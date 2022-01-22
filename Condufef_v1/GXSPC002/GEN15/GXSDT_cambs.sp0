@@ -1,0 +1,60 @@
+ 
+spec_i([ sdt,[ 0,14,0 ],cambs,cambs,0,spa,'10_3_15-115824' ]).
+ 
+struct_dt_i([ 0,14,0 ],name,cambs).
+struct_dt_i([ 0,14,0 ],namespace,'Condufef_v1').
+struct_dt_i([ 0,14,0 ],significantName,cambs).
+struct_dt_i([ 0,14,0 ],'ObjName',cambs).
+struct_dt_i([ 0,14,0 ],'ObjDesc',cambs).
+struct_dt_i([ 0,14,0 ],'ExternalName',cambs).
+struct_dt_i([ 0,14,0 ],'ExternalNamespace','Condufef_v1').
+struct_dt_i([ 0,14,0 ],key,[ 25 ]).
+struct_dt_i([ 0,14,0 ],lvl,14).
+struct_dt_i([ 0,14,0 ],fullname,cambs).
+ 
+struct_dt_elem_i([ 0,14,0 ],1,name,'Cambsid').
+struct_dt_elem_i([ 0,14,0 ],1,camelname,cambsid).
+struct_dt_elem_i([ 0,14,0 ],1,length,9).
+struct_dt_elem_i([ 0,14,0 ],1,decimals,0).
+struct_dt_elem_i([ 0,14,0 ],1,sign,0).
+struct_dt_elem_i([ 0,14,0 ],1,type,[ 4,9,0 ]).
+struct_dt_elem_i([ 0,14,0 ],1,pic,'ZZZZZZZZ9').
+struct_dt_elem_i([ 0,14,0 ],1,collection,'False').
+struct_dt_elem_i([ 0,14,0 ],1,attributeid,'25').
+struct_dt_elem_i([ 0,14,0 ],2,name,'Cambsdsc').
+struct_dt_elem_i([ 0,14,0 ],2,camelname,cambsdsc).
+struct_dt_elem_i([ 0,14,0 ],2,length,100).
+struct_dt_elem_i([ 0,14,0 ],2,decimals,0).
+struct_dt_elem_i([ 0,14,0 ],2,type,[ 13,100,0 ]).
+struct_dt_elem_i([ 0,14,0 ],2,pic,'').
+struct_dt_elem_i([ 0,14,0 ],2,collection,'False').
+struct_dt_elem_i([ 0,14,0 ],2,attributeid,'83').
+struct_dt_elem_i([ 0,14,0 ],3,name,'Cambsusuario').
+struct_dt_elem_i([ 0,14,0 ],3,camelname,cambsusuario).
+struct_dt_elem_i([ 0,14,0 ],3,length,15).
+struct_dt_elem_i([ 0,14,0 ],3,decimals,0).
+struct_dt_elem_i([ 0,14,0 ],3,type,[ 13,15,0 ]).
+struct_dt_elem_i([ 0,14,0 ],3,pic,'').
+struct_dt_elem_i([ 0,14,0 ],3,collection,'False').
+struct_dt_elem_i([ 0,14,0 ],3,attributeid,'84').
+struct_dt_elem_i([ 0,14,0 ],4,name,'Cambsfecreg').
+struct_dt_elem_i([ 0,14,0 ],4,camelname,cambsfecreg).
+struct_dt_elem_i([ 0,14,0 ],4,length,10).
+struct_dt_elem_i([ 0,14,0 ],4,decimals,8).
+struct_dt_elem_i([ 0,14,0 ],4,type,[ 12,10,8 ]).
+struct_dt_elem_i([ 0,14,0 ],4,pic,'99/99/9999 99:99:99').
+struct_dt_elem_i([ 0,14,0 ],4,collection,'False').
+struct_dt_elem_i([ 0,14,0 ],4,attributeid,'85').
+struct_dt_elem_i([ 0,14,0 ],5,name,'Cambsfecultact').
+struct_dt_elem_i([ 0,14,0 ],5,camelname,cambsfecultact).
+struct_dt_elem_i([ 0,14,0 ],5,length,10).
+struct_dt_elem_i([ 0,14,0 ],5,decimals,8).
+struct_dt_elem_i([ 0,14,0 ],5,type,[ 12,10,8 ]).
+struct_dt_elem_i([ 0,14,0 ],5,pic,'99/99/9999 99:99:99').
+struct_dt_elem_i([ 0,14,0 ],5,collection,'False').
+struct_dt_elem_i([ 0,14,0 ],5,attributeid,'86').
+ 
+ 
+ 
+ 
+ 

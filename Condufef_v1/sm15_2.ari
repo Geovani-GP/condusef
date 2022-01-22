@@ -18,8 +18,8 @@ called_program_i(0,12,13,21).
 called_program_i(0,12,13,22).
 called_program_i(0,13,13,1).
 called_program_i(0,13,13,23).
-called_program_i(0,14,13,1).
 called_program_i(0,14,13,19).
+called_program_i(0,14,13,4).
 called_program_i(0,15,13,1).
 called_program_i(0,15,13,24).
 called_program_i(0,16,13,1).
@@ -75,6 +75,7 @@ called_program_i(13,28,13,30).
 called_program_i(13,28,13,4).
 called_program_i(13,29,13,4).
 called_program_i(13,29,33,1).
+called_program_i(13,30,0,14).
 called_program_i(13,30,13,4).
 called_program_i(13,4,13,5).
 called_program_i(13,7,13,6).
@@ -93,5 +94,7 @@ domain_i(6,'GXDOMAINEffect.cs').
 domain_i(7,'GXDOMAINCallType.cs').
 domain_i(8,'GXDOMAINCryptoEncryptAlgorithm.cs').
 domain_i(9,'GXDOMAINCryptoHashAlgorithm.cs').
+sdt_map_i(15,cambs,[ 0,14,0 ]).
 sdt_map_i(15,'gpxMenuItems.gpxMenuItem',[ 26,5,6 ]).
 sdt_map_i(15,'LinkList.LinkItem',[ 26,2,2 ]).
+sdt_map_i(15,'Messages.Message',[ 26,1,1 ]).

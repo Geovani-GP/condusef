@@ -1,0 +1,30 @@
+
+<ObjectSpec>
+<SpecVersion>10_3_15-115824</SpecVersion>
+<Object>
+<ObjClsGuid>84a12160-f59b-4ad7-a683-ea4481ac23e9</ObjClsGuid>
+<ObjCls>1</ObjCls>
+<ObjId>4</ObjId>
+<ObjName>insertCambs</ObjName>
+<ObjDesc>insert Cambs</ObjDesc>
+<ObjPgmName>insertCambs</ObjPgmName>
+<ObjClsName>Procedure</ObjClsName></Object>
+<Result>specfailed</Result>
+<Warnings></Warnings>
+<Errors>
+<Error>
+<MsgCode>spc0061</MsgCode>
+<Message>
+<Token>Group without attributes</Token>
+<Token> in group starting at line </Token>
+<Token>1</Token>
+<Token></Token>
+<Token>.</Token></Message></Error></Errors>
+<OutputDevices>
+<Device>None</Device></OutputDevices>
+<Generator>
+<GenId>15</GenId>
+<GenName>Default (C#)</GenName></Generator>
+<FormClass>Graphic</FormClass>
+<Parameters></Parameters>
+<Levels></Levels></ObjectSpec>

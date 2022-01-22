@@ -113,6 +113,8 @@ public class bldDevelopermenu : GxBaseBuilder
             return true;
          if (checkTime(obj, cs_path + @"\type_SdtLinkList_LinkItem.cs" ))
             return true;
+         if (checkTime(obj, cs_path + @"\type_SdtMessages_Message.cs" ))
+            return true;
          if (checkTime(obj, cs_path + @"\GxObjectCollection.cs" ))
             return true;
          if (checkTime(obj, cs_path + @"\GxSilentTrnGridCollection.cs" ))
@@ -124,6 +126,8 @@ public class bldDevelopermenu : GxBaseBuilder
          if (checkTime(obj, cs_path + @"\GxFullTextSearchReindexer.cs" ))
             return true;
          if (checkTime(obj, cs_path + @"\GxModelInfoProvider.cs" ))
+            return true;
+         if (checkTime(obj, cs_path + @"\type_Sdtcambs.cs" ))
             return true;
          if (checkTime(obj, cs_path + @"\GXDOMAINCryptoSignAlgorithm.cs" ))
             return true;

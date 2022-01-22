@@ -2,9 +2,9 @@
                File: GxFullTextSearchReindexer
         Description: No description for object
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 12/30/2021 22:9:46.84
+       Generated on: 1/21/2022 20:3:24.49
        Program type: Callable routine
-          Main DBMS: sqlserver
+          Main DBMS: postgresql
 */
 using System;
 using System.Collections;
@@ -29,6 +29,12 @@ namespace GeneXus.Programs {
    {
       public static int Reindex( IGxContext context )
       {
+         GxSilentTrnSdt obj ;
+         IGxSilentTrn trn ;
+         bool result ;
+         obj = new Sdtcambs(context);
+         trn = obj.getTransaction();
+         result = trn.Reindex();
          return 1 ;
       }
 

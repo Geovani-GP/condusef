@@ -31,25 +31,11 @@ pos_i(86,[ 0,0,0 ]).
  
  
 rule_i(0,datastore(1,'DS_LAST_CHANGE','')).
-rule_i(0,datastore(1,'LOCK_RETRY','10')).
-rule_i(0,datastore(1,'WAIT_RECORD','0')).
-rule_i(0,datastore(1,'SQLSERVER_VERSION','9')).
+rule_i(0,datastore(1,'POSTGRESQL_VERSION','8_3')).
 rule_i(0,datastore(1,'COMMENT_ON','No')).
-rule_i(0,datastore(1,'DFT_TMP_TBLSPACE','')).
-rule_i(0,datastore(1,'DFT_IDX_TBLSPACE','')).
-rule_i(0,datastore(1,'DFT_TBL_TBLSPACE','')).
 rule_i(0,datastore(1,'DCL_REF_INT_DB','Yes')).
 rule_i(0,datastore(1,'PRIMARY_KEY_TYPE','PK')).
 rule_i(0,datastore(1,'CS_SCHEMA','')).
-rule_i(0,datastore(1,'SORT_ATTRIBUTES','Yes')).
-rule_i(0,datastore(1,'JRN400','QSQJRN')).
-rule_i(0,datastore(1,'CREATE_SAVF','Yes')).
-rule_i(0,datastore(1,'PGMLIB','')).
-rule_i(0,datastore(1,'DTALIB','')).
-rule_i(0,datastore(1,'CC_USER_PASS','')).
-rule_i(0,datastore(1,'CC_USER_ID','')).
-rule_i(0,datastore(1,'CC_SERVER','')).
-rule_i(0,datastore(1,'CC_DBNAME','')).
 rule_i(0,datastore(1,'RecycleRWMin','30')).
 rule_i(0,datastore(1,'RecycleRWType','1')).
 rule_i(0,datastore(1,'RecycleRW','-1')).
@@ -61,32 +47,33 @@ rule_i(0,datastore(1,'CS_RPCPGML','')).
 rule_i(0,datastore(1,'JDBC_DATASOURCE','')).
 rule_i(0,datastore(1,'USE_JDBC_DATASOURCE','0')).
 rule_i(0,datastore(1,'DS_DBMS_ADDINFO','')).
-rule_i(0,datastore(1,'USER_PASSWORD','')).
-rule_i(0,datastore(1,'USER_ID','')).
-rule_i(0,datastore(1,'TRUSTED_CONNECTION','Yes')).
+rule_i(0,datastore(1,'USER_PASSWORD',asdf)).
+rule_i(0,datastore(1,'USER_ID',postgres)).
 rule_i(0,datastore(1,'CS_CONNECT','First')).
-rule_i(0,datastore(1,'DBMS_PORT','')).
-rule_i(0,datastore(1,'CS_SERVER','JOSBUENO-MX\DELGADO')).
-rule_i(0,datastore(1,'CS_DBNAME','Dar_CONDUCEFDB')).
+rule_i(0,datastore(1,'DBMS_PORT','5432')).
+rule_i(0,datastore(1,'CS_SERVER',localhost)).
+rule_i(0,datastore(1,'CS_DBNAME',condusef)).
 rule_i(0,datastore(1,'CS_FLEDSNAME','')).
-rule_i(0,datastore(1,'CS_DRVNAME','sql server')).
+rule_i(0,datastore(1,'CS_DRVNAME','')).
 rule_i(0,datastore(1,'CS_DSNAME','')).
 rule_i(0,datastore(1,'DB_URL','')).
 rule_i(0,datastore(1,'JDBC_CUSTOM_URL','0')).
 rule_i(0,datastore(1,'JDBC_CUSTOM_DRIVER','')).
-rule_i(0,datastore(1,'JDBC_DRIVER','net.sourceforge.jtds.jdbc.Driver')).
+rule_i(0,datastore(1,'JDBC_DRIVER','org.postgresql.Driver')).
 rule_i(0,datastore(1,'CONNECT_METHOD','OPSYS')).
 rule_i(0,datastore(1,'ACCESS_TECHNO','ADONET')).
 rule_i(0,datastore(1,'MAIN_DS','-1')).
 rule_i(0,datastore(1,'REORG_GEN','8')).
 rule_i(0,datastore(1,'HelpKeyword','20')).
-rule_i(0,datastore(1,'DBMS',12)).
+rule_i(0,datastore(1,'DBMS',15)).
 rule_i(0,datastore(1,'NAME','Default')).
 rule_i(0,prop(idNULLS_BEHAVIOR,idNB_Current)).
 rule_i(0,prop('ObjectVisibility','Public')).
 rule_i(0,prop('FullyQualifiedName',cambs)).
 rule_i(0,prop('PWFCallable','0')).
 rule_i(0,prop('GenerateObject','-1')).
+rule_i(0,prop('SEARCH_VIEWER','')).
+rule_i(0,prop('SEARCHABLE','UMPV')).
 rule_i(0,prop('MTIER_OPT','Yes')).
 rule_i(0,prop('CS_ORA_FORUPD','UMPV')).
 rule_i(0,prop('Hint_firstrows','UMPV')).
@@ -148,6 +135,7 @@ rule_i(0,prop('TRNCFM','UMPV')).
 rule_i(0,prop('CFMTRN','No')).
 rule_i(0,prop('TRNEND','Yes')).
 rule_i(0,prop('IsDwhTrn','0')).
+rule_i(0,prop(idISBCEJB,'0')).
 rule_i(0,prop('WEB_SECURITY_LEVEL','High')).
 rule_i(0,prop('HTTP_PROTOCOL','Unsecure')).
 rule_i(0,prop('USE_ENCRYPTION','NO')).
@@ -156,12 +144,17 @@ rule_i(0,prop('SHOWMASTERPAGE_POPUP','0')).
 rule_i(0,prop('MasterPage',o(13,'RwdMasterPage'))).
 rule_i(0,prop('WEB_COMP','No')).
 rule_i(0,prop('Theme',o(25,'Flat'))).
+rule_i(0,prop('WS_Delete','-1')).
+rule_i(0,prop('WS_Update','-1')).
+rule_i(0,prop('WS_Insert','-1')).
+rule_i(0,prop('WS_View','-1')).
 rule_i(0,prop('ExternalNamespace','Condufef_v1')).
 rule_i(0,prop('ExternalName',cambs)).
+rule_i(0,prop(idISBCWEBSERVICE,'0')).
+rule_i(0,prop('CALL_PROTOCOL','INTERNAL')).
 rule_i(0,prop(idConnectivitySupport,idInherit)).
 rule_i(0,prop('OBJECT_METADATA','')).
-rule_i(0,prop('IsMain','0')).
-rule_i(0,prop(idBC,'0')).
+rule_i(0,prop(idBC,'-1')).
 rule_i(0,prop('Folder',o(120,'Root Module'))).
 rule_i(0,prop('ObjDesc',cambs)).
 rule_i(0,prop('ObjName',cambs)).
@@ -169,8 +162,6 @@ rule_i(14,prompt([ 14,[ [ [],25,25 ] ],[],[],[ t(o(13,'Gx00E0'),28),t(25,2) ],[]
 rule_i(14,rule([ a(23,[ [ 25 ],[ t(o(13,'Gx00E0'),28),t(25,2) ] ]) ],[],[],[ 25 ])).
 rule_i(0,rule([ a(22,[ 'Dlt','"Eliminar"','' ]) ],[],[],[])).
 rule_i(0,maingen(15)).
-rule_i(14,rule([ a(1,msg([ t('"Campo cambsfecreg fuera de rango"',3) ],[ t('OutOfRange',3) ])) ],[ t('NOT',8),t('(',0),t('null(',1),t(85,2),t(')',4),t('.OR.',9),t(85,2),t(>=,10),t('ymdhmstot(',1),t('1753',3),t(',',7),t('01',3),t(',',7),t('01',3),t(',',7),t('00',3),t(',',7),t('00',3),t(',',7),t('00',3),t(')',4),t(')',4) ],[ insert,update ],[ 85 ])).
-rule_i(14,rule([ a(1,msg([ t('"Campo cambsfecultact fuera de rango"',3) ],[ t('OutOfRange',3) ])) ],[ t('NOT',8),t('(',0),t('null(',1),t(86,2),t(')',4),t('.OR.',9),t(86,2),t(>=,10),t('ymdhmstot(',1),t('1753',3),t(',',7),t('01',3),t(',',7),t('01',3),t(',',7),t('00',3),t(',',7),t('00',3),t(',',7),t('00',3),t(')',4),t(')',4) ],[ insert,update ],[ 86 ])).
 rule_i(0,p(0,0,fv,19,[ intname,'CAMBS' ])).
 rule_i(0,p(0,0,fv,19,[ table,14 ])).
 rule_i(0,p(0,15,fv,19,[])).
@@ -183,6 +174,10 @@ rule_i(0,p(0,15,fvix,[ 19,20 ],[ 'NAME',cambs_pkey ])).
 rule_i(0,p(0,15,fvix,[ 19,20 ],[ 'LOC','' ])).
 rule_i(0,p(0,15,fvix,[ 19,20 ],[ 'SCHEMA',public ])).
 rule_i(0,p(0,15,fvix,[ 19,20 ],[ 'EXTNAM','YES' ])).
+rule_i(0,file(14,'CAMBS',[ 25,83,84,85,86 ])).
+rule_i(0,loc([ 14 ],'CAMBS','','LAN')).
+rule_i(0,index(14,'CAMBS_PKEY',u,[ 25 ])).
+rule_i(0,loc([ 14,'CAMBS_PKEY' ],cambs_pkey,'','LAN')).
 rule_i(0,p(0,0,fv,14,[ intname,'ETIQUETAS' ])).
 rule_i(0,p(0,0,fv,14,[ table,12 ])).
 rule_i(0,p(0,15,fv,14,[])).
@@ -195,6 +190,10 @@ rule_i(0,p(0,15,fvix,[ 14,14 ],[ 'NAME',etiquetas_pkey ])).
 rule_i(0,p(0,15,fvix,[ 14,14 ],[ 'LOC','' ])).
 rule_i(0,p(0,15,fvix,[ 14,14 ],[ 'SCHEMA',public ])).
 rule_i(0,p(0,15,fvix,[ 14,14 ],[ 'EXTNAM','YES' ])).
+rule_i(0,file(12,'ETIQUETAS',[ 17,18,19,32,33,34,35,36,37,38 ])).
+rule_i(0,loc([ 12 ],'ETIQUETAS','','LAN')).
+rule_i(0,index(12,'ETIQUETAS_PKEY',u,[ 17,18,19 ])).
+rule_i(0,loc([ 12,'ETIQUETAS_PKEY' ],etiquetas_pkey,'','LAN')).
 rule_i(0,p(0,0,fv,15,[ intname,'ARTICULOS' ])).
 rule_i(0,p(0,0,fv,15,[ table,11 ])).
 rule_i(0,p(0,15,fv,15,[])).
@@ -212,20 +211,20 @@ rule_i(0,p(0,15,fvix,[ 15,16 ],[ 'NAME',productoid ])).
 rule_i(0,p(0,15,fvix,[ 15,16 ],[ 'LOC','' ])).
 rule_i(0,p(0,15,fvix,[ 15,16 ],[ 'SCHEMA',public ])).
 rule_i(0,p(0,15,fvix,[ 15,16 ],[ 'EXTNAM','YES' ])).
+rule_i(0,file(11,'ARTICULOS',[ 19,20,21,154,155,23,7,10,156,2,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172 ])).
+rule_i(0,loc([ 11 ],'ARTICULOS','','LAN')).
+rule_i(0,index(11,'ARTICULOS_PKEY',u,[ 19,20,21 ])).
+rule_i(0,loc([ 11,'ARTICULOS_PKEY' ],articulos_pkey,'','LAN')).
+rule_i(0,index(11,'PRODUCTOID',k,[ 19 ])).
+rule_i(0,loc([ 11,'PRODUCTOID' ],productoid,'','LAN')).
  
-a_i(1,14,b,0,[],[ [],[ a(1,msg([ t('"Campo cambsfecreg fuera de rango"',3) ],[ t('OutOfRange',3) ])) ],[ t('NOT',8),t('(',0),t('null(',1),t(85,2),t(')',4),t('.OR.',9),t(85,2),t(>=,10),t('ymdhmstot(',1),t('1753',3),t(',',7),t('01',3),t(',',7),t('01',3),t(',',7),t('00',3),t(',',7),t('00',3),t(',',7),t('00',3),t(')',4),t(')',4) ] ]).
-a_i(2,14,b,0,[],[ [],[ a(1,msg([ t('"Campo cambsfecultact fuera de rango"',3) ],[ t('OutOfRange',3) ])) ],[ t('NOT',8),t('(',0),t('null(',1),t(86,2),t(')',4),t('.OR.',9),t(86,2),t(>=,10),t('ymdhmstot(',1),t('1753',3),t(',',7),t('01',3),t(',',7),t('01',3),t(',',7),t('00',3),t(',',7),t('00',3),t(',',7),t('00',3),t(')',4),t(')',4) ] ]).
-a_i(3,14,t,14,[],[ [ [ [],25,25 ] ],'CAMBS_PKEY',[] ]).
+a_i(1,14,t,14,[],[ [ [ [],25,25 ] ],'CAMBS_PKEY',[] ]).
  
-v_i(b,i,1,85).
-v_i(b,o,1,[]).
-v_i(b,i,2,86).
-v_i(b,o,2,[]).
-v_i(t,i,3,25).
-v_i(t,o,3,83).
-v_i(t,o,3,84).
-v_i(t,o,3,85).
-v_i(t,o,3,86).
+v_i(t,i,1,25).
+v_i(t,o,1,83).
+v_i(t,o,1,84).
+v_i(t,o,1,85).
+v_i(t,o,1,86).
  
  
  
@@ -247,14 +246,14 @@ attri_i(25,[ cambsid,int,9,0,'ZZZZZZZZ9',0,cambsid,'',0 ]).
 attri_i('Gxremove',[ 'GxRemove',int,1,0,'9',0,'Gx Remove','',5 ]).
 attri_i('Mode',[ 'Gx_mode',char,3,0,'@!',1,'','',2 ]).
  
-table_i(11,[ articulos,[ 19,20,21 ],articulos,articulos ]).
-table_i(12,[ etiquetas,[ 17,18,19 ],etiquetas,etiquetas ]).
-table_i(14,[ cambs,[ 25,83,84,85,86 ],cambs,cambs ]).
+table_i(11,[ 'ARTICULOS',[ 19,20,21 ],articulos,articulos ]).
+table_i(12,[ 'ETIQUETAS',[ 17,18,19 ],etiquetas,etiquetas ]).
+table_i(14,[ 'CAMBS',[ 25,83,84,85,86 ],cambs,cambs ]).
  
-index_i(14,[ 'CAMBS_PKEY',u,[ 25 ],cambs_pkey ]).
-index_i(12,[ 'ETIQUETAS_PKEY',u,[ 17,18,19 ],etiquetas_pkey ]).
+index_i(14,[ 'CAMBS_PKEY',u,[ 25 ],'CAMBS_PKEY' ]).
+index_i(12,[ 'ETIQUETAS_PKEY',u,[ 17,18,19 ],'ETIQUETAS_PKEY' ]).
 index_i(12,[ 'IETIQUETAS',d,[ 18 ],'Ietiquetas' ]).
-index_i(11,[ 'ARTICULOS_PKEY',u,[ 19,20,21 ],articulos_pkey ]).
+index_i(11,[ 'ARTICULOS_PKEY',u,[ 19,20,21 ],'ARTICULOS_PKEY' ]).
 index_i(11,[ 'IARTICULOS3',d,[ 21 ],'Iarticulos3' ]).
  
  
@@ -277,6 +276,51 @@ upd_i(14,14,d,[ [],[],'CAMBS_PKEY',[] ]).
  
  
  
+map_i(11,i,'PRODUCTOID',[ 'PRODUCTOID' ]).
+map_i(11,i,'ARTICULOS_PKEY',[ 'ARTICULOS_PKEY' ]).
+map_i(11,a,172,[ articulosfecultact ]).
+map_i(11,a,171,[ articulosfecreg ]).
+map_i(11,a,170,[ articulostipobien ]).
+map_i(11,a,169,[ articulosestatusariticulo ]).
+map_i(11,a,168,[ articulosidtrasfer ]).
+map_i(11,a,167,[ articulosusuario ]).
+map_i(11,a,166,[ articuloscontejado ]).
+map_i(11,a,165,[ articulosstatus ]).
+map_i(11,a,164,[ articulosfechabajaalma ]).
+map_i(11,a,163,[ articulosfechaentraalmacen ]).
+map_i(11,a,162,[ articulosfechacoteja ]).
+map_i(11,a,161,[ articulosrefdocumento ]).
+map_i(11,a,160,[ articulosnumserie ]).
+map_i(11,a,159,[ articuloscantdepreacum ]).
+map_i(11,a,158,[ articulospreccomprareexp ]).
+map_i(11,a,157,[ articulospreciocompra ]).
+map_i(11,a,2,[ proveedorid ]).
+map_i(11,a,156,[ articulosdsc ]).
+map_i(11,a,10,[ origenid ]).
+map_i(11,a,7,[ entidadid ]).
+map_i(11,a,23,[ tipodocid ]).
+map_i(11,a,155,[ articulosnoetiqueta ]).
+map_i(11,a,154,[ alamcenid ]).
+map_i(11,a,21,[ cambsid ]).
+map_i(11,a,20,[ productoid ]).
+map_i(11,a,19,[ articulosid ]).
+map_i(12,i,'ETIQUETAS_PKEY',[ 'ETIQUETAS_PKEY' ]).
+map_i(12,a,38,[ etiquetasfecultact ]).
+map_i(12,a,37,[ etiquetasfecreg ]).
+map_i(12,a,36,[ etiquetasusuario ]).
+map_i(12,a,35,[ etiquetasreimpresión ]).
+map_i(12,a,34,[ etiquetafecharealizada ]).
+map_i(12,a,33,[ etiquetastatus ]).
+map_i(12,a,32,[ etiquetasnumero ]).
+map_i(12,a,19,[ articuloid ]).
+map_i(12,a,18,[ cambsid ]).
+map_i(12,a,17,[ productoid ]).
+map_i(14,i,'CAMBS_PKEY',[ 'CAMBS_PKEY' ]).
+map_i(14,a,86,[ cambsfecultact ]).
+map_i(14,a,85,[ cambsfecreg ]).
+map_i(14,a,84,[ cambsusuario ]).
+map_i(14,a,83,[ cambsdsc ]).
+map_i(14,a,25,[ cambsid ]).
  
  
  
@@ -389,7 +433,7 @@ html_comp_i(6,'Title','',d,[ str ]).
 html_comp_i(6,'Fill',-1,d,[ bool ]).
 html_comp_i(6,'Backcolor',rgb(255,255,255),d,[ color ]).
 html_comp_i(6,'Forecolor',rgb(0,0,0),d,[ color ]).
-html_comp_i(6,'Font',font('Open Sans Semibold',17,[]),d,[ font ]).
+html_comp_i(6,'Font',font('Microsoft Sans Serif',17,[]),d,[ font ]).
 html_comp_i(7,'Class',row,v,[ str ]).
 html_comp_i(7,'Id','',d,[ str ]).
 html_comp_i(7,'Height',measure(0,px),d,[ measure ]).
@@ -803,6 +847,8 @@ html_comp_i(44,'Buttonborderstyle',standard,d,[ str ]).
  
  
  
+warn_gen_i(msg([],spc0134,[ 'Poor performance may be noticed','',' as ','Duplicate',' index ','IETIQUETAS',' is not defined in Data view ',etiquetas,'.' ])).
+warn_gen_i(msg([],spc0134,[ 'Poor performance may be noticed','',' as ','Duplicate',' index ','IARTICULOS3',' is not defined in Data view ',articulos,'.' ])).
  
 lit_i(6,1,t(cambs,3),[ ctlname('Title') ]).
 lit_i(5,1,div(5),[ ctlname('') ]).
@@ -857,6 +903,7 @@ lit_i(1,1,window,[ rect(0,0,1000,1000),ctlname('Form') ]).
  
  
  
+att_prop_i(2,25,'HORIZONTAL_DESCRIPTION',cambsid,v).
 att_prop_i(2,25,'ExternalName',cambsid,d).
 att_prop_i(2,25,'ExternalNamespace','Condufef_v1',d).
 att_prop_i(2,25,'EmptyAsNull','Yes',d).
@@ -866,6 +913,7 @@ att_prop_i(2,25,'ATT_INITIAL_VALUE','',d).
 att_prop_i(2,25,'AttRegEx','',d).
 att_prop_i(2,25,'AttValidationFailedMsg','',d).
 att_prop_i(2,25,'FullName',cambsid,v).
+att_prop_i(2,83,'HORIZONTAL_DESCRIPTION',cambsdsc,v).
 att_prop_i(2,83,'ExternalName',cambsdsc,d).
 att_prop_i(2,83,'ExternalNamespace','Condufef_v1',d).
 att_prop_i(2,83,'EmptyAsNull','Yes',d).
@@ -875,6 +923,7 @@ att_prop_i(2,83,'DB_NLS_SUPPORT','No',d).
 att_prop_i(2,83,'AttRegEx','',d).
 att_prop_i(2,83,'AttValidationFailedMsg','',d).
 att_prop_i(2,83,'FullName',cambsdsc,v).
+att_prop_i(2,84,'HORIZONTAL_DESCRIPTION',cambsusuario,v).
 att_prop_i(2,84,'ExternalName',cambsusuario,d).
 att_prop_i(2,84,'ExternalNamespace','Condufef_v1',d).
 att_prop_i(2,84,'EmptyAsNull','Yes',d).
@@ -884,6 +933,7 @@ att_prop_i(2,84,'DB_NLS_SUPPORT','No',d).
 att_prop_i(2,84,'AttRegEx','',d).
 att_prop_i(2,84,'AttValidationFailedMsg','',d).
 att_prop_i(2,84,'FullName',cambsusuario,v).
+att_prop_i(2,85,'HORIZONTAL_DESCRIPTION',cambsfecreg,v).
 att_prop_i(2,85,'ExternalName',cambsfecreg,d).
 att_prop_i(2,85,'ExternalNamespace','Condufef_v1',d).
 att_prop_i(2,85,'EmptyAsNull','Yes',d).
@@ -894,6 +944,7 @@ att_prop_i(2,85,'AttValidationFailedMsg','',d).
 att_prop_i(2,85,idDATEFORMAT,idDATEFORMAT_LONG,v).
 att_prop_i(2,85,idHOURFORMAT,idHOURFORMAT_HOURMINSEC,v).
 att_prop_i(2,85,'FullName',cambsfecreg,v).
+att_prop_i(2,86,'HORIZONTAL_DESCRIPTION',cambsfecultact,v).
 att_prop_i(2,86,'ExternalName',cambsfecultact,d).
 att_prop_i(2,86,'ExternalNamespace','Condufef_v1',d).
 att_prop_i(2,86,'EmptyAsNull','Yes',d).
@@ -904,6 +955,7 @@ att_prop_i(2,86,'AttValidationFailedMsg','',d).
 att_prop_i(2,86,idDATEFORMAT,idDATEFORMAT_LONG,v).
 att_prop_i(2,86,idHOURFORMAT,idHOURFORMAT_HOURMINSEC,v).
 att_prop_i(2,86,'FullName',cambsfecultact,v).
+att_prop_i(2,18,'HORIZONTAL_DESCRIPTION',etiquetascambsid,v).
 att_prop_i(2,18,'ExternalName',etiquetascambsid,d).
 att_prop_i(2,18,'ExternalNamespace','Condufef_v1',d).
 att_prop_i(2,18,'EmptyAsNull','Yes',d).
@@ -913,6 +965,7 @@ att_prop_i(2,18,'ATT_INITIAL_VALUE','',d).
 att_prop_i(2,18,'AttRegEx','',d).
 att_prop_i(2,18,'AttValidationFailedMsg','',d).
 att_prop_i(2,18,'FullName',etiquetascambsid,v).
+att_prop_i(2,17,'HORIZONTAL_DESCRIPTION',etiquetasproductoid,v).
 att_prop_i(2,17,'ExternalName',etiquetasproductoid,d).
 att_prop_i(2,17,'ExternalNamespace','Condufef_v1',d).
 att_prop_i(2,17,'EmptyAsNull','Yes',d).
@@ -922,6 +975,7 @@ att_prop_i(2,17,'ATT_INITIAL_VALUE','',d).
 att_prop_i(2,17,'AttRegEx','',d).
 att_prop_i(2,17,'AttValidationFailedMsg','',d).
 att_prop_i(2,17,'FullName',etiquetasproductoid,v).
+att_prop_i(2,19,'HORIZONTAL_DESCRIPTION',almacenid,v).
 att_prop_i(2,19,'ExternalName',almacenid,d).
 att_prop_i(2,19,'ExternalNamespace','Condufef_v1',d).
 att_prop_i(2,19,'EmptyAsNull','Yes',d).
@@ -931,6 +985,7 @@ att_prop_i(2,19,'ATT_INITIAL_VALUE','',d).
 att_prop_i(2,19,'AttRegEx','',d).
 att_prop_i(2,19,'AttValidationFailedMsg','',d).
 att_prop_i(2,19,'FullName',almacenid,v).
+att_prop_i(2,21,'HORIZONTAL_DESCRIPTION',articuloscambsid,v).
 att_prop_i(2,21,'ExternalName',articuloscambsid,d).
 att_prop_i(2,21,'ExternalNamespace','Condufef_v1',d).
 att_prop_i(2,21,'EmptyAsNull','Yes',d).
@@ -940,6 +995,7 @@ att_prop_i(2,21,'ATT_INITIAL_VALUE','',d).
 att_prop_i(2,21,'AttRegEx','',d).
 att_prop_i(2,21,'AttValidationFailedMsg','',d).
 att_prop_i(2,21,'FullName',articuloscambsid,v).
+att_prop_i(2,20,'HORIZONTAL_DESCRIPTION',articulosproductoid,v).
 att_prop_i(2,20,'ExternalName',articulosproductoid,d).
 att_prop_i(2,20,'ExternalNamespace','Condufef_v1',d).
 att_prop_i(2,20,'EmptyAsNull','Yes',d).
@@ -950,7 +1006,6 @@ att_prop_i(2,20,'AttRegEx','',d).
 att_prop_i(2,20,'AttValidationFailedMsg','',d).
 att_prop_i(2,20,'FullName',articulosproductoid,v).
  
-tbl_prop_i(2,14,'DirSubor',[ [ 12,[ 18 ] ],[ 11,[ 21 ] ] ],v).
  
 tbl_att_prop_i(2,14,25,'AllowNulls',n).
 tbl_att_prop_i(2,12,17,'AllowNulls',n).
@@ -963,6 +1018,10 @@ tbl_att_prop_i(2,11,21,'AllowNulls',n).
  
  
  
+a_alias_i(18,etiquetascambsid).
+a_alias_i(20,articulosproductoid).
+a_alias_i(17,etiquetasproductoid).
+a_alias_i(21,articuloscambsid).
  
 trn_level_i(14,[ [ 25,83,84,85,86 ],cambs,cambs,cambs,'',83 ]).
  

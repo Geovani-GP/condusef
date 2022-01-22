@@ -15,12 +15,14 @@
 /r:bin\Npgsql.dll
 type_SdtgpxMenuItems_gpxMenuItem.cs
 type_SdtLinkList_LinkItem.cs
+type_SdtMessages_Message.cs
 GxObjectCollection.cs
 GxSilentTrnGridCollection.cs
 SoapParm.cs
 GxWebStd.cs
 GxFullTextSearchReindexer.cs
 GxModelInfoProvider.cs
+type_Sdtcambs.cs
 GXDOMAINCryptoSignAlgorithm.cs
 GXDOMAINAPIAuthorizationStatus.cs
 GXDOMAINMessageTypes.cs

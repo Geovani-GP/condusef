@@ -5,6 +5,9 @@ pgm_main_i(web,28,'LOGIN',[ 15,'LOGIN','Login','','','','' ]).
  
 pgm_prop_i(web,30,'CATALOG_DE_CAMBS','USE_ENCRYPTION','NO').
 pgm_prop_i(web,30,'CATALOG_DE_CAMBS','HTTP_PROTOCOL','Unsecure').
+pgm_prop_i(trn,14,'CAMBS',idISBUSINESSCOMPONENT,'-1').
+pgm_prop_i(trn,14,'CAMBS','USE_ENCRYPTION','NO').
+pgm_prop_i(trn,14,'CAMBS','HTTP_PROTOCOL','Unsecure').
 pgm_prop_i(web,28,'LOGIN','USE_ENCRYPTION','NO').
 pgm_prop_i(web,28,'LOGIN','HTTP_PROTOCOL','Unsecure').
 pgm_prop_i(proc,3,'REPORTCAMBS','USE_ENCRYPTION','NO').
@@ -78,8 +81,6 @@ pgm_prop_i(trn,16,'ORIGEN','USE_ENCRYPTION','NO').
 pgm_prop_i(trn,16,'ORIGEN','HTTP_PROTOCOL','Unsecure').
 pgm_prop_i(trn,15,'USUARIOS','USE_ENCRYPTION','NO').
 pgm_prop_i(trn,15,'USUARIOS','HTTP_PROTOCOL','Unsecure').
-pgm_prop_i(trn,14,'CAMBS','USE_ENCRYPTION','NO').
-pgm_prop_i(trn,14,'CAMBS','HTTP_PROTOCOL','Unsecure').
 pgm_prop_i(trn,13,'ARTICULOSMOV','USE_ENCRYPTION','NO').
 pgm_prop_i(trn,13,'ARTICULOSMOV','HTTP_PROTOCOL','Unsecure').
 pgm_prop_i(trn,12,'ETIQUETAS','USE_ENCRYPTION','NO').
@@ -142,7 +143,7 @@ datastore_i(1,'USER_ID',postgres).
 datastore_i(1,'CS_CONNECT','First').
 datastore_i(1,'DBMS_PORT','5432').
 datastore_i(1,'CS_SERVER',localhost).
-datastore_i(1,'CS_DBNAME',condusef_v2).
+datastore_i(1,'CS_DBNAME',condusef).
 datastore_i(1,'CS_FLEDSNAME','').
 datastore_i(1,'CS_DRVNAME','').
 datastore_i(1,'CS_DSNAME','').

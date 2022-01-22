@@ -9,7 +9,7 @@
 <ObjDesc>Catalog_De_Cambs</ObjDesc>
 <ObjPgmName>Catalog_De_Cambs</ObjPgmName>
 <ObjClsName>Web Panel</ObjClsName></Object>
-<Result>nogenreq</Result>
+<Result>genreq</Result>
 <Warnings>
 <Warning>
 <MsgCode>spc0156</MsgCode>
@@ -18,14 +18,6 @@
 <Token>'Consultar '</Token>
 <Token> for control '</Token>
 <Token>Button1</Token>
-<Token>' is not defined.</Token></Message></Warning>
-<Warning>
-<MsgCode>spc0156</MsgCode>
-<Message>
-<Token>Event </Token>
-<Token>'Guardar '</Token>
-<Token> for control '</Token>
-<Token>Button2</Token>
 <Token>' is not defined.</Token></Message></Warning>
 <Warning>
 <MsgCode>spc0156</MsgCode>
@@ -64,6 +56,26 @@
 <Description>cambs</Description>
 <RecordsToRead>many</RecordsToRead>
 <Tables></Tables></Table></Tables></Table></NavigationTree></Level></Event>
+<Event>
+<EventName>'Guardar'</EventName>
+<Command>
+<Expression>
+<Variable>
+<VarId>Cambs</VarId>
+<VarName>&amp;cambs</VarName></Variable>
+<Token>.</Token>
+<Token>save(</Token>
+<Token>)</Token></Expression></Command></Event>
+<Event>
+<EventName>'Guardar '</EventName>
+<Command>
+<Expression>
+<Variable>
+<VarId>Cambs</VarId>
+<VarName>&amp;cambs</VarName></Variable>
+<Token>.</Token>
+<Token>save(</Token>
+<Token>)</Token></Expression></Command></Event>
 <Event>
 <EventName>Load</EventName></Event>
 <Suggests></Suggests></ObjectSpec>

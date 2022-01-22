@@ -2,9 +2,9 @@
                File: cambs
         Description: cambs
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 12/30/2021 22:9:4.78
+       Generated on: 1/21/2022 20:3:22.78
        Program type: Callable routine
-          Main DBMS: sqlserver
+          Main DBMS: postgresql
 */
 using System;
 using System.Collections;
@@ -14,7 +14,7 @@ using GeneXus.Application;
 using GeneXus.Metadata;
 using GeneXus.Cryptography;
 using System.Data;
-using System.Data.SqlClient;
+using NpgsqlTypes;
 using GeneXus.Data;
 using com.genexus;
 using GeneXus.Data.ADO;
@@ -673,7 +673,7 @@ namespace GeneXus.Programs {
 
       protected void ZM0E14( short GX_JID )
       {
-         if ( ( GX_JID == 3 ) || ( GX_JID == 0 ) )
+         if ( ( GX_JID == 1 ) || ( GX_JID == 0 ) )
          {
             if ( StringUtil.StrCmp(Gx_mode, "INS") != 0 )
             {
@@ -690,7 +690,7 @@ namespace GeneXus.Programs {
                Z86cambsfecultact = A86cambsfecultact;
             }
          }
-         if ( GX_JID == -3 )
+         if ( GX_JID == -1 )
          {
             Z25cambsid = A25cambsid;
             Z83cambsdsc = A83cambsdsc;
@@ -747,7 +747,7 @@ namespace GeneXus.Programs {
             A86cambsfecultact = T000E4_A86cambsfecultact[0];
             context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A86cambsfecultact", context.localUtil.TToC( A86cambsfecultact, 10, 8, 0, 3, "/", ":", " "));
             n86cambsfecultact = T000E4_n86cambsfecultact[0];
-            ZM0E14( -3) ;
+            ZM0E14( -1) ;
          }
          pr_default.close(2);
          OnLoadActions0E14( ) ;
@@ -761,20 +761,6 @@ namespace GeneXus.Programs {
       {
          Gx_BScreen = 1;
          standaloneModal( ) ;
-         if ( ! ( (DateTime.MinValue==A85cambsfecreg) || ( A85cambsfecreg >= context.localUtil.YMDHMSToT( 1753, 1, 1, 0, 0, 0) ) ) )
-         {
-            GX_msglist.addItem("Campo cambsfecreg fuera de rango", "OutOfRange", 1, "CAMBSFECREG");
-            AnyError = 1;
-            GX_FocusControl = edtcambsfecreg_Internalname;
-            context.httpAjaxContext.ajax_rsp_assign_attri("", false, "GX_FocusControl", GX_FocusControl);
-         }
-         if ( ! ( (DateTime.MinValue==A86cambsfecultact) || ( A86cambsfecultact >= context.localUtil.YMDHMSToT( 1753, 1, 1, 0, 0, 0) ) ) )
-         {
-            GX_msglist.addItem("Campo cambsfecultact fuera de rango", "OutOfRange", 1, "CAMBSFECULTACT");
-            AnyError = 1;
-            GX_FocusControl = edtcambsfecultact_Internalname;
-            context.httpAjaxContext.ajax_rsp_assign_attri("", false, "GX_FocusControl", GX_FocusControl);
-         }
       }
 
       protected void CloseExtendedTableCursors0E14( )
@@ -806,7 +792,7 @@ namespace GeneXus.Programs {
          pr_default.execute(1, new Object[] {A25cambsid});
          if ( (pr_default.getStatus(1) != 101) )
          {
-            ZM0E14( 3) ;
+            ZM0E14( 1) ;
             RcdFound14 = 1;
             A25cambsid = T000E3_A25cambsid[0];
             context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A25cambsid", StringUtil.LTrim( StringUtil.Str( (decimal)(A25cambsid), 9, 0)));
@@ -1155,7 +1141,7 @@ namespace GeneXus.Programs {
             pr_default.execute(0, new Object[] {A25cambsid});
             if ( (pr_default.getStatus(0) == 103) )
             {
-               GX_msglist.addItem(context.GetMessage( "GXM_lock", new   object[]  {"cambs"}), "RecordIsLocked", 1, "");
+               GX_msglist.addItem(context.GetMessage( "GXM_lock", new   object[]  {"CAMBS"}), "RecordIsLocked", 1, "");
                AnyError = 1;
                return  ;
             }
@@ -1185,7 +1171,7 @@ namespace GeneXus.Programs {
                   GXUtil.WriteLogRaw("Old: ",Z86cambsfecultact);
                   GXUtil.WriteLogRaw("Current: ",T000E2_A86cambsfecultact[0]);
                }
-               GX_msglist.addItem(context.GetMessage( "GXM_waschg", new   object[]  {"cambs"}), "RecordWasChanged", 1, "");
+               GX_msglist.addItem(context.GetMessage( "GXM_waschg", new   object[]  {"CAMBS"}), "RecordWasChanged", 1, "");
                AnyError = 1;
                return  ;
             }
@@ -1214,7 +1200,7 @@ namespace GeneXus.Programs {
                      /* Using cursor T000E8 */
                      pr_default.execute(6, new Object[] {A25cambsid, n83cambsdsc, A83cambsdsc, n84cambsusuario, A84cambsusuario, n85cambsfecreg, A85cambsfecreg, n86cambsfecultact, A86cambsfecultact});
                      pr_default.close(6);
-                     dsDefault.SmartCacheProvider.SetUpdated("cambs") ;
+                     dsDefault.SmartCacheProvider.SetUpdated("CAMBS") ;
                      if ( (pr_default.getStatus(6) == 1) )
                      {
                         GX_msglist.addItem(context.GetMessage( "GXM_noupdate", ""), "DuplicatePrimaryKey", 1, "");
@@ -1269,10 +1255,10 @@ namespace GeneXus.Programs {
                      /* Using cursor T000E9 */
                      pr_default.execute(7, new Object[] {n83cambsdsc, A83cambsdsc, n84cambsusuario, A84cambsusuario, n85cambsfecreg, A85cambsfecreg, n86cambsfecultact, A86cambsfecultact, A25cambsid});
                      pr_default.close(7);
-                     dsDefault.SmartCacheProvider.SetUpdated("cambs") ;
+                     dsDefault.SmartCacheProvider.SetUpdated("CAMBS") ;
                      if ( (pr_default.getStatus(7) == 103) )
                      {
-                        GX_msglist.addItem(context.GetMessage( "GXM_lock", new   object[]  {"cambs"}), "RecordIsLocked", 1, "");
+                        GX_msglist.addItem(context.GetMessage( "GXM_lock", new   object[]  {"CAMBS"}), "RecordIsLocked", 1, "");
                         AnyError = 1;
                      }
                      DeferredUpdate0E14( ) ;
@@ -1326,7 +1312,7 @@ namespace GeneXus.Programs {
                   /* Using cursor T000E10 */
                   pr_default.execute(8, new Object[] {A25cambsid});
                   pr_default.close(8);
-                  dsDefault.SmartCacheProvider.SetUpdated("cambs") ;
+                  dsDefault.SmartCacheProvider.SetUpdated("CAMBS") ;
                   if ( AnyError == 0 )
                   {
                      /* Start of After( delete) rules */
@@ -1403,7 +1389,6 @@ namespace GeneXus.Programs {
          }
          if ( AnyError == 0 )
          {
-            pr_default.close(1);
             context.CommitDataStores( "cambs");
             if ( AnyError == 0 )
             {
@@ -1415,7 +1400,6 @@ namespace GeneXus.Programs {
          }
          else
          {
-            pr_default.close(1);
             context.RollbackDataStores( "cambs");
          }
          IsModified = 0;
@@ -1537,7 +1521,7 @@ namespace GeneXus.Programs {
          context.AddJavascriptSource("jquery.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxtimezone.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxgral.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("gxcfg.js", "?20211230229549");
+         context.AddJavascriptSource("gxcfg.js", "?20221212032336");
          if ( context.isSpaRequest( ) )
          {
             enableOutput();
@@ -1699,7 +1683,7 @@ namespace GeneXus.Programs {
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?20211230229553");
+            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?20221212032339");
             idxLst = (int)(idxLst+1);
          }
          /* End function define_styles */
@@ -1709,7 +1693,7 @@ namespace GeneXus.Programs {
       {
          context.AddJavascriptSource("messages.spa.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxdec.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("cambs.js", "?20211230229553");
+         context.AddJavascriptSource("cambs.js", "?20221212032340");
          /* End function include_jscripts */
       }
 
@@ -2168,72 +2152,72 @@ namespace GeneXus.Programs {
        {
           Object[] prmT000E4 ;
           prmT000E4 = new Object[] {
-          new Object[] {"@cambsid",SqlDbType.Int,9,0}
+          new Object[] {"cambsid",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT000E5 ;
           prmT000E5 = new Object[] {
-          new Object[] {"@cambsid",SqlDbType.Int,9,0}
+          new Object[] {"cambsid",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT000E3 ;
           prmT000E3 = new Object[] {
-          new Object[] {"@cambsid",SqlDbType.Int,9,0}
+          new Object[] {"cambsid",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT000E6 ;
           prmT000E6 = new Object[] {
-          new Object[] {"@cambsid",SqlDbType.Int,9,0}
+          new Object[] {"cambsid",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT000E7 ;
           prmT000E7 = new Object[] {
-          new Object[] {"@cambsid",SqlDbType.Int,9,0}
+          new Object[] {"cambsid",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT000E2 ;
           prmT000E2 = new Object[] {
-          new Object[] {"@cambsid",SqlDbType.Int,9,0}
+          new Object[] {"cambsid",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT000E8 ;
           prmT000E8 = new Object[] {
-          new Object[] {"@cambsid",SqlDbType.Int,9,0} ,
-          new Object[] {"@cambsdsc",SqlDbType.VarChar,100,0} ,
-          new Object[] {"@cambsusuario",SqlDbType.VarChar,15,0} ,
-          new Object[] {"@cambsfecreg",SqlDbType.DateTime,10,8} ,
-          new Object[] {"@cambsfecultact",SqlDbType.DateTime,10,8}
+          new Object[] {"cambsid",NpgsqlDbType.Integer,9,0} ,
+          new Object[] {"cambsdsc",NpgsqlDbType.Varchar,100,0} ,
+          new Object[] {"cambsusuario",NpgsqlDbType.Varchar,15,0} ,
+          new Object[] {"cambsfecreg",NpgsqlDbType.Timestamp,10,8} ,
+          new Object[] {"cambsfecultact",NpgsqlDbType.Timestamp,10,8}
           } ;
           Object[] prmT000E9 ;
           prmT000E9 = new Object[] {
-          new Object[] {"@cambsdsc",SqlDbType.VarChar,100,0} ,
-          new Object[] {"@cambsusuario",SqlDbType.VarChar,15,0} ,
-          new Object[] {"@cambsfecreg",SqlDbType.DateTime,10,8} ,
-          new Object[] {"@cambsfecultact",SqlDbType.DateTime,10,8} ,
-          new Object[] {"@cambsid",SqlDbType.Int,9,0}
+          new Object[] {"cambsdsc",NpgsqlDbType.Varchar,100,0} ,
+          new Object[] {"cambsusuario",NpgsqlDbType.Varchar,15,0} ,
+          new Object[] {"cambsfecreg",NpgsqlDbType.Timestamp,10,8} ,
+          new Object[] {"cambsfecultact",NpgsqlDbType.Timestamp,10,8} ,
+          new Object[] {"cambsid",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT000E10 ;
           prmT000E10 = new Object[] {
-          new Object[] {"@cambsid",SqlDbType.Int,9,0}
+          new Object[] {"cambsid",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT000E11 ;
           prmT000E11 = new Object[] {
-          new Object[] {"@cambsid",SqlDbType.Int,9,0}
+          new Object[] {"cambsid",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT000E12 ;
           prmT000E12 = new Object[] {
-          new Object[] {"@cambsid",SqlDbType.Int,9,0}
+          new Object[] {"cambsid",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT000E13 ;
           prmT000E13 = new Object[] {
           } ;
           def= new CursorDef[] {
-              new CursorDef("T000E2", "SELECT [cambsid], [cambsdsc], [cambsusuario], [cambsfecreg], [cambsfecultact] FROM [cambs] WITH (UPDLOCK) WHERE [cambsid] = @cambsid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000E2,1,0,true,false )
-             ,new CursorDef("T000E3", "SELECT [cambsid], [cambsdsc], [cambsusuario], [cambsfecreg], [cambsfecultact] FROM [cambs] WITH (NOLOCK) WHERE [cambsid] = @cambsid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000E3,1,0,true,false )
-             ,new CursorDef("T000E4", "SELECT TM1.[cambsid], TM1.[cambsdsc], TM1.[cambsusuario], TM1.[cambsfecreg], TM1.[cambsfecultact] FROM [cambs] TM1 WITH (NOLOCK) WHERE TM1.[cambsid] = @cambsid ORDER BY TM1.[cambsid]  OPTION (FAST 100)",true, GxErrorMask.GX_NOMASK, false, this,prmT000E4,100,0,true,false )
-             ,new CursorDef("T000E5", "SELECT [cambsid] FROM [cambs] WITH (NOLOCK) WHERE [cambsid] = @cambsid  OPTION (FAST 1)",true, GxErrorMask.GX_NOMASK, false, this,prmT000E5,1,0,true,false )
-             ,new CursorDef("T000E6", "SELECT TOP 1 [cambsid] FROM [cambs] WITH (NOLOCK) WHERE ( [cambsid] > @cambsid) ORDER BY [cambsid]  OPTION (FAST 1)",true, GxErrorMask.GX_NOMASK, false, this,prmT000E6,1,0,true,true )
-             ,new CursorDef("T000E7", "SELECT TOP 1 [cambsid] FROM [cambs] WITH (NOLOCK) WHERE ( [cambsid] < @cambsid) ORDER BY [cambsid] DESC  OPTION (FAST 1)",true, GxErrorMask.GX_NOMASK, false, this,prmT000E7,1,0,true,true )
-             ,new CursorDef("T000E8", "INSERT INTO [cambs]([cambsid], [cambsdsc], [cambsusuario], [cambsfecreg], [cambsfecultact]) VALUES(@cambsid, @cambsdsc, @cambsusuario, @cambsfecreg, @cambsfecultact)", GxErrorMask.GX_NOMASK,prmT000E8)
-             ,new CursorDef("T000E9", "UPDATE [cambs] SET [cambsdsc]=@cambsdsc, [cambsusuario]=@cambsusuario, [cambsfecreg]=@cambsfecreg, [cambsfecultact]=@cambsfecultact  WHERE [cambsid] = @cambsid", GxErrorMask.GX_NOMASK,prmT000E9)
-             ,new CursorDef("T000E10", "DELETE FROM [cambs]  WHERE [cambsid] = @cambsid", GxErrorMask.GX_NOMASK,prmT000E10)
-             ,new CursorDef("T000E11", "SELECT TOP 1 [almacenid], [articulosproductoid], [articuloscambsid] FROM [articulos] WITH (NOLOCK) WHERE [articuloscambsid] = @cambsid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000E11,1,0,true,true )
-             ,new CursorDef("T000E12", "SELECT TOP 1 [etiquetasproductoid], [etiquetascambsid], [almacenid] FROM [etiquetas] WITH (NOLOCK) WHERE [etiquetascambsid] = @cambsid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000E12,1,0,true,true )
-             ,new CursorDef("T000E13", "SELECT [cambsid] FROM [cambs] WITH (NOLOCK) ORDER BY [cambsid]  OPTION (FAST 100)",true, GxErrorMask.GX_NOMASK, false, this,prmT000E13,100,0,true,false )
+              new CursorDef("T000E2", "SELECT cambsid, cambsdsc, cambsusuario, cambsfecreg, cambsfecultact FROM public.cambs WHERE cambsid = :cambsid  FOR UPDATE OF cambs NOWAIT",true, GxErrorMask.GX_NOMASK, false, this,prmT000E2,1,0,true,false )
+             ,new CursorDef("T000E3", "SELECT cambsid, cambsdsc, cambsusuario, cambsfecreg, cambsfecultact FROM public.cambs WHERE cambsid = :cambsid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000E3,1,0,true,false )
+             ,new CursorDef("T000E4", "SELECT TM1.cambsid, TM1.cambsdsc, TM1.cambsusuario, TM1.cambsfecreg, TM1.cambsfecultact FROM public.cambs TM1 WHERE TM1.cambsid = :cambsid ORDER BY TM1.cambsid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000E4,100,0,true,false )
+             ,new CursorDef("T000E5", "SELECT cambsid FROM public.cambs WHERE cambsid = :cambsid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000E5,1,0,true,false )
+             ,new CursorDef("T000E6", "SELECT cambsid FROM public.cambs WHERE ( cambsid > :cambsid) ORDER BY cambsid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000E6,1,0,true,true )
+             ,new CursorDef("T000E7", "SELECT cambsid FROM public.cambs WHERE ( cambsid < :cambsid) ORDER BY cambsid DESC ",true, GxErrorMask.GX_NOMASK, false, this,prmT000E7,1,0,true,true )
+             ,new CursorDef("T000E8", "SAVEPOINT gxupdate;INSERT INTO public.cambs(cambsid, cambsdsc, cambsusuario, cambsfecreg, cambsfecultact) VALUES(:cambsid, :cambsdsc, :cambsusuario, :cambsfecreg, :cambsfecultact);RELEASE SAVEPOINT gxupdate", GxErrorMask.GX_ROLLBACKSAVEPOINT,prmT000E8)
+             ,new CursorDef("T000E9", "SAVEPOINT gxupdate;UPDATE public.cambs SET cambsdsc=:cambsdsc, cambsusuario=:cambsusuario, cambsfecreg=:cambsfecreg, cambsfecultact=:cambsfecultact  WHERE cambsid = :cambsid;RELEASE SAVEPOINT gxupdate", GxErrorMask.GX_ROLLBACKSAVEPOINT | GxErrorMask.GX_NOMASK,prmT000E9)
+             ,new CursorDef("T000E10", "SAVEPOINT gxupdate;DELETE FROM public.cambs  WHERE cambsid = :cambsid;RELEASE SAVEPOINT gxupdate", GxErrorMask.GX_ROLLBACKSAVEPOINT | GxErrorMask.GX_NOMASK,prmT000E10)
+             ,new CursorDef("T000E11", "SELECT articulosid, productoid AS articulosproductoid, cambsid AS articuloscambsid FROM public.articulos WHERE cambsid = :cambsid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000E11,1,0,true,true )
+             ,new CursorDef("T000E12", "SELECT productoid AS etiquetasproductoid, cambsid AS etiquetascambsid, articuloid FROM public.etiquetas WHERE cambsid = :cambsid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000E12,1,0,true,true )
+             ,new CursorDef("T000E13", "SELECT cambsid FROM public.cambs ORDER BY cambsid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000E13,100,0,true,false )
           };
        }
     }

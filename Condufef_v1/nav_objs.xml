@@ -4,6 +4,6 @@
 <ObjCls>13</ObjCls>
 <ObjId>30</ObjId>
 <ObjName>Catalog_De_Cambs</ObjName>
-<ObjStatus>nogenreq</ObjStatus>
+<ObjStatus>genreq</ObjStatus>
 <HasWarnings>Yes</HasWarnings>
 <ObjNavig>GXSPC002\GEN15\NVG\Catalog_De_Cambs.xml</ObjNavig></Object>
