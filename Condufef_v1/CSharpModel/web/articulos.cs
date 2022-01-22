@@ -2,9 +2,9 @@
                File: articulos
         Description: articulos
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 12/30/2021 22:8:56.45
+       Generated on: 1/22/2022 13:27:19.28
        Program type: Callable routine
-          Main DBMS: sqlserver
+          Main DBMS: postgresql
 */
 using System;
 using System.Collections;
@@ -14,7 +14,7 @@ using GeneXus.Application;
 using GeneXus.Metadata;
 using GeneXus.Cryptography;
 using System.Data;
-using System.Data.SqlClient;
+using NpgsqlTypes;
 using GeneXus.Data;
 using com.genexus;
 using GeneXus.Data.ADO;
@@ -65,7 +65,7 @@ namespace GeneXus.Programs {
             dyncall( GetNextPar( )) ;
             return  ;
          }
-         else if ( StringUtil.StrCmp(gxfirstwebparm, "gxajaxExecAct_"+"gxLoad_8") == 0 )
+         else if ( StringUtil.StrCmp(gxfirstwebparm, "gxajaxExecAct_"+"gxLoad_3") == 0 )
          {
             A19almacenid = (long)(NumberUtil.Val( GetNextPar( ), "."));
             context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A19almacenid", StringUtil.LTrim( StringUtil.Str( (decimal)(A19almacenid), 18, 0)));
@@ -75,10 +75,10 @@ namespace GeneXus.Programs {
                GxWebError = 1;
                return  ;
             }
-            gxLoad_8( A19almacenid) ;
+            gxLoad_3( A19almacenid) ;
             return  ;
          }
-         else if ( StringUtil.StrCmp(gxfirstwebparm, "gxajaxExecAct_"+"gxLoad_13") == 0 )
+         else if ( StringUtil.StrCmp(gxfirstwebparm, "gxajaxExecAct_"+"gxLoad_8") == 0 )
          {
             A20articulosproductoid = (int)(NumberUtil.Val( GetNextPar( ), "."));
             context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A20articulosproductoid", StringUtil.LTrim( StringUtil.Str( (decimal)(A20articulosproductoid), 9, 0)));
@@ -88,10 +88,10 @@ namespace GeneXus.Programs {
                GxWebError = 1;
                return  ;
             }
-            gxLoad_13( A20articulosproductoid) ;
+            gxLoad_8( A20articulosproductoid) ;
             return  ;
          }
-         else if ( StringUtil.StrCmp(gxfirstwebparm, "gxajaxExecAct_"+"gxLoad_14") == 0 )
+         else if ( StringUtil.StrCmp(gxfirstwebparm, "gxajaxExecAct_"+"gxLoad_9") == 0 )
          {
             A21articuloscambsid = (int)(NumberUtil.Val( GetNextPar( ), "."));
             context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A21articuloscambsid", StringUtil.LTrim( StringUtil.Str( (decimal)(A21articuloscambsid), 9, 0)));
@@ -101,10 +101,10 @@ namespace GeneXus.Programs {
                GxWebError = 1;
                return  ;
             }
-            gxLoad_14( A21articuloscambsid) ;
+            gxLoad_9( A21articuloscambsid) ;
             return  ;
          }
-         else if ( StringUtil.StrCmp(gxfirstwebparm, "gxajaxExecAct_"+"gxLoad_9") == 0 )
+         else if ( StringUtil.StrCmp(gxfirstwebparm, "gxajaxExecAct_"+"gxLoad_4") == 0 )
          {
             A23tipobienid = (int)(NumberUtil.Val( GetNextPar( ), "."));
             n23tipobienid = false;
@@ -115,10 +115,10 @@ namespace GeneXus.Programs {
                GxWebError = 1;
                return  ;
             }
-            gxLoad_9( A23tipobienid) ;
+            gxLoad_4( A23tipobienid) ;
             return  ;
          }
-         else if ( StringUtil.StrCmp(gxfirstwebparm, "gxajaxExecAct_"+"gxLoad_10") == 0 )
+         else if ( StringUtil.StrCmp(gxfirstwebparm, "gxajaxExecAct_"+"gxLoad_5") == 0 )
          {
             A7entidafederativaid = (int)(NumberUtil.Val( GetNextPar( ), "."));
             n7entidafederativaid = false;
@@ -129,10 +129,10 @@ namespace GeneXus.Programs {
                GxWebError = 1;
                return  ;
             }
-            gxLoad_10( A7entidafederativaid) ;
+            gxLoad_5( A7entidafederativaid) ;
             return  ;
          }
-         else if ( StringUtil.StrCmp(gxfirstwebparm, "gxajaxExecAct_"+"gxLoad_11") == 0 )
+         else if ( StringUtil.StrCmp(gxfirstwebparm, "gxajaxExecAct_"+"gxLoad_6") == 0 )
          {
             A10origenid = (long)(NumberUtil.Val( GetNextPar( ), "."));
             n10origenid = false;
@@ -143,10 +143,10 @@ namespace GeneXus.Programs {
                GxWebError = 1;
                return  ;
             }
-            gxLoad_11( A10origenid) ;
+            gxLoad_6( A10origenid) ;
             return  ;
          }
-         else if ( StringUtil.StrCmp(gxfirstwebparm, "gxajaxExecAct_"+"gxLoad_12") == 0 )
+         else if ( StringUtil.StrCmp(gxfirstwebparm, "gxajaxExecAct_"+"gxLoad_7") == 0 )
          {
             A2proveedoresid = (int)(NumberUtil.Val( GetNextPar( ), "."));
             n2proveedoresid = false;
@@ -157,7 +157,7 @@ namespace GeneXus.Programs {
                GxWebError = 1;
                return  ;
             }
-            gxLoad_12( A2proveedoresid) ;
+            gxLoad_7( A2proveedoresid) ;
             return  ;
          }
          else if ( StringUtil.StrCmp(gxfirstwebparm, "gxajaxEvt") == 0 )
@@ -1487,7 +1487,7 @@ namespace GeneXus.Programs {
 
       protected void ZM0B11( short GX_JID )
       {
-         if ( ( GX_JID == 6 ) || ( GX_JID == 0 ) )
+         if ( ( GX_JID == 1 ) || ( GX_JID == 0 ) )
          {
             if ( StringUtil.StrCmp(Gx_mode, "INS") != 0 )
             {
@@ -1542,7 +1542,7 @@ namespace GeneXus.Programs {
                Z2proveedoresid = A2proveedoresid;
             }
          }
-         if ( GX_JID == -6 )
+         if ( GX_JID == -1 )
          {
             Z154alamcenid = A154alamcenid;
             Z155articulosnoetiqueta = A155articulosnoetiqueta;
@@ -1684,7 +1684,7 @@ namespace GeneXus.Programs {
             A2proveedoresid = T000B11_A2proveedoresid[0];
             context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A2proveedoresid", StringUtil.LTrim( StringUtil.Str( (decimal)(A2proveedoresid), 9, 0)));
             n2proveedoresid = T000B11_n2proveedoresid[0];
-            ZM0B11( -6) ;
+            ZM0B11( -1) ;
          }
          pr_default.close(9);
          OnLoadActions0B11( ) ;
@@ -1790,41 +1790,6 @@ namespace GeneXus.Programs {
             }
          }
          pr_default.close(6);
-         if ( ! ( (DateTime.MinValue==A162articulosfechacoteja) || ( A162articulosfechacoteja >= context.localUtil.YMDHMSToT( 1753, 1, 1, 0, 0, 0) ) ) )
-         {
-            GX_msglist.addItem("Campo articulosfechacoteja fuera de rango", "OutOfRange", 1, "ARTICULOSFECHACOTEJA");
-            AnyError = 1;
-            GX_FocusControl = edtarticulosfechacoteja_Internalname;
-            context.httpAjaxContext.ajax_rsp_assign_attri("", false, "GX_FocusControl", GX_FocusControl);
-         }
-         if ( ! ( (DateTime.MinValue==A163articulosfechaentraalmacen) || ( A163articulosfechaentraalmacen >= context.localUtil.YMDHMSToT( 1753, 1, 1, 0, 0, 0) ) ) )
-         {
-            GX_msglist.addItem("Campo articulosfechaentraalmacen fuera de rango", "OutOfRange", 1, "ARTICULOSFECHAENTRAALMACEN");
-            AnyError = 1;
-            GX_FocusControl = edtarticulosfechaentraalmacen_Internalname;
-            context.httpAjaxContext.ajax_rsp_assign_attri("", false, "GX_FocusControl", GX_FocusControl);
-         }
-         if ( ! ( (DateTime.MinValue==A164articulosfechabajaalma) || ( A164articulosfechabajaalma >= context.localUtil.YMDHMSToT( 1753, 1, 1, 0, 0, 0) ) ) )
-         {
-            GX_msglist.addItem("Campo articulosfechabajaalma fuera de rango", "OutOfRange", 1, "ARTICULOSFECHABAJAALMA");
-            AnyError = 1;
-            GX_FocusControl = edtarticulosfechabajaalma_Internalname;
-            context.httpAjaxContext.ajax_rsp_assign_attri("", false, "GX_FocusControl", GX_FocusControl);
-         }
-         if ( ! ( (DateTime.MinValue==A171articulosfecreg) || ( A171articulosfecreg >= context.localUtil.YMDHMSToT( 1753, 1, 1, 0, 0, 0) ) ) )
-         {
-            GX_msglist.addItem("Campo articulosfecreg fuera de rango", "OutOfRange", 1, "ARTICULOSFECREG");
-            AnyError = 1;
-            GX_FocusControl = edtarticulosfecreg_Internalname;
-            context.httpAjaxContext.ajax_rsp_assign_attri("", false, "GX_FocusControl", GX_FocusControl);
-         }
-         if ( ! ( (DateTime.MinValue==A172articulosfecultact) || ( A172articulosfecultact >= context.localUtil.YMDHMSToT( 1753, 1, 1, 0, 0, 0) ) ) )
-         {
-            GX_msglist.addItem("Campo articulosfecultact fuera de rango", "OutOfRange", 1, "ARTICULOSFECULTACT");
-            AnyError = 1;
-            GX_FocusControl = edtarticulosfecultact_Internalname;
-            context.httpAjaxContext.ajax_rsp_assign_attri("", false, "GX_FocusControl", GX_FocusControl);
-         }
       }
 
       protected void CloseExtendedTableCursors0B11( )
@@ -1842,7 +1807,7 @@ namespace GeneXus.Programs {
       {
       }
 
-      protected void gxLoad_8( long A19almacenid )
+      protected void gxLoad_3( long A19almacenid )
       {
          /* Using cursor T000B13 */
          pr_default.execute(11, new Object[] {A19almacenid});
@@ -1866,7 +1831,7 @@ namespace GeneXus.Programs {
          pr_default.close(11);
       }
 
-      protected void gxLoad_13( int A20articulosproductoid )
+      protected void gxLoad_8( int A20articulosproductoid )
       {
          /* Using cursor T000B14 */
          pr_default.execute(12, new Object[] {A20articulosproductoid});
@@ -1890,7 +1855,7 @@ namespace GeneXus.Programs {
          pr_default.close(12);
       }
 
-      protected void gxLoad_14( int A21articuloscambsid )
+      protected void gxLoad_9( int A21articuloscambsid )
       {
          /* Using cursor T000B15 */
          pr_default.execute(13, new Object[] {A21articuloscambsid});
@@ -1914,7 +1879,7 @@ namespace GeneXus.Programs {
          pr_default.close(13);
       }
 
-      protected void gxLoad_9( int A23tipobienid )
+      protected void gxLoad_4( int A23tipobienid )
       {
          /* Using cursor T000B16 */
          pr_default.execute(14, new Object[] {n23tipobienid, A23tipobienid});
@@ -1941,7 +1906,7 @@ namespace GeneXus.Programs {
          pr_default.close(14);
       }
 
-      protected void gxLoad_10( int A7entidafederativaid )
+      protected void gxLoad_5( int A7entidafederativaid )
       {
          /* Using cursor T000B17 */
          pr_default.execute(15, new Object[] {n7entidafederativaid, A7entidafederativaid});
@@ -1968,7 +1933,7 @@ namespace GeneXus.Programs {
          pr_default.close(15);
       }
 
-      protected void gxLoad_11( long A10origenid )
+      protected void gxLoad_6( long A10origenid )
       {
          /* Using cursor T000B18 */
          pr_default.execute(16, new Object[] {n10origenid, A10origenid});
@@ -1995,7 +1960,7 @@ namespace GeneXus.Programs {
          pr_default.close(16);
       }
 
-      protected void gxLoad_12( int A2proveedoresid )
+      protected void gxLoad_7( int A2proveedoresid )
       {
          /* Using cursor T000B19 */
          pr_default.execute(17, new Object[] {n2proveedoresid, A2proveedoresid});
@@ -2043,7 +2008,7 @@ namespace GeneXus.Programs {
          pr_default.execute(1, new Object[] {A19almacenid, A20articulosproductoid, A21articuloscambsid});
          if ( (pr_default.getStatus(1) != 101) )
          {
-            ZM0B11( 6) ;
+            ZM0B11( 1) ;
             RcdFound11 = 1;
             A154alamcenid = T000B3_A154alamcenid[0];
             context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A154alamcenid", StringUtil.LTrim( StringUtil.Str( (decimal)(A154alamcenid), 18, 0)));
@@ -2471,7 +2436,7 @@ namespace GeneXus.Programs {
             pr_default.execute(0, new Object[] {A19almacenid, A20articulosproductoid, A21articuloscambsid});
             if ( (pr_default.getStatus(0) == 103) )
             {
-               GX_msglist.addItem(context.GetMessage( "GXM_lock", new   object[]  {"articulos"}), "RecordIsLocked", 1, "");
+               GX_msglist.addItem(context.GetMessage( "GXM_lock", new   object[]  {"ARTICULOS"}), "RecordIsLocked", 1, "");
                AnyError = 1;
                return  ;
             }
@@ -2632,7 +2597,7 @@ namespace GeneXus.Programs {
                   GXUtil.WriteLogRaw("Old: ",Z2proveedoresid);
                   GXUtil.WriteLogRaw("Current: ",T000B2_A2proveedoresid[0]);
                }
-               GX_msglist.addItem(context.GetMessage( "GXM_waschg", new   object[]  {"articulos"}), "RecordWasChanged", 1, "");
+               GX_msglist.addItem(context.GetMessage( "GXM_waschg", new   object[]  {"ARTICULOS"}), "RecordWasChanged", 1, "");
                AnyError = 1;
                return  ;
             }
@@ -2661,7 +2626,7 @@ namespace GeneXus.Programs {
                      /* Using cursor T000B23 */
                      pr_default.execute(21, new Object[] {n154alamcenid, A154alamcenid, n155articulosnoetiqueta, A155articulosnoetiqueta, n156articulosdsc, A156articulosdsc, n157articulospreciocompra, A157articulospreciocompra, n158articulospreccomprareexp, A158articulospreccomprareexp, n159articuloscantdepreacum, A159articuloscantdepreacum, n160articulosnumserie, A160articulosnumserie, n161articulosrefdocumento, A161articulosrefdocumento, n162articulosfechacoteja, A162articulosfechacoteja, n163articulosfechaentraalmacen, A163articulosfechaentraalmacen, n164articulosfechabajaalma, A164articulosfechabajaalma, n165articulosstatus, A165articulosstatus, n166articuloscontejado, A166articuloscontejado, n167articulosusuario, A167articulosusuario, n168articulosidtrasfer, A168articulosidtrasfer, n169articulosestatusariticulo, A169articulosestatusariticulo, n170articulostipobien, A170articulostipobien, n171articulosfecreg, A171articulosfecreg, n172articulosfecultact, A172articulosfecultact, A19almacenid, n23tipobienid, A23tipobienid, n7entidafederativaid, A7entidafederativaid, n10origenid, A10origenid, n2proveedoresid, A2proveedoresid, A20articulosproductoid, A21articuloscambsid});
                      pr_default.close(21);
-                     dsDefault.SmartCacheProvider.SetUpdated("articulos") ;
+                     dsDefault.SmartCacheProvider.SetUpdated("ARTICULOS") ;
                      if ( (pr_default.getStatus(21) == 1) )
                      {
                         GX_msglist.addItem(context.GetMessage( "GXM_noupdate", ""), "DuplicatePrimaryKey", 1, "");
@@ -2716,10 +2681,10 @@ namespace GeneXus.Programs {
                      /* Using cursor T000B24 */
                      pr_default.execute(22, new Object[] {n154alamcenid, A154alamcenid, n155articulosnoetiqueta, A155articulosnoetiqueta, n156articulosdsc, A156articulosdsc, n157articulospreciocompra, A157articulospreciocompra, n158articulospreccomprareexp, A158articulospreccomprareexp, n159articuloscantdepreacum, A159articuloscantdepreacum, n160articulosnumserie, A160articulosnumserie, n161articulosrefdocumento, A161articulosrefdocumento, n162articulosfechacoteja, A162articulosfechacoteja, n163articulosfechaentraalmacen, A163articulosfechaentraalmacen, n164articulosfechabajaalma, A164articulosfechabajaalma, n165articulosstatus, A165articulosstatus, n166articuloscontejado, A166articuloscontejado, n167articulosusuario, A167articulosusuario, n168articulosidtrasfer, A168articulosidtrasfer, n169articulosestatusariticulo, A169articulosestatusariticulo, n170articulostipobien, A170articulostipobien, n171articulosfecreg, A171articulosfecreg, n172articulosfecultact, A172articulosfecultact, n23tipobienid, A23tipobienid, n7entidafederativaid, A7entidafederativaid, n10origenid, A10origenid, n2proveedoresid, A2proveedoresid, A19almacenid, A20articulosproductoid, A21articuloscambsid});
                      pr_default.close(22);
-                     dsDefault.SmartCacheProvider.SetUpdated("articulos") ;
+                     dsDefault.SmartCacheProvider.SetUpdated("ARTICULOS") ;
                      if ( (pr_default.getStatus(22) == 103) )
                      {
-                        GX_msglist.addItem(context.GetMessage( "GXM_lock", new   object[]  {"articulos"}), "RecordIsLocked", 1, "");
+                        GX_msglist.addItem(context.GetMessage( "GXM_lock", new   object[]  {"ARTICULOS"}), "RecordIsLocked", 1, "");
                         AnyError = 1;
                      }
                      DeferredUpdate0B11( ) ;
@@ -2773,7 +2738,7 @@ namespace GeneXus.Programs {
                   /* Using cursor T000B25 */
                   pr_default.execute(23, new Object[] {A19almacenid, A20articulosproductoid, A21articuloscambsid});
                   pr_default.close(23);
-                  dsDefault.SmartCacheProvider.SetUpdated("articulos") ;
+                  dsDefault.SmartCacheProvider.SetUpdated("ARTICULOS") ;
                   if ( AnyError == 0 )
                   {
                      /* Start of After( delete) rules */
@@ -2831,7 +2796,6 @@ namespace GeneXus.Programs {
          }
          if ( AnyError == 0 )
          {
-            pr_default.close(1);
             context.CommitDataStores( "articulos");
             if ( AnyError == 0 )
             {
@@ -2843,7 +2807,6 @@ namespace GeneXus.Programs {
          }
          else
          {
-            pr_default.close(1);
             context.RollbackDataStores( "articulos");
          }
          IsModified = 0;
@@ -3015,7 +2978,7 @@ namespace GeneXus.Programs {
          context.AddJavascriptSource("jquery.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxtimezone.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxgral.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("gxcfg.js", "?202112302285961");
+         context.AddJavascriptSource("gxcfg.js", "?202212213272358");
          if ( context.isSpaRequest( ) )
          {
             enableOutput();
@@ -3292,12 +3255,12 @@ namespace GeneXus.Programs {
 
       protected void define_styles( )
       {
-         AddStyleSheetFile("calendar-system.css", "?11323129");
-         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?2284430");
+         AddStyleSheetFile("calendar-system.css", "?13205289");
+         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?13264988");
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?202112302285979");
+            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?202212213272382");
             idxLst = (int)(idxLst+1);
          }
          /* End function define_styles */
@@ -3307,7 +3270,7 @@ namespace GeneXus.Programs {
       {
          context.AddJavascriptSource("messages.spa.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxdec.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("articulos.js", "?202112302285979");
+         context.AddJavascriptSource("articulos.js", "?202212213272383");
          /* End function include_jscripts */
       }
 
@@ -4765,237 +4728,237 @@ namespace GeneXus.Programs {
        {
           Object[] prmT000B11 ;
           prmT000B11 = new Object[] {
-          new Object[] {"@almacenid",SqlDbType.Decimal,18,0} ,
-          new Object[] {"@articulosproductoid",SqlDbType.Int,9,0} ,
-          new Object[] {"@articuloscambsid",SqlDbType.Int,9,0}
+          new Object[] {"almacenid",NpgsqlDbType.Real,18,0} ,
+          new Object[] {"articulosproductoid",NpgsqlDbType.Integer,9,0} ,
+          new Object[] {"articuloscambsid",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT000B4 ;
           prmT000B4 = new Object[] {
-          new Object[] {"@almacenid",SqlDbType.Decimal,18,0}
+          new Object[] {"almacenid",NpgsqlDbType.Real,18,0}
           } ;
           Object[] prmT000B9 ;
           prmT000B9 = new Object[] {
-          new Object[] {"@articulosproductoid",SqlDbType.Int,9,0}
+          new Object[] {"articulosproductoid",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT000B10 ;
           prmT000B10 = new Object[] {
-          new Object[] {"@articuloscambsid",SqlDbType.Int,9,0}
+          new Object[] {"articuloscambsid",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT000B12 ;
           prmT000B12 = new Object[] {
-          new Object[] {"@almacenid",SqlDbType.Decimal,18,0} ,
-          new Object[] {"@articulosproductoid",SqlDbType.Int,9,0} ,
-          new Object[] {"@articuloscambsid",SqlDbType.Int,9,0}
+          new Object[] {"almacenid",NpgsqlDbType.Real,18,0} ,
+          new Object[] {"articulosproductoid",NpgsqlDbType.Integer,9,0} ,
+          new Object[] {"articuloscambsid",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT000B5 ;
           prmT000B5 = new Object[] {
-          new Object[] {"@tipobienid",SqlDbType.Int,9,0}
+          new Object[] {"tipobienid",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT000B6 ;
           prmT000B6 = new Object[] {
-          new Object[] {"@entidafederativaid",SqlDbType.Int,9,0}
+          new Object[] {"entidafederativaid",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT000B7 ;
           prmT000B7 = new Object[] {
-          new Object[] {"@origenid",SqlDbType.Decimal,18,0}
+          new Object[] {"origenid",NpgsqlDbType.Real,18,0}
           } ;
           Object[] prmT000B8 ;
           prmT000B8 = new Object[] {
-          new Object[] {"@proveedoresid",SqlDbType.Int,9,0}
+          new Object[] {"proveedoresid",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT000B13 ;
           prmT000B13 = new Object[] {
-          new Object[] {"@almacenid",SqlDbType.Decimal,18,0}
+          new Object[] {"almacenid",NpgsqlDbType.Real,18,0}
           } ;
           Object[] prmT000B14 ;
           prmT000B14 = new Object[] {
-          new Object[] {"@articulosproductoid",SqlDbType.Int,9,0}
+          new Object[] {"articulosproductoid",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT000B15 ;
           prmT000B15 = new Object[] {
-          new Object[] {"@articuloscambsid",SqlDbType.Int,9,0}
+          new Object[] {"articuloscambsid",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT000B16 ;
           prmT000B16 = new Object[] {
-          new Object[] {"@tipobienid",SqlDbType.Int,9,0}
+          new Object[] {"tipobienid",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT000B17 ;
           prmT000B17 = new Object[] {
-          new Object[] {"@entidafederativaid",SqlDbType.Int,9,0}
+          new Object[] {"entidafederativaid",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT000B18 ;
           prmT000B18 = new Object[] {
-          new Object[] {"@origenid",SqlDbType.Decimal,18,0}
+          new Object[] {"origenid",NpgsqlDbType.Real,18,0}
           } ;
           Object[] prmT000B19 ;
           prmT000B19 = new Object[] {
-          new Object[] {"@proveedoresid",SqlDbType.Int,9,0}
+          new Object[] {"proveedoresid",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT000B20 ;
           prmT000B20 = new Object[] {
-          new Object[] {"@almacenid",SqlDbType.Decimal,18,0} ,
-          new Object[] {"@articulosproductoid",SqlDbType.Int,9,0} ,
-          new Object[] {"@articuloscambsid",SqlDbType.Int,9,0}
+          new Object[] {"almacenid",NpgsqlDbType.Real,18,0} ,
+          new Object[] {"articulosproductoid",NpgsqlDbType.Integer,9,0} ,
+          new Object[] {"articuloscambsid",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT000B3 ;
           prmT000B3 = new Object[] {
-          new Object[] {"@almacenid",SqlDbType.Decimal,18,0} ,
-          new Object[] {"@articulosproductoid",SqlDbType.Int,9,0} ,
-          new Object[] {"@articuloscambsid",SqlDbType.Int,9,0}
+          new Object[] {"almacenid",NpgsqlDbType.Real,18,0} ,
+          new Object[] {"articulosproductoid",NpgsqlDbType.Integer,9,0} ,
+          new Object[] {"articuloscambsid",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT000B21 ;
           prmT000B21 = new Object[] {
-          new Object[] {"@almacenid",SqlDbType.Decimal,18,0} ,
-          new Object[] {"@articulosproductoid",SqlDbType.Int,9,0} ,
-          new Object[] {"@articuloscambsid",SqlDbType.Int,9,0}
+          new Object[] {"almacenid",NpgsqlDbType.Real,18,0} ,
+          new Object[] {"articulosproductoid",NpgsqlDbType.Integer,9,0} ,
+          new Object[] {"articuloscambsid",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT000B22 ;
           prmT000B22 = new Object[] {
-          new Object[] {"@almacenid",SqlDbType.Decimal,18,0} ,
-          new Object[] {"@articulosproductoid",SqlDbType.Int,9,0} ,
-          new Object[] {"@articuloscambsid",SqlDbType.Int,9,0}
+          new Object[] {"almacenid",NpgsqlDbType.Real,18,0} ,
+          new Object[] {"articulosproductoid",NpgsqlDbType.Integer,9,0} ,
+          new Object[] {"articuloscambsid",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT000B2 ;
           prmT000B2 = new Object[] {
-          new Object[] {"@almacenid",SqlDbType.Decimal,18,0} ,
-          new Object[] {"@articulosproductoid",SqlDbType.Int,9,0} ,
-          new Object[] {"@articuloscambsid",SqlDbType.Int,9,0}
+          new Object[] {"almacenid",NpgsqlDbType.Real,18,0} ,
+          new Object[] {"articulosproductoid",NpgsqlDbType.Integer,9,0} ,
+          new Object[] {"articuloscambsid",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT000B23 ;
           prmT000B23 = new Object[] {
-          new Object[] {"@alamcenid",SqlDbType.Decimal,18,0} ,
-          new Object[] {"@articulosnoetiqueta",SqlDbType.Decimal,18,0} ,
-          new Object[] {"@articulosdsc",SqlDbType.VarChar,100,0} ,
-          new Object[] {"@articulospreciocompra",SqlDbType.Decimal,17,6} ,
-          new Object[] {"@articulospreccomprareexp",SqlDbType.Decimal,17,6} ,
-          new Object[] {"@articuloscantdepreacum",SqlDbType.Decimal,17,6} ,
-          new Object[] {"@articulosnumserie",SqlDbType.VarChar,20,0} ,
-          new Object[] {"@articulosrefdocumento",SqlDbType.VarChar,20,0} ,
-          new Object[] {"@articulosfechacoteja",SqlDbType.DateTime,10,8} ,
-          new Object[] {"@articulosfechaentraalmacen",SqlDbType.DateTime,10,8} ,
-          new Object[] {"@articulosfechabajaalma",SqlDbType.DateTime,10,8} ,
-          new Object[] {"@articulosstatus",SqlDbType.Decimal,18,0} ,
-          new Object[] {"@articuloscontejado",SqlDbType.Decimal,18,0} ,
-          new Object[] {"@articulosusuario",SqlDbType.VarChar,20,0} ,
-          new Object[] {"@articulosidtrasfer",SqlDbType.Int,9,0} ,
-          new Object[] {"@articulosestatusariticulo",SqlDbType.Decimal,18,0} ,
-          new Object[] {"@articulostipobien",SqlDbType.Decimal,18,0} ,
-          new Object[] {"@articulosfecreg",SqlDbType.DateTime,10,8} ,
-          new Object[] {"@articulosfecultact",SqlDbType.DateTime,10,8} ,
-          new Object[] {"@almacenid",SqlDbType.Decimal,18,0} ,
-          new Object[] {"@tipobienid",SqlDbType.Int,9,0} ,
-          new Object[] {"@entidafederativaid",SqlDbType.Int,9,0} ,
-          new Object[] {"@origenid",SqlDbType.Decimal,18,0} ,
-          new Object[] {"@proveedoresid",SqlDbType.Int,9,0} ,
-          new Object[] {"@articulosproductoid",SqlDbType.Int,9,0} ,
-          new Object[] {"@articuloscambsid",SqlDbType.Int,9,0}
+          new Object[] {"alamcenid",NpgsqlDbType.Real,18,0} ,
+          new Object[] {"articulosnoetiqueta",NpgsqlDbType.Real,18,0} ,
+          new Object[] {"articulosdsc",NpgsqlDbType.Varchar,100,0} ,
+          new Object[] {"articulospreciocompra",NpgsqlDbType.Numeric,17,6} ,
+          new Object[] {"articulospreccomprareexp",NpgsqlDbType.Numeric,17,6} ,
+          new Object[] {"articuloscantdepreacum",NpgsqlDbType.Numeric,17,6} ,
+          new Object[] {"articulosnumserie",NpgsqlDbType.Varchar,20,0} ,
+          new Object[] {"articulosrefdocumento",NpgsqlDbType.Varchar,20,0} ,
+          new Object[] {"articulosfechacoteja",NpgsqlDbType.Timestamp,10,8} ,
+          new Object[] {"articulosfechaentraalmacen",NpgsqlDbType.Timestamp,10,8} ,
+          new Object[] {"articulosfechabajaalma",NpgsqlDbType.Timestamp,10,8} ,
+          new Object[] {"articulosstatus",NpgsqlDbType.Real,18,0} ,
+          new Object[] {"articuloscontejado",NpgsqlDbType.Real,18,0} ,
+          new Object[] {"articulosusuario",NpgsqlDbType.Varchar,20,0} ,
+          new Object[] {"articulosidtrasfer",NpgsqlDbType.Integer,9,0} ,
+          new Object[] {"articulosestatusariticulo",NpgsqlDbType.Real,18,0} ,
+          new Object[] {"articulostipobien",NpgsqlDbType.Real,18,0} ,
+          new Object[] {"articulosfecreg",NpgsqlDbType.Timestamp,10,8} ,
+          new Object[] {"articulosfecultact",NpgsqlDbType.Timestamp,10,8} ,
+          new Object[] {"almacenid",NpgsqlDbType.Real,18,0} ,
+          new Object[] {"tipobienid",NpgsqlDbType.Integer,9,0} ,
+          new Object[] {"entidafederativaid",NpgsqlDbType.Integer,9,0} ,
+          new Object[] {"origenid",NpgsqlDbType.Real,18,0} ,
+          new Object[] {"proveedoresid",NpgsqlDbType.Integer,9,0} ,
+          new Object[] {"articulosproductoid",NpgsqlDbType.Integer,9,0} ,
+          new Object[] {"articuloscambsid",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT000B24 ;
           prmT000B24 = new Object[] {
-          new Object[] {"@alamcenid",SqlDbType.Decimal,18,0} ,
-          new Object[] {"@articulosnoetiqueta",SqlDbType.Decimal,18,0} ,
-          new Object[] {"@articulosdsc",SqlDbType.VarChar,100,0} ,
-          new Object[] {"@articulospreciocompra",SqlDbType.Decimal,17,6} ,
-          new Object[] {"@articulospreccomprareexp",SqlDbType.Decimal,17,6} ,
-          new Object[] {"@articuloscantdepreacum",SqlDbType.Decimal,17,6} ,
-          new Object[] {"@articulosnumserie",SqlDbType.VarChar,20,0} ,
-          new Object[] {"@articulosrefdocumento",SqlDbType.VarChar,20,0} ,
-          new Object[] {"@articulosfechacoteja",SqlDbType.DateTime,10,8} ,
-          new Object[] {"@articulosfechaentraalmacen",SqlDbType.DateTime,10,8} ,
-          new Object[] {"@articulosfechabajaalma",SqlDbType.DateTime,10,8} ,
-          new Object[] {"@articulosstatus",SqlDbType.Decimal,18,0} ,
-          new Object[] {"@articuloscontejado",SqlDbType.Decimal,18,0} ,
-          new Object[] {"@articulosusuario",SqlDbType.VarChar,20,0} ,
-          new Object[] {"@articulosidtrasfer",SqlDbType.Int,9,0} ,
-          new Object[] {"@articulosestatusariticulo",SqlDbType.Decimal,18,0} ,
-          new Object[] {"@articulostipobien",SqlDbType.Decimal,18,0} ,
-          new Object[] {"@articulosfecreg",SqlDbType.DateTime,10,8} ,
-          new Object[] {"@articulosfecultact",SqlDbType.DateTime,10,8} ,
-          new Object[] {"@tipobienid",SqlDbType.Int,9,0} ,
-          new Object[] {"@entidafederativaid",SqlDbType.Int,9,0} ,
-          new Object[] {"@origenid",SqlDbType.Decimal,18,0} ,
-          new Object[] {"@proveedoresid",SqlDbType.Int,9,0} ,
-          new Object[] {"@almacenid",SqlDbType.Decimal,18,0} ,
-          new Object[] {"@articulosproductoid",SqlDbType.Int,9,0} ,
-          new Object[] {"@articuloscambsid",SqlDbType.Int,9,0}
+          new Object[] {"alamcenid",NpgsqlDbType.Real,18,0} ,
+          new Object[] {"articulosnoetiqueta",NpgsqlDbType.Real,18,0} ,
+          new Object[] {"articulosdsc",NpgsqlDbType.Varchar,100,0} ,
+          new Object[] {"articulospreciocompra",NpgsqlDbType.Numeric,17,6} ,
+          new Object[] {"articulospreccomprareexp",NpgsqlDbType.Numeric,17,6} ,
+          new Object[] {"articuloscantdepreacum",NpgsqlDbType.Numeric,17,6} ,
+          new Object[] {"articulosnumserie",NpgsqlDbType.Varchar,20,0} ,
+          new Object[] {"articulosrefdocumento",NpgsqlDbType.Varchar,20,0} ,
+          new Object[] {"articulosfechacoteja",NpgsqlDbType.Timestamp,10,8} ,
+          new Object[] {"articulosfechaentraalmacen",NpgsqlDbType.Timestamp,10,8} ,
+          new Object[] {"articulosfechabajaalma",NpgsqlDbType.Timestamp,10,8} ,
+          new Object[] {"articulosstatus",NpgsqlDbType.Real,18,0} ,
+          new Object[] {"articuloscontejado",NpgsqlDbType.Real,18,0} ,
+          new Object[] {"articulosusuario",NpgsqlDbType.Varchar,20,0} ,
+          new Object[] {"articulosidtrasfer",NpgsqlDbType.Integer,9,0} ,
+          new Object[] {"articulosestatusariticulo",NpgsqlDbType.Real,18,0} ,
+          new Object[] {"articulostipobien",NpgsqlDbType.Real,18,0} ,
+          new Object[] {"articulosfecreg",NpgsqlDbType.Timestamp,10,8} ,
+          new Object[] {"articulosfecultact",NpgsqlDbType.Timestamp,10,8} ,
+          new Object[] {"tipobienid",NpgsqlDbType.Integer,9,0} ,
+          new Object[] {"entidafederativaid",NpgsqlDbType.Integer,9,0} ,
+          new Object[] {"origenid",NpgsqlDbType.Real,18,0} ,
+          new Object[] {"proveedoresid",NpgsqlDbType.Integer,9,0} ,
+          new Object[] {"almacenid",NpgsqlDbType.Real,18,0} ,
+          new Object[] {"articulosproductoid",NpgsqlDbType.Integer,9,0} ,
+          new Object[] {"articuloscambsid",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT000B25 ;
           prmT000B25 = new Object[] {
-          new Object[] {"@almacenid",SqlDbType.Decimal,18,0} ,
-          new Object[] {"@articulosproductoid",SqlDbType.Int,9,0} ,
-          new Object[] {"@articuloscambsid",SqlDbType.Int,9,0}
+          new Object[] {"almacenid",NpgsqlDbType.Real,18,0} ,
+          new Object[] {"articulosproductoid",NpgsqlDbType.Integer,9,0} ,
+          new Object[] {"articuloscambsid",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT000B26 ;
           prmT000B26 = new Object[] {
           } ;
           Object[] prmT000B27 ;
           prmT000B27 = new Object[] {
-          new Object[] {"@almacenid",SqlDbType.Decimal,18,0}
+          new Object[] {"almacenid",NpgsqlDbType.Real,18,0}
           } ;
           Object[] prmT000B28 ;
           prmT000B28 = new Object[] {
-          new Object[] {"@articulosproductoid",SqlDbType.Int,9,0}
+          new Object[] {"articulosproductoid",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT000B29 ;
           prmT000B29 = new Object[] {
-          new Object[] {"@articuloscambsid",SqlDbType.Int,9,0}
+          new Object[] {"articuloscambsid",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT000B30 ;
           prmT000B30 = new Object[] {
-          new Object[] {"@almacenid",SqlDbType.Decimal,18,0} ,
-          new Object[] {"@articulosproductoid",SqlDbType.Int,9,0} ,
-          new Object[] {"@articuloscambsid",SqlDbType.Int,9,0}
+          new Object[] {"almacenid",NpgsqlDbType.Real,18,0} ,
+          new Object[] {"articulosproductoid",NpgsqlDbType.Integer,9,0} ,
+          new Object[] {"articuloscambsid",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT000B31 ;
           prmT000B31 = new Object[] {
-          new Object[] {"@tipobienid",SqlDbType.Int,9,0}
+          new Object[] {"tipobienid",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT000B32 ;
           prmT000B32 = new Object[] {
-          new Object[] {"@entidafederativaid",SqlDbType.Int,9,0}
+          new Object[] {"entidafederativaid",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT000B33 ;
           prmT000B33 = new Object[] {
-          new Object[] {"@origenid",SqlDbType.Decimal,18,0}
+          new Object[] {"origenid",NpgsqlDbType.Real,18,0}
           } ;
           Object[] prmT000B34 ;
           prmT000B34 = new Object[] {
-          new Object[] {"@proveedoresid",SqlDbType.Int,9,0}
+          new Object[] {"proveedoresid",NpgsqlDbType.Integer,9,0}
           } ;
           def= new CursorDef[] {
-              new CursorDef("T000B2", "SELECT [alamcenid], [articulosnoetiqueta], [articulosdsc], [articulospreciocompra], [articulospreccomprareexp], [articuloscantdepreacum], [articulosnumserie], [articulosrefdocumento], [articulosfechacoteja], [articulosfechaentraalmacen], [articulosfechabajaalma], [articulosstatus], [articuloscontejado], [articulosusuario], [articulosidtrasfer], [articulosestatusariticulo], [articulostipobien], [articulosfecreg], [articulosfecultact], [almacenid], [tipobienid], [entidafederativaid], [origenid], [proveedoresid], [articulosproductoid] AS articulosproductoid, [articuloscambsid] AS articuloscambsid FROM [articulos] WITH (UPDLOCK) WHERE [almacenid] = @almacenid AND [articulosproductoid] = @articulosproductoid AND [articuloscambsid] = @articuloscambsid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000B2,1,0,true,false )
-             ,new CursorDef("T000B3", "SELECT [alamcenid], [articulosnoetiqueta], [articulosdsc], [articulospreciocompra], [articulospreccomprareexp], [articuloscantdepreacum], [articulosnumserie], [articulosrefdocumento], [articulosfechacoteja], [articulosfechaentraalmacen], [articulosfechabajaalma], [articulosstatus], [articuloscontejado], [articulosusuario], [articulosidtrasfer], [articulosestatusariticulo], [articulostipobien], [articulosfecreg], [articulosfecultact], [almacenid], [tipobienid], [entidafederativaid], [origenid], [proveedoresid], [articulosproductoid] AS articulosproductoid, [articuloscambsid] AS articuloscambsid FROM [articulos] WITH (NOLOCK) WHERE [almacenid] = @almacenid AND [articulosproductoid] = @articulosproductoid AND [articuloscambsid] = @articuloscambsid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000B3,1,0,true,false )
-             ,new CursorDef("T000B4", "SELECT [almacenid] FROM [almacen] WITH (NOLOCK) WHERE [almacenid] = @almacenid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000B4,1,0,true,false )
-             ,new CursorDef("T000B5", "SELECT [tipobienid] FROM [tipobien] WITH (NOLOCK) WHERE [tipobienid] = @tipobienid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000B5,1,0,true,false )
-             ,new CursorDef("T000B6", "SELECT [entidafederativaid] FROM [entidadfederativa] WITH (NOLOCK) WHERE [entidafederativaid] = @entidafederativaid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000B6,1,0,true,false )
-             ,new CursorDef("T000B7", "SELECT [origenid] FROM [origen] WITH (NOLOCK) WHERE [origenid] = @origenid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000B7,1,0,true,false )
-             ,new CursorDef("T000B8", "SELECT [proveedoresid] FROM [proveedores] WITH (NOLOCK) WHERE [proveedoresid] = @proveedoresid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000B8,1,0,true,false )
-             ,new CursorDef("T000B9", "SELECT [modelosid] AS articulosproductoid FROM [modelos] WITH (NOLOCK) WHERE [modelosid] = @articulosproductoid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000B9,1,0,true,false )
-             ,new CursorDef("T000B10", "SELECT [cambsid] AS articuloscambsid FROM [cambs] WITH (NOLOCK) WHERE [cambsid] = @articuloscambsid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000B10,1,0,true,false )
-             ,new CursorDef("T000B11", "SELECT TM1.[alamcenid], TM1.[articulosnoetiqueta], TM1.[articulosdsc], TM1.[articulospreciocompra], TM1.[articulospreccomprareexp], TM1.[articuloscantdepreacum], TM1.[articulosnumserie], TM1.[articulosrefdocumento], TM1.[articulosfechacoteja], TM1.[articulosfechaentraalmacen], TM1.[articulosfechabajaalma], TM1.[articulosstatus], TM1.[articuloscontejado], TM1.[articulosusuario], TM1.[articulosidtrasfer], TM1.[articulosestatusariticulo], TM1.[articulostipobien], TM1.[articulosfecreg], TM1.[articulosfecultact], TM1.[almacenid], TM1.[tipobienid], TM1.[entidafederativaid], TM1.[origenid], TM1.[proveedoresid], TM1.[articulosproductoid] AS articulosproductoid, TM1.[articuloscambsid] AS articuloscambsid FROM [articulos] TM1 WITH (NOLOCK) WHERE TM1.[almacenid] = @almacenid and TM1.[articulosproductoid] = @articulosproductoid and TM1.[articuloscambsid] = @articuloscambsid ORDER BY TM1.[almacenid], TM1.[articulosproductoid], TM1.[articuloscambsid]  OPTION (FAST 100)",true, GxErrorMask.GX_NOMASK, false, this,prmT000B11,100,0,true,false )
-             ,new CursorDef("T000B12", "SELECT [almacenid] FROM [articulos] WITH (NOLOCK) WHERE ([almacenid] = @almacenid) AND (Not ( [almacenid] = @almacenid and [articulosproductoid] = @articulosproductoid and [articuloscambsid] = @articuloscambsid)) ",true, GxErrorMask.GX_NOMASK, false, this,prmT000B12,1,0,true,false )
-             ,new CursorDef("T000B13", "SELECT [almacenid] FROM [almacen] WITH (NOLOCK) WHERE [almacenid] = @almacenid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000B13,1,0,true,false )
-             ,new CursorDef("T000B14", "SELECT [modelosid] AS articulosproductoid FROM [modelos] WITH (NOLOCK) WHERE [modelosid] = @articulosproductoid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000B14,1,0,true,false )
-             ,new CursorDef("T000B15", "SELECT [cambsid] AS articuloscambsid FROM [cambs] WITH (NOLOCK) WHERE [cambsid] = @articuloscambsid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000B15,1,0,true,false )
-             ,new CursorDef("T000B16", "SELECT [tipobienid] FROM [tipobien] WITH (NOLOCK) WHERE [tipobienid] = @tipobienid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000B16,1,0,true,false )
-             ,new CursorDef("T000B17", "SELECT [entidafederativaid] FROM [entidadfederativa] WITH (NOLOCK) WHERE [entidafederativaid] = @entidafederativaid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000B17,1,0,true,false )
-             ,new CursorDef("T000B18", "SELECT [origenid] FROM [origen] WITH (NOLOCK) WHERE [origenid] = @origenid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000B18,1,0,true,false )
-             ,new CursorDef("T000B19", "SELECT [proveedoresid] FROM [proveedores] WITH (NOLOCK) WHERE [proveedoresid] = @proveedoresid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000B19,1,0,true,false )
-             ,new CursorDef("T000B20", "SELECT [almacenid], [articulosproductoid] AS articulosproductoid, [articuloscambsid] AS articuloscambsid FROM [articulos] WITH (NOLOCK) WHERE [almacenid] = @almacenid AND [articulosproductoid] = @articulosproductoid AND [articuloscambsid] = @articuloscambsid  OPTION (FAST 1)",true, GxErrorMask.GX_NOMASK, false, this,prmT000B20,1,0,true,false )
-             ,new CursorDef("T000B21", "SELECT TOP 1 [almacenid], [articulosproductoid] AS articulosproductoid, [articuloscambsid] AS articuloscambsid FROM [articulos] WITH (NOLOCK) WHERE ( [almacenid] > @almacenid or [almacenid] = @almacenid and [articulosproductoid] > @articulosproductoid or [articulosproductoid] = @articulosproductoid and [almacenid] = @almacenid and [articuloscambsid] > @articuloscambsid) ORDER BY [almacenid], [articulosproductoid], [articuloscambsid]  OPTION (FAST 1)",true, GxErrorMask.GX_NOMASK, false, this,prmT000B21,1,0,true,true )
-             ,new CursorDef("T000B22", "SELECT TOP 1 [almacenid], [articulosproductoid] AS articulosproductoid, [articuloscambsid] AS articuloscambsid FROM [articulos] WITH (NOLOCK) WHERE ( [almacenid] < @almacenid or [almacenid] = @almacenid and [articulosproductoid] < @articulosproductoid or [articulosproductoid] = @articulosproductoid and [almacenid] = @almacenid and [articuloscambsid] < @articuloscambsid) ORDER BY [almacenid] DESC, [articulosproductoid] DESC, [articuloscambsid] DESC  OPTION (FAST 1)",true, GxErrorMask.GX_NOMASK, false, this,prmT000B22,1,0,true,true )
-             ,new CursorDef("T000B23", "INSERT INTO [articulos]([alamcenid], [articulosnoetiqueta], [articulosdsc], [articulospreciocompra], [articulospreccomprareexp], [articuloscantdepreacum], [articulosnumserie], [articulosrefdocumento], [articulosfechacoteja], [articulosfechaentraalmacen], [articulosfechabajaalma], [articulosstatus], [articuloscontejado], [articulosusuario], [articulosidtrasfer], [articulosestatusariticulo], [articulostipobien], [articulosfecreg], [articulosfecultact], [almacenid], [tipobienid], [entidafederativaid], [origenid], [proveedoresid], [articulosproductoid], [articuloscambsid]) VALUES(@alamcenid, @articulosnoetiqueta, @articulosdsc, @articulospreciocompra, @articulospreccomprareexp, @articuloscantdepreacum, @articulosnumserie, @articulosrefdocumento, @articulosfechacoteja, @articulosfechaentraalmacen, @articulosfechabajaalma, @articulosstatus, @articuloscontejado, @articulosusuario, @articulosidtrasfer, @articulosestatusariticulo, @articulostipobien, @articulosfecreg, @articulosfecultact, @almacenid, @tipobienid, @entidafederativaid, @origenid, @proveedoresid, @articulosproductoid, @articuloscambsid)", GxErrorMask.GX_NOMASK,prmT000B23)
-             ,new CursorDef("T000B24", "UPDATE [articulos] SET [alamcenid]=@alamcenid, [articulosnoetiqueta]=@articulosnoetiqueta, [articulosdsc]=@articulosdsc, [articulospreciocompra]=@articulospreciocompra, [articulospreccomprareexp]=@articulospreccomprareexp, [articuloscantdepreacum]=@articuloscantdepreacum, [articulosnumserie]=@articulosnumserie, [articulosrefdocumento]=@articulosrefdocumento, [articulosfechacoteja]=@articulosfechacoteja, [articulosfechaentraalmacen]=@articulosfechaentraalmacen, [articulosfechabajaalma]=@articulosfechabajaalma, [articulosstatus]=@articulosstatus, [articuloscontejado]=@articuloscontejado, [articulosusuario]=@articulosusuario, [articulosidtrasfer]=@articulosidtrasfer, [articulosestatusariticulo]=@articulosestatusariticulo, [articulostipobien]=@articulostipobien, [articulosfecreg]=@articulosfecreg, [articulosfecultact]=@articulosfecultact, [tipobienid]=@tipobienid, [entidafederativaid]=@entidafederativaid, [origenid]=@origenid, [proveedoresid]=@proveedoresid  WHERE [almacenid] = @almacenid AND [articulosproductoid] = @articulosproductoid AND [articuloscambsid] = @articuloscambsid", GxErrorMask.GX_NOMASK,prmT000B24)
-             ,new CursorDef("T000B25", "DELETE FROM [articulos]  WHERE [almacenid] = @almacenid AND [articulosproductoid] = @articulosproductoid AND [articuloscambsid] = @articuloscambsid", GxErrorMask.GX_NOMASK,prmT000B25)
-             ,new CursorDef("T000B26", "SELECT [almacenid], [articulosproductoid] AS articulosproductoid, [articuloscambsid] AS articuloscambsid FROM [articulos] WITH (NOLOCK) ORDER BY [almacenid], [articulosproductoid], [articuloscambsid]  OPTION (FAST 100)",true, GxErrorMask.GX_NOMASK, false, this,prmT000B26,100,0,true,false )
-             ,new CursorDef("T000B27", "SELECT [almacenid] FROM [almacen] WITH (NOLOCK) WHERE [almacenid] = @almacenid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000B27,1,0,true,false )
-             ,new CursorDef("T000B28", "SELECT [modelosid] AS articulosproductoid FROM [modelos] WITH (NOLOCK) WHERE [modelosid] = @articulosproductoid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000B28,1,0,true,false )
-             ,new CursorDef("T000B29", "SELECT [cambsid] AS articuloscambsid FROM [cambs] WITH (NOLOCK) WHERE [cambsid] = @articuloscambsid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000B29,1,0,true,false )
-             ,new CursorDef("T000B30", "SELECT [almacenid] FROM [articulos] WITH (NOLOCK) WHERE ([almacenid] = @almacenid) AND (Not ( [almacenid] = @almacenid and [articulosproductoid] = @articulosproductoid and [articuloscambsid] = @articuloscambsid)) ",true, GxErrorMask.GX_NOMASK, false, this,prmT000B30,1,0,true,false )
-             ,new CursorDef("T000B31", "SELECT [tipobienid] FROM [tipobien] WITH (NOLOCK) WHERE [tipobienid] = @tipobienid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000B31,1,0,true,false )
-             ,new CursorDef("T000B32", "SELECT [entidafederativaid] FROM [entidadfederativa] WITH (NOLOCK) WHERE [entidafederativaid] = @entidafederativaid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000B32,1,0,true,false )
-             ,new CursorDef("T000B33", "SELECT [origenid] FROM [origen] WITH (NOLOCK) WHERE [origenid] = @origenid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000B33,1,0,true,false )
-             ,new CursorDef("T000B34", "SELECT [proveedoresid] FROM [proveedores] WITH (NOLOCK) WHERE [proveedoresid] = @proveedoresid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000B34,1,0,true,false )
+              new CursorDef("T000B2", "SELECT alamcenid, articulosnoetiqueta, articulosdsc, articulospreciocompra, articulospreccomprareexp, articuloscantdepreacum, articulosnumserie, articulosrefdocumento, articulosfechacoteja, articulosfechaentraalmacen, articulosfechabajaalma, articulosstatus, articuloscontejado, articulosusuario, articulosidtrasfer, articulosestatusariticulo, articulostipobien, articulosfecreg, articulosfecultact, articulosid, tipodocid, entidadid, origenid, proveedorid, productoid AS articulosproductoid, cambsid AS articuloscambsid FROM public.articulos WHERE articulosid = :almacenid AND productoid = :articulosproductoid AND cambsid = :articuloscambsid  FOR UPDATE OF articulos NOWAIT",true, GxErrorMask.GX_NOMASK, false, this,prmT000B2,1,0,true,false )
+             ,new CursorDef("T000B3", "SELECT alamcenid, articulosnoetiqueta, articulosdsc, articulospreciocompra, articulospreccomprareexp, articuloscantdepreacum, articulosnumserie, articulosrefdocumento, articulosfechacoteja, articulosfechaentraalmacen, articulosfechabajaalma, articulosstatus, articuloscontejado, articulosusuario, articulosidtrasfer, articulosestatusariticulo, articulostipobien, articulosfecreg, articulosfecultact, articulosid, tipodocid, entidadid, origenid, proveedorid, productoid AS articulosproductoid, cambsid AS articuloscambsid FROM public.articulos WHERE articulosid = :almacenid AND productoid = :articulosproductoid AND cambsid = :articuloscambsid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000B3,1,0,true,false )
+             ,new CursorDef("T000B4", "SELECT almacenid FROM public.almacen WHERE almacenid = :almacenid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000B4,1,0,true,false )
+             ,new CursorDef("T000B5", "SELECT tipobienid FROM public.tipobien WHERE tipobienid = :tipobienid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000B5,1,0,true,false )
+             ,new CursorDef("T000B6", "SELECT entidafederativaid FROM public.entidadfederativa WHERE entidafederativaid = :entidafederativaid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000B6,1,0,true,false )
+             ,new CursorDef("T000B7", "SELECT origenid FROM public.origen WHERE origenid = :origenid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000B7,1,0,true,false )
+             ,new CursorDef("T000B8", "SELECT proveedoresid FROM public.proveedores WHERE proveedoresid = :proveedoresid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000B8,1,0,true,false )
+             ,new CursorDef("T000B9", "SELECT modelosid AS articulosproductoid FROM public.modelos WHERE modelosid = :articulosproductoid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000B9,1,0,true,false )
+             ,new CursorDef("T000B10", "SELECT cambsid AS articuloscambsid FROM public.cambs WHERE cambsid = :articuloscambsid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000B10,1,0,true,false )
+             ,new CursorDef("T000B11", "SELECT TM1.alamcenid, TM1.articulosnoetiqueta, TM1.articulosdsc, TM1.articulospreciocompra, TM1.articulospreccomprareexp, TM1.articuloscantdepreacum, TM1.articulosnumserie, TM1.articulosrefdocumento, TM1.articulosfechacoteja, TM1.articulosfechaentraalmacen, TM1.articulosfechabajaalma, TM1.articulosstatus, TM1.articuloscontejado, TM1.articulosusuario, TM1.articulosidtrasfer, TM1.articulosestatusariticulo, TM1.articulostipobien, TM1.articulosfecreg, TM1.articulosfecultact, TM1.articulosid, TM1.tipodocid, TM1.entidadid, TM1.origenid, TM1.proveedorid, TM1.productoid AS articulosproductoid, TM1.cambsid AS articuloscambsid FROM public.articulos TM1 WHERE TM1.articulosid = :almacenid and TM1.productoid = :articulosproductoid and TM1.cambsid = :articuloscambsid ORDER BY TM1.articulosid, TM1.productoid, TM1.cambsid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000B11,100,0,true,false )
+             ,new CursorDef("T000B12", "SELECT articulosid FROM public.articulos WHERE (articulosid = :almacenid) AND (Not ( articulosid = :almacenid and productoid = :articulosproductoid and cambsid = :articuloscambsid)) ",true, GxErrorMask.GX_NOMASK, false, this,prmT000B12,1,0,true,false )
+             ,new CursorDef("T000B13", "SELECT almacenid FROM public.almacen WHERE almacenid = :almacenid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000B13,1,0,true,false )
+             ,new CursorDef("T000B14", "SELECT modelosid AS articulosproductoid FROM public.modelos WHERE modelosid = :articulosproductoid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000B14,1,0,true,false )
+             ,new CursorDef("T000B15", "SELECT cambsid AS articuloscambsid FROM public.cambs WHERE cambsid = :articuloscambsid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000B15,1,0,true,false )
+             ,new CursorDef("T000B16", "SELECT tipobienid FROM public.tipobien WHERE tipobienid = :tipobienid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000B16,1,0,true,false )
+             ,new CursorDef("T000B17", "SELECT entidafederativaid FROM public.entidadfederativa WHERE entidafederativaid = :entidafederativaid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000B17,1,0,true,false )
+             ,new CursorDef("T000B18", "SELECT origenid FROM public.origen WHERE origenid = :origenid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000B18,1,0,true,false )
+             ,new CursorDef("T000B19", "SELECT proveedoresid FROM public.proveedores WHERE proveedoresid = :proveedoresid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000B19,1,0,true,false )
+             ,new CursorDef("T000B20", "SELECT articulosid, productoid AS articulosproductoid, cambsid AS articuloscambsid FROM public.articulos WHERE articulosid = :almacenid AND productoid = :articulosproductoid AND cambsid = :articuloscambsid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000B20,1,0,true,false )
+             ,new CursorDef("T000B21", "SELECT articulosid, productoid AS articulosproductoid, cambsid AS articuloscambsid FROM public.articulos WHERE ( articulosid > :almacenid or articulosid = :almacenid and productoid > :articulosproductoid or productoid = :articulosproductoid and articulosid = :almacenid and cambsid > :articuloscambsid) ORDER BY articulosid, productoid, cambsid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000B21,1,0,true,true )
+             ,new CursorDef("T000B22", "SELECT articulosid, productoid AS articulosproductoid, cambsid AS articuloscambsid FROM public.articulos WHERE ( articulosid < :almacenid or articulosid = :almacenid and productoid < :articulosproductoid or productoid = :articulosproductoid and articulosid = :almacenid and cambsid < :articuloscambsid) ORDER BY articulosid DESC, productoid DESC, cambsid DESC ",true, GxErrorMask.GX_NOMASK, false, this,prmT000B22,1,0,true,true )
+             ,new CursorDef("T000B23", "SAVEPOINT gxupdate;INSERT INTO public.articulos(alamcenid, articulosnoetiqueta, articulosdsc, articulospreciocompra, articulospreccomprareexp, articuloscantdepreacum, articulosnumserie, articulosrefdocumento, articulosfechacoteja, articulosfechaentraalmacen, articulosfechabajaalma, articulosstatus, articuloscontejado, articulosusuario, articulosidtrasfer, articulosestatusariticulo, articulostipobien, articulosfecreg, articulosfecultact, articulosid, tipodocid, entidadid, origenid, proveedorid, productoid, cambsid) VALUES(:alamcenid, :articulosnoetiqueta, :articulosdsc, :articulospreciocompra, :articulospreccomprareexp, :articuloscantdepreacum, :articulosnumserie, :articulosrefdocumento, :articulosfechacoteja, :articulosfechaentraalmacen, :articulosfechabajaalma, :articulosstatus, :articuloscontejado, :articulosusuario, :articulosidtrasfer, :articulosestatusariticulo, :articulostipobien, :articulosfecreg, :articulosfecultact, :almacenid, :tipobienid, :entidafederativaid, :origenid, :proveedoresid, :articulosproductoid, :articuloscambsid);RELEASE SAVEPOINT gxupdate", GxErrorMask.GX_ROLLBACKSAVEPOINT | GxErrorMask.GX_NOMASK,prmT000B23)
+             ,new CursorDef("T000B24", "SAVEPOINT gxupdate;UPDATE public.articulos SET alamcenid=:alamcenid, articulosnoetiqueta=:articulosnoetiqueta, articulosdsc=:articulosdsc, articulospreciocompra=:articulospreciocompra, articulospreccomprareexp=:articulospreccomprareexp, articuloscantdepreacum=:articuloscantdepreacum, articulosnumserie=:articulosnumserie, articulosrefdocumento=:articulosrefdocumento, articulosfechacoteja=:articulosfechacoteja, articulosfechaentraalmacen=:articulosfechaentraalmacen, articulosfechabajaalma=:articulosfechabajaalma, articulosstatus=:articulosstatus, articuloscontejado=:articuloscontejado, articulosusuario=:articulosusuario, articulosidtrasfer=:articulosidtrasfer, articulosestatusariticulo=:articulosestatusariticulo, articulostipobien=:articulostipobien, articulosfecreg=:articulosfecreg, articulosfecultact=:articulosfecultact, tipodocid=:tipobienid, entidadid=:entidafederativaid, origenid=:origenid, proveedorid=:proveedoresid  WHERE articulosid = :almacenid AND productoid = :articulosproductoid AND cambsid = :articuloscambsid;RELEASE SAVEPOINT gxupdate", GxErrorMask.GX_ROLLBACKSAVEPOINT | GxErrorMask.GX_NOMASK,prmT000B24)
+             ,new CursorDef("T000B25", "SAVEPOINT gxupdate;DELETE FROM public.articulos  WHERE articulosid = :almacenid AND productoid = :articulosproductoid AND cambsid = :articuloscambsid;RELEASE SAVEPOINT gxupdate", GxErrorMask.GX_ROLLBACKSAVEPOINT | GxErrorMask.GX_NOMASK,prmT000B25)
+             ,new CursorDef("T000B26", "SELECT articulosid, productoid AS articulosproductoid, cambsid AS articuloscambsid FROM public.articulos ORDER BY articulosid, productoid, cambsid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000B26,100,0,true,false )
+             ,new CursorDef("T000B27", "SELECT almacenid FROM public.almacen WHERE almacenid = :almacenid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000B27,1,0,true,false )
+             ,new CursorDef("T000B28", "SELECT modelosid AS articulosproductoid FROM public.modelos WHERE modelosid = :articulosproductoid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000B28,1,0,true,false )
+             ,new CursorDef("T000B29", "SELECT cambsid AS articuloscambsid FROM public.cambs WHERE cambsid = :articuloscambsid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000B29,1,0,true,false )
+             ,new CursorDef("T000B30", "SELECT articulosid FROM public.articulos WHERE (articulosid = :almacenid) AND (Not ( articulosid = :almacenid and productoid = :articulosproductoid and cambsid = :articuloscambsid)) ",true, GxErrorMask.GX_NOMASK, false, this,prmT000B30,1,0,true,false )
+             ,new CursorDef("T000B31", "SELECT tipobienid FROM public.tipobien WHERE tipobienid = :tipobienid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000B31,1,0,true,false )
+             ,new CursorDef("T000B32", "SELECT entidafederativaid FROM public.entidadfederativa WHERE entidafederativaid = :entidafederativaid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000B32,1,0,true,false )
+             ,new CursorDef("T000B33", "SELECT origenid FROM public.origen WHERE origenid = :origenid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000B33,1,0,true,false )
+             ,new CursorDef("T000B34", "SELECT proveedoresid FROM public.proveedores WHERE proveedoresid = :proveedoresid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000B34,1,0,true,false )
           };
        }
     }

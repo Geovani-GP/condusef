@@ -2,9 +2,9 @@
                File: RwdMasterPage
         Description: Responsive Master Page
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 12/30/2021 22:18:10.89
+       Generated on: 1/22/2022 13:27:39.24
        Program type: Callable routine
-          Main DBMS: sqlserver
+          Main DBMS: postgresql
 */
 using System;
 using System.Collections;
@@ -14,7 +14,7 @@ using GeneXus.Application;
 using GeneXus.Metadata;
 using GeneXus.Cryptography;
 using System.Data;
-using System.Data.SqlClient;
+using NpgsqlTypes;
 using GeneXus.Data;
 using com.genexus;
 using GeneXus.Data.ADO;
@@ -139,7 +139,7 @@ namespace GeneXus.Programs {
          {
             WebComp_Wcrecentlinks.componentjscripts();
          }
-         context.AddJavascriptSource("rwdmasterpage.js", "?2021123022181090");
+         context.AddJavascriptSource("rwdmasterpage.js", "?202212213273925");
          context.WriteHtmlTextNl( "</body>") ;
          context.WriteHtmlTextNl( "</html>") ;
          if ( context.isSpaRequest( ) )
@@ -646,7 +646,7 @@ namespace GeneXus.Programs {
 
       protected void define_styles( )
       {
-         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?2284430");
+         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?13264988");
          if ( ! ( WebComp_Wcrecentlinks == null ) )
          {
             if ( StringUtil.Len( WebComp_Wcrecentlinks_Component) != 0 )
@@ -657,7 +657,7 @@ namespace GeneXus.Programs {
          idxLst = 1;
          while ( idxLst <= (getDataAreaObject() == null ? Form : getDataAreaObject().GetForm()).Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((String)(getDataAreaObject() == null ? Form : getDataAreaObject().GetForm()).Jscriptsrc.Item(idxLst))), "?2021123022181097");
+            context.AddJavascriptSource(StringUtil.RTrim( ((String)(getDataAreaObject() == null ? Form : getDataAreaObject().GetForm()).Jscriptsrc.Item(idxLst))), "?202212213273935");
             idxLst = (int)(idxLst+1);
          }
          /* End function define_styles */
@@ -665,7 +665,7 @@ namespace GeneXus.Programs {
 
       protected void include_jscripts( )
       {
-         context.AddJavascriptSource("rwdmasterpage.js", "?2021123022181097");
+         context.AddJavascriptSource("rwdmasterpage.js", "?202212213273935");
          /* End function include_jscripts */
       }
 

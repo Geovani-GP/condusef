@@ -60,7 +60,7 @@
 <BaseTable>
 <Table>
 <TableId>11</TableId>
-<TableName>articulos</TableName>
+<TableName>ARTICULOS</TableName>
 <Description>articulos</Description></Table></BaseTable>
 <Order>
 <Attribute>
@@ -209,7 +209,7 @@
 <NavigationTree>
 <Table>
 <TableId>11</TableId>
-<TableName>articulos</TableName>
+<TableName>ARTICULOS</TableName>
 <Description>articulos</Description>
 <RecordsToRead>many</RecordsToRead>
 <KeyAttributes>

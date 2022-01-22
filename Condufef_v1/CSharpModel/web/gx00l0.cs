@@ -2,9 +2,9 @@
                File: Gx00L0
         Description: Selection List status
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 12/30/2021 22:9:44.86
+       Generated on: 1/22/2022 13:28:17.17
        Program type: Callable routine
-          Main DBMS: sqlserver
+          Main DBMS: postgresql
 */
 using System;
 using System.Collections;
@@ -14,7 +14,7 @@ using GeneXus.Application;
 using GeneXus.Metadata;
 using GeneXus.Cryptography;
 using System.Data;
-using System.Data.SqlClient;
+using NpgsqlTypes;
 using GeneXus.Data;
 using com.genexus;
 using GeneXus.Data.ADO;
@@ -265,7 +265,7 @@ namespace GeneXus.Programs {
          context.AddJavascriptSource("jquery.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxtimezone.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxgral.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("gxcfg.js", "?202112302294491");
+         context.AddJavascriptSource("gxcfg.js", "?202212213281725");
          if ( context.isSpaRequest( ) )
          {
             enableOutput();
@@ -1125,8 +1125,8 @@ namespace GeneXus.Programs {
          if ( String.IsNullOrEmpty(StringUtil.RTrim( context.wjLoc)) && ( context.nUserReturn != 1 ) )
          {
             SubsflControlProps_842( ) ;
-            GXPagingFrom2 = (int)(((10==0) ? 1 : GRID1_nFirstRecordOnPage+1));
-            GXPagingTo2 = (int)(((10==0) ? 10000 : GRID1_nFirstRecordOnPage+subGrid1_Recordsperpage( )+1));
+            GXPagingFrom2 = (int)(((10==0) ? 0 : GRID1_nFirstRecordOnPage));
+            GXPagingTo2 = ((10==0) ? 10000 : subGrid1_Recordsperpage( )+1);
             pr_default.dynParam(0, new Object[]{ new Object[]{
                                                  AV7cstatusdsc ,
                                                  AV8cstatususotabla ,
@@ -1155,7 +1155,7 @@ namespace GeneXus.Programs {
             lV10cstatususuario = StringUtil.Concat( StringUtil.RTrim( AV10cstatususuario), "%", "");
             context.httpAjaxContext.ajax_rsp_assign_attri("", false, "AV10cstatususuario", AV10cstatususuario);
             /* Using cursor H000R2 */
-            pr_default.execute(0, new Object[] {AV6cstatusid, lV7cstatusdsc, lV8cstatususotabla, lV9cstatusdesc, lV10cstatususuario, AV11cstatusfecreg, AV12cstatusfecultact, GXPagingFrom2, GXPagingTo2, GXPagingTo2, GXPagingFrom2, GXPagingFrom2});
+            pr_default.execute(0, new Object[] {AV6cstatusid, lV7cstatusdsc, lV8cstatususotabla, lV9cstatusdesc, lV10cstatususuario, AV11cstatusfecreg, AV12cstatusfecultact, GXPagingFrom2, GXPagingTo2, GXPagingTo2});
             nGXsfl_84_idx = 1;
             while ( ( (pr_default.getStatus(0) != 101) ) && ( ( ( 10 == 0 ) || ( GRID1_nCurrentRecord < subGrid1_Recordsperpage( ) ) ) ) )
             {
@@ -1529,12 +1529,12 @@ namespace GeneXus.Programs {
 
       protected void define_styles( )
       {
-         AddStyleSheetFile("calendar-system.css", "?11323129");
-         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?2284430");
+         AddStyleSheetFile("calendar-system.css", "?13205289");
+         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?13264988");
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?202112302294584");
+            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?202212213281858");
             idxLst = (int)(idxLst+1);
          }
          /* End function define_styles */
@@ -1543,7 +1543,7 @@ namespace GeneXus.Programs {
       protected void include_jscripts( )
       {
          context.AddJavascriptSource("messages.spa.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("gx00l0.js", "?202112302294584");
+         context.AddJavascriptSource("gx00l0.js", "?202212213281858");
          /* End function include_jscripts */
       }
 
@@ -2172,19 +2172,19 @@ namespace GeneXus.Programs {
          String sWhereString = "" ;
          String scmdbuf ;
          short[] GXv_int1 ;
-         GXv_int1 = new short [12] ;
+         GXv_int1 = new short [10] ;
          Object[] GXv_Object2 ;
          GXv_Object2 = new Object [2] ;
          String sSelectString ;
          String sFromString ;
          String sOrderString ;
-         sSelectString = " [statusfecultact], [statusfecreg], [statusdesc], [statususuario], [statususotabla], [statusdsc], [statusid]";
-         sFromString = " FROM [status] WITH (NOLOCK)";
+         sSelectString = " statusfecultact, statusfecreg, statusdesc, statususuario, statususotabla, statusdsc, statusid";
+         sFromString = " FROM public.status";
          sOrderString = "";
-         sWhereString = sWhereString + " WHERE ([statusid] >= @AV6cstatusid)";
+         sWhereString = sWhereString + " WHERE (statusid >= :AV6cstatusid)";
          if ( ! String.IsNullOrEmpty(StringUtil.RTrim( AV7cstatusdsc)) )
          {
-            sWhereString = sWhereString + " and ([statusdsc] like @lV7cstatusdsc)";
+            sWhereString = sWhereString + " and (statusdsc like :lV7cstatusdsc)";
          }
          else
          {
@@ -2192,7 +2192,7 @@ namespace GeneXus.Programs {
          }
          if ( ! String.IsNullOrEmpty(StringUtil.RTrim( AV8cstatususotabla)) )
          {
-            sWhereString = sWhereString + " and ([statususotabla] like @lV8cstatususotabla)";
+            sWhereString = sWhereString + " and (statususotabla like :lV8cstatususotabla)";
          }
          else
          {
@@ -2200,7 +2200,7 @@ namespace GeneXus.Programs {
          }
          if ( ! String.IsNullOrEmpty(StringUtil.RTrim( AV9cstatusdesc)) )
          {
-            sWhereString = sWhereString + " and ([statusdesc] like @lV9cstatusdesc)";
+            sWhereString = sWhereString + " and (statusdesc like :lV9cstatusdesc)";
          }
          else
          {
@@ -2208,7 +2208,7 @@ namespace GeneXus.Programs {
          }
          if ( ! String.IsNullOrEmpty(StringUtil.RTrim( AV10cstatususuario)) )
          {
-            sWhereString = sWhereString + " and ([statususuario] like @lV10cstatususuario)";
+            sWhereString = sWhereString + " and (statususuario like :lV10cstatususuario)";
          }
          else
          {
@@ -2216,7 +2216,7 @@ namespace GeneXus.Programs {
          }
          if ( ! (DateTime.MinValue==AV11cstatusfecreg) )
          {
-            sWhereString = sWhereString + " and ([statusfecreg] >= @AV11cstatusfecreg)";
+            sWhereString = sWhereString + " and (statusfecreg >= :AV11cstatusfecreg)";
          }
          else
          {
@@ -2224,15 +2224,14 @@ namespace GeneXus.Programs {
          }
          if ( ! (DateTime.MinValue==AV12cstatusfecultact) )
          {
-            sWhereString = sWhereString + " and ([statusfecultact] >= @AV12cstatusfecultact)";
+            sWhereString = sWhereString + " and (statusfecultact >= :AV12cstatusfecultact)";
          }
          else
          {
             GXv_int1[6] = 1;
          }
-         sOrderString = sOrderString + " ORDER BY [statusid]";
-         scmdbuf = "SELECT * FROM (SELECT " + sSelectString + ", ROW_NUMBER() OVER (" + sOrderString + " ) AS GX_ROW_NUMBER" + sFromString + sWhereString + "" + ") AS GX_CTE WHERE GX_ROW_NUMBER" + " BETWEEN " + "@GXPagingFrom2" + " AND " + "@GXPagingTo2" + " OR " + "@GXPagingTo2" + " < " + "@GXPagingFrom2" + " AND GX_ROW_NUMBER >= " + "@GXPagingFrom2";
-         scmdbuf = scmdbuf + " OPTION (FAST 11)";
+         sOrderString = sOrderString + " ORDER BY statusid";
+         scmdbuf = "SELECT " + sSelectString + sFromString + sWhereString + "" + sOrderString + " OFFSET " + ":GXPagingFrom2" + " LIMIT CASE WHEN " + ":GXPagingTo2" + " > 0 THEN " + ":GXPagingTo2" + " ELSE 1e9 END";
          GXv_Object2[0] = scmdbuf;
          GXv_Object2[1] = GXv_int1;
          return GXv_Object2 ;
@@ -2259,11 +2258,11 @@ namespace GeneXus.Programs {
          GXv_int3 = new short [7] ;
          Object[] GXv_Object4 ;
          GXv_Object4 = new Object [2] ;
-         scmdbuf = "SELECT COUNT(*) FROM [status] WITH (NOLOCK)";
-         scmdbuf = scmdbuf + " WHERE ([statusid] >= @AV6cstatusid)";
+         scmdbuf = "SELECT COUNT(*) FROM public.status";
+         scmdbuf = scmdbuf + " WHERE (statusid >= :AV6cstatusid)";
          if ( ! String.IsNullOrEmpty(StringUtil.RTrim( AV7cstatusdsc)) )
          {
-            sWhereString = sWhereString + " and ([statusdsc] like @lV7cstatusdsc)";
+            sWhereString = sWhereString + " and (statusdsc like :lV7cstatusdsc)";
          }
          else
          {
@@ -2271,7 +2270,7 @@ namespace GeneXus.Programs {
          }
          if ( ! String.IsNullOrEmpty(StringUtil.RTrim( AV8cstatususotabla)) )
          {
-            sWhereString = sWhereString + " and ([statususotabla] like @lV8cstatususotabla)";
+            sWhereString = sWhereString + " and (statususotabla like :lV8cstatususotabla)";
          }
          else
          {
@@ -2279,7 +2278,7 @@ namespace GeneXus.Programs {
          }
          if ( ! String.IsNullOrEmpty(StringUtil.RTrim( AV9cstatusdesc)) )
          {
-            sWhereString = sWhereString + " and ([statusdesc] like @lV9cstatusdesc)";
+            sWhereString = sWhereString + " and (statusdesc like :lV9cstatusdesc)";
          }
          else
          {
@@ -2287,7 +2286,7 @@ namespace GeneXus.Programs {
          }
          if ( ! String.IsNullOrEmpty(StringUtil.RTrim( AV10cstatususuario)) )
          {
-            sWhereString = sWhereString + " and ([statususuario] like @lV10cstatususuario)";
+            sWhereString = sWhereString + " and (statususuario like :lV10cstatususuario)";
          }
          else
          {
@@ -2295,7 +2294,7 @@ namespace GeneXus.Programs {
          }
          if ( ! (DateTime.MinValue==AV11cstatusfecreg) )
          {
-            sWhereString = sWhereString + " and ([statusfecreg] >= @AV11cstatusfecreg)";
+            sWhereString = sWhereString + " and (statusfecreg >= :AV11cstatusfecreg)";
          }
          else
          {
@@ -2303,7 +2302,7 @@ namespace GeneXus.Programs {
          }
          if ( ! (DateTime.MinValue==AV12cstatusfecultact) )
          {
-            sWhereString = sWhereString + " and ([statusfecultact] >= @AV12cstatusfecultact)";
+            sWhereString = sWhereString + " and (statusfecultact >= :AV12cstatusfecultact)";
          }
          else
          {
@@ -2346,28 +2345,26 @@ namespace GeneXus.Programs {
        {
           Object[] prmH000R2 ;
           prmH000R2 = new Object[] {
-          new Object[] {"@AV6cstatusid",SqlDbType.Int,9,0} ,
-          new Object[] {"@lV7cstatusdsc",SqlDbType.VarChar,50,0} ,
-          new Object[] {"@lV8cstatususotabla",SqlDbType.VarChar,50,0} ,
-          new Object[] {"@lV9cstatusdesc",SqlDbType.VarChar,50,0} ,
-          new Object[] {"@lV10cstatususuario",SqlDbType.VarChar,15,0} ,
-          new Object[] {"@AV11cstatusfecreg",SqlDbType.DateTime,10,8} ,
-          new Object[] {"@AV12cstatusfecultact",SqlDbType.DateTime,10,8} ,
-          new Object[] {"@GXPagingFrom2",SqlDbType.Int,9,0} ,
-          new Object[] {"@GXPagingTo2",SqlDbType.Int,9,0} ,
-          new Object[] {"@GXPagingTo2",SqlDbType.Int,9,0} ,
-          new Object[] {"@GXPagingFrom2",SqlDbType.Int,9,0} ,
-          new Object[] {"@GXPagingFrom2",SqlDbType.Int,9,0}
+          new Object[] {"AV6cstatusid",NpgsqlDbType.Integer,9,0} ,
+          new Object[] {"lV7cstatusdsc",NpgsqlDbType.Varchar,50,0} ,
+          new Object[] {"lV8cstatususotabla",NpgsqlDbType.Varchar,50,0} ,
+          new Object[] {"lV9cstatusdesc",NpgsqlDbType.Varchar,50,0} ,
+          new Object[] {"lV10cstatususuario",NpgsqlDbType.Varchar,15,0} ,
+          new Object[] {"AV11cstatusfecreg",NpgsqlDbType.Timestamp,10,8} ,
+          new Object[] {"AV12cstatusfecultact",NpgsqlDbType.Timestamp,10,8} ,
+          new Object[] {"GXPagingFrom2",NpgsqlDbType.Integer,9,0} ,
+          new Object[] {"GXPagingTo2",NpgsqlDbType.Integer,9,0} ,
+          new Object[] {"GXPagingTo2",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmH000R3 ;
           prmH000R3 = new Object[] {
-          new Object[] {"@AV6cstatusid",SqlDbType.Int,9,0} ,
-          new Object[] {"@lV7cstatusdsc",SqlDbType.VarChar,50,0} ,
-          new Object[] {"@lV8cstatususotabla",SqlDbType.VarChar,50,0} ,
-          new Object[] {"@lV9cstatusdesc",SqlDbType.VarChar,50,0} ,
-          new Object[] {"@lV10cstatususuario",SqlDbType.VarChar,15,0} ,
-          new Object[] {"@AV11cstatusfecreg",SqlDbType.DateTime,10,8} ,
-          new Object[] {"@AV12cstatusfecultact",SqlDbType.DateTime,10,8}
+          new Object[] {"AV6cstatusid",NpgsqlDbType.Integer,9,0} ,
+          new Object[] {"lV7cstatusdsc",NpgsqlDbType.Varchar,50,0} ,
+          new Object[] {"lV8cstatususotabla",NpgsqlDbType.Varchar,50,0} ,
+          new Object[] {"lV9cstatusdesc",NpgsqlDbType.Varchar,50,0} ,
+          new Object[] {"lV10cstatususuario",NpgsqlDbType.Varchar,15,0} ,
+          new Object[] {"AV11cstatusfecreg",NpgsqlDbType.Timestamp,10,8} ,
+          new Object[] {"AV12cstatusfecultact",NpgsqlDbType.Timestamp,10,8}
           } ;
           def= new CursorDef[] {
               new CursorDef("H000R2", "scmdbuf",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmH000R2,11,0,false,false )
@@ -2415,62 +2412,52 @@ namespace GeneXus.Programs {
                 if ( (short)parms[0] == 0 )
                 {
                    sIdx = (short)(sIdx+1);
-                   stmt.SetParameter(sIdx, (int)parms[12]);
+                   stmt.SetParameter(sIdx, (int)parms[10]);
                 }
                 if ( (short)parms[1] == 0 )
                 {
                    sIdx = (short)(sIdx+1);
-                   stmt.SetParameter(sIdx, (String)parms[13]);
+                   stmt.SetParameter(sIdx, (String)parms[11]);
                 }
                 if ( (short)parms[2] == 0 )
                 {
                    sIdx = (short)(sIdx+1);
-                   stmt.SetParameter(sIdx, (String)parms[14]);
+                   stmt.SetParameter(sIdx, (String)parms[12]);
                 }
                 if ( (short)parms[3] == 0 )
                 {
                    sIdx = (short)(sIdx+1);
-                   stmt.SetParameter(sIdx, (String)parms[15]);
+                   stmt.SetParameter(sIdx, (String)parms[13]);
                 }
                 if ( (short)parms[4] == 0 )
                 {
                    sIdx = (short)(sIdx+1);
-                   stmt.SetParameter(sIdx, (String)parms[16]);
+                   stmt.SetParameter(sIdx, (String)parms[14]);
                 }
                 if ( (short)parms[5] == 0 )
                 {
                    sIdx = (short)(sIdx+1);
-                   stmt.SetParameterDatetime(sIdx, (DateTime)parms[17]);
+                   stmt.SetParameterDatetime(sIdx, (DateTime)parms[15]);
                 }
                 if ( (short)parms[6] == 0 )
                 {
                    sIdx = (short)(sIdx+1);
-                   stmt.SetParameterDatetime(sIdx, (DateTime)parms[18]);
+                   stmt.SetParameterDatetime(sIdx, (DateTime)parms[16]);
                 }
                 if ( (short)parms[7] == 0 )
                 {
                    sIdx = (short)(sIdx+1);
-                   stmt.SetParameter(sIdx, (int)parms[19]);
+                   stmt.SetParameter(sIdx, (int)parms[17]);
                 }
                 if ( (short)parms[8] == 0 )
                 {
                    sIdx = (short)(sIdx+1);
-                   stmt.SetParameter(sIdx, (int)parms[20]);
+                   stmt.SetParameter(sIdx, (int)parms[18]);
                 }
                 if ( (short)parms[9] == 0 )
                 {
                    sIdx = (short)(sIdx+1);
-                   stmt.SetParameter(sIdx, (int)parms[21]);
-                }
-                if ( (short)parms[10] == 0 )
-                {
-                   sIdx = (short)(sIdx+1);
-                   stmt.SetParameter(sIdx, (int)parms[22]);
-                }
-                if ( (short)parms[11] == 0 )
-                {
-                   sIdx = (short)(sIdx+1);
-                   stmt.SetParameter(sIdx, (int)parms[23]);
+                   stmt.SetParameter(sIdx, (int)parms[19]);
                 }
                 return;
              case 1 :

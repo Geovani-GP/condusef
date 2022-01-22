@@ -46,7 +46,7 @@
 <BaseTable>
 <Table>
 <TableId>14</TableId>
-<TableName>cambs</TableName>
+<TableName>CAMBS</TableName>
 <Description>cambs</Description></Table></BaseTable>
 <Order>
 <Attribute>
@@ -163,7 +163,7 @@
 <NavigationTree>
 <Table>
 <TableId>14</TableId>
-<TableName>cambs</TableName>
+<TableName>CAMBS</TableName>
 <Description>cambs</Description>
 <RecordsToRead>many</RecordsToRead>
 <KeyAttributes>

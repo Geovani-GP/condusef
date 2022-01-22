@@ -2,9 +2,9 @@
                File: proveedores
         Description: proveedores
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 12/30/2021 22:8:54.54
+       Generated on: 1/22/2022 13:27:16.95
        Program type: Callable routine
-          Main DBMS: sqlserver
+          Main DBMS: postgresql
 */
 using System;
 using System.Collections;
@@ -14,7 +14,7 @@ using GeneXus.Application;
 using GeneXus.Metadata;
 using GeneXus.Cryptography;
 using System.Data;
-using System.Data.SqlClient;
+using NpgsqlTypes;
 using GeneXus.Data;
 using com.genexus;
 using GeneXus.Data.ADO;
@@ -856,7 +856,7 @@ namespace GeneXus.Programs {
 
       protected void ZM0A10( short GX_JID )
       {
-         if ( ( GX_JID == 3 ) || ( GX_JID == 0 ) )
+         if ( ( GX_JID == 1 ) || ( GX_JID == 0 ) )
          {
             if ( StringUtil.StrCmp(Gx_mode, "INS") != 0 )
             {
@@ -891,7 +891,7 @@ namespace GeneXus.Programs {
                Z138proveedoresfecultact = A138proveedoresfecultact;
             }
          }
-         if ( GX_JID == -3 )
+         if ( GX_JID == -1 )
          {
             Z2proveedoresid = A2proveedoresid;
             Z126proveedoresnombre = A126proveedoresnombre;
@@ -984,7 +984,7 @@ namespace GeneXus.Programs {
             A138proveedoresfecultact = T000A4_A138proveedoresfecultact[0];
             context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A138proveedoresfecultact", context.localUtil.TToC( A138proveedoresfecultact, 10, 8, 0, 3, "/", ":", " "));
             n138proveedoresfecultact = T000A4_n138proveedoresfecultact[0];
-            ZM0A10( -3) ;
+            ZM0A10( -1) ;
          }
          pr_default.close(2);
          OnLoadActions0A10( ) ;
@@ -998,20 +998,6 @@ namespace GeneXus.Programs {
       {
          Gx_BScreen = 1;
          standaloneModal( ) ;
-         if ( ! ( (DateTime.MinValue==A137proveedoresfecreg) || ( A137proveedoresfecreg >= context.localUtil.YMDHMSToT( 1753, 1, 1, 0, 0, 0) ) ) )
-         {
-            GX_msglist.addItem("Campo proveedoresfecreg fuera de rango", "OutOfRange", 1, "PROVEEDORESFECREG");
-            AnyError = 1;
-            GX_FocusControl = edtproveedoresfecreg_Internalname;
-            context.httpAjaxContext.ajax_rsp_assign_attri("", false, "GX_FocusControl", GX_FocusControl);
-         }
-         if ( ! ( (DateTime.MinValue==A138proveedoresfecultact) || ( A138proveedoresfecultact >= context.localUtil.YMDHMSToT( 1753, 1, 1, 0, 0, 0) ) ) )
-         {
-            GX_msglist.addItem("Campo proveedoresfecultact fuera de rango", "OutOfRange", 1, "PROVEEDORESFECULTACT");
-            AnyError = 1;
-            GX_FocusControl = edtproveedoresfecultact_Internalname;
-            context.httpAjaxContext.ajax_rsp_assign_attri("", false, "GX_FocusControl", GX_FocusControl);
-         }
       }
 
       protected void CloseExtendedTableCursors0A10( )
@@ -1043,7 +1029,7 @@ namespace GeneXus.Programs {
          pr_default.execute(1, new Object[] {n2proveedoresid, A2proveedoresid});
          if ( (pr_default.getStatus(1) != 101) )
          {
-            ZM0A10( 3) ;
+            ZM0A10( 1) ;
             RcdFound10 = 1;
             A2proveedoresid = T000A3_A2proveedoresid[0];
             context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A2proveedoresid", StringUtil.LTrim( StringUtil.Str( (decimal)(A2proveedoresid), 9, 0)));
@@ -1424,7 +1410,7 @@ namespace GeneXus.Programs {
             pr_default.execute(0, new Object[] {n2proveedoresid, A2proveedoresid});
             if ( (pr_default.getStatus(0) == 103) )
             {
-               GX_msglist.addItem(context.GetMessage( "GXM_lock", new   object[]  {"proveedores"}), "RecordIsLocked", 1, "");
+               GX_msglist.addItem(context.GetMessage( "GXM_lock", new   object[]  {"PROVEEDORES"}), "RecordIsLocked", 1, "");
                AnyError = 1;
                return  ;
             }
@@ -1517,7 +1503,7 @@ namespace GeneXus.Programs {
                   GXUtil.WriteLogRaw("Old: ",Z138proveedoresfecultact);
                   GXUtil.WriteLogRaw("Current: ",T000A2_A138proveedoresfecultact[0]);
                }
-               GX_msglist.addItem(context.GetMessage( "GXM_waschg", new   object[]  {"proveedores"}), "RecordWasChanged", 1, "");
+               GX_msglist.addItem(context.GetMessage( "GXM_waschg", new   object[]  {"PROVEEDORES"}), "RecordWasChanged", 1, "");
                AnyError = 1;
                return  ;
             }
@@ -1546,7 +1532,7 @@ namespace GeneXus.Programs {
                      /* Using cursor T000A8 */
                      pr_default.execute(6, new Object[] {n2proveedoresid, A2proveedoresid, n126proveedoresnombre, A126proveedoresnombre, n127proveedoresdireccion, A127proveedoresdireccion, n128proveedorescolonia, A128proveedorescolonia, n129proveedorescodigopostal, A129proveedorescodigopostal, n130proveedoresmunicipio, A130proveedoresmunicipio, n131proveedorestado, A131proveedorestado, n132proveedorestelefono1, A132proveedorestelefono1, n133proveedorestelefono2, A133proveedorestelefono2, n134proveedoresfax, A134proveedoresfax, n135proveedoresrfc, A135proveedoresrfc, n136proveedoresusuario, A136proveedoresusuario, n137proveedoresfecreg, A137proveedoresfecreg, n138proveedoresfecultact, A138proveedoresfecultact});
                      pr_default.close(6);
-                     dsDefault.SmartCacheProvider.SetUpdated("proveedores") ;
+                     dsDefault.SmartCacheProvider.SetUpdated("PROVEEDORES") ;
                      if ( (pr_default.getStatus(6) == 1) )
                      {
                         GX_msglist.addItem(context.GetMessage( "GXM_noupdate", ""), "DuplicatePrimaryKey", 1, "");
@@ -1601,10 +1587,10 @@ namespace GeneXus.Programs {
                      /* Using cursor T000A9 */
                      pr_default.execute(7, new Object[] {n126proveedoresnombre, A126proveedoresnombre, n127proveedoresdireccion, A127proveedoresdireccion, n128proveedorescolonia, A128proveedorescolonia, n129proveedorescodigopostal, A129proveedorescodigopostal, n130proveedoresmunicipio, A130proveedoresmunicipio, n131proveedorestado, A131proveedorestado, n132proveedorestelefono1, A132proveedorestelefono1, n133proveedorestelefono2, A133proveedorestelefono2, n134proveedoresfax, A134proveedoresfax, n135proveedoresrfc, A135proveedoresrfc, n136proveedoresusuario, A136proveedoresusuario, n137proveedoresfecreg, A137proveedoresfecreg, n138proveedoresfecultact, A138proveedoresfecultact, n2proveedoresid, A2proveedoresid});
                      pr_default.close(7);
-                     dsDefault.SmartCacheProvider.SetUpdated("proveedores") ;
+                     dsDefault.SmartCacheProvider.SetUpdated("PROVEEDORES") ;
                      if ( (pr_default.getStatus(7) == 103) )
                      {
-                        GX_msglist.addItem(context.GetMessage( "GXM_lock", new   object[]  {"proveedores"}), "RecordIsLocked", 1, "");
+                        GX_msglist.addItem(context.GetMessage( "GXM_lock", new   object[]  {"PROVEEDORES"}), "RecordIsLocked", 1, "");
                         AnyError = 1;
                      }
                      DeferredUpdate0A10( ) ;
@@ -1658,7 +1644,7 @@ namespace GeneXus.Programs {
                   /* Using cursor T000A10 */
                   pr_default.execute(8, new Object[] {n2proveedoresid, A2proveedoresid});
                   pr_default.close(8);
-                  dsDefault.SmartCacheProvider.SetUpdated("proveedores") ;
+                  dsDefault.SmartCacheProvider.SetUpdated("PROVEEDORES") ;
                   if ( AnyError == 0 )
                   {
                      /* Start of After( delete) rules */
@@ -1727,7 +1713,6 @@ namespace GeneXus.Programs {
          }
          if ( AnyError == 0 )
          {
-            pr_default.close(1);
             context.CommitDataStores( "proveedores");
             if ( AnyError == 0 )
             {
@@ -1739,7 +1724,6 @@ namespace GeneXus.Programs {
          }
          else
          {
-            pr_default.close(1);
             context.RollbackDataStores( "proveedores");
          }
          IsModified = 0;
@@ -1881,7 +1865,7 @@ namespace GeneXus.Programs {
          context.AddJavascriptSource("jquery.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxtimezone.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxgral.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("gxcfg.js", "?202112302285582");
+         context.AddJavascriptSource("gxcfg.js", "?202212213271848");
          if ( context.isSpaRequest( ) )
          {
             enableOutput();
@@ -2093,12 +2077,12 @@ namespace GeneXus.Programs {
 
       protected void define_styles( )
       {
-         AddStyleSheetFile("calendar-system.css", "?11323129");
-         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?2284430");
+         AddStyleSheetFile("calendar-system.css", "?13205289");
+         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?13264988");
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?202112302285590");
+            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?202212213271859");
             idxLst = (int)(idxLst+1);
          }
          /* End function define_styles */
@@ -2108,7 +2092,7 @@ namespace GeneXus.Programs {
       {
          context.AddJavascriptSource("messages.spa.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxdec.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("proveedores.js", "?202112302285591");
+         context.AddJavascriptSource("proveedores.js", "?202212213271859");
          /* End function include_jscripts */
       }
 
@@ -2859,85 +2843,85 @@ namespace GeneXus.Programs {
        {
           Object[] prmT000A4 ;
           prmT000A4 = new Object[] {
-          new Object[] {"@proveedoresid",SqlDbType.Int,9,0}
+          new Object[] {"proveedoresid",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT000A5 ;
           prmT000A5 = new Object[] {
-          new Object[] {"@proveedoresid",SqlDbType.Int,9,0}
+          new Object[] {"proveedoresid",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT000A3 ;
           prmT000A3 = new Object[] {
-          new Object[] {"@proveedoresid",SqlDbType.Int,9,0}
+          new Object[] {"proveedoresid",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT000A6 ;
           prmT000A6 = new Object[] {
-          new Object[] {"@proveedoresid",SqlDbType.Int,9,0}
+          new Object[] {"proveedoresid",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT000A7 ;
           prmT000A7 = new Object[] {
-          new Object[] {"@proveedoresid",SqlDbType.Int,9,0}
+          new Object[] {"proveedoresid",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT000A2 ;
           prmT000A2 = new Object[] {
-          new Object[] {"@proveedoresid",SqlDbType.Int,9,0}
+          new Object[] {"proveedoresid",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT000A8 ;
           prmT000A8 = new Object[] {
-          new Object[] {"@proveedoresid",SqlDbType.Int,9,0} ,
-          new Object[] {"@proveedoresnombre",SqlDbType.VarChar,80,0} ,
-          new Object[] {"@proveedoresdireccion",SqlDbType.VarChar,50,0} ,
-          new Object[] {"@proveedorescolonia",SqlDbType.VarChar,25,0} ,
-          new Object[] {"@proveedorescodigopostal",SqlDbType.VarChar,5,0} ,
-          new Object[] {"@proveedoresmunicipio",SqlDbType.VarChar,20,0} ,
-          new Object[] {"@proveedorestado",SqlDbType.VarChar,20,0} ,
-          new Object[] {"@proveedorestelefono1",SqlDbType.VarChar,10,0} ,
-          new Object[] {"@proveedorestelefono2",SqlDbType.VarChar,10,0} ,
-          new Object[] {"@proveedoresfax",SqlDbType.VarChar,15,0} ,
-          new Object[] {"@proveedoresrfc",SqlDbType.VarChar,13,0} ,
-          new Object[] {"@proveedoresusuario",SqlDbType.VarChar,15,0} ,
-          new Object[] {"@proveedoresfecreg",SqlDbType.DateTime,10,8} ,
-          new Object[] {"@proveedoresfecultact",SqlDbType.DateTime,10,8}
+          new Object[] {"proveedoresid",NpgsqlDbType.Integer,9,0} ,
+          new Object[] {"proveedoresnombre",NpgsqlDbType.Varchar,80,0} ,
+          new Object[] {"proveedoresdireccion",NpgsqlDbType.Varchar,50,0} ,
+          new Object[] {"proveedorescolonia",NpgsqlDbType.Varchar,25,0} ,
+          new Object[] {"proveedorescodigopostal",NpgsqlDbType.Varchar,5,0} ,
+          new Object[] {"proveedoresmunicipio",NpgsqlDbType.Varchar,20,0} ,
+          new Object[] {"proveedorestado",NpgsqlDbType.Varchar,20,0} ,
+          new Object[] {"proveedorestelefono1",NpgsqlDbType.Varchar,10,0} ,
+          new Object[] {"proveedorestelefono2",NpgsqlDbType.Varchar,10,0} ,
+          new Object[] {"proveedoresfax",NpgsqlDbType.Varchar,15,0} ,
+          new Object[] {"proveedoresrfc",NpgsqlDbType.Varchar,13,0} ,
+          new Object[] {"proveedoresusuario",NpgsqlDbType.Varchar,15,0} ,
+          new Object[] {"proveedoresfecreg",NpgsqlDbType.Timestamp,10,8} ,
+          new Object[] {"proveedoresfecultact",NpgsqlDbType.Timestamp,10,8}
           } ;
           Object[] prmT000A9 ;
           prmT000A9 = new Object[] {
-          new Object[] {"@proveedoresnombre",SqlDbType.VarChar,80,0} ,
-          new Object[] {"@proveedoresdireccion",SqlDbType.VarChar,50,0} ,
-          new Object[] {"@proveedorescolonia",SqlDbType.VarChar,25,0} ,
-          new Object[] {"@proveedorescodigopostal",SqlDbType.VarChar,5,0} ,
-          new Object[] {"@proveedoresmunicipio",SqlDbType.VarChar,20,0} ,
-          new Object[] {"@proveedorestado",SqlDbType.VarChar,20,0} ,
-          new Object[] {"@proveedorestelefono1",SqlDbType.VarChar,10,0} ,
-          new Object[] {"@proveedorestelefono2",SqlDbType.VarChar,10,0} ,
-          new Object[] {"@proveedoresfax",SqlDbType.VarChar,15,0} ,
-          new Object[] {"@proveedoresrfc",SqlDbType.VarChar,13,0} ,
-          new Object[] {"@proveedoresusuario",SqlDbType.VarChar,15,0} ,
-          new Object[] {"@proveedoresfecreg",SqlDbType.DateTime,10,8} ,
-          new Object[] {"@proveedoresfecultact",SqlDbType.DateTime,10,8} ,
-          new Object[] {"@proveedoresid",SqlDbType.Int,9,0}
+          new Object[] {"proveedoresnombre",NpgsqlDbType.Varchar,80,0} ,
+          new Object[] {"proveedoresdireccion",NpgsqlDbType.Varchar,50,0} ,
+          new Object[] {"proveedorescolonia",NpgsqlDbType.Varchar,25,0} ,
+          new Object[] {"proveedorescodigopostal",NpgsqlDbType.Varchar,5,0} ,
+          new Object[] {"proveedoresmunicipio",NpgsqlDbType.Varchar,20,0} ,
+          new Object[] {"proveedorestado",NpgsqlDbType.Varchar,20,0} ,
+          new Object[] {"proveedorestelefono1",NpgsqlDbType.Varchar,10,0} ,
+          new Object[] {"proveedorestelefono2",NpgsqlDbType.Varchar,10,0} ,
+          new Object[] {"proveedoresfax",NpgsqlDbType.Varchar,15,0} ,
+          new Object[] {"proveedoresrfc",NpgsqlDbType.Varchar,13,0} ,
+          new Object[] {"proveedoresusuario",NpgsqlDbType.Varchar,15,0} ,
+          new Object[] {"proveedoresfecreg",NpgsqlDbType.Timestamp,10,8} ,
+          new Object[] {"proveedoresfecultact",NpgsqlDbType.Timestamp,10,8} ,
+          new Object[] {"proveedoresid",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT000A10 ;
           prmT000A10 = new Object[] {
-          new Object[] {"@proveedoresid",SqlDbType.Int,9,0}
+          new Object[] {"proveedoresid",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT000A11 ;
           prmT000A11 = new Object[] {
-          new Object[] {"@proveedoresid",SqlDbType.Int,9,0}
+          new Object[] {"proveedoresid",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT000A12 ;
           prmT000A12 = new Object[] {
           } ;
           def= new CursorDef[] {
-              new CursorDef("T000A2", "SELECT [proveedoresid], [proveedoresnombre], [proveedoresdireccion], [proveedorescolonia], [proveedorescodigopostal], [proveedoresmunicipio], [proveedorestado], [proveedorestelefono1], [proveedorestelefono2], [proveedoresfax], [proveedoresrfc], [proveedoresusuario], [proveedoresfecreg], [proveedoresfecultact] FROM [proveedores] WITH (UPDLOCK) WHERE [proveedoresid] = @proveedoresid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000A2,1,0,true,false )
-             ,new CursorDef("T000A3", "SELECT [proveedoresid], [proveedoresnombre], [proveedoresdireccion], [proveedorescolonia], [proveedorescodigopostal], [proveedoresmunicipio], [proveedorestado], [proveedorestelefono1], [proveedorestelefono2], [proveedoresfax], [proveedoresrfc], [proveedoresusuario], [proveedoresfecreg], [proveedoresfecultact] FROM [proveedores] WITH (NOLOCK) WHERE [proveedoresid] = @proveedoresid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000A3,1,0,true,false )
-             ,new CursorDef("T000A4", "SELECT TM1.[proveedoresid], TM1.[proveedoresnombre], TM1.[proveedoresdireccion], TM1.[proveedorescolonia], TM1.[proveedorescodigopostal], TM1.[proveedoresmunicipio], TM1.[proveedorestado], TM1.[proveedorestelefono1], TM1.[proveedorestelefono2], TM1.[proveedoresfax], TM1.[proveedoresrfc], TM1.[proveedoresusuario], TM1.[proveedoresfecreg], TM1.[proveedoresfecultact] FROM [proveedores] TM1 WITH (NOLOCK) WHERE TM1.[proveedoresid] = @proveedoresid ORDER BY TM1.[proveedoresid]  OPTION (FAST 100)",true, GxErrorMask.GX_NOMASK, false, this,prmT000A4,100,0,true,false )
-             ,new CursorDef("T000A5", "SELECT [proveedoresid] FROM [proveedores] WITH (NOLOCK) WHERE [proveedoresid] = @proveedoresid  OPTION (FAST 1)",true, GxErrorMask.GX_NOMASK, false, this,prmT000A5,1,0,true,false )
-             ,new CursorDef("T000A6", "SELECT TOP 1 [proveedoresid] FROM [proveedores] WITH (NOLOCK) WHERE ( [proveedoresid] > @proveedoresid) ORDER BY [proveedoresid]  OPTION (FAST 1)",true, GxErrorMask.GX_NOMASK, false, this,prmT000A6,1,0,true,true )
-             ,new CursorDef("T000A7", "SELECT TOP 1 [proveedoresid] FROM [proveedores] WITH (NOLOCK) WHERE ( [proveedoresid] < @proveedoresid) ORDER BY [proveedoresid] DESC  OPTION (FAST 1)",true, GxErrorMask.GX_NOMASK, false, this,prmT000A7,1,0,true,true )
-             ,new CursorDef("T000A8", "INSERT INTO [proveedores]([proveedoresid], [proveedoresnombre], [proveedoresdireccion], [proveedorescolonia], [proveedorescodigopostal], [proveedoresmunicipio], [proveedorestado], [proveedorestelefono1], [proveedorestelefono2], [proveedoresfax], [proveedoresrfc], [proveedoresusuario], [proveedoresfecreg], [proveedoresfecultact]) VALUES(@proveedoresid, @proveedoresnombre, @proveedoresdireccion, @proveedorescolonia, @proveedorescodigopostal, @proveedoresmunicipio, @proveedorestado, @proveedorestelefono1, @proveedorestelefono2, @proveedoresfax, @proveedoresrfc, @proveedoresusuario, @proveedoresfecreg, @proveedoresfecultact)", GxErrorMask.GX_NOMASK,prmT000A8)
-             ,new CursorDef("T000A9", "UPDATE [proveedores] SET [proveedoresnombre]=@proveedoresnombre, [proveedoresdireccion]=@proveedoresdireccion, [proveedorescolonia]=@proveedorescolonia, [proveedorescodigopostal]=@proveedorescodigopostal, [proveedoresmunicipio]=@proveedoresmunicipio, [proveedorestado]=@proveedorestado, [proveedorestelefono1]=@proveedorestelefono1, [proveedorestelefono2]=@proveedorestelefono2, [proveedoresfax]=@proveedoresfax, [proveedoresrfc]=@proveedoresrfc, [proveedoresusuario]=@proveedoresusuario, [proveedoresfecreg]=@proveedoresfecreg, [proveedoresfecultact]=@proveedoresfecultact  WHERE [proveedoresid] = @proveedoresid", GxErrorMask.GX_NOMASK,prmT000A9)
-             ,new CursorDef("T000A10", "DELETE FROM [proveedores]  WHERE [proveedoresid] = @proveedoresid", GxErrorMask.GX_NOMASK,prmT000A10)
-             ,new CursorDef("T000A11", "SELECT TOP 1 [almacenid], [articulosproductoid], [articuloscambsid] FROM [articulos] WITH (NOLOCK) WHERE [proveedoresid] = @proveedoresid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000A11,1,0,true,true )
-             ,new CursorDef("T000A12", "SELECT [proveedoresid] FROM [proveedores] WITH (NOLOCK) ORDER BY [proveedoresid]  OPTION (FAST 100)",true, GxErrorMask.GX_NOMASK, false, this,prmT000A12,100,0,true,false )
+              new CursorDef("T000A2", "SELECT proveedoresid, proveedoresnombre, proveedoresdireccion, proveedorescolonia, proveedorescodigopostal, proveedoresmunicipio, proveedorestado, proveedorestelefono1, proveedorestelefono2, proveedoresfax, proveedoresrfc, proveedoresusuario, proveedoresfecreg, proveedoresfecultact FROM public.proveedores WHERE proveedoresid = :proveedoresid  FOR UPDATE OF proveedores NOWAIT",true, GxErrorMask.GX_NOMASK, false, this,prmT000A2,1,0,true,false )
+             ,new CursorDef("T000A3", "SELECT proveedoresid, proveedoresnombre, proveedoresdireccion, proveedorescolonia, proveedorescodigopostal, proveedoresmunicipio, proveedorestado, proveedorestelefono1, proveedorestelefono2, proveedoresfax, proveedoresrfc, proveedoresusuario, proveedoresfecreg, proveedoresfecultact FROM public.proveedores WHERE proveedoresid = :proveedoresid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000A3,1,0,true,false )
+             ,new CursorDef("T000A4", "SELECT TM1.proveedoresid, TM1.proveedoresnombre, TM1.proveedoresdireccion, TM1.proveedorescolonia, TM1.proveedorescodigopostal, TM1.proveedoresmunicipio, TM1.proveedorestado, TM1.proveedorestelefono1, TM1.proveedorestelefono2, TM1.proveedoresfax, TM1.proveedoresrfc, TM1.proveedoresusuario, TM1.proveedoresfecreg, TM1.proveedoresfecultact FROM public.proveedores TM1 WHERE TM1.proveedoresid = :proveedoresid ORDER BY TM1.proveedoresid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000A4,100,0,true,false )
+             ,new CursorDef("T000A5", "SELECT proveedoresid FROM public.proveedores WHERE proveedoresid = :proveedoresid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000A5,1,0,true,false )
+             ,new CursorDef("T000A6", "SELECT proveedoresid FROM public.proveedores WHERE ( proveedoresid > :proveedoresid) ORDER BY proveedoresid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000A6,1,0,true,true )
+             ,new CursorDef("T000A7", "SELECT proveedoresid FROM public.proveedores WHERE ( proveedoresid < :proveedoresid) ORDER BY proveedoresid DESC ",true, GxErrorMask.GX_NOMASK, false, this,prmT000A7,1,0,true,true )
+             ,new CursorDef("T000A8", "SAVEPOINT gxupdate;INSERT INTO public.proveedores(proveedoresid, proveedoresnombre, proveedoresdireccion, proveedorescolonia, proveedorescodigopostal, proveedoresmunicipio, proveedorestado, proveedorestelefono1, proveedorestelefono2, proveedoresfax, proveedoresrfc, proveedoresusuario, proveedoresfecreg, proveedoresfecultact) VALUES(:proveedoresid, :proveedoresnombre, :proveedoresdireccion, :proveedorescolonia, :proveedorescodigopostal, :proveedoresmunicipio, :proveedorestado, :proveedorestelefono1, :proveedorestelefono2, :proveedoresfax, :proveedoresrfc, :proveedoresusuario, :proveedoresfecreg, :proveedoresfecultact);RELEASE SAVEPOINT gxupdate", GxErrorMask.GX_ROLLBACKSAVEPOINT,prmT000A8)
+             ,new CursorDef("T000A9", "SAVEPOINT gxupdate;UPDATE public.proveedores SET proveedoresnombre=:proveedoresnombre, proveedoresdireccion=:proveedoresdireccion, proveedorescolonia=:proveedorescolonia, proveedorescodigopostal=:proveedorescodigopostal, proveedoresmunicipio=:proveedoresmunicipio, proveedorestado=:proveedorestado, proveedorestelefono1=:proveedorestelefono1, proveedorestelefono2=:proveedorestelefono2, proveedoresfax=:proveedoresfax, proveedoresrfc=:proveedoresrfc, proveedoresusuario=:proveedoresusuario, proveedoresfecreg=:proveedoresfecreg, proveedoresfecultact=:proveedoresfecultact  WHERE proveedoresid = :proveedoresid;RELEASE SAVEPOINT gxupdate", GxErrorMask.GX_ROLLBACKSAVEPOINT | GxErrorMask.GX_NOMASK,prmT000A9)
+             ,new CursorDef("T000A10", "SAVEPOINT gxupdate;DELETE FROM public.proveedores  WHERE proveedoresid = :proveedoresid;RELEASE SAVEPOINT gxupdate", GxErrorMask.GX_ROLLBACKSAVEPOINT | GxErrorMask.GX_NOMASK,prmT000A10)
+             ,new CursorDef("T000A11", "SELECT articulosid, productoid, cambsid FROM public.articulos WHERE proveedorid = :proveedoresid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000A11,1,0,true,true )
+             ,new CursorDef("T000A12", "SELECT proveedoresid FROM public.proveedores ORDER BY proveedoresid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000A12,100,0,true,false )
           };
        }
     }

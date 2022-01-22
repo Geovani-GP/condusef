@@ -34,25 +34,11 @@ pos_i(60,[ 0,0,0 ]).
  
  
 rule_i(0,datastore(1,'DS_LAST_CHANGE','')).
-rule_i(0,datastore(1,'LOCK_RETRY','10')).
-rule_i(0,datastore(1,'WAIT_RECORD','0')).
-rule_i(0,datastore(1,'SQLSERVER_VERSION','9')).
+rule_i(0,datastore(1,'POSTGRESQL_VERSION','8_3')).
 rule_i(0,datastore(1,'COMMENT_ON','No')).
-rule_i(0,datastore(1,'DFT_TMP_TBLSPACE','')).
-rule_i(0,datastore(1,'DFT_IDX_TBLSPACE','')).
-rule_i(0,datastore(1,'DFT_TBL_TBLSPACE','')).
 rule_i(0,datastore(1,'DCL_REF_INT_DB','Yes')).
 rule_i(0,datastore(1,'PRIMARY_KEY_TYPE','PK')).
 rule_i(0,datastore(1,'CS_SCHEMA','')).
-rule_i(0,datastore(1,'SORT_ATTRIBUTES','Yes')).
-rule_i(0,datastore(1,'JRN400','QSQJRN')).
-rule_i(0,datastore(1,'CREATE_SAVF','Yes')).
-rule_i(0,datastore(1,'PGMLIB','')).
-rule_i(0,datastore(1,'DTALIB','')).
-rule_i(0,datastore(1,'CC_USER_PASS','')).
-rule_i(0,datastore(1,'CC_USER_ID','')).
-rule_i(0,datastore(1,'CC_SERVER','')).
-rule_i(0,datastore(1,'CC_DBNAME','')).
 rule_i(0,datastore(1,'RecycleRWMin','30')).
 rule_i(0,datastore(1,'RecycleRWType','1')).
 rule_i(0,datastore(1,'RecycleRW','-1')).
@@ -64,26 +50,25 @@ rule_i(0,datastore(1,'CS_RPCPGML','')).
 rule_i(0,datastore(1,'JDBC_DATASOURCE','')).
 rule_i(0,datastore(1,'USE_JDBC_DATASOURCE','0')).
 rule_i(0,datastore(1,'DS_DBMS_ADDINFO','')).
-rule_i(0,datastore(1,'USER_PASSWORD','')).
-rule_i(0,datastore(1,'USER_ID','')).
-rule_i(0,datastore(1,'TRUSTED_CONNECTION','Yes')).
+rule_i(0,datastore(1,'USER_PASSWORD',󻢸蘇�2�5炭)).
+rule_i(0,datastore(1,'USER_ID',postgres)).
 rule_i(0,datastore(1,'CS_CONNECT','First')).
-rule_i(0,datastore(1,'DBMS_PORT','')).
-rule_i(0,datastore(1,'CS_SERVER','JOSBUENO-MX\DELGADO')).
-rule_i(0,datastore(1,'CS_DBNAME','Dar_CONDUCEFDB')).
+rule_i(0,datastore(1,'DBMS_PORT','5432')).
+rule_i(0,datastore(1,'CS_SERVER',localhost)).
+rule_i(0,datastore(1,'CS_DBNAME',postgres)).
 rule_i(0,datastore(1,'CS_FLEDSNAME','')).
-rule_i(0,datastore(1,'CS_DRVNAME','sql server')).
+rule_i(0,datastore(1,'CS_DRVNAME','')).
 rule_i(0,datastore(1,'CS_DSNAME','')).
 rule_i(0,datastore(1,'DB_URL','')).
 rule_i(0,datastore(1,'JDBC_CUSTOM_URL','0')).
 rule_i(0,datastore(1,'JDBC_CUSTOM_DRIVER','')).
-rule_i(0,datastore(1,'JDBC_DRIVER','net.sourceforge.jtds.jdbc.Driver')).
+rule_i(0,datastore(1,'JDBC_DRIVER','org.postgresql.Driver')).
 rule_i(0,datastore(1,'CONNECT_METHOD','OPSYS')).
 rule_i(0,datastore(1,'ACCESS_TECHNO','ADONET')).
 rule_i(0,datastore(1,'MAIN_DS','-1')).
 rule_i(0,datastore(1,'REORG_GEN','8')).
 rule_i(0,datastore(1,'HelpKeyword','20')).
-rule_i(0,datastore(1,'DBMS',12)).
+rule_i(0,datastore(1,'DBMS',15)).
 rule_i(0,datastore(1,'NAME','Default')).
 rule_i(0,prop(idNULLS_BEHAVIOR,idNB_Current)).
 rule_i(0,prop('ObjectVisibility','Public')).
@@ -172,8 +157,6 @@ rule_i(7,prompt([ 7,[ [ [],12,12 ] ],[],[],[ t(o(13,'Gx0070'),28),t(12,2) ],[],n
 rule_i(7,rule([ a(23,[ [ 12 ],[ t(o(13,'Gx0070'),28),t(12,2) ] ]) ],[],[],[ 12 ])).
 rule_i(0,rule([ a(22,[ 'Dlt','"Eliminar"','' ]) ],[],[],[])).
 rule_i(0,maingen(15)).
-rule_i(7,rule([ a(1,msg([ t('"Campo estatusarticulofecreg fuera de rango"',3) ],[ t('OutOfRange',3) ])) ],[ t('NOT',8),t('(',0),t('null(',1),t(59,2),t(')',4),t('.OR.',9),t(59,2),t(>=,10),t('ymdhmstot(',1),t('1753',3),t(',',7),t('01',3),t(',',7),t('01',3),t(',',7),t('00',3),t(',',7),t('00',3),t(',',7),t('00',3),t(')',4),t(')',4) ],[ insert,update ],[ 59 ])).
-rule_i(7,rule([ a(1,msg([ t('"Campo estatusarticulofecultact fuera de rango"',3) ],[ t('OutOfRange',3) ])) ],[ t('NOT',8),t('(',0),t('null(',1),t(60,2),t(')',4),t('.OR.',9),t(60,2),t(>=,10),t('ymdhmstot(',1),t('1753',3),t(',',7),t('01',3),t(',',7),t('01',3),t(',',7),t('00',3),t(',',7),t('00',3),t(',',7),t('00',3),t(')',4),t(')',4) ],[ insert,update ],[ 60 ])).
 rule_i(0,p(0,0,fv,10,[ intname,'ESTATUSARTICULO' ])).
 rule_i(0,p(0,0,fv,10,[ table,7 ])).
 rule_i(0,p(0,15,fv,10,[])).
@@ -186,23 +169,21 @@ rule_i(0,p(0,15,fvix,[ 10,9 ],[ 'NAME',estatusarticulo_pkey ])).
 rule_i(0,p(0,15,fvix,[ 10,9 ],[ 'LOC','' ])).
 rule_i(0,p(0,15,fvix,[ 10,9 ],[ 'SCHEMA',public ])).
 rule_i(0,p(0,15,fvix,[ 10,9 ],[ 'EXTNAM','YES' ])).
+rule_i(0,file(7,'ESTATUSARTICULO',[ 12,54,55,56,57,58,59,60 ])).
+rule_i(0,loc([ 7 ],'ESTATUSARTICULO','','LAN')).
+rule_i(0,index(7,'ESTATUSARTICULO_PKEY',u,[ 12 ])).
+rule_i(0,loc([ 7,'ESTATUSARTICULO_PKEY' ],estatusarticulo_pkey,'','LAN')).
  
-a_i(1,7,b,0,[],[ [],[ a(1,msg([ t('"Campo estatusarticulofecreg fuera de rango"',3) ],[ t('OutOfRange',3) ])) ],[ t('NOT',8),t('(',0),t('null(',1),t(59,2),t(')',4),t('.OR.',9),t(59,2),t(>=,10),t('ymdhmstot(',1),t('1753',3),t(',',7),t('01',3),t(',',7),t('01',3),t(',',7),t('00',3),t(',',7),t('00',3),t(',',7),t('00',3),t(')',4),t(')',4) ] ]).
-a_i(2,7,b,0,[],[ [],[ a(1,msg([ t('"Campo estatusarticulofecultact fuera de rango"',3) ],[ t('OutOfRange',3) ])) ],[ t('NOT',8),t('(',0),t('null(',1),t(60,2),t(')',4),t('.OR.',9),t(60,2),t(>=,10),t('ymdhmstot(',1),t('1753',3),t(',',7),t('01',3),t(',',7),t('01',3),t(',',7),t('00',3),t(',',7),t('00',3),t(',',7),t('00',3),t(')',4),t(')',4) ] ]).
-a_i(3,7,t,7,[],[ [ [ [],12,12 ] ],'ESTATUSARTICULO_PKEY',[] ]).
+a_i(1,7,t,7,[],[ [ [ [],12,12 ] ],'ESTATUSARTICULO_PKEY',[] ]).
  
-v_i(b,i,1,59).
-v_i(b,o,1,[]).
-v_i(b,i,2,60).
-v_i(b,o,2,[]).
-v_i(t,i,3,12).
-v_i(t,o,3,54).
-v_i(t,o,3,55).
-v_i(t,o,3,56).
-v_i(t,o,3,57).
-v_i(t,o,3,58).
-v_i(t,o,3,59).
-v_i(t,o,3,60).
+v_i(t,i,1,12).
+v_i(t,o,1,54).
+v_i(t,o,1,55).
+v_i(t,o,1,56).
+v_i(t,o,1,57).
+v_i(t,o,1,58).
+v_i(t,o,1,59).
+v_i(t,o,1,60).
  
  
  
@@ -220,9 +201,9 @@ attri_i(12,[ estatusarticuloid,int,18,0,'ZZZZZZZZZZZZZZZZZ9',0,estatusarticuloid
 attri_i('Gxremove',[ 'GxRemove',int,1,0,'9',0,'Gx Remove','',5 ]).
 attri_i('Mode',[ 'Gx_mode',char,3,0,'@!',1,'','',2 ]).
  
-table_i(7,[ estatusarticulo,[ 12,54,55,56,57,58,59,60 ],estatusarticulo,estatusarticulo ]).
+table_i(7,[ 'ESTATUSARTICULO',[ 12,54,55,56,57,58,59,60 ],estatusarticulo,estatusarticulo ]).
  
-index_i(7,[ 'ESTATUSARTICULO_PKEY',u,[ 12 ],estatusarticulo_pkey ]).
+index_i(7,[ 'ESTATUSARTICULO_PKEY',u,[ 12 ],'ESTATUSARTICULO_PKEY' ]).
  
  
  
@@ -244,6 +225,15 @@ upd_i(7,7,d,[ [],[],'ESTATUSARTICULO_PKEY',[] ]).
  
  
  
+map_i(7,i,'ESTATUSARTICULO_PKEY',[ 'ESTATUSARTICULO_PKEY' ]).
+map_i(7,a,60,[ estatusarticulofecultact ]).
+map_i(7,a,59,[ estatusarticulofecreg ]).
+map_i(7,a,58,[ estatusarticulousuario ]).
+map_i(7,a,57,[ estatusarticulousotabla ]).
+map_i(7,a,56,[ estatusarticuloaplicamov ]).
+map_i(7,a,55,[ estatusarticulodescuso ]).
+map_i(7,a,54,[ estatusarticulodsc ]).
+map_i(7,a,12,[ estatusarticuloid ]).
  
  
  

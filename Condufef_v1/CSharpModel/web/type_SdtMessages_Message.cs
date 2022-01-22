@@ -2,7 +2,7 @@
                File: type_SdtMessages_Message
         Description: Messages
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 1/21/2022 20:3:24.32
+       Generated on: 1/22/2022 13:28:19.83
        Program type: Callable routine
           Main DBMS: postgresql
 */

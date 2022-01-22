@@ -24,12 +24,12 @@
 <BaseTable>
 <Table>
 <TableId>12</TableId>
-<TableName>etiquetas</TableName>
+<TableName>ETIQUETAS</TableName>
 <Description>etiquetas</Description></Table></BaseTable>
 <NavigationTree>
 <Table>
 <TableId>12</TableId>
-<TableName>etiquetas</TableName>
+<TableName>ETIQUETAS</TableName>
 <Description>etiquetas</Description>
 <Updated>Yes</Updated>
 <RecordsToRead>many</RecordsToRead>
@@ -49,7 +49,7 @@
 <Tables>
 <Table>
 <TableId>18</TableId>
-<TableName>almacen</TableName>
+<TableName>ALMACEN</TableName>
 <Description>almacen</Description>
 <RecordsToRead>one</RecordsToRead>
 <KeyAttributes>
@@ -60,7 +60,7 @@
 <Tables></Tables></Table>
 <Table>
 <TableId>19</TableId>
-<TableName>modelos</TableName>
+<TableName>MODELOS</TableName>
 <Description>modelos</Description>
 <RecordsToRead>one</RecordsToRead>
 <KeyAttributes>
@@ -71,7 +71,7 @@
 <Tables></Tables></Table>
 <Table>
 <TableId>14</TableId>
-<TableName>cambs</TableName>
+<TableName>CAMBS</TableName>
 <Description>cambs</Description>
 <RecordsToRead>one</RecordsToRead>
 <KeyAttributes>
@@ -91,7 +91,7 @@
 <TableToUpdate>
 <Table>
 <TableId>12</TableId>
-<TableName>etiquetas</TableName>
+<TableName>ETIQUETAS</TableName>
 <Description>etiquetas</Description></Table>
 <TableAction>insert</TableAction>
 <AttrisToUpdate>
@@ -138,7 +138,7 @@
 <TableToUpdate>
 <Table>
 <TableId>12</TableId>
-<TableName>etiquetas</TableName>
+<TableName>ETIQUETAS</TableName>
 <Description>etiquetas</Description></Table>
 <TableAction>update</TableAction>
 <AttrisToUpdate>
@@ -173,7 +173,7 @@
 <TableToUpdate>
 <Table>
 <TableId>12</TableId>
-<TableName>etiquetas</TableName>
+<TableName>ETIQUETAS</TableName>
 <Description>etiquetas</Description></Table>
 <TableAction>delete</TableAction>
 <AttrisToUpdate></AttrisToUpdate></TableToUpdate></TablesToUpdate>
@@ -188,7 +188,7 @@
 <Prompt>
 <Table>
 <TableId>14</TableId>
-<TableName>cambs</TableName>
+<TableName>CAMBS</TableName>
 <Description>cambs</Description></Table>
 <Object>
 <ObjClsGuid>c9584656-94b6-4ccd-890f-332d11fc2c25</ObjClsGuid>
@@ -207,7 +207,7 @@
 <Prompt>
 <Table>
 <TableId>19</TableId>
-<TableName>modelos</TableName>
+<TableName>MODELOS</TableName>
 <Description>modelos</Description></Table>
 <Object>
 <ObjClsGuid>c9584656-94b6-4ccd-890f-332d11fc2c25</ObjClsGuid>
@@ -226,7 +226,7 @@
 <Prompt>
 <Table>
 <TableId>18</TableId>
-<TableName>almacen</TableName>
+<TableName>ALMACEN</TableName>
 <Description>almacen</Description></Table>
 <Object>
 <ObjClsGuid>c9584656-94b6-4ccd-890f-332d11fc2c25</ObjClsGuid>
@@ -245,7 +245,7 @@
 <Prompt>
 <Table>
 <TableId>12</TableId>
-<TableName>etiquetas</TableName>
+<TableName>ETIQUETAS</TableName>
 <Description>etiquetas</Description></Table>
 <Object>
 <ObjClsGuid>c9584656-94b6-4ccd-890f-332d11fc2c25</ObjClsGuid>

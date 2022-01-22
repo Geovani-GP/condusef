@@ -50,7 +50,7 @@
 <BaseTable>
 <Table>
 <TableId>18</TableId>
-<TableName>almacen</TableName>
+<TableName>ALMACEN</TableName>
 <Description>almacen</Description></Table></BaseTable>
 <Order>
 <Attribute>
@@ -209,7 +209,7 @@
 <NavigationTree>
 <Table>
 <TableId>18</TableId>
-<TableName>almacen</TableName>
+<TableName>ALMACEN</TableName>
 <Description>almacen</Description>
 <RecordsToRead>many</RecordsToRead>
 <KeyAttributes>

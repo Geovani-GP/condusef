@@ -24,12 +24,12 @@
 <BaseTable>
 <Table>
 <TableId>9</TableId>
-<TableName>producto</TableName>
+<TableName>PRODUCTO</TableName>
 <Description>producto</Description></Table></BaseTable>
 <NavigationTree>
 <Table>
 <TableId>9</TableId>
-<TableName>producto</TableName>
+<TableName>PRODUCTO</TableName>
 <Description>producto</Description>
 <Updated>Yes</Updated>
 <RecordsToRead>many</RecordsToRead>
@@ -45,7 +45,7 @@
 <Tables>
 <Table>
 <TableId>19</TableId>
-<TableName>modelos</TableName>
+<TableName>MODELOS</TableName>
 <Description>modelos</Description>
 <RecordsToRead>one</RecordsToRead>
 <KeyAttributes>
@@ -65,7 +65,7 @@
 <TableToUpdate>
 <Table>
 <TableId>9</TableId>
-<TableName>producto</TableName>
+<TableName>PRODUCTO</TableName>
 <Description>producto</Description></Table>
 <TableAction>insert</TableAction>
 <AttrisToUpdate>
@@ -108,7 +108,7 @@
 <TableToUpdate>
 <Table>
 <TableId>9</TableId>
-<TableName>producto</TableName>
+<TableName>PRODUCTO</TableName>
 <Description>producto</Description></Table>
 <TableAction>update</TableAction>
 <AttrisToUpdate>
@@ -143,7 +143,7 @@
 <TableToUpdate>
 <Table>
 <TableId>9</TableId>
-<TableName>producto</TableName>
+<TableName>PRODUCTO</TableName>
 <Description>producto</Description></Table>
 <TableAction>delete</TableAction>
 <AttrisToUpdate></AttrisToUpdate></TableToUpdate></TablesToUpdate>
@@ -158,7 +158,7 @@
 <Prompt>
 <Table>
 <TableId>19</TableId>
-<TableName>modelos</TableName>
+<TableName>MODELOS</TableName>
 <Description>modelos</Description></Table>
 <Object>
 <ObjClsGuid>c9584656-94b6-4ccd-890f-332d11fc2c25</ObjClsGuid>
@@ -177,7 +177,7 @@
 <Prompt>
 <Table>
 <TableId>9</TableId>
-<TableName>producto</TableName>
+<TableName>PRODUCTO</TableName>
 <Description>producto</Description></Table>
 <Object>
 <ObjClsGuid>c9584656-94b6-4ccd-890f-332d11fc2c25</ObjClsGuid>

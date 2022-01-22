@@ -2,9 +2,9 @@
                File: Gx00E0
         Description: Selection List cambs
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 12/30/2021 22:9:32.24
+       Generated on: 1/22/2022 13:28:2.51
        Program type: Callable routine
-          Main DBMS: sqlserver
+          Main DBMS: postgresql
 */
 using System;
 using System.Collections;
@@ -14,7 +14,7 @@ using GeneXus.Application;
 using GeneXus.Metadata;
 using GeneXus.Cryptography;
 using System.Data;
-using System.Data.SqlClient;
+using NpgsqlTypes;
 using GeneXus.Data;
 using com.genexus;
 using GeneXus.Data.ADO;
@@ -261,7 +261,7 @@ namespace GeneXus.Programs {
          context.AddJavascriptSource("jquery.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxtimezone.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxgral.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("gxcfg.js", "?202112302293228");
+         context.AddJavascriptSource("gxcfg.js", "?20221221328256");
          if ( context.isSpaRequest( ) )
          {
             enableOutput();
@@ -1033,8 +1033,8 @@ namespace GeneXus.Programs {
          if ( String.IsNullOrEmpty(StringUtil.RTrim( context.wjLoc)) && ( context.nUserReturn != 1 ) )
          {
             SubsflControlProps_642( ) ;
-            GXPagingFrom2 = (int)(((10==0) ? 1 : GRID1_nFirstRecordOnPage+1));
-            GXPagingTo2 = (int)(((10==0) ? 10000 : GRID1_nFirstRecordOnPage+subGrid1_Recordsperpage( )+1));
+            GXPagingFrom2 = (int)(((10==0) ? 0 : GRID1_nFirstRecordOnPage));
+            GXPagingTo2 = ((10==0) ? 10000 : subGrid1_Recordsperpage( )+1);
             pr_default.dynParam(0, new Object[]{ new Object[]{
                                                  AV7ccambsdsc ,
                                                  AV8ccambsusuario ,
@@ -1055,7 +1055,7 @@ namespace GeneXus.Programs {
             lV8ccambsusuario = StringUtil.Concat( StringUtil.RTrim( AV8ccambsusuario), "%", "");
             context.httpAjaxContext.ajax_rsp_assign_attri("", false, "AV8ccambsusuario", AV8ccambsusuario);
             /* Using cursor H000J2 */
-            pr_default.execute(0, new Object[] {AV6ccambsid, lV7ccambsdsc, lV8ccambsusuario, AV9ccambsfecreg, AV10ccambsfecultact, GXPagingFrom2, GXPagingTo2, GXPagingTo2, GXPagingFrom2, GXPagingFrom2});
+            pr_default.execute(0, new Object[] {AV6ccambsid, lV7ccambsdsc, lV8ccambsusuario, AV9ccambsfecreg, AV10ccambsfecultact, GXPagingFrom2, GXPagingTo2, GXPagingTo2});
             nGXsfl_64_idx = 1;
             while ( ( (pr_default.getStatus(0) != 101) ) && ( ( ( 10 == 0 ) || ( GRID1_nCurrentRecord < subGrid1_Recordsperpage( ) ) ) ) )
             {
@@ -1405,12 +1405,12 @@ namespace GeneXus.Programs {
 
       protected void define_styles( )
       {
-         AddStyleSheetFile("calendar-system.css", "?11323129");
-         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?2284430");
+         AddStyleSheetFile("calendar-system.css", "?13205289");
+         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?13264988");
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?202112302293293");
+            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?20221221328343");
             idxLst = (int)(idxLst+1);
          }
          /* End function define_styles */
@@ -1419,7 +1419,7 @@ namespace GeneXus.Programs {
       protected void include_jscripts( )
       {
          context.AddJavascriptSource("messages.spa.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("gx00e0.js", "?202112302293293");
+         context.AddJavascriptSource("gx00e0.js", "?20221221328343");
          /* End function include_jscripts */
       }
 
@@ -1958,19 +1958,19 @@ namespace GeneXus.Programs {
          String sWhereString = "" ;
          String scmdbuf ;
          short[] GXv_int1 ;
-         GXv_int1 = new short [10] ;
+         GXv_int1 = new short [8] ;
          Object[] GXv_Object2 ;
          GXv_Object2 = new Object [2] ;
          String sSelectString ;
          String sFromString ;
          String sOrderString ;
-         sSelectString = " [cambsfecultact], [cambsfecreg], [cambsusuario], [cambsdsc], [cambsid]";
-         sFromString = " FROM [cambs] WITH (NOLOCK)";
+         sSelectString = " cambsfecultact, cambsfecreg, cambsusuario, cambsdsc, cambsid";
+         sFromString = " FROM public.cambs";
          sOrderString = "";
-         sWhereString = sWhereString + " WHERE ([cambsid] >= @AV6ccambsid)";
+         sWhereString = sWhereString + " WHERE (cambsid >= :AV6ccambsid)";
          if ( ! String.IsNullOrEmpty(StringUtil.RTrim( AV7ccambsdsc)) )
          {
-            sWhereString = sWhereString + " and ([cambsdsc] like @lV7ccambsdsc)";
+            sWhereString = sWhereString + " and (cambsdsc like :lV7ccambsdsc)";
          }
          else
          {
@@ -1978,7 +1978,7 @@ namespace GeneXus.Programs {
          }
          if ( ! String.IsNullOrEmpty(StringUtil.RTrim( AV8ccambsusuario)) )
          {
-            sWhereString = sWhereString + " and ([cambsusuario] like @lV8ccambsusuario)";
+            sWhereString = sWhereString + " and (cambsusuario like :lV8ccambsusuario)";
          }
          else
          {
@@ -1986,7 +1986,7 @@ namespace GeneXus.Programs {
          }
          if ( ! (DateTime.MinValue==AV9ccambsfecreg) )
          {
-            sWhereString = sWhereString + " and ([cambsfecreg] >= @AV9ccambsfecreg)";
+            sWhereString = sWhereString + " and (cambsfecreg >= :AV9ccambsfecreg)";
          }
          else
          {
@@ -1994,15 +1994,14 @@ namespace GeneXus.Programs {
          }
          if ( ! (DateTime.MinValue==AV10ccambsfecultact) )
          {
-            sWhereString = sWhereString + " and ([cambsfecultact] >= @AV10ccambsfecultact)";
+            sWhereString = sWhereString + " and (cambsfecultact >= :AV10ccambsfecultact)";
          }
          else
          {
             GXv_int1[4] = 1;
          }
-         sOrderString = sOrderString + " ORDER BY [cambsid]";
-         scmdbuf = "SELECT * FROM (SELECT " + sSelectString + ", ROW_NUMBER() OVER (" + sOrderString + " ) AS GX_ROW_NUMBER" + sFromString + sWhereString + "" + ") AS GX_CTE WHERE GX_ROW_NUMBER" + " BETWEEN " + "@GXPagingFrom2" + " AND " + "@GXPagingTo2" + " OR " + "@GXPagingTo2" + " < " + "@GXPagingFrom2" + " AND GX_ROW_NUMBER >= " + "@GXPagingFrom2";
-         scmdbuf = scmdbuf + " OPTION (FAST 11)";
+         sOrderString = sOrderString + " ORDER BY cambsid";
+         scmdbuf = "SELECT " + sSelectString + sFromString + sWhereString + "" + sOrderString + " OFFSET " + ":GXPagingFrom2" + " LIMIT CASE WHEN " + ":GXPagingTo2" + " > 0 THEN " + ":GXPagingTo2" + " ELSE 1e9 END";
          GXv_Object2[0] = scmdbuf;
          GXv_Object2[1] = GXv_int1;
          return GXv_Object2 ;
@@ -2025,11 +2024,11 @@ namespace GeneXus.Programs {
          GXv_int3 = new short [5] ;
          Object[] GXv_Object4 ;
          GXv_Object4 = new Object [2] ;
-         scmdbuf = "SELECT COUNT(*) FROM [cambs] WITH (NOLOCK)";
-         scmdbuf = scmdbuf + " WHERE ([cambsid] >= @AV6ccambsid)";
+         scmdbuf = "SELECT COUNT(*) FROM public.cambs";
+         scmdbuf = scmdbuf + " WHERE (cambsid >= :AV6ccambsid)";
          if ( ! String.IsNullOrEmpty(StringUtil.RTrim( AV7ccambsdsc)) )
          {
-            sWhereString = sWhereString + " and ([cambsdsc] like @lV7ccambsdsc)";
+            sWhereString = sWhereString + " and (cambsdsc like :lV7ccambsdsc)";
          }
          else
          {
@@ -2037,7 +2036,7 @@ namespace GeneXus.Programs {
          }
          if ( ! String.IsNullOrEmpty(StringUtil.RTrim( AV8ccambsusuario)) )
          {
-            sWhereString = sWhereString + " and ([cambsusuario] like @lV8ccambsusuario)";
+            sWhereString = sWhereString + " and (cambsusuario like :lV8ccambsusuario)";
          }
          else
          {
@@ -2045,7 +2044,7 @@ namespace GeneXus.Programs {
          }
          if ( ! (DateTime.MinValue==AV9ccambsfecreg) )
          {
-            sWhereString = sWhereString + " and ([cambsfecreg] >= @AV9ccambsfecreg)";
+            sWhereString = sWhereString + " and (cambsfecreg >= :AV9ccambsfecreg)";
          }
          else
          {
@@ -2053,7 +2052,7 @@ namespace GeneXus.Programs {
          }
          if ( ! (DateTime.MinValue==AV10ccambsfecultact) )
          {
-            sWhereString = sWhereString + " and ([cambsfecultact] >= @AV10ccambsfecultact)";
+            sWhereString = sWhereString + " and (cambsfecultact >= :AV10ccambsfecultact)";
          }
          else
          {
@@ -2096,24 +2095,22 @@ namespace GeneXus.Programs {
        {
           Object[] prmH000J2 ;
           prmH000J2 = new Object[] {
-          new Object[] {"@AV6ccambsid",SqlDbType.Int,9,0} ,
-          new Object[] {"@lV7ccambsdsc",SqlDbType.VarChar,100,0} ,
-          new Object[] {"@lV8ccambsusuario",SqlDbType.VarChar,15,0} ,
-          new Object[] {"@AV9ccambsfecreg",SqlDbType.DateTime,10,8} ,
-          new Object[] {"@AV10ccambsfecultact",SqlDbType.DateTime,10,8} ,
-          new Object[] {"@GXPagingFrom2",SqlDbType.Int,9,0} ,
-          new Object[] {"@GXPagingTo2",SqlDbType.Int,9,0} ,
-          new Object[] {"@GXPagingTo2",SqlDbType.Int,9,0} ,
-          new Object[] {"@GXPagingFrom2",SqlDbType.Int,9,0} ,
-          new Object[] {"@GXPagingFrom2",SqlDbType.Int,9,0}
+          new Object[] {"AV6ccambsid",NpgsqlDbType.Integer,9,0} ,
+          new Object[] {"lV7ccambsdsc",NpgsqlDbType.Varchar,100,0} ,
+          new Object[] {"lV8ccambsusuario",NpgsqlDbType.Varchar,15,0} ,
+          new Object[] {"AV9ccambsfecreg",NpgsqlDbType.Timestamp,10,8} ,
+          new Object[] {"AV10ccambsfecultact",NpgsqlDbType.Timestamp,10,8} ,
+          new Object[] {"GXPagingFrom2",NpgsqlDbType.Integer,9,0} ,
+          new Object[] {"GXPagingTo2",NpgsqlDbType.Integer,9,0} ,
+          new Object[] {"GXPagingTo2",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmH000J3 ;
           prmH000J3 = new Object[] {
-          new Object[] {"@AV6ccambsid",SqlDbType.Int,9,0} ,
-          new Object[] {"@lV7ccambsdsc",SqlDbType.VarChar,100,0} ,
-          new Object[] {"@lV8ccambsusuario",SqlDbType.VarChar,15,0} ,
-          new Object[] {"@AV9ccambsfecreg",SqlDbType.DateTime,10,8} ,
-          new Object[] {"@AV10ccambsfecultact",SqlDbType.DateTime,10,8}
+          new Object[] {"AV6ccambsid",NpgsqlDbType.Integer,9,0} ,
+          new Object[] {"lV7ccambsdsc",NpgsqlDbType.Varchar,100,0} ,
+          new Object[] {"lV8ccambsusuario",NpgsqlDbType.Varchar,15,0} ,
+          new Object[] {"AV9ccambsfecreg",NpgsqlDbType.Timestamp,10,8} ,
+          new Object[] {"AV10ccambsfecultact",NpgsqlDbType.Timestamp,10,8}
           } ;
           def= new CursorDef[] {
               new CursorDef("H000J2", "scmdbuf",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmH000J2,11,0,false,false )
@@ -2157,52 +2154,42 @@ namespace GeneXus.Programs {
                 if ( (short)parms[0] == 0 )
                 {
                    sIdx = (short)(sIdx+1);
-                   stmt.SetParameter(sIdx, (int)parms[10]);
+                   stmt.SetParameter(sIdx, (int)parms[8]);
                 }
                 if ( (short)parms[1] == 0 )
                 {
                    sIdx = (short)(sIdx+1);
-                   stmt.SetParameter(sIdx, (String)parms[11]);
+                   stmt.SetParameter(sIdx, (String)parms[9]);
                 }
                 if ( (short)parms[2] == 0 )
                 {
                    sIdx = (short)(sIdx+1);
-                   stmt.SetParameter(sIdx, (String)parms[12]);
+                   stmt.SetParameter(sIdx, (String)parms[10]);
                 }
                 if ( (short)parms[3] == 0 )
                 {
                    sIdx = (short)(sIdx+1);
-                   stmt.SetParameterDatetime(sIdx, (DateTime)parms[13]);
+                   stmt.SetParameterDatetime(sIdx, (DateTime)parms[11]);
                 }
                 if ( (short)parms[4] == 0 )
                 {
                    sIdx = (short)(sIdx+1);
-                   stmt.SetParameterDatetime(sIdx, (DateTime)parms[14]);
+                   stmt.SetParameterDatetime(sIdx, (DateTime)parms[12]);
                 }
                 if ( (short)parms[5] == 0 )
                 {
                    sIdx = (short)(sIdx+1);
-                   stmt.SetParameter(sIdx, (int)parms[15]);
+                   stmt.SetParameter(sIdx, (int)parms[13]);
                 }
                 if ( (short)parms[6] == 0 )
                 {
                    sIdx = (short)(sIdx+1);
-                   stmt.SetParameter(sIdx, (int)parms[16]);
+                   stmt.SetParameter(sIdx, (int)parms[14]);
                 }
                 if ( (short)parms[7] == 0 )
                 {
                    sIdx = (short)(sIdx+1);
-                   stmt.SetParameter(sIdx, (int)parms[17]);
-                }
-                if ( (short)parms[8] == 0 )
-                {
-                   sIdx = (short)(sIdx+1);
-                   stmt.SetParameter(sIdx, (int)parms[18]);
-                }
-                if ( (short)parms[9] == 0 )
-                {
-                   sIdx = (short)(sIdx+1);
-                   stmt.SetParameter(sIdx, (int)parms[19]);
+                   stmt.SetParameter(sIdx, (int)parms[15]);
                 }
                 return;
              case 1 :

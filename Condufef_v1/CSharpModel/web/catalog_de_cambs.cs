@@ -2,7 +2,7 @@
                File: Catalog_De_Cambs
         Description: Catalog_De_Cambs
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 1/21/2022 20:7:39.25
+       Generated on: 1/22/2022 13:27:39.90
        Program type: Callable routine
           Main DBMS: postgresql
 */
@@ -215,7 +215,7 @@ namespace GeneXus.Programs {
          context.AddJavascriptSource("jquery.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxtimezone.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxgral.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("gxcfg.js", "?20221212073926");
+         context.AddJavascriptSource("gxcfg.js", "?202212213273991");
          if ( context.isSpaRequest( ) )
          {
             enableOutput();
@@ -430,26 +430,19 @@ namespace GeneXus.Programs {
                               /* Execute user event: E110U2 */
                               E110U2 ();
                            }
-                           else if ( StringUtil.StrCmp(sEvt, "'GUARDAR'") == 0 )
+                           else if ( StringUtil.StrCmp(sEvt, "'GUARDAR '") == 0 )
                            {
                               context.wbHandled = 1;
                               dynload_actions( ) ;
                               /* Execute user event: E120U2 */
                               E120U2 ();
                            }
-                           else if ( StringUtil.StrCmp(sEvt, "'GUARDAR '") == 0 )
+                           else if ( StringUtil.StrCmp(sEvt, "LOAD") == 0 )
                            {
                               context.wbHandled = 1;
                               dynload_actions( ) ;
                               /* Execute user event: E130U2 */
                               E130U2 ();
-                           }
-                           else if ( StringUtil.StrCmp(sEvt, "LOAD") == 0 )
-                           {
-                              context.wbHandled = 1;
-                              dynload_actions( ) ;
-                              /* Execute user event: E140U2 */
-                              E140U2 ();
                            }
                            else if ( StringUtil.StrCmp(sEvt, "ENTER") == 0 )
                            {
@@ -571,8 +564,8 @@ namespace GeneXus.Programs {
          fix_multi_value_controls( ) ;
          if ( String.IsNullOrEmpty(StringUtil.RTrim( context.wjLoc)) && ( context.nUserReturn != 1 ) )
          {
-            /* Execute user event: E140U2 */
-            E140U2 ();
+            /* Execute user event: E130U2 */
+            E130U2 ();
             WB0U0( ) ;
          }
       }
@@ -679,23 +672,6 @@ namespace GeneXus.Programs {
 
       protected void E120U2( )
       {
-         /* 'Guardar' Routine */
-         AV9cambs.gxTpr_Cambsid = AV6NextValue;
-         AV9cambs.gxTpr_Cambsdsc = AV8cambsdsc;
-         AV9cambs.Save();
-         if ( AV9cambs.Success() )
-         {
-            context.CommitDataStores( "Catalog_De_Cambs");
-         }
-         else
-         {
-            context.RollbackDataStores( "Catalog_De_Cambs");
-         }
-         context.httpAjaxContext.ajax_rsp_assign_sdt_attri("", false, "AV9cambs", AV9cambs);
-      }
-
-      protected void E130U2( )
-      {
          /* 'Guardar ' Routine */
          AV9cambs.gxTpr_Cambsid = AV6NextValue;
          AV9cambs.gxTpr_Cambsdsc = AV8cambsdsc;
@@ -715,7 +691,7 @@ namespace GeneXus.Programs {
       {
       }
 
-      protected void E140U2( )
+      protected void E130U2( )
       {
          /* Load Routine */
       }
@@ -888,11 +864,11 @@ namespace GeneXus.Programs {
 
       protected void define_styles( )
       {
-         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?2284430");
+         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?13264988");
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?20221212073936");
+            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?20221221327407");
             idxLst = (int)(idxLst+1);
          }
          /* End function define_styles */
@@ -901,7 +877,7 @@ namespace GeneXus.Programs {
       protected void include_jscripts( )
       {
          context.AddJavascriptSource("messages.spa.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("catalog_de_cambs.js", "?20221212073936");
+         context.AddJavascriptSource("catalog_de_cambs.js", "?20221221327407");
          /* End function include_jscripts */
       }
 
@@ -947,8 +923,7 @@ namespace GeneXus.Programs {
       public override void InitializeDynEvents( )
       {
          setEventMetadata("REFRESH","{handler:'Refresh',iparms:[],oparms:[]}");
-         setEventMetadata("'GUARDAR'","{handler:'E120U2',iparms:[{av:'AV6NextValue',fld:'vNEXTVALUE',pic:'ZZZ9',hsh:true,nv:0},{av:'AV9cambs',fld:'vCAMBS',pic:'',nv:null},{av:'AV8cambsdsc',fld:'vCAMBSDSC',pic:'',nv:''}],oparms:[{av:'AV9cambs',fld:'vCAMBS',pic:'',nv:null}]}");
-         setEventMetadata("'GUARDAR '","{handler:'E130U2',iparms:[{av:'AV6NextValue',fld:'vNEXTVALUE',pic:'ZZZ9',hsh:true,nv:0},{av:'AV9cambs',fld:'vCAMBS',pic:'',nv:null},{av:'AV8cambsdsc',fld:'vCAMBSDSC',pic:'',nv:''}],oparms:[{av:'AV9cambs',fld:'vCAMBS',pic:'',nv:null}]}");
+         setEventMetadata("'GUARDAR '","{handler:'E120U2',iparms:[{av:'AV6NextValue',fld:'vNEXTVALUE',pic:'ZZZ9',hsh:true,nv:0},{av:'AV9cambs',fld:'vCAMBS',pic:'',nv:null},{av:'AV8cambsdsc',fld:'vCAMBSDSC',pic:'',nv:''}],oparms:[{av:'AV9cambs',fld:'vCAMBS',pic:'',nv:null}]}");
          return  ;
       }
 

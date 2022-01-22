@@ -33,25 +33,11 @@ pos_i(78,[ 0,0,0 ]).
  
  
 rule_i(0,datastore(1,'DS_LAST_CHANGE','')).
-rule_i(0,datastore(1,'LOCK_RETRY','10')).
-rule_i(0,datastore(1,'WAIT_RECORD','0')).
-rule_i(0,datastore(1,'SQLSERVER_VERSION','9')).
+rule_i(0,datastore(1,'POSTGRESQL_VERSION','8_3')).
 rule_i(0,datastore(1,'COMMENT_ON','No')).
-rule_i(0,datastore(1,'DFT_TMP_TBLSPACE','')).
-rule_i(0,datastore(1,'DFT_IDX_TBLSPACE','')).
-rule_i(0,datastore(1,'DFT_TBL_TBLSPACE','')).
 rule_i(0,datastore(1,'DCL_REF_INT_DB','Yes')).
 rule_i(0,datastore(1,'PRIMARY_KEY_TYPE','PK')).
 rule_i(0,datastore(1,'CS_SCHEMA','')).
-rule_i(0,datastore(1,'SORT_ATTRIBUTES','Yes')).
-rule_i(0,datastore(1,'JRN400','QSQJRN')).
-rule_i(0,datastore(1,'CREATE_SAVF','Yes')).
-rule_i(0,datastore(1,'PGMLIB','')).
-rule_i(0,datastore(1,'DTALIB','')).
-rule_i(0,datastore(1,'CC_USER_PASS','')).
-rule_i(0,datastore(1,'CC_USER_ID','')).
-rule_i(0,datastore(1,'CC_SERVER','')).
-rule_i(0,datastore(1,'CC_DBNAME','')).
 rule_i(0,datastore(1,'RecycleRWMin','30')).
 rule_i(0,datastore(1,'RecycleRWType','1')).
 rule_i(0,datastore(1,'RecycleRW','-1')).
@@ -63,26 +49,25 @@ rule_i(0,datastore(1,'CS_RPCPGML','')).
 rule_i(0,datastore(1,'JDBC_DATASOURCE','')).
 rule_i(0,datastore(1,'USE_JDBC_DATASOURCE','0')).
 rule_i(0,datastore(1,'DS_DBMS_ADDINFO','')).
-rule_i(0,datastore(1,'USER_PASSWORD','')).
-rule_i(0,datastore(1,'USER_ID','')).
-rule_i(0,datastore(1,'TRUSTED_CONNECTION','Yes')).
+rule_i(0,datastore(1,'USER_PASSWORD',󻢸蘇�2�5炭)).
+rule_i(0,datastore(1,'USER_ID',postgres)).
 rule_i(0,datastore(1,'CS_CONNECT','First')).
-rule_i(0,datastore(1,'DBMS_PORT','')).
-rule_i(0,datastore(1,'CS_SERVER','JOSBUENO-MX\DELGADO')).
-rule_i(0,datastore(1,'CS_DBNAME','Dar_CONDUCEFDB')).
+rule_i(0,datastore(1,'DBMS_PORT','5432')).
+rule_i(0,datastore(1,'CS_SERVER',localhost)).
+rule_i(0,datastore(1,'CS_DBNAME',postgres)).
 rule_i(0,datastore(1,'CS_FLEDSNAME','')).
-rule_i(0,datastore(1,'CS_DRVNAME','sql server')).
+rule_i(0,datastore(1,'CS_DRVNAME','')).
 rule_i(0,datastore(1,'CS_DSNAME','')).
 rule_i(0,datastore(1,'DB_URL','')).
 rule_i(0,datastore(1,'JDBC_CUSTOM_URL','0')).
 rule_i(0,datastore(1,'JDBC_CUSTOM_DRIVER','')).
-rule_i(0,datastore(1,'JDBC_DRIVER','net.sourceforge.jtds.jdbc.Driver')).
+rule_i(0,datastore(1,'JDBC_DRIVER','org.postgresql.Driver')).
 rule_i(0,datastore(1,'CONNECT_METHOD','OPSYS')).
 rule_i(0,datastore(1,'ACCESS_TECHNO','ADONET')).
 rule_i(0,datastore(1,'MAIN_DS','-1')).
 rule_i(0,datastore(1,'REORG_GEN','8')).
 rule_i(0,datastore(1,'HelpKeyword','20')).
-rule_i(0,datastore(1,'DBMS',12)).
+rule_i(0,datastore(1,'DBMS',15)).
 rule_i(0,datastore(1,'NAME','Default')).
 rule_i(0,prop(idNULLS_BEHAVIOR,idNB_Current)).
 rule_i(0,prop('ObjectVisibility','Public')).
@@ -171,8 +156,6 @@ rule_i(21,prompt([ 21,[ [ [],1,1 ] ],[],[],[ t(o(13,'Gx00L0'),28),t(1,2) ],[],n,
 rule_i(21,rule([ a(23,[ [ 1 ],[ t(o(13,'Gx00L0'),28),t(1,2) ] ]) ],[],[],[ 1 ])).
 rule_i(0,rule([ a(22,[ 'Dlt','"Eliminar"','' ]) ],[],[],[])).
 rule_i(0,maingen(15)).
-rule_i(21,rule([ a(1,msg([ t('"Campo statusfecreg fuera de rango"',3) ],[ t('OutOfRange',3) ])) ],[ t('NOT',8),t('(',0),t('null(',1),t(77,2),t(')',4),t('.OR.',9),t(77,2),t(>=,10),t('ymdhmstot(',1),t('1753',3),t(',',7),t('01',3),t(',',7),t('01',3),t(',',7),t('00',3),t(',',7),t('00',3),t(',',7),t('00',3),t(')',4),t(')',4) ],[ insert,update ],[ 77 ])).
-rule_i(21,rule([ a(1,msg([ t('"Campo statusfecultact fuera de rango"',3) ],[ t('OutOfRange',3) ])) ],[ t('NOT',8),t('(',0),t('null(',1),t(78,2),t(')',4),t('.OR.',9),t(78,2),t(>=,10),t('ymdhmstot(',1),t('1753',3),t(',',7),t('01',3),t(',',7),t('01',3),t(',',7),t('00',3),t(',',7),t('00',3),t(',',7),t('00',3),t(')',4),t(')',4) ],[ insert,update ],[ 78 ])).
 rule_i(0,p(0,0,fv,1,[ intname,'STATUS' ])).
 rule_i(0,p(0,0,fv,1,[ table,21 ])).
 rule_i(0,p(0,15,fv,1,[])).
@@ -185,22 +168,20 @@ rule_i(0,p(0,15,fvix,[ 1,1 ],[ 'NAME',status_pkey ])).
 rule_i(0,p(0,15,fvix,[ 1,1 ],[ 'LOC','' ])).
 rule_i(0,p(0,15,fvix,[ 1,1 ],[ 'SCHEMA',public ])).
 rule_i(0,p(0,15,fvix,[ 1,1 ],[ 'EXTNAM','YES' ])).
+rule_i(0,file(21,'STATUS',[ 1,73,74,75,76,77,78 ])).
+rule_i(0,loc([ 21 ],'STATUS','','LAN')).
+rule_i(0,index(21,'STATUS_PKEY',u,[ 1 ])).
+rule_i(0,loc([ 21,'STATUS_PKEY' ],status_pkey,'','LAN')).
  
-a_i(1,21,b,0,[],[ [],[ a(1,msg([ t('"Campo statusfecreg fuera de rango"',3) ],[ t('OutOfRange',3) ])) ],[ t('NOT',8),t('(',0),t('null(',1),t(77,2),t(')',4),t('.OR.',9),t(77,2),t(>=,10),t('ymdhmstot(',1),t('1753',3),t(',',7),t('01',3),t(',',7),t('01',3),t(',',7),t('00',3),t(',',7),t('00',3),t(',',7),t('00',3),t(')',4),t(')',4) ] ]).
-a_i(2,21,b,0,[],[ [],[ a(1,msg([ t('"Campo statusfecultact fuera de rango"',3) ],[ t('OutOfRange',3) ])) ],[ t('NOT',8),t('(',0),t('null(',1),t(78,2),t(')',4),t('.OR.',9),t(78,2),t(>=,10),t('ymdhmstot(',1),t('1753',3),t(',',7),t('01',3),t(',',7),t('01',3),t(',',7),t('00',3),t(',',7),t('00',3),t(',',7),t('00',3),t(')',4),t(')',4) ] ]).
-a_i(3,21,t,21,[],[ [ [ [],1,1 ] ],'STATUS_PKEY',[] ]).
+a_i(1,21,t,21,[],[ [ [ [],1,1 ] ],'STATUS_PKEY',[] ]).
  
-v_i(b,i,1,77).
-v_i(b,o,1,[]).
-v_i(b,i,2,78).
-v_i(b,o,2,[]).
-v_i(t,i,3,1).
-v_i(t,o,3,73).
-v_i(t,o,3,74).
-v_i(t,o,3,75).
-v_i(t,o,3,76).
-v_i(t,o,3,77).
-v_i(t,o,3,78).
+v_i(t,i,1,1).
+v_i(t,o,1,73).
+v_i(t,o,1,74).
+v_i(t,o,1,75).
+v_i(t,o,1,76).
+v_i(t,o,1,77).
+v_i(t,o,1,78).
  
  
  
@@ -217,9 +198,9 @@ attri_i(1,[ statusid,int,9,0,'ZZZZZZZZ9',0,statusid,'',0 ]).
 attri_i('Gxremove',[ 'GxRemove',int,1,0,'9',0,'Gx Remove','',5 ]).
 attri_i('Mode',[ 'Gx_mode',char,3,0,'@!',1,'','',2 ]).
  
-table_i(21,[ status,[ 1,73,74,75,76,77,78 ],status,status ]).
+table_i(21,[ 'STATUS',[ 1,73,74,75,76,77,78 ],status,status ]).
  
-index_i(21,[ 'STATUS_PKEY',u,[ 1 ],status_pkey ]).
+index_i(21,[ 'STATUS_PKEY',u,[ 1 ],'STATUS_PKEY' ]).
  
  
  
@@ -241,6 +222,14 @@ upd_i(21,21,d,[ [],[],'STATUS_PKEY',[] ]).
  
  
  
+map_i(21,i,'STATUS_PKEY',[ 'STATUS_PKEY' ]).
+map_i(21,a,78,[ statusfecultact ]).
+map_i(21,a,77,[ statusfecreg ]).
+map_i(21,a,76,[ statususuario ]).
+map_i(21,a,75,[ statusdesc ]).
+map_i(21,a,74,[ statususotabla ]).
+map_i(21,a,73,[ statusdsc ]).
+map_i(21,a,1,[ statusid ]).
  
  
  

@@ -24,12 +24,12 @@
 <BaseTable>
 <Table>
 <TableId>21</TableId>
-<TableName>status</TableName>
+<TableName>STATUS</TableName>
 <Description>status</Description></Table></BaseTable>
 <NavigationTree>
 <Table>
 <TableId>21</TableId>
-<TableName>status</TableName>
+<TableName>STATUS</TableName>
 <Description>status</Description>
 <Updated>Yes</Updated>
 <RecordsToRead>many</RecordsToRead>
@@ -50,7 +50,7 @@
 <TableToUpdate>
 <Table>
 <TableId>21</TableId>
-<TableName>status</TableName>
+<TableName>STATUS</TableName>
 <Description>status</Description></Table>
 <TableAction>insert</TableAction>
 <AttrisToUpdate>
@@ -85,7 +85,7 @@
 <TableToUpdate>
 <Table>
 <TableId>21</TableId>
-<TableName>status</TableName>
+<TableName>STATUS</TableName>
 <Description>status</Description></Table>
 <TableAction>update</TableAction>
 <AttrisToUpdate>
@@ -116,7 +116,7 @@
 <TableToUpdate>
 <Table>
 <TableId>21</TableId>
-<TableName>status</TableName>
+<TableName>STATUS</TableName>
 <Description>status</Description></Table>
 <TableAction>delete</TableAction>
 <AttrisToUpdate></AttrisToUpdate></TableToUpdate></TablesToUpdate>
@@ -131,7 +131,7 @@
 <Prompt>
 <Table>
 <TableId>21</TableId>
-<TableName>status</TableName>
+<TableName>STATUS</TableName>
 <Description>status</Description></Table>
 <Object>
 <ObjClsGuid>c9584656-94b6-4ccd-890f-332d11fc2c25</ObjClsGuid>

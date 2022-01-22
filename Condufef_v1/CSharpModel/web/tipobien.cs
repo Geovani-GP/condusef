@@ -2,9 +2,9 @@
                File: tipobien
         Description: tipobien
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 12/30/2021 22:8:46.1
+       Generated on: 1/22/2022 13:27:3.93
        Program type: Callable routine
-          Main DBMS: sqlserver
+          Main DBMS: postgresql
 */
 using System;
 using System.Collections;
@@ -14,7 +14,7 @@ using GeneXus.Application;
 using GeneXus.Metadata;
 using GeneXus.Cryptography;
 using System.Data;
-using System.Data.SqlClient;
+using NpgsqlTypes;
 using GeneXus.Data;
 using com.genexus;
 using GeneXus.Data.ADO;
@@ -676,7 +676,7 @@ namespace GeneXus.Programs {
 
       protected void ZM011( short GX_JID )
       {
-         if ( ( GX_JID == 3 ) || ( GX_JID == 0 ) )
+         if ( ( GX_JID == 1 ) || ( GX_JID == 0 ) )
          {
             if ( StringUtil.StrCmp(Gx_mode, "INS") != 0 )
             {
@@ -693,7 +693,7 @@ namespace GeneXus.Programs {
                Z142tipobienfecultact = A142tipobienfecultact;
             }
          }
-         if ( GX_JID == -3 )
+         if ( GX_JID == -1 )
          {
             Z23tipobienid = A23tipobienid;
             Z139tipobiendsc = A139tipobiendsc;
@@ -750,7 +750,7 @@ namespace GeneXus.Programs {
             A142tipobienfecultact = T00014_A142tipobienfecultact[0];
             context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A142tipobienfecultact", context.localUtil.TToC( A142tipobienfecultact, 10, 8, 0, 3, "/", ":", " "));
             n142tipobienfecultact = T00014_n142tipobienfecultact[0];
-            ZM011( -3) ;
+            ZM011( -1) ;
          }
          pr_default.close(2);
          OnLoadActions011( ) ;
@@ -764,20 +764,6 @@ namespace GeneXus.Programs {
       {
          Gx_BScreen = 1;
          standaloneModal( ) ;
-         if ( ! ( (DateTime.MinValue==A141tipobienfecreg) || ( A141tipobienfecreg >= context.localUtil.YMDHMSToT( 1753, 1, 1, 0, 0, 0) ) ) )
-         {
-            GX_msglist.addItem("Campo tipobienfecreg fuera de rango", "OutOfRange", 1, "TIPOBIENFECREG");
-            AnyError = 1;
-            GX_FocusControl = edttipobienfecreg_Internalname;
-            context.httpAjaxContext.ajax_rsp_assign_attri("", false, "GX_FocusControl", GX_FocusControl);
-         }
-         if ( ! ( (DateTime.MinValue==A142tipobienfecultact) || ( A142tipobienfecultact >= context.localUtil.YMDHMSToT( 1753, 1, 1, 0, 0, 0) ) ) )
-         {
-            GX_msglist.addItem("Campo tipobienfecultact fuera de rango", "OutOfRange", 1, "TIPOBIENFECULTACT");
-            AnyError = 1;
-            GX_FocusControl = edttipobienfecultact_Internalname;
-            context.httpAjaxContext.ajax_rsp_assign_attri("", false, "GX_FocusControl", GX_FocusControl);
-         }
       }
 
       protected void CloseExtendedTableCursors011( )
@@ -809,7 +795,7 @@ namespace GeneXus.Programs {
          pr_default.execute(1, new Object[] {n23tipobienid, A23tipobienid});
          if ( (pr_default.getStatus(1) != 101) )
          {
-            ZM011( 3) ;
+            ZM011( 1) ;
             RcdFound1 = 1;
             A23tipobienid = T00013_A23tipobienid[0];
             context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A23tipobienid", StringUtil.LTrim( StringUtil.Str( (decimal)(A23tipobienid), 9, 0)));
@@ -1163,7 +1149,7 @@ namespace GeneXus.Programs {
             pr_default.execute(0, new Object[] {n23tipobienid, A23tipobienid});
             if ( (pr_default.getStatus(0) == 103) )
             {
-               GX_msglist.addItem(context.GetMessage( "GXM_lock", new   object[]  {"tipobien"}), "RecordIsLocked", 1, "");
+               GX_msglist.addItem(context.GetMessage( "GXM_lock", new   object[]  {"TIPOBIEN"}), "RecordIsLocked", 1, "");
                AnyError = 1;
                return  ;
             }
@@ -1193,7 +1179,7 @@ namespace GeneXus.Programs {
                   GXUtil.WriteLogRaw("Old: ",Z142tipobienfecultact);
                   GXUtil.WriteLogRaw("Current: ",T00012_A142tipobienfecultact[0]);
                }
-               GX_msglist.addItem(context.GetMessage( "GXM_waschg", new   object[]  {"tipobien"}), "RecordWasChanged", 1, "");
+               GX_msglist.addItem(context.GetMessage( "GXM_waschg", new   object[]  {"TIPOBIEN"}), "RecordWasChanged", 1, "");
                AnyError = 1;
                return  ;
             }
@@ -1222,7 +1208,7 @@ namespace GeneXus.Programs {
                      /* Using cursor T00018 */
                      pr_default.execute(6, new Object[] {n23tipobienid, A23tipobienid, n139tipobiendsc, A139tipobiendsc, n140tipobienusuario, A140tipobienusuario, n141tipobienfecreg, A141tipobienfecreg, n142tipobienfecultact, A142tipobienfecultact});
                      pr_default.close(6);
-                     dsDefault.SmartCacheProvider.SetUpdated("tipobien") ;
+                     dsDefault.SmartCacheProvider.SetUpdated("TIPOBIEN") ;
                      if ( (pr_default.getStatus(6) == 1) )
                      {
                         GX_msglist.addItem(context.GetMessage( "GXM_noupdate", ""), "DuplicatePrimaryKey", 1, "");
@@ -1277,10 +1263,10 @@ namespace GeneXus.Programs {
                      /* Using cursor T00019 */
                      pr_default.execute(7, new Object[] {n139tipobiendsc, A139tipobiendsc, n140tipobienusuario, A140tipobienusuario, n141tipobienfecreg, A141tipobienfecreg, n142tipobienfecultact, A142tipobienfecultact, n23tipobienid, A23tipobienid});
                      pr_default.close(7);
-                     dsDefault.SmartCacheProvider.SetUpdated("tipobien") ;
+                     dsDefault.SmartCacheProvider.SetUpdated("TIPOBIEN") ;
                      if ( (pr_default.getStatus(7) == 103) )
                      {
-                        GX_msglist.addItem(context.GetMessage( "GXM_lock", new   object[]  {"tipobien"}), "RecordIsLocked", 1, "");
+                        GX_msglist.addItem(context.GetMessage( "GXM_lock", new   object[]  {"TIPOBIEN"}), "RecordIsLocked", 1, "");
                         AnyError = 1;
                      }
                      DeferredUpdate011( ) ;
@@ -1334,7 +1320,7 @@ namespace GeneXus.Programs {
                   /* Using cursor T000110 */
                   pr_default.execute(8, new Object[] {n23tipobienid, A23tipobienid});
                   pr_default.close(8);
-                  dsDefault.SmartCacheProvider.SetUpdated("tipobien") ;
+                  dsDefault.SmartCacheProvider.SetUpdated("TIPOBIEN") ;
                   if ( AnyError == 0 )
                   {
                      /* Start of After( delete) rules */
@@ -1403,7 +1389,6 @@ namespace GeneXus.Programs {
          }
          if ( AnyError == 0 )
          {
-            pr_default.close(1);
             context.CommitDataStores( "tipobien");
             if ( AnyError == 0 )
             {
@@ -1415,7 +1400,6 @@ namespace GeneXus.Programs {
          }
          else
          {
-            pr_default.close(1);
             context.RollbackDataStores( "tipobien");
          }
          IsModified = 0;
@@ -1539,7 +1523,7 @@ namespace GeneXus.Programs {
          context.AddJavascriptSource("jquery.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxtimezone.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxgral.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("gxcfg.js", "?202112302284648");
+         context.AddJavascriptSource("gxcfg.js", "?20221221327498");
          if ( context.isSpaRequest( ) )
          {
             enableOutput();
@@ -1697,12 +1681,12 @@ namespace GeneXus.Programs {
 
       protected void define_styles( )
       {
-         AddStyleSheetFile("calendar-system.css", "?11323129");
-         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?2284430");
+         AddStyleSheetFile("calendar-system.css", "?13205289");
+         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?13264988");
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?202112302284651");
+            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?2022122132755");
             idxLst = (int)(idxLst+1);
          }
          /* End function define_styles */
@@ -1712,7 +1696,7 @@ namespace GeneXus.Programs {
       {
          context.AddJavascriptSource("messages.spa.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxdec.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("tipobien.js", "?202112302284651");
+         context.AddJavascriptSource("tipobien.js", "?2022122132755");
          /* End function include_jscripts */
       }
 
@@ -2177,67 +2161,67 @@ namespace GeneXus.Programs {
        {
           Object[] prmT00014 ;
           prmT00014 = new Object[] {
-          new Object[] {"@tipobienid",SqlDbType.Int,9,0}
+          new Object[] {"tipobienid",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT00015 ;
           prmT00015 = new Object[] {
-          new Object[] {"@tipobienid",SqlDbType.Int,9,0}
+          new Object[] {"tipobienid",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT00013 ;
           prmT00013 = new Object[] {
-          new Object[] {"@tipobienid",SqlDbType.Int,9,0}
+          new Object[] {"tipobienid",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT00016 ;
           prmT00016 = new Object[] {
-          new Object[] {"@tipobienid",SqlDbType.Int,9,0}
+          new Object[] {"tipobienid",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT00017 ;
           prmT00017 = new Object[] {
-          new Object[] {"@tipobienid",SqlDbType.Int,9,0}
+          new Object[] {"tipobienid",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT00012 ;
           prmT00012 = new Object[] {
-          new Object[] {"@tipobienid",SqlDbType.Int,9,0}
+          new Object[] {"tipobienid",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT00018 ;
           prmT00018 = new Object[] {
-          new Object[] {"@tipobienid",SqlDbType.Int,9,0} ,
-          new Object[] {"@tipobiendsc",SqlDbType.VarChar,100,0} ,
-          new Object[] {"@tipobienusuario",SqlDbType.VarChar,15,0} ,
-          new Object[] {"@tipobienfecreg",SqlDbType.DateTime,10,8} ,
-          new Object[] {"@tipobienfecultact",SqlDbType.DateTime,10,8}
+          new Object[] {"tipobienid",NpgsqlDbType.Integer,9,0} ,
+          new Object[] {"tipobiendsc",NpgsqlDbType.Varchar,100,0} ,
+          new Object[] {"tipobienusuario",NpgsqlDbType.Varchar,15,0} ,
+          new Object[] {"tipobienfecreg",NpgsqlDbType.Timestamp,10,8} ,
+          new Object[] {"tipobienfecultact",NpgsqlDbType.Timestamp,10,8}
           } ;
           Object[] prmT00019 ;
           prmT00019 = new Object[] {
-          new Object[] {"@tipobiendsc",SqlDbType.VarChar,100,0} ,
-          new Object[] {"@tipobienusuario",SqlDbType.VarChar,15,0} ,
-          new Object[] {"@tipobienfecreg",SqlDbType.DateTime,10,8} ,
-          new Object[] {"@tipobienfecultact",SqlDbType.DateTime,10,8} ,
-          new Object[] {"@tipobienid",SqlDbType.Int,9,0}
+          new Object[] {"tipobiendsc",NpgsqlDbType.Varchar,100,0} ,
+          new Object[] {"tipobienusuario",NpgsqlDbType.Varchar,15,0} ,
+          new Object[] {"tipobienfecreg",NpgsqlDbType.Timestamp,10,8} ,
+          new Object[] {"tipobienfecultact",NpgsqlDbType.Timestamp,10,8} ,
+          new Object[] {"tipobienid",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT000110 ;
           prmT000110 = new Object[] {
-          new Object[] {"@tipobienid",SqlDbType.Int,9,0}
+          new Object[] {"tipobienid",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT000111 ;
           prmT000111 = new Object[] {
-          new Object[] {"@tipobienid",SqlDbType.Int,9,0}
+          new Object[] {"tipobienid",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT000112 ;
           prmT000112 = new Object[] {
           } ;
           def= new CursorDef[] {
-              new CursorDef("T00012", "SELECT [tipobienid], [tipobiendsc], [tipobienusuario], [tipobienfecreg], [tipobienfecultact] FROM [tipobien] WITH (UPDLOCK) WHERE [tipobienid] = @tipobienid ",true, GxErrorMask.GX_NOMASK, false, this,prmT00012,1,0,true,false )
-             ,new CursorDef("T00013", "SELECT [tipobienid], [tipobiendsc], [tipobienusuario], [tipobienfecreg], [tipobienfecultact] FROM [tipobien] WITH (NOLOCK) WHERE [tipobienid] = @tipobienid ",true, GxErrorMask.GX_NOMASK, false, this,prmT00013,1,0,true,false )
-             ,new CursorDef("T00014", "SELECT TM1.[tipobienid], TM1.[tipobiendsc], TM1.[tipobienusuario], TM1.[tipobienfecreg], TM1.[tipobienfecultact] FROM [tipobien] TM1 WITH (NOLOCK) WHERE TM1.[tipobienid] = @tipobienid ORDER BY TM1.[tipobienid]  OPTION (FAST 100)",true, GxErrorMask.GX_NOMASK, false, this,prmT00014,100,0,true,false )
-             ,new CursorDef("T00015", "SELECT [tipobienid] FROM [tipobien] WITH (NOLOCK) WHERE [tipobienid] = @tipobienid  OPTION (FAST 1)",true, GxErrorMask.GX_NOMASK, false, this,prmT00015,1,0,true,false )
-             ,new CursorDef("T00016", "SELECT TOP 1 [tipobienid] FROM [tipobien] WITH (NOLOCK) WHERE ( [tipobienid] > @tipobienid) ORDER BY [tipobienid]  OPTION (FAST 1)",true, GxErrorMask.GX_NOMASK, false, this,prmT00016,1,0,true,true )
-             ,new CursorDef("T00017", "SELECT TOP 1 [tipobienid] FROM [tipobien] WITH (NOLOCK) WHERE ( [tipobienid] < @tipobienid) ORDER BY [tipobienid] DESC  OPTION (FAST 1)",true, GxErrorMask.GX_NOMASK, false, this,prmT00017,1,0,true,true )
-             ,new CursorDef("T00018", "INSERT INTO [tipobien]([tipobienid], [tipobiendsc], [tipobienusuario], [tipobienfecreg], [tipobienfecultact]) VALUES(@tipobienid, @tipobiendsc, @tipobienusuario, @tipobienfecreg, @tipobienfecultact)", GxErrorMask.GX_NOMASK,prmT00018)
-             ,new CursorDef("T00019", "UPDATE [tipobien] SET [tipobiendsc]=@tipobiendsc, [tipobienusuario]=@tipobienusuario, [tipobienfecreg]=@tipobienfecreg, [tipobienfecultact]=@tipobienfecultact  WHERE [tipobienid] = @tipobienid", GxErrorMask.GX_NOMASK,prmT00019)
-             ,new CursorDef("T000110", "DELETE FROM [tipobien]  WHERE [tipobienid] = @tipobienid", GxErrorMask.GX_NOMASK,prmT000110)
-             ,new CursorDef("T000111", "SELECT TOP 1 [almacenid], [articulosproductoid], [articuloscambsid] FROM [articulos] WITH (NOLOCK) WHERE [tipobienid] = @tipobienid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000111,1,0,true,true )
-             ,new CursorDef("T000112", "SELECT [tipobienid] FROM [tipobien] WITH (NOLOCK) ORDER BY [tipobienid]  OPTION (FAST 100)",true, GxErrorMask.GX_NOMASK, false, this,prmT000112,100,0,true,false )
+              new CursorDef("T00012", "SELECT tipobienid, tipobiendsc, tipobienusuario, tipobienfecreg, tipobienfecultact FROM public.tipobien WHERE tipobienid = :tipobienid  FOR UPDATE OF tipobien NOWAIT",true, GxErrorMask.GX_NOMASK, false, this,prmT00012,1,0,true,false )
+             ,new CursorDef("T00013", "SELECT tipobienid, tipobiendsc, tipobienusuario, tipobienfecreg, tipobienfecultact FROM public.tipobien WHERE tipobienid = :tipobienid ",true, GxErrorMask.GX_NOMASK, false, this,prmT00013,1,0,true,false )
+             ,new CursorDef("T00014", "SELECT TM1.tipobienid, TM1.tipobiendsc, TM1.tipobienusuario, TM1.tipobienfecreg, TM1.tipobienfecultact FROM public.tipobien TM1 WHERE TM1.tipobienid = :tipobienid ORDER BY TM1.tipobienid ",true, GxErrorMask.GX_NOMASK, false, this,prmT00014,100,0,true,false )
+             ,new CursorDef("T00015", "SELECT tipobienid FROM public.tipobien WHERE tipobienid = :tipobienid ",true, GxErrorMask.GX_NOMASK, false, this,prmT00015,1,0,true,false )
+             ,new CursorDef("T00016", "SELECT tipobienid FROM public.tipobien WHERE ( tipobienid > :tipobienid) ORDER BY tipobienid ",true, GxErrorMask.GX_NOMASK, false, this,prmT00016,1,0,true,true )
+             ,new CursorDef("T00017", "SELECT tipobienid FROM public.tipobien WHERE ( tipobienid < :tipobienid) ORDER BY tipobienid DESC ",true, GxErrorMask.GX_NOMASK, false, this,prmT00017,1,0,true,true )
+             ,new CursorDef("T00018", "SAVEPOINT gxupdate;INSERT INTO public.tipobien(tipobienid, tipobiendsc, tipobienusuario, tipobienfecreg, tipobienfecultact) VALUES(:tipobienid, :tipobiendsc, :tipobienusuario, :tipobienfecreg, :tipobienfecultact);RELEASE SAVEPOINT gxupdate", GxErrorMask.GX_ROLLBACKSAVEPOINT,prmT00018)
+             ,new CursorDef("T00019", "SAVEPOINT gxupdate;UPDATE public.tipobien SET tipobiendsc=:tipobiendsc, tipobienusuario=:tipobienusuario, tipobienfecreg=:tipobienfecreg, tipobienfecultact=:tipobienfecultact  WHERE tipobienid = :tipobienid;RELEASE SAVEPOINT gxupdate", GxErrorMask.GX_ROLLBACKSAVEPOINT | GxErrorMask.GX_NOMASK,prmT00019)
+             ,new CursorDef("T000110", "SAVEPOINT gxupdate;DELETE FROM public.tipobien  WHERE tipobienid = :tipobienid;RELEASE SAVEPOINT gxupdate", GxErrorMask.GX_ROLLBACKSAVEPOINT | GxErrorMask.GX_NOMASK,prmT000110)
+             ,new CursorDef("T000111", "SELECT articulosid, productoid, cambsid FROM public.articulos WHERE tipodocid = :tipobienid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000111,1,0,true,true )
+             ,new CursorDef("T000112", "SELECT tipobienid FROM public.tipobien ORDER BY tipobienid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000112,100,0,true,false )
           };
        }
     }

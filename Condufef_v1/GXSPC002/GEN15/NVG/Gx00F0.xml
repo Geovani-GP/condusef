@@ -42,7 +42,7 @@
 <BaseTable>
 <Table>
 <TableId>15</TableId>
-<TableName>usuarios</TableName>
+<TableName>USUARIOS</TableName>
 <Description>usuarios</Description></Table></BaseTable>
 <Order>
 <Attribute>
@@ -117,7 +117,7 @@
 <NavigationTree>
 <Table>
 <TableId>15</TableId>
-<TableName>usuarios</TableName>
+<TableName>USUARIOS</TableName>
 <Description>usuarios</Description>
 <RecordsToRead>many</RecordsToRead>
 <KeyAttributes>

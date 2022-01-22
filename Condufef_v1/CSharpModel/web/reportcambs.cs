@@ -2,9 +2,9 @@
                File: ReportCambs
         Description: Report Cambs
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 1/21/2022 2:47:57.33
+       Generated on: 1/22/2022 13:27:3.82
        Program type: Callable routine
-          Main DBMS: sqlserver
+          Main DBMS: postgresql
 */
 using System;
 using System.Collections;

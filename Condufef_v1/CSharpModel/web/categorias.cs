@@ -2,9 +2,9 @@
                File: categorias
         Description: categorias
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 12/30/2021 22:8:49.2
+       Generated on: 1/22/2022 13:27:9.54
        Program type: Callable routine
-          Main DBMS: sqlserver
+          Main DBMS: postgresql
 */
 using System;
 using System.Collections;
@@ -14,7 +14,7 @@ using GeneXus.Application;
 using GeneXus.Metadata;
 using GeneXus.Cryptography;
 using System.Data;
-using System.Data.SqlClient;
+using NpgsqlTypes;
 using GeneXus.Data;
 using com.genexus;
 using GeneXus.Data.ADO;
@@ -673,7 +673,7 @@ namespace GeneXus.Programs {
 
       protected void ZM055( short GX_JID )
       {
-         if ( ( GX_JID == 3 ) || ( GX_JID == 0 ) )
+         if ( ( GX_JID == 1 ) || ( GX_JID == 0 ) )
          {
             if ( StringUtil.StrCmp(Gx_mode, "INS") != 0 )
             {
@@ -690,7 +690,7 @@ namespace GeneXus.Programs {
                Z97categoriasfecultact = A97categoriasfecultact;
             }
          }
-         if ( GX_JID == -3 )
+         if ( GX_JID == -1 )
          {
             Z14categoriasid = A14categoriasid;
             Z94categoriasdsc = A94categoriasdsc;
@@ -747,7 +747,7 @@ namespace GeneXus.Programs {
             A97categoriasfecultact = T00054_A97categoriasfecultact[0];
             context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A97categoriasfecultact", context.localUtil.TToC( A97categoriasfecultact, 10, 8, 0, 3, "/", ":", " "));
             n97categoriasfecultact = T00054_n97categoriasfecultact[0];
-            ZM055( -3) ;
+            ZM055( -1) ;
          }
          pr_default.close(2);
          OnLoadActions055( ) ;
@@ -761,20 +761,6 @@ namespace GeneXus.Programs {
       {
          Gx_BScreen = 1;
          standaloneModal( ) ;
-         if ( ! ( (DateTime.MinValue==A96categoriasfecreg) || ( A96categoriasfecreg >= context.localUtil.YMDHMSToT( 1753, 1, 1, 0, 0, 0) ) ) )
-         {
-            GX_msglist.addItem("Campo categoriasfecreg fuera de rango", "OutOfRange", 1, "CATEGORIASFECREG");
-            AnyError = 1;
-            GX_FocusControl = edtcategoriasfecreg_Internalname;
-            context.httpAjaxContext.ajax_rsp_assign_attri("", false, "GX_FocusControl", GX_FocusControl);
-         }
-         if ( ! ( (DateTime.MinValue==A97categoriasfecultact) || ( A97categoriasfecultact >= context.localUtil.YMDHMSToT( 1753, 1, 1, 0, 0, 0) ) ) )
-         {
-            GX_msglist.addItem("Campo categoriasfecultact fuera de rango", "OutOfRange", 1, "CATEGORIASFECULTACT");
-            AnyError = 1;
-            GX_FocusControl = edtcategoriasfecultact_Internalname;
-            context.httpAjaxContext.ajax_rsp_assign_attri("", false, "GX_FocusControl", GX_FocusControl);
-         }
       }
 
       protected void CloseExtendedTableCursors055( )
@@ -806,7 +792,7 @@ namespace GeneXus.Programs {
          pr_default.execute(1, new Object[] {A14categoriasid});
          if ( (pr_default.getStatus(1) != 101) )
          {
-            ZM055( 3) ;
+            ZM055( 1) ;
             RcdFound5 = 1;
             A14categoriasid = T00053_A14categoriasid[0];
             context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A14categoriasid", StringUtil.LTrim( StringUtil.Str( (decimal)(A14categoriasid), 9, 0)));
@@ -1155,7 +1141,7 @@ namespace GeneXus.Programs {
             pr_default.execute(0, new Object[] {A14categoriasid});
             if ( (pr_default.getStatus(0) == 103) )
             {
-               GX_msglist.addItem(context.GetMessage( "GXM_lock", new   object[]  {"categorias"}), "RecordIsLocked", 1, "");
+               GX_msglist.addItem(context.GetMessage( "GXM_lock", new   object[]  {"CATEGORIAS"}), "RecordIsLocked", 1, "");
                AnyError = 1;
                return  ;
             }
@@ -1185,7 +1171,7 @@ namespace GeneXus.Programs {
                   GXUtil.WriteLogRaw("Old: ",Z97categoriasfecultact);
                   GXUtil.WriteLogRaw("Current: ",T00052_A97categoriasfecultact[0]);
                }
-               GX_msglist.addItem(context.GetMessage( "GXM_waschg", new   object[]  {"categorias"}), "RecordWasChanged", 1, "");
+               GX_msglist.addItem(context.GetMessage( "GXM_waschg", new   object[]  {"CATEGORIAS"}), "RecordWasChanged", 1, "");
                AnyError = 1;
                return  ;
             }
@@ -1214,7 +1200,7 @@ namespace GeneXus.Programs {
                      /* Using cursor T00058 */
                      pr_default.execute(6, new Object[] {A14categoriasid, n94categoriasdsc, A94categoriasdsc, n95categoriasusuario, A95categoriasusuario, n96categoriasfecreg, A96categoriasfecreg, n97categoriasfecultact, A97categoriasfecultact});
                      pr_default.close(6);
-                     dsDefault.SmartCacheProvider.SetUpdated("categorias") ;
+                     dsDefault.SmartCacheProvider.SetUpdated("CATEGORIAS") ;
                      if ( (pr_default.getStatus(6) == 1) )
                      {
                         GX_msglist.addItem(context.GetMessage( "GXM_noupdate", ""), "DuplicatePrimaryKey", 1, "");
@@ -1269,10 +1255,10 @@ namespace GeneXus.Programs {
                      /* Using cursor T00059 */
                      pr_default.execute(7, new Object[] {n94categoriasdsc, A94categoriasdsc, n95categoriasusuario, A95categoriasusuario, n96categoriasfecreg, A96categoriasfecreg, n97categoriasfecultact, A97categoriasfecultact, A14categoriasid});
                      pr_default.close(7);
-                     dsDefault.SmartCacheProvider.SetUpdated("categorias") ;
+                     dsDefault.SmartCacheProvider.SetUpdated("CATEGORIAS") ;
                      if ( (pr_default.getStatus(7) == 103) )
                      {
-                        GX_msglist.addItem(context.GetMessage( "GXM_lock", new   object[]  {"categorias"}), "RecordIsLocked", 1, "");
+                        GX_msglist.addItem(context.GetMessage( "GXM_lock", new   object[]  {"CATEGORIAS"}), "RecordIsLocked", 1, "");
                         AnyError = 1;
                      }
                      DeferredUpdate055( ) ;
@@ -1326,7 +1312,7 @@ namespace GeneXus.Programs {
                   /* Using cursor T000510 */
                   pr_default.execute(8, new Object[] {A14categoriasid});
                   pr_default.close(8);
-                  dsDefault.SmartCacheProvider.SetUpdated("categorias") ;
+                  dsDefault.SmartCacheProvider.SetUpdated("CATEGORIAS") ;
                   if ( AnyError == 0 )
                   {
                      /* Start of After( delete) rules */
@@ -1384,7 +1370,6 @@ namespace GeneXus.Programs {
          }
          if ( AnyError == 0 )
          {
-            pr_default.close(1);
             context.CommitDataStores( "categorias");
             if ( AnyError == 0 )
             {
@@ -1396,7 +1381,6 @@ namespace GeneXus.Programs {
          }
          else
          {
-            pr_default.close(1);
             context.RollbackDataStores( "categorias");
          }
          IsModified = 0;
@@ -1518,7 +1502,7 @@ namespace GeneXus.Programs {
          context.AddJavascriptSource("jquery.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxtimezone.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxgral.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("gxcfg.js", "?202112302284956");
+         context.AddJavascriptSource("gxcfg.js", "?202212213271025");
          if ( context.isSpaRequest( ) )
          {
             enableOutput();
@@ -1675,12 +1659,12 @@ namespace GeneXus.Programs {
 
       protected void define_styles( )
       {
-         AddStyleSheetFile("calendar-system.css", "?11323129");
-         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?2284430");
+         AddStyleSheetFile("calendar-system.css", "?13205289");
+         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?13264988");
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?202112302284961");
+            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?202212213271031");
             idxLst = (int)(idxLst+1);
          }
          /* End function define_styles */
@@ -1689,7 +1673,7 @@ namespace GeneXus.Programs {
       protected void include_jscripts( )
       {
          context.AddJavascriptSource("messages.spa.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("categorias.js", "?202112302284961");
+         context.AddJavascriptSource("categorias.js", "?202212213271031");
          /* End function include_jscripts */
       }
 
@@ -2128,62 +2112,62 @@ namespace GeneXus.Programs {
        {
           Object[] prmT00054 ;
           prmT00054 = new Object[] {
-          new Object[] {"@categoriasid",SqlDbType.Int,9,0}
+          new Object[] {"categoriasid",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT00055 ;
           prmT00055 = new Object[] {
-          new Object[] {"@categoriasid",SqlDbType.Int,9,0}
+          new Object[] {"categoriasid",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT00053 ;
           prmT00053 = new Object[] {
-          new Object[] {"@categoriasid",SqlDbType.Int,9,0}
+          new Object[] {"categoriasid",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT00056 ;
           prmT00056 = new Object[] {
-          new Object[] {"@categoriasid",SqlDbType.Int,9,0}
+          new Object[] {"categoriasid",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT00057 ;
           prmT00057 = new Object[] {
-          new Object[] {"@categoriasid",SqlDbType.Int,9,0}
+          new Object[] {"categoriasid",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT00052 ;
           prmT00052 = new Object[] {
-          new Object[] {"@categoriasid",SqlDbType.Int,9,0}
+          new Object[] {"categoriasid",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT00058 ;
           prmT00058 = new Object[] {
-          new Object[] {"@categoriasid",SqlDbType.Int,9,0} ,
-          new Object[] {"@categoriasdsc",SqlDbType.VarChar,100,0} ,
-          new Object[] {"@categoriasusuario",SqlDbType.VarChar,15,0} ,
-          new Object[] {"@categoriasfecreg",SqlDbType.DateTime,10,8} ,
-          new Object[] {"@categoriasfecultact",SqlDbType.DateTime,10,8}
+          new Object[] {"categoriasid",NpgsqlDbType.Integer,9,0} ,
+          new Object[] {"categoriasdsc",NpgsqlDbType.Varchar,100,0} ,
+          new Object[] {"categoriasusuario",NpgsqlDbType.Varchar,15,0} ,
+          new Object[] {"categoriasfecreg",NpgsqlDbType.Timestamp,10,8} ,
+          new Object[] {"categoriasfecultact",NpgsqlDbType.Timestamp,10,8}
           } ;
           Object[] prmT00059 ;
           prmT00059 = new Object[] {
-          new Object[] {"@categoriasdsc",SqlDbType.VarChar,100,0} ,
-          new Object[] {"@categoriasusuario",SqlDbType.VarChar,15,0} ,
-          new Object[] {"@categoriasfecreg",SqlDbType.DateTime,10,8} ,
-          new Object[] {"@categoriasfecultact",SqlDbType.DateTime,10,8} ,
-          new Object[] {"@categoriasid",SqlDbType.Int,9,0}
+          new Object[] {"categoriasdsc",NpgsqlDbType.Varchar,100,0} ,
+          new Object[] {"categoriasusuario",NpgsqlDbType.Varchar,15,0} ,
+          new Object[] {"categoriasfecreg",NpgsqlDbType.Timestamp,10,8} ,
+          new Object[] {"categoriasfecultact",NpgsqlDbType.Timestamp,10,8} ,
+          new Object[] {"categoriasid",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT000510 ;
           prmT000510 = new Object[] {
-          new Object[] {"@categoriasid",SqlDbType.Int,9,0}
+          new Object[] {"categoriasid",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT000511 ;
           prmT000511 = new Object[] {
           } ;
           def= new CursorDef[] {
-              new CursorDef("T00052", "SELECT [categoriasid], [categoriasdsc], [categoriasusuario], [categoriasfecreg], [categoriasfecultact] FROM [categorias] WITH (UPDLOCK) WHERE [categoriasid] = @categoriasid ",true, GxErrorMask.GX_NOMASK, false, this,prmT00052,1,0,true,false )
-             ,new CursorDef("T00053", "SELECT [categoriasid], [categoriasdsc], [categoriasusuario], [categoriasfecreg], [categoriasfecultact] FROM [categorias] WITH (NOLOCK) WHERE [categoriasid] = @categoriasid ",true, GxErrorMask.GX_NOMASK, false, this,prmT00053,1,0,true,false )
-             ,new CursorDef("T00054", "SELECT TM1.[categoriasid], TM1.[categoriasdsc], TM1.[categoriasusuario], TM1.[categoriasfecreg], TM1.[categoriasfecultact] FROM [categorias] TM1 WITH (NOLOCK) WHERE TM1.[categoriasid] = @categoriasid ORDER BY TM1.[categoriasid]  OPTION (FAST 100)",true, GxErrorMask.GX_NOMASK, false, this,prmT00054,100,0,true,false )
-             ,new CursorDef("T00055", "SELECT [categoriasid] FROM [categorias] WITH (NOLOCK) WHERE [categoriasid] = @categoriasid  OPTION (FAST 1)",true, GxErrorMask.GX_NOMASK, false, this,prmT00055,1,0,true,false )
-             ,new CursorDef("T00056", "SELECT TOP 1 [categoriasid] FROM [categorias] WITH (NOLOCK) WHERE ( [categoriasid] > @categoriasid) ORDER BY [categoriasid]  OPTION (FAST 1)",true, GxErrorMask.GX_NOMASK, false, this,prmT00056,1,0,true,true )
-             ,new CursorDef("T00057", "SELECT TOP 1 [categoriasid] FROM [categorias] WITH (NOLOCK) WHERE ( [categoriasid] < @categoriasid) ORDER BY [categoriasid] DESC  OPTION (FAST 1)",true, GxErrorMask.GX_NOMASK, false, this,prmT00057,1,0,true,true )
-             ,new CursorDef("T00058", "INSERT INTO [categorias]([categoriasid], [categoriasdsc], [categoriasusuario], [categoriasfecreg], [categoriasfecultact]) VALUES(@categoriasid, @categoriasdsc, @categoriasusuario, @categoriasfecreg, @categoriasfecultact)", GxErrorMask.GX_NOMASK,prmT00058)
-             ,new CursorDef("T00059", "UPDATE [categorias] SET [categoriasdsc]=@categoriasdsc, [categoriasusuario]=@categoriasusuario, [categoriasfecreg]=@categoriasfecreg, [categoriasfecultact]=@categoriasfecultact  WHERE [categoriasid] = @categoriasid", GxErrorMask.GX_NOMASK,prmT00059)
-             ,new CursorDef("T000510", "DELETE FROM [categorias]  WHERE [categoriasid] = @categoriasid", GxErrorMask.GX_NOMASK,prmT000510)
-             ,new CursorDef("T000511", "SELECT [categoriasid] FROM [categorias] WITH (NOLOCK) ORDER BY [categoriasid]  OPTION (FAST 100)",true, GxErrorMask.GX_NOMASK, false, this,prmT000511,100,0,true,false )
+              new CursorDef("T00052", "SELECT categoriasid, categoriasdsc, categoriasusuario, categoriasfecreg, categoriasfecultact FROM public.categorias WHERE categoriasid = :categoriasid  FOR UPDATE OF categorias NOWAIT",true, GxErrorMask.GX_NOMASK, false, this,prmT00052,1,0,true,false )
+             ,new CursorDef("T00053", "SELECT categoriasid, categoriasdsc, categoriasusuario, categoriasfecreg, categoriasfecultact FROM public.categorias WHERE categoriasid = :categoriasid ",true, GxErrorMask.GX_NOMASK, false, this,prmT00053,1,0,true,false )
+             ,new CursorDef("T00054", "SELECT TM1.categoriasid, TM1.categoriasdsc, TM1.categoriasusuario, TM1.categoriasfecreg, TM1.categoriasfecultact FROM public.categorias TM1 WHERE TM1.categoriasid = :categoriasid ORDER BY TM1.categoriasid ",true, GxErrorMask.GX_NOMASK, false, this,prmT00054,100,0,true,false )
+             ,new CursorDef("T00055", "SELECT categoriasid FROM public.categorias WHERE categoriasid = :categoriasid ",true, GxErrorMask.GX_NOMASK, false, this,prmT00055,1,0,true,false )
+             ,new CursorDef("T00056", "SELECT categoriasid FROM public.categorias WHERE ( categoriasid > :categoriasid) ORDER BY categoriasid ",true, GxErrorMask.GX_NOMASK, false, this,prmT00056,1,0,true,true )
+             ,new CursorDef("T00057", "SELECT categoriasid FROM public.categorias WHERE ( categoriasid < :categoriasid) ORDER BY categoriasid DESC ",true, GxErrorMask.GX_NOMASK, false, this,prmT00057,1,0,true,true )
+             ,new CursorDef("T00058", "SAVEPOINT gxupdate;INSERT INTO public.categorias(categoriasid, categoriasdsc, categoriasusuario, categoriasfecreg, categoriasfecultact) VALUES(:categoriasid, :categoriasdsc, :categoriasusuario, :categoriasfecreg, :categoriasfecultact);RELEASE SAVEPOINT gxupdate", GxErrorMask.GX_ROLLBACKSAVEPOINT,prmT00058)
+             ,new CursorDef("T00059", "SAVEPOINT gxupdate;UPDATE public.categorias SET categoriasdsc=:categoriasdsc, categoriasusuario=:categoriasusuario, categoriasfecreg=:categoriasfecreg, categoriasfecultact=:categoriasfecultact  WHERE categoriasid = :categoriasid;RELEASE SAVEPOINT gxupdate", GxErrorMask.GX_ROLLBACKSAVEPOINT | GxErrorMask.GX_NOMASK,prmT00059)
+             ,new CursorDef("T000510", "SAVEPOINT gxupdate;DELETE FROM public.categorias  WHERE categoriasid = :categoriasid;RELEASE SAVEPOINT gxupdate", GxErrorMask.GX_ROLLBACKSAVEPOINT | GxErrorMask.GX_NOMASK,prmT000510)
+             ,new CursorDef("T000511", "SELECT categoriasid FROM public.categorias ORDER BY categoriasid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000511,100,0,true,false )
           };
        }
     }

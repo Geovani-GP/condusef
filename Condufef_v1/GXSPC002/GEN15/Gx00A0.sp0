@@ -51,25 +51,11 @@ repeat_i(2,[ 1,2,[ 'Linkselection',2,126,128 ],[] ]).
  
  
 rule_i(0,datastore(1,'DS_LAST_CHANGE','')).
-rule_i(0,datastore(1,'LOCK_RETRY','10')).
-rule_i(0,datastore(1,'WAIT_RECORD','0')).
-rule_i(0,datastore(1,'SQLSERVER_VERSION','9')).
+rule_i(0,datastore(1,'POSTGRESQL_VERSION','8_3')).
 rule_i(0,datastore(1,'COMMENT_ON','No')).
-rule_i(0,datastore(1,'DFT_TMP_TBLSPACE','')).
-rule_i(0,datastore(1,'DFT_IDX_TBLSPACE','')).
-rule_i(0,datastore(1,'DFT_TBL_TBLSPACE','')).
 rule_i(0,datastore(1,'DCL_REF_INT_DB','Yes')).
 rule_i(0,datastore(1,'PRIMARY_KEY_TYPE','PK')).
 rule_i(0,datastore(1,'CS_SCHEMA','')).
-rule_i(0,datastore(1,'SORT_ATTRIBUTES','Yes')).
-rule_i(0,datastore(1,'JRN400','QSQJRN')).
-rule_i(0,datastore(1,'CREATE_SAVF','Yes')).
-rule_i(0,datastore(1,'PGMLIB','')).
-rule_i(0,datastore(1,'DTALIB','')).
-rule_i(0,datastore(1,'CC_USER_PASS','')).
-rule_i(0,datastore(1,'CC_USER_ID','')).
-rule_i(0,datastore(1,'CC_SERVER','')).
-rule_i(0,datastore(1,'CC_DBNAME','')).
 rule_i(0,datastore(1,'RecycleRWMin','30')).
 rule_i(0,datastore(1,'RecycleRWType','1')).
 rule_i(0,datastore(1,'RecycleRW','-1')).
@@ -81,26 +67,25 @@ rule_i(0,datastore(1,'CS_RPCPGML','')).
 rule_i(0,datastore(1,'JDBC_DATASOURCE','')).
 rule_i(0,datastore(1,'USE_JDBC_DATASOURCE','0')).
 rule_i(0,datastore(1,'DS_DBMS_ADDINFO','')).
-rule_i(0,datastore(1,'USER_PASSWORD','')).
-rule_i(0,datastore(1,'USER_ID','')).
-rule_i(0,datastore(1,'TRUSTED_CONNECTION','Yes')).
+rule_i(0,datastore(1,'USER_PASSWORD',󻢸蘇�2�5炭)).
+rule_i(0,datastore(1,'USER_ID',postgres)).
 rule_i(0,datastore(1,'CS_CONNECT','First')).
-rule_i(0,datastore(1,'DBMS_PORT','')).
-rule_i(0,datastore(1,'CS_SERVER','JOSBUENO-MX\DELGADO')).
-rule_i(0,datastore(1,'CS_DBNAME','Dar_CONDUCEFDB')).
+rule_i(0,datastore(1,'DBMS_PORT','5432')).
+rule_i(0,datastore(1,'CS_SERVER',localhost)).
+rule_i(0,datastore(1,'CS_DBNAME',postgres)).
 rule_i(0,datastore(1,'CS_FLEDSNAME','')).
-rule_i(0,datastore(1,'CS_DRVNAME','sql server')).
+rule_i(0,datastore(1,'CS_DRVNAME','')).
 rule_i(0,datastore(1,'CS_DSNAME','')).
 rule_i(0,datastore(1,'DB_URL','')).
 rule_i(0,datastore(1,'JDBC_CUSTOM_URL','0')).
 rule_i(0,datastore(1,'JDBC_CUSTOM_DRIVER','')).
-rule_i(0,datastore(1,'JDBC_DRIVER','net.sourceforge.jtds.jdbc.Driver')).
+rule_i(0,datastore(1,'JDBC_DRIVER','org.postgresql.Driver')).
 rule_i(0,datastore(1,'CONNECT_METHOD','OPSYS')).
 rule_i(0,datastore(1,'ACCESS_TECHNO','ADONET')).
 rule_i(0,datastore(1,'MAIN_DS','-1')).
 rule_i(0,datastore(1,'REORG_GEN','8')).
 rule_i(0,datastore(1,'HelpKeyword','20')).
-rule_i(0,datastore(1,'DBMS',12)).
+rule_i(0,datastore(1,'DBMS',15)).
 rule_i(0,datastore(1,'NAME','Default')).
 rule_i(0,prop(idNULLS_BEHAVIOR,idNB_Current)).
 rule_i(0,prop('ObjectVisibility','Public')).
@@ -146,6 +131,10 @@ rule_i(0,maingen(15)).
 rule_i(0,parm([ 'Pproveedoresid' ],[])).
 rule_i(0,parmio([ [ 'Pproveedoresid',out ] ])).
 rule_i(0,order([ 2 ])).
+rule_i(0,file(10,'PROVEEDORES',[ 2,126,127,128,129,130,131,132,133,134,135,136,137,138 ])).
+rule_i(0,loc([ 10 ],'PROVEEDORES','','LAN')).
+rule_i(0,index(10,'PROVEEDORES_PKEY',u,[ 2 ])).
+rule_i(0,loc([ 10,'PROVEEDORES_PKEY' ],proveedores_pkey,'','LAN')).
 rule_i(0,p(0,0,fv,2,[ intname,'PROVEEDORES' ])).
 rule_i(0,p(0,0,fv,2,[ table,10 ])).
 rule_i(0,p(0,15,fv,2,[])).
@@ -179,10 +168,10 @@ v_i(t,o,2,2).
  
  
  
-attri_i(127,[ proveedoresdireccion,svchar,50,0,'',0,proveedoresdireccion,'',0 ]).
-attri_i(129,[ proveedorescodigopostal,svchar,5,0,'',0,proveedorescodigopostal,'',0 ]).
-attri_i(130,[ proveedoresmunicipio,svchar,20,0,'',0,proveedoresmunicipio,'',0 ]).
 attri_i(131,[ proveedorestado,svchar,20,0,'',0,proveedorestado,'',0 ]).
+attri_i(130,[ proveedoresmunicipio,svchar,20,0,'',0,proveedoresmunicipio,'',0 ]).
+attri_i(129,[ proveedorescodigopostal,svchar,5,0,'',0,proveedorescodigopostal,'',0 ]).
+attri_i(127,[ proveedoresdireccion,svchar,50,0,'',0,proveedoresdireccion,'',0 ]).
 attri_i(128,[ proveedorescolonia,svchar,25,0,'',0,proveedorescolonia,'',0 ]).
 attri_i(126,[ proveedoresnombre,svchar,80,0,'',0,proveedoresnombre,'',0 ]).
 attri_i(2,[ proveedoresid,int,9,0,'ZZZZZZZZ9',0,proveedoresid,'',0 ]).
@@ -200,9 +189,9 @@ attri_i('Cproveedoresnombre',[ cproveedoresnombre,svchar,80,0,'',0,proveedoresno
 attri_i('Cproveedoresid',[ cproveedoresid,int,9,0,'ZZZZZZZZ9',0,proveedoresid,'',6 ]).
 attri_i('Linkselection',[ 'LinkSelection',bits,1024,0,'',0,'Link Selection','',5 ]).
  
-table_i(10,[ proveedores,[ 2,126,127,128,129,130,131 ],proveedores,proveedores ]).
+table_i(10,[ 'PROVEEDORES',[ 2,126,127,128,129,130,131 ],proveedores,proveedores ]).
  
-index_i(10,[ 'PROVEEDORES_PKEY',u,[ 2 ],proveedores_pkey ]).
+index_i(10,[ 'PROVEEDORES_PKEY',u,[ 2 ],'PROVEEDORES_PKEY' ]).
  
  
  
@@ -223,6 +212,21 @@ start_i(2,0,0,[ [ [ 2,23,'Cproveedoresid',>= ] ],many ]).
  
  
  
+map_i(10,i,'PROVEEDORES_PKEY',[ 'PROVEEDORES_PKEY' ]).
+map_i(10,a,138,[ proveedoresfecultact ]).
+map_i(10,a,137,[ proveedoresfecreg ]).
+map_i(10,a,136,[ proveedoresusuario ]).
+map_i(10,a,135,[ proveedoresrfc ]).
+map_i(10,a,134,[ proveedoresfax ]).
+map_i(10,a,133,[ proveedorestelefono2 ]).
+map_i(10,a,132,[ proveedorestelefono1 ]).
+map_i(10,a,131,[ proveedorestado ]).
+map_i(10,a,130,[ proveedoresmunicipio ]).
+map_i(10,a,129,[ proveedorescodigopostal ]).
+map_i(10,a,128,[ proveedorescolonia ]).
+map_i(10,a,127,[ proveedoresdireccion ]).
+map_i(10,a,126,[ proveedoresnombre ]).
+map_i(10,a,2,[ proveedoresid ]).
  
  
  
@@ -1500,33 +1504,6 @@ att_prop_i(2,128,'DB_NLS_SUPPORT','No',d).
 att_prop_i(2,128,'AttRegEx','',d).
 att_prop_i(2,128,'AttValidationFailedMsg','',d).
 att_prop_i(2,128,'FullName',proveedorescolonia,v).
-att_prop_i(2,131,'ExternalName',proveedorestado,d).
-att_prop_i(2,131,'ExternalNamespace','Condufef_v1',d).
-att_prop_i(2,131,'EmptyAsNull','Yes',d).
-att_prop_i(2,131,idBasedOn,'',d).
-att_prop_i(2,131,'ATT_INITIAL_VALUE','',d).
-att_prop_i(2,131,'DB_NLS_SUPPORT','No',d).
-att_prop_i(2,131,'AttRegEx','',d).
-att_prop_i(2,131,'AttValidationFailedMsg','',d).
-att_prop_i(2,131,'FullName',proveedorestado,v).
-att_prop_i(2,130,'ExternalName',proveedoresmunicipio,d).
-att_prop_i(2,130,'ExternalNamespace','Condufef_v1',d).
-att_prop_i(2,130,'EmptyAsNull','Yes',d).
-att_prop_i(2,130,idBasedOn,'',d).
-att_prop_i(2,130,'ATT_INITIAL_VALUE','',d).
-att_prop_i(2,130,'DB_NLS_SUPPORT','No',d).
-att_prop_i(2,130,'AttRegEx','',d).
-att_prop_i(2,130,'AttValidationFailedMsg','',d).
-att_prop_i(2,130,'FullName',proveedoresmunicipio,v).
-att_prop_i(2,129,'ExternalName',proveedorescodigopostal,d).
-att_prop_i(2,129,'ExternalNamespace','Condufef_v1',d).
-att_prop_i(2,129,'EmptyAsNull','Yes',d).
-att_prop_i(2,129,idBasedOn,'',d).
-att_prop_i(2,129,'ATT_INITIAL_VALUE','',d).
-att_prop_i(2,129,'DB_NLS_SUPPORT','No',d).
-att_prop_i(2,129,'AttRegEx','',d).
-att_prop_i(2,129,'AttValidationFailedMsg','',d).
-att_prop_i(2,129,'FullName',proveedorescodigopostal,v).
 att_prop_i(2,127,'ExternalName',proveedoresdireccion,d).
 att_prop_i(2,127,'ExternalNamespace','Condufef_v1',d).
 att_prop_i(2,127,'EmptyAsNull','Yes',d).
@@ -1536,6 +1513,33 @@ att_prop_i(2,127,'DB_NLS_SUPPORT','No',d).
 att_prop_i(2,127,'AttRegEx','',d).
 att_prop_i(2,127,'AttValidationFailedMsg','',d).
 att_prop_i(2,127,'FullName',proveedoresdireccion,v).
+att_prop_i(2,129,'ExternalName',proveedorescodigopostal,d).
+att_prop_i(2,129,'ExternalNamespace','Condufef_v1',d).
+att_prop_i(2,129,'EmptyAsNull','Yes',d).
+att_prop_i(2,129,idBasedOn,'',d).
+att_prop_i(2,129,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,129,'DB_NLS_SUPPORT','No',d).
+att_prop_i(2,129,'AttRegEx','',d).
+att_prop_i(2,129,'AttValidationFailedMsg','',d).
+att_prop_i(2,129,'FullName',proveedorescodigopostal,v).
+att_prop_i(2,130,'ExternalName',proveedoresmunicipio,d).
+att_prop_i(2,130,'ExternalNamespace','Condufef_v1',d).
+att_prop_i(2,130,'EmptyAsNull','Yes',d).
+att_prop_i(2,130,idBasedOn,'',d).
+att_prop_i(2,130,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,130,'DB_NLS_SUPPORT','No',d).
+att_prop_i(2,130,'AttRegEx','',d).
+att_prop_i(2,130,'AttValidationFailedMsg','',d).
+att_prop_i(2,130,'FullName',proveedoresmunicipio,v).
+att_prop_i(2,131,'ExternalName',proveedorestado,d).
+att_prop_i(2,131,'ExternalNamespace','Condufef_v1',d).
+att_prop_i(2,131,'EmptyAsNull','Yes',d).
+att_prop_i(2,131,idBasedOn,'',d).
+att_prop_i(2,131,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,131,'DB_NLS_SUPPORT','No',d).
+att_prop_i(2,131,'AttRegEx','',d).
+att_prop_i(2,131,'AttValidationFailedMsg','',d).
+att_prop_i(2,131,'FullName',proveedorestado,v).
  
  
 tbl_att_prop_i(2,10,2,'AllowNulls',n).

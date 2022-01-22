@@ -2,9 +2,9 @@
                File: parametros
         Description: parametros
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 12/30/2021 22:8:46.71
+       Generated on: 1/22/2022 13:27:5.51
        Program type: Callable routine
-          Main DBMS: sqlserver
+          Main DBMS: postgresql
 */
 using System;
 using System.Collections;
@@ -14,7 +14,7 @@ using GeneXus.Application;
 using GeneXus.Metadata;
 using GeneXus.Cryptography;
 using System.Data;
-using System.Data.SqlClient;
+using NpgsqlTypes;
 using GeneXus.Data;
 using com.genexus;
 using GeneXus.Data.ADO;
@@ -781,7 +781,7 @@ namespace GeneXus.Programs {
 
       protected void ZM022( short GX_JID )
       {
-         if ( ( GX_JID == 3 ) || ( GX_JID == 0 ) )
+         if ( ( GX_JID == 1 ) || ( GX_JID == 0 ) )
          {
             if ( StringUtil.StrCmp(Gx_mode, "INS") != 0 )
             {
@@ -806,7 +806,7 @@ namespace GeneXus.Programs {
                Z72parametrosfecact = A72parametrosfecact;
             }
          }
-         if ( GX_JID == -3 )
+         if ( GX_JID == -1 )
          {
             Z8parametrosid = A8parametrosid;
             Z65parametrosdsc = A65parametrosdsc;
@@ -879,7 +879,7 @@ namespace GeneXus.Programs {
             A72parametrosfecact = T00024_A72parametrosfecact[0];
             context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A72parametrosfecact", context.localUtil.TToC( A72parametrosfecact, 10, 8, 0, 3, "/", ":", " "));
             n72parametrosfecact = T00024_n72parametrosfecact[0];
-            ZM022( -3) ;
+            ZM022( -1) ;
          }
          pr_default.close(2);
          OnLoadActions022( ) ;
@@ -893,20 +893,6 @@ namespace GeneXus.Programs {
       {
          Gx_BScreen = 1;
          standaloneModal( ) ;
-         if ( ! ( (DateTime.MinValue==A71parametrosfecgre) || ( A71parametrosfecgre >= context.localUtil.YMDHMSToT( 1753, 1, 1, 0, 0, 0) ) ) )
-         {
-            GX_msglist.addItem("Campo parametrosfecgre fuera de rango", "OutOfRange", 1, "PARAMETROSFECGRE");
-            AnyError = 1;
-            GX_FocusControl = edtparametrosfecgre_Internalname;
-            context.httpAjaxContext.ajax_rsp_assign_attri("", false, "GX_FocusControl", GX_FocusControl);
-         }
-         if ( ! ( (DateTime.MinValue==A72parametrosfecact) || ( A72parametrosfecact >= context.localUtil.YMDHMSToT( 1753, 1, 1, 0, 0, 0) ) ) )
-         {
-            GX_msglist.addItem("Campo parametrosfecact fuera de rango", "OutOfRange", 1, "PARAMETROSFECACT");
-            AnyError = 1;
-            GX_FocusControl = edtparametrosfecact_Internalname;
-            context.httpAjaxContext.ajax_rsp_assign_attri("", false, "GX_FocusControl", GX_FocusControl);
-         }
       }
 
       protected void CloseExtendedTableCursors022( )
@@ -938,7 +924,7 @@ namespace GeneXus.Programs {
          pr_default.execute(1, new Object[] {A8parametrosid});
          if ( (pr_default.getStatus(1) != 101) )
          {
-            ZM022( 3) ;
+            ZM022( 1) ;
             RcdFound2 = 1;
             A8parametrosid = T00023_A8parametrosid[0];
             context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A8parametrosid", StringUtil.LTrim( StringUtil.Str( (decimal)(A8parametrosid), 9, 0)));
@@ -1299,7 +1285,7 @@ namespace GeneXus.Programs {
             pr_default.execute(0, new Object[] {A8parametrosid});
             if ( (pr_default.getStatus(0) == 103) )
             {
-               GX_msglist.addItem(context.GetMessage( "GXM_lock", new   object[]  {"parametros"}), "RecordIsLocked", 1, "");
+               GX_msglist.addItem(context.GetMessage( "GXM_lock", new   object[]  {"PARAMETROS"}), "RecordIsLocked", 1, "");
                AnyError = 1;
                return  ;
             }
@@ -1358,7 +1344,7 @@ namespace GeneXus.Programs {
                   GXUtil.WriteLogRaw("Old: ",Z72parametrosfecact);
                   GXUtil.WriteLogRaw("Current: ",T00022_A72parametrosfecact[0]);
                }
-               GX_msglist.addItem(context.GetMessage( "GXM_waschg", new   object[]  {"parametros"}), "RecordWasChanged", 1, "");
+               GX_msglist.addItem(context.GetMessage( "GXM_waschg", new   object[]  {"PARAMETROS"}), "RecordWasChanged", 1, "");
                AnyError = 1;
                return  ;
             }
@@ -1387,7 +1373,7 @@ namespace GeneXus.Programs {
                      /* Using cursor T00028 */
                      pr_default.execute(6, new Object[] {A8parametrosid, n65parametrosdsc, A65parametrosdsc, n66parametrosvalor, A66parametrosvalor, n67parametroscadena, A67parametroscadena, n68parametrosstatus, A68parametrosstatus, n69parametrosuso, A69parametrosuso, n70parametrosusuario, A70parametrosusuario, n71parametrosfecgre, A71parametrosfecgre, n72parametrosfecact, A72parametrosfecact});
                      pr_default.close(6);
-                     dsDefault.SmartCacheProvider.SetUpdated("parametros") ;
+                     dsDefault.SmartCacheProvider.SetUpdated("PARAMETROS") ;
                      if ( (pr_default.getStatus(6) == 1) )
                      {
                         GX_msglist.addItem(context.GetMessage( "GXM_noupdate", ""), "DuplicatePrimaryKey", 1, "");
@@ -1442,10 +1428,10 @@ namespace GeneXus.Programs {
                      /* Using cursor T00029 */
                      pr_default.execute(7, new Object[] {n65parametrosdsc, A65parametrosdsc, n66parametrosvalor, A66parametrosvalor, n67parametroscadena, A67parametroscadena, n68parametrosstatus, A68parametrosstatus, n69parametrosuso, A69parametrosuso, n70parametrosusuario, A70parametrosusuario, n71parametrosfecgre, A71parametrosfecgre, n72parametrosfecact, A72parametrosfecact, A8parametrosid});
                      pr_default.close(7);
-                     dsDefault.SmartCacheProvider.SetUpdated("parametros") ;
+                     dsDefault.SmartCacheProvider.SetUpdated("PARAMETROS") ;
                      if ( (pr_default.getStatus(7) == 103) )
                      {
-                        GX_msglist.addItem(context.GetMessage( "GXM_lock", new   object[]  {"parametros"}), "RecordIsLocked", 1, "");
+                        GX_msglist.addItem(context.GetMessage( "GXM_lock", new   object[]  {"PARAMETROS"}), "RecordIsLocked", 1, "");
                         AnyError = 1;
                      }
                      DeferredUpdate022( ) ;
@@ -1499,7 +1485,7 @@ namespace GeneXus.Programs {
                   /* Using cursor T000210 */
                   pr_default.execute(8, new Object[] {A8parametrosid});
                   pr_default.close(8);
-                  dsDefault.SmartCacheProvider.SetUpdated("parametros") ;
+                  dsDefault.SmartCacheProvider.SetUpdated("PARAMETROS") ;
                   if ( AnyError == 0 )
                   {
                      /* Start of After( delete) rules */
@@ -1557,7 +1543,6 @@ namespace GeneXus.Programs {
          }
          if ( AnyError == 0 )
          {
-            pr_default.close(1);
             context.CommitDataStores( "parametros");
             if ( AnyError == 0 )
             {
@@ -1569,7 +1554,6 @@ namespace GeneXus.Programs {
          }
          else
          {
-            pr_default.close(1);
             context.RollbackDataStores( "parametros");
          }
          IsModified = 0;
@@ -1699,7 +1683,7 @@ namespace GeneXus.Programs {
          context.AddJavascriptSource("jquery.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxtimezone.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxgral.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("gxcfg.js", "?202112302284735");
+         context.AddJavascriptSource("gxcfg.js", "?20221221327669");
          if ( context.isSpaRequest( ) )
          {
             enableOutput();
@@ -1880,12 +1864,12 @@ namespace GeneXus.Programs {
 
       protected void define_styles( )
       {
-         AddStyleSheetFile("calendar-system.css", "?11323129");
-         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?2284430");
+         AddStyleSheetFile("calendar-system.css", "?13205289");
+         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?13264988");
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?202112302284740");
+            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?20221221327677");
             idxLst = (int)(idxLst+1);
          }
          /* End function define_styles */
@@ -1895,7 +1879,7 @@ namespace GeneXus.Programs {
       {
          context.AddJavascriptSource("messages.spa.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxdec.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("parametros.js", "?202112302284740");
+         context.AddJavascriptSource("parametros.js", "?20221221327677");
          /* End function include_jscripts */
       }
 
@@ -2458,70 +2442,70 @@ namespace GeneXus.Programs {
        {
           Object[] prmT00024 ;
           prmT00024 = new Object[] {
-          new Object[] {"@parametrosid",SqlDbType.Int,9,0}
+          new Object[] {"parametrosid",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT00025 ;
           prmT00025 = new Object[] {
-          new Object[] {"@parametrosid",SqlDbType.Int,9,0}
+          new Object[] {"parametrosid",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT00023 ;
           prmT00023 = new Object[] {
-          new Object[] {"@parametrosid",SqlDbType.Int,9,0}
+          new Object[] {"parametrosid",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT00026 ;
           prmT00026 = new Object[] {
-          new Object[] {"@parametrosid",SqlDbType.Int,9,0}
+          new Object[] {"parametrosid",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT00027 ;
           prmT00027 = new Object[] {
-          new Object[] {"@parametrosid",SqlDbType.Int,9,0}
+          new Object[] {"parametrosid",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT00022 ;
           prmT00022 = new Object[] {
-          new Object[] {"@parametrosid",SqlDbType.Int,9,0}
+          new Object[] {"parametrosid",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT00028 ;
           prmT00028 = new Object[] {
-          new Object[] {"@parametrosid",SqlDbType.Int,9,0} ,
-          new Object[] {"@parametrosdsc",SqlDbType.VarChar,100,0} ,
-          new Object[] {"@parametrosvalor",SqlDbType.Decimal,18,0} ,
-          new Object[] {"@parametroscadena",SqlDbType.VarChar,30,0} ,
-          new Object[] {"@parametrosstatus",SqlDbType.Decimal,18,0} ,
-          new Object[] {"@parametrosuso",SqlDbType.VarChar,100,0} ,
-          new Object[] {"@parametrosusuario",SqlDbType.VarChar,15,0} ,
-          new Object[] {"@parametrosfecgre",SqlDbType.DateTime,10,8} ,
-          new Object[] {"@parametrosfecact",SqlDbType.DateTime,10,8}
+          new Object[] {"parametrosid",NpgsqlDbType.Integer,9,0} ,
+          new Object[] {"parametrosdsc",NpgsqlDbType.Varchar,100,0} ,
+          new Object[] {"parametrosvalor",NpgsqlDbType.Real,18,0} ,
+          new Object[] {"parametroscadena",NpgsqlDbType.Varchar,30,0} ,
+          new Object[] {"parametrosstatus",NpgsqlDbType.Real,18,0} ,
+          new Object[] {"parametrosuso",NpgsqlDbType.Varchar,100,0} ,
+          new Object[] {"parametrosusuario",NpgsqlDbType.Varchar,15,0} ,
+          new Object[] {"parametrosfecgre",NpgsqlDbType.Timestamp,10,8} ,
+          new Object[] {"parametrosfecact",NpgsqlDbType.Timestamp,10,8}
           } ;
           Object[] prmT00029 ;
           prmT00029 = new Object[] {
-          new Object[] {"@parametrosdsc",SqlDbType.VarChar,100,0} ,
-          new Object[] {"@parametrosvalor",SqlDbType.Decimal,18,0} ,
-          new Object[] {"@parametroscadena",SqlDbType.VarChar,30,0} ,
-          new Object[] {"@parametrosstatus",SqlDbType.Decimal,18,0} ,
-          new Object[] {"@parametrosuso",SqlDbType.VarChar,100,0} ,
-          new Object[] {"@parametrosusuario",SqlDbType.VarChar,15,0} ,
-          new Object[] {"@parametrosfecgre",SqlDbType.DateTime,10,8} ,
-          new Object[] {"@parametrosfecact",SqlDbType.DateTime,10,8} ,
-          new Object[] {"@parametrosid",SqlDbType.Int,9,0}
+          new Object[] {"parametrosdsc",NpgsqlDbType.Varchar,100,0} ,
+          new Object[] {"parametrosvalor",NpgsqlDbType.Real,18,0} ,
+          new Object[] {"parametroscadena",NpgsqlDbType.Varchar,30,0} ,
+          new Object[] {"parametrosstatus",NpgsqlDbType.Real,18,0} ,
+          new Object[] {"parametrosuso",NpgsqlDbType.Varchar,100,0} ,
+          new Object[] {"parametrosusuario",NpgsqlDbType.Varchar,15,0} ,
+          new Object[] {"parametrosfecgre",NpgsqlDbType.Timestamp,10,8} ,
+          new Object[] {"parametrosfecact",NpgsqlDbType.Timestamp,10,8} ,
+          new Object[] {"parametrosid",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT000210 ;
           prmT000210 = new Object[] {
-          new Object[] {"@parametrosid",SqlDbType.Int,9,0}
+          new Object[] {"parametrosid",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT000211 ;
           prmT000211 = new Object[] {
           } ;
           def= new CursorDef[] {
-              new CursorDef("T00022", "SELECT [parametrosid], [parametrosdsc], [parametrosvalor], [parametroscadena], [parametrosstatus], [parametrosuso], [parametrosusuario], [parametrosfecgre], [parametrosfecact] FROM [parametros] WITH (UPDLOCK) WHERE [parametrosid] = @parametrosid ",true, GxErrorMask.GX_NOMASK, false, this,prmT00022,1,0,true,false )
-             ,new CursorDef("T00023", "SELECT [parametrosid], [parametrosdsc], [parametrosvalor], [parametroscadena], [parametrosstatus], [parametrosuso], [parametrosusuario], [parametrosfecgre], [parametrosfecact] FROM [parametros] WITH (NOLOCK) WHERE [parametrosid] = @parametrosid ",true, GxErrorMask.GX_NOMASK, false, this,prmT00023,1,0,true,false )
-             ,new CursorDef("T00024", "SELECT TM1.[parametrosid], TM1.[parametrosdsc], TM1.[parametrosvalor], TM1.[parametroscadena], TM1.[parametrosstatus], TM1.[parametrosuso], TM1.[parametrosusuario], TM1.[parametrosfecgre], TM1.[parametrosfecact] FROM [parametros] TM1 WITH (NOLOCK) WHERE TM1.[parametrosid] = @parametrosid ORDER BY TM1.[parametrosid]  OPTION (FAST 100)",true, GxErrorMask.GX_NOMASK, false, this,prmT00024,100,0,true,false )
-             ,new CursorDef("T00025", "SELECT [parametrosid] FROM [parametros] WITH (NOLOCK) WHERE [parametrosid] = @parametrosid  OPTION (FAST 1)",true, GxErrorMask.GX_NOMASK, false, this,prmT00025,1,0,true,false )
-             ,new CursorDef("T00026", "SELECT TOP 1 [parametrosid] FROM [parametros] WITH (NOLOCK) WHERE ( [parametrosid] > @parametrosid) ORDER BY [parametrosid]  OPTION (FAST 1)",true, GxErrorMask.GX_NOMASK, false, this,prmT00026,1,0,true,true )
-             ,new CursorDef("T00027", "SELECT TOP 1 [parametrosid] FROM [parametros] WITH (NOLOCK) WHERE ( [parametrosid] < @parametrosid) ORDER BY [parametrosid] DESC  OPTION (FAST 1)",true, GxErrorMask.GX_NOMASK, false, this,prmT00027,1,0,true,true )
-             ,new CursorDef("T00028", "INSERT INTO [parametros]([parametrosid], [parametrosdsc], [parametrosvalor], [parametroscadena], [parametrosstatus], [parametrosuso], [parametrosusuario], [parametrosfecgre], [parametrosfecact]) VALUES(@parametrosid, @parametrosdsc, @parametrosvalor, @parametroscadena, @parametrosstatus, @parametrosuso, @parametrosusuario, @parametrosfecgre, @parametrosfecact)", GxErrorMask.GX_NOMASK,prmT00028)
-             ,new CursorDef("T00029", "UPDATE [parametros] SET [parametrosdsc]=@parametrosdsc, [parametrosvalor]=@parametrosvalor, [parametroscadena]=@parametroscadena, [parametrosstatus]=@parametrosstatus, [parametrosuso]=@parametrosuso, [parametrosusuario]=@parametrosusuario, [parametrosfecgre]=@parametrosfecgre, [parametrosfecact]=@parametrosfecact  WHERE [parametrosid] = @parametrosid", GxErrorMask.GX_NOMASK,prmT00029)
-             ,new CursorDef("T000210", "DELETE FROM [parametros]  WHERE [parametrosid] = @parametrosid", GxErrorMask.GX_NOMASK,prmT000210)
-             ,new CursorDef("T000211", "SELECT [parametrosid] FROM [parametros] WITH (NOLOCK) ORDER BY [parametrosid]  OPTION (FAST 100)",true, GxErrorMask.GX_NOMASK, false, this,prmT000211,100,0,true,false )
+              new CursorDef("T00022", "SELECT parametrosid, parametrosdsc, parametrosvalor, parametroscadena, parametrosstatus, parametrosuso, parametrosusuario, parametrosfecgre, parametrosfecact FROM public.parametros WHERE parametrosid = :parametrosid  FOR UPDATE OF parametros NOWAIT",true, GxErrorMask.GX_NOMASK, false, this,prmT00022,1,0,true,false )
+             ,new CursorDef("T00023", "SELECT parametrosid, parametrosdsc, parametrosvalor, parametroscadena, parametrosstatus, parametrosuso, parametrosusuario, parametrosfecgre, parametrosfecact FROM public.parametros WHERE parametrosid = :parametrosid ",true, GxErrorMask.GX_NOMASK, false, this,prmT00023,1,0,true,false )
+             ,new CursorDef("T00024", "SELECT TM1.parametrosid, TM1.parametrosdsc, TM1.parametrosvalor, TM1.parametroscadena, TM1.parametrosstatus, TM1.parametrosuso, TM1.parametrosusuario, TM1.parametrosfecgre, TM1.parametrosfecact FROM public.parametros TM1 WHERE TM1.parametrosid = :parametrosid ORDER BY TM1.parametrosid ",true, GxErrorMask.GX_NOMASK, false, this,prmT00024,100,0,true,false )
+             ,new CursorDef("T00025", "SELECT parametrosid FROM public.parametros WHERE parametrosid = :parametrosid ",true, GxErrorMask.GX_NOMASK, false, this,prmT00025,1,0,true,false )
+             ,new CursorDef("T00026", "SELECT parametrosid FROM public.parametros WHERE ( parametrosid > :parametrosid) ORDER BY parametrosid ",true, GxErrorMask.GX_NOMASK, false, this,prmT00026,1,0,true,true )
+             ,new CursorDef("T00027", "SELECT parametrosid FROM public.parametros WHERE ( parametrosid < :parametrosid) ORDER BY parametrosid DESC ",true, GxErrorMask.GX_NOMASK, false, this,prmT00027,1,0,true,true )
+             ,new CursorDef("T00028", "SAVEPOINT gxupdate;INSERT INTO public.parametros(parametrosid, parametrosdsc, parametrosvalor, parametroscadena, parametrosstatus, parametrosuso, parametrosusuario, parametrosfecgre, parametrosfecact) VALUES(:parametrosid, :parametrosdsc, :parametrosvalor, :parametroscadena, :parametrosstatus, :parametrosuso, :parametrosusuario, :parametrosfecgre, :parametrosfecact);RELEASE SAVEPOINT gxupdate", GxErrorMask.GX_ROLLBACKSAVEPOINT,prmT00028)
+             ,new CursorDef("T00029", "SAVEPOINT gxupdate;UPDATE public.parametros SET parametrosdsc=:parametrosdsc, parametrosvalor=:parametrosvalor, parametroscadena=:parametroscadena, parametrosstatus=:parametrosstatus, parametrosuso=:parametrosuso, parametrosusuario=:parametrosusuario, parametrosfecgre=:parametrosfecgre, parametrosfecact=:parametrosfecact  WHERE parametrosid = :parametrosid;RELEASE SAVEPOINT gxupdate", GxErrorMask.GX_ROLLBACKSAVEPOINT | GxErrorMask.GX_NOMASK,prmT00029)
+             ,new CursorDef("T000210", "SAVEPOINT gxupdate;DELETE FROM public.parametros  WHERE parametrosid = :parametrosid;RELEASE SAVEPOINT gxupdate", GxErrorMask.GX_ROLLBACKSAVEPOINT | GxErrorMask.GX_NOMASK,prmT000210)
+             ,new CursorDef("T000211", "SELECT parametrosid FROM public.parametros ORDER BY parametrosid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000211,100,0,true,false )
           };
        }
     }

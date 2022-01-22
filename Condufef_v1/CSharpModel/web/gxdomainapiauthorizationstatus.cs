@@ -2,9 +2,9 @@
                File: APIAuthorizationStatus
         Description: APIAuthorizationStatus
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 12/30/2021 22:9:46.37
+       Generated on: 1/22/2022 13:28:19.36
        Program type: Callable routine
-          Main DBMS: sqlserver
+          Main DBMS: postgresql
 */
 using System;
 using System.Collections;

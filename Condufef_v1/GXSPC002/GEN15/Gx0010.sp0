@@ -45,25 +45,11 @@ repeat_i(2,[ 1,2,[ 'Linkselection',23,139,140 ],[] ]).
  
  
 rule_i(0,datastore(1,'DS_LAST_CHANGE','')).
-rule_i(0,datastore(1,'LOCK_RETRY','10')).
-rule_i(0,datastore(1,'WAIT_RECORD','0')).
-rule_i(0,datastore(1,'SQLSERVER_VERSION','9')).
+rule_i(0,datastore(1,'POSTGRESQL_VERSION','8_3')).
 rule_i(0,datastore(1,'COMMENT_ON','No')).
-rule_i(0,datastore(1,'DFT_TMP_TBLSPACE','')).
-rule_i(0,datastore(1,'DFT_IDX_TBLSPACE','')).
-rule_i(0,datastore(1,'DFT_TBL_TBLSPACE','')).
 rule_i(0,datastore(1,'DCL_REF_INT_DB','Yes')).
 rule_i(0,datastore(1,'PRIMARY_KEY_TYPE','PK')).
 rule_i(0,datastore(1,'CS_SCHEMA','')).
-rule_i(0,datastore(1,'SORT_ATTRIBUTES','Yes')).
-rule_i(0,datastore(1,'JRN400','QSQJRN')).
-rule_i(0,datastore(1,'CREATE_SAVF','Yes')).
-rule_i(0,datastore(1,'PGMLIB','')).
-rule_i(0,datastore(1,'DTALIB','')).
-rule_i(0,datastore(1,'CC_USER_PASS','')).
-rule_i(0,datastore(1,'CC_USER_ID','')).
-rule_i(0,datastore(1,'CC_SERVER','')).
-rule_i(0,datastore(1,'CC_DBNAME','')).
 rule_i(0,datastore(1,'RecycleRWMin','30')).
 rule_i(0,datastore(1,'RecycleRWType','1')).
 rule_i(0,datastore(1,'RecycleRW','-1')).
@@ -75,26 +61,25 @@ rule_i(0,datastore(1,'CS_RPCPGML','')).
 rule_i(0,datastore(1,'JDBC_DATASOURCE','')).
 rule_i(0,datastore(1,'USE_JDBC_DATASOURCE','0')).
 rule_i(0,datastore(1,'DS_DBMS_ADDINFO','')).
-rule_i(0,datastore(1,'USER_PASSWORD','')).
-rule_i(0,datastore(1,'USER_ID','')).
-rule_i(0,datastore(1,'TRUSTED_CONNECTION','Yes')).
+rule_i(0,datastore(1,'USER_PASSWORD',󻢸蘇�2�5炭)).
+rule_i(0,datastore(1,'USER_ID',postgres)).
 rule_i(0,datastore(1,'CS_CONNECT','First')).
-rule_i(0,datastore(1,'DBMS_PORT','')).
-rule_i(0,datastore(1,'CS_SERVER','JOSBUENO-MX\DELGADO')).
-rule_i(0,datastore(1,'CS_DBNAME','Dar_CONDUCEFDB')).
+rule_i(0,datastore(1,'DBMS_PORT','5432')).
+rule_i(0,datastore(1,'CS_SERVER',localhost)).
+rule_i(0,datastore(1,'CS_DBNAME',postgres)).
 rule_i(0,datastore(1,'CS_FLEDSNAME','')).
-rule_i(0,datastore(1,'CS_DRVNAME','sql server')).
+rule_i(0,datastore(1,'CS_DRVNAME','')).
 rule_i(0,datastore(1,'CS_DSNAME','')).
 rule_i(0,datastore(1,'DB_URL','')).
 rule_i(0,datastore(1,'JDBC_CUSTOM_URL','0')).
 rule_i(0,datastore(1,'JDBC_CUSTOM_DRIVER','')).
-rule_i(0,datastore(1,'JDBC_DRIVER','net.sourceforge.jtds.jdbc.Driver')).
+rule_i(0,datastore(1,'JDBC_DRIVER','org.postgresql.Driver')).
 rule_i(0,datastore(1,'CONNECT_METHOD','OPSYS')).
 rule_i(0,datastore(1,'ACCESS_TECHNO','ADONET')).
 rule_i(0,datastore(1,'MAIN_DS','-1')).
 rule_i(0,datastore(1,'REORG_GEN','8')).
 rule_i(0,datastore(1,'HelpKeyword','20')).
-rule_i(0,datastore(1,'DBMS',12)).
+rule_i(0,datastore(1,'DBMS',15)).
 rule_i(0,datastore(1,'NAME','Default')).
 rule_i(0,prop(idNULLS_BEHAVIOR,idNB_Current)).
 rule_i(0,prop('ObjectVisibility','Public')).
@@ -140,6 +125,10 @@ rule_i(0,maingen(15)).
 rule_i(0,parm([ 'Ptipobienid' ],[])).
 rule_i(0,parmio([ [ 'Ptipobienid',out ] ])).
 rule_i(0,order([ 23 ])).
+rule_i(0,file(1,'TIPOBIEN',[ 23,139,140,141,142 ])).
+rule_i(0,loc([ 1 ],'TIPOBIEN','','LAN')).
+rule_i(0,index(1,'TIPOBIEN_PKEY',u,[ 23 ])).
+rule_i(0,loc([ 1,'TIPOBIEN_PKEY' ],tipobien_pkey,'','LAN')).
 rule_i(0,p(0,0,fv,17,[ intname,'TIPOBIEN' ])).
 rule_i(0,p(0,0,fv,17,[ table,1 ])).
 rule_i(0,p(0,15,fv,17,[])).
@@ -152,14 +141,10 @@ rule_i(0,p(0,15,fvix,[ 17,18 ],[ 'NAME',tipobien_pkey ])).
 rule_i(0,p(0,15,fvix,[ 17,18 ],[ 'LOC','' ])).
 rule_i(0,p(0,15,fvix,[ 17,18 ],[ 'SCHEMA',public ])).
 rule_i(0,p(0,15,fvix,[ 17,18 ],[ 'EXTNAM','YES' ])).
-rule_i(2,rule([ a(1,msg([ t('"Campo tipobienfecreg fuera de rango"',3) ],[ t('OutOfRange',3) ])) ],[ t('NOT',8),t('(',0),t('null(',1),t('Ctipobienfecreg',2),t(')',4),t('.OR.',9),t('Ctipobienfecreg',2),t(>=,10),t('ymdhmstot(',1),t('1753',3),t(',',7),t('01',3),t(',',7),t('01',3),t(',',7),t('00',3),t(',',7),t('00',3),t(',',7),t('00',3),t(')',4),t(')',4) ],[ insert,update ],[ 'Ctipobienfecreg' ])).
-rule_i(2,rule([ a(1,msg([ t('"Campo tipobienfecultact fuera de rango"',3) ],[ t('OutOfRange',3) ])) ],[ t('NOT',8),t('(',0),t('null(',1),t('Ctipobienfecultact',2),t(')',4),t('.OR.',9),t('Ctipobienfecultact',2),t(>=,10),t('ymdhmstot(',1),t('1753',3),t(',',7),t('01',3),t(',',7),t('01',3),t(',',7),t('00',3),t(',',7),t('00',3),t(',',7),t('00',3),t(')',4),t(')',4) ],[ insert,update ],[ 'Ctipobienfecultact' ])).
 rule_i(0,rule([ a(22,[ '''Toggle''','''Toggle''','' ]) ],[],[],[])).
  
 a_i(1,1,f,'Err',[],[ [],[ t('0',3) ] ]).
 a_i(2,2,t,1,[],[ [],'TIPOBIEN_PKEY',[] ]).
-a_i(3,2,b,0,[],[ [],[ a(1,msg([ t('"Campo tipobienfecreg fuera de rango"',3) ],[ t('OutOfRange',3) ])) ],[ t('NOT',8),t('(',0),t('null(',1),t('Ctipobienfecreg',2),t(')',4),t('.OR.',9),t('Ctipobienfecreg',2),t(>=,10),t('ymdhmstot(',1),t('1753',3),t(',',7),t('01',3),t(',',7),t('01',3),t(',',7),t('00',3),t(',',7),t('00',3),t(',',7),t('00',3),t(')',4),t(')',4) ] ]).
-a_i(4,2,b,0,[],[ [],[ a(1,msg([ t('"Campo tipobienfecultact fuera de rango"',3) ],[ t('OutOfRange',3) ])) ],[ t('NOT',8),t('(',0),t('null(',1),t('Ctipobienfecultact',2),t(')',4),t('.OR.',9),t('Ctipobienfecultact',2),t(>=,10),t('ymdhmstot(',1),t('1753',3),t(',',7),t('01',3),t(',',7),t('01',3),t(',',7),t('00',3),t(',',7),t('00',3),t(',',7),t('00',3),t(')',4),t(')',4) ] ]).
  
 v_i(f,i,1,[]).
 v_i(f,o,1,'Err').
@@ -169,18 +154,14 @@ v_i(t,o,2,141).
 v_i(t,o,2,140).
 v_i(t,o,2,139).
 v_i(t,o,2,23).
-v_i(b,i,3,'Ctipobienfecreg').
-v_i(b,o,3,[]).
-v_i(b,i,4,'Ctipobienfecultact').
-v_i(b,o,4,[]).
  
  
  
  
  
  
-attri_i(141,[ tipobienfecreg,dtime,10,8,'99/99/9999 99:99:99',0,tipobienfecreg,'',0 ]).
 attri_i(142,[ tipobienfecultact,dtime,10,8,'99/99/9999 99:99:99',0,tipobienfecultact,'',0 ]).
+attri_i(141,[ tipobienfecreg,dtime,10,8,'99/99/9999 99:99:99',0,tipobienfecreg,'',0 ]).
 attri_i(140,[ tipobienusuario,svchar,15,0,'',0,tipobienusuario,'',0 ]).
 attri_i(139,[ tipobiendsc,svchar,100,0,'',0,tipobiendsc,'',0 ]).
 attri_i(23,[ tipobienid,int,9,0,'ZZZZZZZZ9',0,tipobienid,'',0 ]).
@@ -196,9 +177,9 @@ attri_i('Ctipobiendsc',[ ctipobiendsc,svchar,100,0,'',0,tipobiendsc,'',7 ]).
 attri_i('Ctipobienid',[ ctipobienid,int,9,0,'ZZZZZZZZ9',0,tipobienid,'',6 ]).
 attri_i('Linkselection',[ 'LinkSelection',bits,1024,0,'',0,'Link Selection','',5 ]).
  
-table_i(1,[ tipobien,[ 23,139,140,141,142 ],tipobien,tipobien ]).
+table_i(1,[ 'TIPOBIEN',[ 23,139,140,141,142 ],tipobien,tipobien ]).
  
-index_i(1,[ 'TIPOBIEN_PKEY',u,[ 23 ],tipobien_pkey ]).
+index_i(1,[ 'TIPOBIEN_PKEY',u,[ 23 ],'TIPOBIEN_PKEY' ]).
  
  
  
@@ -219,6 +200,12 @@ start_i(2,0,0,[ [ [ 23,23,'Ctipobienid',>= ] ],many ]).
  
  
  
+map_i(1,i,'TIPOBIEN_PKEY',[ 'TIPOBIEN_PKEY' ]).
+map_i(1,a,142,[ tipobienfecultact ]).
+map_i(1,a,141,[ tipobienfecreg ]).
+map_i(1,a,140,[ tipobienusuario ]).
+map_i(1,a,139,[ tipobiendsc ]).
+map_i(1,a,23,[ tipobienid ]).
  
  
  
@@ -1236,16 +1223,6 @@ att_prop_i(2,140,'DB_NLS_SUPPORT','No',d).
 att_prop_i(2,140,'AttRegEx','',d).
 att_prop_i(2,140,'AttValidationFailedMsg','',d).
 att_prop_i(2,140,'FullName',tipobienusuario,v).
-att_prop_i(2,142,'ExternalName',tipobienfecultact,d).
-att_prop_i(2,142,'ExternalNamespace','Condufef_v1',d).
-att_prop_i(2,142,'EmptyAsNull','Yes',d).
-att_prop_i(2,142,idBasedOn,'',d).
-att_prop_i(2,142,'ATT_INITIAL_VALUE','',d).
-att_prop_i(2,142,'AttRegEx','',d).
-att_prop_i(2,142,'AttValidationFailedMsg','',d).
-att_prop_i(2,142,idDATEFORMAT,idDATEFORMAT_LONG,v).
-att_prop_i(2,142,idHOURFORMAT,idHOURFORMAT_HOURMINSEC,v).
-att_prop_i(2,142,'FullName',tipobienfecultact,v).
 att_prop_i(2,141,'ExternalName',tipobienfecreg,d).
 att_prop_i(2,141,'ExternalNamespace','Condufef_v1',d).
 att_prop_i(2,141,'EmptyAsNull','Yes',d).
@@ -1256,6 +1233,16 @@ att_prop_i(2,141,'AttValidationFailedMsg','',d).
 att_prop_i(2,141,idDATEFORMAT,idDATEFORMAT_LONG,v).
 att_prop_i(2,141,idHOURFORMAT,idHOURFORMAT_HOURMINSEC,v).
 att_prop_i(2,141,'FullName',tipobienfecreg,v).
+att_prop_i(2,142,'ExternalName',tipobienfecultact,d).
+att_prop_i(2,142,'ExternalNamespace','Condufef_v1',d).
+att_prop_i(2,142,'EmptyAsNull','Yes',d).
+att_prop_i(2,142,idBasedOn,'',d).
+att_prop_i(2,142,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,142,'AttRegEx','',d).
+att_prop_i(2,142,'AttValidationFailedMsg','',d).
+att_prop_i(2,142,idDATEFORMAT,idDATEFORMAT_LONG,v).
+att_prop_i(2,142,idHOURFORMAT,idHOURFORMAT_HOURMINSEC,v).
+att_prop_i(2,142,'FullName',tipobienfecultact,v).
  
  
 tbl_att_prop_i(2,1,23,'AllowNulls',n).

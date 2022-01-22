@@ -53,25 +53,11 @@ repeat_i(2,[ 1,2,[ 'Linkselection',19,13,145,148,149 ],[] ]).
  
  
 rule_i(0,datastore(1,'DS_LAST_CHANGE','')).
-rule_i(0,datastore(1,'LOCK_RETRY','10')).
-rule_i(0,datastore(1,'WAIT_RECORD','0')).
-rule_i(0,datastore(1,'SQLSERVER_VERSION','9')).
+rule_i(0,datastore(1,'POSTGRESQL_VERSION','8_3')).
 rule_i(0,datastore(1,'COMMENT_ON','No')).
-rule_i(0,datastore(1,'DFT_TMP_TBLSPACE','')).
-rule_i(0,datastore(1,'DFT_IDX_TBLSPACE','')).
-rule_i(0,datastore(1,'DFT_TBL_TBLSPACE','')).
 rule_i(0,datastore(1,'DCL_REF_INT_DB','Yes')).
 rule_i(0,datastore(1,'PRIMARY_KEY_TYPE','PK')).
 rule_i(0,datastore(1,'CS_SCHEMA','')).
-rule_i(0,datastore(1,'SORT_ATTRIBUTES','Yes')).
-rule_i(0,datastore(1,'JRN400','QSQJRN')).
-rule_i(0,datastore(1,'CREATE_SAVF','Yes')).
-rule_i(0,datastore(1,'PGMLIB','')).
-rule_i(0,datastore(1,'DTALIB','')).
-rule_i(0,datastore(1,'CC_USER_PASS','')).
-rule_i(0,datastore(1,'CC_USER_ID','')).
-rule_i(0,datastore(1,'CC_SERVER','')).
-rule_i(0,datastore(1,'CC_DBNAME','')).
 rule_i(0,datastore(1,'RecycleRWMin','30')).
 rule_i(0,datastore(1,'RecycleRWType','1')).
 rule_i(0,datastore(1,'RecycleRW','-1')).
@@ -83,26 +69,25 @@ rule_i(0,datastore(1,'CS_RPCPGML','')).
 rule_i(0,datastore(1,'JDBC_DATASOURCE','')).
 rule_i(0,datastore(1,'USE_JDBC_DATASOURCE','0')).
 rule_i(0,datastore(1,'DS_DBMS_ADDINFO','')).
-rule_i(0,datastore(1,'USER_PASSWORD','')).
-rule_i(0,datastore(1,'USER_ID','')).
-rule_i(0,datastore(1,'TRUSTED_CONNECTION','Yes')).
+rule_i(0,datastore(1,'USER_PASSWORD',󻢸蘇�2�5炭)).
+rule_i(0,datastore(1,'USER_ID',postgres)).
 rule_i(0,datastore(1,'CS_CONNECT','First')).
-rule_i(0,datastore(1,'DBMS_PORT','')).
-rule_i(0,datastore(1,'CS_SERVER','JOSBUENO-MX\DELGADO')).
-rule_i(0,datastore(1,'CS_DBNAME','Dar_CONDUCEFDB')).
+rule_i(0,datastore(1,'DBMS_PORT','5432')).
+rule_i(0,datastore(1,'CS_SERVER',localhost)).
+rule_i(0,datastore(1,'CS_DBNAME',postgres)).
 rule_i(0,datastore(1,'CS_FLEDSNAME','')).
-rule_i(0,datastore(1,'CS_DRVNAME','sql server')).
+rule_i(0,datastore(1,'CS_DRVNAME','')).
 rule_i(0,datastore(1,'CS_DSNAME','')).
 rule_i(0,datastore(1,'DB_URL','')).
 rule_i(0,datastore(1,'JDBC_CUSTOM_URL','0')).
 rule_i(0,datastore(1,'JDBC_CUSTOM_DRIVER','')).
-rule_i(0,datastore(1,'JDBC_DRIVER','net.sourceforge.jtds.jdbc.Driver')).
+rule_i(0,datastore(1,'JDBC_DRIVER','org.postgresql.Driver')).
 rule_i(0,datastore(1,'CONNECT_METHOD','OPSYS')).
 rule_i(0,datastore(1,'ACCESS_TECHNO','ADONET')).
 rule_i(0,datastore(1,'MAIN_DS','-1')).
 rule_i(0,datastore(1,'REORG_GEN','8')).
 rule_i(0,datastore(1,'HelpKeyword','20')).
-rule_i(0,datastore(1,'DBMS',12)).
+rule_i(0,datastore(1,'DBMS',15)).
 rule_i(0,datastore(1,'NAME','Default')).
 rule_i(0,prop(idNULLS_BEHAVIOR,idNB_Current)).
 rule_i(0,prop('ObjectVisibility','Public')).
@@ -148,6 +133,10 @@ rule_i(0,maingen(15)).
 rule_i(0,parm([ 'Palmacenid' ],[])).
 rule_i(0,parmio([ [ 'Palmacenid',out ] ])).
 rule_i(0,order([ 19 ])).
+rule_i(0,file(18,'ALMACEN',[ 19,13,143,144,145,146,147,148,149,150,151,152,153 ])).
+rule_i(0,loc([ 18 ],'ALMACEN','','LAN')).
+rule_i(0,index(18,'ALMACEN_PKEY',u,[ 19 ])).
+rule_i(0,loc([ 18,'ALMACEN_PKEY' ],almacen_pkey,'','LAN')).
 rule_i(0,p(0,0,fv,20,[ intname,'ALMACEN' ])).
 rule_i(0,p(0,0,fv,20,[ table,18 ])).
 rule_i(0,p(0,15,fv,20,[])).
@@ -183,10 +172,10 @@ v_i(t,o,2,19).
  
  
  
-attri_i(143,[ almacendsc,svchar,100,0,'',0,almacendsc,'',0 ]).
-attri_i(144,[ almacendireccion,svchar,100,0,'',0,almacendireccion,'',0 ]).
-attri_i(146,[ almacenmunicipio,svchar,50,0,'',0,almacenmunicipio,'',0 ]).
 attri_i(147,[ alamcenestado,svchar,50,0,'',0,alamcenestado,'',0 ]).
+attri_i(146,[ almacenmunicipio,svchar,50,0,'',0,almacenmunicipio,'',0 ]).
+attri_i(144,[ almacendireccion,svchar,100,0,'',0,almacendireccion,'',0 ]).
+attri_i(143,[ almacendsc,svchar,100,0,'',0,almacendsc,'',0 ]).
 attri_i(149,[ almacentelefono,svchar,10,0,'',0,almacentelefono,'',0 ]).
 attri_i(148,[ alamcencodigopostal,svchar,5,0,'',0,alamcencodigopostal,'',0 ]).
 attri_i(145,[ almacencolonia,svchar,50,0,'',0,almacencolonia,'',0 ]).
@@ -206,9 +195,9 @@ attri_i('Cempleadosid',[ cempleadosid,int,9,0,'ZZZZZZZZ9',0,empleadosid,'',7 ]).
 attri_i('Calmacenid',[ calmacenid,int,18,0,'ZZZZZZZZZZZZZZZZZ9',0,articuloid,'',6 ]).
 attri_i('Linkselection',[ 'LinkSelection',bits,1024,0,'',0,'Link Selection','',5 ]).
  
-table_i(18,[ almacen,[ 19,13,143,144,145,146,147,148,149 ],almacen,almacen ]).
+table_i(18,[ 'ALMACEN',[ 19,13,143,144,145,146,147,148,149 ],almacen,almacen ]).
  
-index_i(18,[ 'ALMACEN_PKEY',u,[ 19 ],almacen_pkey ]).
+index_i(18,[ 'ALMACEN_PKEY',u,[ 19 ],'ALMACEN_PKEY' ]).
  
  
  
@@ -229,6 +218,20 @@ start_i(2,0,0,[ [ [ 19,23,'Calmacenid',>= ] ],many ]).
  
  
  
+map_i(18,i,'ALMACEN_PKEY',[ 'ALMACEN_PKEY' ]).
+map_i(18,a,153,[ almacenfecultact ]).
+map_i(18,a,152,[ almacenfecreg ]).
+map_i(18,a,151,[ alamcenusuario ]).
+map_i(18,a,150,[ alamcenobservaciones ]).
+map_i(18,a,149,[ almacentelefono ]).
+map_i(18,a,148,[ alamcencodigopostal ]).
+map_i(18,a,147,[ alamcenestado ]).
+map_i(18,a,146,[ almacenmunicipio ]).
+map_i(18,a,145,[ almacencolonia ]).
+map_i(18,a,144,[ almacendireccion ]).
+map_i(18,a,143,[ almacendsc ]).
+map_i(18,a,13,[ empleadoid ]).
+map_i(18,a,19,[ almacenid ]).
  
  
  
@@ -1580,33 +1583,6 @@ att_prop_i(2,149,'DB_NLS_SUPPORT','No',d).
 att_prop_i(2,149,'AttRegEx','',d).
 att_prop_i(2,149,'AttValidationFailedMsg','',d).
 att_prop_i(2,149,'FullName',almacentelefono,v).
-att_prop_i(2,147,'ExternalName',alamcenestado,d).
-att_prop_i(2,147,'ExternalNamespace','Condufef_v1',d).
-att_prop_i(2,147,'EmptyAsNull','Yes',d).
-att_prop_i(2,147,idBasedOn,'',d).
-att_prop_i(2,147,'ATT_INITIAL_VALUE','',d).
-att_prop_i(2,147,'DB_NLS_SUPPORT','No',d).
-att_prop_i(2,147,'AttRegEx','',d).
-att_prop_i(2,147,'AttValidationFailedMsg','',d).
-att_prop_i(2,147,'FullName',alamcenestado,v).
-att_prop_i(2,146,'ExternalName',almacenmunicipio,d).
-att_prop_i(2,146,'ExternalNamespace','Condufef_v1',d).
-att_prop_i(2,146,'EmptyAsNull','Yes',d).
-att_prop_i(2,146,idBasedOn,'',d).
-att_prop_i(2,146,'ATT_INITIAL_VALUE','',d).
-att_prop_i(2,146,'DB_NLS_SUPPORT','No',d).
-att_prop_i(2,146,'AttRegEx','',d).
-att_prop_i(2,146,'AttValidationFailedMsg','',d).
-att_prop_i(2,146,'FullName',almacenmunicipio,v).
-att_prop_i(2,144,'ExternalName',almacendireccion,d).
-att_prop_i(2,144,'ExternalNamespace','Condufef_v1',d).
-att_prop_i(2,144,'EmptyAsNull','Yes',d).
-att_prop_i(2,144,idBasedOn,'',d).
-att_prop_i(2,144,'ATT_INITIAL_VALUE','',d).
-att_prop_i(2,144,'DB_NLS_SUPPORT','No',d).
-att_prop_i(2,144,'AttRegEx','',d).
-att_prop_i(2,144,'AttValidationFailedMsg','',d).
-att_prop_i(2,144,'FullName',almacendireccion,v).
 att_prop_i(2,143,'ExternalName',almacendsc,d).
 att_prop_i(2,143,'ExternalNamespace','Condufef_v1',d).
 att_prop_i(2,143,'EmptyAsNull','Yes',d).
@@ -1616,6 +1592,33 @@ att_prop_i(2,143,'DB_NLS_SUPPORT','No',d).
 att_prop_i(2,143,'AttRegEx','',d).
 att_prop_i(2,143,'AttValidationFailedMsg','',d).
 att_prop_i(2,143,'FullName',almacendsc,v).
+att_prop_i(2,144,'ExternalName',almacendireccion,d).
+att_prop_i(2,144,'ExternalNamespace','Condufef_v1',d).
+att_prop_i(2,144,'EmptyAsNull','Yes',d).
+att_prop_i(2,144,idBasedOn,'',d).
+att_prop_i(2,144,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,144,'DB_NLS_SUPPORT','No',d).
+att_prop_i(2,144,'AttRegEx','',d).
+att_prop_i(2,144,'AttValidationFailedMsg','',d).
+att_prop_i(2,144,'FullName',almacendireccion,v).
+att_prop_i(2,146,'ExternalName',almacenmunicipio,d).
+att_prop_i(2,146,'ExternalNamespace','Condufef_v1',d).
+att_prop_i(2,146,'EmptyAsNull','Yes',d).
+att_prop_i(2,146,idBasedOn,'',d).
+att_prop_i(2,146,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,146,'DB_NLS_SUPPORT','No',d).
+att_prop_i(2,146,'AttRegEx','',d).
+att_prop_i(2,146,'AttValidationFailedMsg','',d).
+att_prop_i(2,146,'FullName',almacenmunicipio,v).
+att_prop_i(2,147,'ExternalName',alamcenestado,d).
+att_prop_i(2,147,'ExternalNamespace','Condufef_v1',d).
+att_prop_i(2,147,'EmptyAsNull','Yes',d).
+att_prop_i(2,147,idBasedOn,'',d).
+att_prop_i(2,147,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,147,'DB_NLS_SUPPORT','No',d).
+att_prop_i(2,147,'AttRegEx','',d).
+att_prop_i(2,147,'AttValidationFailedMsg','',d).
+att_prop_i(2,147,'FullName',alamcenestado,v).
  
  
 tbl_att_prop_i(2,18,19,'AllowNulls',n).

@@ -2,9 +2,9 @@
                File: Gx00B0
         Description: Selection List articulos
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 12/30/2021 22:9:30.46
+       Generated on: 1/22/2022 13:27:59.73
        Program type: Callable routine
-          Main DBMS: sqlserver
+          Main DBMS: postgresql
 */
 using System;
 using System.Collections;
@@ -14,7 +14,7 @@ using GeneXus.Application;
 using GeneXus.Metadata;
 using GeneXus.Cryptography;
 using System.Data;
-using System.Data.SqlClient;
+using NpgsqlTypes;
 using GeneXus.Data;
 using com.genexus;
 using GeneXus.Data.ADO;
@@ -278,7 +278,7 @@ namespace GeneXus.Programs {
          context.AddJavascriptSource("jquery.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxtimezone.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxgral.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("gxcfg.js", "?202112302293051");
+         context.AddJavascriptSource("gxcfg.js", "?202212213275982");
          if ( context.isSpaRequest( ) )
          {
             enableOutput();
@@ -1161,8 +1161,8 @@ namespace GeneXus.Programs {
          if ( String.IsNullOrEmpty(StringUtil.RTrim( context.wjLoc)) && ( context.nUserReturn != 1 ) )
          {
             SubsflControlProps_842( ) ;
-            GXPagingFrom2 = (int)(((10==0) ? 1 : GRID1_nFirstRecordOnPage+1));
-            GXPagingTo2 = (int)(((10==0) ? 10000 : GRID1_nFirstRecordOnPage+subGrid1_Recordsperpage( )+1));
+            GXPagingFrom2 = (int)(((10==0) ? 0 : GRID1_nFirstRecordOnPage));
+            GXPagingTo2 = ((10==0) ? 10000 : subGrid1_Recordsperpage( )+1);
             pr_default.dynParam(0, new Object[]{ new Object[]{
                                                  AV9calamcenid ,
                                                  AV10carticulosnoetiqueta ,
@@ -1181,7 +1181,7 @@ namespace GeneXus.Programs {
                                                  }
             });
             /* Using cursor H000I2 */
-            pr_default.execute(0, new Object[] {AV6calmacenid, AV7carticulosproductoid, AV8carticuloscambsid, AV9calamcenid, AV10carticulosnoetiqueta, AV11ctipobienid, AV12centidafederativaid, GXPagingFrom2, GXPagingTo2, GXPagingTo2, GXPagingFrom2, GXPagingFrom2});
+            pr_default.execute(0, new Object[] {AV6calmacenid, AV7carticulosproductoid, AV8carticuloscambsid, AV9calamcenid, AV10carticulosnoetiqueta, AV11ctipobienid, AV12centidafederativaid, GXPagingFrom2, GXPagingTo2, GXPagingTo2});
             nGXsfl_84_idx = 1;
             while ( ( (pr_default.getStatus(0) != 101) ) && ( ( ( 10 == 0 ) || ( GRID1_nCurrentRecord < subGrid1_Recordsperpage( ) ) ) ) )
             {
@@ -1599,11 +1599,11 @@ namespace GeneXus.Programs {
 
       protected void define_styles( )
       {
-         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?2284430");
+         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?13264988");
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?202112302293160");
+            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?20221221328143");
             idxLst = (int)(idxLst+1);
          }
          /* End function define_styles */
@@ -1613,7 +1613,7 @@ namespace GeneXus.Programs {
       {
          context.AddJavascriptSource("messages.spa.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxdec.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("gx00b0.js", "?202112302293160");
+         context.AddJavascriptSource("gx00b0.js", "?20221221328144");
          /* End function include_jscripts */
       }
 
@@ -2267,19 +2267,19 @@ namespace GeneXus.Programs {
          String sWhereString = "" ;
          String scmdbuf ;
          short[] GXv_int1 ;
-         GXv_int1 = new short [12] ;
+         GXv_int1 = new short [10] ;
          Object[] GXv_Object2 ;
          GXv_Object2 = new Object [2] ;
          String sSelectString ;
          String sFromString ;
          String sOrderString ;
-         sSelectString = " [entidafederativaid], [tipobienid], [articulosnoetiqueta], [alamcenid], [articuloscambsid], [articulosproductoid], [almacenid]";
-         sFromString = " FROM [articulos] WITH (NOLOCK)";
+         sSelectString = " entidadid, tipodocid, articulosnoetiqueta, alamcenid, cambsid, productoid, articulosid";
+         sFromString = " FROM public.articulos";
          sOrderString = "";
-         sWhereString = sWhereString + " WHERE ([almacenid] >= @AV6calmacenid and [articulosproductoid] >= @AV7carticulosproductoid and [articuloscambsid] >= @AV8carticuloscambsid)";
+         sWhereString = sWhereString + " WHERE (articulosid >= :AV6calmacenid and productoid >= :AV7carticulosproductoid and cambsid >= :AV8carticuloscambsid)";
          if ( ! (0==AV9calamcenid) )
          {
-            sWhereString = sWhereString + " and ([alamcenid] >= @AV9calamcenid)";
+            sWhereString = sWhereString + " and (alamcenid >= :AV9calamcenid)";
          }
          else
          {
@@ -2287,7 +2287,7 @@ namespace GeneXus.Programs {
          }
          if ( ! (0==AV10carticulosnoetiqueta) )
          {
-            sWhereString = sWhereString + " and ([articulosnoetiqueta] >= @AV10carticulosnoetiqueta)";
+            sWhereString = sWhereString + " and (articulosnoetiqueta >= :AV10carticulosnoetiqueta)";
          }
          else
          {
@@ -2295,7 +2295,7 @@ namespace GeneXus.Programs {
          }
          if ( ! (0==AV11ctipobienid) )
          {
-            sWhereString = sWhereString + " and ([tipobienid] >= @AV11ctipobienid)";
+            sWhereString = sWhereString + " and (tipodocid >= :AV11ctipobienid)";
          }
          else
          {
@@ -2303,15 +2303,14 @@ namespace GeneXus.Programs {
          }
          if ( ! (0==AV12centidafederativaid) )
          {
-            sWhereString = sWhereString + " and ([entidafederativaid] >= @AV12centidafederativaid)";
+            sWhereString = sWhereString + " and (entidadid >= :AV12centidafederativaid)";
          }
          else
          {
             GXv_int1[6] = 1;
          }
-         sOrderString = sOrderString + " ORDER BY [almacenid], [articulosproductoid], [articuloscambsid]";
-         scmdbuf = "SELECT * FROM (SELECT " + sSelectString + ", ROW_NUMBER() OVER (" + sOrderString + " ) AS GX_ROW_NUMBER" + sFromString + sWhereString + "" + ") AS GX_CTE WHERE GX_ROW_NUMBER" + " BETWEEN " + "@GXPagingFrom2" + " AND " + "@GXPagingTo2" + " OR " + "@GXPagingTo2" + " < " + "@GXPagingFrom2" + " AND GX_ROW_NUMBER >= " + "@GXPagingFrom2";
-         scmdbuf = scmdbuf + " OPTION (FAST 11)";
+         sOrderString = sOrderString + " ORDER BY articulosid, productoid, cambsid";
+         scmdbuf = "SELECT " + sSelectString + sFromString + sWhereString + "" + sOrderString + " OFFSET " + ":GXPagingFrom2" + " LIMIT CASE WHEN " + ":GXPagingTo2" + " > 0 THEN " + ":GXPagingTo2" + " ELSE 1e9 END";
          GXv_Object2[0] = scmdbuf;
          GXv_Object2[1] = GXv_int1;
          return GXv_Object2 ;
@@ -2336,11 +2335,11 @@ namespace GeneXus.Programs {
          GXv_int3 = new short [7] ;
          Object[] GXv_Object4 ;
          GXv_Object4 = new Object [2] ;
-         scmdbuf = "SELECT COUNT(*) FROM [articulos] WITH (NOLOCK)";
-         scmdbuf = scmdbuf + " WHERE ([almacenid] >= @AV6calmacenid and [articulosproductoid] >= @AV7carticulosproductoid and [articuloscambsid] >= @AV8carticuloscambsid)";
+         scmdbuf = "SELECT COUNT(*) FROM public.articulos";
+         scmdbuf = scmdbuf + " WHERE (articulosid >= :AV6calmacenid and productoid >= :AV7carticulosproductoid and cambsid >= :AV8carticuloscambsid)";
          if ( ! (0==AV9calamcenid) )
          {
-            sWhereString = sWhereString + " and ([alamcenid] >= @AV9calamcenid)";
+            sWhereString = sWhereString + " and (alamcenid >= :AV9calamcenid)";
          }
          else
          {
@@ -2348,7 +2347,7 @@ namespace GeneXus.Programs {
          }
          if ( ! (0==AV10carticulosnoetiqueta) )
          {
-            sWhereString = sWhereString + " and ([articulosnoetiqueta] >= @AV10carticulosnoetiqueta)";
+            sWhereString = sWhereString + " and (articulosnoetiqueta >= :AV10carticulosnoetiqueta)";
          }
          else
          {
@@ -2356,7 +2355,7 @@ namespace GeneXus.Programs {
          }
          if ( ! (0==AV11ctipobienid) )
          {
-            sWhereString = sWhereString + " and ([tipobienid] >= @AV11ctipobienid)";
+            sWhereString = sWhereString + " and (tipodocid >= :AV11ctipobienid)";
          }
          else
          {
@@ -2364,7 +2363,7 @@ namespace GeneXus.Programs {
          }
          if ( ! (0==AV12centidafederativaid) )
          {
-            sWhereString = sWhereString + " and ([entidafederativaid] >= @AV12centidafederativaid)";
+            sWhereString = sWhereString + " and (entidadid >= :AV12centidafederativaid)";
          }
          else
          {
@@ -2407,28 +2406,26 @@ namespace GeneXus.Programs {
        {
           Object[] prmH000I2 ;
           prmH000I2 = new Object[] {
-          new Object[] {"@AV6calmacenid",SqlDbType.Decimal,18,0} ,
-          new Object[] {"@AV7carticulosproductoid",SqlDbType.Int,9,0} ,
-          new Object[] {"@AV8carticuloscambsid",SqlDbType.Int,9,0} ,
-          new Object[] {"@AV9calamcenid",SqlDbType.Decimal,18,0} ,
-          new Object[] {"@AV10carticulosnoetiqueta",SqlDbType.Decimal,18,0} ,
-          new Object[] {"@AV11ctipobienid",SqlDbType.Int,9,0} ,
-          new Object[] {"@AV12centidafederativaid",SqlDbType.Int,9,0} ,
-          new Object[] {"@GXPagingFrom2",SqlDbType.Int,9,0} ,
-          new Object[] {"@GXPagingTo2",SqlDbType.Int,9,0} ,
-          new Object[] {"@GXPagingTo2",SqlDbType.Int,9,0} ,
-          new Object[] {"@GXPagingFrom2",SqlDbType.Int,9,0} ,
-          new Object[] {"@GXPagingFrom2",SqlDbType.Int,9,0}
+          new Object[] {"AV6calmacenid",NpgsqlDbType.Real,18,0} ,
+          new Object[] {"AV7carticulosproductoid",NpgsqlDbType.Integer,9,0} ,
+          new Object[] {"AV8carticuloscambsid",NpgsqlDbType.Integer,9,0} ,
+          new Object[] {"AV9calamcenid",NpgsqlDbType.Real,18,0} ,
+          new Object[] {"AV10carticulosnoetiqueta",NpgsqlDbType.Real,18,0} ,
+          new Object[] {"AV11ctipobienid",NpgsqlDbType.Integer,9,0} ,
+          new Object[] {"AV12centidafederativaid",NpgsqlDbType.Integer,9,0} ,
+          new Object[] {"GXPagingFrom2",NpgsqlDbType.Integer,9,0} ,
+          new Object[] {"GXPagingTo2",NpgsqlDbType.Integer,9,0} ,
+          new Object[] {"GXPagingTo2",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmH000I3 ;
           prmH000I3 = new Object[] {
-          new Object[] {"@AV6calmacenid",SqlDbType.Decimal,18,0} ,
-          new Object[] {"@AV7carticulosproductoid",SqlDbType.Int,9,0} ,
-          new Object[] {"@AV8carticuloscambsid",SqlDbType.Int,9,0} ,
-          new Object[] {"@AV9calamcenid",SqlDbType.Decimal,18,0} ,
-          new Object[] {"@AV10carticulosnoetiqueta",SqlDbType.Decimal,18,0} ,
-          new Object[] {"@AV11ctipobienid",SqlDbType.Int,9,0} ,
-          new Object[] {"@AV12centidafederativaid",SqlDbType.Int,9,0}
+          new Object[] {"AV6calmacenid",NpgsqlDbType.Real,18,0} ,
+          new Object[] {"AV7carticulosproductoid",NpgsqlDbType.Integer,9,0} ,
+          new Object[] {"AV8carticuloscambsid",NpgsqlDbType.Integer,9,0} ,
+          new Object[] {"AV9calamcenid",NpgsqlDbType.Real,18,0} ,
+          new Object[] {"AV10carticulosnoetiqueta",NpgsqlDbType.Real,18,0} ,
+          new Object[] {"AV11ctipobienid",NpgsqlDbType.Integer,9,0} ,
+          new Object[] {"AV12centidafederativaid",NpgsqlDbType.Integer,9,0}
           } ;
           def= new CursorDef[] {
               new CursorDef("H000I2", "scmdbuf",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmH000I2,11,0,false,false )
@@ -2474,62 +2471,52 @@ namespace GeneXus.Programs {
                 if ( (short)parms[0] == 0 )
                 {
                    sIdx = (short)(sIdx+1);
-                   stmt.SetParameter(sIdx, (long)parms[12]);
+                   stmt.SetParameter(sIdx, (long)parms[10]);
                 }
                 if ( (short)parms[1] == 0 )
                 {
                    sIdx = (short)(sIdx+1);
-                   stmt.SetParameter(sIdx, (int)parms[13]);
+                   stmt.SetParameter(sIdx, (int)parms[11]);
                 }
                 if ( (short)parms[2] == 0 )
                 {
                    sIdx = (short)(sIdx+1);
-                   stmt.SetParameter(sIdx, (int)parms[14]);
+                   stmt.SetParameter(sIdx, (int)parms[12]);
                 }
                 if ( (short)parms[3] == 0 )
                 {
                    sIdx = (short)(sIdx+1);
-                   stmt.SetParameter(sIdx, (long)parms[15]);
+                   stmt.SetParameter(sIdx, (long)parms[13]);
                 }
                 if ( (short)parms[4] == 0 )
                 {
                    sIdx = (short)(sIdx+1);
-                   stmt.SetParameter(sIdx, (long)parms[16]);
+                   stmt.SetParameter(sIdx, (long)parms[14]);
                 }
                 if ( (short)parms[5] == 0 )
                 {
                    sIdx = (short)(sIdx+1);
-                   stmt.SetParameter(sIdx, (int)parms[17]);
+                   stmt.SetParameter(sIdx, (int)parms[15]);
                 }
                 if ( (short)parms[6] == 0 )
                 {
                    sIdx = (short)(sIdx+1);
-                   stmt.SetParameter(sIdx, (int)parms[18]);
+                   stmt.SetParameter(sIdx, (int)parms[16]);
                 }
                 if ( (short)parms[7] == 0 )
                 {
                    sIdx = (short)(sIdx+1);
-                   stmt.SetParameter(sIdx, (int)parms[19]);
+                   stmt.SetParameter(sIdx, (int)parms[17]);
                 }
                 if ( (short)parms[8] == 0 )
                 {
                    sIdx = (short)(sIdx+1);
-                   stmt.SetParameter(sIdx, (int)parms[20]);
+                   stmt.SetParameter(sIdx, (int)parms[18]);
                 }
                 if ( (short)parms[9] == 0 )
                 {
                    sIdx = (short)(sIdx+1);
-                   stmt.SetParameter(sIdx, (int)parms[21]);
-                }
-                if ( (short)parms[10] == 0 )
-                {
-                   sIdx = (short)(sIdx+1);
-                   stmt.SetParameter(sIdx, (int)parms[22]);
-                }
-                if ( (short)parms[11] == 0 )
-                {
-                   sIdx = (short)(sIdx+1);
-                   stmt.SetParameter(sIdx, (int)parms[23]);
+                   stmt.SetParameter(sIdx, (int)parms[19]);
                 }
                 return;
              case 1 :

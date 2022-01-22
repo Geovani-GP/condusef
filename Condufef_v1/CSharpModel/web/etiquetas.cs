@@ -2,9 +2,9 @@
                File: etiquetas
         Description: etiquetas
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 12/30/2021 22:9:1.36
+       Generated on: 1/22/2022 13:27:25.97
        Program type: Callable routine
-          Main DBMS: sqlserver
+          Main DBMS: postgresql
 */
 using System;
 using System.Collections;
@@ -14,7 +14,7 @@ using GeneXus.Application;
 using GeneXus.Metadata;
 using GeneXus.Cryptography;
 using System.Data;
-using System.Data.SqlClient;
+using NpgsqlTypes;
 using GeneXus.Data;
 using com.genexus;
 using GeneXus.Data.ADO;
@@ -65,7 +65,7 @@ namespace GeneXus.Programs {
             dyncall( GetNextPar( )) ;
             return  ;
          }
-         else if ( StringUtil.StrCmp(gxfirstwebparm, "gxajaxExecAct_"+"gxLoad_6") == 0 )
+         else if ( StringUtil.StrCmp(gxfirstwebparm, "gxajaxExecAct_"+"gxLoad_3") == 0 )
          {
             A17etiquetasproductoid = (int)(NumberUtil.Val( GetNextPar( ), "."));
             context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A17etiquetasproductoid", StringUtil.LTrim( StringUtil.Str( (decimal)(A17etiquetasproductoid), 9, 0)));
@@ -75,10 +75,10 @@ namespace GeneXus.Programs {
                GxWebError = 1;
                return  ;
             }
-            gxLoad_6( A17etiquetasproductoid) ;
+            gxLoad_3( A17etiquetasproductoid) ;
             return  ;
          }
-         else if ( StringUtil.StrCmp(gxfirstwebparm, "gxajaxExecAct_"+"gxLoad_7") == 0 )
+         else if ( StringUtil.StrCmp(gxfirstwebparm, "gxajaxExecAct_"+"gxLoad_4") == 0 )
          {
             A18etiquetascambsid = (int)(NumberUtil.Val( GetNextPar( ), "."));
             context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A18etiquetascambsid", StringUtil.LTrim( StringUtil.Str( (decimal)(A18etiquetascambsid), 9, 0)));
@@ -88,10 +88,10 @@ namespace GeneXus.Programs {
                GxWebError = 1;
                return  ;
             }
-            gxLoad_7( A18etiquetascambsid) ;
+            gxLoad_4( A18etiquetascambsid) ;
             return  ;
          }
-         else if ( StringUtil.StrCmp(gxfirstwebparm, "gxajaxExecAct_"+"gxLoad_5") == 0 )
+         else if ( StringUtil.StrCmp(gxfirstwebparm, "gxajaxExecAct_"+"gxLoad_2") == 0 )
          {
             A19almacenid = (long)(NumberUtil.Val( GetNextPar( ), "."));
             context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A19almacenid", StringUtil.LTrim( StringUtil.Str( (decimal)(A19almacenid), 18, 0)));
@@ -101,7 +101,7 @@ namespace GeneXus.Programs {
                GxWebError = 1;
                return  ;
             }
-            gxLoad_5( A19almacenid) ;
+            gxLoad_2( A19almacenid) ;
             return  ;
          }
          else if ( StringUtil.StrCmp(gxfirstwebparm, "gxajaxEvt") == 0 )
@@ -907,7 +907,7 @@ namespace GeneXus.Programs {
 
       protected void ZM0C12( short GX_JID )
       {
-         if ( ( GX_JID == 4 ) || ( GX_JID == 0 ) )
+         if ( ( GX_JID == 1 ) || ( GX_JID == 0 ) )
          {
             if ( StringUtil.StrCmp(Gx_mode, "INS") != 0 )
             {
@@ -930,7 +930,7 @@ namespace GeneXus.Programs {
                Z38etiquetasfecultact = A38etiquetasfecultact;
             }
          }
-         if ( GX_JID == -4 )
+         if ( GX_JID == -1 )
          {
             Z32etiquetasnumero = A32etiquetasnumero;
             Z33etiquetastatus = A33etiquetastatus;
@@ -1004,7 +1004,7 @@ namespace GeneXus.Programs {
             A38etiquetasfecultact = T000C7_A38etiquetasfecultact[0];
             context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A38etiquetasfecultact", context.localUtil.TToC( A38etiquetasfecultact, 10, 8, 0, 3, "/", ":", " "));
             n38etiquetasfecultact = T000C7_n38etiquetasfecultact[0];
-            ZM0C12( -4) ;
+            ZM0C12( -1) ;
          }
          pr_default.close(5);
          OnLoadActions0C12( ) ;
@@ -1048,27 +1048,6 @@ namespace GeneXus.Programs {
             context.httpAjaxContext.ajax_rsp_assign_attri("", false, "GX_FocusControl", GX_FocusControl);
          }
          pr_default.close(2);
-         if ( ! ( (DateTime.MinValue==A34etiquetafecharealizada) || ( A34etiquetafecharealizada >= context.localUtil.YMDHMSToT( 1753, 1, 1, 0, 0, 0) ) ) )
-         {
-            GX_msglist.addItem("Campo etiquetafecharealizada fuera de rango", "OutOfRange", 1, "ETIQUETAFECHAREALIZADA");
-            AnyError = 1;
-            GX_FocusControl = edtetiquetafecharealizada_Internalname;
-            context.httpAjaxContext.ajax_rsp_assign_attri("", false, "GX_FocusControl", GX_FocusControl);
-         }
-         if ( ! ( (DateTime.MinValue==A37etiquetasfecreg) || ( A37etiquetasfecreg >= context.localUtil.YMDHMSToT( 1753, 1, 1, 0, 0, 0) ) ) )
-         {
-            GX_msglist.addItem("Campo etiquetasfecreg fuera de rango", "OutOfRange", 1, "ETIQUETASFECREG");
-            AnyError = 1;
-            GX_FocusControl = edtetiquetasfecreg_Internalname;
-            context.httpAjaxContext.ajax_rsp_assign_attri("", false, "GX_FocusControl", GX_FocusControl);
-         }
-         if ( ! ( (DateTime.MinValue==A38etiquetasfecultact) || ( A38etiquetasfecultact >= context.localUtil.YMDHMSToT( 1753, 1, 1, 0, 0, 0) ) ) )
-         {
-            GX_msglist.addItem("Campo etiquetasfecultact fuera de rango", "OutOfRange", 1, "ETIQUETASFECULTACT");
-            AnyError = 1;
-            GX_FocusControl = edtetiquetasfecultact_Internalname;
-            context.httpAjaxContext.ajax_rsp_assign_attri("", false, "GX_FocusControl", GX_FocusControl);
-         }
       }
 
       protected void CloseExtendedTableCursors0C12( )
@@ -1082,7 +1061,7 @@ namespace GeneXus.Programs {
       {
       }
 
-      protected void gxLoad_6( int A17etiquetasproductoid )
+      protected void gxLoad_3( int A17etiquetasproductoid )
       {
          /* Using cursor T000C8 */
          pr_default.execute(6, new Object[] {A17etiquetasproductoid});
@@ -1106,7 +1085,7 @@ namespace GeneXus.Programs {
          pr_default.close(6);
       }
 
-      protected void gxLoad_7( int A18etiquetascambsid )
+      protected void gxLoad_4( int A18etiquetascambsid )
       {
          /* Using cursor T000C9 */
          pr_default.execute(7, new Object[] {A18etiquetascambsid});
@@ -1130,7 +1109,7 @@ namespace GeneXus.Programs {
          pr_default.close(7);
       }
 
-      protected void gxLoad_5( long A19almacenid )
+      protected void gxLoad_2( long A19almacenid )
       {
          /* Using cursor T000C10 */
          pr_default.execute(8, new Object[] {A19almacenid});
@@ -1175,7 +1154,7 @@ namespace GeneXus.Programs {
          pr_default.execute(1, new Object[] {A17etiquetasproductoid, A18etiquetascambsid, A19almacenid});
          if ( (pr_default.getStatus(1) != 101) )
          {
-            ZM0C12( 4) ;
+            ZM0C12( 1) ;
             RcdFound12 = 1;
             A32etiquetasnumero = T000C3_A32etiquetasnumero[0];
             context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A32etiquetasnumero", StringUtil.LTrim( StringUtil.Str( (decimal)(A32etiquetasnumero), 18, 0)));
@@ -1555,7 +1534,7 @@ namespace GeneXus.Programs {
             pr_default.execute(0, new Object[] {A17etiquetasproductoid, A18etiquetascambsid, A19almacenid});
             if ( (pr_default.getStatus(0) == 103) )
             {
-               GX_msglist.addItem(context.GetMessage( "GXM_lock", new   object[]  {"etiquetas"}), "RecordIsLocked", 1, "");
+               GX_msglist.addItem(context.GetMessage( "GXM_lock", new   object[]  {"ETIQUETAS"}), "RecordIsLocked", 1, "");
                AnyError = 1;
                return  ;
             }
@@ -1608,7 +1587,7 @@ namespace GeneXus.Programs {
                   GXUtil.WriteLogRaw("Old: ",Z38etiquetasfecultact);
                   GXUtil.WriteLogRaw("Current: ",T000C2_A38etiquetasfecultact[0]);
                }
-               GX_msglist.addItem(context.GetMessage( "GXM_waschg", new   object[]  {"etiquetas"}), "RecordWasChanged", 1, "");
+               GX_msglist.addItem(context.GetMessage( "GXM_waschg", new   object[]  {"ETIQUETAS"}), "RecordWasChanged", 1, "");
                AnyError = 1;
                return  ;
             }
@@ -1637,7 +1616,7 @@ namespace GeneXus.Programs {
                      /* Using cursor T000C14 */
                      pr_default.execute(12, new Object[] {n32etiquetasnumero, A32etiquetasnumero, n33etiquetastatus, A33etiquetastatus, n34etiquetafecharealizada, A34etiquetafecharealizada, n35etiquetasreimpresion, A35etiquetasreimpresion, n36etiquetasusuario, A36etiquetasusuario, n37etiquetasfecreg, A37etiquetasfecreg, n38etiquetasfecultact, A38etiquetasfecultact, A19almacenid, A17etiquetasproductoid, A18etiquetascambsid});
                      pr_default.close(12);
-                     dsDefault.SmartCacheProvider.SetUpdated("etiquetas") ;
+                     dsDefault.SmartCacheProvider.SetUpdated("ETIQUETAS") ;
                      if ( (pr_default.getStatus(12) == 1) )
                      {
                         GX_msglist.addItem(context.GetMessage( "GXM_noupdate", ""), "DuplicatePrimaryKey", 1, "");
@@ -1692,10 +1671,10 @@ namespace GeneXus.Programs {
                      /* Using cursor T000C15 */
                      pr_default.execute(13, new Object[] {n32etiquetasnumero, A32etiquetasnumero, n33etiquetastatus, A33etiquetastatus, n34etiquetafecharealizada, A34etiquetafecharealizada, n35etiquetasreimpresion, A35etiquetasreimpresion, n36etiquetasusuario, A36etiquetasusuario, n37etiquetasfecreg, A37etiquetasfecreg, n38etiquetasfecultact, A38etiquetasfecultact, A17etiquetasproductoid, A18etiquetascambsid, A19almacenid});
                      pr_default.close(13);
-                     dsDefault.SmartCacheProvider.SetUpdated("etiquetas") ;
+                     dsDefault.SmartCacheProvider.SetUpdated("ETIQUETAS") ;
                      if ( (pr_default.getStatus(13) == 103) )
                      {
-                        GX_msglist.addItem(context.GetMessage( "GXM_lock", new   object[]  {"etiquetas"}), "RecordIsLocked", 1, "");
+                        GX_msglist.addItem(context.GetMessage( "GXM_lock", new   object[]  {"ETIQUETAS"}), "RecordIsLocked", 1, "");
                         AnyError = 1;
                      }
                      DeferredUpdate0C12( ) ;
@@ -1749,7 +1728,7 @@ namespace GeneXus.Programs {
                   /* Using cursor T000C16 */
                   pr_default.execute(14, new Object[] {A17etiquetasproductoid, A18etiquetascambsid, A19almacenid});
                   pr_default.close(14);
-                  dsDefault.SmartCacheProvider.SetUpdated("etiquetas") ;
+                  dsDefault.SmartCacheProvider.SetUpdated("ETIQUETAS") ;
                   if ( AnyError == 0 )
                   {
                      /* Start of After( delete) rules */
@@ -1807,7 +1786,6 @@ namespace GeneXus.Programs {
          }
          if ( AnyError == 0 )
          {
-            pr_default.close(1);
             context.CommitDataStores( "etiquetas");
             if ( AnyError == 0 )
             {
@@ -1819,7 +1797,6 @@ namespace GeneXus.Programs {
          }
          else
          {
-            pr_default.close(1);
             context.RollbackDataStores( "etiquetas");
          }
          IsModified = 0;
@@ -1959,7 +1936,7 @@ namespace GeneXus.Programs {
          context.AddJavascriptSource("jquery.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxtimezone.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxgral.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("gxcfg.js", "?20211230229247");
+         context.AddJavascriptSource("gxcfg.js", "?202212213272721");
          if ( context.isSpaRequest( ) )
          {
             enableOutput();
@@ -2140,12 +2117,12 @@ namespace GeneXus.Programs {
 
       protected void define_styles( )
       {
-         AddStyleSheetFile("calendar-system.css", "?11323129");
-         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?2284430");
+         AddStyleSheetFile("calendar-system.css", "?13205289");
+         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?13264988");
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?20211230229253");
+            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?202212213272728");
             idxLst = (int)(idxLst+1);
          }
          /* End function define_styles */
@@ -2155,7 +2132,7 @@ namespace GeneXus.Programs {
       {
          context.AddJavascriptSource("messages.spa.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxdec.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("etiquetas.js", "?20211230229253");
+         context.AddJavascriptSource("etiquetas.js", "?202212213272728");
          /* End function include_jscripts */
       }
 
@@ -2893,131 +2870,131 @@ namespace GeneXus.Programs {
        {
           Object[] prmT000C7 ;
           prmT000C7 = new Object[] {
-          new Object[] {"@etiquetasproductoid",SqlDbType.Int,9,0} ,
-          new Object[] {"@etiquetascambsid",SqlDbType.Int,9,0} ,
-          new Object[] {"@almacenid",SqlDbType.Decimal,18,0}
+          new Object[] {"etiquetasproductoid",NpgsqlDbType.Integer,9,0} ,
+          new Object[] {"etiquetascambsid",NpgsqlDbType.Integer,9,0} ,
+          new Object[] {"almacenid",NpgsqlDbType.Real,18,0}
           } ;
           Object[] prmT000C5 ;
           prmT000C5 = new Object[] {
-          new Object[] {"@etiquetasproductoid",SqlDbType.Int,9,0}
+          new Object[] {"etiquetasproductoid",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT000C6 ;
           prmT000C6 = new Object[] {
-          new Object[] {"@etiquetascambsid",SqlDbType.Int,9,0}
+          new Object[] {"etiquetascambsid",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT000C4 ;
           prmT000C4 = new Object[] {
-          new Object[] {"@almacenid",SqlDbType.Decimal,18,0}
+          new Object[] {"almacenid",NpgsqlDbType.Real,18,0}
           } ;
           Object[] prmT000C8 ;
           prmT000C8 = new Object[] {
-          new Object[] {"@etiquetasproductoid",SqlDbType.Int,9,0}
+          new Object[] {"etiquetasproductoid",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT000C9 ;
           prmT000C9 = new Object[] {
-          new Object[] {"@etiquetascambsid",SqlDbType.Int,9,0}
+          new Object[] {"etiquetascambsid",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT000C10 ;
           prmT000C10 = new Object[] {
-          new Object[] {"@almacenid",SqlDbType.Decimal,18,0}
+          new Object[] {"almacenid",NpgsqlDbType.Real,18,0}
           } ;
           Object[] prmT000C11 ;
           prmT000C11 = new Object[] {
-          new Object[] {"@etiquetasproductoid",SqlDbType.Int,9,0} ,
-          new Object[] {"@etiquetascambsid",SqlDbType.Int,9,0} ,
-          new Object[] {"@almacenid",SqlDbType.Decimal,18,0}
+          new Object[] {"etiquetasproductoid",NpgsqlDbType.Integer,9,0} ,
+          new Object[] {"etiquetascambsid",NpgsqlDbType.Integer,9,0} ,
+          new Object[] {"almacenid",NpgsqlDbType.Real,18,0}
           } ;
           Object[] prmT000C3 ;
           prmT000C3 = new Object[] {
-          new Object[] {"@etiquetasproductoid",SqlDbType.Int,9,0} ,
-          new Object[] {"@etiquetascambsid",SqlDbType.Int,9,0} ,
-          new Object[] {"@almacenid",SqlDbType.Decimal,18,0}
+          new Object[] {"etiquetasproductoid",NpgsqlDbType.Integer,9,0} ,
+          new Object[] {"etiquetascambsid",NpgsqlDbType.Integer,9,0} ,
+          new Object[] {"almacenid",NpgsqlDbType.Real,18,0}
           } ;
           Object[] prmT000C12 ;
           prmT000C12 = new Object[] {
-          new Object[] {"@etiquetasproductoid",SqlDbType.Int,9,0} ,
-          new Object[] {"@etiquetascambsid",SqlDbType.Int,9,0} ,
-          new Object[] {"@almacenid",SqlDbType.Decimal,18,0}
+          new Object[] {"etiquetasproductoid",NpgsqlDbType.Integer,9,0} ,
+          new Object[] {"etiquetascambsid",NpgsqlDbType.Integer,9,0} ,
+          new Object[] {"almacenid",NpgsqlDbType.Real,18,0}
           } ;
           Object[] prmT000C13 ;
           prmT000C13 = new Object[] {
-          new Object[] {"@etiquetasproductoid",SqlDbType.Int,9,0} ,
-          new Object[] {"@etiquetascambsid",SqlDbType.Int,9,0} ,
-          new Object[] {"@almacenid",SqlDbType.Decimal,18,0}
+          new Object[] {"etiquetasproductoid",NpgsqlDbType.Integer,9,0} ,
+          new Object[] {"etiquetascambsid",NpgsqlDbType.Integer,9,0} ,
+          new Object[] {"almacenid",NpgsqlDbType.Real,18,0}
           } ;
           Object[] prmT000C2 ;
           prmT000C2 = new Object[] {
-          new Object[] {"@etiquetasproductoid",SqlDbType.Int,9,0} ,
-          new Object[] {"@etiquetascambsid",SqlDbType.Int,9,0} ,
-          new Object[] {"@almacenid",SqlDbType.Decimal,18,0}
+          new Object[] {"etiquetasproductoid",NpgsqlDbType.Integer,9,0} ,
+          new Object[] {"etiquetascambsid",NpgsqlDbType.Integer,9,0} ,
+          new Object[] {"almacenid",NpgsqlDbType.Real,18,0}
           } ;
           Object[] prmT000C14 ;
           prmT000C14 = new Object[] {
-          new Object[] {"@etiquetasnumero",SqlDbType.Decimal,18,0} ,
-          new Object[] {"@etiquetastatus",SqlDbType.Decimal,18,0} ,
-          new Object[] {"@etiquetafecharealizada",SqlDbType.DateTime,10,8} ,
-          new Object[] {"@etiquetasreimpresion",SqlDbType.Decimal,18,0} ,
-          new Object[] {"@etiquetasusuario",SqlDbType.VarChar,15,0} ,
-          new Object[] {"@etiquetasfecreg",SqlDbType.DateTime,10,8} ,
-          new Object[] {"@etiquetasfecultact",SqlDbType.DateTime,10,8} ,
-          new Object[] {"@almacenid",SqlDbType.Decimal,18,0} ,
-          new Object[] {"@etiquetasproductoid",SqlDbType.Int,9,0} ,
-          new Object[] {"@etiquetascambsid",SqlDbType.Int,9,0}
+          new Object[] {"etiquetasnumero",NpgsqlDbType.Real,18,0} ,
+          new Object[] {"etiquetastatus",NpgsqlDbType.Real,18,0} ,
+          new Object[] {"etiquetafecharealizada",NpgsqlDbType.Timestamp,10,8} ,
+          new Object[] {"etiquetasreimpresion",NpgsqlDbType.Real,18,0} ,
+          new Object[] {"etiquetasusuario",NpgsqlDbType.Varchar,15,0} ,
+          new Object[] {"etiquetasfecreg",NpgsqlDbType.Timestamp,10,8} ,
+          new Object[] {"etiquetasfecultact",NpgsqlDbType.Timestamp,10,8} ,
+          new Object[] {"almacenid",NpgsqlDbType.Real,18,0} ,
+          new Object[] {"etiquetasproductoid",NpgsqlDbType.Integer,9,0} ,
+          new Object[] {"etiquetascambsid",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT000C15 ;
           prmT000C15 = new Object[] {
-          new Object[] {"@etiquetasnumero",SqlDbType.Decimal,18,0} ,
-          new Object[] {"@etiquetastatus",SqlDbType.Decimal,18,0} ,
-          new Object[] {"@etiquetafecharealizada",SqlDbType.DateTime,10,8} ,
-          new Object[] {"@etiquetasreimpresion",SqlDbType.Decimal,18,0} ,
-          new Object[] {"@etiquetasusuario",SqlDbType.VarChar,15,0} ,
-          new Object[] {"@etiquetasfecreg",SqlDbType.DateTime,10,8} ,
-          new Object[] {"@etiquetasfecultact",SqlDbType.DateTime,10,8} ,
-          new Object[] {"@etiquetasproductoid",SqlDbType.Int,9,0} ,
-          new Object[] {"@etiquetascambsid",SqlDbType.Int,9,0} ,
-          new Object[] {"@almacenid",SqlDbType.Decimal,18,0}
+          new Object[] {"etiquetasnumero",NpgsqlDbType.Real,18,0} ,
+          new Object[] {"etiquetastatus",NpgsqlDbType.Real,18,0} ,
+          new Object[] {"etiquetafecharealizada",NpgsqlDbType.Timestamp,10,8} ,
+          new Object[] {"etiquetasreimpresion",NpgsqlDbType.Real,18,0} ,
+          new Object[] {"etiquetasusuario",NpgsqlDbType.Varchar,15,0} ,
+          new Object[] {"etiquetasfecreg",NpgsqlDbType.Timestamp,10,8} ,
+          new Object[] {"etiquetasfecultact",NpgsqlDbType.Timestamp,10,8} ,
+          new Object[] {"etiquetasproductoid",NpgsqlDbType.Integer,9,0} ,
+          new Object[] {"etiquetascambsid",NpgsqlDbType.Integer,9,0} ,
+          new Object[] {"almacenid",NpgsqlDbType.Real,18,0}
           } ;
           Object[] prmT000C16 ;
           prmT000C16 = new Object[] {
-          new Object[] {"@etiquetasproductoid",SqlDbType.Int,9,0} ,
-          new Object[] {"@etiquetascambsid",SqlDbType.Int,9,0} ,
-          new Object[] {"@almacenid",SqlDbType.Decimal,18,0}
+          new Object[] {"etiquetasproductoid",NpgsqlDbType.Integer,9,0} ,
+          new Object[] {"etiquetascambsid",NpgsqlDbType.Integer,9,0} ,
+          new Object[] {"almacenid",NpgsqlDbType.Real,18,0}
           } ;
           Object[] prmT000C17 ;
           prmT000C17 = new Object[] {
           } ;
           Object[] prmT000C18 ;
           prmT000C18 = new Object[] {
-          new Object[] {"@etiquetasproductoid",SqlDbType.Int,9,0}
+          new Object[] {"etiquetasproductoid",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT000C19 ;
           prmT000C19 = new Object[] {
-          new Object[] {"@etiquetascambsid",SqlDbType.Int,9,0}
+          new Object[] {"etiquetascambsid",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT000C20 ;
           prmT000C20 = new Object[] {
-          new Object[] {"@almacenid",SqlDbType.Decimal,18,0}
+          new Object[] {"almacenid",NpgsqlDbType.Real,18,0}
           } ;
           def= new CursorDef[] {
-              new CursorDef("T000C2", "SELECT [etiquetasnumero], [etiquetastatus], [etiquetafecharealizada], [etiquetasreimpresion], [etiquetasusuario], [etiquetasfecreg], [etiquetasfecultact], [almacenid], [etiquetasproductoid] AS etiquetasproductoid, [etiquetascambsid] AS etiquetascambsid FROM [etiquetas] WITH (UPDLOCK) WHERE [etiquetasproductoid] = @etiquetasproductoid AND [etiquetascambsid] = @etiquetascambsid AND [almacenid] = @almacenid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000C2,1,0,true,false )
-             ,new CursorDef("T000C3", "SELECT [etiquetasnumero], [etiquetastatus], [etiquetafecharealizada], [etiquetasreimpresion], [etiquetasusuario], [etiquetasfecreg], [etiquetasfecultact], [almacenid], [etiquetasproductoid] AS etiquetasproductoid, [etiquetascambsid] AS etiquetascambsid FROM [etiquetas] WITH (NOLOCK) WHERE [etiquetasproductoid] = @etiquetasproductoid AND [etiquetascambsid] = @etiquetascambsid AND [almacenid] = @almacenid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000C3,1,0,true,false )
-             ,new CursorDef("T000C4", "SELECT [almacenid] FROM [almacen] WITH (NOLOCK) WHERE [almacenid] = @almacenid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000C4,1,0,true,false )
-             ,new CursorDef("T000C5", "SELECT [modelosid] AS etiquetasproductoid FROM [modelos] WITH (NOLOCK) WHERE [modelosid] = @etiquetasproductoid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000C5,1,0,true,false )
-             ,new CursorDef("T000C6", "SELECT [cambsid] AS etiquetascambsid FROM [cambs] WITH (NOLOCK) WHERE [cambsid] = @etiquetascambsid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000C6,1,0,true,false )
-             ,new CursorDef("T000C7", "SELECT TM1.[etiquetasnumero], TM1.[etiquetastatus], TM1.[etiquetafecharealizada], TM1.[etiquetasreimpresion], TM1.[etiquetasusuario], TM1.[etiquetasfecreg], TM1.[etiquetasfecultact], TM1.[almacenid], TM1.[etiquetasproductoid] AS etiquetasproductoid, TM1.[etiquetascambsid] AS etiquetascambsid FROM [etiquetas] TM1 WITH (NOLOCK) WHERE TM1.[etiquetasproductoid] = @etiquetasproductoid and TM1.[etiquetascambsid] = @etiquetascambsid and TM1.[almacenid] = @almacenid ORDER BY TM1.[etiquetasproductoid], TM1.[etiquetascambsid], TM1.[almacenid]  OPTION (FAST 100)",true, GxErrorMask.GX_NOMASK, false, this,prmT000C7,100,0,true,false )
-             ,new CursorDef("T000C8", "SELECT [modelosid] AS etiquetasproductoid FROM [modelos] WITH (NOLOCK) WHERE [modelosid] = @etiquetasproductoid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000C8,1,0,true,false )
-             ,new CursorDef("T000C9", "SELECT [cambsid] AS etiquetascambsid FROM [cambs] WITH (NOLOCK) WHERE [cambsid] = @etiquetascambsid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000C9,1,0,true,false )
-             ,new CursorDef("T000C10", "SELECT [almacenid] FROM [almacen] WITH (NOLOCK) WHERE [almacenid] = @almacenid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000C10,1,0,true,false )
-             ,new CursorDef("T000C11", "SELECT [etiquetasproductoid] AS etiquetasproductoid, [etiquetascambsid] AS etiquetascambsid, [almacenid] FROM [etiquetas] WITH (NOLOCK) WHERE [etiquetasproductoid] = @etiquetasproductoid AND [etiquetascambsid] = @etiquetascambsid AND [almacenid] = @almacenid  OPTION (FAST 1)",true, GxErrorMask.GX_NOMASK, false, this,prmT000C11,1,0,true,false )
-             ,new CursorDef("T000C12", "SELECT TOP 1 [etiquetasproductoid] AS etiquetasproductoid, [etiquetascambsid] AS etiquetascambsid, [almacenid] FROM [etiquetas] WITH (NOLOCK) WHERE ( [etiquetasproductoid] > @etiquetasproductoid or [etiquetasproductoid] = @etiquetasproductoid and [etiquetascambsid] > @etiquetascambsid or [etiquetascambsid] = @etiquetascambsid and [etiquetasproductoid] = @etiquetasproductoid and [almacenid] > @almacenid) ORDER BY [etiquetasproductoid], [etiquetascambsid], [almacenid]  OPTION (FAST 1)",true, GxErrorMask.GX_NOMASK, false, this,prmT000C12,1,0,true,true )
-             ,new CursorDef("T000C13", "SELECT TOP 1 [etiquetasproductoid] AS etiquetasproductoid, [etiquetascambsid] AS etiquetascambsid, [almacenid] FROM [etiquetas] WITH (NOLOCK) WHERE ( [etiquetasproductoid] < @etiquetasproductoid or [etiquetasproductoid] = @etiquetasproductoid and [etiquetascambsid] < @etiquetascambsid or [etiquetascambsid] = @etiquetascambsid and [etiquetasproductoid] = @etiquetasproductoid and [almacenid] < @almacenid) ORDER BY [etiquetasproductoid] DESC, [etiquetascambsid] DESC, [almacenid] DESC  OPTION (FAST 1)",true, GxErrorMask.GX_NOMASK, false, this,prmT000C13,1,0,true,true )
-             ,new CursorDef("T000C14", "INSERT INTO [etiquetas]([etiquetasnumero], [etiquetastatus], [etiquetafecharealizada], [etiquetasreimpresion], [etiquetasusuario], [etiquetasfecreg], [etiquetasfecultact], [almacenid], [etiquetasproductoid], [etiquetascambsid]) VALUES(@etiquetasnumero, @etiquetastatus, @etiquetafecharealizada, @etiquetasreimpresion, @etiquetasusuario, @etiquetasfecreg, @etiquetasfecultact, @almacenid, @etiquetasproductoid, @etiquetascambsid)", GxErrorMask.GX_NOMASK,prmT000C14)
-             ,new CursorDef("T000C15", "UPDATE [etiquetas] SET [etiquetasnumero]=@etiquetasnumero, [etiquetastatus]=@etiquetastatus, [etiquetafecharealizada]=@etiquetafecharealizada, [etiquetasreimpresion]=@etiquetasreimpresion, [etiquetasusuario]=@etiquetasusuario, [etiquetasfecreg]=@etiquetasfecreg, [etiquetasfecultact]=@etiquetasfecultact  WHERE [etiquetasproductoid] = @etiquetasproductoid AND [etiquetascambsid] = @etiquetascambsid AND [almacenid] = @almacenid", GxErrorMask.GX_NOMASK,prmT000C15)
-             ,new CursorDef("T000C16", "DELETE FROM [etiquetas]  WHERE [etiquetasproductoid] = @etiquetasproductoid AND [etiquetascambsid] = @etiquetascambsid AND [almacenid] = @almacenid", GxErrorMask.GX_NOMASK,prmT000C16)
-             ,new CursorDef("T000C17", "SELECT [etiquetasproductoid] AS etiquetasproductoid, [etiquetascambsid] AS etiquetascambsid, [almacenid] FROM [etiquetas] WITH (NOLOCK) ORDER BY [etiquetasproductoid], [etiquetascambsid], [almacenid]  OPTION (FAST 100)",true, GxErrorMask.GX_NOMASK, false, this,prmT000C17,100,0,true,false )
-             ,new CursorDef("T000C18", "SELECT [modelosid] AS etiquetasproductoid FROM [modelos] WITH (NOLOCK) WHERE [modelosid] = @etiquetasproductoid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000C18,1,0,true,false )
-             ,new CursorDef("T000C19", "SELECT [cambsid] AS etiquetascambsid FROM [cambs] WITH (NOLOCK) WHERE [cambsid] = @etiquetascambsid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000C19,1,0,true,false )
-             ,new CursorDef("T000C20", "SELECT [almacenid] FROM [almacen] WITH (NOLOCK) WHERE [almacenid] = @almacenid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000C20,1,0,true,false )
+              new CursorDef("T000C2", "SELECT etiquetasnumero, etiquetastatus, etiquetafecharealizada, etiquetasreimpresión, etiquetasusuario, etiquetasfecreg, etiquetasfecultact, articuloid, productoid AS etiquetasproductoid, cambsid AS etiquetascambsid FROM public.etiquetas WHERE productoid = :etiquetasproductoid AND cambsid = :etiquetascambsid AND articuloid = :almacenid  FOR UPDATE OF etiquetas NOWAIT",true, GxErrorMask.GX_NOMASK, false, this,prmT000C2,1,0,true,false )
+             ,new CursorDef("T000C3", "SELECT etiquetasnumero, etiquetastatus, etiquetafecharealizada, etiquetasreimpresión, etiquetasusuario, etiquetasfecreg, etiquetasfecultact, articuloid, productoid AS etiquetasproductoid, cambsid AS etiquetascambsid FROM public.etiquetas WHERE productoid = :etiquetasproductoid AND cambsid = :etiquetascambsid AND articuloid = :almacenid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000C3,1,0,true,false )
+             ,new CursorDef("T000C4", "SELECT almacenid FROM public.almacen WHERE almacenid = :almacenid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000C4,1,0,true,false )
+             ,new CursorDef("T000C5", "SELECT modelosid AS etiquetasproductoid FROM public.modelos WHERE modelosid = :etiquetasproductoid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000C5,1,0,true,false )
+             ,new CursorDef("T000C6", "SELECT cambsid AS etiquetascambsid FROM public.cambs WHERE cambsid = :etiquetascambsid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000C6,1,0,true,false )
+             ,new CursorDef("T000C7", "SELECT TM1.etiquetasnumero, TM1.etiquetastatus, TM1.etiquetafecharealizada, TM1.etiquetasreimpresión, TM1.etiquetasusuario, TM1.etiquetasfecreg, TM1.etiquetasfecultact, TM1.articuloid, TM1.productoid AS etiquetasproductoid, TM1.cambsid AS etiquetascambsid FROM public.etiquetas TM1 WHERE TM1.productoid = :etiquetasproductoid and TM1.cambsid = :etiquetascambsid and TM1.articuloid = :almacenid ORDER BY TM1.productoid, TM1.cambsid, TM1.articuloid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000C7,100,0,true,false )
+             ,new CursorDef("T000C8", "SELECT modelosid AS etiquetasproductoid FROM public.modelos WHERE modelosid = :etiquetasproductoid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000C8,1,0,true,false )
+             ,new CursorDef("T000C9", "SELECT cambsid AS etiquetascambsid FROM public.cambs WHERE cambsid = :etiquetascambsid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000C9,1,0,true,false )
+             ,new CursorDef("T000C10", "SELECT almacenid FROM public.almacen WHERE almacenid = :almacenid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000C10,1,0,true,false )
+             ,new CursorDef("T000C11", "SELECT productoid AS etiquetasproductoid, cambsid AS etiquetascambsid, articuloid FROM public.etiquetas WHERE productoid = :etiquetasproductoid AND cambsid = :etiquetascambsid AND articuloid = :almacenid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000C11,1,0,true,false )
+             ,new CursorDef("T000C12", "SELECT productoid AS etiquetasproductoid, cambsid AS etiquetascambsid, articuloid FROM public.etiquetas WHERE ( productoid > :etiquetasproductoid or productoid = :etiquetasproductoid and cambsid > :etiquetascambsid or cambsid = :etiquetascambsid and productoid = :etiquetasproductoid and articuloid > :almacenid) ORDER BY productoid, cambsid, articuloid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000C12,1,0,true,true )
+             ,new CursorDef("T000C13", "SELECT productoid AS etiquetasproductoid, cambsid AS etiquetascambsid, articuloid FROM public.etiquetas WHERE ( productoid < :etiquetasproductoid or productoid = :etiquetasproductoid and cambsid < :etiquetascambsid or cambsid = :etiquetascambsid and productoid = :etiquetasproductoid and articuloid < :almacenid) ORDER BY productoid DESC, cambsid DESC, articuloid DESC ",true, GxErrorMask.GX_NOMASK, false, this,prmT000C13,1,0,true,true )
+             ,new CursorDef("T000C14", "SAVEPOINT gxupdate;INSERT INTO public.etiquetas(etiquetasnumero, etiquetastatus, etiquetafecharealizada, etiquetasreimpresión, etiquetasusuario, etiquetasfecreg, etiquetasfecultact, articuloid, productoid, cambsid) VALUES(:etiquetasnumero, :etiquetastatus, :etiquetafecharealizada, :etiquetasreimpresion, :etiquetasusuario, :etiquetasfecreg, :etiquetasfecultact, :almacenid, :etiquetasproductoid, :etiquetascambsid);RELEASE SAVEPOINT gxupdate", GxErrorMask.GX_ROLLBACKSAVEPOINT | GxErrorMask.GX_NOMASK,prmT000C14)
+             ,new CursorDef("T000C15", "SAVEPOINT gxupdate;UPDATE public.etiquetas SET etiquetasnumero=:etiquetasnumero, etiquetastatus=:etiquetastatus, etiquetafecharealizada=:etiquetafecharealizada, etiquetasreimpresión=:etiquetasreimpresion, etiquetasusuario=:etiquetasusuario, etiquetasfecreg=:etiquetasfecreg, etiquetasfecultact=:etiquetasfecultact  WHERE productoid = :etiquetasproductoid AND cambsid = :etiquetascambsid AND articuloid = :almacenid;RELEASE SAVEPOINT gxupdate", GxErrorMask.GX_ROLLBACKSAVEPOINT | GxErrorMask.GX_NOMASK,prmT000C15)
+             ,new CursorDef("T000C16", "SAVEPOINT gxupdate;DELETE FROM public.etiquetas  WHERE productoid = :etiquetasproductoid AND cambsid = :etiquetascambsid AND articuloid = :almacenid;RELEASE SAVEPOINT gxupdate", GxErrorMask.GX_ROLLBACKSAVEPOINT | GxErrorMask.GX_NOMASK,prmT000C16)
+             ,new CursorDef("T000C17", "SELECT productoid AS etiquetasproductoid, cambsid AS etiquetascambsid, articuloid FROM public.etiquetas ORDER BY productoid, cambsid, articuloid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000C17,100,0,true,false )
+             ,new CursorDef("T000C18", "SELECT modelosid AS etiquetasproductoid FROM public.modelos WHERE modelosid = :etiquetasproductoid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000C18,1,0,true,false )
+             ,new CursorDef("T000C19", "SELECT cambsid AS etiquetascambsid FROM public.cambs WHERE cambsid = :etiquetascambsid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000C19,1,0,true,false )
+             ,new CursorDef("T000C20", "SELECT almacenid FROM public.almacen WHERE almacenid = :almacenid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000C20,1,0,true,false )
           };
        }
     }

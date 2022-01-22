@@ -2,9 +2,9 @@
                File: MenuPrincipal
         Description: Menu Principal
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 12/30/2021 22:9:13.51
+       Generated on: 1/22/2022 13:27:39.73
        Program type: Callable routine
-          Main DBMS: sqlserver
+          Main DBMS: postgresql
 */
 using System;
 using System.Collections;
@@ -14,7 +14,7 @@ using GeneXus.Application;
 using GeneXus.Metadata;
 using GeneXus.Cryptography;
 using System.Data;
-using System.Data.SqlClient;
+using NpgsqlTypes;
 using GeneXus.Data;
 using com.genexus;
 using GeneXus.Data.ADO;
@@ -215,7 +215,7 @@ namespace GeneXus.Programs {
          context.AddJavascriptSource("jquery.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxtimezone.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxgral.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("gxcfg.js", "?202112302291353");
+         context.AddJavascriptSource("gxcfg.js", "?202212213273975");
          if ( context.isSpaRequest( ) )
          {
             enableOutput();
@@ -653,13 +653,13 @@ namespace GeneXus.Programs {
 
       protected void define_styles( )
       {
-         AddStyleSheetFile("gpxMenu/resources/reset.css", "?128300");
-         AddStyleSheetFile("gpxMenu/resources/slimmenu.min.css", "?102640");
-         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?2284430");
+         AddStyleSheetFile("gpxMenu/resources/reset.css", "?1320536");
+         AddStyleSheetFile("gpxMenu/resources/slimmenu.min.css", "?1320536");
+         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?13264988");
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?202112302291359");
+            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?202212213273982");
             idxLst = (int)(idxLst+1);
          }
          /* End function define_styles */
@@ -668,7 +668,7 @@ namespace GeneXus.Programs {
       protected void include_jscripts( )
       {
          context.AddJavascriptSource("messages.spa.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("menuprincipal.js", "?202112302291359");
+         context.AddJavascriptSource("menuprincipal.js", "?202212213273982");
          context.AddJavascriptSource("gpxMenu/gpxMenuRender.js", "");
          /* End function include_jscripts */
       }

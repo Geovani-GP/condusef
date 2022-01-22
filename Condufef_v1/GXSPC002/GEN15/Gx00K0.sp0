@@ -44,25 +44,11 @@ repeat_i(2,[ 1,2,[ 'Linkselection',26,79 ],[] ]).
  
  
 rule_i(0,datastore(1,'DS_LAST_CHANGE','')).
-rule_i(0,datastore(1,'LOCK_RETRY','10')).
-rule_i(0,datastore(1,'WAIT_RECORD','0')).
-rule_i(0,datastore(1,'SQLSERVER_VERSION','9')).
+rule_i(0,datastore(1,'POSTGRESQL_VERSION','8_3')).
 rule_i(0,datastore(1,'COMMENT_ON','No')).
-rule_i(0,datastore(1,'DFT_TMP_TBLSPACE','')).
-rule_i(0,datastore(1,'DFT_IDX_TBLSPACE','')).
-rule_i(0,datastore(1,'DFT_TBL_TBLSPACE','')).
 rule_i(0,datastore(1,'DCL_REF_INT_DB','Yes')).
 rule_i(0,datastore(1,'PRIMARY_KEY_TYPE','PK')).
 rule_i(0,datastore(1,'CS_SCHEMA','')).
-rule_i(0,datastore(1,'SORT_ATTRIBUTES','Yes')).
-rule_i(0,datastore(1,'JRN400','QSQJRN')).
-rule_i(0,datastore(1,'CREATE_SAVF','Yes')).
-rule_i(0,datastore(1,'PGMLIB','')).
-rule_i(0,datastore(1,'DTALIB','')).
-rule_i(0,datastore(1,'CC_USER_PASS','')).
-rule_i(0,datastore(1,'CC_USER_ID','')).
-rule_i(0,datastore(1,'CC_SERVER','')).
-rule_i(0,datastore(1,'CC_DBNAME','')).
 rule_i(0,datastore(1,'RecycleRWMin','30')).
 rule_i(0,datastore(1,'RecycleRWType','1')).
 rule_i(0,datastore(1,'RecycleRW','-1')).
@@ -74,26 +60,25 @@ rule_i(0,datastore(1,'CS_RPCPGML','')).
 rule_i(0,datastore(1,'JDBC_DATASOURCE','')).
 rule_i(0,datastore(1,'USE_JDBC_DATASOURCE','0')).
 rule_i(0,datastore(1,'DS_DBMS_ADDINFO','')).
-rule_i(0,datastore(1,'USER_PASSWORD','')).
-rule_i(0,datastore(1,'USER_ID','')).
-rule_i(0,datastore(1,'TRUSTED_CONNECTION','Yes')).
+rule_i(0,datastore(1,'USER_PASSWORD',󻢸蘇�2�5炭)).
+rule_i(0,datastore(1,'USER_ID',postgres)).
 rule_i(0,datastore(1,'CS_CONNECT','First')).
-rule_i(0,datastore(1,'DBMS_PORT','')).
-rule_i(0,datastore(1,'CS_SERVER','JOSBUENO-MX\DELGADO')).
-rule_i(0,datastore(1,'CS_DBNAME','Dar_CONDUCEFDB')).
+rule_i(0,datastore(1,'DBMS_PORT','5432')).
+rule_i(0,datastore(1,'CS_SERVER',localhost)).
+rule_i(0,datastore(1,'CS_DBNAME',postgres)).
 rule_i(0,datastore(1,'CS_FLEDSNAME','')).
-rule_i(0,datastore(1,'CS_DRVNAME','sql server')).
+rule_i(0,datastore(1,'CS_DRVNAME','')).
 rule_i(0,datastore(1,'CS_DSNAME','')).
 rule_i(0,datastore(1,'DB_URL','')).
 rule_i(0,datastore(1,'JDBC_CUSTOM_URL','0')).
 rule_i(0,datastore(1,'JDBC_CUSTOM_DRIVER','')).
-rule_i(0,datastore(1,'JDBC_DRIVER','net.sourceforge.jtds.jdbc.Driver')).
+rule_i(0,datastore(1,'JDBC_DRIVER','org.postgresql.Driver')).
 rule_i(0,datastore(1,'CONNECT_METHOD','OPSYS')).
 rule_i(0,datastore(1,'ACCESS_TECHNO','ADONET')).
 rule_i(0,datastore(1,'MAIN_DS','-1')).
 rule_i(0,datastore(1,'REORG_GEN','8')).
 rule_i(0,datastore(1,'HelpKeyword','20')).
-rule_i(0,datastore(1,'DBMS',12)).
+rule_i(0,datastore(1,'DBMS',15)).
 rule_i(0,datastore(1,'NAME','Default')).
 rule_i(0,prop(idNULLS_BEHAVIOR,idNB_Current)).
 rule_i(0,prop('ObjectVisibility','Public')).
@@ -139,6 +124,10 @@ rule_i(0,maingen(15)).
 rule_i(0,parm([ 'Ptipodocumentoid' ],[])).
 rule_i(0,parmio([ [ 'Ptipodocumentoid',out ] ])).
 rule_i(0,order([ 26 ])).
+rule_i(0,file(20,'TIPODOCUMENTO',[ 26,79,80,81,82 ])).
+rule_i(0,loc([ 20 ],'TIPODOCUMENTO','','LAN')).
+rule_i(0,index(20,'TIPODOCUMENTO_PKEY',u,[ 26 ])).
+rule_i(0,loc([ 20,'TIPODOCUMENTO_PKEY' ],tipodocumento_pkey,'','LAN')).
 rule_i(0,p(0,0,fv,22,[ intname,'TIPODOCUMENTO' ])).
 rule_i(0,p(0,0,fv,22,[ table,20 ])).
 rule_i(0,p(0,15,fv,22,[])).
@@ -151,14 +140,10 @@ rule_i(0,p(0,15,fvix,[ 22,23 ],[ 'NAME',tipodocumento_pkey ])).
 rule_i(0,p(0,15,fvix,[ 22,23 ],[ 'LOC','' ])).
 rule_i(0,p(0,15,fvix,[ 22,23 ],[ 'SCHEMA',public ])).
 rule_i(0,p(0,15,fvix,[ 22,23 ],[ 'EXTNAM','YES' ])).
-rule_i(2,rule([ a(1,msg([ t('"Campo tipodocumentofecreg fuera de rango"',3) ],[ t('OutOfRange',3) ])) ],[ t('NOT',8),t('(',0),t('null(',1),t('Ctipodocumentofecreg',2),t(')',4),t('.OR.',9),t('Ctipodocumentofecreg',2),t(>=,10),t('ymdhmstot(',1),t('1753',3),t(',',7),t('01',3),t(',',7),t('01',3),t(',',7),t('00',3),t(',',7),t('00',3),t(',',7),t('00',3),t(')',4),t(')',4) ],[ insert,update ],[ 'Ctipodocumentofecreg' ])).
-rule_i(2,rule([ a(1,msg([ t('"Campo tipodocumentofecultact fuera de rango"',3) ],[ t('OutOfRange',3) ])) ],[ t('NOT',8),t('(',0),t('null(',1),t('Ctipodocumentofecultact',2),t(')',4),t('.OR.',9),t('Ctipodocumentofecultact',2),t(>=,10),t('ymdhmstot(',1),t('1753',3),t(',',7),t('01',3),t(',',7),t('01',3),t(',',7),t('00',3),t(',',7),t('00',3),t(',',7),t('00',3),t(')',4),t(')',4) ],[ insert,update ],[ 'Ctipodocumentofecultact' ])).
 rule_i(0,rule([ a(22,[ '''Toggle''','''Toggle''','' ]) ],[],[],[])).
  
 a_i(1,1,f,'Err',[],[ [],[ t('0',3) ] ]).
 a_i(2,2,t,20,[],[ [],'TIPODOCUMENTO_PKEY',[] ]).
-a_i(3,2,b,0,[],[ [],[ a(1,msg([ t('"Campo tipodocumentofecreg fuera de rango"',3) ],[ t('OutOfRange',3) ])) ],[ t('NOT',8),t('(',0),t('null(',1),t('Ctipodocumentofecreg',2),t(')',4),t('.OR.',9),t('Ctipodocumentofecreg',2),t(>=,10),t('ymdhmstot(',1),t('1753',3),t(',',7),t('01',3),t(',',7),t('01',3),t(',',7),t('00',3),t(',',7),t('00',3),t(',',7),t('00',3),t(')',4),t(')',4) ] ]).
-a_i(4,2,b,0,[],[ [],[ a(1,msg([ t('"Campo tipodocumentofecultact fuera de rango"',3) ],[ t('OutOfRange',3) ])) ],[ t('NOT',8),t('(',0),t('null(',1),t('Ctipodocumentofecultact',2),t(')',4),t('.OR.',9),t('Ctipodocumentofecultact',2),t(>=,10),t('ymdhmstot(',1),t('1753',3),t(',',7),t('01',3),t(',',7),t('01',3),t(',',7),t('00',3),t(',',7),t('00',3),t(',',7),t('00',3),t(')',4),t(')',4) ] ]).
  
 v_i(f,i,1,[]).
 v_i(f,o,1,'Err').
@@ -168,19 +153,15 @@ v_i(t,o,2,81).
 v_i(t,o,2,80).
 v_i(t,o,2,79).
 v_i(t,o,2,26).
-v_i(b,i,3,'Ctipodocumentofecreg').
-v_i(b,o,3,[]).
-v_i(b,i,4,'Ctipodocumentofecultact').
-v_i(b,o,4,[]).
  
  
  
  
  
  
-attri_i(80,[ tipodocumentousuario,svchar,15,0,'',0,tipodocumentousuario,'',0 ]).
-attri_i(81,[ tipodocumentofecreg,dtime,10,8,'99/99/9999 99:99:99',0,tipodocumentofecreg,'',0 ]).
 attri_i(82,[ tipodocumentofecultact,dtime,10,8,'99/99/9999 99:99:99',0,tipodocumentofecultact,'',0 ]).
+attri_i(81,[ tipodocumentofecreg,dtime,10,8,'99/99/9999 99:99:99',0,tipodocumentofecreg,'',0 ]).
+attri_i(80,[ tipodocumentousuario,svchar,15,0,'',0,tipodocumentousuario,'',0 ]).
 attri_i(79,[ tipodocumentodsc,svchar,100,0,'',0,tipodocumentodsc,'',0 ]).
 attri_i(26,[ tipodocumentoid,int,9,0,'ZZZZZZZZ9',0,tipodocumentoid,'',0 ]).
 attri_i('Linkselection_GXI',[ 'Linkselection_GXI',svchar,2048,0,'',0,'',[],15 ]).
@@ -195,9 +176,9 @@ attri_i('Ctipodocumentodsc',[ ctipodocumentodsc,svchar,100,0,'',0,tipodocumentod
 attri_i('Ctipodocumentoid',[ ctipodocumentoid,int,9,0,'ZZZZZZZZ9',0,tipodocumentoid,'',6 ]).
 attri_i('Linkselection',[ 'LinkSelection',bits,1024,0,'',0,'Link Selection','',5 ]).
  
-table_i(20,[ tipodocumento,[ 26,79,80,81,82 ],tipodocumento,tipodocumento ]).
+table_i(20,[ 'TIPODOCUMENTO',[ 26,79,80,81,82 ],tipodocumento,tipodocumento ]).
  
-index_i(20,[ 'TIPODOCUMENTO_PKEY',u,[ 26 ],tipodocumento_pkey ]).
+index_i(20,[ 'TIPODOCUMENTO_PKEY',u,[ 26 ],'TIPODOCUMENTO_PKEY' ]).
  
  
  
@@ -218,6 +199,12 @@ start_i(2,0,0,[ [ [ 26,23,'Ctipodocumentoid',>= ] ],many ]).
  
  
  
+map_i(20,i,'TIPODOCUMENTO_PKEY',[ 'TIPODOCUMENTO_PKEY' ]).
+map_i(20,a,82,[ tipodocumentofecultact ]).
+map_i(20,a,81,[ tipodocumentofecreg ]).
+map_i(20,a,80,[ tipodocumentousuario ]).
+map_i(20,a,79,[ tipodocumentodsc ]).
+map_i(20,a,26,[ tipodocumentoid ]).
  
  
  
@@ -1195,16 +1182,15 @@ att_prop_i(2,79,'DB_NLS_SUPPORT','No',d).
 att_prop_i(2,79,'AttRegEx','',d).
 att_prop_i(2,79,'AttValidationFailedMsg','',d).
 att_prop_i(2,79,'FullName',tipodocumentodsc,v).
-att_prop_i(2,82,'ExternalName',tipodocumentofecultact,d).
-att_prop_i(2,82,'ExternalNamespace','Condufef_v1',d).
-att_prop_i(2,82,'EmptyAsNull','Yes',d).
-att_prop_i(2,82,idBasedOn,'',d).
-att_prop_i(2,82,'ATT_INITIAL_VALUE','',d).
-att_prop_i(2,82,'AttRegEx','',d).
-att_prop_i(2,82,'AttValidationFailedMsg','',d).
-att_prop_i(2,82,idDATEFORMAT,idDATEFORMAT_LONG,v).
-att_prop_i(2,82,idHOURFORMAT,idHOURFORMAT_HOURMINSEC,v).
-att_prop_i(2,82,'FullName',tipodocumentofecultact,v).
+att_prop_i(2,80,'ExternalName',tipodocumentousuario,d).
+att_prop_i(2,80,'ExternalNamespace','Condufef_v1',d).
+att_prop_i(2,80,'EmptyAsNull','Yes',d).
+att_prop_i(2,80,idBasedOn,'',d).
+att_prop_i(2,80,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,80,'DB_NLS_SUPPORT','No',d).
+att_prop_i(2,80,'AttRegEx','',d).
+att_prop_i(2,80,'AttValidationFailedMsg','',d).
+att_prop_i(2,80,'FullName',tipodocumentousuario,v).
 att_prop_i(2,81,'ExternalName',tipodocumentofecreg,d).
 att_prop_i(2,81,'ExternalNamespace','Condufef_v1',d).
 att_prop_i(2,81,'EmptyAsNull','Yes',d).
@@ -1215,15 +1201,16 @@ att_prop_i(2,81,'AttValidationFailedMsg','',d).
 att_prop_i(2,81,idDATEFORMAT,idDATEFORMAT_LONG,v).
 att_prop_i(2,81,idHOURFORMAT,idHOURFORMAT_HOURMINSEC,v).
 att_prop_i(2,81,'FullName',tipodocumentofecreg,v).
-att_prop_i(2,80,'ExternalName',tipodocumentousuario,d).
-att_prop_i(2,80,'ExternalNamespace','Condufef_v1',d).
-att_prop_i(2,80,'EmptyAsNull','Yes',d).
-att_prop_i(2,80,idBasedOn,'',d).
-att_prop_i(2,80,'ATT_INITIAL_VALUE','',d).
-att_prop_i(2,80,'DB_NLS_SUPPORT','No',d).
-att_prop_i(2,80,'AttRegEx','',d).
-att_prop_i(2,80,'AttValidationFailedMsg','',d).
-att_prop_i(2,80,'FullName',tipodocumentousuario,v).
+att_prop_i(2,82,'ExternalName',tipodocumentofecultact,d).
+att_prop_i(2,82,'ExternalNamespace','Condufef_v1',d).
+att_prop_i(2,82,'EmptyAsNull','Yes',d).
+att_prop_i(2,82,idBasedOn,'',d).
+att_prop_i(2,82,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,82,'AttRegEx','',d).
+att_prop_i(2,82,'AttValidationFailedMsg','',d).
+att_prop_i(2,82,idDATEFORMAT,idDATEFORMAT_LONG,v).
+att_prop_i(2,82,idHOURFORMAT,idHOURFORMAT_HOURMINSEC,v).
+att_prop_i(2,82,'FullName',tipodocumentofecultact,v).
  
  
 tbl_att_prop_i(2,20,26,'AllowNulls',n).

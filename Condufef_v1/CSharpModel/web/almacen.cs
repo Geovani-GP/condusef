@@ -2,9 +2,9 @@
                File: almacen
         Description: almacen
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 12/30/2021 22:9:8.78
+       Generated on: 1/22/2022 13:27:33.85
        Program type: Callable routine
-          Main DBMS: sqlserver
+          Main DBMS: postgresql
 */
 using System;
 using System.Collections;
@@ -14,7 +14,7 @@ using GeneXus.Application;
 using GeneXus.Metadata;
 using GeneXus.Cryptography;
 using System.Data;
-using System.Data.SqlClient;
+using NpgsqlTypes;
 using GeneXus.Data;
 using com.genexus;
 using GeneXus.Data.ADO;
@@ -65,7 +65,7 @@ namespace GeneXus.Programs {
             dyncall( GetNextPar( )) ;
             return  ;
          }
-         else if ( StringUtil.StrCmp(gxfirstwebparm, "gxajaxExecAct_"+"gxLoad_4") == 0 )
+         else if ( StringUtil.StrCmp(gxfirstwebparm, "gxajaxExecAct_"+"gxLoad_2") == 0 )
          {
             A13empleadosid = (int)(NumberUtil.Val( GetNextPar( ), "."));
             n13empleadosid = false;
@@ -76,7 +76,7 @@ namespace GeneXus.Programs {
                GxWebError = 1;
                return  ;
             }
-            gxLoad_4( A13empleadosid) ;
+            gxLoad_2( A13empleadosid) ;
             return  ;
          }
          else if ( StringUtil.StrCmp(gxfirstwebparm, "gxajaxEvt") == 0 )
@@ -865,7 +865,7 @@ namespace GeneXus.Programs {
 
       protected void ZM0I18( short GX_JID )
       {
-         if ( ( GX_JID == 3 ) || ( GX_JID == 0 ) )
+         if ( ( GX_JID == 1 ) || ( GX_JID == 0 ) )
          {
             if ( StringUtil.StrCmp(Gx_mode, "INS") != 0 )
             {
@@ -898,7 +898,7 @@ namespace GeneXus.Programs {
                Z13empleadosid = A13empleadosid;
             }
          }
-         if ( GX_JID == -3 )
+         if ( GX_JID == -1 )
          {
             Z19almacenid = A19almacenid;
             Z143almacendsc = A143almacendsc;
@@ -988,7 +988,7 @@ namespace GeneXus.Programs {
             A13empleadosid = T000I5_A13empleadosid[0];
             context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A13empleadosid", StringUtil.LTrim( StringUtil.Str( (decimal)(A13empleadosid), 9, 0)));
             n13empleadosid = T000I5_n13empleadosid[0];
-            ZM0I18( -3) ;
+            ZM0I18( -1) ;
          }
          pr_default.close(3);
          OnLoadActions0I18( ) ;
@@ -1015,20 +1015,6 @@ namespace GeneXus.Programs {
             }
          }
          pr_default.close(2);
-         if ( ! ( (DateTime.MinValue==A152almacenfecreg) || ( A152almacenfecreg >= context.localUtil.YMDHMSToT( 1753, 1, 1, 0, 0, 0) ) ) )
-         {
-            GX_msglist.addItem("Campo almacenfecreg fuera de rango", "OutOfRange", 1, "ALMACENFECREG");
-            AnyError = 1;
-            GX_FocusControl = edtalmacenfecreg_Internalname;
-            context.httpAjaxContext.ajax_rsp_assign_attri("", false, "GX_FocusControl", GX_FocusControl);
-         }
-         if ( ! ( (DateTime.MinValue==A153almacenfecultact) || ( A153almacenfecultact >= context.localUtil.YMDHMSToT( 1753, 1, 1, 0, 0, 0) ) ) )
-         {
-            GX_msglist.addItem("Campo almacenfecultact fuera de rango", "OutOfRange", 1, "ALMACENFECULTACT");
-            AnyError = 1;
-            GX_FocusControl = edtalmacenfecultact_Internalname;
-            context.httpAjaxContext.ajax_rsp_assign_attri("", false, "GX_FocusControl", GX_FocusControl);
-         }
       }
 
       protected void CloseExtendedTableCursors0I18( )
@@ -1040,7 +1026,7 @@ namespace GeneXus.Programs {
       {
       }
 
-      protected void gxLoad_4( int A13empleadosid )
+      protected void gxLoad_2( int A13empleadosid )
       {
          /* Using cursor T000I6 */
          pr_default.execute(4, new Object[] {n13empleadosid, A13empleadosid});
@@ -1088,7 +1074,7 @@ namespace GeneXus.Programs {
          pr_default.execute(1, new Object[] {A19almacenid});
          if ( (pr_default.getStatus(1) != 101) )
          {
-            ZM0I18( 3) ;
+            ZM0I18( 1) ;
             RcdFound18 = 1;
             A19almacenid = T000I3_A19almacenid[0];
             context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A19almacenid", StringUtil.LTrim( StringUtil.Str( (decimal)(A19almacenid), 18, 0)));
@@ -1461,7 +1447,7 @@ namespace GeneXus.Programs {
             pr_default.execute(0, new Object[] {A19almacenid});
             if ( (pr_default.getStatus(0) == 103) )
             {
-               GX_msglist.addItem(context.GetMessage( "GXM_lock", new   object[]  {"almacen"}), "RecordIsLocked", 1, "");
+               GX_msglist.addItem(context.GetMessage( "GXM_lock", new   object[]  {"ALMACEN"}), "RecordIsLocked", 1, "");
                AnyError = 1;
                return  ;
             }
@@ -1548,7 +1534,7 @@ namespace GeneXus.Programs {
                   GXUtil.WriteLogRaw("Old: ",Z13empleadosid);
                   GXUtil.WriteLogRaw("Current: ",T000I2_A13empleadosid[0]);
                }
-               GX_msglist.addItem(context.GetMessage( "GXM_waschg", new   object[]  {"almacen"}), "RecordWasChanged", 1, "");
+               GX_msglist.addItem(context.GetMessage( "GXM_waschg", new   object[]  {"ALMACEN"}), "RecordWasChanged", 1, "");
                AnyError = 1;
                return  ;
             }
@@ -1577,7 +1563,7 @@ namespace GeneXus.Programs {
                      /* Using cursor T000I10 */
                      pr_default.execute(8, new Object[] {A19almacenid, n143almacendsc, A143almacendsc, n144almacendireccion, A144almacendireccion, n145almacencolonia, A145almacencolonia, n146almacenmunicipio, A146almacenmunicipio, n147alamcenestado, A147alamcenestado, n148alamcencodigopostal, A148alamcencodigopostal, n149almacentelefono, A149almacentelefono, n150alamcenobservaciones, A150alamcenobservaciones, n151alamcenusuario, A151alamcenusuario, n152almacenfecreg, A152almacenfecreg, n153almacenfecultact, A153almacenfecultact, n13empleadosid, A13empleadosid});
                      pr_default.close(8);
-                     dsDefault.SmartCacheProvider.SetUpdated("almacen") ;
+                     dsDefault.SmartCacheProvider.SetUpdated("ALMACEN") ;
                      if ( (pr_default.getStatus(8) == 1) )
                      {
                         GX_msglist.addItem(context.GetMessage( "GXM_noupdate", ""), "DuplicatePrimaryKey", 1, "");
@@ -1632,10 +1618,10 @@ namespace GeneXus.Programs {
                      /* Using cursor T000I11 */
                      pr_default.execute(9, new Object[] {n143almacendsc, A143almacendsc, n144almacendireccion, A144almacendireccion, n145almacencolonia, A145almacencolonia, n146almacenmunicipio, A146almacenmunicipio, n147alamcenestado, A147alamcenestado, n148alamcencodigopostal, A148alamcencodigopostal, n149almacentelefono, A149almacentelefono, n150alamcenobservaciones, A150alamcenobservaciones, n151alamcenusuario, A151alamcenusuario, n152almacenfecreg, A152almacenfecreg, n153almacenfecultact, A153almacenfecultact, n13empleadosid, A13empleadosid, A19almacenid});
                      pr_default.close(9);
-                     dsDefault.SmartCacheProvider.SetUpdated("almacen") ;
+                     dsDefault.SmartCacheProvider.SetUpdated("ALMACEN") ;
                      if ( (pr_default.getStatus(9) == 103) )
                      {
-                        GX_msglist.addItem(context.GetMessage( "GXM_lock", new   object[]  {"almacen"}), "RecordIsLocked", 1, "");
+                        GX_msglist.addItem(context.GetMessage( "GXM_lock", new   object[]  {"ALMACEN"}), "RecordIsLocked", 1, "");
                         AnyError = 1;
                      }
                      DeferredUpdate0I18( ) ;
@@ -1689,7 +1675,7 @@ namespace GeneXus.Programs {
                   /* Using cursor T000I12 */
                   pr_default.execute(10, new Object[] {A19almacenid});
                   pr_default.close(10);
-                  dsDefault.SmartCacheProvider.SetUpdated("almacen") ;
+                  dsDefault.SmartCacheProvider.SetUpdated("ALMACEN") ;
                   if ( AnyError == 0 )
                   {
                      /* Start of After( delete) rules */
@@ -1766,7 +1752,6 @@ namespace GeneXus.Programs {
          }
          if ( AnyError == 0 )
          {
-            pr_default.close(1);
             context.CommitDataStores( "almacen");
             if ( AnyError == 0 )
             {
@@ -1778,7 +1763,6 @@ namespace GeneXus.Programs {
          }
          else
          {
-            pr_default.close(1);
             context.RollbackDataStores( "almacen");
          }
          IsModified = 0;
@@ -1916,7 +1900,7 @@ namespace GeneXus.Programs {
          context.AddJavascriptSource("jquery.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxtimezone.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxgral.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("gxcfg.js", "?20211230229995");
+         context.AddJavascriptSource("gxcfg.js", "?202212213273521");
          if ( context.isSpaRequest( ) )
          {
             enableOutput();
@@ -2121,12 +2105,12 @@ namespace GeneXus.Programs {
 
       protected void define_styles( )
       {
-         AddStyleSheetFile("calendar-system.css", "?11323129");
-         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?2284430");
+         AddStyleSheetFile("calendar-system.css", "?13205289");
+         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?13264988");
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?20211230229103");
+            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?202212213273531");
             idxLst = (int)(idxLst+1);
          }
          /* End function define_styles */
@@ -2136,7 +2120,7 @@ namespace GeneXus.Programs {
       {
          context.AddJavascriptSource("messages.spa.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxdec.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("almacen.js", "?20211230229103");
+         context.AddJavascriptSource("almacen.js", "?202212213273531");
          /* End function include_jscripts */
       }
 
@@ -2902,103 +2886,103 @@ namespace GeneXus.Programs {
        {
           Object[] prmT000I5 ;
           prmT000I5 = new Object[] {
-          new Object[] {"@almacenid",SqlDbType.Decimal,18,0}
+          new Object[] {"almacenid",NpgsqlDbType.Real,18,0}
           } ;
           Object[] prmT000I4 ;
           prmT000I4 = new Object[] {
-          new Object[] {"@empleadosid",SqlDbType.Int,9,0}
+          new Object[] {"empleadosid",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT000I6 ;
           prmT000I6 = new Object[] {
-          new Object[] {"@empleadosid",SqlDbType.Int,9,0}
+          new Object[] {"empleadosid",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT000I7 ;
           prmT000I7 = new Object[] {
-          new Object[] {"@almacenid",SqlDbType.Decimal,18,0}
+          new Object[] {"almacenid",NpgsqlDbType.Real,18,0}
           } ;
           Object[] prmT000I3 ;
           prmT000I3 = new Object[] {
-          new Object[] {"@almacenid",SqlDbType.Decimal,18,0}
+          new Object[] {"almacenid",NpgsqlDbType.Real,18,0}
           } ;
           Object[] prmT000I8 ;
           prmT000I8 = new Object[] {
-          new Object[] {"@almacenid",SqlDbType.Decimal,18,0}
+          new Object[] {"almacenid",NpgsqlDbType.Real,18,0}
           } ;
           Object[] prmT000I9 ;
           prmT000I9 = new Object[] {
-          new Object[] {"@almacenid",SqlDbType.Decimal,18,0}
+          new Object[] {"almacenid",NpgsqlDbType.Real,18,0}
           } ;
           Object[] prmT000I2 ;
           prmT000I2 = new Object[] {
-          new Object[] {"@almacenid",SqlDbType.Decimal,18,0}
+          new Object[] {"almacenid",NpgsqlDbType.Real,18,0}
           } ;
           Object[] prmT000I10 ;
           prmT000I10 = new Object[] {
-          new Object[] {"@almacenid",SqlDbType.Decimal,18,0} ,
-          new Object[] {"@almacendsc",SqlDbType.VarChar,100,0} ,
-          new Object[] {"@almacendireccion",SqlDbType.VarChar,100,0} ,
-          new Object[] {"@almacencolonia",SqlDbType.VarChar,50,0} ,
-          new Object[] {"@almacenmunicipio",SqlDbType.VarChar,50,0} ,
-          new Object[] {"@alamcenestado",SqlDbType.VarChar,50,0} ,
-          new Object[] {"@alamcencodigopostal",SqlDbType.VarChar,5,0} ,
-          new Object[] {"@almacentelefono",SqlDbType.VarChar,10,0} ,
-          new Object[] {"@alamcenobservaciones",SqlDbType.VarChar,50,0} ,
-          new Object[] {"@alamcenusuario",SqlDbType.VarChar,15,0} ,
-          new Object[] {"@almacenfecreg",SqlDbType.DateTime,10,8} ,
-          new Object[] {"@almacenfecultact",SqlDbType.DateTime,10,8} ,
-          new Object[] {"@empleadosid",SqlDbType.Int,9,0}
+          new Object[] {"almacenid",NpgsqlDbType.Real,18,0} ,
+          new Object[] {"almacendsc",NpgsqlDbType.Varchar,100,0} ,
+          new Object[] {"almacendireccion",NpgsqlDbType.Varchar,100,0} ,
+          new Object[] {"almacencolonia",NpgsqlDbType.Varchar,50,0} ,
+          new Object[] {"almacenmunicipio",NpgsqlDbType.Varchar,50,0} ,
+          new Object[] {"alamcenestado",NpgsqlDbType.Varchar,50,0} ,
+          new Object[] {"alamcencodigopostal",NpgsqlDbType.Varchar,5,0} ,
+          new Object[] {"almacentelefono",NpgsqlDbType.Varchar,10,0} ,
+          new Object[] {"alamcenobservaciones",NpgsqlDbType.Varchar,50,0} ,
+          new Object[] {"alamcenusuario",NpgsqlDbType.Varchar,15,0} ,
+          new Object[] {"almacenfecreg",NpgsqlDbType.Timestamp,10,8} ,
+          new Object[] {"almacenfecultact",NpgsqlDbType.Timestamp,10,8} ,
+          new Object[] {"empleadosid",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT000I11 ;
           prmT000I11 = new Object[] {
-          new Object[] {"@almacendsc",SqlDbType.VarChar,100,0} ,
-          new Object[] {"@almacendireccion",SqlDbType.VarChar,100,0} ,
-          new Object[] {"@almacencolonia",SqlDbType.VarChar,50,0} ,
-          new Object[] {"@almacenmunicipio",SqlDbType.VarChar,50,0} ,
-          new Object[] {"@alamcenestado",SqlDbType.VarChar,50,0} ,
-          new Object[] {"@alamcencodigopostal",SqlDbType.VarChar,5,0} ,
-          new Object[] {"@almacentelefono",SqlDbType.VarChar,10,0} ,
-          new Object[] {"@alamcenobservaciones",SqlDbType.VarChar,50,0} ,
-          new Object[] {"@alamcenusuario",SqlDbType.VarChar,15,0} ,
-          new Object[] {"@almacenfecreg",SqlDbType.DateTime,10,8} ,
-          new Object[] {"@almacenfecultact",SqlDbType.DateTime,10,8} ,
-          new Object[] {"@empleadosid",SqlDbType.Int,9,0} ,
-          new Object[] {"@almacenid",SqlDbType.Decimal,18,0}
+          new Object[] {"almacendsc",NpgsqlDbType.Varchar,100,0} ,
+          new Object[] {"almacendireccion",NpgsqlDbType.Varchar,100,0} ,
+          new Object[] {"almacencolonia",NpgsqlDbType.Varchar,50,0} ,
+          new Object[] {"almacenmunicipio",NpgsqlDbType.Varchar,50,0} ,
+          new Object[] {"alamcenestado",NpgsqlDbType.Varchar,50,0} ,
+          new Object[] {"alamcencodigopostal",NpgsqlDbType.Varchar,5,0} ,
+          new Object[] {"almacentelefono",NpgsqlDbType.Varchar,10,0} ,
+          new Object[] {"alamcenobservaciones",NpgsqlDbType.Varchar,50,0} ,
+          new Object[] {"alamcenusuario",NpgsqlDbType.Varchar,15,0} ,
+          new Object[] {"almacenfecreg",NpgsqlDbType.Timestamp,10,8} ,
+          new Object[] {"almacenfecultact",NpgsqlDbType.Timestamp,10,8} ,
+          new Object[] {"empleadosid",NpgsqlDbType.Integer,9,0} ,
+          new Object[] {"almacenid",NpgsqlDbType.Real,18,0}
           } ;
           Object[] prmT000I12 ;
           prmT000I12 = new Object[] {
-          new Object[] {"@almacenid",SqlDbType.Decimal,18,0}
+          new Object[] {"almacenid",NpgsqlDbType.Real,18,0}
           } ;
           Object[] prmT000I13 ;
           prmT000I13 = new Object[] {
-          new Object[] {"@almacenid",SqlDbType.Decimal,18,0}
+          new Object[] {"almacenid",NpgsqlDbType.Real,18,0}
           } ;
           Object[] prmT000I14 ;
           prmT000I14 = new Object[] {
-          new Object[] {"@almacenid",SqlDbType.Decimal,18,0}
+          new Object[] {"almacenid",NpgsqlDbType.Real,18,0}
           } ;
           Object[] prmT000I15 ;
           prmT000I15 = new Object[] {
           } ;
           Object[] prmT000I16 ;
           prmT000I16 = new Object[] {
-          new Object[] {"@empleadosid",SqlDbType.Int,9,0}
+          new Object[] {"empleadosid",NpgsqlDbType.Integer,9,0}
           } ;
           def= new CursorDef[] {
-              new CursorDef("T000I2", "SELECT [almacenid], [almacendsc], [almacendireccion], [almacencolonia], [almacenmunicipio], [alamcenestado], [alamcencodigopostal], [almacentelefono], [alamcenobservaciones], [alamcenusuario], [almacenfecreg], [almacenfecultact], [empleadosid] FROM [almacen] WITH (UPDLOCK) WHERE [almacenid] = @almacenid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000I2,1,0,true,false )
-             ,new CursorDef("T000I3", "SELECT [almacenid], [almacendsc], [almacendireccion], [almacencolonia], [almacenmunicipio], [alamcenestado], [alamcencodigopostal], [almacentelefono], [alamcenobservaciones], [alamcenusuario], [almacenfecreg], [almacenfecultact], [empleadosid] FROM [almacen] WITH (NOLOCK) WHERE [almacenid] = @almacenid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000I3,1,0,true,false )
-             ,new CursorDef("T000I4", "SELECT [empleadosid] FROM [empleados] WITH (NOLOCK) WHERE [empleadosid] = @empleadosid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000I4,1,0,true,false )
-             ,new CursorDef("T000I5", "SELECT TM1.[almacenid], TM1.[almacendsc], TM1.[almacendireccion], TM1.[almacencolonia], TM1.[almacenmunicipio], TM1.[alamcenestado], TM1.[alamcencodigopostal], TM1.[almacentelefono], TM1.[alamcenobservaciones], TM1.[alamcenusuario], TM1.[almacenfecreg], TM1.[almacenfecultact], TM1.[empleadosid] FROM [almacen] TM1 WITH (NOLOCK) WHERE TM1.[almacenid] = @almacenid ORDER BY TM1.[almacenid]  OPTION (FAST 100)",true, GxErrorMask.GX_NOMASK, false, this,prmT000I5,100,0,true,false )
-             ,new CursorDef("T000I6", "SELECT [empleadosid] FROM [empleados] WITH (NOLOCK) WHERE [empleadosid] = @empleadosid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000I6,1,0,true,false )
-             ,new CursorDef("T000I7", "SELECT [almacenid] FROM [almacen] WITH (NOLOCK) WHERE [almacenid] = @almacenid  OPTION (FAST 1)",true, GxErrorMask.GX_NOMASK, false, this,prmT000I7,1,0,true,false )
-             ,new CursorDef("T000I8", "SELECT TOP 1 [almacenid] FROM [almacen] WITH (NOLOCK) WHERE ( [almacenid] > @almacenid) ORDER BY [almacenid]  OPTION (FAST 1)",true, GxErrorMask.GX_NOMASK, false, this,prmT000I8,1,0,true,true )
-             ,new CursorDef("T000I9", "SELECT TOP 1 [almacenid] FROM [almacen] WITH (NOLOCK) WHERE ( [almacenid] < @almacenid) ORDER BY [almacenid] DESC  OPTION (FAST 1)",true, GxErrorMask.GX_NOMASK, false, this,prmT000I9,1,0,true,true )
-             ,new CursorDef("T000I10", "INSERT INTO [almacen]([almacenid], [almacendsc], [almacendireccion], [almacencolonia], [almacenmunicipio], [alamcenestado], [alamcencodigopostal], [almacentelefono], [alamcenobservaciones], [alamcenusuario], [almacenfecreg], [almacenfecultact], [empleadosid]) VALUES(@almacenid, @almacendsc, @almacendireccion, @almacencolonia, @almacenmunicipio, @alamcenestado, @alamcencodigopostal, @almacentelefono, @alamcenobservaciones, @alamcenusuario, @almacenfecreg, @almacenfecultact, @empleadosid)", GxErrorMask.GX_NOMASK,prmT000I10)
-             ,new CursorDef("T000I11", "UPDATE [almacen] SET [almacendsc]=@almacendsc, [almacendireccion]=@almacendireccion, [almacencolonia]=@almacencolonia, [almacenmunicipio]=@almacenmunicipio, [alamcenestado]=@alamcenestado, [alamcencodigopostal]=@alamcencodigopostal, [almacentelefono]=@almacentelefono, [alamcenobservaciones]=@alamcenobservaciones, [alamcenusuario]=@alamcenusuario, [almacenfecreg]=@almacenfecreg, [almacenfecultact]=@almacenfecultact, [empleadosid]=@empleadosid  WHERE [almacenid] = @almacenid", GxErrorMask.GX_NOMASK,prmT000I11)
-             ,new CursorDef("T000I12", "DELETE FROM [almacen]  WHERE [almacenid] = @almacenid", GxErrorMask.GX_NOMASK,prmT000I12)
-             ,new CursorDef("T000I13", "SELECT TOP 1 [etiquetasproductoid], [etiquetascambsid], [almacenid] FROM [etiquetas] WITH (NOLOCK) WHERE [almacenid] = @almacenid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000I13,1,0,true,true )
-             ,new CursorDef("T000I14", "SELECT TOP 1 [almacenid], [articulosproductoid], [articuloscambsid] FROM [articulos] WITH (NOLOCK) WHERE [almacenid] = @almacenid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000I14,1,0,true,true )
-             ,new CursorDef("T000I15", "SELECT [almacenid] FROM [almacen] WITH (NOLOCK) ORDER BY [almacenid]  OPTION (FAST 100)",true, GxErrorMask.GX_NOMASK, false, this,prmT000I15,100,0,true,false )
-             ,new CursorDef("T000I16", "SELECT [empleadosid] FROM [empleados] WITH (NOLOCK) WHERE [empleadosid] = @empleadosid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000I16,1,0,true,false )
+              new CursorDef("T000I2", "SELECT almacenid, almacendsc, almacendireccion, almacencolonia, almacenmunicipio, alamcenestado, alamcencodigopostal, almacentelefono, alamcenobservaciones, alamcenusuario, almacenfecreg, almacenfecultact, empleadoid FROM public.almacen WHERE almacenid = :almacenid  FOR UPDATE OF almacen NOWAIT",true, GxErrorMask.GX_NOMASK, false, this,prmT000I2,1,0,true,false )
+             ,new CursorDef("T000I3", "SELECT almacenid, almacendsc, almacendireccion, almacencolonia, almacenmunicipio, alamcenestado, alamcencodigopostal, almacentelefono, alamcenobservaciones, alamcenusuario, almacenfecreg, almacenfecultact, empleadoid FROM public.almacen WHERE almacenid = :almacenid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000I3,1,0,true,false )
+             ,new CursorDef("T000I4", "SELECT empleadosid FROM public.empleados WHERE empleadosid = :empleadosid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000I4,1,0,true,false )
+             ,new CursorDef("T000I5", "SELECT TM1.almacenid, TM1.almacendsc, TM1.almacendireccion, TM1.almacencolonia, TM1.almacenmunicipio, TM1.alamcenestado, TM1.alamcencodigopostal, TM1.almacentelefono, TM1.alamcenobservaciones, TM1.alamcenusuario, TM1.almacenfecreg, TM1.almacenfecultact, TM1.empleadoid FROM public.almacen TM1 WHERE TM1.almacenid = :almacenid ORDER BY TM1.almacenid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000I5,100,0,true,false )
+             ,new CursorDef("T000I6", "SELECT empleadosid FROM public.empleados WHERE empleadosid = :empleadosid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000I6,1,0,true,false )
+             ,new CursorDef("T000I7", "SELECT almacenid FROM public.almacen WHERE almacenid = :almacenid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000I7,1,0,true,false )
+             ,new CursorDef("T000I8", "SELECT almacenid FROM public.almacen WHERE ( almacenid > :almacenid) ORDER BY almacenid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000I8,1,0,true,true )
+             ,new CursorDef("T000I9", "SELECT almacenid FROM public.almacen WHERE ( almacenid < :almacenid) ORDER BY almacenid DESC ",true, GxErrorMask.GX_NOMASK, false, this,prmT000I9,1,0,true,true )
+             ,new CursorDef("T000I10", "SAVEPOINT gxupdate;INSERT INTO public.almacen(almacenid, almacendsc, almacendireccion, almacencolonia, almacenmunicipio, alamcenestado, alamcencodigopostal, almacentelefono, alamcenobservaciones, alamcenusuario, almacenfecreg, almacenfecultact, empleadoid) VALUES(:almacenid, :almacendsc, :almacendireccion, :almacencolonia, :almacenmunicipio, :alamcenestado, :alamcencodigopostal, :almacentelefono, :alamcenobservaciones, :alamcenusuario, :almacenfecreg, :almacenfecultact, :empleadosid);RELEASE SAVEPOINT gxupdate", GxErrorMask.GX_ROLLBACKSAVEPOINT | GxErrorMask.GX_NOMASK,prmT000I10)
+             ,new CursorDef("T000I11", "SAVEPOINT gxupdate;UPDATE public.almacen SET almacendsc=:almacendsc, almacendireccion=:almacendireccion, almacencolonia=:almacencolonia, almacenmunicipio=:almacenmunicipio, alamcenestado=:alamcenestado, alamcencodigopostal=:alamcencodigopostal, almacentelefono=:almacentelefono, alamcenobservaciones=:alamcenobservaciones, alamcenusuario=:alamcenusuario, almacenfecreg=:almacenfecreg, almacenfecultact=:almacenfecultact, empleadoid=:empleadosid  WHERE almacenid = :almacenid;RELEASE SAVEPOINT gxupdate", GxErrorMask.GX_ROLLBACKSAVEPOINT | GxErrorMask.GX_NOMASK,prmT000I11)
+             ,new CursorDef("T000I12", "SAVEPOINT gxupdate;DELETE FROM public.almacen  WHERE almacenid = :almacenid;RELEASE SAVEPOINT gxupdate", GxErrorMask.GX_ROLLBACKSAVEPOINT | GxErrorMask.GX_NOMASK,prmT000I12)
+             ,new CursorDef("T000I13", "SELECT productoid AS etiquetasproductoid, cambsid AS etiquetascambsid, articuloid FROM public.etiquetas WHERE articuloid = :almacenid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000I13,1,0,true,true )
+             ,new CursorDef("T000I14", "SELECT articulosid, productoid AS articulosproductoid, cambsid AS articuloscambsid FROM public.articulos WHERE articulosid = :almacenid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000I14,1,0,true,true )
+             ,new CursorDef("T000I15", "SELECT almacenid FROM public.almacen ORDER BY almacenid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000I15,100,0,true,false )
+             ,new CursorDef("T000I16", "SELECT empleadosid FROM public.empleados WHERE empleadosid = :empleadosid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000I16,1,0,true,false )
           };
        }
     }

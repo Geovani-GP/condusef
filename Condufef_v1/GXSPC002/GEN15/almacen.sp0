@@ -39,25 +39,11 @@ pos_i(153,[ 0,0,0 ]).
  
  
 rule_i(0,datastore(1,'DS_LAST_CHANGE','')).
-rule_i(0,datastore(1,'LOCK_RETRY','10')).
-rule_i(0,datastore(1,'WAIT_RECORD','0')).
-rule_i(0,datastore(1,'SQLSERVER_VERSION','9')).
+rule_i(0,datastore(1,'POSTGRESQL_VERSION','8_3')).
 rule_i(0,datastore(1,'COMMENT_ON','No')).
-rule_i(0,datastore(1,'DFT_TMP_TBLSPACE','')).
-rule_i(0,datastore(1,'DFT_IDX_TBLSPACE','')).
-rule_i(0,datastore(1,'DFT_TBL_TBLSPACE','')).
 rule_i(0,datastore(1,'DCL_REF_INT_DB','Yes')).
 rule_i(0,datastore(1,'PRIMARY_KEY_TYPE','PK')).
 rule_i(0,datastore(1,'CS_SCHEMA','')).
-rule_i(0,datastore(1,'SORT_ATTRIBUTES','Yes')).
-rule_i(0,datastore(1,'JRN400','QSQJRN')).
-rule_i(0,datastore(1,'CREATE_SAVF','Yes')).
-rule_i(0,datastore(1,'PGMLIB','')).
-rule_i(0,datastore(1,'DTALIB','')).
-rule_i(0,datastore(1,'CC_USER_PASS','')).
-rule_i(0,datastore(1,'CC_USER_ID','')).
-rule_i(0,datastore(1,'CC_SERVER','')).
-rule_i(0,datastore(1,'CC_DBNAME','')).
 rule_i(0,datastore(1,'RecycleRWMin','30')).
 rule_i(0,datastore(1,'RecycleRWType','1')).
 rule_i(0,datastore(1,'RecycleRW','-1')).
@@ -69,26 +55,25 @@ rule_i(0,datastore(1,'CS_RPCPGML','')).
 rule_i(0,datastore(1,'JDBC_DATASOURCE','')).
 rule_i(0,datastore(1,'USE_JDBC_DATASOURCE','0')).
 rule_i(0,datastore(1,'DS_DBMS_ADDINFO','')).
-rule_i(0,datastore(1,'USER_PASSWORD','')).
-rule_i(0,datastore(1,'USER_ID','')).
-rule_i(0,datastore(1,'TRUSTED_CONNECTION','Yes')).
+rule_i(0,datastore(1,'USER_PASSWORD',󻢸蘇�2�5炭)).
+rule_i(0,datastore(1,'USER_ID',postgres)).
 rule_i(0,datastore(1,'CS_CONNECT','First')).
-rule_i(0,datastore(1,'DBMS_PORT','')).
-rule_i(0,datastore(1,'CS_SERVER','JOSBUENO-MX\DELGADO')).
-rule_i(0,datastore(1,'CS_DBNAME','Dar_CONDUCEFDB')).
+rule_i(0,datastore(1,'DBMS_PORT','5432')).
+rule_i(0,datastore(1,'CS_SERVER',localhost)).
+rule_i(0,datastore(1,'CS_DBNAME',postgres)).
 rule_i(0,datastore(1,'CS_FLEDSNAME','')).
-rule_i(0,datastore(1,'CS_DRVNAME','sql server')).
+rule_i(0,datastore(1,'CS_DRVNAME','')).
 rule_i(0,datastore(1,'CS_DSNAME','')).
 rule_i(0,datastore(1,'DB_URL','')).
 rule_i(0,datastore(1,'JDBC_CUSTOM_URL','0')).
 rule_i(0,datastore(1,'JDBC_CUSTOM_DRIVER','')).
-rule_i(0,datastore(1,'JDBC_DRIVER','net.sourceforge.jtds.jdbc.Driver')).
+rule_i(0,datastore(1,'JDBC_DRIVER','org.postgresql.Driver')).
 rule_i(0,datastore(1,'CONNECT_METHOD','OPSYS')).
 rule_i(0,datastore(1,'ACCESS_TECHNO','ADONET')).
 rule_i(0,datastore(1,'MAIN_DS','-1')).
 rule_i(0,datastore(1,'REORG_GEN','8')).
 rule_i(0,datastore(1,'HelpKeyword','20')).
-rule_i(0,datastore(1,'DBMS',12)).
+rule_i(0,datastore(1,'DBMS',15)).
 rule_i(0,datastore(1,'NAME','Default')).
 rule_i(0,prop(idNULLS_BEHAVIOR,idNB_Current)).
 rule_i(0,prop('ObjectVisibility','Public')).
@@ -179,8 +164,6 @@ rule_i(18,prompt([ 18,[ [ [],19,19 ] ],[],[],[ t(o(13,'Gx00I0'),28),t(19,2) ],[]
 rule_i(18,rule([ a(23,[ [ 19 ],[ t(o(13,'Gx00I0'),28),t(19,2) ] ]) ],[],[],[ 19 ])).
 rule_i(0,rule([ a(22,[ 'Dlt','"Eliminar"','' ]) ],[],[],[])).
 rule_i(0,maingen(15)).
-rule_i(18,rule([ a(1,msg([ t('"Campo almacenfecreg fuera de rango"',3) ],[ t('OutOfRange',3) ])) ],[ t('NOT',8),t('(',0),t('null(',1),t(152,2),t(')',4),t('.OR.',9),t(152,2),t(>=,10),t('ymdhmstot(',1),t('1753',3),t(',',7),t('01',3),t(',',7),t('01',3),t(',',7),t('00',3),t(',',7),t('00',3),t(',',7),t('00',3),t(')',4),t(')',4) ],[ insert,update ],[ 152 ])).
-rule_i(18,rule([ a(1,msg([ t('"Campo almacenfecultact fuera de rango"',3) ],[ t('OutOfRange',3) ])) ],[ t('NOT',8),t('(',0),t('null(',1),t(153,2),t(')',4),t('.OR.',9),t(153,2),t(>=,10),t('ymdhmstot(',1),t('1753',3),t(',',7),t('01',3),t(',',7),t('01',3),t(',',7),t('00',3),t(',',7),t('00',3),t(',',7),t('00',3),t(')',4),t(')',4) ],[ insert,update ],[ 153 ])).
 rule_i(18,rule([ a(18,[ [ 13 ] ]) ],[],[ insert,update,delete ],[ 13 ])).
 rule_i(0,p(0,0,fv,20,[ intname,'ALMACEN' ])).
 rule_i(0,p(0,0,fv,20,[ table,18 ])).
@@ -194,6 +177,10 @@ rule_i(0,p(0,15,fvix,[ 20,21 ],[ 'NAME',almacen_pkey ])).
 rule_i(0,p(0,15,fvix,[ 20,21 ],[ 'LOC','' ])).
 rule_i(0,p(0,15,fvix,[ 20,21 ],[ 'SCHEMA',public ])).
 rule_i(0,p(0,15,fvix,[ 20,21 ],[ 'EXTNAM','YES' ])).
+rule_i(0,file(18,'ALMACEN',[ 19,13,143,144,145,146,147,148,149,150,151,152,153 ])).
+rule_i(0,loc([ 18 ],'ALMACEN','','LAN')).
+rule_i(0,index(18,'ALMACEN_PKEY',u,[ 19 ])).
+rule_i(0,loc([ 18,'ALMACEN_PKEY' ],almacen_pkey,'','LAN')).
 rule_i(0,p(0,0,fv,11,[ intname,'EMPLEADOS' ])).
 rule_i(0,p(0,0,fv,11,[ table,6 ])).
 rule_i(0,p(0,15,fv,11,[])).
@@ -206,6 +193,10 @@ rule_i(0,p(0,15,fvix,[ 11,10 ],[ 'NAME',empleados_pkey ])).
 rule_i(0,p(0,15,fvix,[ 11,10 ],[ 'LOC','' ])).
 rule_i(0,p(0,15,fvix,[ 11,10 ],[ 'SCHEMA',public ])).
 rule_i(0,p(0,15,fvix,[ 11,10 ],[ 'EXTNAM','YES' ])).
+rule_i(0,file(6,'EMPLEADOS',[ 13,98,99,100,101,102,103,104,105,106,107 ])).
+rule_i(0,loc([ 6 ],'EMPLEADOS','','LAN')).
+rule_i(0,index(6,'EMPLEADOS_PKEY',u,[ 13 ])).
+rule_i(0,loc([ 6,'EMPLEADOS_PKEY' ],empleados_pkey,'','LAN')).
 rule_i(18,rule([ a(19,[ [ 13 ],msg([ t('"No existe ''empleados''."',3) ],[ t('ForeignKeyNotFound',3) ]) ]) ],[],[ insert,update,delete ],[ 13 ])).
 rule_i(0,p(0,0,fv,15,[ intname,'ARTICULOS' ])).
 rule_i(0,p(0,0,fv,15,[ table,11 ])).
@@ -224,6 +215,12 @@ rule_i(0,p(0,15,fvix,[ 15,16 ],[ 'NAME',productoid ])).
 rule_i(0,p(0,15,fvix,[ 15,16 ],[ 'LOC','' ])).
 rule_i(0,p(0,15,fvix,[ 15,16 ],[ 'SCHEMA',public ])).
 rule_i(0,p(0,15,fvix,[ 15,16 ],[ 'EXTNAM','YES' ])).
+rule_i(0,file(11,'ARTICULOS',[ 19,20,21,154,155,23,7,10,156,2,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172 ])).
+rule_i(0,loc([ 11 ],'ARTICULOS','','LAN')).
+rule_i(0,index(11,'ARTICULOS_PKEY',u,[ 19,20,21 ])).
+rule_i(0,loc([ 11,'ARTICULOS_PKEY' ],articulos_pkey,'','LAN')).
+rule_i(0,index(11,'PRODUCTOID',k,[ 19 ])).
+rule_i(0,loc([ 11,'PRODUCTOID' ],productoid,'','LAN')).
 rule_i(0,p(0,0,fv,14,[ intname,'ETIQUETAS' ])).
 rule_i(0,p(0,0,fv,14,[ table,12 ])).
 rule_i(0,p(0,15,fv,14,[])).
@@ -236,31 +233,29 @@ rule_i(0,p(0,15,fvix,[ 14,14 ],[ 'NAME',etiquetas_pkey ])).
 rule_i(0,p(0,15,fvix,[ 14,14 ],[ 'LOC','' ])).
 rule_i(0,p(0,15,fvix,[ 14,14 ],[ 'SCHEMA',public ])).
 rule_i(0,p(0,15,fvix,[ 14,14 ],[ 'EXTNAM','YES' ])).
+rule_i(0,file(12,'ETIQUETAS',[ 17,18,19,32,33,34,35,36,37,38 ])).
+rule_i(0,loc([ 12 ],'ETIQUETAS','','LAN')).
+rule_i(0,index(12,'ETIQUETAS_PKEY',u,[ 17,18,19 ])).
+rule_i(0,loc([ 12,'ETIQUETAS_PKEY' ],etiquetas_pkey,'','LAN')).
  
-a_i(1,18,b,0,[],[ [],[ a(1,msg([ t('"Campo almacenfecreg fuera de rango"',3) ],[ t('OutOfRange',3) ])) ],[ t('NOT',8),t('(',0),t('null(',1),t(152,2),t(')',4),t('.OR.',9),t(152,2),t(>=,10),t('ymdhmstot(',1),t('1753',3),t(',',7),t('01',3),t(',',7),t('01',3),t(',',7),t('00',3),t(',',7),t('00',3),t(',',7),t('00',3),t(')',4),t(')',4) ] ]).
-a_i(2,18,b,0,[],[ [],[ a(1,msg([ t('"Campo almacenfecultact fuera de rango"',3) ],[ t('OutOfRange',3) ])) ],[ t('NOT',8),t('(',0),t('null(',1),t(153,2),t(')',4),t('.OR.',9),t(153,2),t(>=,10),t('ymdhmstot(',1),t('1753',3),t(',',7),t('01',3),t(',',7),t('01',3),t(',',7),t('00',3),t(',',7),t('00',3),t(',',7),t('00',3),t(')',4),t(')',4) ] ]).
-a_i(3,18,t,18,[],[ [ [ [],19,19 ] ],'ALMACEN_PKEY',[] ]).
-a_i(4,18,r,6,[],[ [ [ 18,13,13 ] ],'EMPLEADOS_PKEY',[] ]).
+a_i(1,18,t,18,[],[ [ [ [],19,19 ] ],'ALMACEN_PKEY',[] ]).
+a_i(2,18,r,6,[],[ [ [ 18,13,13 ] ],'EMPLEADOS_PKEY',[] ]).
  
-v_i(b,i,1,152).
-v_i(b,o,1,[]).
-v_i(b,i,2,153).
-v_i(b,o,2,[]).
-v_i(t,i,3,19).
-v_i(t,o,3,143).
-v_i(t,o,3,144).
-v_i(t,o,3,145).
-v_i(t,o,3,146).
-v_i(t,o,3,147).
-v_i(t,o,3,148).
-v_i(t,o,3,149).
-v_i(t,o,3,150).
-v_i(t,o,3,151).
-v_i(t,o,3,152).
-v_i(t,o,3,153).
-v_i(t,o,3,13).
-v_i(r,i,4,13).
-v_i(r,o,4,[]).
+v_i(t,i,1,19).
+v_i(t,o,1,143).
+v_i(t,o,1,144).
+v_i(t,o,1,145).
+v_i(t,o,1,146).
+v_i(t,o,1,147).
+v_i(t,o,1,148).
+v_i(t,o,1,149).
+v_i(t,o,1,150).
+v_i(t,o,1,151).
+v_i(t,o,1,152).
+v_i(t,o,1,153).
+v_i(t,o,1,13).
+v_i(r,i,2,13).
+v_i(r,o,2,[]).
  
  
  
@@ -289,15 +284,15 @@ attri_i(19,[ almacenid,int,18,0,'ZZZZZZZZZZZZZZZZZ9',0,almacenid,'',0 ]).
 attri_i('Gxremove',[ 'GxRemove',int,1,0,'9',0,'Gx Remove','',5 ]).
 attri_i('Mode',[ 'Gx_mode',char,3,0,'@!',1,'','',2 ]).
  
-table_i(12,[ etiquetas,[ 17,18,19 ],etiquetas,etiquetas ]).
-table_i(11,[ articulos,[ 19,20,21 ],articulos,articulos ]).
-table_i(6,[ empleados,[ 13 ],empleados,empleados ]).
-table_i(18,[ almacen,[ 19,13,143,144,145,146,147,148,149,150,151,152,153 ],almacen,almacen ]).
+table_i(12,[ 'ETIQUETAS',[ 17,18,19 ],etiquetas,etiquetas ]).
+table_i(11,[ 'ARTICULOS',[ 19,20,21 ],articulos,articulos ]).
+table_i(6,[ 'EMPLEADOS',[ 13 ],empleados,empleados ]).
+table_i(18,[ 'ALMACEN',[ 19,13,143,144,145,146,147,148,149,150,151,152,153 ],almacen,almacen ]).
  
-index_i(18,[ 'ALMACEN_PKEY',u,[ 19 ],almacen_pkey ]).
-index_i(6,[ 'EMPLEADOS_PKEY',u,[ 13 ],empleados_pkey ]).
-index_i(11,[ 'ARTICULOS_PKEY',u,[ 19,20,21 ],articulos_pkey ]).
-index_i(12,[ 'ETIQUETAS_PKEY',u,[ 17,18,19 ],etiquetas_pkey ]).
+index_i(18,[ 'ALMACEN_PKEY',u,[ 19 ],'ALMACEN_PKEY' ]).
+index_i(6,[ 'EMPLEADOS_PKEY',u,[ 13 ],'EMPLEADOS_PKEY' ]).
+index_i(11,[ 'ARTICULOS_PKEY',u,[ 19,20,21 ],'ARTICULOS_PKEY' ]).
+index_i(12,[ 'ETIQUETAS_PKEY',u,[ 17,18,19 ],'ETIQUETAS_PKEY' ]).
 index_i(12,[ 'IETIQUETAS2',d,[ 19 ],'Ietiquetas2' ]).
  
  
@@ -320,6 +315,71 @@ upd_i(18,18,d,[ [],[],'ALMACEN_PKEY',[] ]).
  
  
  
+map_i(12,i,'ETIQUETAS_PKEY',[ 'ETIQUETAS_PKEY' ]).
+map_i(12,a,38,[ etiquetasfecultact ]).
+map_i(12,a,37,[ etiquetasfecreg ]).
+map_i(12,a,36,[ etiquetasusuario ]).
+map_i(12,a,35,[ etiquetasreimpresi髇 ]).
+map_i(12,a,34,[ etiquetafecharealizada ]).
+map_i(12,a,33,[ etiquetastatus ]).
+map_i(12,a,32,[ etiquetasnumero ]).
+map_i(12,a,19,[ articuloid ]).
+map_i(12,a,18,[ cambsid ]).
+map_i(12,a,17,[ productoid ]).
+map_i(11,i,'PRODUCTOID',[ 'PRODUCTOID' ]).
+map_i(11,i,'ARTICULOS_PKEY',[ 'ARTICULOS_PKEY' ]).
+map_i(11,a,172,[ articulosfecultact ]).
+map_i(11,a,171,[ articulosfecreg ]).
+map_i(11,a,170,[ articulostipobien ]).
+map_i(11,a,169,[ articulosestatusariticulo ]).
+map_i(11,a,168,[ articulosidtrasfer ]).
+map_i(11,a,167,[ articulosusuario ]).
+map_i(11,a,166,[ articuloscontejado ]).
+map_i(11,a,165,[ articulosstatus ]).
+map_i(11,a,164,[ articulosfechabajaalma ]).
+map_i(11,a,163,[ articulosfechaentraalmacen ]).
+map_i(11,a,162,[ articulosfechacoteja ]).
+map_i(11,a,161,[ articulosrefdocumento ]).
+map_i(11,a,160,[ articulosnumserie ]).
+map_i(11,a,159,[ articuloscantdepreacum ]).
+map_i(11,a,158,[ articulospreccomprareexp ]).
+map_i(11,a,157,[ articulospreciocompra ]).
+map_i(11,a,2,[ proveedorid ]).
+map_i(11,a,156,[ articulosdsc ]).
+map_i(11,a,10,[ origenid ]).
+map_i(11,a,7,[ entidadid ]).
+map_i(11,a,23,[ tipodocid ]).
+map_i(11,a,155,[ articulosnoetiqueta ]).
+map_i(11,a,154,[ alamcenid ]).
+map_i(11,a,21,[ cambsid ]).
+map_i(11,a,20,[ productoid ]).
+map_i(11,a,19,[ articulosid ]).
+map_i(6,i,'EMPLEADOS_PKEY',[ 'EMPLEADOS_PKEY' ]).
+map_i(6,a,107,[ empleadosext ]).
+map_i(6,a,106,[ empleadoscorreo ]).
+map_i(6,a,105,[ empleadosfecultact ]).
+map_i(6,a,104,[ empleadosfecreg ]).
+map_i(6,a,103,[ empleadosusuario ]).
+map_i(6,a,102,[ empleadosstatus ]).
+map_i(6,a,101,[ empleadosapmaterno ]).
+map_i(6,a,100,[ empleadosappaterno ]).
+map_i(6,a,99,[ empleadosnomemple ]).
+map_i(6,a,98,[ areaid ]).
+map_i(6,a,13,[ empleadosid ]).
+map_i(18,i,'ALMACEN_PKEY',[ 'ALMACEN_PKEY' ]).
+map_i(18,a,153,[ almacenfecultact ]).
+map_i(18,a,152,[ almacenfecreg ]).
+map_i(18,a,151,[ alamcenusuario ]).
+map_i(18,a,150,[ alamcenobservaciones ]).
+map_i(18,a,149,[ almacentelefono ]).
+map_i(18,a,148,[ alamcencodigopostal ]).
+map_i(18,a,147,[ alamcenestado ]).
+map_i(18,a,146,[ almacenmunicipio ]).
+map_i(18,a,145,[ almacencolonia ]).
+map_i(18,a,144,[ almacendireccion ]).
+map_i(18,a,143,[ almacendsc ]).
+map_i(18,a,13,[ empleadoid ]).
+map_i(18,a,19,[ almacenid ]).
  
  
  
@@ -1283,6 +1343,7 @@ html_comp_i(76,'Buttonborderstyle',standard,d,[ str ]).
  
  
  
+warn_gen_i(msg([],spc0134,[ 'Poor performance may be noticed','',' as ','Duplicate',' index ','IETIQUETAS2',' is not defined in Data view ',etiquetas,'.' ])).
  
 lit_i(6,1,t(almacen,3),[ ctlname('Title') ]).
 lit_i(5,1,div(5),[ ctlname('') ]).
@@ -1525,15 +1586,6 @@ att_prop_i(2,18,'AttRegEx','',d).
 att_prop_i(2,18,'AttValidationFailedMsg','',d).
 att_prop_i(2,18,'FullName',etiquetascambsid,v).
  
-tbl_prop_i(2,12,'AllDirSuper',[ [ 18,[ 19 ] ] ],v).
-tbl_prop_i(2,11,'AllDirSuper',[ [ 18,[ 19 ] ] ],v).
-tbl_prop_i(2,18,'AllDirSuper',[ [ 6,[ 13 ] ] ],v).
-tbl_prop_i(2,18,'DirSuperNull',[ [ 6,[ 13 ] ] ],v).
-tbl_prop_i(2,6,'DirSubor',[ [ 18,[ 13 ] ] ],v).
-tbl_prop_i(2,18,'DirSubor',[ [ 11,[ 19 ] ],[ 12,[ 19 ] ] ],v).
-tbl_prop_i(2,12,'DirSuper',[ [ 18,[ 19 ] ] ],v).
-tbl_prop_i(2,11,'DirSuper',[ [ 18,[ 19 ] ] ],v).
-tbl_prop_i(2,18,'DirSuper',[ [ 6,[ 13 ] ] ],v).
  
 tbl_att_prop_i(2,18,19,'AllowNulls',n).
 tbl_att_prop_i(2,6,13,'AllowNulls',n).
@@ -1547,6 +1599,10 @@ tbl_att_prop_i(2,12,19,'AllowNulls',n).
  
  
  
+a_alias_i(17,etiquetasproductoid).
+a_alias_i(20,articulosproductoid).
+a_alias_i(18,etiquetascambsid).
+a_alias_i(21,articuloscambsid).
  
 trn_level_i(18,[ [ 19,13,143,144,145,146,147,148,149,150,151,152,153 ],almacen,almacen,almacen,'',143 ]).
  

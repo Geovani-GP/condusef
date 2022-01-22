@@ -2,7 +2,7 @@
                File: GXLRED
         Description: Load redundancy procedure
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 1/21/2022 2:50:38.81
+       Generated on: 1/22/2022 13:28:19.65
        Program type: Callable routine
           Main DBMS: postgresql
 */

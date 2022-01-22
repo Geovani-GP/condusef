@@ -24,12 +24,12 @@
 <BaseTable>
 <Table>
 <TableId>15</TableId>
-<TableName>usuarios</TableName>
+<TableName>USUARIOS</TableName>
 <Description>usuarios</Description></Table></BaseTable>
 <NavigationTree>
 <Table>
 <TableId>15</TableId>
-<TableName>usuarios</TableName>
+<TableName>USUARIOS</TableName>
 <Description>usuarios</Description>
 <Updated>Yes</Updated>
 <RecordsToRead>many</RecordsToRead>
@@ -50,7 +50,7 @@
 <TableToUpdate>
 <Table>
 <TableId>15</TableId>
-<TableName>usuarios</TableName>
+<TableName>USUARIOS</TableName>
 <Description>usuarios</Description></Table>
 <TableAction>insert</TableAction>
 <AttrisToUpdate>
@@ -69,7 +69,7 @@
 <TableToUpdate>
 <Table>
 <TableId>15</TableId>
-<TableName>usuarios</TableName>
+<TableName>USUARIOS</TableName>
 <Description>usuarios</Description></Table>
 <TableAction>update</TableAction>
 <AttrisToUpdate>
@@ -84,7 +84,7 @@
 <TableToUpdate>
 <Table>
 <TableId>15</TableId>
-<TableName>usuarios</TableName>
+<TableName>USUARIOS</TableName>
 <Description>usuarios</Description></Table>
 <TableAction>delete</TableAction>
 <AttrisToUpdate></AttrisToUpdate></TableToUpdate></TablesToUpdate>
@@ -99,7 +99,7 @@
 <Prompt>
 <Table>
 <TableId>15</TableId>
-<TableName>usuarios</TableName>
+<TableName>USUARIOS</TableName>
 <Description>usuarios</Description></Table>
 <Object>
 <ObjClsGuid>c9584656-94b6-4ccd-890f-332d11fc2c25</ObjClsGuid>

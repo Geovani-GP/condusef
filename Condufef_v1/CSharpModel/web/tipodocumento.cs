@@ -2,9 +2,9 @@
                File: tipodocumento
         Description: tipodocumento
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 12/30/2021 22:9:11.25
+       Generated on: 1/22/2022 13:27:36.91
        Program type: Callable routine
-          Main DBMS: sqlserver
+          Main DBMS: postgresql
 */
 using System;
 using System.Collections;
@@ -14,7 +14,7 @@ using GeneXus.Application;
 using GeneXus.Metadata;
 using GeneXus.Cryptography;
 using System.Data;
-using System.Data.SqlClient;
+using NpgsqlTypes;
 using GeneXus.Data;
 using com.genexus;
 using GeneXus.Data.ADO;
@@ -673,7 +673,7 @@ namespace GeneXus.Programs {
 
       protected void ZM0K20( short GX_JID )
       {
-         if ( ( GX_JID == 3 ) || ( GX_JID == 0 ) )
+         if ( ( GX_JID == 1 ) || ( GX_JID == 0 ) )
          {
             if ( StringUtil.StrCmp(Gx_mode, "INS") != 0 )
             {
@@ -690,7 +690,7 @@ namespace GeneXus.Programs {
                Z82tipodocumentofecultact = A82tipodocumentofecultact;
             }
          }
-         if ( GX_JID == -3 )
+         if ( GX_JID == -1 )
          {
             Z26tipodocumentoid = A26tipodocumentoid;
             Z79tipodocumentodsc = A79tipodocumentodsc;
@@ -747,7 +747,7 @@ namespace GeneXus.Programs {
             A82tipodocumentofecultact = T000K4_A82tipodocumentofecultact[0];
             context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A82tipodocumentofecultact", context.localUtil.TToC( A82tipodocumentofecultact, 10, 8, 0, 3, "/", ":", " "));
             n82tipodocumentofecultact = T000K4_n82tipodocumentofecultact[0];
-            ZM0K20( -3) ;
+            ZM0K20( -1) ;
          }
          pr_default.close(2);
          OnLoadActions0K20( ) ;
@@ -761,20 +761,6 @@ namespace GeneXus.Programs {
       {
          Gx_BScreen = 1;
          standaloneModal( ) ;
-         if ( ! ( (DateTime.MinValue==A81tipodocumentofecreg) || ( A81tipodocumentofecreg >= context.localUtil.YMDHMSToT( 1753, 1, 1, 0, 0, 0) ) ) )
-         {
-            GX_msglist.addItem("Campo tipodocumentofecreg fuera de rango", "OutOfRange", 1, "TIPODOCUMENTOFECREG");
-            AnyError = 1;
-            GX_FocusControl = edttipodocumentofecreg_Internalname;
-            context.httpAjaxContext.ajax_rsp_assign_attri("", false, "GX_FocusControl", GX_FocusControl);
-         }
-         if ( ! ( (DateTime.MinValue==A82tipodocumentofecultact) || ( A82tipodocumentofecultact >= context.localUtil.YMDHMSToT( 1753, 1, 1, 0, 0, 0) ) ) )
-         {
-            GX_msglist.addItem("Campo tipodocumentofecultact fuera de rango", "OutOfRange", 1, "TIPODOCUMENTOFECULTACT");
-            AnyError = 1;
-            GX_FocusControl = edttipodocumentofecultact_Internalname;
-            context.httpAjaxContext.ajax_rsp_assign_attri("", false, "GX_FocusControl", GX_FocusControl);
-         }
       }
 
       protected void CloseExtendedTableCursors0K20( )
@@ -806,7 +792,7 @@ namespace GeneXus.Programs {
          pr_default.execute(1, new Object[] {A26tipodocumentoid});
          if ( (pr_default.getStatus(1) != 101) )
          {
-            ZM0K20( 3) ;
+            ZM0K20( 1) ;
             RcdFound20 = 1;
             A26tipodocumentoid = T000K3_A26tipodocumentoid[0];
             context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A26tipodocumentoid", StringUtil.LTrim( StringUtil.Str( (decimal)(A26tipodocumentoid), 9, 0)));
@@ -1155,7 +1141,7 @@ namespace GeneXus.Programs {
             pr_default.execute(0, new Object[] {A26tipodocumentoid});
             if ( (pr_default.getStatus(0) == 103) )
             {
-               GX_msglist.addItem(context.GetMessage( "GXM_lock", new   object[]  {"tipodocumento"}), "RecordIsLocked", 1, "");
+               GX_msglist.addItem(context.GetMessage( "GXM_lock", new   object[]  {"TIPODOCUMENTO"}), "RecordIsLocked", 1, "");
                AnyError = 1;
                return  ;
             }
@@ -1185,7 +1171,7 @@ namespace GeneXus.Programs {
                   GXUtil.WriteLogRaw("Old: ",Z82tipodocumentofecultact);
                   GXUtil.WriteLogRaw("Current: ",T000K2_A82tipodocumentofecultact[0]);
                }
-               GX_msglist.addItem(context.GetMessage( "GXM_waschg", new   object[]  {"tipodocumento"}), "RecordWasChanged", 1, "");
+               GX_msglist.addItem(context.GetMessage( "GXM_waschg", new   object[]  {"TIPODOCUMENTO"}), "RecordWasChanged", 1, "");
                AnyError = 1;
                return  ;
             }
@@ -1214,7 +1200,7 @@ namespace GeneXus.Programs {
                      /* Using cursor T000K8 */
                      pr_default.execute(6, new Object[] {A26tipodocumentoid, n79tipodocumentodsc, A79tipodocumentodsc, n80tipodocumentousuario, A80tipodocumentousuario, n81tipodocumentofecreg, A81tipodocumentofecreg, n82tipodocumentofecultact, A82tipodocumentofecultact});
                      pr_default.close(6);
-                     dsDefault.SmartCacheProvider.SetUpdated("tipodocumento") ;
+                     dsDefault.SmartCacheProvider.SetUpdated("TIPODOCUMENTO") ;
                      if ( (pr_default.getStatus(6) == 1) )
                      {
                         GX_msglist.addItem(context.GetMessage( "GXM_noupdate", ""), "DuplicatePrimaryKey", 1, "");
@@ -1269,10 +1255,10 @@ namespace GeneXus.Programs {
                      /* Using cursor T000K9 */
                      pr_default.execute(7, new Object[] {n79tipodocumentodsc, A79tipodocumentodsc, n80tipodocumentousuario, A80tipodocumentousuario, n81tipodocumentofecreg, A81tipodocumentofecreg, n82tipodocumentofecultact, A82tipodocumentofecultact, A26tipodocumentoid});
                      pr_default.close(7);
-                     dsDefault.SmartCacheProvider.SetUpdated("tipodocumento") ;
+                     dsDefault.SmartCacheProvider.SetUpdated("TIPODOCUMENTO") ;
                      if ( (pr_default.getStatus(7) == 103) )
                      {
-                        GX_msglist.addItem(context.GetMessage( "GXM_lock", new   object[]  {"tipodocumento"}), "RecordIsLocked", 1, "");
+                        GX_msglist.addItem(context.GetMessage( "GXM_lock", new   object[]  {"TIPODOCUMENTO"}), "RecordIsLocked", 1, "");
                         AnyError = 1;
                      }
                      DeferredUpdate0K20( ) ;
@@ -1326,7 +1312,7 @@ namespace GeneXus.Programs {
                   /* Using cursor T000K10 */
                   pr_default.execute(8, new Object[] {A26tipodocumentoid});
                   pr_default.close(8);
-                  dsDefault.SmartCacheProvider.SetUpdated("tipodocumento") ;
+                  dsDefault.SmartCacheProvider.SetUpdated("TIPODOCUMENTO") ;
                   if ( AnyError == 0 )
                   {
                      /* Start of After( delete) rules */
@@ -1384,7 +1370,6 @@ namespace GeneXus.Programs {
          }
          if ( AnyError == 0 )
          {
-            pr_default.close(1);
             context.CommitDataStores( "tipodocumento");
             if ( AnyError == 0 )
             {
@@ -1396,7 +1381,6 @@ namespace GeneXus.Programs {
          }
          else
          {
-            pr_default.close(1);
             context.RollbackDataStores( "tipodocumento");
          }
          IsModified = 0;
@@ -1518,7 +1502,7 @@ namespace GeneXus.Programs {
          context.AddJavascriptSource("jquery.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxtimezone.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxgral.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("gxcfg.js", "?202112302291167");
+         context.AddJavascriptSource("gxcfg.js", "?202212213273751");
          if ( context.isSpaRequest( ) )
          {
             enableOutput();
@@ -1675,12 +1659,12 @@ namespace GeneXus.Programs {
 
       protected void define_styles( )
       {
-         AddStyleSheetFile("calendar-system.css", "?11323129");
-         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?2284430");
+         AddStyleSheetFile("calendar-system.css", "?13205289");
+         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?13264988");
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?202112302291170");
+            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?202212213273755");
             idxLst = (int)(idxLst+1);
          }
          /* End function define_styles */
@@ -1689,7 +1673,7 @@ namespace GeneXus.Programs {
       protected void include_jscripts( )
       {
          context.AddJavascriptSource("messages.spa.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("tipodocumento.js", "?202112302291171");
+         context.AddJavascriptSource("tipodocumento.js", "?202212213273756");
          /* End function include_jscripts */
       }
 
@@ -2128,62 +2112,62 @@ namespace GeneXus.Programs {
        {
           Object[] prmT000K4 ;
           prmT000K4 = new Object[] {
-          new Object[] {"@tipodocumentoid",SqlDbType.Int,9,0}
+          new Object[] {"tipodocumentoid",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT000K5 ;
           prmT000K5 = new Object[] {
-          new Object[] {"@tipodocumentoid",SqlDbType.Int,9,0}
+          new Object[] {"tipodocumentoid",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT000K3 ;
           prmT000K3 = new Object[] {
-          new Object[] {"@tipodocumentoid",SqlDbType.Int,9,0}
+          new Object[] {"tipodocumentoid",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT000K6 ;
           prmT000K6 = new Object[] {
-          new Object[] {"@tipodocumentoid",SqlDbType.Int,9,0}
+          new Object[] {"tipodocumentoid",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT000K7 ;
           prmT000K7 = new Object[] {
-          new Object[] {"@tipodocumentoid",SqlDbType.Int,9,0}
+          new Object[] {"tipodocumentoid",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT000K2 ;
           prmT000K2 = new Object[] {
-          new Object[] {"@tipodocumentoid",SqlDbType.Int,9,0}
+          new Object[] {"tipodocumentoid",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT000K8 ;
           prmT000K8 = new Object[] {
-          new Object[] {"@tipodocumentoid",SqlDbType.Int,9,0} ,
-          new Object[] {"@tipodocumentodsc",SqlDbType.VarChar,100,0} ,
-          new Object[] {"@tipodocumentousuario",SqlDbType.VarChar,15,0} ,
-          new Object[] {"@tipodocumentofecreg",SqlDbType.DateTime,10,8} ,
-          new Object[] {"@tipodocumentofecultact",SqlDbType.DateTime,10,8}
+          new Object[] {"tipodocumentoid",NpgsqlDbType.Integer,9,0} ,
+          new Object[] {"tipodocumentodsc",NpgsqlDbType.Varchar,100,0} ,
+          new Object[] {"tipodocumentousuario",NpgsqlDbType.Varchar,15,0} ,
+          new Object[] {"tipodocumentofecreg",NpgsqlDbType.Timestamp,10,8} ,
+          new Object[] {"tipodocumentofecultact",NpgsqlDbType.Timestamp,10,8}
           } ;
           Object[] prmT000K9 ;
           prmT000K9 = new Object[] {
-          new Object[] {"@tipodocumentodsc",SqlDbType.VarChar,100,0} ,
-          new Object[] {"@tipodocumentousuario",SqlDbType.VarChar,15,0} ,
-          new Object[] {"@tipodocumentofecreg",SqlDbType.DateTime,10,8} ,
-          new Object[] {"@tipodocumentofecultact",SqlDbType.DateTime,10,8} ,
-          new Object[] {"@tipodocumentoid",SqlDbType.Int,9,0}
+          new Object[] {"tipodocumentodsc",NpgsqlDbType.Varchar,100,0} ,
+          new Object[] {"tipodocumentousuario",NpgsqlDbType.Varchar,15,0} ,
+          new Object[] {"tipodocumentofecreg",NpgsqlDbType.Timestamp,10,8} ,
+          new Object[] {"tipodocumentofecultact",NpgsqlDbType.Timestamp,10,8} ,
+          new Object[] {"tipodocumentoid",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT000K10 ;
           prmT000K10 = new Object[] {
-          new Object[] {"@tipodocumentoid",SqlDbType.Int,9,0}
+          new Object[] {"tipodocumentoid",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT000K11 ;
           prmT000K11 = new Object[] {
           } ;
           def= new CursorDef[] {
-              new CursorDef("T000K2", "SELECT [tipodocumentoid], [tipodocumentodsc], [tipodocumentousuario], [tipodocumentofecreg], [tipodocumentofecultact] FROM [tipodocumento] WITH (UPDLOCK) WHERE [tipodocumentoid] = @tipodocumentoid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000K2,1,0,true,false )
-             ,new CursorDef("T000K3", "SELECT [tipodocumentoid], [tipodocumentodsc], [tipodocumentousuario], [tipodocumentofecreg], [tipodocumentofecultact] FROM [tipodocumento] WITH (NOLOCK) WHERE [tipodocumentoid] = @tipodocumentoid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000K3,1,0,true,false )
-             ,new CursorDef("T000K4", "SELECT TM1.[tipodocumentoid], TM1.[tipodocumentodsc], TM1.[tipodocumentousuario], TM1.[tipodocumentofecreg], TM1.[tipodocumentofecultact] FROM [tipodocumento] TM1 WITH (NOLOCK) WHERE TM1.[tipodocumentoid] = @tipodocumentoid ORDER BY TM1.[tipodocumentoid]  OPTION (FAST 100)",true, GxErrorMask.GX_NOMASK, false, this,prmT000K4,100,0,true,false )
-             ,new CursorDef("T000K5", "SELECT [tipodocumentoid] FROM [tipodocumento] WITH (NOLOCK) WHERE [tipodocumentoid] = @tipodocumentoid  OPTION (FAST 1)",true, GxErrorMask.GX_NOMASK, false, this,prmT000K5,1,0,true,false )
-             ,new CursorDef("T000K6", "SELECT TOP 1 [tipodocumentoid] FROM [tipodocumento] WITH (NOLOCK) WHERE ( [tipodocumentoid] > @tipodocumentoid) ORDER BY [tipodocumentoid]  OPTION (FAST 1)",true, GxErrorMask.GX_NOMASK, false, this,prmT000K6,1,0,true,true )
-             ,new CursorDef("T000K7", "SELECT TOP 1 [tipodocumentoid] FROM [tipodocumento] WITH (NOLOCK) WHERE ( [tipodocumentoid] < @tipodocumentoid) ORDER BY [tipodocumentoid] DESC  OPTION (FAST 1)",true, GxErrorMask.GX_NOMASK, false, this,prmT000K7,1,0,true,true )
-             ,new CursorDef("T000K8", "INSERT INTO [tipodocumento]([tipodocumentoid], [tipodocumentodsc], [tipodocumentousuario], [tipodocumentofecreg], [tipodocumentofecultact]) VALUES(@tipodocumentoid, @tipodocumentodsc, @tipodocumentousuario, @tipodocumentofecreg, @tipodocumentofecultact)", GxErrorMask.GX_NOMASK,prmT000K8)
-             ,new CursorDef("T000K9", "UPDATE [tipodocumento] SET [tipodocumentodsc]=@tipodocumentodsc, [tipodocumentousuario]=@tipodocumentousuario, [tipodocumentofecreg]=@tipodocumentofecreg, [tipodocumentofecultact]=@tipodocumentofecultact  WHERE [tipodocumentoid] = @tipodocumentoid", GxErrorMask.GX_NOMASK,prmT000K9)
-             ,new CursorDef("T000K10", "DELETE FROM [tipodocumento]  WHERE [tipodocumentoid] = @tipodocumentoid", GxErrorMask.GX_NOMASK,prmT000K10)
-             ,new CursorDef("T000K11", "SELECT [tipodocumentoid] FROM [tipodocumento] WITH (NOLOCK) ORDER BY [tipodocumentoid]  OPTION (FAST 100)",true, GxErrorMask.GX_NOMASK, false, this,prmT000K11,100,0,true,false )
+              new CursorDef("T000K2", "SELECT tipodocumentoid, tipodocumentodsc, tipodocumentousuario, tipodocumentofecreg, tipodocumentofecultact FROM public.tipodocumento WHERE tipodocumentoid = :tipodocumentoid  FOR UPDATE OF tipodocumento NOWAIT",true, GxErrorMask.GX_NOMASK, false, this,prmT000K2,1,0,true,false )
+             ,new CursorDef("T000K3", "SELECT tipodocumentoid, tipodocumentodsc, tipodocumentousuario, tipodocumentofecreg, tipodocumentofecultact FROM public.tipodocumento WHERE tipodocumentoid = :tipodocumentoid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000K3,1,0,true,false )
+             ,new CursorDef("T000K4", "SELECT TM1.tipodocumentoid, TM1.tipodocumentodsc, TM1.tipodocumentousuario, TM1.tipodocumentofecreg, TM1.tipodocumentofecultact FROM public.tipodocumento TM1 WHERE TM1.tipodocumentoid = :tipodocumentoid ORDER BY TM1.tipodocumentoid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000K4,100,0,true,false )
+             ,new CursorDef("T000K5", "SELECT tipodocumentoid FROM public.tipodocumento WHERE tipodocumentoid = :tipodocumentoid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000K5,1,0,true,false )
+             ,new CursorDef("T000K6", "SELECT tipodocumentoid FROM public.tipodocumento WHERE ( tipodocumentoid > :tipodocumentoid) ORDER BY tipodocumentoid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000K6,1,0,true,true )
+             ,new CursorDef("T000K7", "SELECT tipodocumentoid FROM public.tipodocumento WHERE ( tipodocumentoid < :tipodocumentoid) ORDER BY tipodocumentoid DESC ",true, GxErrorMask.GX_NOMASK, false, this,prmT000K7,1,0,true,true )
+             ,new CursorDef("T000K8", "SAVEPOINT gxupdate;INSERT INTO public.tipodocumento(tipodocumentoid, tipodocumentodsc, tipodocumentousuario, tipodocumentofecreg, tipodocumentofecultact) VALUES(:tipodocumentoid, :tipodocumentodsc, :tipodocumentousuario, :tipodocumentofecreg, :tipodocumentofecultact);RELEASE SAVEPOINT gxupdate", GxErrorMask.GX_ROLLBACKSAVEPOINT,prmT000K8)
+             ,new CursorDef("T000K9", "SAVEPOINT gxupdate;UPDATE public.tipodocumento SET tipodocumentodsc=:tipodocumentodsc, tipodocumentousuario=:tipodocumentousuario, tipodocumentofecreg=:tipodocumentofecreg, tipodocumentofecultact=:tipodocumentofecultact  WHERE tipodocumentoid = :tipodocumentoid;RELEASE SAVEPOINT gxupdate", GxErrorMask.GX_ROLLBACKSAVEPOINT | GxErrorMask.GX_NOMASK,prmT000K9)
+             ,new CursorDef("T000K10", "SAVEPOINT gxupdate;DELETE FROM public.tipodocumento  WHERE tipodocumentoid = :tipodocumentoid;RELEASE SAVEPOINT gxupdate", GxErrorMask.GX_ROLLBACKSAVEPOINT | GxErrorMask.GX_NOMASK,prmT000K10)
+             ,new CursorDef("T000K11", "SELECT tipodocumentoid FROM public.tipodocumento ORDER BY tipodocumentoid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000K11,100,0,true,false )
           };
        }
     }

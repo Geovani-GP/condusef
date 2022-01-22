@@ -46,7 +46,7 @@
 <BaseTable>
 <Table>
 <TableId>8</TableId>
-<TableName>marcas</TableName>
+<TableName>MARCAS</TableName>
 <Description>marcas</Description></Table></BaseTable>
 <Order>
 <Attribute>
@@ -163,7 +163,7 @@
 <NavigationTree>
 <Table>
 <TableId>8</TableId>
-<TableName>marcas</TableName>
+<TableName>MARCAS</TableName>
 <Description>marcas</Description>
 <RecordsToRead>many</RecordsToRead>
 <KeyAttributes>

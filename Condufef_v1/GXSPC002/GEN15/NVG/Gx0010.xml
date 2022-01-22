@@ -46,7 +46,7 @@
 <BaseTable>
 <Table>
 <TableId>1</TableId>
-<TableName>tipobien</TableName>
+<TableName>TIPOBIEN</TableName>
 <Description>tipobien</Description></Table></BaseTable>
 <Order>
 <Attribute>
@@ -163,7 +163,7 @@
 <NavigationTree>
 <Table>
 <TableId>1</TableId>
-<TableName>tipobien</TableName>
+<TableName>TIPOBIEN</TableName>
 <Description>tipobien</Description>
 <RecordsToRead>many</RecordsToRead>
 <KeyAttributes>

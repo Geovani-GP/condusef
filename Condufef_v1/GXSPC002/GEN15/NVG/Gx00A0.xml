@@ -50,7 +50,7 @@
 <BaseTable>
 <Table>
 <TableId>10</TableId>
-<TableName>proveedores</TableName>
+<TableName>PROVEEDORES</TableName>
 <Description>proveedores</Description></Table></BaseTable>
 <Order>
 <Attribute>
@@ -209,7 +209,7 @@
 <NavigationTree>
 <Table>
 <TableId>10</TableId>
-<TableName>proveedores</TableName>
+<TableName>PROVEEDORES</TableName>
 <Description>proveedores</Description>
 <RecordsToRead>many</RecordsToRead>
 <KeyAttributes>

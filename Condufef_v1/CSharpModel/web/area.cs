@@ -2,9 +2,9 @@
                File: area
         Description: area
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 12/30/2021 22:9:7.76
+       Generated on: 1/22/2022 13:27:32.88
        Program type: Callable routine
-          Main DBMS: sqlserver
+          Main DBMS: postgresql
 */
 using System;
 using System.Collections;
@@ -14,7 +14,7 @@ using GeneXus.Application;
 using GeneXus.Metadata;
 using GeneXus.Cryptography;
 using System.Data;
-using System.Data.SqlClient;
+using NpgsqlTypes;
 using GeneXus.Data;
 using com.genexus;
 using GeneXus.Data.ADO;
@@ -693,7 +693,7 @@ namespace GeneXus.Programs {
 
       protected void ZM0H17( short GX_JID )
       {
-         if ( ( GX_JID == 3 ) || ( GX_JID == 0 ) )
+         if ( ( GX_JID == 1 ) || ( GX_JID == 0 ) )
          {
             if ( StringUtil.StrCmp(Gx_mode, "INS") != 0 )
             {
@@ -712,7 +712,7 @@ namespace GeneXus.Programs {
                Z31areafecultact = A31areafecultact;
             }
          }
-         if ( GX_JID == -3 )
+         if ( GX_JID == -1 )
          {
             Z22areaareaid = A22areaareaid;
             Z27areadsc = A27areadsc;
@@ -773,7 +773,7 @@ namespace GeneXus.Programs {
             A31areafecultact = T000H4_A31areafecultact[0];
             context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A31areafecultact", context.localUtil.TToC( A31areafecultact, 10, 8, 0, 3, "/", ":", " "));
             n31areafecultact = T000H4_n31areafecultact[0];
-            ZM0H17( -3) ;
+            ZM0H17( -1) ;
          }
          pr_default.close(2);
          OnLoadActions0H17( ) ;
@@ -787,20 +787,6 @@ namespace GeneXus.Programs {
       {
          Gx_BScreen = 1;
          standaloneModal( ) ;
-         if ( ! ( (DateTime.MinValue==A30areafecreg) || ( A30areafecreg >= context.localUtil.YMDHMSToT( 1753, 1, 1, 0, 0, 0) ) ) )
-         {
-            GX_msglist.addItem("Campo areafecreg fuera de rango", "OutOfRange", 1, "AREAFECREG");
-            AnyError = 1;
-            GX_FocusControl = edtareafecreg_Internalname;
-            context.httpAjaxContext.ajax_rsp_assign_attri("", false, "GX_FocusControl", GX_FocusControl);
-         }
-         if ( ! ( (DateTime.MinValue==A31areafecultact) || ( A31areafecultact >= context.localUtil.YMDHMSToT( 1753, 1, 1, 0, 0, 0) ) ) )
-         {
-            GX_msglist.addItem("Campo areafecultact fuera de rango", "OutOfRange", 1, "AREAFECULTACT");
-            AnyError = 1;
-            GX_FocusControl = edtareafecultact_Internalname;
-            context.httpAjaxContext.ajax_rsp_assign_attri("", false, "GX_FocusControl", GX_FocusControl);
-         }
       }
 
       protected void CloseExtendedTableCursors0H17( )
@@ -832,7 +818,7 @@ namespace GeneXus.Programs {
          pr_default.execute(1, new Object[] {A22areaareaid});
          if ( (pr_default.getStatus(1) != 101) )
          {
-            ZM0H17( 3) ;
+            ZM0H17( 1) ;
             RcdFound17 = 1;
             A22areaareaid = T000H3_A22areaareaid[0];
             context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A22areaareaid", StringUtil.LTrim( StringUtil.Str( (decimal)(A22areaareaid), 9, 0)));
@@ -1184,7 +1170,7 @@ namespace GeneXus.Programs {
             pr_default.execute(0, new Object[] {A22areaareaid});
             if ( (pr_default.getStatus(0) == 103) )
             {
-               GX_msglist.addItem(context.GetMessage( "GXM_lock", new   object[]  {"area"}), "RecordIsLocked", 1, "");
+               GX_msglist.addItem(context.GetMessage( "GXM_lock", new   object[]  {"AREA"}), "RecordIsLocked", 1, "");
                AnyError = 1;
                return  ;
             }
@@ -1220,7 +1206,7 @@ namespace GeneXus.Programs {
                   GXUtil.WriteLogRaw("Old: ",Z31areafecultact);
                   GXUtil.WriteLogRaw("Current: ",T000H2_A31areafecultact[0]);
                }
-               GX_msglist.addItem(context.GetMessage( "GXM_waschg", new   object[]  {"area"}), "RecordWasChanged", 1, "");
+               GX_msglist.addItem(context.GetMessage( "GXM_waschg", new   object[]  {"AREA"}), "RecordWasChanged", 1, "");
                AnyError = 1;
                return  ;
             }
@@ -1249,7 +1235,7 @@ namespace GeneXus.Programs {
                      /* Using cursor T000H8 */
                      pr_default.execute(6, new Object[] {A22areaareaid, n27areadsc, A27areadsc, n28areastatusadsc, A28areastatusadsc, n29areausuario, A29areausuario, n30areafecreg, A30areafecreg, n31areafecultact, A31areafecultact});
                      pr_default.close(6);
-                     dsDefault.SmartCacheProvider.SetUpdated("area") ;
+                     dsDefault.SmartCacheProvider.SetUpdated("AREA") ;
                      if ( (pr_default.getStatus(6) == 1) )
                      {
                         GX_msglist.addItem(context.GetMessage( "GXM_noupdate", ""), "DuplicatePrimaryKey", 1, "");
@@ -1304,10 +1290,10 @@ namespace GeneXus.Programs {
                      /* Using cursor T000H9 */
                      pr_default.execute(7, new Object[] {n27areadsc, A27areadsc, n28areastatusadsc, A28areastatusadsc, n29areausuario, A29areausuario, n30areafecreg, A30areafecreg, n31areafecultact, A31areafecultact, A22areaareaid});
                      pr_default.close(7);
-                     dsDefault.SmartCacheProvider.SetUpdated("area") ;
+                     dsDefault.SmartCacheProvider.SetUpdated("AREA") ;
                      if ( (pr_default.getStatus(7) == 103) )
                      {
-                        GX_msglist.addItem(context.GetMessage( "GXM_lock", new   object[]  {"area"}), "RecordIsLocked", 1, "");
+                        GX_msglist.addItem(context.GetMessage( "GXM_lock", new   object[]  {"AREA"}), "RecordIsLocked", 1, "");
                         AnyError = 1;
                      }
                      DeferredUpdate0H17( ) ;
@@ -1361,7 +1347,7 @@ namespace GeneXus.Programs {
                   /* Using cursor T000H10 */
                   pr_default.execute(8, new Object[] {A22areaareaid});
                   pr_default.close(8);
-                  dsDefault.SmartCacheProvider.SetUpdated("area") ;
+                  dsDefault.SmartCacheProvider.SetUpdated("AREA") ;
                   if ( AnyError == 0 )
                   {
                      /* Start of After( delete) rules */
@@ -1419,7 +1405,6 @@ namespace GeneXus.Programs {
          }
          if ( AnyError == 0 )
          {
-            pr_default.close(1);
             context.CommitDataStores( "area");
             if ( AnyError == 0 )
             {
@@ -1431,7 +1416,6 @@ namespace GeneXus.Programs {
          }
          else
          {
-            pr_default.close(1);
             context.RollbackDataStores( "area");
          }
          IsModified = 0;
@@ -1555,7 +1539,7 @@ namespace GeneXus.Programs {
          context.AddJavascriptSource("jquery.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxtimezone.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxgral.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("gxcfg.js", "?20211230229839");
+         context.AddJavascriptSource("gxcfg.js", "?202212213273352");
          if ( context.isSpaRequest( ) )
          {
             enableOutput();
@@ -1718,12 +1702,12 @@ namespace GeneXus.Programs {
 
       protected void define_styles( )
       {
-         AddStyleSheetFile("calendar-system.css", "?11323129");
-         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?2284430");
+         AddStyleSheetFile("calendar-system.css", "?13205289");
+         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?13264988");
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?20211230229842");
+            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?202212213273357");
             idxLst = (int)(idxLst+1);
          }
          /* End function define_styles */
@@ -1732,7 +1716,7 @@ namespace GeneXus.Programs {
       protected void include_jscripts( )
       {
          context.AddJavascriptSource("messages.spa.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("area.js", "?20211230229843");
+         context.AddJavascriptSource("area.js", "?202212213273357");
          /* End function include_jscripts */
       }
 
@@ -2205,64 +2189,64 @@ namespace GeneXus.Programs {
        {
           Object[] prmT000H4 ;
           prmT000H4 = new Object[] {
-          new Object[] {"@areaareaid",SqlDbType.Int,9,0}
+          new Object[] {"areaareaid",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT000H5 ;
           prmT000H5 = new Object[] {
-          new Object[] {"@areaareaid",SqlDbType.Int,9,0}
+          new Object[] {"areaareaid",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT000H3 ;
           prmT000H3 = new Object[] {
-          new Object[] {"@areaareaid",SqlDbType.Int,9,0}
+          new Object[] {"areaareaid",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT000H6 ;
           prmT000H6 = new Object[] {
-          new Object[] {"@areaareaid",SqlDbType.Int,9,0}
+          new Object[] {"areaareaid",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT000H7 ;
           prmT000H7 = new Object[] {
-          new Object[] {"@areaareaid",SqlDbType.Int,9,0}
+          new Object[] {"areaareaid",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT000H2 ;
           prmT000H2 = new Object[] {
-          new Object[] {"@areaareaid",SqlDbType.Int,9,0}
+          new Object[] {"areaareaid",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT000H8 ;
           prmT000H8 = new Object[] {
-          new Object[] {"@areaareaid",SqlDbType.Int,9,0} ,
-          new Object[] {"@areadsc",SqlDbType.VarChar,100,0} ,
-          new Object[] {"@areastatusadsc",SqlDbType.VarChar,100,0} ,
-          new Object[] {"@areausuario",SqlDbType.VarChar,15,0} ,
-          new Object[] {"@areafecreg",SqlDbType.DateTime,10,8} ,
-          new Object[] {"@areafecultact",SqlDbType.DateTime,10,8}
+          new Object[] {"areaareaid",NpgsqlDbType.Integer,9,0} ,
+          new Object[] {"areadsc",NpgsqlDbType.Varchar,100,0} ,
+          new Object[] {"areastatusadsc",NpgsqlDbType.Varchar,100,0} ,
+          new Object[] {"areausuario",NpgsqlDbType.Varchar,15,0} ,
+          new Object[] {"areafecreg",NpgsqlDbType.Timestamp,10,8} ,
+          new Object[] {"areafecultact",NpgsqlDbType.Timestamp,10,8}
           } ;
           Object[] prmT000H9 ;
           prmT000H9 = new Object[] {
-          new Object[] {"@areadsc",SqlDbType.VarChar,100,0} ,
-          new Object[] {"@areastatusadsc",SqlDbType.VarChar,100,0} ,
-          new Object[] {"@areausuario",SqlDbType.VarChar,15,0} ,
-          new Object[] {"@areafecreg",SqlDbType.DateTime,10,8} ,
-          new Object[] {"@areafecultact",SqlDbType.DateTime,10,8} ,
-          new Object[] {"@areaareaid",SqlDbType.Int,9,0}
+          new Object[] {"areadsc",NpgsqlDbType.Varchar,100,0} ,
+          new Object[] {"areastatusadsc",NpgsqlDbType.Varchar,100,0} ,
+          new Object[] {"areausuario",NpgsqlDbType.Varchar,15,0} ,
+          new Object[] {"areafecreg",NpgsqlDbType.Timestamp,10,8} ,
+          new Object[] {"areafecultact",NpgsqlDbType.Timestamp,10,8} ,
+          new Object[] {"areaareaid",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT000H10 ;
           prmT000H10 = new Object[] {
-          new Object[] {"@areaareaid",SqlDbType.Int,9,0}
+          new Object[] {"areaareaid",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT000H11 ;
           prmT000H11 = new Object[] {
           } ;
           def= new CursorDef[] {
-              new CursorDef("T000H2", "SELECT [areaareaid], [areadsc], [areastatusadsc], [areausuario], [areafecreg], [areafecultact] FROM [area] WITH (UPDLOCK) WHERE [areaareaid] = @areaareaid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000H2,1,0,true,false )
-             ,new CursorDef("T000H3", "SELECT [areaareaid], [areadsc], [areastatusadsc], [areausuario], [areafecreg], [areafecultact] FROM [area] WITH (NOLOCK) WHERE [areaareaid] = @areaareaid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000H3,1,0,true,false )
-             ,new CursorDef("T000H4", "SELECT TM1.[areaareaid], TM1.[areadsc], TM1.[areastatusadsc], TM1.[areausuario], TM1.[areafecreg], TM1.[areafecultact] FROM [area] TM1 WITH (NOLOCK) WHERE TM1.[areaareaid] = @areaareaid ORDER BY TM1.[areaareaid]  OPTION (FAST 100)",true, GxErrorMask.GX_NOMASK, false, this,prmT000H4,100,0,true,false )
-             ,new CursorDef("T000H5", "SELECT [areaareaid] FROM [area] WITH (NOLOCK) WHERE [areaareaid] = @areaareaid  OPTION (FAST 1)",true, GxErrorMask.GX_NOMASK, false, this,prmT000H5,1,0,true,false )
-             ,new CursorDef("T000H6", "SELECT TOP 1 [areaareaid] FROM [area] WITH (NOLOCK) WHERE ( [areaareaid] > @areaareaid) ORDER BY [areaareaid]  OPTION (FAST 1)",true, GxErrorMask.GX_NOMASK, false, this,prmT000H6,1,0,true,true )
-             ,new CursorDef("T000H7", "SELECT TOP 1 [areaareaid] FROM [area] WITH (NOLOCK) WHERE ( [areaareaid] < @areaareaid) ORDER BY [areaareaid] DESC  OPTION (FAST 1)",true, GxErrorMask.GX_NOMASK, false, this,prmT000H7,1,0,true,true )
-             ,new CursorDef("T000H8", "INSERT INTO [area]([areaareaid], [areadsc], [areastatusadsc], [areausuario], [areafecreg], [areafecultact]) VALUES(@areaareaid, @areadsc, @areastatusadsc, @areausuario, @areafecreg, @areafecultact)", GxErrorMask.GX_NOMASK,prmT000H8)
-             ,new CursorDef("T000H9", "UPDATE [area] SET [areadsc]=@areadsc, [areastatusadsc]=@areastatusadsc, [areausuario]=@areausuario, [areafecreg]=@areafecreg, [areafecultact]=@areafecultact  WHERE [areaareaid] = @areaareaid", GxErrorMask.GX_NOMASK,prmT000H9)
-             ,new CursorDef("T000H10", "DELETE FROM [area]  WHERE [areaareaid] = @areaareaid", GxErrorMask.GX_NOMASK,prmT000H10)
-             ,new CursorDef("T000H11", "SELECT [areaareaid] FROM [area] WITH (NOLOCK) ORDER BY [areaareaid]  OPTION (FAST 100)",true, GxErrorMask.GX_NOMASK, false, this,prmT000H11,100,0,true,false )
+              new CursorDef("T000H2", "SELECT areaid, areadsc, areastatusadsc, areausuario, areafecreg, areafecultact FROM public.area WHERE areaid = :areaareaid  FOR UPDATE OF area NOWAIT",true, GxErrorMask.GX_NOMASK, false, this,prmT000H2,1,0,true,false )
+             ,new CursorDef("T000H3", "SELECT areaid, areadsc, areastatusadsc, areausuario, areafecreg, areafecultact FROM public.area WHERE areaid = :areaareaid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000H3,1,0,true,false )
+             ,new CursorDef("T000H4", "SELECT TM1.areaid, TM1.areadsc, TM1.areastatusadsc, TM1.areausuario, TM1.areafecreg, TM1.areafecultact FROM public.area TM1 WHERE TM1.areaid = :areaareaid ORDER BY TM1.areaid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000H4,100,0,true,false )
+             ,new CursorDef("T000H5", "SELECT areaid FROM public.area WHERE areaid = :areaareaid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000H5,1,0,true,false )
+             ,new CursorDef("T000H6", "SELECT areaid FROM public.area WHERE ( areaid > :areaareaid) ORDER BY areaid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000H6,1,0,true,true )
+             ,new CursorDef("T000H7", "SELECT areaid FROM public.area WHERE ( areaid < :areaareaid) ORDER BY areaid DESC ",true, GxErrorMask.GX_NOMASK, false, this,prmT000H7,1,0,true,true )
+             ,new CursorDef("T000H8", "SAVEPOINT gxupdate;INSERT INTO public.area(areaid, areadsc, areastatusadsc, areausuario, areafecreg, areafecultact) VALUES(:areaareaid, :areadsc, :areastatusadsc, :areausuario, :areafecreg, :areafecultact);RELEASE SAVEPOINT gxupdate", GxErrorMask.GX_ROLLBACKSAVEPOINT,prmT000H8)
+             ,new CursorDef("T000H9", "SAVEPOINT gxupdate;UPDATE public.area SET areadsc=:areadsc, areastatusadsc=:areastatusadsc, areausuario=:areausuario, areafecreg=:areafecreg, areafecultact=:areafecultact  WHERE areaid = :areaareaid;RELEASE SAVEPOINT gxupdate", GxErrorMask.GX_ROLLBACKSAVEPOINT | GxErrorMask.GX_NOMASK,prmT000H9)
+             ,new CursorDef("T000H10", "SAVEPOINT gxupdate;DELETE FROM public.area  WHERE areaid = :areaareaid;RELEASE SAVEPOINT gxupdate", GxErrorMask.GX_ROLLBACKSAVEPOINT | GxErrorMask.GX_NOMASK,prmT000H10)
+             ,new CursorDef("T000H11", "SELECT areaid FROM public.area ORDER BY areaid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000H11,100,0,true,false )
           };
        }
     }

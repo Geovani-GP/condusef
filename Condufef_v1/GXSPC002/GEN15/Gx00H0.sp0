@@ -48,25 +48,11 @@ repeat_i(2,[ 1,2,[ 'Linkselection',22,27,29 ],[] ]).
  
  
 rule_i(0,datastore(1,'DS_LAST_CHANGE','')).
-rule_i(0,datastore(1,'LOCK_RETRY','10')).
-rule_i(0,datastore(1,'WAIT_RECORD','0')).
-rule_i(0,datastore(1,'SQLSERVER_VERSION','9')).
+rule_i(0,datastore(1,'POSTGRESQL_VERSION','8_3')).
 rule_i(0,datastore(1,'COMMENT_ON','No')).
-rule_i(0,datastore(1,'DFT_TMP_TBLSPACE','')).
-rule_i(0,datastore(1,'DFT_IDX_TBLSPACE','')).
-rule_i(0,datastore(1,'DFT_TBL_TBLSPACE','')).
 rule_i(0,datastore(1,'DCL_REF_INT_DB','Yes')).
 rule_i(0,datastore(1,'PRIMARY_KEY_TYPE','PK')).
 rule_i(0,datastore(1,'CS_SCHEMA','')).
-rule_i(0,datastore(1,'SORT_ATTRIBUTES','Yes')).
-rule_i(0,datastore(1,'JRN400','QSQJRN')).
-rule_i(0,datastore(1,'CREATE_SAVF','Yes')).
-rule_i(0,datastore(1,'PGMLIB','')).
-rule_i(0,datastore(1,'DTALIB','')).
-rule_i(0,datastore(1,'CC_USER_PASS','')).
-rule_i(0,datastore(1,'CC_USER_ID','')).
-rule_i(0,datastore(1,'CC_SERVER','')).
-rule_i(0,datastore(1,'CC_DBNAME','')).
 rule_i(0,datastore(1,'RecycleRWMin','30')).
 rule_i(0,datastore(1,'RecycleRWType','1')).
 rule_i(0,datastore(1,'RecycleRW','-1')).
@@ -78,26 +64,25 @@ rule_i(0,datastore(1,'CS_RPCPGML','')).
 rule_i(0,datastore(1,'JDBC_DATASOURCE','')).
 rule_i(0,datastore(1,'USE_JDBC_DATASOURCE','0')).
 rule_i(0,datastore(1,'DS_DBMS_ADDINFO','')).
-rule_i(0,datastore(1,'USER_PASSWORD','')).
-rule_i(0,datastore(1,'USER_ID','')).
-rule_i(0,datastore(1,'TRUSTED_CONNECTION','Yes')).
+rule_i(0,datastore(1,'USER_PASSWORD',󻢸蘇�2�5炭)).
+rule_i(0,datastore(1,'USER_ID',postgres)).
 rule_i(0,datastore(1,'CS_CONNECT','First')).
-rule_i(0,datastore(1,'DBMS_PORT','')).
-rule_i(0,datastore(1,'CS_SERVER','JOSBUENO-MX\DELGADO')).
-rule_i(0,datastore(1,'CS_DBNAME','Dar_CONDUCEFDB')).
+rule_i(0,datastore(1,'DBMS_PORT','5432')).
+rule_i(0,datastore(1,'CS_SERVER',localhost)).
+rule_i(0,datastore(1,'CS_DBNAME',postgres)).
 rule_i(0,datastore(1,'CS_FLEDSNAME','')).
-rule_i(0,datastore(1,'CS_DRVNAME','sql server')).
+rule_i(0,datastore(1,'CS_DRVNAME','')).
 rule_i(0,datastore(1,'CS_DSNAME','')).
 rule_i(0,datastore(1,'DB_URL','')).
 rule_i(0,datastore(1,'JDBC_CUSTOM_URL','0')).
 rule_i(0,datastore(1,'JDBC_CUSTOM_DRIVER','')).
-rule_i(0,datastore(1,'JDBC_DRIVER','net.sourceforge.jtds.jdbc.Driver')).
+rule_i(0,datastore(1,'JDBC_DRIVER','org.postgresql.Driver')).
 rule_i(0,datastore(1,'CONNECT_METHOD','OPSYS')).
 rule_i(0,datastore(1,'ACCESS_TECHNO','ADONET')).
 rule_i(0,datastore(1,'MAIN_DS','-1')).
 rule_i(0,datastore(1,'REORG_GEN','8')).
 rule_i(0,datastore(1,'HelpKeyword','20')).
-rule_i(0,datastore(1,'DBMS',12)).
+rule_i(0,datastore(1,'DBMS',15)).
 rule_i(0,datastore(1,'NAME','Default')).
 rule_i(0,prop(idNULLS_BEHAVIOR,idNB_Current)).
 rule_i(0,prop('ObjectVisibility','Public')).
@@ -143,6 +128,10 @@ rule_i(0,maingen(15)).
 rule_i(0,parm([ 'Pareaareaid' ],[])).
 rule_i(0,parmio([ [ 'Pareaareaid',out ] ])).
 rule_i(0,order([ 22 ])).
+rule_i(0,file(17,'AREA',[ 22,27,28,29,30,31 ])).
+rule_i(0,loc([ 17 ],'AREA','','LAN')).
+rule_i(0,index(17,'AREA_PKEY',u,[ 22 ])).
+rule_i(0,loc([ 17,'AREA_PKEY' ],area_pkey,'','LAN')).
 rule_i(0,p(0,0,fv,16,[ intname,'AREA' ])).
 rule_i(0,p(0,0,fv,16,[ table,17 ])).
 rule_i(0,p(0,15,fv,16,[])).
@@ -155,14 +144,10 @@ rule_i(0,p(0,15,fvix,[ 16,17 ],[ 'NAME',area_pkey ])).
 rule_i(0,p(0,15,fvix,[ 16,17 ],[ 'LOC','' ])).
 rule_i(0,p(0,15,fvix,[ 16,17 ],[ 'SCHEMA',public ])).
 rule_i(0,p(0,15,fvix,[ 16,17 ],[ 'EXTNAM','YES' ])).
-rule_i(2,rule([ a(1,msg([ t('"Campo areafecreg fuera de rango"',3) ],[ t('OutOfRange',3) ])) ],[ t('NOT',8),t('(',0),t('null(',1),t('Careafecreg',2),t(')',4),t('.OR.',9),t('Careafecreg',2),t(>=,10),t('ymdhmstot(',1),t('1753',3),t(',',7),t('01',3),t(',',7),t('01',3),t(',',7),t('00',3),t(',',7),t('00',3),t(',',7),t('00',3),t(')',4),t(')',4) ],[ insert,update ],[ 'Careafecreg' ])).
-rule_i(2,rule([ a(1,msg([ t('"Campo areafecultact fuera de rango"',3) ],[ t('OutOfRange',3) ])) ],[ t('NOT',8),t('(',0),t('null(',1),t('Careafecultact',2),t(')',4),t('.OR.',9),t('Careafecultact',2),t(>=,10),t('ymdhmstot(',1),t('1753',3),t(',',7),t('01',3),t(',',7),t('01',3),t(',',7),t('00',3),t(',',7),t('00',3),t(',',7),t('00',3),t(')',4),t(')',4) ],[ insert,update ],[ 'Careafecultact' ])).
 rule_i(0,rule([ a(22,[ '''Toggle''','''Toggle''','' ]) ],[],[],[])).
  
 a_i(1,1,f,'Err',[],[ [],[ t('0',3) ] ]).
 a_i(2,2,t,17,[],[ [],'AREA_PKEY',[] ]).
-a_i(3,2,b,0,[],[ [],[ a(1,msg([ t('"Campo areafecreg fuera de rango"',3) ],[ t('OutOfRange',3) ])) ],[ t('NOT',8),t('(',0),t('null(',1),t('Careafecreg',2),t(')',4),t('.OR.',9),t('Careafecreg',2),t(>=,10),t('ymdhmstot(',1),t('1753',3),t(',',7),t('01',3),t(',',7),t('01',3),t(',',7),t('00',3),t(',',7),t('00',3),t(',',7),t('00',3),t(')',4),t(')',4) ] ]).
-a_i(4,2,b,0,[],[ [],[ a(1,msg([ t('"Campo areafecultact fuera de rango"',3) ],[ t('OutOfRange',3) ])) ],[ t('NOT',8),t('(',0),t('null(',1),t('Careafecultact',2),t(')',4),t('.OR.',9),t('Careafecultact',2),t(>=,10),t('ymdhmstot(',1),t('1753',3),t(',',7),t('01',3),t(',',7),t('01',3),t(',',7),t('00',3),t(',',7),t('00',3),t(',',7),t('00',3),t(')',4),t(')',4) ] ]).
  
 v_i(f,i,1,[]).
 v_i(f,o,1,'Err').
@@ -173,19 +158,15 @@ v_i(t,o,2,28).
 v_i(t,o,2,29).
 v_i(t,o,2,27).
 v_i(t,o,2,22).
-v_i(b,i,3,'Careafecreg').
-v_i(b,o,3,[]).
-v_i(b,i,4,'Careafecultact').
-v_i(b,o,4,[]).
  
  
  
  
  
  
-attri_i(28,[ areastatusadsc,svchar,100,0,'',0,areastatusadsc,'',0 ]).
-attri_i(30,[ areafecreg,dtime,10,8,'99/99/9999 99:99:99',0,areafecreg,'',0 ]).
 attri_i(31,[ areafecultact,dtime,10,8,'99/99/9999 99:99:99',0,areafecultact,'',0 ]).
+attri_i(30,[ areafecreg,dtime,10,8,'99/99/9999 99:99:99',0,areafecreg,'',0 ]).
+attri_i(28,[ areastatusadsc,svchar,100,0,'',0,areastatusadsc,'',0 ]).
 attri_i(29,[ areausuario,svchar,15,0,'',0,areausuario,'',0 ]).
 attri_i(27,[ areadsc,svchar,100,0,'',0,areadsc,'',0 ]).
 attri_i(22,[ areaareaid,int,9,0,'ZZZZZZZZ9',0,areaareaid,'',0 ]).
@@ -202,9 +183,9 @@ attri_i('Careadsc',[ careadsc,svchar,100,0,'',0,areadsc,'',7 ]).
 attri_i('Careaareaid',[ careaareaid,int,9,0,'ZZZZZZZZ9',0,areaid,'',6 ]).
 attri_i('Linkselection',[ 'LinkSelection',bits,1024,0,'',0,'Link Selection','',5 ]).
  
-table_i(17,[ area,[ 22,27,28,29,30,31 ],area,area ]).
+table_i(17,[ 'AREA',[ 22,27,28,29,30,31 ],area,area ]).
  
-index_i(17,[ 'AREA_PKEY',u,[ 22 ],area_pkey ]).
+index_i(17,[ 'AREA_PKEY',u,[ 22 ],'AREA_PKEY' ]).
  
  
  
@@ -225,6 +206,13 @@ start_i(2,0,0,[ [ [ 22,23,'Careaareaid',>= ] ],many ]).
  
  
  
+map_i(17,i,'AREA_PKEY',[ 'AREA_PKEY' ]).
+map_i(17,a,31,[ areafecultact ]).
+map_i(17,a,30,[ areafecreg ]).
+map_i(17,a,29,[ areausuario ]).
+map_i(17,a,28,[ areastatusadsc ]).
+map_i(17,a,27,[ areadsc ]).
+map_i(17,a,22,[ areaid ]).
  
  
  
@@ -1369,16 +1357,15 @@ att_prop_i(2,29,'DB_NLS_SUPPORT','No',d).
 att_prop_i(2,29,'AttRegEx','',d).
 att_prop_i(2,29,'AttValidationFailedMsg','',d).
 att_prop_i(2,29,'FullName',areausuario,v).
-att_prop_i(2,31,'ExternalName',areafecultact,d).
-att_prop_i(2,31,'ExternalNamespace','Condufef_v1',d).
-att_prop_i(2,31,'EmptyAsNull','Yes',d).
-att_prop_i(2,31,idBasedOn,'',d).
-att_prop_i(2,31,'ATT_INITIAL_VALUE','',d).
-att_prop_i(2,31,'AttRegEx','',d).
-att_prop_i(2,31,'AttValidationFailedMsg','',d).
-att_prop_i(2,31,idDATEFORMAT,idDATEFORMAT_LONG,v).
-att_prop_i(2,31,idHOURFORMAT,idHOURFORMAT_HOURMINSEC,v).
-att_prop_i(2,31,'FullName',areafecultact,v).
+att_prop_i(2,28,'ExternalName',areastatusadsc,d).
+att_prop_i(2,28,'ExternalNamespace','Condufef_v1',d).
+att_prop_i(2,28,'EmptyAsNull','Yes',d).
+att_prop_i(2,28,idBasedOn,'',d).
+att_prop_i(2,28,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,28,'DB_NLS_SUPPORT','No',d).
+att_prop_i(2,28,'AttRegEx','',d).
+att_prop_i(2,28,'AttValidationFailedMsg','',d).
+att_prop_i(2,28,'FullName',areastatusadsc,v).
 att_prop_i(2,30,'ExternalName',areafecreg,d).
 att_prop_i(2,30,'ExternalNamespace','Condufef_v1',d).
 att_prop_i(2,30,'EmptyAsNull','Yes',d).
@@ -1389,15 +1376,16 @@ att_prop_i(2,30,'AttValidationFailedMsg','',d).
 att_prop_i(2,30,idDATEFORMAT,idDATEFORMAT_LONG,v).
 att_prop_i(2,30,idHOURFORMAT,idHOURFORMAT_HOURMINSEC,v).
 att_prop_i(2,30,'FullName',areafecreg,v).
-att_prop_i(2,28,'ExternalName',areastatusadsc,d).
-att_prop_i(2,28,'ExternalNamespace','Condufef_v1',d).
-att_prop_i(2,28,'EmptyAsNull','Yes',d).
-att_prop_i(2,28,idBasedOn,'',d).
-att_prop_i(2,28,'ATT_INITIAL_VALUE','',d).
-att_prop_i(2,28,'DB_NLS_SUPPORT','No',d).
-att_prop_i(2,28,'AttRegEx','',d).
-att_prop_i(2,28,'AttValidationFailedMsg','',d).
-att_prop_i(2,28,'FullName',areastatusadsc,v).
+att_prop_i(2,31,'ExternalName',areafecultact,d).
+att_prop_i(2,31,'ExternalNamespace','Condufef_v1',d).
+att_prop_i(2,31,'EmptyAsNull','Yes',d).
+att_prop_i(2,31,idBasedOn,'',d).
+att_prop_i(2,31,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,31,'AttRegEx','',d).
+att_prop_i(2,31,'AttValidationFailedMsg','',d).
+att_prop_i(2,31,idDATEFORMAT,idDATEFORMAT_LONG,v).
+att_prop_i(2,31,idHOURFORMAT,idHOURFORMAT_HOURMINSEC,v).
+att_prop_i(2,31,'FullName',areafecultact,v).
  
  
 tbl_att_prop_i(2,17,22,'AllowNulls',n).

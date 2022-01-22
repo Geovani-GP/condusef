@@ -2,9 +2,9 @@
                File: modelos
         Description: modelos
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 12/30/2021 22:9:10.49
+       Generated on: 1/22/2022 13:27:35.91
        Program type: Callable routine
-          Main DBMS: sqlserver
+          Main DBMS: postgresql
 */
 using System;
 using System.Collections;
@@ -14,7 +14,7 @@ using GeneXus.Application;
 using GeneXus.Metadata;
 using GeneXus.Cryptography;
 using System.Data;
-using System.Data.SqlClient;
+using NpgsqlTypes;
 using GeneXus.Data;
 using com.genexus;
 using GeneXus.Data.ADO;
@@ -673,7 +673,7 @@ namespace GeneXus.Programs {
 
       protected void ZM0J19( short GX_JID )
       {
-         if ( ( GX_JID == 3 ) || ( GX_JID == 0 ) )
+         if ( ( GX_JID == 1 ) || ( GX_JID == 0 ) )
          {
             if ( StringUtil.StrCmp(Gx_mode, "INS") != 0 )
             {
@@ -690,7 +690,7 @@ namespace GeneXus.Programs {
                Z119modelosfecultact = A119modelosfecultact;
             }
          }
-         if ( GX_JID == -3 )
+         if ( GX_JID == -1 )
          {
             Z15modelosid = A15modelosid;
             Z116modelosdsc = A116modelosdsc;
@@ -747,7 +747,7 @@ namespace GeneXus.Programs {
             A119modelosfecultact = T000J4_A119modelosfecultact[0];
             context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A119modelosfecultact", context.localUtil.TToC( A119modelosfecultact, 10, 8, 0, 3, "/", ":", " "));
             n119modelosfecultact = T000J4_n119modelosfecultact[0];
-            ZM0J19( -3) ;
+            ZM0J19( -1) ;
          }
          pr_default.close(2);
          OnLoadActions0J19( ) ;
@@ -761,20 +761,6 @@ namespace GeneXus.Programs {
       {
          Gx_BScreen = 1;
          standaloneModal( ) ;
-         if ( ! ( (DateTime.MinValue==A118modelosfecreg) || ( A118modelosfecreg >= context.localUtil.YMDHMSToT( 1753, 1, 1, 0, 0, 0) ) ) )
-         {
-            GX_msglist.addItem("Campo modelosfecreg fuera de rango", "OutOfRange", 1, "MODELOSFECREG");
-            AnyError = 1;
-            GX_FocusControl = edtmodelosfecreg_Internalname;
-            context.httpAjaxContext.ajax_rsp_assign_attri("", false, "GX_FocusControl", GX_FocusControl);
-         }
-         if ( ! ( (DateTime.MinValue==A119modelosfecultact) || ( A119modelosfecultact >= context.localUtil.YMDHMSToT( 1753, 1, 1, 0, 0, 0) ) ) )
-         {
-            GX_msglist.addItem("Campo modelosfecultact fuera de rango", "OutOfRange", 1, "MODELOSFECULTACT");
-            AnyError = 1;
-            GX_FocusControl = edtmodelosfecultact_Internalname;
-            context.httpAjaxContext.ajax_rsp_assign_attri("", false, "GX_FocusControl", GX_FocusControl);
-         }
       }
 
       protected void CloseExtendedTableCursors0J19( )
@@ -806,7 +792,7 @@ namespace GeneXus.Programs {
          pr_default.execute(1, new Object[] {A15modelosid});
          if ( (pr_default.getStatus(1) != 101) )
          {
-            ZM0J19( 3) ;
+            ZM0J19( 1) ;
             RcdFound19 = 1;
             A15modelosid = T000J3_A15modelosid[0];
             context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A15modelosid", StringUtil.LTrim( StringUtil.Str( (decimal)(A15modelosid), 9, 0)));
@@ -1155,7 +1141,7 @@ namespace GeneXus.Programs {
             pr_default.execute(0, new Object[] {A15modelosid});
             if ( (pr_default.getStatus(0) == 103) )
             {
-               GX_msglist.addItem(context.GetMessage( "GXM_lock", new   object[]  {"modelos"}), "RecordIsLocked", 1, "");
+               GX_msglist.addItem(context.GetMessage( "GXM_lock", new   object[]  {"MODELOS"}), "RecordIsLocked", 1, "");
                AnyError = 1;
                return  ;
             }
@@ -1185,7 +1171,7 @@ namespace GeneXus.Programs {
                   GXUtil.WriteLogRaw("Old: ",Z119modelosfecultact);
                   GXUtil.WriteLogRaw("Current: ",T000J2_A119modelosfecultact[0]);
                }
-               GX_msglist.addItem(context.GetMessage( "GXM_waschg", new   object[]  {"modelos"}), "RecordWasChanged", 1, "");
+               GX_msglist.addItem(context.GetMessage( "GXM_waschg", new   object[]  {"MODELOS"}), "RecordWasChanged", 1, "");
                AnyError = 1;
                return  ;
             }
@@ -1214,7 +1200,7 @@ namespace GeneXus.Programs {
                      /* Using cursor T000J8 */
                      pr_default.execute(6, new Object[] {A15modelosid, n116modelosdsc, A116modelosdsc, n117modelosusuario, A117modelosusuario, n118modelosfecreg, A118modelosfecreg, n119modelosfecultact, A119modelosfecultact});
                      pr_default.close(6);
-                     dsDefault.SmartCacheProvider.SetUpdated("modelos") ;
+                     dsDefault.SmartCacheProvider.SetUpdated("MODELOS") ;
                      if ( (pr_default.getStatus(6) == 1) )
                      {
                         GX_msglist.addItem(context.GetMessage( "GXM_noupdate", ""), "DuplicatePrimaryKey", 1, "");
@@ -1269,10 +1255,10 @@ namespace GeneXus.Programs {
                      /* Using cursor T000J9 */
                      pr_default.execute(7, new Object[] {n116modelosdsc, A116modelosdsc, n117modelosusuario, A117modelosusuario, n118modelosfecreg, A118modelosfecreg, n119modelosfecultact, A119modelosfecultact, A15modelosid});
                      pr_default.close(7);
-                     dsDefault.SmartCacheProvider.SetUpdated("modelos") ;
+                     dsDefault.SmartCacheProvider.SetUpdated("MODELOS") ;
                      if ( (pr_default.getStatus(7) == 103) )
                      {
-                        GX_msglist.addItem(context.GetMessage( "GXM_lock", new   object[]  {"modelos"}), "RecordIsLocked", 1, "");
+                        GX_msglist.addItem(context.GetMessage( "GXM_lock", new   object[]  {"MODELOS"}), "RecordIsLocked", 1, "");
                         AnyError = 1;
                      }
                      DeferredUpdate0J19( ) ;
@@ -1326,7 +1312,7 @@ namespace GeneXus.Programs {
                   /* Using cursor T000J10 */
                   pr_default.execute(8, new Object[] {A15modelosid});
                   pr_default.close(8);
-                  dsDefault.SmartCacheProvider.SetUpdated("modelos") ;
+                  dsDefault.SmartCacheProvider.SetUpdated("MODELOS") ;
                   if ( AnyError == 0 )
                   {
                      /* Start of After( delete) rules */
@@ -1411,7 +1397,6 @@ namespace GeneXus.Programs {
          }
          if ( AnyError == 0 )
          {
-            pr_default.close(1);
             context.CommitDataStores( "modelos");
             if ( AnyError == 0 )
             {
@@ -1423,7 +1408,6 @@ namespace GeneXus.Programs {
          }
          else
          {
-            pr_default.close(1);
             context.RollbackDataStores( "modelos");
          }
          IsModified = 0;
@@ -1545,7 +1529,7 @@ namespace GeneXus.Programs {
          context.AddJavascriptSource("jquery.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxtimezone.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxgral.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("gxcfg.js", "?20211230229111");
+         context.AddJavascriptSource("gxcfg.js", "?202212213273658");
          if ( context.isSpaRequest( ) )
          {
             enableOutput();
@@ -1702,12 +1686,12 @@ namespace GeneXus.Programs {
 
       protected void define_styles( )
       {
-         AddStyleSheetFile("calendar-system.css", "?11323129");
-         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?2284430");
+         AddStyleSheetFile("calendar-system.css", "?13205289");
+         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?13264988");
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?20211230229115");
+            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?202212213273663");
             idxLst = (int)(idxLst+1);
          }
          /* End function define_styles */
@@ -1717,7 +1701,7 @@ namespace GeneXus.Programs {
       {
          context.AddJavascriptSource("messages.spa.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxdec.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("modelos.js", "?20211230229115");
+         context.AddJavascriptSource("modelos.js", "?202212213273663");
          /* End function include_jscripts */
       }
 
@@ -2184,77 +2168,77 @@ namespace GeneXus.Programs {
        {
           Object[] prmT000J4 ;
           prmT000J4 = new Object[] {
-          new Object[] {"@modelosid",SqlDbType.Int,9,0}
+          new Object[] {"modelosid",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT000J5 ;
           prmT000J5 = new Object[] {
-          new Object[] {"@modelosid",SqlDbType.Int,9,0}
+          new Object[] {"modelosid",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT000J3 ;
           prmT000J3 = new Object[] {
-          new Object[] {"@modelosid",SqlDbType.Int,9,0}
+          new Object[] {"modelosid",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT000J6 ;
           prmT000J6 = new Object[] {
-          new Object[] {"@modelosid",SqlDbType.Int,9,0}
+          new Object[] {"modelosid",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT000J7 ;
           prmT000J7 = new Object[] {
-          new Object[] {"@modelosid",SqlDbType.Int,9,0}
+          new Object[] {"modelosid",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT000J2 ;
           prmT000J2 = new Object[] {
-          new Object[] {"@modelosid",SqlDbType.Int,9,0}
+          new Object[] {"modelosid",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT000J8 ;
           prmT000J8 = new Object[] {
-          new Object[] {"@modelosid",SqlDbType.Int,9,0} ,
-          new Object[] {"@modelosdsc",SqlDbType.VarChar,100,0} ,
-          new Object[] {"@modelosusuario",SqlDbType.VarChar,15,0} ,
-          new Object[] {"@modelosfecreg",SqlDbType.DateTime,10,8} ,
-          new Object[] {"@modelosfecultact",SqlDbType.DateTime,10,8}
+          new Object[] {"modelosid",NpgsqlDbType.Integer,9,0} ,
+          new Object[] {"modelosdsc",NpgsqlDbType.Varchar,100,0} ,
+          new Object[] {"modelosusuario",NpgsqlDbType.Varchar,15,0} ,
+          new Object[] {"modelosfecreg",NpgsqlDbType.Timestamp,10,8} ,
+          new Object[] {"modelosfecultact",NpgsqlDbType.Timestamp,10,8}
           } ;
           Object[] prmT000J9 ;
           prmT000J9 = new Object[] {
-          new Object[] {"@modelosdsc",SqlDbType.VarChar,100,0} ,
-          new Object[] {"@modelosusuario",SqlDbType.VarChar,15,0} ,
-          new Object[] {"@modelosfecreg",SqlDbType.DateTime,10,8} ,
-          new Object[] {"@modelosfecultact",SqlDbType.DateTime,10,8} ,
-          new Object[] {"@modelosid",SqlDbType.Int,9,0}
+          new Object[] {"modelosdsc",NpgsqlDbType.Varchar,100,0} ,
+          new Object[] {"modelosusuario",NpgsqlDbType.Varchar,15,0} ,
+          new Object[] {"modelosfecreg",NpgsqlDbType.Timestamp,10,8} ,
+          new Object[] {"modelosfecultact",NpgsqlDbType.Timestamp,10,8} ,
+          new Object[] {"modelosid",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT000J10 ;
           prmT000J10 = new Object[] {
-          new Object[] {"@modelosid",SqlDbType.Int,9,0}
+          new Object[] {"modelosid",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT000J11 ;
           prmT000J11 = new Object[] {
-          new Object[] {"@modelosid",SqlDbType.Int,9,0}
+          new Object[] {"modelosid",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT000J12 ;
           prmT000J12 = new Object[] {
-          new Object[] {"@modelosid",SqlDbType.Int,9,0}
+          new Object[] {"modelosid",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT000J13 ;
           prmT000J13 = new Object[] {
-          new Object[] {"@modelosid",SqlDbType.Int,9,0}
+          new Object[] {"modelosid",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT000J14 ;
           prmT000J14 = new Object[] {
           } ;
           def= new CursorDef[] {
-              new CursorDef("T000J2", "SELECT [modelosid], [modelosdsc], [modelosusuario], [modelosfecreg], [modelosfecultact] FROM [modelos] WITH (UPDLOCK) WHERE [modelosid] = @modelosid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000J2,1,0,true,false )
-             ,new CursorDef("T000J3", "SELECT [modelosid], [modelosdsc], [modelosusuario], [modelosfecreg], [modelosfecultact] FROM [modelos] WITH (NOLOCK) WHERE [modelosid] = @modelosid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000J3,1,0,true,false )
-             ,new CursorDef("T000J4", "SELECT TM1.[modelosid], TM1.[modelosdsc], TM1.[modelosusuario], TM1.[modelosfecreg], TM1.[modelosfecultact] FROM [modelos] TM1 WITH (NOLOCK) WHERE TM1.[modelosid] = @modelosid ORDER BY TM1.[modelosid]  OPTION (FAST 100)",true, GxErrorMask.GX_NOMASK, false, this,prmT000J4,100,0,true,false )
-             ,new CursorDef("T000J5", "SELECT [modelosid] FROM [modelos] WITH (NOLOCK) WHERE [modelosid] = @modelosid  OPTION (FAST 1)",true, GxErrorMask.GX_NOMASK, false, this,prmT000J5,1,0,true,false )
-             ,new CursorDef("T000J6", "SELECT TOP 1 [modelosid] FROM [modelos] WITH (NOLOCK) WHERE ( [modelosid] > @modelosid) ORDER BY [modelosid]  OPTION (FAST 1)",true, GxErrorMask.GX_NOMASK, false, this,prmT000J6,1,0,true,true )
-             ,new CursorDef("T000J7", "SELECT TOP 1 [modelosid] FROM [modelos] WITH (NOLOCK) WHERE ( [modelosid] < @modelosid) ORDER BY [modelosid] DESC  OPTION (FAST 1)",true, GxErrorMask.GX_NOMASK, false, this,prmT000J7,1,0,true,true )
-             ,new CursorDef("T000J8", "INSERT INTO [modelos]([modelosid], [modelosdsc], [modelosusuario], [modelosfecreg], [modelosfecultact]) VALUES(@modelosid, @modelosdsc, @modelosusuario, @modelosfecreg, @modelosfecultact)", GxErrorMask.GX_NOMASK,prmT000J8)
-             ,new CursorDef("T000J9", "UPDATE [modelos] SET [modelosdsc]=@modelosdsc, [modelosusuario]=@modelosusuario, [modelosfecreg]=@modelosfecreg, [modelosfecultact]=@modelosfecultact  WHERE [modelosid] = @modelosid", GxErrorMask.GX_NOMASK,prmT000J9)
-             ,new CursorDef("T000J10", "DELETE FROM [modelos]  WHERE [modelosid] = @modelosid", GxErrorMask.GX_NOMASK,prmT000J10)
-             ,new CursorDef("T000J11", "SELECT TOP 1 [almacenid], [articulosproductoid], [articuloscambsid] FROM [articulos] WITH (NOLOCK) WHERE [articulosproductoid] = @modelosid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000J11,1,0,true,true )
-             ,new CursorDef("T000J12", "SELECT TOP 1 [etiquetasproductoid], [etiquetascambsid], [almacenid] FROM [etiquetas] WITH (NOLOCK) WHERE [etiquetasproductoid] = @modelosid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000J12,1,0,true,true )
-             ,new CursorDef("T000J13", "SELECT TOP 1 [modelosid], [productocambsid] FROM [producto] WITH (NOLOCK) WHERE [modelosid] = @modelosid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000J13,1,0,true,true )
-             ,new CursorDef("T000J14", "SELECT [modelosid] FROM [modelos] WITH (NOLOCK) ORDER BY [modelosid]  OPTION (FAST 100)",true, GxErrorMask.GX_NOMASK, false, this,prmT000J14,100,0,true,false )
+              new CursorDef("T000J2", "SELECT modelosid, modelosdsc, modelosusuario, modelosfecreg, modelosfecultact FROM public.modelos WHERE modelosid = :modelosid  FOR UPDATE OF modelos NOWAIT",true, GxErrorMask.GX_NOMASK, false, this,prmT000J2,1,0,true,false )
+             ,new CursorDef("T000J3", "SELECT modelosid, modelosdsc, modelosusuario, modelosfecreg, modelosfecultact FROM public.modelos WHERE modelosid = :modelosid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000J3,1,0,true,false )
+             ,new CursorDef("T000J4", "SELECT TM1.modelosid AS modelosid, TM1.modelosdsc, TM1.modelosusuario, TM1.modelosfecreg, TM1.modelosfecultact FROM public.modelos TM1 WHERE TM1.modelosid = :modelosid ORDER BY TM1.modelosid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000J4,100,0,true,false )
+             ,new CursorDef("T000J5", "SELECT modelosid FROM public.modelos WHERE modelosid = :modelosid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000J5,1,0,true,false )
+             ,new CursorDef("T000J6", "SELECT modelosid FROM public.modelos WHERE ( modelosid > :modelosid) ORDER BY modelosid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000J6,1,0,true,true )
+             ,new CursorDef("T000J7", "SELECT modelosid FROM public.modelos WHERE ( modelosid < :modelosid) ORDER BY modelosid DESC ",true, GxErrorMask.GX_NOMASK, false, this,prmT000J7,1,0,true,true )
+             ,new CursorDef("T000J8", "SAVEPOINT gxupdate;INSERT INTO public.modelos(modelosid, modelosdsc, modelosusuario, modelosfecreg, modelosfecultact) VALUES(:modelosid, :modelosdsc, :modelosusuario, :modelosfecreg, :modelosfecultact);RELEASE SAVEPOINT gxupdate", GxErrorMask.GX_ROLLBACKSAVEPOINT,prmT000J8)
+             ,new CursorDef("T000J9", "SAVEPOINT gxupdate;UPDATE public.modelos SET modelosdsc=:modelosdsc, modelosusuario=:modelosusuario, modelosfecreg=:modelosfecreg, modelosfecultact=:modelosfecultact  WHERE modelosid = :modelosid;RELEASE SAVEPOINT gxupdate", GxErrorMask.GX_ROLLBACKSAVEPOINT | GxErrorMask.GX_NOMASK,prmT000J9)
+             ,new CursorDef("T000J10", "SAVEPOINT gxupdate;DELETE FROM public.modelos  WHERE modelosid = :modelosid;RELEASE SAVEPOINT gxupdate", GxErrorMask.GX_ROLLBACKSAVEPOINT | GxErrorMask.GX_NOMASK,prmT000J10)
+             ,new CursorDef("T000J11", "SELECT articulosid, productoid AS articulosproductoid, cambsid AS articuloscambsid FROM public.articulos WHERE productoid = :modelosid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000J11,1,0,true,true )
+             ,new CursorDef("T000J12", "SELECT productoid AS etiquetasproductoid, cambsid AS etiquetascambsid, articuloid FROM public.etiquetas WHERE productoid = :modelosid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000J12,1,0,true,true )
+             ,new CursorDef("T000J13", "SELECT productoid AS modelosid, cambsid AS productocambsid FROM public.producto WHERE productoid = :modelosid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000J13,1,0,true,true )
+             ,new CursorDef("T000J14", "SELECT modelosid FROM public.modelos ORDER BY modelosid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000J14,100,0,true,false )
           };
        }
     }

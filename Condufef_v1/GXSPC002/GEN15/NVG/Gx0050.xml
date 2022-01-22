@@ -46,7 +46,7 @@
 <BaseTable>
 <Table>
 <TableId>5</TableId>
-<TableName>categorias</TableName>
+<TableName>CATEGORIAS</TableName>
 <Description>categorias</Description></Table></BaseTable>
 <Order>
 <Attribute>
@@ -163,7 +163,7 @@
 <NavigationTree>
 <Table>
 <TableId>5</TableId>
-<TableName>categorias</TableName>
+<TableName>CATEGORIAS</TableName>
 <Description>categorias</Description>
 <RecordsToRead>many</RecordsToRead>
 <KeyAttributes>

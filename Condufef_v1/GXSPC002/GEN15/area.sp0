@@ -32,25 +32,11 @@ pos_i(31,[ 0,0,0 ]).
  
  
 rule_i(0,datastore(1,'DS_LAST_CHANGE','')).
-rule_i(0,datastore(1,'LOCK_RETRY','10')).
-rule_i(0,datastore(1,'WAIT_RECORD','0')).
-rule_i(0,datastore(1,'SQLSERVER_VERSION','9')).
+rule_i(0,datastore(1,'POSTGRESQL_VERSION','8_3')).
 rule_i(0,datastore(1,'COMMENT_ON','No')).
-rule_i(0,datastore(1,'DFT_TMP_TBLSPACE','')).
-rule_i(0,datastore(1,'DFT_IDX_TBLSPACE','')).
-rule_i(0,datastore(1,'DFT_TBL_TBLSPACE','')).
 rule_i(0,datastore(1,'DCL_REF_INT_DB','Yes')).
 rule_i(0,datastore(1,'PRIMARY_KEY_TYPE','PK')).
 rule_i(0,datastore(1,'CS_SCHEMA','')).
-rule_i(0,datastore(1,'SORT_ATTRIBUTES','Yes')).
-rule_i(0,datastore(1,'JRN400','QSQJRN')).
-rule_i(0,datastore(1,'CREATE_SAVF','Yes')).
-rule_i(0,datastore(1,'PGMLIB','')).
-rule_i(0,datastore(1,'DTALIB','')).
-rule_i(0,datastore(1,'CC_USER_PASS','')).
-rule_i(0,datastore(1,'CC_USER_ID','')).
-rule_i(0,datastore(1,'CC_SERVER','')).
-rule_i(0,datastore(1,'CC_DBNAME','')).
 rule_i(0,datastore(1,'RecycleRWMin','30')).
 rule_i(0,datastore(1,'RecycleRWType','1')).
 rule_i(0,datastore(1,'RecycleRW','-1')).
@@ -62,26 +48,25 @@ rule_i(0,datastore(1,'CS_RPCPGML','')).
 rule_i(0,datastore(1,'JDBC_DATASOURCE','')).
 rule_i(0,datastore(1,'USE_JDBC_DATASOURCE','0')).
 rule_i(0,datastore(1,'DS_DBMS_ADDINFO','')).
-rule_i(0,datastore(1,'USER_PASSWORD','')).
-rule_i(0,datastore(1,'USER_ID','')).
-rule_i(0,datastore(1,'TRUSTED_CONNECTION','Yes')).
+rule_i(0,datastore(1,'USER_PASSWORD',󻢸蘇�2�5炭)).
+rule_i(0,datastore(1,'USER_ID',postgres)).
 rule_i(0,datastore(1,'CS_CONNECT','First')).
-rule_i(0,datastore(1,'DBMS_PORT','')).
-rule_i(0,datastore(1,'CS_SERVER','JOSBUENO-MX\DELGADO')).
-rule_i(0,datastore(1,'CS_DBNAME','Dar_CONDUCEFDB')).
+rule_i(0,datastore(1,'DBMS_PORT','5432')).
+rule_i(0,datastore(1,'CS_SERVER',localhost)).
+rule_i(0,datastore(1,'CS_DBNAME',postgres)).
 rule_i(0,datastore(1,'CS_FLEDSNAME','')).
-rule_i(0,datastore(1,'CS_DRVNAME','sql server')).
+rule_i(0,datastore(1,'CS_DRVNAME','')).
 rule_i(0,datastore(1,'CS_DSNAME','')).
 rule_i(0,datastore(1,'DB_URL','')).
 rule_i(0,datastore(1,'JDBC_CUSTOM_URL','0')).
 rule_i(0,datastore(1,'JDBC_CUSTOM_DRIVER','')).
-rule_i(0,datastore(1,'JDBC_DRIVER','net.sourceforge.jtds.jdbc.Driver')).
+rule_i(0,datastore(1,'JDBC_DRIVER','org.postgresql.Driver')).
 rule_i(0,datastore(1,'CONNECT_METHOD','OPSYS')).
 rule_i(0,datastore(1,'ACCESS_TECHNO','ADONET')).
 rule_i(0,datastore(1,'MAIN_DS','-1')).
 rule_i(0,datastore(1,'REORG_GEN','8')).
 rule_i(0,datastore(1,'HelpKeyword','20')).
-rule_i(0,datastore(1,'DBMS',12)).
+rule_i(0,datastore(1,'DBMS',15)).
 rule_i(0,datastore(1,'NAME','Default')).
 rule_i(0,prop(idNULLS_BEHAVIOR,idNB_Current)).
 rule_i(0,prop('ObjectVisibility','Public')).
@@ -170,8 +155,6 @@ rule_i(17,prompt([ 17,[ [ [],22,22 ] ],[],[],[ t(o(13,'Gx00H0'),28),t(22,2) ],[]
 rule_i(17,rule([ a(23,[ [ 22 ],[ t(o(13,'Gx00H0'),28),t(22,2) ] ]) ],[],[],[ 22 ])).
 rule_i(0,rule([ a(22,[ 'Dlt','"Eliminar"','' ]) ],[],[],[])).
 rule_i(0,maingen(15)).
-rule_i(17,rule([ a(1,msg([ t('"Campo areafecreg fuera de rango"',3) ],[ t('OutOfRange',3) ])) ],[ t('NOT',8),t('(',0),t('null(',1),t(30,2),t(')',4),t('.OR.',9),t(30,2),t(>=,10),t('ymdhmstot(',1),t('1753',3),t(',',7),t('01',3),t(',',7),t('01',3),t(',',7),t('00',3),t(',',7),t('00',3),t(',',7),t('00',3),t(')',4),t(')',4) ],[ insert,update ],[ 30 ])).
-rule_i(17,rule([ a(1,msg([ t('"Campo areafecultact fuera de rango"',3) ],[ t('OutOfRange',3) ])) ],[ t('NOT',8),t('(',0),t('null(',1),t(31,2),t(')',4),t('.OR.',9),t(31,2),t(>=,10),t('ymdhmstot(',1),t('1753',3),t(',',7),t('01',3),t(',',7),t('01',3),t(',',7),t('00',3),t(',',7),t('00',3),t(',',7),t('00',3),t(')',4),t(')',4) ],[ insert,update ],[ 31 ])).
 rule_i(0,p(0,0,fv,16,[ intname,'AREA' ])).
 rule_i(0,p(0,0,fv,16,[ table,17 ])).
 rule_i(0,p(0,15,fv,16,[])).
@@ -184,21 +167,19 @@ rule_i(0,p(0,15,fvix,[ 16,17 ],[ 'NAME',area_pkey ])).
 rule_i(0,p(0,15,fvix,[ 16,17 ],[ 'LOC','' ])).
 rule_i(0,p(0,15,fvix,[ 16,17 ],[ 'SCHEMA',public ])).
 rule_i(0,p(0,15,fvix,[ 16,17 ],[ 'EXTNAM','YES' ])).
+rule_i(0,file(17,'AREA',[ 22,27,28,29,30,31 ])).
+rule_i(0,loc([ 17 ],'AREA','','LAN')).
+rule_i(0,index(17,'AREA_PKEY',u,[ 22 ])).
+rule_i(0,loc([ 17,'AREA_PKEY' ],area_pkey,'','LAN')).
  
-a_i(1,17,b,0,[],[ [],[ a(1,msg([ t('"Campo areafecreg fuera de rango"',3) ],[ t('OutOfRange',3) ])) ],[ t('NOT',8),t('(',0),t('null(',1),t(30,2),t(')',4),t('.OR.',9),t(30,2),t(>=,10),t('ymdhmstot(',1),t('1753',3),t(',',7),t('01',3),t(',',7),t('01',3),t(',',7),t('00',3),t(',',7),t('00',3),t(',',7),t('00',3),t(')',4),t(')',4) ] ]).
-a_i(2,17,b,0,[],[ [],[ a(1,msg([ t('"Campo areafecultact fuera de rango"',3) ],[ t('OutOfRange',3) ])) ],[ t('NOT',8),t('(',0),t('null(',1),t(31,2),t(')',4),t('.OR.',9),t(31,2),t(>=,10),t('ymdhmstot(',1),t('1753',3),t(',',7),t('01',3),t(',',7),t('01',3),t(',',7),t('00',3),t(',',7),t('00',3),t(',',7),t('00',3),t(')',4),t(')',4) ] ]).
-a_i(3,17,t,17,[],[ [ [ [],22,22 ] ],'AREA_PKEY',[] ]).
+a_i(1,17,t,17,[],[ [ [ [],22,22 ] ],'AREA_PKEY',[] ]).
  
-v_i(b,i,1,30).
-v_i(b,o,1,[]).
-v_i(b,i,2,31).
-v_i(b,o,2,[]).
-v_i(t,i,3,22).
-v_i(t,o,3,27).
-v_i(t,o,3,28).
-v_i(t,o,3,29).
-v_i(t,o,3,30).
-v_i(t,o,3,31).
+v_i(t,i,1,22).
+v_i(t,o,1,27).
+v_i(t,o,1,28).
+v_i(t,o,1,29).
+v_i(t,o,1,30).
+v_i(t,o,1,31).
  
  
  
@@ -214,9 +195,9 @@ attri_i(22,[ areaareaid,int,9,0,'ZZZZZZZZ9',0,areaareaid,'',0 ]).
 attri_i('Gxremove',[ 'GxRemove',int,1,0,'9',0,'Gx Remove','',5 ]).
 attri_i('Mode',[ 'Gx_mode',char,3,0,'@!',1,'','',2 ]).
  
-table_i(17,[ area,[ 22,27,28,29,30,31 ],area,area ]).
+table_i(17,[ 'AREA',[ 22,27,28,29,30,31 ],area,area ]).
  
-index_i(17,[ 'AREA_PKEY',u,[ 22 ],area_pkey ]).
+index_i(17,[ 'AREA_PKEY',u,[ 22 ],'AREA_PKEY' ]).
  
  
  
@@ -238,6 +219,13 @@ upd_i(17,17,d,[ [],[],'AREA_PKEY',[] ]).
  
  
  
+map_i(17,i,'AREA_PKEY',[ 'AREA_PKEY' ]).
+map_i(17,a,31,[ areafecultact ]).
+map_i(17,a,30,[ areafecreg ]).
+map_i(17,a,29,[ areausuario ]).
+map_i(17,a,28,[ areastatusadsc ]).
+map_i(17,a,27,[ areadsc ]).
+map_i(17,a,22,[ areaid ]).
  
  
  

@@ -40,25 +40,11 @@ pos_i(138,[ 0,0,0 ]).
  
  
 rule_i(0,datastore(1,'DS_LAST_CHANGE','')).
-rule_i(0,datastore(1,'LOCK_RETRY','10')).
-rule_i(0,datastore(1,'WAIT_RECORD','0')).
-rule_i(0,datastore(1,'SQLSERVER_VERSION','9')).
+rule_i(0,datastore(1,'POSTGRESQL_VERSION','8_3')).
 rule_i(0,datastore(1,'COMMENT_ON','No')).
-rule_i(0,datastore(1,'DFT_TMP_TBLSPACE','')).
-rule_i(0,datastore(1,'DFT_IDX_TBLSPACE','')).
-rule_i(0,datastore(1,'DFT_TBL_TBLSPACE','')).
 rule_i(0,datastore(1,'DCL_REF_INT_DB','Yes')).
 rule_i(0,datastore(1,'PRIMARY_KEY_TYPE','PK')).
 rule_i(0,datastore(1,'CS_SCHEMA','')).
-rule_i(0,datastore(1,'SORT_ATTRIBUTES','Yes')).
-rule_i(0,datastore(1,'JRN400','QSQJRN')).
-rule_i(0,datastore(1,'CREATE_SAVF','Yes')).
-rule_i(0,datastore(1,'PGMLIB','')).
-rule_i(0,datastore(1,'DTALIB','')).
-rule_i(0,datastore(1,'CC_USER_PASS','')).
-rule_i(0,datastore(1,'CC_USER_ID','')).
-rule_i(0,datastore(1,'CC_SERVER','')).
-rule_i(0,datastore(1,'CC_DBNAME','')).
 rule_i(0,datastore(1,'RecycleRWMin','30')).
 rule_i(0,datastore(1,'RecycleRWType','1')).
 rule_i(0,datastore(1,'RecycleRW','-1')).
@@ -70,26 +56,25 @@ rule_i(0,datastore(1,'CS_RPCPGML','')).
 rule_i(0,datastore(1,'JDBC_DATASOURCE','')).
 rule_i(0,datastore(1,'USE_JDBC_DATASOURCE','0')).
 rule_i(0,datastore(1,'DS_DBMS_ADDINFO','')).
-rule_i(0,datastore(1,'USER_PASSWORD','')).
-rule_i(0,datastore(1,'USER_ID','')).
-rule_i(0,datastore(1,'TRUSTED_CONNECTION','Yes')).
+rule_i(0,datastore(1,'USER_PASSWORD',󻢸蘇�2�5炭)).
+rule_i(0,datastore(1,'USER_ID',postgres)).
 rule_i(0,datastore(1,'CS_CONNECT','First')).
-rule_i(0,datastore(1,'DBMS_PORT','')).
-rule_i(0,datastore(1,'CS_SERVER','JOSBUENO-MX\DELGADO')).
-rule_i(0,datastore(1,'CS_DBNAME','Dar_CONDUCEFDB')).
+rule_i(0,datastore(1,'DBMS_PORT','5432')).
+rule_i(0,datastore(1,'CS_SERVER',localhost)).
+rule_i(0,datastore(1,'CS_DBNAME',postgres)).
 rule_i(0,datastore(1,'CS_FLEDSNAME','')).
-rule_i(0,datastore(1,'CS_DRVNAME','sql server')).
+rule_i(0,datastore(1,'CS_DRVNAME','')).
 rule_i(0,datastore(1,'CS_DSNAME','')).
 rule_i(0,datastore(1,'DB_URL','')).
 rule_i(0,datastore(1,'JDBC_CUSTOM_URL','0')).
 rule_i(0,datastore(1,'JDBC_CUSTOM_DRIVER','')).
-rule_i(0,datastore(1,'JDBC_DRIVER','net.sourceforge.jtds.jdbc.Driver')).
+rule_i(0,datastore(1,'JDBC_DRIVER','org.postgresql.Driver')).
 rule_i(0,datastore(1,'CONNECT_METHOD','OPSYS')).
 rule_i(0,datastore(1,'ACCESS_TECHNO','ADONET')).
 rule_i(0,datastore(1,'MAIN_DS','-1')).
 rule_i(0,datastore(1,'REORG_GEN','8')).
 rule_i(0,datastore(1,'HelpKeyword','20')).
-rule_i(0,datastore(1,'DBMS',12)).
+rule_i(0,datastore(1,'DBMS',15)).
 rule_i(0,datastore(1,'NAME','Default')).
 rule_i(0,prop(idNULLS_BEHAVIOR,idNB_Current)).
 rule_i(0,prop('ObjectVisibility','Public')).
@@ -178,8 +163,6 @@ rule_i(10,prompt([ 10,[ [ [],2,2 ] ],[],[],[ t(o(13,'Gx00A0'),28),t(2,2) ],[],n,
 rule_i(10,rule([ a(23,[ [ 2 ],[ t(o(13,'Gx00A0'),28),t(2,2) ] ]) ],[],[],[ 2 ])).
 rule_i(0,rule([ a(22,[ 'Dlt','"Eliminar"','' ]) ],[],[],[])).
 rule_i(0,maingen(15)).
-rule_i(10,rule([ a(1,msg([ t('"Campo proveedoresfecreg fuera de rango"',3) ],[ t('OutOfRange',3) ])) ],[ t('NOT',8),t('(',0),t('null(',1),t(137,2),t(')',4),t('.OR.',9),t(137,2),t(>=,10),t('ymdhmstot(',1),t('1753',3),t(',',7),t('01',3),t(',',7),t('01',3),t(',',7),t('00',3),t(',',7),t('00',3),t(',',7),t('00',3),t(')',4),t(')',4) ],[ insert,update ],[ 137 ])).
-rule_i(10,rule([ a(1,msg([ t('"Campo proveedoresfecultact fuera de rango"',3) ],[ t('OutOfRange',3) ])) ],[ t('NOT',8),t('(',0),t('null(',1),t(138,2),t(')',4),t('.OR.',9),t(138,2),t(>=,10),t('ymdhmstot(',1),t('1753',3),t(',',7),t('01',3),t(',',7),t('01',3),t(',',7),t('00',3),t(',',7),t('00',3),t(',',7),t('00',3),t(')',4),t(')',4) ],[ insert,update ],[ 138 ])).
 rule_i(0,p(0,0,fv,2,[ intname,'PROVEEDORES' ])).
 rule_i(0,p(0,0,fv,2,[ table,10 ])).
 rule_i(0,p(0,15,fv,2,[])).
@@ -192,6 +175,10 @@ rule_i(0,p(0,15,fvix,[ 2,2 ],[ 'NAME',proveedores_pkey ])).
 rule_i(0,p(0,15,fvix,[ 2,2 ],[ 'LOC','' ])).
 rule_i(0,p(0,15,fvix,[ 2,2 ],[ 'SCHEMA',public ])).
 rule_i(0,p(0,15,fvix,[ 2,2 ],[ 'EXTNAM','YES' ])).
+rule_i(0,file(10,'PROVEEDORES',[ 2,126,127,128,129,130,131,132,133,134,135,136,137,138 ])).
+rule_i(0,loc([ 10 ],'PROVEEDORES','','LAN')).
+rule_i(0,index(10,'PROVEEDORES_PKEY',u,[ 2 ])).
+rule_i(0,loc([ 10,'PROVEEDORES_PKEY' ],proveedores_pkey,'','LAN')).
 rule_i(0,p(0,0,fv,15,[ intname,'ARTICULOS' ])).
 rule_i(0,p(0,0,fv,15,[ table,11 ])).
 rule_i(0,p(0,15,fv,15,[])).
@@ -209,29 +196,29 @@ rule_i(0,p(0,15,fvix,[ 15,16 ],[ 'NAME',productoid ])).
 rule_i(0,p(0,15,fvix,[ 15,16 ],[ 'LOC','' ])).
 rule_i(0,p(0,15,fvix,[ 15,16 ],[ 'SCHEMA',public ])).
 rule_i(0,p(0,15,fvix,[ 15,16 ],[ 'EXTNAM','YES' ])).
+rule_i(0,file(11,'ARTICULOS',[ 19,20,21,154,155,23,7,10,156,2,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172 ])).
+rule_i(0,loc([ 11 ],'ARTICULOS','','LAN')).
+rule_i(0,index(11,'ARTICULOS_PKEY',u,[ 19,20,21 ])).
+rule_i(0,loc([ 11,'ARTICULOS_PKEY' ],articulos_pkey,'','LAN')).
+rule_i(0,index(11,'PRODUCTOID',k,[ 19 ])).
+rule_i(0,loc([ 11,'PRODUCTOID' ],productoid,'','LAN')).
  
-a_i(1,10,b,0,[],[ [],[ a(1,msg([ t('"Campo proveedoresfecreg fuera de rango"',3) ],[ t('OutOfRange',3) ])) ],[ t('NOT',8),t('(',0),t('null(',1),t(137,2),t(')',4),t('.OR.',9),t(137,2),t(>=,10),t('ymdhmstot(',1),t('1753',3),t(',',7),t('01',3),t(',',7),t('01',3),t(',',7),t('00',3),t(',',7),t('00',3),t(',',7),t('00',3),t(')',4),t(')',4) ] ]).
-a_i(2,10,b,0,[],[ [],[ a(1,msg([ t('"Campo proveedoresfecultact fuera de rango"',3) ],[ t('OutOfRange',3) ])) ],[ t('NOT',8),t('(',0),t('null(',1),t(138,2),t(')',4),t('.OR.',9),t(138,2),t(>=,10),t('ymdhmstot(',1),t('1753',3),t(',',7),t('01',3),t(',',7),t('01',3),t(',',7),t('00',3),t(',',7),t('00',3),t(',',7),t('00',3),t(')',4),t(')',4) ] ]).
-a_i(3,10,t,10,[],[ [ [ [],2,2 ] ],'PROVEEDORES_PKEY',[] ]).
+a_i(1,10,t,10,[],[ [ [ [],2,2 ] ],'PROVEEDORES_PKEY',[] ]).
  
-v_i(b,i,1,137).
-v_i(b,o,1,[]).
-v_i(b,i,2,138).
-v_i(b,o,2,[]).
-v_i(t,i,3,2).
-v_i(t,o,3,126).
-v_i(t,o,3,127).
-v_i(t,o,3,128).
-v_i(t,o,3,129).
-v_i(t,o,3,130).
-v_i(t,o,3,131).
-v_i(t,o,3,132).
-v_i(t,o,3,133).
-v_i(t,o,3,134).
-v_i(t,o,3,135).
-v_i(t,o,3,136).
-v_i(t,o,3,137).
-v_i(t,o,3,138).
+v_i(t,i,1,2).
+v_i(t,o,1,126).
+v_i(t,o,1,127).
+v_i(t,o,1,128).
+v_i(t,o,1,129).
+v_i(t,o,1,130).
+v_i(t,o,1,131).
+v_i(t,o,1,132).
+v_i(t,o,1,133).
+v_i(t,o,1,134).
+v_i(t,o,1,135).
+v_i(t,o,1,136).
+v_i(t,o,1,137).
+v_i(t,o,1,138).
  
  
  
@@ -259,11 +246,11 @@ attri_i(2,[ proveedoresid,int,9,0,'ZZZZZZZZ9',0,proveedoresid,'',0 ]).
 attri_i('Gxremove',[ 'GxRemove',int,1,0,'9',0,'Gx Remove','',5 ]).
 attri_i('Mode',[ 'Gx_mode',char,3,0,'@!',1,'','',2 ]).
  
-table_i(11,[ articulos,[ 19,20,21,2 ],articulos,articulos ]).
-table_i(10,[ proveedores,[ 2,126,127,128,129,130,131,132,133,134,135,136,137,138 ],proveedores,proveedores ]).
+table_i(11,[ 'ARTICULOS',[ 19,20,21,2 ],articulos,articulos ]).
+table_i(10,[ 'PROVEEDORES',[ 2,126,127,128,129,130,131,132,133,134,135,136,137,138 ],proveedores,proveedores ]).
  
-index_i(10,[ 'PROVEEDORES_PKEY',u,[ 2 ],proveedores_pkey ]).
-index_i(11,[ 'ARTICULOS_PKEY',u,[ 19,20,21 ],articulos_pkey ]).
+index_i(10,[ 'PROVEEDORES_PKEY',u,[ 2 ],'PROVEEDORES_PKEY' ]).
+index_i(11,[ 'ARTICULOS_PKEY',u,[ 19,20,21 ],'ARTICULOS_PKEY' ]).
 index_i(11,[ 'IARTICULOS',d,[ 2 ],'Iarticulos' ]).
  
  
@@ -286,6 +273,49 @@ upd_i(10,10,d,[ [],[],'PROVEEDORES_PKEY',[] ]).
  
  
  
+map_i(11,i,'PRODUCTOID',[ 'PRODUCTOID' ]).
+map_i(11,i,'ARTICULOS_PKEY',[ 'ARTICULOS_PKEY' ]).
+map_i(11,a,172,[ articulosfecultact ]).
+map_i(11,a,171,[ articulosfecreg ]).
+map_i(11,a,170,[ articulostipobien ]).
+map_i(11,a,169,[ articulosestatusariticulo ]).
+map_i(11,a,168,[ articulosidtrasfer ]).
+map_i(11,a,167,[ articulosusuario ]).
+map_i(11,a,166,[ articuloscontejado ]).
+map_i(11,a,165,[ articulosstatus ]).
+map_i(11,a,164,[ articulosfechabajaalma ]).
+map_i(11,a,163,[ articulosfechaentraalmacen ]).
+map_i(11,a,162,[ articulosfechacoteja ]).
+map_i(11,a,161,[ articulosrefdocumento ]).
+map_i(11,a,160,[ articulosnumserie ]).
+map_i(11,a,159,[ articuloscantdepreacum ]).
+map_i(11,a,158,[ articulospreccomprareexp ]).
+map_i(11,a,157,[ articulospreciocompra ]).
+map_i(11,a,2,[ proveedorid ]).
+map_i(11,a,156,[ articulosdsc ]).
+map_i(11,a,10,[ origenid ]).
+map_i(11,a,7,[ entidadid ]).
+map_i(11,a,23,[ tipodocid ]).
+map_i(11,a,155,[ articulosnoetiqueta ]).
+map_i(11,a,154,[ alamcenid ]).
+map_i(11,a,21,[ cambsid ]).
+map_i(11,a,20,[ productoid ]).
+map_i(11,a,19,[ articulosid ]).
+map_i(10,i,'PROVEEDORES_PKEY',[ 'PROVEEDORES_PKEY' ]).
+map_i(10,a,138,[ proveedoresfecultact ]).
+map_i(10,a,137,[ proveedoresfecreg ]).
+map_i(10,a,136,[ proveedoresusuario ]).
+map_i(10,a,135,[ proveedoresrfc ]).
+map_i(10,a,134,[ proveedoresfax ]).
+map_i(10,a,133,[ proveedorestelefono2 ]).
+map_i(10,a,132,[ proveedorestelefono1 ]).
+map_i(10,a,131,[ proveedorestado ]).
+map_i(10,a,130,[ proveedoresmunicipio ]).
+map_i(10,a,129,[ proveedorescodigopostal ]).
+map_i(10,a,128,[ proveedorescolonia ]).
+map_i(10,a,127,[ proveedoresdireccion ]).
+map_i(10,a,126,[ proveedoresnombre ]).
+map_i(10,a,2,[ proveedoresid ]).
  
  
  
@@ -1307,6 +1337,7 @@ html_comp_i(80,'Buttonborderstyle',standard,d,[ str ]).
  
  
  
+warn_gen_i(msg([],spc0134,[ 'Poor performance may be noticed','',' as ','Duplicate',' index ','IARTICULOS',' is not defined in Data view ',articulos,'.' ])).
  
 lit_i(6,1,t(proveedores,3),[ ctlname('Title') ]).
 lit_i(5,1,div(5),[ ctlname('') ]).
@@ -1553,10 +1584,6 @@ att_prop_i(2,21,'AttRegEx','',d).
 att_prop_i(2,21,'AttValidationFailedMsg','',d).
 att_prop_i(2,21,'FullName',articuloscambsid,v).
  
-tbl_prop_i(2,11,'AllDirSuper',[ [ 10,[ 2 ] ] ],v).
-tbl_prop_i(2,11,'DirSuperNull',[ [ 10,[ 2 ] ] ],v).
-tbl_prop_i(2,10,'DirSubor',[ [ 11,[ 2 ] ] ],v).
-tbl_prop_i(2,11,'DirSuper',[ [ 10,[ 2 ] ] ],v).
  
 tbl_att_prop_i(2,10,2,'AllowNulls',n).
 tbl_att_prop_i(2,11,19,'AllowNulls',n).

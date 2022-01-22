@@ -24,12 +24,12 @@
 <BaseTable>
 <Table>
 <TableId>11</TableId>
-<TableName>articulos</TableName>
+<TableName>ARTICULOS</TableName>
 <Description>articulos</Description></Table></BaseTable>
 <NavigationTree>
 <Table>
 <TableId>11</TableId>
-<TableName>articulos</TableName>
+<TableName>ARTICULOS</TableName>
 <Description>articulos</Description>
 <Updated>Yes</Updated>
 <RecordsToRead>many</RecordsToRead>
@@ -49,7 +49,7 @@
 <Tables>
 <Table>
 <TableId>18</TableId>
-<TableName>almacen</TableName>
+<TableName>ALMACEN</TableName>
 <Description>almacen</Description>
 <RecordsToRead>one</RecordsToRead>
 <KeyAttributes>
@@ -60,7 +60,7 @@
 <Tables></Tables></Table>
 <Table>
 <TableId>1</TableId>
-<TableName>tipobien</TableName>
+<TableName>TIPOBIEN</TableName>
 <Description>tipobien</Description>
 <RecordsToRead>one</RecordsToRead>
 <KeyAttributes>
@@ -72,7 +72,7 @@
 <Tables></Tables></Table>
 <Table>
 <TableId>4</TableId>
-<TableName>entidadfederativa</TableName>
+<TableName>ENTIDADFEDERATIVA</TableName>
 <Description>entidadfederativa</Description>
 <RecordsToRead>one</RecordsToRead>
 <KeyAttributes>
@@ -84,7 +84,7 @@
 <Tables></Tables></Table>
 <Table>
 <TableId>16</TableId>
-<TableName>origen</TableName>
+<TableName>ORIGEN</TableName>
 <Description>origen</Description>
 <RecordsToRead>one</RecordsToRead>
 <KeyAttributes>
@@ -96,7 +96,7 @@
 <Tables></Tables></Table>
 <Table>
 <TableId>10</TableId>
-<TableName>proveedores</TableName>
+<TableName>PROVEEDORES</TableName>
 <Description>proveedores</Description>
 <RecordsToRead>one</RecordsToRead>
 <KeyAttributes>
@@ -108,7 +108,7 @@
 <Tables></Tables></Table>
 <Table>
 <TableId>19</TableId>
-<TableName>modelos</TableName>
+<TableName>MODELOS</TableName>
 <Description>modelos</Description>
 <RecordsToRead>one</RecordsToRead>
 <KeyAttributes>
@@ -119,7 +119,7 @@
 <Tables></Tables></Table>
 <Table>
 <TableId>14</TableId>
-<TableName>cambs</TableName>
+<TableName>CAMBS</TableName>
 <Description>cambs</Description>
 <RecordsToRead>one</RecordsToRead>
 <KeyAttributes>
@@ -139,7 +139,7 @@
 <TableToUpdate>
 <Table>
 <TableId>11</TableId>
-<TableName>articulos</TableName>
+<TableName>ARTICULOS</TableName>
 <Description>articulos</Description></Table>
 <TableAction>insert</TableAction>
 <AttrisToUpdate>
@@ -250,7 +250,7 @@
 <TableToUpdate>
 <Table>
 <TableId>11</TableId>
-<TableName>articulos</TableName>
+<TableName>ARTICULOS</TableName>
 <Description>articulos</Description></Table>
 <TableAction>update</TableAction>
 <AttrisToUpdate>
@@ -349,7 +349,7 @@
 <TableToUpdate>
 <Table>
 <TableId>11</TableId>
-<TableName>articulos</TableName>
+<TableName>ARTICULOS</TableName>
 <Description>articulos</Description></Table>
 <TableAction>delete</TableAction>
 <AttrisToUpdate></AttrisToUpdate></TableToUpdate></TablesToUpdate>
@@ -364,7 +364,7 @@
 <Prompt>
 <Table>
 <TableId>14</TableId>
-<TableName>cambs</TableName>
+<TableName>CAMBS</TableName>
 <Description>cambs</Description></Table>
 <Object>
 <ObjClsGuid>c9584656-94b6-4ccd-890f-332d11fc2c25</ObjClsGuid>
@@ -383,7 +383,7 @@
 <Prompt>
 <Table>
 <TableId>19</TableId>
-<TableName>modelos</TableName>
+<TableName>MODELOS</TableName>
 <Description>modelos</Description></Table>
 <Object>
 <ObjClsGuid>c9584656-94b6-4ccd-890f-332d11fc2c25</ObjClsGuid>
@@ -402,7 +402,7 @@
 <Prompt>
 <Table>
 <TableId>10</TableId>
-<TableName>proveedores</TableName>
+<TableName>PROVEEDORES</TableName>
 <Description>proveedores</Description></Table>
 <Object>
 <ObjClsGuid>c9584656-94b6-4ccd-890f-332d11fc2c25</ObjClsGuid>
@@ -421,7 +421,7 @@
 <Prompt>
 <Table>
 <TableId>16</TableId>
-<TableName>origen</TableName>
+<TableName>ORIGEN</TableName>
 <Description>origen</Description></Table>
 <Object>
 <ObjClsGuid>c9584656-94b6-4ccd-890f-332d11fc2c25</ObjClsGuid>
@@ -440,7 +440,7 @@
 <Prompt>
 <Table>
 <TableId>4</TableId>
-<TableName>entidadfederativa</TableName>
+<TableName>ENTIDADFEDERATIVA</TableName>
 <Description>entidadfederativa</Description></Table>
 <Object>
 <ObjClsGuid>c9584656-94b6-4ccd-890f-332d11fc2c25</ObjClsGuid>
@@ -459,7 +459,7 @@
 <Prompt>
 <Table>
 <TableId>1</TableId>
-<TableName>tipobien</TableName>
+<TableName>TIPOBIEN</TableName>
 <Description>tipobien</Description></Table>
 <Object>
 <ObjClsGuid>c9584656-94b6-4ccd-890f-332d11fc2c25</ObjClsGuid>
@@ -478,7 +478,7 @@
 <Prompt>
 <Table>
 <TableId>18</TableId>
-<TableName>almacen</TableName>
+<TableName>ALMACEN</TableName>
 <Description>almacen</Description></Table>
 <Object>
 <ObjClsGuid>c9584656-94b6-4ccd-890f-332d11fc2c25</ObjClsGuid>
@@ -497,7 +497,7 @@
 <Prompt>
 <Table>
 <TableId>11</TableId>
-<TableName>articulos</TableName>
+<TableName>ARTICULOS</TableName>
 <Description>articulos</Description></Table>
 <Object>
 <ObjClsGuid>c9584656-94b6-4ccd-890f-332d11fc2c25</ObjClsGuid>

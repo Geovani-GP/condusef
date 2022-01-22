@@ -44,25 +44,11 @@ repeat_i(2,[ 1,2,[ 'Linkselection',7,108 ],[] ]).
  
  
 rule_i(0,datastore(1,'DS_LAST_CHANGE','')).
-rule_i(0,datastore(1,'LOCK_RETRY','10')).
-rule_i(0,datastore(1,'WAIT_RECORD','0')).
-rule_i(0,datastore(1,'SQLSERVER_VERSION','9')).
+rule_i(0,datastore(1,'POSTGRESQL_VERSION','8_3')).
 rule_i(0,datastore(1,'COMMENT_ON','No')).
-rule_i(0,datastore(1,'DFT_TMP_TBLSPACE','')).
-rule_i(0,datastore(1,'DFT_IDX_TBLSPACE','')).
-rule_i(0,datastore(1,'DFT_TBL_TBLSPACE','')).
 rule_i(0,datastore(1,'DCL_REF_INT_DB','Yes')).
 rule_i(0,datastore(1,'PRIMARY_KEY_TYPE','PK')).
 rule_i(0,datastore(1,'CS_SCHEMA','')).
-rule_i(0,datastore(1,'SORT_ATTRIBUTES','Yes')).
-rule_i(0,datastore(1,'JRN400','QSQJRN')).
-rule_i(0,datastore(1,'CREATE_SAVF','Yes')).
-rule_i(0,datastore(1,'PGMLIB','')).
-rule_i(0,datastore(1,'DTALIB','')).
-rule_i(0,datastore(1,'CC_USER_PASS','')).
-rule_i(0,datastore(1,'CC_USER_ID','')).
-rule_i(0,datastore(1,'CC_SERVER','')).
-rule_i(0,datastore(1,'CC_DBNAME','')).
 rule_i(0,datastore(1,'RecycleRWMin','30')).
 rule_i(0,datastore(1,'RecycleRWType','1')).
 rule_i(0,datastore(1,'RecycleRW','-1')).
@@ -74,26 +60,25 @@ rule_i(0,datastore(1,'CS_RPCPGML','')).
 rule_i(0,datastore(1,'JDBC_DATASOURCE','')).
 rule_i(0,datastore(1,'USE_JDBC_DATASOURCE','0')).
 rule_i(0,datastore(1,'DS_DBMS_ADDINFO','')).
-rule_i(0,datastore(1,'USER_PASSWORD','')).
-rule_i(0,datastore(1,'USER_ID','')).
-rule_i(0,datastore(1,'TRUSTED_CONNECTION','Yes')).
+rule_i(0,datastore(1,'USER_PASSWORD',󻢸蘇�2�5炭)).
+rule_i(0,datastore(1,'USER_ID',postgres)).
 rule_i(0,datastore(1,'CS_CONNECT','First')).
-rule_i(0,datastore(1,'DBMS_PORT','')).
-rule_i(0,datastore(1,'CS_SERVER','JOSBUENO-MX\DELGADO')).
-rule_i(0,datastore(1,'CS_DBNAME','Dar_CONDUCEFDB')).
+rule_i(0,datastore(1,'DBMS_PORT','5432')).
+rule_i(0,datastore(1,'CS_SERVER',localhost)).
+rule_i(0,datastore(1,'CS_DBNAME',postgres)).
 rule_i(0,datastore(1,'CS_FLEDSNAME','')).
-rule_i(0,datastore(1,'CS_DRVNAME','sql server')).
+rule_i(0,datastore(1,'CS_DRVNAME','')).
 rule_i(0,datastore(1,'CS_DSNAME','')).
 rule_i(0,datastore(1,'DB_URL','')).
 rule_i(0,datastore(1,'JDBC_CUSTOM_URL','0')).
 rule_i(0,datastore(1,'JDBC_CUSTOM_DRIVER','')).
-rule_i(0,datastore(1,'JDBC_DRIVER','net.sourceforge.jtds.jdbc.Driver')).
+rule_i(0,datastore(1,'JDBC_DRIVER','org.postgresql.Driver')).
 rule_i(0,datastore(1,'CONNECT_METHOD','OPSYS')).
 rule_i(0,datastore(1,'ACCESS_TECHNO','ADONET')).
 rule_i(0,datastore(1,'MAIN_DS','-1')).
 rule_i(0,datastore(1,'REORG_GEN','8')).
 rule_i(0,datastore(1,'HelpKeyword','20')).
-rule_i(0,datastore(1,'DBMS',12)).
+rule_i(0,datastore(1,'DBMS',15)).
 rule_i(0,datastore(1,'NAME','Default')).
 rule_i(0,prop(idNULLS_BEHAVIOR,idNB_Current)).
 rule_i(0,prop('ObjectVisibility','Public')).
@@ -139,6 +124,10 @@ rule_i(0,maingen(15)).
 rule_i(0,parm([ 'Pentidafederativaid' ],[])).
 rule_i(0,parmio([ [ 'Pentidafederativaid',out ] ])).
 rule_i(0,order([ 7 ])).
+rule_i(0,file(4,'ENTIDADFEDERATIVA',[ 7,108,109,110,111 ])).
+rule_i(0,loc([ 4 ],'ENTIDADFEDERATIVA','','LAN')).
+rule_i(0,index(4,'ENTIDADFEDERATIVA_PKEY',u,[ 7 ])).
+rule_i(0,loc([ 4,'ENTIDADFEDERATIVA_PKEY' ],entidadfederativa_pkey,'','LAN')).
 rule_i(0,p(0,0,fv,4,[ intname,'ENTIDADFEDERATIVA' ])).
 rule_i(0,p(0,0,fv,4,[ table,4 ])).
 rule_i(0,p(0,15,fv,4,[])).
@@ -151,14 +140,10 @@ rule_i(0,p(0,15,fvix,[ 4,4 ],[ 'NAME',entidadfederativa_pkey ])).
 rule_i(0,p(0,15,fvix,[ 4,4 ],[ 'LOC','' ])).
 rule_i(0,p(0,15,fvix,[ 4,4 ],[ 'SCHEMA',public ])).
 rule_i(0,p(0,15,fvix,[ 4,4 ],[ 'EXTNAM','YES' ])).
-rule_i(2,rule([ a(1,msg([ t('"Campo entidadfederativafecreg fuera de rango"',3) ],[ t('OutOfRange',3) ])) ],[ t('NOT',8),t('(',0),t('null(',1),t('Centidadfederativafecreg',2),t(')',4),t('.OR.',9),t('Centidadfederativafecreg',2),t(>=,10),t('ymdhmstot(',1),t('1753',3),t(',',7),t('01',3),t(',',7),t('01',3),t(',',7),t('00',3),t(',',7),t('00',3),t(',',7),t('00',3),t(')',4),t(')',4) ],[ insert,update ],[ 'Centidadfederativafecreg' ])).
-rule_i(2,rule([ a(1,msg([ t('"Campo entidadfederativafecultact fuera de rango"',3) ],[ t('OutOfRange',3) ])) ],[ t('NOT',8),t('(',0),t('null(',1),t('Centidadfederativafecultact',2),t(')',4),t('.OR.',9),t('Centidadfederativafecultact',2),t(>=,10),t('ymdhmstot(',1),t('1753',3),t(',',7),t('01',3),t(',',7),t('01',3),t(',',7),t('00',3),t(',',7),t('00',3),t(',',7),t('00',3),t(')',4),t(')',4) ],[ insert,update ],[ 'Centidadfederativafecultact' ])).
 rule_i(0,rule([ a(22,[ '''Toggle''','''Toggle''','' ]) ],[],[],[])).
  
 a_i(1,1,f,'Err',[],[ [],[ t('0',3) ] ]).
 a_i(2,2,t,4,[],[ [],'ENTIDADFEDERATIVA_PKEY',[] ]).
-a_i(3,2,b,0,[],[ [],[ a(1,msg([ t('"Campo entidadfederativafecreg fuera de rango"',3) ],[ t('OutOfRange',3) ])) ],[ t('NOT',8),t('(',0),t('null(',1),t('Centidadfederativafecreg',2),t(')',4),t('.OR.',9),t('Centidadfederativafecreg',2),t(>=,10),t('ymdhmstot(',1),t('1753',3),t(',',7),t('01',3),t(',',7),t('01',3),t(',',7),t('00',3),t(',',7),t('00',3),t(',',7),t('00',3),t(')',4),t(')',4) ] ]).
-a_i(4,2,b,0,[],[ [],[ a(1,msg([ t('"Campo entidadfederativafecultact fuera de rango"',3) ],[ t('OutOfRange',3) ])) ],[ t('NOT',8),t('(',0),t('null(',1),t('Centidadfederativafecultact',2),t(')',4),t('.OR.',9),t('Centidadfederativafecultact',2),t(>=,10),t('ymdhmstot(',1),t('1753',3),t(',',7),t('01',3),t(',',7),t('01',3),t(',',7),t('00',3),t(',',7),t('00',3),t(',',7),t('00',3),t(')',4),t(')',4) ] ]).
  
 v_i(f,i,1,[]).
 v_i(f,o,1,'Err').
@@ -168,19 +153,15 @@ v_i(t,o,2,110).
 v_i(t,o,2,109).
 v_i(t,o,2,108).
 v_i(t,o,2,7).
-v_i(b,i,3,'Centidadfederativafecreg').
-v_i(b,o,3,[]).
-v_i(b,i,4,'Centidadfederativafecultact').
-v_i(b,o,4,[]).
  
  
  
  
  
  
-attri_i(109,[ entidadfederativausuario,svchar,15,0,'',0,entidadfederativausuario,'',0 ]).
-attri_i(110,[ entidadfederativafecreg,dtime,10,8,'99/99/9999 99:99:99',0,entidadfederativafecreg,'',0 ]).
 attri_i(111,[ entidadfederativafecultact,dtime,10,8,'99/99/9999 99:99:99',0,entidadfederativafecultact,'',0 ]).
+attri_i(110,[ entidadfederativafecreg,dtime,10,8,'99/99/9999 99:99:99',0,entidadfederativafecreg,'',0 ]).
+attri_i(109,[ entidadfederativausuario,svchar,15,0,'',0,entidadfederativausuario,'',0 ]).
 attri_i(108,[ entidadfederativadsc,svchar,100,0,'',0,entidadfederativadsc,'',0 ]).
 attri_i(7,[ entidafederativaid,int,9,0,'ZZZZZZZZ9',0,entidafederativaid,'',0 ]).
 attri_i('Linkselection_GXI',[ 'Linkselection_GXI',svchar,2048,0,'',0,'',[],15 ]).
@@ -195,9 +176,9 @@ attri_i('Centidadfederativadsc',[ centidadfederativadsc,svchar,100,0,'',0,entida
 attri_i('Centidafederativaid',[ centidafederativaid,int,9,0,'ZZZZZZZZ9',0,entidafederativaid,'',6 ]).
 attri_i('Linkselection',[ 'LinkSelection',bits,1024,0,'',0,'Link Selection','',5 ]).
  
-table_i(4,[ entidadfederativa,[ 7,108,109,110,111 ],entidadfederativa,entidadfederativa ]).
+table_i(4,[ 'ENTIDADFEDERATIVA',[ 7,108,109,110,111 ],entidadfederativa,entidadfederativa ]).
  
-index_i(4,[ 'ENTIDADFEDERATIVA_PKEY',u,[ 7 ],entidadfederativa_pkey ]).
+index_i(4,[ 'ENTIDADFEDERATIVA_PKEY',u,[ 7 ],'ENTIDADFEDERATIVA_PKEY' ]).
  
  
  
@@ -218,6 +199,12 @@ start_i(2,0,0,[ [ [ 7,23,'Centidafederativaid',>= ] ],many ]).
  
  
  
+map_i(4,i,'ENTIDADFEDERATIVA_PKEY',[ 'ENTIDADFEDERATIVA_PKEY' ]).
+map_i(4,a,111,[ entidadfederativafecultact ]).
+map_i(4,a,110,[ entidadfederativafecreg ]).
+map_i(4,a,109,[ entidadfederativausuario ]).
+map_i(4,a,108,[ entidadfederativadsc ]).
+map_i(4,a,7,[ entidafederativaid ]).
  
  
  
@@ -1195,16 +1182,15 @@ att_prop_i(2,108,'DB_NLS_SUPPORT','No',d).
 att_prop_i(2,108,'AttRegEx','',d).
 att_prop_i(2,108,'AttValidationFailedMsg','',d).
 att_prop_i(2,108,'FullName',entidadfederativadsc,v).
-att_prop_i(2,111,'ExternalName',entidadfederativafecultact,d).
-att_prop_i(2,111,'ExternalNamespace','Condufef_v1',d).
-att_prop_i(2,111,'EmptyAsNull','Yes',d).
-att_prop_i(2,111,idBasedOn,'',d).
-att_prop_i(2,111,'ATT_INITIAL_VALUE','',d).
-att_prop_i(2,111,'AttRegEx','',d).
-att_prop_i(2,111,'AttValidationFailedMsg','',d).
-att_prop_i(2,111,idDATEFORMAT,idDATEFORMAT_LONG,v).
-att_prop_i(2,111,idHOURFORMAT,idHOURFORMAT_HOURMINSEC,v).
-att_prop_i(2,111,'FullName',entidadfederativafecultact,v).
+att_prop_i(2,109,'ExternalName',entidadfederativausuario,d).
+att_prop_i(2,109,'ExternalNamespace','Condufef_v1',d).
+att_prop_i(2,109,'EmptyAsNull','Yes',d).
+att_prop_i(2,109,idBasedOn,'',d).
+att_prop_i(2,109,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,109,'DB_NLS_SUPPORT','No',d).
+att_prop_i(2,109,'AttRegEx','',d).
+att_prop_i(2,109,'AttValidationFailedMsg','',d).
+att_prop_i(2,109,'FullName',entidadfederativausuario,v).
 att_prop_i(2,110,'ExternalName',entidadfederativafecreg,d).
 att_prop_i(2,110,'ExternalNamespace','Condufef_v1',d).
 att_prop_i(2,110,'EmptyAsNull','Yes',d).
@@ -1215,15 +1201,16 @@ att_prop_i(2,110,'AttValidationFailedMsg','',d).
 att_prop_i(2,110,idDATEFORMAT,idDATEFORMAT_LONG,v).
 att_prop_i(2,110,idHOURFORMAT,idHOURFORMAT_HOURMINSEC,v).
 att_prop_i(2,110,'FullName',entidadfederativafecreg,v).
-att_prop_i(2,109,'ExternalName',entidadfederativausuario,d).
-att_prop_i(2,109,'ExternalNamespace','Condufef_v1',d).
-att_prop_i(2,109,'EmptyAsNull','Yes',d).
-att_prop_i(2,109,idBasedOn,'',d).
-att_prop_i(2,109,'ATT_INITIAL_VALUE','',d).
-att_prop_i(2,109,'DB_NLS_SUPPORT','No',d).
-att_prop_i(2,109,'AttRegEx','',d).
-att_prop_i(2,109,'AttValidationFailedMsg','',d).
-att_prop_i(2,109,'FullName',entidadfederativausuario,v).
+att_prop_i(2,111,'ExternalName',entidadfederativafecultact,d).
+att_prop_i(2,111,'ExternalNamespace','Condufef_v1',d).
+att_prop_i(2,111,'EmptyAsNull','Yes',d).
+att_prop_i(2,111,idBasedOn,'',d).
+att_prop_i(2,111,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,111,'AttRegEx','',d).
+att_prop_i(2,111,'AttValidationFailedMsg','',d).
+att_prop_i(2,111,idDATEFORMAT,idDATEFORMAT_LONG,v).
+att_prop_i(2,111,idHOURFORMAT,idHOURFORMAT_HOURMINSEC,v).
+att_prop_i(2,111,'FullName',entidadfederativafecultact,v).
  
  
 tbl_att_prop_i(2,4,7,'AllowNulls',n).

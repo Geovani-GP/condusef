@@ -2,9 +2,9 @@
                File: SoapParm
         Description: No description for object
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 12/30/2021 22:9:46.84
+       Generated on: 1/22/2022 13:28:20.24
        Program type: Callable routine
-          Main DBMS: sqlserver
+          Main DBMS: postgresql
 */
 using System;
 using System.Collections;

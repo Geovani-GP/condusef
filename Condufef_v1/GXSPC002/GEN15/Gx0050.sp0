@@ -44,25 +44,11 @@ repeat_i(2,[ 1,2,[ 'Linkselection',14,94 ],[] ]).
  
  
 rule_i(0,datastore(1,'DS_LAST_CHANGE','')).
-rule_i(0,datastore(1,'LOCK_RETRY','10')).
-rule_i(0,datastore(1,'WAIT_RECORD','0')).
-rule_i(0,datastore(1,'SQLSERVER_VERSION','9')).
+rule_i(0,datastore(1,'POSTGRESQL_VERSION','8_3')).
 rule_i(0,datastore(1,'COMMENT_ON','No')).
-rule_i(0,datastore(1,'DFT_TMP_TBLSPACE','')).
-rule_i(0,datastore(1,'DFT_IDX_TBLSPACE','')).
-rule_i(0,datastore(1,'DFT_TBL_TBLSPACE','')).
 rule_i(0,datastore(1,'DCL_REF_INT_DB','Yes')).
 rule_i(0,datastore(1,'PRIMARY_KEY_TYPE','PK')).
 rule_i(0,datastore(1,'CS_SCHEMA','')).
-rule_i(0,datastore(1,'SORT_ATTRIBUTES','Yes')).
-rule_i(0,datastore(1,'JRN400','QSQJRN')).
-rule_i(0,datastore(1,'CREATE_SAVF','Yes')).
-rule_i(0,datastore(1,'PGMLIB','')).
-rule_i(0,datastore(1,'DTALIB','')).
-rule_i(0,datastore(1,'CC_USER_PASS','')).
-rule_i(0,datastore(1,'CC_USER_ID','')).
-rule_i(0,datastore(1,'CC_SERVER','')).
-rule_i(0,datastore(1,'CC_DBNAME','')).
 rule_i(0,datastore(1,'RecycleRWMin','30')).
 rule_i(0,datastore(1,'RecycleRWType','1')).
 rule_i(0,datastore(1,'RecycleRW','-1')).
@@ -74,26 +60,25 @@ rule_i(0,datastore(1,'CS_RPCPGML','')).
 rule_i(0,datastore(1,'JDBC_DATASOURCE','')).
 rule_i(0,datastore(1,'USE_JDBC_DATASOURCE','0')).
 rule_i(0,datastore(1,'DS_DBMS_ADDINFO','')).
-rule_i(0,datastore(1,'USER_PASSWORD','')).
-rule_i(0,datastore(1,'USER_ID','')).
-rule_i(0,datastore(1,'TRUSTED_CONNECTION','Yes')).
+rule_i(0,datastore(1,'USER_PASSWORD',󻢸蘇�2�5炭)).
+rule_i(0,datastore(1,'USER_ID',postgres)).
 rule_i(0,datastore(1,'CS_CONNECT','First')).
-rule_i(0,datastore(1,'DBMS_PORT','')).
-rule_i(0,datastore(1,'CS_SERVER','JOSBUENO-MX\DELGADO')).
-rule_i(0,datastore(1,'CS_DBNAME','Dar_CONDUCEFDB')).
+rule_i(0,datastore(1,'DBMS_PORT','5432')).
+rule_i(0,datastore(1,'CS_SERVER',localhost)).
+rule_i(0,datastore(1,'CS_DBNAME',postgres)).
 rule_i(0,datastore(1,'CS_FLEDSNAME','')).
-rule_i(0,datastore(1,'CS_DRVNAME','sql server')).
+rule_i(0,datastore(1,'CS_DRVNAME','')).
 rule_i(0,datastore(1,'CS_DSNAME','')).
 rule_i(0,datastore(1,'DB_URL','')).
 rule_i(0,datastore(1,'JDBC_CUSTOM_URL','0')).
 rule_i(0,datastore(1,'JDBC_CUSTOM_DRIVER','')).
-rule_i(0,datastore(1,'JDBC_DRIVER','net.sourceforge.jtds.jdbc.Driver')).
+rule_i(0,datastore(1,'JDBC_DRIVER','org.postgresql.Driver')).
 rule_i(0,datastore(1,'CONNECT_METHOD','OPSYS')).
 rule_i(0,datastore(1,'ACCESS_TECHNO','ADONET')).
 rule_i(0,datastore(1,'MAIN_DS','-1')).
 rule_i(0,datastore(1,'REORG_GEN','8')).
 rule_i(0,datastore(1,'HelpKeyword','20')).
-rule_i(0,datastore(1,'DBMS',12)).
+rule_i(0,datastore(1,'DBMS',15)).
 rule_i(0,datastore(1,'NAME','Default')).
 rule_i(0,prop(idNULLS_BEHAVIOR,idNB_Current)).
 rule_i(0,prop('ObjectVisibility','Public')).
@@ -139,6 +124,10 @@ rule_i(0,maingen(15)).
 rule_i(0,parm([ 'Pcategoriasid' ],[])).
 rule_i(0,parmio([ [ 'Pcategoriasid',out ] ])).
 rule_i(0,order([ 14 ])).
+rule_i(0,file(5,'CATEGORIAS',[ 14,94,95,96,97 ])).
+rule_i(0,loc([ 5 ],'CATEGORIAS','','LAN')).
+rule_i(0,index(5,'CATEGORIAS_PKEY',u,[ 14 ])).
+rule_i(0,loc([ 5,'CATEGORIAS_PKEY' ],categorias_pkey,'','LAN')).
 rule_i(0,p(0,0,fv,12,[ intname,'CATEGORIAS' ])).
 rule_i(0,p(0,0,fv,12,[ table,5 ])).
 rule_i(0,p(0,15,fv,12,[])).
@@ -151,14 +140,10 @@ rule_i(0,p(0,15,fvix,[ 12,11 ],[ 'NAME',categorias_pkey ])).
 rule_i(0,p(0,15,fvix,[ 12,11 ],[ 'LOC','' ])).
 rule_i(0,p(0,15,fvix,[ 12,11 ],[ 'SCHEMA',public ])).
 rule_i(0,p(0,15,fvix,[ 12,11 ],[ 'EXTNAM','YES' ])).
-rule_i(2,rule([ a(1,msg([ t('"Campo categoriasfecreg fuera de rango"',3) ],[ t('OutOfRange',3) ])) ],[ t('NOT',8),t('(',0),t('null(',1),t('Ccategoriasfecreg',2),t(')',4),t('.OR.',9),t('Ccategoriasfecreg',2),t(>=,10),t('ymdhmstot(',1),t('1753',3),t(',',7),t('01',3),t(',',7),t('01',3),t(',',7),t('00',3),t(',',7),t('00',3),t(',',7),t('00',3),t(')',4),t(')',4) ],[ insert,update ],[ 'Ccategoriasfecreg' ])).
-rule_i(2,rule([ a(1,msg([ t('"Campo categoriasfecultact fuera de rango"',3) ],[ t('OutOfRange',3) ])) ],[ t('NOT',8),t('(',0),t('null(',1),t('Ccategoriasfecultact',2),t(')',4),t('.OR.',9),t('Ccategoriasfecultact',2),t(>=,10),t('ymdhmstot(',1),t('1753',3),t(',',7),t('01',3),t(',',7),t('01',3),t(',',7),t('00',3),t(',',7),t('00',3),t(',',7),t('00',3),t(')',4),t(')',4) ],[ insert,update ],[ 'Ccategoriasfecultact' ])).
 rule_i(0,rule([ a(22,[ '''Toggle''','''Toggle''','' ]) ],[],[],[])).
  
 a_i(1,1,f,'Err',[],[ [],[ t('0',3) ] ]).
 a_i(2,2,t,5,[],[ [],'CATEGORIAS_PKEY',[] ]).
-a_i(3,2,b,0,[],[ [],[ a(1,msg([ t('"Campo categoriasfecreg fuera de rango"',3) ],[ t('OutOfRange',3) ])) ],[ t('NOT',8),t('(',0),t('null(',1),t('Ccategoriasfecreg',2),t(')',4),t('.OR.',9),t('Ccategoriasfecreg',2),t(>=,10),t('ymdhmstot(',1),t('1753',3),t(',',7),t('01',3),t(',',7),t('01',3),t(',',7),t('00',3),t(',',7),t('00',3),t(',',7),t('00',3),t(')',4),t(')',4) ] ]).
-a_i(4,2,b,0,[],[ [],[ a(1,msg([ t('"Campo categoriasfecultact fuera de rango"',3) ],[ t('OutOfRange',3) ])) ],[ t('NOT',8),t('(',0),t('null(',1),t('Ccategoriasfecultact',2),t(')',4),t('.OR.',9),t('Ccategoriasfecultact',2),t(>=,10),t('ymdhmstot(',1),t('1753',3),t(',',7),t('01',3),t(',',7),t('01',3),t(',',7),t('00',3),t(',',7),t('00',3),t(',',7),t('00',3),t(')',4),t(')',4) ] ]).
  
 v_i(f,i,1,[]).
 v_i(f,o,1,'Err').
@@ -168,19 +153,15 @@ v_i(t,o,2,96).
 v_i(t,o,2,95).
 v_i(t,o,2,94).
 v_i(t,o,2,14).
-v_i(b,i,3,'Ccategoriasfecreg').
-v_i(b,o,3,[]).
-v_i(b,i,4,'Ccategoriasfecultact').
-v_i(b,o,4,[]).
  
  
  
  
  
  
-attri_i(95,[ categoriasusuario,svchar,15,0,'',0,categoriasusuario,'',0 ]).
-attri_i(96,[ categoriasfecreg,dtime,10,8,'99/99/9999 99:99:99',0,categoriasfecreg,'',0 ]).
 attri_i(97,[ categoriasfecultact,dtime,10,8,'99/99/9999 99:99:99',0,categoriasfecultact,'',0 ]).
+attri_i(96,[ categoriasfecreg,dtime,10,8,'99/99/9999 99:99:99',0,categoriasfecreg,'',0 ]).
+attri_i(95,[ categoriasusuario,svchar,15,0,'',0,categoriasusuario,'',0 ]).
 attri_i(94,[ categoriasdsc,svchar,100,0,'',0,categoriasdsc,'',0 ]).
 attri_i(14,[ categoriasid,int,9,0,'ZZZZZZZZ9',0,categoriasid,'',0 ]).
 attri_i('Linkselection_GXI',[ 'Linkselection_GXI',svchar,2048,0,'',0,'',[],15 ]).
@@ -195,9 +176,9 @@ attri_i('Ccategoriasdsc',[ ccategoriasdsc,svchar,100,0,'',0,categoriasdsc,'',7 ]
 attri_i('Ccategoriasid',[ ccategoriasid,int,9,0,'ZZZZZZZZ9',0,categoriasid,'',6 ]).
 attri_i('Linkselection',[ 'LinkSelection',bits,1024,0,'',0,'Link Selection','',5 ]).
  
-table_i(5,[ categorias,[ 14,94,95,96,97 ],categorias,categorias ]).
+table_i(5,[ 'CATEGORIAS',[ 14,94,95,96,97 ],categorias,categorias ]).
  
-index_i(5,[ 'CATEGORIAS_PKEY',u,[ 14 ],categorias_pkey ]).
+index_i(5,[ 'CATEGORIAS_PKEY',u,[ 14 ],'CATEGORIAS_PKEY' ]).
  
  
  
@@ -218,6 +199,12 @@ start_i(2,0,0,[ [ [ 14,23,'Ccategoriasid',>= ] ],many ]).
  
  
  
+map_i(5,i,'CATEGORIAS_PKEY',[ 'CATEGORIAS_PKEY' ]).
+map_i(5,a,97,[ categoriasfecultact ]).
+map_i(5,a,96,[ categoriasfecreg ]).
+map_i(5,a,95,[ categoriasusuario ]).
+map_i(5,a,94,[ categoriasdsc ]).
+map_i(5,a,14,[ categoriasid ]).
  
  
  
@@ -1195,16 +1182,15 @@ att_prop_i(2,94,'DB_NLS_SUPPORT','No',d).
 att_prop_i(2,94,'AttRegEx','',d).
 att_prop_i(2,94,'AttValidationFailedMsg','',d).
 att_prop_i(2,94,'FullName',categoriasdsc,v).
-att_prop_i(2,97,'ExternalName',categoriasfecultact,d).
-att_prop_i(2,97,'ExternalNamespace','Condufef_v1',d).
-att_prop_i(2,97,'EmptyAsNull','Yes',d).
-att_prop_i(2,97,idBasedOn,'',d).
-att_prop_i(2,97,'ATT_INITIAL_VALUE','',d).
-att_prop_i(2,97,'AttRegEx','',d).
-att_prop_i(2,97,'AttValidationFailedMsg','',d).
-att_prop_i(2,97,idDATEFORMAT,idDATEFORMAT_LONG,v).
-att_prop_i(2,97,idHOURFORMAT,idHOURFORMAT_HOURMINSEC,v).
-att_prop_i(2,97,'FullName',categoriasfecultact,v).
+att_prop_i(2,95,'ExternalName',categoriasusuario,d).
+att_prop_i(2,95,'ExternalNamespace','Condufef_v1',d).
+att_prop_i(2,95,'EmptyAsNull','Yes',d).
+att_prop_i(2,95,idBasedOn,'',d).
+att_prop_i(2,95,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,95,'DB_NLS_SUPPORT','No',d).
+att_prop_i(2,95,'AttRegEx','',d).
+att_prop_i(2,95,'AttValidationFailedMsg','',d).
+att_prop_i(2,95,'FullName',categoriasusuario,v).
 att_prop_i(2,96,'ExternalName',categoriasfecreg,d).
 att_prop_i(2,96,'ExternalNamespace','Condufef_v1',d).
 att_prop_i(2,96,'EmptyAsNull','Yes',d).
@@ -1215,15 +1201,16 @@ att_prop_i(2,96,'AttValidationFailedMsg','',d).
 att_prop_i(2,96,idDATEFORMAT,idDATEFORMAT_LONG,v).
 att_prop_i(2,96,idHOURFORMAT,idHOURFORMAT_HOURMINSEC,v).
 att_prop_i(2,96,'FullName',categoriasfecreg,v).
-att_prop_i(2,95,'ExternalName',categoriasusuario,d).
-att_prop_i(2,95,'ExternalNamespace','Condufef_v1',d).
-att_prop_i(2,95,'EmptyAsNull','Yes',d).
-att_prop_i(2,95,idBasedOn,'',d).
-att_prop_i(2,95,'ATT_INITIAL_VALUE','',d).
-att_prop_i(2,95,'DB_NLS_SUPPORT','No',d).
-att_prop_i(2,95,'AttRegEx','',d).
-att_prop_i(2,95,'AttValidationFailedMsg','',d).
-att_prop_i(2,95,'FullName',categoriasusuario,v).
+att_prop_i(2,97,'ExternalName',categoriasfecultact,d).
+att_prop_i(2,97,'ExternalNamespace','Condufef_v1',d).
+att_prop_i(2,97,'EmptyAsNull','Yes',d).
+att_prop_i(2,97,idBasedOn,'',d).
+att_prop_i(2,97,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,97,'AttRegEx','',d).
+att_prop_i(2,97,'AttValidationFailedMsg','',d).
+att_prop_i(2,97,idDATEFORMAT,idDATEFORMAT_LONG,v).
+att_prop_i(2,97,idHOURFORMAT,idHOURFORMAT_HOURMINSEC,v).
+att_prop_i(2,97,'FullName',categoriasfecultact,v).
  
  
 tbl_att_prop_i(2,5,14,'AllowNulls',n).

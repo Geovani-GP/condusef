@@ -2,9 +2,9 @@
                File: estatusarticulo
         Description: estatusarticulo
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 12/30/2021 22:8:51.22
+       Generated on: 1/22/2022 13:27:12.51
        Program type: Callable routine
-          Main DBMS: sqlserver
+          Main DBMS: postgresql
 */
 using System;
 using System.Collections;
@@ -14,7 +14,7 @@ using GeneXus.Application;
 using GeneXus.Metadata;
 using GeneXus.Cryptography;
 using System.Data;
-using System.Data.SqlClient;
+using NpgsqlTypes;
 using GeneXus.Data;
 using com.genexus;
 using GeneXus.Data.ADO;
@@ -747,7 +747,7 @@ namespace GeneXus.Programs {
 
       protected void ZM077( short GX_JID )
       {
-         if ( ( GX_JID == 3 ) || ( GX_JID == 0 ) )
+         if ( ( GX_JID == 1 ) || ( GX_JID == 0 ) )
          {
             if ( StringUtil.StrCmp(Gx_mode, "INS") != 0 )
             {
@@ -770,7 +770,7 @@ namespace GeneXus.Programs {
                Z60estatusarticulofecultact = A60estatusarticulofecultact;
             }
          }
-         if ( GX_JID == -3 )
+         if ( GX_JID == -1 )
          {
             Z12estatusarticuloid = A12estatusarticuloid;
             Z54estatusarticulodsc = A54estatusarticulodsc;
@@ -839,7 +839,7 @@ namespace GeneXus.Programs {
             A60estatusarticulofecultact = T00074_A60estatusarticulofecultact[0];
             context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A60estatusarticulofecultact", context.localUtil.TToC( A60estatusarticulofecultact, 10, 8, 0, 3, "/", ":", " "));
             n60estatusarticulofecultact = T00074_n60estatusarticulofecultact[0];
-            ZM077( -3) ;
+            ZM077( -1) ;
          }
          pr_default.close(2);
          OnLoadActions077( ) ;
@@ -853,20 +853,6 @@ namespace GeneXus.Programs {
       {
          Gx_BScreen = 1;
          standaloneModal( ) ;
-         if ( ! ( (DateTime.MinValue==A59estatusarticulofecreg) || ( A59estatusarticulofecreg >= context.localUtil.YMDHMSToT( 1753, 1, 1, 0, 0, 0) ) ) )
-         {
-            GX_msglist.addItem("Campo estatusarticulofecreg fuera de rango", "OutOfRange", 1, "ESTATUSARTICULOFECREG");
-            AnyError = 1;
-            GX_FocusControl = edtestatusarticulofecreg_Internalname;
-            context.httpAjaxContext.ajax_rsp_assign_attri("", false, "GX_FocusControl", GX_FocusControl);
-         }
-         if ( ! ( (DateTime.MinValue==A60estatusarticulofecultact) || ( A60estatusarticulofecultact >= context.localUtil.YMDHMSToT( 1753, 1, 1, 0, 0, 0) ) ) )
-         {
-            GX_msglist.addItem("Campo estatusarticulofecultact fuera de rango", "OutOfRange", 1, "ESTATUSARTICULOFECULTACT");
-            AnyError = 1;
-            GX_FocusControl = edtestatusarticulofecultact_Internalname;
-            context.httpAjaxContext.ajax_rsp_assign_attri("", false, "GX_FocusControl", GX_FocusControl);
-         }
       }
 
       protected void CloseExtendedTableCursors077( )
@@ -898,7 +884,7 @@ namespace GeneXus.Programs {
          pr_default.execute(1, new Object[] {A12estatusarticuloid});
          if ( (pr_default.getStatus(1) != 101) )
          {
-            ZM077( 3) ;
+            ZM077( 1) ;
             RcdFound7 = 1;
             A12estatusarticuloid = T00073_A12estatusarticuloid[0];
             context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A12estatusarticuloid", StringUtil.LTrim( StringUtil.Str( (decimal)(A12estatusarticuloid), 18, 0)));
@@ -1256,7 +1242,7 @@ namespace GeneXus.Programs {
             pr_default.execute(0, new Object[] {A12estatusarticuloid});
             if ( (pr_default.getStatus(0) == 103) )
             {
-               GX_msglist.addItem(context.GetMessage( "GXM_lock", new   object[]  {"estatusarticulo"}), "RecordIsLocked", 1, "");
+               GX_msglist.addItem(context.GetMessage( "GXM_lock", new   object[]  {"ESTATUSARTICULO"}), "RecordIsLocked", 1, "");
                AnyError = 1;
                return  ;
             }
@@ -1309,7 +1295,7 @@ namespace GeneXus.Programs {
                   GXUtil.WriteLogRaw("Old: ",Z60estatusarticulofecultact);
                   GXUtil.WriteLogRaw("Current: ",T00072_A60estatusarticulofecultact[0]);
                }
-               GX_msglist.addItem(context.GetMessage( "GXM_waschg", new   object[]  {"estatusarticulo"}), "RecordWasChanged", 1, "");
+               GX_msglist.addItem(context.GetMessage( "GXM_waschg", new   object[]  {"ESTATUSARTICULO"}), "RecordWasChanged", 1, "");
                AnyError = 1;
                return  ;
             }
@@ -1338,7 +1324,7 @@ namespace GeneXus.Programs {
                      /* Using cursor T00078 */
                      pr_default.execute(6, new Object[] {A12estatusarticuloid, n54estatusarticulodsc, A54estatusarticulodsc, n55estatusarticulodescuso, A55estatusarticulodescuso, n56estatusarticuloaplicamov, A56estatusarticuloaplicamov, n57estatusarticulousotabla, A57estatusarticulousotabla, n58estatusarticulousuario, A58estatusarticulousuario, n59estatusarticulofecreg, A59estatusarticulofecreg, n60estatusarticulofecultact, A60estatusarticulofecultact});
                      pr_default.close(6);
-                     dsDefault.SmartCacheProvider.SetUpdated("estatusarticulo") ;
+                     dsDefault.SmartCacheProvider.SetUpdated("ESTATUSARTICULO") ;
                      if ( (pr_default.getStatus(6) == 1) )
                      {
                         GX_msglist.addItem(context.GetMessage( "GXM_noupdate", ""), "DuplicatePrimaryKey", 1, "");
@@ -1393,10 +1379,10 @@ namespace GeneXus.Programs {
                      /* Using cursor T00079 */
                      pr_default.execute(7, new Object[] {n54estatusarticulodsc, A54estatusarticulodsc, n55estatusarticulodescuso, A55estatusarticulodescuso, n56estatusarticuloaplicamov, A56estatusarticuloaplicamov, n57estatusarticulousotabla, A57estatusarticulousotabla, n58estatusarticulousuario, A58estatusarticulousuario, n59estatusarticulofecreg, A59estatusarticulofecreg, n60estatusarticulofecultact, A60estatusarticulofecultact, A12estatusarticuloid});
                      pr_default.close(7);
-                     dsDefault.SmartCacheProvider.SetUpdated("estatusarticulo") ;
+                     dsDefault.SmartCacheProvider.SetUpdated("ESTATUSARTICULO") ;
                      if ( (pr_default.getStatus(7) == 103) )
                      {
-                        GX_msglist.addItem(context.GetMessage( "GXM_lock", new   object[]  {"estatusarticulo"}), "RecordIsLocked", 1, "");
+                        GX_msglist.addItem(context.GetMessage( "GXM_lock", new   object[]  {"ESTATUSARTICULO"}), "RecordIsLocked", 1, "");
                         AnyError = 1;
                      }
                      DeferredUpdate077( ) ;
@@ -1450,7 +1436,7 @@ namespace GeneXus.Programs {
                   /* Using cursor T000710 */
                   pr_default.execute(8, new Object[] {A12estatusarticuloid});
                   pr_default.close(8);
-                  dsDefault.SmartCacheProvider.SetUpdated("estatusarticulo") ;
+                  dsDefault.SmartCacheProvider.SetUpdated("ESTATUSARTICULO") ;
                   if ( AnyError == 0 )
                   {
                      /* Start of After( delete) rules */
@@ -1508,7 +1494,6 @@ namespace GeneXus.Programs {
          }
          if ( AnyError == 0 )
          {
-            pr_default.close(1);
             context.CommitDataStores( "estatusarticulo");
             if ( AnyError == 0 )
             {
@@ -1520,7 +1505,6 @@ namespace GeneXus.Programs {
          }
          else
          {
-            pr_default.close(1);
             context.RollbackDataStores( "estatusarticulo");
          }
          IsModified = 0;
@@ -1648,7 +1632,7 @@ namespace GeneXus.Programs {
          context.AddJavascriptSource("jquery.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxtimezone.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxgral.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("gxcfg.js", "?202112302285192");
+         context.AddJavascriptSource("gxcfg.js", "?202212213271348");
          if ( context.isSpaRequest( ) )
          {
             enableOutput();
@@ -1823,12 +1807,12 @@ namespace GeneXus.Programs {
 
       protected void define_styles( )
       {
-         AddStyleSheetFile("calendar-system.css", "?11323129");
-         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?2284430");
+         AddStyleSheetFile("calendar-system.css", "?13205289");
+         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?13264988");
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?202112302285197");
+            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?202212213271356");
             idxLst = (int)(idxLst+1);
          }
          /* End function define_styles */
@@ -1838,7 +1822,7 @@ namespace GeneXus.Programs {
       {
          context.AddJavascriptSource("messages.spa.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxdec.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("estatusarticulo.js", "?202112302285197");
+         context.AddJavascriptSource("estatusarticulo.js", "?202212213271356");
          /* End function include_jscripts */
       }
 
@@ -2372,68 +2356,68 @@ namespace GeneXus.Programs {
        {
           Object[] prmT00074 ;
           prmT00074 = new Object[] {
-          new Object[] {"@estatusarticuloid",SqlDbType.Decimal,18,0}
+          new Object[] {"estatusarticuloid",NpgsqlDbType.Real,18,0}
           } ;
           Object[] prmT00075 ;
           prmT00075 = new Object[] {
-          new Object[] {"@estatusarticuloid",SqlDbType.Decimal,18,0}
+          new Object[] {"estatusarticuloid",NpgsqlDbType.Real,18,0}
           } ;
           Object[] prmT00073 ;
           prmT00073 = new Object[] {
-          new Object[] {"@estatusarticuloid",SqlDbType.Decimal,18,0}
+          new Object[] {"estatusarticuloid",NpgsqlDbType.Real,18,0}
           } ;
           Object[] prmT00076 ;
           prmT00076 = new Object[] {
-          new Object[] {"@estatusarticuloid",SqlDbType.Decimal,18,0}
+          new Object[] {"estatusarticuloid",NpgsqlDbType.Real,18,0}
           } ;
           Object[] prmT00077 ;
           prmT00077 = new Object[] {
-          new Object[] {"@estatusarticuloid",SqlDbType.Decimal,18,0}
+          new Object[] {"estatusarticuloid",NpgsqlDbType.Real,18,0}
           } ;
           Object[] prmT00072 ;
           prmT00072 = new Object[] {
-          new Object[] {"@estatusarticuloid",SqlDbType.Decimal,18,0}
+          new Object[] {"estatusarticuloid",NpgsqlDbType.Real,18,0}
           } ;
           Object[] prmT00078 ;
           prmT00078 = new Object[] {
-          new Object[] {"@estatusarticuloid",SqlDbType.Decimal,18,0} ,
-          new Object[] {"@estatusarticulodsc",SqlDbType.VarChar,100,0} ,
-          new Object[] {"@estatusarticulodescuso",SqlDbType.VarChar,100,0} ,
-          new Object[] {"@estatusarticuloaplicamov",SqlDbType.Int,9,0} ,
-          new Object[] {"@estatusarticulousotabla",SqlDbType.VarChar,50,0} ,
-          new Object[] {"@estatusarticulousuario",SqlDbType.VarChar,15,0} ,
-          new Object[] {"@estatusarticulofecreg",SqlDbType.DateTime,10,8} ,
-          new Object[] {"@estatusarticulofecultact",SqlDbType.DateTime,10,8}
+          new Object[] {"estatusarticuloid",NpgsqlDbType.Real,18,0} ,
+          new Object[] {"estatusarticulodsc",NpgsqlDbType.Varchar,100,0} ,
+          new Object[] {"estatusarticulodescuso",NpgsqlDbType.Varchar,100,0} ,
+          new Object[] {"estatusarticuloaplicamov",NpgsqlDbType.Integer,9,0} ,
+          new Object[] {"estatusarticulousotabla",NpgsqlDbType.Varchar,50,0} ,
+          new Object[] {"estatusarticulousuario",NpgsqlDbType.Varchar,15,0} ,
+          new Object[] {"estatusarticulofecreg",NpgsqlDbType.Timestamp,10,8} ,
+          new Object[] {"estatusarticulofecultact",NpgsqlDbType.Timestamp,10,8}
           } ;
           Object[] prmT00079 ;
           prmT00079 = new Object[] {
-          new Object[] {"@estatusarticulodsc",SqlDbType.VarChar,100,0} ,
-          new Object[] {"@estatusarticulodescuso",SqlDbType.VarChar,100,0} ,
-          new Object[] {"@estatusarticuloaplicamov",SqlDbType.Int,9,0} ,
-          new Object[] {"@estatusarticulousotabla",SqlDbType.VarChar,50,0} ,
-          new Object[] {"@estatusarticulousuario",SqlDbType.VarChar,15,0} ,
-          new Object[] {"@estatusarticulofecreg",SqlDbType.DateTime,10,8} ,
-          new Object[] {"@estatusarticulofecultact",SqlDbType.DateTime,10,8} ,
-          new Object[] {"@estatusarticuloid",SqlDbType.Decimal,18,0}
+          new Object[] {"estatusarticulodsc",NpgsqlDbType.Varchar,100,0} ,
+          new Object[] {"estatusarticulodescuso",NpgsqlDbType.Varchar,100,0} ,
+          new Object[] {"estatusarticuloaplicamov",NpgsqlDbType.Integer,9,0} ,
+          new Object[] {"estatusarticulousotabla",NpgsqlDbType.Varchar,50,0} ,
+          new Object[] {"estatusarticulousuario",NpgsqlDbType.Varchar,15,0} ,
+          new Object[] {"estatusarticulofecreg",NpgsqlDbType.Timestamp,10,8} ,
+          new Object[] {"estatusarticulofecultact",NpgsqlDbType.Timestamp,10,8} ,
+          new Object[] {"estatusarticuloid",NpgsqlDbType.Real,18,0}
           } ;
           Object[] prmT000710 ;
           prmT000710 = new Object[] {
-          new Object[] {"@estatusarticuloid",SqlDbType.Decimal,18,0}
+          new Object[] {"estatusarticuloid",NpgsqlDbType.Real,18,0}
           } ;
           Object[] prmT000711 ;
           prmT000711 = new Object[] {
           } ;
           def= new CursorDef[] {
-              new CursorDef("T00072", "SELECT [estatusarticuloid], [estatusarticulodsc], [estatusarticulodescuso], [estatusarticuloaplicamov], [estatusarticulousotabla], [estatusarticulousuario], [estatusarticulofecreg], [estatusarticulofecultact] FROM [estatusarticulo] WITH (UPDLOCK) WHERE [estatusarticuloid] = @estatusarticuloid ",true, GxErrorMask.GX_NOMASK, false, this,prmT00072,1,0,true,false )
-             ,new CursorDef("T00073", "SELECT [estatusarticuloid], [estatusarticulodsc], [estatusarticulodescuso], [estatusarticuloaplicamov], [estatusarticulousotabla], [estatusarticulousuario], [estatusarticulofecreg], [estatusarticulofecultact] FROM [estatusarticulo] WITH (NOLOCK) WHERE [estatusarticuloid] = @estatusarticuloid ",true, GxErrorMask.GX_NOMASK, false, this,prmT00073,1,0,true,false )
-             ,new CursorDef("T00074", "SELECT TM1.[estatusarticuloid], TM1.[estatusarticulodsc], TM1.[estatusarticulodescuso], TM1.[estatusarticuloaplicamov], TM1.[estatusarticulousotabla], TM1.[estatusarticulousuario], TM1.[estatusarticulofecreg], TM1.[estatusarticulofecultact] FROM [estatusarticulo] TM1 WITH (NOLOCK) WHERE TM1.[estatusarticuloid] = @estatusarticuloid ORDER BY TM1.[estatusarticuloid]  OPTION (FAST 100)",true, GxErrorMask.GX_NOMASK, false, this,prmT00074,100,0,true,false )
-             ,new CursorDef("T00075", "SELECT [estatusarticuloid] FROM [estatusarticulo] WITH (NOLOCK) WHERE [estatusarticuloid] = @estatusarticuloid  OPTION (FAST 1)",true, GxErrorMask.GX_NOMASK, false, this,prmT00075,1,0,true,false )
-             ,new CursorDef("T00076", "SELECT TOP 1 [estatusarticuloid] FROM [estatusarticulo] WITH (NOLOCK) WHERE ( [estatusarticuloid] > @estatusarticuloid) ORDER BY [estatusarticuloid]  OPTION (FAST 1)",true, GxErrorMask.GX_NOMASK, false, this,prmT00076,1,0,true,true )
-             ,new CursorDef("T00077", "SELECT TOP 1 [estatusarticuloid] FROM [estatusarticulo] WITH (NOLOCK) WHERE ( [estatusarticuloid] < @estatusarticuloid) ORDER BY [estatusarticuloid] DESC  OPTION (FAST 1)",true, GxErrorMask.GX_NOMASK, false, this,prmT00077,1,0,true,true )
-             ,new CursorDef("T00078", "INSERT INTO [estatusarticulo]([estatusarticuloid], [estatusarticulodsc], [estatusarticulodescuso], [estatusarticuloaplicamov], [estatusarticulousotabla], [estatusarticulousuario], [estatusarticulofecreg], [estatusarticulofecultact]) VALUES(@estatusarticuloid, @estatusarticulodsc, @estatusarticulodescuso, @estatusarticuloaplicamov, @estatusarticulousotabla, @estatusarticulousuario, @estatusarticulofecreg, @estatusarticulofecultact)", GxErrorMask.GX_NOMASK,prmT00078)
-             ,new CursorDef("T00079", "UPDATE [estatusarticulo] SET [estatusarticulodsc]=@estatusarticulodsc, [estatusarticulodescuso]=@estatusarticulodescuso, [estatusarticuloaplicamov]=@estatusarticuloaplicamov, [estatusarticulousotabla]=@estatusarticulousotabla, [estatusarticulousuario]=@estatusarticulousuario, [estatusarticulofecreg]=@estatusarticulofecreg, [estatusarticulofecultact]=@estatusarticulofecultact  WHERE [estatusarticuloid] = @estatusarticuloid", GxErrorMask.GX_NOMASK,prmT00079)
-             ,new CursorDef("T000710", "DELETE FROM [estatusarticulo]  WHERE [estatusarticuloid] = @estatusarticuloid", GxErrorMask.GX_NOMASK,prmT000710)
-             ,new CursorDef("T000711", "SELECT [estatusarticuloid] FROM [estatusarticulo] WITH (NOLOCK) ORDER BY [estatusarticuloid]  OPTION (FAST 100)",true, GxErrorMask.GX_NOMASK, false, this,prmT000711,100,0,true,false )
+              new CursorDef("T00072", "SELECT estatusarticuloid, estatusarticulodsc, estatusarticulodescuso, estatusarticuloaplicamov, estatusarticulousotabla, estatusarticulousuario, estatusarticulofecreg, estatusarticulofecultact FROM public.estatusarticulo WHERE estatusarticuloid = :estatusarticuloid  FOR UPDATE OF estatusarticulo NOWAIT",true, GxErrorMask.GX_NOMASK, false, this,prmT00072,1,0,true,false )
+             ,new CursorDef("T00073", "SELECT estatusarticuloid, estatusarticulodsc, estatusarticulodescuso, estatusarticuloaplicamov, estatusarticulousotabla, estatusarticulousuario, estatusarticulofecreg, estatusarticulofecultact FROM public.estatusarticulo WHERE estatusarticuloid = :estatusarticuloid ",true, GxErrorMask.GX_NOMASK, false, this,prmT00073,1,0,true,false )
+             ,new CursorDef("T00074", "SELECT TM1.estatusarticuloid, TM1.estatusarticulodsc, TM1.estatusarticulodescuso, TM1.estatusarticuloaplicamov, TM1.estatusarticulousotabla, TM1.estatusarticulousuario, TM1.estatusarticulofecreg, TM1.estatusarticulofecultact FROM public.estatusarticulo TM1 WHERE TM1.estatusarticuloid = :estatusarticuloid ORDER BY TM1.estatusarticuloid ",true, GxErrorMask.GX_NOMASK, false, this,prmT00074,100,0,true,false )
+             ,new CursorDef("T00075", "SELECT estatusarticuloid FROM public.estatusarticulo WHERE estatusarticuloid = :estatusarticuloid ",true, GxErrorMask.GX_NOMASK, false, this,prmT00075,1,0,true,false )
+             ,new CursorDef("T00076", "SELECT estatusarticuloid FROM public.estatusarticulo WHERE ( estatusarticuloid > :estatusarticuloid) ORDER BY estatusarticuloid ",true, GxErrorMask.GX_NOMASK, false, this,prmT00076,1,0,true,true )
+             ,new CursorDef("T00077", "SELECT estatusarticuloid FROM public.estatusarticulo WHERE ( estatusarticuloid < :estatusarticuloid) ORDER BY estatusarticuloid DESC ",true, GxErrorMask.GX_NOMASK, false, this,prmT00077,1,0,true,true )
+             ,new CursorDef("T00078", "SAVEPOINT gxupdate;INSERT INTO public.estatusarticulo(estatusarticuloid, estatusarticulodsc, estatusarticulodescuso, estatusarticuloaplicamov, estatusarticulousotabla, estatusarticulousuario, estatusarticulofecreg, estatusarticulofecultact) VALUES(:estatusarticuloid, :estatusarticulodsc, :estatusarticulodescuso, :estatusarticuloaplicamov, :estatusarticulousotabla, :estatusarticulousuario, :estatusarticulofecreg, :estatusarticulofecultact);RELEASE SAVEPOINT gxupdate", GxErrorMask.GX_ROLLBACKSAVEPOINT,prmT00078)
+             ,new CursorDef("T00079", "SAVEPOINT gxupdate;UPDATE public.estatusarticulo SET estatusarticulodsc=:estatusarticulodsc, estatusarticulodescuso=:estatusarticulodescuso, estatusarticuloaplicamov=:estatusarticuloaplicamov, estatusarticulousotabla=:estatusarticulousotabla, estatusarticulousuario=:estatusarticulousuario, estatusarticulofecreg=:estatusarticulofecreg, estatusarticulofecultact=:estatusarticulofecultact  WHERE estatusarticuloid = :estatusarticuloid;RELEASE SAVEPOINT gxupdate", GxErrorMask.GX_ROLLBACKSAVEPOINT | GxErrorMask.GX_NOMASK,prmT00079)
+             ,new CursorDef("T000710", "SAVEPOINT gxupdate;DELETE FROM public.estatusarticulo  WHERE estatusarticuloid = :estatusarticuloid;RELEASE SAVEPOINT gxupdate", GxErrorMask.GX_ROLLBACKSAVEPOINT | GxErrorMask.GX_NOMASK,prmT000710)
+             ,new CursorDef("T000711", "SELECT estatusarticuloid FROM public.estatusarticulo ORDER BY estatusarticuloid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000711,100,0,true,false )
           };
        }
     }

@@ -53,25 +53,11 @@ repeat_i(2,[ 1,2,[ 'Linkselection',10,120,122,124,125 ],[] ]).
  
  
 rule_i(0,datastore(1,'DS_LAST_CHANGE','')).
-rule_i(0,datastore(1,'LOCK_RETRY','10')).
-rule_i(0,datastore(1,'WAIT_RECORD','0')).
-rule_i(0,datastore(1,'SQLSERVER_VERSION','9')).
+rule_i(0,datastore(1,'POSTGRESQL_VERSION','8_3')).
 rule_i(0,datastore(1,'COMMENT_ON','No')).
-rule_i(0,datastore(1,'DFT_TMP_TBLSPACE','')).
-rule_i(0,datastore(1,'DFT_IDX_TBLSPACE','')).
-rule_i(0,datastore(1,'DFT_TBL_TBLSPACE','')).
 rule_i(0,datastore(1,'DCL_REF_INT_DB','Yes')).
 rule_i(0,datastore(1,'PRIMARY_KEY_TYPE','PK')).
 rule_i(0,datastore(1,'CS_SCHEMA','')).
-rule_i(0,datastore(1,'SORT_ATTRIBUTES','Yes')).
-rule_i(0,datastore(1,'JRN400','QSQJRN')).
-rule_i(0,datastore(1,'CREATE_SAVF','Yes')).
-rule_i(0,datastore(1,'PGMLIB','')).
-rule_i(0,datastore(1,'DTALIB','')).
-rule_i(0,datastore(1,'CC_USER_PASS','')).
-rule_i(0,datastore(1,'CC_USER_ID','')).
-rule_i(0,datastore(1,'CC_SERVER','')).
-rule_i(0,datastore(1,'CC_DBNAME','')).
 rule_i(0,datastore(1,'RecycleRWMin','30')).
 rule_i(0,datastore(1,'RecycleRWType','1')).
 rule_i(0,datastore(1,'RecycleRW','-1')).
@@ -83,26 +69,25 @@ rule_i(0,datastore(1,'CS_RPCPGML','')).
 rule_i(0,datastore(1,'JDBC_DATASOURCE','')).
 rule_i(0,datastore(1,'USE_JDBC_DATASOURCE','0')).
 rule_i(0,datastore(1,'DS_DBMS_ADDINFO','')).
-rule_i(0,datastore(1,'USER_PASSWORD','')).
-rule_i(0,datastore(1,'USER_ID','')).
-rule_i(0,datastore(1,'TRUSTED_CONNECTION','Yes')).
+rule_i(0,datastore(1,'USER_PASSWORD',󻢸蘇�2�5炭)).
+rule_i(0,datastore(1,'USER_ID',postgres)).
 rule_i(0,datastore(1,'CS_CONNECT','First')).
-rule_i(0,datastore(1,'DBMS_PORT','')).
-rule_i(0,datastore(1,'CS_SERVER','JOSBUENO-MX\DELGADO')).
-rule_i(0,datastore(1,'CS_DBNAME','Dar_CONDUCEFDB')).
+rule_i(0,datastore(1,'DBMS_PORT','5432')).
+rule_i(0,datastore(1,'CS_SERVER',localhost)).
+rule_i(0,datastore(1,'CS_DBNAME',postgres)).
 rule_i(0,datastore(1,'CS_FLEDSNAME','')).
-rule_i(0,datastore(1,'CS_DRVNAME','sql server')).
+rule_i(0,datastore(1,'CS_DRVNAME','')).
 rule_i(0,datastore(1,'CS_DSNAME','')).
 rule_i(0,datastore(1,'DB_URL','')).
 rule_i(0,datastore(1,'JDBC_CUSTOM_URL','0')).
 rule_i(0,datastore(1,'JDBC_CUSTOM_DRIVER','')).
-rule_i(0,datastore(1,'JDBC_DRIVER','net.sourceforge.jtds.jdbc.Driver')).
+rule_i(0,datastore(1,'JDBC_DRIVER','org.postgresql.Driver')).
 rule_i(0,datastore(1,'CONNECT_METHOD','OPSYS')).
 rule_i(0,datastore(1,'ACCESS_TECHNO','ADONET')).
 rule_i(0,datastore(1,'MAIN_DS','-1')).
 rule_i(0,datastore(1,'REORG_GEN','8')).
 rule_i(0,datastore(1,'HelpKeyword','20')).
-rule_i(0,datastore(1,'DBMS',12)).
+rule_i(0,datastore(1,'DBMS',15)).
 rule_i(0,datastore(1,'NAME','Default')).
 rule_i(0,prop(idNULLS_BEHAVIOR,idNB_Current)).
 rule_i(0,prop('ObjectVisibility','Public')).
@@ -148,6 +133,10 @@ rule_i(0,maingen(15)).
 rule_i(0,parm([ 'Porigenid' ],[])).
 rule_i(0,parmio([ [ 'Porigenid',out ] ])).
 rule_i(0,order([ 10 ])).
+rule_i(0,file(16,'ORIGEN',[ 10,120,121,122,123,124,125 ])).
+rule_i(0,loc([ 16 ],'ORIGEN','','LAN')).
+rule_i(0,index(16,'ORIGEN_PKEY',u,[ 10 ])).
+rule_i(0,loc([ 16,'ORIGEN_PKEY' ],origen_pkey,'','LAN')).
 rule_i(0,p(0,0,fv,8,[ intname,'ORIGEN' ])).
 rule_i(0,p(0,0,fv,8,[ table,16 ])).
 rule_i(0,p(0,15,fv,8,[])).
@@ -160,14 +149,10 @@ rule_i(0,p(0,15,fvix,[ 8,7 ],[ 'NAME',origen_pkey ])).
 rule_i(0,p(0,15,fvix,[ 8,7 ],[ 'LOC','' ])).
 rule_i(0,p(0,15,fvix,[ 8,7 ],[ 'SCHEMA',public ])).
 rule_i(0,p(0,15,fvix,[ 8,7 ],[ 'EXTNAM','YES' ])).
-rule_i(2,rule([ a(1,msg([ t('"Campo origenfecreg fuera de rango"',3) ],[ t('OutOfRange',3) ])) ],[ t('NOT',8),t('(',0),t('null(',1),t('Corigenfecreg',2),t(')',4),t('.OR.',9),t('Corigenfecreg',2),t(>=,10),t('ymdhmstot(',1),t('1753',3),t(',',7),t('01',3),t(',',7),t('01',3),t(',',7),t('00',3),t(',',7),t('00',3),t(',',7),t('00',3),t(')',4),t(')',4) ],[ insert,update ],[ 'Corigenfecreg' ])).
-rule_i(2,rule([ a(1,msg([ t('"Campo origenfecultact fuera de rango"',3) ],[ t('OutOfRange',3) ])) ],[ t('NOT',8),t('(',0),t('null(',1),t('Corigenfecultact',2),t(')',4),t('.OR.',9),t('Corigenfecultact',2),t(>=,10),t('ymdhmstot(',1),t('1753',3),t(',',7),t('01',3),t(',',7),t('01',3),t(',',7),t('00',3),t(',',7),t('00',3),t(',',7),t('00',3),t(')',4),t(')',4) ],[ insert,update ],[ 'Corigenfecultact' ])).
 rule_i(0,rule([ a(22,[ '''Toggle''','''Toggle''','' ]) ],[],[],[])).
  
 a_i(1,1,f,'Err',[],[ [],[ t('0',3) ] ]).
 a_i(2,2,t,16,[],[ [],'ORIGEN_PKEY',[] ]).
-a_i(3,2,b,0,[],[ [],[ a(1,msg([ t('"Campo origenfecreg fuera de rango"',3) ],[ t('OutOfRange',3) ])) ],[ t('NOT',8),t('(',0),t('null(',1),t('Corigenfecreg',2),t(')',4),t('.OR.',9),t('Corigenfecreg',2),t(>=,10),t('ymdhmstot(',1),t('1753',3),t(',',7),t('01',3),t(',',7),t('01',3),t(',',7),t('00',3),t(',',7),t('00',3),t(',',7),t('00',3),t(')',4),t(')',4) ] ]).
-a_i(4,2,b,0,[],[ [],[ a(1,msg([ t('"Campo origenfecultact fuera de rango"',3) ],[ t('OutOfRange',3) ])) ],[ t('NOT',8),t('(',0),t('null(',1),t('Corigenfecultact',2),t(')',4),t('.OR.',9),t('Corigenfecultact',2),t(>=,10),t('ymdhmstot(',1),t('1753',3),t(',',7),t('01',3),t(',',7),t('01',3),t(',',7),t('00',3),t(',',7),t('00',3),t(',',7),t('00',3),t(')',4),t(')',4) ] ]).
  
 v_i(f,i,1,[]).
 v_i(f,o,1,'Err').
@@ -179,18 +164,14 @@ v_i(t,o,2,124).
 v_i(t,o,2,122).
 v_i(t,o,2,120).
 v_i(t,o,2,10).
-v_i(b,i,3,'Corigenfecreg').
-v_i(b,o,3,[]).
-v_i(b,i,4,'Corigenfecultact').
-v_i(b,o,4,[]).
  
  
  
  
  
  
-attri_i(121,[ origendsclarga,svchar,100,0,'',0,origendsclarga,'',0 ]).
 attri_i(123,[ origentotal,svchar,50,0,'',0,origentotal,'',0 ]).
+attri_i(121,[ origendsclarga,svchar,100,0,'',0,origendsclarga,'',0 ]).
 attri_i(125,[ origenfecultact,dtime,10,8,'99/99/9999 99:99:99',0,origenfecultact,'',0 ]).
 attri_i(124,[ origenfecreg,dtime,10,8,'99/99/9999 99:99:99',0,origenfecreg,'',0 ]).
 attri_i(122,[ origenusuario,svchar,15,0,'',0,origenusuario,'',0 ]).
@@ -210,9 +191,9 @@ attri_i('Corigendscorta',[ corigendscorta,svchar,50,0,'',0,origendscorta,'',7 ])
 attri_i('Corigenid',[ corigenid,int,18,0,'ZZZZZZZZZZZZZZZZZ9',0,origenid,'',6 ]).
 attri_i('Linkselection',[ 'LinkSelection',bits,1024,0,'',0,'Link Selection','',5 ]).
  
-table_i(16,[ origen,[ 10,120,121,122,123,124,125 ],origen,origen ]).
+table_i(16,[ 'ORIGEN',[ 10,120,121,122,123,124,125 ],origen,origen ]).
  
-index_i(16,[ 'ORIGEN_PKEY',u,[ 10 ],origen_pkey ]).
+index_i(16,[ 'ORIGEN_PKEY',u,[ 10 ],'ORIGEN_PKEY' ]).
  
  
  
@@ -233,6 +214,14 @@ start_i(2,0,0,[ [ [ 10,23,'Corigenid',>= ] ],many ]).
  
  
  
+map_i(16,i,'ORIGEN_PKEY',[ 'ORIGEN_PKEY' ]).
+map_i(16,a,125,[ origenfecultact ]).
+map_i(16,a,124,[ origenfecreg ]).
+map_i(16,a,123,[ origentotal ]).
+map_i(16,a,122,[ origenusuario ]).
+map_i(16,a,121,[ origendsclarga ]).
+map_i(16,a,120,[ origendscorta ]).
+map_i(16,a,10,[ origenid ]).
  
  
  
@@ -1584,15 +1573,6 @@ att_prop_i(2,125,'AttValidationFailedMsg','',d).
 att_prop_i(2,125,idDATEFORMAT,idDATEFORMAT_LONG,v).
 att_prop_i(2,125,idHOURFORMAT,idHOURFORMAT_HOURMINSEC,v).
 att_prop_i(2,125,'FullName',origenfecultact,v).
-att_prop_i(2,123,'ExternalName',origentotal,d).
-att_prop_i(2,123,'ExternalNamespace','Condufef_v1',d).
-att_prop_i(2,123,'EmptyAsNull','Yes',d).
-att_prop_i(2,123,idBasedOn,'',d).
-att_prop_i(2,123,'ATT_INITIAL_VALUE','',d).
-att_prop_i(2,123,'DB_NLS_SUPPORT','No',d).
-att_prop_i(2,123,'AttRegEx','',d).
-att_prop_i(2,123,'AttValidationFailedMsg','',d).
-att_prop_i(2,123,'FullName',origentotal,v).
 att_prop_i(2,121,'ExternalName',origendsclarga,d).
 att_prop_i(2,121,'ExternalNamespace','Condufef_v1',d).
 att_prop_i(2,121,'EmptyAsNull','Yes',d).
@@ -1602,6 +1582,15 @@ att_prop_i(2,121,'DB_NLS_SUPPORT','No',d).
 att_prop_i(2,121,'AttRegEx','',d).
 att_prop_i(2,121,'AttValidationFailedMsg','',d).
 att_prop_i(2,121,'FullName',origendsclarga,v).
+att_prop_i(2,123,'ExternalName',origentotal,d).
+att_prop_i(2,123,'ExternalNamespace','Condufef_v1',d).
+att_prop_i(2,123,'EmptyAsNull','Yes',d).
+att_prop_i(2,123,idBasedOn,'',d).
+att_prop_i(2,123,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,123,'DB_NLS_SUPPORT','No',d).
+att_prop_i(2,123,'AttRegEx','',d).
+att_prop_i(2,123,'AttValidationFailedMsg','',d).
+att_prop_i(2,123,'FullName',origentotal,v).
  
  
 tbl_att_prop_i(2,16,10,'AllowNulls',n).

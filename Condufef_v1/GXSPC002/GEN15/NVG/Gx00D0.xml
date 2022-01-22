@@ -65,7 +65,7 @@
 <BaseTable>
 <Table>
 <TableId>13</TableId>
-<TableName>articulosmov</TableName>
+<TableName>ARTÌCULOSMOV</TableName>
 <Description>articulosmov</Description></Table></BaseTable>
 <Order>
 <Attribute>
@@ -209,7 +209,7 @@
 <NavigationTree>
 <Table>
 <TableId>13</TableId>
-<TableName>articulosmov</TableName>
+<TableName>ARTÌCULOSMOV</TableName>
 <Description>articulosmov</Description>
 <RecordsToRead>many</RecordsToRead>
 <KeyAttributes>

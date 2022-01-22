@@ -2,9 +2,9 @@
                File: marcas
         Description: marcas
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 12/30/2021 22:8:52.26
+       Generated on: 1/22/2022 13:27:13.93
        Program type: Callable routine
-          Main DBMS: sqlserver
+          Main DBMS: postgresql
 */
 using System;
 using System.Collections;
@@ -14,7 +14,7 @@ using GeneXus.Application;
 using GeneXus.Metadata;
 using GeneXus.Cryptography;
 using System.Data;
-using System.Data.SqlClient;
+using NpgsqlTypes;
 using GeneXus.Data;
 using com.genexus;
 using GeneXus.Data.ADO;
@@ -673,7 +673,7 @@ namespace GeneXus.Programs {
 
       protected void ZM088( short GX_JID )
       {
-         if ( ( GX_JID == 3 ) || ( GX_JID == 0 ) )
+         if ( ( GX_JID == 1 ) || ( GX_JID == 0 ) )
          {
             if ( StringUtil.StrCmp(Gx_mode, "INS") != 0 )
             {
@@ -690,7 +690,7 @@ namespace GeneXus.Programs {
                Z115marcasfecultact = A115marcasfecultact;
             }
          }
-         if ( GX_JID == -3 )
+         if ( GX_JID == -1 )
          {
             Z24marcasid = A24marcasid;
             Z112marcasdsc = A112marcasdsc;
@@ -747,7 +747,7 @@ namespace GeneXus.Programs {
             A115marcasfecultact = T00084_A115marcasfecultact[0];
             context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A115marcasfecultact", context.localUtil.TToC( A115marcasfecultact, 10, 8, 0, 3, "/", ":", " "));
             n115marcasfecultact = T00084_n115marcasfecultact[0];
-            ZM088( -3) ;
+            ZM088( -1) ;
          }
          pr_default.close(2);
          OnLoadActions088( ) ;
@@ -761,20 +761,6 @@ namespace GeneXus.Programs {
       {
          Gx_BScreen = 1;
          standaloneModal( ) ;
-         if ( ! ( (DateTime.MinValue==A114marcasfecreg) || ( A114marcasfecreg >= context.localUtil.YMDHMSToT( 1753, 1, 1, 0, 0, 0) ) ) )
-         {
-            GX_msglist.addItem("Campo marcasfecreg fuera de rango", "OutOfRange", 1, "MARCASFECREG");
-            AnyError = 1;
-            GX_FocusControl = edtmarcasfecreg_Internalname;
-            context.httpAjaxContext.ajax_rsp_assign_attri("", false, "GX_FocusControl", GX_FocusControl);
-         }
-         if ( ! ( (DateTime.MinValue==A115marcasfecultact) || ( A115marcasfecultact >= context.localUtil.YMDHMSToT( 1753, 1, 1, 0, 0, 0) ) ) )
-         {
-            GX_msglist.addItem("Campo marcasfecultact fuera de rango", "OutOfRange", 1, "MARCASFECULTACT");
-            AnyError = 1;
-            GX_FocusControl = edtmarcasfecultact_Internalname;
-            context.httpAjaxContext.ajax_rsp_assign_attri("", false, "GX_FocusControl", GX_FocusControl);
-         }
       }
 
       protected void CloseExtendedTableCursors088( )
@@ -806,7 +792,7 @@ namespace GeneXus.Programs {
          pr_default.execute(1, new Object[] {A24marcasid});
          if ( (pr_default.getStatus(1) != 101) )
          {
-            ZM088( 3) ;
+            ZM088( 1) ;
             RcdFound8 = 1;
             A24marcasid = T00083_A24marcasid[0];
             context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A24marcasid", StringUtil.LTrim( StringUtil.Str( (decimal)(A24marcasid), 9, 0)));
@@ -1155,7 +1141,7 @@ namespace GeneXus.Programs {
             pr_default.execute(0, new Object[] {A24marcasid});
             if ( (pr_default.getStatus(0) == 103) )
             {
-               GX_msglist.addItem(context.GetMessage( "GXM_lock", new   object[]  {"marcas"}), "RecordIsLocked", 1, "");
+               GX_msglist.addItem(context.GetMessage( "GXM_lock", new   object[]  {"MARCAS"}), "RecordIsLocked", 1, "");
                AnyError = 1;
                return  ;
             }
@@ -1185,7 +1171,7 @@ namespace GeneXus.Programs {
                   GXUtil.WriteLogRaw("Old: ",Z115marcasfecultact);
                   GXUtil.WriteLogRaw("Current: ",T00082_A115marcasfecultact[0]);
                }
-               GX_msglist.addItem(context.GetMessage( "GXM_waschg", new   object[]  {"marcas"}), "RecordWasChanged", 1, "");
+               GX_msglist.addItem(context.GetMessage( "GXM_waschg", new   object[]  {"MARCAS"}), "RecordWasChanged", 1, "");
                AnyError = 1;
                return  ;
             }
@@ -1214,7 +1200,7 @@ namespace GeneXus.Programs {
                      /* Using cursor T00088 */
                      pr_default.execute(6, new Object[] {A24marcasid, n112marcasdsc, A112marcasdsc, n113marcasusuario, A113marcasusuario, n114marcasfecreg, A114marcasfecreg, n115marcasfecultact, A115marcasfecultact});
                      pr_default.close(6);
-                     dsDefault.SmartCacheProvider.SetUpdated("marcas") ;
+                     dsDefault.SmartCacheProvider.SetUpdated("MARCAS") ;
                      if ( (pr_default.getStatus(6) == 1) )
                      {
                         GX_msglist.addItem(context.GetMessage( "GXM_noupdate", ""), "DuplicatePrimaryKey", 1, "");
@@ -1269,10 +1255,10 @@ namespace GeneXus.Programs {
                      /* Using cursor T00089 */
                      pr_default.execute(7, new Object[] {n112marcasdsc, A112marcasdsc, n113marcasusuario, A113marcasusuario, n114marcasfecreg, A114marcasfecreg, n115marcasfecultact, A115marcasfecultact, A24marcasid});
                      pr_default.close(7);
-                     dsDefault.SmartCacheProvider.SetUpdated("marcas") ;
+                     dsDefault.SmartCacheProvider.SetUpdated("MARCAS") ;
                      if ( (pr_default.getStatus(7) == 103) )
                      {
-                        GX_msglist.addItem(context.GetMessage( "GXM_lock", new   object[]  {"marcas"}), "RecordIsLocked", 1, "");
+                        GX_msglist.addItem(context.GetMessage( "GXM_lock", new   object[]  {"MARCAS"}), "RecordIsLocked", 1, "");
                         AnyError = 1;
                      }
                      DeferredUpdate088( ) ;
@@ -1326,7 +1312,7 @@ namespace GeneXus.Programs {
                   /* Using cursor T000810 */
                   pr_default.execute(8, new Object[] {A24marcasid});
                   pr_default.close(8);
-                  dsDefault.SmartCacheProvider.SetUpdated("marcas") ;
+                  dsDefault.SmartCacheProvider.SetUpdated("MARCAS") ;
                   if ( AnyError == 0 )
                   {
                      /* Start of After( delete) rules */
@@ -1384,7 +1370,6 @@ namespace GeneXus.Programs {
          }
          if ( AnyError == 0 )
          {
-            pr_default.close(1);
             context.CommitDataStores( "marcas");
             if ( AnyError == 0 )
             {
@@ -1396,7 +1381,6 @@ namespace GeneXus.Programs {
          }
          else
          {
-            pr_default.close(1);
             context.RollbackDataStores( "marcas");
          }
          IsModified = 0;
@@ -1518,7 +1502,7 @@ namespace GeneXus.Programs {
          context.AddJavascriptSource("jquery.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxtimezone.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxgral.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("gxcfg.js", "?202112302285285");
+         context.AddJavascriptSource("gxcfg.js", "?202212213271466");
          if ( context.isSpaRequest( ) )
          {
             enableOutput();
@@ -1675,12 +1659,12 @@ namespace GeneXus.Programs {
 
       protected void define_styles( )
       {
-         AddStyleSheetFile("calendar-system.css", "?11323129");
-         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?2284430");
+         AddStyleSheetFile("calendar-system.css", "?13205289");
+         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?13264988");
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?202112302285289");
+            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?202212213271471");
             idxLst = (int)(idxLst+1);
          }
          /* End function define_styles */
@@ -1689,7 +1673,7 @@ namespace GeneXus.Programs {
       protected void include_jscripts( )
       {
          context.AddJavascriptSource("messages.spa.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("marcas.js", "?202112302285289");
+         context.AddJavascriptSource("marcas.js", "?202212213271472");
          /* End function include_jscripts */
       }
 
@@ -2128,62 +2112,62 @@ namespace GeneXus.Programs {
        {
           Object[] prmT00084 ;
           prmT00084 = new Object[] {
-          new Object[] {"@marcasid",SqlDbType.Int,9,0}
+          new Object[] {"marcasid",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT00085 ;
           prmT00085 = new Object[] {
-          new Object[] {"@marcasid",SqlDbType.Int,9,0}
+          new Object[] {"marcasid",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT00083 ;
           prmT00083 = new Object[] {
-          new Object[] {"@marcasid",SqlDbType.Int,9,0}
+          new Object[] {"marcasid",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT00086 ;
           prmT00086 = new Object[] {
-          new Object[] {"@marcasid",SqlDbType.Int,9,0}
+          new Object[] {"marcasid",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT00087 ;
           prmT00087 = new Object[] {
-          new Object[] {"@marcasid",SqlDbType.Int,9,0}
+          new Object[] {"marcasid",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT00082 ;
           prmT00082 = new Object[] {
-          new Object[] {"@marcasid",SqlDbType.Int,9,0}
+          new Object[] {"marcasid",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT00088 ;
           prmT00088 = new Object[] {
-          new Object[] {"@marcasid",SqlDbType.Int,9,0} ,
-          new Object[] {"@marcasdsc",SqlDbType.VarChar,100,0} ,
-          new Object[] {"@marcasusuario",SqlDbType.VarChar,15,0} ,
-          new Object[] {"@marcasfecreg",SqlDbType.DateTime,10,8} ,
-          new Object[] {"@marcasfecultact",SqlDbType.DateTime,10,8}
+          new Object[] {"marcasid",NpgsqlDbType.Integer,9,0} ,
+          new Object[] {"marcasdsc",NpgsqlDbType.Varchar,100,0} ,
+          new Object[] {"marcasusuario",NpgsqlDbType.Varchar,15,0} ,
+          new Object[] {"marcasfecreg",NpgsqlDbType.Timestamp,10,8} ,
+          new Object[] {"marcasfecultact",NpgsqlDbType.Timestamp,10,8}
           } ;
           Object[] prmT00089 ;
           prmT00089 = new Object[] {
-          new Object[] {"@marcasdsc",SqlDbType.VarChar,100,0} ,
-          new Object[] {"@marcasusuario",SqlDbType.VarChar,15,0} ,
-          new Object[] {"@marcasfecreg",SqlDbType.DateTime,10,8} ,
-          new Object[] {"@marcasfecultact",SqlDbType.DateTime,10,8} ,
-          new Object[] {"@marcasid",SqlDbType.Int,9,0}
+          new Object[] {"marcasdsc",NpgsqlDbType.Varchar,100,0} ,
+          new Object[] {"marcasusuario",NpgsqlDbType.Varchar,15,0} ,
+          new Object[] {"marcasfecreg",NpgsqlDbType.Timestamp,10,8} ,
+          new Object[] {"marcasfecultact",NpgsqlDbType.Timestamp,10,8} ,
+          new Object[] {"marcasid",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT000810 ;
           prmT000810 = new Object[] {
-          new Object[] {"@marcasid",SqlDbType.Int,9,0}
+          new Object[] {"marcasid",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT000811 ;
           prmT000811 = new Object[] {
           } ;
           def= new CursorDef[] {
-              new CursorDef("T00082", "SELECT [marcasid], [marcasdsc], [marcasusuario], [marcasfecreg], [marcasfecultact] FROM [marcas] WITH (UPDLOCK) WHERE [marcasid] = @marcasid ",true, GxErrorMask.GX_NOMASK, false, this,prmT00082,1,0,true,false )
-             ,new CursorDef("T00083", "SELECT [marcasid], [marcasdsc], [marcasusuario], [marcasfecreg], [marcasfecultact] FROM [marcas] WITH (NOLOCK) WHERE [marcasid] = @marcasid ",true, GxErrorMask.GX_NOMASK, false, this,prmT00083,1,0,true,false )
-             ,new CursorDef("T00084", "SELECT TM1.[marcasid], TM1.[marcasdsc], TM1.[marcasusuario], TM1.[marcasfecreg], TM1.[marcasfecultact] FROM [marcas] TM1 WITH (NOLOCK) WHERE TM1.[marcasid] = @marcasid ORDER BY TM1.[marcasid]  OPTION (FAST 100)",true, GxErrorMask.GX_NOMASK, false, this,prmT00084,100,0,true,false )
-             ,new CursorDef("T00085", "SELECT [marcasid] FROM [marcas] WITH (NOLOCK) WHERE [marcasid] = @marcasid  OPTION (FAST 1)",true, GxErrorMask.GX_NOMASK, false, this,prmT00085,1,0,true,false )
-             ,new CursorDef("T00086", "SELECT TOP 1 [marcasid] FROM [marcas] WITH (NOLOCK) WHERE ( [marcasid] > @marcasid) ORDER BY [marcasid]  OPTION (FAST 1)",true, GxErrorMask.GX_NOMASK, false, this,prmT00086,1,0,true,true )
-             ,new CursorDef("T00087", "SELECT TOP 1 [marcasid] FROM [marcas] WITH (NOLOCK) WHERE ( [marcasid] < @marcasid) ORDER BY [marcasid] DESC  OPTION (FAST 1)",true, GxErrorMask.GX_NOMASK, false, this,prmT00087,1,0,true,true )
-             ,new CursorDef("T00088", "INSERT INTO [marcas]([marcasid], [marcasdsc], [marcasusuario], [marcasfecreg], [marcasfecultact]) VALUES(@marcasid, @marcasdsc, @marcasusuario, @marcasfecreg, @marcasfecultact)", GxErrorMask.GX_NOMASK,prmT00088)
-             ,new CursorDef("T00089", "UPDATE [marcas] SET [marcasdsc]=@marcasdsc, [marcasusuario]=@marcasusuario, [marcasfecreg]=@marcasfecreg, [marcasfecultact]=@marcasfecultact  WHERE [marcasid] = @marcasid", GxErrorMask.GX_NOMASK,prmT00089)
-             ,new CursorDef("T000810", "DELETE FROM [marcas]  WHERE [marcasid] = @marcasid", GxErrorMask.GX_NOMASK,prmT000810)
-             ,new CursorDef("T000811", "SELECT [marcasid] FROM [marcas] WITH (NOLOCK) ORDER BY [marcasid]  OPTION (FAST 100)",true, GxErrorMask.GX_NOMASK, false, this,prmT000811,100,0,true,false )
+              new CursorDef("T00082", "SELECT marcasid, marcasdsc, marcasusuario, marcasfecreg, marcasfecultact FROM public.marcas WHERE marcasid = :marcasid  FOR UPDATE OF marcas NOWAIT",true, GxErrorMask.GX_NOMASK, false, this,prmT00082,1,0,true,false )
+             ,new CursorDef("T00083", "SELECT marcasid, marcasdsc, marcasusuario, marcasfecreg, marcasfecultact FROM public.marcas WHERE marcasid = :marcasid ",true, GxErrorMask.GX_NOMASK, false, this,prmT00083,1,0,true,false )
+             ,new CursorDef("T00084", "SELECT TM1.marcasid, TM1.marcasdsc, TM1.marcasusuario, TM1.marcasfecreg, TM1.marcasfecultact FROM public.marcas TM1 WHERE TM1.marcasid = :marcasid ORDER BY TM1.marcasid ",true, GxErrorMask.GX_NOMASK, false, this,prmT00084,100,0,true,false )
+             ,new CursorDef("T00085", "SELECT marcasid FROM public.marcas WHERE marcasid = :marcasid ",true, GxErrorMask.GX_NOMASK, false, this,prmT00085,1,0,true,false )
+             ,new CursorDef("T00086", "SELECT marcasid FROM public.marcas WHERE ( marcasid > :marcasid) ORDER BY marcasid ",true, GxErrorMask.GX_NOMASK, false, this,prmT00086,1,0,true,true )
+             ,new CursorDef("T00087", "SELECT marcasid FROM public.marcas WHERE ( marcasid < :marcasid) ORDER BY marcasid DESC ",true, GxErrorMask.GX_NOMASK, false, this,prmT00087,1,0,true,true )
+             ,new CursorDef("T00088", "SAVEPOINT gxupdate;INSERT INTO public.marcas(marcasid, marcasdsc, marcasusuario, marcasfecreg, marcasfecultact) VALUES(:marcasid, :marcasdsc, :marcasusuario, :marcasfecreg, :marcasfecultact);RELEASE SAVEPOINT gxupdate", GxErrorMask.GX_ROLLBACKSAVEPOINT,prmT00088)
+             ,new CursorDef("T00089", "SAVEPOINT gxupdate;UPDATE public.marcas SET marcasdsc=:marcasdsc, marcasusuario=:marcasusuario, marcasfecreg=:marcasfecreg, marcasfecultact=:marcasfecultact  WHERE marcasid = :marcasid;RELEASE SAVEPOINT gxupdate", GxErrorMask.GX_ROLLBACKSAVEPOINT | GxErrorMask.GX_NOMASK,prmT00089)
+             ,new CursorDef("T000810", "SAVEPOINT gxupdate;DELETE FROM public.marcas  WHERE marcasid = :marcasid;RELEASE SAVEPOINT gxupdate", GxErrorMask.GX_ROLLBACKSAVEPOINT | GxErrorMask.GX_NOMASK,prmT000810)
+             ,new CursorDef("T000811", "SELECT marcasid FROM public.marcas ORDER BY marcasid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000811,100,0,true,false )
           };
        }
     }

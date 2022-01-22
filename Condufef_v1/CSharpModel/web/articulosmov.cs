@@ -2,9 +2,9 @@
                File: articulosmov
         Description: articulosmov
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 12/30/2021 22:9:3.0
+       Generated on: 1/22/2022 13:27:27.80
        Program type: Callable routine
-          Main DBMS: sqlserver
+          Main DBMS: postgresql
 */
 using System;
 using System.Collections;
@@ -14,7 +14,7 @@ using GeneXus.Application;
 using GeneXus.Metadata;
 using GeneXus.Cryptography;
 using System.Data;
-using System.Data.SqlClient;
+using NpgsqlTypes;
 using GeneXus.Data;
 using com.genexus;
 using GeneXus.Data.ADO;
@@ -861,7 +861,7 @@ namespace GeneXus.Programs {
 
       protected void ZM0D13( short GX_JID )
       {
-         if ( ( GX_JID == 4 ) || ( GX_JID == 0 ) )
+         if ( ( GX_JID == 1 ) || ( GX_JID == 0 ) )
          {
             if ( StringUtil.StrCmp(Gx_mode, "INS") != 0 )
             {
@@ -884,7 +884,7 @@ namespace GeneXus.Programs {
                Z45articulosmovfecultact = A45articulosmovfecultact;
             }
          }
-         if ( GX_JID == -4 )
+         if ( GX_JID == -1 )
          {
             Z3articulosmovid = A3articulosmovid;
             Z4articulosmovproductoid = A4articulosmovproductoid;
@@ -956,7 +956,7 @@ namespace GeneXus.Programs {
             A45articulosmovfecultact = T000D4_A45articulosmovfecultact[0];
             context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A45articulosmovfecultact", context.localUtil.TToC( A45articulosmovfecultact, 10, 8, 0, 3, "/", ":", " "));
             n45articulosmovfecultact = T000D4_n45articulosmovfecultact[0];
-            ZM0D13( -4) ;
+            ZM0D13( -1) ;
          }
          pr_default.close(2);
          OnLoadActions0D13( ) ;
@@ -970,27 +970,6 @@ namespace GeneXus.Programs {
       {
          Gx_BScreen = 1;
          standaloneModal( ) ;
-         if ( ! ( (DateTime.MinValue==A40articulosmovfechamov) || ( A40articulosmovfechamov >= context.localUtil.YMDHMSToT( 1753, 1, 1, 0, 0, 0) ) ) )
-         {
-            GX_msglist.addItem("Campo articulosmovfechamov fuera de rango", "OutOfRange", 1, "ARTICULOSMOVFECHAMOV");
-            AnyError = 1;
-            GX_FocusControl = edtarticulosmovfechamov_Internalname;
-            context.httpAjaxContext.ajax_rsp_assign_attri("", false, "GX_FocusControl", GX_FocusControl);
-         }
-         if ( ! ( (DateTime.MinValue==A44articulosmovfecreg) || ( A44articulosmovfecreg >= context.localUtil.YMDHMSToT( 1753, 1, 1, 0, 0, 0) ) ) )
-         {
-            GX_msglist.addItem("Campo articulosmovfecreg fuera de rango", "OutOfRange", 1, "ARTICULOSMOVFECREG");
-            AnyError = 1;
-            GX_FocusControl = edtarticulosmovfecreg_Internalname;
-            context.httpAjaxContext.ajax_rsp_assign_attri("", false, "GX_FocusControl", GX_FocusControl);
-         }
-         if ( ! ( (DateTime.MinValue==A45articulosmovfecultact) || ( A45articulosmovfecultact >= context.localUtil.YMDHMSToT( 1753, 1, 1, 0, 0, 0) ) ) )
-         {
-            GX_msglist.addItem("Campo articulosmovfecultact fuera de rango", "OutOfRange", 1, "ARTICULOSMOVFECULTACT");
-            AnyError = 1;
-            GX_FocusControl = edtarticulosmovfecultact_Internalname;
-            context.httpAjaxContext.ajax_rsp_assign_attri("", false, "GX_FocusControl", GX_FocusControl);
-         }
       }
 
       protected void CloseExtendedTableCursors0D13( )
@@ -1022,7 +1001,7 @@ namespace GeneXus.Programs {
          pr_default.execute(1, new Object[] {A3articulosmovid, A4articulosmovproductoid, A5articulosmovcambsid, A6articulosmovarticuloid});
          if ( (pr_default.getStatus(1) != 101) )
          {
-            ZM0D13( 4) ;
+            ZM0D13( 1) ;
             RcdFound13 = 1;
             A3articulosmovid = T000D3_A3articulosmovid[0];
             context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A3articulosmovid", StringUtil.LTrim( StringUtil.Str( (decimal)(A3articulosmovid), 9, 0)));
@@ -1413,7 +1392,7 @@ namespace GeneXus.Programs {
             pr_default.execute(0, new Object[] {A3articulosmovid, A4articulosmovproductoid, A5articulosmovcambsid, A6articulosmovarticuloid});
             if ( (pr_default.getStatus(0) == 103) )
             {
-               GX_msglist.addItem(context.GetMessage( "GXM_lock", new   object[]  {"articulosmov"}), "RecordIsLocked", 1, "");
+               GX_msglist.addItem(context.GetMessage( "GXM_lock", new   object[]  {"ARTÌCULOSMOV"}), "RecordIsLocked", 1, "");
                AnyError = 1;
                return  ;
             }
@@ -1466,7 +1445,7 @@ namespace GeneXus.Programs {
                   GXUtil.WriteLogRaw("Old: ",Z45articulosmovfecultact);
                   GXUtil.WriteLogRaw("Current: ",T000D2_A45articulosmovfecultact[0]);
                }
-               GX_msglist.addItem(context.GetMessage( "GXM_waschg", new   object[]  {"articulosmov"}), "RecordWasChanged", 1, "");
+               GX_msglist.addItem(context.GetMessage( "GXM_waschg", new   object[]  {"ARTÌCULOSMOV"}), "RecordWasChanged", 1, "");
                AnyError = 1;
                return  ;
             }
@@ -1495,7 +1474,7 @@ namespace GeneXus.Programs {
                      /* Using cursor T000D8 */
                      pr_default.execute(6, new Object[] {A3articulosmovid, A4articulosmovproductoid, A5articulosmovcambsid, A6articulosmovarticuloid, n39articulosmovdepositario, A39articulosmovdepositario, n40articulosmovfechamov, A40articulosmovfechamov, n41articulosmovstatus, A41articulosmovstatus, n42articulosmovagregomovsist, A42articulosmovagregomovsist, n43articulosmovususuario, A43articulosmovususuario, n44articulosmovfecreg, A44articulosmovfecreg, n45articulosmovfecultact, A45articulosmovfecultact});
                      pr_default.close(6);
-                     dsDefault.SmartCacheProvider.SetUpdated("articulosmov") ;
+                     dsDefault.SmartCacheProvider.SetUpdated("ARTÌCULOSMOV") ;
                      if ( (pr_default.getStatus(6) == 1) )
                      {
                         GX_msglist.addItem(context.GetMessage( "GXM_noupdate", ""), "DuplicatePrimaryKey", 1, "");
@@ -1550,10 +1529,10 @@ namespace GeneXus.Programs {
                      /* Using cursor T000D9 */
                      pr_default.execute(7, new Object[] {n39articulosmovdepositario, A39articulosmovdepositario, n40articulosmovfechamov, A40articulosmovfechamov, n41articulosmovstatus, A41articulosmovstatus, n42articulosmovagregomovsist, A42articulosmovagregomovsist, n43articulosmovususuario, A43articulosmovususuario, n44articulosmovfecreg, A44articulosmovfecreg, n45articulosmovfecultact, A45articulosmovfecultact, A3articulosmovid, A4articulosmovproductoid, A5articulosmovcambsid, A6articulosmovarticuloid});
                      pr_default.close(7);
-                     dsDefault.SmartCacheProvider.SetUpdated("articulosmov") ;
+                     dsDefault.SmartCacheProvider.SetUpdated("ARTÌCULOSMOV") ;
                      if ( (pr_default.getStatus(7) == 103) )
                      {
-                        GX_msglist.addItem(context.GetMessage( "GXM_lock", new   object[]  {"articulosmov"}), "RecordIsLocked", 1, "");
+                        GX_msglist.addItem(context.GetMessage( "GXM_lock", new   object[]  {"ARTÌCULOSMOV"}), "RecordIsLocked", 1, "");
                         AnyError = 1;
                      }
                      DeferredUpdate0D13( ) ;
@@ -1607,7 +1586,7 @@ namespace GeneXus.Programs {
                   /* Using cursor T000D10 */
                   pr_default.execute(8, new Object[] {A3articulosmovid, A4articulosmovproductoid, A5articulosmovcambsid, A6articulosmovarticuloid});
                   pr_default.close(8);
-                  dsDefault.SmartCacheProvider.SetUpdated("articulosmov") ;
+                  dsDefault.SmartCacheProvider.SetUpdated("ARTÌCULOSMOV") ;
                   if ( AnyError == 0 )
                   {
                      /* Start of After( delete) rules */
@@ -1665,7 +1644,6 @@ namespace GeneXus.Programs {
          }
          if ( AnyError == 0 )
          {
-            pr_default.close(1);
             context.CommitDataStores( "articulosmov");
             if ( AnyError == 0 )
             {
@@ -1677,7 +1655,6 @@ namespace GeneXus.Programs {
          }
          else
          {
-            pr_default.close(1);
             context.RollbackDataStores( "articulosmov");
          }
          IsModified = 0;
@@ -1823,7 +1800,7 @@ namespace GeneXus.Programs {
          context.AddJavascriptSource("jquery.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxtimezone.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxgral.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("gxcfg.js", "?2021123022941");
+         context.AddJavascriptSource("gxcfg.js", "?202212213272886");
          if ( context.isSpaRequest( ) )
          {
             enableOutput();
@@ -2007,12 +1984,12 @@ namespace GeneXus.Programs {
 
       protected void define_styles( )
       {
-         AddStyleSheetFile("calendar-system.css", "?11323129");
-         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?2284430");
+         AddStyleSheetFile("calendar-system.css", "?13205289");
+         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?13264988");
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?20211230229416");
+            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?202212213272892");
             idxLst = (int)(idxLst+1);
          }
          /* End function define_styles */
@@ -2022,7 +1999,7 @@ namespace GeneXus.Programs {
       {
          context.AddJavascriptSource("messages.spa.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxdec.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("articulosmov.js", "?20211230229416");
+         context.AddJavascriptSource("articulosmov.js", "?202212213272893");
          /* End function include_jscripts */
       }
 
@@ -2640,95 +2617,95 @@ namespace GeneXus.Programs {
        {
           Object[] prmT000D4 ;
           prmT000D4 = new Object[] {
-          new Object[] {"@articulosmovid",SqlDbType.Int,9,0} ,
-          new Object[] {"@articulosmovproductoid",SqlDbType.Int,9,0} ,
-          new Object[] {"@articulosmovcambsid",SqlDbType.VarChar,3,0} ,
-          new Object[] {"@articulosmovarticuloid",SqlDbType.Decimal,18,0}
+          new Object[] {"articulosmovid",NpgsqlDbType.Integer,9,0} ,
+          new Object[] {"articulosmovproductoid",NpgsqlDbType.Integer,9,0} ,
+          new Object[] {"articulosmovcambsid",NpgsqlDbType.Varchar,3,0} ,
+          new Object[] {"articulosmovarticuloid",NpgsqlDbType.Real,18,0}
           } ;
           Object[] prmT000D5 ;
           prmT000D5 = new Object[] {
-          new Object[] {"@articulosmovid",SqlDbType.Int,9,0} ,
-          new Object[] {"@articulosmovproductoid",SqlDbType.Int,9,0} ,
-          new Object[] {"@articulosmovcambsid",SqlDbType.VarChar,3,0} ,
-          new Object[] {"@articulosmovarticuloid",SqlDbType.Decimal,18,0}
+          new Object[] {"articulosmovid",NpgsqlDbType.Integer,9,0} ,
+          new Object[] {"articulosmovproductoid",NpgsqlDbType.Integer,9,0} ,
+          new Object[] {"articulosmovcambsid",NpgsqlDbType.Varchar,3,0} ,
+          new Object[] {"articulosmovarticuloid",NpgsqlDbType.Real,18,0}
           } ;
           Object[] prmT000D3 ;
           prmT000D3 = new Object[] {
-          new Object[] {"@articulosmovid",SqlDbType.Int,9,0} ,
-          new Object[] {"@articulosmovproductoid",SqlDbType.Int,9,0} ,
-          new Object[] {"@articulosmovcambsid",SqlDbType.VarChar,3,0} ,
-          new Object[] {"@articulosmovarticuloid",SqlDbType.Decimal,18,0}
+          new Object[] {"articulosmovid",NpgsqlDbType.Integer,9,0} ,
+          new Object[] {"articulosmovproductoid",NpgsqlDbType.Integer,9,0} ,
+          new Object[] {"articulosmovcambsid",NpgsqlDbType.Varchar,3,0} ,
+          new Object[] {"articulosmovarticuloid",NpgsqlDbType.Real,18,0}
           } ;
           Object[] prmT000D6 ;
           prmT000D6 = new Object[] {
-          new Object[] {"@articulosmovid",SqlDbType.Int,9,0} ,
-          new Object[] {"@articulosmovproductoid",SqlDbType.Int,9,0} ,
-          new Object[] {"@articulosmovcambsid",SqlDbType.VarChar,3,0} ,
-          new Object[] {"@articulosmovarticuloid",SqlDbType.Decimal,18,0}
+          new Object[] {"articulosmovid",NpgsqlDbType.Integer,9,0} ,
+          new Object[] {"articulosmovproductoid",NpgsqlDbType.Integer,9,0} ,
+          new Object[] {"articulosmovcambsid",NpgsqlDbType.Varchar,3,0} ,
+          new Object[] {"articulosmovarticuloid",NpgsqlDbType.Real,18,0}
           } ;
           Object[] prmT000D7 ;
           prmT000D7 = new Object[] {
-          new Object[] {"@articulosmovid",SqlDbType.Int,9,0} ,
-          new Object[] {"@articulosmovproductoid",SqlDbType.Int,9,0} ,
-          new Object[] {"@articulosmovcambsid",SqlDbType.VarChar,3,0} ,
-          new Object[] {"@articulosmovarticuloid",SqlDbType.Decimal,18,0}
+          new Object[] {"articulosmovid",NpgsqlDbType.Integer,9,0} ,
+          new Object[] {"articulosmovproductoid",NpgsqlDbType.Integer,9,0} ,
+          new Object[] {"articulosmovcambsid",NpgsqlDbType.Varchar,3,0} ,
+          new Object[] {"articulosmovarticuloid",NpgsqlDbType.Real,18,0}
           } ;
           Object[] prmT000D2 ;
           prmT000D2 = new Object[] {
-          new Object[] {"@articulosmovid",SqlDbType.Int,9,0} ,
-          new Object[] {"@articulosmovproductoid",SqlDbType.Int,9,0} ,
-          new Object[] {"@articulosmovcambsid",SqlDbType.VarChar,3,0} ,
-          new Object[] {"@articulosmovarticuloid",SqlDbType.Decimal,18,0}
+          new Object[] {"articulosmovid",NpgsqlDbType.Integer,9,0} ,
+          new Object[] {"articulosmovproductoid",NpgsqlDbType.Integer,9,0} ,
+          new Object[] {"articulosmovcambsid",NpgsqlDbType.Varchar,3,0} ,
+          new Object[] {"articulosmovarticuloid",NpgsqlDbType.Real,18,0}
           } ;
           Object[] prmT000D8 ;
           prmT000D8 = new Object[] {
-          new Object[] {"@articulosmovid",SqlDbType.Int,9,0} ,
-          new Object[] {"@articulosmovproductoid",SqlDbType.Int,9,0} ,
-          new Object[] {"@articulosmovcambsid",SqlDbType.VarChar,3,0} ,
-          new Object[] {"@articulosmovarticuloid",SqlDbType.Decimal,18,0} ,
-          new Object[] {"@articulosmovdepositario",SqlDbType.Decimal,18,0} ,
-          new Object[] {"@articulosmovfechamov",SqlDbType.DateTime,10,8} ,
-          new Object[] {"@articulosmovstatus",SqlDbType.Decimal,18,0} ,
-          new Object[] {"@articulosmovagregomovsist",SqlDbType.VarChar,50,0} ,
-          new Object[] {"@articulosmovususuario",SqlDbType.VarChar,15,0} ,
-          new Object[] {"@articulosmovfecreg",SqlDbType.DateTime,10,8} ,
-          new Object[] {"@articulosmovfecultact",SqlDbType.DateTime,10,8}
+          new Object[] {"articulosmovid",NpgsqlDbType.Integer,9,0} ,
+          new Object[] {"articulosmovproductoid",NpgsqlDbType.Integer,9,0} ,
+          new Object[] {"articulosmovcambsid",NpgsqlDbType.Varchar,3,0} ,
+          new Object[] {"articulosmovarticuloid",NpgsqlDbType.Real,18,0} ,
+          new Object[] {"articulosmovdepositario",NpgsqlDbType.Real,18,0} ,
+          new Object[] {"articulosmovfechamov",NpgsqlDbType.Timestamp,10,8} ,
+          new Object[] {"articulosmovstatus",NpgsqlDbType.Real,18,0} ,
+          new Object[] {"articulosmovagregomovsist",NpgsqlDbType.Varchar,50,0} ,
+          new Object[] {"articulosmovususuario",NpgsqlDbType.Varchar,15,0} ,
+          new Object[] {"articulosmovfecreg",NpgsqlDbType.Timestamp,10,8} ,
+          new Object[] {"articulosmovfecultact",NpgsqlDbType.Timestamp,10,8}
           } ;
           Object[] prmT000D9 ;
           prmT000D9 = new Object[] {
-          new Object[] {"@articulosmovdepositario",SqlDbType.Decimal,18,0} ,
-          new Object[] {"@articulosmovfechamov",SqlDbType.DateTime,10,8} ,
-          new Object[] {"@articulosmovstatus",SqlDbType.Decimal,18,0} ,
-          new Object[] {"@articulosmovagregomovsist",SqlDbType.VarChar,50,0} ,
-          new Object[] {"@articulosmovususuario",SqlDbType.VarChar,15,0} ,
-          new Object[] {"@articulosmovfecreg",SqlDbType.DateTime,10,8} ,
-          new Object[] {"@articulosmovfecultact",SqlDbType.DateTime,10,8} ,
-          new Object[] {"@articulosmovid",SqlDbType.Int,9,0} ,
-          new Object[] {"@articulosmovproductoid",SqlDbType.Int,9,0} ,
-          new Object[] {"@articulosmovcambsid",SqlDbType.VarChar,3,0} ,
-          new Object[] {"@articulosmovarticuloid",SqlDbType.Decimal,18,0}
+          new Object[] {"articulosmovdepositario",NpgsqlDbType.Real,18,0} ,
+          new Object[] {"articulosmovfechamov",NpgsqlDbType.Timestamp,10,8} ,
+          new Object[] {"articulosmovstatus",NpgsqlDbType.Real,18,0} ,
+          new Object[] {"articulosmovagregomovsist",NpgsqlDbType.Varchar,50,0} ,
+          new Object[] {"articulosmovususuario",NpgsqlDbType.Varchar,15,0} ,
+          new Object[] {"articulosmovfecreg",NpgsqlDbType.Timestamp,10,8} ,
+          new Object[] {"articulosmovfecultact",NpgsqlDbType.Timestamp,10,8} ,
+          new Object[] {"articulosmovid",NpgsqlDbType.Integer,9,0} ,
+          new Object[] {"articulosmovproductoid",NpgsqlDbType.Integer,9,0} ,
+          new Object[] {"articulosmovcambsid",NpgsqlDbType.Varchar,3,0} ,
+          new Object[] {"articulosmovarticuloid",NpgsqlDbType.Real,18,0}
           } ;
           Object[] prmT000D10 ;
           prmT000D10 = new Object[] {
-          new Object[] {"@articulosmovid",SqlDbType.Int,9,0} ,
-          new Object[] {"@articulosmovproductoid",SqlDbType.Int,9,0} ,
-          new Object[] {"@articulosmovcambsid",SqlDbType.VarChar,3,0} ,
-          new Object[] {"@articulosmovarticuloid",SqlDbType.Decimal,18,0}
+          new Object[] {"articulosmovid",NpgsqlDbType.Integer,9,0} ,
+          new Object[] {"articulosmovproductoid",NpgsqlDbType.Integer,9,0} ,
+          new Object[] {"articulosmovcambsid",NpgsqlDbType.Varchar,3,0} ,
+          new Object[] {"articulosmovarticuloid",NpgsqlDbType.Real,18,0}
           } ;
           Object[] prmT000D11 ;
           prmT000D11 = new Object[] {
           } ;
           def= new CursorDef[] {
-              new CursorDef("T000D2", "SELECT [articulosmovid], [articulosmovproductoid], [articulosmovcambsid], [articulosmovarticuloid], [articulosmovdepositario], [articulosmovfechamov], [articulosmovstatus], [articulosmovagregomovsist], [articulosmovususuario], [articulosmovfecreg], [articulosmovfecultact] FROM [articulosmov] WITH (UPDLOCK) WHERE [articulosmovid] = @articulosmovid AND [articulosmovproductoid] = @articulosmovproductoid AND [articulosmovcambsid] = @articulosmovcambsid AND [articulosmovarticuloid] = @articulosmovarticuloid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000D2,1,0,true,false )
-             ,new CursorDef("T000D3", "SELECT [articulosmovid], [articulosmovproductoid], [articulosmovcambsid], [articulosmovarticuloid], [articulosmovdepositario], [articulosmovfechamov], [articulosmovstatus], [articulosmovagregomovsist], [articulosmovususuario], [articulosmovfecreg], [articulosmovfecultact] FROM [articulosmov] WITH (NOLOCK) WHERE [articulosmovid] = @articulosmovid AND [articulosmovproductoid] = @articulosmovproductoid AND [articulosmovcambsid] = @articulosmovcambsid AND [articulosmovarticuloid] = @articulosmovarticuloid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000D3,1,0,true,false )
-             ,new CursorDef("T000D4", "SELECT TM1.[articulosmovid], TM1.[articulosmovproductoid], TM1.[articulosmovcambsid], TM1.[articulosmovarticuloid], TM1.[articulosmovdepositario], TM1.[articulosmovfechamov], TM1.[articulosmovstatus], TM1.[articulosmovagregomovsist], TM1.[articulosmovususuario], TM1.[articulosmovfecreg], TM1.[articulosmovfecultact] FROM [articulosmov] TM1 WITH (NOLOCK) WHERE TM1.[articulosmovid] = @articulosmovid and TM1.[articulosmovproductoid] = @articulosmovproductoid and TM1.[articulosmovcambsid] = @articulosmovcambsid and TM1.[articulosmovarticuloid] = @articulosmovarticuloid ORDER BY TM1.[articulosmovid], TM1.[articulosmovproductoid], TM1.[articulosmovcambsid], TM1.[articulosmovarticuloid]  OPTION (FAST 100)",true, GxErrorMask.GX_NOMASK, false, this,prmT000D4,100,0,true,false )
-             ,new CursorDef("T000D5", "SELECT [articulosmovid], [articulosmovproductoid], [articulosmovcambsid], [articulosmovarticuloid] FROM [articulosmov] WITH (NOLOCK) WHERE [articulosmovid] = @articulosmovid AND [articulosmovproductoid] = @articulosmovproductoid AND [articulosmovcambsid] = @articulosmovcambsid AND [articulosmovarticuloid] = @articulosmovarticuloid  OPTION (FAST 1)",true, GxErrorMask.GX_NOMASK, false, this,prmT000D5,1,0,true,false )
-             ,new CursorDef("T000D6", "SELECT TOP 1 [articulosmovid], [articulosmovproductoid], [articulosmovcambsid], [articulosmovarticuloid] FROM [articulosmov] WITH (NOLOCK) WHERE ( [articulosmovid] > @articulosmovid or [articulosmovid] = @articulosmovid and [articulosmovproductoid] > @articulosmovproductoid or [articulosmovproductoid] = @articulosmovproductoid and [articulosmovid] = @articulosmovid and [articulosmovcambsid] > @articulosmovcambsid or [articulosmovcambsid] = @articulosmovcambsid and [articulosmovproductoid] = @articulosmovproductoid and [articulosmovid] = @articulosmovid and [articulosmovarticuloid] > @articulosmovarticuloid) ORDER BY [articulosmovid], [articulosmovproductoid], [articulosmovcambsid], [articulosmovarticuloid]  OPTION (FAST 1)",true, GxErrorMask.GX_NOMASK, false, this,prmT000D6,1,0,true,true )
-             ,new CursorDef("T000D7", "SELECT TOP 1 [articulosmovid], [articulosmovproductoid], [articulosmovcambsid], [articulosmovarticuloid] FROM [articulosmov] WITH (NOLOCK) WHERE ( [articulosmovid] < @articulosmovid or [articulosmovid] = @articulosmovid and [articulosmovproductoid] < @articulosmovproductoid or [articulosmovproductoid] = @articulosmovproductoid and [articulosmovid] = @articulosmovid and [articulosmovcambsid] < @articulosmovcambsid or [articulosmovcambsid] = @articulosmovcambsid and [articulosmovproductoid] = @articulosmovproductoid and [articulosmovid] = @articulosmovid and [articulosmovarticuloid] < @articulosmovarticuloid) ORDER BY [articulosmovid] DESC, [articulosmovproductoid] DESC, [articulosmovcambsid] DESC, [articulosmovarticuloid] DESC  OPTION (FAST 1)",true, GxErrorMask.GX_NOMASK, false, this,prmT000D7,1,0,true,true )
-             ,new CursorDef("T000D8", "INSERT INTO [articulosmov]([articulosmovid], [articulosmovproductoid], [articulosmovcambsid], [articulosmovarticuloid], [articulosmovdepositario], [articulosmovfechamov], [articulosmovstatus], [articulosmovagregomovsist], [articulosmovususuario], [articulosmovfecreg], [articulosmovfecultact]) VALUES(@articulosmovid, @articulosmovproductoid, @articulosmovcambsid, @articulosmovarticuloid, @articulosmovdepositario, @articulosmovfechamov, @articulosmovstatus, @articulosmovagregomovsist, @articulosmovususuario, @articulosmovfecreg, @articulosmovfecultact)", GxErrorMask.GX_NOMASK,prmT000D8)
-             ,new CursorDef("T000D9", "UPDATE [articulosmov] SET [articulosmovdepositario]=@articulosmovdepositario, [articulosmovfechamov]=@articulosmovfechamov, [articulosmovstatus]=@articulosmovstatus, [articulosmovagregomovsist]=@articulosmovagregomovsist, [articulosmovususuario]=@articulosmovususuario, [articulosmovfecreg]=@articulosmovfecreg, [articulosmovfecultact]=@articulosmovfecultact  WHERE [articulosmovid] = @articulosmovid AND [articulosmovproductoid] = @articulosmovproductoid AND [articulosmovcambsid] = @articulosmovcambsid AND [articulosmovarticuloid] = @articulosmovarticuloid", GxErrorMask.GX_NOMASK,prmT000D9)
-             ,new CursorDef("T000D10", "DELETE FROM [articulosmov]  WHERE [articulosmovid] = @articulosmovid AND [articulosmovproductoid] = @articulosmovproductoid AND [articulosmovcambsid] = @articulosmovcambsid AND [articulosmovarticuloid] = @articulosmovarticuloid", GxErrorMask.GX_NOMASK,prmT000D10)
-             ,new CursorDef("T000D11", "SELECT [articulosmovid], [articulosmovproductoid], [articulosmovcambsid], [articulosmovarticuloid] FROM [articulosmov] WITH (NOLOCK) ORDER BY [articulosmovid], [articulosmovproductoid], [articulosmovcambsid], [articulosmovarticuloid]  OPTION (FAST 100)",true, GxErrorMask.GX_NOMASK, false, this,prmT000D11,100,0,true,false )
+              new CursorDef("T000D2", "SELECT articulosmovid, productoid, cambsid, articulosmovarticuloid, articulosmovdepositario, articulosmovfechamov, articulosmovstatus, articulosmovagregomovsist, articulosmovususuario, articulosmovfecreg, articulosmovfecultact FROM public.artÌculosmov WHERE articulosmovid = :articulosmovid AND productoid = :articulosmovproductoid AND cambsid = :articulosmovcambsid AND articulosmovarticuloid = :articulosmovarticuloid  FOR UPDATE OF artÌculosmov NOWAIT",true, GxErrorMask.GX_NOMASK, false, this,prmT000D2,1,0,true,false )
+             ,new CursorDef("T000D3", "SELECT articulosmovid, productoid, cambsid, articulosmovarticuloid, articulosmovdepositario, articulosmovfechamov, articulosmovstatus, articulosmovagregomovsist, articulosmovususuario, articulosmovfecreg, articulosmovfecultact FROM public.artÌculosmov WHERE articulosmovid = :articulosmovid AND productoid = :articulosmovproductoid AND cambsid = :articulosmovcambsid AND articulosmovarticuloid = :articulosmovarticuloid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000D3,1,0,true,false )
+             ,new CursorDef("T000D4", "SELECT TM1.articulosmovid, TM1.productoid, TM1.cambsid, TM1.articulosmovarticuloid, TM1.articulosmovdepositario, TM1.articulosmovfechamov, TM1.articulosmovstatus, TM1.articulosmovagregomovsist, TM1.articulosmovususuario, TM1.articulosmovfecreg, TM1.articulosmovfecultact FROM public.artÌculosmov TM1 WHERE TM1.articulosmovid = :articulosmovid and TM1.productoid = :articulosmovproductoid and TM1.cambsid = ( :articulosmovcambsid) and TM1.articulosmovarticuloid = :articulosmovarticuloid ORDER BY TM1.articulosmovid, TM1.productoid, TM1.cambsid, TM1.articulosmovarticuloid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000D4,100,0,true,false )
+             ,new CursorDef("T000D5", "SELECT articulosmovid, productoid, cambsid, articulosmovarticuloid FROM public.artÌculosmov WHERE articulosmovid = :articulosmovid AND productoid = :articulosmovproductoid AND cambsid = :articulosmovcambsid AND articulosmovarticuloid = :articulosmovarticuloid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000D5,1,0,true,false )
+             ,new CursorDef("T000D6", "SELECT articulosmovid, productoid, cambsid, articulosmovarticuloid FROM public.artÌculosmov WHERE ( articulosmovid > :articulosmovid or articulosmovid = :articulosmovid and productoid > :articulosmovproductoid or productoid = :articulosmovproductoid and articulosmovid = :articulosmovid and cambsid > ( :articulosmovcambsid) or cambsid = ( :articulosmovcambsid) and productoid = :articulosmovproductoid and articulosmovid = :articulosmovid and articulosmovarticuloid > :articulosmovarticuloid) ORDER BY articulosmovid, productoid, cambsid, articulosmovarticuloid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000D6,1,0,true,true )
+             ,new CursorDef("T000D7", "SELECT articulosmovid, productoid, cambsid, articulosmovarticuloid FROM public.artÌculosmov WHERE ( articulosmovid < :articulosmovid or articulosmovid = :articulosmovid and productoid < :articulosmovproductoid or productoid = :articulosmovproductoid and articulosmovid = :articulosmovid and cambsid < ( :articulosmovcambsid) or cambsid = ( :articulosmovcambsid) and productoid = :articulosmovproductoid and articulosmovid = :articulosmovid and articulosmovarticuloid < :articulosmovarticuloid) ORDER BY articulosmovid DESC, productoid DESC, cambsid DESC, articulosmovarticuloid DESC ",true, GxErrorMask.GX_NOMASK, false, this,prmT000D7,1,0,true,true )
+             ,new CursorDef("T000D8", "SAVEPOINT gxupdate;INSERT INTO public.artÌculosmov(articulosmovid, productoid, cambsid, articulosmovarticuloid, articulosmovdepositario, articulosmovfechamov, articulosmovstatus, articulosmovagregomovsist, articulosmovususuario, articulosmovfecreg, articulosmovfecultact) VALUES(:articulosmovid, :articulosmovproductoid, :articulosmovcambsid, :articulosmovarticuloid, :articulosmovdepositario, :articulosmovfechamov, :articulosmovstatus, :articulosmovagregomovsist, :articulosmovususuario, :articulosmovfecreg, :articulosmovfecultact);RELEASE SAVEPOINT gxupdate", GxErrorMask.GX_ROLLBACKSAVEPOINT,prmT000D8)
+             ,new CursorDef("T000D9", "SAVEPOINT gxupdate;UPDATE public.artÌculosmov SET articulosmovdepositario=:articulosmovdepositario, articulosmovfechamov=:articulosmovfechamov, articulosmovstatus=:articulosmovstatus, articulosmovagregomovsist=:articulosmovagregomovsist, articulosmovususuario=:articulosmovususuario, articulosmovfecreg=:articulosmovfecreg, articulosmovfecultact=:articulosmovfecultact  WHERE articulosmovid = :articulosmovid AND productoid = :articulosmovproductoid AND cambsid = :articulosmovcambsid AND articulosmovarticuloid = :articulosmovarticuloid;RELEASE SAVEPOINT gxupdate", GxErrorMask.GX_ROLLBACKSAVEPOINT | GxErrorMask.GX_NOMASK,prmT000D9)
+             ,new CursorDef("T000D10", "SAVEPOINT gxupdate;DELETE FROM public.artÌculosmov  WHERE articulosmovid = :articulosmovid AND productoid = :articulosmovproductoid AND cambsid = :articulosmovcambsid AND articulosmovarticuloid = :articulosmovarticuloid;RELEASE SAVEPOINT gxupdate", GxErrorMask.GX_ROLLBACKSAVEPOINT | GxErrorMask.GX_NOMASK,prmT000D10)
+             ,new CursorDef("T000D11", "SELECT articulosmovid, productoid, cambsid, articulosmovarticuloid FROM public.artÌculosmov ORDER BY articulosmovid, productoid, cambsid, articulosmovarticuloid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000D11,100,0,true,false )
           };
        }
     }

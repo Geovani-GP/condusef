@@ -50,7 +50,7 @@
 <BaseTable>
 <Table>
 <TableId>7</TableId>
-<TableName>estatusarticulo</TableName>
+<TableName>ESTATUSARTICULO</TableName>
 <Description>estatusarticulo</Description></Table></BaseTable>
 <Order>
 <Attribute>
@@ -209,7 +209,7 @@
 <NavigationTree>
 <Table>
 <TableId>7</TableId>
-<TableName>estatusarticulo</TableName>
+<TableName>ESTATUSARTICULO</TableName>
 <Description>estatusarticulo</Description>
 <RecordsToRead>many</RecordsToRead>
 <KeyAttributes>

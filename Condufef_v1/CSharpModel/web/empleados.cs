@@ -2,9 +2,9 @@
                File: empleados
         Description: empleados
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 12/30/2021 22:8:49.86
+       Generated on: 1/22/2022 13:27:10.62
        Program type: Callable routine
-          Main DBMS: sqlserver
+          Main DBMS: postgresql
 */
 using System;
 using System.Collections;
@@ -14,7 +14,7 @@ using GeneXus.Application;
 using GeneXus.Metadata;
 using GeneXus.Cryptography;
 using System.Data;
-using System.Data.SqlClient;
+using NpgsqlTypes;
 using GeneXus.Data;
 using com.genexus;
 using GeneXus.Data.ADO;
@@ -810,7 +810,7 @@ namespace GeneXus.Programs {
 
       protected void ZM066( short GX_JID )
       {
-         if ( ( GX_JID == 3 ) || ( GX_JID == 0 ) )
+         if ( ( GX_JID == 1 ) || ( GX_JID == 0 ) )
          {
             if ( StringUtil.StrCmp(Gx_mode, "INS") != 0 )
             {
@@ -839,7 +839,7 @@ namespace GeneXus.Programs {
                Z107empleadosext = A107empleadosext;
             }
          }
-         if ( GX_JID == -3 )
+         if ( GX_JID == -1 )
          {
             Z13empleadosid = A13empleadosid;
             Z98empleadosareaid = A98empleadosareaid;
@@ -920,7 +920,7 @@ namespace GeneXus.Programs {
             A107empleadosext = T00064_A107empleadosext[0];
             context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A107empleadosext", StringUtil.LTrim( StringUtil.Str( (decimal)(A107empleadosext), 9, 0)));
             n107empleadosext = T00064_n107empleadosext[0];
-            ZM066( -3) ;
+            ZM066( -1) ;
          }
          pr_default.close(2);
          OnLoadActions066( ) ;
@@ -934,20 +934,6 @@ namespace GeneXus.Programs {
       {
          Gx_BScreen = 1;
          standaloneModal( ) ;
-         if ( ! ( (DateTime.MinValue==A104empleadosfecreg) || ( A104empleadosfecreg >= context.localUtil.YMDHMSToT( 1753, 1, 1, 0, 0, 0) ) ) )
-         {
-            GX_msglist.addItem("Campo empleadosfecreg fuera de rango", "OutOfRange", 1, "EMPLEADOSFECREG");
-            AnyError = 1;
-            GX_FocusControl = edtempleadosfecreg_Internalname;
-            context.httpAjaxContext.ajax_rsp_assign_attri("", false, "GX_FocusControl", GX_FocusControl);
-         }
-         if ( ! ( (DateTime.MinValue==A105empleadosfecultact) || ( A105empleadosfecultact >= context.localUtil.YMDHMSToT( 1753, 1, 1, 0, 0, 0) ) ) )
-         {
-            GX_msglist.addItem("Campo empleadosfecultact fuera de rango", "OutOfRange", 1, "EMPLEADOSFECULTACT");
-            AnyError = 1;
-            GX_FocusControl = edtempleadosfecultact_Internalname;
-            context.httpAjaxContext.ajax_rsp_assign_attri("", false, "GX_FocusControl", GX_FocusControl);
-         }
       }
 
       protected void CloseExtendedTableCursors066( )
@@ -979,7 +965,7 @@ namespace GeneXus.Programs {
          pr_default.execute(1, new Object[] {n13empleadosid, A13empleadosid});
          if ( (pr_default.getStatus(1) != 101) )
          {
-            ZM066( 3) ;
+            ZM066( 1) ;
             RcdFound6 = 1;
             A13empleadosid = T00063_A13empleadosid[0];
             context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A13empleadosid", StringUtil.LTrim( StringUtil.Str( (decimal)(A13empleadosid), 9, 0)));
@@ -1351,7 +1337,7 @@ namespace GeneXus.Programs {
             pr_default.execute(0, new Object[] {n13empleadosid, A13empleadosid});
             if ( (pr_default.getStatus(0) == 103) )
             {
-               GX_msglist.addItem(context.GetMessage( "GXM_lock", new   object[]  {"empleados"}), "RecordIsLocked", 1, "");
+               GX_msglist.addItem(context.GetMessage( "GXM_lock", new   object[]  {"EMPLEADOS"}), "RecordIsLocked", 1, "");
                AnyError = 1;
                return  ;
             }
@@ -1422,7 +1408,7 @@ namespace GeneXus.Programs {
                   GXUtil.WriteLogRaw("Old: ",Z107empleadosext);
                   GXUtil.WriteLogRaw("Current: ",T00062_A107empleadosext[0]);
                }
-               GX_msglist.addItem(context.GetMessage( "GXM_waschg", new   object[]  {"empleados"}), "RecordWasChanged", 1, "");
+               GX_msglist.addItem(context.GetMessage( "GXM_waschg", new   object[]  {"EMPLEADOS"}), "RecordWasChanged", 1, "");
                AnyError = 1;
                return  ;
             }
@@ -1451,7 +1437,7 @@ namespace GeneXus.Programs {
                      /* Using cursor T00068 */
                      pr_default.execute(6, new Object[] {n13empleadosid, A13empleadosid, n98empleadosareaid, A98empleadosareaid, n99empleadosnomemple, A99empleadosnomemple, n100empleadosappaterno, A100empleadosappaterno, n101empleadosapmaterno, A101empleadosapmaterno, n102empleadosstatus, A102empleadosstatus, n103empleadosusuario, A103empleadosusuario, n104empleadosfecreg, A104empleadosfecreg, n105empleadosfecultact, A105empleadosfecultact, n106empleadoscorreo, A106empleadoscorreo, n107empleadosext, A107empleadosext});
                      pr_default.close(6);
-                     dsDefault.SmartCacheProvider.SetUpdated("empleados") ;
+                     dsDefault.SmartCacheProvider.SetUpdated("EMPLEADOS") ;
                      if ( (pr_default.getStatus(6) == 1) )
                      {
                         GX_msglist.addItem(context.GetMessage( "GXM_noupdate", ""), "DuplicatePrimaryKey", 1, "");
@@ -1506,10 +1492,10 @@ namespace GeneXus.Programs {
                      /* Using cursor T00069 */
                      pr_default.execute(7, new Object[] {n98empleadosareaid, A98empleadosareaid, n99empleadosnomemple, A99empleadosnomemple, n100empleadosappaterno, A100empleadosappaterno, n101empleadosapmaterno, A101empleadosapmaterno, n102empleadosstatus, A102empleadosstatus, n103empleadosusuario, A103empleadosusuario, n104empleadosfecreg, A104empleadosfecreg, n105empleadosfecultact, A105empleadosfecultact, n106empleadoscorreo, A106empleadoscorreo, n107empleadosext, A107empleadosext, n13empleadosid, A13empleadosid});
                      pr_default.close(7);
-                     dsDefault.SmartCacheProvider.SetUpdated("empleados") ;
+                     dsDefault.SmartCacheProvider.SetUpdated("EMPLEADOS") ;
                      if ( (pr_default.getStatus(7) == 103) )
                      {
-                        GX_msglist.addItem(context.GetMessage( "GXM_lock", new   object[]  {"empleados"}), "RecordIsLocked", 1, "");
+                        GX_msglist.addItem(context.GetMessage( "GXM_lock", new   object[]  {"EMPLEADOS"}), "RecordIsLocked", 1, "");
                         AnyError = 1;
                      }
                      DeferredUpdate066( ) ;
@@ -1563,7 +1549,7 @@ namespace GeneXus.Programs {
                   /* Using cursor T000610 */
                   pr_default.execute(8, new Object[] {n13empleadosid, A13empleadosid});
                   pr_default.close(8);
-                  dsDefault.SmartCacheProvider.SetUpdated("empleados") ;
+                  dsDefault.SmartCacheProvider.SetUpdated("EMPLEADOS") ;
                   if ( AnyError == 0 )
                   {
                      /* Start of After( delete) rules */
@@ -1632,7 +1618,6 @@ namespace GeneXus.Programs {
          }
          if ( AnyError == 0 )
          {
-            pr_default.close(1);
             context.CommitDataStores( "empleados");
             if ( AnyError == 0 )
             {
@@ -1644,7 +1629,6 @@ namespace GeneXus.Programs {
          }
          else
          {
-            pr_default.close(1);
             context.RollbackDataStores( "empleados");
          }
          IsModified = 0;
@@ -1780,7 +1764,7 @@ namespace GeneXus.Programs {
          context.AddJavascriptSource("jquery.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxtimezone.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxgral.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("gxcfg.js", "?202112302285079");
+         context.AddJavascriptSource("gxcfg.js", "?202212213271189");
          if ( context.isSpaRequest( ) )
          {
             enableOutput();
@@ -1974,12 +1958,12 @@ namespace GeneXus.Programs {
 
       protected void define_styles( )
       {
-         AddStyleSheetFile("calendar-system.css", "?11323129");
-         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?2284430");
+         AddStyleSheetFile("calendar-system.css", "?13205289");
+         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?13264988");
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?202112302285085");
+            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?202212213271199");
             idxLst = (int)(idxLst+1);
          }
          /* End function define_styles */
@@ -1989,7 +1973,7 @@ namespace GeneXus.Programs {
       {
          context.AddJavascriptSource("messages.spa.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxdec.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("empleados.js", "?202112302285085");
+         context.AddJavascriptSource("empleados.js", "?202212213271199");
          /* End function include_jscripts */
       }
 
@@ -2641,79 +2625,79 @@ namespace GeneXus.Programs {
        {
           Object[] prmT00064 ;
           prmT00064 = new Object[] {
-          new Object[] {"@empleadosid",SqlDbType.Int,9,0}
+          new Object[] {"empleadosid",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT00065 ;
           prmT00065 = new Object[] {
-          new Object[] {"@empleadosid",SqlDbType.Int,9,0}
+          new Object[] {"empleadosid",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT00063 ;
           prmT00063 = new Object[] {
-          new Object[] {"@empleadosid",SqlDbType.Int,9,0}
+          new Object[] {"empleadosid",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT00066 ;
           prmT00066 = new Object[] {
-          new Object[] {"@empleadosid",SqlDbType.Int,9,0}
+          new Object[] {"empleadosid",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT00067 ;
           prmT00067 = new Object[] {
-          new Object[] {"@empleadosid",SqlDbType.Int,9,0}
+          new Object[] {"empleadosid",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT00062 ;
           prmT00062 = new Object[] {
-          new Object[] {"@empleadosid",SqlDbType.Int,9,0}
+          new Object[] {"empleadosid",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT00068 ;
           prmT00068 = new Object[] {
-          new Object[] {"@empleadosid",SqlDbType.Int,9,0} ,
-          new Object[] {"@empleadosareaid",SqlDbType.VarChar,3,0} ,
-          new Object[] {"@empleadosnomemple",SqlDbType.VarChar,30,0} ,
-          new Object[] {"@empleadosappaterno",SqlDbType.VarChar,30,0} ,
-          new Object[] {"@empleadosapmaterno",SqlDbType.VarChar,30,0} ,
-          new Object[] {"@empleadosstatus",SqlDbType.VarChar,1,0} ,
-          new Object[] {"@empleadosusuario",SqlDbType.VarChar,15,0} ,
-          new Object[] {"@empleadosfecreg",SqlDbType.DateTime,10,8} ,
-          new Object[] {"@empleadosfecultact",SqlDbType.DateTime,10,8} ,
-          new Object[] {"@empleadoscorreo",SqlDbType.VarChar,50,0} ,
-          new Object[] {"@empleadosext",SqlDbType.Int,9,0}
+          new Object[] {"empleadosid",NpgsqlDbType.Integer,9,0} ,
+          new Object[] {"empleadosareaid",NpgsqlDbType.Varchar,3,0} ,
+          new Object[] {"empleadosnomemple",NpgsqlDbType.Varchar,30,0} ,
+          new Object[] {"empleadosappaterno",NpgsqlDbType.Varchar,30,0} ,
+          new Object[] {"empleadosapmaterno",NpgsqlDbType.Varchar,30,0} ,
+          new Object[] {"empleadosstatus",NpgsqlDbType.Varchar,1,0} ,
+          new Object[] {"empleadosusuario",NpgsqlDbType.Varchar,15,0} ,
+          new Object[] {"empleadosfecreg",NpgsqlDbType.Timestamp,10,8} ,
+          new Object[] {"empleadosfecultact",NpgsqlDbType.Timestamp,10,8} ,
+          new Object[] {"empleadoscorreo",NpgsqlDbType.Varchar,50,0} ,
+          new Object[] {"empleadosext",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT00069 ;
           prmT00069 = new Object[] {
-          new Object[] {"@empleadosareaid",SqlDbType.VarChar,3,0} ,
-          new Object[] {"@empleadosnomemple",SqlDbType.VarChar,30,0} ,
-          new Object[] {"@empleadosappaterno",SqlDbType.VarChar,30,0} ,
-          new Object[] {"@empleadosapmaterno",SqlDbType.VarChar,30,0} ,
-          new Object[] {"@empleadosstatus",SqlDbType.VarChar,1,0} ,
-          new Object[] {"@empleadosusuario",SqlDbType.VarChar,15,0} ,
-          new Object[] {"@empleadosfecreg",SqlDbType.DateTime,10,8} ,
-          new Object[] {"@empleadosfecultact",SqlDbType.DateTime,10,8} ,
-          new Object[] {"@empleadoscorreo",SqlDbType.VarChar,50,0} ,
-          new Object[] {"@empleadosext",SqlDbType.Int,9,0} ,
-          new Object[] {"@empleadosid",SqlDbType.Int,9,0}
+          new Object[] {"empleadosareaid",NpgsqlDbType.Varchar,3,0} ,
+          new Object[] {"empleadosnomemple",NpgsqlDbType.Varchar,30,0} ,
+          new Object[] {"empleadosappaterno",NpgsqlDbType.Varchar,30,0} ,
+          new Object[] {"empleadosapmaterno",NpgsqlDbType.Varchar,30,0} ,
+          new Object[] {"empleadosstatus",NpgsqlDbType.Varchar,1,0} ,
+          new Object[] {"empleadosusuario",NpgsqlDbType.Varchar,15,0} ,
+          new Object[] {"empleadosfecreg",NpgsqlDbType.Timestamp,10,8} ,
+          new Object[] {"empleadosfecultact",NpgsqlDbType.Timestamp,10,8} ,
+          new Object[] {"empleadoscorreo",NpgsqlDbType.Varchar,50,0} ,
+          new Object[] {"empleadosext",NpgsqlDbType.Integer,9,0} ,
+          new Object[] {"empleadosid",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT000610 ;
           prmT000610 = new Object[] {
-          new Object[] {"@empleadosid",SqlDbType.Int,9,0}
+          new Object[] {"empleadosid",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT000611 ;
           prmT000611 = new Object[] {
-          new Object[] {"@empleadosid",SqlDbType.Int,9,0}
+          new Object[] {"empleadosid",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT000612 ;
           prmT000612 = new Object[] {
           } ;
           def= new CursorDef[] {
-              new CursorDef("T00062", "SELECT [empleadosid], [empleadosareaid], [empleadosnomemple], [empleadosappaterno], [empleadosapmaterno], [empleadosstatus], [empleadosusuario], [empleadosfecreg], [empleadosfecultact], [empleadoscorreo], [empleadosext] FROM [empleados] WITH (UPDLOCK) WHERE [empleadosid] = @empleadosid ",true, GxErrorMask.GX_NOMASK, false, this,prmT00062,1,0,true,false )
-             ,new CursorDef("T00063", "SELECT [empleadosid], [empleadosareaid], [empleadosnomemple], [empleadosappaterno], [empleadosapmaterno], [empleadosstatus], [empleadosusuario], [empleadosfecreg], [empleadosfecultact], [empleadoscorreo], [empleadosext] FROM [empleados] WITH (NOLOCK) WHERE [empleadosid] = @empleadosid ",true, GxErrorMask.GX_NOMASK, false, this,prmT00063,1,0,true,false )
-             ,new CursorDef("T00064", "SELECT TM1.[empleadosid], TM1.[empleadosareaid], TM1.[empleadosnomemple], TM1.[empleadosappaterno], TM1.[empleadosapmaterno], TM1.[empleadosstatus], TM1.[empleadosusuario], TM1.[empleadosfecreg], TM1.[empleadosfecultact], TM1.[empleadoscorreo], TM1.[empleadosext] FROM [empleados] TM1 WITH (NOLOCK) WHERE TM1.[empleadosid] = @empleadosid ORDER BY TM1.[empleadosid]  OPTION (FAST 100)",true, GxErrorMask.GX_NOMASK, false, this,prmT00064,100,0,true,false )
-             ,new CursorDef("T00065", "SELECT [empleadosid] FROM [empleados] WITH (NOLOCK) WHERE [empleadosid] = @empleadosid  OPTION (FAST 1)",true, GxErrorMask.GX_NOMASK, false, this,prmT00065,1,0,true,false )
-             ,new CursorDef("T00066", "SELECT TOP 1 [empleadosid] FROM [empleados] WITH (NOLOCK) WHERE ( [empleadosid] > @empleadosid) ORDER BY [empleadosid]  OPTION (FAST 1)",true, GxErrorMask.GX_NOMASK, false, this,prmT00066,1,0,true,true )
-             ,new CursorDef("T00067", "SELECT TOP 1 [empleadosid] FROM [empleados] WITH (NOLOCK) WHERE ( [empleadosid] < @empleadosid) ORDER BY [empleadosid] DESC  OPTION (FAST 1)",true, GxErrorMask.GX_NOMASK, false, this,prmT00067,1,0,true,true )
-             ,new CursorDef("T00068", "INSERT INTO [empleados]([empleadosid], [empleadosareaid], [empleadosnomemple], [empleadosappaterno], [empleadosapmaterno], [empleadosstatus], [empleadosusuario], [empleadosfecreg], [empleadosfecultact], [empleadoscorreo], [empleadosext]) VALUES(@empleadosid, @empleadosareaid, @empleadosnomemple, @empleadosappaterno, @empleadosapmaterno, @empleadosstatus, @empleadosusuario, @empleadosfecreg, @empleadosfecultact, @empleadoscorreo, @empleadosext)", GxErrorMask.GX_NOMASK,prmT00068)
-             ,new CursorDef("T00069", "UPDATE [empleados] SET [empleadosareaid]=@empleadosareaid, [empleadosnomemple]=@empleadosnomemple, [empleadosappaterno]=@empleadosappaterno, [empleadosapmaterno]=@empleadosapmaterno, [empleadosstatus]=@empleadosstatus, [empleadosusuario]=@empleadosusuario, [empleadosfecreg]=@empleadosfecreg, [empleadosfecultact]=@empleadosfecultact, [empleadoscorreo]=@empleadoscorreo, [empleadosext]=@empleadosext  WHERE [empleadosid] = @empleadosid", GxErrorMask.GX_NOMASK,prmT00069)
-             ,new CursorDef("T000610", "DELETE FROM [empleados]  WHERE [empleadosid] = @empleadosid", GxErrorMask.GX_NOMASK,prmT000610)
-             ,new CursorDef("T000611", "SELECT TOP 1 [almacenid] FROM [almacen] WITH (NOLOCK) WHERE [empleadosid] = @empleadosid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000611,1,0,true,true )
-             ,new CursorDef("T000612", "SELECT [empleadosid] FROM [empleados] WITH (NOLOCK) ORDER BY [empleadosid]  OPTION (FAST 100)",true, GxErrorMask.GX_NOMASK, false, this,prmT000612,100,0,true,false )
+              new CursorDef("T00062", "SELECT empleadosid, areaid, empleadosnomemple, empleadosappaterno, empleadosapmaterno, empleadosstatus, empleadosusuario, empleadosfecreg, empleadosfecultact, empleadoscorreo, empleadosext FROM public.empleados WHERE empleadosid = :empleadosid  FOR UPDATE OF empleados NOWAIT",true, GxErrorMask.GX_NOMASK, false, this,prmT00062,1,0,true,false )
+             ,new CursorDef("T00063", "SELECT empleadosid, areaid, empleadosnomemple, empleadosappaterno, empleadosapmaterno, empleadosstatus, empleadosusuario, empleadosfecreg, empleadosfecultact, empleadoscorreo, empleadosext FROM public.empleados WHERE empleadosid = :empleadosid ",true, GxErrorMask.GX_NOMASK, false, this,prmT00063,1,0,true,false )
+             ,new CursorDef("T00064", "SELECT TM1.empleadosid, TM1.areaid, TM1.empleadosnomemple, TM1.empleadosappaterno, TM1.empleadosapmaterno, TM1.empleadosstatus, TM1.empleadosusuario, TM1.empleadosfecreg, TM1.empleadosfecultact, TM1.empleadoscorreo, TM1.empleadosext FROM public.empleados TM1 WHERE TM1.empleadosid = :empleadosid ORDER BY TM1.empleadosid ",true, GxErrorMask.GX_NOMASK, false, this,prmT00064,100,0,true,false )
+             ,new CursorDef("T00065", "SELECT empleadosid FROM public.empleados WHERE empleadosid = :empleadosid ",true, GxErrorMask.GX_NOMASK, false, this,prmT00065,1,0,true,false )
+             ,new CursorDef("T00066", "SELECT empleadosid FROM public.empleados WHERE ( empleadosid > :empleadosid) ORDER BY empleadosid ",true, GxErrorMask.GX_NOMASK, false, this,prmT00066,1,0,true,true )
+             ,new CursorDef("T00067", "SELECT empleadosid FROM public.empleados WHERE ( empleadosid < :empleadosid) ORDER BY empleadosid DESC ",true, GxErrorMask.GX_NOMASK, false, this,prmT00067,1,0,true,true )
+             ,new CursorDef("T00068", "SAVEPOINT gxupdate;INSERT INTO public.empleados(empleadosid, areaid, empleadosnomemple, empleadosappaterno, empleadosapmaterno, empleadosstatus, empleadosusuario, empleadosfecreg, empleadosfecultact, empleadoscorreo, empleadosext) VALUES(:empleadosid, :empleadosareaid, :empleadosnomemple, :empleadosappaterno, :empleadosapmaterno, :empleadosstatus, :empleadosusuario, :empleadosfecreg, :empleadosfecultact, :empleadoscorreo, :empleadosext);RELEASE SAVEPOINT gxupdate", GxErrorMask.GX_ROLLBACKSAVEPOINT,prmT00068)
+             ,new CursorDef("T00069", "SAVEPOINT gxupdate;UPDATE public.empleados SET areaid=:empleadosareaid, empleadosnomemple=:empleadosnomemple, empleadosappaterno=:empleadosappaterno, empleadosapmaterno=:empleadosapmaterno, empleadosstatus=:empleadosstatus, empleadosusuario=:empleadosusuario, empleadosfecreg=:empleadosfecreg, empleadosfecultact=:empleadosfecultact, empleadoscorreo=:empleadoscorreo, empleadosext=:empleadosext  WHERE empleadosid = :empleadosid;RELEASE SAVEPOINT gxupdate", GxErrorMask.GX_ROLLBACKSAVEPOINT | GxErrorMask.GX_NOMASK,prmT00069)
+             ,new CursorDef("T000610", "SAVEPOINT gxupdate;DELETE FROM public.empleados  WHERE empleadosid = :empleadosid;RELEASE SAVEPOINT gxupdate", GxErrorMask.GX_ROLLBACKSAVEPOINT | GxErrorMask.GX_NOMASK,prmT000610)
+             ,new CursorDef("T000611", "SELECT almacenid FROM public.almacen WHERE empleadoid = :empleadosid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000611,1,0,true,true )
+             ,new CursorDef("T000612", "SELECT empleadosid FROM public.empleados ORDER BY empleadosid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000612,100,0,true,false )
           };
        }
     }

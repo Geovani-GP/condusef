@@ -2,9 +2,9 @@
                File: origen
         Description: origen
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 12/30/2021 22:9:6.71
+       Generated on: 1/22/2022 13:27:31.80
        Program type: Callable routine
-          Main DBMS: sqlserver
+          Main DBMS: postgresql
 */
 using System;
 using System.Collections;
@@ -14,7 +14,7 @@ using GeneXus.Application;
 using GeneXus.Metadata;
 using GeneXus.Cryptography;
 using System.Data;
-using System.Data.SqlClient;
+using NpgsqlTypes;
 using GeneXus.Data;
 using com.genexus;
 using GeneXus.Data.ADO;
@@ -716,7 +716,7 @@ namespace GeneXus.Programs {
 
       protected void ZM0G16( short GX_JID )
       {
-         if ( ( GX_JID == 3 ) || ( GX_JID == 0 ) )
+         if ( ( GX_JID == 1 ) || ( GX_JID == 0 ) )
          {
             if ( StringUtil.StrCmp(Gx_mode, "INS") != 0 )
             {
@@ -737,7 +737,7 @@ namespace GeneXus.Programs {
                Z125origenfecultact = A125origenfecultact;
             }
          }
-         if ( GX_JID == -3 )
+         if ( GX_JID == -1 )
          {
             Z10origenid = A10origenid;
             Z120origendscorta = A120origendscorta;
@@ -802,7 +802,7 @@ namespace GeneXus.Programs {
             A125origenfecultact = T000G4_A125origenfecultact[0];
             context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A125origenfecultact", context.localUtil.TToC( A125origenfecultact, 10, 8, 0, 3, "/", ":", " "));
             n125origenfecultact = T000G4_n125origenfecultact[0];
-            ZM0G16( -3) ;
+            ZM0G16( -1) ;
          }
          pr_default.close(2);
          OnLoadActions0G16( ) ;
@@ -816,20 +816,6 @@ namespace GeneXus.Programs {
       {
          Gx_BScreen = 1;
          standaloneModal( ) ;
-         if ( ! ( (DateTime.MinValue==A124origenfecreg) || ( A124origenfecreg >= context.localUtil.YMDHMSToT( 1753, 1, 1, 0, 0, 0) ) ) )
-         {
-            GX_msglist.addItem("Campo origenfecreg fuera de rango", "OutOfRange", 1, "ORIGENFECREG");
-            AnyError = 1;
-            GX_FocusControl = edtorigenfecreg_Internalname;
-            context.httpAjaxContext.ajax_rsp_assign_attri("", false, "GX_FocusControl", GX_FocusControl);
-         }
-         if ( ! ( (DateTime.MinValue==A125origenfecultact) || ( A125origenfecultact >= context.localUtil.YMDHMSToT( 1753, 1, 1, 0, 0, 0) ) ) )
-         {
-            GX_msglist.addItem("Campo origenfecultact fuera de rango", "OutOfRange", 1, "ORIGENFECULTACT");
-            AnyError = 1;
-            GX_FocusControl = edtorigenfecultact_Internalname;
-            context.httpAjaxContext.ajax_rsp_assign_attri("", false, "GX_FocusControl", GX_FocusControl);
-         }
       }
 
       protected void CloseExtendedTableCursors0G16( )
@@ -861,7 +847,7 @@ namespace GeneXus.Programs {
          pr_default.execute(1, new Object[] {n10origenid, A10origenid});
          if ( (pr_default.getStatus(1) != 101) )
          {
-            ZM0G16( 3) ;
+            ZM0G16( 1) ;
             RcdFound16 = 1;
             A10origenid = T000G3_A10origenid[0];
             context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A10origenid", StringUtil.LTrim( StringUtil.Str( (decimal)(A10origenid), 18, 0)));
@@ -1221,7 +1207,7 @@ namespace GeneXus.Programs {
             pr_default.execute(0, new Object[] {n10origenid, A10origenid});
             if ( (pr_default.getStatus(0) == 103) )
             {
-               GX_msglist.addItem(context.GetMessage( "GXM_lock", new   object[]  {"origen"}), "RecordIsLocked", 1, "");
+               GX_msglist.addItem(context.GetMessage( "GXM_lock", new   object[]  {"ORIGEN"}), "RecordIsLocked", 1, "");
                AnyError = 1;
                return  ;
             }
@@ -1268,7 +1254,7 @@ namespace GeneXus.Programs {
                   GXUtil.WriteLogRaw("Old: ",Z125origenfecultact);
                   GXUtil.WriteLogRaw("Current: ",T000G2_A125origenfecultact[0]);
                }
-               GX_msglist.addItem(context.GetMessage( "GXM_waschg", new   object[]  {"origen"}), "RecordWasChanged", 1, "");
+               GX_msglist.addItem(context.GetMessage( "GXM_waschg", new   object[]  {"ORIGEN"}), "RecordWasChanged", 1, "");
                AnyError = 1;
                return  ;
             }
@@ -1297,7 +1283,7 @@ namespace GeneXus.Programs {
                      /* Using cursor T000G8 */
                      pr_default.execute(6, new Object[] {n10origenid, A10origenid, n120origendscorta, A120origendscorta, n121origendsclarga, A121origendsclarga, n122origenusuario, A122origenusuario, n123origentotal, A123origentotal, n124origenfecreg, A124origenfecreg, n125origenfecultact, A125origenfecultact});
                      pr_default.close(6);
-                     dsDefault.SmartCacheProvider.SetUpdated("origen") ;
+                     dsDefault.SmartCacheProvider.SetUpdated("ORIGEN") ;
                      if ( (pr_default.getStatus(6) == 1) )
                      {
                         GX_msglist.addItem(context.GetMessage( "GXM_noupdate", ""), "DuplicatePrimaryKey", 1, "");
@@ -1352,10 +1338,10 @@ namespace GeneXus.Programs {
                      /* Using cursor T000G9 */
                      pr_default.execute(7, new Object[] {n120origendscorta, A120origendscorta, n121origendsclarga, A121origendsclarga, n122origenusuario, A122origenusuario, n123origentotal, A123origentotal, n124origenfecreg, A124origenfecreg, n125origenfecultact, A125origenfecultact, n10origenid, A10origenid});
                      pr_default.close(7);
-                     dsDefault.SmartCacheProvider.SetUpdated("origen") ;
+                     dsDefault.SmartCacheProvider.SetUpdated("ORIGEN") ;
                      if ( (pr_default.getStatus(7) == 103) )
                      {
-                        GX_msglist.addItem(context.GetMessage( "GXM_lock", new   object[]  {"origen"}), "RecordIsLocked", 1, "");
+                        GX_msglist.addItem(context.GetMessage( "GXM_lock", new   object[]  {"ORIGEN"}), "RecordIsLocked", 1, "");
                         AnyError = 1;
                      }
                      DeferredUpdate0G16( ) ;
@@ -1409,7 +1395,7 @@ namespace GeneXus.Programs {
                   /* Using cursor T000G10 */
                   pr_default.execute(8, new Object[] {n10origenid, A10origenid});
                   pr_default.close(8);
-                  dsDefault.SmartCacheProvider.SetUpdated("origen") ;
+                  dsDefault.SmartCacheProvider.SetUpdated("ORIGEN") ;
                   if ( AnyError == 0 )
                   {
                      /* Start of After( delete) rules */
@@ -1478,7 +1464,6 @@ namespace GeneXus.Programs {
          }
          if ( AnyError == 0 )
          {
-            pr_default.close(1);
             context.CommitDataStores( "origen");
             if ( AnyError == 0 )
             {
@@ -1490,7 +1475,6 @@ namespace GeneXus.Programs {
          }
          else
          {
-            pr_default.close(1);
             context.RollbackDataStores( "origen");
          }
          IsModified = 0;
@@ -1618,7 +1602,7 @@ namespace GeneXus.Programs {
          context.AddJavascriptSource("jquery.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxtimezone.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxgral.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("gxcfg.js", "?20211230229743");
+         context.AddJavascriptSource("gxcfg.js", "?202212213273251");
          if ( context.isSpaRequest( ) )
          {
             enableOutput();
@@ -1788,12 +1772,12 @@ namespace GeneXus.Programs {
 
       protected void define_styles( )
       {
-         AddStyleSheetFile("calendar-system.css", "?11323129");
-         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?2284430");
+         AddStyleSheetFile("calendar-system.css", "?13205289");
+         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?13264988");
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?20211230229747");
+            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?202212213273257");
             idxLst = (int)(idxLst+1);
          }
          /* End function define_styles */
@@ -1803,7 +1787,7 @@ namespace GeneXus.Programs {
       {
          context.AddJavascriptSource("messages.spa.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxdec.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("origen.js", "?20211230229748");
+         context.AddJavascriptSource("origen.js", "?202212213273257");
          /* End function include_jscripts */
       }
 
@@ -2334,71 +2318,71 @@ namespace GeneXus.Programs {
        {
           Object[] prmT000G4 ;
           prmT000G4 = new Object[] {
-          new Object[] {"@origenid",SqlDbType.Decimal,18,0}
+          new Object[] {"origenid",NpgsqlDbType.Real,18,0}
           } ;
           Object[] prmT000G5 ;
           prmT000G5 = new Object[] {
-          new Object[] {"@origenid",SqlDbType.Decimal,18,0}
+          new Object[] {"origenid",NpgsqlDbType.Real,18,0}
           } ;
           Object[] prmT000G3 ;
           prmT000G3 = new Object[] {
-          new Object[] {"@origenid",SqlDbType.Decimal,18,0}
+          new Object[] {"origenid",NpgsqlDbType.Real,18,0}
           } ;
           Object[] prmT000G6 ;
           prmT000G6 = new Object[] {
-          new Object[] {"@origenid",SqlDbType.Decimal,18,0}
+          new Object[] {"origenid",NpgsqlDbType.Real,18,0}
           } ;
           Object[] prmT000G7 ;
           prmT000G7 = new Object[] {
-          new Object[] {"@origenid",SqlDbType.Decimal,18,0}
+          new Object[] {"origenid",NpgsqlDbType.Real,18,0}
           } ;
           Object[] prmT000G2 ;
           prmT000G2 = new Object[] {
-          new Object[] {"@origenid",SqlDbType.Decimal,18,0}
+          new Object[] {"origenid",NpgsqlDbType.Real,18,0}
           } ;
           Object[] prmT000G8 ;
           prmT000G8 = new Object[] {
-          new Object[] {"@origenid",SqlDbType.Decimal,18,0} ,
-          new Object[] {"@origendscorta",SqlDbType.VarChar,50,0} ,
-          new Object[] {"@origendsclarga",SqlDbType.VarChar,100,0} ,
-          new Object[] {"@origenusuario",SqlDbType.VarChar,15,0} ,
-          new Object[] {"@origentotal",SqlDbType.VarChar,50,0} ,
-          new Object[] {"@origenfecreg",SqlDbType.DateTime,10,8} ,
-          new Object[] {"@origenfecultact",SqlDbType.DateTime,10,8}
+          new Object[] {"origenid",NpgsqlDbType.Real,18,0} ,
+          new Object[] {"origendscorta",NpgsqlDbType.Varchar,50,0} ,
+          new Object[] {"origendsclarga",NpgsqlDbType.Varchar,100,0} ,
+          new Object[] {"origenusuario",NpgsqlDbType.Varchar,15,0} ,
+          new Object[] {"origentotal",NpgsqlDbType.Varchar,50,0} ,
+          new Object[] {"origenfecreg",NpgsqlDbType.Timestamp,10,8} ,
+          new Object[] {"origenfecultact",NpgsqlDbType.Timestamp,10,8}
           } ;
           Object[] prmT000G9 ;
           prmT000G9 = new Object[] {
-          new Object[] {"@origendscorta",SqlDbType.VarChar,50,0} ,
-          new Object[] {"@origendsclarga",SqlDbType.VarChar,100,0} ,
-          new Object[] {"@origenusuario",SqlDbType.VarChar,15,0} ,
-          new Object[] {"@origentotal",SqlDbType.VarChar,50,0} ,
-          new Object[] {"@origenfecreg",SqlDbType.DateTime,10,8} ,
-          new Object[] {"@origenfecultact",SqlDbType.DateTime,10,8} ,
-          new Object[] {"@origenid",SqlDbType.Decimal,18,0}
+          new Object[] {"origendscorta",NpgsqlDbType.Varchar,50,0} ,
+          new Object[] {"origendsclarga",NpgsqlDbType.Varchar,100,0} ,
+          new Object[] {"origenusuario",NpgsqlDbType.Varchar,15,0} ,
+          new Object[] {"origentotal",NpgsqlDbType.Varchar,50,0} ,
+          new Object[] {"origenfecreg",NpgsqlDbType.Timestamp,10,8} ,
+          new Object[] {"origenfecultact",NpgsqlDbType.Timestamp,10,8} ,
+          new Object[] {"origenid",NpgsqlDbType.Real,18,0}
           } ;
           Object[] prmT000G10 ;
           prmT000G10 = new Object[] {
-          new Object[] {"@origenid",SqlDbType.Decimal,18,0}
+          new Object[] {"origenid",NpgsqlDbType.Real,18,0}
           } ;
           Object[] prmT000G11 ;
           prmT000G11 = new Object[] {
-          new Object[] {"@origenid",SqlDbType.Decimal,18,0}
+          new Object[] {"origenid",NpgsqlDbType.Real,18,0}
           } ;
           Object[] prmT000G12 ;
           prmT000G12 = new Object[] {
           } ;
           def= new CursorDef[] {
-              new CursorDef("T000G2", "SELECT [origenid], [origendscorta], [origendsclarga], [origenusuario], [origentotal], [origenfecreg], [origenfecultact] FROM [origen] WITH (UPDLOCK) WHERE [origenid] = @origenid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000G2,1,0,true,false )
-             ,new CursorDef("T000G3", "SELECT [origenid], [origendscorta], [origendsclarga], [origenusuario], [origentotal], [origenfecreg], [origenfecultact] FROM [origen] WITH (NOLOCK) WHERE [origenid] = @origenid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000G3,1,0,true,false )
-             ,new CursorDef("T000G4", "SELECT TM1.[origenid], TM1.[origendscorta], TM1.[origendsclarga], TM1.[origenusuario], TM1.[origentotal], TM1.[origenfecreg], TM1.[origenfecultact] FROM [origen] TM1 WITH (NOLOCK) WHERE TM1.[origenid] = @origenid ORDER BY TM1.[origenid]  OPTION (FAST 100)",true, GxErrorMask.GX_NOMASK, false, this,prmT000G4,100,0,true,false )
-             ,new CursorDef("T000G5", "SELECT [origenid] FROM [origen] WITH (NOLOCK) WHERE [origenid] = @origenid  OPTION (FAST 1)",true, GxErrorMask.GX_NOMASK, false, this,prmT000G5,1,0,true,false )
-             ,new CursorDef("T000G6", "SELECT TOP 1 [origenid] FROM [origen] WITH (NOLOCK) WHERE ( [origenid] > @origenid) ORDER BY [origenid]  OPTION (FAST 1)",true, GxErrorMask.GX_NOMASK, false, this,prmT000G6,1,0,true,true )
-             ,new CursorDef("T000G7", "SELECT TOP 1 [origenid] FROM [origen] WITH (NOLOCK) WHERE ( [origenid] < @origenid) ORDER BY [origenid] DESC  OPTION (FAST 1)",true, GxErrorMask.GX_NOMASK, false, this,prmT000G7,1,0,true,true )
-             ,new CursorDef("T000G8", "INSERT INTO [origen]([origenid], [origendscorta], [origendsclarga], [origenusuario], [origentotal], [origenfecreg], [origenfecultact]) VALUES(@origenid, @origendscorta, @origendsclarga, @origenusuario, @origentotal, @origenfecreg, @origenfecultact)", GxErrorMask.GX_NOMASK,prmT000G8)
-             ,new CursorDef("T000G9", "UPDATE [origen] SET [origendscorta]=@origendscorta, [origendsclarga]=@origendsclarga, [origenusuario]=@origenusuario, [origentotal]=@origentotal, [origenfecreg]=@origenfecreg, [origenfecultact]=@origenfecultact  WHERE [origenid] = @origenid", GxErrorMask.GX_NOMASK,prmT000G9)
-             ,new CursorDef("T000G10", "DELETE FROM [origen]  WHERE [origenid] = @origenid", GxErrorMask.GX_NOMASK,prmT000G10)
-             ,new CursorDef("T000G11", "SELECT TOP 1 [almacenid], [articulosproductoid], [articuloscambsid] FROM [articulos] WITH (NOLOCK) WHERE [origenid] = @origenid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000G11,1,0,true,true )
-             ,new CursorDef("T000G12", "SELECT [origenid] FROM [origen] WITH (NOLOCK) ORDER BY [origenid]  OPTION (FAST 100)",true, GxErrorMask.GX_NOMASK, false, this,prmT000G12,100,0,true,false )
+              new CursorDef("T000G2", "SELECT origenid, origendscorta, origendsclarga, origenusuario, origentotal, origenfecreg, origenfecultact FROM public.origen WHERE origenid = :origenid  FOR UPDATE OF origen NOWAIT",true, GxErrorMask.GX_NOMASK, false, this,prmT000G2,1,0,true,false )
+             ,new CursorDef("T000G3", "SELECT origenid, origendscorta, origendsclarga, origenusuario, origentotal, origenfecreg, origenfecultact FROM public.origen WHERE origenid = :origenid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000G3,1,0,true,false )
+             ,new CursorDef("T000G4", "SELECT TM1.origenid, TM1.origendscorta, TM1.origendsclarga, TM1.origenusuario, TM1.origentotal, TM1.origenfecreg, TM1.origenfecultact FROM public.origen TM1 WHERE TM1.origenid = :origenid ORDER BY TM1.origenid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000G4,100,0,true,false )
+             ,new CursorDef("T000G5", "SELECT origenid FROM public.origen WHERE origenid = :origenid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000G5,1,0,true,false )
+             ,new CursorDef("T000G6", "SELECT origenid FROM public.origen WHERE ( origenid > :origenid) ORDER BY origenid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000G6,1,0,true,true )
+             ,new CursorDef("T000G7", "SELECT origenid FROM public.origen WHERE ( origenid < :origenid) ORDER BY origenid DESC ",true, GxErrorMask.GX_NOMASK, false, this,prmT000G7,1,0,true,true )
+             ,new CursorDef("T000G8", "SAVEPOINT gxupdate;INSERT INTO public.origen(origenid, origendscorta, origendsclarga, origenusuario, origentotal, origenfecreg, origenfecultact) VALUES(:origenid, :origendscorta, :origendsclarga, :origenusuario, :origentotal, :origenfecreg, :origenfecultact);RELEASE SAVEPOINT gxupdate", GxErrorMask.GX_ROLLBACKSAVEPOINT,prmT000G8)
+             ,new CursorDef("T000G9", "SAVEPOINT gxupdate;UPDATE public.origen SET origendscorta=:origendscorta, origendsclarga=:origendsclarga, origenusuario=:origenusuario, origentotal=:origentotal, origenfecreg=:origenfecreg, origenfecultact=:origenfecultact  WHERE origenid = :origenid;RELEASE SAVEPOINT gxupdate", GxErrorMask.GX_ROLLBACKSAVEPOINT | GxErrorMask.GX_NOMASK,prmT000G9)
+             ,new CursorDef("T000G10", "SAVEPOINT gxupdate;DELETE FROM public.origen  WHERE origenid = :origenid;RELEASE SAVEPOINT gxupdate", GxErrorMask.GX_ROLLBACKSAVEPOINT | GxErrorMask.GX_NOMASK,prmT000G10)
+             ,new CursorDef("T000G11", "SELECT articulosid, productoid, cambsid FROM public.articulos WHERE origenid = :origenid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000G11,1,0,true,true )
+             ,new CursorDef("T000G12", "SELECT origenid FROM public.origen ORDER BY origenid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000G12,100,0,true,false )
           };
        }
     }

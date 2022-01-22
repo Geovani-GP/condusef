@@ -45,25 +45,11 @@ repeat_i(2,[ 1,2,[ 'Linkselection',25,83,84 ],[] ]).
  
  
 rule_i(0,datastore(1,'DS_LAST_CHANGE','')).
-rule_i(0,datastore(1,'LOCK_RETRY','10')).
-rule_i(0,datastore(1,'WAIT_RECORD','0')).
-rule_i(0,datastore(1,'SQLSERVER_VERSION','9')).
+rule_i(0,datastore(1,'POSTGRESQL_VERSION','8_3')).
 rule_i(0,datastore(1,'COMMENT_ON','No')).
-rule_i(0,datastore(1,'DFT_TMP_TBLSPACE','')).
-rule_i(0,datastore(1,'DFT_IDX_TBLSPACE','')).
-rule_i(0,datastore(1,'DFT_TBL_TBLSPACE','')).
 rule_i(0,datastore(1,'DCL_REF_INT_DB','Yes')).
 rule_i(0,datastore(1,'PRIMARY_KEY_TYPE','PK')).
 rule_i(0,datastore(1,'CS_SCHEMA','')).
-rule_i(0,datastore(1,'SORT_ATTRIBUTES','Yes')).
-rule_i(0,datastore(1,'JRN400','QSQJRN')).
-rule_i(0,datastore(1,'CREATE_SAVF','Yes')).
-rule_i(0,datastore(1,'PGMLIB','')).
-rule_i(0,datastore(1,'DTALIB','')).
-rule_i(0,datastore(1,'CC_USER_PASS','')).
-rule_i(0,datastore(1,'CC_USER_ID','')).
-rule_i(0,datastore(1,'CC_SERVER','')).
-rule_i(0,datastore(1,'CC_DBNAME','')).
 rule_i(0,datastore(1,'RecycleRWMin','30')).
 rule_i(0,datastore(1,'RecycleRWType','1')).
 rule_i(0,datastore(1,'RecycleRW','-1')).
@@ -75,26 +61,25 @@ rule_i(0,datastore(1,'CS_RPCPGML','')).
 rule_i(0,datastore(1,'JDBC_DATASOURCE','')).
 rule_i(0,datastore(1,'USE_JDBC_DATASOURCE','0')).
 rule_i(0,datastore(1,'DS_DBMS_ADDINFO','')).
-rule_i(0,datastore(1,'USER_PASSWORD','')).
-rule_i(0,datastore(1,'USER_ID','')).
-rule_i(0,datastore(1,'TRUSTED_CONNECTION','Yes')).
+rule_i(0,datastore(1,'USER_PASSWORD',󻢸蘇�2�5炭)).
+rule_i(0,datastore(1,'USER_ID',postgres)).
 rule_i(0,datastore(1,'CS_CONNECT','First')).
-rule_i(0,datastore(1,'DBMS_PORT','')).
-rule_i(0,datastore(1,'CS_SERVER','JOSBUENO-MX\DELGADO')).
-rule_i(0,datastore(1,'CS_DBNAME','Dar_CONDUCEFDB')).
+rule_i(0,datastore(1,'DBMS_PORT','5432')).
+rule_i(0,datastore(1,'CS_SERVER',localhost)).
+rule_i(0,datastore(1,'CS_DBNAME',postgres)).
 rule_i(0,datastore(1,'CS_FLEDSNAME','')).
-rule_i(0,datastore(1,'CS_DRVNAME','sql server')).
+rule_i(0,datastore(1,'CS_DRVNAME','')).
 rule_i(0,datastore(1,'CS_DSNAME','')).
 rule_i(0,datastore(1,'DB_URL','')).
 rule_i(0,datastore(1,'JDBC_CUSTOM_URL','0')).
 rule_i(0,datastore(1,'JDBC_CUSTOM_DRIVER','')).
-rule_i(0,datastore(1,'JDBC_DRIVER','net.sourceforge.jtds.jdbc.Driver')).
+rule_i(0,datastore(1,'JDBC_DRIVER','org.postgresql.Driver')).
 rule_i(0,datastore(1,'CONNECT_METHOD','OPSYS')).
 rule_i(0,datastore(1,'ACCESS_TECHNO','ADONET')).
 rule_i(0,datastore(1,'MAIN_DS','-1')).
 rule_i(0,datastore(1,'REORG_GEN','8')).
 rule_i(0,datastore(1,'HelpKeyword','20')).
-rule_i(0,datastore(1,'DBMS',12)).
+rule_i(0,datastore(1,'DBMS',15)).
 rule_i(0,datastore(1,'NAME','Default')).
 rule_i(0,prop(idNULLS_BEHAVIOR,idNB_Current)).
 rule_i(0,prop('ObjectVisibility','Public')).
@@ -140,6 +125,10 @@ rule_i(0,maingen(15)).
 rule_i(0,parm([ 'Pcambsid' ],[])).
 rule_i(0,parmio([ [ 'Pcambsid',out ] ])).
 rule_i(0,order([ 25 ])).
+rule_i(0,file(14,'CAMBS',[ 25,83,84,85,86 ])).
+rule_i(0,loc([ 14 ],'CAMBS','','LAN')).
+rule_i(0,index(14,'CAMBS_PKEY',u,[ 25 ])).
+rule_i(0,loc([ 14,'CAMBS_PKEY' ],cambs_pkey,'','LAN')).
 rule_i(0,p(0,0,fv,19,[ intname,'CAMBS' ])).
 rule_i(0,p(0,0,fv,19,[ table,14 ])).
 rule_i(0,p(0,15,fv,19,[])).
@@ -152,14 +141,10 @@ rule_i(0,p(0,15,fvix,[ 19,20 ],[ 'NAME',cambs_pkey ])).
 rule_i(0,p(0,15,fvix,[ 19,20 ],[ 'LOC','' ])).
 rule_i(0,p(0,15,fvix,[ 19,20 ],[ 'SCHEMA',public ])).
 rule_i(0,p(0,15,fvix,[ 19,20 ],[ 'EXTNAM','YES' ])).
-rule_i(2,rule([ a(1,msg([ t('"Campo cambsfecreg fuera de rango"',3) ],[ t('OutOfRange',3) ])) ],[ t('NOT',8),t('(',0),t('null(',1),t('Ccambsfecreg',2),t(')',4),t('.OR.',9),t('Ccambsfecreg',2),t(>=,10),t('ymdhmstot(',1),t('1753',3),t(',',7),t('01',3),t(',',7),t('01',3),t(',',7),t('00',3),t(',',7),t('00',3),t(',',7),t('00',3),t(')',4),t(')',4) ],[ insert,update ],[ 'Ccambsfecreg' ])).
-rule_i(2,rule([ a(1,msg([ t('"Campo cambsfecultact fuera de rango"',3) ],[ t('OutOfRange',3) ])) ],[ t('NOT',8),t('(',0),t('null(',1),t('Ccambsfecultact',2),t(')',4),t('.OR.',9),t('Ccambsfecultact',2),t(>=,10),t('ymdhmstot(',1),t('1753',3),t(',',7),t('01',3),t(',',7),t('01',3),t(',',7),t('00',3),t(',',7),t('00',3),t(',',7),t('00',3),t(')',4),t(')',4) ],[ insert,update ],[ 'Ccambsfecultact' ])).
 rule_i(0,rule([ a(22,[ '''Toggle''','''Toggle''','' ]) ],[],[],[])).
  
 a_i(1,1,f,'Err',[],[ [],[ t('0',3) ] ]).
 a_i(2,2,t,14,[],[ [],'CAMBS_PKEY',[] ]).
-a_i(3,2,b,0,[],[ [],[ a(1,msg([ t('"Campo cambsfecreg fuera de rango"',3) ],[ t('OutOfRange',3) ])) ],[ t('NOT',8),t('(',0),t('null(',1),t('Ccambsfecreg',2),t(')',4),t('.OR.',9),t('Ccambsfecreg',2),t(>=,10),t('ymdhmstot(',1),t('1753',3),t(',',7),t('01',3),t(',',7),t('01',3),t(',',7),t('00',3),t(',',7),t('00',3),t(',',7),t('00',3),t(')',4),t(')',4) ] ]).
-a_i(4,2,b,0,[],[ [],[ a(1,msg([ t('"Campo cambsfecultact fuera de rango"',3) ],[ t('OutOfRange',3) ])) ],[ t('NOT',8),t('(',0),t('null(',1),t('Ccambsfecultact',2),t(')',4),t('.OR.',9),t('Ccambsfecultact',2),t(>=,10),t('ymdhmstot(',1),t('1753',3),t(',',7),t('01',3),t(',',7),t('01',3),t(',',7),t('00',3),t(',',7),t('00',3),t(',',7),t('00',3),t(')',4),t(')',4) ] ]).
  
 v_i(f,i,1,[]).
 v_i(f,o,1,'Err').
@@ -169,18 +154,14 @@ v_i(t,o,2,85).
 v_i(t,o,2,84).
 v_i(t,o,2,83).
 v_i(t,o,2,25).
-v_i(b,i,3,'Ccambsfecreg').
-v_i(b,o,3,[]).
-v_i(b,i,4,'Ccambsfecultact').
-v_i(b,o,4,[]).
  
  
  
  
  
  
-attri_i(85,[ cambsfecreg,dtime,10,8,'99/99/9999 99:99:99',0,cambsfecreg,'',0 ]).
 attri_i(86,[ cambsfecultact,dtime,10,8,'99/99/9999 99:99:99',0,cambsfecultact,'',0 ]).
+attri_i(85,[ cambsfecreg,dtime,10,8,'99/99/9999 99:99:99',0,cambsfecreg,'',0 ]).
 attri_i(84,[ cambsusuario,svchar,15,0,'',0,cambsusuario,'',0 ]).
 attri_i(83,[ cambsdsc,svchar,100,0,'',0,cambsdsc,'',0 ]).
 attri_i(25,[ cambsid,int,9,0,'ZZZZZZZZ9',0,cambsid,'',0 ]).
@@ -196,9 +177,9 @@ attri_i('Ccambsdsc',[ ccambsdsc,svchar,100,0,'',0,cambsdsc,'',7 ]).
 attri_i('Ccambsid',[ ccambsid,int,9,0,'ZZZZZZZZ9',0,cambsid,'',6 ]).
 attri_i('Linkselection',[ 'LinkSelection',bits,1024,0,'',0,'Link Selection','',5 ]).
  
-table_i(14,[ cambs,[ 25,83,84,85,86 ],cambs,cambs ]).
+table_i(14,[ 'CAMBS',[ 25,83,84,85,86 ],cambs,cambs ]).
  
-index_i(14,[ 'CAMBS_PKEY',u,[ 25 ],cambs_pkey ]).
+index_i(14,[ 'CAMBS_PKEY',u,[ 25 ],'CAMBS_PKEY' ]).
  
  
  
@@ -219,6 +200,12 @@ start_i(2,0,0,[ [ [ 25,23,'Ccambsid',>= ] ],many ]).
  
  
  
+map_i(14,i,'CAMBS_PKEY',[ 'CAMBS_PKEY' ]).
+map_i(14,a,86,[ cambsfecultact ]).
+map_i(14,a,85,[ cambsfecreg ]).
+map_i(14,a,84,[ cambsusuario ]).
+map_i(14,a,83,[ cambsdsc ]).
+map_i(14,a,25,[ cambsid ]).
  
  
  
@@ -1236,16 +1223,6 @@ att_prop_i(2,84,'DB_NLS_SUPPORT','No',d).
 att_prop_i(2,84,'AttRegEx','',d).
 att_prop_i(2,84,'AttValidationFailedMsg','',d).
 att_prop_i(2,84,'FullName',cambsusuario,v).
-att_prop_i(2,86,'ExternalName',cambsfecultact,d).
-att_prop_i(2,86,'ExternalNamespace','Condufef_v1',d).
-att_prop_i(2,86,'EmptyAsNull','Yes',d).
-att_prop_i(2,86,idBasedOn,'',d).
-att_prop_i(2,86,'ATT_INITIAL_VALUE','',d).
-att_prop_i(2,86,'AttRegEx','',d).
-att_prop_i(2,86,'AttValidationFailedMsg','',d).
-att_prop_i(2,86,idDATEFORMAT,idDATEFORMAT_LONG,v).
-att_prop_i(2,86,idHOURFORMAT,idHOURFORMAT_HOURMINSEC,v).
-att_prop_i(2,86,'FullName',cambsfecultact,v).
 att_prop_i(2,85,'ExternalName',cambsfecreg,d).
 att_prop_i(2,85,'ExternalNamespace','Condufef_v1',d).
 att_prop_i(2,85,'EmptyAsNull','Yes',d).
@@ -1256,6 +1233,16 @@ att_prop_i(2,85,'AttValidationFailedMsg','',d).
 att_prop_i(2,85,idDATEFORMAT,idDATEFORMAT_LONG,v).
 att_prop_i(2,85,idHOURFORMAT,idHOURFORMAT_HOURMINSEC,v).
 att_prop_i(2,85,'FullName',cambsfecreg,v).
+att_prop_i(2,86,'ExternalName',cambsfecultact,d).
+att_prop_i(2,86,'ExternalNamespace','Condufef_v1',d).
+att_prop_i(2,86,'EmptyAsNull','Yes',d).
+att_prop_i(2,86,idBasedOn,'',d).
+att_prop_i(2,86,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,86,'AttRegEx','',d).
+att_prop_i(2,86,'AttValidationFailedMsg','',d).
+att_prop_i(2,86,idDATEFORMAT,idDATEFORMAT_LONG,v).
+att_prop_i(2,86,idHOURFORMAT,idHOURFORMAT_HOURMINSEC,v).
+att_prop_i(2,86,'FullName',cambsfecultact,v).
  
  
 tbl_att_prop_i(2,14,25,'AllowNulls',n).

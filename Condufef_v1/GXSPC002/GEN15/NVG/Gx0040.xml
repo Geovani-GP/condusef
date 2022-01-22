@@ -46,7 +46,7 @@
 <BaseTable>
 <Table>
 <TableId>4</TableId>
-<TableName>entidadfederativa</TableName>
+<TableName>ENTIDADFEDERATIVA</TableName>
 <Description>entidadfederativa</Description></Table></BaseTable>
 <Order>
 <Attribute>
@@ -163,7 +163,7 @@
 <NavigationTree>
 <Table>
 <TableId>4</TableId>
-<TableName>entidadfederativa</TableName>
+<TableName>ENTIDADFEDERATIVA</TableName>
 <Description>entidadfederativa</Description>
 <RecordsToRead>many</RecordsToRead>
 <KeyAttributes>

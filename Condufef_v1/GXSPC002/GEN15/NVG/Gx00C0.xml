@@ -60,7 +60,7 @@
 <BaseTable>
 <Table>
 <TableId>12</TableId>
-<TableName>etiquetas</TableName>
+<TableName>ETIQUETAS</TableName>
 <Description>etiquetas</Description></Table></BaseTable>
 <Order>
 <Attribute>
@@ -209,7 +209,7 @@
 <NavigationTree>
 <Table>
 <TableId>12</TableId>
-<TableName>etiquetas</TableName>
+<TableName>ETIQUETAS</TableName>
 <Description>etiquetas</Description>
 <RecordsToRead>many</RecordsToRead>
 <KeyAttributes>

@@ -2,9 +2,9 @@
                File: meses
         Description: meses
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 12/30/2021 22:8:47.66
+       Generated on: 1/22/2022 13:27:7.20
        Program type: Callable routine
-          Main DBMS: sqlserver
+          Main DBMS: postgresql
 */
 using System;
 using System.Collections;
@@ -14,7 +14,7 @@ using GeneXus.Application;
 using GeneXus.Metadata;
 using GeneXus.Cryptography;
 using System.Data;
-using System.Data.SqlClient;
+using NpgsqlTypes;
 using GeneXus.Data;
 using com.genexus;
 using GeneXus.Data.ADO;
@@ -673,7 +673,7 @@ namespace GeneXus.Programs {
 
       protected void ZM033( short GX_JID )
       {
-         if ( ( GX_JID == 3 ) || ( GX_JID == 0 ) )
+         if ( ( GX_JID == 1 ) || ( GX_JID == 0 ) )
          {
             if ( StringUtil.StrCmp(Gx_mode, "INS") != 0 )
             {
@@ -690,7 +690,7 @@ namespace GeneXus.Programs {
                Z64mesesfeact = A64mesesfeact;
             }
          }
-         if ( GX_JID == -3 )
+         if ( GX_JID == -1 )
          {
             Z11mesesid = A11mesesid;
             Z61mesesanio = A61mesesanio;
@@ -747,7 +747,7 @@ namespace GeneXus.Programs {
             A64mesesfeact = T00034_A64mesesfeact[0];
             context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A64mesesfeact", context.localUtil.TToC( A64mesesfeact, 10, 8, 0, 3, "/", ":", " "));
             n64mesesfeact = T00034_n64mesesfeact[0];
-            ZM033( -3) ;
+            ZM033( -1) ;
          }
          pr_default.close(2);
          OnLoadActions033( ) ;
@@ -761,20 +761,6 @@ namespace GeneXus.Programs {
       {
          Gx_BScreen = 1;
          standaloneModal( ) ;
-         if ( ! ( (DateTime.MinValue==A63mesesfecgre) || ( A63mesesfecgre >= context.localUtil.YMDHMSToT( 1753, 1, 1, 0, 0, 0) ) ) )
-         {
-            GX_msglist.addItem("Campo mesesfecgre fuera de rango", "OutOfRange", 1, "MESESFECGRE");
-            AnyError = 1;
-            GX_FocusControl = edtmesesfecgre_Internalname;
-            context.httpAjaxContext.ajax_rsp_assign_attri("", false, "GX_FocusControl", GX_FocusControl);
-         }
-         if ( ! ( (DateTime.MinValue==A64mesesfeact) || ( A64mesesfeact >= context.localUtil.YMDHMSToT( 1753, 1, 1, 0, 0, 0) ) ) )
-         {
-            GX_msglist.addItem("Campo mesesfeact fuera de rango", "OutOfRange", 1, "MESESFEACT");
-            AnyError = 1;
-            GX_FocusControl = edtmesesfeact_Internalname;
-            context.httpAjaxContext.ajax_rsp_assign_attri("", false, "GX_FocusControl", GX_FocusControl);
-         }
       }
 
       protected void CloseExtendedTableCursors033( )
@@ -806,7 +792,7 @@ namespace GeneXus.Programs {
          pr_default.execute(1, new Object[] {A11mesesid});
          if ( (pr_default.getStatus(1) != 101) )
          {
-            ZM033( 3) ;
+            ZM033( 1) ;
             RcdFound3 = 1;
             A11mesesid = T00033_A11mesesid[0];
             context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A11mesesid", StringUtil.LTrim( StringUtil.Str( (decimal)(A11mesesid), 9, 0)));
@@ -1155,7 +1141,7 @@ namespace GeneXus.Programs {
             pr_default.execute(0, new Object[] {A11mesesid});
             if ( (pr_default.getStatus(0) == 103) )
             {
-               GX_msglist.addItem(context.GetMessage( "GXM_lock", new   object[]  {"meses"}), "RecordIsLocked", 1, "");
+               GX_msglist.addItem(context.GetMessage( "GXM_lock", new   object[]  {"MESES"}), "RecordIsLocked", 1, "");
                AnyError = 1;
                return  ;
             }
@@ -1185,7 +1171,7 @@ namespace GeneXus.Programs {
                   GXUtil.WriteLogRaw("Old: ",Z64mesesfeact);
                   GXUtil.WriteLogRaw("Current: ",T00032_A64mesesfeact[0]);
                }
-               GX_msglist.addItem(context.GetMessage( "GXM_waschg", new   object[]  {"meses"}), "RecordWasChanged", 1, "");
+               GX_msglist.addItem(context.GetMessage( "GXM_waschg", new   object[]  {"MESES"}), "RecordWasChanged", 1, "");
                AnyError = 1;
                return  ;
             }
@@ -1214,7 +1200,7 @@ namespace GeneXus.Programs {
                      /* Using cursor T00038 */
                      pr_default.execute(6, new Object[] {A11mesesid, n61mesesanio, A61mesesanio, n62mesesusuario, A62mesesusuario, n63mesesfecgre, A63mesesfecgre, n64mesesfeact, A64mesesfeact});
                      pr_default.close(6);
-                     dsDefault.SmartCacheProvider.SetUpdated("meses") ;
+                     dsDefault.SmartCacheProvider.SetUpdated("MESES") ;
                      if ( (pr_default.getStatus(6) == 1) )
                      {
                         GX_msglist.addItem(context.GetMessage( "GXM_noupdate", ""), "DuplicatePrimaryKey", 1, "");
@@ -1269,10 +1255,10 @@ namespace GeneXus.Programs {
                      /* Using cursor T00039 */
                      pr_default.execute(7, new Object[] {n61mesesanio, A61mesesanio, n62mesesusuario, A62mesesusuario, n63mesesfecgre, A63mesesfecgre, n64mesesfeact, A64mesesfeact, A11mesesid});
                      pr_default.close(7);
-                     dsDefault.SmartCacheProvider.SetUpdated("meses") ;
+                     dsDefault.SmartCacheProvider.SetUpdated("MESES") ;
                      if ( (pr_default.getStatus(7) == 103) )
                      {
-                        GX_msglist.addItem(context.GetMessage( "GXM_lock", new   object[]  {"meses"}), "RecordIsLocked", 1, "");
+                        GX_msglist.addItem(context.GetMessage( "GXM_lock", new   object[]  {"MESES"}), "RecordIsLocked", 1, "");
                         AnyError = 1;
                      }
                      DeferredUpdate033( ) ;
@@ -1326,7 +1312,7 @@ namespace GeneXus.Programs {
                   /* Using cursor T000310 */
                   pr_default.execute(8, new Object[] {A11mesesid});
                   pr_default.close(8);
-                  dsDefault.SmartCacheProvider.SetUpdated("meses") ;
+                  dsDefault.SmartCacheProvider.SetUpdated("MESES") ;
                   if ( AnyError == 0 )
                   {
                      /* Start of After( delete) rules */
@@ -1384,7 +1370,6 @@ namespace GeneXus.Programs {
          }
          if ( AnyError == 0 )
          {
-            pr_default.close(1);
             context.CommitDataStores( "meses");
             if ( AnyError == 0 )
             {
@@ -1396,7 +1381,6 @@ namespace GeneXus.Programs {
          }
          else
          {
-            pr_default.close(1);
             context.RollbackDataStores( "meses");
          }
          IsModified = 0;
@@ -1518,7 +1502,7 @@ namespace GeneXus.Programs {
          context.AddJavascriptSource("jquery.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxtimezone.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxgral.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("gxcfg.js", "?202112302284810");
+         context.AddJavascriptSource("gxcfg.js", "?20221221327794");
          if ( context.isSpaRequest( ) )
          {
             enableOutput();
@@ -1675,12 +1659,12 @@ namespace GeneXus.Programs {
 
       protected void define_styles( )
       {
-         AddStyleSheetFile("calendar-system.css", "?11323129");
-         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?2284430");
+         AddStyleSheetFile("calendar-system.css", "?13205289");
+         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?13264988");
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?202112302284813");
+            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?20221221327799");
             idxLst = (int)(idxLst+1);
          }
          /* End function define_styles */
@@ -1689,7 +1673,7 @@ namespace GeneXus.Programs {
       protected void include_jscripts( )
       {
          context.AddJavascriptSource("messages.spa.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("meses.js", "?202112302284814");
+         context.AddJavascriptSource("meses.js", "?20221221327799");
          /* End function include_jscripts */
       }
 
@@ -2128,62 +2112,62 @@ namespace GeneXus.Programs {
        {
           Object[] prmT00034 ;
           prmT00034 = new Object[] {
-          new Object[] {"@mesesid",SqlDbType.Int,9,0}
+          new Object[] {"mesesid",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT00035 ;
           prmT00035 = new Object[] {
-          new Object[] {"@mesesid",SqlDbType.Int,9,0}
+          new Object[] {"mesesid",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT00033 ;
           prmT00033 = new Object[] {
-          new Object[] {"@mesesid",SqlDbType.Int,9,0}
+          new Object[] {"mesesid",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT00036 ;
           prmT00036 = new Object[] {
-          new Object[] {"@mesesid",SqlDbType.Int,9,0}
+          new Object[] {"mesesid",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT00037 ;
           prmT00037 = new Object[] {
-          new Object[] {"@mesesid",SqlDbType.Int,9,0}
+          new Object[] {"mesesid",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT00032 ;
           prmT00032 = new Object[] {
-          new Object[] {"@mesesid",SqlDbType.Int,9,0}
+          new Object[] {"mesesid",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT00038 ;
           prmT00038 = new Object[] {
-          new Object[] {"@mesesid",SqlDbType.Int,9,0} ,
-          new Object[] {"@mesesanio",SqlDbType.VarChar,5,0} ,
-          new Object[] {"@mesesusuario",SqlDbType.VarChar,15,0} ,
-          new Object[] {"@mesesfecgre",SqlDbType.DateTime,10,8} ,
-          new Object[] {"@mesesfeact",SqlDbType.DateTime,10,8}
+          new Object[] {"mesesid",NpgsqlDbType.Integer,9,0} ,
+          new Object[] {"mesesanio",NpgsqlDbType.Varchar,5,0} ,
+          new Object[] {"mesesusuario",NpgsqlDbType.Varchar,15,0} ,
+          new Object[] {"mesesfecgre",NpgsqlDbType.Timestamp,10,8} ,
+          new Object[] {"mesesfeact",NpgsqlDbType.Timestamp,10,8}
           } ;
           Object[] prmT00039 ;
           prmT00039 = new Object[] {
-          new Object[] {"@mesesanio",SqlDbType.VarChar,5,0} ,
-          new Object[] {"@mesesusuario",SqlDbType.VarChar,15,0} ,
-          new Object[] {"@mesesfecgre",SqlDbType.DateTime,10,8} ,
-          new Object[] {"@mesesfeact",SqlDbType.DateTime,10,8} ,
-          new Object[] {"@mesesid",SqlDbType.Int,9,0}
+          new Object[] {"mesesanio",NpgsqlDbType.Varchar,5,0} ,
+          new Object[] {"mesesusuario",NpgsqlDbType.Varchar,15,0} ,
+          new Object[] {"mesesfecgre",NpgsqlDbType.Timestamp,10,8} ,
+          new Object[] {"mesesfeact",NpgsqlDbType.Timestamp,10,8} ,
+          new Object[] {"mesesid",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT000310 ;
           prmT000310 = new Object[] {
-          new Object[] {"@mesesid",SqlDbType.Int,9,0}
+          new Object[] {"mesesid",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT000311 ;
           prmT000311 = new Object[] {
           } ;
           def= new CursorDef[] {
-              new CursorDef("T00032", "SELECT [mesesid], [mesesanio], [mesesusuario], [mesesfecgre], [mesesfeact] FROM [meses] WITH (UPDLOCK) WHERE [mesesid] = @mesesid ",true, GxErrorMask.GX_NOMASK, false, this,prmT00032,1,0,true,false )
-             ,new CursorDef("T00033", "SELECT [mesesid], [mesesanio], [mesesusuario], [mesesfecgre], [mesesfeact] FROM [meses] WITH (NOLOCK) WHERE [mesesid] = @mesesid ",true, GxErrorMask.GX_NOMASK, false, this,prmT00033,1,0,true,false )
-             ,new CursorDef("T00034", "SELECT TM1.[mesesid], TM1.[mesesanio], TM1.[mesesusuario], TM1.[mesesfecgre], TM1.[mesesfeact] FROM [meses] TM1 WITH (NOLOCK) WHERE TM1.[mesesid] = @mesesid ORDER BY TM1.[mesesid]  OPTION (FAST 100)",true, GxErrorMask.GX_NOMASK, false, this,prmT00034,100,0,true,false )
-             ,new CursorDef("T00035", "SELECT [mesesid] FROM [meses] WITH (NOLOCK) WHERE [mesesid] = @mesesid  OPTION (FAST 1)",true, GxErrorMask.GX_NOMASK, false, this,prmT00035,1,0,true,false )
-             ,new CursorDef("T00036", "SELECT TOP 1 [mesesid] FROM [meses] WITH (NOLOCK) WHERE ( [mesesid] > @mesesid) ORDER BY [mesesid]  OPTION (FAST 1)",true, GxErrorMask.GX_NOMASK, false, this,prmT00036,1,0,true,true )
-             ,new CursorDef("T00037", "SELECT TOP 1 [mesesid] FROM [meses] WITH (NOLOCK) WHERE ( [mesesid] < @mesesid) ORDER BY [mesesid] DESC  OPTION (FAST 1)",true, GxErrorMask.GX_NOMASK, false, this,prmT00037,1,0,true,true )
-             ,new CursorDef("T00038", "INSERT INTO [meses]([mesesid], [mesesanio], [mesesusuario], [mesesfecgre], [mesesfeact]) VALUES(@mesesid, @mesesanio, @mesesusuario, @mesesfecgre, @mesesfeact)", GxErrorMask.GX_NOMASK,prmT00038)
-             ,new CursorDef("T00039", "UPDATE [meses] SET [mesesanio]=@mesesanio, [mesesusuario]=@mesesusuario, [mesesfecgre]=@mesesfecgre, [mesesfeact]=@mesesfeact  WHERE [mesesid] = @mesesid", GxErrorMask.GX_NOMASK,prmT00039)
-             ,new CursorDef("T000310", "DELETE FROM [meses]  WHERE [mesesid] = @mesesid", GxErrorMask.GX_NOMASK,prmT000310)
-             ,new CursorDef("T000311", "SELECT [mesesid] FROM [meses] WITH (NOLOCK) ORDER BY [mesesid]  OPTION (FAST 100)",true, GxErrorMask.GX_NOMASK, false, this,prmT000311,100,0,true,false )
+              new CursorDef("T00032", "SELECT mesesid, mesesanio, mesesusuario, mesesfecgre, mesesfeact FROM public.meses WHERE mesesid = :mesesid  FOR UPDATE OF meses NOWAIT",true, GxErrorMask.GX_NOMASK, false, this,prmT00032,1,0,true,false )
+             ,new CursorDef("T00033", "SELECT mesesid, mesesanio, mesesusuario, mesesfecgre, mesesfeact FROM public.meses WHERE mesesid = :mesesid ",true, GxErrorMask.GX_NOMASK, false, this,prmT00033,1,0,true,false )
+             ,new CursorDef("T00034", "SELECT TM1.mesesid, TM1.mesesanio, TM1.mesesusuario, TM1.mesesfecgre, TM1.mesesfeact FROM public.meses TM1 WHERE TM1.mesesid = :mesesid ORDER BY TM1.mesesid ",true, GxErrorMask.GX_NOMASK, false, this,prmT00034,100,0,true,false )
+             ,new CursorDef("T00035", "SELECT mesesid FROM public.meses WHERE mesesid = :mesesid ",true, GxErrorMask.GX_NOMASK, false, this,prmT00035,1,0,true,false )
+             ,new CursorDef("T00036", "SELECT mesesid FROM public.meses WHERE ( mesesid > :mesesid) ORDER BY mesesid ",true, GxErrorMask.GX_NOMASK, false, this,prmT00036,1,0,true,true )
+             ,new CursorDef("T00037", "SELECT mesesid FROM public.meses WHERE ( mesesid < :mesesid) ORDER BY mesesid DESC ",true, GxErrorMask.GX_NOMASK, false, this,prmT00037,1,0,true,true )
+             ,new CursorDef("T00038", "SAVEPOINT gxupdate;INSERT INTO public.meses(mesesid, mesesanio, mesesusuario, mesesfecgre, mesesfeact) VALUES(:mesesid, :mesesanio, :mesesusuario, :mesesfecgre, :mesesfeact);RELEASE SAVEPOINT gxupdate", GxErrorMask.GX_ROLLBACKSAVEPOINT,prmT00038)
+             ,new CursorDef("T00039", "SAVEPOINT gxupdate;UPDATE public.meses SET mesesanio=:mesesanio, mesesusuario=:mesesusuario, mesesfecgre=:mesesfecgre, mesesfeact=:mesesfeact  WHERE mesesid = :mesesid;RELEASE SAVEPOINT gxupdate", GxErrorMask.GX_ROLLBACKSAVEPOINT | GxErrorMask.GX_NOMASK,prmT00039)
+             ,new CursorDef("T000310", "SAVEPOINT gxupdate;DELETE FROM public.meses  WHERE mesesid = :mesesid;RELEASE SAVEPOINT gxupdate", GxErrorMask.GX_ROLLBACKSAVEPOINT | GxErrorMask.GX_NOMASK,prmT000310)
+             ,new CursorDef("T000311", "SELECT mesesid FROM public.meses ORDER BY mesesid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000311,100,0,true,false )
           };
        }
     }

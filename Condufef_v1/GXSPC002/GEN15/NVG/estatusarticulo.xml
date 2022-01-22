@@ -24,12 +24,12 @@
 <BaseTable>
 <Table>
 <TableId>7</TableId>
-<TableName>estatusarticulo</TableName>
+<TableName>ESTATUSARTICULO</TableName>
 <Description>estatusarticulo</Description></Table></BaseTable>
 <NavigationTree>
 <Table>
 <TableId>7</TableId>
-<TableName>estatusarticulo</TableName>
+<TableName>ESTATUSARTICULO</TableName>
 <Description>estatusarticulo</Description>
 <Updated>Yes</Updated>
 <RecordsToRead>many</RecordsToRead>
@@ -50,7 +50,7 @@
 <TableToUpdate>
 <Table>
 <TableId>7</TableId>
-<TableName>estatusarticulo</TableName>
+<TableName>ESTATUSARTICULO</TableName>
 <Description>estatusarticulo</Description></Table>
 <TableAction>insert</TableAction>
 <AttrisToUpdate>
@@ -89,7 +89,7 @@
 <TableToUpdate>
 <Table>
 <TableId>7</TableId>
-<TableName>estatusarticulo</TableName>
+<TableName>ESTATUSARTICULO</TableName>
 <Description>estatusarticulo</Description></Table>
 <TableAction>update</TableAction>
 <AttrisToUpdate>
@@ -124,7 +124,7 @@
 <TableToUpdate>
 <Table>
 <TableId>7</TableId>
-<TableName>estatusarticulo</TableName>
+<TableName>ESTATUSARTICULO</TableName>
 <Description>estatusarticulo</Description></Table>
 <TableAction>delete</TableAction>
 <AttrisToUpdate></AttrisToUpdate></TableToUpdate></TablesToUpdate>
@@ -139,7 +139,7 @@
 <Prompt>
 <Table>
 <TableId>7</TableId>
-<TableName>estatusarticulo</TableName>
+<TableName>ESTATUSARTICULO</TableName>
 <Description>estatusarticulo</Description></Table>
 <Object>
 <ObjClsGuid>c9584656-94b6-4ccd-890f-332d11fc2c25</ObjClsGuid>

@@ -50,25 +50,11 @@ repeat_i(2,[ 1,2,[ 'Linkselection',8,65 ],[] ]).
  
  
 rule_i(0,datastore(1,'DS_LAST_CHANGE','')).
-rule_i(0,datastore(1,'LOCK_RETRY','10')).
-rule_i(0,datastore(1,'WAIT_RECORD','0')).
-rule_i(0,datastore(1,'SQLSERVER_VERSION','9')).
+rule_i(0,datastore(1,'POSTGRESQL_VERSION','8_3')).
 rule_i(0,datastore(1,'COMMENT_ON','No')).
-rule_i(0,datastore(1,'DFT_TMP_TBLSPACE','')).
-rule_i(0,datastore(1,'DFT_IDX_TBLSPACE','')).
-rule_i(0,datastore(1,'DFT_TBL_TBLSPACE','')).
 rule_i(0,datastore(1,'DCL_REF_INT_DB','Yes')).
 rule_i(0,datastore(1,'PRIMARY_KEY_TYPE','PK')).
 rule_i(0,datastore(1,'CS_SCHEMA','')).
-rule_i(0,datastore(1,'SORT_ATTRIBUTES','Yes')).
-rule_i(0,datastore(1,'JRN400','QSQJRN')).
-rule_i(0,datastore(1,'CREATE_SAVF','Yes')).
-rule_i(0,datastore(1,'PGMLIB','')).
-rule_i(0,datastore(1,'DTALIB','')).
-rule_i(0,datastore(1,'CC_USER_PASS','')).
-rule_i(0,datastore(1,'CC_USER_ID','')).
-rule_i(0,datastore(1,'CC_SERVER','')).
-rule_i(0,datastore(1,'CC_DBNAME','')).
 rule_i(0,datastore(1,'RecycleRWMin','30')).
 rule_i(0,datastore(1,'RecycleRWType','1')).
 rule_i(0,datastore(1,'RecycleRW','-1')).
@@ -80,26 +66,25 @@ rule_i(0,datastore(1,'CS_RPCPGML','')).
 rule_i(0,datastore(1,'JDBC_DATASOURCE','')).
 rule_i(0,datastore(1,'USE_JDBC_DATASOURCE','0')).
 rule_i(0,datastore(1,'DS_DBMS_ADDINFO','')).
-rule_i(0,datastore(1,'USER_PASSWORD','')).
-rule_i(0,datastore(1,'USER_ID','')).
-rule_i(0,datastore(1,'TRUSTED_CONNECTION','Yes')).
+rule_i(0,datastore(1,'USER_PASSWORD',󻢸蘇�2�5炭)).
+rule_i(0,datastore(1,'USER_ID',postgres)).
 rule_i(0,datastore(1,'CS_CONNECT','First')).
-rule_i(0,datastore(1,'DBMS_PORT','')).
-rule_i(0,datastore(1,'CS_SERVER','JOSBUENO-MX\DELGADO')).
-rule_i(0,datastore(1,'CS_DBNAME','Dar_CONDUCEFDB')).
+rule_i(0,datastore(1,'DBMS_PORT','5432')).
+rule_i(0,datastore(1,'CS_SERVER',localhost)).
+rule_i(0,datastore(1,'CS_DBNAME',postgres)).
 rule_i(0,datastore(1,'CS_FLEDSNAME','')).
-rule_i(0,datastore(1,'CS_DRVNAME','sql server')).
+rule_i(0,datastore(1,'CS_DRVNAME','')).
 rule_i(0,datastore(1,'CS_DSNAME','')).
 rule_i(0,datastore(1,'DB_URL','')).
 rule_i(0,datastore(1,'JDBC_CUSTOM_URL','0')).
 rule_i(0,datastore(1,'JDBC_CUSTOM_DRIVER','')).
-rule_i(0,datastore(1,'JDBC_DRIVER','net.sourceforge.jtds.jdbc.Driver')).
+rule_i(0,datastore(1,'JDBC_DRIVER','org.postgresql.Driver')).
 rule_i(0,datastore(1,'CONNECT_METHOD','OPSYS')).
 rule_i(0,datastore(1,'ACCESS_TECHNO','ADONET')).
 rule_i(0,datastore(1,'MAIN_DS','-1')).
 rule_i(0,datastore(1,'REORG_GEN','8')).
 rule_i(0,datastore(1,'HelpKeyword','20')).
-rule_i(0,datastore(1,'DBMS',12)).
+rule_i(0,datastore(1,'DBMS',15)).
 rule_i(0,datastore(1,'NAME','Default')).
 rule_i(0,prop(idNULLS_BEHAVIOR,idNB_Current)).
 rule_i(0,prop('ObjectVisibility','Public')).
@@ -145,6 +130,10 @@ rule_i(0,maingen(15)).
 rule_i(0,parm([ 'Pparametrosid' ],[])).
 rule_i(0,parmio([ [ 'Pparametrosid',out ] ])).
 rule_i(0,order([ 8 ])).
+rule_i(0,file(2,'PARAMETROS',[ 8,65,66,67,68,69,70,71,72 ])).
+rule_i(0,loc([ 2 ],'PARAMETROS','','LAN')).
+rule_i(0,index(2,'PARAMETROS_PKEY',u,[ 8 ])).
+rule_i(0,loc([ 2,'PARAMETROS_PKEY' ],parametros_pkey,'','LAN')).
 rule_i(0,p(0,0,fv,5,[ intname,'PARAMETROS' ])).
 rule_i(0,p(0,0,fv,5,[ table,2 ])).
 rule_i(0,p(0,15,fv,5,[])).
@@ -178,11 +167,11 @@ v_i(t,o,2,8).
  
  
  
-attri_i(66,[ parametrosvalor,int,18,0,'ZZZZZZZZZZZZZZZZZ9',0,parametrosvalor,'',0 ]).
-attri_i(67,[ parametroscadena,svchar,30,0,'',0,parametroscadena,'',0 ]).
-attri_i(68,[ parametrosstatus,int,18,0,'ZZZZZZZZZZZZZZZZZ9',0,parametrosstatus,'',0 ]).
-attri_i(69,[ parametrosuso,svchar,100,0,'',0,parametrosuso,'',0 ]).
 attri_i(70,[ parametrosusuario,svchar,15,0,'',0,parametrosusuario,'',0 ]).
+attri_i(69,[ parametrosuso,svchar,100,0,'',0,parametrosuso,'',0 ]).
+attri_i(68,[ parametrosstatus,int,18,0,'ZZZZZZZZZZZZZZZZZ9',0,parametrosstatus,'',0 ]).
+attri_i(67,[ parametroscadena,svchar,30,0,'',0,parametroscadena,'',0 ]).
+attri_i(66,[ parametrosvalor,int,18,0,'ZZZZZZZZZZZZZZZZZ9',0,parametrosvalor,'',0 ]).
 attri_i(65,[ parametrosdsc,svchar,100,0,'',0,parametrosdsc,'',0 ]).
 attri_i(8,[ parametrosid,int,9,0,'ZZZZZZZZ9',0,parametrosid,'',0 ]).
 attri_i('Linkselection_GXI',[ 'Linkselection_GXI',svchar,2048,0,'',0,'',[],17 ]).
@@ -199,9 +188,9 @@ attri_i('Cparametrosdsc',[ cparametrosdsc,svchar,100,0,'',0,parametrosdsc,'',7 ]
 attri_i('Cparametrosid',[ cparametrosid,int,9,0,'ZZZZZZZZ9',0,parametrosid,'',6 ]).
 attri_i('Linkselection',[ 'LinkSelection',bits,1024,0,'',0,'Link Selection','',5 ]).
  
-table_i(2,[ parametros,[ 8,65,66,67,68,69,70 ],parametros,parametros ]).
+table_i(2,[ 'PARAMETROS',[ 8,65,66,67,68,69,70 ],parametros,parametros ]).
  
-index_i(2,[ 'PARAMETROS_PKEY',u,[ 8 ],parametros_pkey ]).
+index_i(2,[ 'PARAMETROS_PKEY',u,[ 8 ],'PARAMETROS_PKEY' ]).
  
  
  
@@ -222,6 +211,16 @@ start_i(2,0,0,[ [ [ 8,23,'Cparametrosid',>= ] ],many ]).
  
  
  
+map_i(2,i,'PARAMETROS_PKEY',[ 'PARAMETROS_PKEY' ]).
+map_i(2,a,72,[ parametrosfecact ]).
+map_i(2,a,71,[ parametrosfecgre ]).
+map_i(2,a,70,[ parametrosusuario ]).
+map_i(2,a,69,[ parametrosuso ]).
+map_i(2,a,68,[ parametrosstatus ]).
+map_i(2,a,67,[ parametroscadena ]).
+map_i(2,a,66,[ parametrosvalor ]).
+map_i(2,a,65,[ parametrosdsc ]).
+map_i(2,a,8,[ parametrosid ]).
  
  
  
@@ -1453,42 +1452,6 @@ att_prop_i(2,65,'DB_NLS_SUPPORT','No',d).
 att_prop_i(2,65,'AttRegEx','',d).
 att_prop_i(2,65,'AttValidationFailedMsg','',d).
 att_prop_i(2,65,'FullName',parametrosdsc,v).
-att_prop_i(2,70,'ExternalName',parametrosusuario,d).
-att_prop_i(2,70,'ExternalNamespace','Condufef_v1',d).
-att_prop_i(2,70,'EmptyAsNull','Yes',d).
-att_prop_i(2,70,idBasedOn,'',d).
-att_prop_i(2,70,'ATT_INITIAL_VALUE','',d).
-att_prop_i(2,70,'DB_NLS_SUPPORT','No',d).
-att_prop_i(2,70,'AttRegEx','',d).
-att_prop_i(2,70,'AttValidationFailedMsg','',d).
-att_prop_i(2,70,'FullName',parametrosusuario,v).
-att_prop_i(2,69,'ExternalName',parametrosuso,d).
-att_prop_i(2,69,'ExternalNamespace','Condufef_v1',d).
-att_prop_i(2,69,'EmptyAsNull','Yes',d).
-att_prop_i(2,69,idBasedOn,'',d).
-att_prop_i(2,69,'ATT_INITIAL_VALUE','',d).
-att_prop_i(2,69,'DB_NLS_SUPPORT','No',d).
-att_prop_i(2,69,'AttRegEx','',d).
-att_prop_i(2,69,'AttValidationFailedMsg','',d).
-att_prop_i(2,69,'FullName',parametrosuso,v).
-att_prop_i(2,68,'ExternalName',parametrosstatus,d).
-att_prop_i(2,68,'ExternalNamespace','Condufef_v1',d).
-att_prop_i(2,68,'EmptyAsNull','Yes',d).
-att_prop_i(2,68,idBasedOn,'',d).
-att_prop_i(2,68,'AUTONUMBER','0',d).
-att_prop_i(2,68,'ATT_INITIAL_VALUE','',d).
-att_prop_i(2,68,'AttRegEx','',d).
-att_prop_i(2,68,'AttValidationFailedMsg','',d).
-att_prop_i(2,68,'FullName',parametrosstatus,v).
-att_prop_i(2,67,'ExternalName',parametroscadena,d).
-att_prop_i(2,67,'ExternalNamespace','Condufef_v1',d).
-att_prop_i(2,67,'EmptyAsNull','Yes',d).
-att_prop_i(2,67,idBasedOn,'',d).
-att_prop_i(2,67,'ATT_INITIAL_VALUE','',d).
-att_prop_i(2,67,'DB_NLS_SUPPORT','No',d).
-att_prop_i(2,67,'AttRegEx','',d).
-att_prop_i(2,67,'AttValidationFailedMsg','',d).
-att_prop_i(2,67,'FullName',parametroscadena,v).
 att_prop_i(2,66,'ExternalName',parametrosvalor,d).
 att_prop_i(2,66,'ExternalNamespace','Condufef_v1',d).
 att_prop_i(2,66,'EmptyAsNull','Yes',d).
@@ -1498,6 +1461,42 @@ att_prop_i(2,66,'ATT_INITIAL_VALUE','',d).
 att_prop_i(2,66,'AttRegEx','',d).
 att_prop_i(2,66,'AttValidationFailedMsg','',d).
 att_prop_i(2,66,'FullName',parametrosvalor,v).
+att_prop_i(2,67,'ExternalName',parametroscadena,d).
+att_prop_i(2,67,'ExternalNamespace','Condufef_v1',d).
+att_prop_i(2,67,'EmptyAsNull','Yes',d).
+att_prop_i(2,67,idBasedOn,'',d).
+att_prop_i(2,67,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,67,'DB_NLS_SUPPORT','No',d).
+att_prop_i(2,67,'AttRegEx','',d).
+att_prop_i(2,67,'AttValidationFailedMsg','',d).
+att_prop_i(2,67,'FullName',parametroscadena,v).
+att_prop_i(2,68,'ExternalName',parametrosstatus,d).
+att_prop_i(2,68,'ExternalNamespace','Condufef_v1',d).
+att_prop_i(2,68,'EmptyAsNull','Yes',d).
+att_prop_i(2,68,idBasedOn,'',d).
+att_prop_i(2,68,'AUTONUMBER','0',d).
+att_prop_i(2,68,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,68,'AttRegEx','',d).
+att_prop_i(2,68,'AttValidationFailedMsg','',d).
+att_prop_i(2,68,'FullName',parametrosstatus,v).
+att_prop_i(2,69,'ExternalName',parametrosuso,d).
+att_prop_i(2,69,'ExternalNamespace','Condufef_v1',d).
+att_prop_i(2,69,'EmptyAsNull','Yes',d).
+att_prop_i(2,69,idBasedOn,'',d).
+att_prop_i(2,69,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,69,'DB_NLS_SUPPORT','No',d).
+att_prop_i(2,69,'AttRegEx','',d).
+att_prop_i(2,69,'AttValidationFailedMsg','',d).
+att_prop_i(2,69,'FullName',parametrosuso,v).
+att_prop_i(2,70,'ExternalName',parametrosusuario,d).
+att_prop_i(2,70,'ExternalNamespace','Condufef_v1',d).
+att_prop_i(2,70,'EmptyAsNull','Yes',d).
+att_prop_i(2,70,idBasedOn,'',d).
+att_prop_i(2,70,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,70,'DB_NLS_SUPPORT','No',d).
+att_prop_i(2,70,'AttRegEx','',d).
+att_prop_i(2,70,'AttValidationFailedMsg','',d).
+att_prop_i(2,70,'FullName',parametrosusuario,v).
  
  
 tbl_att_prop_i(2,2,8,'AllowNulls',n).

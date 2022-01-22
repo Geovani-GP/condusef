@@ -2,9 +2,9 @@
                File: entidadfederativa
         Description: entidadfederativa
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 12/30/2021 22:8:48.31
+       Generated on: 1/22/2022 13:27:8.31
        Program type: Callable routine
-          Main DBMS: sqlserver
+          Main DBMS: postgresql
 */
 using System;
 using System.Collections;
@@ -14,7 +14,7 @@ using GeneXus.Application;
 using GeneXus.Metadata;
 using GeneXus.Cryptography;
 using System.Data;
-using System.Data.SqlClient;
+using NpgsqlTypes;
 using GeneXus.Data;
 using com.genexus;
 using GeneXus.Data.ADO;
@@ -676,7 +676,7 @@ namespace GeneXus.Programs {
 
       protected void ZM044( short GX_JID )
       {
-         if ( ( GX_JID == 3 ) || ( GX_JID == 0 ) )
+         if ( ( GX_JID == 1 ) || ( GX_JID == 0 ) )
          {
             if ( StringUtil.StrCmp(Gx_mode, "INS") != 0 )
             {
@@ -693,7 +693,7 @@ namespace GeneXus.Programs {
                Z111entidadfederativafecultact = A111entidadfederativafecultact;
             }
          }
-         if ( GX_JID == -3 )
+         if ( GX_JID == -1 )
          {
             Z7entidafederativaid = A7entidafederativaid;
             Z108entidadfederativadsc = A108entidadfederativadsc;
@@ -750,7 +750,7 @@ namespace GeneXus.Programs {
             A111entidadfederativafecultact = T00044_A111entidadfederativafecultact[0];
             context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A111entidadfederativafecultact", context.localUtil.TToC( A111entidadfederativafecultact, 10, 8, 0, 3, "/", ":", " "));
             n111entidadfederativafecultact = T00044_n111entidadfederativafecultact[0];
-            ZM044( -3) ;
+            ZM044( -1) ;
          }
          pr_default.close(2);
          OnLoadActions044( ) ;
@@ -764,20 +764,6 @@ namespace GeneXus.Programs {
       {
          Gx_BScreen = 1;
          standaloneModal( ) ;
-         if ( ! ( (DateTime.MinValue==A110entidadfederativafecreg) || ( A110entidadfederativafecreg >= context.localUtil.YMDHMSToT( 1753, 1, 1, 0, 0, 0) ) ) )
-         {
-            GX_msglist.addItem("Campo entidadfederativafecreg fuera de rango", "OutOfRange", 1, "ENTIDADFEDERATIVAFECREG");
-            AnyError = 1;
-            GX_FocusControl = edtentidadfederativafecreg_Internalname;
-            context.httpAjaxContext.ajax_rsp_assign_attri("", false, "GX_FocusControl", GX_FocusControl);
-         }
-         if ( ! ( (DateTime.MinValue==A111entidadfederativafecultact) || ( A111entidadfederativafecultact >= context.localUtil.YMDHMSToT( 1753, 1, 1, 0, 0, 0) ) ) )
-         {
-            GX_msglist.addItem("Campo entidadfederativafecultact fuera de rango", "OutOfRange", 1, "ENTIDADFEDERATIVAFECULTACT");
-            AnyError = 1;
-            GX_FocusControl = edtentidadfederativafecultact_Internalname;
-            context.httpAjaxContext.ajax_rsp_assign_attri("", false, "GX_FocusControl", GX_FocusControl);
-         }
       }
 
       protected void CloseExtendedTableCursors044( )
@@ -809,7 +795,7 @@ namespace GeneXus.Programs {
          pr_default.execute(1, new Object[] {n7entidafederativaid, A7entidafederativaid});
          if ( (pr_default.getStatus(1) != 101) )
          {
-            ZM044( 3) ;
+            ZM044( 1) ;
             RcdFound4 = 1;
             A7entidafederativaid = T00043_A7entidafederativaid[0];
             context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A7entidafederativaid", StringUtil.LTrim( StringUtil.Str( (decimal)(A7entidafederativaid), 9, 0)));
@@ -1163,7 +1149,7 @@ namespace GeneXus.Programs {
             pr_default.execute(0, new Object[] {n7entidafederativaid, A7entidafederativaid});
             if ( (pr_default.getStatus(0) == 103) )
             {
-               GX_msglist.addItem(context.GetMessage( "GXM_lock", new   object[]  {"entidadfederativa"}), "RecordIsLocked", 1, "");
+               GX_msglist.addItem(context.GetMessage( "GXM_lock", new   object[]  {"ENTIDADFEDERATIVA"}), "RecordIsLocked", 1, "");
                AnyError = 1;
                return  ;
             }
@@ -1193,7 +1179,7 @@ namespace GeneXus.Programs {
                   GXUtil.WriteLogRaw("Old: ",Z111entidadfederativafecultact);
                   GXUtil.WriteLogRaw("Current: ",T00042_A111entidadfederativafecultact[0]);
                }
-               GX_msglist.addItem(context.GetMessage( "GXM_waschg", new   object[]  {"entidadfederativa"}), "RecordWasChanged", 1, "");
+               GX_msglist.addItem(context.GetMessage( "GXM_waschg", new   object[]  {"ENTIDADFEDERATIVA"}), "RecordWasChanged", 1, "");
                AnyError = 1;
                return  ;
             }
@@ -1222,7 +1208,7 @@ namespace GeneXus.Programs {
                      /* Using cursor T00048 */
                      pr_default.execute(6, new Object[] {n7entidafederativaid, A7entidafederativaid, n108entidadfederativadsc, A108entidadfederativadsc, n109entidadfederativausuario, A109entidadfederativausuario, n110entidadfederativafecreg, A110entidadfederativafecreg, n111entidadfederativafecultact, A111entidadfederativafecultact});
                      pr_default.close(6);
-                     dsDefault.SmartCacheProvider.SetUpdated("entidadfederativa") ;
+                     dsDefault.SmartCacheProvider.SetUpdated("ENTIDADFEDERATIVA") ;
                      if ( (pr_default.getStatus(6) == 1) )
                      {
                         GX_msglist.addItem(context.GetMessage( "GXM_noupdate", ""), "DuplicatePrimaryKey", 1, "");
@@ -1277,10 +1263,10 @@ namespace GeneXus.Programs {
                      /* Using cursor T00049 */
                      pr_default.execute(7, new Object[] {n108entidadfederativadsc, A108entidadfederativadsc, n109entidadfederativausuario, A109entidadfederativausuario, n110entidadfederativafecreg, A110entidadfederativafecreg, n111entidadfederativafecultact, A111entidadfederativafecultact, n7entidafederativaid, A7entidafederativaid});
                      pr_default.close(7);
-                     dsDefault.SmartCacheProvider.SetUpdated("entidadfederativa") ;
+                     dsDefault.SmartCacheProvider.SetUpdated("ENTIDADFEDERATIVA") ;
                      if ( (pr_default.getStatus(7) == 103) )
                      {
-                        GX_msglist.addItem(context.GetMessage( "GXM_lock", new   object[]  {"entidadfederativa"}), "RecordIsLocked", 1, "");
+                        GX_msglist.addItem(context.GetMessage( "GXM_lock", new   object[]  {"ENTIDADFEDERATIVA"}), "RecordIsLocked", 1, "");
                         AnyError = 1;
                      }
                      DeferredUpdate044( ) ;
@@ -1334,7 +1320,7 @@ namespace GeneXus.Programs {
                   /* Using cursor T000410 */
                   pr_default.execute(8, new Object[] {n7entidafederativaid, A7entidafederativaid});
                   pr_default.close(8);
-                  dsDefault.SmartCacheProvider.SetUpdated("entidadfederativa") ;
+                  dsDefault.SmartCacheProvider.SetUpdated("ENTIDADFEDERATIVA") ;
                   if ( AnyError == 0 )
                   {
                      /* Start of After( delete) rules */
@@ -1403,7 +1389,6 @@ namespace GeneXus.Programs {
          }
          if ( AnyError == 0 )
          {
-            pr_default.close(1);
             context.CommitDataStores( "entidadfederativa");
             if ( AnyError == 0 )
             {
@@ -1415,7 +1400,6 @@ namespace GeneXus.Programs {
          }
          else
          {
-            pr_default.close(1);
             context.RollbackDataStores( "entidadfederativa");
          }
          IsModified = 0;
@@ -1539,7 +1523,7 @@ namespace GeneXus.Programs {
          context.AddJavascriptSource("jquery.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxtimezone.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxgral.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("gxcfg.js", "?202112302284875");
+         context.AddJavascriptSource("gxcfg.js", "?20221221327913");
          if ( context.isSpaRequest( ) )
          {
             enableOutput();
@@ -1697,12 +1681,12 @@ namespace GeneXus.Programs {
 
       protected void define_styles( )
       {
-         AddStyleSheetFile("calendar-system.css", "?11323129");
-         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?2284430");
+         AddStyleSheetFile("calendar-system.css", "?13205289");
+         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?13264988");
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?202112302284879");
+            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?20221221327919");
             idxLst = (int)(idxLst+1);
          }
          /* End function define_styles */
@@ -1712,7 +1696,7 @@ namespace GeneXus.Programs {
       {
          context.AddJavascriptSource("messages.spa.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxdec.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("entidadfederativa.js", "?202112302284879");
+         context.AddJavascriptSource("entidadfederativa.js", "?20221221327919");
          /* End function include_jscripts */
       }
 
@@ -2177,67 +2161,67 @@ namespace GeneXus.Programs {
        {
           Object[] prmT00044 ;
           prmT00044 = new Object[] {
-          new Object[] {"@entidafederativaid",SqlDbType.Int,9,0}
+          new Object[] {"entidafederativaid",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT00045 ;
           prmT00045 = new Object[] {
-          new Object[] {"@entidafederativaid",SqlDbType.Int,9,0}
+          new Object[] {"entidafederativaid",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT00043 ;
           prmT00043 = new Object[] {
-          new Object[] {"@entidafederativaid",SqlDbType.Int,9,0}
+          new Object[] {"entidafederativaid",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT00046 ;
           prmT00046 = new Object[] {
-          new Object[] {"@entidafederativaid",SqlDbType.Int,9,0}
+          new Object[] {"entidafederativaid",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT00047 ;
           prmT00047 = new Object[] {
-          new Object[] {"@entidafederativaid",SqlDbType.Int,9,0}
+          new Object[] {"entidafederativaid",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT00042 ;
           prmT00042 = new Object[] {
-          new Object[] {"@entidafederativaid",SqlDbType.Int,9,0}
+          new Object[] {"entidafederativaid",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT00048 ;
           prmT00048 = new Object[] {
-          new Object[] {"@entidafederativaid",SqlDbType.Int,9,0} ,
-          new Object[] {"@entidadfederativadsc",SqlDbType.VarChar,100,0} ,
-          new Object[] {"@entidadfederativausuario",SqlDbType.VarChar,15,0} ,
-          new Object[] {"@entidadfederativafecreg",SqlDbType.DateTime,10,8} ,
-          new Object[] {"@entidadfederativafecultact",SqlDbType.DateTime,10,8}
+          new Object[] {"entidafederativaid",NpgsqlDbType.Integer,9,0} ,
+          new Object[] {"entidadfederativadsc",NpgsqlDbType.Varchar,100,0} ,
+          new Object[] {"entidadfederativausuario",NpgsqlDbType.Varchar,15,0} ,
+          new Object[] {"entidadfederativafecreg",NpgsqlDbType.Timestamp,10,8} ,
+          new Object[] {"entidadfederativafecultact",NpgsqlDbType.Timestamp,10,8}
           } ;
           Object[] prmT00049 ;
           prmT00049 = new Object[] {
-          new Object[] {"@entidadfederativadsc",SqlDbType.VarChar,100,0} ,
-          new Object[] {"@entidadfederativausuario",SqlDbType.VarChar,15,0} ,
-          new Object[] {"@entidadfederativafecreg",SqlDbType.DateTime,10,8} ,
-          new Object[] {"@entidadfederativafecultact",SqlDbType.DateTime,10,8} ,
-          new Object[] {"@entidafederativaid",SqlDbType.Int,9,0}
+          new Object[] {"entidadfederativadsc",NpgsqlDbType.Varchar,100,0} ,
+          new Object[] {"entidadfederativausuario",NpgsqlDbType.Varchar,15,0} ,
+          new Object[] {"entidadfederativafecreg",NpgsqlDbType.Timestamp,10,8} ,
+          new Object[] {"entidadfederativafecultact",NpgsqlDbType.Timestamp,10,8} ,
+          new Object[] {"entidafederativaid",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT000410 ;
           prmT000410 = new Object[] {
-          new Object[] {"@entidafederativaid",SqlDbType.Int,9,0}
+          new Object[] {"entidafederativaid",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT000411 ;
           prmT000411 = new Object[] {
-          new Object[] {"@entidafederativaid",SqlDbType.Int,9,0}
+          new Object[] {"entidafederativaid",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT000412 ;
           prmT000412 = new Object[] {
           } ;
           def= new CursorDef[] {
-              new CursorDef("T00042", "SELECT [entidafederativaid], [entidadfederativadsc], [entidadfederativausuario], [entidadfederativafecreg], [entidadfederativafecultact] FROM [entidadfederativa] WITH (UPDLOCK) WHERE [entidafederativaid] = @entidafederativaid ",true, GxErrorMask.GX_NOMASK, false, this,prmT00042,1,0,true,false )
-             ,new CursorDef("T00043", "SELECT [entidafederativaid], [entidadfederativadsc], [entidadfederativausuario], [entidadfederativafecreg], [entidadfederativafecultact] FROM [entidadfederativa] WITH (NOLOCK) WHERE [entidafederativaid] = @entidafederativaid ",true, GxErrorMask.GX_NOMASK, false, this,prmT00043,1,0,true,false )
-             ,new CursorDef("T00044", "SELECT TM1.[entidafederativaid], TM1.[entidadfederativadsc], TM1.[entidadfederativausuario], TM1.[entidadfederativafecreg], TM1.[entidadfederativafecultact] FROM [entidadfederativa] TM1 WITH (NOLOCK) WHERE TM1.[entidafederativaid] = @entidafederativaid ORDER BY TM1.[entidafederativaid]  OPTION (FAST 100)",true, GxErrorMask.GX_NOMASK, false, this,prmT00044,100,0,true,false )
-             ,new CursorDef("T00045", "SELECT [entidafederativaid] FROM [entidadfederativa] WITH (NOLOCK) WHERE [entidafederativaid] = @entidafederativaid  OPTION (FAST 1)",true, GxErrorMask.GX_NOMASK, false, this,prmT00045,1,0,true,false )
-             ,new CursorDef("T00046", "SELECT TOP 1 [entidafederativaid] FROM [entidadfederativa] WITH (NOLOCK) WHERE ( [entidafederativaid] > @entidafederativaid) ORDER BY [entidafederativaid]  OPTION (FAST 1)",true, GxErrorMask.GX_NOMASK, false, this,prmT00046,1,0,true,true )
-             ,new CursorDef("T00047", "SELECT TOP 1 [entidafederativaid] FROM [entidadfederativa] WITH (NOLOCK) WHERE ( [entidafederativaid] < @entidafederativaid) ORDER BY [entidafederativaid] DESC  OPTION (FAST 1)",true, GxErrorMask.GX_NOMASK, false, this,prmT00047,1,0,true,true )
-             ,new CursorDef("T00048", "INSERT INTO [entidadfederativa]([entidafederativaid], [entidadfederativadsc], [entidadfederativausuario], [entidadfederativafecreg], [entidadfederativafecultact]) VALUES(@entidafederativaid, @entidadfederativadsc, @entidadfederativausuario, @entidadfederativafecreg, @entidadfederativafecultact)", GxErrorMask.GX_NOMASK,prmT00048)
-             ,new CursorDef("T00049", "UPDATE [entidadfederativa] SET [entidadfederativadsc]=@entidadfederativadsc, [entidadfederativausuario]=@entidadfederativausuario, [entidadfederativafecreg]=@entidadfederativafecreg, [entidadfederativafecultact]=@entidadfederativafecultact  WHERE [entidafederativaid] = @entidafederativaid", GxErrorMask.GX_NOMASK,prmT00049)
-             ,new CursorDef("T000410", "DELETE FROM [entidadfederativa]  WHERE [entidafederativaid] = @entidafederativaid", GxErrorMask.GX_NOMASK,prmT000410)
-             ,new CursorDef("T000411", "SELECT TOP 1 [almacenid], [articulosproductoid], [articuloscambsid] FROM [articulos] WITH (NOLOCK) WHERE [entidafederativaid] = @entidafederativaid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000411,1,0,true,true )
-             ,new CursorDef("T000412", "SELECT [entidafederativaid] FROM [entidadfederativa] WITH (NOLOCK) ORDER BY [entidafederativaid]  OPTION (FAST 100)",true, GxErrorMask.GX_NOMASK, false, this,prmT000412,100,0,true,false )
+              new CursorDef("T00042", "SELECT entidafederativaid, entidadfederativadsc, entidadfederativausuario, entidadfederativafecreg, entidadfederativafecultact FROM public.entidadfederativa WHERE entidafederativaid = :entidafederativaid  FOR UPDATE OF entidadfederativa NOWAIT",true, GxErrorMask.GX_NOMASK, false, this,prmT00042,1,0,true,false )
+             ,new CursorDef("T00043", "SELECT entidafederativaid, entidadfederativadsc, entidadfederativausuario, entidadfederativafecreg, entidadfederativafecultact FROM public.entidadfederativa WHERE entidafederativaid = :entidafederativaid ",true, GxErrorMask.GX_NOMASK, false, this,prmT00043,1,0,true,false )
+             ,new CursorDef("T00044", "SELECT TM1.entidafederativaid, TM1.entidadfederativadsc, TM1.entidadfederativausuario, TM1.entidadfederativafecreg, TM1.entidadfederativafecultact FROM public.entidadfederativa TM1 WHERE TM1.entidafederativaid = :entidafederativaid ORDER BY TM1.entidafederativaid ",true, GxErrorMask.GX_NOMASK, false, this,prmT00044,100,0,true,false )
+             ,new CursorDef("T00045", "SELECT entidafederativaid FROM public.entidadfederativa WHERE entidafederativaid = :entidafederativaid ",true, GxErrorMask.GX_NOMASK, false, this,prmT00045,1,0,true,false )
+             ,new CursorDef("T00046", "SELECT entidafederativaid FROM public.entidadfederativa WHERE ( entidafederativaid > :entidafederativaid) ORDER BY entidafederativaid ",true, GxErrorMask.GX_NOMASK, false, this,prmT00046,1,0,true,true )
+             ,new CursorDef("T00047", "SELECT entidafederativaid FROM public.entidadfederativa WHERE ( entidafederativaid < :entidafederativaid) ORDER BY entidafederativaid DESC ",true, GxErrorMask.GX_NOMASK, false, this,prmT00047,1,0,true,true )
+             ,new CursorDef("T00048", "SAVEPOINT gxupdate;INSERT INTO public.entidadfederativa(entidafederativaid, entidadfederativadsc, entidadfederativausuario, entidadfederativafecreg, entidadfederativafecultact) VALUES(:entidafederativaid, :entidadfederativadsc, :entidadfederativausuario, :entidadfederativafecreg, :entidadfederativafecultact);RELEASE SAVEPOINT gxupdate", GxErrorMask.GX_ROLLBACKSAVEPOINT,prmT00048)
+             ,new CursorDef("T00049", "SAVEPOINT gxupdate;UPDATE public.entidadfederativa SET entidadfederativadsc=:entidadfederativadsc, entidadfederativausuario=:entidadfederativausuario, entidadfederativafecreg=:entidadfederativafecreg, entidadfederativafecultact=:entidadfederativafecultact  WHERE entidafederativaid = :entidafederativaid;RELEASE SAVEPOINT gxupdate", GxErrorMask.GX_ROLLBACKSAVEPOINT | GxErrorMask.GX_NOMASK,prmT00049)
+             ,new CursorDef("T000410", "SAVEPOINT gxupdate;DELETE FROM public.entidadfederativa  WHERE entidafederativaid = :entidafederativaid;RELEASE SAVEPOINT gxupdate", GxErrorMask.GX_ROLLBACKSAVEPOINT | GxErrorMask.GX_NOMASK,prmT000410)
+             ,new CursorDef("T000411", "SELECT articulosid, productoid, cambsid FROM public.articulos WHERE entidadid = :entidafederativaid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000411,1,0,true,true )
+             ,new CursorDef("T000412", "SELECT entidafederativaid FROM public.entidadfederativa ORDER BY entidafederativaid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000412,100,0,true,false )
           };
        }
     }

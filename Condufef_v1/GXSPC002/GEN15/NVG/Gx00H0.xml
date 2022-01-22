@@ -48,7 +48,7 @@
 <BaseTable>
 <Table>
 <TableId>17</TableId>
-<TableName>area</TableName>
+<TableName>AREA</TableName>
 <Description>area</Description></Table></BaseTable>
 <Order>
 <Attribute>
@@ -186,7 +186,7 @@
 <NavigationTree>
 <Table>
 <TableId>17</TableId>
-<TableName>area</TableName>
+<TableName>AREA</TableName>
 <Description>area</Description>
 <RecordsToRead>many</RecordsToRead>
 <KeyAttributes>

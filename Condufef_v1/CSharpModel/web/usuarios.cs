@@ -2,9 +2,9 @@
                File: usuarios
         Description: usuarios
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 12/30/2021 22:9:5.82
+       Generated on: 1/22/2022 13:27:31.6
        Program type: Callable routine
-          Main DBMS: sqlserver
+          Main DBMS: postgresql
 */
 using System;
 using System.Collections;
@@ -14,7 +14,7 @@ using GeneXus.Application;
 using GeneXus.Metadata;
 using GeneXus.Cryptography;
 using System.Data;
-using System.Data.SqlClient;
+using NpgsqlTypes;
 using GeneXus.Data;
 using com.genexus;
 using GeneXus.Data.ADO;
@@ -1049,7 +1049,7 @@ namespace GeneXus.Programs {
             pr_default.execute(0, new Object[] {A9idusuario});
             if ( (pr_default.getStatus(0) == 103) )
             {
-               GX_msglist.addItem(context.GetMessage( "GXM_lock", new   object[]  {"usuarios"}), "RecordIsLocked", 1, "");
+               GX_msglist.addItem(context.GetMessage( "GXM_lock", new   object[]  {"USUARIOS"}), "RecordIsLocked", 1, "");
                AnyError = 1;
                return  ;
             }
@@ -1067,7 +1067,7 @@ namespace GeneXus.Programs {
                   GXUtil.WriteLogRaw("Old: ",Z174contrasena);
                   GXUtil.WriteLogRaw("Current: ",T000F2_A174contrasena[0]);
                }
-               GX_msglist.addItem(context.GetMessage( "GXM_waschg", new   object[]  {"usuarios"}), "RecordWasChanged", 1, "");
+               GX_msglist.addItem(context.GetMessage( "GXM_waschg", new   object[]  {"USUARIOS"}), "RecordWasChanged", 1, "");
                AnyError = 1;
                return  ;
             }
@@ -1096,7 +1096,7 @@ namespace GeneXus.Programs {
                      /* Using cursor T000F8 */
                      pr_default.execute(6, new Object[] {A9idusuario, n173usuario, A173usuario, n174contrasena, A174contrasena});
                      pr_default.close(6);
-                     dsDefault.SmartCacheProvider.SetUpdated("usuarios") ;
+                     dsDefault.SmartCacheProvider.SetUpdated("USUARIOS") ;
                      if ( (pr_default.getStatus(6) == 1) )
                      {
                         GX_msglist.addItem(context.GetMessage( "GXM_noupdate", ""), "DuplicatePrimaryKey", 1, "");
@@ -1151,10 +1151,10 @@ namespace GeneXus.Programs {
                      /* Using cursor T000F9 */
                      pr_default.execute(7, new Object[] {n173usuario, A173usuario, n174contrasena, A174contrasena, A9idusuario});
                      pr_default.close(7);
-                     dsDefault.SmartCacheProvider.SetUpdated("usuarios") ;
+                     dsDefault.SmartCacheProvider.SetUpdated("USUARIOS") ;
                      if ( (pr_default.getStatus(7) == 103) )
                      {
-                        GX_msglist.addItem(context.GetMessage( "GXM_lock", new   object[]  {"usuarios"}), "RecordIsLocked", 1, "");
+                        GX_msglist.addItem(context.GetMessage( "GXM_lock", new   object[]  {"USUARIOS"}), "RecordIsLocked", 1, "");
                         AnyError = 1;
                      }
                      DeferredUpdate0F15( ) ;
@@ -1208,7 +1208,7 @@ namespace GeneXus.Programs {
                   /* Using cursor T000F10 */
                   pr_default.execute(8, new Object[] {A9idusuario});
                   pr_default.close(8);
-                  dsDefault.SmartCacheProvider.SetUpdated("usuarios") ;
+                  dsDefault.SmartCacheProvider.SetUpdated("USUARIOS") ;
                   if ( AnyError == 0 )
                   {
                      /* Start of After( delete) rules */
@@ -1266,7 +1266,6 @@ namespace GeneXus.Programs {
          }
          if ( AnyError == 0 )
          {
-            pr_default.close(1);
             context.CommitDataStores( "usuarios");
             if ( AnyError == 0 )
             {
@@ -1278,7 +1277,6 @@ namespace GeneXus.Programs {
          }
          else
          {
-            pr_default.close(1);
             context.RollbackDataStores( "usuarios");
          }
          IsModified = 0;
@@ -1396,7 +1394,7 @@ namespace GeneXus.Programs {
          context.AddJavascriptSource("jquery.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxtimezone.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxgral.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("gxcfg.js", "?20211230229643");
+         context.AddJavascriptSource("gxcfg.js", "?202212213273155");
          if ( context.isSpaRequest( ) )
          {
             enableOutput();
@@ -1538,11 +1536,11 @@ namespace GeneXus.Programs {
 
       protected void define_styles( )
       {
-         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?2284430");
+         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?13264988");
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?20211230229646");
+            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?202212213273158");
             idxLst = (int)(idxLst+1);
          }
          /* End function define_styles */
@@ -1551,7 +1549,7 @@ namespace GeneXus.Programs {
       protected void include_jscripts( )
       {
          context.AddJavascriptSource("messages.spa.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("usuarios.js", "?20211230229646");
+         context.AddJavascriptSource("usuarios.js", "?202212213273158");
          /* End function include_jscripts */
       }
 
@@ -1928,58 +1926,58 @@ namespace GeneXus.Programs {
        {
           Object[] prmT000F4 ;
           prmT000F4 = new Object[] {
-          new Object[] {"@idusuario",SqlDbType.Int,9,0}
+          new Object[] {"idusuario",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT000F5 ;
           prmT000F5 = new Object[] {
-          new Object[] {"@idusuario",SqlDbType.Int,9,0}
+          new Object[] {"idusuario",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT000F3 ;
           prmT000F3 = new Object[] {
-          new Object[] {"@idusuario",SqlDbType.Int,9,0}
+          new Object[] {"idusuario",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT000F6 ;
           prmT000F6 = new Object[] {
-          new Object[] {"@idusuario",SqlDbType.Int,9,0}
+          new Object[] {"idusuario",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT000F7 ;
           prmT000F7 = new Object[] {
-          new Object[] {"@idusuario",SqlDbType.Int,9,0}
+          new Object[] {"idusuario",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT000F2 ;
           prmT000F2 = new Object[] {
-          new Object[] {"@idusuario",SqlDbType.Int,9,0}
+          new Object[] {"idusuario",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT000F8 ;
           prmT000F8 = new Object[] {
-          new Object[] {"@idusuario",SqlDbType.Int,9,0} ,
-          new Object[] {"@usuario",SqlDbType.VarChar,25,0} ,
-          new Object[] {"@contrasena",SqlDbType.VarChar,10,0}
+          new Object[] {"idusuario",NpgsqlDbType.Integer,9,0} ,
+          new Object[] {"usuario",NpgsqlDbType.Varchar,25,0} ,
+          new Object[] {"contrasena",NpgsqlDbType.Varchar,10,0}
           } ;
           Object[] prmT000F9 ;
           prmT000F9 = new Object[] {
-          new Object[] {"@usuario",SqlDbType.VarChar,25,0} ,
-          new Object[] {"@contrasena",SqlDbType.VarChar,10,0} ,
-          new Object[] {"@idusuario",SqlDbType.Int,9,0}
+          new Object[] {"usuario",NpgsqlDbType.Varchar,25,0} ,
+          new Object[] {"contrasena",NpgsqlDbType.Varchar,10,0} ,
+          new Object[] {"idusuario",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT000F10 ;
           prmT000F10 = new Object[] {
-          new Object[] {"@idusuario",SqlDbType.Int,9,0}
+          new Object[] {"idusuario",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT000F11 ;
           prmT000F11 = new Object[] {
           } ;
           def= new CursorDef[] {
-              new CursorDef("T000F2", "SELECT [idusuario], [usuario], [contrasena] FROM [usuarios] WITH (UPDLOCK) WHERE [idusuario] = @idusuario ",true, GxErrorMask.GX_NOMASK, false, this,prmT000F2,1,0,true,false )
-             ,new CursorDef("T000F3", "SELECT [idusuario], [usuario], [contrasena] FROM [usuarios] WITH (NOLOCK) WHERE [idusuario] = @idusuario ",true, GxErrorMask.GX_NOMASK, false, this,prmT000F3,1,0,true,false )
-             ,new CursorDef("T000F4", "SELECT TM1.[idusuario], TM1.[usuario], TM1.[contrasena] FROM [usuarios] TM1 WITH (NOLOCK) WHERE TM1.[idusuario] = @idusuario ORDER BY TM1.[idusuario]  OPTION (FAST 100)",true, GxErrorMask.GX_NOMASK, false, this,prmT000F4,100,0,true,false )
-             ,new CursorDef("T000F5", "SELECT [idusuario] FROM [usuarios] WITH (NOLOCK) WHERE [idusuario] = @idusuario  OPTION (FAST 1)",true, GxErrorMask.GX_NOMASK, false, this,prmT000F5,1,0,true,false )
-             ,new CursorDef("T000F6", "SELECT TOP 1 [idusuario] FROM [usuarios] WITH (NOLOCK) WHERE ( [idusuario] > @idusuario) ORDER BY [idusuario]  OPTION (FAST 1)",true, GxErrorMask.GX_NOMASK, false, this,prmT000F6,1,0,true,true )
-             ,new CursorDef("T000F7", "SELECT TOP 1 [idusuario] FROM [usuarios] WITH (NOLOCK) WHERE ( [idusuario] < @idusuario) ORDER BY [idusuario] DESC  OPTION (FAST 1)",true, GxErrorMask.GX_NOMASK, false, this,prmT000F7,1,0,true,true )
-             ,new CursorDef("T000F8", "INSERT INTO [usuarios]([idusuario], [usuario], [contrasena]) VALUES(@idusuario, @usuario, @contrasena)", GxErrorMask.GX_NOMASK,prmT000F8)
-             ,new CursorDef("T000F9", "UPDATE [usuarios] SET [usuario]=@usuario, [contrasena]=@contrasena  WHERE [idusuario] = @idusuario", GxErrorMask.GX_NOMASK,prmT000F9)
-             ,new CursorDef("T000F10", "DELETE FROM [usuarios]  WHERE [idusuario] = @idusuario", GxErrorMask.GX_NOMASK,prmT000F10)
-             ,new CursorDef("T000F11", "SELECT [idusuario] FROM [usuarios] WITH (NOLOCK) ORDER BY [idusuario]  OPTION (FAST 100)",true, GxErrorMask.GX_NOMASK, false, this,prmT000F11,100,0,true,false )
+              new CursorDef("T000F2", "SELECT idusuario, usuario, contrasena FROM public.usuarios WHERE idusuario = :idusuario  FOR UPDATE OF usuarios NOWAIT",true, GxErrorMask.GX_NOMASK, false, this,prmT000F2,1,0,true,false )
+             ,new CursorDef("T000F3", "SELECT idusuario, usuario, contrasena FROM public.usuarios WHERE idusuario = :idusuario ",true, GxErrorMask.GX_NOMASK, false, this,prmT000F3,1,0,true,false )
+             ,new CursorDef("T000F4", "SELECT TM1.idusuario, TM1.usuario, TM1.contrasena FROM public.usuarios TM1 WHERE TM1.idusuario = :idusuario ORDER BY TM1.idusuario ",true, GxErrorMask.GX_NOMASK, false, this,prmT000F4,100,0,true,false )
+             ,new CursorDef("T000F5", "SELECT idusuario FROM public.usuarios WHERE idusuario = :idusuario ",true, GxErrorMask.GX_NOMASK, false, this,prmT000F5,1,0,true,false )
+             ,new CursorDef("T000F6", "SELECT idusuario FROM public.usuarios WHERE ( idusuario > :idusuario) ORDER BY idusuario ",true, GxErrorMask.GX_NOMASK, false, this,prmT000F6,1,0,true,true )
+             ,new CursorDef("T000F7", "SELECT idusuario FROM public.usuarios WHERE ( idusuario < :idusuario) ORDER BY idusuario DESC ",true, GxErrorMask.GX_NOMASK, false, this,prmT000F7,1,0,true,true )
+             ,new CursorDef("T000F8", "SAVEPOINT gxupdate;INSERT INTO public.usuarios(idusuario, usuario, contrasena) VALUES(:idusuario, :usuario, :contrasena);RELEASE SAVEPOINT gxupdate", GxErrorMask.GX_ROLLBACKSAVEPOINT,prmT000F8)
+             ,new CursorDef("T000F9", "SAVEPOINT gxupdate;UPDATE public.usuarios SET usuario=:usuario, contrasena=:contrasena  WHERE idusuario = :idusuario;RELEASE SAVEPOINT gxupdate", GxErrorMask.GX_ROLLBACKSAVEPOINT | GxErrorMask.GX_NOMASK,prmT000F9)
+             ,new CursorDef("T000F10", "SAVEPOINT gxupdate;DELETE FROM public.usuarios  WHERE idusuario = :idusuario;RELEASE SAVEPOINT gxupdate", GxErrorMask.GX_ROLLBACKSAVEPOINT | GxErrorMask.GX_NOMASK,prmT000F10)
+             ,new CursorDef("T000F11", "SELECT idusuario FROM public.usuarios ORDER BY idusuario ",true, GxErrorMask.GX_NOMASK, false, this,prmT000F11,100,0,true,false )
           };
        }
     }

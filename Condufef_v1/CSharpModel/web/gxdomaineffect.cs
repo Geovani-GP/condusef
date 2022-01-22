@@ -2,9 +2,9 @@
                File: Effect
         Description: Effect
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 12/30/2021 22:9:46.47
+       Generated on: 1/22/2022 13:28:19.53
        Program type: Callable routine
-          Main DBMS: sqlserver
+          Main DBMS: postgresql
 */
 using System;
 using System.Collections;

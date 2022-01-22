@@ -46,7 +46,7 @@
 <BaseTable>
 <Table>
 <TableId>20</TableId>
-<TableName>tipodocumento</TableName>
+<TableName>TIPODOCUMENTO</TableName>
 <Description>tipodocumento</Description></Table></BaseTable>
 <Order>
 <Attribute>
@@ -163,7 +163,7 @@
 <NavigationTree>
 <Table>
 <TableId>20</TableId>
-<TableName>tipodocumento</TableName>
+<TableName>TIPODOCUMENTO</TableName>
 <Description>tipodocumento</Description>
 <RecordsToRead>many</RecordsToRead>
 <KeyAttributes>

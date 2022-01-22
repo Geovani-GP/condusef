@@ -52,25 +52,11 @@ pos_i(172,[ 0,0,0 ]).
  
  
 rule_i(0,datastore(1,'DS_LAST_CHANGE','')).
-rule_i(0,datastore(1,'LOCK_RETRY','10')).
-rule_i(0,datastore(1,'WAIT_RECORD','0')).
-rule_i(0,datastore(1,'SQLSERVER_VERSION','9')).
+rule_i(0,datastore(1,'POSTGRESQL_VERSION','8_3')).
 rule_i(0,datastore(1,'COMMENT_ON','No')).
-rule_i(0,datastore(1,'DFT_TMP_TBLSPACE','')).
-rule_i(0,datastore(1,'DFT_IDX_TBLSPACE','')).
-rule_i(0,datastore(1,'DFT_TBL_TBLSPACE','')).
 rule_i(0,datastore(1,'DCL_REF_INT_DB','Yes')).
 rule_i(0,datastore(1,'PRIMARY_KEY_TYPE','PK')).
 rule_i(0,datastore(1,'CS_SCHEMA','')).
-rule_i(0,datastore(1,'SORT_ATTRIBUTES','Yes')).
-rule_i(0,datastore(1,'JRN400','QSQJRN')).
-rule_i(0,datastore(1,'CREATE_SAVF','Yes')).
-rule_i(0,datastore(1,'PGMLIB','')).
-rule_i(0,datastore(1,'DTALIB','')).
-rule_i(0,datastore(1,'CC_USER_PASS','')).
-rule_i(0,datastore(1,'CC_USER_ID','')).
-rule_i(0,datastore(1,'CC_SERVER','')).
-rule_i(0,datastore(1,'CC_DBNAME','')).
 rule_i(0,datastore(1,'RecycleRWMin','30')).
 rule_i(0,datastore(1,'RecycleRWType','1')).
 rule_i(0,datastore(1,'RecycleRW','-1')).
@@ -82,26 +68,25 @@ rule_i(0,datastore(1,'CS_RPCPGML','')).
 rule_i(0,datastore(1,'JDBC_DATASOURCE','')).
 rule_i(0,datastore(1,'USE_JDBC_DATASOURCE','0')).
 rule_i(0,datastore(1,'DS_DBMS_ADDINFO','')).
-rule_i(0,datastore(1,'USER_PASSWORD','')).
-rule_i(0,datastore(1,'USER_ID','')).
-rule_i(0,datastore(1,'TRUSTED_CONNECTION','Yes')).
+rule_i(0,datastore(1,'USER_PASSWORD',󻢸蘇�2�5炭)).
+rule_i(0,datastore(1,'USER_ID',postgres)).
 rule_i(0,datastore(1,'CS_CONNECT','First')).
-rule_i(0,datastore(1,'DBMS_PORT','')).
-rule_i(0,datastore(1,'CS_SERVER','JOSBUENO-MX\DELGADO')).
-rule_i(0,datastore(1,'CS_DBNAME','Dar_CONDUCEFDB')).
+rule_i(0,datastore(1,'DBMS_PORT','5432')).
+rule_i(0,datastore(1,'CS_SERVER',localhost)).
+rule_i(0,datastore(1,'CS_DBNAME',postgres)).
 rule_i(0,datastore(1,'CS_FLEDSNAME','')).
-rule_i(0,datastore(1,'CS_DRVNAME','sql server')).
+rule_i(0,datastore(1,'CS_DRVNAME','')).
 rule_i(0,datastore(1,'CS_DSNAME','')).
 rule_i(0,datastore(1,'DB_URL','')).
 rule_i(0,datastore(1,'JDBC_CUSTOM_URL','0')).
 rule_i(0,datastore(1,'JDBC_CUSTOM_DRIVER','')).
-rule_i(0,datastore(1,'JDBC_DRIVER','net.sourceforge.jtds.jdbc.Driver')).
+rule_i(0,datastore(1,'JDBC_DRIVER','org.postgresql.Driver')).
 rule_i(0,datastore(1,'CONNECT_METHOD','OPSYS')).
 rule_i(0,datastore(1,'ACCESS_TECHNO','ADONET')).
 rule_i(0,datastore(1,'MAIN_DS','-1')).
 rule_i(0,datastore(1,'REORG_GEN','8')).
 rule_i(0,datastore(1,'HelpKeyword','20')).
-rule_i(0,datastore(1,'DBMS',12)).
+rule_i(0,datastore(1,'DBMS',15)).
 rule_i(0,datastore(1,'NAME','Default')).
 rule_i(0,prop(idNULLS_BEHAVIOR,idNB_Current)).
 rule_i(0,prop('ObjectVisibility','Public')).
@@ -204,11 +189,6 @@ rule_i(11,prompt([ 11,[ [ [],19,19 ],[ [],20,20 ],[ [],21,21 ] ],[],[],[ t(o(13,
 rule_i(11,rule([ a(23,[ [ 19,20,21 ],[ t(o(13,'Gx00B0'),28),t(19,2),t(',',7),t(20,2),t(',',7),t(21,2) ] ]) ],[],[],[ 19,20,21 ])).
 rule_i(0,rule([ a(22,[ 'Dlt','"Eliminar"','' ]) ],[],[],[])).
 rule_i(0,maingen(15)).
-rule_i(11,rule([ a(1,msg([ t('"Campo articulosfechacoteja fuera de rango"',3) ],[ t('OutOfRange',3) ])) ],[ t('NOT',8),t('(',0),t('null(',1),t(162,2),t(')',4),t('.OR.',9),t(162,2),t(>=,10),t('ymdhmstot(',1),t('1753',3),t(',',7),t('01',3),t(',',7),t('01',3),t(',',7),t('00',3),t(',',7),t('00',3),t(',',7),t('00',3),t(')',4),t(')',4) ],[ insert,update ],[ 162 ])).
-rule_i(11,rule([ a(1,msg([ t('"Campo articulosfechaentraalmacen fuera de rango"',3) ],[ t('OutOfRange',3) ])) ],[ t('NOT',8),t('(',0),t('null(',1),t(163,2),t(')',4),t('.OR.',9),t(163,2),t(>=,10),t('ymdhmstot(',1),t('1753',3),t(',',7),t('01',3),t(',',7),t('01',3),t(',',7),t('00',3),t(',',7),t('00',3),t(',',7),t('00',3),t(')',4),t(')',4) ],[ insert,update ],[ 163 ])).
-rule_i(11,rule([ a(1,msg([ t('"Campo articulosfechabajaalma fuera de rango"',3) ],[ t('OutOfRange',3) ])) ],[ t('NOT',8),t('(',0),t('null(',1),t(164,2),t(')',4),t('.OR.',9),t(164,2),t(>=,10),t('ymdhmstot(',1),t('1753',3),t(',',7),t('01',3),t(',',7),t('01',3),t(',',7),t('00',3),t(',',7),t('00',3),t(',',7),t('00',3),t(')',4),t(')',4) ],[ insert,update ],[ 164 ])).
-rule_i(11,rule([ a(1,msg([ t('"Campo articulosfecreg fuera de rango"',3) ],[ t('OutOfRange',3) ])) ],[ t('NOT',8),t('(',0),t('null(',1),t(171,2),t(')',4),t('.OR.',9),t(171,2),t(>=,10),t('ymdhmstot(',1),t('1753',3),t(',',7),t('01',3),t(',',7),t('01',3),t(',',7),t('00',3),t(',',7),t('00',3),t(',',7),t('00',3),t(')',4),t(')',4) ],[ insert,update ],[ 171 ])).
-rule_i(11,rule([ a(1,msg([ t('"Campo articulosfecultact fuera de rango"',3) ],[ t('OutOfRange',3) ])) ],[ t('NOT',8),t('(',0),t('null(',1),t(172,2),t(')',4),t('.OR.',9),t(172,2),t(>=,10),t('ymdhmstot(',1),t('1753',3),t(',',7),t('01',3),t(',',7),t('01',3),t(',',7),t('00',3),t(',',7),t('00',3),t(',',7),t('00',3),t(')',4),t(')',4) ],[ insert,update ],[ 172 ])).
 rule_i(11,rule([ a(18,[ [ 2 ] ]) ],[],[ insert,update,delete ],[ 2 ])).
 rule_i(11,rule([ a(18,[ [ 10 ] ]) ],[],[ insert,update,delete ],[ 10 ])).
 rule_i(11,rule([ a(18,[ [ 7 ] ]) ],[],[ insert,update,delete ],[ 7 ])).
@@ -230,6 +210,12 @@ rule_i(0,p(0,15,fvix,[ 15,16 ],[ 'NAME',productoid ])).
 rule_i(0,p(0,15,fvix,[ 15,16 ],[ 'LOC','' ])).
 rule_i(0,p(0,15,fvix,[ 15,16 ],[ 'SCHEMA',public ])).
 rule_i(0,p(0,15,fvix,[ 15,16 ],[ 'EXTNAM','YES' ])).
+rule_i(0,file(11,'ARTICULOS',[ 19,20,21,154,155,23,7,10,156,2,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172 ])).
+rule_i(0,loc([ 11 ],'ARTICULOS','','LAN')).
+rule_i(0,index(11,'ARTICULOS_PKEY',u,[ 19,20,21 ])).
+rule_i(0,loc([ 11,'ARTICULOS_PKEY' ],articulos_pkey,'','LAN')).
+rule_i(0,index(11,'PRODUCTOID',k,[ 19 ])).
+rule_i(0,loc([ 11,'PRODUCTOID' ],productoid,'','LAN')).
 rule_i(0,p(0,0,fv,20,[ intname,'ALMACEN' ])).
 rule_i(0,p(0,0,fv,20,[ table,18 ])).
 rule_i(0,p(0,15,fv,20,[])).
@@ -242,6 +228,10 @@ rule_i(0,p(0,15,fvix,[ 20,21 ],[ 'NAME',almacen_pkey ])).
 rule_i(0,p(0,15,fvix,[ 20,21 ],[ 'LOC','' ])).
 rule_i(0,p(0,15,fvix,[ 20,21 ],[ 'SCHEMA',public ])).
 rule_i(0,p(0,15,fvix,[ 20,21 ],[ 'EXTNAM','YES' ])).
+rule_i(0,file(18,'ALMACEN',[ 19,13,143,144,145,146,147,148,149,150,151,152,153 ])).
+rule_i(0,loc([ 18 ],'ALMACEN','','LAN')).
+rule_i(0,index(18,'ALMACEN_PKEY',u,[ 19 ])).
+rule_i(0,loc([ 18,'ALMACEN_PKEY' ],almacen_pkey,'','LAN')).
 rule_i(0,p(0,0,fv,17,[ intname,'TIPOBIEN' ])).
 rule_i(0,p(0,0,fv,17,[ table,1 ])).
 rule_i(0,p(0,15,fv,17,[])).
@@ -254,6 +244,10 @@ rule_i(0,p(0,15,fvix,[ 17,18 ],[ 'NAME',tipobien_pkey ])).
 rule_i(0,p(0,15,fvix,[ 17,18 ],[ 'LOC','' ])).
 rule_i(0,p(0,15,fvix,[ 17,18 ],[ 'SCHEMA',public ])).
 rule_i(0,p(0,15,fvix,[ 17,18 ],[ 'EXTNAM','YES' ])).
+rule_i(0,file(1,'TIPOBIEN',[ 23,139,140,141,142 ])).
+rule_i(0,loc([ 1 ],'TIPOBIEN','','LAN')).
+rule_i(0,index(1,'TIPOBIEN_PKEY',u,[ 23 ])).
+rule_i(0,loc([ 1,'TIPOBIEN_PKEY' ],tipobien_pkey,'','LAN')).
 rule_i(0,p(0,0,fv,4,[ intname,'ENTIDADFEDERATIVA' ])).
 rule_i(0,p(0,0,fv,4,[ table,4 ])).
 rule_i(0,p(0,15,fv,4,[])).
@@ -266,6 +260,10 @@ rule_i(0,p(0,15,fvix,[ 4,4 ],[ 'NAME',entidadfederativa_pkey ])).
 rule_i(0,p(0,15,fvix,[ 4,4 ],[ 'LOC','' ])).
 rule_i(0,p(0,15,fvix,[ 4,4 ],[ 'SCHEMA',public ])).
 rule_i(0,p(0,15,fvix,[ 4,4 ],[ 'EXTNAM','YES' ])).
+rule_i(0,file(4,'ENTIDADFEDERATIVA',[ 7,108,109,110,111 ])).
+rule_i(0,loc([ 4 ],'ENTIDADFEDERATIVA','','LAN')).
+rule_i(0,index(4,'ENTIDADFEDERATIVA_PKEY',u,[ 7 ])).
+rule_i(0,loc([ 4,'ENTIDADFEDERATIVA_PKEY' ],entidadfederativa_pkey,'','LAN')).
 rule_i(0,p(0,0,fv,8,[ intname,'ORIGEN' ])).
 rule_i(0,p(0,0,fv,8,[ table,16 ])).
 rule_i(0,p(0,15,fv,8,[])).
@@ -278,6 +276,10 @@ rule_i(0,p(0,15,fvix,[ 8,7 ],[ 'NAME',origen_pkey ])).
 rule_i(0,p(0,15,fvix,[ 8,7 ],[ 'LOC','' ])).
 rule_i(0,p(0,15,fvix,[ 8,7 ],[ 'SCHEMA',public ])).
 rule_i(0,p(0,15,fvix,[ 8,7 ],[ 'EXTNAM','YES' ])).
+rule_i(0,file(16,'ORIGEN',[ 10,120,121,122,123,124,125 ])).
+rule_i(0,loc([ 16 ],'ORIGEN','','LAN')).
+rule_i(0,index(16,'ORIGEN_PKEY',u,[ 10 ])).
+rule_i(0,loc([ 16,'ORIGEN_PKEY' ],origen_pkey,'','LAN')).
 rule_i(0,p(0,0,fv,2,[ intname,'PROVEEDORES' ])).
 rule_i(0,p(0,0,fv,2,[ table,10 ])).
 rule_i(0,p(0,15,fv,2,[])).
@@ -290,6 +292,10 @@ rule_i(0,p(0,15,fvix,[ 2,2 ],[ 'NAME',proveedores_pkey ])).
 rule_i(0,p(0,15,fvix,[ 2,2 ],[ 'LOC','' ])).
 rule_i(0,p(0,15,fvix,[ 2,2 ],[ 'SCHEMA',public ])).
 rule_i(0,p(0,15,fvix,[ 2,2 ],[ 'EXTNAM','YES' ])).
+rule_i(0,file(10,'PROVEEDORES',[ 2,126,127,128,129,130,131,132,133,134,135,136,137,138 ])).
+rule_i(0,loc([ 10 ],'PROVEEDORES','','LAN')).
+rule_i(0,index(10,'PROVEEDORES_PKEY',u,[ 2 ])).
+rule_i(0,loc([ 10,'PROVEEDORES_PKEY' ],proveedores_pkey,'','LAN')).
 rule_i(0,p(0,0,fv,21,[ intname,'MODELOS' ])).
 rule_i(0,p(0,0,fv,21,[ table,19 ])).
 rule_i(0,p(0,15,fv,21,[])).
@@ -302,6 +308,10 @@ rule_i(0,p(0,15,fvix,[ 21,22 ],[ 'NAME',modelos_pkey ])).
 rule_i(0,p(0,15,fvix,[ 21,22 ],[ 'LOC','' ])).
 rule_i(0,p(0,15,fvix,[ 21,22 ],[ 'SCHEMA',public ])).
 rule_i(0,p(0,15,fvix,[ 21,22 ],[ 'EXTNAM','YES' ])).
+rule_i(0,file(522,'MODELOS',[ 20,116,117,118,119 ])).
+rule_i(0,loc([ 522 ],'MODELOS','','LAN')).
+rule_i(0,index(522,'MODELOS_PKEY',u,[ 20 ])).
+rule_i(0,loc([ 522,'MODELOS_PKEY' ],modelos_pkey,'','LAN')).
 rule_i(0,p(0,0,fv,19,[ intname,'CAMBS' ])).
 rule_i(0,p(0,0,fv,19,[ table,14 ])).
 rule_i(0,p(0,15,fv,19,[])).
@@ -314,6 +324,10 @@ rule_i(0,p(0,15,fvix,[ 19,20 ],[ 'NAME',cambs_pkey ])).
 rule_i(0,p(0,15,fvix,[ 19,20 ],[ 'LOC','' ])).
 rule_i(0,p(0,15,fvix,[ 19,20 ],[ 'SCHEMA',public ])).
 rule_i(0,p(0,15,fvix,[ 19,20 ],[ 'EXTNAM','YES' ])).
+rule_i(0,file(525,'CAMBS',[ 21,83,84,85,86 ])).
+rule_i(0,loc([ 525 ],'CAMBS','','LAN')).
+rule_i(0,index(525,'CAMBS_PKEY',u,[ 21 ])).
+rule_i(0,loc([ 525,'CAMBS_PKEY' ],cambs_pkey,'','LAN')).
 rule_i(11,rule([ a(19,[ [ 19 ],msg([ t('"No existe ''almacen''."',3) ],[ t('ForeignKeyNotFound',3) ]) ]) ],[],[ insert,update,delete ],[ 19 ])).
 rule_i(11,rule([ a(19,[ [ 23 ],msg([ t('"No existe ''tipobien''."',3) ],[ t('ForeignKeyNotFound',3) ]) ]) ],[],[ insert,update,delete ],[ 23 ])).
 rule_i(11,rule([ a(19,[ [ 7 ],msg([ t('"No existe ''entidadfederativa''."',3) ],[ t('ForeignKeyNotFound',3) ]) ]) ],[],[ insert,update,delete ],[ 7 ])).
@@ -322,75 +336,60 @@ rule_i(11,rule([ a(19,[ [ 2 ],msg([ t('"No existe ''proveedores''."',3) ],[ t('F
 rule_i(11,rule([ a(19,[ [ 20 ],msg([ t('"No existe ''articulosproducto''."',3) ],[ t('ForeignKeyNotFound',3) ]) ]) ],[],[ insert,update,delete ],[ 20 ])).
 rule_i(11,rule([ a(19,[ [ 21 ],msg([ t('"No existe ''articuloscambs''."',3) ],[ t('ForeignKeyNotFound',3) ]) ]) ],[],[ insert,update,delete ],[ 21 ])).
  
-a_i(1,11,b,0,[],[ [],[ a(1,msg([ t('"Campo articulosfechacoteja fuera de rango"',3) ],[ t('OutOfRange',3) ])) ],[ t('NOT',8),t('(',0),t('null(',1),t(162,2),t(')',4),t('.OR.',9),t(162,2),t(>=,10),t('ymdhmstot(',1),t('1753',3),t(',',7),t('01',3),t(',',7),t('01',3),t(',',7),t('00',3),t(',',7),t('00',3),t(',',7),t('00',3),t(')',4),t(')',4) ] ]).
-a_i(2,11,b,0,[],[ [],[ a(1,msg([ t('"Campo articulosfechaentraalmacen fuera de rango"',3) ],[ t('OutOfRange',3) ])) ],[ t('NOT',8),t('(',0),t('null(',1),t(163,2),t(')',4),t('.OR.',9),t(163,2),t(>=,10),t('ymdhmstot(',1),t('1753',3),t(',',7),t('01',3),t(',',7),t('01',3),t(',',7),t('00',3),t(',',7),t('00',3),t(',',7),t('00',3),t(')',4),t(')',4) ] ]).
-a_i(3,11,b,0,[],[ [],[ a(1,msg([ t('"Campo articulosfechabajaalma fuera de rango"',3) ],[ t('OutOfRange',3) ])) ],[ t('NOT',8),t('(',0),t('null(',1),t(164,2),t(')',4),t('.OR.',9),t(164,2),t(>=,10),t('ymdhmstot(',1),t('1753',3),t(',',7),t('01',3),t(',',7),t('01',3),t(',',7),t('00',3),t(',',7),t('00',3),t(',',7),t('00',3),t(')',4),t(')',4) ] ]).
-a_i(4,11,b,0,[],[ [],[ a(1,msg([ t('"Campo articulosfecreg fuera de rango"',3) ],[ t('OutOfRange',3) ])) ],[ t('NOT',8),t('(',0),t('null(',1),t(171,2),t(')',4),t('.OR.',9),t(171,2),t(>=,10),t('ymdhmstot(',1),t('1753',3),t(',',7),t('01',3),t(',',7),t('01',3),t(',',7),t('00',3),t(',',7),t('00',3),t(',',7),t('00',3),t(')',4),t(')',4) ] ]).
-a_i(5,11,b,0,[],[ [],[ a(1,msg([ t('"Campo articulosfecultact fuera de rango"',3) ],[ t('OutOfRange',3) ])) ],[ t('NOT',8),t('(',0),t('null(',1),t(172,2),t(')',4),t('.OR.',9),t(172,2),t(>=,10),t('ymdhmstot(',1),t('1753',3),t(',',7),t('01',3),t(',',7),t('01',3),t(',',7),t('00',3),t(',',7),t('00',3),t(',',7),t('00',3),t(')',4),t(')',4) ] ]).
-a_i(6,11,t,11,[],[ [ [ [],19,19 ],[ [],20,20 ],[ [],21,21 ] ],'ARTICULOS_PKEY',[] ]).
-a_i(7,11,k,11,[],[ [ [ [],19,19 ] ],'PRODUCTOID',[] ]).
-a_i(8,11,r,18,[],[ [ [ 11,19,19 ] ],'ALMACEN_PKEY',[] ]).
-a_i(9,11,r,1,[],[ [ [ 11,23,23 ] ],'TIPOBIEN_PKEY',[] ]).
-a_i(10,11,r,4,[],[ [ [ 11,7,7 ] ],'ENTIDADFEDERATIVA_PKEY',[] ]).
-a_i(11,11,r,16,[],[ [ [ 11,10,10 ] ],'ORIGEN_PKEY',[] ]).
-a_i(12,11,r,10,[],[ [ [ 11,2,2 ] ],'PROVEEDORES_PKEY',[] ]).
-a_i(13,11,r,522,[],[ [ [ 11,20,15 ] ],'MODELOS_PKEY',[] ]).
-a_i(14,11,r,525,[],[ [ [ 11,21,25 ] ],'CAMBS_PKEY',[] ]).
+a_i(1,11,t,11,[],[ [ [ [],19,19 ],[ [],20,20 ],[ [],21,21 ] ],'ARTICULOS_PKEY',[] ]).
+a_i(2,11,k,11,[],[ [ [ [],19,19 ] ],'PRODUCTOID',[] ]).
+a_i(3,11,r,18,[],[ [ [ 11,19,19 ] ],'ALMACEN_PKEY',[] ]).
+a_i(4,11,r,1,[],[ [ [ 11,23,23 ] ],'TIPOBIEN_PKEY',[] ]).
+a_i(5,11,r,4,[],[ [ [ 11,7,7 ] ],'ENTIDADFEDERATIVA_PKEY',[] ]).
+a_i(6,11,r,16,[],[ [ [ 11,10,10 ] ],'ORIGEN_PKEY',[] ]).
+a_i(7,11,r,10,[],[ [ [ 11,2,2 ] ],'PROVEEDORES_PKEY',[] ]).
+a_i(8,11,r,522,[],[ [ [ 11,20,15 ] ],'MODELOS_PKEY',[] ]).
+a_i(9,11,r,525,[],[ [ [ 11,21,25 ] ],'CAMBS_PKEY',[] ]).
  
-v_i(b,i,1,162).
-v_i(b,o,1,[]).
-v_i(b,i,2,163).
-v_i(b,o,2,[]).
-v_i(b,i,3,164).
-v_i(b,o,3,[]).
-v_i(b,i,4,171).
-v_i(b,o,4,[]).
-v_i(b,i,5,172).
-v_i(b,o,5,[]).
-v_i(t,i,6,19).
-v_i(t,i,6,20).
-v_i(t,i,6,21).
-v_i(t,o,6,154).
-v_i(t,o,6,155).
-v_i(t,o,6,156).
-v_i(t,o,6,157).
-v_i(t,o,6,158).
-v_i(t,o,6,159).
-v_i(t,o,6,160).
-v_i(t,o,6,161).
-v_i(t,o,6,162).
-v_i(t,o,6,163).
-v_i(t,o,6,164).
-v_i(t,o,6,165).
-v_i(t,o,6,166).
-v_i(t,o,6,167).
-v_i(t,o,6,168).
-v_i(t,o,6,169).
-v_i(t,o,6,170).
-v_i(t,o,6,171).
-v_i(t,o,6,172).
-v_i(t,o,6,23).
-v_i(t,o,6,7).
-v_i(t,o,6,10).
-v_i(t,o,6,2).
-v_i(k,i,7,19).
-v_i(k,i,7,20).
-v_i(k,i,7,21).
-v_i(k,o,7,[]).
-v_i(r,i,8,19).
+v_i(t,i,1,19).
+v_i(t,i,1,20).
+v_i(t,i,1,21).
+v_i(t,o,1,154).
+v_i(t,o,1,155).
+v_i(t,o,1,156).
+v_i(t,o,1,157).
+v_i(t,o,1,158).
+v_i(t,o,1,159).
+v_i(t,o,1,160).
+v_i(t,o,1,161).
+v_i(t,o,1,162).
+v_i(t,o,1,163).
+v_i(t,o,1,164).
+v_i(t,o,1,165).
+v_i(t,o,1,166).
+v_i(t,o,1,167).
+v_i(t,o,1,168).
+v_i(t,o,1,169).
+v_i(t,o,1,170).
+v_i(t,o,1,171).
+v_i(t,o,1,172).
+v_i(t,o,1,23).
+v_i(t,o,1,7).
+v_i(t,o,1,10).
+v_i(t,o,1,2).
+v_i(k,i,2,19).
+v_i(k,i,2,20).
+v_i(k,i,2,21).
+v_i(k,o,2,[]).
+v_i(r,i,3,19).
+v_i(r,o,3,[]).
+v_i(r,i,4,23).
+v_i(r,o,4,[]).
+v_i(r,i,5,7).
+v_i(r,o,5,[]).
+v_i(r,i,6,10).
+v_i(r,o,6,[]).
+v_i(r,i,7,2).
+v_i(r,o,7,[]).
+v_i(r,i,8,20).
 v_i(r,o,8,[]).
-v_i(r,i,9,23).
+v_i(r,i,9,21).
 v_i(r,o,9,[]).
-v_i(r,i,10,7).
-v_i(r,o,10,[]).
-v_i(r,i,11,10).
-v_i(r,o,11,[]).
-v_i(r,i,12,2).
-v_i(r,o,12,[]).
-v_i(r,i,13,20).
-v_i(r,o,13,[]).
-v_i(r,i,14,21).
-v_i(r,o,14,[]).
  
  
  
@@ -428,24 +427,24 @@ attri_i(15,[ modelosid,int,9,0,'ZZZZZZZZ9',0,modelosid,'',0 ]).
 attri_i('Gxremove',[ 'GxRemove',int,1,0,'9',0,'Gx Remove','',5 ]).
 attri_i('Mode',[ 'Gx_mode',char,3,0,'@!',1,'','',2 ]).
  
-table_i(525,[ cambs,[ 21 ],cambs,cambs ]).
-table_i(522,[ modelos,[ 20 ],modelos,modelos ]).
-table_i(10,[ proveedores,[ 2 ],proveedores,proveedores ]).
-table_i(16,[ origen,[ 10 ],origen,origen ]).
-table_i(4,[ entidadfederativa,[ 7 ],entidadfederativa,entidadfederativa ]).
-table_i(1,[ tipobien,[ 23 ],tipobien,tipobien ]).
-table_i(18,[ almacen,[ 19 ],almacen,almacen ]).
-table_i(11,[ articulos,[ 19,20,21,154,155,23,7,10,156,2,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172 ],articulos,articulos ]).
+table_i(525,[ 'CAMBS',[ 21 ],cambs,cambs ]).
+table_i(522,[ 'MODELOS',[ 20 ],modelos,modelos ]).
+table_i(10,[ 'PROVEEDORES',[ 2 ],proveedores,proveedores ]).
+table_i(16,[ 'ORIGEN',[ 10 ],origen,origen ]).
+table_i(4,[ 'ENTIDADFEDERATIVA',[ 7 ],entidadfederativa,entidadfederativa ]).
+table_i(1,[ 'TIPOBIEN',[ 23 ],tipobien,tipobien ]).
+table_i(18,[ 'ALMACEN',[ 19 ],almacen,almacen ]).
+table_i(11,[ 'ARTICULOS',[ 19,20,21,154,155,23,7,10,156,2,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172 ],articulos,articulos ]).
  
-index_i(11,[ 'ARTICULOS_PKEY',u,[ 19,20,21 ],articulos_pkey ]).
-index_i(11,[ 'PRODUCTOID',k,[ 19 ],productoid ]).
-index_i(18,[ 'ALMACEN_PKEY',u,[ 19 ],almacen_pkey ]).
-index_i(1,[ 'TIPOBIEN_PKEY',u,[ 23 ],tipobien_pkey ]).
-index_i(4,[ 'ENTIDADFEDERATIVA_PKEY',u,[ 7 ],entidadfederativa_pkey ]).
-index_i(16,[ 'ORIGEN_PKEY',u,[ 10 ],origen_pkey ]).
-index_i(10,[ 'PROVEEDORES_PKEY',u,[ 2 ],proveedores_pkey ]).
-index_i(522,[ 'MODELOS_PKEY',u,[ 20 ],modelos_pkey ]).
-index_i(525,[ 'CAMBS_PKEY',u,[ 21 ],cambs_pkey ]).
+index_i(11,[ 'ARTICULOS_PKEY',u,[ 19,20,21 ],'ARTICULOS_PKEY' ]).
+index_i(11,[ 'PRODUCTOID',k,[ 19 ],'PRODUCTOID' ]).
+index_i(18,[ 'ALMACEN_PKEY',u,[ 19 ],'ALMACEN_PKEY' ]).
+index_i(1,[ 'TIPOBIEN_PKEY',u,[ 23 ],'TIPOBIEN_PKEY' ]).
+index_i(4,[ 'ENTIDADFEDERATIVA_PKEY',u,[ 7 ],'ENTIDADFEDERATIVA_PKEY' ]).
+index_i(16,[ 'ORIGEN_PKEY',u,[ 10 ],'ORIGEN_PKEY' ]).
+index_i(10,[ 'PROVEEDORES_PKEY',u,[ 2 ],'PROVEEDORES_PKEY' ]).
+index_i(522,[ 'MODELOS_PKEY',u,[ 20 ],'MODELOS_PKEY' ]).
+index_i(525,[ 'CAMBS_PKEY',u,[ 21 ],'CAMBS_PKEY' ]).
  
  
  
@@ -467,8 +466,97 @@ upd_i(11,11,d,[ [],[],'ARTICULOS_PKEY',[] ]).
  
  
  
+map_i(525,i,'CAMBS_PKEY',[ 'CAMBS_PKEY' ]).
+map_i(525,a,25,[ cambsid ]).
+map_i(525,a,86,[ cambsfecultact ]).
+map_i(525,a,85,[ cambsfecreg ]).
+map_i(525,a,84,[ cambsusuario ]).
+map_i(525,a,83,[ cambsdsc ]).
 map_i(525,a,21,[ cambsid ]).
+map_i(522,i,'MODELOS_PKEY',[ 'MODELOS_PKEY' ]).
+map_i(522,a,15,[ modelosid ]).
+map_i(522,a,119,[ modelosfecultact ]).
+map_i(522,a,118,[ modelosfecreg ]).
+map_i(522,a,117,[ modelosusuario ]).
+map_i(522,a,116,[ modelosdsc ]).
 map_i(522,a,20,[ modelosid ]).
+map_i(10,i,'PROVEEDORES_PKEY',[ 'PROVEEDORES_PKEY' ]).
+map_i(10,a,138,[ proveedoresfecultact ]).
+map_i(10,a,137,[ proveedoresfecreg ]).
+map_i(10,a,136,[ proveedoresusuario ]).
+map_i(10,a,135,[ proveedoresrfc ]).
+map_i(10,a,134,[ proveedoresfax ]).
+map_i(10,a,133,[ proveedorestelefono2 ]).
+map_i(10,a,132,[ proveedorestelefono1 ]).
+map_i(10,a,131,[ proveedorestado ]).
+map_i(10,a,130,[ proveedoresmunicipio ]).
+map_i(10,a,129,[ proveedorescodigopostal ]).
+map_i(10,a,128,[ proveedorescolonia ]).
+map_i(10,a,127,[ proveedoresdireccion ]).
+map_i(10,a,126,[ proveedoresnombre ]).
+map_i(10,a,2,[ proveedoresid ]).
+map_i(16,i,'ORIGEN_PKEY',[ 'ORIGEN_PKEY' ]).
+map_i(16,a,125,[ origenfecultact ]).
+map_i(16,a,124,[ origenfecreg ]).
+map_i(16,a,123,[ origentotal ]).
+map_i(16,a,122,[ origenusuario ]).
+map_i(16,a,121,[ origendsclarga ]).
+map_i(16,a,120,[ origendscorta ]).
+map_i(16,a,10,[ origenid ]).
+map_i(4,i,'ENTIDADFEDERATIVA_PKEY',[ 'ENTIDADFEDERATIVA_PKEY' ]).
+map_i(4,a,111,[ entidadfederativafecultact ]).
+map_i(4,a,110,[ entidadfederativafecreg ]).
+map_i(4,a,109,[ entidadfederativausuario ]).
+map_i(4,a,108,[ entidadfederativadsc ]).
+map_i(4,a,7,[ entidafederativaid ]).
+map_i(1,i,'TIPOBIEN_PKEY',[ 'TIPOBIEN_PKEY' ]).
+map_i(1,a,142,[ tipobienfecultact ]).
+map_i(1,a,141,[ tipobienfecreg ]).
+map_i(1,a,140,[ tipobienusuario ]).
+map_i(1,a,139,[ tipobiendsc ]).
+map_i(1,a,23,[ tipobienid ]).
+map_i(18,i,'ALMACEN_PKEY',[ 'ALMACEN_PKEY' ]).
+map_i(18,a,153,[ almacenfecultact ]).
+map_i(18,a,152,[ almacenfecreg ]).
+map_i(18,a,151,[ alamcenusuario ]).
+map_i(18,a,150,[ alamcenobservaciones ]).
+map_i(18,a,149,[ almacentelefono ]).
+map_i(18,a,148,[ alamcencodigopostal ]).
+map_i(18,a,147,[ alamcenestado ]).
+map_i(18,a,146,[ almacenmunicipio ]).
+map_i(18,a,145,[ almacencolonia ]).
+map_i(18,a,144,[ almacendireccion ]).
+map_i(18,a,143,[ almacendsc ]).
+map_i(18,a,13,[ empleadoid ]).
+map_i(18,a,19,[ almacenid ]).
+map_i(11,i,'PRODUCTOID',[ 'PRODUCTOID' ]).
+map_i(11,i,'ARTICULOS_PKEY',[ 'ARTICULOS_PKEY' ]).
+map_i(11,a,172,[ articulosfecultact ]).
+map_i(11,a,171,[ articulosfecreg ]).
+map_i(11,a,170,[ articulostipobien ]).
+map_i(11,a,169,[ articulosestatusariticulo ]).
+map_i(11,a,168,[ articulosidtrasfer ]).
+map_i(11,a,167,[ articulosusuario ]).
+map_i(11,a,166,[ articuloscontejado ]).
+map_i(11,a,165,[ articulosstatus ]).
+map_i(11,a,164,[ articulosfechabajaalma ]).
+map_i(11,a,163,[ articulosfechaentraalmacen ]).
+map_i(11,a,162,[ articulosfechacoteja ]).
+map_i(11,a,161,[ articulosrefdocumento ]).
+map_i(11,a,160,[ articulosnumserie ]).
+map_i(11,a,159,[ articuloscantdepreacum ]).
+map_i(11,a,158,[ articulospreccomprareexp ]).
+map_i(11,a,157,[ articulospreciocompra ]).
+map_i(11,a,2,[ proveedorid ]).
+map_i(11,a,156,[ articulosdsc ]).
+map_i(11,a,10,[ origenid ]).
+map_i(11,a,7,[ entidadid ]).
+map_i(11,a,23,[ tipodocid ]).
+map_i(11,a,155,[ articulosnoetiqueta ]).
+map_i(11,a,154,[ alamcenid ]).
+map_i(11,a,21,[ cambsid ]).
+map_i(11,a,20,[ productoid ]).
+map_i(11,a,19,[ articulosid ]).
  
  
  
@@ -2495,18 +2583,8 @@ att_prop_i(2,25,'AttRegEx','',d).
 att_prop_i(2,25,'AttValidationFailedMsg','',d).
 att_prop_i(2,25,'FullName',cambsid,v).
  
-tbl_prop_i(2,11,'AllDirSuper',[ [ 525,[ 21 ] ],[ 522,[ 20 ] ],[ 10,[ 2 ] ],[ 16,[ 10 ] ],[ 4,[ 7 ] ],[ 1,[ 23 ] ],[ 18,[ 19 ] ] ],v).
-tbl_prop_i(2,11,'DirSuperNull',[ [ 10,[ 2 ] ],[ 16,[ 10 ] ],[ 4,[ 7 ] ],[ 1,[ 23 ] ] ],v).
 tbl_prop_i(2,14,'DirSubor',[ [ 11,[ 21 ] ] ],v).
-tbl_prop_i(2,525,'DirSubor',[ [ 11,[ 21 ] ] ],v).
 tbl_prop_i(2,19,'DirSubor',[ [ 11,[ 20 ] ] ],v).
-tbl_prop_i(2,522,'DirSubor',[ [ 11,[ 20 ] ] ],v).
-tbl_prop_i(2,10,'DirSubor',[ [ 11,[ 2 ] ] ],v).
-tbl_prop_i(2,16,'DirSubor',[ [ 11,[ 10 ] ] ],v).
-tbl_prop_i(2,4,'DirSubor',[ [ 11,[ 7 ] ] ],v).
-tbl_prop_i(2,1,'DirSubor',[ [ 11,[ 23 ] ] ],v).
-tbl_prop_i(2,18,'DirSubor',[ [ 11,[ 19 ] ] ],v).
-tbl_prop_i(2,11,'DirSuper',[ [ 525,[ 21 ] ],[ 522,[ 20 ] ],[ 10,[ 2 ] ],[ 16,[ 10 ] ],[ 4,[ 7 ] ],[ 1,[ 23 ] ],[ 18,[ 19 ] ] ],v).
  
 tbl_att_prop_i(2,11,19,'AllowNulls',n).
 tbl_att_prop_i(2,11,20,'AllowNulls',n).

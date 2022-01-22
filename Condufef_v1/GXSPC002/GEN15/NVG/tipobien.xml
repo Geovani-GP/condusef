@@ -10,7 +10,19 @@
 <ObjPgmName>tipobien</ObjPgmName>
 <ObjClsName>Transaction</ObjClsName></Object>
 <Result>genreq</Result>
-<Warnings></Warnings>
+<Warnings>
+<Warning>
+<MsgCode>spc0134</MsgCode>
+<Message>
+<Token>Poor performance may be noticed</Token>
+<Token></Token>
+<Token> as </Token>
+<Token>Duplicate</Token>
+<Token> index </Token>
+<Token>IARTICULOS2</Token>
+<Token> is not defined in Data view </Token>
+<Token>articulos</Token>
+<Token>.</Token></Message></Warning></Warnings>
 <Errors></Errors>
 <Generator>
 <GenId>15</GenId>
@@ -24,12 +36,12 @@
 <BaseTable>
 <Table>
 <TableId>1</TableId>
-<TableName>tipobien</TableName>
+<TableName>TIPOBIEN</TableName>
 <Description>tipobien</Description></Table></BaseTable>
 <NavigationTree>
 <Table>
 <TableId>1</TableId>
-<TableName>tipobien</TableName>
+<TableName>TIPOBIEN</TableName>
 <Description>tipobien</Description>
 <Updated>Yes</Updated>
 <RecordsToRead>many</RecordsToRead>
@@ -50,7 +62,7 @@
 <TableToUpdate>
 <Table>
 <TableId>1</TableId>
-<TableName>tipobien</TableName>
+<TableName>TIPOBIEN</TableName>
 <Description>tipobien</Description></Table>
 <TableAction>insert</TableAction>
 <AttrisToUpdate>
@@ -77,7 +89,7 @@
 <TableToUpdate>
 <Table>
 <TableId>1</TableId>
-<TableName>tipobien</TableName>
+<TableName>TIPOBIEN</TableName>
 <Description>tipobien</Description></Table>
 <TableAction>update</TableAction>
 <AttrisToUpdate>
@@ -100,7 +112,7 @@
 <TableToUpdate>
 <Table>
 <TableId>1</TableId>
-<TableName>tipobien</TableName>
+<TableName>TIPOBIEN</TableName>
 <Description>tipobien</Description></Table>
 <TableAction>delete</TableAction>
 <AttrisToUpdate></AttrisToUpdate></TableToUpdate></TablesToUpdate>
@@ -110,7 +122,7 @@
 <TablesToControlOnDelete>
 <Table>
 <TableId>11</TableId>
-<TableName>articulos</TableName>
+<TableName>ARTICULOS</TableName>
 <Description>articulos</Description>
 <RecordsToRead>one</RecordsToRead>
 <KeyAttributes>
@@ -125,7 +137,7 @@
 <Prompt>
 <Table>
 <TableId>1</TableId>
-<TableName>tipobien</TableName>
+<TableName>TIPOBIEN</TableName>
 <Description>tipobien</Description></Table>
 <Object>
 <ObjClsGuid>c9584656-94b6-4ccd-890f-332d11fc2c25</ObjClsGuid>
