@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Dependencies type="guid" guid="308799c0-4d46-74f7-3888-244766f26508">
+  <Table name="articulos" />
+  <Table name="origen" />
+</Dependencies>

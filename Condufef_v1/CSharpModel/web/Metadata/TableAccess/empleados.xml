@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Dependencies type="guid" guid="47f3dacc-0ab0-b938-e09b-02ca90987d5c">
+  <Table name="empleados" />
+  <Table name="almacen" />
+</Dependencies>

@@ -1,0 +1,18 @@
+current_obj_i(2,web,9).
+ 
+called_tree_i(13,9,13,6).
+ 
+ 
+ 
+ 
+ 
+ 
+ij_object_dependency(gx0030,[],[],[],9).
+ 
+ 
+obj_parms_i([ 'int aP0_pmesesid' ],[ [ 'Pmesesid',out ] ]).
+ 
+ 
+ 
+ 
+ 

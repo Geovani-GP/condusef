@@ -1,0 +1,18 @@
+current_obj_i(2,web,24).
+ 
+called_tree_i(13,24,13,6).
+ 
+ 
+ 
+ 
+ 
+ 
+ij_object_dependency(gx00f0,[],[],[],24).
+ 
+ 
+obj_parms_i([ 'int aP0_pidusuario' ],[ [ 'Pidusuario',out ] ]).
+ 
+ 
+ 
+ 
+ 

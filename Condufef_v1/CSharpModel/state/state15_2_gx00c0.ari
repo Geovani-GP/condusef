@@ -1,0 +1,18 @@
+current_obj_i(2,web,22).
+ 
+called_tree_i(13,22,13,6).
+ 
+ 
+ 
+ 
+ 
+ 
+ij_object_dependency(gx00c0,[],[],[],22).
+ 
+ 
+obj_parms_i([ 'int aP0_petiquetasproductoid','int aP1_petiquetascambsid','long aP2_palmacenid' ],[ [ 'Petiquetasproductoid',out ],[ 'Petiquetascambsid',out ],[ 'Palmacenid',out ] ]).
+ 
+ 
+ 
+ 
+ 

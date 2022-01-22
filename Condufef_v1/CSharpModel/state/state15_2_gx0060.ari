@@ -1,0 +1,18 @@
+current_obj_i(2,web,12).
+ 
+called_tree_i(13,12,13,6).
+ 
+ 
+ 
+ 
+ 
+ 
+ij_object_dependency(gx0060,[],[],[],12).
+ 
+ 
+obj_parms_i([ 'int aP0_pempleadosid' ],[ [ 'Pempleadosid',out ] ]).
+ 
+ 
+ 
+ 
+ 

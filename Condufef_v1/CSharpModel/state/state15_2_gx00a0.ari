@@ -1,0 +1,18 @@
+current_obj_i(2,web,17).
+ 
+called_tree_i(13,17,13,6).
+ 
+ 
+ 
+ 
+ 
+ 
+ij_object_dependency(gx00a0,[],[],[],17).
+ 
+ 
+obj_parms_i([ 'int aP0_pproveedoresid' ],[ [ 'Pproveedoresid',out ] ]).
+ 
+ 
+ 
+ 
+ 

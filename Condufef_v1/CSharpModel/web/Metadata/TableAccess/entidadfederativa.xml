@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Dependencies type="guid" guid="de8f1f4b-37b8-d2dd-e40b-f30c6e0e83b3">
+  <Table name="entidadfederativa" />
+  <Table name="articulos" />
+</Dependencies>

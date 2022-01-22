@@ -1,0 +1,18 @@
+current_obj_i(2,web,10).
+ 
+called_tree_i(13,10,13,6).
+ 
+ 
+ 
+ 
+ 
+ 
+ij_object_dependency(gx0040,[],[],[],10).
+ 
+ 
+obj_parms_i([ 'int aP0_pentidafederativaid' ],[ [ 'Pentidafederativaid',out ] ]).
+ 
+ 
+ 
+ 
+ 

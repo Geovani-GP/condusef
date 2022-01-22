@@ -1,0 +1,10 @@
+<ConnectionInformation>
+	<DBName>CONDUCEF_3</DBName>
+	<IntegratedSecurity>True</IntegratedSecurity>
+	<ServerInstance>DESKTOP-8T0GLUJ\SQLEXPRESS</ServerInstance>
+	<CreateDbInKbFolder>True</CreateDbInKbFolder>
+	<Directory>D:\Models\Condufef_v1</Directory>
+	<DataFile>GX_KB_Condufef_v1.mdf</DataFile>
+	<LogFile>GX_KB_Condufef_v1_log.ldf</LogFile>
+	<HostName>DESKTOP-8T0GLUJ</HostName>
+</ConnectionInformation>

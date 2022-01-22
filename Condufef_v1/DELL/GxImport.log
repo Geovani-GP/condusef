@@ -1,0 +1,2181 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ImportLog>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>areaareaid</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>areadsc</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>areastatusadsc</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>areausuario</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>areafecreg</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>areafecultact</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>etiquetasproductoid</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>etiquetascambsid</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>almacenid</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>etiquetasnumero</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>etiquetastatus</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>etiquetafecharealizada</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>etiquetasreimpresion</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>etiquetasusuario</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>etiquetasfecreg</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>etiquetasfecultact</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>articulosmovid</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>articulosmovproductoid</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>articulosmovcambsid</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>articulosmovarticuloid</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>articulosmovdepositario</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>articulosmovfechamov</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>articulosmovstatus</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>articulosmovagregomovsist</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>articulosmovususuario</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>articulosmovfecreg</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>articulosmovfecultact</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>empleadospisoextid</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>empleadospisoextpiso</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>empleadospisoextext</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>empleadospisoextcorreo</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>empleadopisoextprofesion</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>empleadospisoextusuario</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>empleadospisoextfecgre</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>empleadospisoextfeact</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>estatusarticuloid</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>estatusarticulodsc</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>estatusarticulodescuso</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>estatusarticuloaplicamov</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>estatusarticulousotabla</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>estatusarticulousuario</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>estatusarticulofecreg</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>estatusarticulofecultact</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>mesesid</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>mesesanio</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>mesesusuario</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>mesesfecgre</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>mesesfeact</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>parametrosid</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>parametrosdsc</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>parametrosvalor</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>parametroscadena</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>parametrosstatus</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>parametrosuso</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>parametrosusuario</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>parametrosfecgre</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>parametrosfecact</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>statusid</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>statusdsc</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>statususotabla</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>statusdesc</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>statususuario</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>statusfecreg</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>statusfecultact</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>tipodocumentoid</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>tipodocumentodsc</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>tipodocumentousuario</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>tipodocumentofecreg</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>tipodocumentofecultact</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>cambsid</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>cambsdsc</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>cambsusuario</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>cambsfecreg</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>cambsfecultact</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>modelosid</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>productocambsid</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>productodsc</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>modeloid</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>marcaid</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>categoriaid</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>productousuario</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>productofecreg</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>productofecultact</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>categoriasid</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>categoriasdsc</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>categoriasusuario</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>categoriasfecreg</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>categoriasfecultact</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>empleadosid</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>empleadosareaid</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>empleadosnomemple</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>empleadosappaterno</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>empleadosapmaterno</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>empleadosstatus</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>empleadosusuario</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>empleadosfecreg</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>empleadosfecultact</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>empleadoscorreo</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>empleadosext</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>entidafederativaid</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>entidadfederativadsc</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>entidadfederativausuario</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>entidadfederativafecreg</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>entidadfederativafecultact</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>marcasid</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>marcasdsc</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>marcasusuario</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>marcasfecreg</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>marcasfecultact</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>modelosdsc</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>modelosusuario</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>modelosfecreg</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>modelosfecultact</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>origenid</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>origendscorta</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>origendsclarga</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>origenusuario</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>origentotal</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>origenfecreg</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>origenfecultact</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>proveedoresid</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>proveedoresnombre</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>proveedoresdireccion</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>proveedorescolonia</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>proveedorescodigopostal</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>proveedoresmunicipio</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>proveedorestado</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>proveedorestelefono1</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>proveedorestelefono2</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>proveedoresfax</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>proveedoresrfc</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>proveedoresusuario</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>proveedoresfecreg</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>proveedoresfecultact</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>tipobienid</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>tipobiendsc</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>tipobienusuario</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>tipobienfecreg</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>tipobienfecultact</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>almacendsc</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>almacendireccion</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>almacencolonia</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>almacenmunicipio</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>alamcenestado</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>alamcencodigopostal</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>almacentelefono</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>alamcenobservaciones</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>alamcenusuario</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>almacenfecreg</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>almacenfecultact</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>articulosproductoid</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>articuloscambsid</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>alamcenid</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>articulosnoetiqueta</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>articulosdsc</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>articulospreciocompra</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>articulospreccomprareexp</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>articuloscantdepreacum</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>articulosnumserie</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>articulosrefdocumento</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>articulosfechacoteja</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>articulosfechaentraalmacen</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>articulosfechabajaalma</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>articulosstatus</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>articuloscontejado</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>articulosusuario</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>articulosidtrasfer</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>articulosestatusariticulo</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>articulostipobien</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>articulosfecreg</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>articulosfecultact</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>idusuario</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>usuario</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>contrasena</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>1db606f2-af09-4cf9-a3b5-b481519d28f6</Type>
+		<TypeName>Transaction</TypeName>
+		<Name>tipobien</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>1db606f2-af09-4cf9-a3b5-b481519d28f6</Type>
+		<TypeName>Transaction</TypeName>
+		<Name>parametros</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>1db606f2-af09-4cf9-a3b5-b481519d28f6</Type>
+		<TypeName>Transaction</TypeName>
+		<Name>meses</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>1db606f2-af09-4cf9-a3b5-b481519d28f6</Type>
+		<TypeName>Transaction</TypeName>
+		<Name>entidadfederativa</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>1db606f2-af09-4cf9-a3b5-b481519d28f6</Type>
+		<TypeName>Transaction</TypeName>
+		<Name>categorias</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>1db606f2-af09-4cf9-a3b5-b481519d28f6</Type>
+		<TypeName>Transaction</TypeName>
+		<Name>empleados</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>1db606f2-af09-4cf9-a3b5-b481519d28f6</Type>
+		<TypeName>Transaction</TypeName>
+		<Name>estatusarticulo</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>1db606f2-af09-4cf9-a3b5-b481519d28f6</Type>
+		<TypeName>Transaction</TypeName>
+		<Name>marcas</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>1db606f2-af09-4cf9-a3b5-b481519d28f6</Type>
+		<TypeName>Transaction</TypeName>
+		<Name>producto</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>1db606f2-af09-4cf9-a3b5-b481519d28f6</Type>
+		<TypeName>Transaction</TypeName>
+		<Name>proveedores</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>1db606f2-af09-4cf9-a3b5-b481519d28f6</Type>
+		<TypeName>Transaction</TypeName>
+		<Name>articulos</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>1db606f2-af09-4cf9-a3b5-b481519d28f6</Type>
+		<TypeName>Transaction</TypeName>
+		<Name>etiquetas</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>1db606f2-af09-4cf9-a3b5-b481519d28f6</Type>
+		<TypeName>Transaction</TypeName>
+		<Name>articulosmov</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>1db606f2-af09-4cf9-a3b5-b481519d28f6</Type>
+		<TypeName>Transaction</TypeName>
+		<Name>cambs</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>1db606f2-af09-4cf9-a3b5-b481519d28f6</Type>
+		<TypeName>Transaction</TypeName>
+		<Name>usuarios</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>1db606f2-af09-4cf9-a3b5-b481519d28f6</Type>
+		<TypeName>Transaction</TypeName>
+		<Name>origen</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>1db606f2-af09-4cf9-a3b5-b481519d28f6</Type>
+		<TypeName>Transaction</TypeName>
+		<Name>area</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>1db606f2-af09-4cf9-a3b5-b481519d28f6</Type>
+		<TypeName>Transaction</TypeName>
+		<Name>almacen</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>1db606f2-af09-4cf9-a3b5-b481519d28f6</Type>
+		<TypeName>Transaction</TypeName>
+		<Name>modelos</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>1db606f2-af09-4cf9-a3b5-b481519d28f6</Type>
+		<TypeName>Transaction</TypeName>
+		<Name>tipodocumento</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>1db606f2-af09-4cf9-a3b5-b481519d28f6</Type>
+		<TypeName>Transaction</TypeName>
+		<Name>status</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>87313f43-5eb2-41d7-9b8c-e8d9f5bf9588</Type>
+		<TypeName>Group</TypeName>
+		<Name>articulosproducto</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>87313f43-5eb2-41d7-9b8c-e8d9f5bf9588</Type>
+		<TypeName>Group</TypeName>
+		<Name>etiquetascambs</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>87313f43-5eb2-41d7-9b8c-e8d9f5bf9588</Type>
+		<TypeName>Group</TypeName>
+		<Name>etiquetasproducto</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>87313f43-5eb2-41d7-9b8c-e8d9f5bf9588</Type>
+		<TypeName>Group</TypeName>
+		<Name>articuloscambs</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>857ca50e-7905-0000-0007-c5d9ff2975ec</Type>
+		<TypeName>Table</TypeName>
+		<Name>tipobien</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>857ca50e-7905-0000-0007-c5d9ff2975ec</Type>
+		<TypeName>Table</TypeName>
+		<Name>parametros</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>857ca50e-7905-0000-0007-c5d9ff2975ec</Type>
+		<TypeName>Table</TypeName>
+		<Name>meses</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>857ca50e-7905-0000-0007-c5d9ff2975ec</Type>
+		<TypeName>Table</TypeName>
+		<Name>entidadfederativa</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>857ca50e-7905-0000-0007-c5d9ff2975ec</Type>
+		<TypeName>Table</TypeName>
+		<Name>categorias</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>857ca50e-7905-0000-0007-c5d9ff2975ec</Type>
+		<TypeName>Table</TypeName>
+		<Name>empleados</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>857ca50e-7905-0000-0007-c5d9ff2975ec</Type>
+		<TypeName>Table</TypeName>
+		<Name>estatusarticulo</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>857ca50e-7905-0000-0007-c5d9ff2975ec</Type>
+		<TypeName>Table</TypeName>
+		<Name>marcas</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>857ca50e-7905-0000-0007-c5d9ff2975ec</Type>
+		<TypeName>Table</TypeName>
+		<Name>producto</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>857ca50e-7905-0000-0007-c5d9ff2975ec</Type>
+		<TypeName>Table</TypeName>
+		<Name>proveedores</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>857ca50e-7905-0000-0007-c5d9ff2975ec</Type>
+		<TypeName>Table</TypeName>
+		<Name>articulos</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>857ca50e-7905-0000-0007-c5d9ff2975ec</Type>
+		<TypeName>Table</TypeName>
+		<Name>etiquetas</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>857ca50e-7905-0000-0007-c5d9ff2975ec</Type>
+		<TypeName>Table</TypeName>
+		<Name>articulosmov</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>857ca50e-7905-0000-0007-c5d9ff2975ec</Type>
+		<TypeName>Table</TypeName>
+		<Name>cambs</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>857ca50e-7905-0000-0007-c5d9ff2975ec</Type>
+		<TypeName>Table</TypeName>
+		<Name>usuarios</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>857ca50e-7905-0000-0007-c5d9ff2975ec</Type>
+		<TypeName>Table</TypeName>
+		<Name>origen</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>857ca50e-7905-0000-0007-c5d9ff2975ec</Type>
+		<TypeName>Table</TypeName>
+		<Name>area</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>857ca50e-7905-0000-0007-c5d9ff2975ec</Type>
+		<TypeName>Table</TypeName>
+		<Name>almacen</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>857ca50e-7905-0000-0007-c5d9ff2975ec</Type>
+		<TypeName>Table</TypeName>
+		<Name>modelos</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>857ca50e-7905-0000-0007-c5d9ff2975ec</Type>
+		<TypeName>Table</TypeName>
+		<Name>tipodocumento</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>857ca50e-7905-0000-0007-c5d9ff2975ec</Type>
+		<TypeName>Table</TypeName>
+		<Name>status</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>19abc6ff-2cd2-0000-0006-6d172bc2333b</Type>
+		<TypeName>DataView</TypeName>
+		<Name>status</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>19abc6ff-2cd2-0000-0006-6d172bc2333b</Type>
+		<TypeName>DataView</TypeName>
+		<Name>proveedores</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>19abc6ff-2cd2-0000-0006-6d172bc2333b</Type>
+		<TypeName>DataView</TypeName>
+		<Name>articulosmov</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>19abc6ff-2cd2-0000-0006-6d172bc2333b</Type>
+		<TypeName>DataView</TypeName>
+		<Name>entidadfederativa</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>19abc6ff-2cd2-0000-0006-6d172bc2333b</Type>
+		<TypeName>DataView</TypeName>
+		<Name>parametros</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>19abc6ff-2cd2-0000-0006-6d172bc2333b</Type>
+		<TypeName>DataView</TypeName>
+		<Name>empleadospisoext</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>19abc6ff-2cd2-0000-0006-6d172bc2333b</Type>
+		<TypeName>DataView</TypeName>
+		<Name>usuarios</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>19abc6ff-2cd2-0000-0006-6d172bc2333b</Type>
+		<TypeName>DataView</TypeName>
+		<Name>origen</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>19abc6ff-2cd2-0000-0006-6d172bc2333b</Type>
+		<TypeName>DataView</TypeName>
+		<Name>meses</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>19abc6ff-2cd2-0000-0006-6d172bc2333b</Type>
+		<TypeName>DataView</TypeName>
+		<Name>estatusarticulo</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>19abc6ff-2cd2-0000-0006-6d172bc2333b</Type>
+		<TypeName>DataView</TypeName>
+		<Name>empleados</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>19abc6ff-2cd2-0000-0006-6d172bc2333b</Type>
+		<TypeName>DataView</TypeName>
+		<Name>categorias</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>19abc6ff-2cd2-0000-0006-6d172bc2333b</Type>
+		<TypeName>DataView</TypeName>
+		<Name>producto</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>19abc6ff-2cd2-0000-0006-6d172bc2333b</Type>
+		<TypeName>DataView</TypeName>
+		<Name>etiquetas</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>19abc6ff-2cd2-0000-0006-6d172bc2333b</Type>
+		<TypeName>DataView</TypeName>
+		<Name>articulos</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>19abc6ff-2cd2-0000-0006-6d172bc2333b</Type>
+		<TypeName>DataView</TypeName>
+		<Name>area</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>19abc6ff-2cd2-0000-0006-6d172bc2333b</Type>
+		<TypeName>DataView</TypeName>
+		<Name>tipobien</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>19abc6ff-2cd2-0000-0006-6d172bc2333b</Type>
+		<TypeName>DataView</TypeName>
+		<Name>marcas</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>19abc6ff-2cd2-0000-0006-6d172bc2333b</Type>
+		<TypeName>DataView</TypeName>
+		<Name>cambs</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>19abc6ff-2cd2-0000-0006-6d172bc2333b</Type>
+		<TypeName>DataView</TypeName>
+		<Name>almacen</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>19abc6ff-2cd2-0000-0006-6d172bc2333b</Type>
+		<TypeName>DataView</TypeName>
+		<Name>modelos</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>19abc6ff-2cd2-0000-0006-6d172bc2333b</Type>
+		<TypeName>DataView</TypeName>
+		<Name>tipodocumento</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+</ImportLog>

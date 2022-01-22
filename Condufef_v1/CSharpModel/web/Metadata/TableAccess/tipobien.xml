@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Dependencies type="guid" guid="e537d5e3-0d04-efde-d16a-f9ee8a80a963">
+  <Table name="tipobien" />
+  <Table name="articulos" />
+</Dependencies>

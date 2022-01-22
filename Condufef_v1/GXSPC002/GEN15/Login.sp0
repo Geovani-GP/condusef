@@ -1,0 +1,486 @@
+spec_i([ web,28,'Login','Login',0,spa,'10_3_15-115824' ]).
+ 
+struct_i(2,1,[],[]).
+struct_i(3,2,[],[]).
+ 
+level_i(2,[ 0,[],[],[],[],[],[],[],[],[] ]).
+level_i(3,[ 15,[ [ 15,many ] ],[],[],[ [ [ 15 ],[ 173,174 ] ] ],[ [ [ 15 ],[] ] ],[ 9 ],'USUARIOS_PKEY',[],[] ]).
+ 
+tw_i(2,[]).
+tw_i(3,[]).
+ 
+lwi_i(2,[ [] ]).
+lwi_i(3,[ [ c([ t(173,2),t(=,10),t('Usuario',23) ],[ 173 ]) ] ]).
+ 
+ 
+ 
+level_option_i(3,usr_condition,y).
+level_option_i(3,when_none,'GXLvl9').
+ 
+ta_i(2,[ [] ]).
+ta_i(3,[ [ [ 15,173 ],[ 15,174 ] ] ]).
+ 
+las_i(2,[ [ 'Usuario','Contrasena' ] ]).
+las_i(3,[ [ 'Usuario','Contrasena',173,174 ] ]).
+ 
+lac_i(2,[ [ 'Usuario','Contrasena' ] ]).
+lac_i(3,[ [ 'Usuario','Contrasena' ] ]).
+ 
+ 
+ 
+cls_i([ 0,0 ],[ 0,24 ]).
+ 
+pos_i('Usuario',[ 0,0,0 ]).
+pos_i('Contrasena',[ 0,0,0 ]).
+ 
+ 
+ 
+rule_i(0,datastore(1,'DS_LAST_CHANGE','')).
+rule_i(0,datastore(1,'POSTGRESQL_VERSION','8_3')).
+rule_i(0,datastore(1,'COMMENT_ON','No')).
+rule_i(0,datastore(1,'DCL_REF_INT_DB','Yes')).
+rule_i(0,datastore(1,'PRIMARY_KEY_TYPE','PK')).
+rule_i(0,datastore(1,'CS_SCHEMA','')).
+rule_i(0,datastore(1,'RecycleRWMin','30')).
+rule_i(0,datastore(1,'RecycleRWType','1')).
+rule_i(0,datastore(1,'RecycleRW','-1')).
+rule_i(0,datastore(1,'POOL_STARTUP','No')).
+rule_i(0,datastore(1,'POOLSIZE_RW','10')).
+rule_i(0,datastore(1,'UnlimitedRWPool','-1')).
+rule_i(0,datastore(1,'PoolRWEnabled','-1')).
+rule_i(0,datastore(1,'CS_RPCPGML','')).
+rule_i(0,datastore(1,'JDBC_DATASOURCE','')).
+rule_i(0,datastore(1,'USE_JDBC_DATASOURCE','0')).
+rule_i(0,datastore(1,'DS_DBMS_ADDINFO','')).
+rule_i(0,datastore(1,'USER_PASSWORD',asdf)).
+rule_i(0,datastore(1,'USER_ID',postgres)).
+rule_i(0,datastore(1,'CS_CONNECT','First')).
+rule_i(0,datastore(1,'DBMS_PORT','5432')).
+rule_i(0,datastore(1,'CS_SERVER',localhost)).
+rule_i(0,datastore(1,'CS_DBNAME',condusef_v2)).
+rule_i(0,datastore(1,'CS_FLEDSNAME','')).
+rule_i(0,datastore(1,'CS_DRVNAME','')).
+rule_i(0,datastore(1,'CS_DSNAME','')).
+rule_i(0,datastore(1,'DB_URL','')).
+rule_i(0,datastore(1,'JDBC_CUSTOM_URL','0')).
+rule_i(0,datastore(1,'JDBC_CUSTOM_DRIVER','')).
+rule_i(0,datastore(1,'JDBC_DRIVER','org.postgresql.Driver')).
+rule_i(0,datastore(1,'CONNECT_METHOD','OPSYS')).
+rule_i(0,datastore(1,'ACCESS_TECHNO','ADONET')).
+rule_i(0,datastore(1,'MAIN_DS','-1')).
+rule_i(0,datastore(1,'REORG_GEN','8')).
+rule_i(0,datastore(1,'HelpKeyword','20')).
+rule_i(0,datastore(1,'DBMS',15)).
+rule_i(0,datastore(1,'NAME','Default')).
+rule_i(0,prop(idNULLS_BEHAVIOR,idNB_Current)).
+rule_i(0,prop('ObjectVisibility','Public')).
+rule_i(0,prop('FullyQualifiedName','Login')).
+rule_i(0,prop('PWFCallable','0')).
+rule_i(0,prop('GenerateObject','-1')).
+rule_i(0,prop('Hint_firstrows','UMPV')).
+rule_i(0,prop('JOIN_TYPE','UMPV')).
+rule_i(0,prop('DBMS_JOINS','UMPV')).
+rule_i(0,prop('REFRESH_TOUT_TRIG','ALL')).
+rule_i(0,prop('REFRESH_TOUT','')).
+rule_i(0,prop('KEY_ENTER','UMPV')).
+rule_i(0,prop('KEY_CANCEL','UMPV')).
+rule_i(0,prop('KEY_REFRESH','UMPV')).
+rule_i(0,prop('KEY_HELP','UMPV')).
+rule_i(0,prop('ASSIGNED_FNC_KEYS','UMPV')).
+rule_i(0,prop('WEB_SECURITY_LEVEL','High')).
+rule_i(0,prop('HTTP_PROTOCOL','Unsecure')).
+rule_i(0,prop('USE_ENCRYPTION','NO')).
+rule_i(0,prop('FIRST_WD_DATEPICKER','UMPV')).
+rule_i(0,prop('WNUM_DATEPICKER','UMPV')).
+rule_i(0,prop(idUSE_WEB_DATEPICKER,'UMPV')).
+rule_i(0,prop('WebUX','SMOOTH')).
+rule_i(0,prop('STD_FUNC_OBJECT','Yes')).
+rule_i(0,prop('SPC_WARNINGS_DISABLED','spc0096 spc0107 spc0142')).
+rule_i(0,prop('AppGenerator','1')).
+rule_i(0,prop('AppLocation','')).
+rule_i(0,prop('COMPRESS_HTML','UMPV')).
+rule_i(0,prop('AUTO_REFRESH','VARS_CHANGE')).
+rule_i(0,prop('CACHE_EXPIRES','')).
+rule_i(0,prop('WEB_AUTO_FOCUS','UMPV')).
+rule_i(0,prop('OnSessionTimeout','Ignore')).
+rule_i(0,prop('OBJECT_METADATA','')).
+rule_i(0,prop('IsMain','-1')).
+rule_i(0,prop('SHOWMASTERPAGE_POPUP','0')).
+rule_i(0,prop('MasterPage',o(13,'RwdMasterPage'))).
+rule_i(0,prop('WEB_COMP','No')).
+rule_i(0,prop('Theme',o(25,'Flat'))).
+rule_i(0,prop('Folder',o(8,'WebApi'))).
+rule_i(0,prop('ObjDesc','Login')).
+rule_i(0,prop('ObjName','Login')).
+rule_i(0,maingen(15)).
+rule_i(0,prop('PGMTYPE',main)).
+rule_i(0,file(15,'USUARIOS',[ 9,173,174 ])).
+rule_i(0,loc([ 15 ],'USUARIOS','','LAN')).
+rule_i(0,index(15,'USUARIOS_PKEY',u,[ 9 ])).
+rule_i(0,loc([ 15,'USUARIOS_PKEY' ],usuarios_pkey,'','LAN')).
+rule_i(0,p(0,0,fv,7,[ intname,'USUARIOS' ])).
+rule_i(0,p(0,0,fv,7,[ table,15 ])).
+rule_i(0,p(0,15,fv,7,[])).
+rule_i(0,p(0,15,fv,7,[ 'NAME',usuarios ])).
+rule_i(0,p(0,15,fv,7,[ 'LOC','' ])).
+rule_i(0,p(0,15,fv,7,[ 'SCHEMA',public ])).
+rule_i(0,p(0,15,fv,7,[ 'EXTNAM','YES' ])).
+rule_i(0,p(0,15,fvix,[ 7,6 ],[])).
+rule_i(0,p(0,15,fvix,[ 7,6 ],[ 'NAME',usuarios_pkey ])).
+rule_i(0,p(0,15,fvix,[ 7,6 ],[ 'LOC','' ])).
+rule_i(0,p(0,15,fvix,[ 7,6 ],[ 'SCHEMA',public ])).
+rule_i(0,p(0,15,fvix,[ 7,6 ],[ 'EXTNAM','YES' ])).
+rule_i(0,rule([ a(22,[ '''INICIAR SESIÓN ''','''INICIAR SESIÓN ''','' ]) ],[],[],[])).
+ 
+a_i(1,1,f,'Err',[],[ [],[ t('0',3) ] ]).
+a_i(2,3,t,15,[],[ [],'USUARIOS_PKEY',[] ]).
+ 
+v_i(f,i,1,[]).
+v_i(f,o,1,'Err').
+v_i(t,i,2,[]).
+v_i(t,o,2,173).
+v_i(t,o,2,174).
+ 
+ 
+ 
+ 
+ 
+ 
+attri_i(173,[ usuario,svchar,25,0,'',0,usuario,'',0 ]).
+attri_i(9,[ idusuario,int,9,0,'ZZZZZZZZ9',0,idusuario,'',0 ]).
+attri_i(174,[ contrasena,svchar,10,0,'',0,contrasena,'',0 ]).
+attri_i('GXLvl9',[ 'GXLvl9',int,1,0,'',0,'',[],13 ]).
+attri_i('Errmsg',[ 'Gx_emsg',char,70,0,'',1,'Error text','',12 ]).
+attri_i('Err',[ 'Gx_err',int,3,0,'ZZ9',1,'Error code','',11 ]).
+attri_i('Update',[ update,svchar,40,0,'',0,update,'',10 ]).
+attri_i('Idusuario',[ idusuario,int,9,0,'ZZZZZZZZ9',0,idusuario,'',9 ]).
+attri_i('Websession',[ 'WebSession',o(websession),4,0,'',0,'Web Session','',8 ]).
+attri_i('Contrasena',[ contrasena,svchar,10,0,'',0,contrasena,'',6 ]).
+attri_i('Usuario',[ usuario,svchar,25,0,'',0,usuario,'',5 ]).
+ 
+table_i(15,[ 'USUARIOS',[ 9,173,174 ],usuarios,usuarios ]).
+ 
+index_i(15,[ 'USUARIOS_PKEY',u,[ 9 ],'USUARIOS_PKEY' ]).
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+map_i(15,i,'USUARIOS_PKEY',[ 'USUARIOS_PKEY' ]).
+map_i(15,a,174,[ contrasena ]).
+map_i(15,a,173,[ usuario ]).
+map_i(15,a,9,[ idusuario ]).
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+break_i(3,nvg,2,[],[ [ 174 ],[ 173 ],[] ]).
+break_i(2,nvg,1,[],[ [],[],[] ]).
+ 
+b_group_i(2,1,lit,0,1,5).
+b_group_i(2,2,lit,0,6,5).
+b_group_i(2,3,nvg,3,9,9).
+b_group_i(3,1,lit,0,10,10).
+b_group_i(2,4,lit,0,22,0).
+ 
+b_line_i(5,2,1,cmd,5,[ t('',146,5,0),t('''INICIAR SESIÓN ''',3,5,7) ]).
+b_line_i([ 9,0 ],2,2,cmd,5,[ t('',107,5,0),t('GXLvl9',23,5,0),t(=,10,5,0),t('0',3,5,0) ]).
+b_line_i(9,3,1,cmd,10,[ t('',121,9,0) ]).
+b_line_i([ 9,1 ],3,1,cmd,9,[ t('',107,9,0),t('GXLvl9',23,9,0),t(=,10,9,0),t('1',3,9,0) ]).
+b_line_i(12,3,1,cmd,10,[ t('',109,10,0),t(174,2,10,6),t(=,10,10,17),t('Contrasena',23,10,19) ]).
+b_line_i(14,3,1,cmd,10,[ t('',107,10,0),t([ t('Websession',23,14,4),t('set(',1,14,16) ],31,14,4),t('''idusuario''',3,14,21),t(',',7,10,32),t('str(',1,14,44),t('Idusuario',23,10,33),t(',',7,10,44),t(9,3,10,44),t(',',7,10,44),t(0,3,10,44),t(')',4,10,54),t(')',4,10,55) ]).
+b_line_i(16,3,1,cmd,10,[ t('',104,10,0),t(o(13,'Catalog_De_Cambs'),28,10,4) ]).
+b_line_i(18,3,1,cmd,10,[ t('',110,10,0) ]).
+b_line_i(19,3,1,cmd,10,[ t('',141,10,0),t('''usuario invalida''',3,19,8),t(')',4,10,26) ]).
+b_line_i(20,3,1,cmd,10,[ t('',111,10,0) ]).
+b_line_i(21,3,1,cmd,10,[ t('',128,10,0) ]).
+b_line_i([ 21,1 ],2,4,cmd,17,[ t('',109,17,0),t('GXLvl9',23,17,0),t(=,10,17,0),t('0',3,17,0) ]).
+b_line_i(22,2,4,cmd,18,[ t('',141,18,0),t('''contraseña invalida''',3,22,7),t(')',4,18,28) ]).
+b_line_i(24,2,4,cmd,18,[ t('',111,18,0) ]).
+b_line_i(25,2,4,cmd,18,[ t('',147,18,0) ]).
+b_line_i(1000,2,4,cmd,0,[ t('',146,0,0),t('Load',3,0,0) ]).
+b_line_i(1001,2,4,cmd,0,[ t('',155,0,0) ]).
+b_line_i(1002,2,4,cmd,0,[ t('',147,0,0) ]).
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+html_i(2,html('&nbsp; ')).
+html_i(3,table(3)).
+ 
+html_sub_i(3,0,html_i(0,html('<tbody>'))).
+html_sub_i(3,4,html_i(1,row(4))).
+html_sub_i(4,5,html_i(0,cell(5))).
+html_sub_i(3,6,html_i(2,row(6))).
+html_sub_i(6,7,html_i(0,cell(7))).
+html_sub_i(7,8,html_i(0,table(8))).
+html_sub_i(8,0,html_i(0,html('<tbody>'))).
+html_sub_i(8,9,html_i(1,row(9))).
+html_sub_i(9,10,html_i(0,cell(10))).
+html_sub_i(9,11,html_i(1,cell(11))).
+html_sub_i(11,12,html_i(0,bitmap('9fb193d9-64a4-4d30-b129-ff7c76830f7e-101'))).
+html_sub_i(8,13,html_i(2,row(13))).
+html_sub_i(13,14,html_i(0,cell(14))).
+html_sub_i(14,0,html_i(0,html('Usuario'))).
+html_sub_i(13,15,html_i(1,cell(15))).
+html_sub_i(15,16,html_i(0,t('Usuario',23))).
+html_sub_i(8,17,html_i(3,row(17))).
+html_sub_i(17,18,html_i(0,cell(18))).
+html_sub_i(18,0,html_i(0,html('Contraseña'))).
+html_sub_i(17,19,html_i(1,cell(19))).
+html_sub_i(19,20,html_i(0,t('Contrasena',23))).
+html_sub_i(8,21,html_i(4,row(21))).
+html_sub_i(21,22,html_i(0,cell(22))).
+html_sub_i(22,23,html_i(0,comp(errview))).
+html_sub_i(21,24,html_i(1,cell(24))).
+html_sub_i(24,0,html_i(0,html('&nbsp;'))).
+html_sub_i(24,25,html_i(1,button('''INICIAR SESIÓN '''))).
+html_sub_i(8,0,html_i(5,html('</tbody>'))).
+html_sub_i(3,0,html_i(3,html('</tbody>'))).
+ 
+html_tags_i(1,'Class','Form').
+ 
+html_comp_i(23,'Backcolor',rgb(0,0,0),d,[ color ]).
+html_comp_i(3,'Id','Table1',v,[ str ]).
+html_comp_i(3,'Class','Table',v,[ str ]).
+html_comp_i(3,'Title','',d,[ str ]).
+html_comp_i(3,'Align',left,d,[ str ]).
+html_comp_i(3,'Backgroundgx','',d,[ str ]).
+html_comp_i(3,'Bgcolor',rgb(0,0,0),d,[ color ]).
+html_comp_i(3,'Border','0',d,[ str ]).
+html_comp_i(3,'Bordercolor',rgb(0,0,0),d,[ color ]).
+html_comp_i(3,'Cellpadding','1',d,[ str ]).
+html_comp_i(3,'Cellspacing','2',d,[ str ]).
+html_comp_i(3,'Height',measure(38,px),v,[ measure ]).
+html_comp_i(3,'Width',measure(100,'%'),v,[ measure ]).
+html_comp_i(3,'Rules',none,d,[ str ]).
+html_comp_i(8,'Id','Table2',v,[ str ]).
+html_comp_i(8,'Class','Table',v,[ str ]).
+html_comp_i(8,'Title','',d,[ str ]).
+html_comp_i(8,'Align',center,v,[ str ]).
+html_comp_i(8,'Backgroundgx','',d,[ str ]).
+html_comp_i(8,'Bgcolor',rgb(0,0,0),d,[ color ]).
+html_comp_i(8,'Border','0',d,[ str ]).
+html_comp_i(8,'Bordercolor',rgb(0,0,0),d,[ color ]).
+html_comp_i(8,'Cellpadding','1',d,[ str ]).
+html_comp_i(8,'Cellspacing','2',d,[ str ]).
+html_comp_i(8,'Height',measure(0,px),d,[ measure ]).
+html_comp_i(8,'Width',measure(50,'%'),v,[ measure ]).
+html_comp_i(8,'Rules',none,d,[ str ]).
+html_comp_i(10,'Height',measure(16,px),v,[ measure ]).
+html_comp_i(10,'Width',measure(68,px),v,[ measure ]).
+html_comp_i(11,'Align',left,v,[ str ]).
+html_comp_i(11,'Width',measure(25,px),v,[ measure ]).
+html_comp_i(12,'Id','Image1',v,[ str ]).
+html_comp_i(12,'Class','Image',v,[ str ]).
+html_comp_i(12,src,i(98,'5f30ca97-9603-4cf3-8c47-b1a261245deb'),v,[ image ]).
+html_comp_i(12,lowsrc,'',d,[ str ]).
+html_comp_i(12,'Returnonclick',0,d,[ bool ]).
+html_comp_i(12,'Eventgx','',d,[ str ]).
+html_comp_i(12,'Height',measure(0,px),d,[ measure ]).
+html_comp_i(12,'Width',measure(0,px),d,[ measure ]).
+html_comp_i(12,'Border','0',d,[ str ]).
+html_comp_i(12,'Alt','',d,[ str ]).
+html_comp_i(12,'Title','',d,[ str ]).
+html_comp_i(12,'Hspace',0,v,[ num ]).
+html_comp_i(12,'Vspace',0,d,[ num ]).
+html_comp_i(12,'Align',left,d,[ str ]).
+html_comp_i(12,'Usemap','',d,[ str ]).
+html_comp_i(14,'Height',measure(16,px),v,[ measure ]).
+html_comp_i(14,'Width',measure(68,px),v,[ measure ]).
+html_comp_i(15,'Align',left,v,[ str ]).
+html_comp_i(15,'Width',measure(25,px),v,[ measure ]).
+html_comp_i(16,'Colcount',25,d,[ num ]).
+html_comp_i(16,'Attid',-5,v,[ num ]).
+html_comp_i(16,'Class','Attribute',d,[ str ]).
+html_comp_i(16,'Controlname','&Usuario',d,[ str ]).
+html_comp_i(16,'Returnonclick',0,d,[ bool ]).
+html_comp_i(16,'Captionclass','',d,[ str ]).
+html_comp_i(16,'Captionposition','',d,[ str ]).
+html_comp_i(16,'Captionvalue','',d,[ str ]).
+html_comp_i(16,'Controltype',2,d,[ num ]).
+html_comp_i(16,'Inputtype',0,d,[ num ]).
+html_comp_i(16,'Editautocomplete',0,d,[ num ]).
+html_comp_i(16,'Autocorrection',-1,d,[ bool ]).
+html_comp_i(16,'Autocapitalization','FirstWord',d,[ str ]).
+html_comp_i(16,'Notifycontextchange',0,d,[ bool ]).
+html_comp_i(16,'Emptyasnull','Yes',d,[ str ]).
+html_comp_i(16,'Readonly',0,d,[ bool ]).
+html_comp_i(16,'Autocomplete',-1,d,[ bool ]).
+html_comp_i(16,'Ispassword',0,d,[ bool ]).
+html_comp_i(16,'Autoresize',0,v,[ bool ]).
+html_comp_i(16,'Gxwidth',measure(25,chr),d,[ measure ]).
+html_comp_i(16,'Gxheight',measure(1,row),d,[ measure ]).
+html_comp_i(16,'Ismultiline',0,d,[ bool ]).
+html_comp_i(16,'Fill',-1,d,[ bool ]).
+html_comp_i(16,'Backcolor',rgb(255,255,255),d,[ color ]).
+html_comp_i(16,'Forecolor',rgb(0,0,0),d,[ color ]).
+html_comp_i(16,'Font',font('Verdana',12,[]),d,[ font ]).
+html_comp_i(16,'Horizontalalignment',left,d,[ str ]).
+html_comp_i(16,'Gxformat',0,d,[ num ]).
+html_comp_i(16,'Title','',d,[ str ]).
+html_comp_i(16,'Invitemsg','',d,[ str ]).
+html_comp_i(18,'Height',measure(43,px),v,[ measure ]).
+html_comp_i(19,'Align',left,v,[ str ]).
+html_comp_i(20,'Colcount',10,d,[ num ]).
+html_comp_i(20,'Attid',-6,v,[ num ]).
+html_comp_i(20,'Class','Attribute',d,[ str ]).
+html_comp_i(20,'Controlname','&Contrasena',d,[ str ]).
+html_comp_i(20,'Returnonclick',0,d,[ bool ]).
+html_comp_i(20,'Captionclass','',d,[ str ]).
+html_comp_i(20,'Captionposition','',d,[ str ]).
+html_comp_i(20,'Captionvalue','',d,[ str ]).
+html_comp_i(20,'Controltype',2,d,[ num ]).
+html_comp_i(20,'Inputtype',0,d,[ num ]).
+html_comp_i(20,'Editautocomplete',0,d,[ num ]).
+html_comp_i(20,'Autocorrection',-1,d,[ bool ]).
+html_comp_i(20,'Autocapitalization','FirstWord',d,[ str ]).
+html_comp_i(20,'Notifycontextchange',0,d,[ bool ]).
+html_comp_i(20,'Emptyasnull','Yes',d,[ str ]).
+html_comp_i(20,'Readonly',0,d,[ bool ]).
+html_comp_i(20,'Autocomplete',0,d,[ bool ]).
+html_comp_i(20,'Ispassword',-1,d,[ bool ]).
+html_comp_i(20,'Autoresize',0,v,[ bool ]).
+html_comp_i(20,'Gxwidth',measure(207,px),v,[ measure ]).
+html_comp_i(20,'Gxheight',measure(36,px),v,[ measure ]).
+html_comp_i(20,'Ismultiline',0,d,[ bool ]).
+html_comp_i(20,'Fill',-1,d,[ bool ]).
+html_comp_i(20,'Backcolor',rgb(255,255,255),d,[ color ]).
+html_comp_i(20,'Forecolor',rgb(0,0,0),d,[ color ]).
+html_comp_i(20,'Font',font('Verdana',12,[]),d,[ font ]).
+html_comp_i(20,'Horizontalalignment',left,d,[ str ]).
+html_comp_i(20,'Gxformat',0,d,[ num ]).
+html_comp_i(20,'Title','',d,[ str ]).
+html_comp_i(20,'Invitemsg','',d,[ str ]).
+html_comp_i(22,'Height',measure(35,px),v,[ measure ]).
+html_comp_i(23,'Controlname','Errviewer1',v,[ str ]).
+html_comp_i(23,'Class','ErrorViewer',d,[ str ]).
+html_comp_i(23,'Displaymode',1,d,[ num ]).
+html_comp_i(23,'Forecolor',rgb(0,0,0),d,[ color ]).
+html_comp_i(23,'Font',font('Microsoft Sans Serif',10,[]),d,[ font ]).
+html_comp_i(23,'Fill',-1,d,[ bool ]).
+html_comp_i(25,'Controlname','Button1',v,[ str ]).
+html_comp_i(25,'Class','Button',d,[ str ]).
+html_comp_i(25,'Event','''INICIAR SESIÓN ''',v,[ str ]).
+html_comp_i(25,'Caption','INICIAR SESIÓN ',d,[ str ]).
+html_comp_i(25,'Title','INICIAR SESIÓN ',d,[ str ]).
+html_comp_i(25,'Font',font('Microsoft Sans Serif',10,[]),d,[ font ]).
+html_comp_i(25,'Forecolor',rgb(255,255,255),v,[ color ]).
+html_comp_i(25,'Backcolor',rgb(0,128,128),v,[ color ]).
+html_comp_i(25,'Border','2',d,[ str ]).
+html_comp_i(25,'Bordercolor',rgb(219,220,222),d,[ color ]).
+html_comp_i(25,'Buttonborderstyle',standard,d,[ str ]).
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+lit_i(12,1,bitmap('9fb193d9-64a4-4d30-b129-ff7c76830f7e-101'),[ ctlname('Image1') ]).
+lit_i(16,1,t('Usuario',23),[ ctlname('&Usuario'),ctrltype(edit,16),pos(16),ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
+lit_i(20,1,t('Contrasena',23),[ ctlname('&Contrasena'),ctrltype(edit,20),pos(20),ispwd(1),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
+lit_i(23,1,comp(errview),[ ctlname('Errviewer1'),width(0),rect(0,0,10,10),title('Nothing') ]).
+lit_i(25,1,button('''INICIAR SESIÓN '''),[ ctlname('Button1'),width(0),rect(0,0,10,10),title('Nothing') ]).
+lit_i(8,1,table(8),[ ctlname('Table2') ]).
+lit_i(3,1,table(3),[ ctlname('Table1') ]).
+lit_i(1,1,window,[ rect(0,0,1000,1000),ctlname('Form') ]).
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+att_prop_i(2,174,'ExternalName',contrasena,d).
+att_prop_i(2,174,'ExternalNamespace','Condufef_v1',d).
+att_prop_i(2,174,'EmptyAsNull','Yes',d).
+att_prop_i(2,174,idBasedOn,'',d).
+att_prop_i(2,174,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,174,'DB_NLS_SUPPORT','No',d).
+att_prop_i(2,174,'AttRegEx','',d).
+att_prop_i(2,174,'AttValidationFailedMsg','',d).
+att_prop_i(2,174,'FullName',contrasena,v).
+att_prop_i(2,9,'ExternalName',idusuario,d).
+att_prop_i(2,9,'ExternalNamespace','Condufef_v1',d).
+att_prop_i(2,9,'EmptyAsNull','Yes',d).
+att_prop_i(2,9,idBasedOn,'',d).
+att_prop_i(2,9,'AUTONUMBER','0',d).
+att_prop_i(2,9,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,9,'AttRegEx','',d).
+att_prop_i(2,9,'AttValidationFailedMsg','',d).
+att_prop_i(2,9,'FullName',idusuario,v).
+att_prop_i(2,173,'ExternalName',usuario,d).
+att_prop_i(2,173,'ExternalNamespace','Condufef_v1',d).
+att_prop_i(2,173,'EmptyAsNull','Yes',d).
+att_prop_i(2,173,idBasedOn,'',d).
+att_prop_i(2,173,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,173,'DB_NLS_SUPPORT','No',d).
+att_prop_i(2,173,'AttRegEx','',d).
+att_prop_i(2,173,'AttValidationFailedMsg','',d).
+att_prop_i(2,173,'FullName',usuario,v).
+ 
+ 
+tbl_att_prop_i(2,15,9,'AllowNulls',n).
+ 
+var_prop_i(2,'Usuario',idBasedOn,'',v).
+var_prop_i(2,'Contrasena',idBasedOn,'',v).
+var_prop_i(2,'Idusuario',idBasedOn,'',v).
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+sub_info_i(146,'''INICIAR SESIÓN ''',5,25,[ [ 173,'Usuario',174,'Contrasena','Idusuario' ],[] ]).
+ 
+pgm_parm_i(web,30,'CATALOG_DE_CAMBS',[],[]).
+ 
+pgm_callprotocol_i(web,28,'LOGIN','INTERNAL').
+pgm_callprotocol_i(web,30,'CATALOG_DE_CAMBS','INTERNAL').
+ 
+pgm_main_info_i(web,28,'LOGIN',[ 15,'LOGIN','Login','','','','' ]).
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

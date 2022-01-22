@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Dependencies type="guid" guid="fe405f66-0531-e608-f909-74e8af4d53b6">
+  <Table name="etiquetas" />
+  <Table name="cambs" />
+  <Table name="almacen" />
+  <Table name="modelos" />
+</Dependencies>

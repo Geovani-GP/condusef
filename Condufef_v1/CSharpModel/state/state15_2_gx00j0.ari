@@ -1,0 +1,18 @@
+current_obj_i(2,web,16).
+ 
+called_tree_i(13,16,13,6).
+ 
+ 
+ 
+ 
+ 
+ 
+ij_object_dependency(gx00j0,[],[],[],16).
+ 
+ 
+obj_parms_i([ 'int aP0_pmodelosid' ],[ [ 'Pmodelosid',out ] ]).
+ 
+ 
+ 
+ 
+ 

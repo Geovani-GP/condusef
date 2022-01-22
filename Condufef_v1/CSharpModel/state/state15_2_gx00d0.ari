@@ -1,0 +1,18 @@
+current_obj_i(2,web,23).
+ 
+called_tree_i(13,23,13,6).
+ 
+ 
+ 
+ 
+ 
+ 
+ij_object_dependency(gx00d0,[],[],[],23).
+ 
+ 
+obj_parms_i([ 'int aP0_particulosmovid','int aP1_particulosmovproductoid','String aP2_particulosmovcambsid','long aP3_particulosmovarticuloid' ],[ [ 'Particulosmovid',out ],[ 'Particulosmovproductoid',out ],[ 'Particulosmovcambsid',out ],[ 'Particulosmovarticuloid',out ] ]).
+ 
+ 
+ 
+ 
+ 

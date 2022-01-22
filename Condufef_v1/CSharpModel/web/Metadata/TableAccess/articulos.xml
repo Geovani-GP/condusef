@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Dependencies type="guid" guid="7a3e0cd2-47cd-0f8d-757d-216a08442956">
+  <Table name="tipobien" />
+  <Table name="entidadfederativa" />
+  <Table name="proveedores" />
+  <Table name="articulos" />
+  <Table name="cambs" />
+  <Table name="origen" />
+  <Table name="almacen" />
+  <Table name="modelos" />
+</Dependencies>
