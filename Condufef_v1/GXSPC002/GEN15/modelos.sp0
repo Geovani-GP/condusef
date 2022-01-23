@@ -72,6 +72,8 @@ rule_i(0,prop('ObjectVisibility','Public')).
 rule_i(0,prop('FullyQualifiedName',modelos)).
 rule_i(0,prop('PWFCallable','0')).
 rule_i(0,prop('GenerateObject','-1')).
+rule_i(0,prop('SEARCH_VIEWER','')).
+rule_i(0,prop('SEARCHABLE','UMPV')).
 rule_i(0,prop('MTIER_OPT','Yes')).
 rule_i(0,prop('CS_ORA_FORUPD','UMPV')).
 rule_i(0,prop('Hint_firstrows','UMPV')).
@@ -133,6 +135,7 @@ rule_i(0,prop('TRNCFM','UMPV')).
 rule_i(0,prop('CFMTRN','No')).
 rule_i(0,prop('TRNEND','Yes')).
 rule_i(0,prop('IsDwhTrn','0')).
+rule_i(0,prop(idISBCEJB,'0')).
 rule_i(0,prop('WEB_SECURITY_LEVEL','High')).
 rule_i(0,prop('HTTP_PROTOCOL','Unsecure')).
 rule_i(0,prop('USE_ENCRYPTION','NO')).
@@ -141,12 +144,17 @@ rule_i(0,prop('SHOWMASTERPAGE_POPUP','0')).
 rule_i(0,prop('MasterPage',o(13,'RwdMasterPage'))).
 rule_i(0,prop('WEB_COMP','No')).
 rule_i(0,prop('Theme',o(25,'Flat'))).
+rule_i(0,prop('WS_Delete','-1')).
+rule_i(0,prop('WS_Update','-1')).
+rule_i(0,prop('WS_Insert','-1')).
+rule_i(0,prop('WS_View','-1')).
 rule_i(0,prop('ExternalNamespace','Condufef_v1')).
 rule_i(0,prop('ExternalName',modelos)).
+rule_i(0,prop(idISBCWEBSERVICE,'0')).
+rule_i(0,prop('CALL_PROTOCOL','INTERNAL')).
 rule_i(0,prop(idConnectivitySupport,idInherit)).
 rule_i(0,prop('OBJECT_METADATA','')).
-rule_i(0,prop('IsMain','0')).
-rule_i(0,prop(idBC,'0')).
+rule_i(0,prop(idBC,'-1')).
 rule_i(0,prop('Folder',o(120,'Root Module'))).
 rule_i(0,prop('ObjDesc',modelos)).
 rule_i(0,prop('ObjName',modelos)).
@@ -931,6 +939,7 @@ lit_i(1,1,window,[ rect(0,0,1000,1000),ctlname('Form') ]).
  
  
  
+att_prop_i(2,15,'HORIZONTAL_DESCRIPTION',modelosid,v).
 att_prop_i(2,15,'ExternalName',modelosid,d).
 att_prop_i(2,15,'ExternalNamespace','Condufef_v1',d).
 att_prop_i(2,15,'EmptyAsNull','Yes',d).
@@ -940,6 +949,7 @@ att_prop_i(2,15,'ATT_INITIAL_VALUE','',d).
 att_prop_i(2,15,'AttRegEx','',d).
 att_prop_i(2,15,'AttValidationFailedMsg','',d).
 att_prop_i(2,15,'FullName',modelosid,v).
+att_prop_i(2,116,'HORIZONTAL_DESCRIPTION',modelosdsc,v).
 att_prop_i(2,116,'ExternalName',modelosdsc,d).
 att_prop_i(2,116,'ExternalNamespace','Condufef_v1',d).
 att_prop_i(2,116,'EmptyAsNull','Yes',d).
@@ -949,6 +959,7 @@ att_prop_i(2,116,'DB_NLS_SUPPORT','No',d).
 att_prop_i(2,116,'AttRegEx','',d).
 att_prop_i(2,116,'AttValidationFailedMsg','',d).
 att_prop_i(2,116,'FullName',modelosdsc,v).
+att_prop_i(2,117,'HORIZONTAL_DESCRIPTION',modelosusuario,v).
 att_prop_i(2,117,'ExternalName',modelosusuario,d).
 att_prop_i(2,117,'ExternalNamespace','Condufef_v1',d).
 att_prop_i(2,117,'EmptyAsNull','Yes',d).
@@ -958,6 +969,7 @@ att_prop_i(2,117,'DB_NLS_SUPPORT','No',d).
 att_prop_i(2,117,'AttRegEx','',d).
 att_prop_i(2,117,'AttValidationFailedMsg','',d).
 att_prop_i(2,117,'FullName',modelosusuario,v).
+att_prop_i(2,118,'HORIZONTAL_DESCRIPTION',modelosfecreg,v).
 att_prop_i(2,118,'ExternalName',modelosfecreg,d).
 att_prop_i(2,118,'ExternalNamespace','Condufef_v1',d).
 att_prop_i(2,118,'EmptyAsNull','Yes',d).
@@ -968,6 +980,7 @@ att_prop_i(2,118,'AttValidationFailedMsg','',d).
 att_prop_i(2,118,idDATEFORMAT,idDATEFORMAT_LONG,v).
 att_prop_i(2,118,idHOURFORMAT,idHOURFORMAT_HOURMINSEC,v).
 att_prop_i(2,118,'FullName',modelosfecreg,v).
+att_prop_i(2,119,'HORIZONTAL_DESCRIPTION',modelosfecultact,v).
 att_prop_i(2,119,'ExternalName',modelosfecultact,d).
 att_prop_i(2,119,'ExternalNamespace','Condufef_v1',d).
 att_prop_i(2,119,'EmptyAsNull','Yes',d).
@@ -978,6 +991,7 @@ att_prop_i(2,119,'AttValidationFailedMsg','',d).
 att_prop_i(2,119,idDATEFORMAT,idDATEFORMAT_LONG,v).
 att_prop_i(2,119,idHOURFORMAT,idHOURFORMAT_HOURMINSEC,v).
 att_prop_i(2,119,'FullName',modelosfecultact,v).
+att_prop_i(2,16,'HORIZONTAL_DESCRIPTION',productocambsid,v).
 att_prop_i(2,16,'ExternalName',productocambsid,d).
 att_prop_i(2,16,'ExternalNamespace','Condufef_v1',d).
 att_prop_i(2,16,'EmptyAsNull','Yes',d).
@@ -987,6 +1001,7 @@ att_prop_i(2,16,'DB_NLS_SUPPORT','No',d).
 att_prop_i(2,16,'AttRegEx','',d).
 att_prop_i(2,16,'AttValidationFailedMsg','',d).
 att_prop_i(2,16,'FullName',productocambsid,v).
+att_prop_i(2,17,'HORIZONTAL_DESCRIPTION',etiquetasproductoid,v).
 att_prop_i(2,17,'ExternalName',etiquetasproductoid,d).
 att_prop_i(2,17,'ExternalNamespace','Condufef_v1',d).
 att_prop_i(2,17,'EmptyAsNull','Yes',d).
@@ -996,6 +1011,7 @@ att_prop_i(2,17,'ATT_INITIAL_VALUE','',d).
 att_prop_i(2,17,'AttRegEx','',d).
 att_prop_i(2,17,'AttValidationFailedMsg','',d).
 att_prop_i(2,17,'FullName',etiquetasproductoid,v).
+att_prop_i(2,18,'HORIZONTAL_DESCRIPTION',etiquetascambsid,v).
 att_prop_i(2,18,'ExternalName',etiquetascambsid,d).
 att_prop_i(2,18,'ExternalNamespace','Condufef_v1',d).
 att_prop_i(2,18,'EmptyAsNull','Yes',d).
@@ -1005,6 +1021,7 @@ att_prop_i(2,18,'ATT_INITIAL_VALUE','',d).
 att_prop_i(2,18,'AttRegEx','',d).
 att_prop_i(2,18,'AttValidationFailedMsg','',d).
 att_prop_i(2,18,'FullName',etiquetascambsid,v).
+att_prop_i(2,19,'HORIZONTAL_DESCRIPTION',almacenid,v).
 att_prop_i(2,19,'ExternalName',almacenid,d).
 att_prop_i(2,19,'ExternalNamespace','Condufef_v1',d).
 att_prop_i(2,19,'EmptyAsNull','Yes',d).
@@ -1014,6 +1031,7 @@ att_prop_i(2,19,'ATT_INITIAL_VALUE','',d).
 att_prop_i(2,19,'AttRegEx','',d).
 att_prop_i(2,19,'AttValidationFailedMsg','',d).
 att_prop_i(2,19,'FullName',almacenid,v).
+att_prop_i(2,20,'HORIZONTAL_DESCRIPTION',articulosproductoid,v).
 att_prop_i(2,20,'ExternalName',articulosproductoid,d).
 att_prop_i(2,20,'ExternalNamespace','Condufef_v1',d).
 att_prop_i(2,20,'EmptyAsNull','Yes',d).
@@ -1023,6 +1041,7 @@ att_prop_i(2,20,'ATT_INITIAL_VALUE','',d).
 att_prop_i(2,20,'AttRegEx','',d).
 att_prop_i(2,20,'AttValidationFailedMsg','',d).
 att_prop_i(2,20,'FullName',articulosproductoid,v).
+att_prop_i(2,21,'HORIZONTAL_DESCRIPTION',articuloscambsid,v).
 att_prop_i(2,21,'ExternalName',articuloscambsid,d).
 att_prop_i(2,21,'ExternalNamespace','Condufef_v1',d).
 att_prop_i(2,21,'EmptyAsNull','Yes',d).

@@ -1,0 +1,571 @@
+spec_i([ web,32,'Catalog_De_Modelo','Catalog_De_Modelo',0,spa,'10_3_15-115824' ]).
+ 
+struct_i(2,1,[ 'Nextvalue' ],[]).
+ 
+level_i(2,[ 0,[],[],[],[],[],[],[],[],[] ]).
+ 
+tw_i(2,[]).
+ 
+lwi_i(2,[ [] ]).
+ 
+ 
+ 
+ 
+ta_i(2,[ [ [ 2000,se(40000,[ [ 2000,40000 ] ],[ t('coalesce(',1),t(40000,2),t(',',7),t('0',3),t(')',4) ]) ] ] ]).
+ta_i(2,[ [] ]).
+ 
+las_i(2,[ [ 'Nextvalue','Modelosdsc' ] ]).
+ 
+lac_i(2,[ [ 'Nextvalue','Modelosdsc' ] ]).
+ 
+ 
+ 
+cls_i([ 0,0 ],[ 0,99 ]).
+ 
+pos_i('Nextvalue',[ 0,0,0 ]).
+pos_i('Modelosdsc',[ 0,0,0 ]).
+ 
+ 
+ 
+rule_i(0,datastore(1,'DS_LAST_CHANGE','')).
+rule_i(0,datastore(1,'POSTGRESQL_VERSION','8_3')).
+rule_i(0,datastore(1,'COMMENT_ON','No')).
+rule_i(0,datastore(1,'DCL_REF_INT_DB','Yes')).
+rule_i(0,datastore(1,'PRIMARY_KEY_TYPE','PK')).
+rule_i(0,datastore(1,'CS_SCHEMA','')).
+rule_i(0,datastore(1,'RecycleRWMin','30')).
+rule_i(0,datastore(1,'RecycleRWType','1')).
+rule_i(0,datastore(1,'RecycleRW','-1')).
+rule_i(0,datastore(1,'POOL_STARTUP','No')).
+rule_i(0,datastore(1,'POOLSIZE_RW','10')).
+rule_i(0,datastore(1,'UnlimitedRWPool','-1')).
+rule_i(0,datastore(1,'PoolRWEnabled','-1')).
+rule_i(0,datastore(1,'CS_RPCPGML','')).
+rule_i(0,datastore(1,'JDBC_DATASOURCE','')).
+rule_i(0,datastore(1,'USE_JDBC_DATASOURCE','0')).
+rule_i(0,datastore(1,'DS_DBMS_ADDINFO','')).
+rule_i(0,datastore(1,'USER_PASSWORD',󻢸蘇�2�5炭)).
+rule_i(0,datastore(1,'USER_ID',postgres)).
+rule_i(0,datastore(1,'CS_CONNECT','First')).
+rule_i(0,datastore(1,'DBMS_PORT','5432')).
+rule_i(0,datastore(1,'CS_SERVER',localhost)).
+rule_i(0,datastore(1,'CS_DBNAME',postgres)).
+rule_i(0,datastore(1,'CS_FLEDSNAME','')).
+rule_i(0,datastore(1,'CS_DRVNAME','')).
+rule_i(0,datastore(1,'CS_DSNAME','')).
+rule_i(0,datastore(1,'DB_URL','')).
+rule_i(0,datastore(1,'JDBC_CUSTOM_URL','0')).
+rule_i(0,datastore(1,'JDBC_CUSTOM_DRIVER','')).
+rule_i(0,datastore(1,'JDBC_DRIVER','org.postgresql.Driver')).
+rule_i(0,datastore(1,'CONNECT_METHOD','OPSYS')).
+rule_i(0,datastore(1,'ACCESS_TECHNO','ADONET')).
+rule_i(0,datastore(1,'MAIN_DS','-1')).
+rule_i(0,datastore(1,'REORG_GEN','8')).
+rule_i(0,datastore(1,'HelpKeyword','20')).
+rule_i(0,datastore(1,'DBMS',15)).
+rule_i(0,datastore(1,'NAME','Default')).
+rule_i(0,prop(idNULLS_BEHAVIOR,idNB_Current)).
+rule_i(0,prop('ObjectVisibility','Public')).
+rule_i(0,prop('FullyQualifiedName','Catalog_De_Modelo')).
+rule_i(0,prop('PWFCallable','0')).
+rule_i(0,prop('GenerateObject','-1')).
+rule_i(0,prop('Hint_firstrows','UMPV')).
+rule_i(0,prop('JOIN_TYPE','UMPV')).
+rule_i(0,prop('DBMS_JOINS','UMPV')).
+rule_i(0,prop('REFRESH_TOUT_TRIG','ALL')).
+rule_i(0,prop('REFRESH_TOUT','')).
+rule_i(0,prop('KEY_ENTER','UMPV')).
+rule_i(0,prop('KEY_CANCEL','UMPV')).
+rule_i(0,prop('KEY_REFRESH','UMPV')).
+rule_i(0,prop('KEY_HELP','UMPV')).
+rule_i(0,prop('ASSIGNED_FNC_KEYS','UMPV')).
+rule_i(0,prop('WEB_SECURITY_LEVEL','High')).
+rule_i(0,prop('HTTP_PROTOCOL','Unsecure')).
+rule_i(0,prop('USE_ENCRYPTION','NO')).
+rule_i(0,prop('FIRST_WD_DATEPICKER','UMPV')).
+rule_i(0,prop('WNUM_DATEPICKER','UMPV')).
+rule_i(0,prop(idUSE_WEB_DATEPICKER,'UMPV')).
+rule_i(0,prop('WebUX','SMOOTH')).
+rule_i(0,prop('STD_FUNC_OBJECT','Yes')).
+rule_i(0,prop('SPC_WARNINGS_DISABLED','spc0096 spc0107 spc0142')).
+rule_i(0,prop('COMPRESS_HTML','UMPV')).
+rule_i(0,prop('AUTO_REFRESH','VARS_CHANGE')).
+rule_i(0,prop('CACHE_EXPIRES','')).
+rule_i(0,prop('WEB_AUTO_FOCUS','UMPV')).
+rule_i(0,prop('OnSessionTimeout','Ignore')).
+rule_i(0,prop('OBJECT_METADATA','')).
+rule_i(0,prop('IsMain','0')).
+rule_i(0,prop('SHOWMASTERPAGE_POPUP','0')).
+rule_i(0,prop('MasterPage',o(13,'RwdMasterPage'))).
+rule_i(0,prop('WEB_COMP','No')).
+rule_i(0,prop('Theme',o(25,'Flat'))).
+rule_i(0,prop('Folder',o(8,'WebApi'))).
+rule_i(0,prop('ObjDesc','Catalog_De_Modelo')).
+rule_i(0,prop('ObjName','Catalog_De_Modelo')).
+rule_i(0,maingen(15)).
+rule_i(0,file(19,'MODELOS',[ 15,116,117,118,119 ])).
+rule_i(0,loc([ 19 ],'MODELOS','','LAN')).
+rule_i(0,index(19,'MODELOS_PKEY',u,[ 15 ])).
+rule_i(0,loc([ 19,'MODELOS_PKEY' ],modelos_pkey,'','LAN')).
+rule_i(0,p(0,0,fv,21,[ intname,'MODELOS' ])).
+rule_i(0,p(0,0,fv,21,[ table,19 ])).
+rule_i(0,p(0,15,fv,21,[])).
+rule_i(0,p(0,15,fv,21,[ 'NAME',modelos ])).
+rule_i(0,p(0,15,fv,21,[ 'LOC','' ])).
+rule_i(0,p(0,15,fv,21,[ 'SCHEMA',public ])).
+rule_i(0,p(0,15,fv,21,[ 'EXTNAM','YES' ])).
+rule_i(0,p(0,15,fvix,[ 21,22 ],[])).
+rule_i(0,p(0,15,fvix,[ 21,22 ],[ 'NAME',modelos_pkey ])).
+rule_i(0,p(0,15,fvix,[ 21,22 ],[ 'LOC','' ])).
+rule_i(0,p(0,15,fvix,[ 21,22 ],[ 'SCHEMA',public ])).
+rule_i(0,p(0,15,fvix,[ 21,22 ],[ 'EXTNAM','YES' ])).
+rule_i(0,rule([ a(22,[ '''Guardar ''','''Guardar ''','' ]) ],[],[],[])).
+ 
+a_i(1,1,f,'Err',[],[ [],[ t('0',3) ] ]).
+a_i(2,2,ra,2000,[],[ [],'MODELOS_PKEY',[],2 ]).
+ 
+v_i(f,i,1,[]).
+v_i(f,o,1,'Err').
+v_i(ra,i,2,[]).
+v_i(ra,o,2,40000).
+ 
+ 
+ 
+ 
+ 
+ 
+attri_i(40000,[ 'GXC1',int,9,0,'',0,'',[],0 ]).
+attri_i(15,[ modelosid,int,9,0,'ZZZZZZZZ9',0,modelosid,'',0 ]).
+attri_i('Errmsg',[ 'Gx_emsg',char,70,0,'',1,'Error text','',13 ]).
+attri_i('Err',[ 'Gx_err',int,3,0,'ZZ9',1,'Error code','',12 ]).
+attri_i('Modelosid',[ modelosid,int,9,0,'ZZZZZZZZ9',0,productoid,'',11 ]).
+attri_i('Nextvalue',[ 'NextValue',int,4,0,'ZZZ9',0,'Next Value','',6 ]).
+attri_i('Modelosdsc',[ modelosdsc,svchar,100,0,'',0,modelosdsc,'',9 ]).
+attri_i('Modelos',[ modelos,o(modelos),0,0,'',0,modelos,'',7 ]).
+attri_i('Cambsdsc',[ cambsdsc,svchar,100,0,'',0,cambsdsc,'',10 ]).
+ 
+table_i(19,[ 'MODELOS',[ 15 ],modelos,modelos ]).
+ 
+index_i(19,[ 'MODELOS_PKEY',u,[ 15 ],'MODELOS_PKEY' ]).
+ 
+lv_i(2,2000,19).
+ 
+ 
+ 
+ 
+nav_view_i(2000,[ 40000 ],[],[],[ [ 2000,[] ] ],[ [ [ 19,[ 'max(',15 ] ] ],n,[ [ 19,many ] ],[],[],[ none ],[],[],[] ]).
+ 
+agg_def_i(40000,[ t('0',3) ]).
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+map_i(19,i,'MODELOS_PKEY',[ 'MODELOS_PKEY' ]).
+map_i(19,a,119,[ modelosfecultact ]).
+map_i(19,a,118,[ modelosfecreg ]).
+map_i(19,a,117,[ modelosusuario ]).
+map_i(19,a,116,[ modelosdsc ]).
+map_i(19,a,15,[ modelosid ]).
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+break_i(2,nvg,1,[],[ [],[],[] ]).
+ 
+b_group_i(2,1,lit,0,1,1).
+b_group_i(2,2,lit,0,2,5).
+b_group_i(2,3,lit,0,6,0).
+ 
+b_line_i(1,2,1,cmd,1,[ t('',146,1,0),t('Start',3,1,7) ]).
+b_line_i(2,2,2,cmd,1,[ t('',107,1,0),t('Nextvalue',23,1,0),t(=,10,1,0),t(40000,2,1,0),t(+,5,1,0),t('1',3,1,0) ]).
+b_line_i(3,2,2,cmd,1,[ t('',147,1,0) ]).
+b_line_i(5,2,2,cmd,1,[ t('',146,1,0),t('''Guardar ''',3,5,7) ]).
+b_line_i(6,2,3,cmd,1,[ t('',107,1,0),t([ t('Modelos',23,1,0),t('Modelosid',3,1,0) ],29,1,0),t(=,10,1,0),t('Nextvalue',23,1,0) ]).
+b_line_i(7,2,3,cmd,1,[ t('',107,1,0),t([ t('Modelos',23,1,0),t('Modelosdsc',3,1,0) ],29,1,0),t(=,10,1,0),t('Modelosdsc',23,1,0) ]).
+b_line_i(8,2,3,cmd,1,[ t('',107,1,0),t([ t('Modelos',23,8,2),t('save(',1,8,11) ],31,8,11),t(')',4,1,17) ]).
+b_line_i(9,2,3,cmd,1,[ t('',109,1,0),t([ t('Modelos',23,9,5),t('success(',1,9,14) ],31,9,14),t(')',4,1,23) ]).
+b_line_i(10,2,3,cmd,1,[ t('',132,1,0) ]).
+b_line_i(11,2,3,cmd,1,[ t('',110,1,0) ]).
+b_line_i(12,2,3,cmd,1,[ t('',157,1,0) ]).
+b_line_i(13,2,3,cmd,1,[ t('',111,1,0) ]).
+b_line_i(14,2,3,cmd,1,[ t('',147,1,0) ]).
+b_line_i(1000,2,3,cmd,0,[ t('',146,0,0),t('Load',3,0,0) ]).
+b_line_i(1001,2,3,cmd,0,[ t('',155,0,0) ]).
+b_line_i(1002,2,3,cmd,0,[ t('',147,0,0) ]).
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+html_i(2,html('<p>')).
+html_i(3,table(3)).
+html_i(25,html('</p>')).
+ 
+html_sub_i(3,0,html_i(0,html('<tbody>'))).
+html_sub_i(3,4,html_i(1,row(4))).
+html_sub_i(4,5,html_i(0,cell(5))).
+html_sub_i(3,6,html_i(2,row(6))).
+html_sub_i(6,7,html_i(0,cell(7))).
+html_sub_i(7,8,html_i(0,table(8))).
+html_sub_i(8,0,html_i(0,html('<tbody>'))).
+html_sub_i(8,9,html_i(1,row(9))).
+html_sub_i(9,10,html_i(0,cell(10))).
+html_sub_i(10,0,html_i(0,html('Modelo'))).
+html_sub_i(9,11,html_i(1,cell(11))).
+html_sub_i(11,12,html_i(0,t('Nextvalue',23))).
+html_sub_i(8,13,html_i(2,row(13))).
+html_sub_i(13,14,html_i(0,cell(14))).
+html_sub_i(14,0,html_i(0,html('Descripci髇'))).
+html_sub_i(13,15,html_i(1,cell(15))).
+html_sub_i(15,16,html_i(0,t('Modelosdsc',23))).
+html_sub_i(8,0,html_i(3,html('</tbody>'))).
+html_sub_i(7,17,html_i(1,table(17))).
+html_sub_i(17,0,html_i(0,html('<tbody>'))).
+html_sub_i(17,18,html_i(1,row(18))).
+html_sub_i(18,19,html_i(0,cell(19))).
+html_sub_i(19,20,html_i(0,button('''Consultar '''))).
+html_sub_i(18,21,html_i(1,cell(21))).
+html_sub_i(21,22,html_i(0,button('''Guardar '''))).
+html_sub_i(18,23,html_i(2,cell(23))).
+html_sub_i(23,24,html_i(0,button('''Cancelar'''))).
+html_sub_i(17,0,html_i(2,html('</tbody>'))).
+html_sub_i(3,0,html_i(3,html('</tbody>'))).
+ 
+html_tags_i(1,'Class','Form').
+ 
+html_comp_i(3,'Id','Table1',v,[ str ]).
+html_comp_i(3,'Class','Table',v,[ str ]).
+html_comp_i(3,'Title','',d,[ str ]).
+html_comp_i(3,'Align',left,d,[ str ]).
+html_comp_i(3,'Backgroundgx','',d,[ str ]).
+html_comp_i(3,'Bgcolor',rgb(0,0,0),d,[ color ]).
+html_comp_i(3,'Border','0',d,[ str ]).
+html_comp_i(3,'Bordercolor',rgb(0,0,0),d,[ color ]).
+html_comp_i(3,'Cellpadding','1',d,[ str ]).
+html_comp_i(3,'Cellspacing','2',d,[ str ]).
+html_comp_i(3,'Height',measure(46,px),v,[ measure ]).
+html_comp_i(3,'Width',measure(100,'%'),v,[ measure ]).
+html_comp_i(3,'Rules',none,d,[ str ]).
+html_comp_i(8,'Id','Table2',v,[ str ]).
+html_comp_i(8,'Class','Table',v,[ str ]).
+html_comp_i(8,'Title','',d,[ str ]).
+html_comp_i(8,'Align',left,d,[ str ]).
+html_comp_i(8,'Backgroundgx','',d,[ str ]).
+html_comp_i(8,'Bgcolor',rgb(0,0,0),d,[ color ]).
+html_comp_i(8,'Border','0',d,[ str ]).
+html_comp_i(8,'Bordercolor',rgb(0,0,0),d,[ color ]).
+html_comp_i(8,'Cellpadding','1',d,[ str ]).
+html_comp_i(8,'Cellspacing','2',d,[ str ]).
+html_comp_i(8,'Height',measure(46,px),v,[ measure ]).
+html_comp_i(8,'Width',measure(503,px),v,[ measure ]).
+html_comp_i(8,'Rules',none,d,[ str ]).
+html_comp_i(12,'Colcount',4,d,[ num ]).
+html_comp_i(12,'Attid',-6,v,[ num ]).
+html_comp_i(12,'Class','Attribute',d,[ str ]).
+html_comp_i(12,'Controlname','&Nextvalue',d,[ str ]).
+html_comp_i(12,'Returnonclick',0,d,[ bool ]).
+html_comp_i(12,'Captionclass','',d,[ str ]).
+html_comp_i(12,'Captionposition','',d,[ str ]).
+html_comp_i(12,'Captionvalue','',d,[ str ]).
+html_comp_i(12,'Controltype',2,d,[ num ]).
+html_comp_i(12,'Inputtype',0,d,[ num ]).
+html_comp_i(12,'Notifycontextchange',0,d,[ bool ]).
+html_comp_i(12,'Emptyasnull','Yes',d,[ str ]).
+html_comp_i(12,'Readonly',0,d,[ bool ]).
+html_comp_i(12,'Autocomplete',-1,d,[ bool ]).
+html_comp_i(12,'Ispassword',0,d,[ bool ]).
+html_comp_i(12,'Autoresize',-1,d,[ bool ]).
+html_comp_i(12,'Gxwidth',measure(4,chr),d,[ measure ]).
+html_comp_i(12,'Gxheight',measure(1,row),d,[ measure ]).
+html_comp_i(12,'Ismultiline',0,d,[ bool ]).
+html_comp_i(12,'Fill',-1,d,[ bool ]).
+html_comp_i(12,'Backcolor',rgb(255,255,255),d,[ color ]).
+html_comp_i(12,'Forecolor',rgb(0,0,0),d,[ color ]).
+html_comp_i(12,'Font',font('Verdana',12,[]),d,[ font ]).
+html_comp_i(12,'Horizontalalignment',right,d,[ str ]).
+html_comp_i(12,'Gxformat',0,d,[ num ]).
+html_comp_i(12,'Title','',d,[ str ]).
+html_comp_i(12,'Invitemsg','',d,[ str ]).
+html_comp_i(16,'Colcount',80,d,[ num ]).
+html_comp_i(16,'Attid',-9,v,[ num ]).
+html_comp_i(16,'Class','Attribute',d,[ str ]).
+html_comp_i(16,'Controlname','&Modelosdsc',d,[ str ]).
+html_comp_i(16,'Returnonclick',0,d,[ bool ]).
+html_comp_i(16,'Captionclass','',d,[ str ]).
+html_comp_i(16,'Captionposition','',d,[ str ]).
+html_comp_i(16,'Captionvalue','',d,[ str ]).
+html_comp_i(16,'Controltype',2,d,[ num ]).
+html_comp_i(16,'Inputtype',0,d,[ num ]).
+html_comp_i(16,'Editautocomplete',0,d,[ num ]).
+html_comp_i(16,'Autocorrection',-1,d,[ bool ]).
+html_comp_i(16,'Autocapitalization','FirstWord',d,[ str ]).
+html_comp_i(16,'Notifycontextchange',0,d,[ bool ]).
+html_comp_i(16,'Emptyasnull','Yes',d,[ str ]).
+html_comp_i(16,'Readonly',0,d,[ bool ]).
+html_comp_i(16,'Autocomplete',-1,d,[ bool ]).
+html_comp_i(16,'Ispassword',0,d,[ bool ]).
+html_comp_i(16,'Autoresize',-1,d,[ bool ]).
+html_comp_i(16,'Gxwidth',measure(80,chr),d,[ measure ]).
+html_comp_i(16,'Gxheight',measure(1,row),d,[ measure ]).
+html_comp_i(16,'Ismultiline',0,d,[ bool ]).
+html_comp_i(16,'Fill',-1,d,[ bool ]).
+html_comp_i(16,'Backcolor',rgb(255,255,255),d,[ color ]).
+html_comp_i(16,'Forecolor',rgb(0,0,0),d,[ color ]).
+html_comp_i(16,'Font',font('Verdana',12,[]),d,[ font ]).
+html_comp_i(16,'Horizontalalignment',left,d,[ str ]).
+html_comp_i(16,'Gxformat',0,d,[ num ]).
+html_comp_i(16,'Title','',d,[ str ]).
+html_comp_i(16,'Invitemsg','',d,[ str ]).
+html_comp_i(17,'Id','Table3',v,[ str ]).
+html_comp_i(17,'Class','Table',v,[ str ]).
+html_comp_i(17,'Title','',d,[ str ]).
+html_comp_i(17,'Align',left,d,[ str ]).
+html_comp_i(17,'Backgroundgx','',d,[ str ]).
+html_comp_i(17,'Bgcolor',rgb(0,0,0),d,[ color ]).
+html_comp_i(17,'Border','0',d,[ str ]).
+html_comp_i(17,'Bordercolor',rgb(0,0,0),d,[ color ]).
+html_comp_i(17,'Cellpadding','1',d,[ str ]).
+html_comp_i(17,'Cellspacing','2',d,[ str ]).
+html_comp_i(17,'Height',measure(24,px),v,[ measure ]).
+html_comp_i(17,'Width',measure(502,px),v,[ measure ]).
+html_comp_i(17,'Rules',none,d,[ str ]).
+html_comp_i(20,'Controlname','Button1',v,[ str ]).
+html_comp_i(20,'Class','Button',d,[ str ]).
+html_comp_i(20,'Event','''Consultar ''',v,[ str ]).
+html_comp_i(20,'Caption','Consultar',d,[ str ]).
+html_comp_i(20,'Title','Consultar',d,[ str ]).
+html_comp_i(20,'Font',font('Microsoft Sans Serif',10,[]),d,[ font ]).
+html_comp_i(20,'Forecolor',rgb(255,255,255),v,[ color ]).
+html_comp_i(20,'Backcolor',rgb(0,128,128),v,[ color ]).
+html_comp_i(20,'Border','2',d,[ str ]).
+html_comp_i(20,'Bordercolor',rgb(219,220,222),d,[ color ]).
+html_comp_i(20,'Buttonborderstyle',standard,d,[ str ]).
+html_comp_i(22,'Controlname','Button2',v,[ str ]).
+html_comp_i(22,'Class','Button',d,[ str ]).
+html_comp_i(22,'Event','''Guardar ''',v,[ str ]).
+html_comp_i(22,'Caption','Guardar',d,[ str ]).
+html_comp_i(22,'Title','Guardar',d,[ str ]).
+html_comp_i(22,'Font',font('Microsoft Sans Serif',10,[]),d,[ font ]).
+html_comp_i(22,'Forecolor',rgb(255,255,255),v,[ color ]).
+html_comp_i(22,'Backcolor',rgb(0,128,128),v,[ color ]).
+html_comp_i(22,'Border','2',d,[ str ]).
+html_comp_i(22,'Bordercolor',rgb(219,220,222),d,[ color ]).
+html_comp_i(22,'Buttonborderstyle',standard,d,[ str ]).
+html_comp_i(24,'Controlname','Button3',v,[ str ]).
+html_comp_i(24,'Class','Button',d,[ str ]).
+html_comp_i(24,'Event','''Cancelar''',v,[ str ]).
+html_comp_i(24,'Caption','Cancelar',d,[ str ]).
+html_comp_i(24,'Title','Cancelar',d,[ str ]).
+html_comp_i(24,'Font',font('Microsoft Sans Serif',10,[]),d,[ font ]).
+html_comp_i(24,'Forecolor',rgb(255,255,255),v,[ color ]).
+html_comp_i(24,'Backcolor',rgb(220,20,60),v,[ color ]).
+html_comp_i(24,'Border','2',d,[ str ]).
+html_comp_i(24,'Bordercolor',rgb(219,220,222),d,[ color ]).
+html_comp_i(24,'Buttonborderstyle',standard,d,[ str ]).
+ 
+ 
+ 
+ 
+ 
+ 
+warn_gen_i(msg([],spc0156,[ 'Event ','''Consultar ''',' for control ''','Button1',''' is not defined.' ])).
+warn_gen_i(msg([],spc0156,[ 'Event ','''Cancelar''',' for control ''','Button3',''' is not defined.' ])).
+ 
+lit_i(12,1,t('Nextvalue',23),[ ctlname('&Nextvalue'),ctrltype(edit,12),pos(12),ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
+lit_i(16,1,t('Modelosdsc',23),[ ctlname('&Modelosdsc'),ctrltype(edit,16),pos(16),ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
+lit_i(8,1,table(8),[ ctlname('Table2') ]).
+lit_i(20,1,button('''Consultar '''),[ ctlname('Button1'),width(0),rect(0,0,10,10),title('Nothing') ]).
+lit_i(22,1,button('''Guardar '''),[ ctlname('Button2'),width(0),rect(0,0,10,10),title('Nothing') ]).
+lit_i(24,1,button('''Cancelar'''),[ ctlname('Button3'),width(0),rect(0,0,10,10),title('Nothing') ]).
+lit_i(17,1,table(17),[ ctlname('Table3') ]).
+lit_i(3,1,table(3),[ ctlname('Table1') ]).
+lit_i(1,1,window,[ rect(0,0,1000,1000),ctlname('Form') ]).
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+att_prop_i(2,15,'ExternalName',modelosid,d).
+att_prop_i(2,15,'ExternalNamespace','Condufef_v1',d).
+att_prop_i(2,15,'EmptyAsNull','Yes',d).
+att_prop_i(2,15,idBasedOn,'',d).
+att_prop_i(2,15,'AUTONUMBER','0',d).
+att_prop_i(2,15,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,15,'AttRegEx','',d).
+att_prop_i(2,15,'AttValidationFailedMsg','',d).
+att_prop_i(2,15,'FullName',modelosid,v).
+att_prop_i(2,40000,'ExternalName',modelosid,d).
+att_prop_i(2,40000,'ExternalNamespace','Condufef_v1',d).
+att_prop_i(2,40000,'EmptyAsNull','Yes',d).
+att_prop_i(2,40000,idBasedOn,'',d).
+att_prop_i(2,40000,'AUTONUMBER','0',d).
+att_prop_i(2,40000,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,40000,'AttRegEx','',d).
+att_prop_i(2,40000,'AttValidationFailedMsg','',d).
+att_prop_i(2,40000,'FullName',modelosid,v).
+ 
+ 
+tbl_att_prop_i(2,19,15,'AllowNulls',n).
+ 
+var_prop_i(2,'Cambsdsc',idBasedOn,'',v).
+var_prop_i(2,'Modelosdsc',idBasedOn,'',v).
+var_prop_i(2,'Modelosid',idBasedOn,'',v).
+ 
+ 
+ 
+a_alias_i([ 'max(',15 ],'GXC1').
+a_alias_i(se(40000,[ [ 2000,40000 ] ],[ t('coalesce(',1),t(40000,2),t(',',7),t('0',3),t(')',4) ]),'GXC1').
+ 
+ 
+struct_dt_i([ 0,19,0 ],name,modelos).
+struct_dt_i([ 0,19,0 ],namespace,'Condufef_v1').
+struct_dt_i([ 0,19,0 ],significantName,modelos).
+struct_dt_i([ 0,19,0 ],'ObjName',modelos).
+struct_dt_i([ 0,19,0 ],'ObjDesc',modelos).
+struct_dt_i([ 0,19,0 ],'ExternalName',modelos).
+struct_dt_i([ 0,19,0 ],'ExternalNamespace','Condufef_v1').
+struct_dt_i([ 0,19,0 ],key,[ 15 ]).
+struct_dt_i([ 0,19,0 ],lvl,19).
+struct_dt_i([ 26,1,0 ],name,'Messages').
+struct_dt_i([ 26,1,0 ],namespace,'Genexus').
+struct_dt_i([ 26,1,0 ],'ObjName','Messages').
+struct_dt_i([ 26,1,0 ],'ObjDesc','Messages').
+struct_dt_i([ 26,1,0 ],'ExternalName','Messages').
+struct_dt_i([ 26,1,0 ],'ExternalNamespace','Genexus').
+struct_dt_i([ 26,1,0 ],collection,'True').
+struct_dt_i([ 26,1,0 ],datatype,[ 26,1,1 ]).
+struct_dt_i([ 26,1,1 ],name,'Message').
+struct_dt_i([ 26,1,1 ],namespace,'Genexus.Messages').
+struct_dt_i([ 0,19,0 ],fullname,modelos).
+struct_dt_i([ 26,1,0 ],fullname,'Messages').
+struct_dt_i([ 26,1,1 ],fullname,'Messages.Message').
+ 
+struct_dt_elem_i([ 0,19,0 ],1,name,'Modelosid').
+struct_dt_elem_i([ 0,19,0 ],1,camelname,modelosid).
+struct_dt_elem_i([ 0,19,0 ],1,length,9).
+struct_dt_elem_i([ 0,19,0 ],1,decimals,0).
+struct_dt_elem_i([ 0,19,0 ],1,sign,0).
+struct_dt_elem_i([ 0,19,0 ],1,type,[ 4,9,0 ]).
+struct_dt_elem_i([ 0,19,0 ],1,pic,'ZZZZZZZZ9').
+struct_dt_elem_i([ 0,19,0 ],1,collection,'False').
+struct_dt_elem_i([ 0,19,0 ],1,attributeid,'15').
+struct_dt_elem_i([ 0,19,0 ],2,name,'Modelosdsc').
+struct_dt_elem_i([ 0,19,0 ],2,camelname,modelosdsc).
+struct_dt_elem_i([ 0,19,0 ],2,length,100).
+struct_dt_elem_i([ 0,19,0 ],2,decimals,0).
+struct_dt_elem_i([ 0,19,0 ],2,type,[ 13,100,0 ]).
+struct_dt_elem_i([ 0,19,0 ],2,pic,'').
+struct_dt_elem_i([ 0,19,0 ],2,collection,'False').
+struct_dt_elem_i([ 0,19,0 ],2,attributeid,'116').
+struct_dt_elem_i([ 0,19,0 ],3,name,'Modelosusuario').
+struct_dt_elem_i([ 0,19,0 ],3,camelname,modelosusuario).
+struct_dt_elem_i([ 0,19,0 ],3,length,15).
+struct_dt_elem_i([ 0,19,0 ],3,decimals,0).
+struct_dt_elem_i([ 0,19,0 ],3,type,[ 13,15,0 ]).
+struct_dt_elem_i([ 0,19,0 ],3,pic,'').
+struct_dt_elem_i([ 0,19,0 ],3,collection,'False').
+struct_dt_elem_i([ 0,19,0 ],3,attributeid,'117').
+struct_dt_elem_i([ 0,19,0 ],4,name,'Modelosfecreg').
+struct_dt_elem_i([ 0,19,0 ],4,camelname,modelosfecreg).
+struct_dt_elem_i([ 0,19,0 ],4,length,10).
+struct_dt_elem_i([ 0,19,0 ],4,decimals,8).
+struct_dt_elem_i([ 0,19,0 ],4,type,[ 12,10,8 ]).
+struct_dt_elem_i([ 0,19,0 ],4,pic,'99/99/9999 99:99:99').
+struct_dt_elem_i([ 0,19,0 ],4,collection,'False').
+struct_dt_elem_i([ 0,19,0 ],4,attributeid,'118').
+struct_dt_elem_i([ 0,19,0 ],5,name,'Modelosfecultact').
+struct_dt_elem_i([ 0,19,0 ],5,camelname,modelosfecultact).
+struct_dt_elem_i([ 0,19,0 ],5,length,10).
+struct_dt_elem_i([ 0,19,0 ],5,decimals,8).
+struct_dt_elem_i([ 0,19,0 ],5,type,[ 12,10,8 ]).
+struct_dt_elem_i([ 0,19,0 ],5,pic,'99/99/9999 99:99:99').
+struct_dt_elem_i([ 0,19,0 ],5,collection,'False').
+struct_dt_elem_i([ 0,19,0 ],5,attributeid,'119').
+struct_dt_elem_i([ 26,1,1 ],1,name,'Id').
+struct_dt_elem_i([ 26,1,1 ],1,camelname,'Id').
+struct_dt_elem_i([ 26,1,1 ],1,length,128).
+struct_dt_elem_i([ 26,1,1 ],1,decimals,0).
+struct_dt_elem_i([ 26,1,1 ],1,type,[ 13,128,0 ]).
+struct_dt_elem_i([ 26,1,1 ],1,pic,'').
+struct_dt_elem_i([ 26,1,1 ],1,collection,'False').
+struct_dt_elem_i([ 26,1,1 ],1,'XmlType','Element').
+struct_dt_elem_i([ 26,1,1 ],1,'XmlName','').
+struct_dt_elem_i([ 26,1,1 ],1,'XmlNamespace','').
+struct_dt_elem_i([ 26,1,1 ],1,soaptype,'').
+struct_dt_elem_i([ 26,1,1 ],1,'XmlInclude',idXmlIncludeAlways).
+struct_dt_elem_i([ 26,1,1 ],1,'JsonName','').
+struct_dt_elem_i([ 26,1,1 ],2,name,'Type').
+struct_dt_elem_i([ 26,1,1 ],2,camelname,'Type').
+struct_dt_elem_i([ 26,1,1 ],2,basedon,18).
+struct_dt_elem_i([ 26,1,1 ],2,length,2).
+struct_dt_elem_i([ 26,1,1 ],2,decimals,0).
+struct_dt_elem_i([ 26,1,1 ],2,sign,0).
+struct_dt_elem_i([ 26,1,1 ],2,type,[ 4,2,0 ]).
+struct_dt_elem_i([ 26,1,1 ],2,pic,'Z9').
+struct_dt_elem_i([ 26,1,1 ],2,collection,'False').
+struct_dt_elem_i([ 26,1,1 ],2,'XmlType','Element').
+struct_dt_elem_i([ 26,1,1 ],2,'XmlName','').
+struct_dt_elem_i([ 26,1,1 ],2,'XmlNamespace','').
+struct_dt_elem_i([ 26,1,1 ],2,soaptype,'').
+struct_dt_elem_i([ 26,1,1 ],2,'XmlInclude',idXmlIncludeAlways).
+struct_dt_elem_i([ 26,1,1 ],2,'JsonName','').
+struct_dt_elem_i([ 26,1,1 ],3,name,'Description').
+struct_dt_elem_i([ 26,1,1 ],3,camelname,'Description').
+struct_dt_elem_i([ 26,1,1 ],3,length,256).
+struct_dt_elem_i([ 26,1,1 ],3,decimals,0).
+struct_dt_elem_i([ 26,1,1 ],3,type,[ 13,256,0 ]).
+struct_dt_elem_i([ 26,1,1 ],3,pic,'').
+struct_dt_elem_i([ 26,1,1 ],3,collection,'False').
+struct_dt_elem_i([ 26,1,1 ],3,'XmlType','Element').
+struct_dt_elem_i([ 26,1,1 ],3,'XmlName','').
+struct_dt_elem_i([ 26,1,1 ],3,'XmlNamespace','').
+struct_dt_elem_i([ 26,1,1 ],3,soaptype,'').
+struct_dt_elem_i([ 26,1,1 ],3,'XmlInclude',idXmlIncludeAlways).
+struct_dt_elem_i([ 26,1,1 ],3,'JsonName','').
+struct_dt_elem_i([ 26,1,1 ],2,pic,'ZZZZZZZZ9').
+ 
+ 
+ 
+ 
+ 
+sub_info_i(146,'Start',1,3,[ [],[ 'Nextvalue' ] ]).
+sub_info_i(146,'''Guardar ''',5,14,[ [ 'Nextvalue','Modelos','Modelosdsc' ],[ 'Modelos' ] ]).
+ 
+ 
+pgm_callprotocol_i(web,32,'CATALOG_DE_MODELO','INTERNAL').
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

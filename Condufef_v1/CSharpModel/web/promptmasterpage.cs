@@ -2,7 +2,7 @@
                File: PromptMasterPage
         Description: Prompt Master Page
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 1/22/2022 13:27:39.12
+       Generated on: 1/23/2022 3:49:20.30
        Program type: Callable routine
           Main DBMS: postgresql
 */
@@ -134,7 +134,7 @@ namespace GeneXus.Programs {
          {
             disableOutput();
          }
-         context.AddJavascriptSource("promptmasterpage.js", "?202212213273913");
+         context.AddJavascriptSource("promptmasterpage.js", "?20221233492030");
          context.WriteHtmlTextNl( "</body>") ;
          context.WriteHtmlTextNl( "</html>") ;
          if ( context.isSpaRequest( ) )
@@ -814,11 +814,11 @@ namespace GeneXus.Programs {
 
       protected void define_styles( )
       {
-         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?13264988");
+         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?3485073");
          idxLst = 1;
          while ( idxLst <= (getDataAreaObject() == null ? Form : getDataAreaObject().GetForm()).Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((String)(getDataAreaObject() == null ? Form : getDataAreaObject().GetForm()).Jscriptsrc.Item(idxLst))), "?202212213273920");
+            context.AddJavascriptSource(StringUtil.RTrim( ((String)(getDataAreaObject() == null ? Form : getDataAreaObject().GetForm()).Jscriptsrc.Item(idxLst))), "?20221233492035");
             idxLst = (int)(idxLst+1);
          }
          /* End function define_styles */
@@ -828,7 +828,7 @@ namespace GeneXus.Programs {
       {
          if ( nGXWrapped != 1 )
          {
-            context.AddJavascriptSource("promptmasterpage.js", "?202212213273920");
+            context.AddJavascriptSource("promptmasterpage.js", "?20221233492035");
          }
          /* End function include_jscripts */
       }

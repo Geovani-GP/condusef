@@ -2,7 +2,7 @@
                File: type_Sdtcambs
         Description: cambs
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 1/22/2022 13:27:30.64
+       Generated on: 1/23/2022 3:49:12.33
        Program type: Callable routine
           Main DBMS: postgresql
 */

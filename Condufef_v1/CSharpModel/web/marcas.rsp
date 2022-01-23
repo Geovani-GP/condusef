@@ -16,3 +16,4 @@
 /r:GxBaseBuilder.dll
 /out:bin\marcas.dll
 marcas.cs
+marcas_bc.cs

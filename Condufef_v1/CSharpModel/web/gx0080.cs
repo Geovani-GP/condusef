@@ -2,7 +2,7 @@
                File: Gx0080
         Description: Selection List marcas
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 1/22/2022 13:27:52.29
+       Generated on: 1/23/2022 3:49:31.11
        Program type: Callable routine
           Main DBMS: postgresql
 */
@@ -261,7 +261,7 @@ namespace GeneXus.Programs {
          context.AddJavascriptSource("jquery.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxtimezone.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxgral.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("gxcfg.js", "?202212213275235");
+         context.AddJavascriptSource("gxcfg.js", "?20221233493115");
          if ( context.isSpaRequest( ) )
          {
             enableOutput();
@@ -1406,11 +1406,11 @@ namespace GeneXus.Programs {
       protected void define_styles( )
       {
          AddStyleSheetFile("calendar-system.css", "?13205289");
-         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?13264988");
+         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?3485073");
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?202212213275324");
+            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?20221233493179");
             idxLst = (int)(idxLst+1);
          }
          /* End function define_styles */
@@ -1419,7 +1419,7 @@ namespace GeneXus.Programs {
       protected void include_jscripts( )
       {
          context.AddJavascriptSource("messages.spa.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("gx0080.js", "?202212213275324");
+         context.AddJavascriptSource("gx0080.js", "?20221233493179");
          /* End function include_jscripts */
       }
 

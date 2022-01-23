@@ -2,7 +2,7 @@
                File: type_SdtLinkList_LinkItem
         Description: LinkList
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 1/22/2022 13:28:19.78
+       Generated on: 1/23/2022 3:49:51.69
        Program type: Callable routine
           Main DBMS: postgresql
 */

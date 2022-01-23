@@ -2,7 +2,7 @@
                File: AppMasterPage
         Description: Application Master Page
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 1/22/2022 13:27:38.90
+       Generated on: 1/23/2022 3:49:20.15
        Program type: Callable routine
           Main DBMS: postgresql
 */
@@ -139,7 +139,7 @@ namespace GeneXus.Programs {
          {
             WebComp_Wcrecentlinks.componentjscripts();
          }
-         context.AddJavascriptSource("appmasterpage.js", "?202212213273891");
+         context.AddJavascriptSource("appmasterpage.js", "?20221233492016");
          context.WriteHtmlTextNl( "</body>") ;
          context.WriteHtmlTextNl( "</html>") ;
          if ( context.isSpaRequest( ) )
@@ -877,7 +877,7 @@ namespace GeneXus.Programs {
 
       protected void define_styles( )
       {
-         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?13264988");
+         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?3485073");
          if ( ! ( WebComp_Wcrecentlinks == null ) )
          {
             if ( StringUtil.Len( WebComp_Wcrecentlinks_Component) != 0 )
@@ -888,7 +888,7 @@ namespace GeneXus.Programs {
          idxLst = 1;
          while ( idxLst <= (getDataAreaObject() == null ? Form : getDataAreaObject().GetForm()).Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((String)(getDataAreaObject() == null ? Form : getDataAreaObject().GetForm()).Jscriptsrc.Item(idxLst))), "?20221221327394");
+            context.AddJavascriptSource(StringUtil.RTrim( ((String)(getDataAreaObject() == null ? Form : getDataAreaObject().GetForm()).Jscriptsrc.Item(idxLst))), "?20221233492025");
             idxLst = (int)(idxLst+1);
          }
          /* End function define_styles */
@@ -896,7 +896,7 @@ namespace GeneXus.Programs {
 
       protected void include_jscripts( )
       {
-         context.AddJavascriptSource("appmasterpage.js", "?20221221327394");
+         context.AddJavascriptSource("appmasterpage.js", "?20221233492025");
          /* End function include_jscripts */
       }
 

@@ -1,0 +1,60 @@
+ 
+spec_i([ sdt,[ 0,8,0 ],marcas,marcas,0,spa,'10_3_15-115824' ]).
+ 
+struct_dt_i([ 0,8,0 ],name,marcas).
+struct_dt_i([ 0,8,0 ],namespace,'Condufef_v1').
+struct_dt_i([ 0,8,0 ],significantName,marcas).
+struct_dt_i([ 0,8,0 ],'ObjName',marcas).
+struct_dt_i([ 0,8,0 ],'ObjDesc',marcas).
+struct_dt_i([ 0,8,0 ],'ExternalName',marcas).
+struct_dt_i([ 0,8,0 ],'ExternalNamespace','Condufef_v1').
+struct_dt_i([ 0,8,0 ],key,[ 24 ]).
+struct_dt_i([ 0,8,0 ],lvl,8).
+struct_dt_i([ 0,8,0 ],fullname,marcas).
+ 
+struct_dt_elem_i([ 0,8,0 ],1,name,'Marcasid').
+struct_dt_elem_i([ 0,8,0 ],1,camelname,marcasid).
+struct_dt_elem_i([ 0,8,0 ],1,length,9).
+struct_dt_elem_i([ 0,8,0 ],1,decimals,0).
+struct_dt_elem_i([ 0,8,0 ],1,sign,0).
+struct_dt_elem_i([ 0,8,0 ],1,type,[ 4,9,0 ]).
+struct_dt_elem_i([ 0,8,0 ],1,pic,'ZZZZZZZZ9').
+struct_dt_elem_i([ 0,8,0 ],1,collection,'False').
+struct_dt_elem_i([ 0,8,0 ],1,attributeid,'24').
+struct_dt_elem_i([ 0,8,0 ],2,name,'Marcasdsc').
+struct_dt_elem_i([ 0,8,0 ],2,camelname,marcasdsc).
+struct_dt_elem_i([ 0,8,0 ],2,length,100).
+struct_dt_elem_i([ 0,8,0 ],2,decimals,0).
+struct_dt_elem_i([ 0,8,0 ],2,type,[ 13,100,0 ]).
+struct_dt_elem_i([ 0,8,0 ],2,pic,'').
+struct_dt_elem_i([ 0,8,0 ],2,collection,'False').
+struct_dt_elem_i([ 0,8,0 ],2,attributeid,'112').
+struct_dt_elem_i([ 0,8,0 ],3,name,'Marcasusuario').
+struct_dt_elem_i([ 0,8,0 ],3,camelname,marcasusuario).
+struct_dt_elem_i([ 0,8,0 ],3,length,15).
+struct_dt_elem_i([ 0,8,0 ],3,decimals,0).
+struct_dt_elem_i([ 0,8,0 ],3,type,[ 13,15,0 ]).
+struct_dt_elem_i([ 0,8,0 ],3,pic,'').
+struct_dt_elem_i([ 0,8,0 ],3,collection,'False').
+struct_dt_elem_i([ 0,8,0 ],3,attributeid,'113').
+struct_dt_elem_i([ 0,8,0 ],4,name,'Marcasfecreg').
+struct_dt_elem_i([ 0,8,0 ],4,camelname,marcasfecreg).
+struct_dt_elem_i([ 0,8,0 ],4,length,10).
+struct_dt_elem_i([ 0,8,0 ],4,decimals,8).
+struct_dt_elem_i([ 0,8,0 ],4,type,[ 12,10,8 ]).
+struct_dt_elem_i([ 0,8,0 ],4,pic,'99/99/9999 99:99:99').
+struct_dt_elem_i([ 0,8,0 ],4,collection,'False').
+struct_dt_elem_i([ 0,8,0 ],4,attributeid,'114').
+struct_dt_elem_i([ 0,8,0 ],5,name,'Marcasfecultact').
+struct_dt_elem_i([ 0,8,0 ],5,camelname,marcasfecultact).
+struct_dt_elem_i([ 0,8,0 ],5,length,10).
+struct_dt_elem_i([ 0,8,0 ],5,decimals,8).
+struct_dt_elem_i([ 0,8,0 ],5,type,[ 12,10,8 ]).
+struct_dt_elem_i([ 0,8,0 ],5,pic,'99/99/9999 99:99:99').
+struct_dt_elem_i([ 0,8,0 ],5,collection,'False').
+struct_dt_elem_i([ 0,8,0 ],5,attributeid,'115').
+ 
+ 
+ 
+ 
+ 

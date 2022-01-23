@@ -16,3 +16,4 @@
 /r:GxBaseBuilder.dll
 /out:bin\modelos.dll
 modelos.cs
+modelos_bc.cs

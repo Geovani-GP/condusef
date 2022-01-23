@@ -1,0 +1,76 @@
+ 
+spec_i([ sdt,[ 0,16,0 ],origen,origen,0,spa,'10_3_15-115824' ]).
+ 
+struct_dt_i([ 0,16,0 ],name,origen).
+struct_dt_i([ 0,16,0 ],namespace,'Condufef_v1').
+struct_dt_i([ 0,16,0 ],significantName,origen).
+struct_dt_i([ 0,16,0 ],'ObjName',origen).
+struct_dt_i([ 0,16,0 ],'ObjDesc',origen).
+struct_dt_i([ 0,16,0 ],'ExternalName',origen).
+struct_dt_i([ 0,16,0 ],'ExternalNamespace','Condufef_v1').
+struct_dt_i([ 0,16,0 ],key,[ 10 ]).
+struct_dt_i([ 0,16,0 ],lvl,16).
+struct_dt_i([ 0,16,0 ],fullname,origen).
+ 
+struct_dt_elem_i([ 0,16,0 ],1,name,'Origenid').
+struct_dt_elem_i([ 0,16,0 ],1,camelname,origenid).
+struct_dt_elem_i([ 0,16,0 ],1,length,18).
+struct_dt_elem_i([ 0,16,0 ],1,decimals,0).
+struct_dt_elem_i([ 0,16,0 ],1,sign,0).
+struct_dt_elem_i([ 0,16,0 ],1,type,[ 4,18,0 ]).
+struct_dt_elem_i([ 0,16,0 ],1,pic,'ZZZZZZZZZZZZZZZZZ9').
+struct_dt_elem_i([ 0,16,0 ],1,collection,'False').
+struct_dt_elem_i([ 0,16,0 ],1,attributeid,'10').
+struct_dt_elem_i([ 0,16,0 ],2,name,'Origendscorta').
+struct_dt_elem_i([ 0,16,0 ],2,camelname,origendscorta).
+struct_dt_elem_i([ 0,16,0 ],2,length,50).
+struct_dt_elem_i([ 0,16,0 ],2,decimals,0).
+struct_dt_elem_i([ 0,16,0 ],2,type,[ 13,50,0 ]).
+struct_dt_elem_i([ 0,16,0 ],2,pic,'').
+struct_dt_elem_i([ 0,16,0 ],2,collection,'False').
+struct_dt_elem_i([ 0,16,0 ],2,attributeid,'120').
+struct_dt_elem_i([ 0,16,0 ],3,name,'Origendsclarga').
+struct_dt_elem_i([ 0,16,0 ],3,camelname,origendsclarga).
+struct_dt_elem_i([ 0,16,0 ],3,length,100).
+struct_dt_elem_i([ 0,16,0 ],3,decimals,0).
+struct_dt_elem_i([ 0,16,0 ],3,type,[ 13,100,0 ]).
+struct_dt_elem_i([ 0,16,0 ],3,pic,'').
+struct_dt_elem_i([ 0,16,0 ],3,collection,'False').
+struct_dt_elem_i([ 0,16,0 ],3,attributeid,'121').
+struct_dt_elem_i([ 0,16,0 ],4,name,'Origenusuario').
+struct_dt_elem_i([ 0,16,0 ],4,camelname,origenusuario).
+struct_dt_elem_i([ 0,16,0 ],4,length,15).
+struct_dt_elem_i([ 0,16,0 ],4,decimals,0).
+struct_dt_elem_i([ 0,16,0 ],4,type,[ 13,15,0 ]).
+struct_dt_elem_i([ 0,16,0 ],4,pic,'').
+struct_dt_elem_i([ 0,16,0 ],4,collection,'False').
+struct_dt_elem_i([ 0,16,0 ],4,attributeid,'122').
+struct_dt_elem_i([ 0,16,0 ],5,name,'Origentotal').
+struct_dt_elem_i([ 0,16,0 ],5,camelname,origentotal).
+struct_dt_elem_i([ 0,16,0 ],5,length,50).
+struct_dt_elem_i([ 0,16,0 ],5,decimals,0).
+struct_dt_elem_i([ 0,16,0 ],5,type,[ 13,50,0 ]).
+struct_dt_elem_i([ 0,16,0 ],5,pic,'').
+struct_dt_elem_i([ 0,16,0 ],5,collection,'False').
+struct_dt_elem_i([ 0,16,0 ],5,attributeid,'123').
+struct_dt_elem_i([ 0,16,0 ],6,name,'Origenfecreg').
+struct_dt_elem_i([ 0,16,0 ],6,camelname,origenfecreg).
+struct_dt_elem_i([ 0,16,0 ],6,length,10).
+struct_dt_elem_i([ 0,16,0 ],6,decimals,8).
+struct_dt_elem_i([ 0,16,0 ],6,type,[ 12,10,8 ]).
+struct_dt_elem_i([ 0,16,0 ],6,pic,'99/99/9999 99:99:99').
+struct_dt_elem_i([ 0,16,0 ],6,collection,'False').
+struct_dt_elem_i([ 0,16,0 ],6,attributeid,'124').
+struct_dt_elem_i([ 0,16,0 ],7,name,'Origenfecultact').
+struct_dt_elem_i([ 0,16,0 ],7,camelname,origenfecultact).
+struct_dt_elem_i([ 0,16,0 ],7,length,10).
+struct_dt_elem_i([ 0,16,0 ],7,decimals,8).
+struct_dt_elem_i([ 0,16,0 ],7,type,[ 12,10,8 ]).
+struct_dt_elem_i([ 0,16,0 ],7,pic,'99/99/9999 99:99:99').
+struct_dt_elem_i([ 0,16,0 ],7,collection,'False').
+struct_dt_elem_i([ 0,16,0 ],7,attributeid,'125').
+ 
+ 
+ 
+ 
+ 

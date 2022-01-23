@@ -73,7 +73,15 @@ public class bldlogin : GxBaseBuilder
             return true;
          if (checkTime(obj, cs_path + @"\GxModelInfoProvider.cs" ))
             return true;
+         if (checkTime(obj, cs_path + @"\type_Sdtmodelos.cs" ))
+            return true;
+         if (checkTime(obj, cs_path + @"\type_Sdtorigen.cs" ))
+            return true;
          if (checkTime(obj, cs_path + @"\type_Sdtcambs.cs" ))
+            return true;
+         if (checkTime(obj, cs_path + @"\type_Sdtmarcas.cs" ))
+            return true;
+         if (checkTime(obj, cs_path + @"\type_Sdtcategorias.cs" ))
             return true;
          if (checkTime(obj, cs_path + @"\GXDOMAINCryptoSignAlgorithm.cs" ))
             return true;

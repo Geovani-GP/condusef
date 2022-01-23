@@ -1,0 +1,71 @@
+
+<ObjectSpec>
+<SpecVersion>10_3_15-115824</SpecVersion>
+<Object>
+<ObjClsGuid>c9584656-94b6-4ccd-890f-332d11fc2c25</ObjClsGuid>
+<ObjCls>13</ObjCls>
+<ObjId>33</ObjId>
+<ObjName>Catalog_De_Categoria</ObjName>
+<ObjDesc>Catalog_De_Categoria</ObjDesc>
+<ObjPgmName>Catalog_De_Categoria</ObjPgmName>
+<ObjClsName>Web Panel</ObjClsName></Object>
+<Result>genreq</Result>
+<Warnings>
+<Warning>
+<MsgCode>spc0156</MsgCode>
+<Message>
+<Token>Event </Token>
+<Token>'Consultar '</Token>
+<Token> for control '</Token>
+<Token>Button1</Token>
+<Token>' is not defined.</Token></Message></Warning>
+<Warning>
+<MsgCode>spc0156</MsgCode>
+<Message>
+<Token>Event </Token>
+<Token>'Cancelar'</Token>
+<Token> for control '</Token>
+<Token>Button3</Token>
+<Token>' is not defined.</Token></Message></Warning></Warnings>
+<Errors></Errors>
+<Generator>
+<GenId>15</GenId>
+<GenName>Default (C#)</GenName></Generator>
+<FormClass>HTML</FormClass>
+<Parameters></Parameters>
+<StandAloneRules>
+<Action></Action></StandAloneRules>
+<Event>
+<EventName>Start</EventName>
+<Level>
+<LevelNumber>2</LevelNumber>
+<Optimizations></Optimizations>
+<LevelType>Aggregate Formulas</LevelType>
+<LevelBeginRow>2</LevelBeginRow>
+<BaseTable></BaseTable>
+<NavigationTree>
+<Table>
+<TableId>14</TableId>
+<TableName>max( cambsid )  navigation</TableName>
+<Description>cambs</Description>
+<RecordsToRead>many</RecordsToRead>
+<Tables>
+<Table>
+<TableId>14</TableId>
+<TableName>CAMBS</TableName>
+<Description>cambs</Description>
+<RecordsToRead>many</RecordsToRead>
+<Tables></Tables></Table></Tables></Table></NavigationTree></Level></Event>
+<Event>
+<EventName>'Guardar '</EventName>
+<Command>
+<Expression>
+<Variable>
+<VarId>Cambs</VarId>
+<VarName>&amp;cambs</VarName></Variable>
+<Token>.</Token>
+<Token>save(</Token>
+<Token>)</Token></Expression></Command></Event>
+<Event>
+<EventName>Load</EventName></Event>
+<Suggests></Suggests></ObjectSpec>

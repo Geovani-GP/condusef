@@ -505,8 +505,6 @@ struct_dt_i([ 26,1,1 ],namespace,'Genexus.Messages').
 struct_dt_i([ 0,14,0 ],fullname,cambs).
 struct_dt_i([ 26,1,0 ],fullname,'Messages').
 struct_dt_i([ 26,1,1 ],fullname,'Messages.Message').
-struct_dt_i([ 26,1,0 ],modified,yes).
-struct_dt_i([ 26,1,1 ],modified,yes).
  
 struct_dt_elem_i([ 0,14,0 ],1,name,'Cambsid').
 struct_dt_elem_i([ 0,14,0 ],1,camelname,cambsid).

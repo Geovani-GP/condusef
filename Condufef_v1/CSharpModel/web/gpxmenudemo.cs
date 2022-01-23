@@ -2,7 +2,7 @@
                File: gpxMenuDemo
         Description: gpx Menu Demo
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 1/22/2022 13:27:3.68
+       Generated on: 1/23/2022 3:48:52.84
        Program type: Callable routine
           Main DBMS: postgresql
 */

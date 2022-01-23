@@ -22,7 +22,11 @@ SoapParm.cs
 GxWebStd.cs
 GxFullTextSearchReindexer.cs
 GxModelInfoProvider.cs
+type_Sdtmodelos.cs
+type_Sdtorigen.cs
 type_Sdtcambs.cs
+type_Sdtmarcas.cs
+type_Sdtcategorias.cs
 GXDOMAINCryptoSignAlgorithm.cs
 GXDOMAINAPIAuthorizationStatus.cs
 GXDOMAINMessageTypes.cs

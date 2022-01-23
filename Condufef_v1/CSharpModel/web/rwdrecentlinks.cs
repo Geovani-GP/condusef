@@ -2,7 +2,7 @@
                File: RwdRecentLinks
         Description: Responsive Recent Links
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 1/22/2022 13:27:2.68
+       Generated on: 1/23/2022 3:48:52.41
        Program type: Callable routine
           Main DBMS: postgresql
 */
@@ -294,7 +294,7 @@ namespace GeneXus.Programs {
          context.AddJavascriptSource("jquery.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxtimezone.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxgral.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("gxcfg.js", "?20221221327274");
+         context.AddJavascriptSource("gxcfg.js", "?20221233485243");
          if ( context.isSpaRequest( ) )
          {
             enableOutput();
@@ -360,7 +360,7 @@ namespace GeneXus.Programs {
          SendCloseFormHiddens( ) ;
          if ( ( StringUtil.Len( sPrefix) != 0 ) && context.isAjaxRequest( ) )
          {
-            context.AddJavascriptSource("rwdrecentlinks.js", "?20221221327276");
+            context.AddJavascriptSource("rwdrecentlinks.js", "?20221233485244");
          }
          GxWebStd.gx_hidden_field( context, sPrefix+"GX_FocusControl", GX_FocusControl);
          define_styles( ) ;
@@ -1154,11 +1154,11 @@ namespace GeneXus.Programs {
 
       protected void define_styles( )
       {
-         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?13264988");
+         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?3485073");
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?20221221327295");
+            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?20221233485254");
             idxLst = (int)(idxLst+1);
          }
          /* End function define_styles */
@@ -1166,7 +1166,7 @@ namespace GeneXus.Programs {
 
       protected void include_jscripts( )
       {
-         context.AddJavascriptSource("rwdrecentlinks.js", "?20221221327295");
+         context.AddJavascriptSource("rwdrecentlinks.js", "?20221233485254");
          /* End function include_jscripts */
       }
 

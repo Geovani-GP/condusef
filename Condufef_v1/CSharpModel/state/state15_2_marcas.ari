@@ -1,6 +1,6 @@
 current_obj_i(2,trn,8).
  
-called_tree_i(0,8,13,1).
+called_tree_i(0,8,13,4).
 called_tree_i(0,8,13,14).
  
  
@@ -14,6 +14,7 @@ ij_object_dependency(marcas,[],[],[],8).
 obj_parms_i([],[]).
  
  
+has_silent_trn_i(marcas_bc).
  
  
  

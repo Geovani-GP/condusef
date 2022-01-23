@@ -72,6 +72,15 @@ public class bldDevelopermenu : GxBaseBuilder
       sc.Add( @"login", "dll");
       sc.Add( @"menuprincipal", "dll");
       sc.Add( @"catalog_de_cambs", "dll");
+      sc.Add( @"catalog_de_marcas", "dll");
+      sc.Add( @"catalog_de_modelo", "dll");
+      sc.Add( @"catalog_de_tipo_doc", "dll");
+      sc.Add( @"catalog_de_articulo", "dll");
+      sc.Add( @"catalog_de_status", "dll");
+      sc.Add( @"catalog_de_entidad_federativa", "dll");
+      sc.Add( @"catalog_de_area", "dll");
+      sc.Add( @"catalog_de_categorias", "dll");
+      sc.Add( @"catalog_de_origen", "dll");
       sc.Add( @"tipobien", "dll");
       sc.Add( @"parametros", "dll");
       sc.Add( @"meses", "dll");
@@ -127,7 +136,15 @@ public class bldDevelopermenu : GxBaseBuilder
             return true;
          if (checkTime(obj, cs_path + @"\GxModelInfoProvider.cs" ))
             return true;
+         if (checkTime(obj, cs_path + @"\type_Sdtmodelos.cs" ))
+            return true;
+         if (checkTime(obj, cs_path + @"\type_Sdtorigen.cs" ))
+            return true;
          if (checkTime(obj, cs_path + @"\type_Sdtcambs.cs" ))
+            return true;
+         if (checkTime(obj, cs_path + @"\type_Sdtmarcas.cs" ))
+            return true;
+         if (checkTime(obj, cs_path + @"\type_Sdtcategorias.cs" ))
             return true;
          if (checkTime(obj, cs_path + @"\GXDOMAINCryptoSignAlgorithm.cs" ))
             return true;

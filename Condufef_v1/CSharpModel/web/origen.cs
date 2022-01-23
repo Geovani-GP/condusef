@@ -2,7 +2,7 @@
                File: origen
         Description: origen
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 1/22/2022 13:27:31.80
+       Generated on: 1/23/2022 3:49:13.48
        Program type: Callable routine
           Main DBMS: postgresql
 */
@@ -1602,7 +1602,7 @@ namespace GeneXus.Programs {
          context.AddJavascriptSource("jquery.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxtimezone.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxgral.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("gxcfg.js", "?202212213273251");
+         context.AddJavascriptSource("gxcfg.js", "?20221233491421");
          if ( context.isSpaRequest( ) )
          {
             enableOutput();
@@ -1773,11 +1773,11 @@ namespace GeneXus.Programs {
       protected void define_styles( )
       {
          AddStyleSheetFile("calendar-system.css", "?13205289");
-         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?13264988");
+         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?3485073");
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?202212213273257");
+            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?20221233491425");
             idxLst = (int)(idxLst+1);
          }
          /* End function define_styles */
@@ -1787,7 +1787,7 @@ namespace GeneXus.Programs {
       {
          context.AddJavascriptSource("messages.spa.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxdec.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("origen.js", "?202212213273257");
+         context.AddJavascriptSource("origen.js", "?20221233491426");
          /* End function include_jscripts */
       }
 
