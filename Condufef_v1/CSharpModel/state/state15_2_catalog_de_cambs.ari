@@ -1,6 +1,7 @@
 current_obj_i(2,web,30).
  
 called_tree_i(13,30,1000,14).
+called_tree_i(13,30,13,1).
  
  
  

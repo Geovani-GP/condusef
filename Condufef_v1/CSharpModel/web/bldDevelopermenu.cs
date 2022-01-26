@@ -42,8 +42,6 @@ public class bldDevelopermenu : GxBaseBuilder
    public override TargetCollection GetRuntimeBuildList( )
    {
       TargetCollection sc = new TargetCollection() ;
-      sc.Add( @"aloadeventssampleproc", "dll");
-      sc.Add( @"aschedulerrequesthandler", "dll");
       sc.Add( @"appmasterpage", "dll");
       sc.Add( @"login", "dll");
       sc.Add( @"menuprincipal", "dll");
@@ -80,6 +78,7 @@ public class bldDevelopermenu : GxBaseBuilder
       sc.Add( @"gx00l0", "dll");
       sc.Add( @"schedulerdetailsform", "dll");
       sc.Add( @"sidebar", "dll");
+      sc.Add( @"detallescambs", "dll");
       sc.Add( @"tipobien", "dll");
       sc.Add( @"parametros", "dll");
       sc.Add( @"meses", "dll");
@@ -117,18 +116,6 @@ public class bldDevelopermenu : GxBaseBuilder
          return true;
       if ( obj == @"bin\GeneXus.Programs.Common.dll" )
       {
-         if (checkTime(obj, cs_path + @"\type_SdtSchedulerEvents.cs" ))
-            return true;
-         if (checkTime(obj, cs_path + @"\type_SdtSchedulerEvents_Day.cs" ))
-            return true;
-         if (checkTime(obj, cs_path + @"\type_SdtSchedulerEvents_event.cs" ))
-            return true;
-         if (checkTime(obj, cs_path + @"\type_SdtTabsMenuData_TabsMenuDataItem.cs" ))
-            return true;
-         if (checkTime(obj, cs_path + @"\type_SdtTabsMenuData_TabsMenuDataItem_SectionsItem.cs" ))
-            return true;
-         if (checkTime(obj, cs_path + @"\type_SdtgpxMenuItems_gpxMenuItem.cs" ))
-            return true;
          if (checkTime(obj, cs_path + @"\type_SdtMessages_Message.cs" ))
             return true;
          if (checkTime(obj, cs_path + @"\GxObjectCollection.cs" ))

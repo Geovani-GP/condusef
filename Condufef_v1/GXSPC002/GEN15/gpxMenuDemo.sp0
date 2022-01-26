@@ -33,12 +33,12 @@ rule_i(0,datastore(1,'CS_RPCPGML','')).
 rule_i(0,datastore(1,'JDBC_DATASOURCE','')).
 rule_i(0,datastore(1,'USE_JDBC_DATASOURCE','0')).
 rule_i(0,datastore(1,'DS_DBMS_ADDINFO','')).
-rule_i(0,datastore(1,'USER_PASSWORD',asdf)).
+rule_i(0,datastore(1,'USER_PASSWORD',admin)).
 rule_i(0,datastore(1,'USER_ID',postgres)).
 rule_i(0,datastore(1,'CS_CONNECT','First')).
 rule_i(0,datastore(1,'DBMS_PORT','5432')).
 rule_i(0,datastore(1,'CS_SERVER',localhost)).
-rule_i(0,datastore(1,'CS_DBNAME',condusef)).
+rule_i(0,datastore(1,'CS_DBNAME',postgres)).
 rule_i(0,datastore(1,'CS_FLEDSNAME','')).
 rule_i(0,datastore(1,'CS_DRVNAME','')).
 rule_i(0,datastore(1,'CS_DSNAME','')).
@@ -135,8 +135,8 @@ b_line_i(16,1,1,cmd,9,[ t('',107,9,0),t([ t('Gxm3gpxmenuitems_subitems',23,9,0),
 b_line_i(17,1,1,cmd,9,[ t('',107,9,0),t([ t('Gxm3gpxmenuitems_subitems',23,9,0),t('Url',3,9,0) ],29,9,0),t(=,10,9,0),t('"Catalog_De_Cambs.aspx"',3,9,0) ]).
 b_line_i(19,1,1,cmd,9,[ t('',107,9,0),t('Gxm3gpxmenuitems_subitems',23,9,0),t(=,10,9,0),t([ 'gpxMenuItems.gpxMenuItem',[ t('(',0,19,0),t(')',4,19,0) ],n ],46,9,0) ]).
 b_line_i([ 19,1 ],1,1,cmd,9,[ t('',107,9,0),t([ t('Gxm1gpxmenuitems',23,19,0),t('Subitems',3,19,0),t('add(',1,19,0) ],31,19,0),t('Gxm3gpxmenuitems_subitems',23,9,0),t(')',4,9,0) ]).
-b_line_i(21,1,1,cmd,11,[ t('',107,11,0),t([ t('Gxm3gpxmenuitems_subitems',23,11,0),t('Title',3,11,0) ],29,11,0),t(=,10,11,0),t('"Documentation"',3,11,0) ]).
-b_line_i(22,1,1,cmd,11,[ t('',107,11,0),t([ t('Gxm3gpxmenuitems_subitems',23,11,0),t('Url',3,11,0) ],29,11,0),t(=,10,11,0),t('"http://open.genexus.com/wiki.aspx?SSID-32,Stone+Framework+by+GProjex,article"',3,11,0) ]).
+b_line_i(21,1,1,cmd,11,[ t('',107,11,0),t([ t('Gxm3gpxmenuitems_subitems',23,11,0),t('Title',3,11,0) ],29,11,0),t(=,10,11,0),t('"Detalle de Cambs"',3,11,0) ]).
+b_line_i(22,1,1,cmd,11,[ t('',107,11,0),t([ t('Gxm3gpxmenuitems_subitems',23,11,0),t('Url',3,11,0) ],29,11,0),t(=,10,11,0),t('"DetallesCambs.aspx"',3,11,0) ]).
 b_line_i(24,1,1,cmd,11,[ t('',107,11,0),t('Gxm3gpxmenuitems_subitems',23,11,0),t(=,10,11,0),t([ 'gpxMenuItems.gpxMenuItem',[ t('(',0,24,0),t(')',4,24,0) ],n ],46,11,0) ]).
 b_line_i([ 24,1 ],1,1,cmd,11,[ t('',107,11,0),t([ t('Gxm1gpxmenuitems',23,24,0),t('Subitems',3,24,0),t('add(',1,24,0) ],31,24,0),t('Gxm3gpxmenuitems_subitems',23,11,0),t(')',4,11,0) ]).
 b_line_i(26,1,1,cmd,13,[ t('',107,13,0),t([ t('Gxm3gpxmenuitems_subitems',23,13,0),t('Title',3,13,0) ],29,13,0),t(=,10,13,0),t('"Download"',3,13,0) ]).

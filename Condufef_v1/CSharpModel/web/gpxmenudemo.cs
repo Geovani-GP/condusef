@@ -2,7 +2,7 @@
                File: gpxMenuDemo
         Description: gpx Menu Demo
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 1/25/2022 21:47:40.60
+       Generated on: 1/25/2022 23:17:19.48
        Program type: Callable routine
           Main DBMS: postgresql
 */
@@ -112,8 +112,8 @@ namespace GeneXus.Programs {
          Gxm3gpxmenuitems_subitems.gxTpr_Url = "Catalog_De_Cambs.aspx";
          Gxm3gpxmenuitems_subitems = new SdtgpxMenuItems_gpxMenuItem(context);
          Gxm1gpxmenuitems.gxTpr_Subitems.Add(Gxm3gpxmenuitems_subitems, 0);
-         Gxm3gpxmenuitems_subitems.gxTpr_Title = "Documentation";
-         Gxm3gpxmenuitems_subitems.gxTpr_Url = "http://open.genexus.com/wiki.aspx?SSID-32,Stone+Framework+by+GProjex,article";
+         Gxm3gpxmenuitems_subitems.gxTpr_Title = "Detalle de Cambs";
+         Gxm3gpxmenuitems_subitems.gxTpr_Url = "DetallesCambs.aspx";
          Gxm3gpxmenuitems_subitems = new SdtgpxMenuItems_gpxMenuItem(context);
          Gxm1gpxmenuitems.gxTpr_Subitems.Add(Gxm3gpxmenuitems_subitems, 0);
          Gxm3gpxmenuitems_subitems.gxTpr_Title = "Download";
