@@ -1,4 +1,4 @@
-spec_i([ web,11,'Selection List categorias','Gx0050',0,spa,'10_3_15-115824' ]).
+spec_i([ web,66,'Selection List categorias','Gx0050',0,spa,'10_3_15-115824' ]).
  
 struct_i(2,1,[ 'Advanced_label_template' ],[]).
  
@@ -60,12 +60,12 @@ rule_i(0,datastore(1,'CS_RPCPGML','')).
 rule_i(0,datastore(1,'JDBC_DATASOURCE','')).
 rule_i(0,datastore(1,'USE_JDBC_DATASOURCE','0')).
 rule_i(0,datastore(1,'DS_DBMS_ADDINFO','')).
-rule_i(0,datastore(1,'USER_PASSWORD',󻢸蘇�2�5炭)).
+rule_i(0,datastore(1,'USER_PASSWORD',asdf)).
 rule_i(0,datastore(1,'USER_ID',postgres)).
 rule_i(0,datastore(1,'CS_CONNECT','First')).
 rule_i(0,datastore(1,'DBMS_PORT','5432')).
 rule_i(0,datastore(1,'CS_SERVER',localhost)).
-rule_i(0,datastore(1,'CS_DBNAME',postgres)).
+rule_i(0,datastore(1,'CS_DBNAME',condusef)).
 rule_i(0,datastore(1,'CS_FLEDSNAME','')).
 rule_i(0,datastore(1,'CS_DRVNAME','')).
 rule_i(0,datastore(1,'CS_DSNAME','')).
@@ -114,7 +114,7 @@ rule_i(0,prop('PMPTAssocTable',o(7,categorias))).
 rule_i(0,prop('IsUserPrompt','0')).
 rule_i(0,prop('IsMain','0')).
 rule_i(0,prop('SHOWMASTERPAGE_POPUP','-1')).
-rule_i(0,prop('MasterPage',o(13,'RwdPromptMasterPage'))).
+rule_i(0,prop('MasterPage',o(13,'AppMasterPage'))).
 rule_i(0,prop('WEB_COMP','No')).
 rule_i(0,prop('Theme',o(25,'Flat'))).
 rule_i(0,prop('Folder',o(120,'Root Module'))).
@@ -1243,7 +1243,7 @@ sub_info_i(146,'Load',62,64,[ [],[ 'Linkselection' ] ]).
 sub_info_i(146,'Enter',66,69,[ [ 14 ],[ 'Pcategoriasid' ] ]).
  
  
-pgm_callprotocol_i(web,11,'GX0050','INTERNAL').
+pgm_callprotocol_i(web,66,'GX0050','INTERNAL').
  
  
  

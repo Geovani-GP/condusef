@@ -2,7 +2,7 @@
                File: Gx0040
         Description: Selection List entidadfederativa
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 1/23/2022 3:49:26.7
+       Generated on: 1/25/2022 17:35:10.18
        Program type: Callable routine
           Main DBMS: postgresql
 */
@@ -190,7 +190,7 @@ namespace GeneXus.Programs {
          INITWEB( ) ;
          if ( ! isAjaxCallMode( ) )
          {
-            MasterPageObj = (GXMasterPage) ClassLoader.GetInstance("rwdpromptmasterpage", "GeneXus.Programs.rwdpromptmasterpage", new Object[] {new GxContext( context.handle, context.DataStores, context.HttpContext)});
+            MasterPageObj = (GXMasterPage) ClassLoader.GetInstance("appmasterpage", "GeneXus.Programs.appmasterpage", new Object[] {new GxContext( context.handle, context.DataStores, context.HttpContext)});
             MasterPageObj.setDataArea(this,true);
             ValidateSpaRequest();
             MasterPageObj.webExecute();
@@ -222,11 +222,11 @@ namespace GeneXus.Programs {
 
       public override short ExecuteStartEvent( )
       {
-         PA0A2( ) ;
+         PA1T2( ) ;
          gxajaxcallmode = (short)((isAjaxCallMode( ) ? 1 : 0));
          if ( ( gxajaxcallmode == 0 ) && ( GxWebError == 0 ) )
          {
-            START0A2( ) ;
+            START1T2( ) ;
          }
          return gxajaxcallmode ;
       }
@@ -261,7 +261,7 @@ namespace GeneXus.Programs {
          context.AddJavascriptSource("jquery.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxtimezone.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxgral.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("gxcfg.js", "?20221233492611");
+         context.AddJavascriptSource("gxcfg.js", "?202212517351025");
          if ( context.isSpaRequest( ) )
          {
             enableOutput();
@@ -353,14 +353,14 @@ namespace GeneXus.Programs {
             context.WriteHtmlText( "<div") ;
             GxWebStd.ClassAttribute( context, "gx-ct-body"+" "+(String.IsNullOrEmpty(StringUtil.RTrim( Form.Class)) ? "form-horizontal Form" : Form.Class)+"-fx");
             context.WriteHtmlText( ">") ;
-            WE0A2( ) ;
+            WE1T2( ) ;
             context.WriteHtmlText( "</div>") ;
          }
       }
 
       public override void DispatchEvents( )
       {
-         EVT0A2( ) ;
+         EVT1T2( ) ;
       }
 
       public override bool HasEnterEvent( )
@@ -388,7 +388,7 @@ namespace GeneXus.Programs {
          return "Selection List entidadfederativa" ;
       }
 
-      protected void WB0A0( )
+      protected void WB1T0( )
       {
          if ( context.isAjaxRequest( ) )
          {
@@ -423,7 +423,7 @@ namespace GeneXus.Programs {
             /* Div Control */
             GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "col-xs-12", "left", "top", "", "", "div");
             /* Text block */
-            GxWebStd.gx_label_ctrl( context, lblLblentidafederativaidfilter_Internalname, "entidafederativaid", "", "", lblLblentidafederativaidfilter_Jsonclick, "'"+""+"'"+",false,"+"'"+"e110a1_client"+"'", "", "WWAdvancedLabel WWFilterLabel", 7, "", 1, 1, 1, "HLP_Gx0040.htm");
+            GxWebStd.gx_label_ctrl( context, lblLblentidafederativaidfilter_Internalname, "entidafederativaid", "", "", lblLblentidafederativaidfilter_Jsonclick, "'"+""+"'"+",false,"+"'"+"e111t1_client"+"'", "", "WWAdvancedLabel WWFilterLabel", 7, "", 1, 1, 1, "HLP_Gx0040.htm");
             GxWebStd.gx_div_end( context, "left", "top");
             GxWebStd.gx_div_end( context, "left", "top");
             /* Div Control */
@@ -454,7 +454,7 @@ namespace GeneXus.Programs {
             /* Div Control */
             GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "col-xs-12", "left", "top", "", "", "div");
             /* Text block */
-            GxWebStd.gx_label_ctrl( context, lblLblentidadfederativadscfilter_Internalname, "entidadfederativadsc", "", "", lblLblentidadfederativadscfilter_Jsonclick, "'"+""+"'"+",false,"+"'"+"e120a1_client"+"'", "", "WWAdvancedLabel WWFilterLabel", 7, "", 1, 1, 1, "HLP_Gx0040.htm");
+            GxWebStd.gx_label_ctrl( context, lblLblentidadfederativadscfilter_Internalname, "entidadfederativadsc", "", "", lblLblentidadfederativadscfilter_Jsonclick, "'"+""+"'"+",false,"+"'"+"e121t1_client"+"'", "", "WWAdvancedLabel WWFilterLabel", 7, "", 1, 1, 1, "HLP_Gx0040.htm");
             GxWebStd.gx_div_end( context, "left", "top");
             GxWebStd.gx_div_end( context, "left", "top");
             /* Div Control */
@@ -485,7 +485,7 @@ namespace GeneXus.Programs {
             /* Div Control */
             GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "col-xs-12", "left", "top", "", "", "div");
             /* Text block */
-            GxWebStd.gx_label_ctrl( context, lblLblentidadfederativausuariofilter_Internalname, "entidadfederativausuario", "", "", lblLblentidadfederativausuariofilter_Jsonclick, "'"+""+"'"+",false,"+"'"+"e130a1_client"+"'", "", "WWAdvancedLabel WWFilterLabel", 7, "", 1, 1, 1, "HLP_Gx0040.htm");
+            GxWebStd.gx_label_ctrl( context, lblLblentidadfederativausuariofilter_Internalname, "entidadfederativausuario", "", "", lblLblentidadfederativausuariofilter_Jsonclick, "'"+""+"'"+",false,"+"'"+"e131t1_client"+"'", "", "WWAdvancedLabel WWFilterLabel", 7, "", 1, 1, 1, "HLP_Gx0040.htm");
             GxWebStd.gx_div_end( context, "left", "top");
             GxWebStd.gx_div_end( context, "left", "top");
             /* Div Control */
@@ -516,7 +516,7 @@ namespace GeneXus.Programs {
             /* Div Control */
             GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "col-xs-12", "left", "top", "", "", "div");
             /* Text block */
-            GxWebStd.gx_label_ctrl( context, lblLblentidadfederativafecregfilter_Internalname, "entidadfederativafecreg", "", "", lblLblentidadfederativafecregfilter_Jsonclick, "'"+""+"'"+",false,"+"'"+"e140a1_client"+"'", "", "WWAdvancedLabel WWDateFilterLabel", 7, "", 1, 1, 1, "HLP_Gx0040.htm");
+            GxWebStd.gx_label_ctrl( context, lblLblentidadfederativafecregfilter_Internalname, "entidadfederativafecreg", "", "", lblLblentidadfederativafecregfilter_Jsonclick, "'"+""+"'"+",false,"+"'"+"e141t1_client"+"'", "", "WWAdvancedLabel WWDateFilterLabel", 7, "", 1, 1, 1, "HLP_Gx0040.htm");
             GxWebStd.gx_div_end( context, "left", "top");
             GxWebStd.gx_div_end( context, "left", "top");
             /* Div Control */
@@ -549,7 +549,7 @@ namespace GeneXus.Programs {
             /* Div Control */
             GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "col-xs-12", "left", "top", "", "", "div");
             /* Text block */
-            GxWebStd.gx_label_ctrl( context, lblLblentidadfederativafecultactfilter_Internalname, "entidadfederativafecultact", "", "", lblLblentidadfederativafecultactfilter_Jsonclick, "'"+""+"'"+",false,"+"'"+"e150a1_client"+"'", "", "WWAdvancedLabel WWDateFilterLabel", 7, "", 1, 1, 1, "HLP_Gx0040.htm");
+            GxWebStd.gx_label_ctrl( context, lblLblentidadfederativafecultactfilter_Internalname, "entidadfederativafecultact", "", "", lblLblentidadfederativafecultactfilter_Jsonclick, "'"+""+"'"+",false,"+"'"+"e151t1_client"+"'", "", "WWAdvancedLabel WWDateFilterLabel", 7, "", 1, 1, 1, "HLP_Gx0040.htm");
             GxWebStd.gx_div_end( context, "left", "top");
             GxWebStd.gx_div_end( context, "left", "top");
             /* Div Control */
@@ -584,7 +584,7 @@ namespace GeneXus.Programs {
             TempTags = "  onfocus=\"gx.evt.onfocus(this, 61,'',false,'',0)\"";
             ClassString = bttBtntoggle_Class;
             StyleString = "";
-            GxWebStd.gx_button_ctrl( context, bttBtntoggle_Internalname, "gx.evt.setGridEvt("+StringUtil.Str( (decimal)(64), 2, 0)+","+"null"+");", "|||", bttBtntoggle_Jsonclick, 7, "|||", "", StyleString, ClassString, 1, 1, "standard", "'"+""+"'"+",false,"+"'"+"e160a1_client"+"'", TempTags, "", 2, "HLP_Gx0040.htm");
+            GxWebStd.gx_button_ctrl( context, bttBtntoggle_Internalname, "gx.evt.setGridEvt("+StringUtil.Str( (decimal)(64), 2, 0)+","+"null"+");", "|||", bttBtntoggle_Jsonclick, 7, "|||", "", StyleString, ClassString, 1, 1, "standard", "'"+""+"'"+",false,"+"'"+"e161t1_client"+"'", TempTags, "", 2, "HLP_Gx0040.htm");
             GxWebStd.gx_div_end( context, "left", "top");
             GxWebStd.gx_div_end( context, "left", "top");
             /* Div Control */
@@ -727,7 +727,7 @@ namespace GeneXus.Programs {
          wbLoad = true;
       }
 
-      protected void START0A2( )
+      protected void START1T2( )
       {
          wbLoad = false;
          wbEnd = 0;
@@ -744,16 +744,16 @@ namespace GeneXus.Programs {
          {
          }
          wbErr = false;
-         STRUP0A0( ) ;
+         STRUP1T0( ) ;
       }
 
-      protected void WS0A2( )
+      protected void WS1T2( )
       {
-         START0A2( ) ;
-         EVT0A2( ) ;
+         START1T2( ) ;
+         EVT1T2( ) ;
       }
 
-      protected void EVT0A2( )
+      protected void EVT1T2( )
       {
          if ( StringUtil.StrCmp(context.GetRequestMethod( ), "POST") == 0 )
          {
@@ -831,15 +831,15 @@ namespace GeneXus.Programs {
                                  {
                                     context.wbHandled = 1;
                                     dynload_actions( ) ;
-                                    /* Execute user event: E170A2 */
-                                    E170A2 ();
+                                    /* Execute user event: E171T2 */
+                                    E171T2 ();
                                  }
                                  else if ( StringUtil.StrCmp(sEvt, "LOAD") == 0 )
                                  {
                                     context.wbHandled = 1;
                                     dynload_actions( ) ;
-                                    /* Execute user event: E180A2 */
-                                    E180A2 ();
+                                    /* Execute user event: E181T2 */
+                                    E181T2 ();
                                  }
                                  else if ( StringUtil.StrCmp(sEvt, "ENTER") == 0 )
                                  {
@@ -874,8 +874,8 @@ namespace GeneXus.Programs {
                                        }
                                        if ( ! Rfr0gs )
                                        {
-                                          /* Execute user event: E190A2 */
-                                          E190A2 ();
+                                          /* Execute user event: E191T2 */
+                                          E191T2 ();
                                        }
                                        dynload_actions( ) ;
                                     }
@@ -899,7 +899,7 @@ namespace GeneXus.Programs {
          }
       }
 
-      protected void WE0A2( )
+      protected void WE1T2( )
       {
          if ( ! GxWebStd.gx_redirect( context) )
          {
@@ -915,7 +915,7 @@ namespace GeneXus.Programs {
          }
       }
 
-      protected void PA0A2( )
+      protected void PA1T2( )
       {
          if ( nDonePA == 0 )
          {
@@ -971,7 +971,7 @@ namespace GeneXus.Programs {
          GxWebStd.set_html_headers( context, 0, "", "");
          GxWebStd.gx_hidden_field( context, "GRID1_Rows", StringUtil.LTrim( StringUtil.NToC( (decimal)(subGrid1_Rows), 6, 0, ".", "")));
          GRID1_nCurrentRecord = 0;
-         RF0A2( ) ;
+         RF1T2( ) ;
          /* End function gxgrGrid1_refresh */
       }
 
@@ -990,7 +990,7 @@ namespace GeneXus.Programs {
       public void Refresh( )
       {
          send_integrity_hashes( ) ;
-         RF0A2( ) ;
+         RF1T2( ) ;
       }
 
       protected void initialize_formulas( )
@@ -999,7 +999,7 @@ namespace GeneXus.Programs {
          context.Gx_err = 0;
       }
 
-      protected void RF0A2( )
+      protected void RF1T2( )
       {
          initialize_formulas( ) ;
          if ( isAjaxCallMode( ) )
@@ -1044,29 +1044,29 @@ namespace GeneXus.Programs {
             context.httpAjaxContext.ajax_rsp_assign_attri("", false, "AV7centidadfederativadsc", AV7centidadfederativadsc);
             lV8centidadfederativausuario = StringUtil.Concat( StringUtil.RTrim( AV8centidadfederativausuario), "%", "");
             context.httpAjaxContext.ajax_rsp_assign_attri("", false, "AV8centidadfederativausuario", AV8centidadfederativausuario);
-            /* Using cursor H000A2 */
+            /* Using cursor H001T2 */
             pr_default.execute(0, new Object[] {AV6centidafederativaid, lV7centidadfederativadsc, lV8centidadfederativausuario, AV9centidadfederativafecreg, AV10centidadfederativafecultact, GXPagingFrom2, GXPagingTo2, GXPagingTo2});
             nGXsfl_64_idx = 1;
             while ( ( (pr_default.getStatus(0) != 101) ) && ( ( ( 10 == 0 ) || ( GRID1_nCurrentRecord < subGrid1_Recordsperpage( ) ) ) ) )
             {
-               A111entidadfederativafecultact = H000A2_A111entidadfederativafecultact[0];
-               n111entidadfederativafecultact = H000A2_n111entidadfederativafecultact[0];
-               A110entidadfederativafecreg = H000A2_A110entidadfederativafecreg[0];
-               n110entidadfederativafecreg = H000A2_n110entidadfederativafecreg[0];
-               A109entidadfederativausuario = H000A2_A109entidadfederativausuario[0];
-               n109entidadfederativausuario = H000A2_n109entidadfederativausuario[0];
-               A108entidadfederativadsc = H000A2_A108entidadfederativadsc[0];
-               n108entidadfederativadsc = H000A2_n108entidadfederativadsc[0];
-               A7entidafederativaid = H000A2_A7entidafederativaid[0];
-               /* Execute user event: E180A2 */
-               E180A2 ();
+               A111entidadfederativafecultact = H001T2_A111entidadfederativafecultact[0];
+               n111entidadfederativafecultact = H001T2_n111entidadfederativafecultact[0];
+               A110entidadfederativafecreg = H001T2_A110entidadfederativafecreg[0];
+               n110entidadfederativafecreg = H001T2_n110entidadfederativafecreg[0];
+               A109entidadfederativausuario = H001T2_A109entidadfederativausuario[0];
+               n109entidadfederativausuario = H001T2_n109entidadfederativausuario[0];
+               A108entidadfederativadsc = H001T2_A108entidadfederativadsc[0];
+               n108entidadfederativadsc = H001T2_n108entidadfederativadsc[0];
+               A7entidafederativaid = H001T2_A7entidafederativaid[0];
+               /* Execute user event: E181T2 */
+               E181T2 ();
                pr_default.readNext(0);
             }
             GRID1_nEOF = (short)(((pr_default.getStatus(0) == 101) ? 1 : 0));
             GxWebStd.gx_hidden_field( context, "GRID1_nEOF", StringUtil.LTrim( StringUtil.NToC( (decimal)(GRID1_nEOF), 1, 0, ".", "")));
             pr_default.close(0);
             wbEnd = 64;
-            WB0A0( ) ;
+            WB1T0( ) ;
          }
          nGXsfl_64_Refreshing = 0;
       }
@@ -1102,9 +1102,9 @@ namespace GeneXus.Programs {
          context.httpAjaxContext.ajax_rsp_assign_attri("", false, "AV7centidadfederativadsc", AV7centidadfederativadsc);
          lV8centidadfederativausuario = StringUtil.Concat( StringUtil.RTrim( AV8centidadfederativausuario), "%", "");
          context.httpAjaxContext.ajax_rsp_assign_attri("", false, "AV8centidadfederativausuario", AV8centidadfederativausuario);
-         /* Using cursor H000A3 */
+         /* Using cursor H001T3 */
          pr_default.execute(1, new Object[] {AV6centidafederativaid, lV7centidadfederativadsc, lV8centidadfederativausuario, AV9centidadfederativafecreg, AV10centidadfederativafecultact});
-         GRID1_nRecordCount = H000A3_AGRID1_nRecordCount[0];
+         GRID1_nRecordCount = H001T3_AGRID1_nRecordCount[0];
          pr_default.close(1);
          return (int)(GRID1_nRecordCount) ;
       }
@@ -1211,14 +1211,14 @@ namespace GeneXus.Programs {
          return (int)(0) ;
       }
 
-      protected void STRUP0A0( )
+      protected void STRUP1T0( )
       {
          /* Before Start, stand alone formulas. */
          context.Gx_err = 0;
          /* Execute Start event if defined. */
          context.wbGlbDoneStart = 0;
-         /* Execute user event: E170A2 */
-         E170A2 ();
+         /* Execute user event: E171T2 */
+         E171T2 ();
          context.wbGlbDoneStart = 1;
          /* After Start, stand alone formulas. */
          if ( StringUtil.StrCmp(context.GetRequestMethod( ), "POST") == 0 )
@@ -1308,8 +1308,8 @@ namespace GeneXus.Programs {
 
       protected void GXStart( )
       {
-         /* Execute user event: E170A2 */
-         E170A2 ();
+         /* Execute user event: E171T2 */
+         E171T2 ();
          if ( returnInSub )
          {
             returnInSub = true;
@@ -1317,7 +1317,7 @@ namespace GeneXus.Programs {
          }
       }
 
-      protected void E170A2( )
+      protected void E171T2( )
       {
          /* Start Routine */
          Form.Caption = StringUtil.Format( "Lista de Selección %1", "entidadfederativa", "", "", "", "", "", "", "", "");
@@ -1325,7 +1325,7 @@ namespace GeneXus.Programs {
          AV12ADVANCED_LABEL_TEMPLATE = "%1 <strong>%2</strong>";
       }
 
-      private void E180A2( )
+      private void E181T2( )
       {
          /* Load Routine */
          AV5LinkSelection = context.GetImagePath( "3914535b-0c03-44c5-9538-906a99cdd2bc", "", context.GetTheme( ));
@@ -1341,8 +1341,8 @@ namespace GeneXus.Programs {
 
       public void GXEnter( )
       {
-         /* Execute user event: E190A2 */
-         E190A2 ();
+         /* Execute user event: E191T2 */
+         E191T2 ();
          if ( returnInSub )
          {
             returnInSub = true;
@@ -1350,7 +1350,7 @@ namespace GeneXus.Programs {
          }
       }
 
-      protected void E190A2( )
+      protected void E191T2( )
       {
          /* Enter Routine */
          AV11pentidafederativaid = A7entidafederativaid;
@@ -1380,9 +1380,9 @@ namespace GeneXus.Programs {
          nGotPars = (short)(1);
          nGXWrapped = (short)(1);
          context.SetWrapped(true);
-         PA0A2( ) ;
-         WS0A2( ) ;
-         WE0A2( ) ;
+         PA1T2( ) ;
+         WS1T2( ) ;
+         WE1T2( ) ;
          this.cleanup();
          context.SetWrapped(false);
          context.GX_msglist = BackMsgLst;
@@ -1395,12 +1395,12 @@ namespace GeneXus.Programs {
 
       protected void define_styles( )
       {
-         AddStyleSheetFile("calendar-system.css", "?13205289");
-         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?3485073");
+         AddStyleSheetFile("calendar-system.css", "?11323129");
+         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?1734189");
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?20221233492675");
+            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?202212517351154");
             idxLst = (int)(idxLst+1);
          }
          /* End function define_styles */
@@ -1409,7 +1409,7 @@ namespace GeneXus.Programs {
       protected void include_jscripts( )
       {
          context.AddJavascriptSource("messages.spa.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("gx0040.js", "?20221233492675");
+         context.AddJavascriptSource("gx0040.js", "?202212517351155");
          /* End function include_jscripts */
       }
 
@@ -1430,7 +1430,7 @@ namespace GeneXus.Programs {
       protected void sendrow_642( )
       {
          SubsflControlProps_642( ) ;
-         WB0A0( ) ;
+         WB1T0( ) ;
          if ( ( 10 * 1 == 0 ) || ( nGXsfl_64_idx <= subGrid1_Recordsperpage( ) * 1 ) )
          {
             Grid1Row = GXWebRow.GetNew(context,Grid1Container);
@@ -1659,13 +1659,13 @@ namespace GeneXus.Programs {
       public override void InitializeDynEvents( )
       {
          setEventMetadata("REFRESH","{handler:'Refresh',iparms:[{av:'GRID1_nFirstRecordOnPage',nv:0},{av:'GRID1_nEOF',nv:0},{av:'subGrid1_Rows',nv:0},{av:'AV6centidafederativaid',fld:'vCENTIDAFEDERATIVAID',pic:'ZZZZZZZZ9',nv:0},{av:'AV7centidadfederativadsc',fld:'vCENTIDADFEDERATIVADSC',pic:'',nv:''},{av:'AV8centidadfederativausuario',fld:'vCENTIDADFEDERATIVAUSUARIO',pic:'',nv:''},{av:'AV9centidadfederativafecreg',fld:'vCENTIDADFEDERATIVAFECREG',pic:'99/99/9999 99:99:99',nv:''},{av:'AV10centidadfederativafecultact',fld:'vCENTIDADFEDERATIVAFECULTACT',pic:'99/99/9999 99:99:99',nv:''}],oparms:[]}");
-         setEventMetadata("'TOGGLE'","{handler:'E160A1',iparms:[{av:'divAdvancedcontainer_Class',ctrl:'ADVANCEDCONTAINER',prop:'Class'},{ctrl:'BTNTOGGLE',prop:'Class'}],oparms:[{av:'divAdvancedcontainer_Class',ctrl:'ADVANCEDCONTAINER',prop:'Class'},{ctrl:'BTNTOGGLE',prop:'Class'}]}");
-         setEventMetadata("LBLENTIDAFEDERATIVAIDFILTER.CLICK","{handler:'E110A1',iparms:[{av:'divEntidafederativaidfiltercontainer_Class',ctrl:'ENTIDAFEDERATIVAIDFILTERCONTAINER',prop:'Class'}],oparms:[{av:'divEntidafederativaidfiltercontainer_Class',ctrl:'ENTIDAFEDERATIVAIDFILTERCONTAINER',prop:'Class'},{av:'edtavCentidafederativaid_Visible',ctrl:'vCENTIDAFEDERATIVAID',prop:'Visible'}]}");
-         setEventMetadata("LBLENTIDADFEDERATIVADSCFILTER.CLICK","{handler:'E120A1',iparms:[{av:'divEntidadfederativadscfiltercontainer_Class',ctrl:'ENTIDADFEDERATIVADSCFILTERCONTAINER',prop:'Class'}],oparms:[{av:'divEntidadfederativadscfiltercontainer_Class',ctrl:'ENTIDADFEDERATIVADSCFILTERCONTAINER',prop:'Class'},{av:'edtavCentidadfederativadsc_Visible',ctrl:'vCENTIDADFEDERATIVADSC',prop:'Visible'}]}");
-         setEventMetadata("LBLENTIDADFEDERATIVAUSUARIOFILTER.CLICK","{handler:'E130A1',iparms:[{av:'divEntidadfederativausuariofiltercontainer_Class',ctrl:'ENTIDADFEDERATIVAUSUARIOFILTERCONTAINER',prop:'Class'}],oparms:[{av:'divEntidadfederativausuariofiltercontainer_Class',ctrl:'ENTIDADFEDERATIVAUSUARIOFILTERCONTAINER',prop:'Class'},{av:'edtavCentidadfederativausuario_Visible',ctrl:'vCENTIDADFEDERATIVAUSUARIO',prop:'Visible'}]}");
-         setEventMetadata("LBLENTIDADFEDERATIVAFECREGFILTER.CLICK","{handler:'E140A1',iparms:[{av:'divEntidadfederativafecregfiltercontainer_Class',ctrl:'ENTIDADFEDERATIVAFECREGFILTERCONTAINER',prop:'Class'}],oparms:[{av:'divEntidadfederativafecregfiltercontainer_Class',ctrl:'ENTIDADFEDERATIVAFECREGFILTERCONTAINER',prop:'Class'}]}");
-         setEventMetadata("LBLENTIDADFEDERATIVAFECULTACTFILTER.CLICK","{handler:'E150A1',iparms:[{av:'divEntidadfederativafecultactfiltercontainer_Class',ctrl:'ENTIDADFEDERATIVAFECULTACTFILTERCONTAINER',prop:'Class'}],oparms:[{av:'divEntidadfederativafecultactfiltercontainer_Class',ctrl:'ENTIDADFEDERATIVAFECULTACTFILTERCONTAINER',prop:'Class'}]}");
-         setEventMetadata("ENTER","{handler:'E190A2',iparms:[{av:'A7entidafederativaid',fld:'ENTIDAFEDERATIVAID',pic:'ZZZZZZZZ9',hsh:true,nv:0}],oparms:[{av:'AV11pentidafederativaid',fld:'vPENTIDAFEDERATIVAID',pic:'ZZZZZZZZ9',nv:0}]}");
+         setEventMetadata("'TOGGLE'","{handler:'E161T1',iparms:[{av:'divAdvancedcontainer_Class',ctrl:'ADVANCEDCONTAINER',prop:'Class'},{ctrl:'BTNTOGGLE',prop:'Class'}],oparms:[{av:'divAdvancedcontainer_Class',ctrl:'ADVANCEDCONTAINER',prop:'Class'},{ctrl:'BTNTOGGLE',prop:'Class'}]}");
+         setEventMetadata("LBLENTIDAFEDERATIVAIDFILTER.CLICK","{handler:'E111T1',iparms:[{av:'divEntidafederativaidfiltercontainer_Class',ctrl:'ENTIDAFEDERATIVAIDFILTERCONTAINER',prop:'Class'}],oparms:[{av:'divEntidafederativaidfiltercontainer_Class',ctrl:'ENTIDAFEDERATIVAIDFILTERCONTAINER',prop:'Class'},{av:'edtavCentidafederativaid_Visible',ctrl:'vCENTIDAFEDERATIVAID',prop:'Visible'}]}");
+         setEventMetadata("LBLENTIDADFEDERATIVADSCFILTER.CLICK","{handler:'E121T1',iparms:[{av:'divEntidadfederativadscfiltercontainer_Class',ctrl:'ENTIDADFEDERATIVADSCFILTERCONTAINER',prop:'Class'}],oparms:[{av:'divEntidadfederativadscfiltercontainer_Class',ctrl:'ENTIDADFEDERATIVADSCFILTERCONTAINER',prop:'Class'},{av:'edtavCentidadfederativadsc_Visible',ctrl:'vCENTIDADFEDERATIVADSC',prop:'Visible'}]}");
+         setEventMetadata("LBLENTIDADFEDERATIVAUSUARIOFILTER.CLICK","{handler:'E131T1',iparms:[{av:'divEntidadfederativausuariofiltercontainer_Class',ctrl:'ENTIDADFEDERATIVAUSUARIOFILTERCONTAINER',prop:'Class'}],oparms:[{av:'divEntidadfederativausuariofiltercontainer_Class',ctrl:'ENTIDADFEDERATIVAUSUARIOFILTERCONTAINER',prop:'Class'},{av:'edtavCentidadfederativausuario_Visible',ctrl:'vCENTIDADFEDERATIVAUSUARIO',prop:'Visible'}]}");
+         setEventMetadata("LBLENTIDADFEDERATIVAFECREGFILTER.CLICK","{handler:'E141T1',iparms:[{av:'divEntidadfederativafecregfiltercontainer_Class',ctrl:'ENTIDADFEDERATIVAFECREGFILTERCONTAINER',prop:'Class'}],oparms:[{av:'divEntidadfederativafecregfiltercontainer_Class',ctrl:'ENTIDADFEDERATIVAFECREGFILTERCONTAINER',prop:'Class'}]}");
+         setEventMetadata("LBLENTIDADFEDERATIVAFECULTACTFILTER.CLICK","{handler:'E151T1',iparms:[{av:'divEntidadfederativafecultactfiltercontainer_Class',ctrl:'ENTIDADFEDERATIVAFECULTACTFILTERCONTAINER',prop:'Class'}],oparms:[{av:'divEntidadfederativafecultactfiltercontainer_Class',ctrl:'ENTIDADFEDERATIVAFECULTACTFILTERCONTAINER',prop:'Class'}]}");
+         setEventMetadata("ENTER","{handler:'E191T2',iparms:[{av:'A7entidafederativaid',fld:'ENTIDAFEDERATIVAID',pic:'ZZZZZZZZ9',hsh:true,nv:0}],oparms:[{av:'AV11pentidafederativaid',fld:'vPENTIDAFEDERATIVAID',pic:'ZZZZZZZZ9',nv:0}]}");
          setEventMetadata("GRID1_FIRSTPAGE","{handler:'subgrid1_firstpage',iparms:[{av:'GRID1_nFirstRecordOnPage',nv:0},{av:'GRID1_nEOF',nv:0},{av:'subGrid1_Rows',nv:0},{av:'AV6centidafederativaid',fld:'vCENTIDAFEDERATIVAID',pic:'ZZZZZZZZ9',nv:0},{av:'AV7centidadfederativadsc',fld:'vCENTIDADFEDERATIVADSC',pic:'',nv:''},{av:'AV8centidadfederativausuario',fld:'vCENTIDADFEDERATIVAUSUARIO',pic:'',nv:''},{av:'AV9centidadfederativafecreg',fld:'vCENTIDADFEDERATIVAFECREG',pic:'99/99/9999 99:99:99',nv:''},{av:'AV10centidadfederativafecultact',fld:'vCENTIDADFEDERATIVAFECULTACT',pic:'99/99/9999 99:99:99',nv:''}],oparms:[]}");
          setEventMetadata("GRID1_PREVPAGE","{handler:'subgrid1_previouspage',iparms:[{av:'GRID1_nFirstRecordOnPage',nv:0},{av:'GRID1_nEOF',nv:0},{av:'subGrid1_Rows',nv:0},{av:'AV6centidafederativaid',fld:'vCENTIDAFEDERATIVAID',pic:'ZZZZZZZZ9',nv:0},{av:'AV7centidadfederativadsc',fld:'vCENTIDADFEDERATIVADSC',pic:'',nv:''},{av:'AV8centidadfederativausuario',fld:'vCENTIDADFEDERATIVAUSUARIO',pic:'',nv:''},{av:'AV9centidadfederativafecreg',fld:'vCENTIDADFEDERATIVAFECREG',pic:'99/99/9999 99:99:99',nv:''},{av:'AV10centidadfederativafecultact',fld:'vCENTIDADFEDERATIVAFECULTACT',pic:'99/99/9999 99:99:99',nv:''}],oparms:[]}");
          setEventMetadata("GRID1_NEXTPAGE","{handler:'subgrid1_nextpage',iparms:[{av:'GRID1_nFirstRecordOnPage',nv:0},{av:'GRID1_nEOF',nv:0},{av:'subGrid1_Rows',nv:0},{av:'AV6centidafederativaid',fld:'vCENTIDAFEDERATIVAID',pic:'ZZZZZZZZ9',nv:0},{av:'AV7centidadfederativadsc',fld:'vCENTIDADFEDERATIVADSC',pic:'',nv:''},{av:'AV8centidadfederativausuario',fld:'vCENTIDADFEDERATIVAUSUARIO',pic:'',nv:''},{av:'AV9centidadfederativafecreg',fld:'vCENTIDADFEDERATIVAFECREG',pic:'99/99/9999 99:99:99',nv:''},{av:'AV10centidadfederativafecultact',fld:'vCENTIDADFEDERATIVAFECULTACT',pic:'99/99/9999 99:99:99',nv:''}],oparms:[]}");
@@ -1729,16 +1729,16 @@ namespace GeneXus.Programs {
          A109entidadfederativausuario = "";
          A110entidadfederativafecreg = (DateTime)(DateTime.MinValue);
          A111entidadfederativafecultact = (DateTime)(DateTime.MinValue);
-         H000A2_A111entidadfederativafecultact = new DateTime[] {DateTime.MinValue} ;
-         H000A2_n111entidadfederativafecultact = new bool[] {false} ;
-         H000A2_A110entidadfederativafecreg = new DateTime[] {DateTime.MinValue} ;
-         H000A2_n110entidadfederativafecreg = new bool[] {false} ;
-         H000A2_A109entidadfederativausuario = new String[] {""} ;
-         H000A2_n109entidadfederativausuario = new bool[] {false} ;
-         H000A2_A108entidadfederativadsc = new String[] {""} ;
-         H000A2_n108entidadfederativadsc = new bool[] {false} ;
-         H000A2_A7entidafederativaid = new int[1] ;
-         H000A3_AGRID1_nRecordCount = new long[1] ;
+         H001T2_A111entidadfederativafecultact = new DateTime[] {DateTime.MinValue} ;
+         H001T2_n111entidadfederativafecultact = new bool[] {false} ;
+         H001T2_A110entidadfederativafecreg = new DateTime[] {DateTime.MinValue} ;
+         H001T2_n110entidadfederativafecreg = new bool[] {false} ;
+         H001T2_A109entidadfederativausuario = new String[] {""} ;
+         H001T2_n109entidadfederativausuario = new bool[] {false} ;
+         H001T2_A108entidadfederativadsc = new String[] {""} ;
+         H001T2_n108entidadfederativadsc = new bool[] {false} ;
+         H001T2_A7entidafederativaid = new int[1] ;
+         H001T3_AGRID1_nRecordCount = new long[1] ;
          AV12ADVANCED_LABEL_TEMPLATE = "";
          Grid1Row = new GXWebRow();
          BackMsgLst = new msglist();
@@ -1747,10 +1747,10 @@ namespace GeneXus.Programs {
          pr_default = new DataStoreProvider(context, new GeneXus.Programs.gx0040__default(),
             new Object[][] {
                 new Object[] {
-               H000A2_A111entidadfederativafecultact, H000A2_n111entidadfederativafecultact, H000A2_A110entidadfederativafecreg, H000A2_n110entidadfederativafecreg, H000A2_A109entidadfederativausuario, H000A2_n109entidadfederativausuario, H000A2_A108entidadfederativadsc, H000A2_n108entidadfederativadsc, H000A2_A7entidafederativaid
+               H001T2_A111entidadfederativafecultact, H001T2_n111entidadfederativafecultact, H001T2_A110entidadfederativafecreg, H001T2_n110entidadfederativafecreg, H001T2_A109entidadfederativausuario, H001T2_n109entidadfederativausuario, H001T2_A108entidadfederativadsc, H001T2_n108entidadfederativadsc, H001T2_A7entidafederativaid
                }
                , new Object[] {
-               H000A3_AGRID1_nRecordCount
+               H001T3_AGRID1_nRecordCount
                }
             }
          );
@@ -1901,16 +1901,16 @@ namespace GeneXus.Programs {
       private GXWebColumn Grid1Column ;
       private IGxDataStore dsDefault ;
       private IDataStoreProvider pr_default ;
-      private DateTime[] H000A2_A111entidadfederativafecultact ;
-      private bool[] H000A2_n111entidadfederativafecultact ;
-      private DateTime[] H000A2_A110entidadfederativafecreg ;
-      private bool[] H000A2_n110entidadfederativafecreg ;
-      private String[] H000A2_A109entidadfederativausuario ;
-      private bool[] H000A2_n109entidadfederativausuario ;
-      private String[] H000A2_A108entidadfederativadsc ;
-      private bool[] H000A2_n108entidadfederativadsc ;
-      private int[] H000A2_A7entidafederativaid ;
-      private long[] H000A3_AGRID1_nRecordCount ;
+      private DateTime[] H001T2_A111entidadfederativafecultact ;
+      private bool[] H001T2_n111entidadfederativafecultact ;
+      private DateTime[] H001T2_A110entidadfederativafecreg ;
+      private bool[] H001T2_n110entidadfederativafecreg ;
+      private String[] H001T2_A109entidadfederativausuario ;
+      private bool[] H001T2_n109entidadfederativausuario ;
+      private String[] H001T2_A108entidadfederativadsc ;
+      private bool[] H001T2_n108entidadfederativadsc ;
+      private int[] H001T2_A7entidafederativaid ;
+      private long[] H001T3_AGRID1_nRecordCount ;
       private msglist BackMsgLst ;
       private msglist LclMsgLst ;
       private int aP0_pentidafederativaid ;
@@ -1919,7 +1919,7 @@ namespace GeneXus.Programs {
 
    public class gx0040__default : DataStoreHelperBase, IDataStoreHelper
    {
-      protected Object[] conditional_H000A2( IGxContext context ,
+      protected Object[] conditional_H001T2( IGxContext context ,
                                              String AV7centidadfederativadsc ,
                                              String AV8centidadfederativausuario ,
                                              DateTime AV9centidadfederativafecreg ,
@@ -1982,7 +1982,7 @@ namespace GeneXus.Programs {
          return GXv_Object2 ;
       }
 
-      protected Object[] conditional_H000A3( IGxContext context ,
+      protected Object[] conditional_H001T3( IGxContext context ,
                                              String AV7centidadfederativadsc ,
                                              String AV8centidadfederativausuario ,
                                              DateTime AV9centidadfederativafecreg ,
@@ -2047,9 +2047,9 @@ namespace GeneXus.Programs {
          switch ( cursor )
          {
                case 0 :
-                     return conditional_H000A2(context, (String)dynConstraints[0] , (String)dynConstraints[1] , (DateTime)dynConstraints[2] , (DateTime)dynConstraints[3] , (String)dynConstraints[4] , (String)dynConstraints[5] , (DateTime)dynConstraints[6] , (DateTime)dynConstraints[7] , (int)dynConstraints[8] );
+                     return conditional_H001T2(context, (String)dynConstraints[0] , (String)dynConstraints[1] , (DateTime)dynConstraints[2] , (DateTime)dynConstraints[3] , (String)dynConstraints[4] , (String)dynConstraints[5] , (DateTime)dynConstraints[6] , (DateTime)dynConstraints[7] , (int)dynConstraints[8] );
                case 1 :
-                     return conditional_H000A3(context, (String)dynConstraints[0] , (String)dynConstraints[1] , (DateTime)dynConstraints[2] , (DateTime)dynConstraints[3] , (String)dynConstraints[4] , (String)dynConstraints[5] , (DateTime)dynConstraints[6] , (DateTime)dynConstraints[7] , (int)dynConstraints[8] );
+                     return conditional_H001T3(context, (String)dynConstraints[0] , (String)dynConstraints[1] , (DateTime)dynConstraints[2] , (DateTime)dynConstraints[3] , (String)dynConstraints[4] , (String)dynConstraints[5] , (DateTime)dynConstraints[6] , (DateTime)dynConstraints[7] , (int)dynConstraints[8] );
          }
          return base.getDynamicStatement(cursor, context, dynConstraints);
       }
@@ -2068,8 +2068,8 @@ namespace GeneXus.Programs {
     {
        if ( def == null )
        {
-          Object[] prmH000A2 ;
-          prmH000A2 = new Object[] {
+          Object[] prmH001T2 ;
+          prmH001T2 = new Object[] {
           new Object[] {"AV6centidafederativaid",NpgsqlDbType.Integer,9,0} ,
           new Object[] {"lV7centidadfederativadsc",NpgsqlDbType.Varchar,100,0} ,
           new Object[] {"lV8centidadfederativausuario",NpgsqlDbType.Varchar,15,0} ,
@@ -2079,8 +2079,8 @@ namespace GeneXus.Programs {
           new Object[] {"GXPagingTo2",NpgsqlDbType.Integer,9,0} ,
           new Object[] {"GXPagingTo2",NpgsqlDbType.Integer,9,0}
           } ;
-          Object[] prmH000A3 ;
-          prmH000A3 = new Object[] {
+          Object[] prmH001T3 ;
+          prmH001T3 = new Object[] {
           new Object[] {"AV6centidafederativaid",NpgsqlDbType.Integer,9,0} ,
           new Object[] {"lV7centidadfederativadsc",NpgsqlDbType.Varchar,100,0} ,
           new Object[] {"lV8centidadfederativausuario",NpgsqlDbType.Varchar,15,0} ,
@@ -2088,8 +2088,8 @@ namespace GeneXus.Programs {
           new Object[] {"AV10centidadfederativafecultact",NpgsqlDbType.Timestamp,10,8}
           } ;
           def= new CursorDef[] {
-              new CursorDef("H000A2", "scmdbuf",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmH000A2,11,0,false,false )
-             ,new CursorDef("H000A3", "scmdbuf",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmH000A3,1,0,false,false )
+              new CursorDef("H001T2", "scmdbuf",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmH001T2,11,0,false,false )
+             ,new CursorDef("H001T3", "scmdbuf",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmH001T3,1,0,false,false )
           };
        }
     }

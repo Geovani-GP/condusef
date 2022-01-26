@@ -2,7 +2,7 @@
                File: marcas_BC
         Description: marcas
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 1/23/2022 3:49:0.85
+       Generated on: 1/25/2022 17:34:20.49
        Program type: Callable routine
           Main DBMS: postgresql
 */

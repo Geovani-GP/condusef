@@ -101,6 +101,7 @@ a897d5df-1d95-42a8-9974-13f23ddeb0f8=login_modified2
 507104ae-9f67-49f2-9069-07863c114c37=login_modified5
 5f30ca97-9603-4cf3-8c47-b1a261245deb=ABEJA_90X90_chat
 a6caa308-5b46-4f81-8b4f-9a458d476a33=Secretaria
+4501a883-ab40-469d-8b9a-8ccc7365672d=Img633d40ba_3969_45dd_a795_ed0fdb93aaf4
 [Location]
 90274dae-49c6-47ae-98c4-7a8f5eb82c12=Spanish,Flat,I,Flat/PageFirst.png
 90274dae-49c6-47ae-98c4-7a8f5eb82c12=Spanish,GeneXusXEv2,I,GeneXusXEv2/PageFirst.png
@@ -510,3 +511,7 @@ a6caa308-5b46-4f81-8b4f-9a458d476a33=Spanish,Flat,I,Secretaria.png
 a6caa308-5b46-4f81-8b4f-9a458d476a33=Spanish,GeneXusXEv2,I,Secretaria.png
 a6caa308-5b46-4f81-8b4f-9a458d476a33=Spanish,Classic,I,Secretaria.png
 a6caa308-5b46-4f81-8b4f-9a458d476a33=Spanish,GeneXusX,I,Secretaria.png
+4501a883-ab40-469d-8b9a-8ccc7365672d=Spanish,Flat,I,Img633d40ba_3969_45dd_a795_ed0fdb93aaf4.jfif
+4501a883-ab40-469d-8b9a-8ccc7365672d=Spanish,GeneXusXEv2,I,Img633d40ba_3969_45dd_a795_ed0fdb93aaf4.jfif
+4501a883-ab40-469d-8b9a-8ccc7365672d=Spanish,Classic,I,Img633d40ba_3969_45dd_a795_ed0fdb93aaf4.jfif
+4501a883-ab40-469d-8b9a-8ccc7365672d=Spanish,GeneXusX,I,Img633d40ba_3969_45dd_a795_ed0fdb93aaf4.jfif

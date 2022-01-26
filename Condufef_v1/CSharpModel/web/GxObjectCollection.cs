@@ -2,7 +2,7 @@
                File: GxObjectCollection
         Description: No description for object
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 1/23/2022 3:49:51.82
+       Generated on: 1/25/2022 17:35:44.63
        Program type: Callable routine
           Main DBMS: postgresql
 */

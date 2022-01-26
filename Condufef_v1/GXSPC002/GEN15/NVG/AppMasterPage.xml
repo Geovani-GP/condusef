@@ -21,7 +21,5 @@
 <Event>
 <EventName>Start</EventName></Event>
 <Event>
-<EventName>Refresh</EventName></Event>
-<Event>
 <EventName>Load</EventName></Event>
 <Suggests></Suggests></ObjectSpec>

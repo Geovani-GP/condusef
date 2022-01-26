@@ -2,7 +2,7 @@
                File: type_Sdtmodelos
         Description: modelos
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 1/23/2022 3:49:18.46
+       Generated on: 1/25/2022 17:34:54.91
        Program type: Callable routine
           Main DBMS: postgresql
 */

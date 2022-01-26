@@ -16,4 +16,3 @@
 /r:GxBaseBuilder.dll
 /out:bin\menuprincipal.dll
 menuprincipal.cs
-gpxmenudemo.cs

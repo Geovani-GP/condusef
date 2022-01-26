@@ -2,7 +2,7 @@
                File: Login
         Description: Login
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 1/23/2022 3:49:20.57
+       Generated on: 1/25/2022 18:27:52.30
        Program type: Main program
           Main DBMS: postgresql
 */
@@ -33,7 +33,7 @@ using System.ServiceModel;
 using System.ServiceModel.Activation;
 using System.Runtime.Serialization;
 namespace GeneXus.Programs {
-   public class login : GXDataArea, System.Web.SessionState.IRequiresSessionState
+   public class login : GXHttpHandler, System.Web.SessionState.IRequiresSessionState
    {
       public login( )
       {
@@ -144,10 +144,18 @@ namespace GeneXus.Programs {
          INITWEB( ) ;
          if ( ! isAjaxCallMode( ) )
          {
-            MasterPageObj = (GXMasterPage) ClassLoader.GetInstance("rwdmasterpage", "GeneXus.Programs.rwdmasterpage", new Object[] {new GxContext( context.handle, context.DataStores, context.HttpContext)});
-            MasterPageObj.setDataArea(this,false);
             ValidateSpaRequest();
-            MasterPageObj.webExecute();
+            PA0S2( ) ;
+            if ( ( GxWebError == 0 ) && ! isAjaxCallMode( ) )
+            {
+               /* GeneXus formulas. */
+               context.Gx_err = 0;
+               WS0S2( ) ;
+               if ( ! isAjaxCallMode( ) )
+               {
+                  WE0S2( ) ;
+               }
+            }
             if ( ( GxWebError == 0 ) && context.isAjaxRequest( ) )
             {
                enableOutput();
@@ -174,30 +182,19 @@ namespace GeneXus.Programs {
          this.cleanup();
       }
 
-      public override short ExecuteStartEvent( )
-      {
-         PA0S2( ) ;
-         gxajaxcallmode = (short)((isAjaxCallMode( ) ? 1 : 0));
-         if ( ( gxajaxcallmode == 0 ) && ( GxWebError == 0 ) )
-         {
-            START0S2( ) ;
-         }
-         return gxajaxcallmode ;
-      }
-
-      public override void RenderHtmlHeaders( )
+      protected void RenderHtmlHeaders( )
       {
          GxWebStd.gx_html_headers( context, 0, "", "", Form.Meta, Form.Metaequiv);
       }
 
-      public override void RenderHtmlOpenForm( )
+      protected void RenderHtmlOpenForm( )
       {
          if ( context.isSpaRequest( ) )
          {
             enableOutput();
          }
          context.WriteHtmlText( "<title>") ;
-         context.SendWebValue( Form.Caption) ;
+         context.SendWebValue( "Login") ;
          context.WriteHtmlTextNl( "</title>") ;
          if ( context.isSpaRequest( ) )
          {
@@ -208,19 +205,14 @@ namespace GeneXus.Programs {
             context.WriteHtmlText( "<BASE href=\""+sDynURL+"\" />") ;
          }
          define_styles( ) ;
-         if ( nGXWrapped != 1 )
-         {
-            MasterPageObj.master_styles();
-         }
          context.AddJavascriptSource("jquery.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxtimezone.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxgral.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("gxcfg.js", "?20221233492058");
+         context.AddJavascriptSource("gxcfg.js", "?202212518275233");
          if ( context.isSpaRequest( ) )
          {
             enableOutput();
          }
-         context.WriteHtmlText( Form.Headerrawhtml) ;
          context.CloseHtmlHeader();
          if ( context.isSpaRequest( ) )
          {
@@ -228,14 +220,10 @@ namespace GeneXus.Programs {
          }
          FormProcess = " data-HasEnter=\"false\" data-Skiponenter=\"false\"";
          context.WriteHtmlText( "<body") ;
-         bodyStyle = "" + "background-color:" + context.BuildHTMLColor( Form.Backcolor) + ";color:" + context.BuildHTMLColor( Form.Textcolor) + ";";
+         bodyStyle = "";
          if ( nGXWrapped == 0 )
          {
             bodyStyle = bodyStyle + ";-moz-opacity:0;opacity:0;";
-         }
-         if ( ! ( String.IsNullOrEmpty(StringUtil.RTrim( Form.Background)) ) )
-         {
-            bodyStyle = bodyStyle + " background-image:url(" + context.convertURL( Form.Background) + ")";
          }
          context.WriteHtmlText( " "+"class=\"Form\""+" "+ "style='"+bodyStyle+"'") ;
          context.WriteHtmlText( FormProcess+">") ;
@@ -258,11 +246,10 @@ namespace GeneXus.Programs {
          /* Send saved values. */
          GxWebStd.gx_hidden_field( context, "USUARIO", A173usuario);
          GxWebStd.gx_hidden_field( context, "CONTRASENA", A174contrasena);
-         GxWebStd.gx_hidden_field( context, "vIDUSUARIO", StringUtil.LTrim( StringUtil.NToC( (decimal)(AV9idusuario), 9, 0, ",", "")));
          GXKey = Crypto.Decrypt64( context.GetCookie( "GX_SESSION_ID"), Crypto.GetServerKey( ));
       }
 
-      public override void RenderHtmlCloseForm( )
+      protected void RenderHtmlCloseForm0S2( )
       {
          SendCloseFormHiddens( ) ;
          GxWebStd.gx_hidden_field( context, "GX_FocusControl", GX_FocusControl);
@@ -281,39 +268,12 @@ namespace GeneXus.Programs {
             enableOutput();
          }
          include_jscripts( ) ;
-      }
-
-      public override void RenderHtmlContent( )
-      {
-         gxajaxcallmode = (short)((isAjaxCallMode( ) ? 1 : 0));
-         if ( ( gxajaxcallmode == 0 ) && ( GxWebError == 0 ) )
+         context.WriteHtmlTextNl( "</body>") ;
+         context.WriteHtmlTextNl( "</html>") ;
+         if ( context.isSpaRequest( ) )
          {
-            context.WriteHtmlText( "<div") ;
-            GxWebStd.ClassAttribute( context, "gx-ct-body"+" "+(String.IsNullOrEmpty(StringUtil.RTrim( Form.Class)) ? "Form" : Form.Class)+"-fx");
-            context.WriteHtmlText( ">") ;
-            WE0S2( ) ;
-            context.WriteHtmlText( "</div>") ;
+            enableOutput();
          }
-      }
-
-      public override void DispatchEvents( )
-      {
-         EVT0S2( ) ;
-      }
-
-      public override bool HasEnterEvent( )
-      {
-         return false ;
-      }
-
-      public override GXWebForm GetForm( )
-      {
-         return Form ;
-      }
-
-      public override String GetSelfLink( )
-      {
-         return formatLink("login.aspx")  ;
       }
 
       public override String GetPgmname( )
@@ -334,11 +294,8 @@ namespace GeneXus.Programs {
          }
          if ( ! wbLoad )
          {
-            if ( nGXWrapped == 1 )
-            {
-               RenderHtmlHeaders( ) ;
-               RenderHtmlOpenForm( ) ;
-            }
+            RenderHtmlHeaders( ) ;
+            RenderHtmlOpenForm( ) ;
             context.WriteHtmlText( "&nbsp; ") ;
             wb_table1_3_0S2( true) ;
          }
@@ -397,59 +354,56 @@ namespace GeneXus.Programs {
                {
                   sEvtType = StringUtil.Left( sEvt, 1);
                   sEvt = StringUtil.Right( sEvt, (short)(StringUtil.Len( sEvt)-1));
-                  if ( StringUtil.StrCmp(sEvtType, "M") != 0 )
+                  if ( StringUtil.StrCmp(sEvtType, "E") == 0 )
                   {
-                     if ( StringUtil.StrCmp(sEvtType, "E") == 0 )
+                     sEvtType = StringUtil.Right( sEvt, 1);
+                     if ( StringUtil.StrCmp(sEvtType, ".") == 0 )
                      {
-                        sEvtType = StringUtil.Right( sEvt, 1);
-                        if ( StringUtil.StrCmp(sEvtType, ".") == 0 )
+                        sEvt = StringUtil.Left( sEvt, (short)(StringUtil.Len( sEvt)-1));
+                        if ( StringUtil.StrCmp(sEvt, "RFR") == 0 )
                         {
-                           sEvt = StringUtil.Left( sEvt, (short)(StringUtil.Len( sEvt)-1));
-                           if ( StringUtil.StrCmp(sEvt, "RFR") == 0 )
-                           {
-                              context.wbHandled = 1;
-                              dynload_actions( ) ;
-                           }
-                           else if ( StringUtil.StrCmp(sEvt, "'INICIAR SESIÓN '") == 0 )
-                           {
-                              context.wbHandled = 1;
-                              dynload_actions( ) ;
-                              /* Execute user event: E110S2 */
-                              E110S2 ();
-                           }
-                           else if ( StringUtil.StrCmp(sEvt, "LOAD") == 0 )
-                           {
-                              context.wbHandled = 1;
-                              dynload_actions( ) ;
-                              /* Execute user event: E120S2 */
-                              E120S2 ();
-                           }
-                           else if ( StringUtil.StrCmp(sEvt, "ENTER") == 0 )
-                           {
-                              context.wbHandled = 1;
-                              if ( ! wbErr )
-                              {
-                                 Rfr0gs = false;
-                                 if ( ! Rfr0gs )
-                                 {
-                                 }
-                                 dynload_actions( ) ;
-                              }
-                              /* No code required for Cancel button. It is implemented as the Reset button. */
-                           }
-                           else if ( StringUtil.StrCmp(sEvt, "LSCR") == 0 )
-                           {
-                              context.wbHandled = 1;
-                              dynload_actions( ) ;
-                              dynload_actions( ) ;
-                           }
+                           context.wbHandled = 1;
+                           dynload_actions( ) ;
                         }
-                        else
+                        else if ( StringUtil.StrCmp(sEvt, "'INICIAR SESIÓN '") == 0 )
                         {
+                           context.wbHandled = 1;
+                           dynload_actions( ) ;
+                           /* Execute user event: E110S2 */
+                           E110S2 ();
+                        }
+                        else if ( StringUtil.StrCmp(sEvt, "LOAD") == 0 )
+                        {
+                           context.wbHandled = 1;
+                           dynload_actions( ) ;
+                           /* Execute user event: E120S2 */
+                           E120S2 ();
+                        }
+                        else if ( StringUtil.StrCmp(sEvt, "ENTER") == 0 )
+                        {
+                           context.wbHandled = 1;
+                           if ( ! wbErr )
+                           {
+                              Rfr0gs = false;
+                              if ( ! Rfr0gs )
+                              {
+                              }
+                              dynload_actions( ) ;
+                           }
+                           /* No code required for Cancel button. It is implemented as the Reset button. */
+                        }
+                        else if ( StringUtil.StrCmp(sEvt, "LSCR") == 0 )
+                        {
+                           context.wbHandled = 1;
+                           dynload_actions( ) ;
+                           dynload_actions( ) ;
                         }
                      }
-                     context.wbHandled = 1;
+                     else
+                     {
+                     }
                   }
+                  context.wbHandled = 1;
                }
             }
          }
@@ -463,10 +417,7 @@ namespace GeneXus.Programs {
             Refresh( ) ;
             if ( ! GxWebStd.gx_redirect( context) )
             {
-               if ( nGXWrapped == 1 )
-               {
-                  RenderHtmlCloseForm( ) ;
-               }
+               RenderHtmlCloseForm0S2( ) ;
             }
          }
       }
@@ -568,7 +519,7 @@ namespace GeneXus.Programs {
       protected void E110S2( )
       {
          /* 'INICIAR SESIÓN ' Routine */
-         AV13GXLvl9 = 0;
+         AV15GXLvl9 = 0;
          /* Using cursor H000S2 */
          pr_default.execute(0, new Object[] {AV5usuario});
          while ( (pr_default.getStatus(0) != 101) )
@@ -577,11 +528,13 @@ namespace GeneXus.Programs {
             n173usuario = H000S2_n173usuario[0];
             A174contrasena = H000S2_A174contrasena[0];
             n174contrasena = H000S2_n174contrasena[0];
-            AV13GXLvl9 = 1;
+            AV15GXLvl9 = 1;
             if ( StringUtil.StrCmp(A174contrasena, AV6contrasena) == 0 )
             {
-               AV8WebSession.Set("idusuario", StringUtil.Str( (decimal)(AV9idusuario), 9, 0));
-               context.wjLoc = formatLink("catalog_de_cambs.aspx") ;
+               AV8WebSession.Set("usuario", AV5usuario);
+               context.httpAjaxContext.ajax_rsp_assign_attri("", false, "AV5usuario", AV5usuario);
+               AV8WebSession.Set("fecha", context.localUtil.DToC( (DateTime)(DateTimeUtil.Today( context)), 0, "-"));
+               context.wjLoc = formatLink("menuprincipal.aspx") ;
                context.wjLocDisableFrm = 1;
             }
             else
@@ -591,7 +544,7 @@ namespace GeneXus.Programs {
             pr_default.readNext(0);
          }
          pr_default.close(0);
-         if ( AV13GXLvl9 == 0 )
+         if ( AV15GXLvl9 == 0 )
          {
             GX_msglist.addItem("contraseña invalida");
          }
@@ -743,11 +696,11 @@ namespace GeneXus.Programs {
 
       protected void define_styles( )
       {
-         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?3485073");
+         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?1734189");
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?20221233492065");
+            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?202212518275247");
             idxLst = (int)(idxLst+1);
          }
          /* End function define_styles */
@@ -756,7 +709,7 @@ namespace GeneXus.Programs {
       protected void include_jscripts( )
       {
          context.AddJavascriptSource("messages.spa.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("login.js", "?20221233492065");
+         context.AddJavascriptSource("login.js", "?202212518275247");
          /* End function include_jscripts */
       }
 
@@ -780,11 +733,6 @@ namespace GeneXus.Programs {
          init_default_properties( ) ;
          edtavContrasena_Jsonclick = "";
          edtavUsuario_Jsonclick = "";
-         Form.Headerrawhtml = "";
-         Form.Background = "";
-         Form.Textcolor = 0;
-         Form.Backcolor = (int)(0xFFFFFF);
-         Form.Caption = "Login";
          context.GX_msglist.DisplayMode = 1;
          if ( context.isSpaRequest( ) )
          {
@@ -800,7 +748,7 @@ namespace GeneXus.Programs {
       public override void InitializeDynEvents( )
       {
          setEventMetadata("REFRESH","{handler:'Refresh',iparms:[],oparms:[]}");
-         setEventMetadata("'INICIAR SESIÓN '","{handler:'E110S2',iparms:[{av:'A173usuario',fld:'USUARIO',pic:'',nv:''},{av:'AV5usuario',fld:'vUSUARIO',pic:'',nv:''},{av:'A174contrasena',fld:'CONTRASENA',pic:'',nv:''},{av:'AV6contrasena',fld:'vCONTRASENA',pic:'',nv:''},{av:'AV9idusuario',fld:'vIDUSUARIO',pic:'ZZZZZZZZ9',nv:0}],oparms:[]}");
+         setEventMetadata("'INICIAR SESIÓN '","{handler:'E110S2',iparms:[{av:'A173usuario',fld:'USUARIO',pic:'',nv:''},{av:'AV5usuario',fld:'vUSUARIO',pic:'',nv:''},{av:'A174contrasena',fld:'CONTRASENA',pic:'',nv:''},{av:'AV6contrasena',fld:'vCONTRASENA',pic:'',nv:''}],oparms:[]}");
          return  ;
       }
 
@@ -829,8 +777,8 @@ namespace GeneXus.Programs {
          A174contrasena = "";
          GXKey = "";
          GX_FocusControl = "";
-         Form = new GXWebForm();
          sPrefix = "";
+         Form = new GXWebForm();
          sEvt = "";
          EvtGridId = "";
          EvtRowId = "";
@@ -867,14 +815,12 @@ namespace GeneXus.Programs {
       private short nGotPars ;
       private short GxWebError ;
       private short initialized ;
-      private short gxajaxcallmode ;
       private short wbEnd ;
       private short wbStart ;
       private short nDonePA ;
       private short gxcookieaux ;
-      private short AV13GXLvl9 ;
+      private short AV15GXLvl9 ;
       private short nGXWrapped ;
-      private int AV9idusuario ;
       private int idxLst ;
       private String gxfirstwebparm ;
       private String gxfirstwebparm_bkp ;
@@ -913,6 +859,7 @@ namespace GeneXus.Programs {
       private String A174contrasena ;
       private String AV5usuario ;
       private String AV6contrasena ;
+      private GXWebForm Form ;
       private IGxDataStore dsDefault ;
       private IDataStoreProvider pr_default ;
       private int[] H000S2_A9idusuario ;
@@ -923,7 +870,6 @@ namespace GeneXus.Programs {
       private msglist BackMsgLst ;
       private msglist LclMsgLst ;
       private IGxSession AV8WebSession ;
-      private GXWebForm Form ;
    }
 
    public class login__default : DataStoreHelperBase, IDataStoreHelper

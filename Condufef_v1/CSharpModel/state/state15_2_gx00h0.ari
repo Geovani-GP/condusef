@@ -1,13 +1,13 @@
-current_obj_i(2,web,25).
+current_obj_i(2,web,80).
  
-called_tree_i(13,25,13,6).
- 
- 
+called_tree_i(13,80,13,1).
  
  
  
  
-ij_object_dependency(gx00h0,[],[],[],25).
+ 
+ 
+ij_object_dependency(gx00h0,[],[],[],80).
  
  
 obj_parms_i([ 'int aP0_pareaareaid' ],[ [ 'Pareaareaid',out ] ]).

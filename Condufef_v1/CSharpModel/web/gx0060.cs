@@ -2,7 +2,7 @@
                File: Gx0060
         Description: Selection List empleados
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 1/23/2022 3:49:28.8
+       Generated on: 1/25/2022 17:35:14.30
        Program type: Callable routine
           Main DBMS: postgresql
 */
@@ -194,7 +194,7 @@ namespace GeneXus.Programs {
          INITWEB( ) ;
          if ( ! isAjaxCallMode( ) )
          {
-            MasterPageObj = (GXMasterPage) ClassLoader.GetInstance("rwdpromptmasterpage", "GeneXus.Programs.rwdpromptmasterpage", new Object[] {new GxContext( context.handle, context.DataStores, context.HttpContext)});
+            MasterPageObj = (GXMasterPage) ClassLoader.GetInstance("appmasterpage", "GeneXus.Programs.appmasterpage", new Object[] {new GxContext( context.handle, context.DataStores, context.HttpContext)});
             MasterPageObj.setDataArea(this,true);
             ValidateSpaRequest();
             MasterPageObj.webExecute();
@@ -226,11 +226,11 @@ namespace GeneXus.Programs {
 
       public override short ExecuteStartEvent( )
       {
-         PA0C2( ) ;
+         PA1V2( ) ;
          gxajaxcallmode = (short)((isAjaxCallMode( ) ? 1 : 0));
          if ( ( gxajaxcallmode == 0 ) && ( GxWebError == 0 ) )
          {
-            START0C2( ) ;
+            START1V2( ) ;
          }
          return gxajaxcallmode ;
       }
@@ -265,7 +265,7 @@ namespace GeneXus.Programs {
          context.AddJavascriptSource("jquery.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxtimezone.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxgral.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("gxcfg.js", "?20221233492813");
+         context.AddJavascriptSource("gxcfg.js", "?202212517351441");
          if ( context.isSpaRequest( ) )
          {
             enableOutput();
@@ -358,14 +358,14 @@ namespace GeneXus.Programs {
             context.WriteHtmlText( "<div") ;
             GxWebStd.ClassAttribute( context, "gx-ct-body"+" "+(String.IsNullOrEmpty(StringUtil.RTrim( Form.Class)) ? "form-horizontal Form" : Form.Class)+"-fx");
             context.WriteHtmlText( ">") ;
-            WE0C2( ) ;
+            WE1V2( ) ;
             context.WriteHtmlText( "</div>") ;
          }
       }
 
       public override void DispatchEvents( )
       {
-         EVT0C2( ) ;
+         EVT1V2( ) ;
       }
 
       public override bool HasEnterEvent( )
@@ -393,7 +393,7 @@ namespace GeneXus.Programs {
          return "Selection List empleados" ;
       }
 
-      protected void WB0C0( )
+      protected void WB1V0( )
       {
          if ( context.isAjaxRequest( ) )
          {
@@ -428,7 +428,7 @@ namespace GeneXus.Programs {
             /* Div Control */
             GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "col-xs-12", "left", "top", "", "", "div");
             /* Text block */
-            GxWebStd.gx_label_ctrl( context, lblLblempleadosidfilter_Internalname, "empleadosid", "", "", lblLblempleadosidfilter_Jsonclick, "'"+""+"'"+",false,"+"'"+"e110c1_client"+"'", "", "WWAdvancedLabel WWFilterLabel", 7, "", 1, 1, 1, "HLP_Gx0060.htm");
+            GxWebStd.gx_label_ctrl( context, lblLblempleadosidfilter_Internalname, "empleadosid", "", "", lblLblempleadosidfilter_Jsonclick, "'"+""+"'"+",false,"+"'"+"e111v1_client"+"'", "", "WWAdvancedLabel WWFilterLabel", 7, "", 1, 1, 1, "HLP_Gx0060.htm");
             GxWebStd.gx_div_end( context, "left", "top");
             GxWebStd.gx_div_end( context, "left", "top");
             /* Div Control */
@@ -459,7 +459,7 @@ namespace GeneXus.Programs {
             /* Div Control */
             GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "col-xs-12", "left", "top", "", "", "div");
             /* Text block */
-            GxWebStd.gx_label_ctrl( context, lblLblempleadosareaidfilter_Internalname, "empleadosareaid", "", "", lblLblempleadosareaidfilter_Jsonclick, "'"+""+"'"+",false,"+"'"+"e120c1_client"+"'", "", "WWAdvancedLabel WWFilterLabel", 7, "", 1, 1, 1, "HLP_Gx0060.htm");
+            GxWebStd.gx_label_ctrl( context, lblLblempleadosareaidfilter_Internalname, "empleadosareaid", "", "", lblLblempleadosareaidfilter_Jsonclick, "'"+""+"'"+",false,"+"'"+"e121v1_client"+"'", "", "WWAdvancedLabel WWFilterLabel", 7, "", 1, 1, 1, "HLP_Gx0060.htm");
             GxWebStd.gx_div_end( context, "left", "top");
             GxWebStd.gx_div_end( context, "left", "top");
             /* Div Control */
@@ -490,7 +490,7 @@ namespace GeneXus.Programs {
             /* Div Control */
             GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "col-xs-12", "left", "top", "", "", "div");
             /* Text block */
-            GxWebStd.gx_label_ctrl( context, lblLblempleadosnomemplefilter_Internalname, "empleadosnomemple", "", "", lblLblempleadosnomemplefilter_Jsonclick, "'"+""+"'"+",false,"+"'"+"e130c1_client"+"'", "", "WWAdvancedLabel WWFilterLabel", 7, "", 1, 1, 1, "HLP_Gx0060.htm");
+            GxWebStd.gx_label_ctrl( context, lblLblempleadosnomemplefilter_Internalname, "empleadosnomemple", "", "", lblLblempleadosnomemplefilter_Jsonclick, "'"+""+"'"+",false,"+"'"+"e131v1_client"+"'", "", "WWAdvancedLabel WWFilterLabel", 7, "", 1, 1, 1, "HLP_Gx0060.htm");
             GxWebStd.gx_div_end( context, "left", "top");
             GxWebStd.gx_div_end( context, "left", "top");
             /* Div Control */
@@ -521,7 +521,7 @@ namespace GeneXus.Programs {
             /* Div Control */
             GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "col-xs-12", "left", "top", "", "", "div");
             /* Text block */
-            GxWebStd.gx_label_ctrl( context, lblLblempleadosappaternofilter_Internalname, "empleadosappaterno", "", "", lblLblempleadosappaternofilter_Jsonclick, "'"+""+"'"+",false,"+"'"+"e140c1_client"+"'", "", "WWAdvancedLabel WWFilterLabel", 7, "", 1, 1, 1, "HLP_Gx0060.htm");
+            GxWebStd.gx_label_ctrl( context, lblLblempleadosappaternofilter_Internalname, "empleadosappaterno", "", "", lblLblempleadosappaternofilter_Jsonclick, "'"+""+"'"+",false,"+"'"+"e141v1_client"+"'", "", "WWAdvancedLabel WWFilterLabel", 7, "", 1, 1, 1, "HLP_Gx0060.htm");
             GxWebStd.gx_div_end( context, "left", "top");
             GxWebStd.gx_div_end( context, "left", "top");
             /* Div Control */
@@ -552,7 +552,7 @@ namespace GeneXus.Programs {
             /* Div Control */
             GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "col-xs-12", "left", "top", "", "", "div");
             /* Text block */
-            GxWebStd.gx_label_ctrl( context, lblLblempleadosapmaternofilter_Internalname, "empleadosapmaterno", "", "", lblLblempleadosapmaternofilter_Jsonclick, "'"+""+"'"+",false,"+"'"+"e150c1_client"+"'", "", "WWAdvancedLabel WWFilterLabel", 7, "", 1, 1, 1, "HLP_Gx0060.htm");
+            GxWebStd.gx_label_ctrl( context, lblLblempleadosapmaternofilter_Internalname, "empleadosapmaterno", "", "", lblLblempleadosapmaternofilter_Jsonclick, "'"+""+"'"+",false,"+"'"+"e151v1_client"+"'", "", "WWAdvancedLabel WWFilterLabel", 7, "", 1, 1, 1, "HLP_Gx0060.htm");
             GxWebStd.gx_div_end( context, "left", "top");
             GxWebStd.gx_div_end( context, "left", "top");
             /* Div Control */
@@ -583,7 +583,7 @@ namespace GeneXus.Programs {
             /* Div Control */
             GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "col-xs-12", "left", "top", "", "", "div");
             /* Text block */
-            GxWebStd.gx_label_ctrl( context, lblLblempleadosstatusfilter_Internalname, "empleadosstatus", "", "", lblLblempleadosstatusfilter_Jsonclick, "'"+""+"'"+",false,"+"'"+"e160c1_client"+"'", "", "WWAdvancedLabel WWFilterLabel", 7, "", 1, 1, 1, "HLP_Gx0060.htm");
+            GxWebStd.gx_label_ctrl( context, lblLblempleadosstatusfilter_Internalname, "empleadosstatus", "", "", lblLblempleadosstatusfilter_Jsonclick, "'"+""+"'"+",false,"+"'"+"e161v1_client"+"'", "", "WWAdvancedLabel WWFilterLabel", 7, "", 1, 1, 1, "HLP_Gx0060.htm");
             GxWebStd.gx_div_end( context, "left", "top");
             GxWebStd.gx_div_end( context, "left", "top");
             /* Div Control */
@@ -614,7 +614,7 @@ namespace GeneXus.Programs {
             /* Div Control */
             GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "col-xs-12", "left", "top", "", "", "div");
             /* Text block */
-            GxWebStd.gx_label_ctrl( context, lblLblempleadosusuariofilter_Internalname, "empleadosusuario", "", "", lblLblempleadosusuariofilter_Jsonclick, "'"+""+"'"+",false,"+"'"+"e170c1_client"+"'", "", "WWAdvancedLabel WWFilterLabel", 7, "", 1, 1, 1, "HLP_Gx0060.htm");
+            GxWebStd.gx_label_ctrl( context, lblLblempleadosusuariofilter_Internalname, "empleadosusuario", "", "", lblLblempleadosusuariofilter_Jsonclick, "'"+""+"'"+",false,"+"'"+"e171v1_client"+"'", "", "WWAdvancedLabel WWFilterLabel", 7, "", 1, 1, 1, "HLP_Gx0060.htm");
             GxWebStd.gx_div_end( context, "left", "top");
             GxWebStd.gx_div_end( context, "left", "top");
             /* Div Control */
@@ -647,7 +647,7 @@ namespace GeneXus.Programs {
             TempTags = "  onfocus=\"gx.evt.onfocus(this, 81,'',false,'',0)\"";
             ClassString = bttBtntoggle_Class;
             StyleString = "";
-            GxWebStd.gx_button_ctrl( context, bttBtntoggle_Internalname, "gx.evt.setGridEvt("+StringUtil.Str( (decimal)(84), 2, 0)+","+"null"+");", "|||", bttBtntoggle_Jsonclick, 7, "|||", "", StyleString, ClassString, 1, 1, "standard", "'"+""+"'"+",false,"+"'"+"e180c1_client"+"'", TempTags, "", 2, "HLP_Gx0060.htm");
+            GxWebStd.gx_button_ctrl( context, bttBtntoggle_Internalname, "gx.evt.setGridEvt("+StringUtil.Str( (decimal)(84), 2, 0)+","+"null"+");", "|||", bttBtntoggle_Jsonclick, 7, "|||", "", StyleString, ClassString, 1, 1, "standard", "'"+""+"'"+",false,"+"'"+"e181v1_client"+"'", TempTags, "", 2, "HLP_Gx0060.htm");
             GxWebStd.gx_div_end( context, "left", "top");
             GxWebStd.gx_div_end( context, "left", "top");
             /* Div Control */
@@ -808,7 +808,7 @@ namespace GeneXus.Programs {
          wbLoad = true;
       }
 
-      protected void START0C2( )
+      protected void START1V2( )
       {
          wbLoad = false;
          wbEnd = 0;
@@ -825,16 +825,16 @@ namespace GeneXus.Programs {
          {
          }
          wbErr = false;
-         STRUP0C0( ) ;
+         STRUP1V0( ) ;
       }
 
-      protected void WS0C2( )
+      protected void WS1V2( )
       {
-         START0C2( ) ;
-         EVT0C2( ) ;
+         START1V2( ) ;
+         EVT1V2( ) ;
       }
 
-      protected void EVT0C2( )
+      protected void EVT1V2( )
       {
          if ( StringUtil.StrCmp(context.GetRequestMethod( ), "POST") == 0 )
          {
@@ -918,15 +918,15 @@ namespace GeneXus.Programs {
                                  {
                                     context.wbHandled = 1;
                                     dynload_actions( ) ;
-                                    /* Execute user event: E190C2 */
-                                    E190C2 ();
+                                    /* Execute user event: E191V2 */
+                                    E191V2 ();
                                  }
                                  else if ( StringUtil.StrCmp(sEvt, "LOAD") == 0 )
                                  {
                                     context.wbHandled = 1;
                                     dynload_actions( ) ;
-                                    /* Execute user event: E200C2 */
-                                    E200C2 ();
+                                    /* Execute user event: E201V2 */
+                                    E201V2 ();
                                  }
                                  else if ( StringUtil.StrCmp(sEvt, "ENTER") == 0 )
                                  {
@@ -971,8 +971,8 @@ namespace GeneXus.Programs {
                                        }
                                        if ( ! Rfr0gs )
                                        {
-                                          /* Execute user event: E210C2 */
-                                          E210C2 ();
+                                          /* Execute user event: E211V2 */
+                                          E211V2 ();
                                        }
                                        dynload_actions( ) ;
                                     }
@@ -996,7 +996,7 @@ namespace GeneXus.Programs {
          }
       }
 
-      protected void WE0C2( )
+      protected void WE1V2( )
       {
          if ( ! GxWebStd.gx_redirect( context) )
          {
@@ -1012,7 +1012,7 @@ namespace GeneXus.Programs {
          }
       }
 
-      protected void PA0C2( )
+      protected void PA1V2( )
       {
          if ( nDonePA == 0 )
          {
@@ -1070,7 +1070,7 @@ namespace GeneXus.Programs {
          GxWebStd.set_html_headers( context, 0, "", "");
          GxWebStd.gx_hidden_field( context, "GRID1_Rows", StringUtil.LTrim( StringUtil.NToC( (decimal)(subGrid1_Rows), 6, 0, ".", "")));
          GRID1_nCurrentRecord = 0;
-         RF0C2( ) ;
+         RF1V2( ) ;
          /* End function gxgrGrid1_refresh */
       }
 
@@ -1095,7 +1095,7 @@ namespace GeneXus.Programs {
       public void Refresh( )
       {
          send_integrity_hashes( ) ;
-         RF0C2( ) ;
+         RF1V2( ) ;
       }
 
       protected void initialize_formulas( )
@@ -1104,7 +1104,7 @@ namespace GeneXus.Programs {
          context.Gx_err = 0;
       }
 
-      protected void RF0C2( )
+      protected void RF1V2( )
       {
          initialize_formulas( ) ;
          if ( isAjaxCallMode( ) )
@@ -1161,33 +1161,33 @@ namespace GeneXus.Programs {
             context.httpAjaxContext.ajax_rsp_assign_attri("", false, "AV11cempleadosstatus", AV11cempleadosstatus);
             lV12cempleadosusuario = StringUtil.Concat( StringUtil.RTrim( AV12cempleadosusuario), "%", "");
             context.httpAjaxContext.ajax_rsp_assign_attri("", false, "AV12cempleadosusuario", AV12cempleadosusuario);
-            /* Using cursor H000C2 */
+            /* Using cursor H001V2 */
             pr_default.execute(0, new Object[] {AV6cempleadosid, lV7cempleadosareaid, lV8cempleadosnomemple, lV9cempleadosappaterno, lV10cempleadosapmaterno, lV11cempleadosstatus, lV12cempleadosusuario, GXPagingFrom2, GXPagingTo2, GXPagingTo2});
             nGXsfl_84_idx = 1;
             while ( ( (pr_default.getStatus(0) != 101) ) && ( ( ( 10 == 0 ) || ( GRID1_nCurrentRecord < subGrid1_Recordsperpage( ) ) ) ) )
             {
-               A103empleadosusuario = H000C2_A103empleadosusuario[0];
-               n103empleadosusuario = H000C2_n103empleadosusuario[0];
-               A102empleadosstatus = H000C2_A102empleadosstatus[0];
-               n102empleadosstatus = H000C2_n102empleadosstatus[0];
-               A101empleadosapmaterno = H000C2_A101empleadosapmaterno[0];
-               n101empleadosapmaterno = H000C2_n101empleadosapmaterno[0];
-               A100empleadosappaterno = H000C2_A100empleadosappaterno[0];
-               n100empleadosappaterno = H000C2_n100empleadosappaterno[0];
-               A99empleadosnomemple = H000C2_A99empleadosnomemple[0];
-               n99empleadosnomemple = H000C2_n99empleadosnomemple[0];
-               A98empleadosareaid = H000C2_A98empleadosareaid[0];
-               n98empleadosareaid = H000C2_n98empleadosareaid[0];
-               A13empleadosid = H000C2_A13empleadosid[0];
-               /* Execute user event: E200C2 */
-               E200C2 ();
+               A103empleadosusuario = H001V2_A103empleadosusuario[0];
+               n103empleadosusuario = H001V2_n103empleadosusuario[0];
+               A102empleadosstatus = H001V2_A102empleadosstatus[0];
+               n102empleadosstatus = H001V2_n102empleadosstatus[0];
+               A101empleadosapmaterno = H001V2_A101empleadosapmaterno[0];
+               n101empleadosapmaterno = H001V2_n101empleadosapmaterno[0];
+               A100empleadosappaterno = H001V2_A100empleadosappaterno[0];
+               n100empleadosappaterno = H001V2_n100empleadosappaterno[0];
+               A99empleadosnomemple = H001V2_A99empleadosnomemple[0];
+               n99empleadosnomemple = H001V2_n99empleadosnomemple[0];
+               A98empleadosareaid = H001V2_A98empleadosareaid[0];
+               n98empleadosareaid = H001V2_n98empleadosareaid[0];
+               A13empleadosid = H001V2_A13empleadosid[0];
+               /* Execute user event: E201V2 */
+               E201V2 ();
                pr_default.readNext(0);
             }
             GRID1_nEOF = (short)(((pr_default.getStatus(0) == 101) ? 1 : 0));
             GxWebStd.gx_hidden_field( context, "GRID1_nEOF", StringUtil.LTrim( StringUtil.NToC( (decimal)(GRID1_nEOF), 1, 0, ".", "")));
             pr_default.close(0);
             wbEnd = 84;
-            WB0C0( ) ;
+            WB1V0( ) ;
          }
          nGXsfl_84_Refreshing = 0;
       }
@@ -1235,9 +1235,9 @@ namespace GeneXus.Programs {
          context.httpAjaxContext.ajax_rsp_assign_attri("", false, "AV11cempleadosstatus", AV11cempleadosstatus);
          lV12cempleadosusuario = StringUtil.Concat( StringUtil.RTrim( AV12cempleadosusuario), "%", "");
          context.httpAjaxContext.ajax_rsp_assign_attri("", false, "AV12cempleadosusuario", AV12cempleadosusuario);
-         /* Using cursor H000C3 */
+         /* Using cursor H001V3 */
          pr_default.execute(1, new Object[] {AV6cempleadosid, lV7cempleadosareaid, lV8cempleadosnomemple, lV9cempleadosappaterno, lV10cempleadosapmaterno, lV11cempleadosstatus, lV12cempleadosusuario});
-         GRID1_nRecordCount = H000C3_AGRID1_nRecordCount[0];
+         GRID1_nRecordCount = H001V3_AGRID1_nRecordCount[0];
          pr_default.close(1);
          return (int)(GRID1_nRecordCount) ;
       }
@@ -1344,14 +1344,14 @@ namespace GeneXus.Programs {
          return (int)(0) ;
       }
 
-      protected void STRUP0C0( )
+      protected void STRUP1V0( )
       {
          /* Before Start, stand alone formulas. */
          context.Gx_err = 0;
          /* Execute Start event if defined. */
          context.wbGlbDoneStart = 0;
-         /* Execute user event: E190C2 */
-         E190C2 ();
+         /* Execute user event: E191V2 */
+         E191V2 ();
          context.wbGlbDoneStart = 1;
          /* After Start, stand alone formulas. */
          if ( StringUtil.StrCmp(context.GetRequestMethod( ), "POST") == 0 )
@@ -1429,8 +1429,8 @@ namespace GeneXus.Programs {
 
       protected void GXStart( )
       {
-         /* Execute user event: E190C2 */
-         E190C2 ();
+         /* Execute user event: E191V2 */
+         E191V2 ();
          if ( returnInSub )
          {
             returnInSub = true;
@@ -1438,7 +1438,7 @@ namespace GeneXus.Programs {
          }
       }
 
-      protected void E190C2( )
+      protected void E191V2( )
       {
          /* Start Routine */
          Form.Caption = StringUtil.Format( "Lista de Selección %1", "empleados", "", "", "", "", "", "", "", "");
@@ -1446,7 +1446,7 @@ namespace GeneXus.Programs {
          AV14ADVANCED_LABEL_TEMPLATE = "%1 <strong>%2</strong>";
       }
 
-      private void E200C2( )
+      private void E201V2( )
       {
          /* Load Routine */
          AV5LinkSelection = context.GetImagePath( "3914535b-0c03-44c5-9538-906a99cdd2bc", "", context.GetTheme( ));
@@ -1462,8 +1462,8 @@ namespace GeneXus.Programs {
 
       public void GXEnter( )
       {
-         /* Execute user event: E210C2 */
-         E210C2 ();
+         /* Execute user event: E211V2 */
+         E211V2 ();
          if ( returnInSub )
          {
             returnInSub = true;
@@ -1471,7 +1471,7 @@ namespace GeneXus.Programs {
          }
       }
 
-      protected void E210C2( )
+      protected void E211V2( )
       {
          /* Enter Routine */
          AV13pempleadosid = A13empleadosid;
@@ -1501,9 +1501,9 @@ namespace GeneXus.Programs {
          nGotPars = (short)(1);
          nGXWrapped = (short)(1);
          context.SetWrapped(true);
-         PA0C2( ) ;
-         WS0C2( ) ;
-         WE0C2( ) ;
+         PA1V2( ) ;
+         WS1V2( ) ;
+         WE1V2( ) ;
          this.cleanup();
          context.SetWrapped(false);
          context.GX_msglist = BackMsgLst;
@@ -1516,11 +1516,11 @@ namespace GeneXus.Programs {
 
       protected void define_styles( )
       {
-         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?3485073");
+         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?1734189");
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?20221233492913");
+            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?202212517351633");
             idxLst = (int)(idxLst+1);
          }
          /* End function define_styles */
@@ -1529,7 +1529,7 @@ namespace GeneXus.Programs {
       protected void include_jscripts( )
       {
          context.AddJavascriptSource("messages.spa.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("gx0060.js", "?20221233492913");
+         context.AddJavascriptSource("gx0060.js", "?202212517351633");
          /* End function include_jscripts */
       }
 
@@ -1556,7 +1556,7 @@ namespace GeneXus.Programs {
       protected void sendrow_842( )
       {
          SubsflControlProps_842( ) ;
-         WB0C0( ) ;
+         WB1V0( ) ;
          if ( ( 10 * 1 == 0 ) || ( nGXsfl_84_idx <= subGrid1_Recordsperpage( ) * 1 ) )
          {
             Grid1Row = GXWebRow.GetNew(context,Grid1Container);
@@ -1848,15 +1848,15 @@ namespace GeneXus.Programs {
       public override void InitializeDynEvents( )
       {
          setEventMetadata("REFRESH","{handler:'Refresh',iparms:[{av:'GRID1_nFirstRecordOnPage',nv:0},{av:'GRID1_nEOF',nv:0},{av:'subGrid1_Rows',nv:0},{av:'AV6cempleadosid',fld:'vCEMPLEADOSID',pic:'ZZZZZZZZ9',nv:0},{av:'AV7cempleadosareaid',fld:'vCEMPLEADOSAREAID',pic:'',nv:''},{av:'AV8cempleadosnomemple',fld:'vCEMPLEADOSNOMEMPLE',pic:'',nv:''},{av:'AV9cempleadosappaterno',fld:'vCEMPLEADOSAPPATERNO',pic:'',nv:''},{av:'AV10cempleadosapmaterno',fld:'vCEMPLEADOSAPMATERNO',pic:'',nv:''},{av:'AV11cempleadosstatus',fld:'vCEMPLEADOSSTATUS',pic:'',nv:''},{av:'AV12cempleadosusuario',fld:'vCEMPLEADOSUSUARIO',pic:'',nv:''}],oparms:[]}");
-         setEventMetadata("'TOGGLE'","{handler:'E180C1',iparms:[{av:'divAdvancedcontainer_Class',ctrl:'ADVANCEDCONTAINER',prop:'Class'},{ctrl:'BTNTOGGLE',prop:'Class'}],oparms:[{av:'divAdvancedcontainer_Class',ctrl:'ADVANCEDCONTAINER',prop:'Class'},{ctrl:'BTNTOGGLE',prop:'Class'}]}");
-         setEventMetadata("LBLEMPLEADOSIDFILTER.CLICK","{handler:'E110C1',iparms:[{av:'divEmpleadosidfiltercontainer_Class',ctrl:'EMPLEADOSIDFILTERCONTAINER',prop:'Class'}],oparms:[{av:'divEmpleadosidfiltercontainer_Class',ctrl:'EMPLEADOSIDFILTERCONTAINER',prop:'Class'},{av:'edtavCempleadosid_Visible',ctrl:'vCEMPLEADOSID',prop:'Visible'}]}");
-         setEventMetadata("LBLEMPLEADOSAREAIDFILTER.CLICK","{handler:'E120C1',iparms:[{av:'divEmpleadosareaidfiltercontainer_Class',ctrl:'EMPLEADOSAREAIDFILTERCONTAINER',prop:'Class'}],oparms:[{av:'divEmpleadosareaidfiltercontainer_Class',ctrl:'EMPLEADOSAREAIDFILTERCONTAINER',prop:'Class'},{av:'edtavCempleadosareaid_Visible',ctrl:'vCEMPLEADOSAREAID',prop:'Visible'}]}");
-         setEventMetadata("LBLEMPLEADOSNOMEMPLEFILTER.CLICK","{handler:'E130C1',iparms:[{av:'divEmpleadosnomemplefiltercontainer_Class',ctrl:'EMPLEADOSNOMEMPLEFILTERCONTAINER',prop:'Class'}],oparms:[{av:'divEmpleadosnomemplefiltercontainer_Class',ctrl:'EMPLEADOSNOMEMPLEFILTERCONTAINER',prop:'Class'},{av:'edtavCempleadosnomemple_Visible',ctrl:'vCEMPLEADOSNOMEMPLE',prop:'Visible'}]}");
-         setEventMetadata("LBLEMPLEADOSAPPATERNOFILTER.CLICK","{handler:'E140C1',iparms:[{av:'divEmpleadosappaternofiltercontainer_Class',ctrl:'EMPLEADOSAPPATERNOFILTERCONTAINER',prop:'Class'}],oparms:[{av:'divEmpleadosappaternofiltercontainer_Class',ctrl:'EMPLEADOSAPPATERNOFILTERCONTAINER',prop:'Class'},{av:'edtavCempleadosappaterno_Visible',ctrl:'vCEMPLEADOSAPPATERNO',prop:'Visible'}]}");
-         setEventMetadata("LBLEMPLEADOSAPMATERNOFILTER.CLICK","{handler:'E150C1',iparms:[{av:'divEmpleadosapmaternofiltercontainer_Class',ctrl:'EMPLEADOSAPMATERNOFILTERCONTAINER',prop:'Class'}],oparms:[{av:'divEmpleadosapmaternofiltercontainer_Class',ctrl:'EMPLEADOSAPMATERNOFILTERCONTAINER',prop:'Class'},{av:'edtavCempleadosapmaterno_Visible',ctrl:'vCEMPLEADOSAPMATERNO',prop:'Visible'}]}");
-         setEventMetadata("LBLEMPLEADOSSTATUSFILTER.CLICK","{handler:'E160C1',iparms:[{av:'divEmpleadosstatusfiltercontainer_Class',ctrl:'EMPLEADOSSTATUSFILTERCONTAINER',prop:'Class'}],oparms:[{av:'divEmpleadosstatusfiltercontainer_Class',ctrl:'EMPLEADOSSTATUSFILTERCONTAINER',prop:'Class'},{av:'edtavCempleadosstatus_Visible',ctrl:'vCEMPLEADOSSTATUS',prop:'Visible'}]}");
-         setEventMetadata("LBLEMPLEADOSUSUARIOFILTER.CLICK","{handler:'E170C1',iparms:[{av:'divEmpleadosusuariofiltercontainer_Class',ctrl:'EMPLEADOSUSUARIOFILTERCONTAINER',prop:'Class'}],oparms:[{av:'divEmpleadosusuariofiltercontainer_Class',ctrl:'EMPLEADOSUSUARIOFILTERCONTAINER',prop:'Class'},{av:'edtavCempleadosusuario_Visible',ctrl:'vCEMPLEADOSUSUARIO',prop:'Visible'}]}");
-         setEventMetadata("ENTER","{handler:'E210C2',iparms:[{av:'A13empleadosid',fld:'EMPLEADOSID',pic:'ZZZZZZZZ9',hsh:true,nv:0}],oparms:[{av:'AV13pempleadosid',fld:'vPEMPLEADOSID',pic:'ZZZZZZZZ9',nv:0}]}");
+         setEventMetadata("'TOGGLE'","{handler:'E181V1',iparms:[{av:'divAdvancedcontainer_Class',ctrl:'ADVANCEDCONTAINER',prop:'Class'},{ctrl:'BTNTOGGLE',prop:'Class'}],oparms:[{av:'divAdvancedcontainer_Class',ctrl:'ADVANCEDCONTAINER',prop:'Class'},{ctrl:'BTNTOGGLE',prop:'Class'}]}");
+         setEventMetadata("LBLEMPLEADOSIDFILTER.CLICK","{handler:'E111V1',iparms:[{av:'divEmpleadosidfiltercontainer_Class',ctrl:'EMPLEADOSIDFILTERCONTAINER',prop:'Class'}],oparms:[{av:'divEmpleadosidfiltercontainer_Class',ctrl:'EMPLEADOSIDFILTERCONTAINER',prop:'Class'},{av:'edtavCempleadosid_Visible',ctrl:'vCEMPLEADOSID',prop:'Visible'}]}");
+         setEventMetadata("LBLEMPLEADOSAREAIDFILTER.CLICK","{handler:'E121V1',iparms:[{av:'divEmpleadosareaidfiltercontainer_Class',ctrl:'EMPLEADOSAREAIDFILTERCONTAINER',prop:'Class'}],oparms:[{av:'divEmpleadosareaidfiltercontainer_Class',ctrl:'EMPLEADOSAREAIDFILTERCONTAINER',prop:'Class'},{av:'edtavCempleadosareaid_Visible',ctrl:'vCEMPLEADOSAREAID',prop:'Visible'}]}");
+         setEventMetadata("LBLEMPLEADOSNOMEMPLEFILTER.CLICK","{handler:'E131V1',iparms:[{av:'divEmpleadosnomemplefiltercontainer_Class',ctrl:'EMPLEADOSNOMEMPLEFILTERCONTAINER',prop:'Class'}],oparms:[{av:'divEmpleadosnomemplefiltercontainer_Class',ctrl:'EMPLEADOSNOMEMPLEFILTERCONTAINER',prop:'Class'},{av:'edtavCempleadosnomemple_Visible',ctrl:'vCEMPLEADOSNOMEMPLE',prop:'Visible'}]}");
+         setEventMetadata("LBLEMPLEADOSAPPATERNOFILTER.CLICK","{handler:'E141V1',iparms:[{av:'divEmpleadosappaternofiltercontainer_Class',ctrl:'EMPLEADOSAPPATERNOFILTERCONTAINER',prop:'Class'}],oparms:[{av:'divEmpleadosappaternofiltercontainer_Class',ctrl:'EMPLEADOSAPPATERNOFILTERCONTAINER',prop:'Class'},{av:'edtavCempleadosappaterno_Visible',ctrl:'vCEMPLEADOSAPPATERNO',prop:'Visible'}]}");
+         setEventMetadata("LBLEMPLEADOSAPMATERNOFILTER.CLICK","{handler:'E151V1',iparms:[{av:'divEmpleadosapmaternofiltercontainer_Class',ctrl:'EMPLEADOSAPMATERNOFILTERCONTAINER',prop:'Class'}],oparms:[{av:'divEmpleadosapmaternofiltercontainer_Class',ctrl:'EMPLEADOSAPMATERNOFILTERCONTAINER',prop:'Class'},{av:'edtavCempleadosapmaterno_Visible',ctrl:'vCEMPLEADOSAPMATERNO',prop:'Visible'}]}");
+         setEventMetadata("LBLEMPLEADOSSTATUSFILTER.CLICK","{handler:'E161V1',iparms:[{av:'divEmpleadosstatusfiltercontainer_Class',ctrl:'EMPLEADOSSTATUSFILTERCONTAINER',prop:'Class'}],oparms:[{av:'divEmpleadosstatusfiltercontainer_Class',ctrl:'EMPLEADOSSTATUSFILTERCONTAINER',prop:'Class'},{av:'edtavCempleadosstatus_Visible',ctrl:'vCEMPLEADOSSTATUS',prop:'Visible'}]}");
+         setEventMetadata("LBLEMPLEADOSUSUARIOFILTER.CLICK","{handler:'E171V1',iparms:[{av:'divEmpleadosusuariofiltercontainer_Class',ctrl:'EMPLEADOSUSUARIOFILTERCONTAINER',prop:'Class'}],oparms:[{av:'divEmpleadosusuariofiltercontainer_Class',ctrl:'EMPLEADOSUSUARIOFILTERCONTAINER',prop:'Class'},{av:'edtavCempleadosusuario_Visible',ctrl:'vCEMPLEADOSUSUARIO',prop:'Visible'}]}");
+         setEventMetadata("ENTER","{handler:'E211V2',iparms:[{av:'A13empleadosid',fld:'EMPLEADOSID',pic:'ZZZZZZZZ9',hsh:true,nv:0}],oparms:[{av:'AV13pempleadosid',fld:'vPEMPLEADOSID',pic:'ZZZZZZZZ9',nv:0}]}");
          setEventMetadata("GRID1_FIRSTPAGE","{handler:'subgrid1_firstpage',iparms:[{av:'GRID1_nFirstRecordOnPage',nv:0},{av:'GRID1_nEOF',nv:0},{av:'subGrid1_Rows',nv:0},{av:'AV6cempleadosid',fld:'vCEMPLEADOSID',pic:'ZZZZZZZZ9',nv:0},{av:'AV7cempleadosareaid',fld:'vCEMPLEADOSAREAID',pic:'',nv:''},{av:'AV8cempleadosnomemple',fld:'vCEMPLEADOSNOMEMPLE',pic:'',nv:''},{av:'AV9cempleadosappaterno',fld:'vCEMPLEADOSAPPATERNO',pic:'',nv:''},{av:'AV10cempleadosapmaterno',fld:'vCEMPLEADOSAPMATERNO',pic:'',nv:''},{av:'AV11cempleadosstatus',fld:'vCEMPLEADOSSTATUS',pic:'',nv:''},{av:'AV12cempleadosusuario',fld:'vCEMPLEADOSUSUARIO',pic:'',nv:''}],oparms:[]}");
          setEventMetadata("GRID1_PREVPAGE","{handler:'subgrid1_previouspage',iparms:[{av:'GRID1_nFirstRecordOnPage',nv:0},{av:'GRID1_nEOF',nv:0},{av:'subGrid1_Rows',nv:0},{av:'AV6cempleadosid',fld:'vCEMPLEADOSID',pic:'ZZZZZZZZ9',nv:0},{av:'AV7cempleadosareaid',fld:'vCEMPLEADOSAREAID',pic:'',nv:''},{av:'AV8cempleadosnomemple',fld:'vCEMPLEADOSNOMEMPLE',pic:'',nv:''},{av:'AV9cempleadosappaterno',fld:'vCEMPLEADOSAPPATERNO',pic:'',nv:''},{av:'AV10cempleadosapmaterno',fld:'vCEMPLEADOSAPMATERNO',pic:'',nv:''},{av:'AV11cempleadosstatus',fld:'vCEMPLEADOSSTATUS',pic:'',nv:''},{av:'AV12cempleadosusuario',fld:'vCEMPLEADOSUSUARIO',pic:'',nv:''}],oparms:[]}");
          setEventMetadata("GRID1_NEXTPAGE","{handler:'subgrid1_nextpage',iparms:[{av:'GRID1_nFirstRecordOnPage',nv:0},{av:'GRID1_nEOF',nv:0},{av:'subGrid1_Rows',nv:0},{av:'AV6cempleadosid',fld:'vCEMPLEADOSID',pic:'ZZZZZZZZ9',nv:0},{av:'AV7cempleadosareaid',fld:'vCEMPLEADOSAREAID',pic:'',nv:''},{av:'AV8cempleadosnomemple',fld:'vCEMPLEADOSNOMEMPLE',pic:'',nv:''},{av:'AV9cempleadosappaterno',fld:'vCEMPLEADOSAPPATERNO',pic:'',nv:''},{av:'AV10cempleadosapmaterno',fld:'vCEMPLEADOSAPMATERNO',pic:'',nv:''},{av:'AV11cempleadosstatus',fld:'vCEMPLEADOSSTATUS',pic:'',nv:''},{av:'AV12cempleadosusuario',fld:'vCEMPLEADOSUSUARIO',pic:'',nv:''}],oparms:[]}");
@@ -1930,20 +1930,20 @@ namespace GeneXus.Programs {
          lV12cempleadosusuario = "";
          A102empleadosstatus = "";
          A103empleadosusuario = "";
-         H000C2_A103empleadosusuario = new String[] {""} ;
-         H000C2_n103empleadosusuario = new bool[] {false} ;
-         H000C2_A102empleadosstatus = new String[] {""} ;
-         H000C2_n102empleadosstatus = new bool[] {false} ;
-         H000C2_A101empleadosapmaterno = new String[] {""} ;
-         H000C2_n101empleadosapmaterno = new bool[] {false} ;
-         H000C2_A100empleadosappaterno = new String[] {""} ;
-         H000C2_n100empleadosappaterno = new bool[] {false} ;
-         H000C2_A99empleadosnomemple = new String[] {""} ;
-         H000C2_n99empleadosnomemple = new bool[] {false} ;
-         H000C2_A98empleadosareaid = new String[] {""} ;
-         H000C2_n98empleadosareaid = new bool[] {false} ;
-         H000C2_A13empleadosid = new int[1] ;
-         H000C3_AGRID1_nRecordCount = new long[1] ;
+         H001V2_A103empleadosusuario = new String[] {""} ;
+         H001V2_n103empleadosusuario = new bool[] {false} ;
+         H001V2_A102empleadosstatus = new String[] {""} ;
+         H001V2_n102empleadosstatus = new bool[] {false} ;
+         H001V2_A101empleadosapmaterno = new String[] {""} ;
+         H001V2_n101empleadosapmaterno = new bool[] {false} ;
+         H001V2_A100empleadosappaterno = new String[] {""} ;
+         H001V2_n100empleadosappaterno = new bool[] {false} ;
+         H001V2_A99empleadosnomemple = new String[] {""} ;
+         H001V2_n99empleadosnomemple = new bool[] {false} ;
+         H001V2_A98empleadosareaid = new String[] {""} ;
+         H001V2_n98empleadosareaid = new bool[] {false} ;
+         H001V2_A13empleadosid = new int[1] ;
+         H001V3_AGRID1_nRecordCount = new long[1] ;
          AV14ADVANCED_LABEL_TEMPLATE = "";
          Grid1Row = new GXWebRow();
          BackMsgLst = new msglist();
@@ -1952,11 +1952,11 @@ namespace GeneXus.Programs {
          pr_default = new DataStoreProvider(context, new GeneXus.Programs.gx0060__default(),
             new Object[][] {
                 new Object[] {
-               H000C2_A103empleadosusuario, H000C2_n103empleadosusuario, H000C2_A102empleadosstatus, H000C2_n102empleadosstatus, H000C2_A101empleadosapmaterno, H000C2_n101empleadosapmaterno, H000C2_A100empleadosappaterno, H000C2_n100empleadosappaterno, H000C2_A99empleadosnomemple, H000C2_n99empleadosnomemple,
-               H000C2_A98empleadosareaid, H000C2_n98empleadosareaid, H000C2_A13empleadosid
+               H001V2_A103empleadosusuario, H001V2_n103empleadosusuario, H001V2_A102empleadosstatus, H001V2_n102empleadosstatus, H001V2_A101empleadosapmaterno, H001V2_n101empleadosapmaterno, H001V2_A100empleadosappaterno, H001V2_n100empleadosappaterno, H001V2_A99empleadosnomemple, H001V2_n99empleadosnomemple,
+               H001V2_A98empleadosareaid, H001V2_n98empleadosareaid, H001V2_A13empleadosid
                }
                , new Object[] {
-               H000C3_AGRID1_nRecordCount
+               H001V3_AGRID1_nRecordCount
                }
             }
          );
@@ -2141,20 +2141,20 @@ namespace GeneXus.Programs {
       private GXWebColumn Grid1Column ;
       private IGxDataStore dsDefault ;
       private IDataStoreProvider pr_default ;
-      private String[] H000C2_A103empleadosusuario ;
-      private bool[] H000C2_n103empleadosusuario ;
-      private String[] H000C2_A102empleadosstatus ;
-      private bool[] H000C2_n102empleadosstatus ;
-      private String[] H000C2_A101empleadosapmaterno ;
-      private bool[] H000C2_n101empleadosapmaterno ;
-      private String[] H000C2_A100empleadosappaterno ;
-      private bool[] H000C2_n100empleadosappaterno ;
-      private String[] H000C2_A99empleadosnomemple ;
-      private bool[] H000C2_n99empleadosnomemple ;
-      private String[] H000C2_A98empleadosareaid ;
-      private bool[] H000C2_n98empleadosareaid ;
-      private int[] H000C2_A13empleadosid ;
-      private long[] H000C3_AGRID1_nRecordCount ;
+      private String[] H001V2_A103empleadosusuario ;
+      private bool[] H001V2_n103empleadosusuario ;
+      private String[] H001V2_A102empleadosstatus ;
+      private bool[] H001V2_n102empleadosstatus ;
+      private String[] H001V2_A101empleadosapmaterno ;
+      private bool[] H001V2_n101empleadosapmaterno ;
+      private String[] H001V2_A100empleadosappaterno ;
+      private bool[] H001V2_n100empleadosappaterno ;
+      private String[] H001V2_A99empleadosnomemple ;
+      private bool[] H001V2_n99empleadosnomemple ;
+      private String[] H001V2_A98empleadosareaid ;
+      private bool[] H001V2_n98empleadosareaid ;
+      private int[] H001V2_A13empleadosid ;
+      private long[] H001V3_AGRID1_nRecordCount ;
       private msglist BackMsgLst ;
       private msglist LclMsgLst ;
       private int aP0_pempleadosid ;
@@ -2163,7 +2163,7 @@ namespace GeneXus.Programs {
 
    public class gx0060__default : DataStoreHelperBase, IDataStoreHelper
    {
-      protected Object[] conditional_H000C2( IGxContext context ,
+      protected Object[] conditional_H001V2( IGxContext context ,
                                              String AV7cempleadosareaid ,
                                              String AV8cempleadosnomemple ,
                                              String AV9cempleadosappaterno ,
@@ -2246,7 +2246,7 @@ namespace GeneXus.Programs {
          return GXv_Object2 ;
       }
 
-      protected Object[] conditional_H000C3( IGxContext context ,
+      protected Object[] conditional_H001V3( IGxContext context ,
                                              String AV7cempleadosareaid ,
                                              String AV8cempleadosnomemple ,
                                              String AV9cempleadosappaterno ,
@@ -2331,9 +2331,9 @@ namespace GeneXus.Programs {
          switch ( cursor )
          {
                case 0 :
-                     return conditional_H000C2(context, (String)dynConstraints[0] , (String)dynConstraints[1] , (String)dynConstraints[2] , (String)dynConstraints[3] , (String)dynConstraints[4] , (String)dynConstraints[5] , (String)dynConstraints[6] , (String)dynConstraints[7] , (String)dynConstraints[8] , (String)dynConstraints[9] , (String)dynConstraints[10] , (String)dynConstraints[11] , (int)dynConstraints[12] );
+                     return conditional_H001V2(context, (String)dynConstraints[0] , (String)dynConstraints[1] , (String)dynConstraints[2] , (String)dynConstraints[3] , (String)dynConstraints[4] , (String)dynConstraints[5] , (String)dynConstraints[6] , (String)dynConstraints[7] , (String)dynConstraints[8] , (String)dynConstraints[9] , (String)dynConstraints[10] , (String)dynConstraints[11] , (int)dynConstraints[12] );
                case 1 :
-                     return conditional_H000C3(context, (String)dynConstraints[0] , (String)dynConstraints[1] , (String)dynConstraints[2] , (String)dynConstraints[3] , (String)dynConstraints[4] , (String)dynConstraints[5] , (String)dynConstraints[6] , (String)dynConstraints[7] , (String)dynConstraints[8] , (String)dynConstraints[9] , (String)dynConstraints[10] , (String)dynConstraints[11] , (int)dynConstraints[12] );
+                     return conditional_H001V3(context, (String)dynConstraints[0] , (String)dynConstraints[1] , (String)dynConstraints[2] , (String)dynConstraints[3] , (String)dynConstraints[4] , (String)dynConstraints[5] , (String)dynConstraints[6] , (String)dynConstraints[7] , (String)dynConstraints[8] , (String)dynConstraints[9] , (String)dynConstraints[10] , (String)dynConstraints[11] , (int)dynConstraints[12] );
          }
          return base.getDynamicStatement(cursor, context, dynConstraints);
       }
@@ -2352,8 +2352,8 @@ namespace GeneXus.Programs {
     {
        if ( def == null )
        {
-          Object[] prmH000C2 ;
-          prmH000C2 = new Object[] {
+          Object[] prmH001V2 ;
+          prmH001V2 = new Object[] {
           new Object[] {"AV6cempleadosid",NpgsqlDbType.Integer,9,0} ,
           new Object[] {"lV7cempleadosareaid",NpgsqlDbType.Varchar,3,0} ,
           new Object[] {"lV8cempleadosnomemple",NpgsqlDbType.Varchar,30,0} ,
@@ -2365,8 +2365,8 @@ namespace GeneXus.Programs {
           new Object[] {"GXPagingTo2",NpgsqlDbType.Integer,9,0} ,
           new Object[] {"GXPagingTo2",NpgsqlDbType.Integer,9,0}
           } ;
-          Object[] prmH000C3 ;
-          prmH000C3 = new Object[] {
+          Object[] prmH001V3 ;
+          prmH001V3 = new Object[] {
           new Object[] {"AV6cempleadosid",NpgsqlDbType.Integer,9,0} ,
           new Object[] {"lV7cempleadosareaid",NpgsqlDbType.Varchar,3,0} ,
           new Object[] {"lV8cempleadosnomemple",NpgsqlDbType.Varchar,30,0} ,
@@ -2376,8 +2376,8 @@ namespace GeneXus.Programs {
           new Object[] {"lV12cempleadosusuario",NpgsqlDbType.Varchar,15,0}
           } ;
           def= new CursorDef[] {
-              new CursorDef("H000C2", "scmdbuf",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmH000C2,11,0,false,false )
-             ,new CursorDef("H000C3", "scmdbuf",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmH000C3,1,0,false,false )
+              new CursorDef("H001V2", "scmdbuf",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmH001V2,11,0,false,false )
+             ,new CursorDef("H001V3", "scmdbuf",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmH001V3,1,0,false,false )
           };
        }
     }

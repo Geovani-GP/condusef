@@ -2,20 +2,21 @@ spec_i([ web,40,'Catalog_De_Origen','Catalog_De_Origen',0,spa,'10_3_15-115824' ]
  
 struct_i(2,1,[ 'Nextvalue' ],[]).
  
-level_i(2,[ 16,[ [ 16,many ],[ 2000,one ] ],[],[],[ [ [ 16,2000 ],[ 121,40000 ] ] ],[ [ [ 16,2000 ],[] ] ],[ 10 ],'ORIGEN_PKEY',[],[] ]).
+level_i(2,[ 0,[],[],[],[],[],[],[],[],[] ]).
  
-tw_i(2,[ [ 2000,[] ] ]).
+tw_i(2,[]).
  
 lwi_i(2,[ [] ]).
  
  
  
  
-ta_i(2,[ [ [ 16,121 ],[ 2000,se(40000,[ [ 2000,40000 ] ],[ t('coalesce(',1),t(40000,2),t(',',7),t('0',3),t(')',4) ]) ] ] ]).
+ta_i(2,[ [ [ 2000,se(40000,[ [ 2000,40000 ] ],[ t('coalesce(',1),t(40000,2),t(',',7),t('0',3),t(')',4) ]) ] ] ]).
+ta_i(2,[ [] ]).
  
-las_i(2,[ [ 'Nextvalue','Origendscorta',121,40000 ] ]).
+las_i(2,[ [ 'Nextvalue','Origendscorta','Origendsclarga' ] ]).
  
-lac_i(2,[ [ 'Nextvalue','Origendscorta' ] ]).
+lac_i(2,[ [ 'Nextvalue','Origendscorta','Origendsclarga' ] ]).
  
  
  
@@ -23,7 +24,7 @@ cls_i([ 0,0 ],[ 0,99 ]).
  
 pos_i('Nextvalue',[ 0,0,0 ]).
 pos_i('Origendscorta',[ 0,0,0 ]).
-pos_i(121,[ 0,0,0 ]).
+pos_i('Origendsclarga',[ 0,0,0 ]).
  
  
  
@@ -44,12 +45,12 @@ rule_i(0,datastore(1,'CS_RPCPGML','')).
 rule_i(0,datastore(1,'JDBC_DATASOURCE','')).
 rule_i(0,datastore(1,'USE_JDBC_DATASOURCE','0')).
 rule_i(0,datastore(1,'DS_DBMS_ADDINFO','')).
-rule_i(0,datastore(1,'USER_PASSWORD',󻢸蘇�2�5炭)).
+rule_i(0,datastore(1,'USER_PASSWORD',asdf)).
 rule_i(0,datastore(1,'USER_ID',postgres)).
 rule_i(0,datastore(1,'CS_CONNECT','First')).
 rule_i(0,datastore(1,'DBMS_PORT','5432')).
 rule_i(0,datastore(1,'CS_SERVER',localhost)).
-rule_i(0,datastore(1,'CS_DBNAME',postgres)).
+rule_i(0,datastore(1,'CS_DBNAME',condusef)).
 rule_i(0,datastore(1,'CS_FLEDSNAME','')).
 rule_i(0,datastore(1,'CS_DRVNAME','')).
 rule_i(0,datastore(1,'CS_DSNAME','')).
@@ -96,7 +97,7 @@ rule_i(0,prop('OnSessionTimeout','Ignore')).
 rule_i(0,prop('OBJECT_METADATA','')).
 rule_i(0,prop('IsMain','0')).
 rule_i(0,prop('SHOWMASTERPAGE_POPUP','0')).
-rule_i(0,prop('MasterPage',o(13,'RwdMasterPage'))).
+rule_i(0,prop('MasterPage',o(13,'AppMasterPage'))).
 rule_i(0,prop('WEB_COMP','No')).
 rule_i(0,prop('Theme',o(25,'Flat'))).
 rule_i(0,prop('Folder',o(8,'WebApi'))).
@@ -119,29 +120,21 @@ rule_i(0,p(0,15,fvix,[ 8,7 ],[ 'NAME',origen_pkey ])).
 rule_i(0,p(0,15,fvix,[ 8,7 ],[ 'LOC','' ])).
 rule_i(0,p(0,15,fvix,[ 8,7 ],[ 'SCHEMA',public ])).
 rule_i(0,p(0,15,fvix,[ 8,7 ],[ 'EXTNAM','YES' ])).
-rule_i(0,file(2000,'ORIGEN',[ 10,120,121,122,123,124,125 ])).
-rule_i(0,loc([ 2000 ],'ORIGEN','','LAN')).
-rule_i(0,index(2000,'ORIGEN_PKEY',u,[ 10 ])).
-rule_i(0,loc([ 2000,'ORIGEN_PKEY' ],origen_pkey,'','LAN')).
 rule_i(0,rule([ a(22,[ '''Guardar ''','''Guardar ''','' ]) ],[],[],[])).
  
 a_i(1,1,f,'Err',[],[ [],[ t('0',3) ] ]).
-a_i(2,2,t,16,[],[ [],'ORIGEN_PKEY',[] ]).
-a_i(3,2,r,2000,[],[ [],'ORIGEN_PKEY',[] ]).
+a_i(2,2,ra,2000,[],[ [],'ORIGEN_PKEY',[],2 ]).
  
 v_i(f,i,1,[]).
 v_i(f,o,1,'Err').
-v_i(t,i,2,[]).
-v_i(t,o,2,121).
-v_i(r,i,3,[]).
-v_i(r,o,3,40000).
+v_i(ra,i,2,[]).
+v_i(ra,o,2,40000).
  
  
  
  
  
  
-attri_i(121,[ origendsclarga,svchar,100,0,'',0,origendsclarga,'',0 ]).
 attri_i(40000,[ 'GXC1',int,18,0,'',0,'',[],0 ]).
 attri_i(10,[ origenid,int,18,0,'ZZZZZZZZZZZZZZZZZ9',0,origenid,'',0 ]).
 attri_i('Errmsg',[ 'Gx_emsg',char,70,0,'',1,'Error text','',16 ]).
@@ -152,11 +145,9 @@ attri_i('Origendscorta',[ origendscorta,svchar,50,0,'',0,origendscorta,'',8 ]).
 attri_i('Origendsclarga',[ origendsclarga,svchar,100,0,'',0,origendsclarga,'',9 ]).
 attri_i('Nextvalue',[ 'NextValue',int,4,0,'ZZZ9',0,'Next Value','',6 ]).
  
-table_i(2000,[ 'ORIGEN',[ 10 ],origen,origen ]).
-table_i(16,[ 'ORIGEN',[ 10,121 ],origen,origen ]).
+table_i(16,[ 'ORIGEN',[ 10 ],origen,origen ]).
  
 index_i(16,[ 'ORIGEN_PKEY',u,[ 10 ],'ORIGEN_PKEY' ]).
-index_i(2000,[ 'ORIGEN_PKEY',u,[ 10 ],'ORIGEN_PKEY' ]).
  
 lv_i(2,2000,16).
  
@@ -178,14 +169,6 @@ agg_def_i(40000,[ t('0',3) ]).
  
  
  
-map_i(2000,i,'ORIGEN_PKEY',[ 'ORIGEN_PKEY' ]).
-map_i(2000,a,125,[ origenfecultact ]).
-map_i(2000,a,124,[ origenfecreg ]).
-map_i(2000,a,123,[ origentotal ]).
-map_i(2000,a,122,[ origenusuario ]).
-map_i(2000,a,121,[ origendsclarga ]).
-map_i(2000,a,120,[ origendscorta ]).
-map_i(2000,a,10,[ origenid ]).
 map_i(16,i,'ORIGEN_PKEY',[ 'ORIGEN_PKEY' ]).
 map_i(16,a,125,[ origenfecultact ]).
 map_i(16,a,124,[ origenfecreg ]).
@@ -202,7 +185,7 @@ map_i(16,a,10,[ origenid ]).
  
  
  
-break_i(2,nvg,1,[],[ [ 121 ],[],[] ]).
+break_i(2,nvg,1,[],[ [],[],[] ]).
  
 b_group_i(2,1,lit,0,1,1).
 b_group_i(2,2,lit,0,2,5).
@@ -263,7 +246,7 @@ html_sub_i(8,17,html_i(3,row(17))).
 html_sub_i(17,18,html_i(0,cell(18))).
 html_sub_i(18,0,html_i(0,html('Descripci髇 Larga'))).
 html_sub_i(17,19,html_i(1,cell(19))).
-html_sub_i(19,20,html_i(0,t(121,2))).
+html_sub_i(19,20,html_i(0,t('Origendsclarga',23))).
 html_sub_i(8,0,html_i(4,html('</tbody>'))).
 html_sub_i(7,21,html_i(1,table(21))).
 html_sub_i(21,0,html_i(0,html('<tbody>'))).
@@ -363,11 +346,10 @@ html_comp_i(16,'Gxformat',0,d,[ num ]).
 html_comp_i(16,'Title','',d,[ str ]).
 html_comp_i(16,'Invitemsg','',d,[ str ]).
 html_comp_i(20,'Colcount',80,d,[ num ]).
-html_comp_i(20,'Attid',121,v,[ num ]).
+html_comp_i(20,'Attid',-9,v,[ num ]).
 html_comp_i(20,'Class','Attribute',d,[ str ]).
-html_comp_i(20,'Controlname','Origendsclarga',d,[ str ]).
+html_comp_i(20,'Controlname','&Origendsclarga',d,[ str ]).
 html_comp_i(20,'Returnonclick',0,d,[ bool ]).
-html_comp_i(20,'Eventgx','',d,[ str ]).
 html_comp_i(20,'Captionclass','',d,[ str ]).
 html_comp_i(20,'Captionposition','',d,[ str ]).
 html_comp_i(20,'Captionvalue','',d,[ str ]).
@@ -378,14 +360,15 @@ html_comp_i(20,'Autocorrection',-1,d,[ bool ]).
 html_comp_i(20,'Autocapitalization','FirstWord',d,[ str ]).
 html_comp_i(20,'Notifycontextchange',0,d,[ bool ]).
 html_comp_i(20,'Emptyasnull','Yes',d,[ str ]).
-html_comp_i(20,'Readonly',-1,d,[ bool ]).
+html_comp_i(20,'Readonly',0,d,[ bool ]).
 html_comp_i(20,'Autocomplete',-1,d,[ bool ]).
 html_comp_i(20,'Ispassword',0,d,[ bool ]).
 html_comp_i(20,'Autoresize',-1,d,[ bool ]).
 html_comp_i(20,'Gxwidth',measure(80,chr),d,[ measure ]).
 html_comp_i(20,'Gxheight',measure(1,row),d,[ measure ]).
 html_comp_i(20,'Ismultiline',0,d,[ bool ]).
-html_comp_i(20,'Fill',0,d,[ bool ]).
+html_comp_i(20,'Fill',-1,d,[ bool ]).
+html_comp_i(20,'Backcolor',rgb(255,255,255),d,[ color ]).
 html_comp_i(20,'Forecolor',rgb(0,0,0),d,[ color ]).
 html_comp_i(20,'Font',font('Verdana',12,[]),d,[ font ]).
 html_comp_i(20,'Horizontalalignment',left,d,[ str ]).
@@ -449,7 +432,7 @@ warn_gen_i(msg([],spc0156,[ 'Event ','''Cancelar''',' for control ''','Button3',
  
 lit_i(12,1,t('Nextvalue',23),[ ctlname('&Nextvalue'),ctrltype(edit,12),pos(12),ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
 lit_i(16,1,t('Origendscorta',23),[ ctlname('&Origendscorta'),ctrltype(edit,16),pos(16),ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
-lit_i(20,1,t(121,2),[ ctlname(121),ctrltype(edit,20),pos(20),readonly,ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
+lit_i(20,1,t('Origendsclarga',23),[ ctlname('&Origendsclarga'),ctrltype(edit,20),pos(20),ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
 lit_i(8,1,table(8),[ ctlname('Table2') ]).
 lit_i(24,1,button('''Consultar '''),[ ctlname('Button1'),width(0),rect(0,0,10,10),title('Nothing') ]).
 lit_i(26,1,button('''Guardar '''),[ ctlname('Button2'),width(0),rect(0,0,10,10),title('Nothing') ]).
@@ -475,15 +458,6 @@ att_prop_i(2,10,'ATT_INITIAL_VALUE','',d).
 att_prop_i(2,10,'AttRegEx','',d).
 att_prop_i(2,10,'AttValidationFailedMsg','',d).
 att_prop_i(2,10,'FullName',origenid,v).
-att_prop_i(2,121,'ExternalName',origendsclarga,d).
-att_prop_i(2,121,'ExternalNamespace','Condufef_v1',d).
-att_prop_i(2,121,'EmptyAsNull','Yes',d).
-att_prop_i(2,121,idBasedOn,'',d).
-att_prop_i(2,121,'ATT_INITIAL_VALUE','',d).
-att_prop_i(2,121,'DB_NLS_SUPPORT','No',d).
-att_prop_i(2,121,'AttRegEx','',d).
-att_prop_i(2,121,'AttValidationFailedMsg','',d).
-att_prop_i(2,121,'FullName',origendsclarga,v).
 att_prop_i(2,40000,'ExternalName',origenid,d).
 att_prop_i(2,40000,'ExternalNamespace','Condufef_v1',d).
 att_prop_i(2,40000,'EmptyAsNull','Yes',d).
@@ -496,7 +470,6 @@ att_prop_i(2,40000,'FullName',origenid,v).
  
  
 tbl_att_prop_i(2,16,10,'AllowNulls',n).
-tbl_att_prop_i(2,2000,10,'AllowNulls',n).
  
 var_prop_i(2,'Origendsclarga',idBasedOn,'',v).
 var_prop_i(2,'Origendscorta',idBasedOn,'',v).

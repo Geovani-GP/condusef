@@ -2,7 +2,7 @@
                File: Gx0010
         Description: Selection List tipobien
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 1/23/2022 3:49:22.35
+       Generated on: 1/25/2022 17:35:2.74
        Program type: Callable routine
           Main DBMS: postgresql
 */
@@ -190,7 +190,7 @@ namespace GeneXus.Programs {
          INITWEB( ) ;
          if ( ! isAjaxCallMode( ) )
          {
-            MasterPageObj = (GXMasterPage) ClassLoader.GetInstance("rwdpromptmasterpage", "GeneXus.Programs.rwdpromptmasterpage", new Object[] {new GxContext( context.handle, context.DataStores, context.HttpContext)});
+            MasterPageObj = (GXMasterPage) ClassLoader.GetInstance("appmasterpage", "GeneXus.Programs.appmasterpage", new Object[] {new GxContext( context.handle, context.DataStores, context.HttpContext)});
             MasterPageObj.setDataArea(this,true);
             ValidateSpaRequest();
             MasterPageObj.webExecute();
@@ -222,11 +222,11 @@ namespace GeneXus.Programs {
 
       public override short ExecuteStartEvent( )
       {
-         PA072( ) ;
+         PA1Q2( ) ;
          gxajaxcallmode = (short)((isAjaxCallMode( ) ? 1 : 0));
          if ( ( gxajaxcallmode == 0 ) && ( GxWebError == 0 ) )
          {
-            START072( ) ;
+            START1Q2( ) ;
          }
          return gxajaxcallmode ;
       }
@@ -261,7 +261,7 @@ namespace GeneXus.Programs {
          context.AddJavascriptSource("jquery.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxtimezone.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxgral.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("gxcfg.js", "?20221233492239");
+         context.AddJavascriptSource("gxcfg.js", "?20221251735283");
          if ( context.isSpaRequest( ) )
          {
             enableOutput();
@@ -353,14 +353,14 @@ namespace GeneXus.Programs {
             context.WriteHtmlText( "<div") ;
             GxWebStd.ClassAttribute( context, "gx-ct-body"+" "+(String.IsNullOrEmpty(StringUtil.RTrim( Form.Class)) ? "form-horizontal Form" : Form.Class)+"-fx");
             context.WriteHtmlText( ">") ;
-            WE072( ) ;
+            WE1Q2( ) ;
             context.WriteHtmlText( "</div>") ;
          }
       }
 
       public override void DispatchEvents( )
       {
-         EVT072( ) ;
+         EVT1Q2( ) ;
       }
 
       public override bool HasEnterEvent( )
@@ -388,7 +388,7 @@ namespace GeneXus.Programs {
          return "Selection List tipobien" ;
       }
 
-      protected void WB070( )
+      protected void WB1Q0( )
       {
          if ( context.isAjaxRequest( ) )
          {
@@ -423,7 +423,7 @@ namespace GeneXus.Programs {
             /* Div Control */
             GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "col-xs-12", "left", "top", "", "", "div");
             /* Text block */
-            GxWebStd.gx_label_ctrl( context, lblLbltipobienidfilter_Internalname, "tipobienid", "", "", lblLbltipobienidfilter_Jsonclick, "'"+""+"'"+",false,"+"'"+"e11071_client"+"'", "", "WWAdvancedLabel WWFilterLabel", 7, "", 1, 1, 1, "HLP_Gx0010.htm");
+            GxWebStd.gx_label_ctrl( context, lblLbltipobienidfilter_Internalname, "tipobienid", "", "", lblLbltipobienidfilter_Jsonclick, "'"+""+"'"+",false,"+"'"+"e111q1_client"+"'", "", "WWAdvancedLabel WWFilterLabel", 7, "", 1, 1, 1, "HLP_Gx0010.htm");
             GxWebStd.gx_div_end( context, "left", "top");
             GxWebStd.gx_div_end( context, "left", "top");
             /* Div Control */
@@ -454,7 +454,7 @@ namespace GeneXus.Programs {
             /* Div Control */
             GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "col-xs-12", "left", "top", "", "", "div");
             /* Text block */
-            GxWebStd.gx_label_ctrl( context, lblLbltipobiendscfilter_Internalname, "tipobiendsc", "", "", lblLbltipobiendscfilter_Jsonclick, "'"+""+"'"+",false,"+"'"+"e12071_client"+"'", "", "WWAdvancedLabel WWFilterLabel", 7, "", 1, 1, 1, "HLP_Gx0010.htm");
+            GxWebStd.gx_label_ctrl( context, lblLbltipobiendscfilter_Internalname, "tipobiendsc", "", "", lblLbltipobiendscfilter_Jsonclick, "'"+""+"'"+",false,"+"'"+"e121q1_client"+"'", "", "WWAdvancedLabel WWFilterLabel", 7, "", 1, 1, 1, "HLP_Gx0010.htm");
             GxWebStd.gx_div_end( context, "left", "top");
             GxWebStd.gx_div_end( context, "left", "top");
             /* Div Control */
@@ -485,7 +485,7 @@ namespace GeneXus.Programs {
             /* Div Control */
             GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "col-xs-12", "left", "top", "", "", "div");
             /* Text block */
-            GxWebStd.gx_label_ctrl( context, lblLbltipobienusuariofilter_Internalname, "tipobienusuario", "", "", lblLbltipobienusuariofilter_Jsonclick, "'"+""+"'"+",false,"+"'"+"e13071_client"+"'", "", "WWAdvancedLabel WWFilterLabel", 7, "", 1, 1, 1, "HLP_Gx0010.htm");
+            GxWebStd.gx_label_ctrl( context, lblLbltipobienusuariofilter_Internalname, "tipobienusuario", "", "", lblLbltipobienusuariofilter_Jsonclick, "'"+""+"'"+",false,"+"'"+"e131q1_client"+"'", "", "WWAdvancedLabel WWFilterLabel", 7, "", 1, 1, 1, "HLP_Gx0010.htm");
             GxWebStd.gx_div_end( context, "left", "top");
             GxWebStd.gx_div_end( context, "left", "top");
             /* Div Control */
@@ -516,7 +516,7 @@ namespace GeneXus.Programs {
             /* Div Control */
             GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "col-xs-12", "left", "top", "", "", "div");
             /* Text block */
-            GxWebStd.gx_label_ctrl( context, lblLbltipobienfecregfilter_Internalname, "tipobienfecreg", "", "", lblLbltipobienfecregfilter_Jsonclick, "'"+""+"'"+",false,"+"'"+"e14071_client"+"'", "", "WWAdvancedLabel WWDateFilterLabel", 7, "", 1, 1, 1, "HLP_Gx0010.htm");
+            GxWebStd.gx_label_ctrl( context, lblLbltipobienfecregfilter_Internalname, "tipobienfecreg", "", "", lblLbltipobienfecregfilter_Jsonclick, "'"+""+"'"+",false,"+"'"+"e141q1_client"+"'", "", "WWAdvancedLabel WWDateFilterLabel", 7, "", 1, 1, 1, "HLP_Gx0010.htm");
             GxWebStd.gx_div_end( context, "left", "top");
             GxWebStd.gx_div_end( context, "left", "top");
             /* Div Control */
@@ -549,7 +549,7 @@ namespace GeneXus.Programs {
             /* Div Control */
             GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "col-xs-12", "left", "top", "", "", "div");
             /* Text block */
-            GxWebStd.gx_label_ctrl( context, lblLbltipobienfecultactfilter_Internalname, "tipobienfecultact", "", "", lblLbltipobienfecultactfilter_Jsonclick, "'"+""+"'"+",false,"+"'"+"e15071_client"+"'", "", "WWAdvancedLabel WWDateFilterLabel", 7, "", 1, 1, 1, "HLP_Gx0010.htm");
+            GxWebStd.gx_label_ctrl( context, lblLbltipobienfecultactfilter_Internalname, "tipobienfecultact", "", "", lblLbltipobienfecultactfilter_Jsonclick, "'"+""+"'"+",false,"+"'"+"e151q1_client"+"'", "", "WWAdvancedLabel WWDateFilterLabel", 7, "", 1, 1, 1, "HLP_Gx0010.htm");
             GxWebStd.gx_div_end( context, "left", "top");
             GxWebStd.gx_div_end( context, "left", "top");
             /* Div Control */
@@ -584,7 +584,7 @@ namespace GeneXus.Programs {
             TempTags = "  onfocus=\"gx.evt.onfocus(this, 61,'',false,'',0)\"";
             ClassString = bttBtntoggle_Class;
             StyleString = "";
-            GxWebStd.gx_button_ctrl( context, bttBtntoggle_Internalname, "gx.evt.setGridEvt("+StringUtil.Str( (decimal)(64), 2, 0)+","+"null"+");", "|||", bttBtntoggle_Jsonclick, 7, "|||", "", StyleString, ClassString, 1, 1, "standard", "'"+""+"'"+",false,"+"'"+"e16071_client"+"'", TempTags, "", 2, "HLP_Gx0010.htm");
+            GxWebStd.gx_button_ctrl( context, bttBtntoggle_Internalname, "gx.evt.setGridEvt("+StringUtil.Str( (decimal)(64), 2, 0)+","+"null"+");", "|||", bttBtntoggle_Jsonclick, 7, "|||", "", StyleString, ClassString, 1, 1, "standard", "'"+""+"'"+",false,"+"'"+"e161q1_client"+"'", TempTags, "", 2, "HLP_Gx0010.htm");
             GxWebStd.gx_div_end( context, "left", "top");
             GxWebStd.gx_div_end( context, "left", "top");
             /* Div Control */
@@ -733,7 +733,7 @@ namespace GeneXus.Programs {
          wbLoad = true;
       }
 
-      protected void START072( )
+      protected void START1Q2( )
       {
          wbLoad = false;
          wbEnd = 0;
@@ -750,16 +750,16 @@ namespace GeneXus.Programs {
          {
          }
          wbErr = false;
-         STRUP070( ) ;
+         STRUP1Q0( ) ;
       }
 
-      protected void WS072( )
+      protected void WS1Q2( )
       {
-         START072( ) ;
-         EVT072( ) ;
+         START1Q2( ) ;
+         EVT1Q2( ) ;
       }
 
-      protected void EVT072( )
+      protected void EVT1Q2( )
       {
          if ( StringUtil.StrCmp(context.GetRequestMethod( ), "POST") == 0 )
          {
@@ -839,15 +839,15 @@ namespace GeneXus.Programs {
                                  {
                                     context.wbHandled = 1;
                                     dynload_actions( ) ;
-                                    /* Execute user event: E17072 */
-                                    E17072 ();
+                                    /* Execute user event: E171Q2 */
+                                    E171Q2 ();
                                  }
                                  else if ( StringUtil.StrCmp(sEvt, "LOAD") == 0 )
                                  {
                                     context.wbHandled = 1;
                                     dynload_actions( ) ;
-                                    /* Execute user event: E18072 */
-                                    E18072 ();
+                                    /* Execute user event: E181Q2 */
+                                    E181Q2 ();
                                  }
                                  else if ( StringUtil.StrCmp(sEvt, "ENTER") == 0 )
                                  {
@@ -882,8 +882,8 @@ namespace GeneXus.Programs {
                                        }
                                        if ( ! Rfr0gs )
                                        {
-                                          /* Execute user event: E19072 */
-                                          E19072 ();
+                                          /* Execute user event: E191Q2 */
+                                          E191Q2 ();
                                        }
                                        dynload_actions( ) ;
                                     }
@@ -907,7 +907,7 @@ namespace GeneXus.Programs {
          }
       }
 
-      protected void WE072( )
+      protected void WE1Q2( )
       {
          if ( ! GxWebStd.gx_redirect( context) )
          {
@@ -923,7 +923,7 @@ namespace GeneXus.Programs {
          }
       }
 
-      protected void PA072( )
+      protected void PA1Q2( )
       {
          if ( nDonePA == 0 )
          {
@@ -979,7 +979,7 @@ namespace GeneXus.Programs {
          GxWebStd.set_html_headers( context, 0, "", "");
          GxWebStd.gx_hidden_field( context, "GRID1_Rows", StringUtil.LTrim( StringUtil.NToC( (decimal)(subGrid1_Rows), 6, 0, ".", "")));
          GRID1_nCurrentRecord = 0;
-         RF072( ) ;
+         RF1Q2( ) ;
          /* End function gxgrGrid1_refresh */
       }
 
@@ -1000,7 +1000,7 @@ namespace GeneXus.Programs {
       public void Refresh( )
       {
          send_integrity_hashes( ) ;
-         RF072( ) ;
+         RF1Q2( ) ;
       }
 
       protected void initialize_formulas( )
@@ -1009,7 +1009,7 @@ namespace GeneXus.Programs {
          context.Gx_err = 0;
       }
 
-      protected void RF072( )
+      protected void RF1Q2( )
       {
          initialize_formulas( ) ;
          if ( isAjaxCallMode( ) )
@@ -1054,29 +1054,29 @@ namespace GeneXus.Programs {
             context.httpAjaxContext.ajax_rsp_assign_attri("", false, "AV7ctipobiendsc", AV7ctipobiendsc);
             lV8ctipobienusuario = StringUtil.Concat( StringUtil.RTrim( AV8ctipobienusuario), "%", "");
             context.httpAjaxContext.ajax_rsp_assign_attri("", false, "AV8ctipobienusuario", AV8ctipobienusuario);
-            /* Using cursor H00072 */
+            /* Using cursor H001Q2 */
             pr_default.execute(0, new Object[] {AV6ctipobienid, lV7ctipobiendsc, lV8ctipobienusuario, AV9ctipobienfecreg, AV10ctipobienfecultact, GXPagingFrom2, GXPagingTo2, GXPagingTo2});
             nGXsfl_64_idx = 1;
             while ( ( (pr_default.getStatus(0) != 101) ) && ( ( ( 10 == 0 ) || ( GRID1_nCurrentRecord < subGrid1_Recordsperpage( ) ) ) ) )
             {
-               A142tipobienfecultact = H00072_A142tipobienfecultact[0];
-               n142tipobienfecultact = H00072_n142tipobienfecultact[0];
-               A141tipobienfecreg = H00072_A141tipobienfecreg[0];
-               n141tipobienfecreg = H00072_n141tipobienfecreg[0];
-               A140tipobienusuario = H00072_A140tipobienusuario[0];
-               n140tipobienusuario = H00072_n140tipobienusuario[0];
-               A139tipobiendsc = H00072_A139tipobiendsc[0];
-               n139tipobiendsc = H00072_n139tipobiendsc[0];
-               A23tipobienid = H00072_A23tipobienid[0];
-               /* Execute user event: E18072 */
-               E18072 ();
+               A142tipobienfecultact = H001Q2_A142tipobienfecultact[0];
+               n142tipobienfecultact = H001Q2_n142tipobienfecultact[0];
+               A141tipobienfecreg = H001Q2_A141tipobienfecreg[0];
+               n141tipobienfecreg = H001Q2_n141tipobienfecreg[0];
+               A140tipobienusuario = H001Q2_A140tipobienusuario[0];
+               n140tipobienusuario = H001Q2_n140tipobienusuario[0];
+               A139tipobiendsc = H001Q2_A139tipobiendsc[0];
+               n139tipobiendsc = H001Q2_n139tipobiendsc[0];
+               A23tipobienid = H001Q2_A23tipobienid[0];
+               /* Execute user event: E181Q2 */
+               E181Q2 ();
                pr_default.readNext(0);
             }
             GRID1_nEOF = (short)(((pr_default.getStatus(0) == 101) ? 1 : 0));
             GxWebStd.gx_hidden_field( context, "GRID1_nEOF", StringUtil.LTrim( StringUtil.NToC( (decimal)(GRID1_nEOF), 1, 0, ".", "")));
             pr_default.close(0);
             wbEnd = 64;
-            WB070( ) ;
+            WB1Q0( ) ;
          }
          nGXsfl_64_Refreshing = 0;
       }
@@ -1112,9 +1112,9 @@ namespace GeneXus.Programs {
          context.httpAjaxContext.ajax_rsp_assign_attri("", false, "AV7ctipobiendsc", AV7ctipobiendsc);
          lV8ctipobienusuario = StringUtil.Concat( StringUtil.RTrim( AV8ctipobienusuario), "%", "");
          context.httpAjaxContext.ajax_rsp_assign_attri("", false, "AV8ctipobienusuario", AV8ctipobienusuario);
-         /* Using cursor H00073 */
+         /* Using cursor H001Q3 */
          pr_default.execute(1, new Object[] {AV6ctipobienid, lV7ctipobiendsc, lV8ctipobienusuario, AV9ctipobienfecreg, AV10ctipobienfecultact});
-         GRID1_nRecordCount = H00073_AGRID1_nRecordCount[0];
+         GRID1_nRecordCount = H001Q3_AGRID1_nRecordCount[0];
          pr_default.close(1);
          return (int)(GRID1_nRecordCount) ;
       }
@@ -1221,14 +1221,14 @@ namespace GeneXus.Programs {
          return (int)(0) ;
       }
 
-      protected void STRUP070( )
+      protected void STRUP1Q0( )
       {
          /* Before Start, stand alone formulas. */
          context.Gx_err = 0;
          /* Execute Start event if defined. */
          context.wbGlbDoneStart = 0;
-         /* Execute user event: E17072 */
-         E17072 ();
+         /* Execute user event: E171Q2 */
+         E171Q2 ();
          context.wbGlbDoneStart = 1;
          /* After Start, stand alone formulas. */
          if ( StringUtil.StrCmp(context.GetRequestMethod( ), "POST") == 0 )
@@ -1318,8 +1318,8 @@ namespace GeneXus.Programs {
 
       protected void GXStart( )
       {
-         /* Execute user event: E17072 */
-         E17072 ();
+         /* Execute user event: E171Q2 */
+         E171Q2 ();
          if ( returnInSub )
          {
             returnInSub = true;
@@ -1327,7 +1327,7 @@ namespace GeneXus.Programs {
          }
       }
 
-      protected void E17072( )
+      protected void E171Q2( )
       {
          /* Start Routine */
          Form.Caption = StringUtil.Format( "Lista de Selección %1", "tipobien", "", "", "", "", "", "", "", "");
@@ -1335,7 +1335,7 @@ namespace GeneXus.Programs {
          AV12ADVANCED_LABEL_TEMPLATE = "%1 <strong>%2</strong>";
       }
 
-      private void E18072( )
+      private void E181Q2( )
       {
          /* Load Routine */
          AV5LinkSelection = context.GetImagePath( "3914535b-0c03-44c5-9538-906a99cdd2bc", "", context.GetTheme( ));
@@ -1351,8 +1351,8 @@ namespace GeneXus.Programs {
 
       public void GXEnter( )
       {
-         /* Execute user event: E19072 */
-         E19072 ();
+         /* Execute user event: E191Q2 */
+         E191Q2 ();
          if ( returnInSub )
          {
             returnInSub = true;
@@ -1360,7 +1360,7 @@ namespace GeneXus.Programs {
          }
       }
 
-      protected void E19072( )
+      protected void E191Q2( )
       {
          /* Enter Routine */
          AV11ptipobienid = A23tipobienid;
@@ -1390,9 +1390,9 @@ namespace GeneXus.Programs {
          nGotPars = (short)(1);
          nGXWrapped = (short)(1);
          context.SetWrapped(true);
-         PA072( ) ;
-         WS072( ) ;
-         WE072( ) ;
+         PA1Q2( ) ;
+         WS1Q2( ) ;
+         WE1Q2( ) ;
          this.cleanup();
          context.SetWrapped(false);
          context.GX_msglist = BackMsgLst;
@@ -1405,12 +1405,12 @@ namespace GeneXus.Programs {
 
       protected void define_styles( )
       {
-         AddStyleSheetFile("calendar-system.css", "?13205289");
-         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?3485073");
+         AddStyleSheetFile("calendar-system.css", "?11323129");
+         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?1734189");
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?2022123349231");
+            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?20221251735415");
             idxLst = (int)(idxLst+1);
          }
          /* End function define_styles */
@@ -1419,7 +1419,7 @@ namespace GeneXus.Programs {
       protected void include_jscripts( )
       {
          context.AddJavascriptSource("messages.spa.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("gx0010.js", "?2022123349231");
+         context.AddJavascriptSource("gx0010.js", "?20221251735415");
          /* End function include_jscripts */
       }
 
@@ -1442,7 +1442,7 @@ namespace GeneXus.Programs {
       protected void sendrow_642( )
       {
          SubsflControlProps_642( ) ;
-         WB070( ) ;
+         WB1Q0( ) ;
          if ( ( 10 * 1 == 0 ) || ( nGXsfl_64_idx <= subGrid1_Recordsperpage( ) * 1 ) )
          {
             Grid1Row = GXWebRow.GetNew(context,Grid1Container);
@@ -1682,13 +1682,13 @@ namespace GeneXus.Programs {
       public override void InitializeDynEvents( )
       {
          setEventMetadata("REFRESH","{handler:'Refresh',iparms:[{av:'GRID1_nFirstRecordOnPage',nv:0},{av:'GRID1_nEOF',nv:0},{av:'subGrid1_Rows',nv:0},{av:'AV6ctipobienid',fld:'vCTIPOBIENID',pic:'ZZZZZZZZ9',nv:0},{av:'AV7ctipobiendsc',fld:'vCTIPOBIENDSC',pic:'',nv:''},{av:'AV8ctipobienusuario',fld:'vCTIPOBIENUSUARIO',pic:'',nv:''},{av:'AV9ctipobienfecreg',fld:'vCTIPOBIENFECREG',pic:'99/99/9999 99:99:99',nv:''},{av:'AV10ctipobienfecultact',fld:'vCTIPOBIENFECULTACT',pic:'99/99/9999 99:99:99',nv:''}],oparms:[]}");
-         setEventMetadata("'TOGGLE'","{handler:'E16071',iparms:[{av:'divAdvancedcontainer_Class',ctrl:'ADVANCEDCONTAINER',prop:'Class'},{ctrl:'BTNTOGGLE',prop:'Class'}],oparms:[{av:'divAdvancedcontainer_Class',ctrl:'ADVANCEDCONTAINER',prop:'Class'},{ctrl:'BTNTOGGLE',prop:'Class'}]}");
-         setEventMetadata("LBLTIPOBIENIDFILTER.CLICK","{handler:'E11071',iparms:[{av:'divTipobienidfiltercontainer_Class',ctrl:'TIPOBIENIDFILTERCONTAINER',prop:'Class'}],oparms:[{av:'divTipobienidfiltercontainer_Class',ctrl:'TIPOBIENIDFILTERCONTAINER',prop:'Class'},{av:'edtavCtipobienid_Visible',ctrl:'vCTIPOBIENID',prop:'Visible'}]}");
-         setEventMetadata("LBLTIPOBIENDSCFILTER.CLICK","{handler:'E12071',iparms:[{av:'divTipobiendscfiltercontainer_Class',ctrl:'TIPOBIENDSCFILTERCONTAINER',prop:'Class'}],oparms:[{av:'divTipobiendscfiltercontainer_Class',ctrl:'TIPOBIENDSCFILTERCONTAINER',prop:'Class'},{av:'edtavCtipobiendsc_Visible',ctrl:'vCTIPOBIENDSC',prop:'Visible'}]}");
-         setEventMetadata("LBLTIPOBIENUSUARIOFILTER.CLICK","{handler:'E13071',iparms:[{av:'divTipobienusuariofiltercontainer_Class',ctrl:'TIPOBIENUSUARIOFILTERCONTAINER',prop:'Class'}],oparms:[{av:'divTipobienusuariofiltercontainer_Class',ctrl:'TIPOBIENUSUARIOFILTERCONTAINER',prop:'Class'},{av:'edtavCtipobienusuario_Visible',ctrl:'vCTIPOBIENUSUARIO',prop:'Visible'}]}");
-         setEventMetadata("LBLTIPOBIENFECREGFILTER.CLICK","{handler:'E14071',iparms:[{av:'divTipobienfecregfiltercontainer_Class',ctrl:'TIPOBIENFECREGFILTERCONTAINER',prop:'Class'}],oparms:[{av:'divTipobienfecregfiltercontainer_Class',ctrl:'TIPOBIENFECREGFILTERCONTAINER',prop:'Class'}]}");
-         setEventMetadata("LBLTIPOBIENFECULTACTFILTER.CLICK","{handler:'E15071',iparms:[{av:'divTipobienfecultactfiltercontainer_Class',ctrl:'TIPOBIENFECULTACTFILTERCONTAINER',prop:'Class'}],oparms:[{av:'divTipobienfecultactfiltercontainer_Class',ctrl:'TIPOBIENFECULTACTFILTERCONTAINER',prop:'Class'}]}");
-         setEventMetadata("ENTER","{handler:'E19072',iparms:[{av:'A23tipobienid',fld:'TIPOBIENID',pic:'ZZZZZZZZ9',hsh:true,nv:0}],oparms:[{av:'AV11ptipobienid',fld:'vPTIPOBIENID',pic:'ZZZZZZZZ9',nv:0}]}");
+         setEventMetadata("'TOGGLE'","{handler:'E161Q1',iparms:[{av:'divAdvancedcontainer_Class',ctrl:'ADVANCEDCONTAINER',prop:'Class'},{ctrl:'BTNTOGGLE',prop:'Class'}],oparms:[{av:'divAdvancedcontainer_Class',ctrl:'ADVANCEDCONTAINER',prop:'Class'},{ctrl:'BTNTOGGLE',prop:'Class'}]}");
+         setEventMetadata("LBLTIPOBIENIDFILTER.CLICK","{handler:'E111Q1',iparms:[{av:'divTipobienidfiltercontainer_Class',ctrl:'TIPOBIENIDFILTERCONTAINER',prop:'Class'}],oparms:[{av:'divTipobienidfiltercontainer_Class',ctrl:'TIPOBIENIDFILTERCONTAINER',prop:'Class'},{av:'edtavCtipobienid_Visible',ctrl:'vCTIPOBIENID',prop:'Visible'}]}");
+         setEventMetadata("LBLTIPOBIENDSCFILTER.CLICK","{handler:'E121Q1',iparms:[{av:'divTipobiendscfiltercontainer_Class',ctrl:'TIPOBIENDSCFILTERCONTAINER',prop:'Class'}],oparms:[{av:'divTipobiendscfiltercontainer_Class',ctrl:'TIPOBIENDSCFILTERCONTAINER',prop:'Class'},{av:'edtavCtipobiendsc_Visible',ctrl:'vCTIPOBIENDSC',prop:'Visible'}]}");
+         setEventMetadata("LBLTIPOBIENUSUARIOFILTER.CLICK","{handler:'E131Q1',iparms:[{av:'divTipobienusuariofiltercontainer_Class',ctrl:'TIPOBIENUSUARIOFILTERCONTAINER',prop:'Class'}],oparms:[{av:'divTipobienusuariofiltercontainer_Class',ctrl:'TIPOBIENUSUARIOFILTERCONTAINER',prop:'Class'},{av:'edtavCtipobienusuario_Visible',ctrl:'vCTIPOBIENUSUARIO',prop:'Visible'}]}");
+         setEventMetadata("LBLTIPOBIENFECREGFILTER.CLICK","{handler:'E141Q1',iparms:[{av:'divTipobienfecregfiltercontainer_Class',ctrl:'TIPOBIENFECREGFILTERCONTAINER',prop:'Class'}],oparms:[{av:'divTipobienfecregfiltercontainer_Class',ctrl:'TIPOBIENFECREGFILTERCONTAINER',prop:'Class'}]}");
+         setEventMetadata("LBLTIPOBIENFECULTACTFILTER.CLICK","{handler:'E151Q1',iparms:[{av:'divTipobienfecultactfiltercontainer_Class',ctrl:'TIPOBIENFECULTACTFILTERCONTAINER',prop:'Class'}],oparms:[{av:'divTipobienfecultactfiltercontainer_Class',ctrl:'TIPOBIENFECULTACTFILTERCONTAINER',prop:'Class'}]}");
+         setEventMetadata("ENTER","{handler:'E191Q2',iparms:[{av:'A23tipobienid',fld:'TIPOBIENID',pic:'ZZZZZZZZ9',hsh:true,nv:0}],oparms:[{av:'AV11ptipobienid',fld:'vPTIPOBIENID',pic:'ZZZZZZZZ9',nv:0}]}");
          setEventMetadata("GRID1_FIRSTPAGE","{handler:'subgrid1_firstpage',iparms:[{av:'GRID1_nFirstRecordOnPage',nv:0},{av:'GRID1_nEOF',nv:0},{av:'subGrid1_Rows',nv:0},{av:'AV6ctipobienid',fld:'vCTIPOBIENID',pic:'ZZZZZZZZ9',nv:0},{av:'AV7ctipobiendsc',fld:'vCTIPOBIENDSC',pic:'',nv:''},{av:'AV8ctipobienusuario',fld:'vCTIPOBIENUSUARIO',pic:'',nv:''},{av:'AV9ctipobienfecreg',fld:'vCTIPOBIENFECREG',pic:'99/99/9999 99:99:99',nv:''},{av:'AV10ctipobienfecultact',fld:'vCTIPOBIENFECULTACT',pic:'99/99/9999 99:99:99',nv:''}],oparms:[]}");
          setEventMetadata("GRID1_PREVPAGE","{handler:'subgrid1_previouspage',iparms:[{av:'GRID1_nFirstRecordOnPage',nv:0},{av:'GRID1_nEOF',nv:0},{av:'subGrid1_Rows',nv:0},{av:'AV6ctipobienid',fld:'vCTIPOBIENID',pic:'ZZZZZZZZ9',nv:0},{av:'AV7ctipobiendsc',fld:'vCTIPOBIENDSC',pic:'',nv:''},{av:'AV8ctipobienusuario',fld:'vCTIPOBIENUSUARIO',pic:'',nv:''},{av:'AV9ctipobienfecreg',fld:'vCTIPOBIENFECREG',pic:'99/99/9999 99:99:99',nv:''},{av:'AV10ctipobienfecultact',fld:'vCTIPOBIENFECULTACT',pic:'99/99/9999 99:99:99',nv:''}],oparms:[]}");
          setEventMetadata("GRID1_NEXTPAGE","{handler:'subgrid1_nextpage',iparms:[{av:'GRID1_nFirstRecordOnPage',nv:0},{av:'GRID1_nEOF',nv:0},{av:'subGrid1_Rows',nv:0},{av:'AV6ctipobienid',fld:'vCTIPOBIENID',pic:'ZZZZZZZZ9',nv:0},{av:'AV7ctipobiendsc',fld:'vCTIPOBIENDSC',pic:'',nv:''},{av:'AV8ctipobienusuario',fld:'vCTIPOBIENUSUARIO',pic:'',nv:''},{av:'AV9ctipobienfecreg',fld:'vCTIPOBIENFECREG',pic:'99/99/9999 99:99:99',nv:''},{av:'AV10ctipobienfecultact',fld:'vCTIPOBIENFECULTACT',pic:'99/99/9999 99:99:99',nv:''}],oparms:[]}");
@@ -1752,16 +1752,16 @@ namespace GeneXus.Programs {
          lV8ctipobienusuario = "";
          A141tipobienfecreg = (DateTime)(DateTime.MinValue);
          A142tipobienfecultact = (DateTime)(DateTime.MinValue);
-         H00072_A142tipobienfecultact = new DateTime[] {DateTime.MinValue} ;
-         H00072_n142tipobienfecultact = new bool[] {false} ;
-         H00072_A141tipobienfecreg = new DateTime[] {DateTime.MinValue} ;
-         H00072_n141tipobienfecreg = new bool[] {false} ;
-         H00072_A140tipobienusuario = new String[] {""} ;
-         H00072_n140tipobienusuario = new bool[] {false} ;
-         H00072_A139tipobiendsc = new String[] {""} ;
-         H00072_n139tipobiendsc = new bool[] {false} ;
-         H00072_A23tipobienid = new int[1] ;
-         H00073_AGRID1_nRecordCount = new long[1] ;
+         H001Q2_A142tipobienfecultact = new DateTime[] {DateTime.MinValue} ;
+         H001Q2_n142tipobienfecultact = new bool[] {false} ;
+         H001Q2_A141tipobienfecreg = new DateTime[] {DateTime.MinValue} ;
+         H001Q2_n141tipobienfecreg = new bool[] {false} ;
+         H001Q2_A140tipobienusuario = new String[] {""} ;
+         H001Q2_n140tipobienusuario = new bool[] {false} ;
+         H001Q2_A139tipobiendsc = new String[] {""} ;
+         H001Q2_n139tipobiendsc = new bool[] {false} ;
+         H001Q2_A23tipobienid = new int[1] ;
+         H001Q3_AGRID1_nRecordCount = new long[1] ;
          AV12ADVANCED_LABEL_TEMPLATE = "";
          Grid1Row = new GXWebRow();
          BackMsgLst = new msglist();
@@ -1770,10 +1770,10 @@ namespace GeneXus.Programs {
          pr_default = new DataStoreProvider(context, new GeneXus.Programs.gx0010__default(),
             new Object[][] {
                 new Object[] {
-               H00072_A142tipobienfecultact, H00072_n142tipobienfecultact, H00072_A141tipobienfecreg, H00072_n141tipobienfecreg, H00072_A140tipobienusuario, H00072_n140tipobienusuario, H00072_A139tipobiendsc, H00072_n139tipobiendsc, H00072_A23tipobienid
+               H001Q2_A142tipobienfecultact, H001Q2_n142tipobienfecultact, H001Q2_A141tipobienfecreg, H001Q2_n141tipobienfecreg, H001Q2_A140tipobienusuario, H001Q2_n140tipobienusuario, H001Q2_A139tipobiendsc, H001Q2_n139tipobiendsc, H001Q2_A23tipobienid
                }
                , new Object[] {
-               H00073_AGRID1_nRecordCount
+               H001Q3_AGRID1_nRecordCount
                }
             }
          );
@@ -1926,16 +1926,16 @@ namespace GeneXus.Programs {
       private GXWebColumn Grid1Column ;
       private IGxDataStore dsDefault ;
       private IDataStoreProvider pr_default ;
-      private DateTime[] H00072_A142tipobienfecultact ;
-      private bool[] H00072_n142tipobienfecultact ;
-      private DateTime[] H00072_A141tipobienfecreg ;
-      private bool[] H00072_n141tipobienfecreg ;
-      private String[] H00072_A140tipobienusuario ;
-      private bool[] H00072_n140tipobienusuario ;
-      private String[] H00072_A139tipobiendsc ;
-      private bool[] H00072_n139tipobiendsc ;
-      private int[] H00072_A23tipobienid ;
-      private long[] H00073_AGRID1_nRecordCount ;
+      private DateTime[] H001Q2_A142tipobienfecultact ;
+      private bool[] H001Q2_n142tipobienfecultact ;
+      private DateTime[] H001Q2_A141tipobienfecreg ;
+      private bool[] H001Q2_n141tipobienfecreg ;
+      private String[] H001Q2_A140tipobienusuario ;
+      private bool[] H001Q2_n140tipobienusuario ;
+      private String[] H001Q2_A139tipobiendsc ;
+      private bool[] H001Q2_n139tipobiendsc ;
+      private int[] H001Q2_A23tipobienid ;
+      private long[] H001Q3_AGRID1_nRecordCount ;
       private msglist BackMsgLst ;
       private msglist LclMsgLst ;
       private int aP0_ptipobienid ;
@@ -1944,7 +1944,7 @@ namespace GeneXus.Programs {
 
    public class gx0010__default : DataStoreHelperBase, IDataStoreHelper
    {
-      protected Object[] conditional_H00072( IGxContext context ,
+      protected Object[] conditional_H001Q2( IGxContext context ,
                                              String AV7ctipobiendsc ,
                                              String AV8ctipobienusuario ,
                                              DateTime AV9ctipobienfecreg ,
@@ -2007,7 +2007,7 @@ namespace GeneXus.Programs {
          return GXv_Object2 ;
       }
 
-      protected Object[] conditional_H00073( IGxContext context ,
+      protected Object[] conditional_H001Q3( IGxContext context ,
                                              String AV7ctipobiendsc ,
                                              String AV8ctipobienusuario ,
                                              DateTime AV9ctipobienfecreg ,
@@ -2072,9 +2072,9 @@ namespace GeneXus.Programs {
          switch ( cursor )
          {
                case 0 :
-                     return conditional_H00072(context, (String)dynConstraints[0] , (String)dynConstraints[1] , (DateTime)dynConstraints[2] , (DateTime)dynConstraints[3] , (String)dynConstraints[4] , (String)dynConstraints[5] , (DateTime)dynConstraints[6] , (DateTime)dynConstraints[7] , (int)dynConstraints[8] );
+                     return conditional_H001Q2(context, (String)dynConstraints[0] , (String)dynConstraints[1] , (DateTime)dynConstraints[2] , (DateTime)dynConstraints[3] , (String)dynConstraints[4] , (String)dynConstraints[5] , (DateTime)dynConstraints[6] , (DateTime)dynConstraints[7] , (int)dynConstraints[8] );
                case 1 :
-                     return conditional_H00073(context, (String)dynConstraints[0] , (String)dynConstraints[1] , (DateTime)dynConstraints[2] , (DateTime)dynConstraints[3] , (String)dynConstraints[4] , (String)dynConstraints[5] , (DateTime)dynConstraints[6] , (DateTime)dynConstraints[7] , (int)dynConstraints[8] );
+                     return conditional_H001Q3(context, (String)dynConstraints[0] , (String)dynConstraints[1] , (DateTime)dynConstraints[2] , (DateTime)dynConstraints[3] , (String)dynConstraints[4] , (String)dynConstraints[5] , (DateTime)dynConstraints[6] , (DateTime)dynConstraints[7] , (int)dynConstraints[8] );
          }
          return base.getDynamicStatement(cursor, context, dynConstraints);
       }
@@ -2093,8 +2093,8 @@ namespace GeneXus.Programs {
     {
        if ( def == null )
        {
-          Object[] prmH00072 ;
-          prmH00072 = new Object[] {
+          Object[] prmH001Q2 ;
+          prmH001Q2 = new Object[] {
           new Object[] {"AV6ctipobienid",NpgsqlDbType.Integer,9,0} ,
           new Object[] {"lV7ctipobiendsc",NpgsqlDbType.Varchar,100,0} ,
           new Object[] {"lV8ctipobienusuario",NpgsqlDbType.Varchar,15,0} ,
@@ -2104,8 +2104,8 @@ namespace GeneXus.Programs {
           new Object[] {"GXPagingTo2",NpgsqlDbType.Integer,9,0} ,
           new Object[] {"GXPagingTo2",NpgsqlDbType.Integer,9,0}
           } ;
-          Object[] prmH00073 ;
-          prmH00073 = new Object[] {
+          Object[] prmH001Q3 ;
+          prmH001Q3 = new Object[] {
           new Object[] {"AV6ctipobienid",NpgsqlDbType.Integer,9,0} ,
           new Object[] {"lV7ctipobiendsc",NpgsqlDbType.Varchar,100,0} ,
           new Object[] {"lV8ctipobienusuario",NpgsqlDbType.Varchar,15,0} ,
@@ -2113,8 +2113,8 @@ namespace GeneXus.Programs {
           new Object[] {"AV10ctipobienfecultact",NpgsqlDbType.Timestamp,10,8}
           } ;
           def= new CursorDef[] {
-              new CursorDef("H00072", "scmdbuf",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmH00072,11,0,false,false )
-             ,new CursorDef("H00073", "scmdbuf",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmH00073,1,0,false,false )
+              new CursorDef("H001Q2", "scmdbuf",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmH001Q2,11,0,false,false )
+             ,new CursorDef("H001Q3", "scmdbuf",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmH001Q3,1,0,false,false )
           };
        }
     }

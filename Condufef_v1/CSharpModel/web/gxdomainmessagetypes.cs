@@ -2,7 +2,7 @@
                File: MessageTypes
         Description: MessageTypes
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 1/23/2022 3:49:51.53
+       Generated on: 1/25/2022 17:35:44.24
        Program type: Callable routine
           Main DBMS: postgresql
 */

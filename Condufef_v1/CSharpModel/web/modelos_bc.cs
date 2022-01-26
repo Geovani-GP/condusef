@@ -2,7 +2,7 @@
                File: modelos_BC
         Description: modelos
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 1/23/2022 3:49:18.17
+       Generated on: 1/25/2022 17:34:54.30
        Program type: Callable routine
           Main DBMS: postgresql
 */

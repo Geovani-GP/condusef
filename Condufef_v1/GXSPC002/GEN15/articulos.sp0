@@ -68,12 +68,12 @@ rule_i(0,datastore(1,'CS_RPCPGML','')).
 rule_i(0,datastore(1,'JDBC_DATASOURCE','')).
 rule_i(0,datastore(1,'USE_JDBC_DATASOURCE','0')).
 rule_i(0,datastore(1,'DS_DBMS_ADDINFO','')).
-rule_i(0,datastore(1,'USER_PASSWORD',󻢸蘇�2�5炭)).
+rule_i(0,datastore(1,'USER_PASSWORD',asdf)).
 rule_i(0,datastore(1,'USER_ID',postgres)).
 rule_i(0,datastore(1,'CS_CONNECT','First')).
 rule_i(0,datastore(1,'DBMS_PORT','5432')).
 rule_i(0,datastore(1,'CS_SERVER',localhost)).
-rule_i(0,datastore(1,'CS_DBNAME',postgres)).
+rule_i(0,datastore(1,'CS_DBNAME',condusef)).
 rule_i(0,datastore(1,'CS_FLEDSNAME','')).
 rule_i(0,datastore(1,'CS_DRVNAME','')).
 rule_i(0,datastore(1,'CS_DSNAME','')).
@@ -159,7 +159,7 @@ rule_i(0,prop('HTTP_PROTOCOL','Unsecure')).
 rule_i(0,prop('USE_ENCRYPTION','NO')).
 rule_i(0,prop('OnSessionTimeout','Ignore')).
 rule_i(0,prop('SHOWMASTERPAGE_POPUP','0')).
-rule_i(0,prop('MasterPage',o(13,'RwdMasterPage'))).
+rule_i(0,prop('MasterPage',o(13,'AppMasterPage'))).
 rule_i(0,prop('WEB_COMP','No')).
 rule_i(0,prop('Theme',o(25,'Flat'))).
 rule_i(0,prop('ExternalNamespace','Condufef_v1')).
@@ -753,7 +753,7 @@ html_comp_i(6,'Title','',d,[ str ]).
 html_comp_i(6,'Fill',-1,d,[ bool ]).
 html_comp_i(6,'Backcolor',rgb(255,255,255),d,[ color ]).
 html_comp_i(6,'Forecolor',rgb(0,0,0),d,[ color ]).
-html_comp_i(6,'Font',font('Open Sans Semibold',17,[]),d,[ font ]).
+html_comp_i(6,'Font',font('Microsoft Sans Serif',17,[]),d,[ font ]).
 html_comp_i(7,'Class',row,v,[ str ]).
 html_comp_i(7,'Id','',d,[ str ]).
 html_comp_i(7,'Height',measure(0,px),d,[ measure ]).
@@ -2612,24 +2612,24 @@ trn_level_i(11,[ [ 19,20,21,154,155,23,7,10,156,2,157,158,159,160,161,162,163,16
  
  
  
-pgm_parm_i(web,18,'GX00B0',[ [ int,18,0,0 ],[ int,9,0,0 ],[ int,9,0,0 ] ],[ [ palmacenid,out,[] ],[ particulosproductoid,out,[] ],[ particuloscambsid,out,[] ] ]).
-pgm_parm_i(web,21,'GX00I0',[ [ int,18,0,0 ] ],[ [ palmacenid,out,[] ] ]).
-pgm_parm_i(web,7,'GX0010',[ [ int,9,0,0 ] ],[ [ ptipobienid,out,[] ] ]).
-pgm_parm_i(web,10,'GX0040',[ [ int,9,0,0 ] ],[ [ pentidafederativaid,out,[] ] ]).
-pgm_parm_i(web,20,'GX00G0',[ [ int,18,0,0 ] ],[ [ porigenid,out,[] ] ]).
-pgm_parm_i(web,17,'GX00A0',[ [ int,9,0,0 ] ],[ [ pproveedoresid,out,[] ] ]).
-pgm_parm_i(web,16,'GX00J0',[ [ int,9,0,0 ] ],[ [ pmodelosid,out,[] ] ]).
-pgm_parm_i(web,19,'GX00E0',[ [ int,9,0,0 ] ],[ [ pcambsid,out,[] ] ]).
+pgm_parm_i(web,73,'GX00B0',[ [ int,18,0,0 ],[ int,9,0,0 ],[ int,9,0,0 ] ],[ [ palmacenid,out,[] ],[ particulosproductoid,out,[] ],[ particuloscambsid,out,[] ] ]).
+pgm_parm_i(web,76,'GX00I0',[ [ int,18,0,0 ] ],[ [ palmacenid,out,[] ] ]).
+pgm_parm_i(web,62,'GX0010',[ [ int,9,0,0 ] ],[ [ ptipobienid,out,[] ] ]).
+pgm_parm_i(web,65,'GX0040',[ [ int,9,0,0 ] ],[ [ pentidafederativaid,out,[] ] ]).
+pgm_parm_i(web,75,'GX00G0',[ [ int,18,0,0 ] ],[ [ porigenid,out,[] ] ]).
+pgm_parm_i(web,72,'GX00A0',[ [ int,9,0,0 ] ],[ [ pproveedoresid,out,[] ] ]).
+pgm_parm_i(web,71,'GX00J0',[ [ int,9,0,0 ] ],[ [ pmodelosid,out,[] ] ]).
+pgm_parm_i(web,74,'GX00E0',[ [ int,9,0,0 ] ],[ [ pcambsid,out,[] ] ]).
  
 pgm_callprotocol_i(trn,11,'ARTICULOS','INTERNAL').
-pgm_callprotocol_i(web,18,'GX00B0','INTERNAL').
-pgm_callprotocol_i(web,21,'GX00I0','INTERNAL').
-pgm_callprotocol_i(web,7,'GX0010','INTERNAL').
-pgm_callprotocol_i(web,10,'GX0040','INTERNAL').
-pgm_callprotocol_i(web,20,'GX00G0','INTERNAL').
-pgm_callprotocol_i(web,17,'GX00A0','INTERNAL').
-pgm_callprotocol_i(web,16,'GX00J0','INTERNAL').
-pgm_callprotocol_i(web,19,'GX00E0','INTERNAL').
+pgm_callprotocol_i(web,73,'GX00B0','INTERNAL').
+pgm_callprotocol_i(web,76,'GX00I0','INTERNAL').
+pgm_callprotocol_i(web,62,'GX0010','INTERNAL').
+pgm_callprotocol_i(web,65,'GX0040','INTERNAL').
+pgm_callprotocol_i(web,75,'GX00G0','INTERNAL').
+pgm_callprotocol_i(web,72,'GX00A0','INTERNAL').
+pgm_callprotocol_i(web,71,'GX00J0','INTERNAL').
+pgm_callprotocol_i(web,74,'GX00E0','INTERNAL').
  
  
  

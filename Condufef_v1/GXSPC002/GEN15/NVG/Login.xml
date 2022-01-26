@@ -10,7 +10,20 @@
 <ObjPgmName>Login</ObjPgmName>
 <ObjClsName>Web Panel</ObjClsName></Object>
 <Result>genreq</Result>
-<Warnings></Warnings>
+<Warnings>
+<Warning>
+<MsgCode>spc0023</MsgCode>
+<Location>
+<Type>Source</Type>
+<Line>15</Line></Location>
+<Message>
+<Token>Parameter </Token>
+<Token>today()</Token>
+<Sp></Sp>
+<Token>for method</Token>
+<Sp></Sp>
+<Token>set</Token>
+<Token> has wrong type.</Token></Message></Warning></Warnings>
 <Errors></Errors>
 <Main>Yes</Main>
 <Generator>
@@ -77,9 +90,9 @@
 <Object>
 <ObjClsGuid>c9584656-94b6-4ccd-890f-332d11fc2c25</ObjClsGuid>
 <ObjCls>13</ObjCls>
-<ObjId>30</ObjId>
-<ObjName>Catalog_De_Cambs</ObjName>
-<ObjPgmName>Catalog_De_Cambs</ObjPgmName>
+<ObjId>29</ObjId>
+<ObjName>MenuPrincipal</ObjName>
+<ObjPgmName>MenuPrincipal</ObjPgmName>
 <ObjClsName>Web Panel</ObjClsName></Object>
 <Parameters></Parameters>
 <IF></IF></CALL></Level></Event>

@@ -2,7 +2,7 @@
                File: Gx00C0
         Description: Selection List etiquetas
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 1/23/2022 3:49:42.59
+       Generated on: 1/25/2022 17:35:35.58
        Program type: Callable routine
           Main DBMS: postgresql
 */
@@ -207,7 +207,7 @@ namespace GeneXus.Programs {
          INITWEB( ) ;
          if ( ! isAjaxCallMode( ) )
          {
-            MasterPageObj = (GXMasterPage) ClassLoader.GetInstance("rwdpromptmasterpage", "GeneXus.Programs.rwdpromptmasterpage", new Object[] {new GxContext( context.handle, context.DataStores, context.HttpContext)});
+            MasterPageObj = (GXMasterPage) ClassLoader.GetInstance("appmasterpage", "GeneXus.Programs.appmasterpage", new Object[] {new GxContext( context.handle, context.DataStores, context.HttpContext)});
             MasterPageObj.setDataArea(this,true);
             ValidateSpaRequest();
             MasterPageObj.webExecute();
@@ -239,11 +239,11 @@ namespace GeneXus.Programs {
 
       public override short ExecuteStartEvent( )
       {
-         PA0M2( ) ;
+         PA252( ) ;
          gxajaxcallmode = (short)((isAjaxCallMode( ) ? 1 : 0));
          if ( ( gxajaxcallmode == 0 ) && ( GxWebError == 0 ) )
          {
-            START0M2( ) ;
+            START252( ) ;
          }
          return gxajaxcallmode ;
       }
@@ -278,7 +278,7 @@ namespace GeneXus.Programs {
          context.AddJavascriptSource("jquery.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxtimezone.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxgral.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("gxcfg.js", "?20221233494265");
+         context.AddJavascriptSource("gxcfg.js", "?202212517353565");
          if ( context.isSpaRequest( ) )
          {
             enableOutput();
@@ -376,14 +376,14 @@ namespace GeneXus.Programs {
             context.WriteHtmlText( "<div") ;
             GxWebStd.ClassAttribute( context, "gx-ct-body"+" "+(String.IsNullOrEmpty(StringUtil.RTrim( Form.Class)) ? "form-horizontal Form" : Form.Class)+"-fx");
             context.WriteHtmlText( ">") ;
-            WE0M2( ) ;
+            WE252( ) ;
             context.WriteHtmlText( "</div>") ;
          }
       }
 
       public override void DispatchEvents( )
       {
-         EVT0M2( ) ;
+         EVT252( ) ;
       }
 
       public override bool HasEnterEvent( )
@@ -411,7 +411,7 @@ namespace GeneXus.Programs {
          return "Selection List etiquetas" ;
       }
 
-      protected void WB0M0( )
+      protected void WB250( )
       {
          if ( context.isAjaxRequest( ) )
          {
@@ -446,7 +446,7 @@ namespace GeneXus.Programs {
             /* Div Control */
             GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "col-xs-12", "left", "top", "", "", "div");
             /* Text block */
-            GxWebStd.gx_label_ctrl( context, lblLbletiquetasproductoidfilter_Internalname, "etiquetasproductoid", "", "", lblLbletiquetasproductoidfilter_Jsonclick, "'"+""+"'"+",false,"+"'"+"e110m1_client"+"'", "", "WWAdvancedLabel WWFilterLabel", 7, "", 1, 1, 1, "HLP_Gx00C0.htm");
+            GxWebStd.gx_label_ctrl( context, lblLbletiquetasproductoidfilter_Internalname, "etiquetasproductoid", "", "", lblLbletiquetasproductoidfilter_Jsonclick, "'"+""+"'"+",false,"+"'"+"e11251_client"+"'", "", "WWAdvancedLabel WWFilterLabel", 7, "", 1, 1, 1, "HLP_Gx00C0.htm");
             GxWebStd.gx_div_end( context, "left", "top");
             GxWebStd.gx_div_end( context, "left", "top");
             /* Div Control */
@@ -477,7 +477,7 @@ namespace GeneXus.Programs {
             /* Div Control */
             GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "col-xs-12", "left", "top", "", "", "div");
             /* Text block */
-            GxWebStd.gx_label_ctrl( context, lblLbletiquetascambsidfilter_Internalname, "etiquetascambsid", "", "", lblLbletiquetascambsidfilter_Jsonclick, "'"+""+"'"+",false,"+"'"+"e120m1_client"+"'", "", "WWAdvancedLabel WWFilterLabel", 7, "", 1, 1, 1, "HLP_Gx00C0.htm");
+            GxWebStd.gx_label_ctrl( context, lblLbletiquetascambsidfilter_Internalname, "etiquetascambsid", "", "", lblLbletiquetascambsidfilter_Jsonclick, "'"+""+"'"+",false,"+"'"+"e12251_client"+"'", "", "WWAdvancedLabel WWFilterLabel", 7, "", 1, 1, 1, "HLP_Gx00C0.htm");
             GxWebStd.gx_div_end( context, "left", "top");
             GxWebStd.gx_div_end( context, "left", "top");
             /* Div Control */
@@ -508,7 +508,7 @@ namespace GeneXus.Programs {
             /* Div Control */
             GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "col-xs-12", "left", "top", "", "", "div");
             /* Text block */
-            GxWebStd.gx_label_ctrl( context, lblLblalmacenidfilter_Internalname, "almacenid", "", "", lblLblalmacenidfilter_Jsonclick, "'"+""+"'"+",false,"+"'"+"e130m1_client"+"'", "", "WWAdvancedLabel WWFilterLabel", 7, "", 1, 1, 1, "HLP_Gx00C0.htm");
+            GxWebStd.gx_label_ctrl( context, lblLblalmacenidfilter_Internalname, "almacenid", "", "", lblLblalmacenidfilter_Jsonclick, "'"+""+"'"+",false,"+"'"+"e13251_client"+"'", "", "WWAdvancedLabel WWFilterLabel", 7, "", 1, 1, 1, "HLP_Gx00C0.htm");
             GxWebStd.gx_div_end( context, "left", "top");
             GxWebStd.gx_div_end( context, "left", "top");
             /* Div Control */
@@ -539,7 +539,7 @@ namespace GeneXus.Programs {
             /* Div Control */
             GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "col-xs-12", "left", "top", "", "", "div");
             /* Text block */
-            GxWebStd.gx_label_ctrl( context, lblLbletiquetasnumerofilter_Internalname, "etiquetasnumero", "", "", lblLbletiquetasnumerofilter_Jsonclick, "'"+""+"'"+",false,"+"'"+"e140m1_client"+"'", "", "WWAdvancedLabel WWFilterLabel", 7, "", 1, 1, 1, "HLP_Gx00C0.htm");
+            GxWebStd.gx_label_ctrl( context, lblLbletiquetasnumerofilter_Internalname, "etiquetasnumero", "", "", lblLbletiquetasnumerofilter_Jsonclick, "'"+""+"'"+",false,"+"'"+"e14251_client"+"'", "", "WWAdvancedLabel WWFilterLabel", 7, "", 1, 1, 1, "HLP_Gx00C0.htm");
             GxWebStd.gx_div_end( context, "left", "top");
             GxWebStd.gx_div_end( context, "left", "top");
             /* Div Control */
@@ -570,7 +570,7 @@ namespace GeneXus.Programs {
             /* Div Control */
             GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "col-xs-12", "left", "top", "", "", "div");
             /* Text block */
-            GxWebStd.gx_label_ctrl( context, lblLbletiquetastatusfilter_Internalname, "etiquetastatus", "", "", lblLbletiquetastatusfilter_Jsonclick, "'"+""+"'"+",false,"+"'"+"e150m1_client"+"'", "", "WWAdvancedLabel WWFilterLabel", 7, "", 1, 1, 1, "HLP_Gx00C0.htm");
+            GxWebStd.gx_label_ctrl( context, lblLbletiquetastatusfilter_Internalname, "etiquetastatus", "", "", lblLbletiquetastatusfilter_Jsonclick, "'"+""+"'"+",false,"+"'"+"e15251_client"+"'", "", "WWAdvancedLabel WWFilterLabel", 7, "", 1, 1, 1, "HLP_Gx00C0.htm");
             GxWebStd.gx_div_end( context, "left", "top");
             GxWebStd.gx_div_end( context, "left", "top");
             /* Div Control */
@@ -601,7 +601,7 @@ namespace GeneXus.Programs {
             /* Div Control */
             GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "col-xs-12", "left", "top", "", "", "div");
             /* Text block */
-            GxWebStd.gx_label_ctrl( context, lblLbletiquetafecharealizadafilter_Internalname, "etiquetafecharealizada", "", "", lblLbletiquetafecharealizadafilter_Jsonclick, "'"+""+"'"+",false,"+"'"+"e160m1_client"+"'", "", "WWAdvancedLabel WWDateFilterLabel", 7, "", 1, 1, 1, "HLP_Gx00C0.htm");
+            GxWebStd.gx_label_ctrl( context, lblLbletiquetafecharealizadafilter_Internalname, "etiquetafecharealizada", "", "", lblLbletiquetafecharealizadafilter_Jsonclick, "'"+""+"'"+",false,"+"'"+"e16251_client"+"'", "", "WWAdvancedLabel WWDateFilterLabel", 7, "", 1, 1, 1, "HLP_Gx00C0.htm");
             GxWebStd.gx_div_end( context, "left", "top");
             GxWebStd.gx_div_end( context, "left", "top");
             /* Div Control */
@@ -634,7 +634,7 @@ namespace GeneXus.Programs {
             /* Div Control */
             GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "col-xs-12", "left", "top", "", "", "div");
             /* Text block */
-            GxWebStd.gx_label_ctrl( context, lblLbletiquetasreimpresionfilter_Internalname, "etiquetasreimpresion", "", "", lblLbletiquetasreimpresionfilter_Jsonclick, "'"+""+"'"+",false,"+"'"+"e170m1_client"+"'", "", "WWAdvancedLabel WWFilterLabel", 7, "", 1, 1, 1, "HLP_Gx00C0.htm");
+            GxWebStd.gx_label_ctrl( context, lblLbletiquetasreimpresionfilter_Internalname, "etiquetasreimpresion", "", "", lblLbletiquetasreimpresionfilter_Jsonclick, "'"+""+"'"+",false,"+"'"+"e17251_client"+"'", "", "WWAdvancedLabel WWFilterLabel", 7, "", 1, 1, 1, "HLP_Gx00C0.htm");
             GxWebStd.gx_div_end( context, "left", "top");
             GxWebStd.gx_div_end( context, "left", "top");
             /* Div Control */
@@ -667,7 +667,7 @@ namespace GeneXus.Programs {
             TempTags = "  onfocus=\"gx.evt.onfocus(this, 81,'',false,'',0)\"";
             ClassString = bttBtntoggle_Class;
             StyleString = "";
-            GxWebStd.gx_button_ctrl( context, bttBtntoggle_Internalname, "gx.evt.setGridEvt("+StringUtil.Str( (decimal)(84), 2, 0)+","+"null"+");", "|||", bttBtntoggle_Jsonclick, 7, "|||", "", StyleString, ClassString, 1, 1, "standard", "'"+""+"'"+",false,"+"'"+"e180m1_client"+"'", TempTags, "", 2, "HLP_Gx00C0.htm");
+            GxWebStd.gx_button_ctrl( context, bttBtntoggle_Internalname, "gx.evt.setGridEvt("+StringUtil.Str( (decimal)(84), 2, 0)+","+"null"+");", "|||", bttBtntoggle_Jsonclick, 7, "|||", "", StyleString, ClassString, 1, 1, "standard", "'"+""+"'"+",false,"+"'"+"e18251_client"+"'", TempTags, "", 2, "HLP_Gx00C0.htm");
             GxWebStd.gx_div_end( context, "left", "top");
             GxWebStd.gx_div_end( context, "left", "top");
             /* Div Control */
@@ -834,7 +834,7 @@ namespace GeneXus.Programs {
          wbLoad = true;
       }
 
-      protected void START0M2( )
+      protected void START252( )
       {
          wbLoad = false;
          wbEnd = 0;
@@ -851,16 +851,16 @@ namespace GeneXus.Programs {
          {
          }
          wbErr = false;
-         STRUP0M0( ) ;
+         STRUP250( ) ;
       }
 
-      protected void WS0M2( )
+      protected void WS252( )
       {
-         START0M2( ) ;
-         EVT0M2( ) ;
+         START252( ) ;
+         EVT252( ) ;
       }
 
-      protected void EVT0M2( )
+      protected void EVT252( )
       {
          if ( StringUtil.StrCmp(context.GetRequestMethod( ), "POST") == 0 )
          {
@@ -944,15 +944,15 @@ namespace GeneXus.Programs {
                                  {
                                     context.wbHandled = 1;
                                     dynload_actions( ) ;
-                                    /* Execute user event: E190M2 */
-                                    E190M2 ();
+                                    /* Execute user event: E19252 */
+                                    E19252 ();
                                  }
                                  else if ( StringUtil.StrCmp(sEvt, "LOAD") == 0 )
                                  {
                                     context.wbHandled = 1;
                                     dynload_actions( ) ;
-                                    /* Execute user event: E200M2 */
-                                    E200M2 ();
+                                    /* Execute user event: E20252 */
+                                    E20252 ();
                                  }
                                  else if ( StringUtil.StrCmp(sEvt, "ENTER") == 0 )
                                  {
@@ -997,8 +997,8 @@ namespace GeneXus.Programs {
                                        }
                                        if ( ! Rfr0gs )
                                        {
-                                          /* Execute user event: E210M2 */
-                                          E210M2 ();
+                                          /* Execute user event: E21252 */
+                                          E21252 ();
                                        }
                                        dynload_actions( ) ;
                                     }
@@ -1022,7 +1022,7 @@ namespace GeneXus.Programs {
          }
       }
 
-      protected void WE0M2( )
+      protected void WE252( )
       {
          if ( ! GxWebStd.gx_redirect( context) )
          {
@@ -1038,7 +1038,7 @@ namespace GeneXus.Programs {
          }
       }
 
-      protected void PA0M2( )
+      protected void PA252( )
       {
          if ( nDonePA == 0 )
          {
@@ -1096,7 +1096,7 @@ namespace GeneXus.Programs {
          GxWebStd.set_html_headers( context, 0, "", "");
          GxWebStd.gx_hidden_field( context, "GRID1_Rows", StringUtil.LTrim( StringUtil.NToC( (decimal)(subGrid1_Rows), 6, 0, ".", "")));
          GRID1_nCurrentRecord = 0;
-         RF0M2( ) ;
+         RF252( ) ;
          /* End function gxgrGrid1_refresh */
       }
 
@@ -1123,7 +1123,7 @@ namespace GeneXus.Programs {
       public void Refresh( )
       {
          send_integrity_hashes( ) ;
-         RF0M2( ) ;
+         RF252( ) ;
       }
 
       protected void initialize_formulas( )
@@ -1132,7 +1132,7 @@ namespace GeneXus.Programs {
          context.Gx_err = 0;
       }
 
-      protected void RF0M2( )
+      protected void RF252( )
       {
          initialize_formulas( ) ;
          if ( isAjaxCallMode( ) )
@@ -1175,31 +1175,31 @@ namespace GeneXus.Programs {
                                                  TypeConstants.LONG, TypeConstants.BOOLEAN, TypeConstants.INT, TypeConstants.INT, TypeConstants.LONG
                                                  }
             });
-            /* Using cursor H000M2 */
+            /* Using cursor H00252 */
             pr_default.execute(0, new Object[] {AV6cetiquetasproductoid, AV7cetiquetascambsid, AV8calmacenid, AV9cetiquetasnumero, AV10cetiquetastatus, AV11cetiquetafecharealizada, AV12cetiquetasreimpresion, GXPagingFrom2, GXPagingTo2, GXPagingTo2});
             nGXsfl_84_idx = 1;
             while ( ( (pr_default.getStatus(0) != 101) ) && ( ( ( 10 == 0 ) || ( GRID1_nCurrentRecord < subGrid1_Recordsperpage( ) ) ) ) )
             {
-               A35etiquetasreimpresion = H000M2_A35etiquetasreimpresion[0];
-               n35etiquetasreimpresion = H000M2_n35etiquetasreimpresion[0];
-               A34etiquetafecharealizada = H000M2_A34etiquetafecharealizada[0];
-               n34etiquetafecharealizada = H000M2_n34etiquetafecharealizada[0];
-               A33etiquetastatus = H000M2_A33etiquetastatus[0];
-               n33etiquetastatus = H000M2_n33etiquetastatus[0];
-               A32etiquetasnumero = H000M2_A32etiquetasnumero[0];
-               n32etiquetasnumero = H000M2_n32etiquetasnumero[0];
-               A19almacenid = H000M2_A19almacenid[0];
-               A18etiquetascambsid = H000M2_A18etiquetascambsid[0];
-               A17etiquetasproductoid = H000M2_A17etiquetasproductoid[0];
-               /* Execute user event: E200M2 */
-               E200M2 ();
+               A35etiquetasreimpresion = H00252_A35etiquetasreimpresion[0];
+               n35etiquetasreimpresion = H00252_n35etiquetasreimpresion[0];
+               A34etiquetafecharealizada = H00252_A34etiquetafecharealizada[0];
+               n34etiquetafecharealizada = H00252_n34etiquetafecharealizada[0];
+               A33etiquetastatus = H00252_A33etiquetastatus[0];
+               n33etiquetastatus = H00252_n33etiquetastatus[0];
+               A32etiquetasnumero = H00252_A32etiquetasnumero[0];
+               n32etiquetasnumero = H00252_n32etiquetasnumero[0];
+               A19almacenid = H00252_A19almacenid[0];
+               A18etiquetascambsid = H00252_A18etiquetascambsid[0];
+               A17etiquetasproductoid = H00252_A17etiquetasproductoid[0];
+               /* Execute user event: E20252 */
+               E20252 ();
                pr_default.readNext(0);
             }
             GRID1_nEOF = (short)(((pr_default.getStatus(0) == 101) ? 1 : 0));
             GxWebStd.gx_hidden_field( context, "GRID1_nEOF", StringUtil.LTrim( StringUtil.NToC( (decimal)(GRID1_nEOF), 1, 0, ".", "")));
             pr_default.close(0);
             wbEnd = 84;
-            WB0M0( ) ;
+            WB250( ) ;
          }
          nGXsfl_84_Refreshing = 0;
       }
@@ -1233,9 +1233,9 @@ namespace GeneXus.Programs {
                                               TypeConstants.LONG, TypeConstants.BOOLEAN, TypeConstants.INT, TypeConstants.INT, TypeConstants.LONG
                                               }
          });
-         /* Using cursor H000M3 */
+         /* Using cursor H00253 */
          pr_default.execute(1, new Object[] {AV6cetiquetasproductoid, AV7cetiquetascambsid, AV8calmacenid, AV9cetiquetasnumero, AV10cetiquetastatus, AV11cetiquetafecharealizada, AV12cetiquetasreimpresion});
-         GRID1_nRecordCount = H000M3_AGRID1_nRecordCount[0];
+         GRID1_nRecordCount = H00253_AGRID1_nRecordCount[0];
          pr_default.close(1);
          return (int)(GRID1_nRecordCount) ;
       }
@@ -1342,14 +1342,14 @@ namespace GeneXus.Programs {
          return (int)(0) ;
       }
 
-      protected void STRUP0M0( )
+      protected void STRUP250( )
       {
          /* Before Start, stand alone formulas. */
          context.Gx_err = 0;
          /* Execute Start event if defined. */
          context.wbGlbDoneStart = 0;
-         /* Execute user event: E190M2 */
-         E190M2 ();
+         /* Execute user event: E19252 */
+         E19252 ();
          context.wbGlbDoneStart = 1;
          /* After Start, stand alone formulas. */
          if ( StringUtil.StrCmp(context.GetRequestMethod( ), "POST") == 0 )
@@ -1499,8 +1499,8 @@ namespace GeneXus.Programs {
 
       protected void GXStart( )
       {
-         /* Execute user event: E190M2 */
-         E190M2 ();
+         /* Execute user event: E19252 */
+         E19252 ();
          if ( returnInSub )
          {
             returnInSub = true;
@@ -1508,7 +1508,7 @@ namespace GeneXus.Programs {
          }
       }
 
-      protected void E190M2( )
+      protected void E19252( )
       {
          /* Start Routine */
          Form.Caption = StringUtil.Format( "Lista de Selección %1", "etiquetas", "", "", "", "", "", "", "", "");
@@ -1516,7 +1516,7 @@ namespace GeneXus.Programs {
          AV16ADVANCED_LABEL_TEMPLATE = "%1 <strong>%2</strong>";
       }
 
-      private void E200M2( )
+      private void E20252( )
       {
          /* Load Routine */
          AV5LinkSelection = context.GetImagePath( "3914535b-0c03-44c5-9538-906a99cdd2bc", "", context.GetTheme( ));
@@ -1532,8 +1532,8 @@ namespace GeneXus.Programs {
 
       public void GXEnter( )
       {
-         /* Execute user event: E210M2 */
-         E210M2 ();
+         /* Execute user event: E21252 */
+         E21252 ();
          if ( returnInSub )
          {
             returnInSub = true;
@@ -1541,7 +1541,7 @@ namespace GeneXus.Programs {
          }
       }
 
-      protected void E210M2( )
+      protected void E21252( )
       {
          /* Enter Routine */
          AV13petiquetasproductoid = A17etiquetasproductoid;
@@ -1579,9 +1579,9 @@ namespace GeneXus.Programs {
          nGotPars = (short)(1);
          nGXWrapped = (short)(1);
          context.SetWrapped(true);
-         PA0M2( ) ;
-         WS0M2( ) ;
-         WE0M2( ) ;
+         PA252( ) ;
+         WS252( ) ;
+         WE252( ) ;
          this.cleanup();
          context.SetWrapped(false);
          context.GX_msglist = BackMsgLst;
@@ -1594,12 +1594,12 @@ namespace GeneXus.Programs {
 
       protected void define_styles( )
       {
-         AddStyleSheetFile("calendar-system.css", "?13205289");
-         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?3485073");
+         AddStyleSheetFile("calendar-system.css", "?11323129");
+         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?1734189");
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?20221233494370");
+            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?202212517353673");
             idxLst = (int)(idxLst+1);
          }
          /* End function define_styles */
@@ -1609,7 +1609,7 @@ namespace GeneXus.Programs {
       {
          context.AddJavascriptSource("messages.spa.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxdec.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("gx00c0.js", "?20221233494371");
+         context.AddJavascriptSource("gx00c0.js", "?202212517353673");
          /* End function include_jscripts */
       }
 
@@ -1638,7 +1638,7 @@ namespace GeneXus.Programs {
       protected void sendrow_842( )
       {
          SubsflControlProps_842( ) ;
-         WB0M0( ) ;
+         WB250( ) ;
          if ( ( 10 * 1 == 0 ) || ( nGXsfl_84_idx <= subGrid1_Recordsperpage( ) * 1 ) )
          {
             Grid1Row = GXWebRow.GetNew(context,Grid1Container);
@@ -1940,15 +1940,15 @@ namespace GeneXus.Programs {
       public override void InitializeDynEvents( )
       {
          setEventMetadata("REFRESH","{handler:'Refresh',iparms:[{av:'GRID1_nFirstRecordOnPage',nv:0},{av:'GRID1_nEOF',nv:0},{av:'subGrid1_Rows',nv:0},{av:'AV6cetiquetasproductoid',fld:'vCETIQUETASPRODUCTOID',pic:'ZZZZZZZZ9',nv:0},{av:'AV7cetiquetascambsid',fld:'vCETIQUETASCAMBSID',pic:'ZZZZZZZZ9',nv:0},{av:'AV8calmacenid',fld:'vCALMACENID',pic:'ZZZZZZZZZZZZZZZZZ9',nv:0},{av:'AV9cetiquetasnumero',fld:'vCETIQUETASNUMERO',pic:'ZZZZZZZZZZZZZZZZZ9',nv:0},{av:'AV10cetiquetastatus',fld:'vCETIQUETASTATUS',pic:'ZZZZZZZZZZZZZZZZZ9',nv:0},{av:'AV11cetiquetafecharealizada',fld:'vCETIQUETAFECHAREALIZADA',pic:'99/99/9999 99:99:99',nv:''},{av:'AV12cetiquetasreimpresion',fld:'vCETIQUETASREIMPRESION',pic:'ZZZZZZZZZZZZZZZZZ9',nv:0}],oparms:[]}");
-         setEventMetadata("'TOGGLE'","{handler:'E180M1',iparms:[{av:'divAdvancedcontainer_Class',ctrl:'ADVANCEDCONTAINER',prop:'Class'},{ctrl:'BTNTOGGLE',prop:'Class'}],oparms:[{av:'divAdvancedcontainer_Class',ctrl:'ADVANCEDCONTAINER',prop:'Class'},{ctrl:'BTNTOGGLE',prop:'Class'}]}");
-         setEventMetadata("LBLETIQUETASPRODUCTOIDFILTER.CLICK","{handler:'E110M1',iparms:[{av:'divEtiquetasproductoidfiltercontainer_Class',ctrl:'ETIQUETASPRODUCTOIDFILTERCONTAINER',prop:'Class'}],oparms:[{av:'divEtiquetasproductoidfiltercontainer_Class',ctrl:'ETIQUETASPRODUCTOIDFILTERCONTAINER',prop:'Class'},{av:'edtavCetiquetasproductoid_Visible',ctrl:'vCETIQUETASPRODUCTOID',prop:'Visible'}]}");
-         setEventMetadata("LBLETIQUETASCAMBSIDFILTER.CLICK","{handler:'E120M1',iparms:[{av:'divEtiquetascambsidfiltercontainer_Class',ctrl:'ETIQUETASCAMBSIDFILTERCONTAINER',prop:'Class'}],oparms:[{av:'divEtiquetascambsidfiltercontainer_Class',ctrl:'ETIQUETASCAMBSIDFILTERCONTAINER',prop:'Class'},{av:'edtavCetiquetascambsid_Visible',ctrl:'vCETIQUETASCAMBSID',prop:'Visible'}]}");
-         setEventMetadata("LBLALMACENIDFILTER.CLICK","{handler:'E130M1',iparms:[{av:'divAlmacenidfiltercontainer_Class',ctrl:'ALMACENIDFILTERCONTAINER',prop:'Class'}],oparms:[{av:'divAlmacenidfiltercontainer_Class',ctrl:'ALMACENIDFILTERCONTAINER',prop:'Class'},{av:'edtavCalmacenid_Visible',ctrl:'vCALMACENID',prop:'Visible'}]}");
-         setEventMetadata("LBLETIQUETASNUMEROFILTER.CLICK","{handler:'E140M1',iparms:[{av:'divEtiquetasnumerofiltercontainer_Class',ctrl:'ETIQUETASNUMEROFILTERCONTAINER',prop:'Class'}],oparms:[{av:'divEtiquetasnumerofiltercontainer_Class',ctrl:'ETIQUETASNUMEROFILTERCONTAINER',prop:'Class'},{av:'edtavCetiquetasnumero_Visible',ctrl:'vCETIQUETASNUMERO',prop:'Visible'}]}");
-         setEventMetadata("LBLETIQUETASTATUSFILTER.CLICK","{handler:'E150M1',iparms:[{av:'divEtiquetastatusfiltercontainer_Class',ctrl:'ETIQUETASTATUSFILTERCONTAINER',prop:'Class'}],oparms:[{av:'divEtiquetastatusfiltercontainer_Class',ctrl:'ETIQUETASTATUSFILTERCONTAINER',prop:'Class'},{av:'edtavCetiquetastatus_Visible',ctrl:'vCETIQUETASTATUS',prop:'Visible'}]}");
-         setEventMetadata("LBLETIQUETAFECHAREALIZADAFILTER.CLICK","{handler:'E160M1',iparms:[{av:'divEtiquetafecharealizadafiltercontainer_Class',ctrl:'ETIQUETAFECHAREALIZADAFILTERCONTAINER',prop:'Class'}],oparms:[{av:'divEtiquetafecharealizadafiltercontainer_Class',ctrl:'ETIQUETAFECHAREALIZADAFILTERCONTAINER',prop:'Class'}]}");
-         setEventMetadata("LBLETIQUETASREIMPRESIONFILTER.CLICK","{handler:'E170M1',iparms:[{av:'divEtiquetasreimpresionfiltercontainer_Class',ctrl:'ETIQUETASREIMPRESIONFILTERCONTAINER',prop:'Class'}],oparms:[{av:'divEtiquetasreimpresionfiltercontainer_Class',ctrl:'ETIQUETASREIMPRESIONFILTERCONTAINER',prop:'Class'},{av:'edtavCetiquetasreimpresion_Visible',ctrl:'vCETIQUETASREIMPRESION',prop:'Visible'}]}");
-         setEventMetadata("ENTER","{handler:'E210M2',iparms:[{av:'A17etiquetasproductoid',fld:'ETIQUETASPRODUCTOID',pic:'ZZZZZZZZ9',hsh:true,nv:0},{av:'A18etiquetascambsid',fld:'ETIQUETASCAMBSID',pic:'ZZZZZZZZ9',hsh:true,nv:0},{av:'A19almacenid',fld:'ALMACENID',pic:'ZZZZZZZZZZZZZZZZZ9',hsh:true,nv:0}],oparms:[{av:'AV13petiquetasproductoid',fld:'vPETIQUETASPRODUCTOID',pic:'ZZZZZZZZ9',nv:0},{av:'AV14petiquetascambsid',fld:'vPETIQUETASCAMBSID',pic:'ZZZZZZZZ9',nv:0},{av:'AV15palmacenid',fld:'vPALMACENID',pic:'ZZZZZZZZZZZZZZZZZ9',nv:0}]}");
+         setEventMetadata("'TOGGLE'","{handler:'E18251',iparms:[{av:'divAdvancedcontainer_Class',ctrl:'ADVANCEDCONTAINER',prop:'Class'},{ctrl:'BTNTOGGLE',prop:'Class'}],oparms:[{av:'divAdvancedcontainer_Class',ctrl:'ADVANCEDCONTAINER',prop:'Class'},{ctrl:'BTNTOGGLE',prop:'Class'}]}");
+         setEventMetadata("LBLETIQUETASPRODUCTOIDFILTER.CLICK","{handler:'E11251',iparms:[{av:'divEtiquetasproductoidfiltercontainer_Class',ctrl:'ETIQUETASPRODUCTOIDFILTERCONTAINER',prop:'Class'}],oparms:[{av:'divEtiquetasproductoidfiltercontainer_Class',ctrl:'ETIQUETASPRODUCTOIDFILTERCONTAINER',prop:'Class'},{av:'edtavCetiquetasproductoid_Visible',ctrl:'vCETIQUETASPRODUCTOID',prop:'Visible'}]}");
+         setEventMetadata("LBLETIQUETASCAMBSIDFILTER.CLICK","{handler:'E12251',iparms:[{av:'divEtiquetascambsidfiltercontainer_Class',ctrl:'ETIQUETASCAMBSIDFILTERCONTAINER',prop:'Class'}],oparms:[{av:'divEtiquetascambsidfiltercontainer_Class',ctrl:'ETIQUETASCAMBSIDFILTERCONTAINER',prop:'Class'},{av:'edtavCetiquetascambsid_Visible',ctrl:'vCETIQUETASCAMBSID',prop:'Visible'}]}");
+         setEventMetadata("LBLALMACENIDFILTER.CLICK","{handler:'E13251',iparms:[{av:'divAlmacenidfiltercontainer_Class',ctrl:'ALMACENIDFILTERCONTAINER',prop:'Class'}],oparms:[{av:'divAlmacenidfiltercontainer_Class',ctrl:'ALMACENIDFILTERCONTAINER',prop:'Class'},{av:'edtavCalmacenid_Visible',ctrl:'vCALMACENID',prop:'Visible'}]}");
+         setEventMetadata("LBLETIQUETASNUMEROFILTER.CLICK","{handler:'E14251',iparms:[{av:'divEtiquetasnumerofiltercontainer_Class',ctrl:'ETIQUETASNUMEROFILTERCONTAINER',prop:'Class'}],oparms:[{av:'divEtiquetasnumerofiltercontainer_Class',ctrl:'ETIQUETASNUMEROFILTERCONTAINER',prop:'Class'},{av:'edtavCetiquetasnumero_Visible',ctrl:'vCETIQUETASNUMERO',prop:'Visible'}]}");
+         setEventMetadata("LBLETIQUETASTATUSFILTER.CLICK","{handler:'E15251',iparms:[{av:'divEtiquetastatusfiltercontainer_Class',ctrl:'ETIQUETASTATUSFILTERCONTAINER',prop:'Class'}],oparms:[{av:'divEtiquetastatusfiltercontainer_Class',ctrl:'ETIQUETASTATUSFILTERCONTAINER',prop:'Class'},{av:'edtavCetiquetastatus_Visible',ctrl:'vCETIQUETASTATUS',prop:'Visible'}]}");
+         setEventMetadata("LBLETIQUETAFECHAREALIZADAFILTER.CLICK","{handler:'E16251',iparms:[{av:'divEtiquetafecharealizadafiltercontainer_Class',ctrl:'ETIQUETAFECHAREALIZADAFILTERCONTAINER',prop:'Class'}],oparms:[{av:'divEtiquetafecharealizadafiltercontainer_Class',ctrl:'ETIQUETAFECHAREALIZADAFILTERCONTAINER',prop:'Class'}]}");
+         setEventMetadata("LBLETIQUETASREIMPRESIONFILTER.CLICK","{handler:'E17251',iparms:[{av:'divEtiquetasreimpresionfiltercontainer_Class',ctrl:'ETIQUETASREIMPRESIONFILTERCONTAINER',prop:'Class'}],oparms:[{av:'divEtiquetasreimpresionfiltercontainer_Class',ctrl:'ETIQUETASREIMPRESIONFILTERCONTAINER',prop:'Class'},{av:'edtavCetiquetasreimpresion_Visible',ctrl:'vCETIQUETASREIMPRESION',prop:'Visible'}]}");
+         setEventMetadata("ENTER","{handler:'E21252',iparms:[{av:'A17etiquetasproductoid',fld:'ETIQUETASPRODUCTOID',pic:'ZZZZZZZZ9',hsh:true,nv:0},{av:'A18etiquetascambsid',fld:'ETIQUETASCAMBSID',pic:'ZZZZZZZZ9',hsh:true,nv:0},{av:'A19almacenid',fld:'ALMACENID',pic:'ZZZZZZZZZZZZZZZZZ9',hsh:true,nv:0}],oparms:[{av:'AV13petiquetasproductoid',fld:'vPETIQUETASPRODUCTOID',pic:'ZZZZZZZZ9',nv:0},{av:'AV14petiquetascambsid',fld:'vPETIQUETASCAMBSID',pic:'ZZZZZZZZ9',nv:0},{av:'AV15palmacenid',fld:'vPALMACENID',pic:'ZZZZZZZZZZZZZZZZZ9',nv:0}]}");
          setEventMetadata("GRID1_FIRSTPAGE","{handler:'subgrid1_firstpage',iparms:[{av:'GRID1_nFirstRecordOnPage',nv:0},{av:'GRID1_nEOF',nv:0},{av:'subGrid1_Rows',nv:0},{av:'AV6cetiquetasproductoid',fld:'vCETIQUETASPRODUCTOID',pic:'ZZZZZZZZ9',nv:0},{av:'AV7cetiquetascambsid',fld:'vCETIQUETASCAMBSID',pic:'ZZZZZZZZ9',nv:0},{av:'AV8calmacenid',fld:'vCALMACENID',pic:'ZZZZZZZZZZZZZZZZZ9',nv:0},{av:'AV9cetiquetasnumero',fld:'vCETIQUETASNUMERO',pic:'ZZZZZZZZZZZZZZZZZ9',nv:0},{av:'AV10cetiquetastatus',fld:'vCETIQUETASTATUS',pic:'ZZZZZZZZZZZZZZZZZ9',nv:0},{av:'AV11cetiquetafecharealizada',fld:'vCETIQUETAFECHAREALIZADA',pic:'99/99/9999 99:99:99',nv:''},{av:'AV12cetiquetasreimpresion',fld:'vCETIQUETASREIMPRESION',pic:'ZZZZZZZZZZZZZZZZZ9',nv:0}],oparms:[]}");
          setEventMetadata("GRID1_PREVPAGE","{handler:'subgrid1_previouspage',iparms:[{av:'GRID1_nFirstRecordOnPage',nv:0},{av:'GRID1_nEOF',nv:0},{av:'subGrid1_Rows',nv:0},{av:'AV6cetiquetasproductoid',fld:'vCETIQUETASPRODUCTOID',pic:'ZZZZZZZZ9',nv:0},{av:'AV7cetiquetascambsid',fld:'vCETIQUETASCAMBSID',pic:'ZZZZZZZZ9',nv:0},{av:'AV8calmacenid',fld:'vCALMACENID',pic:'ZZZZZZZZZZZZZZZZZ9',nv:0},{av:'AV9cetiquetasnumero',fld:'vCETIQUETASNUMERO',pic:'ZZZZZZZZZZZZZZZZZ9',nv:0},{av:'AV10cetiquetastatus',fld:'vCETIQUETASTATUS',pic:'ZZZZZZZZZZZZZZZZZ9',nv:0},{av:'AV11cetiquetafecharealizada',fld:'vCETIQUETAFECHAREALIZADA',pic:'99/99/9999 99:99:99',nv:''},{av:'AV12cetiquetasreimpresion',fld:'vCETIQUETASREIMPRESION',pic:'ZZZZZZZZZZZZZZZZZ9',nv:0}],oparms:[]}");
          setEventMetadata("GRID1_NEXTPAGE","{handler:'subgrid1_nextpage',iparms:[{av:'GRID1_nFirstRecordOnPage',nv:0},{av:'GRID1_nEOF',nv:0},{av:'subGrid1_Rows',nv:0},{av:'AV6cetiquetasproductoid',fld:'vCETIQUETASPRODUCTOID',pic:'ZZZZZZZZ9',nv:0},{av:'AV7cetiquetascambsid',fld:'vCETIQUETASCAMBSID',pic:'ZZZZZZZZ9',nv:0},{av:'AV8calmacenid',fld:'vCALMACENID',pic:'ZZZZZZZZZZZZZZZZZ9',nv:0},{av:'AV9cetiquetasnumero',fld:'vCETIQUETASNUMERO',pic:'ZZZZZZZZZZZZZZZZZ9',nv:0},{av:'AV10cetiquetastatus',fld:'vCETIQUETASTATUS',pic:'ZZZZZZZZZZZZZZZZZ9',nv:0},{av:'AV11cetiquetafecharealizada',fld:'vCETIQUETAFECHAREALIZADA',pic:'99/99/9999 99:99:99',nv:''},{av:'AV12cetiquetasreimpresion',fld:'vCETIQUETASREIMPRESION',pic:'ZZZZZZZZZZZZZZZZZ9',nv:0}],oparms:[]}");
@@ -2006,18 +2006,18 @@ namespace GeneXus.Programs {
          sEvtType = "";
          AV19Linkselection_GXI = "";
          scmdbuf = "";
-         H000M2_A35etiquetasreimpresion = new long[1] ;
-         H000M2_n35etiquetasreimpresion = new bool[] {false} ;
-         H000M2_A34etiquetafecharealizada = new DateTime[] {DateTime.MinValue} ;
-         H000M2_n34etiquetafecharealizada = new bool[] {false} ;
-         H000M2_A33etiquetastatus = new long[1] ;
-         H000M2_n33etiquetastatus = new bool[] {false} ;
-         H000M2_A32etiquetasnumero = new long[1] ;
-         H000M2_n32etiquetasnumero = new bool[] {false} ;
-         H000M2_A19almacenid = new long[1] ;
-         H000M2_A18etiquetascambsid = new int[1] ;
-         H000M2_A17etiquetasproductoid = new int[1] ;
-         H000M3_AGRID1_nRecordCount = new long[1] ;
+         H00252_A35etiquetasreimpresion = new long[1] ;
+         H00252_n35etiquetasreimpresion = new bool[] {false} ;
+         H00252_A34etiquetafecharealizada = new DateTime[] {DateTime.MinValue} ;
+         H00252_n34etiquetafecharealizada = new bool[] {false} ;
+         H00252_A33etiquetastatus = new long[1] ;
+         H00252_n33etiquetastatus = new bool[] {false} ;
+         H00252_A32etiquetasnumero = new long[1] ;
+         H00252_n32etiquetasnumero = new bool[] {false} ;
+         H00252_A19almacenid = new long[1] ;
+         H00252_A18etiquetascambsid = new int[1] ;
+         H00252_A17etiquetasproductoid = new int[1] ;
+         H00253_AGRID1_nRecordCount = new long[1] ;
          AV16ADVANCED_LABEL_TEMPLATE = "";
          Grid1Row = new GXWebRow();
          BackMsgLst = new msglist();
@@ -2026,11 +2026,11 @@ namespace GeneXus.Programs {
          pr_default = new DataStoreProvider(context, new GeneXus.Programs.gx00c0__default(),
             new Object[][] {
                 new Object[] {
-               H000M2_A35etiquetasreimpresion, H000M2_n35etiquetasreimpresion, H000M2_A34etiquetafecharealizada, H000M2_n34etiquetafecharealizada, H000M2_A33etiquetastatus, H000M2_n33etiquetastatus, H000M2_A32etiquetasnumero, H000M2_n32etiquetasnumero, H000M2_A19almacenid, H000M2_A18etiquetascambsid,
-               H000M2_A17etiquetasproductoid
+               H00252_A35etiquetasreimpresion, H00252_n35etiquetasreimpresion, H00252_A34etiquetafecharealizada, H00252_n34etiquetafecharealizada, H00252_A33etiquetastatus, H00252_n33etiquetastatus, H00252_A32etiquetasnumero, H00252_n32etiquetasnumero, H00252_A19almacenid, H00252_A18etiquetascambsid,
+               H00252_A17etiquetasproductoid
                }
                , new Object[] {
-               H000M3_AGRID1_nRecordCount
+               H00253_AGRID1_nRecordCount
                }
             }
          );
@@ -2210,18 +2210,18 @@ namespace GeneXus.Programs {
       private GXWebColumn Grid1Column ;
       private IGxDataStore dsDefault ;
       private IDataStoreProvider pr_default ;
-      private long[] H000M2_A35etiquetasreimpresion ;
-      private bool[] H000M2_n35etiquetasreimpresion ;
-      private DateTime[] H000M2_A34etiquetafecharealizada ;
-      private bool[] H000M2_n34etiquetafecharealizada ;
-      private long[] H000M2_A33etiquetastatus ;
-      private bool[] H000M2_n33etiquetastatus ;
-      private long[] H000M2_A32etiquetasnumero ;
-      private bool[] H000M2_n32etiquetasnumero ;
-      private long[] H000M2_A19almacenid ;
-      private int[] H000M2_A18etiquetascambsid ;
-      private int[] H000M2_A17etiquetasproductoid ;
-      private long[] H000M3_AGRID1_nRecordCount ;
+      private long[] H00252_A35etiquetasreimpresion ;
+      private bool[] H00252_n35etiquetasreimpresion ;
+      private DateTime[] H00252_A34etiquetafecharealizada ;
+      private bool[] H00252_n34etiquetafecharealizada ;
+      private long[] H00252_A33etiquetastatus ;
+      private bool[] H00252_n33etiquetastatus ;
+      private long[] H00252_A32etiquetasnumero ;
+      private bool[] H00252_n32etiquetasnumero ;
+      private long[] H00252_A19almacenid ;
+      private int[] H00252_A18etiquetascambsid ;
+      private int[] H00252_A17etiquetasproductoid ;
+      private long[] H00253_AGRID1_nRecordCount ;
       private msglist BackMsgLst ;
       private msglist LclMsgLst ;
       private int aP0_petiquetasproductoid ;
@@ -2232,7 +2232,7 @@ namespace GeneXus.Programs {
 
    public class gx00c0__default : DataStoreHelperBase, IDataStoreHelper
    {
-      protected Object[] conditional_H000M2( IGxContext context ,
+      protected Object[] conditional_H00252( IGxContext context ,
                                              long AV9cetiquetasnumero ,
                                              long AV10cetiquetastatus ,
                                              DateTime AV11cetiquetafecharealizada ,
@@ -2297,7 +2297,7 @@ namespace GeneXus.Programs {
          return GXv_Object2 ;
       }
 
-      protected Object[] conditional_H000M3( IGxContext context ,
+      protected Object[] conditional_H00253( IGxContext context ,
                                              long AV9cetiquetasnumero ,
                                              long AV10cetiquetastatus ,
                                              DateTime AV11cetiquetafecharealizada ,
@@ -2364,9 +2364,9 @@ namespace GeneXus.Programs {
          switch ( cursor )
          {
                case 0 :
-                     return conditional_H000M2(context, (long)dynConstraints[0] , (long)dynConstraints[1] , (DateTime)dynConstraints[2] , (long)dynConstraints[3] , (long)dynConstraints[4] , (long)dynConstraints[5] , (DateTime)dynConstraints[6] , (long)dynConstraints[7] , (int)dynConstraints[8] , (int)dynConstraints[9] , (long)dynConstraints[10] );
+                     return conditional_H00252(context, (long)dynConstraints[0] , (long)dynConstraints[1] , (DateTime)dynConstraints[2] , (long)dynConstraints[3] , (long)dynConstraints[4] , (long)dynConstraints[5] , (DateTime)dynConstraints[6] , (long)dynConstraints[7] , (int)dynConstraints[8] , (int)dynConstraints[9] , (long)dynConstraints[10] );
                case 1 :
-                     return conditional_H000M3(context, (long)dynConstraints[0] , (long)dynConstraints[1] , (DateTime)dynConstraints[2] , (long)dynConstraints[3] , (long)dynConstraints[4] , (long)dynConstraints[5] , (DateTime)dynConstraints[6] , (long)dynConstraints[7] , (int)dynConstraints[8] , (int)dynConstraints[9] , (long)dynConstraints[10] );
+                     return conditional_H00253(context, (long)dynConstraints[0] , (long)dynConstraints[1] , (DateTime)dynConstraints[2] , (long)dynConstraints[3] , (long)dynConstraints[4] , (long)dynConstraints[5] , (DateTime)dynConstraints[6] , (long)dynConstraints[7] , (int)dynConstraints[8] , (int)dynConstraints[9] , (long)dynConstraints[10] );
          }
          return base.getDynamicStatement(cursor, context, dynConstraints);
       }
@@ -2385,8 +2385,8 @@ namespace GeneXus.Programs {
     {
        if ( def == null )
        {
-          Object[] prmH000M2 ;
-          prmH000M2 = new Object[] {
+          Object[] prmH00252 ;
+          prmH00252 = new Object[] {
           new Object[] {"AV6cetiquetasproductoid",NpgsqlDbType.Integer,9,0} ,
           new Object[] {"AV7cetiquetascambsid",NpgsqlDbType.Integer,9,0} ,
           new Object[] {"AV8calmacenid",NpgsqlDbType.Real,18,0} ,
@@ -2398,8 +2398,8 @@ namespace GeneXus.Programs {
           new Object[] {"GXPagingTo2",NpgsqlDbType.Integer,9,0} ,
           new Object[] {"GXPagingTo2",NpgsqlDbType.Integer,9,0}
           } ;
-          Object[] prmH000M3 ;
-          prmH000M3 = new Object[] {
+          Object[] prmH00253 ;
+          prmH00253 = new Object[] {
           new Object[] {"AV6cetiquetasproductoid",NpgsqlDbType.Integer,9,0} ,
           new Object[] {"AV7cetiquetascambsid",NpgsqlDbType.Integer,9,0} ,
           new Object[] {"AV8calmacenid",NpgsqlDbType.Real,18,0} ,
@@ -2409,8 +2409,8 @@ namespace GeneXus.Programs {
           new Object[] {"AV12cetiquetasreimpresion",NpgsqlDbType.Real,18,0}
           } ;
           def= new CursorDef[] {
-              new CursorDef("H000M2", "scmdbuf",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmH000M2,11,0,false,false )
-             ,new CursorDef("H000M3", "scmdbuf",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmH000M3,1,0,false,false )
+              new CursorDef("H00252", "scmdbuf",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmH00252,11,0,false,false )
+             ,new CursorDef("H00253", "scmdbuf",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmH00253,1,0,false,false )
           };
        }
     }

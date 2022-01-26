@@ -1,6 +1,6 @@
 spec_i([ web,29,'Menu Principal','MenuPrincipal',0,spa,'10_3_15-115824' ]).
  
-struct_i(2,1,[ 'Gpxmenuitems' ],[]).
+struct_i(2,1,[],[]).
  
 level_i(2,[ 0,[],[],[],[],[],[],[],[],[] ]).
  
@@ -13,15 +13,17 @@ lwi_i(2,[ [] ]).
  
 ta_i(2,[ [] ]).
  
-las_i(2,[ [ 'Gpxmenuitems' ] ]).
+las_i(2,[ [] ]).
  
-lac_i(2,[ [ 'Gpxmenuitems' ] ]).
+lac_i(2,[ [] ]).
  
  
+lits_i('MENÚ',5,10).
+lits_i('BIENVENIDOS AL SISTEMA DE INVENTARIOS  CONDUSEF',5,10).
+lits_i('COMISION NACIONAL PARA LA PROTECCIÓN Y DEFENSA DE LOS USUARIOS DE SERVICIOS FINANCIEROS',5,10).
  
-cls_i([ 0,0 ],[ 0,0 ]).
+cls_i([ 5,10 ],[ 5,96 ]).
  
-pos_i('Gpxmenuitems',[ 0,0,0 ]).
  
  
  
@@ -42,12 +44,12 @@ rule_i(0,datastore(1,'CS_RPCPGML','')).
 rule_i(0,datastore(1,'JDBC_DATASOURCE','')).
 rule_i(0,datastore(1,'USE_JDBC_DATASOURCE','0')).
 rule_i(0,datastore(1,'DS_DBMS_ADDINFO','')).
-rule_i(0,datastore(1,'USER_PASSWORD',Ü5Ú2ÌKê2â5Ì¿)).
+rule_i(0,datastore(1,'USER_PASSWORD',asdf)).
 rule_i(0,datastore(1,'USER_ID',postgres)).
 rule_i(0,datastore(1,'CS_CONNECT','First')).
 rule_i(0,datastore(1,'DBMS_PORT','5432')).
 rule_i(0,datastore(1,'CS_SERVER',localhost)).
-rule_i(0,datastore(1,'CS_DBNAME',postgres)).
+rule_i(0,datastore(1,'CS_DBNAME',condusef)).
 rule_i(0,datastore(1,'CS_FLEDSNAME','')).
 rule_i(0,datastore(1,'CS_DRVNAME','')).
 rule_i(0,datastore(1,'CS_DSNAME','')).
@@ -86,21 +88,24 @@ rule_i(0,prop(idUSE_WEB_DATEPICKER,'UMPV')).
 rule_i(0,prop('WebUX','SMOOTH')).
 rule_i(0,prop('STD_FUNC_OBJECT','Yes')).
 rule_i(0,prop('SPC_WARNINGS_DISABLED','spc0096 spc0107 spc0142')).
+rule_i(0,prop('AppGenerator','1')).
+rule_i(0,prop('AppLocation','')).
 rule_i(0,prop('COMPRESS_HTML','UMPV')).
 rule_i(0,prop('AUTO_REFRESH','VARS_CHANGE')).
 rule_i(0,prop('CACHE_EXPIRES','')).
 rule_i(0,prop('WEB_AUTO_FOCUS','UMPV')).
 rule_i(0,prop('OnSessionTimeout','Ignore')).
 rule_i(0,prop('OBJECT_METADATA','')).
-rule_i(0,prop('IsMain','0')).
+rule_i(0,prop('IsMain','-1')).
 rule_i(0,prop('SHOWMASTERPAGE_POPUP','0')).
-rule_i(0,prop('MasterPage',o(13,'RwdMasterPage'))).
+rule_i(0,prop('MasterPage',o(13,'AppMasterPage'))).
 rule_i(0,prop('WEB_COMP','No')).
 rule_i(0,prop('Theme',o(25,'Flat'))).
 rule_i(0,prop('Folder',o(8,'WebApi'))).
 rule_i(0,prop('ObjDesc','Menu Principal')).
 rule_i(0,prop('ObjName','MenuPrincipal')).
 rule_i(0,maingen(15)).
+rule_i(0,prop('PGMTYPE',main)).
  
 a_i(1,1,f,'Err',[],[ [],[ t('0',3) ] ]).
  
@@ -145,19 +150,14 @@ attri_i('Gpxmenuitems',[ gpxMenuItems,o(objectcollection('gpxMenuItems.gpxMenuIt
  
 break_i(2,nvg,1,[],[ [],[],[] ]).
  
-b_group_i(2,1,lit,0,1,14).
-b_group_i(2,2,lit,0,15,19).
-b_group_i(2,3,lit,0,20,0).
+b_group_i(2,1,lit,0,1,1).
+b_group_i(2,2,lit,0,2,0).
  
-b_line_i(14,2,1,cmd,14,[ t('',146,14,0),t('Start',3,14,7) ]).
-b_line_i(15,2,2,cmd,14,[ t('',104,14,0),t(o(33,gpxMenuDemo),28,14,1),t('Gpxmenuitems',23,14,13) ]).
-b_line_i(16,2,2,cmd,14,[ t('',147,14,0) ]).
-b_line_i(19,2,2,cmd,14,[ t('',146,14,0),t([ t('Gpxmenu1',3,19,7),t('Itemclick',3,19,16) ],29,19,16) ]).
-b_line_i(20,2,3,cmd,14,[ t('',141,14,0),t([ t('Gpxmenu1',3,20,6),t('Code',3,20,15) ],29,20,15),t(')',4,14,19) ]).
-b_line_i(21,2,3,cmd,14,[ t('',147,14,0) ]).
-b_line_i(1000,2,3,cmd,0,[ t('',146,0,0),t('Load',3,0,0) ]).
-b_line_i(1001,2,3,cmd,0,[ t('',155,0,0) ]).
-b_line_i(1002,2,3,cmd,0,[ t('',147,0,0) ]).
+b_line_i(1,2,1,cmd,1,[ t('',146,1,0),t('Start',3,1,7) ]).
+b_line_i(3,2,2,cmd,1,[ t('',147,1,0) ]).
+b_line_i(1000,2,2,cmd,0,[ t('',146,0,0),t('Load',3,0,0) ]).
+b_line_i(1001,2,2,cmd,0,[ t('',155,0,0) ]).
+b_line_i(1002,2,2,cmd,0,[ t('',147,0,0) ]).
  
  
  
@@ -173,15 +173,23 @@ b_line_i(1002,2,3,cmd,0,[ t('',147,0,0) ]).
  
 html_i(2,html('<p>')).
 html_i(3,table(3)).
-html_i(7,html('</p>')).
-html_i(8,html('<p></p>')).
-html_i(9,html('<p></p>')).
+html_i(15,html('</p>')).
+html_i(16,html('<p></p>')).
+html_i(17,html('<p></p>')).
  
 html_sub_i(3,0,html_i(0,html('<tbody>'))).
 html_sub_i(3,4,html_i(1,row(4))).
 html_sub_i(4,5,html_i(0,cell(5))).
-html_sub_i(5,6,html_i(0,usercontrol(6))).
-html_sub_i(3,0,html_i(2,html('</tbody>'))).
+html_sub_i(5,6,html_i(0,t('MENÚ',3))).
+html_sub_i(3,7,html_i(2,row(7))).
+html_sub_i(7,8,html_i(0,cell(8))).
+html_sub_i(8,9,html_i(0,t('BIENVENIDOS AL SISTEMA DE INVENTARIOS  CONDUSEF',3))).
+html_sub_i(3,10,html_i(3,row(10))).
+html_sub_i(10,11,html_i(0,cell(11))).
+html_sub_i(11,12,html_i(0,t('COMISION NACIONAL PARA LA PROTECCIÓN Y DEFENSA DE LOS USUARIOS DE SERVICIOS FINANCIEROS',3))).
+html_sub_i(3,13,html_i(4,row(13))).
+html_sub_i(13,14,html_i(0,cell(14))).
+html_sub_i(3,0,html_i(5,html('</tbody>'))).
  
 html_tags_i(1,'Class','Form').
  
@@ -196,27 +204,45 @@ html_comp_i(3,'Bordercolor',rgb(0,0,0),d,[ color ]).
 html_comp_i(3,'Cellpadding','1',d,[ str ]).
 html_comp_i(3,'Cellspacing','2',d,[ str ]).
 html_comp_i(3,'Height',measure(143,px),v,[ measure ]).
-html_comp_i(3,'Width',measure(100,'%'),v,[ measure ]).
+html_comp_i(3,'Width',measure(90,'%'),v,[ measure ]).
 html_comp_i(3,'Rules',none,d,[ str ]).
-html_comp_i(6,'Usercontroltype',gpxMenu,d,[ str ]).
-html_comp_i(6,'Constructorname',gpxMenu,d,[ str ]).
-html_comp_i(6,'Showmethodname',show,d,[ str ]).
-html_comp_i(6,'Controlname',gpxMenu1,v,[ str ]).
-html_comp_i(6,'Menu',[ t('Gpxmenuitems',23) ],v,[ params ]).
-html_comp_i(6,'Collapsedtitle','Main Menu',d,[ str ]).
-html_comp_i(6,'Resizewidth','800',d,[ str ]).
-html_comp_i(6,'Code','',d,[ str ]).
-html_comp_i(6,'Collapsedbackcolor','#999',d,[ str ]).
-html_comp_i(6,'Mainbackcolor','#aaa',d,[ str ]).
-html_comp_i(6,'Secondarybackcolor','#bbb',d,[ str ]).
-html_comp_i(6,'Fontcolor',black,d,[ str ]).
-html_comp_i(6,'Setmenu','SetMenu',d,[ str ]).
-html_comp_i(6,'Getmenu','GetMenu',d,[ str ]).
-html_comp_i(6,'Visible',-1,d,[ bool ]).
-html_comp_i(6,'Csssupportfiles',[ [ t('''gpxMenu\resources\reset.css''',3) ],[ t('''gpxMenu\resources\slimmenu.min.css''',3) ] ],d,[ params ]).
-html_comp_i(6,'Jssupportfiles',[ [ t('''gpxMenu\gpxMenuRender.js''',3) ] ],d,[ params ]).
-html_comp_i(6,'Csssharedsupportfiles',[],d,[ params ]).
-html_comp_i(6,'Jssharedsupportfiles',[],d,[ params ]).
+html_comp_i(5,'Align',center,v,[ str ]).
+html_comp_i(5,'Bgcolor',rgb(255,128,0),v,[ color ]).
+html_comp_i(6,'Caption','MENÚ',d,[ str ]).
+html_comp_i(6,'Id','Textblock1',v,[ str ]).
+html_comp_i(6,'Class','TextBlock',d,[ str ]).
+html_comp_i(6,'Event','',d,[ str ]).
+html_comp_i(6,'Returnonclick',0,d,[ bool ]).
+html_comp_i(6,'Gxformat',0,d,[ num ]).
+html_comp_i(6,'Title','',d,[ str ]).
+html_comp_i(6,'Fill',-1,d,[ bool ]).
+html_comp_i(6,'Backcolor',rgb(255,255,255),d,[ color ]).
+html_comp_i(6,'Forecolor',rgb(255,255,255),v,[ color ]).
+html_comp_i(6,'Font',font('Microsoft Sans Serif',13,[ bold ]),v,[ font ]).
+html_comp_i(8,'Align',center,v,[ str ]).
+html_comp_i(9,'Caption','BIENVENIDOS AL SISTEMA DE INVENTARIOS  CONDUSEF',d,[ str ]).
+html_comp_i(9,'Id','Textblock2',v,[ str ]).
+html_comp_i(9,'Class','TextBlock',d,[ str ]).
+html_comp_i(9,'Event','',d,[ str ]).
+html_comp_i(9,'Returnonclick',0,d,[ bool ]).
+html_comp_i(9,'Gxformat',0,d,[ num ]).
+html_comp_i(9,'Title','',d,[ str ]).
+html_comp_i(9,'Fill',-1,d,[ bool ]).
+html_comp_i(9,'Backcolor',rgb(255,255,255),d,[ color ]).
+html_comp_i(9,'Forecolor',rgb(0,0,0),d,[ color ]).
+html_comp_i(9,'Font',font('Microsoft Sans Serif',15,[ bold ]),v,[ font ]).
+html_comp_i(11,'Align',center,v,[ str ]).
+html_comp_i(12,'Caption','COMISION NACIONAL PARA LA PROTECCIÓN Y DEFENSA DE LOS USUARIOS DE SERVICIOS FINANCIEROS',d,[ str ]).
+html_comp_i(12,'Id','Textblock3',v,[ str ]).
+html_comp_i(12,'Class','TextBlock',d,[ str ]).
+html_comp_i(12,'Event','',d,[ str ]).
+html_comp_i(12,'Returnonclick',0,d,[ bool ]).
+html_comp_i(12,'Gxformat',0,d,[ num ]).
+html_comp_i(12,'Title','',d,[ str ]).
+html_comp_i(12,'Fill',-1,d,[ bool ]).
+html_comp_i(12,'Backcolor',rgb(255,255,255),d,[ color ]).
+html_comp_i(12,'Forecolor',rgb(0,0,0),d,[ color ]).
+html_comp_i(12,'Font',font('Microsoft Sans Serif',15,[]),v,[ font ]).
  
  
  
@@ -224,7 +250,9 @@ html_comp_i(6,'Jssharedsupportfiles',[],d,[ params ]).
  
  
  
-lit_i(6,1,usercontrol(6),[ ctlname('Gpxmenu1'),ctrltype(gpxmenu),el([ t('Gpxmenuitems',23) ]),containers([]) ]).
+lit_i(6,1,t('MENÚ',3),[ ctlname('Textblock1') ]).
+lit_i(9,1,t('BIENVENIDOS AL SISTEMA DE INVENTARIOS  CONDUSEF',3),[ ctlname('Textblock2') ]).
+lit_i(12,1,t('COMISION NACIONAL PARA LA PROTECCIÓN Y DEFENSA DE LOS USUARIOS DE SERVICIOS FINANCIEROS',3),[ ctlname('Textblock3') ]).
 lit_i(3,1,table(3),[ ctlname('Table1') ]).
 lit_i(1,1,window,[ rect(0,0,1000,1000),ctlname('Form') ]).
  
@@ -366,14 +394,12 @@ struct_dt_elem_i([ 26,5,6 ],8,'JsonName','').
  
  
  
-sub_info_i(146,'Start',14,16,[ [],[ 'Gpxmenuitems' ] ]).
-sub_info_i(146,[ t('Gpxmenu1',3,19,7),t('Itemclick',3,19,16) ],19,21,[ [ [ t('Gpxmenu1',3),t('Code',3) ] ],[] ]).
+sub_info_i(146,'Start',1,3,[ [],[] ]).
  
-pgm_parm_i(mnproc,1,'GPXMENUDEMO',[ [ o(objectcollection('gpxMenuItems.gpxMenuItem')),0,0,0 ] ],[ [ 'ReturnValue',out,[] ] ]).
  
 pgm_callprotocol_i(web,29,'MENUPRINCIPAL','INTERNAL').
-pgm_callprotocol_i(mnproc,1,'GPXMENUDEMO','INTERNAL').
  
+pgm_main_info_i(web,29,'MENUPRINCIPAL',[ 15,'MENUPRINCIPAL','Menu Principal','','','','' ]).
  
  
  

@@ -52,12 +52,12 @@ rule_i(0,datastore(1,'CS_RPCPGML','')).
 rule_i(0,datastore(1,'JDBC_DATASOURCE','')).
 rule_i(0,datastore(1,'USE_JDBC_DATASOURCE','0')).
 rule_i(0,datastore(1,'DS_DBMS_ADDINFO','')).
-rule_i(0,datastore(1,'USER_PASSWORD',󻢸蘇�2�5炭)).
+rule_i(0,datastore(1,'USER_PASSWORD',asdf)).
 rule_i(0,datastore(1,'USER_ID',postgres)).
 rule_i(0,datastore(1,'CS_CONNECT','First')).
 rule_i(0,datastore(1,'DBMS_PORT','5432')).
 rule_i(0,datastore(1,'CS_SERVER',localhost)).
-rule_i(0,datastore(1,'CS_DBNAME',postgres)).
+rule_i(0,datastore(1,'CS_DBNAME',condusef)).
 rule_i(0,datastore(1,'CS_FLEDSNAME','')).
 rule_i(0,datastore(1,'CS_DRVNAME','')).
 rule_i(0,datastore(1,'CS_DSNAME','')).
@@ -105,8 +105,6 @@ rule_i(0,prop('WEB_AUTO_FOCUS','UMPV')).
 rule_i(0,prop('OnSessionTimeout','Ignore')).
 rule_i(0,prop('OBJECT_METADATA','')).
 rule_i(0,prop('IsMain','-1')).
-rule_i(0,prop('SHOWMASTERPAGE_POPUP','0')).
-rule_i(0,prop('MasterPage',o(13,'RwdMasterPage'))).
 rule_i(0,prop('WEB_COMP','No')).
 rule_i(0,prop('Theme',o(25,'Flat'))).
 rule_i(0,prop('Folder',o(8,'WebApi'))).
@@ -149,14 +147,16 @@ v_i(t,o,2,174).
 attri_i(173,[ usuario,svchar,25,0,'',0,usuario,'',0 ]).
 attri_i(9,[ idusuario,int,9,0,'ZZZZZZZZ9',0,idusuario,'',0 ]).
 attri_i(174,[ contrasena,svchar,10,0,'',0,contrasena,'',0 ]).
-attri_i('GXLvl9',[ 'GXLvl9',int,1,0,'',0,'',[],13 ]).
-attri_i('Errmsg',[ 'Gx_emsg',char,70,0,'',1,'Error text','',12 ]).
-attri_i('Err',[ 'Gx_err',int,3,0,'ZZ9',1,'Error code','',11 ]).
+attri_i('GXLvl9',[ 'GXLvl9',int,1,0,'',0,'',[],15 ]).
+attri_i('Errmsg',[ 'Gx_emsg',char,70,0,'',1,'Error text','',14 ]).
+attri_i('Err',[ 'Gx_err',int,3,0,'ZZ9',1,'Error code','',13 ]).
+attri_i('Titulo',[ titulo,char,20,0,'',0,titulo,'',12 ]).
+attri_i('Fecha',[ fecha,dtime,8,5,'99/99/99 99:99',0,fecha,'',11 ]).
+attri_i('Websession',[ 'WebSession',o(websession),4,0,'',0,'Web Session','',8 ]).
+attri_i('Usuario',[ usuario,svchar,25,0,'',0,usuario,'',5 ]).
 attri_i('Update',[ update,svchar,40,0,'',0,update,'',10 ]).
 attri_i('Idusuario',[ idusuario,int,9,0,'ZZZZZZZZ9',0,idusuario,'',9 ]).
-attri_i('Websession',[ 'WebSession',o(websession),4,0,'',0,'Web Session','',8 ]).
 attri_i('Contrasena',[ contrasena,svchar,10,0,'',0,contrasena,'',6 ]).
-attri_i('Usuario',[ usuario,svchar,25,0,'',0,usuario,'',5 ]).
  
 table_i(15,[ 'USUARIOS',[ 9,173,174 ],usuarios,usuarios ]).
  
@@ -205,8 +205,9 @@ b_line_i([ 9,0 ],2,2,cmd,5,[ t('',107,5,0),t('GXLvl9',23,5,0),t(=,10,5,0),t('0',
 b_line_i(9,3,1,cmd,10,[ t('',121,9,0) ]).
 b_line_i([ 9,1 ],3,1,cmd,9,[ t('',107,9,0),t('GXLvl9',23,9,0),t(=,10,9,0),t('1',3,9,0) ]).
 b_line_i(12,3,1,cmd,10,[ t('',109,10,0),t(174,2,10,6),t(=,10,10,17),t('Contrasena',23,10,19) ]).
-b_line_i(14,3,1,cmd,10,[ t('',107,10,0),t([ t('Websession',23,14,4),t('set(',1,14,16) ],31,14,4),t('''idusuario''',3,14,21),t(',',7,10,32),t('str(',1,14,44),t('Idusuario',23,10,33),t(',',7,10,44),t(9,3,10,44),t(',',7,10,44),t(0,3,10,44),t(')',4,10,54),t(')',4,10,55) ]).
-b_line_i(16,3,1,cmd,10,[ t('',104,10,0),t(o(13,'Catalog_De_Cambs'),28,10,4) ]).
+b_line_i(14,3,1,cmd,10,[ t('',107,10,0),t([ t('Websession',23,14,4),t('set(',1,14,16) ],31,14,4),t('''usuario''',3,14,21),t(',',7,10,30),t('Usuario',23,14,31),t(')',4,10,51) ]).
+b_line_i(15,3,1,cmd,10,[ t('',107,10,0),t([ t('Websession',23,15,4),t('set(',1,15,16) ],31,15,4),t('''fecha''',3,15,21),t(',',7,10,28),t('today(',1,10,29),t(')',4,10,36),t(')',4,10,37) ]).
+b_line_i(16,3,1,cmd,10,[ t('',104,10,0),t(o(13,'MenuPrincipal'),28,10,4) ]).
 b_line_i(18,3,1,cmd,10,[ t('',110,10,0) ]).
 b_line_i(19,3,1,cmd,10,[ t('',141,10,0),t('''usuario invalida''',3,19,8),t(')',4,10,26) ]).
 b_line_i(20,3,1,cmd,10,[ t('',111,10,0) ]).
@@ -402,6 +403,7 @@ html_comp_i(25,'Buttonborderstyle',standard,d,[ str ]).
  
  
  
+warn_gen_i(msg(layout(15,[]),spc0023,[ 'Parameter ','today()',' ','for method',' ',set,' has wrong type.' ])).
  
 lit_i(12,1,bitmap('9fb193d9-64a4-4d30-b129-ff7c76830f7e-101'),[ ctlname('Image1') ]).
 lit_i(16,1,t('Usuario',23),[ ctlname('&Usuario'),ctrltype(edit,16),pos(16),ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
@@ -451,9 +453,9 @@ att_prop_i(2,173,'FullName',usuario,v).
  
 tbl_att_prop_i(2,15,9,'AllowNulls',n).
  
-var_prop_i(2,'Usuario',idBasedOn,'',v).
 var_prop_i(2,'Contrasena',idBasedOn,'',v).
 var_prop_i(2,'Idusuario',idBasedOn,'',v).
+var_prop_i(2,'Usuario',idBasedOn,'',v).
  
  
  
@@ -465,13 +467,14 @@ var_prop_i(2,'Idusuario',idBasedOn,'',v).
  
  
  
-sub_info_i(146,'''INICIAR SESI覰 ''',5,25,[ [ 173,'Usuario',174,'Contrasena','Idusuario' ],[] ]).
+sub_info_i(146,'''INICIAR SESI覰 ''',5,25,[ [ 173,'Usuario',174,'Contrasena' ],[] ]).
  
-pgm_parm_i(web,30,'CATALOG_DE_CAMBS',[],[]).
+pgm_parm_i(web,29,'MENUPRINCIPAL',[],[]).
  
 pgm_callprotocol_i(web,28,'LOGIN','INTERNAL').
-pgm_callprotocol_i(web,30,'CATALOG_DE_CAMBS','INTERNAL').
+pgm_callprotocol_i(web,29,'MENUPRINCIPAL','INTERNAL').
  
+pgm_main_info_i(web,29,'MENUPRINCIPAL',[ 15,'MENUPRINCIPAL','','','','','INTERNAL' ]).
 pgm_main_info_i(web,28,'LOGIN',[ 15,'LOGIN','Login','','','','' ]).
  
  

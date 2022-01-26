@@ -1,0 +1,17 @@
+current_obj_i(2,web,83).
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ij_object_dependency(schedulerdetailsform,[],[],[],83).
+ 
+ 
+obj_parms_i([ 'String aP0_Gx_mode','String aP1_eventId','DateTime aP2_eventStartTime','DateTime aP3_eventEndTime' ],[ [ 'Mode',inout ],[ 'Eventid',inout ],[ 'Eventstarttime',inout ],[ 'Eventendtime',inout ] ]).
+ 
+ 
+ 
+ 
+ 

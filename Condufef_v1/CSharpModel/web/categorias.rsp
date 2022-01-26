@@ -15,5 +15,5 @@
 /r:bin\GeneXus.Programs.Common.dll
 /r:GxBaseBuilder.dll
 /out:bin\categorias.dll
-categorias_bc.cs
 categorias.cs
+categorias_bc.cs

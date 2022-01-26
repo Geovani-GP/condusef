@@ -2,7 +2,7 @@
                File: Gx0080
         Description: Selection List marcas
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 1/23/2022 3:49:31.11
+       Generated on: 1/25/2022 17:35:20.49
        Program type: Callable routine
           Main DBMS: postgresql
 */
@@ -190,7 +190,7 @@ namespace GeneXus.Programs {
          INITWEB( ) ;
          if ( ! isAjaxCallMode( ) )
          {
-            MasterPageObj = (GXMasterPage) ClassLoader.GetInstance("rwdpromptmasterpage", "GeneXus.Programs.rwdpromptmasterpage", new Object[] {new GxContext( context.handle, context.DataStores, context.HttpContext)});
+            MasterPageObj = (GXMasterPage) ClassLoader.GetInstance("appmasterpage", "GeneXus.Programs.appmasterpage", new Object[] {new GxContext( context.handle, context.DataStores, context.HttpContext)});
             MasterPageObj.setDataArea(this,true);
             ValidateSpaRequest();
             MasterPageObj.webExecute();
@@ -222,11 +222,11 @@ namespace GeneXus.Programs {
 
       public override short ExecuteStartEvent( )
       {
-         PA0E2( ) ;
+         PA1X2( ) ;
          gxajaxcallmode = (short)((isAjaxCallMode( ) ? 1 : 0));
          if ( ( gxajaxcallmode == 0 ) && ( GxWebError == 0 ) )
          {
-            START0E2( ) ;
+            START1X2( ) ;
          }
          return gxajaxcallmode ;
       }
@@ -261,7 +261,7 @@ namespace GeneXus.Programs {
          context.AddJavascriptSource("jquery.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxtimezone.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxgral.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("gxcfg.js", "?20221233493115");
+         context.AddJavascriptSource("gxcfg.js", "?202212517352055");
          if ( context.isSpaRequest( ) )
          {
             enableOutput();
@@ -353,14 +353,14 @@ namespace GeneXus.Programs {
             context.WriteHtmlText( "<div") ;
             GxWebStd.ClassAttribute( context, "gx-ct-body"+" "+(String.IsNullOrEmpty(StringUtil.RTrim( Form.Class)) ? "form-horizontal Form" : Form.Class)+"-fx");
             context.WriteHtmlText( ">") ;
-            WE0E2( ) ;
+            WE1X2( ) ;
             context.WriteHtmlText( "</div>") ;
          }
       }
 
       public override void DispatchEvents( )
       {
-         EVT0E2( ) ;
+         EVT1X2( ) ;
       }
 
       public override bool HasEnterEvent( )
@@ -388,7 +388,7 @@ namespace GeneXus.Programs {
          return "Selection List marcas" ;
       }
 
-      protected void WB0E0( )
+      protected void WB1X0( )
       {
          if ( context.isAjaxRequest( ) )
          {
@@ -423,7 +423,7 @@ namespace GeneXus.Programs {
             /* Div Control */
             GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "col-xs-12", "left", "top", "", "", "div");
             /* Text block */
-            GxWebStd.gx_label_ctrl( context, lblLblmarcasidfilter_Internalname, "marcasid", "", "", lblLblmarcasidfilter_Jsonclick, "'"+""+"'"+",false,"+"'"+"e110e1_client"+"'", "", "WWAdvancedLabel WWFilterLabel", 7, "", 1, 1, 1, "HLP_Gx0080.htm");
+            GxWebStd.gx_label_ctrl( context, lblLblmarcasidfilter_Internalname, "marcasid", "", "", lblLblmarcasidfilter_Jsonclick, "'"+""+"'"+",false,"+"'"+"e111x1_client"+"'", "", "WWAdvancedLabel WWFilterLabel", 7, "", 1, 1, 1, "HLP_Gx0080.htm");
             GxWebStd.gx_div_end( context, "left", "top");
             GxWebStd.gx_div_end( context, "left", "top");
             /* Div Control */
@@ -454,7 +454,7 @@ namespace GeneXus.Programs {
             /* Div Control */
             GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "col-xs-12", "left", "top", "", "", "div");
             /* Text block */
-            GxWebStd.gx_label_ctrl( context, lblLblmarcasdscfilter_Internalname, "marcasdsc", "", "", lblLblmarcasdscfilter_Jsonclick, "'"+""+"'"+",false,"+"'"+"e120e1_client"+"'", "", "WWAdvancedLabel WWFilterLabel", 7, "", 1, 1, 1, "HLP_Gx0080.htm");
+            GxWebStd.gx_label_ctrl( context, lblLblmarcasdscfilter_Internalname, "marcasdsc", "", "", lblLblmarcasdscfilter_Jsonclick, "'"+""+"'"+",false,"+"'"+"e121x1_client"+"'", "", "WWAdvancedLabel WWFilterLabel", 7, "", 1, 1, 1, "HLP_Gx0080.htm");
             GxWebStd.gx_div_end( context, "left", "top");
             GxWebStd.gx_div_end( context, "left", "top");
             /* Div Control */
@@ -485,7 +485,7 @@ namespace GeneXus.Programs {
             /* Div Control */
             GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "col-xs-12", "left", "top", "", "", "div");
             /* Text block */
-            GxWebStd.gx_label_ctrl( context, lblLblmarcasusuariofilter_Internalname, "marcasusuario", "", "", lblLblmarcasusuariofilter_Jsonclick, "'"+""+"'"+",false,"+"'"+"e130e1_client"+"'", "", "WWAdvancedLabel WWFilterLabel", 7, "", 1, 1, 1, "HLP_Gx0080.htm");
+            GxWebStd.gx_label_ctrl( context, lblLblmarcasusuariofilter_Internalname, "marcasusuario", "", "", lblLblmarcasusuariofilter_Jsonclick, "'"+""+"'"+",false,"+"'"+"e131x1_client"+"'", "", "WWAdvancedLabel WWFilterLabel", 7, "", 1, 1, 1, "HLP_Gx0080.htm");
             GxWebStd.gx_div_end( context, "left", "top");
             GxWebStd.gx_div_end( context, "left", "top");
             /* Div Control */
@@ -516,7 +516,7 @@ namespace GeneXus.Programs {
             /* Div Control */
             GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "col-xs-12", "left", "top", "", "", "div");
             /* Text block */
-            GxWebStd.gx_label_ctrl( context, lblLblmarcasfecregfilter_Internalname, "marcasfecreg", "", "", lblLblmarcasfecregfilter_Jsonclick, "'"+""+"'"+",false,"+"'"+"e140e1_client"+"'", "", "WWAdvancedLabel WWDateFilterLabel", 7, "", 1, 1, 1, "HLP_Gx0080.htm");
+            GxWebStd.gx_label_ctrl( context, lblLblmarcasfecregfilter_Internalname, "marcasfecreg", "", "", lblLblmarcasfecregfilter_Jsonclick, "'"+""+"'"+",false,"+"'"+"e141x1_client"+"'", "", "WWAdvancedLabel WWDateFilterLabel", 7, "", 1, 1, 1, "HLP_Gx0080.htm");
             GxWebStd.gx_div_end( context, "left", "top");
             GxWebStd.gx_div_end( context, "left", "top");
             /* Div Control */
@@ -549,7 +549,7 @@ namespace GeneXus.Programs {
             /* Div Control */
             GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "col-xs-12", "left", "top", "", "", "div");
             /* Text block */
-            GxWebStd.gx_label_ctrl( context, lblLblmarcasfecultactfilter_Internalname, "marcasfecultact", "", "", lblLblmarcasfecultactfilter_Jsonclick, "'"+""+"'"+",false,"+"'"+"e150e1_client"+"'", "", "WWAdvancedLabel WWDateFilterLabel", 7, "", 1, 1, 1, "HLP_Gx0080.htm");
+            GxWebStd.gx_label_ctrl( context, lblLblmarcasfecultactfilter_Internalname, "marcasfecultact", "", "", lblLblmarcasfecultactfilter_Jsonclick, "'"+""+"'"+",false,"+"'"+"e151x1_client"+"'", "", "WWAdvancedLabel WWDateFilterLabel", 7, "", 1, 1, 1, "HLP_Gx0080.htm");
             GxWebStd.gx_div_end( context, "left", "top");
             GxWebStd.gx_div_end( context, "left", "top");
             /* Div Control */
@@ -584,7 +584,7 @@ namespace GeneXus.Programs {
             TempTags = "  onfocus=\"gx.evt.onfocus(this, 61,'',false,'',0)\"";
             ClassString = bttBtntoggle_Class;
             StyleString = "";
-            GxWebStd.gx_button_ctrl( context, bttBtntoggle_Internalname, "gx.evt.setGridEvt("+StringUtil.Str( (decimal)(64), 2, 0)+","+"null"+");", "|||", bttBtntoggle_Jsonclick, 7, "|||", "", StyleString, ClassString, 1, 1, "standard", "'"+""+"'"+",false,"+"'"+"e160e1_client"+"'", TempTags, "", 2, "HLP_Gx0080.htm");
+            GxWebStd.gx_button_ctrl( context, bttBtntoggle_Internalname, "gx.evt.setGridEvt("+StringUtil.Str( (decimal)(64), 2, 0)+","+"null"+");", "|||", bttBtntoggle_Jsonclick, 7, "|||", "", StyleString, ClassString, 1, 1, "standard", "'"+""+"'"+",false,"+"'"+"e161x1_client"+"'", TempTags, "", 2, "HLP_Gx0080.htm");
             GxWebStd.gx_div_end( context, "left", "top");
             GxWebStd.gx_div_end( context, "left", "top");
             /* Div Control */
@@ -733,7 +733,7 @@ namespace GeneXus.Programs {
          wbLoad = true;
       }
 
-      protected void START0E2( )
+      protected void START1X2( )
       {
          wbLoad = false;
          wbEnd = 0;
@@ -750,16 +750,16 @@ namespace GeneXus.Programs {
          {
          }
          wbErr = false;
-         STRUP0E0( ) ;
+         STRUP1X0( ) ;
       }
 
-      protected void WS0E2( )
+      protected void WS1X2( )
       {
-         START0E2( ) ;
-         EVT0E2( ) ;
+         START1X2( ) ;
+         EVT1X2( ) ;
       }
 
-      protected void EVT0E2( )
+      protected void EVT1X2( )
       {
          if ( StringUtil.StrCmp(context.GetRequestMethod( ), "POST") == 0 )
          {
@@ -839,15 +839,15 @@ namespace GeneXus.Programs {
                                  {
                                     context.wbHandled = 1;
                                     dynload_actions( ) ;
-                                    /* Execute user event: E170E2 */
-                                    E170E2 ();
+                                    /* Execute user event: E171X2 */
+                                    E171X2 ();
                                  }
                                  else if ( StringUtil.StrCmp(sEvt, "LOAD") == 0 )
                                  {
                                     context.wbHandled = 1;
                                     dynload_actions( ) ;
-                                    /* Execute user event: E180E2 */
-                                    E180E2 ();
+                                    /* Execute user event: E181X2 */
+                                    E181X2 ();
                                  }
                                  else if ( StringUtil.StrCmp(sEvt, "ENTER") == 0 )
                                  {
@@ -882,8 +882,8 @@ namespace GeneXus.Programs {
                                        }
                                        if ( ! Rfr0gs )
                                        {
-                                          /* Execute user event: E190E2 */
-                                          E190E2 ();
+                                          /* Execute user event: E191X2 */
+                                          E191X2 ();
                                        }
                                        dynload_actions( ) ;
                                     }
@@ -907,7 +907,7 @@ namespace GeneXus.Programs {
          }
       }
 
-      protected void WE0E2( )
+      protected void WE1X2( )
       {
          if ( ! GxWebStd.gx_redirect( context) )
          {
@@ -923,7 +923,7 @@ namespace GeneXus.Programs {
          }
       }
 
-      protected void PA0E2( )
+      protected void PA1X2( )
       {
          if ( nDonePA == 0 )
          {
@@ -979,7 +979,7 @@ namespace GeneXus.Programs {
          GxWebStd.set_html_headers( context, 0, "", "");
          GxWebStd.gx_hidden_field( context, "GRID1_Rows", StringUtil.LTrim( StringUtil.NToC( (decimal)(subGrid1_Rows), 6, 0, ".", "")));
          GRID1_nCurrentRecord = 0;
-         RF0E2( ) ;
+         RF1X2( ) ;
          /* End function gxgrGrid1_refresh */
       }
 
@@ -1000,7 +1000,7 @@ namespace GeneXus.Programs {
       public void Refresh( )
       {
          send_integrity_hashes( ) ;
-         RF0E2( ) ;
+         RF1X2( ) ;
       }
 
       protected void initialize_formulas( )
@@ -1009,7 +1009,7 @@ namespace GeneXus.Programs {
          context.Gx_err = 0;
       }
 
-      protected void RF0E2( )
+      protected void RF1X2( )
       {
          initialize_formulas( ) ;
          if ( isAjaxCallMode( ) )
@@ -1054,29 +1054,29 @@ namespace GeneXus.Programs {
             context.httpAjaxContext.ajax_rsp_assign_attri("", false, "AV7cmarcasdsc", AV7cmarcasdsc);
             lV8cmarcasusuario = StringUtil.Concat( StringUtil.RTrim( AV8cmarcasusuario), "%", "");
             context.httpAjaxContext.ajax_rsp_assign_attri("", false, "AV8cmarcasusuario", AV8cmarcasusuario);
-            /* Using cursor H000E2 */
+            /* Using cursor H001X2 */
             pr_default.execute(0, new Object[] {AV6cmarcasid, lV7cmarcasdsc, lV8cmarcasusuario, AV9cmarcasfecreg, AV10cmarcasfecultact, GXPagingFrom2, GXPagingTo2, GXPagingTo2});
             nGXsfl_64_idx = 1;
             while ( ( (pr_default.getStatus(0) != 101) ) && ( ( ( 10 == 0 ) || ( GRID1_nCurrentRecord < subGrid1_Recordsperpage( ) ) ) ) )
             {
-               A115marcasfecultact = H000E2_A115marcasfecultact[0];
-               n115marcasfecultact = H000E2_n115marcasfecultact[0];
-               A114marcasfecreg = H000E2_A114marcasfecreg[0];
-               n114marcasfecreg = H000E2_n114marcasfecreg[0];
-               A113marcasusuario = H000E2_A113marcasusuario[0];
-               n113marcasusuario = H000E2_n113marcasusuario[0];
-               A112marcasdsc = H000E2_A112marcasdsc[0];
-               n112marcasdsc = H000E2_n112marcasdsc[0];
-               A24marcasid = H000E2_A24marcasid[0];
-               /* Execute user event: E180E2 */
-               E180E2 ();
+               A115marcasfecultact = H001X2_A115marcasfecultact[0];
+               n115marcasfecultact = H001X2_n115marcasfecultact[0];
+               A114marcasfecreg = H001X2_A114marcasfecreg[0];
+               n114marcasfecreg = H001X2_n114marcasfecreg[0];
+               A113marcasusuario = H001X2_A113marcasusuario[0];
+               n113marcasusuario = H001X2_n113marcasusuario[0];
+               A112marcasdsc = H001X2_A112marcasdsc[0];
+               n112marcasdsc = H001X2_n112marcasdsc[0];
+               A24marcasid = H001X2_A24marcasid[0];
+               /* Execute user event: E181X2 */
+               E181X2 ();
                pr_default.readNext(0);
             }
             GRID1_nEOF = (short)(((pr_default.getStatus(0) == 101) ? 1 : 0));
             GxWebStd.gx_hidden_field( context, "GRID1_nEOF", StringUtil.LTrim( StringUtil.NToC( (decimal)(GRID1_nEOF), 1, 0, ".", "")));
             pr_default.close(0);
             wbEnd = 64;
-            WB0E0( ) ;
+            WB1X0( ) ;
          }
          nGXsfl_64_Refreshing = 0;
       }
@@ -1112,9 +1112,9 @@ namespace GeneXus.Programs {
          context.httpAjaxContext.ajax_rsp_assign_attri("", false, "AV7cmarcasdsc", AV7cmarcasdsc);
          lV8cmarcasusuario = StringUtil.Concat( StringUtil.RTrim( AV8cmarcasusuario), "%", "");
          context.httpAjaxContext.ajax_rsp_assign_attri("", false, "AV8cmarcasusuario", AV8cmarcasusuario);
-         /* Using cursor H000E3 */
+         /* Using cursor H001X3 */
          pr_default.execute(1, new Object[] {AV6cmarcasid, lV7cmarcasdsc, lV8cmarcasusuario, AV9cmarcasfecreg, AV10cmarcasfecultact});
-         GRID1_nRecordCount = H000E3_AGRID1_nRecordCount[0];
+         GRID1_nRecordCount = H001X3_AGRID1_nRecordCount[0];
          pr_default.close(1);
          return (int)(GRID1_nRecordCount) ;
       }
@@ -1221,14 +1221,14 @@ namespace GeneXus.Programs {
          return (int)(0) ;
       }
 
-      protected void STRUP0E0( )
+      protected void STRUP1X0( )
       {
          /* Before Start, stand alone formulas. */
          context.Gx_err = 0;
          /* Execute Start event if defined. */
          context.wbGlbDoneStart = 0;
-         /* Execute user event: E170E2 */
-         E170E2 ();
+         /* Execute user event: E171X2 */
+         E171X2 ();
          context.wbGlbDoneStart = 1;
          /* After Start, stand alone formulas. */
          if ( StringUtil.StrCmp(context.GetRequestMethod( ), "POST") == 0 )
@@ -1318,8 +1318,8 @@ namespace GeneXus.Programs {
 
       protected void GXStart( )
       {
-         /* Execute user event: E170E2 */
-         E170E2 ();
+         /* Execute user event: E171X2 */
+         E171X2 ();
          if ( returnInSub )
          {
             returnInSub = true;
@@ -1327,7 +1327,7 @@ namespace GeneXus.Programs {
          }
       }
 
-      protected void E170E2( )
+      protected void E171X2( )
       {
          /* Start Routine */
          Form.Caption = StringUtil.Format( "Lista de Selección %1", "marcas", "", "", "", "", "", "", "", "");
@@ -1335,7 +1335,7 @@ namespace GeneXus.Programs {
          AV12ADVANCED_LABEL_TEMPLATE = "%1 <strong>%2</strong>";
       }
 
-      private void E180E2( )
+      private void E181X2( )
       {
          /* Load Routine */
          AV5LinkSelection = context.GetImagePath( "3914535b-0c03-44c5-9538-906a99cdd2bc", "", context.GetTheme( ));
@@ -1351,8 +1351,8 @@ namespace GeneXus.Programs {
 
       public void GXEnter( )
       {
-         /* Execute user event: E190E2 */
-         E190E2 ();
+         /* Execute user event: E191X2 */
+         E191X2 ();
          if ( returnInSub )
          {
             returnInSub = true;
@@ -1360,7 +1360,7 @@ namespace GeneXus.Programs {
          }
       }
 
-      protected void E190E2( )
+      protected void E191X2( )
       {
          /* Enter Routine */
          AV11pmarcasid = A24marcasid;
@@ -1390,9 +1390,9 @@ namespace GeneXus.Programs {
          nGotPars = (short)(1);
          nGXWrapped = (short)(1);
          context.SetWrapped(true);
-         PA0E2( ) ;
-         WS0E2( ) ;
-         WE0E2( ) ;
+         PA1X2( ) ;
+         WS1X2( ) ;
+         WE1X2( ) ;
          this.cleanup();
          context.SetWrapped(false);
          context.GX_msglist = BackMsgLst;
@@ -1405,12 +1405,12 @@ namespace GeneXus.Programs {
 
       protected void define_styles( )
       {
-         AddStyleSheetFile("calendar-system.css", "?13205289");
-         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?3485073");
+         AddStyleSheetFile("calendar-system.css", "?11323129");
+         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?1734189");
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?20221233493179");
+            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?202212517352154");
             idxLst = (int)(idxLst+1);
          }
          /* End function define_styles */
@@ -1419,7 +1419,7 @@ namespace GeneXus.Programs {
       protected void include_jscripts( )
       {
          context.AddJavascriptSource("messages.spa.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("gx0080.js", "?20221233493179");
+         context.AddJavascriptSource("gx0080.js", "?202212517352155");
          /* End function include_jscripts */
       }
 
@@ -1442,7 +1442,7 @@ namespace GeneXus.Programs {
       protected void sendrow_642( )
       {
          SubsflControlProps_642( ) ;
-         WB0E0( ) ;
+         WB1X0( ) ;
          if ( ( 10 * 1 == 0 ) || ( nGXsfl_64_idx <= subGrid1_Recordsperpage( ) * 1 ) )
          {
             Grid1Row = GXWebRow.GetNew(context,Grid1Container);
@@ -1682,13 +1682,13 @@ namespace GeneXus.Programs {
       public override void InitializeDynEvents( )
       {
          setEventMetadata("REFRESH","{handler:'Refresh',iparms:[{av:'GRID1_nFirstRecordOnPage',nv:0},{av:'GRID1_nEOF',nv:0},{av:'subGrid1_Rows',nv:0},{av:'AV6cmarcasid',fld:'vCMARCASID',pic:'ZZZZZZZZ9',nv:0},{av:'AV7cmarcasdsc',fld:'vCMARCASDSC',pic:'',nv:''},{av:'AV8cmarcasusuario',fld:'vCMARCASUSUARIO',pic:'',nv:''},{av:'AV9cmarcasfecreg',fld:'vCMARCASFECREG',pic:'99/99/9999 99:99:99',nv:''},{av:'AV10cmarcasfecultact',fld:'vCMARCASFECULTACT',pic:'99/99/9999 99:99:99',nv:''}],oparms:[]}");
-         setEventMetadata("'TOGGLE'","{handler:'E160E1',iparms:[{av:'divAdvancedcontainer_Class',ctrl:'ADVANCEDCONTAINER',prop:'Class'},{ctrl:'BTNTOGGLE',prop:'Class'}],oparms:[{av:'divAdvancedcontainer_Class',ctrl:'ADVANCEDCONTAINER',prop:'Class'},{ctrl:'BTNTOGGLE',prop:'Class'}]}");
-         setEventMetadata("LBLMARCASIDFILTER.CLICK","{handler:'E110E1',iparms:[{av:'divMarcasidfiltercontainer_Class',ctrl:'MARCASIDFILTERCONTAINER',prop:'Class'}],oparms:[{av:'divMarcasidfiltercontainer_Class',ctrl:'MARCASIDFILTERCONTAINER',prop:'Class'},{av:'edtavCmarcasid_Visible',ctrl:'vCMARCASID',prop:'Visible'}]}");
-         setEventMetadata("LBLMARCASDSCFILTER.CLICK","{handler:'E120E1',iparms:[{av:'divMarcasdscfiltercontainer_Class',ctrl:'MARCASDSCFILTERCONTAINER',prop:'Class'}],oparms:[{av:'divMarcasdscfiltercontainer_Class',ctrl:'MARCASDSCFILTERCONTAINER',prop:'Class'},{av:'edtavCmarcasdsc_Visible',ctrl:'vCMARCASDSC',prop:'Visible'}]}");
-         setEventMetadata("LBLMARCASUSUARIOFILTER.CLICK","{handler:'E130E1',iparms:[{av:'divMarcasusuariofiltercontainer_Class',ctrl:'MARCASUSUARIOFILTERCONTAINER',prop:'Class'}],oparms:[{av:'divMarcasusuariofiltercontainer_Class',ctrl:'MARCASUSUARIOFILTERCONTAINER',prop:'Class'},{av:'edtavCmarcasusuario_Visible',ctrl:'vCMARCASUSUARIO',prop:'Visible'}]}");
-         setEventMetadata("LBLMARCASFECREGFILTER.CLICK","{handler:'E140E1',iparms:[{av:'divMarcasfecregfiltercontainer_Class',ctrl:'MARCASFECREGFILTERCONTAINER',prop:'Class'}],oparms:[{av:'divMarcasfecregfiltercontainer_Class',ctrl:'MARCASFECREGFILTERCONTAINER',prop:'Class'}]}");
-         setEventMetadata("LBLMARCASFECULTACTFILTER.CLICK","{handler:'E150E1',iparms:[{av:'divMarcasfecultactfiltercontainer_Class',ctrl:'MARCASFECULTACTFILTERCONTAINER',prop:'Class'}],oparms:[{av:'divMarcasfecultactfiltercontainer_Class',ctrl:'MARCASFECULTACTFILTERCONTAINER',prop:'Class'}]}");
-         setEventMetadata("ENTER","{handler:'E190E2',iparms:[{av:'A24marcasid',fld:'MARCASID',pic:'ZZZZZZZZ9',hsh:true,nv:0}],oparms:[{av:'AV11pmarcasid',fld:'vPMARCASID',pic:'ZZZZZZZZ9',nv:0}]}");
+         setEventMetadata("'TOGGLE'","{handler:'E161X1',iparms:[{av:'divAdvancedcontainer_Class',ctrl:'ADVANCEDCONTAINER',prop:'Class'},{ctrl:'BTNTOGGLE',prop:'Class'}],oparms:[{av:'divAdvancedcontainer_Class',ctrl:'ADVANCEDCONTAINER',prop:'Class'},{ctrl:'BTNTOGGLE',prop:'Class'}]}");
+         setEventMetadata("LBLMARCASIDFILTER.CLICK","{handler:'E111X1',iparms:[{av:'divMarcasidfiltercontainer_Class',ctrl:'MARCASIDFILTERCONTAINER',prop:'Class'}],oparms:[{av:'divMarcasidfiltercontainer_Class',ctrl:'MARCASIDFILTERCONTAINER',prop:'Class'},{av:'edtavCmarcasid_Visible',ctrl:'vCMARCASID',prop:'Visible'}]}");
+         setEventMetadata("LBLMARCASDSCFILTER.CLICK","{handler:'E121X1',iparms:[{av:'divMarcasdscfiltercontainer_Class',ctrl:'MARCASDSCFILTERCONTAINER',prop:'Class'}],oparms:[{av:'divMarcasdscfiltercontainer_Class',ctrl:'MARCASDSCFILTERCONTAINER',prop:'Class'},{av:'edtavCmarcasdsc_Visible',ctrl:'vCMARCASDSC',prop:'Visible'}]}");
+         setEventMetadata("LBLMARCASUSUARIOFILTER.CLICK","{handler:'E131X1',iparms:[{av:'divMarcasusuariofiltercontainer_Class',ctrl:'MARCASUSUARIOFILTERCONTAINER',prop:'Class'}],oparms:[{av:'divMarcasusuariofiltercontainer_Class',ctrl:'MARCASUSUARIOFILTERCONTAINER',prop:'Class'},{av:'edtavCmarcasusuario_Visible',ctrl:'vCMARCASUSUARIO',prop:'Visible'}]}");
+         setEventMetadata("LBLMARCASFECREGFILTER.CLICK","{handler:'E141X1',iparms:[{av:'divMarcasfecregfiltercontainer_Class',ctrl:'MARCASFECREGFILTERCONTAINER',prop:'Class'}],oparms:[{av:'divMarcasfecregfiltercontainer_Class',ctrl:'MARCASFECREGFILTERCONTAINER',prop:'Class'}]}");
+         setEventMetadata("LBLMARCASFECULTACTFILTER.CLICK","{handler:'E151X1',iparms:[{av:'divMarcasfecultactfiltercontainer_Class',ctrl:'MARCASFECULTACTFILTERCONTAINER',prop:'Class'}],oparms:[{av:'divMarcasfecultactfiltercontainer_Class',ctrl:'MARCASFECULTACTFILTERCONTAINER',prop:'Class'}]}");
+         setEventMetadata("ENTER","{handler:'E191X2',iparms:[{av:'A24marcasid',fld:'MARCASID',pic:'ZZZZZZZZ9',hsh:true,nv:0}],oparms:[{av:'AV11pmarcasid',fld:'vPMARCASID',pic:'ZZZZZZZZ9',nv:0}]}");
          setEventMetadata("GRID1_FIRSTPAGE","{handler:'subgrid1_firstpage',iparms:[{av:'GRID1_nFirstRecordOnPage',nv:0},{av:'GRID1_nEOF',nv:0},{av:'subGrid1_Rows',nv:0},{av:'AV6cmarcasid',fld:'vCMARCASID',pic:'ZZZZZZZZ9',nv:0},{av:'AV7cmarcasdsc',fld:'vCMARCASDSC',pic:'',nv:''},{av:'AV8cmarcasusuario',fld:'vCMARCASUSUARIO',pic:'',nv:''},{av:'AV9cmarcasfecreg',fld:'vCMARCASFECREG',pic:'99/99/9999 99:99:99',nv:''},{av:'AV10cmarcasfecultact',fld:'vCMARCASFECULTACT',pic:'99/99/9999 99:99:99',nv:''}],oparms:[]}");
          setEventMetadata("GRID1_PREVPAGE","{handler:'subgrid1_previouspage',iparms:[{av:'GRID1_nFirstRecordOnPage',nv:0},{av:'GRID1_nEOF',nv:0},{av:'subGrid1_Rows',nv:0},{av:'AV6cmarcasid',fld:'vCMARCASID',pic:'ZZZZZZZZ9',nv:0},{av:'AV7cmarcasdsc',fld:'vCMARCASDSC',pic:'',nv:''},{av:'AV8cmarcasusuario',fld:'vCMARCASUSUARIO',pic:'',nv:''},{av:'AV9cmarcasfecreg',fld:'vCMARCASFECREG',pic:'99/99/9999 99:99:99',nv:''},{av:'AV10cmarcasfecultact',fld:'vCMARCASFECULTACT',pic:'99/99/9999 99:99:99',nv:''}],oparms:[]}");
          setEventMetadata("GRID1_NEXTPAGE","{handler:'subgrid1_nextpage',iparms:[{av:'GRID1_nFirstRecordOnPage',nv:0},{av:'GRID1_nEOF',nv:0},{av:'subGrid1_Rows',nv:0},{av:'AV6cmarcasid',fld:'vCMARCASID',pic:'ZZZZZZZZ9',nv:0},{av:'AV7cmarcasdsc',fld:'vCMARCASDSC',pic:'',nv:''},{av:'AV8cmarcasusuario',fld:'vCMARCASUSUARIO',pic:'',nv:''},{av:'AV9cmarcasfecreg',fld:'vCMARCASFECREG',pic:'99/99/9999 99:99:99',nv:''},{av:'AV10cmarcasfecultact',fld:'vCMARCASFECULTACT',pic:'99/99/9999 99:99:99',nv:''}],oparms:[]}");
@@ -1752,16 +1752,16 @@ namespace GeneXus.Programs {
          lV8cmarcasusuario = "";
          A114marcasfecreg = (DateTime)(DateTime.MinValue);
          A115marcasfecultact = (DateTime)(DateTime.MinValue);
-         H000E2_A115marcasfecultact = new DateTime[] {DateTime.MinValue} ;
-         H000E2_n115marcasfecultact = new bool[] {false} ;
-         H000E2_A114marcasfecreg = new DateTime[] {DateTime.MinValue} ;
-         H000E2_n114marcasfecreg = new bool[] {false} ;
-         H000E2_A113marcasusuario = new String[] {""} ;
-         H000E2_n113marcasusuario = new bool[] {false} ;
-         H000E2_A112marcasdsc = new String[] {""} ;
-         H000E2_n112marcasdsc = new bool[] {false} ;
-         H000E2_A24marcasid = new int[1] ;
-         H000E3_AGRID1_nRecordCount = new long[1] ;
+         H001X2_A115marcasfecultact = new DateTime[] {DateTime.MinValue} ;
+         H001X2_n115marcasfecultact = new bool[] {false} ;
+         H001X2_A114marcasfecreg = new DateTime[] {DateTime.MinValue} ;
+         H001X2_n114marcasfecreg = new bool[] {false} ;
+         H001X2_A113marcasusuario = new String[] {""} ;
+         H001X2_n113marcasusuario = new bool[] {false} ;
+         H001X2_A112marcasdsc = new String[] {""} ;
+         H001X2_n112marcasdsc = new bool[] {false} ;
+         H001X2_A24marcasid = new int[1] ;
+         H001X3_AGRID1_nRecordCount = new long[1] ;
          AV12ADVANCED_LABEL_TEMPLATE = "";
          Grid1Row = new GXWebRow();
          BackMsgLst = new msglist();
@@ -1770,10 +1770,10 @@ namespace GeneXus.Programs {
          pr_default = new DataStoreProvider(context, new GeneXus.Programs.gx0080__default(),
             new Object[][] {
                 new Object[] {
-               H000E2_A115marcasfecultact, H000E2_n115marcasfecultact, H000E2_A114marcasfecreg, H000E2_n114marcasfecreg, H000E2_A113marcasusuario, H000E2_n113marcasusuario, H000E2_A112marcasdsc, H000E2_n112marcasdsc, H000E2_A24marcasid
+               H001X2_A115marcasfecultact, H001X2_n115marcasfecultact, H001X2_A114marcasfecreg, H001X2_n114marcasfecreg, H001X2_A113marcasusuario, H001X2_n113marcasusuario, H001X2_A112marcasdsc, H001X2_n112marcasdsc, H001X2_A24marcasid
                }
                , new Object[] {
-               H000E3_AGRID1_nRecordCount
+               H001X3_AGRID1_nRecordCount
                }
             }
          );
@@ -1926,16 +1926,16 @@ namespace GeneXus.Programs {
       private GXWebColumn Grid1Column ;
       private IGxDataStore dsDefault ;
       private IDataStoreProvider pr_default ;
-      private DateTime[] H000E2_A115marcasfecultact ;
-      private bool[] H000E2_n115marcasfecultact ;
-      private DateTime[] H000E2_A114marcasfecreg ;
-      private bool[] H000E2_n114marcasfecreg ;
-      private String[] H000E2_A113marcasusuario ;
-      private bool[] H000E2_n113marcasusuario ;
-      private String[] H000E2_A112marcasdsc ;
-      private bool[] H000E2_n112marcasdsc ;
-      private int[] H000E2_A24marcasid ;
-      private long[] H000E3_AGRID1_nRecordCount ;
+      private DateTime[] H001X2_A115marcasfecultact ;
+      private bool[] H001X2_n115marcasfecultact ;
+      private DateTime[] H001X2_A114marcasfecreg ;
+      private bool[] H001X2_n114marcasfecreg ;
+      private String[] H001X2_A113marcasusuario ;
+      private bool[] H001X2_n113marcasusuario ;
+      private String[] H001X2_A112marcasdsc ;
+      private bool[] H001X2_n112marcasdsc ;
+      private int[] H001X2_A24marcasid ;
+      private long[] H001X3_AGRID1_nRecordCount ;
       private msglist BackMsgLst ;
       private msglist LclMsgLst ;
       private int aP0_pmarcasid ;
@@ -1944,7 +1944,7 @@ namespace GeneXus.Programs {
 
    public class gx0080__default : DataStoreHelperBase, IDataStoreHelper
    {
-      protected Object[] conditional_H000E2( IGxContext context ,
+      protected Object[] conditional_H001X2( IGxContext context ,
                                              String AV7cmarcasdsc ,
                                              String AV8cmarcasusuario ,
                                              DateTime AV9cmarcasfecreg ,
@@ -2007,7 +2007,7 @@ namespace GeneXus.Programs {
          return GXv_Object2 ;
       }
 
-      protected Object[] conditional_H000E3( IGxContext context ,
+      protected Object[] conditional_H001X3( IGxContext context ,
                                              String AV7cmarcasdsc ,
                                              String AV8cmarcasusuario ,
                                              DateTime AV9cmarcasfecreg ,
@@ -2072,9 +2072,9 @@ namespace GeneXus.Programs {
          switch ( cursor )
          {
                case 0 :
-                     return conditional_H000E2(context, (String)dynConstraints[0] , (String)dynConstraints[1] , (DateTime)dynConstraints[2] , (DateTime)dynConstraints[3] , (String)dynConstraints[4] , (String)dynConstraints[5] , (DateTime)dynConstraints[6] , (DateTime)dynConstraints[7] , (int)dynConstraints[8] );
+                     return conditional_H001X2(context, (String)dynConstraints[0] , (String)dynConstraints[1] , (DateTime)dynConstraints[2] , (DateTime)dynConstraints[3] , (String)dynConstraints[4] , (String)dynConstraints[5] , (DateTime)dynConstraints[6] , (DateTime)dynConstraints[7] , (int)dynConstraints[8] );
                case 1 :
-                     return conditional_H000E3(context, (String)dynConstraints[0] , (String)dynConstraints[1] , (DateTime)dynConstraints[2] , (DateTime)dynConstraints[3] , (String)dynConstraints[4] , (String)dynConstraints[5] , (DateTime)dynConstraints[6] , (DateTime)dynConstraints[7] , (int)dynConstraints[8] );
+                     return conditional_H001X3(context, (String)dynConstraints[0] , (String)dynConstraints[1] , (DateTime)dynConstraints[2] , (DateTime)dynConstraints[3] , (String)dynConstraints[4] , (String)dynConstraints[5] , (DateTime)dynConstraints[6] , (DateTime)dynConstraints[7] , (int)dynConstraints[8] );
          }
          return base.getDynamicStatement(cursor, context, dynConstraints);
       }
@@ -2093,8 +2093,8 @@ namespace GeneXus.Programs {
     {
        if ( def == null )
        {
-          Object[] prmH000E2 ;
-          prmH000E2 = new Object[] {
+          Object[] prmH001X2 ;
+          prmH001X2 = new Object[] {
           new Object[] {"AV6cmarcasid",NpgsqlDbType.Integer,9,0} ,
           new Object[] {"lV7cmarcasdsc",NpgsqlDbType.Varchar,100,0} ,
           new Object[] {"lV8cmarcasusuario",NpgsqlDbType.Varchar,15,0} ,
@@ -2104,8 +2104,8 @@ namespace GeneXus.Programs {
           new Object[] {"GXPagingTo2",NpgsqlDbType.Integer,9,0} ,
           new Object[] {"GXPagingTo2",NpgsqlDbType.Integer,9,0}
           } ;
-          Object[] prmH000E3 ;
-          prmH000E3 = new Object[] {
+          Object[] prmH001X3 ;
+          prmH001X3 = new Object[] {
           new Object[] {"AV6cmarcasid",NpgsqlDbType.Integer,9,0} ,
           new Object[] {"lV7cmarcasdsc",NpgsqlDbType.Varchar,100,0} ,
           new Object[] {"lV8cmarcasusuario",NpgsqlDbType.Varchar,15,0} ,
@@ -2113,8 +2113,8 @@ namespace GeneXus.Programs {
           new Object[] {"AV10cmarcasfecultact",NpgsqlDbType.Timestamp,10,8}
           } ;
           def= new CursorDef[] {
-              new CursorDef("H000E2", "scmdbuf",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmH000E2,11,0,false,false )
-             ,new CursorDef("H000E3", "scmdbuf",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmH000E3,1,0,false,false )
+              new CursorDef("H001X2", "scmdbuf",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmH001X2,11,0,false,false )
+             ,new CursorDef("H001X3", "scmdbuf",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmH001X3,1,0,false,false )
           };
        }
     }

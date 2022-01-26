@@ -1,7 +1,7 @@
 current_obj_i(2,trn,3).
  
 called_tree_i(0,3,13,1).
-called_tree_i(0,3,13,9).
+called_tree_i(0,3,13,64).
  
  
  

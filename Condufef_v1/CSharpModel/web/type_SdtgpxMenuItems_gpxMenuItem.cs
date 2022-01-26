@@ -2,7 +2,7 @@
                File: type_SdtgpxMenuItems_gpxMenuItem
         Description: gpxMenuItems
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 1/23/2022 3:49:51.61
+       Generated on: 1/25/2022 17:35:44.36
        Program type: Callable routine
           Main DBMS: postgresql
 */

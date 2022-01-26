@@ -42,12 +42,21 @@ public class bldDevelopermenu : GxBaseBuilder
    public override TargetCollection GetRuntimeBuildList( )
    {
       TargetCollection sc = new TargetCollection() ;
+      sc.Add( @"aloadeventssampleproc", "dll");
+      sc.Add( @"aschedulerrequesthandler", "dll");
       sc.Add( @"appmasterpage", "dll");
-      sc.Add( @"recentlinks", "dll");
-      sc.Add( @"promptmasterpage", "dll");
-      sc.Add( @"rwdmasterpage", "dll");
-      sc.Add( @"rwdrecentlinks", "dll");
-      sc.Add( @"rwdpromptmasterpage", "dll");
+      sc.Add( @"login", "dll");
+      sc.Add( @"menuprincipal", "dll");
+      sc.Add( @"catalog_de_cambs", "dll");
+      sc.Add( @"catalog_de_marcas", "dll");
+      sc.Add( @"catalog_de_modelo", "dll");
+      sc.Add( @"catalog_de_tipo_doc", "dll");
+      sc.Add( @"catalog_de_articulo", "dll");
+      sc.Add( @"catalog_de_status", "dll");
+      sc.Add( @"catalog_de_entidad_federativa", "dll");
+      sc.Add( @"catalog_de_area", "dll");
+      sc.Add( @"catalog_de_categorias", "dll");
+      sc.Add( @"catalog_de_origen", "dll");
       sc.Add( @"gx0010", "dll");
       sc.Add( @"gx0020", "dll");
       sc.Add( @"gx0030", "dll");
@@ -69,18 +78,8 @@ public class bldDevelopermenu : GxBaseBuilder
       sc.Add( @"gx00h0", "dll");
       sc.Add( @"gx00k0", "dll");
       sc.Add( @"gx00l0", "dll");
-      sc.Add( @"login", "dll");
-      sc.Add( @"menuprincipal", "dll");
-      sc.Add( @"catalog_de_cambs", "dll");
-      sc.Add( @"catalog_de_marcas", "dll");
-      sc.Add( @"catalog_de_modelo", "dll");
-      sc.Add( @"catalog_de_tipo_doc", "dll");
-      sc.Add( @"catalog_de_articulo", "dll");
-      sc.Add( @"catalog_de_status", "dll");
-      sc.Add( @"catalog_de_entidad_federativa", "dll");
-      sc.Add( @"catalog_de_area", "dll");
-      sc.Add( @"catalog_de_categorias", "dll");
-      sc.Add( @"catalog_de_origen", "dll");
+      sc.Add( @"schedulerdetailsform", "dll");
+      sc.Add( @"sidebar", "dll");
       sc.Add( @"tipobien", "dll");
       sc.Add( @"parametros", "dll");
       sc.Add( @"meses", "dll");
@@ -118,9 +117,17 @@ public class bldDevelopermenu : GxBaseBuilder
          return true;
       if ( obj == @"bin\GeneXus.Programs.Common.dll" )
       {
-         if (checkTime(obj, cs_path + @"\type_SdtgpxMenuItems_gpxMenuItem.cs" ))
+         if (checkTime(obj, cs_path + @"\type_SdtSchedulerEvents.cs" ))
             return true;
-         if (checkTime(obj, cs_path + @"\type_SdtLinkList_LinkItem.cs" ))
+         if (checkTime(obj, cs_path + @"\type_SdtSchedulerEvents_Day.cs" ))
+            return true;
+         if (checkTime(obj, cs_path + @"\type_SdtSchedulerEvents_event.cs" ))
+            return true;
+         if (checkTime(obj, cs_path + @"\type_SdtTabsMenuData_TabsMenuDataItem.cs" ))
+            return true;
+         if (checkTime(obj, cs_path + @"\type_SdtTabsMenuData_TabsMenuDataItem_SectionsItem.cs" ))
+            return true;
+         if (checkTime(obj, cs_path + @"\type_SdtgpxMenuItems_gpxMenuItem.cs" ))
             return true;
          if (checkTime(obj, cs_path + @"\type_SdtMessages_Message.cs" ))
             return true;

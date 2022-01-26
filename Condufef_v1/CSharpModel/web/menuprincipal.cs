@@ -2,8 +2,8 @@
                File: MenuPrincipal
         Description: Menu Principal
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 1/23/2022 3:49:20.71
-       Program type: Callable routine
+       Generated on: 1/25/2022 21:59:30.20
+       Program type: Main program
           Main DBMS: postgresql
 */
 using System;
@@ -144,7 +144,7 @@ namespace GeneXus.Programs {
          INITWEB( ) ;
          if ( ! isAjaxCallMode( ) )
          {
-            MasterPageObj = (GXMasterPage) ClassLoader.GetInstance("rwdmasterpage", "GeneXus.Programs.rwdmasterpage", new Object[] {new GxContext( context.handle, context.DataStores, context.HttpContext)});
+            MasterPageObj = (GXMasterPage) ClassLoader.GetInstance("appmasterpage", "GeneXus.Programs.appmasterpage", new Object[] {new GxContext( context.handle, context.DataStores, context.HttpContext)});
             MasterPageObj.setDataArea(this,false);
             ValidateSpaRequest();
             MasterPageObj.webExecute();
@@ -215,19 +215,18 @@ namespace GeneXus.Programs {
          context.AddJavascriptSource("jquery.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxtimezone.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxgral.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("gxcfg.js", "?20221233492072");
+         context.AddJavascriptSource("gxcfg.js", "?202212521593021");
          if ( context.isSpaRequest( ) )
          {
             enableOutput();
          }
-         context.AddJavascriptSource("gpxMenu/gpxMenuRender.js", "");
          context.WriteHtmlText( Form.Headerrawhtml) ;
          context.CloseHtmlHeader();
          if ( context.isSpaRequest( ) )
          {
             disableOutput();
          }
-         FormProcess = " data-HasEnter=\"false\" data-Skiponenter=\"false\"";
+         FormProcess = ((nGXWrapped==0) ? " data-HasEnter=\"false\" data-Skiponenter=\"false\"" : "");
          context.WriteHtmlText( "<body") ;
          bodyStyle = "" + "background-color:" + context.BuildHTMLColor( Form.Backcolor) + ";color:" + context.BuildHTMLColor( Form.Textcolor) + ";";
          if ( nGXWrapped == 0 )
@@ -241,11 +240,14 @@ namespace GeneXus.Programs {
          context.WriteHtmlText( " "+"class=\"Form\""+" "+ "style='"+bodyStyle+"'") ;
          context.WriteHtmlText( FormProcess+">") ;
          context.skipLines(1);
-         context.WriteHtmlTextNl( "<form id=\"MAINFORM\" name=\"MAINFORM\" method=\"post\" tabindex=-1  class=\"Form\" novalidate action=\""+formatLink("menuprincipal.aspx") +"\">") ;
-         GxWebStd.gx_hidden_field( context, "_EventName", "");
-         GxWebStd.gx_hidden_field( context, "_EventGridId", "");
-         GxWebStd.gx_hidden_field( context, "_EventRowId", "");
-         context.WriteHtmlText( "<input type=\"submit\" style=\"display:none\">") ;
+         if ( nGXWrapped != 1 )
+         {
+            context.WriteHtmlTextNl( "<form id=\"MAINFORM\" name=\"MAINFORM\" method=\"post\" tabindex=-1  class=\"Form\" novalidate action=\""+formatLink("menuprincipal.aspx") +"\">") ;
+            GxWebStd.gx_hidden_field( context, "_EventName", "");
+            GxWebStd.gx_hidden_field( context, "_EventGridId", "");
+            GxWebStd.gx_hidden_field( context, "_EventRowId", "");
+            context.WriteHtmlText( "<input type=\"submit\" style=\"display:none\">") ;
+         }
          toggleJsOutput = isJsOutputEnabled( );
          if ( context.isSpaRequest( ) )
          {
@@ -257,15 +259,6 @@ namespace GeneXus.Programs {
       {
          /* Send hidden variables. */
          /* Send saved values. */
-         if ( context.isAjaxRequest( ) )
-         {
-            context.httpAjaxContext.ajax_rsp_assign_sdt_attri("", false, "vGPXMENUITEMS", AV5gpxMenuItems);
-         }
-         else
-         {
-            context.httpAjaxContext.ajax_rsp_assign_hidden_sdt("vGPXMENUITEMS", AV5gpxMenuItems);
-         }
-         GxWebStd.gx_hidden_field( context, "GPXMENU1_Code", StringUtil.RTrim( Gpxmenu1_Code));
          GXKey = Crypto.Decrypt64( context.GetCookie( "GX_SESSION_ID"), Crypto.GetServerKey( ));
       }
 
@@ -282,7 +275,10 @@ namespace GeneXus.Programs {
          {
             disableOutput();
          }
-         context.WriteHtmlTextNl( "</form>") ;
+         if ( nGXWrapped != 1 )
+         {
+            context.WriteHtmlTextNl( "</form>") ;
+         }
          if ( context.isSpaRequest( ) )
          {
             enableOutput();
@@ -560,7 +556,6 @@ namespace GeneXus.Programs {
          if ( StringUtil.StrCmp(context.GetRequestMethod( ), "POST") == 0 )
          {
             /* Read saved SDTs. */
-            ajax_req_read_hidden_sdt(cgiGet( "vGPXMENUITEMS"), AV5gpxMenuItems);
             /* Read variables values. */
             /* Read saved values. */
             /* Read subfile selected row values. */
@@ -583,7 +578,6 @@ namespace GeneXus.Programs {
       protected void E110T2( )
       {
          /* Start Routine */
-         new gpxmenudemo(context ).execute( out  AV5gpxMenuItems) ;
       }
 
       protected void nextLoad( )
@@ -602,13 +596,29 @@ namespace GeneXus.Programs {
             /* Table start */
             sStyleString = "";
             sStyleString = sStyleString + " height: " + StringUtil.LTrim( StringUtil.Str( (decimal)(143), 10, 0)) + "px" + ";";
-            sStyleString = sStyleString + " width: " + StringUtil.LTrim( StringUtil.Str( (decimal)(100), 10, 0)) + "%" + ";";
+            sStyleString = sStyleString + " width: " + StringUtil.LTrim( StringUtil.Str( (decimal)(90), 10, 0)) + "%" + ";";
             GxWebStd.gx_table_start( context, tblTable1_Internalname, tblTable1_Internalname, "", "Table", 0, "center", "", 1, 2, sStyleString, "", 0);
             context.WriteHtmlText( "<tbody>") ;
             context.WriteHtmlText( "<tr>") ;
+            context.WriteHtmlText( "<td data-align=\"center\" bgcolor=\"#FF8000\"  style=\""+CSSHelper.Prettify( "text-align:-khtml-center;text-align:-moz-center;text-align:-webkit-center")+"\">") ;
+            /* Text block */
+            GxWebStd.gx_label_ctrl( context, lblTextblock1_Internalname, "MENÚ", "", "", lblTextblock1_Jsonclick, "'"+""+"'"+",false,"+"'"+""+"'", "font-family:'Microsoft Sans Serif'; font-size:13.0pt; font-weight:bold; font-style:normal; color:#FFFFFF;", "TextBlock", 0, "", 1, 1, 0, "HLP_MenuPrincipal.htm");
+            context.WriteHtmlText( "</td>") ;
+            context.WriteHtmlText( "</tr>") ;
+            context.WriteHtmlText( "<tr>") ;
+            context.WriteHtmlText( "<td data-align=\"center\"  style=\""+CSSHelper.Prettify( "text-align:-khtml-center;text-align:-moz-center;text-align:-webkit-center")+"\">") ;
+            /* Text block */
+            GxWebStd.gx_label_ctrl( context, lblTextblock2_Internalname, "BIENVENIDOS AL SISTEMA DE INVENTARIOS  CONDUSEF", "", "", lblTextblock2_Jsonclick, "'"+""+"'"+",false,"+"'"+""+"'", "font-family:'Microsoft Sans Serif'; font-size:15.0pt; font-weight:bold; font-style:normal;", "TextBlock", 0, "", 1, 1, 0, "HLP_MenuPrincipal.htm");
+            context.WriteHtmlText( "</td>") ;
+            context.WriteHtmlText( "</tr>") ;
+            context.WriteHtmlText( "<tr>") ;
+            context.WriteHtmlText( "<td data-align=\"center\"  style=\""+CSSHelper.Prettify( "text-align:-khtml-center;text-align:-moz-center;text-align:-webkit-center")+"\">") ;
+            /* Text block */
+            GxWebStd.gx_label_ctrl( context, lblTextblock3_Internalname, "COMISION NACIONAL PARA LA PROTECCIÓN Y DEFENSA DE LOS USUARIOS DE SERVICIOS FINANCIEROS", "", "", lblTextblock3_Jsonclick, "'"+""+"'"+",false,"+"'"+""+"'", "font-family:'Microsoft Sans Serif'; font-size:15.0pt; font-weight:normal; font-style:normal;", "TextBlock", 0, "", 1, 1, 0, "HLP_MenuPrincipal.htm");
+            context.WriteHtmlText( "</td>") ;
+            context.WriteHtmlText( "</tr>") ;
+            context.WriteHtmlText( "<tr>") ;
             context.WriteHtmlText( "<td>") ;
-            /* User Defined Control */
-            context.WriteHtmlText( "<div class=\"gx_usercontrol\" id=\""+"GPXMENU1Container"+"\"></div>") ;
             context.WriteHtmlText( "</td>") ;
             context.WriteHtmlText( "</tr>") ;
             context.WriteHtmlText( "</tbody>") ;
@@ -653,13 +663,11 @@ namespace GeneXus.Programs {
 
       protected void define_styles( )
       {
-         AddStyleSheetFile("gpxMenu/resources/reset.css", "?1320536");
-         AddStyleSheetFile("gpxMenu/resources/slimmenu.min.css", "?1320536");
-         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?3485073");
+         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?1734189");
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?20221233492076");
+            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?202212521593025");
             idxLst = (int)(idxLst+1);
          }
          /* End function define_styles */
@@ -667,15 +675,19 @@ namespace GeneXus.Programs {
 
       protected void include_jscripts( )
       {
-         context.AddJavascriptSource("messages.spa.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("menuprincipal.js", "?20221233492076");
-         context.AddJavascriptSource("gpxMenu/gpxMenuRender.js", "");
+         if ( nGXWrapped != 1 )
+         {
+            context.AddJavascriptSource("messages.spa.js", "?"+context.GetBuildNumber( 115824));
+            context.AddJavascriptSource("menuprincipal.js", "?202212521593025");
+         }
          /* End function include_jscripts */
       }
 
       protected void init_default_properties( )
       {
-         Gpxmenu1_Internalname = "GPXMENU1";
+         lblTextblock1_Internalname = "TEXTBLOCK1";
+         lblTextblock2_Internalname = "TEXTBLOCK2";
+         lblTextblock3_Internalname = "TEXTBLOCK3";
          tblTable1_Internalname = "TABLE1";
          Form.Internalname = "FORM";
       }
@@ -687,7 +699,6 @@ namespace GeneXus.Programs {
             disableJsOutput();
          }
          init_default_properties( ) ;
-         Gpxmenu1_Code = "";
          Form.Headerrawhtml = "";
          Form.Background = "";
          Form.Textcolor = 0;
@@ -731,7 +742,6 @@ namespace GeneXus.Programs {
          sDynURL = "";
          FormProcess = "";
          bodyStyle = "";
-         AV5gpxMenuItems = new GxObjectCollection( context, "gpxMenuItems.gpxMenuItem", "Condufef_v1", "SdtgpxMenuItems_gpxMenuItem", "GeneXus.Programs");
          GXKey = "";
          GX_FocusControl = "";
          Form = new GXWebForm();
@@ -741,6 +751,9 @@ namespace GeneXus.Programs {
          EvtRowId = "";
          sEvtType = "";
          sStyleString = "";
+         lblTextblock1_Jsonclick = "";
+         lblTextblock2_Jsonclick = "";
+         lblTextblock3_Jsonclick = "";
          BackMsgLst = new msglist();
          LclMsgLst = new msglist();
          /* GeneXus formulas. */
@@ -751,13 +764,12 @@ namespace GeneXus.Programs {
       private short GxWebError ;
       private short initialized ;
       private short gxajaxcallmode ;
+      private short nGXWrapped ;
       private short wbEnd ;
       private short wbStart ;
       private short nDonePA ;
       private short gxcookieaux ;
-      private short nGXWrapped ;
       private int idxLst ;
-      private String Gpxmenu1_Code ;
       private String gxfirstwebparm ;
       private String gxfirstwebparm_bkp ;
       private String sDynURL ;
@@ -772,7 +784,12 @@ namespace GeneXus.Programs {
       private String sEvtType ;
       private String sStyleString ;
       private String tblTable1_Internalname ;
-      private String Gpxmenu1_Internalname ;
+      private String lblTextblock1_Internalname ;
+      private String lblTextblock1_Jsonclick ;
+      private String lblTextblock2_Internalname ;
+      private String lblTextblock2_Jsonclick ;
+      private String lblTextblock3_Internalname ;
+      private String lblTextblock3_Jsonclick ;
       private bool entryPointCalled ;
       private bool toggleJsOutput ;
       private bool wbLoad ;
@@ -782,8 +799,6 @@ namespace GeneXus.Programs {
       private IGxDataStore dsDefault ;
       private msglist BackMsgLst ;
       private msglist LclMsgLst ;
-      [ObjectCollection(ItemType=typeof( SdtgpxMenuItems_gpxMenuItem ))]
-      private IGxCollection AV5gpxMenuItems ;
       private GXWebForm Form ;
    }
 

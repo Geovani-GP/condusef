@@ -1,13 +1,13 @@
-current_obj_i(2,web,11).
+current_obj_i(2,web,66).
  
-called_tree_i(13,11,13,6).
- 
- 
+called_tree_i(13,66,13,1).
  
  
  
  
-ij_object_dependency(gx0050,[],[],[],11).
+ 
+ 
+ij_object_dependency(gx0050,[],[],[],66).
  
  
 obj_parms_i([ 'int aP0_pcategoriasid' ],[ [ 'Pcategoriasid',out ] ]).

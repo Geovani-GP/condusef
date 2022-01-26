@@ -1,7 +1,5 @@
 current_obj_i(2,web,28).
  
-called_tree_i(13,28,13,4).
-called_tree_i(13,28,13,30).
  
  
 ij_main_object(login,'Login','','""','').

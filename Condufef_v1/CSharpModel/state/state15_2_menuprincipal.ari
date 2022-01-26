@@ -1,9 +1,9 @@
 current_obj_i(2,web,29).
  
-called_tree_i(13,29,33,1).
-called_tree_i(13,29,13,4).
+called_tree_i(13,29,13,1).
  
  
+ij_main_object(menuprincipal,'Menu Principal','','""','').
  
  
  
@@ -13,7 +13,6 @@ ij_object_dependency(menuprincipal,[],[],[],29).
  
 obj_parms_i([],[]).
  
-ij_usercontrol_directory_i(gpxMenu).
  
  
  

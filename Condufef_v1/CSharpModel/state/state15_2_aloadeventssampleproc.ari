@@ -1,0 +1,18 @@
+current_obj_i(2,proc,5).
+ 
+ 
+ 
+ij_main_object(aloadeventssampleproc,'Load Events Sample Proc','','""','INTERNAL').
+ 
+ 
+ 
+ 
+ij_object_dependency(aloadeventssampleproc,[],[],[],5).
+ 
+ 
+obj_parms_i([ 'DateTime aP0_dateFrom','DateTime aP1_dateTo','SdtSchedulerEvents aP2_events' ],[ [ 'Datefrom',in ],[ 'Dateto',in ],[ 'Events',out ] ]).
+ 
+ 
+ 
+ 
+ 

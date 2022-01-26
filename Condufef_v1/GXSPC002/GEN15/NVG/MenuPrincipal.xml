@@ -12,6 +12,7 @@
 <Result>genreq</Result>
 <Warnings></Warnings>
 <Errors></Errors>
+<Main>Yes</Main>
 <Generator>
 <GenId>15</GenId>
 <GenName>Default (C#)</GenName></Generator>
@@ -19,22 +20,7 @@
 <Parameters></Parameters>
 <StandAloneRules></StandAloneRules>
 <Event>
-<EventName>Start</EventName>
-<CALL>
-<Object>
-<ObjClsGuid>2a9e9aba-d2de-4801-ae7f-5e3819222daf</ObjClsGuid>
-<ObjCls>33</ObjCls>
-<ObjId>1</ObjId>
-<ObjName>gpxMenuDemo</ObjName>
-<ObjPgmName>gpxMenuDemo</ObjPgmName>
-<ObjClsName>DataProvider</ObjClsName></Object>
-<Parameters>
-<Variable>
-<VarId>Gpxmenuitems</VarId>
-<VarName>&amp;gpxMenuItems</VarName></Variable></Parameters>
-<IF></IF></CALL></Event>
-<Event>
-<EventName>Gpxmenu1.Itemclick</EventName></Event>
+<EventName>Start</EventName></Event>
 <Event>
 <EventName>Load</EventName></Event>
 <Suggests></Suggests></ObjectSpec>

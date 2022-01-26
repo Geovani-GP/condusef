@@ -1,0 +1,158 @@
+ 
+spec_i([ sdt,[ 26,6,0 ],'TabsMenuData','TabsMenuData',0,spa,'10_3_15-115824' ]).
+ 
+struct_dt_i([ 26,6,0 ],name,'TabsMenuData').
+struct_dt_i([ 26,6,0 ],namespace,'Condufef_v1').
+struct_dt_i([ 26,6,0 ],'ObjName','TabsMenuData').
+struct_dt_i([ 26,6,0 ],'ObjDesc','Tabs Menu Data').
+struct_dt_i([ 26,6,0 ],'ExternalName','TabsMenuData').
+struct_dt_i([ 26,6,0 ],'ExternalNamespace','Condufef_v1').
+struct_dt_i([ 26,6,0 ],collection,'True').
+struct_dt_i([ 26,6,0 ],datatype,[ 26,6,7 ]).
+struct_dt_i([ 26,6,7 ],name,'TabsMenuDataItem').
+struct_dt_i([ 26,6,7 ],namespace,'Condufef_v1.TabsMenuData').
+struct_dt_i([ 26,6,8 ],name,'SectionsItem').
+struct_dt_i([ 26,6,8 ],namespace,'Condufef_v1.TabsMenuData.TabsMenuDataItem').
+struct_dt_i([ 26,6,0 ],fullname,'TabsMenuData').
+struct_dt_i([ 26,6,7 ],fullname,'TabsMenuData.TabsMenuDataItem').
+struct_dt_i([ 26,6,8 ],fullname,'TabsMenuData.TabsMenuDataItem.SectionsItem').
+struct_dt_i([ 26,6,0 ],modified,yes).
+struct_dt_i([ 26,6,7 ],modified,yes).
+struct_dt_i([ 26,6,8 ],modified,yes).
+ 
+struct_dt_elem_i([ 26,6,7 ],1,name,'Menuid').
+struct_dt_elem_i([ 26,6,7 ],1,camelname,'MenuId').
+struct_dt_elem_i([ 26,6,7 ],1,length,4).
+struct_dt_elem_i([ 26,6,7 ],1,decimals,0).
+struct_dt_elem_i([ 26,6,7 ],1,sign,0).
+struct_dt_elem_i([ 26,6,7 ],1,type,[ 4,4,0 ]).
+struct_dt_elem_i([ 26,6,7 ],1,pic,'ZZZ9').
+struct_dt_elem_i([ 26,6,7 ],1,collection,'False').
+struct_dt_elem_i([ 26,6,7 ],1,'XmlType','Element').
+struct_dt_elem_i([ 26,6,7 ],1,'XmlName','').
+struct_dt_elem_i([ 26,6,7 ],1,'XmlNamespace','').
+struct_dt_elem_i([ 26,6,7 ],1,soaptype,'').
+struct_dt_elem_i([ 26,6,7 ],1,'XmlInclude',idXmlIncludeAlways).
+struct_dt_elem_i([ 26,6,7 ],1,'JsonName','').
+struct_dt_elem_i([ 26,6,7 ],2,name,'Menutitle').
+struct_dt_elem_i([ 26,6,7 ],2,camelname,'MenuTitle').
+struct_dt_elem_i([ 26,6,7 ],2,basedon,24).
+struct_dt_elem_i([ 26,6,7 ],2,length,20).
+struct_dt_elem_i([ 26,6,7 ],2,decimals,0).
+struct_dt_elem_i([ 26,6,7 ],2,type,[ 5,20,0 ]).
+struct_dt_elem_i([ 26,6,7 ],2,pic,'').
+struct_dt_elem_i([ 26,6,7 ],2,collection,'False').
+struct_dt_elem_i([ 26,6,7 ],2,'XmlType','Element').
+struct_dt_elem_i([ 26,6,7 ],2,'XmlName','').
+struct_dt_elem_i([ 26,6,7 ],2,'XmlNamespace','').
+struct_dt_elem_i([ 26,6,7 ],2,soaptype,'').
+struct_dt_elem_i([ 26,6,7 ],2,'XmlInclude',idXmlIncludeAlways).
+struct_dt_elem_i([ 26,6,7 ],2,'JsonName','').
+struct_dt_elem_i([ 26,6,7 ],3,name,'Menudescription').
+struct_dt_elem_i([ 26,6,7 ],3,camelname,'MenuDescription').
+struct_dt_elem_i([ 26,6,7 ],3,basedon,23).
+struct_dt_elem_i([ 26,6,7 ],3,length,40).
+struct_dt_elem_i([ 26,6,7 ],3,decimals,0).
+struct_dt_elem_i([ 26,6,7 ],3,type,[ 5,40,0 ]).
+struct_dt_elem_i([ 26,6,7 ],3,pic,'').
+struct_dt_elem_i([ 26,6,7 ],3,collection,'False').
+struct_dt_elem_i([ 26,6,7 ],3,'XmlType','Element').
+struct_dt_elem_i([ 26,6,7 ],3,'XmlName','').
+struct_dt_elem_i([ 26,6,7 ],3,'XmlNamespace','').
+struct_dt_elem_i([ 26,6,7 ],3,soaptype,'').
+struct_dt_elem_i([ 26,6,7 ],3,'XmlInclude',idXmlIncludeAlways).
+struct_dt_elem_i([ 26,6,7 ],3,'JsonName','').
+struct_dt_elem_i([ 26,6,7 ],4,name,'Menuurl').
+struct_dt_elem_i([ 26,6,7 ],4,camelname,'MenuURL').
+struct_dt_elem_i([ 26,6,7 ],4,basedon,1).
+struct_dt_elem_i([ 26,6,7 ],4,length,1000).
+struct_dt_elem_i([ 26,6,7 ],4,decimals,0).
+struct_dt_elem_i([ 26,6,7 ],4,type,[ 13,1000,0 ]).
+struct_dt_elem_i([ 26,6,7 ],4,pic,'').
+struct_dt_elem_i([ 26,6,7 ],4,collection,'False').
+struct_dt_elem_i([ 26,6,7 ],4,'XmlType','Element').
+struct_dt_elem_i([ 26,6,7 ],4,'XmlName','').
+struct_dt_elem_i([ 26,6,7 ],4,'XmlNamespace','').
+struct_dt_elem_i([ 26,6,7 ],4,soaptype,'').
+struct_dt_elem_i([ 26,6,7 ],4,'XmlInclude',idXmlIncludeAlways).
+struct_dt_elem_i([ 26,6,7 ],4,'JsonName','').
+struct_dt_elem_i([ 26,6,7 ],5,name,'Sections').
+struct_dt_elem_i([ 26,6,7 ],5,camelname,'Sections').
+struct_dt_elem_i([ 26,6,7 ],5,type,[ [ 26,6,8 ],0,0 ]).
+struct_dt_elem_i([ 26,6,7 ],5,pic,'').
+struct_dt_elem_i([ 26,6,7 ],5,collection,'True').
+struct_dt_elem_i([ 26,6,7 ],5,'ObjName','Sections').
+struct_dt_elem_i([ 26,6,7 ],5,'ObjDesc','Sections').
+struct_dt_elem_i([ 26,6,7 ],5,'CollectionItemName','SectionsItem').
+struct_dt_elem_i([ 26,6,7 ],5,'XmlName','').
+struct_dt_elem_i([ 26,6,7 ],5,'XmlNamespace','').
+struct_dt_elem_i([ 26,6,7 ],5,'CollectionSerialization',idXmlCollectionWrapped).
+struct_dt_elem_i([ 26,6,7 ],5,'XmlInclude',idXmlIncludeAlways).
+struct_dt_elem_i([ 26,6,7 ],5,'JsonName','').
+struct_dt_elem_i([ 26,6,8 ],1,name,'Sectionid').
+struct_dt_elem_i([ 26,6,8 ],1,camelname,'SectionId').
+struct_dt_elem_i([ 26,6,8 ],1,length,4).
+struct_dt_elem_i([ 26,6,8 ],1,decimals,0).
+struct_dt_elem_i([ 26,6,8 ],1,sign,0).
+struct_dt_elem_i([ 26,6,8 ],1,type,[ 4,4,0 ]).
+struct_dt_elem_i([ 26,6,8 ],1,pic,'ZZZ9').
+struct_dt_elem_i([ 26,6,8 ],1,collection,'False').
+struct_dt_elem_i([ 26,6,8 ],1,'XmlType','Element').
+struct_dt_elem_i([ 26,6,8 ],1,'XmlName','').
+struct_dt_elem_i([ 26,6,8 ],1,'XmlNamespace','').
+struct_dt_elem_i([ 26,6,8 ],1,soaptype,'').
+struct_dt_elem_i([ 26,6,8 ],1,'XmlInclude',idXmlIncludeAlways).
+struct_dt_elem_i([ 26,6,8 ],1,'JsonName','').
+struct_dt_elem_i([ 26,6,8 ],2,name,'Sectiontitle').
+struct_dt_elem_i([ 26,6,8 ],2,camelname,'SectionTitle').
+struct_dt_elem_i([ 26,6,8 ],2,basedon,24).
+struct_dt_elem_i([ 26,6,8 ],2,length,20).
+struct_dt_elem_i([ 26,6,8 ],2,decimals,0).
+struct_dt_elem_i([ 26,6,8 ],2,type,[ 5,20,0 ]).
+struct_dt_elem_i([ 26,6,8 ],2,pic,'').
+struct_dt_elem_i([ 26,6,8 ],2,collection,'False').
+struct_dt_elem_i([ 26,6,8 ],2,'XmlType','Element').
+struct_dt_elem_i([ 26,6,8 ],2,'XmlName','').
+struct_dt_elem_i([ 26,6,8 ],2,'XmlNamespace','').
+struct_dt_elem_i([ 26,6,8 ],2,soaptype,'').
+struct_dt_elem_i([ 26,6,8 ],2,'XmlInclude',idXmlIncludeAlways).
+struct_dt_elem_i([ 26,6,8 ],2,'JsonName','').
+struct_dt_elem_i([ 26,6,8 ],3,name,'Sectiondescription').
+struct_dt_elem_i([ 26,6,8 ],3,camelname,'SectionDescription').
+struct_dt_elem_i([ 26,6,8 ],3,basedon,23).
+struct_dt_elem_i([ 26,6,8 ],3,length,40).
+struct_dt_elem_i([ 26,6,8 ],3,decimals,0).
+struct_dt_elem_i([ 26,6,8 ],3,type,[ 5,40,0 ]).
+struct_dt_elem_i([ 26,6,8 ],3,pic,'').
+struct_dt_elem_i([ 26,6,8 ],3,collection,'False').
+struct_dt_elem_i([ 26,6,8 ],3,'XmlType','Element').
+struct_dt_elem_i([ 26,6,8 ],3,'XmlName','').
+struct_dt_elem_i([ 26,6,8 ],3,'XmlNamespace','').
+struct_dt_elem_i([ 26,6,8 ],3,soaptype,'').
+struct_dt_elem_i([ 26,6,8 ],3,'XmlInclude',idXmlIncludeAlways).
+struct_dt_elem_i([ 26,6,8 ],3,'JsonName','').
+struct_dt_elem_i([ 26,6,8 ],4,name,'Sectionurl').
+struct_dt_elem_i([ 26,6,8 ],4,camelname,'SectionURL').
+struct_dt_elem_i([ 26,6,8 ],4,basedon,1).
+struct_dt_elem_i([ 26,6,8 ],4,length,1000).
+struct_dt_elem_i([ 26,6,8 ],4,decimals,0).
+struct_dt_elem_i([ 26,6,8 ],4,type,[ 13,1000,0 ]).
+struct_dt_elem_i([ 26,6,8 ],4,pic,'').
+struct_dt_elem_i([ 26,6,8 ],4,collection,'False').
+struct_dt_elem_i([ 26,6,8 ],4,'XmlType','Element').
+struct_dt_elem_i([ 26,6,8 ],4,'XmlName','').
+struct_dt_elem_i([ 26,6,8 ],4,'XmlNamespace','').
+struct_dt_elem_i([ 26,6,8 ],4,soaptype,'').
+struct_dt_elem_i([ 26,6,8 ],4,'XmlInclude',idXmlIncludeAlways).
+struct_dt_elem_i([ 26,6,8 ],4,'JsonName','').
+struct_dt_elem_i([ 26,6,7 ],2,pic,'ZZZZZZZZ9').
+struct_dt_elem_i([ 26,6,7 ],3,pic,'ZZZZZZZZ9').
+struct_dt_elem_i([ 26,6,7 ],4,pic,'ZZZZZZZZ9').
+struct_dt_elem_i([ 26,6,8 ],2,pic,'ZZZZZZZZ9').
+struct_dt_elem_i([ 26,6,8 ],3,pic,'ZZZZZZZZ9').
+struct_dt_elem_i([ 26,6,8 ],4,pic,'ZZZZZZZZ9').
+ 
+ 
+ 
+ 
+ 

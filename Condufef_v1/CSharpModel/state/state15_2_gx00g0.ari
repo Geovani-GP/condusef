@@ -1,13 +1,13 @@
-current_obj_i(2,web,20).
+current_obj_i(2,web,75).
  
-called_tree_i(13,20,13,6).
- 
- 
+called_tree_i(13,75,13,1).
  
  
  
  
-ij_object_dependency(gx00g0,[],[],[],20).
+ 
+ 
+ij_object_dependency(gx00g0,[],[],[],75).
  
  
 obj_parms_i([ 'long aP0_porigenid' ],[ [ 'Porigenid',out ] ]).

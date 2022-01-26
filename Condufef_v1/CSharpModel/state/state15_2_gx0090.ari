@@ -1,13 +1,13 @@
-current_obj_i(2,web,15).
+current_obj_i(2,web,70).
  
-called_tree_i(13,15,13,6).
- 
- 
+called_tree_i(13,70,13,1).
  
  
  
  
-ij_object_dependency(gx0090,[],[],[],15).
+ 
+ 
+ij_object_dependency(gx0090,[],[],[],70).
  
  
 obj_parms_i([ 'int aP0_pmodelosid','String aP1_pproductocambsid' ],[ [ 'Pmodelosid',out ],[ 'Pproductocambsid',out ] ]).

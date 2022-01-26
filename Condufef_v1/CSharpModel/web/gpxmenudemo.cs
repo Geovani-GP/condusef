@@ -2,7 +2,7 @@
                File: gpxMenuDemo
         Description: gpx Menu Demo
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 1/23/2022 3:48:52.84
+       Generated on: 1/25/2022 21:47:40.60
        Program type: Callable routine
           Main DBMS: postgresql
 */
@@ -101,8 +101,8 @@ namespace GeneXus.Programs {
          Gxm1gpxmenuitems = new SdtgpxMenuItems_gpxMenuItem(context);
          Gxm2rootcol.Add(Gxm1gpxmenuitems, 0);
          Gxm1gpxmenuitems.gxTpr_Title = "Inicio";
-         Gxm1gpxmenuitems.gxTpr_Url = "http://www.gprojex.com";
-         Gxm1gpxmenuitems.gxTpr_Description = "Making things happen!";
+         Gxm1gpxmenuitems.gxTpr_Url = "MenuPrincipal.aspx";
+         Gxm1gpxmenuitems.gxTpr_Description = "Menú Principal";
          Gxm1gpxmenuitems = new SdtgpxMenuItems_gpxMenuItem(context);
          Gxm2rootcol.Add(Gxm1gpxmenuitems, 0);
          Gxm1gpxmenuitems.gxTpr_Title = "Catálogos";

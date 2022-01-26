@@ -57,8 +57,6 @@ public class bldlogin : GxBaseBuilder
       {
          if (checkTime(obj, cs_path + @"\type_SdtgpxMenuItems_gpxMenuItem.cs" ))
             return true;
-         if (checkTime(obj, cs_path + @"\type_SdtLinkList_LinkItem.cs" ))
-            return true;
          if (checkTime(obj, cs_path + @"\type_SdtMessages_Message.cs" ))
             return true;
          if (checkTime(obj, cs_path + @"\GxObjectCollection.cs" ))

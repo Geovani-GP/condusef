@@ -2,7 +2,7 @@
                File: Catalog_De_Origen
         Description: Catalog_De_Origen
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 1/23/2022 3:49:22.17
+       Generated on: 1/25/2022 17:35:2.28
        Program type: Callable routine
           Main DBMS: postgresql
 */
@@ -144,7 +144,7 @@ namespace GeneXus.Programs {
          INITWEB( ) ;
          if ( ! isAjaxCallMode( ) )
          {
-            MasterPageObj = (GXMasterPage) ClassLoader.GetInstance("rwdmasterpage", "GeneXus.Programs.rwdmasterpage", new Object[] {new GxContext( context.handle, context.DataStores, context.HttpContext)});
+            MasterPageObj = (GXMasterPage) ClassLoader.GetInstance("appmasterpage", "GeneXus.Programs.appmasterpage", new Object[] {new GxContext( context.handle, context.DataStores, context.HttpContext)});
             MasterPageObj.setDataArea(this,false);
             ValidateSpaRequest();
             MasterPageObj.webExecute();
@@ -215,7 +215,7 @@ namespace GeneXus.Programs {
          context.AddJavascriptSource("jquery.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxtimezone.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxgral.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("gxcfg.js", "?20221233492218");
+         context.AddJavascriptSource("gxcfg.js", "?20221251735231");
          if ( context.isSpaRequest( ) )
          {
             enableOutput();
@@ -264,8 +264,7 @@ namespace GeneXus.Programs {
          {
             context.httpAjaxContext.ajax_rsp_assign_hidden_sdt("vORIGEN", AV14origen);
          }
-         GxWebStd.gx_hidden_field( context, "vORIGENDSCLARGA", AV9origendsclarga);
-         GxWebStd.gx_hidden_field( context, "gxhash_ORIGENDSCLARGA", GetSecureSignedToken( "", StringUtil.RTrim( context.localUtil.Format( A121origendsclarga, ""))));
+         GxWebStd.gx_hidden_field( context, "GXC1", StringUtil.LTrim( StringUtil.NToC( (decimal)(A40000GXC1), 18, 0, ",", "")));
          GXKey = Crypto.Decrypt64( context.GetCookie( "GX_SESSION_ID"), Crypto.GetServerKey( ));
       }
 
@@ -558,21 +557,8 @@ namespace GeneXus.Programs {
          fix_multi_value_controls( ) ;
          if ( String.IsNullOrEmpty(StringUtil.RTrim( context.wjLoc)) && ( context.nUserReturn != 1 ) )
          {
-            /* Using cursor H00143 */
-            pr_default.execute(0);
-            while ( (pr_default.getStatus(0) != 101) )
-            {
-               A121origendsclarga = H00143_A121origendsclarga[0];
-               context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A121origendsclarga", A121origendsclarga);
-               context.httpAjaxContext.ajax_rsp_assign_attri("", false, "gxhash_ORIGENDSCLARGA", GetSecureSignedToken( "", StringUtil.RTrim( context.localUtil.Format( A121origendsclarga, ""))));
-               n121origendsclarga = H00143_n121origendsclarga[0];
-               A40000GXC1 = H00143_A40000GXC1[0];
-               A40000GXC1 = H00143_A40000GXC1[0];
-               /* Execute user event: E13142 */
-               E13142 ();
-               pr_default.readNext(0);
-            }
-            pr_default.close(0);
+            /* Execute user event: E13142 */
+            E13142 ();
             WB140( ) ;
          }
       }
@@ -581,18 +567,17 @@ namespace GeneXus.Programs {
       {
          /* Before Start, stand alone formulas. */
          context.Gx_err = 0;
-         /* Using cursor H00145 */
-         pr_default.execute(1);
-         if ( (pr_default.getStatus(1) != 101) )
+         /* Using cursor H00143 */
+         pr_default.execute(0);
+         if ( (pr_default.getStatus(0) != 101) )
          {
-            A40000GXC1 = H00145_A40000GXC1[0];
+            A40000GXC1 = H00143_A40000GXC1[0];
          }
          else
          {
             A40000GXC1 = 0;
-            context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A40000GXC1", StringUtil.LTrim( StringUtil.Str( (decimal)(A40000GXC1), 18, 0)));
          }
-         pr_default.close(1);
+         pr_default.close(0);
          /* Execute Start event if defined. */
          context.wbGlbDoneStart = 0;
          /* Execute user event: E11142 */
@@ -619,10 +604,8 @@ namespace GeneXus.Programs {
             }
             AV8origendscorta = cgiGet( edtavOrigendscorta_Internalname);
             context.httpAjaxContext.ajax_rsp_assign_attri("", false, "AV8origendscorta", AV8origendscorta);
-            A121origendsclarga = cgiGet( edtorigendsclarga_Internalname);
-            n121origendsclarga = false;
-            context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A121origendsclarga", A121origendsclarga);
-            context.httpAjaxContext.ajax_rsp_assign_attri("", false, "gxhash_ORIGENDSCLARGA", GetSecureSignedToken( "", StringUtil.RTrim( context.localUtil.Format( A121origendsclarga, ""))));
+            AV9origendsclarga = cgiGet( edtavOrigendsclarga_Internalname);
+            context.httpAjaxContext.ajax_rsp_assign_attri("", false, "AV9origendsclarga", AV9origendsclarga);
             /* Read saved values. */
             /* Read subfile selected row values. */
             /* Read hidden variables. */
@@ -638,16 +621,23 @@ namespace GeneXus.Programs {
       {
          /* Execute user event: E11142 */
          E11142 ();
-         if ( returnInSub )
-         {
-            returnInSub = true;
-            if (true) return;
-         }
+         if (returnInSub) return;
       }
 
       protected void E11142( )
       {
          /* Start Routine */
+         /* Using cursor H00145 */
+         pr_default.execute(1);
+         if ( (pr_default.getStatus(1) != 101) )
+         {
+            A40000GXC1 = H00145_A40000GXC1[0];
+         }
+         else
+         {
+            A40000GXC1 = 0;
+         }
+         pr_default.close(1);
          AV6NextValue = (short)(A40000GXC1+1);
          context.httpAjaxContext.ajax_rsp_assign_attri("", false, "AV6NextValue", StringUtil.LTrim( StringUtil.Str( (decimal)(AV6NextValue), 4, 0)));
       }
@@ -811,7 +801,8 @@ namespace GeneXus.Programs {
             context.WriteHtmlText( "</td>") ;
             context.WriteHtmlText( "<td>") ;
             /* Single line edit */
-            GxWebStd.gx_single_line_edit( context, edtorigendsclarga_Internalname, A121origendsclarga, StringUtil.RTrim( context.localUtil.Format( A121origendsclarga, "")), "", "'"+""+"'"+",false,"+"'"+""+"'", "", "", "", "", edtorigendsclarga_Jsonclick, 0, "Attribute", "", "", "", 1, 0, 0, "text", "", 80, "chr", 1, "row", 100, 0, 0, 0, 1, -1, -1, true, "", "left", true, "HLP_Catalog_De_Origen.htm");
+            TempTags = "  onfocus=\"gx.evt.onfocus(this, 20,'',false,'',0)\"";
+            GxWebStd.gx_single_line_edit( context, edtavOrigendsclarga_Internalname, AV9origendsclarga, StringUtil.RTrim( context.localUtil.Format( AV9origendsclarga, "")), TempTags+" onchange=\"gx.evt.onchange(this)\" "+" onblur=\""+""+";gx.evt.onblur(this,20);\"", "'"+""+"'"+",false,"+"'"+""+"'", "", "", "", "", edtavOrigendsclarga_Jsonclick, 0, "Attribute", "", "", "", 1, 1, 0, "text", "", 80, "chr", 1, "row", 100, 0, 0, 0, 1, -1, -1, true, "", "left", true, "HLP_Catalog_De_Origen.htm");
             context.WriteHtmlText( "</td>") ;
             context.WriteHtmlText( "</tr>") ;
             context.WriteHtmlText( "</tbody>") ;
@@ -856,11 +847,11 @@ namespace GeneXus.Programs {
 
       protected void define_styles( )
       {
-         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?3485073");
+         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?1734189");
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?20221233492228");
+            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?20221251735254");
             idxLst = (int)(idxLst+1);
          }
          /* End function define_styles */
@@ -870,7 +861,7 @@ namespace GeneXus.Programs {
       {
          context.AddJavascriptSource("messages.spa.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxdec.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("catalog_de_origen.js", "?20221233492228");
+         context.AddJavascriptSource("catalog_de_origen.js", "?20221251735254");
          /* End function include_jscripts */
       }
 
@@ -878,7 +869,7 @@ namespace GeneXus.Programs {
       {
          edtavNextvalue_Internalname = "vNEXTVALUE";
          edtavOrigendscorta_Internalname = "vORIGENDSCORTA";
-         edtorigendsclarga_Internalname = "ORIGENDSCLARGA";
+         edtavOrigendsclarga_Internalname = "vORIGENDSCLARGA";
          tblTable2_Internalname = "TABLE2";
          bttButton1_Internalname = "BUTTON1";
          bttButton2_Internalname = "BUTTON2";
@@ -895,7 +886,7 @@ namespace GeneXus.Programs {
             disableJsOutput();
          }
          init_default_properties( ) ;
-         edtorigendsclarga_Jsonclick = "";
+         edtavOrigendsclarga_Jsonclick = "";
          edtavOrigendscorta_Jsonclick = "";
          edtavNextvalue_Jsonclick = "";
          Form.Headerrawhtml = "";
@@ -943,8 +934,6 @@ namespace GeneXus.Programs {
          FormProcess = "";
          bodyStyle = "";
          AV14origen = new Sdtorigen(context);
-         AV9origendsclarga = "";
-         A121origendsclarga = "";
          GXKey = "";
          GX_FocusControl = "";
          Form = new GXWebForm();
@@ -954,12 +943,10 @@ namespace GeneXus.Programs {
          EvtRowId = "";
          sEvtType = "";
          scmdbuf = "";
-         H00143_A10origenid = new long[1] ;
-         H00143_A121origendsclarga = new String[] {""} ;
-         H00143_n121origendsclarga = new bool[] {false} ;
          H00143_A40000GXC1 = new long[1] ;
-         H00145_A40000GXC1 = new long[1] ;
          AV8origendscorta = "";
+         AV9origendsclarga = "";
+         H00145_A40000GXC1 = new long[1] ;
          sStyleString = "";
          TempTags = "";
          ClassString = "";
@@ -972,7 +959,7 @@ namespace GeneXus.Programs {
          pr_default = new DataStoreProvider(context, new GeneXus.Programs.catalog_de_origen__default(),
             new Object[][] {
                 new Object[] {
-               H00143_A10origenid, H00143_A121origendsclarga, H00143_n121origendsclarga, H00143_A40000GXC1
+               H00143_A40000GXC1
                }
                , new Object[] {
                H00145_A40000GXC1
@@ -1010,7 +997,7 @@ namespace GeneXus.Programs {
       private String edtavNextvalue_Internalname ;
       private String scmdbuf ;
       private String edtavOrigendscorta_Internalname ;
-      private String edtorigendsclarga_Internalname ;
+      private String edtavOrigendsclarga_Internalname ;
       private String sStyleString ;
       private String tblTable1_Internalname ;
       private String tblTable3_Internalname ;
@@ -1026,22 +1013,17 @@ namespace GeneXus.Programs {
       private String tblTable2_Internalname ;
       private String edtavNextvalue_Jsonclick ;
       private String edtavOrigendscorta_Jsonclick ;
-      private String edtorigendsclarga_Jsonclick ;
+      private String edtavOrigendsclarga_Jsonclick ;
       private bool entryPointCalled ;
       private bool toggleJsOutput ;
       private bool wbLoad ;
       private bool Rfr0gs ;
       private bool wbErr ;
-      private bool n121origendsclarga ;
       private bool returnInSub ;
-      private String AV9origendsclarga ;
-      private String A121origendsclarga ;
       private String AV8origendscorta ;
+      private String AV9origendsclarga ;
       private IGxDataStore dsDefault ;
       private IDataStoreProvider pr_default ;
-      private long[] H00143_A10origenid ;
-      private String[] H00143_A121origendsclarga ;
-      private bool[] H00143_n121origendsclarga ;
       private long[] H00143_A40000GXC1 ;
       private long[] H00145_A40000GXC1 ;
       private msglist BackMsgLst ;
@@ -1073,7 +1055,7 @@ namespace GeneXus.Programs {
           prmH00145 = new Object[] {
           } ;
           def= new CursorDef[] {
-              new CursorDef("H00143", "SELECT T1.origenid, T1.origendsclarga, COALESCE( T2.GXC1, 0) AS GXC1 FROM public.origen T1,  (SELECT MAX(origenid) AS GXC1 FROM public.origen ) T2 ORDER BY T1.origenid ",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmH00143,100,0,true,false )
+              new CursorDef("H00143", "SELECT COALESCE( T1.GXC1, 0) AS GXC1 FROM (SELECT MAX(origenid) AS GXC1 FROM public.origen ) T1 ",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmH00143,1,0,true,false )
              ,new CursorDef("H00145", "SELECT COALESCE( T1.GXC1, 0) AS GXC1 FROM (SELECT MAX(origenid) AS GXC1 FROM public.origen ) T1 ",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmH00145,1,0,true,false )
           };
        }
@@ -1087,9 +1069,6 @@ namespace GeneXus.Programs {
        {
              case 0 :
                 ((long[]) buf[0])[0] = rslt.getLong(1) ;
-                ((String[]) buf[1])[0] = rslt.getVarchar(2) ;
-                ((bool[]) buf[2])[0] = rslt.wasNull(2);
-                ((long[]) buf[3])[0] = rslt.getLong(3) ;
                 return;
              case 1 :
                 ((long[]) buf[0])[0] = rslt.getLong(1) ;

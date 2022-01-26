@@ -1,0 +1,19 @@
+current_obj_i(2,proc,6).
+ 
+ 
+is_webproc_i(aschedulerrequesthandler).
+ 
+ij_main_object(aschedulerrequesthandler,'Scheduler Request Handler','','""','HTTP').
+ 
+ 
+ 
+ 
+ij_object_dependency(aschedulerrequesthandler,[],[],[],6).
+ 
+ 
+obj_parms_i([],[]).
+ 
+ 
+ 
+ 
+ 
