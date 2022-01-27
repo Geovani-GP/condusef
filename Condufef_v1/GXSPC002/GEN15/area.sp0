@@ -48,12 +48,12 @@ rule_i(0,datastore(1,'CS_RPCPGML','')).
 rule_i(0,datastore(1,'JDBC_DATASOURCE','')).
 rule_i(0,datastore(1,'USE_JDBC_DATASOURCE','0')).
 rule_i(0,datastore(1,'DS_DBMS_ADDINFO','')).
-rule_i(0,datastore(1,'USER_PASSWORD',asdf)).
+rule_i(0,datastore(1,'USER_PASSWORD',󻢸蘇�2�5炭)).
 rule_i(0,datastore(1,'USER_ID',postgres)).
 rule_i(0,datastore(1,'CS_CONNECT','First')).
 rule_i(0,datastore(1,'DBMS_PORT','5432')).
 rule_i(0,datastore(1,'CS_SERVER',localhost)).
-rule_i(0,datastore(1,'CS_DBNAME',condusef)).
+rule_i(0,datastore(1,'CS_DBNAME',postgres)).
 rule_i(0,datastore(1,'CS_FLEDSNAME','')).
 rule_i(0,datastore(1,'CS_DRVNAME','')).
 rule_i(0,datastore(1,'CS_DSNAME','')).
@@ -73,6 +73,8 @@ rule_i(0,prop('ObjectVisibility','Public')).
 rule_i(0,prop('FullyQualifiedName',area)).
 rule_i(0,prop('PWFCallable','0')).
 rule_i(0,prop('GenerateObject','-1')).
+rule_i(0,prop('SEARCH_VIEWER','')).
+rule_i(0,prop('SEARCHABLE','UMPV')).
 rule_i(0,prop('MTIER_OPT','Yes')).
 rule_i(0,prop('CS_ORA_FORUPD','UMPV')).
 rule_i(0,prop('Hint_firstrows','UMPV')).
@@ -134,6 +136,7 @@ rule_i(0,prop('TRNCFM','UMPV')).
 rule_i(0,prop('CFMTRN','No')).
 rule_i(0,prop('TRNEND','Yes')).
 rule_i(0,prop('IsDwhTrn','0')).
+rule_i(0,prop(idISBCEJB,'0')).
 rule_i(0,prop('WEB_SECURITY_LEVEL','High')).
 rule_i(0,prop('HTTP_PROTOCOL','Unsecure')).
 rule_i(0,prop('USE_ENCRYPTION','NO')).
@@ -142,12 +145,17 @@ rule_i(0,prop('SHOWMASTERPAGE_POPUP','0')).
 rule_i(0,prop('MasterPage',o(13,'AppMasterPage'))).
 rule_i(0,prop('WEB_COMP','No')).
 rule_i(0,prop('Theme',o(25,'Flat'))).
+rule_i(0,prop('WS_Delete','-1')).
+rule_i(0,prop('WS_Update','-1')).
+rule_i(0,prop('WS_Insert','-1')).
+rule_i(0,prop('WS_View','-1')).
 rule_i(0,prop('ExternalNamespace','Condufef_v1')).
 rule_i(0,prop('ExternalName',area)).
+rule_i(0,prop(idISBCWEBSERVICE,'0')).
+rule_i(0,prop('CALL_PROTOCOL','INTERNAL')).
 rule_i(0,prop(idConnectivitySupport,idInherit)).
 rule_i(0,prop('OBJECT_METADATA','')).
-rule_i(0,prop('IsMain','0')).
-rule_i(0,prop(idBC,'0')).
+rule_i(0,prop(idBC,'-1')).
 rule_i(0,prop('Folder',o(120,'Root Module'))).
 rule_i(0,prop('ObjDesc',area)).
 rule_i(0,prop('ObjName',area)).
@@ -342,7 +350,7 @@ html_comp_i(6,'Title','',d,[ str ]).
 html_comp_i(6,'Fill',-1,d,[ bool ]).
 html_comp_i(6,'Backcolor',rgb(255,255,255),d,[ color ]).
 html_comp_i(6,'Forecolor',rgb(0,0,0),d,[ color ]).
-html_comp_i(6,'Font',font('Microsoft Sans Serif',17,[]),d,[ font ]).
+html_comp_i(6,'Font',font('Open Sans Semibold',17,[]),d,[ font ]).
 html_comp_i(7,'Class',row,v,[ str ]).
 html_comp_i(7,'Id','',d,[ str ]).
 html_comp_i(7,'Height',measure(0,px),d,[ measure ]).
@@ -865,6 +873,7 @@ lit_i(1,1,window,[ rect(0,0,1000,1000),ctlname('Form') ]).
  
  
  
+att_prop_i(2,22,'HORIZONTAL_DESCRIPTION',areaareaid,v).
 att_prop_i(2,22,'ExternalName',areaareaid,d).
 att_prop_i(2,22,'ExternalNamespace','Condufef_v1',d).
 att_prop_i(2,22,'EmptyAsNull','Yes',d).
@@ -874,6 +883,7 @@ att_prop_i(2,22,'ATT_INITIAL_VALUE','',d).
 att_prop_i(2,22,'AttRegEx','',d).
 att_prop_i(2,22,'AttValidationFailedMsg','',d).
 att_prop_i(2,22,'FullName',areaareaid,v).
+att_prop_i(2,27,'HORIZONTAL_DESCRIPTION',areadsc,v).
 att_prop_i(2,27,'ExternalName',areadsc,d).
 att_prop_i(2,27,'ExternalNamespace','Condufef_v1',d).
 att_prop_i(2,27,'EmptyAsNull','Yes',d).
@@ -883,6 +893,7 @@ att_prop_i(2,27,'DB_NLS_SUPPORT','No',d).
 att_prop_i(2,27,'AttRegEx','',d).
 att_prop_i(2,27,'AttValidationFailedMsg','',d).
 att_prop_i(2,27,'FullName',areadsc,v).
+att_prop_i(2,28,'HORIZONTAL_DESCRIPTION',areastatusadsc,v).
 att_prop_i(2,28,'ExternalName',areastatusadsc,d).
 att_prop_i(2,28,'ExternalNamespace','Condufef_v1',d).
 att_prop_i(2,28,'EmptyAsNull','Yes',d).
@@ -892,6 +903,7 @@ att_prop_i(2,28,'DB_NLS_SUPPORT','No',d).
 att_prop_i(2,28,'AttRegEx','',d).
 att_prop_i(2,28,'AttValidationFailedMsg','',d).
 att_prop_i(2,28,'FullName',areastatusadsc,v).
+att_prop_i(2,29,'HORIZONTAL_DESCRIPTION',areausuario,v).
 att_prop_i(2,29,'ExternalName',areausuario,d).
 att_prop_i(2,29,'ExternalNamespace','Condufef_v1',d).
 att_prop_i(2,29,'EmptyAsNull','Yes',d).
@@ -901,6 +913,7 @@ att_prop_i(2,29,'DB_NLS_SUPPORT','No',d).
 att_prop_i(2,29,'AttRegEx','',d).
 att_prop_i(2,29,'AttValidationFailedMsg','',d).
 att_prop_i(2,29,'FullName',areausuario,v).
+att_prop_i(2,30,'HORIZONTAL_DESCRIPTION',areafecreg,v).
 att_prop_i(2,30,'ExternalName',areafecreg,d).
 att_prop_i(2,30,'ExternalNamespace','Condufef_v1',d).
 att_prop_i(2,30,'EmptyAsNull','Yes',d).
@@ -911,6 +924,7 @@ att_prop_i(2,30,'AttValidationFailedMsg','',d).
 att_prop_i(2,30,idDATEFORMAT,idDATEFORMAT_LONG,v).
 att_prop_i(2,30,idHOURFORMAT,idHOURFORMAT_HOURMINSEC,v).
 att_prop_i(2,30,'FullName',areafecreg,v).
+att_prop_i(2,31,'HORIZONTAL_DESCRIPTION',areafecultact,v).
 att_prop_i(2,31,'ExternalName',areafecultact,d).
 att_prop_i(2,31,'ExternalNamespace','Condufef_v1',d).
 att_prop_i(2,31,'EmptyAsNull','Yes',d).

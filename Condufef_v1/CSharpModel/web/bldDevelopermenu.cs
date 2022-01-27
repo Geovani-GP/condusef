@@ -42,6 +42,8 @@ public class bldDevelopermenu : GxBaseBuilder
    public override TargetCollection GetRuntimeBuildList( )
    {
       TargetCollection sc = new TargetCollection() ;
+      sc.Add( @"aloadeventssampleproc", "dll");
+      sc.Add( @"aschedulerrequesthandler", "dll");
       sc.Add( @"appmasterpage", "dll");
       sc.Add( @"login", "dll");
       sc.Add( @"menuprincipal", "dll");
@@ -116,6 +118,18 @@ public class bldDevelopermenu : GxBaseBuilder
          return true;
       if ( obj == @"bin\GeneXus.Programs.Common.dll" )
       {
+         if (checkTime(obj, cs_path + @"\type_SdtSchedulerEvents.cs" ))
+            return true;
+         if (checkTime(obj, cs_path + @"\type_SdtSchedulerEvents_Day.cs" ))
+            return true;
+         if (checkTime(obj, cs_path + @"\type_SdtSchedulerEvents_event.cs" ))
+            return true;
+         if (checkTime(obj, cs_path + @"\type_SdtTabsMenuData_TabsMenuDataItem.cs" ))
+            return true;
+         if (checkTime(obj, cs_path + @"\type_SdtTabsMenuData_TabsMenuDataItem_SectionsItem.cs" ))
+            return true;
+         if (checkTime(obj, cs_path + @"\type_SdtgpxMenuItems_gpxMenuItem.cs" ))
+            return true;
          if (checkTime(obj, cs_path + @"\type_SdtMessages_Message.cs" ))
             return true;
          if (checkTime(obj, cs_path + @"\GxObjectCollection.cs" ))
@@ -130,7 +144,13 @@ public class bldDevelopermenu : GxBaseBuilder
             return true;
          if (checkTime(obj, cs_path + @"\GxModelInfoProvider.cs" ))
             return true;
+         if (checkTime(obj, cs_path + @"\type_Sdtstatus.cs" ))
+            return true;
+         if (checkTime(obj, cs_path + @"\type_Sdttipodocumento.cs" ))
+            return true;
          if (checkTime(obj, cs_path + @"\type_Sdtmodelos.cs" ))
+            return true;
+         if (checkTime(obj, cs_path + @"\type_Sdtarea.cs" ))
             return true;
          if (checkTime(obj, cs_path + @"\type_Sdtorigen.cs" ))
             return true;
@@ -138,7 +158,13 @@ public class bldDevelopermenu : GxBaseBuilder
             return true;
          if (checkTime(obj, cs_path + @"\type_Sdtmarcas.cs" ))
             return true;
+         if (checkTime(obj, cs_path + @"\type_Sdtestatusarticulo.cs" ))
+            return true;
          if (checkTime(obj, cs_path + @"\type_Sdtcategorias.cs" ))
+            return true;
+         if (checkTime(obj, cs_path + @"\type_Sdtentidadfederativa.cs" ))
+            return true;
+         if (checkTime(obj, cs_path + @"\type_Sdttipobien.cs" ))
             return true;
          if (checkTime(obj, cs_path + @"\GXDOMAINCryptoSignAlgorithm.cs" ))
             return true;

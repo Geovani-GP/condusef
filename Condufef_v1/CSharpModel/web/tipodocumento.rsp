@@ -16,3 +16,4 @@
 /r:GxBaseBuilder.dll
 /out:bin\tipodocumento.dll
 tipodocumento.cs
+tipodocumento_bc.cs

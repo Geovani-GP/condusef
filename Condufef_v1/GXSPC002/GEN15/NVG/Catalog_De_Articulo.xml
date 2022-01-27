@@ -45,15 +45,15 @@
 <BaseTable></BaseTable>
 <NavigationTree>
 <Table>
-<TableId>14</TableId>
-<TableName>max( cambsid )  navigation</TableName>
-<Description>cambs</Description>
+<TableId>7</TableId>
+<TableName>max( estatusarticuloid )  navigation</TableName>
+<Description>estatusarticulo</Description>
 <RecordsToRead>many</RecordsToRead>
 <Tables>
 <Table>
-<TableId>14</TableId>
-<TableName>CAMBS</TableName>
-<Description>cambs</Description>
+<TableId>7</TableId>
+<TableName>ESTATUSARTICULO</TableName>
+<Description>estatusarticulo</Description>
 <RecordsToRead>many</RecordsToRead>
 <Tables></Tables></Table></Tables></Table></NavigationTree></Level></Event>
 <Event>
@@ -61,8 +61,8 @@
 <Command>
 <Expression>
 <Variable>
-<VarId>Cambs</VarId>
-<VarName>&amp;cambs</VarName></Variable>
+<VarId>Estatusarticulo</VarId>
+<VarName>&amp;estatusarticulo</VarName></Variable>
 <Token>.</Token>
 <Token>save(</Token>
 <Token>)</Token></Expression></Command></Event>

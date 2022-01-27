@@ -2,7 +2,7 @@
                File: DPTabsMenuData
         Description: DPTabs Menu Data
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 1/25/2022 18:38:45.83
+       Generated on: 1/26/2022 20:7:12.22
        Program type: Callable routine
           Main DBMS: postgresql
 */

@@ -16,3 +16,4 @@
 /r:GxBaseBuilder.dll
 /out:bin\tipobien.dll
 tipobien.cs
+tipobien_bc.cs

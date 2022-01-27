@@ -1,0 +1,85 @@
+ 
+spec_i([ sdt,[ 0,7,0 ],estatusarticulo,estatusarticulo,0,spa,'10_3_15-115824' ]).
+ 
+struct_dt_i([ 0,7,0 ],name,estatusarticulo).
+struct_dt_i([ 0,7,0 ],namespace,'Condufef_v1').
+struct_dt_i([ 0,7,0 ],significantName,estatusarticulo).
+struct_dt_i([ 0,7,0 ],'ObjName',estatusarticulo).
+struct_dt_i([ 0,7,0 ],'ObjDesc',estatusarticulo).
+struct_dt_i([ 0,7,0 ],'ExternalName',estatusarticulo).
+struct_dt_i([ 0,7,0 ],'ExternalNamespace','Condufef_v1').
+struct_dt_i([ 0,7,0 ],key,[ 12 ]).
+struct_dt_i([ 0,7,0 ],lvl,7).
+struct_dt_i([ 0,7,0 ],fullname,estatusarticulo).
+ 
+struct_dt_elem_i([ 0,7,0 ],1,name,'Estatusarticuloid').
+struct_dt_elem_i([ 0,7,0 ],1,camelname,estatusarticuloid).
+struct_dt_elem_i([ 0,7,0 ],1,length,18).
+struct_dt_elem_i([ 0,7,0 ],1,decimals,0).
+struct_dt_elem_i([ 0,7,0 ],1,sign,0).
+struct_dt_elem_i([ 0,7,0 ],1,type,[ 4,18,0 ]).
+struct_dt_elem_i([ 0,7,0 ],1,pic,'ZZZZZZZZZZZZZZZZZ9').
+struct_dt_elem_i([ 0,7,0 ],1,collection,'False').
+struct_dt_elem_i([ 0,7,0 ],1,attributeid,'12').
+struct_dt_elem_i([ 0,7,0 ],2,name,'Estatusarticulodsc').
+struct_dt_elem_i([ 0,7,0 ],2,camelname,estatusarticulodsc).
+struct_dt_elem_i([ 0,7,0 ],2,length,100).
+struct_dt_elem_i([ 0,7,0 ],2,decimals,0).
+struct_dt_elem_i([ 0,7,0 ],2,type,[ 13,100,0 ]).
+struct_dt_elem_i([ 0,7,0 ],2,pic,'').
+struct_dt_elem_i([ 0,7,0 ],2,collection,'False').
+struct_dt_elem_i([ 0,7,0 ],2,attributeid,'54').
+struct_dt_elem_i([ 0,7,0 ],3,name,'Estatusarticulodescuso').
+struct_dt_elem_i([ 0,7,0 ],3,camelname,estatusarticulodescuso).
+struct_dt_elem_i([ 0,7,0 ],3,length,100).
+struct_dt_elem_i([ 0,7,0 ],3,decimals,0).
+struct_dt_elem_i([ 0,7,0 ],3,type,[ 13,100,0 ]).
+struct_dt_elem_i([ 0,7,0 ],3,pic,'').
+struct_dt_elem_i([ 0,7,0 ],3,collection,'False').
+struct_dt_elem_i([ 0,7,0 ],3,attributeid,'55').
+struct_dt_elem_i([ 0,7,0 ],4,name,'Estatusarticuloaplicamov').
+struct_dt_elem_i([ 0,7,0 ],4,camelname,estatusarticuloaplicamov).
+struct_dt_elem_i([ 0,7,0 ],4,length,9).
+struct_dt_elem_i([ 0,7,0 ],4,decimals,0).
+struct_dt_elem_i([ 0,7,0 ],4,sign,0).
+struct_dt_elem_i([ 0,7,0 ],4,type,[ 4,9,0 ]).
+struct_dt_elem_i([ 0,7,0 ],4,pic,'ZZZZZZZZ9').
+struct_dt_elem_i([ 0,7,0 ],4,collection,'False').
+struct_dt_elem_i([ 0,7,0 ],4,attributeid,'56').
+struct_dt_elem_i([ 0,7,0 ],5,name,'Estatusarticulousotabla').
+struct_dt_elem_i([ 0,7,0 ],5,camelname,estatusarticulousotabla).
+struct_dt_elem_i([ 0,7,0 ],5,length,50).
+struct_dt_elem_i([ 0,7,0 ],5,decimals,0).
+struct_dt_elem_i([ 0,7,0 ],5,type,[ 13,50,0 ]).
+struct_dt_elem_i([ 0,7,0 ],5,pic,'').
+struct_dt_elem_i([ 0,7,0 ],5,collection,'False').
+struct_dt_elem_i([ 0,7,0 ],5,attributeid,'57').
+struct_dt_elem_i([ 0,7,0 ],6,name,'Estatusarticulousuario').
+struct_dt_elem_i([ 0,7,0 ],6,camelname,estatusarticulousuario).
+struct_dt_elem_i([ 0,7,0 ],6,length,15).
+struct_dt_elem_i([ 0,7,0 ],6,decimals,0).
+struct_dt_elem_i([ 0,7,0 ],6,type,[ 13,15,0 ]).
+struct_dt_elem_i([ 0,7,0 ],6,pic,'').
+struct_dt_elem_i([ 0,7,0 ],6,collection,'False').
+struct_dt_elem_i([ 0,7,0 ],6,attributeid,'58').
+struct_dt_elem_i([ 0,7,0 ],7,name,'Estatusarticulofecreg').
+struct_dt_elem_i([ 0,7,0 ],7,camelname,estatusarticulofecreg).
+struct_dt_elem_i([ 0,7,0 ],7,length,10).
+struct_dt_elem_i([ 0,7,0 ],7,decimals,8).
+struct_dt_elem_i([ 0,7,0 ],7,type,[ 12,10,8 ]).
+struct_dt_elem_i([ 0,7,0 ],7,pic,'99/99/9999 99:99:99').
+struct_dt_elem_i([ 0,7,0 ],7,collection,'False').
+struct_dt_elem_i([ 0,7,0 ],7,attributeid,'59').
+struct_dt_elem_i([ 0,7,0 ],8,name,'Estatusarticulofecultact').
+struct_dt_elem_i([ 0,7,0 ],8,camelname,estatusarticulofecultact).
+struct_dt_elem_i([ 0,7,0 ],8,length,10).
+struct_dt_elem_i([ 0,7,0 ],8,decimals,8).
+struct_dt_elem_i([ 0,7,0 ],8,type,[ 12,10,8 ]).
+struct_dt_elem_i([ 0,7,0 ],8,pic,'99/99/9999 99:99:99').
+struct_dt_elem_i([ 0,7,0 ],8,collection,'False').
+struct_dt_elem_i([ 0,7,0 ],8,attributeid,'60').
+ 
+ 
+ 
+ 
+ 

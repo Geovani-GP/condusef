@@ -14,6 +14,7 @@ ij_object_dependency(tipodocumento,[],[],[],20).
 obj_parms_i([],[]).
  
  
+has_silent_trn_i(tipodocumento_bc).
  
  
  

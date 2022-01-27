@@ -1,0 +1,60 @@
+ 
+spec_i([ sdt,[ 0,4,0 ],entidadfederativa,entidadfederativa,0,spa,'10_3_15-115824' ]).
+ 
+struct_dt_i([ 0,4,0 ],name,entidadfederativa).
+struct_dt_i([ 0,4,0 ],namespace,'Condufef_v1').
+struct_dt_i([ 0,4,0 ],significantName,entidadfederativa).
+struct_dt_i([ 0,4,0 ],'ObjName',entidadfederativa).
+struct_dt_i([ 0,4,0 ],'ObjDesc',entidadfederativa).
+struct_dt_i([ 0,4,0 ],'ExternalName',entidadfederativa).
+struct_dt_i([ 0,4,0 ],'ExternalNamespace','Condufef_v1').
+struct_dt_i([ 0,4,0 ],key,[ 7 ]).
+struct_dt_i([ 0,4,0 ],lvl,4).
+struct_dt_i([ 0,4,0 ],fullname,entidadfederativa).
+ 
+struct_dt_elem_i([ 0,4,0 ],1,name,'Entidafederativaid').
+struct_dt_elem_i([ 0,4,0 ],1,camelname,entidafederativaid).
+struct_dt_elem_i([ 0,4,0 ],1,length,9).
+struct_dt_elem_i([ 0,4,0 ],1,decimals,0).
+struct_dt_elem_i([ 0,4,0 ],1,sign,0).
+struct_dt_elem_i([ 0,4,0 ],1,type,[ 4,9,0 ]).
+struct_dt_elem_i([ 0,4,0 ],1,pic,'ZZZZZZZZ9').
+struct_dt_elem_i([ 0,4,0 ],1,collection,'False').
+struct_dt_elem_i([ 0,4,0 ],1,attributeid,'7').
+struct_dt_elem_i([ 0,4,0 ],2,name,'Entidadfederativadsc').
+struct_dt_elem_i([ 0,4,0 ],2,camelname,entidadfederativadsc).
+struct_dt_elem_i([ 0,4,0 ],2,length,100).
+struct_dt_elem_i([ 0,4,0 ],2,decimals,0).
+struct_dt_elem_i([ 0,4,0 ],2,type,[ 13,100,0 ]).
+struct_dt_elem_i([ 0,4,0 ],2,pic,'').
+struct_dt_elem_i([ 0,4,0 ],2,collection,'False').
+struct_dt_elem_i([ 0,4,0 ],2,attributeid,'108').
+struct_dt_elem_i([ 0,4,0 ],3,name,'Entidadfederativausuario').
+struct_dt_elem_i([ 0,4,0 ],3,camelname,entidadfederativausuario).
+struct_dt_elem_i([ 0,4,0 ],3,length,15).
+struct_dt_elem_i([ 0,4,0 ],3,decimals,0).
+struct_dt_elem_i([ 0,4,0 ],3,type,[ 13,15,0 ]).
+struct_dt_elem_i([ 0,4,0 ],3,pic,'').
+struct_dt_elem_i([ 0,4,0 ],3,collection,'False').
+struct_dt_elem_i([ 0,4,0 ],3,attributeid,'109').
+struct_dt_elem_i([ 0,4,0 ],4,name,'Entidadfederativafecreg').
+struct_dt_elem_i([ 0,4,0 ],4,camelname,entidadfederativafecreg).
+struct_dt_elem_i([ 0,4,0 ],4,length,10).
+struct_dt_elem_i([ 0,4,0 ],4,decimals,8).
+struct_dt_elem_i([ 0,4,0 ],4,type,[ 12,10,8 ]).
+struct_dt_elem_i([ 0,4,0 ],4,pic,'99/99/9999 99:99:99').
+struct_dt_elem_i([ 0,4,0 ],4,collection,'False').
+struct_dt_elem_i([ 0,4,0 ],4,attributeid,'110').
+struct_dt_elem_i([ 0,4,0 ],5,name,'Entidadfederativafecultact').
+struct_dt_elem_i([ 0,4,0 ],5,camelname,entidadfederativafecultact).
+struct_dt_elem_i([ 0,4,0 ],5,length,10).
+struct_dt_elem_i([ 0,4,0 ],5,decimals,8).
+struct_dt_elem_i([ 0,4,0 ],5,type,[ 12,10,8 ]).
+struct_dt_elem_i([ 0,4,0 ],5,pic,'99/99/9999 99:99:99').
+struct_dt_elem_i([ 0,4,0 ],5,collection,'False').
+struct_dt_elem_i([ 0,4,0 ],5,attributeid,'111').
+ 
+ 
+ 
+ 
+ 

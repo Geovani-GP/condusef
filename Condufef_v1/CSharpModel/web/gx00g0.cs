@@ -2,7 +2,7 @@
                File: Gx00G0
         Description: Selection List origen
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 1/25/2022 17:35:32.14
+       Generated on: 1/26/2022 20:8:8.35
        Program type: Callable routine
           Main DBMS: postgresql
 */
@@ -265,7 +265,7 @@ namespace GeneXus.Programs {
          context.AddJavascriptSource("jquery.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxtimezone.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxgral.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("gxcfg.js", "?202212517353219");
+         context.AddJavascriptSource("gxcfg.js", "?2022126208840");
          if ( context.isSpaRequest( ) )
          {
             enableOutput();
@@ -1539,12 +1539,12 @@ namespace GeneXus.Programs {
 
       protected void define_styles( )
       {
-         AddStyleSheetFile("calendar-system.css", "?11323129");
-         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?1734189");
+         AddStyleSheetFile("calendar-system.css", "?13205289");
+         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?2071072");
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?202212517353329");
+            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?2022126208945");
             idxLst = (int)(idxLst+1);
          }
          /* End function define_styles */
@@ -1554,7 +1554,7 @@ namespace GeneXus.Programs {
       {
          context.AddJavascriptSource("messages.spa.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxdec.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("gx00g0.js", "?202212517353329");
+         context.AddJavascriptSource("gx00g0.js", "?2022126208946");
          /* End function include_jscripts */
       }
 

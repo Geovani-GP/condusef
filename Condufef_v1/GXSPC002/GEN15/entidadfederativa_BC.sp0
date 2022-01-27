@@ -1,0 +1,550 @@
+spec_i([ trn,4,entidadfederativa,entidadfederativa_BC,[],spa,'10_3_15-115824' ]).
+ 
+struct_i(4,0,[],[]).
+ 
+level_i(4,[ 4,[ [ 4,many ] ],[ 7 ],[],[],[],[ 7 ],'ENTIDADFEDERATIVA_PKEY',[ 4,[] ],[] ]).
+ 
+tw_i(4,[]).
+ 
+lwi_i(4,[ [] ]).
+ 
+ 
+ 
+ 
+ta_i(4,[ [ [ 4,7 ],[ 4,108 ],[ 4,109 ],[ 4,110 ],[ 4,111 ] ] ]).
+ 
+las_i(4,[ [ 7,108,109,110,111 ] ]).
+ 
+lac_i(4,[ [ 7,108,109,110,111 ] ]).
+ 
+ 
+ 
+cls_i([ 25,80 ],[ 0,0 ]).
+ 
+ 
+ 
+ 
+rule_i(0,datastore(1,'DS_LAST_CHANGE','')).
+rule_i(0,datastore(1,'POSTGRESQL_VERSION','8_3')).
+rule_i(0,datastore(1,'COMMENT_ON','No')).
+rule_i(0,datastore(1,'DCL_REF_INT_DB','Yes')).
+rule_i(0,datastore(1,'PRIMARY_KEY_TYPE','PK')).
+rule_i(0,datastore(1,'CS_SCHEMA','')).
+rule_i(0,datastore(1,'RecycleRWMin','30')).
+rule_i(0,datastore(1,'RecycleRWType','1')).
+rule_i(0,datastore(1,'RecycleRW','-1')).
+rule_i(0,datastore(1,'POOL_STARTUP','No')).
+rule_i(0,datastore(1,'POOLSIZE_RW','10')).
+rule_i(0,datastore(1,'UnlimitedRWPool','-1')).
+rule_i(0,datastore(1,'PoolRWEnabled','-1')).
+rule_i(0,datastore(1,'CS_RPCPGML','')).
+rule_i(0,datastore(1,'JDBC_DATASOURCE','')).
+rule_i(0,datastore(1,'USE_JDBC_DATASOURCE','0')).
+rule_i(0,datastore(1,'DS_DBMS_ADDINFO','')).
+rule_i(0,datastore(1,'USER_PASSWORD',󻢸蘇�2�5炭)).
+rule_i(0,datastore(1,'USER_ID',postgres)).
+rule_i(0,datastore(1,'CS_CONNECT','First')).
+rule_i(0,datastore(1,'DBMS_PORT','5432')).
+rule_i(0,datastore(1,'CS_SERVER',localhost)).
+rule_i(0,datastore(1,'CS_DBNAME',postgres)).
+rule_i(0,datastore(1,'CS_FLEDSNAME','')).
+rule_i(0,datastore(1,'CS_DRVNAME','')).
+rule_i(0,datastore(1,'CS_DSNAME','')).
+rule_i(0,datastore(1,'DB_URL','')).
+rule_i(0,datastore(1,'JDBC_CUSTOM_URL','0')).
+rule_i(0,datastore(1,'JDBC_CUSTOM_DRIVER','')).
+rule_i(0,datastore(1,'JDBC_DRIVER','org.postgresql.Driver')).
+rule_i(0,datastore(1,'CONNECT_METHOD','OPSYS')).
+rule_i(0,datastore(1,'ACCESS_TECHNO','ADONET')).
+rule_i(0,datastore(1,'MAIN_DS','-1')).
+rule_i(0,datastore(1,'REORG_GEN','8')).
+rule_i(0,datastore(1,'HelpKeyword','20')).
+rule_i(0,datastore(1,'DBMS',15)).
+rule_i(0,datastore(1,'NAME','Default')).
+rule_i(0,prop(idNULLS_BEHAVIOR,idNB_Current)).
+rule_i(0,prop('PKSupFKs',[])).
+rule_i(0,prop('ObjectVisibility','Public')).
+rule_i(0,prop('FullyQualifiedName',entidadfederativa)).
+rule_i(0,prop('PWFCallable','0')).
+rule_i(0,prop('GenerateObject','-1')).
+rule_i(0,prop('SEARCH_VIEWER','')).
+rule_i(0,prop('SEARCHABLE','UMPV')).
+rule_i(0,prop('MTIER_OPT','Yes')).
+rule_i(0,prop('CS_ORA_FORUPD','UMPV')).
+rule_i(0,prop('Hint_firstrows','UMPV')).
+rule_i(0,prop('AUTOENTER','UMPV')).
+rule_i(0,prop('BEEPONMSG','UMPV')).
+rule_i(0,prop('BEEPONERROR','UMPV')).
+rule_i(0,prop('GENERATE_ILE','UMPV')).
+rule_i(0,prop('TRNCMT','YES')).
+rule_i(0,prop('NULLVALUE_AS_NULL','UMPV')).
+rule_i(0,prop('INITIALIZE_NEW','UMPV')).
+rule_i(0,prop('STD_FUNC_OBJECT','Yes')).
+rule_i(0,prop('SPC_WARNINGS_DISABLED','spc0096 spc0107 spc0142')).
+rule_i(0,prop('WBCHAR','')).
+rule_i(0,prop('WBATTR',none)).
+rule_i(0,prop('WBCOLOR',none)).
+rule_i(0,prop('WNDPOP','NO')).
+rule_i(0,prop('AUTOCENTER','UMPV')).
+rule_i(0,prop('DLT_BUTTON','')).
+rule_i(0,prop('CNF_BUTTON','')).
+rule_i(0,prop('UPD_BUTTON','')).
+rule_i(0,prop('ADD_BUTTON','')).
+rule_i(0,prop('AUTOSCROLL_FORM','UMPV')).
+rule_i(0,prop('SHOW_FRM','UMPV')).
+rule_i(0,prop('MODAL','PARM')).
+rule_i(0,prop('CTRBOX','YES')).
+rule_i(0,prop('ICON','')).
+rule_i(0,prop('S_TASK','YES')).
+rule_i(0,prop('MINBUT','YES')).
+rule_i(0,prop('MAXBUT','YES')).
+rule_i(0,prop('BORSTY','2')).
+rule_i(0,prop('KEY_MOREKEYS','UMPV')).
+rule_i(0,prop('KEY_ENTER','UMPV')).
+rule_i(0,prop('KEY_LAST','UMPV')).
+rule_i(0,prop('KEY_FIRST','UMPV')).
+rule_i(0,prop('KEY_SELECT','UMPV')).
+rule_i(0,prop('KEY_DISPLAY','UMPV')).
+rule_i(0,prop('KEY_DELETE','UMPV')).
+rule_i(0,prop('KEY_CANCEL','UMPV')).
+rule_i(0,prop('KEY_UPDATE','UMPV')).
+rule_i(0,prop('KEY_MENU','UMPV')).
+rule_i(0,prop('KEY_RETRIEVE','UMPV')).
+rule_i(0,prop('KEY_NEXT','UMPV')).
+rule_i(0,prop('KEY_PREVIOUS','UMPV')).
+rule_i(0,prop('KEY_INSERT','UMPV')).
+rule_i(0,prop('KEY_REFRESH','UMPV')).
+rule_i(0,prop('KEY_PROMPT','UMPV')).
+rule_i(0,prop('KEY_EXIT','UMPV')).
+rule_i(0,prop('KEY_CHECK','UMPV')).
+rule_i(0,prop('KEY_HELP','UMPV')).
+rule_i(0,prop('ASSIGNED_FNC_KEYS','UMPV')).
+rule_i(0,prop('FIRST_WD_DATEPICKER','UMPV')).
+rule_i(0,prop('WNUM_DATEPICKER','UMPV')).
+rule_i(0,prop(idUSE_WEB_DATEPICKER,'UMPV')).
+rule_i(0,prop('WebFormDefaults','0')).
+rule_i(0,prop('WebUX','SMOOTH')).
+rule_i(0,prop('FIELD_TO_FIELD','UMPV')).
+rule_i(0,prop('CONFIRM','UMPV')).
+rule_i(0,prop('TRNCFM','UMPV')).
+rule_i(0,prop('CFMTRN','No')).
+rule_i(0,prop('TRNEND','Yes')).
+rule_i(0,prop('IsDwhTrn','0')).
+rule_i(0,prop(idISBCEJB,'0')).
+rule_i(0,prop('WEB_SECURITY_LEVEL','High')).
+rule_i(0,prop('HTTP_PROTOCOL','Unsecure')).
+rule_i(0,prop('USE_ENCRYPTION','NO')).
+rule_i(0,prop('OnSessionTimeout','Ignore')).
+rule_i(0,prop('SHOWMASTERPAGE_POPUP','0')).
+rule_i(0,prop('MasterPage',o(13,'AppMasterPage'))).
+rule_i(0,prop('WEB_COMP','No')).
+rule_i(0,prop('Theme',o(25,'Flat'))).
+rule_i(0,prop('WS_Delete','-1')).
+rule_i(0,prop('WS_Update','-1')).
+rule_i(0,prop('WS_Insert','-1')).
+rule_i(0,prop('WS_View','-1')).
+rule_i(0,prop('ExternalNamespace','Condufef_v1')).
+rule_i(0,prop('ExternalName',entidadfederativa)).
+rule_i(0,prop(idISBCWEBSERVICE,'0')).
+rule_i(0,prop('CALL_PROTOCOL','INTERNAL')).
+rule_i(0,prop(idConnectivitySupport,idInherit)).
+rule_i(0,prop('OBJECT_METADATA','')).
+rule_i(0,prop(idISBUSINESSCOMPONENT,'-1')).
+rule_i(0,prop('Folder',o(120,'Root Module'))).
+rule_i(0,prop('ObjDesc',entidadfederativa)).
+rule_i(0,prop('ObjName',entidadfederativa)).
+rule_i(0,rule([ a(22,[ 'Dlt','"Eliminar"','' ]) ],[],[],[])).
+rule_i(0,maingen(15)).
+rule_i(0,p(0,0,fv,4,[ intname,'ENTIDADFEDERATIVA' ])).
+rule_i(0,p(0,0,fv,4,[ table,4 ])).
+rule_i(0,p(0,15,fv,4,[])).
+rule_i(0,p(0,15,fv,4,[ 'NAME',entidadfederativa ])).
+rule_i(0,p(0,15,fv,4,[ 'LOC','' ])).
+rule_i(0,p(0,15,fv,4,[ 'SCHEMA',public ])).
+rule_i(0,p(0,15,fv,4,[ 'EXTNAM','YES' ])).
+rule_i(0,p(0,15,fvix,[ 4,4 ],[])).
+rule_i(0,p(0,15,fvix,[ 4,4 ],[ 'NAME',entidadfederativa_pkey ])).
+rule_i(0,p(0,15,fvix,[ 4,4 ],[ 'LOC','' ])).
+rule_i(0,p(0,15,fvix,[ 4,4 ],[ 'SCHEMA',public ])).
+rule_i(0,p(0,15,fvix,[ 4,4 ],[ 'EXTNAM','YES' ])).
+rule_i(0,file(4,'ENTIDADFEDERATIVA',[ 7,108,109,110,111 ])).
+rule_i(0,loc([ 4 ],'ENTIDADFEDERATIVA','','LAN')).
+rule_i(0,index(4,'ENTIDADFEDERATIVA_PKEY',u,[ 7 ])).
+rule_i(0,loc([ 4,'ENTIDADFEDERATIVA_PKEY' ],entidadfederativa_pkey,'','LAN')).
+rule_i(0,p(0,0,fv,15,[ intname,'ARTICULOS' ])).
+rule_i(0,p(0,0,fv,15,[ table,11 ])).
+rule_i(0,p(0,15,fv,15,[])).
+rule_i(0,p(0,15,fv,15,[ 'NAME',articulos ])).
+rule_i(0,p(0,15,fv,15,[ 'LOC','' ])).
+rule_i(0,p(0,15,fv,15,[ 'SCHEMA',public ])).
+rule_i(0,p(0,15,fv,15,[ 'EXTNAM','YES' ])).
+rule_i(0,p(0,15,fvix,[ 15,15 ],[])).
+rule_i(0,p(0,15,fvix,[ 15,15 ],[ 'NAME',articulos_pkey ])).
+rule_i(0,p(0,15,fvix,[ 15,15 ],[ 'LOC','' ])).
+rule_i(0,p(0,15,fvix,[ 15,15 ],[ 'SCHEMA',public ])).
+rule_i(0,p(0,15,fvix,[ 15,15 ],[ 'EXTNAM','YES' ])).
+rule_i(0,p(0,15,fvix,[ 15,16 ],[])).
+rule_i(0,p(0,15,fvix,[ 15,16 ],[ 'NAME',productoid ])).
+rule_i(0,p(0,15,fvix,[ 15,16 ],[ 'LOC','' ])).
+rule_i(0,p(0,15,fvix,[ 15,16 ],[ 'SCHEMA',public ])).
+rule_i(0,p(0,15,fvix,[ 15,16 ],[ 'EXTNAM','YES' ])).
+rule_i(0,file(11,'ARTICULOS',[ 19,20,21,154,155,23,7,10,156,2,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172 ])).
+rule_i(0,loc([ 11 ],'ARTICULOS','','LAN')).
+rule_i(0,index(11,'ARTICULOS_PKEY',u,[ 19,20,21 ])).
+rule_i(0,loc([ 11,'ARTICULOS_PKEY' ],articulos_pkey,'','LAN')).
+rule_i(0,index(11,'PRODUCTOID',k,[ 19 ])).
+rule_i(0,loc([ 11,'PRODUCTOID' ],productoid,'','LAN')).
+ 
+a_i(1,4,t,4,[],[ [ [ [],7,7 ] ],'ENTIDADFEDERATIVA_PKEY',[] ]).
+ 
+v_i(t,i,1,7).
+v_i(t,o,1,108).
+v_i(t,o,1,109).
+v_i(t,o,1,110).
+v_i(t,o,1,111).
+ 
+ 
+ 
+tbl_to_delete_i(4,[ 11,[ [ 4,7,7 ] ],c,'IARTICULOS1',[ [ 11,7 ] ],[ 19,20,21 ],'' ]).
+ 
+ 
+ 
+attri_i(21,[ articuloscambsid,int,9,0,'ZZZZZZZZ9',0,articuloscambsid,'',0 ]).
+attri_i(20,[ articulosproductoid,int,9,0,'ZZZZZZZZ9',0,articulosproductoid,'',0 ]).
+attri_i(19,[ almacenid,int,18,0,'ZZZZZZZZZZZZZZZZZ9',0,almacenid,'',0 ]).
+attri_i(111,[ entidadfederativafecultact,dtime,10,8,'99/99/9999 99:99:99',0,entidadfederativafecultact,'',0 ]).
+attri_i(110,[ entidadfederativafecreg,dtime,10,8,'99/99/9999 99:99:99',0,entidadfederativafecreg,'',0 ]).
+attri_i(109,[ entidadfederativausuario,svchar,15,0,'',0,entidadfederativausuario,'',0 ]).
+attri_i(108,[ entidadfederativadsc,svchar,100,0,'',0,entidadfederativadsc,'',0 ]).
+attri_i(7,[ entidafederativaid,int,9,0,'ZZZZZZZZ9',0,entidafederativaid,'',0 ]).
+attri_i('Gxremove',[ 'GxRemove',int,1,0,'9',0,'Gx Remove','',5 ]).
+attri_i('Mode',[ 'Gx_mode',char,3,0,'@!',1,'','',2 ]).
+ 
+table_i(11,[ 'ARTICULOS',[ 19,20,21,7 ],articulos,articulos ]).
+table_i(4,[ 'ENTIDADFEDERATIVA',[ 7,108,109,110,111 ],entidadfederativa,entidadfederativa ]).
+ 
+index_i(4,[ 'ENTIDADFEDERATIVA_PKEY',u,[ 7 ],'ENTIDADFEDERATIVA_PKEY' ]).
+index_i(11,[ 'ARTICULOS_PKEY',u,[ 19,20,21 ],'ARTICULOS_PKEY' ]).
+index_i(11,[ 'IARTICULOS1',d,[ 7 ],'Iarticulos1' ]).
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+upd_i(4,4,i,[ [ 7,108,109,110,111 ],[],'ENTIDADFEDERATIVA_PKEY',[ [ [],7,7 ] ] ]).
+upd_i(4,4,u,[ [ 108,109,110,111 ],[],'ENTIDADFEDERATIVA_PKEY',[] ]).
+upd_i(4,4,d,[ [],[],'ENTIDADFEDERATIVA_PKEY',[] ]).
+ 
+ 
+ 
+ 
+ 
+ 
+map_i(11,i,'PRODUCTOID',[ 'PRODUCTOID' ]).
+map_i(11,i,'ARTICULOS_PKEY',[ 'ARTICULOS_PKEY' ]).
+map_i(11,a,172,[ articulosfecultact ]).
+map_i(11,a,171,[ articulosfecreg ]).
+map_i(11,a,170,[ articulostipobien ]).
+map_i(11,a,169,[ articulosestatusariticulo ]).
+map_i(11,a,168,[ articulosidtrasfer ]).
+map_i(11,a,167,[ articulosusuario ]).
+map_i(11,a,166,[ articuloscontejado ]).
+map_i(11,a,165,[ articulosstatus ]).
+map_i(11,a,164,[ articulosfechabajaalma ]).
+map_i(11,a,163,[ articulosfechaentraalmacen ]).
+map_i(11,a,162,[ articulosfechacoteja ]).
+map_i(11,a,161,[ articulosrefdocumento ]).
+map_i(11,a,160,[ articulosnumserie ]).
+map_i(11,a,159,[ articuloscantdepreacum ]).
+map_i(11,a,158,[ articulospreccomprareexp ]).
+map_i(11,a,157,[ articulospreciocompra ]).
+map_i(11,a,2,[ proveedorid ]).
+map_i(11,a,156,[ articulosdsc ]).
+map_i(11,a,10,[ origenid ]).
+map_i(11,a,7,[ entidadid ]).
+map_i(11,a,23,[ tipodocid ]).
+map_i(11,a,155,[ articulosnoetiqueta ]).
+map_i(11,a,154,[ alamcenid ]).
+map_i(11,a,21,[ cambsid ]).
+map_i(11,a,20,[ productoid ]).
+map_i(11,a,19,[ articulosid ]).
+map_i(4,i,'ENTIDADFEDERATIVA_PKEY',[ 'ENTIDADFEDERATIVA_PKEY' ]).
+map_i(4,a,111,[ entidadfederativafecultact ]).
+map_i(4,a,110,[ entidadfederativafecreg ]).
+map_i(4,a,109,[ entidadfederativausuario ]).
+map_i(4,a,108,[ entidadfederativadsc ]).
+map_i(4,a,7,[ entidafederativaid ]).
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+break_i(2,nvg,1,[],[ [],[],[] ]).
+ 
+b_group_i(2,1,lit,0,1,0).
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+warn_gen_i(msg([],spc0134,[ 'Poor performance may be noticed','',' as ','Duplicate',' index ','IARTICULOS1',' is not defined in Data view ',articulos,'.' ])).
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+att_prop_i(2,7,'HORIZONTAL_DESCRIPTION',entidafederativaid,v).
+att_prop_i(2,7,'ExternalName',entidafederativaid,d).
+att_prop_i(2,7,'ExternalNamespace','Condufef_v1',d).
+att_prop_i(2,7,'EmptyAsNull','Yes',d).
+att_prop_i(2,7,idBasedOn,'',d).
+att_prop_i(2,7,'AUTONUMBER','0',d).
+att_prop_i(2,7,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,7,'AttRegEx','',d).
+att_prop_i(2,7,'AttValidationFailedMsg','',d).
+att_prop_i(2,7,'FullName',entidafederativaid,v).
+att_prop_i(2,108,'HORIZONTAL_DESCRIPTION',entidadfederativadsc,v).
+att_prop_i(2,108,'ExternalName',entidadfederativadsc,d).
+att_prop_i(2,108,'ExternalNamespace','Condufef_v1',d).
+att_prop_i(2,108,'EmptyAsNull','Yes',d).
+att_prop_i(2,108,idBasedOn,'',d).
+att_prop_i(2,108,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,108,'DB_NLS_SUPPORT','No',d).
+att_prop_i(2,108,'AttRegEx','',d).
+att_prop_i(2,108,'AttValidationFailedMsg','',d).
+att_prop_i(2,108,'FullName',entidadfederativadsc,v).
+att_prop_i(2,109,'HORIZONTAL_DESCRIPTION',entidadfederativausuario,v).
+att_prop_i(2,109,'ExternalName',entidadfederativausuario,d).
+att_prop_i(2,109,'ExternalNamespace','Condufef_v1',d).
+att_prop_i(2,109,'EmptyAsNull','Yes',d).
+att_prop_i(2,109,idBasedOn,'',d).
+att_prop_i(2,109,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,109,'DB_NLS_SUPPORT','No',d).
+att_prop_i(2,109,'AttRegEx','',d).
+att_prop_i(2,109,'AttValidationFailedMsg','',d).
+att_prop_i(2,109,'FullName',entidadfederativausuario,v).
+att_prop_i(2,110,'HORIZONTAL_DESCRIPTION',entidadfederativafecreg,v).
+att_prop_i(2,110,'ExternalName',entidadfederativafecreg,d).
+att_prop_i(2,110,'ExternalNamespace','Condufef_v1',d).
+att_prop_i(2,110,'EmptyAsNull','Yes',d).
+att_prop_i(2,110,idBasedOn,'',d).
+att_prop_i(2,110,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,110,'AttRegEx','',d).
+att_prop_i(2,110,'AttValidationFailedMsg','',d).
+att_prop_i(2,110,idDATEFORMAT,idDATEFORMAT_LONG,v).
+att_prop_i(2,110,idHOURFORMAT,idHOURFORMAT_HOURMINSEC,v).
+att_prop_i(2,110,'FullName',entidadfederativafecreg,v).
+att_prop_i(2,111,'HORIZONTAL_DESCRIPTION',entidadfederativafecultact,v).
+att_prop_i(2,111,'ExternalName',entidadfederativafecultact,d).
+att_prop_i(2,111,'ExternalNamespace','Condufef_v1',d).
+att_prop_i(2,111,'EmptyAsNull','Yes',d).
+att_prop_i(2,111,idBasedOn,'',d).
+att_prop_i(2,111,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,111,'AttRegEx','',d).
+att_prop_i(2,111,'AttValidationFailedMsg','',d).
+att_prop_i(2,111,idDATEFORMAT,idDATEFORMAT_LONG,v).
+att_prop_i(2,111,idHOURFORMAT,idHOURFORMAT_HOURMINSEC,v).
+att_prop_i(2,111,'FullName',entidadfederativafecultact,v).
+att_prop_i(2,19,'HORIZONTAL_DESCRIPTION',almacenid,v).
+att_prop_i(2,19,'ExternalName',almacenid,d).
+att_prop_i(2,19,'ExternalNamespace','Condufef_v1',d).
+att_prop_i(2,19,'EmptyAsNull','Yes',d).
+att_prop_i(2,19,idBasedOn,'',d).
+att_prop_i(2,19,'AUTONUMBER','0',d).
+att_prop_i(2,19,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,19,'AttRegEx','',d).
+att_prop_i(2,19,'AttValidationFailedMsg','',d).
+att_prop_i(2,19,'FullName',almacenid,v).
+att_prop_i(2,20,'HORIZONTAL_DESCRIPTION',articulosproductoid,v).
+att_prop_i(2,20,'ExternalName',articulosproductoid,d).
+att_prop_i(2,20,'ExternalNamespace','Condufef_v1',d).
+att_prop_i(2,20,'EmptyAsNull','Yes',d).
+att_prop_i(2,20,idBasedOn,'',d).
+att_prop_i(2,20,'AUTONUMBER','0',d).
+att_prop_i(2,20,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,20,'AttRegEx','',d).
+att_prop_i(2,20,'AttValidationFailedMsg','',d).
+att_prop_i(2,20,'FullName',articulosproductoid,v).
+att_prop_i(2,21,'HORIZONTAL_DESCRIPTION',articuloscambsid,v).
+att_prop_i(2,21,'ExternalName',articuloscambsid,d).
+att_prop_i(2,21,'ExternalNamespace','Condufef_v1',d).
+att_prop_i(2,21,'EmptyAsNull','Yes',d).
+att_prop_i(2,21,idBasedOn,'',d).
+att_prop_i(2,21,'AUTONUMBER','0',d).
+att_prop_i(2,21,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,21,'AttRegEx','',d).
+att_prop_i(2,21,'AttValidationFailedMsg','',d).
+att_prop_i(2,21,'FullName',articuloscambsid,v).
+ 
+ 
+tbl_att_prop_i(2,4,7,'AllowNulls',n).
+tbl_att_prop_i(2,11,19,'AllowNulls',n).
+tbl_att_prop_i(2,11,20,'AllowNulls',n).
+tbl_att_prop_i(2,11,21,'AllowNulls',n).
+ 
+ 
+i_tbl_best_trn(4,[ 4,1,entidadfederativa,entidadfederativa,[] ]).
+ 
+ 
+ 
+trn_level_i(4,[ [ 7,108,109,110,111 ],entidadfederativa,entidadfederativa,entidadfederativa,'',108 ]).
+ 
+struct_dt_i([ 0,4,0 ],name,entidadfederativa).
+struct_dt_i([ 0,4,0 ],namespace,'Condufef_v1').
+struct_dt_i([ 0,4,0 ],significantName,entidadfederativa).
+struct_dt_i([ 0,4,0 ],'ObjName',entidadfederativa).
+struct_dt_i([ 0,4,0 ],'ObjDesc',entidadfederativa).
+struct_dt_i([ 0,4,0 ],'ExternalName',entidadfederativa).
+struct_dt_i([ 0,4,0 ],'ExternalNamespace','Condufef_v1').
+struct_dt_i([ 0,4,0 ],key,[ 7 ]).
+struct_dt_i([ 0,4,0 ],lvl,4).
+struct_dt_i([ 26,1,0 ],name,'Messages').
+struct_dt_i([ 26,1,0 ],namespace,'Genexus').
+struct_dt_i([ 26,1,0 ],'ObjName','Messages').
+struct_dt_i([ 26,1,0 ],'ObjDesc','Messages').
+struct_dt_i([ 26,1,0 ],'ExternalName','Messages').
+struct_dt_i([ 26,1,0 ],'ExternalNamespace','Genexus').
+struct_dt_i([ 26,1,0 ],collection,'True').
+struct_dt_i([ 26,1,0 ],datatype,[ 26,1,1 ]).
+struct_dt_i([ 26,1,1 ],name,'Message').
+struct_dt_i([ 26,1,1 ],namespace,'Genexus.Messages').
+struct_dt_i([ 0,4,0 ],fullname,entidadfederativa).
+struct_dt_i([ 26,1,0 ],fullname,'Messages').
+struct_dt_i([ 26,1,1 ],fullname,'Messages.Message').
+ 
+struct_dt_elem_i([ 0,4,0 ],1,name,'Entidafederativaid').
+struct_dt_elem_i([ 0,4,0 ],1,camelname,entidafederativaid).
+struct_dt_elem_i([ 0,4,0 ],1,length,9).
+struct_dt_elem_i([ 0,4,0 ],1,decimals,0).
+struct_dt_elem_i([ 0,4,0 ],1,sign,0).
+struct_dt_elem_i([ 0,4,0 ],1,type,[ 4,9,0 ]).
+struct_dt_elem_i([ 0,4,0 ],1,pic,'ZZZZZZZZ9').
+struct_dt_elem_i([ 0,4,0 ],1,collection,'False').
+struct_dt_elem_i([ 0,4,0 ],1,attributeid,'7').
+struct_dt_elem_i([ 0,4,0 ],2,name,'Entidadfederativadsc').
+struct_dt_elem_i([ 0,4,0 ],2,camelname,entidadfederativadsc).
+struct_dt_elem_i([ 0,4,0 ],2,length,100).
+struct_dt_elem_i([ 0,4,0 ],2,decimals,0).
+struct_dt_elem_i([ 0,4,0 ],2,type,[ 13,100,0 ]).
+struct_dt_elem_i([ 0,4,0 ],2,pic,'').
+struct_dt_elem_i([ 0,4,0 ],2,collection,'False').
+struct_dt_elem_i([ 0,4,0 ],2,attributeid,'108').
+struct_dt_elem_i([ 0,4,0 ],3,name,'Entidadfederativausuario').
+struct_dt_elem_i([ 0,4,0 ],3,camelname,entidadfederativausuario).
+struct_dt_elem_i([ 0,4,0 ],3,length,15).
+struct_dt_elem_i([ 0,4,0 ],3,decimals,0).
+struct_dt_elem_i([ 0,4,0 ],3,type,[ 13,15,0 ]).
+struct_dt_elem_i([ 0,4,0 ],3,pic,'').
+struct_dt_elem_i([ 0,4,0 ],3,collection,'False').
+struct_dt_elem_i([ 0,4,0 ],3,attributeid,'109').
+struct_dt_elem_i([ 0,4,0 ],4,name,'Entidadfederativafecreg').
+struct_dt_elem_i([ 0,4,0 ],4,camelname,entidadfederativafecreg).
+struct_dt_elem_i([ 0,4,0 ],4,length,10).
+struct_dt_elem_i([ 0,4,0 ],4,decimals,8).
+struct_dt_elem_i([ 0,4,0 ],4,type,[ 12,10,8 ]).
+struct_dt_elem_i([ 0,4,0 ],4,pic,'99/99/9999 99:99:99').
+struct_dt_elem_i([ 0,4,0 ],4,collection,'False').
+struct_dt_elem_i([ 0,4,0 ],4,attributeid,'110').
+struct_dt_elem_i([ 0,4,0 ],5,name,'Entidadfederativafecultact').
+struct_dt_elem_i([ 0,4,0 ],5,camelname,entidadfederativafecultact).
+struct_dt_elem_i([ 0,4,0 ],5,length,10).
+struct_dt_elem_i([ 0,4,0 ],5,decimals,8).
+struct_dt_elem_i([ 0,4,0 ],5,type,[ 12,10,8 ]).
+struct_dt_elem_i([ 0,4,0 ],5,pic,'99/99/9999 99:99:99').
+struct_dt_elem_i([ 0,4,0 ],5,collection,'False').
+struct_dt_elem_i([ 0,4,0 ],5,attributeid,'111').
+struct_dt_elem_i([ 26,1,1 ],1,name,'Id').
+struct_dt_elem_i([ 26,1,1 ],1,camelname,'Id').
+struct_dt_elem_i([ 26,1,1 ],1,length,128).
+struct_dt_elem_i([ 26,1,1 ],1,decimals,0).
+struct_dt_elem_i([ 26,1,1 ],1,type,[ 13,128,0 ]).
+struct_dt_elem_i([ 26,1,1 ],1,pic,'').
+struct_dt_elem_i([ 26,1,1 ],1,collection,'False').
+struct_dt_elem_i([ 26,1,1 ],1,'XmlType','Element').
+struct_dt_elem_i([ 26,1,1 ],1,'XmlName','').
+struct_dt_elem_i([ 26,1,1 ],1,'XmlNamespace','').
+struct_dt_elem_i([ 26,1,1 ],1,soaptype,'').
+struct_dt_elem_i([ 26,1,1 ],1,'XmlInclude',idXmlIncludeAlways).
+struct_dt_elem_i([ 26,1,1 ],1,'JsonName','').
+struct_dt_elem_i([ 26,1,1 ],2,name,'Type').
+struct_dt_elem_i([ 26,1,1 ],2,camelname,'Type').
+struct_dt_elem_i([ 26,1,1 ],2,basedon,18).
+struct_dt_elem_i([ 26,1,1 ],2,length,2).
+struct_dt_elem_i([ 26,1,1 ],2,decimals,0).
+struct_dt_elem_i([ 26,1,1 ],2,sign,0).
+struct_dt_elem_i([ 26,1,1 ],2,type,[ 4,2,0 ]).
+struct_dt_elem_i([ 26,1,1 ],2,pic,'Z9').
+struct_dt_elem_i([ 26,1,1 ],2,collection,'False').
+struct_dt_elem_i([ 26,1,1 ],2,'XmlType','Element').
+struct_dt_elem_i([ 26,1,1 ],2,'XmlName','').
+struct_dt_elem_i([ 26,1,1 ],2,'XmlNamespace','').
+struct_dt_elem_i([ 26,1,1 ],2,soaptype,'').
+struct_dt_elem_i([ 26,1,1 ],2,'XmlInclude',idXmlIncludeAlways).
+struct_dt_elem_i([ 26,1,1 ],2,'JsonName','').
+struct_dt_elem_i([ 26,1,1 ],3,name,'Description').
+struct_dt_elem_i([ 26,1,1 ],3,camelname,'Description').
+struct_dt_elem_i([ 26,1,1 ],3,length,256).
+struct_dt_elem_i([ 26,1,1 ],3,decimals,0).
+struct_dt_elem_i([ 26,1,1 ],3,type,[ 13,256,0 ]).
+struct_dt_elem_i([ 26,1,1 ],3,pic,'').
+struct_dt_elem_i([ 26,1,1 ],3,collection,'False').
+struct_dt_elem_i([ 26,1,1 ],3,'XmlType','Element').
+struct_dt_elem_i([ 26,1,1 ],3,'XmlName','').
+struct_dt_elem_i([ 26,1,1 ],3,'XmlNamespace','').
+struct_dt_elem_i([ 26,1,1 ],3,soaptype,'').
+struct_dt_elem_i([ 26,1,1 ],3,'XmlInclude',idXmlIncludeAlways).
+struct_dt_elem_i([ 26,1,1 ],3,'JsonName','').
+struct_dt_elem_i([ 26,1,1 ],2,pic,'ZZZZZZZZ9').
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+pgm_callprotocol_i(trn,4,'ENTIDADFEDERATIVA_BC','INTERNAL').
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

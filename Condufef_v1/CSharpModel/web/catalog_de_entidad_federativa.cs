@@ -2,7 +2,7 @@
                File: Catalog_De_Entidad_Federativa
         Description: Catalog_De_Entidad_Federativa
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 1/25/2022 17:35:1.26
+       Generated on: 1/26/2022 20:7:46.96
        Program type: Callable routine
           Main DBMS: postgresql
 */
@@ -215,7 +215,7 @@ namespace GeneXus.Programs {
          context.AddJavascriptSource("jquery.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxtimezone.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxgral.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("gxcfg.js", "?20221251735128");
+         context.AddJavascriptSource("gxcfg.js", "?20221262074697");
          if ( context.isSpaRequest( ) )
          {
             enableOutput();
@@ -256,18 +256,21 @@ namespace GeneXus.Programs {
       {
          /* Send hidden variables. */
          /* Send saved values. */
-         GxWebStd.gx_hidden_field( context, "vNEXTVALUE", StringUtil.LTrim( StringUtil.NToC( (decimal)(AV6NextValue), 4, 0, ",", "")));
          if ( context.isAjaxRequest( ) )
          {
-            context.httpAjaxContext.ajax_rsp_assign_sdt_attri("", false, "vCAMBS", AV8cambs);
+            context.httpAjaxContext.ajax_rsp_assign_sdt_attri("", false, "vENTIDADFEDERATIVA", AV8entidadfederativa);
          }
          else
          {
-            context.httpAjaxContext.ajax_rsp_assign_hidden_sdt("vCAMBS", AV8cambs);
+            context.httpAjaxContext.ajax_rsp_assign_hidden_sdt("vENTIDADFEDERATIVA", AV8entidadfederativa);
          }
-         GxWebStd.gx_hidden_field( context, "vCAMBSDSC", AV7cambsdsc);
          GxWebStd.gx_hidden_field( context, "GXC1", StringUtil.LTrim( StringUtil.NToC( (decimal)(A40000GXC1), 9, 0, ",", "")));
+         GxWebStd.gx_hidden_field( context, "gxhash_vNEXTVALUE", GetSecureSignedToken( "", context.localUtil.Format( (decimal)(AV6NextValue), "ZZZ9")));
          GXKey = Crypto.Decrypt64( context.GetCookie( "GX_SESSION_ID"), Crypto.GetServerKey( ));
+         forbiddenHiddens = "hsh" + "Catalog_De_Entidad_Federativa";
+         forbiddenHiddens = forbiddenHiddens + context.localUtil.Format( (decimal)(AV6NextValue), "ZZZ9");
+         GxWebStd.gx_hidden_field( context, "hsh", GXUtil.GetEncryptedHash( forbiddenHiddens, GXKey));
+         GXUtil.WriteLog("catalog_de_entidad_federativa:[SendSecurityCheck value for]"+"NextValue:"+context.localUtil.Format( (decimal)(AV6NextValue), "ZZZ9"));
       }
 
       public override void RenderHtmlCloseForm( )
@@ -521,6 +524,8 @@ namespace GeneXus.Programs {
             }
             if ( ! context.isAjaxRequest( ) )
             {
+               GX_FocusControl = edtavNextvalue_Internalname;
+               context.httpAjaxContext.ajax_rsp_assign_attri("", false, "GX_FocusControl", GX_FocusControl);
             }
             nDonePA = 1;
          }
@@ -549,6 +554,8 @@ namespace GeneXus.Programs {
       {
          /* GeneXus formulas. */
          context.Gx_err = 0;
+         edtavNextvalue_Enabled = 0;
+         context.httpAjaxContext.ajax_rsp_assign_prop("", false, edtavNextvalue_Internalname, "Enabled", StringUtil.LTrim( StringUtil.Str( (decimal)(edtavNextvalue_Enabled), 5, 0)));
       }
 
       protected void RF112( )
@@ -567,6 +574,8 @@ namespace GeneXus.Programs {
       {
          /* Before Start, stand alone formulas. */
          context.Gx_err = 0;
+         edtavNextvalue_Enabled = 0;
+         context.httpAjaxContext.ajax_rsp_assign_prop("", false, edtavNextvalue_Internalname, "Enabled", StringUtil.LTrim( StringUtil.Str( (decimal)(edtavNextvalue_Enabled), 5, 0)));
          /* Using cursor H00113 */
          pr_default.execute(0);
          if ( (pr_default.getStatus(0) != 101) )
@@ -588,10 +597,46 @@ namespace GeneXus.Programs {
          {
             /* Read saved SDTs. */
             /* Read variables values. */
+            if ( ( ( context.localUtil.CToN( cgiGet( edtavNextvalue_Internalname), ",", ".") < Convert.ToDecimal( 0 )) ) || ( ( context.localUtil.CToN( cgiGet( edtavNextvalue_Internalname), ",", ".") > Convert.ToDecimal( 9999 )) ) )
+            {
+               GX_msglist.addItem(context.GetMessage( "GXM_badnum", ""), 1, "vNEXTVALUE");
+               GX_FocusControl = edtavNextvalue_Internalname;
+               context.httpAjaxContext.ajax_rsp_assign_attri("", false, "GX_FocusControl", GX_FocusControl);
+               wbErr = true;
+               AV6NextValue = 0;
+               context.httpAjaxContext.ajax_rsp_assign_attri("", false, "AV6NextValue", StringUtil.LTrim( StringUtil.Str( (decimal)(AV6NextValue), 4, 0)));
+               context.httpAjaxContext.ajax_rsp_assign_attri("", false, "gxhash_vNEXTVALUE", GetSecureSignedToken( "", context.localUtil.Format( (decimal)(AV6NextValue), "ZZZ9")));
+            }
+            else
+            {
+               AV6NextValue = (short)(context.localUtil.CToN( cgiGet( edtavNextvalue_Internalname), ",", "."));
+               context.httpAjaxContext.ajax_rsp_assign_attri("", false, "AV6NextValue", StringUtil.LTrim( StringUtil.Str( (decimal)(AV6NextValue), 4, 0)));
+               context.httpAjaxContext.ajax_rsp_assign_attri("", false, "gxhash_vNEXTVALUE", GetSecureSignedToken( "", context.localUtil.Format( (decimal)(AV6NextValue), "ZZZ9")));
+            }
+            AV9entidadfederativadsc = cgiGet( edtavEntidadfederativadsc_Internalname);
+            context.httpAjaxContext.ajax_rsp_assign_attri("", false, "AV9entidadfederativadsc", AV9entidadfederativadsc);
             /* Read saved values. */
             /* Read subfile selected row values. */
             /* Read hidden variables. */
             GXKey = Crypto.Decrypt64( context.GetCookie( "GX_SESSION_ID"), Crypto.GetServerKey( ));
+            forbiddenHiddens = "hsh" + "Catalog_De_Entidad_Federativa";
+            AV6NextValue = (short)(context.localUtil.CToN( cgiGet( edtavNextvalue_Internalname), ",", "."));
+            context.httpAjaxContext.ajax_rsp_assign_attri("", false, "AV6NextValue", StringUtil.LTrim( StringUtil.Str( (decimal)(AV6NextValue), 4, 0)));
+            context.httpAjaxContext.ajax_rsp_assign_attri("", false, "gxhash_vNEXTVALUE", GetSecureSignedToken( "", context.localUtil.Format( (decimal)(AV6NextValue), "ZZZ9")));
+            forbiddenHiddens = forbiddenHiddens + context.localUtil.Format( (decimal)(AV6NextValue), "ZZZ9");
+            hsh = cgiGet( "hsh");
+            if ( ! GXUtil.CheckEncryptedHash( forbiddenHiddens, hsh, GXKey) )
+            {
+               GXUtil.WriteLog("catalog_de_entidad_federativa:[SecurityCheckFailed value for]"+"NextValue:"+context.localUtil.Format( (decimal)(AV6NextValue), "ZZZ9"));
+               GxWebError = 1;
+               context.HttpContext.Response.StatusDescription = 403.ToString();
+               context.HttpContext.Response.StatusCode = 403;
+               context.WriteHtmlText( "<title>403 Forbidden</title>") ;
+               context.WriteHtmlText( "<h1>403 Forbidden</h1>") ;
+               context.WriteHtmlText( "<p /><hr />") ;
+               GXUtil.WriteLog("send_http_error_code " + 403.ToString());
+               return  ;
+            }
          }
          else
          {
@@ -622,15 +667,16 @@ namespace GeneXus.Programs {
          pr_default.close(1);
          AV6NextValue = (short)(A40000GXC1+1);
          context.httpAjaxContext.ajax_rsp_assign_attri("", false, "AV6NextValue", StringUtil.LTrim( StringUtil.Str( (decimal)(AV6NextValue), 4, 0)));
+         context.httpAjaxContext.ajax_rsp_assign_attri("", false, "gxhash_vNEXTVALUE", GetSecureSignedToken( "", context.localUtil.Format( (decimal)(AV6NextValue), "ZZZ9")));
       }
 
       protected void E12112( )
       {
          /* 'Guardar ' Routine */
-         AV8cambs.gxTpr_Cambsid = AV6NextValue;
-         AV8cambs.gxTpr_Cambsdsc = AV7cambsdsc;
-         AV8cambs.Save();
-         if ( AV8cambs.Success() )
+         AV8entidadfederativa.gxTpr_Entidafederativaid = AV6NextValue;
+         AV8entidadfederativa.gxTpr_Entidadfederativadsc = AV9entidadfederativadsc;
+         AV8entidadfederativa.Save();
+         if ( AV8entidadfederativa.Success() )
          {
             context.CommitDataStores( "Catalog_De_Entidad_Federativa");
          }
@@ -638,7 +684,7 @@ namespace GeneXus.Programs {
          {
             context.RollbackDataStores( "Catalog_De_Entidad_Federativa");
          }
-         context.httpAjaxContext.ajax_rsp_assign_sdt_attri("", false, "AV8cambs", AV8cambs);
+         context.httpAjaxContext.ajax_rsp_assign_sdt_attri("", false, "AV8entidadfederativa", AV8entidadfederativa);
       }
 
       protected void nextLoad( )
@@ -679,16 +725,16 @@ namespace GeneXus.Programs {
       {
          if ( wbgen )
          {
-            wb_table3_15_112( true) ;
+            wb_table3_17_112( true) ;
          }
          else
          {
-            wb_table3_15_112( false) ;
+            wb_table3_17_112( false) ;
          }
          return  ;
       }
 
-      protected void wb_table3_15_112e( bool wbgen )
+      protected void wb_table3_17_112e( bool wbgen )
       {
          if ( wbgen )
          {
@@ -705,7 +751,7 @@ namespace GeneXus.Programs {
          }
       }
 
-      protected void wb_table3_15_112( bool wbgen )
+      protected void wb_table3_17_112( bool wbgen )
       {
          if ( wbgen )
          {
@@ -717,19 +763,19 @@ namespace GeneXus.Programs {
             context.WriteHtmlText( "<tbody>") ;
             context.WriteHtmlText( "<tr>") ;
             context.WriteHtmlText( "<td>") ;
-            TempTags = "  onfocus=\"gx.evt.onfocus(this, 18,'',false,'',0)\"";
+            TempTags = "  onfocus=\"gx.evt.onfocus(this, 20,'',false,'',0)\"";
             ClassString = "Button";
             StyleString = "color:#FFFFFF; background-color:#008080;";
             GxWebStd.gx_button_ctrl( context, bttButton1_Internalname, "", "Consultar", bttButton1_Jsonclick, 5, "Consultar", "", StyleString, ClassString, 1, 1, "standard", "'"+""+"'"+",false,"+"'"+"E\\'CONSULTAR \\'."+"'", TempTags, "", context.GetButtonType( ), "HLP_Catalog_De_Entidad_Federativa.htm");
             context.WriteHtmlText( "</td>") ;
             context.WriteHtmlText( "<td>") ;
-            TempTags = "  onfocus=\"gx.evt.onfocus(this, 20,'',false,'',0)\"";
+            TempTags = "  onfocus=\"gx.evt.onfocus(this, 22,'',false,'',0)\"";
             ClassString = "Button";
             StyleString = "color:#FFFFFF; background-color:#008080;";
             GxWebStd.gx_button_ctrl( context, bttButton2_Internalname, "", "Guardar", bttButton2_Jsonclick, 5, "Guardar", "", StyleString, ClassString, 1, 1, "standard", "'"+""+"'"+",false,"+"'"+"E\\'GUARDAR \\'."+"'", TempTags, "", context.GetButtonType( ), "HLP_Catalog_De_Entidad_Federativa.htm");
             context.WriteHtmlText( "</td>") ;
             context.WriteHtmlText( "<td>") ;
-            TempTags = "  onfocus=\"gx.evt.onfocus(this, 22,'',false,'',0)\"";
+            TempTags = "  onfocus=\"gx.evt.onfocus(this, 24,'',false,'',0)\"";
             ClassString = "Button";
             StyleString = "color:#FFFFFF; background-color:#DC143C;";
             GxWebStd.gx_button_ctrl( context, bttButton3_Internalname, "", "Cancelar", bttButton3_Jsonclick, 5, "Cancelar", "", StyleString, ClassString, 1, 1, "standard", "'"+""+"'"+",false,"+"'"+"E\\'CANCELAR\\'."+"'", TempTags, "", context.GetButtonType( ), "HLP_Catalog_De_Entidad_Federativa.htm");
@@ -738,11 +784,11 @@ namespace GeneXus.Programs {
             context.WriteHtmlText( "</tbody>") ;
             /* End of table */
             context.WriteHtmlText( "</table>") ;
-            wb_table3_15_112e( true) ;
+            wb_table3_17_112e( true) ;
          }
          else
          {
-            wb_table3_15_112e( false) ;
+            wb_table3_17_112e( false) ;
          }
       }
 
@@ -758,9 +804,12 @@ namespace GeneXus.Programs {
             context.WriteHtmlText( "<tbody>") ;
             context.WriteHtmlText( "<tr>") ;
             context.WriteHtmlText( "<td>") ;
-            context.WriteHtmlText( "Marca") ;
+            context.WriteHtmlText( "Entidad") ;
             context.WriteHtmlText( "</td>") ;
             context.WriteHtmlText( "<td>") ;
+            /* Single line edit */
+            TempTags = "  onfocus=\"gx.evt.onfocus(this, 12,'',false,'',0)\"";
+            GxWebStd.gx_single_line_edit( context, edtavNextvalue_Internalname, StringUtil.LTrim( StringUtil.NToC( (decimal)(AV6NextValue), 4, 0, ",", "")), ((edtavNextvalue_Enabled!=0) ? StringUtil.LTrim( context.localUtil.Format( (decimal)(AV6NextValue), "ZZZ9")) : context.localUtil.Format( (decimal)(AV6NextValue), "ZZZ9")), TempTags+" onchange=\"gx.evt.onchange(this)\" "+" onblur=\""+"gx.num.valid_integer( this,'.');"+";gx.evt.onblur(this,12);\"", "'"+""+"'"+",false,"+"'"+""+"'", "", "", "", "", edtavNextvalue_Jsonclick, 0, "Attribute", "", "", "", 1, edtavNextvalue_Enabled, 0, "text", "", 4, "chr", 1, "row", 4, 0, 0, 0, 1, -1, 0, true, "", "right", false, "HLP_Catalog_De_Entidad_Federativa.htm");
             context.WriteHtmlText( "</td>") ;
             context.WriteHtmlText( "</tr>") ;
             context.WriteHtmlText( "<tr>") ;
@@ -768,6 +817,9 @@ namespace GeneXus.Programs {
             context.WriteHtmlText( "Descripción") ;
             context.WriteHtmlText( "</td>") ;
             context.WriteHtmlText( "<td>") ;
+            /* Single line edit */
+            TempTags = "  onfocus=\"gx.evt.onfocus(this, 16,'',false,'',0)\"";
+            GxWebStd.gx_single_line_edit( context, edtavEntidadfederativadsc_Internalname, AV9entidadfederativadsc, StringUtil.RTrim( context.localUtil.Format( AV9entidadfederativadsc, "")), TempTags+" onchange=\"gx.evt.onchange(this)\" "+" onblur=\""+""+";gx.evt.onblur(this,16);\"", "'"+""+"'"+",false,"+"'"+""+"'", "", "", "", "", edtavEntidadfederativadsc_Jsonclick, 0, "Attribute", "", "", "", 1, 1, 0, "text", "", 80, "chr", 1, "row", 100, 0, 0, 0, 1, -1, -1, true, "", "left", true, "HLP_Catalog_De_Entidad_Federativa.htm");
             context.WriteHtmlText( "</td>") ;
             context.WriteHtmlText( "</tr>") ;
             context.WriteHtmlText( "</tbody>") ;
@@ -812,11 +864,11 @@ namespace GeneXus.Programs {
 
       protected void define_styles( )
       {
-         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?1734189");
+         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?2071072");
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?20221251735142");
+            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?2022126207477");
             idxLst = (int)(idxLst+1);
          }
          /* End function define_styles */
@@ -825,12 +877,14 @@ namespace GeneXus.Programs {
       protected void include_jscripts( )
       {
          context.AddJavascriptSource("messages.spa.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("catalog_de_entidad_federativa.js", "?20221251735142");
+         context.AddJavascriptSource("catalog_de_entidad_federativa.js", "?2022126207477");
          /* End function include_jscripts */
       }
 
       protected void init_default_properties( )
       {
+         edtavNextvalue_Internalname = "vNEXTVALUE";
+         edtavEntidadfederativadsc_Internalname = "vENTIDADFEDERATIVADSC";
          tblTable2_Internalname = "TABLE2";
          bttButton1_Internalname = "BUTTON1";
          bttButton2_Internalname = "BUTTON2";
@@ -847,6 +901,9 @@ namespace GeneXus.Programs {
             disableJsOutput();
          }
          init_default_properties( ) ;
+         edtavEntidadfederativadsc_Jsonclick = "";
+         edtavNextvalue_Jsonclick = "";
+         edtavNextvalue_Enabled = 1;
          Form.Headerrawhtml = "";
          Form.Background = "";
          Form.Textcolor = 0;
@@ -866,7 +923,7 @@ namespace GeneXus.Programs {
       public override void InitializeDynEvents( )
       {
          setEventMetadata("REFRESH","{handler:'Refresh',iparms:[],oparms:[]}");
-         setEventMetadata("'GUARDAR '","{handler:'E12112',iparms:[{av:'AV6NextValue',fld:'vNEXTVALUE',pic:'ZZZ9',nv:0},{av:'AV8cambs',fld:'vCAMBS',pic:'',nv:null},{av:'AV7cambsdsc',fld:'vCAMBSDSC',pic:'',nv:''}],oparms:[{av:'AV8cambs',fld:'vCAMBS',pic:'',nv:null}]}");
+         setEventMetadata("'GUARDAR '","{handler:'E12112',iparms:[{av:'AV6NextValue',fld:'vNEXTVALUE',pic:'ZZZ9',hsh:true,nv:0},{av:'AV8entidadfederativa',fld:'vENTIDADFEDERATIVA',pic:'',nv:null},{av:'AV9entidadfederativadsc',fld:'vENTIDADFEDERATIVADSC',pic:'',nv:''}],oparms:[{av:'AV8entidadfederativa',fld:'vENTIDADFEDERATIVA',pic:'',nv:null}]}");
          return  ;
       }
 
@@ -891,9 +948,9 @@ namespace GeneXus.Programs {
          sDynURL = "";
          FormProcess = "";
          bodyStyle = "";
-         AV8cambs = new Sdtcambs(context);
-         AV7cambsdsc = "";
+         AV8entidadfederativa = new Sdtentidadfederativa(context);
          GXKey = "";
+         forbiddenHiddens = "";
          GX_FocusControl = "";
          Form = new GXWebForm();
          sPrefix = "";
@@ -903,6 +960,8 @@ namespace GeneXus.Programs {
          sEvtType = "";
          scmdbuf = "";
          H00113_A40000GXC1 = new int[1] ;
+         AV9entidadfederativadsc = "";
+         hsh = "";
          H00115_A40000GXC1 = new int[1] ;
          sStyleString = "";
          TempTags = "";
@@ -925,6 +984,7 @@ namespace GeneXus.Programs {
          );
          /* GeneXus formulas. */
          context.Gx_err = 0;
+         edtavNextvalue_Enabled = 0;
       }
 
       private short nGotPars ;
@@ -938,6 +998,7 @@ namespace GeneXus.Programs {
       private short gxcookieaux ;
       private short nGXWrapped ;
       private int A40000GXC1 ;
+      private int edtavNextvalue_Enabled ;
       private int idxLst ;
       private String gxfirstwebparm ;
       private String gxfirstwebparm_bkp ;
@@ -945,13 +1006,17 @@ namespace GeneXus.Programs {
       private String FormProcess ;
       private String bodyStyle ;
       private String GXKey ;
+      private String forbiddenHiddens ;
       private String GX_FocusControl ;
       private String sPrefix ;
       private String sEvt ;
       private String EvtGridId ;
       private String EvtRowId ;
       private String sEvtType ;
+      private String edtavNextvalue_Internalname ;
       private String scmdbuf ;
+      private String edtavEntidadfederativadsc_Internalname ;
+      private String hsh ;
       private String sStyleString ;
       private String tblTable1_Internalname ;
       private String tblTable3_Internalname ;
@@ -965,13 +1030,15 @@ namespace GeneXus.Programs {
       private String bttButton3_Internalname ;
       private String bttButton3_Jsonclick ;
       private String tblTable2_Internalname ;
+      private String edtavNextvalue_Jsonclick ;
+      private String edtavEntidadfederativadsc_Jsonclick ;
       private bool entryPointCalled ;
       private bool toggleJsOutput ;
       private bool wbLoad ;
       private bool Rfr0gs ;
       private bool wbErr ;
       private bool returnInSub ;
-      private String AV7cambsdsc ;
+      private String AV9entidadfederativadsc ;
       private IGxDataStore dsDefault ;
       private IDataStoreProvider pr_default ;
       private int[] H00113_A40000GXC1 ;
@@ -979,7 +1046,7 @@ namespace GeneXus.Programs {
       private msglist BackMsgLst ;
       private msglist LclMsgLst ;
       private GXWebForm Form ;
-      private Sdtcambs AV8cambs ;
+      private Sdtentidadfederativa AV8entidadfederativa ;
    }
 
    public class catalog_de_entidad_federativa__default : DataStoreHelperBase, IDataStoreHelper
@@ -1005,8 +1072,8 @@ namespace GeneXus.Programs {
           prmH00115 = new Object[] {
           } ;
           def= new CursorDef[] {
-              new CursorDef("H00113", "SELECT COALESCE( T1.GXC1, 0) AS GXC1 FROM (SELECT MAX(cambsid) AS GXC1 FROM public.cambs ) T1 ",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmH00113,1,0,true,false )
-             ,new CursorDef("H00115", "SELECT COALESCE( T1.GXC1, 0) AS GXC1 FROM (SELECT MAX(cambsid) AS GXC1 FROM public.cambs ) T1 ",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmH00115,1,0,true,false )
+              new CursorDef("H00113", "SELECT COALESCE( T1.GXC1, 0) AS GXC1 FROM (SELECT MAX(entidafederativaid) AS GXC1 FROM public.entidadfederativa ) T1 ",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmH00113,1,0,true,false )
+             ,new CursorDef("H00115", "SELECT COALESCE( T1.GXC1, 0) AS GXC1 FROM (SELECT MAX(entidafederativaid) AS GXC1 FROM public.entidadfederativa ) T1 ",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmH00115,1,0,true,false )
           };
        }
     }

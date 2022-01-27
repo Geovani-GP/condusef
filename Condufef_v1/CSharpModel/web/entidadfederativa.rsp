@@ -16,3 +16,4 @@
 /r:GxBaseBuilder.dll
 /out:bin\entidadfederativa.dll
 entidadfederativa.cs
+entidadfederativa_bc.cs

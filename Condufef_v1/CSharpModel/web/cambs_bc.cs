@@ -2,7 +2,7 @@
                File: cambs_BC
         Description: cambs
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 1/25/2022 17:34:43.17
+       Generated on: 1/26/2022 20:7:35.44
        Program type: Callable routine
           Main DBMS: postgresql
 */

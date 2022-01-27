@@ -2,7 +2,7 @@
                File: Catalog_De_Tipo_Doc
         Description: Catalog_De_Tipo_Doc
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 1/25/2022 17:35:0.32
+       Generated on: 1/26/2022 20:7:46.40
        Program type: Callable routine
           Main DBMS: postgresql
 */
@@ -215,7 +215,7 @@ namespace GeneXus.Programs {
          context.AddJavascriptSource("jquery.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxtimezone.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxgral.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("gxcfg.js", "?20221251735034");
+         context.AddJavascriptSource("gxcfg.js", "?20221262074642");
          if ( context.isSpaRequest( ) )
          {
             enableOutput();
@@ -256,16 +256,14 @@ namespace GeneXus.Programs {
       {
          /* Send hidden variables. */
          /* Send saved values. */
-         GxWebStd.gx_hidden_field( context, "vNEXTVALUE", StringUtil.LTrim( StringUtil.NToC( (decimal)(AV6NextValue), 4, 0, ",", "")));
          if ( context.isAjaxRequest( ) )
          {
-            context.httpAjaxContext.ajax_rsp_assign_sdt_attri("", false, "vCAMBS", AV8cambs);
+            context.httpAjaxContext.ajax_rsp_assign_sdt_attri("", false, "vTIPODOCUMENTO", AV7tipodocumento);
          }
          else
          {
-            context.httpAjaxContext.ajax_rsp_assign_hidden_sdt("vCAMBS", AV8cambs);
+            context.httpAjaxContext.ajax_rsp_assign_hidden_sdt("vTIPODOCUMENTO", AV7tipodocumento);
          }
-         GxWebStd.gx_hidden_field( context, "vCAMBSDSC", AV7cambsdsc);
          GxWebStd.gx_hidden_field( context, "GXC1", StringUtil.LTrim( StringUtil.NToC( (decimal)(A40000GXC1), 9, 0, ",", "")));
          GXKey = Crypto.Decrypt64( context.GetCookie( "GX_SESSION_ID"), Crypto.GetServerKey( ));
       }
@@ -521,6 +519,8 @@ namespace GeneXus.Programs {
             }
             if ( ! context.isAjaxRequest( ) )
             {
+               GX_FocusControl = edtavNextvalue_Internalname;
+               context.httpAjaxContext.ajax_rsp_assign_attri("", false, "GX_FocusControl", GX_FocusControl);
             }
             nDonePA = 1;
          }
@@ -588,6 +588,22 @@ namespace GeneXus.Programs {
          {
             /* Read saved SDTs. */
             /* Read variables values. */
+            if ( ( ( context.localUtil.CToN( cgiGet( edtavNextvalue_Internalname), ",", ".") < Convert.ToDecimal( 0 )) ) || ( ( context.localUtil.CToN( cgiGet( edtavNextvalue_Internalname), ",", ".") > Convert.ToDecimal( 9999 )) ) )
+            {
+               GX_msglist.addItem(context.GetMessage( "GXM_badnum", ""), 1, "vNEXTVALUE");
+               GX_FocusControl = edtavNextvalue_Internalname;
+               context.httpAjaxContext.ajax_rsp_assign_attri("", false, "GX_FocusControl", GX_FocusControl);
+               wbErr = true;
+               AV6NextValue = 0;
+               context.httpAjaxContext.ajax_rsp_assign_attri("", false, "AV6NextValue", StringUtil.LTrim( StringUtil.Str( (decimal)(AV6NextValue), 4, 0)));
+            }
+            else
+            {
+               AV6NextValue = (short)(context.localUtil.CToN( cgiGet( edtavNextvalue_Internalname), ",", "."));
+               context.httpAjaxContext.ajax_rsp_assign_attri("", false, "AV6NextValue", StringUtil.LTrim( StringUtil.Str( (decimal)(AV6NextValue), 4, 0)));
+            }
+            AV8tipodocumentodsc = cgiGet( edtavTipodocumentodsc_Internalname);
+            context.httpAjaxContext.ajax_rsp_assign_attri("", false, "AV8tipodocumentodsc", AV8tipodocumentodsc);
             /* Read saved values. */
             /* Read subfile selected row values. */
             /* Read hidden variables. */
@@ -627,10 +643,10 @@ namespace GeneXus.Programs {
       protected void E120Y2( )
       {
          /* 'Guardar ' Routine */
-         AV8cambs.gxTpr_Cambsid = AV6NextValue;
-         AV8cambs.gxTpr_Cambsdsc = AV7cambsdsc;
-         AV8cambs.Save();
-         if ( AV8cambs.Success() )
+         AV7tipodocumento.gxTpr_Tipodocumentoid = AV6NextValue;
+         AV7tipodocumento.gxTpr_Tipodocumentodsc = AV8tipodocumentodsc;
+         AV7tipodocumento.Save();
+         if ( AV7tipodocumento.Success() )
          {
             context.CommitDataStores( "Catalog_De_Tipo_Doc");
          }
@@ -638,7 +654,7 @@ namespace GeneXus.Programs {
          {
             context.RollbackDataStores( "Catalog_De_Tipo_Doc");
          }
-         context.httpAjaxContext.ajax_rsp_assign_sdt_attri("", false, "AV8cambs", AV8cambs);
+         context.httpAjaxContext.ajax_rsp_assign_sdt_attri("", false, "AV7tipodocumento", AV7tipodocumento);
       }
 
       protected void nextLoad( )
@@ -679,16 +695,16 @@ namespace GeneXus.Programs {
       {
          if ( wbgen )
          {
-            wb_table3_15_0Y2( true) ;
+            wb_table3_17_0Y2( true) ;
          }
          else
          {
-            wb_table3_15_0Y2( false) ;
+            wb_table3_17_0Y2( false) ;
          }
          return  ;
       }
 
-      protected void wb_table3_15_0Y2e( bool wbgen )
+      protected void wb_table3_17_0Y2e( bool wbgen )
       {
          if ( wbgen )
          {
@@ -705,7 +721,7 @@ namespace GeneXus.Programs {
          }
       }
 
-      protected void wb_table3_15_0Y2( bool wbgen )
+      protected void wb_table3_17_0Y2( bool wbgen )
       {
          if ( wbgen )
          {
@@ -717,19 +733,19 @@ namespace GeneXus.Programs {
             context.WriteHtmlText( "<tbody>") ;
             context.WriteHtmlText( "<tr>") ;
             context.WriteHtmlText( "<td>") ;
-            TempTags = "  onfocus=\"gx.evt.onfocus(this, 18,'',false,'',0)\"";
+            TempTags = "  onfocus=\"gx.evt.onfocus(this, 20,'',false,'',0)\"";
             ClassString = "Button";
             StyleString = "color:#FFFFFF; background-color:#008080;";
             GxWebStd.gx_button_ctrl( context, bttButton1_Internalname, "", "Consultar", bttButton1_Jsonclick, 5, "Consultar", "", StyleString, ClassString, 1, 1, "standard", "'"+""+"'"+",false,"+"'"+"E\\'CONSULTAR \\'."+"'", TempTags, "", context.GetButtonType( ), "HLP_Catalog_De_Tipo_Doc.htm");
             context.WriteHtmlText( "</td>") ;
             context.WriteHtmlText( "<td>") ;
-            TempTags = "  onfocus=\"gx.evt.onfocus(this, 20,'',false,'',0)\"";
+            TempTags = "  onfocus=\"gx.evt.onfocus(this, 22,'',false,'',0)\"";
             ClassString = "Button";
             StyleString = "color:#FFFFFF; background-color:#008080;";
             GxWebStd.gx_button_ctrl( context, bttButton2_Internalname, "", "Guardar", bttButton2_Jsonclick, 5, "Guardar", "", StyleString, ClassString, 1, 1, "standard", "'"+""+"'"+",false,"+"'"+"E\\'GUARDAR \\'."+"'", TempTags, "", context.GetButtonType( ), "HLP_Catalog_De_Tipo_Doc.htm");
             context.WriteHtmlText( "</td>") ;
             context.WriteHtmlText( "<td>") ;
-            TempTags = "  onfocus=\"gx.evt.onfocus(this, 22,'',false,'',0)\"";
+            TempTags = "  onfocus=\"gx.evt.onfocus(this, 24,'',false,'',0)\"";
             ClassString = "Button";
             StyleString = "color:#FFFFFF; background-color:#DC143C;";
             GxWebStd.gx_button_ctrl( context, bttButton3_Internalname, "", "Cancelar", bttButton3_Jsonclick, 5, "Cancelar", "", StyleString, ClassString, 1, 1, "standard", "'"+""+"'"+",false,"+"'"+"E\\'CANCELAR\\'."+"'", TempTags, "", context.GetButtonType( ), "HLP_Catalog_De_Tipo_Doc.htm");
@@ -738,11 +754,11 @@ namespace GeneXus.Programs {
             context.WriteHtmlText( "</tbody>") ;
             /* End of table */
             context.WriteHtmlText( "</table>") ;
-            wb_table3_15_0Y2e( true) ;
+            wb_table3_17_0Y2e( true) ;
          }
          else
          {
-            wb_table3_15_0Y2e( false) ;
+            wb_table3_17_0Y2e( false) ;
          }
       }
 
@@ -758,9 +774,12 @@ namespace GeneXus.Programs {
             context.WriteHtmlText( "<tbody>") ;
             context.WriteHtmlText( "<tr>") ;
             context.WriteHtmlText( "<td>") ;
-            context.WriteHtmlText( "Marca") ;
+            context.WriteHtmlText( "Tipo Documento") ;
             context.WriteHtmlText( "</td>") ;
             context.WriteHtmlText( "<td>") ;
+            /* Single line edit */
+            TempTags = "  onfocus=\"gx.evt.onfocus(this, 12,'',false,'',0)\"";
+            GxWebStd.gx_single_line_edit( context, edtavNextvalue_Internalname, StringUtil.LTrim( StringUtil.NToC( (decimal)(AV6NextValue), 4, 0, ",", "")), StringUtil.LTrim( context.localUtil.Format( (decimal)(AV6NextValue), "ZZZ9")), TempTags+" onchange=\"gx.evt.onchange(this)\" "+" onblur=\""+"gx.num.valid_integer( this,'.');"+";gx.evt.onblur(this,12);\"", "'"+""+"'"+",false,"+"'"+""+"'", "", "", "", "", edtavNextvalue_Jsonclick, 0, "Attribute", "", "", "", 1, 1, 0, "text", "", 4, "chr", 1, "row", 4, 0, 0, 0, 1, -1, 0, true, "", "right", false, "HLP_Catalog_De_Tipo_Doc.htm");
             context.WriteHtmlText( "</td>") ;
             context.WriteHtmlText( "</tr>") ;
             context.WriteHtmlText( "<tr>") ;
@@ -768,6 +787,9 @@ namespace GeneXus.Programs {
             context.WriteHtmlText( "Descripción") ;
             context.WriteHtmlText( "</td>") ;
             context.WriteHtmlText( "<td>") ;
+            /* Single line edit */
+            TempTags = "  onfocus=\"gx.evt.onfocus(this, 16,'',false,'',0)\"";
+            GxWebStd.gx_single_line_edit( context, edtavTipodocumentodsc_Internalname, AV8tipodocumentodsc, StringUtil.RTrim( context.localUtil.Format( AV8tipodocumentodsc, "")), TempTags+" onchange=\"gx.evt.onchange(this)\" "+" onblur=\""+""+";gx.evt.onblur(this,16);\"", "'"+""+"'"+",false,"+"'"+""+"'", "", "", "", "", edtavTipodocumentodsc_Jsonclick, 0, "Attribute", "", "", "", 1, 1, 0, "text", "", 80, "chr", 1, "row", 100, 0, 0, 0, 1, -1, -1, true, "", "left", true, "HLP_Catalog_De_Tipo_Doc.htm");
             context.WriteHtmlText( "</td>") ;
             context.WriteHtmlText( "</tr>") ;
             context.WriteHtmlText( "</tbody>") ;
@@ -812,11 +834,11 @@ namespace GeneXus.Programs {
 
       protected void define_styles( )
       {
-         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?1734189");
+         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?2071072");
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?20221251735050");
+            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?20221262074651");
             idxLst = (int)(idxLst+1);
          }
          /* End function define_styles */
@@ -825,12 +847,14 @@ namespace GeneXus.Programs {
       protected void include_jscripts( )
       {
          context.AddJavascriptSource("messages.spa.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("catalog_de_tipo_doc.js", "?20221251735050");
+         context.AddJavascriptSource("catalog_de_tipo_doc.js", "?20221262074651");
          /* End function include_jscripts */
       }
 
       protected void init_default_properties( )
       {
+         edtavNextvalue_Internalname = "vNEXTVALUE";
+         edtavTipodocumentodsc_Internalname = "vTIPODOCUMENTODSC";
          tblTable2_Internalname = "TABLE2";
          bttButton1_Internalname = "BUTTON1";
          bttButton2_Internalname = "BUTTON2";
@@ -847,6 +871,8 @@ namespace GeneXus.Programs {
             disableJsOutput();
          }
          init_default_properties( ) ;
+         edtavTipodocumentodsc_Jsonclick = "";
+         edtavNextvalue_Jsonclick = "";
          Form.Headerrawhtml = "";
          Form.Background = "";
          Form.Textcolor = 0;
@@ -866,7 +892,7 @@ namespace GeneXus.Programs {
       public override void InitializeDynEvents( )
       {
          setEventMetadata("REFRESH","{handler:'Refresh',iparms:[],oparms:[]}");
-         setEventMetadata("'GUARDAR '","{handler:'E120Y2',iparms:[{av:'AV6NextValue',fld:'vNEXTVALUE',pic:'ZZZ9',nv:0},{av:'AV8cambs',fld:'vCAMBS',pic:'',nv:null},{av:'AV7cambsdsc',fld:'vCAMBSDSC',pic:'',nv:''}],oparms:[{av:'AV8cambs',fld:'vCAMBS',pic:'',nv:null}]}");
+         setEventMetadata("'GUARDAR '","{handler:'E120Y2',iparms:[{av:'AV6NextValue',fld:'vNEXTVALUE',pic:'ZZZ9',nv:0},{av:'AV7tipodocumento',fld:'vTIPODOCUMENTO',pic:'',nv:null},{av:'AV8tipodocumentodsc',fld:'vTIPODOCUMENTODSC',pic:'',nv:''}],oparms:[{av:'AV7tipodocumento',fld:'vTIPODOCUMENTO',pic:'',nv:null}]}");
          return  ;
       }
 
@@ -891,8 +917,7 @@ namespace GeneXus.Programs {
          sDynURL = "";
          FormProcess = "";
          bodyStyle = "";
-         AV8cambs = new Sdtcambs(context);
-         AV7cambsdsc = "";
+         AV7tipodocumento = new Sdttipodocumento(context);
          GXKey = "";
          GX_FocusControl = "";
          Form = new GXWebForm();
@@ -903,6 +928,7 @@ namespace GeneXus.Programs {
          sEvtType = "";
          scmdbuf = "";
          H000Y3_A40000GXC1 = new int[1] ;
+         AV8tipodocumentodsc = "";
          H000Y5_A40000GXC1 = new int[1] ;
          sStyleString = "";
          TempTags = "";
@@ -931,11 +957,11 @@ namespace GeneXus.Programs {
       private short GxWebError ;
       private short initialized ;
       private short gxajaxcallmode ;
-      private short AV6NextValue ;
       private short wbEnd ;
       private short wbStart ;
       private short nDonePA ;
       private short gxcookieaux ;
+      private short AV6NextValue ;
       private short nGXWrapped ;
       private int A40000GXC1 ;
       private int idxLst ;
@@ -951,7 +977,9 @@ namespace GeneXus.Programs {
       private String EvtGridId ;
       private String EvtRowId ;
       private String sEvtType ;
+      private String edtavNextvalue_Internalname ;
       private String scmdbuf ;
+      private String edtavTipodocumentodsc_Internalname ;
       private String sStyleString ;
       private String tblTable1_Internalname ;
       private String tblTable3_Internalname ;
@@ -965,13 +993,15 @@ namespace GeneXus.Programs {
       private String bttButton3_Internalname ;
       private String bttButton3_Jsonclick ;
       private String tblTable2_Internalname ;
+      private String edtavNextvalue_Jsonclick ;
+      private String edtavTipodocumentodsc_Jsonclick ;
       private bool entryPointCalled ;
       private bool toggleJsOutput ;
       private bool wbLoad ;
       private bool Rfr0gs ;
       private bool wbErr ;
       private bool returnInSub ;
-      private String AV7cambsdsc ;
+      private String AV8tipodocumentodsc ;
       private IGxDataStore dsDefault ;
       private IDataStoreProvider pr_default ;
       private int[] H000Y3_A40000GXC1 ;
@@ -979,7 +1009,7 @@ namespace GeneXus.Programs {
       private msglist BackMsgLst ;
       private msglist LclMsgLst ;
       private GXWebForm Form ;
-      private Sdtcambs AV8cambs ;
+      private Sdttipodocumento AV7tipodocumento ;
    }
 
    public class catalog_de_tipo_doc__default : DataStoreHelperBase, IDataStoreHelper
@@ -1005,8 +1035,8 @@ namespace GeneXus.Programs {
           prmH000Y5 = new Object[] {
           } ;
           def= new CursorDef[] {
-              new CursorDef("H000Y3", "SELECT COALESCE( T1.GXC1, 0) AS GXC1 FROM (SELECT MAX(cambsid) AS GXC1 FROM public.cambs ) T1 ",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmH000Y3,1,0,true,false )
-             ,new CursorDef("H000Y5", "SELECT COALESCE( T1.GXC1, 0) AS GXC1 FROM (SELECT MAX(cambsid) AS GXC1 FROM public.cambs ) T1 ",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmH000Y5,1,0,true,false )
+              new CursorDef("H000Y3", "SELECT COALESCE( T1.GXC1, 0) AS GXC1 FROM (SELECT MAX(tipodocumentoid) AS GXC1 FROM public.tipodocumento ) T1 ",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmH000Y3,1,0,true,false )
+             ,new CursorDef("H000Y5", "SELECT COALESCE( T1.GXC1, 0) AS GXC1 FROM (SELECT MAX(tipodocumentoid) AS GXC1 FROM public.tipodocumento ) T1 ",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmH000Y5,1,0,true,false )
           };
        }
     }

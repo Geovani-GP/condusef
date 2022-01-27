@@ -1,0 +1,500 @@
+spec_i([ trn,21,status,status_BC,[],spa,'10_3_15-115824' ]).
+ 
+struct_i(21,0,[],[]).
+ 
+level_i(21,[ 21,[ [ 21,many ] ],[ 1 ],[],[],[],[ 1 ],'STATUS_PKEY',[ 21,[] ],[] ]).
+ 
+tw_i(21,[]).
+ 
+lwi_i(21,[ [] ]).
+ 
+ 
+ 
+ 
+ta_i(21,[ [ [ 21,1 ],[ 21,73 ],[ 21,74 ],[ 21,75 ],[ 21,76 ],[ 21,77 ],[ 21,78 ] ] ]).
+ 
+las_i(21,[ [ 1,73,74,75,76,77,78 ] ]).
+ 
+lac_i(21,[ [ 1,73,74,75,76,77,78 ] ]).
+ 
+ 
+ 
+cls_i([ 25,80 ],[ 0,0 ]).
+ 
+ 
+ 
+ 
+rule_i(0,datastore(1,'DS_LAST_CHANGE','')).
+rule_i(0,datastore(1,'POSTGRESQL_VERSION','8_3')).
+rule_i(0,datastore(1,'COMMENT_ON','No')).
+rule_i(0,datastore(1,'DCL_REF_INT_DB','Yes')).
+rule_i(0,datastore(1,'PRIMARY_KEY_TYPE','PK')).
+rule_i(0,datastore(1,'CS_SCHEMA','')).
+rule_i(0,datastore(1,'RecycleRWMin','30')).
+rule_i(0,datastore(1,'RecycleRWType','1')).
+rule_i(0,datastore(1,'RecycleRW','-1')).
+rule_i(0,datastore(1,'POOL_STARTUP','No')).
+rule_i(0,datastore(1,'POOLSIZE_RW','10')).
+rule_i(0,datastore(1,'UnlimitedRWPool','-1')).
+rule_i(0,datastore(1,'PoolRWEnabled','-1')).
+rule_i(0,datastore(1,'CS_RPCPGML','')).
+rule_i(0,datastore(1,'JDBC_DATASOURCE','')).
+rule_i(0,datastore(1,'USE_JDBC_DATASOURCE','0')).
+rule_i(0,datastore(1,'DS_DBMS_ADDINFO','')).
+rule_i(0,datastore(1,'USER_PASSWORD',󻢸蘇�2�5炭)).
+rule_i(0,datastore(1,'USER_ID',postgres)).
+rule_i(0,datastore(1,'CS_CONNECT','First')).
+rule_i(0,datastore(1,'DBMS_PORT','5432')).
+rule_i(0,datastore(1,'CS_SERVER',localhost)).
+rule_i(0,datastore(1,'CS_DBNAME',postgres)).
+rule_i(0,datastore(1,'CS_FLEDSNAME','')).
+rule_i(0,datastore(1,'CS_DRVNAME','')).
+rule_i(0,datastore(1,'CS_DSNAME','')).
+rule_i(0,datastore(1,'DB_URL','')).
+rule_i(0,datastore(1,'JDBC_CUSTOM_URL','0')).
+rule_i(0,datastore(1,'JDBC_CUSTOM_DRIVER','')).
+rule_i(0,datastore(1,'JDBC_DRIVER','org.postgresql.Driver')).
+rule_i(0,datastore(1,'CONNECT_METHOD','OPSYS')).
+rule_i(0,datastore(1,'ACCESS_TECHNO','ADONET')).
+rule_i(0,datastore(1,'MAIN_DS','-1')).
+rule_i(0,datastore(1,'REORG_GEN','8')).
+rule_i(0,datastore(1,'HelpKeyword','20')).
+rule_i(0,datastore(1,'DBMS',15)).
+rule_i(0,datastore(1,'NAME','Default')).
+rule_i(0,prop(idNULLS_BEHAVIOR,idNB_Current)).
+rule_i(0,prop('PKSupFKs',[])).
+rule_i(0,prop('ObjectVisibility','Public')).
+rule_i(0,prop('FullyQualifiedName',status)).
+rule_i(0,prop('PWFCallable','0')).
+rule_i(0,prop('GenerateObject','-1')).
+rule_i(0,prop('SEARCH_VIEWER','')).
+rule_i(0,prop('SEARCHABLE','UMPV')).
+rule_i(0,prop('MTIER_OPT','Yes')).
+rule_i(0,prop('CS_ORA_FORUPD','UMPV')).
+rule_i(0,prop('Hint_firstrows','UMPV')).
+rule_i(0,prop('AUTOENTER','UMPV')).
+rule_i(0,prop('BEEPONMSG','UMPV')).
+rule_i(0,prop('BEEPONERROR','UMPV')).
+rule_i(0,prop('GENERATE_ILE','UMPV')).
+rule_i(0,prop('TRNCMT','YES')).
+rule_i(0,prop('NULLVALUE_AS_NULL','UMPV')).
+rule_i(0,prop('INITIALIZE_NEW','UMPV')).
+rule_i(0,prop('STD_FUNC_OBJECT','Yes')).
+rule_i(0,prop('SPC_WARNINGS_DISABLED','spc0096 spc0107 spc0142')).
+rule_i(0,prop('WBCHAR','')).
+rule_i(0,prop('WBATTR',none)).
+rule_i(0,prop('WBCOLOR',none)).
+rule_i(0,prop('WNDPOP','NO')).
+rule_i(0,prop('AUTOCENTER','UMPV')).
+rule_i(0,prop('DLT_BUTTON','')).
+rule_i(0,prop('CNF_BUTTON','')).
+rule_i(0,prop('UPD_BUTTON','')).
+rule_i(0,prop('ADD_BUTTON','')).
+rule_i(0,prop('AUTOSCROLL_FORM','UMPV')).
+rule_i(0,prop('SHOW_FRM','UMPV')).
+rule_i(0,prop('MODAL','PARM')).
+rule_i(0,prop('CTRBOX','YES')).
+rule_i(0,prop('ICON','')).
+rule_i(0,prop('S_TASK','YES')).
+rule_i(0,prop('MINBUT','YES')).
+rule_i(0,prop('MAXBUT','YES')).
+rule_i(0,prop('BORSTY','2')).
+rule_i(0,prop('KEY_MOREKEYS','UMPV')).
+rule_i(0,prop('KEY_ENTER','UMPV')).
+rule_i(0,prop('KEY_LAST','UMPV')).
+rule_i(0,prop('KEY_FIRST','UMPV')).
+rule_i(0,prop('KEY_SELECT','UMPV')).
+rule_i(0,prop('KEY_DISPLAY','UMPV')).
+rule_i(0,prop('KEY_DELETE','UMPV')).
+rule_i(0,prop('KEY_CANCEL','UMPV')).
+rule_i(0,prop('KEY_UPDATE','UMPV')).
+rule_i(0,prop('KEY_MENU','UMPV')).
+rule_i(0,prop('KEY_RETRIEVE','UMPV')).
+rule_i(0,prop('KEY_NEXT','UMPV')).
+rule_i(0,prop('KEY_PREVIOUS','UMPV')).
+rule_i(0,prop('KEY_INSERT','UMPV')).
+rule_i(0,prop('KEY_REFRESH','UMPV')).
+rule_i(0,prop('KEY_PROMPT','UMPV')).
+rule_i(0,prop('KEY_EXIT','UMPV')).
+rule_i(0,prop('KEY_CHECK','UMPV')).
+rule_i(0,prop('KEY_HELP','UMPV')).
+rule_i(0,prop('ASSIGNED_FNC_KEYS','UMPV')).
+rule_i(0,prop('FIRST_WD_DATEPICKER','UMPV')).
+rule_i(0,prop('WNUM_DATEPICKER','UMPV')).
+rule_i(0,prop(idUSE_WEB_DATEPICKER,'UMPV')).
+rule_i(0,prop('WebFormDefaults','0')).
+rule_i(0,prop('WebUX','SMOOTH')).
+rule_i(0,prop('FIELD_TO_FIELD','UMPV')).
+rule_i(0,prop('CONFIRM','UMPV')).
+rule_i(0,prop('TRNCFM','UMPV')).
+rule_i(0,prop('CFMTRN','No')).
+rule_i(0,prop('TRNEND','Yes')).
+rule_i(0,prop('IsDwhTrn','0')).
+rule_i(0,prop(idISBCEJB,'0')).
+rule_i(0,prop('WEB_SECURITY_LEVEL','High')).
+rule_i(0,prop('HTTP_PROTOCOL','Unsecure')).
+rule_i(0,prop('USE_ENCRYPTION','NO')).
+rule_i(0,prop('OnSessionTimeout','Ignore')).
+rule_i(0,prop('SHOWMASTERPAGE_POPUP','0')).
+rule_i(0,prop('MasterPage',o(13,'AppMasterPage'))).
+rule_i(0,prop('WEB_COMP','No')).
+rule_i(0,prop('Theme',o(25,'Flat'))).
+rule_i(0,prop('WS_Delete','-1')).
+rule_i(0,prop('WS_Update','-1')).
+rule_i(0,prop('WS_Insert','-1')).
+rule_i(0,prop('WS_View','-1')).
+rule_i(0,prop('ExternalNamespace','Condufef_v1')).
+rule_i(0,prop('ExternalName',status)).
+rule_i(0,prop(idISBCWEBSERVICE,'0')).
+rule_i(0,prop('CALL_PROTOCOL','INTERNAL')).
+rule_i(0,prop(idConnectivitySupport,idInherit)).
+rule_i(0,prop('OBJECT_METADATA','')).
+rule_i(0,prop(idISBUSINESSCOMPONENT,'-1')).
+rule_i(0,prop('Folder',o(120,'Root Module'))).
+rule_i(0,prop('ObjDesc',status)).
+rule_i(0,prop('ObjName',status)).
+rule_i(0,rule([ a(22,[ 'Dlt','"Eliminar"','' ]) ],[],[],[])).
+rule_i(0,maingen(15)).
+rule_i(0,p(0,0,fv,1,[ intname,'STATUS' ])).
+rule_i(0,p(0,0,fv,1,[ table,21 ])).
+rule_i(0,p(0,15,fv,1,[])).
+rule_i(0,p(0,15,fv,1,[ 'NAME',status ])).
+rule_i(0,p(0,15,fv,1,[ 'LOC','' ])).
+rule_i(0,p(0,15,fv,1,[ 'SCHEMA',public ])).
+rule_i(0,p(0,15,fv,1,[ 'EXTNAM','YES' ])).
+rule_i(0,p(0,15,fvix,[ 1,1 ],[])).
+rule_i(0,p(0,15,fvix,[ 1,1 ],[ 'NAME',status_pkey ])).
+rule_i(0,p(0,15,fvix,[ 1,1 ],[ 'LOC','' ])).
+rule_i(0,p(0,15,fvix,[ 1,1 ],[ 'SCHEMA',public ])).
+rule_i(0,p(0,15,fvix,[ 1,1 ],[ 'EXTNAM','YES' ])).
+rule_i(0,file(21,'STATUS',[ 1,73,74,75,76,77,78 ])).
+rule_i(0,loc([ 21 ],'STATUS','','LAN')).
+rule_i(0,index(21,'STATUS_PKEY',u,[ 1 ])).
+rule_i(0,loc([ 21,'STATUS_PKEY' ],status_pkey,'','LAN')).
+ 
+a_i(1,21,t,21,[],[ [ [ [],1,1 ] ],'STATUS_PKEY',[] ]).
+ 
+v_i(t,i,1,1).
+v_i(t,o,1,73).
+v_i(t,o,1,74).
+v_i(t,o,1,75).
+v_i(t,o,1,76).
+v_i(t,o,1,77).
+v_i(t,o,1,78).
+ 
+ 
+ 
+ 
+ 
+ 
+attri_i(78,[ statusfecultact,dtime,10,8,'99/99/9999 99:99:99',0,statusfecultact,'',0 ]).
+attri_i(77,[ statusfecreg,dtime,10,8,'99/99/9999 99:99:99',0,statusfecreg,'',0 ]).
+attri_i(76,[ statususuario,svchar,15,0,'',0,statususuario,'',0 ]).
+attri_i(75,[ statusdesc,svchar,50,0,'',0,statusdesc,'',0 ]).
+attri_i(74,[ statususotabla,svchar,50,0,'',0,statususotabla,'',0 ]).
+attri_i(73,[ statusdsc,svchar,50,0,'',0,statusdsc,'',0 ]).
+attri_i(1,[ statusid,int,9,0,'ZZZZZZZZ9',0,statusid,'',0 ]).
+attri_i('Gxremove',[ 'GxRemove',int,1,0,'9',0,'Gx Remove','',5 ]).
+attri_i('Mode',[ 'Gx_mode',char,3,0,'@!',1,'','',2 ]).
+ 
+table_i(21,[ 'STATUS',[ 1,73,74,75,76,77,78 ],status,status ]).
+ 
+index_i(21,[ 'STATUS_PKEY',u,[ 1 ],'STATUS_PKEY' ]).
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+upd_i(21,21,i,[ [ 1,73,74,75,76,77,78 ],[],'STATUS_PKEY',[ [ [],1,1 ] ] ]).
+upd_i(21,21,u,[ [ 73,74,75,76,77,78 ],[],'STATUS_PKEY',[] ]).
+upd_i(21,21,d,[ [],[],'STATUS_PKEY',[] ]).
+ 
+ 
+ 
+ 
+ 
+ 
+map_i(21,i,'STATUS_PKEY',[ 'STATUS_PKEY' ]).
+map_i(21,a,78,[ statusfecultact ]).
+map_i(21,a,77,[ statusfecreg ]).
+map_i(21,a,76,[ statususuario ]).
+map_i(21,a,75,[ statusdesc ]).
+map_i(21,a,74,[ statususotabla ]).
+map_i(21,a,73,[ statusdsc ]).
+map_i(21,a,1,[ statusid ]).
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+break_i(2,nvg,1,[],[ [],[],[] ]).
+ 
+b_group_i(2,1,lit,0,1,0).
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+att_prop_i(2,1,'HORIZONTAL_DESCRIPTION',statusid,v).
+att_prop_i(2,1,'ExternalName',statusid,d).
+att_prop_i(2,1,'ExternalNamespace','Condufef_v1',d).
+att_prop_i(2,1,'EmptyAsNull','Yes',d).
+att_prop_i(2,1,idBasedOn,'',d).
+att_prop_i(2,1,'AUTONUMBER','0',d).
+att_prop_i(2,1,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,1,'AttRegEx','',d).
+att_prop_i(2,1,'AttValidationFailedMsg','',d).
+att_prop_i(2,1,'FullName',statusid,v).
+att_prop_i(2,73,'HORIZONTAL_DESCRIPTION',statusdsc,v).
+att_prop_i(2,73,'ExternalName',statusdsc,d).
+att_prop_i(2,73,'ExternalNamespace','Condufef_v1',d).
+att_prop_i(2,73,'EmptyAsNull','Yes',d).
+att_prop_i(2,73,idBasedOn,'',d).
+att_prop_i(2,73,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,73,'DB_NLS_SUPPORT','No',d).
+att_prop_i(2,73,'AttRegEx','',d).
+att_prop_i(2,73,'AttValidationFailedMsg','',d).
+att_prop_i(2,73,'FullName',statusdsc,v).
+att_prop_i(2,74,'HORIZONTAL_DESCRIPTION',statususotabla,v).
+att_prop_i(2,74,'ExternalName',statususotabla,d).
+att_prop_i(2,74,'ExternalNamespace','Condufef_v1',d).
+att_prop_i(2,74,'EmptyAsNull','Yes',d).
+att_prop_i(2,74,idBasedOn,'',d).
+att_prop_i(2,74,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,74,'DB_NLS_SUPPORT','No',d).
+att_prop_i(2,74,'AttRegEx','',d).
+att_prop_i(2,74,'AttValidationFailedMsg','',d).
+att_prop_i(2,74,'FullName',statususotabla,v).
+att_prop_i(2,75,'HORIZONTAL_DESCRIPTION',statusdesc,v).
+att_prop_i(2,75,'ExternalName',statusdesc,d).
+att_prop_i(2,75,'ExternalNamespace','Condufef_v1',d).
+att_prop_i(2,75,'EmptyAsNull','Yes',d).
+att_prop_i(2,75,idBasedOn,'',d).
+att_prop_i(2,75,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,75,'DB_NLS_SUPPORT','No',d).
+att_prop_i(2,75,'AttRegEx','',d).
+att_prop_i(2,75,'AttValidationFailedMsg','',d).
+att_prop_i(2,75,'FullName',statusdesc,v).
+att_prop_i(2,76,'HORIZONTAL_DESCRIPTION',statususuario,v).
+att_prop_i(2,76,'ExternalName',statususuario,d).
+att_prop_i(2,76,'ExternalNamespace','Condufef_v1',d).
+att_prop_i(2,76,'EmptyAsNull','Yes',d).
+att_prop_i(2,76,idBasedOn,'',d).
+att_prop_i(2,76,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,76,'DB_NLS_SUPPORT','No',d).
+att_prop_i(2,76,'AttRegEx','',d).
+att_prop_i(2,76,'AttValidationFailedMsg','',d).
+att_prop_i(2,76,'FullName',statususuario,v).
+att_prop_i(2,77,'HORIZONTAL_DESCRIPTION',statusfecreg,v).
+att_prop_i(2,77,'ExternalName',statusfecreg,d).
+att_prop_i(2,77,'ExternalNamespace','Condufef_v1',d).
+att_prop_i(2,77,'EmptyAsNull','Yes',d).
+att_prop_i(2,77,idBasedOn,'',d).
+att_prop_i(2,77,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,77,'AttRegEx','',d).
+att_prop_i(2,77,'AttValidationFailedMsg','',d).
+att_prop_i(2,77,idDATEFORMAT,idDATEFORMAT_LONG,v).
+att_prop_i(2,77,idHOURFORMAT,idHOURFORMAT_HOURMINSEC,v).
+att_prop_i(2,77,'FullName',statusfecreg,v).
+att_prop_i(2,78,'HORIZONTAL_DESCRIPTION',statusfecultact,v).
+att_prop_i(2,78,'ExternalName',statusfecultact,d).
+att_prop_i(2,78,'ExternalNamespace','Condufef_v1',d).
+att_prop_i(2,78,'EmptyAsNull','Yes',d).
+att_prop_i(2,78,idBasedOn,'',d).
+att_prop_i(2,78,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,78,'AttRegEx','',d).
+att_prop_i(2,78,'AttValidationFailedMsg','',d).
+att_prop_i(2,78,idDATEFORMAT,idDATEFORMAT_LONG,v).
+att_prop_i(2,78,idHOURFORMAT,idHOURFORMAT_HOURMINSEC,v).
+att_prop_i(2,78,'FullName',statusfecultact,v).
+ 
+ 
+tbl_att_prop_i(2,21,1,'AllowNulls',n).
+ 
+ 
+i_tbl_best_trn(21,[ 21,1,status,status,[] ]).
+ 
+ 
+ 
+trn_level_i(21,[ [ 1,73,74,75,76,77,78 ],status,status,status,'',73 ]).
+ 
+struct_dt_i([ 0,21,0 ],name,status).
+struct_dt_i([ 0,21,0 ],namespace,'Condufef_v1').
+struct_dt_i([ 0,21,0 ],significantName,status).
+struct_dt_i([ 0,21,0 ],'ObjName',status).
+struct_dt_i([ 0,21,0 ],'ObjDesc',status).
+struct_dt_i([ 0,21,0 ],'ExternalName',status).
+struct_dt_i([ 0,21,0 ],'ExternalNamespace','Condufef_v1').
+struct_dt_i([ 0,21,0 ],key,[ 1 ]).
+struct_dt_i([ 0,21,0 ],lvl,21).
+struct_dt_i([ 26,1,0 ],name,'Messages').
+struct_dt_i([ 26,1,0 ],namespace,'Genexus').
+struct_dt_i([ 26,1,0 ],'ObjName','Messages').
+struct_dt_i([ 26,1,0 ],'ObjDesc','Messages').
+struct_dt_i([ 26,1,0 ],'ExternalName','Messages').
+struct_dt_i([ 26,1,0 ],'ExternalNamespace','Genexus').
+struct_dt_i([ 26,1,0 ],collection,'True').
+struct_dt_i([ 26,1,0 ],datatype,[ 26,1,1 ]).
+struct_dt_i([ 26,1,1 ],name,'Message').
+struct_dt_i([ 26,1,1 ],namespace,'Genexus.Messages').
+struct_dt_i([ 0,21,0 ],fullname,status).
+struct_dt_i([ 26,1,0 ],fullname,'Messages').
+struct_dt_i([ 26,1,1 ],fullname,'Messages.Message').
+ 
+struct_dt_elem_i([ 0,21,0 ],1,name,'Statusid').
+struct_dt_elem_i([ 0,21,0 ],1,camelname,statusid).
+struct_dt_elem_i([ 0,21,0 ],1,length,9).
+struct_dt_elem_i([ 0,21,0 ],1,decimals,0).
+struct_dt_elem_i([ 0,21,0 ],1,sign,0).
+struct_dt_elem_i([ 0,21,0 ],1,type,[ 4,9,0 ]).
+struct_dt_elem_i([ 0,21,0 ],1,pic,'ZZZZZZZZ9').
+struct_dt_elem_i([ 0,21,0 ],1,collection,'False').
+struct_dt_elem_i([ 0,21,0 ],1,attributeid,'1').
+struct_dt_elem_i([ 0,21,0 ],2,name,'Statusdsc').
+struct_dt_elem_i([ 0,21,0 ],2,camelname,statusdsc).
+struct_dt_elem_i([ 0,21,0 ],2,length,50).
+struct_dt_elem_i([ 0,21,0 ],2,decimals,0).
+struct_dt_elem_i([ 0,21,0 ],2,type,[ 13,50,0 ]).
+struct_dt_elem_i([ 0,21,0 ],2,pic,'').
+struct_dt_elem_i([ 0,21,0 ],2,collection,'False').
+struct_dt_elem_i([ 0,21,0 ],2,attributeid,'73').
+struct_dt_elem_i([ 0,21,0 ],3,name,'Statususotabla').
+struct_dt_elem_i([ 0,21,0 ],3,camelname,statususotabla).
+struct_dt_elem_i([ 0,21,0 ],3,length,50).
+struct_dt_elem_i([ 0,21,0 ],3,decimals,0).
+struct_dt_elem_i([ 0,21,0 ],3,type,[ 13,50,0 ]).
+struct_dt_elem_i([ 0,21,0 ],3,pic,'').
+struct_dt_elem_i([ 0,21,0 ],3,collection,'False').
+struct_dt_elem_i([ 0,21,0 ],3,attributeid,'74').
+struct_dt_elem_i([ 0,21,0 ],4,name,'Statusdesc').
+struct_dt_elem_i([ 0,21,0 ],4,camelname,statusdesc).
+struct_dt_elem_i([ 0,21,0 ],4,length,50).
+struct_dt_elem_i([ 0,21,0 ],4,decimals,0).
+struct_dt_elem_i([ 0,21,0 ],4,type,[ 13,50,0 ]).
+struct_dt_elem_i([ 0,21,0 ],4,pic,'').
+struct_dt_elem_i([ 0,21,0 ],4,collection,'False').
+struct_dt_elem_i([ 0,21,0 ],4,attributeid,'75').
+struct_dt_elem_i([ 0,21,0 ],5,name,'Statususuario').
+struct_dt_elem_i([ 0,21,0 ],5,camelname,statususuario).
+struct_dt_elem_i([ 0,21,0 ],5,length,15).
+struct_dt_elem_i([ 0,21,0 ],5,decimals,0).
+struct_dt_elem_i([ 0,21,0 ],5,type,[ 13,15,0 ]).
+struct_dt_elem_i([ 0,21,0 ],5,pic,'').
+struct_dt_elem_i([ 0,21,0 ],5,collection,'False').
+struct_dt_elem_i([ 0,21,0 ],5,attributeid,'76').
+struct_dt_elem_i([ 0,21,0 ],6,name,'Statusfecreg').
+struct_dt_elem_i([ 0,21,0 ],6,camelname,statusfecreg).
+struct_dt_elem_i([ 0,21,0 ],6,length,10).
+struct_dt_elem_i([ 0,21,0 ],6,decimals,8).
+struct_dt_elem_i([ 0,21,0 ],6,type,[ 12,10,8 ]).
+struct_dt_elem_i([ 0,21,0 ],6,pic,'99/99/9999 99:99:99').
+struct_dt_elem_i([ 0,21,0 ],6,collection,'False').
+struct_dt_elem_i([ 0,21,0 ],6,attributeid,'77').
+struct_dt_elem_i([ 0,21,0 ],7,name,'Statusfecultact').
+struct_dt_elem_i([ 0,21,0 ],7,camelname,statusfecultact).
+struct_dt_elem_i([ 0,21,0 ],7,length,10).
+struct_dt_elem_i([ 0,21,0 ],7,decimals,8).
+struct_dt_elem_i([ 0,21,0 ],7,type,[ 12,10,8 ]).
+struct_dt_elem_i([ 0,21,0 ],7,pic,'99/99/9999 99:99:99').
+struct_dt_elem_i([ 0,21,0 ],7,collection,'False').
+struct_dt_elem_i([ 0,21,0 ],7,attributeid,'78').
+struct_dt_elem_i([ 26,1,1 ],1,name,'Id').
+struct_dt_elem_i([ 26,1,1 ],1,camelname,'Id').
+struct_dt_elem_i([ 26,1,1 ],1,length,128).
+struct_dt_elem_i([ 26,1,1 ],1,decimals,0).
+struct_dt_elem_i([ 26,1,1 ],1,type,[ 13,128,0 ]).
+struct_dt_elem_i([ 26,1,1 ],1,pic,'').
+struct_dt_elem_i([ 26,1,1 ],1,collection,'False').
+struct_dt_elem_i([ 26,1,1 ],1,'XmlType','Element').
+struct_dt_elem_i([ 26,1,1 ],1,'XmlName','').
+struct_dt_elem_i([ 26,1,1 ],1,'XmlNamespace','').
+struct_dt_elem_i([ 26,1,1 ],1,soaptype,'').
+struct_dt_elem_i([ 26,1,1 ],1,'XmlInclude',idXmlIncludeAlways).
+struct_dt_elem_i([ 26,1,1 ],1,'JsonName','').
+struct_dt_elem_i([ 26,1,1 ],2,name,'Type').
+struct_dt_elem_i([ 26,1,1 ],2,camelname,'Type').
+struct_dt_elem_i([ 26,1,1 ],2,basedon,18).
+struct_dt_elem_i([ 26,1,1 ],2,length,2).
+struct_dt_elem_i([ 26,1,1 ],2,decimals,0).
+struct_dt_elem_i([ 26,1,1 ],2,sign,0).
+struct_dt_elem_i([ 26,1,1 ],2,type,[ 4,2,0 ]).
+struct_dt_elem_i([ 26,1,1 ],2,pic,'Z9').
+struct_dt_elem_i([ 26,1,1 ],2,collection,'False').
+struct_dt_elem_i([ 26,1,1 ],2,'XmlType','Element').
+struct_dt_elem_i([ 26,1,1 ],2,'XmlName','').
+struct_dt_elem_i([ 26,1,1 ],2,'XmlNamespace','').
+struct_dt_elem_i([ 26,1,1 ],2,soaptype,'').
+struct_dt_elem_i([ 26,1,1 ],2,'XmlInclude',idXmlIncludeAlways).
+struct_dt_elem_i([ 26,1,1 ],2,'JsonName','').
+struct_dt_elem_i([ 26,1,1 ],3,name,'Description').
+struct_dt_elem_i([ 26,1,1 ],3,camelname,'Description').
+struct_dt_elem_i([ 26,1,1 ],3,length,256).
+struct_dt_elem_i([ 26,1,1 ],3,decimals,0).
+struct_dt_elem_i([ 26,1,1 ],3,type,[ 13,256,0 ]).
+struct_dt_elem_i([ 26,1,1 ],3,pic,'').
+struct_dt_elem_i([ 26,1,1 ],3,collection,'False').
+struct_dt_elem_i([ 26,1,1 ],3,'XmlType','Element').
+struct_dt_elem_i([ 26,1,1 ],3,'XmlName','').
+struct_dt_elem_i([ 26,1,1 ],3,'XmlNamespace','').
+struct_dt_elem_i([ 26,1,1 ],3,soaptype,'').
+struct_dt_elem_i([ 26,1,1 ],3,'XmlInclude',idXmlIncludeAlways).
+struct_dt_elem_i([ 26,1,1 ],3,'JsonName','').
+struct_dt_elem_i([ 26,1,1 ],2,pic,'ZZZZZZZZ9').
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+pgm_callprotocol_i(trn,21,'STATUS_BC','INTERNAL').
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

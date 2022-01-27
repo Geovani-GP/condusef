@@ -2,7 +2,7 @@
                File: categorias
         Description: categorias
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 1/25/2022 17:34:10.91
+       Generated on: 1/26/2022 20:7:17.24
        Program type: Callable routine
           Main DBMS: postgresql
 */
@@ -1502,7 +1502,7 @@ namespace GeneXus.Programs {
          context.AddJavascriptSource("jquery.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxtimezone.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxgral.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("gxcfg.js", "?202212517341199");
+         context.AddJavascriptSource("gxcfg.js", "?20221262071773");
          if ( context.isSpaRequest( ) )
          {
             enableOutput();
@@ -1659,12 +1659,12 @@ namespace GeneXus.Programs {
 
       protected void define_styles( )
       {
-         AddStyleSheetFile("calendar-system.css", "?11323129");
-         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?1734189");
+         AddStyleSheetFile("calendar-system.css", "?13205289");
+         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?2071072");
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?20221251734128");
+            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?20221262071776");
             idxLst = (int)(idxLst+1);
          }
          /* End function define_styles */
@@ -1673,7 +1673,7 @@ namespace GeneXus.Programs {
       protected void include_jscripts( )
       {
          context.AddJavascriptSource("messages.spa.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("categorias.js", "?20221251734129");
+         context.AddJavascriptSource("categorias.js", "?20221262071776");
          /* End function include_jscripts */
       }
 

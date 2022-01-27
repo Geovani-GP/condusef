@@ -15,4 +15,5 @@
 /r:bin\GeneXus.Programs.Common.dll
 /r:GxBaseBuilder.dll
 /out:bin\status.dll
+status_bc.cs
 status.cs

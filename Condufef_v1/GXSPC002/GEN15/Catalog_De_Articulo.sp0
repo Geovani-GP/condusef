@@ -14,14 +14,17 @@ lwi_i(2,[ [] ]).
 ta_i(2,[ [ [ 2000,se(40000,[ [ 2000,40000 ] ],[ t('coalesce(',1),t(40000,2),t(',',7),t('0',3),t(')',4) ]) ] ] ]).
 ta_i(2,[ [] ]).
  
-las_i(2,[ [] ]).
+las_i(2,[ [ 'Nextvalue','Estatusarticulodsc','Estatusarticulodescuso' ] ]).
  
-lac_i(2,[ [] ]).
+lac_i(2,[ [ 'Nextvalue','Estatusarticulodsc','Estatusarticulodescuso' ] ]).
  
  
  
-cls_i([ 25,80 ],[ 0,0 ]).
+cls_i([ 0,0 ],[ 0,99 ]).
  
+pos_i('Nextvalue',[ 0,0,0 ]).
+pos_i('Estatusarticulodsc',[ 0,0,0 ]).
+pos_i('Estatusarticulodescuso',[ 0,0,0 ]).
  
  
  
@@ -42,7 +45,7 @@ rule_i(0,datastore(1,'CS_RPCPGML','')).
 rule_i(0,datastore(1,'JDBC_DATASOURCE','')).
 rule_i(0,datastore(1,'USE_JDBC_DATASOURCE','0')).
 rule_i(0,datastore(1,'DS_DBMS_ADDINFO','')).
-rule_i(0,datastore(1,'USER_PASSWORD',admin)).
+rule_i(0,datastore(1,'USER_PASSWORD',󻢸蘇�2�5炭)).
 rule_i(0,datastore(1,'USER_ID',postgres)).
 rule_i(0,datastore(1,'CS_CONNECT','First')).
 rule_i(0,datastore(1,'DBMS_PORT','5432')).
@@ -101,26 +104,26 @@ rule_i(0,prop('Folder',o(8,'WebApi'))).
 rule_i(0,prop('ObjDesc','Catalog_De_Articulo')).
 rule_i(0,prop('ObjName','Catalog_De_Articulo')).
 rule_i(0,maingen(15)).
-rule_i(0,file(14,'CAMBS',[ 25,83,84,85,86 ])).
-rule_i(0,loc([ 14 ],'CAMBS','','LAN')).
-rule_i(0,index(14,'CAMBS_PKEY',u,[ 25 ])).
-rule_i(0,loc([ 14,'CAMBS_PKEY' ],cambs_pkey,'','LAN')).
-rule_i(0,p(0,0,fv,19,[ intname,'CAMBS' ])).
-rule_i(0,p(0,0,fv,19,[ table,14 ])).
-rule_i(0,p(0,15,fv,19,[])).
-rule_i(0,p(0,15,fv,19,[ 'NAME',cambs ])).
-rule_i(0,p(0,15,fv,19,[ 'LOC','' ])).
-rule_i(0,p(0,15,fv,19,[ 'SCHEMA',public ])).
-rule_i(0,p(0,15,fv,19,[ 'EXTNAM','YES' ])).
-rule_i(0,p(0,15,fvix,[ 19,20 ],[])).
-rule_i(0,p(0,15,fvix,[ 19,20 ],[ 'NAME',cambs_pkey ])).
-rule_i(0,p(0,15,fvix,[ 19,20 ],[ 'LOC','' ])).
-rule_i(0,p(0,15,fvix,[ 19,20 ],[ 'SCHEMA',public ])).
-rule_i(0,p(0,15,fvix,[ 19,20 ],[ 'EXTNAM','YES' ])).
+rule_i(0,file(7,'ESTATUSARTICULO',[ 12,54,55,56,57,58,59,60 ])).
+rule_i(0,loc([ 7 ],'ESTATUSARTICULO','','LAN')).
+rule_i(0,index(7,'ESTATUSARTICULO_PKEY',u,[ 12 ])).
+rule_i(0,loc([ 7,'ESTATUSARTICULO_PKEY' ],estatusarticulo_pkey,'','LAN')).
+rule_i(0,p(0,0,fv,10,[ intname,'ESTATUSARTICULO' ])).
+rule_i(0,p(0,0,fv,10,[ table,7 ])).
+rule_i(0,p(0,15,fv,10,[])).
+rule_i(0,p(0,15,fv,10,[ 'NAME',estatusarticulo ])).
+rule_i(0,p(0,15,fv,10,[ 'LOC','' ])).
+rule_i(0,p(0,15,fv,10,[ 'SCHEMA',public ])).
+rule_i(0,p(0,15,fv,10,[ 'EXTNAM','YES' ])).
+rule_i(0,p(0,15,fvix,[ 10,9 ],[])).
+rule_i(0,p(0,15,fvix,[ 10,9 ],[ 'NAME',estatusarticulo_pkey ])).
+rule_i(0,p(0,15,fvix,[ 10,9 ],[ 'LOC','' ])).
+rule_i(0,p(0,15,fvix,[ 10,9 ],[ 'SCHEMA',public ])).
+rule_i(0,p(0,15,fvix,[ 10,9 ],[ 'EXTNAM','YES' ])).
 rule_i(0,rule([ a(22,[ '''Guardar ''','''Guardar ''','' ]) ],[],[],[])).
  
 a_i(1,1,f,'Err',[],[ [],[ t('0',3) ] ]).
-a_i(2,2,ra,2000,[],[ [],'CAMBS_PKEY',[],2 ]).
+a_i(2,2,ra,2000,[],[ [],'ESTATUSARTICULO_PKEY',[],2 ]).
  
 v_i(f,i,1,[]).
 v_i(f,o,1,'Err').
@@ -132,25 +135,26 @@ v_i(ra,o,2,40000).
  
  
  
-attri_i(40000,[ 'GXC1',int,9,0,'',0,'',[],0 ]).
-attri_i(25,[ cambsid,int,9,0,'ZZZZZZZZ9',0,cambsid,'',0 ]).
-attri_i('Errmsg',[ 'Gx_emsg',char,70,0,'',1,'Error text','',10 ]).
-attri_i('Err',[ 'Gx_err',int,3,0,'ZZ9',1,'Error code','',9 ]).
-attri_i('Cambs',[ cambs,o(cambs),0,0,'',0,cambs,'',8 ]).
-attri_i('Cambsdsc',[ cambsdsc,svchar,100,0,'',0,cambsdsc,'',7 ]).
+attri_i(40000,[ 'GXC1',int,18,0,'',0,'',[],0 ]).
+attri_i(12,[ estatusarticuloid,int,18,0,'ZZZZZZZZZZZZZZZZZ9',0,estatusarticuloid,'',0 ]).
+attri_i('Errmsg',[ 'Gx_emsg',char,70,0,'',1,'Error text','',12 ]).
+attri_i('Err',[ 'Gx_err',int,3,0,'ZZ9',1,'Error code','',11 ]).
+attri_i('Estatusarticuloid',[ estatusarticuloid,int,18,0,'ZZZZZZZZZZZZZZZZZ9',0,estatusarticuloid,'',10 ]).
+attri_i('Estatusarticulodescuso',[ estatusarticulodescuso,svchar,100,0,'',0,estatusarticulodescuso,'',9 ]).
+attri_i('Estatusarticulodsc',[ estatusarticulodsc,svchar,100,0,'',0,estatusarticulodsc,'',8 ]).
+attri_i('Estatusarticulo',[ estatusarticulo,o(estatusarticulo),0,0,'',0,estatusarticulo,'',7 ]).
 attri_i('Nextvalue',[ 'NextValue',int,4,0,'ZZZ9',0,'Next Value','',6 ]).
-attri_i('Cambsid',[ cambsid,int,9,0,'ZZZZZZZZ9',0,cambsid,'',5 ]).
  
-table_i(14,[ 'CAMBS',[ 25 ],cambs,cambs ]).
+table_i(7,[ 'ESTATUSARTICULO',[ 12 ],estatusarticulo,estatusarticulo ]).
  
-index_i(14,[ 'CAMBS_PKEY',u,[ 25 ],'CAMBS_PKEY' ]).
+index_i(7,[ 'ESTATUSARTICULO_PKEY',u,[ 12 ],'ESTATUSARTICULO_PKEY' ]).
  
-lv_i(2,2000,14).
- 
+lv_i(2,2000,7).
  
  
  
-nav_view_i(2000,[ 40000 ],[],[],[ [ 2000,[] ] ],[ [ [ 14,[ 'max(',25 ] ] ],n,[ [ 14,many ] ],[],[],[ none ],[],[],[] ]).
+ 
+nav_view_i(2000,[ 40000 ],[],[],[ [ 2000,[] ] ],[ [ [ 7,[ 'max(',12 ] ] ],n,[ [ 7,many ] ],[],[],[ none ],[],[],[] ]).
  
 agg_def_i(40000,[ t('0',3) ]).
  
@@ -165,12 +169,15 @@ agg_def_i(40000,[ t('0',3) ]).
  
  
  
-map_i(14,i,'CAMBS_PKEY',[ 'CAMBS_PKEY' ]).
-map_i(14,a,86,[ cambsfecultact ]).
-map_i(14,a,85,[ cambsfecreg ]).
-map_i(14,a,84,[ cambsusuario ]).
-map_i(14,a,83,[ cambsdsc ]).
-map_i(14,a,25,[ cambsid ]).
+map_i(7,i,'ESTATUSARTICULO_PKEY',[ 'ESTATUSARTICULO_PKEY' ]).
+map_i(7,a,60,[ estatusarticulofecultact ]).
+map_i(7,a,59,[ estatusarticulofecreg ]).
+map_i(7,a,58,[ estatusarticulousuario ]).
+map_i(7,a,57,[ estatusarticulousotabla ]).
+map_i(7,a,56,[ estatusarticuloaplicamov ]).
+map_i(7,a,55,[ estatusarticulodescuso ]).
+map_i(7,a,54,[ estatusarticulodsc ]).
+map_i(7,a,12,[ estatusarticuloid ]).
  
  
  
@@ -189,15 +196,16 @@ b_line_i(1,2,1,cmd,1,[ t('',146,1,0),t('Start',3,1,7) ]).
 b_line_i(2,2,2,cmd,1,[ t('',107,1,0),t('Nextvalue',23,1,0),t(=,10,1,0),t(40000,2,1,0),t(+,5,1,0),t('1',3,1,0) ]).
 b_line_i(3,2,2,cmd,1,[ t('',147,1,0) ]).
 b_line_i(5,2,2,cmd,1,[ t('',146,1,0),t('''Guardar ''',3,5,7) ]).
-b_line_i(6,2,3,cmd,1,[ t('',107,1,0),t([ t('Cambs',23,1,0),t('Cambsid',3,1,0) ],29,1,0),t(=,10,1,0),t('Nextvalue',23,1,0) ]).
-b_line_i(7,2,3,cmd,1,[ t('',107,1,0),t([ t('Cambs',23,1,0),t('Cambsdsc',3,1,0) ],29,1,0),t(=,10,1,0),t('Cambsdsc',23,1,0) ]).
-b_line_i(8,2,3,cmd,1,[ t('',107,1,0),t([ t('Cambs',23,8,2),t('save(',1,8,9) ],31,8,9),t(')',4,1,15) ]).
-b_line_i(9,2,3,cmd,1,[ t('',109,1,0),t([ t('Cambs',23,9,5),t('success(',1,9,12) ],31,9,12),t(')',4,1,21) ]).
-b_line_i(10,2,3,cmd,1,[ t('',132,1,0) ]).
-b_line_i(11,2,3,cmd,1,[ t('',110,1,0) ]).
-b_line_i(12,2,3,cmd,1,[ t('',157,1,0) ]).
-b_line_i(13,2,3,cmd,1,[ t('',111,1,0) ]).
-b_line_i(14,2,3,cmd,1,[ t('',147,1,0) ]).
+b_line_i(6,2,3,cmd,1,[ t('',107,1,0),t([ t('Estatusarticulo',23,1,0),t('Estatusarticuloid',3,1,0) ],29,1,0),t(=,10,1,0),t('Nextvalue',23,1,0) ]).
+b_line_i(7,2,3,cmd,1,[ t('',107,1,0),t([ t('Estatusarticulo',23,1,0),t('Estatusarticulodsc',3,1,0) ],29,1,0),t(=,10,1,0),t('Estatusarticulodsc',23,1,0) ]).
+b_line_i(8,2,3,cmd,1,[ t('',107,1,0),t([ t('Estatusarticulo',23,1,0),t('Estatusarticulodescuso',3,1,0) ],29,1,0),t(=,10,1,0),t('Estatusarticulodescuso',23,1,0) ]).
+b_line_i(9,2,3,cmd,1,[ t('',107,1,0),t([ t('Estatusarticulo',23,9,2),t('save(',1,9,19) ],31,9,19),t(')',4,1,25) ]).
+b_line_i(10,2,3,cmd,1,[ t('',109,1,0),t([ t('Estatusarticulo',23,10,5),t('success(',1,10,22) ],31,10,22),t(')',4,1,31) ]).
+b_line_i(11,2,3,cmd,1,[ t('',132,1,0) ]).
+b_line_i(12,2,3,cmd,1,[ t('',110,1,0) ]).
+b_line_i(13,2,3,cmd,1,[ t('',157,1,0) ]).
+b_line_i(14,2,3,cmd,1,[ t('',111,1,0) ]).
+b_line_i(15,2,3,cmd,1,[ t('',147,1,0) ]).
 b_line_i(1000,2,3,cmd,0,[ t('',146,0,0),t('Load',3,0,0) ]).
 b_line_i(1001,2,3,cmd,0,[ t('',155,0,0) ]).
 b_line_i(1002,2,3,cmd,0,[ t('',147,0,0) ]).
@@ -216,7 +224,7 @@ b_line_i(1002,2,3,cmd,0,[ t('',147,0,0) ]).
  
 html_i(2,html('<p>')).
 html_i(3,table(3)).
-html_i(23,html('</p>')).
+html_i(29,html('</p>')).
  
 html_sub_i(3,0,html_i(0,html('<tbody>'))).
 html_sub_i(3,4,html_i(1,row(4))).
@@ -227,23 +235,30 @@ html_sub_i(7,8,html_i(0,table(8))).
 html_sub_i(8,0,html_i(0,html('<tbody>'))).
 html_sub_i(8,9,html_i(1,row(9))).
 html_sub_i(9,10,html_i(0,cell(10))).
-html_sub_i(10,0,html_i(0,html('Marca'))).
+html_sub_i(10,0,html_i(0,html('Estatus&nbsp;Articulo'))).
 html_sub_i(9,11,html_i(1,cell(11))).
-html_sub_i(8,12,html_i(2,row(12))).
-html_sub_i(12,13,html_i(0,cell(13))).
-html_sub_i(13,0,html_i(0,html('Descripci髇'))).
-html_sub_i(12,14,html_i(1,cell(14))).
-html_sub_i(8,0,html_i(3,html('</tbody>'))).
-html_sub_i(7,15,html_i(1,table(15))).
-html_sub_i(15,0,html_i(0,html('<tbody>'))).
-html_sub_i(15,16,html_i(1,row(16))).
-html_sub_i(16,17,html_i(0,cell(17))).
-html_sub_i(17,18,html_i(0,button('''Consultar '''))).
-html_sub_i(16,19,html_i(1,cell(19))).
-html_sub_i(19,20,html_i(0,button('''Guardar '''))).
-html_sub_i(16,21,html_i(2,cell(21))).
-html_sub_i(21,22,html_i(0,button('''Cancelar'''))).
-html_sub_i(15,0,html_i(2,html('</tbody>'))).
+html_sub_i(11,12,html_i(0,t('Nextvalue',23))).
+html_sub_i(8,13,html_i(2,row(13))).
+html_sub_i(13,14,html_i(0,cell(14))).
+html_sub_i(14,0,html_i(0,html('Descripci髇'))).
+html_sub_i(13,15,html_i(1,cell(15))).
+html_sub_i(15,16,html_i(0,t('Estatusarticulodsc',23))).
+html_sub_i(8,17,html_i(3,row(17))).
+html_sub_i(17,18,html_i(0,cell(18))).
+html_sub_i(18,0,html_i(0,html('Uso'))).
+html_sub_i(17,19,html_i(1,cell(19))).
+html_sub_i(19,20,html_i(0,t('Estatusarticulodescuso',23))).
+html_sub_i(8,0,html_i(4,html('</tbody>'))).
+html_sub_i(7,21,html_i(1,table(21))).
+html_sub_i(21,0,html_i(0,html('<tbody>'))).
+html_sub_i(21,22,html_i(1,row(22))).
+html_sub_i(22,23,html_i(0,cell(23))).
+html_sub_i(23,24,html_i(0,button('''Consultar '''))).
+html_sub_i(22,25,html_i(1,cell(25))).
+html_sub_i(25,26,html_i(0,button('''Guardar '''))).
+html_sub_i(22,27,html_i(2,cell(27))).
+html_sub_i(27,28,html_i(0,button('''Cancelar'''))).
+html_sub_i(21,0,html_i(2,html('</tbody>'))).
 html_sub_i(3,0,html_i(3,html('</tbody>'))).
  
 html_tags_i(1,'Class','Form').
@@ -274,52 +289,139 @@ html_comp_i(8,'Cellspacing','2',d,[ str ]).
 html_comp_i(8,'Height',measure(46,px),v,[ measure ]).
 html_comp_i(8,'Width',measure(503,px),v,[ measure ]).
 html_comp_i(8,'Rules',none,d,[ str ]).
-html_comp_i(15,'Id','Table3',v,[ str ]).
-html_comp_i(15,'Class','Table',v,[ str ]).
-html_comp_i(15,'Title','',d,[ str ]).
-html_comp_i(15,'Align',left,d,[ str ]).
-html_comp_i(15,'Backgroundgx','',d,[ str ]).
-html_comp_i(15,'Bgcolor',rgb(0,0,0),d,[ color ]).
-html_comp_i(15,'Border','0',d,[ str ]).
-html_comp_i(15,'Bordercolor',rgb(0,0,0),d,[ color ]).
-html_comp_i(15,'Cellpadding','1',d,[ str ]).
-html_comp_i(15,'Cellspacing','2',d,[ str ]).
-html_comp_i(15,'Height',measure(24,px),v,[ measure ]).
-html_comp_i(15,'Width',measure(502,px),v,[ measure ]).
-html_comp_i(15,'Rules',none,d,[ str ]).
-html_comp_i(18,'Controlname','Button1',v,[ str ]).
-html_comp_i(18,'Class','Button',d,[ str ]).
-html_comp_i(18,'Event','''Consultar ''',v,[ str ]).
-html_comp_i(18,'Caption','Consultar',d,[ str ]).
-html_comp_i(18,'Title','Consultar',d,[ str ]).
-html_comp_i(18,'Font',font('Microsoft Sans Serif',10,[]),d,[ font ]).
-html_comp_i(18,'Forecolor',rgb(255,255,255),v,[ color ]).
-html_comp_i(18,'Backcolor',rgb(0,128,128),v,[ color ]).
-html_comp_i(18,'Border','2',d,[ str ]).
-html_comp_i(18,'Bordercolor',rgb(219,220,222),d,[ color ]).
-html_comp_i(18,'Buttonborderstyle',standard,d,[ str ]).
-html_comp_i(20,'Controlname','Button2',v,[ str ]).
-html_comp_i(20,'Class','Button',d,[ str ]).
-html_comp_i(20,'Event','''Guardar ''',v,[ str ]).
-html_comp_i(20,'Caption','Guardar',d,[ str ]).
-html_comp_i(20,'Title','Guardar',d,[ str ]).
-html_comp_i(20,'Font',font('Microsoft Sans Serif',10,[]),d,[ font ]).
-html_comp_i(20,'Forecolor',rgb(255,255,255),v,[ color ]).
-html_comp_i(20,'Backcolor',rgb(0,128,128),v,[ color ]).
-html_comp_i(20,'Border','2',d,[ str ]).
-html_comp_i(20,'Bordercolor',rgb(219,220,222),d,[ color ]).
-html_comp_i(20,'Buttonborderstyle',standard,d,[ str ]).
-html_comp_i(22,'Controlname','Button3',v,[ str ]).
-html_comp_i(22,'Class','Button',d,[ str ]).
-html_comp_i(22,'Event','''Cancelar''',v,[ str ]).
-html_comp_i(22,'Caption','Cancelar',d,[ str ]).
-html_comp_i(22,'Title','Cancelar',d,[ str ]).
-html_comp_i(22,'Font',font('Microsoft Sans Serif',10,[]),d,[ font ]).
-html_comp_i(22,'Forecolor',rgb(255,255,255),v,[ color ]).
-html_comp_i(22,'Backcolor',rgb(220,20,60),v,[ color ]).
-html_comp_i(22,'Border','2',d,[ str ]).
-html_comp_i(22,'Bordercolor',rgb(219,220,222),d,[ color ]).
-html_comp_i(22,'Buttonborderstyle',standard,d,[ str ]).
+html_comp_i(12,'Colcount',4,d,[ num ]).
+html_comp_i(12,'Attid',-6,v,[ num ]).
+html_comp_i(12,'Class','Attribute',d,[ str ]).
+html_comp_i(12,'Controlname','&Nextvalue',d,[ str ]).
+html_comp_i(12,'Returnonclick',0,d,[ bool ]).
+html_comp_i(12,'Captionclass','',d,[ str ]).
+html_comp_i(12,'Captionposition','',d,[ str ]).
+html_comp_i(12,'Captionvalue','',d,[ str ]).
+html_comp_i(12,'Controltype',2,d,[ num ]).
+html_comp_i(12,'Inputtype',0,d,[ num ]).
+html_comp_i(12,'Notifycontextchange',0,d,[ bool ]).
+html_comp_i(12,'Emptyasnull','Yes',d,[ str ]).
+html_comp_i(12,'Readonly',0,d,[ bool ]).
+html_comp_i(12,'Autocomplete',-1,d,[ bool ]).
+html_comp_i(12,'Ispassword',0,d,[ bool ]).
+html_comp_i(12,'Autoresize',-1,d,[ bool ]).
+html_comp_i(12,'Gxwidth',measure(4,chr),d,[ measure ]).
+html_comp_i(12,'Gxheight',measure(1,row),d,[ measure ]).
+html_comp_i(12,'Ismultiline',0,d,[ bool ]).
+html_comp_i(12,'Fill',-1,d,[ bool ]).
+html_comp_i(12,'Backcolor',rgb(255,255,255),d,[ color ]).
+html_comp_i(12,'Forecolor',rgb(0,0,0),d,[ color ]).
+html_comp_i(12,'Font',font('Verdana',12,[]),d,[ font ]).
+html_comp_i(12,'Horizontalalignment',right,d,[ str ]).
+html_comp_i(12,'Gxformat',0,d,[ num ]).
+html_comp_i(12,'Title','',d,[ str ]).
+html_comp_i(12,'Invitemsg','',d,[ str ]).
+html_comp_i(16,'Colcount',80,d,[ num ]).
+html_comp_i(16,'Attid',-8,v,[ num ]).
+html_comp_i(16,'Class','Attribute',d,[ str ]).
+html_comp_i(16,'Controlname','&Estatusarticulodsc',d,[ str ]).
+html_comp_i(16,'Returnonclick',0,d,[ bool ]).
+html_comp_i(16,'Captionclass','',d,[ str ]).
+html_comp_i(16,'Captionposition','',d,[ str ]).
+html_comp_i(16,'Captionvalue','',d,[ str ]).
+html_comp_i(16,'Controltype',2,d,[ num ]).
+html_comp_i(16,'Inputtype',0,d,[ num ]).
+html_comp_i(16,'Editautocomplete',0,d,[ num ]).
+html_comp_i(16,'Autocorrection',-1,d,[ bool ]).
+html_comp_i(16,'Autocapitalization','FirstWord',d,[ str ]).
+html_comp_i(16,'Notifycontextchange',0,d,[ bool ]).
+html_comp_i(16,'Emptyasnull','Yes',d,[ str ]).
+html_comp_i(16,'Readonly',0,d,[ bool ]).
+html_comp_i(16,'Autocomplete',-1,d,[ bool ]).
+html_comp_i(16,'Ispassword',0,d,[ bool ]).
+html_comp_i(16,'Autoresize',-1,d,[ bool ]).
+html_comp_i(16,'Gxwidth',measure(80,chr),d,[ measure ]).
+html_comp_i(16,'Gxheight',measure(1,row),d,[ measure ]).
+html_comp_i(16,'Ismultiline',0,d,[ bool ]).
+html_comp_i(16,'Fill',-1,d,[ bool ]).
+html_comp_i(16,'Backcolor',rgb(255,255,255),d,[ color ]).
+html_comp_i(16,'Forecolor',rgb(0,0,0),d,[ color ]).
+html_comp_i(16,'Font',font('Verdana',12,[]),d,[ font ]).
+html_comp_i(16,'Horizontalalignment',left,d,[ str ]).
+html_comp_i(16,'Gxformat',0,d,[ num ]).
+html_comp_i(16,'Title','',d,[ str ]).
+html_comp_i(16,'Invitemsg','',d,[ str ]).
+html_comp_i(20,'Colcount',80,d,[ num ]).
+html_comp_i(20,'Attid',-9,v,[ num ]).
+html_comp_i(20,'Class','Attribute',d,[ str ]).
+html_comp_i(20,'Controlname','&Estatusarticulodescuso',d,[ str ]).
+html_comp_i(20,'Returnonclick',0,d,[ bool ]).
+html_comp_i(20,'Captionclass','',d,[ str ]).
+html_comp_i(20,'Captionposition','',d,[ str ]).
+html_comp_i(20,'Captionvalue','',d,[ str ]).
+html_comp_i(20,'Controltype',2,d,[ num ]).
+html_comp_i(20,'Inputtype',0,d,[ num ]).
+html_comp_i(20,'Editautocomplete',0,d,[ num ]).
+html_comp_i(20,'Autocorrection',-1,d,[ bool ]).
+html_comp_i(20,'Autocapitalization','FirstWord',d,[ str ]).
+html_comp_i(20,'Notifycontextchange',0,d,[ bool ]).
+html_comp_i(20,'Emptyasnull','Yes',d,[ str ]).
+html_comp_i(20,'Readonly',0,d,[ bool ]).
+html_comp_i(20,'Autocomplete',-1,d,[ bool ]).
+html_comp_i(20,'Ispassword',0,d,[ bool ]).
+html_comp_i(20,'Autoresize',-1,d,[ bool ]).
+html_comp_i(20,'Gxwidth',measure(80,chr),d,[ measure ]).
+html_comp_i(20,'Gxheight',measure(1,row),d,[ measure ]).
+html_comp_i(20,'Ismultiline',0,d,[ bool ]).
+html_comp_i(20,'Fill',-1,d,[ bool ]).
+html_comp_i(20,'Backcolor',rgb(255,255,255),d,[ color ]).
+html_comp_i(20,'Forecolor',rgb(0,0,0),d,[ color ]).
+html_comp_i(20,'Font',font('Verdana',12,[]),d,[ font ]).
+html_comp_i(20,'Horizontalalignment',left,d,[ str ]).
+html_comp_i(20,'Gxformat',0,d,[ num ]).
+html_comp_i(20,'Title','',d,[ str ]).
+html_comp_i(20,'Invitemsg','',d,[ str ]).
+html_comp_i(21,'Id','Table3',v,[ str ]).
+html_comp_i(21,'Class','Table',v,[ str ]).
+html_comp_i(21,'Title','',d,[ str ]).
+html_comp_i(21,'Align',left,d,[ str ]).
+html_comp_i(21,'Backgroundgx','',d,[ str ]).
+html_comp_i(21,'Bgcolor',rgb(0,0,0),d,[ color ]).
+html_comp_i(21,'Border','0',d,[ str ]).
+html_comp_i(21,'Bordercolor',rgb(0,0,0),d,[ color ]).
+html_comp_i(21,'Cellpadding','1',d,[ str ]).
+html_comp_i(21,'Cellspacing','2',d,[ str ]).
+html_comp_i(21,'Height',measure(24,px),v,[ measure ]).
+html_comp_i(21,'Width',measure(502,px),v,[ measure ]).
+html_comp_i(21,'Rules',none,d,[ str ]).
+html_comp_i(24,'Controlname','Button1',v,[ str ]).
+html_comp_i(24,'Class','Button',d,[ str ]).
+html_comp_i(24,'Event','''Consultar ''',v,[ str ]).
+html_comp_i(24,'Caption','Consultar',d,[ str ]).
+html_comp_i(24,'Title','Consultar',d,[ str ]).
+html_comp_i(24,'Font',font('Microsoft Sans Serif',10,[]),d,[ font ]).
+html_comp_i(24,'Forecolor',rgb(255,255,255),v,[ color ]).
+html_comp_i(24,'Backcolor',rgb(0,128,128),v,[ color ]).
+html_comp_i(24,'Border','2',d,[ str ]).
+html_comp_i(24,'Bordercolor',rgb(219,220,222),d,[ color ]).
+html_comp_i(24,'Buttonborderstyle',standard,d,[ str ]).
+html_comp_i(26,'Controlname','Button2',v,[ str ]).
+html_comp_i(26,'Class','Button',d,[ str ]).
+html_comp_i(26,'Event','''Guardar ''',v,[ str ]).
+html_comp_i(26,'Caption','Guardar',d,[ str ]).
+html_comp_i(26,'Title','Guardar',d,[ str ]).
+html_comp_i(26,'Font',font('Microsoft Sans Serif',10,[]),d,[ font ]).
+html_comp_i(26,'Forecolor',rgb(255,255,255),v,[ color ]).
+html_comp_i(26,'Backcolor',rgb(0,128,128),v,[ color ]).
+html_comp_i(26,'Border','2',d,[ str ]).
+html_comp_i(26,'Bordercolor',rgb(219,220,222),d,[ color ]).
+html_comp_i(26,'Buttonborderstyle',standard,d,[ str ]).
+html_comp_i(28,'Controlname','Button3',v,[ str ]).
+html_comp_i(28,'Class','Button',d,[ str ]).
+html_comp_i(28,'Event','''Cancelar''',v,[ str ]).
+html_comp_i(28,'Caption','Cancelar',d,[ str ]).
+html_comp_i(28,'Title','Cancelar',d,[ str ]).
+html_comp_i(28,'Font',font('Microsoft Sans Serif',10,[]),d,[ font ]).
+html_comp_i(28,'Forecolor',rgb(255,255,255),v,[ color ]).
+html_comp_i(28,'Backcolor',rgb(220,20,60),v,[ color ]).
+html_comp_i(28,'Border','2',d,[ str ]).
+html_comp_i(28,'Bordercolor',rgb(219,220,222),d,[ color ]).
+html_comp_i(28,'Buttonborderstyle',standard,d,[ str ]).
  
  
  
@@ -329,11 +431,14 @@ html_comp_i(22,'Buttonborderstyle',standard,d,[ str ]).
 warn_gen_i(msg([],spc0156,[ 'Event ','''Consultar ''',' for control ''','Button1',''' is not defined.' ])).
 warn_gen_i(msg([],spc0156,[ 'Event ','''Cancelar''',' for control ''','Button3',''' is not defined.' ])).
  
+lit_i(12,1,t('Nextvalue',23),[ ctlname('&Nextvalue'),ctrltype(edit,12),pos(12),ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
+lit_i(16,1,t('Estatusarticulodsc',23),[ ctlname('&Estatusarticulodsc'),ctrltype(edit,16),pos(16),ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
+lit_i(20,1,t('Estatusarticulodescuso',23),[ ctlname('&Estatusarticulodescuso'),ctrltype(edit,20),pos(20),ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
 lit_i(8,1,table(8),[ ctlname('Table2') ]).
-lit_i(18,1,button('''Consultar '''),[ ctlname('Button1'),width(0),rect(0,0,10,10),title('Nothing') ]).
-lit_i(20,1,button('''Guardar '''),[ ctlname('Button2'),width(0),rect(0,0,10,10),title('Nothing') ]).
-lit_i(22,1,button('''Cancelar'''),[ ctlname('Button3'),width(0),rect(0,0,10,10),title('Nothing') ]).
-lit_i(15,1,table(15),[ ctlname('Table3') ]).
+lit_i(24,1,button('''Consultar '''),[ ctlname('Button1'),width(0),rect(0,0,10,10),title('Nothing') ]).
+lit_i(26,1,button('''Guardar '''),[ ctlname('Button2'),width(0),rect(0,0,10,10),title('Nothing') ]).
+lit_i(28,1,button('''Cancelar'''),[ ctlname('Button3'),width(0),rect(0,0,10,10),title('Nothing') ]).
+lit_i(21,1,table(21),[ ctlname('Table3') ]).
 lit_i(3,1,table(3),[ ctlname('Table1') ]).
 lit_i(1,1,window,[ rect(0,0,1000,1000),ctlname('Form') ]).
  
@@ -345,44 +450,47 @@ lit_i(1,1,window,[ rect(0,0,1000,1000),ctlname('Form') ]).
  
  
  
-att_prop_i(2,25,'ExternalName',cambsid,d).
-att_prop_i(2,25,'ExternalNamespace','Condufef_v1',d).
-att_prop_i(2,25,'EmptyAsNull','Yes',d).
-att_prop_i(2,25,idBasedOn,'',d).
-att_prop_i(2,25,'AUTONUMBER','0',d).
-att_prop_i(2,25,'ATT_INITIAL_VALUE','',d).
-att_prop_i(2,25,'AttValidationFailedMsg','',d).
-att_prop_i(2,25,'FullName',cambsid,v).
-att_prop_i(2,40000,'ExternalName',cambsid,d).
+att_prop_i(2,12,'ExternalName',estatusarticuloid,d).
+att_prop_i(2,12,'ExternalNamespace','Condufef_v1',d).
+att_prop_i(2,12,'EmptyAsNull','Yes',d).
+att_prop_i(2,12,idBasedOn,'',d).
+att_prop_i(2,12,'AUTONUMBER','0',d).
+att_prop_i(2,12,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,12,'AttRegEx','',d).
+att_prop_i(2,12,'AttValidationFailedMsg','',d).
+att_prop_i(2,12,'FullName',estatusarticuloid,v).
+att_prop_i(2,40000,'ExternalName',estatusarticuloid,d).
 att_prop_i(2,40000,'ExternalNamespace','Condufef_v1',d).
 att_prop_i(2,40000,'EmptyAsNull','Yes',d).
 att_prop_i(2,40000,idBasedOn,'',d).
 att_prop_i(2,40000,'AUTONUMBER','0',d).
 att_prop_i(2,40000,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,40000,'AttRegEx','',d).
 att_prop_i(2,40000,'AttValidationFailedMsg','',d).
-att_prop_i(2,40000,'FullName',cambsid,v).
+att_prop_i(2,40000,'FullName',estatusarticuloid,v).
  
  
-tbl_att_prop_i(2,14,25,'AllowNulls',n).
+tbl_att_prop_i(2,7,12,'AllowNulls',n).
  
-var_prop_i(2,'Cambsid',idBasedOn,'',v).
-var_prop_i(2,'Cambsdsc',idBasedOn,'',v).
+var_prop_i(2,'Estatusarticulodsc',idBasedOn,'',v).
+var_prop_i(2,'Estatusarticulodescuso',idBasedOn,'',v).
+var_prop_i(2,'Estatusarticuloid',idBasedOn,'',v).
  
  
  
-a_alias_i([ 'max(',25 ],'GXC1').
+a_alias_i([ 'max(',12 ],'GXC1').
 a_alias_i(se(40000,[ [ 2000,40000 ] ],[ t('coalesce(',1),t(40000,2),t(',',7),t('0',3),t(')',4) ]),'GXC1').
  
  
-struct_dt_i([ 0,14,0 ],name,cambs).
-struct_dt_i([ 0,14,0 ],namespace,'Condufef_v1').
-struct_dt_i([ 0,14,0 ],significantName,cambs).
-struct_dt_i([ 0,14,0 ],'ObjName',cambs).
-struct_dt_i([ 0,14,0 ],'ObjDesc',cambs).
-struct_dt_i([ 0,14,0 ],'ExternalName',cambs).
-struct_dt_i([ 0,14,0 ],'ExternalNamespace','Condufef_v1').
-struct_dt_i([ 0,14,0 ],key,[ 25 ]).
-struct_dt_i([ 0,14,0 ],lvl,14).
+struct_dt_i([ 0,7,0 ],name,estatusarticulo).
+struct_dt_i([ 0,7,0 ],namespace,'Condufef_v1').
+struct_dt_i([ 0,7,0 ],significantName,estatusarticulo).
+struct_dt_i([ 0,7,0 ],'ObjName',estatusarticulo).
+struct_dt_i([ 0,7,0 ],'ObjDesc',estatusarticulo).
+struct_dt_i([ 0,7,0 ],'ExternalName',estatusarticulo).
+struct_dt_i([ 0,7,0 ],'ExternalNamespace','Condufef_v1').
+struct_dt_i([ 0,7,0 ],key,[ 12 ]).
+struct_dt_i([ 0,7,0 ],lvl,7).
 struct_dt_i([ 26,1,0 ],name,'Messages').
 struct_dt_i([ 26,1,0 ],namespace,'Genexus').
 struct_dt_i([ 26,1,0 ],'ObjName','Messages').
@@ -393,51 +501,76 @@ struct_dt_i([ 26,1,0 ],collection,'True').
 struct_dt_i([ 26,1,0 ],datatype,[ 26,1,1 ]).
 struct_dt_i([ 26,1,1 ],name,'Message').
 struct_dt_i([ 26,1,1 ],namespace,'Genexus.Messages').
-struct_dt_i([ 0,14,0 ],fullname,cambs).
+struct_dt_i([ 0,7,0 ],fullname,estatusarticulo).
 struct_dt_i([ 26,1,0 ],fullname,'Messages').
 struct_dt_i([ 26,1,1 ],fullname,'Messages.Message').
  
-struct_dt_elem_i([ 0,14,0 ],1,name,'Cambsid').
-struct_dt_elem_i([ 0,14,0 ],1,camelname,cambsid).
-struct_dt_elem_i([ 0,14,0 ],1,length,9).
-struct_dt_elem_i([ 0,14,0 ],1,decimals,0).
-struct_dt_elem_i([ 0,14,0 ],1,sign,0).
-struct_dt_elem_i([ 0,14,0 ],1,type,[ 4,9,0 ]).
-struct_dt_elem_i([ 0,14,0 ],1,pic,'ZZZZZZZZ9').
-struct_dt_elem_i([ 0,14,0 ],1,collection,'False').
-struct_dt_elem_i([ 0,14,0 ],1,attributeid,'25').
-struct_dt_elem_i([ 0,14,0 ],2,name,'Cambsdsc').
-struct_dt_elem_i([ 0,14,0 ],2,camelname,cambsdsc).
-struct_dt_elem_i([ 0,14,0 ],2,length,100).
-struct_dt_elem_i([ 0,14,0 ],2,decimals,0).
-struct_dt_elem_i([ 0,14,0 ],2,type,[ 13,100,0 ]).
-struct_dt_elem_i([ 0,14,0 ],2,pic,'').
-struct_dt_elem_i([ 0,14,0 ],2,collection,'False').
-struct_dt_elem_i([ 0,14,0 ],2,attributeid,'83').
-struct_dt_elem_i([ 0,14,0 ],3,name,'Cambsusuario').
-struct_dt_elem_i([ 0,14,0 ],3,camelname,cambsusuario).
-struct_dt_elem_i([ 0,14,0 ],3,length,15).
-struct_dt_elem_i([ 0,14,0 ],3,decimals,0).
-struct_dt_elem_i([ 0,14,0 ],3,type,[ 13,15,0 ]).
-struct_dt_elem_i([ 0,14,0 ],3,pic,'').
-struct_dt_elem_i([ 0,14,0 ],3,collection,'False').
-struct_dt_elem_i([ 0,14,0 ],3,attributeid,'84').
-struct_dt_elem_i([ 0,14,0 ],4,name,'Cambsfecreg').
-struct_dt_elem_i([ 0,14,0 ],4,camelname,cambsfecreg).
-struct_dt_elem_i([ 0,14,0 ],4,length,10).
-struct_dt_elem_i([ 0,14,0 ],4,decimals,8).
-struct_dt_elem_i([ 0,14,0 ],4,type,[ 12,10,8 ]).
-struct_dt_elem_i([ 0,14,0 ],4,pic,'99/99/9999 99:99:99').
-struct_dt_elem_i([ 0,14,0 ],4,collection,'False').
-struct_dt_elem_i([ 0,14,0 ],4,attributeid,'85').
-struct_dt_elem_i([ 0,14,0 ],5,name,'Cambsfecultact').
-struct_dt_elem_i([ 0,14,0 ],5,camelname,cambsfecultact).
-struct_dt_elem_i([ 0,14,0 ],5,length,10).
-struct_dt_elem_i([ 0,14,0 ],5,decimals,8).
-struct_dt_elem_i([ 0,14,0 ],5,type,[ 12,10,8 ]).
-struct_dt_elem_i([ 0,14,0 ],5,pic,'99/99/9999 99:99:99').
-struct_dt_elem_i([ 0,14,0 ],5,collection,'False').
-struct_dt_elem_i([ 0,14,0 ],5,attributeid,'86').
+struct_dt_elem_i([ 0,7,0 ],1,name,'Estatusarticuloid').
+struct_dt_elem_i([ 0,7,0 ],1,camelname,estatusarticuloid).
+struct_dt_elem_i([ 0,7,0 ],1,length,18).
+struct_dt_elem_i([ 0,7,0 ],1,decimals,0).
+struct_dt_elem_i([ 0,7,0 ],1,sign,0).
+struct_dt_elem_i([ 0,7,0 ],1,type,[ 4,18,0 ]).
+struct_dt_elem_i([ 0,7,0 ],1,pic,'ZZZZZZZZZZZZZZZZZ9').
+struct_dt_elem_i([ 0,7,0 ],1,collection,'False').
+struct_dt_elem_i([ 0,7,0 ],1,attributeid,'12').
+struct_dt_elem_i([ 0,7,0 ],2,name,'Estatusarticulodsc').
+struct_dt_elem_i([ 0,7,0 ],2,camelname,estatusarticulodsc).
+struct_dt_elem_i([ 0,7,0 ],2,length,100).
+struct_dt_elem_i([ 0,7,0 ],2,decimals,0).
+struct_dt_elem_i([ 0,7,0 ],2,type,[ 13,100,0 ]).
+struct_dt_elem_i([ 0,7,0 ],2,pic,'').
+struct_dt_elem_i([ 0,7,0 ],2,collection,'False').
+struct_dt_elem_i([ 0,7,0 ],2,attributeid,'54').
+struct_dt_elem_i([ 0,7,0 ],3,name,'Estatusarticulodescuso').
+struct_dt_elem_i([ 0,7,0 ],3,camelname,estatusarticulodescuso).
+struct_dt_elem_i([ 0,7,0 ],3,length,100).
+struct_dt_elem_i([ 0,7,0 ],3,decimals,0).
+struct_dt_elem_i([ 0,7,0 ],3,type,[ 13,100,0 ]).
+struct_dt_elem_i([ 0,7,0 ],3,pic,'').
+struct_dt_elem_i([ 0,7,0 ],3,collection,'False').
+struct_dt_elem_i([ 0,7,0 ],3,attributeid,'55').
+struct_dt_elem_i([ 0,7,0 ],4,name,'Estatusarticuloaplicamov').
+struct_dt_elem_i([ 0,7,0 ],4,camelname,estatusarticuloaplicamov).
+struct_dt_elem_i([ 0,7,0 ],4,length,9).
+struct_dt_elem_i([ 0,7,0 ],4,decimals,0).
+struct_dt_elem_i([ 0,7,0 ],4,sign,0).
+struct_dt_elem_i([ 0,7,0 ],4,type,[ 4,9,0 ]).
+struct_dt_elem_i([ 0,7,0 ],4,pic,'ZZZZZZZZ9').
+struct_dt_elem_i([ 0,7,0 ],4,collection,'False').
+struct_dt_elem_i([ 0,7,0 ],4,attributeid,'56').
+struct_dt_elem_i([ 0,7,0 ],5,name,'Estatusarticulousotabla').
+struct_dt_elem_i([ 0,7,0 ],5,camelname,estatusarticulousotabla).
+struct_dt_elem_i([ 0,7,0 ],5,length,50).
+struct_dt_elem_i([ 0,7,0 ],5,decimals,0).
+struct_dt_elem_i([ 0,7,0 ],5,type,[ 13,50,0 ]).
+struct_dt_elem_i([ 0,7,0 ],5,pic,'').
+struct_dt_elem_i([ 0,7,0 ],5,collection,'False').
+struct_dt_elem_i([ 0,7,0 ],5,attributeid,'57').
+struct_dt_elem_i([ 0,7,0 ],6,name,'Estatusarticulousuario').
+struct_dt_elem_i([ 0,7,0 ],6,camelname,estatusarticulousuario).
+struct_dt_elem_i([ 0,7,0 ],6,length,15).
+struct_dt_elem_i([ 0,7,0 ],6,decimals,0).
+struct_dt_elem_i([ 0,7,0 ],6,type,[ 13,15,0 ]).
+struct_dt_elem_i([ 0,7,0 ],6,pic,'').
+struct_dt_elem_i([ 0,7,0 ],6,collection,'False').
+struct_dt_elem_i([ 0,7,0 ],6,attributeid,'58').
+struct_dt_elem_i([ 0,7,0 ],7,name,'Estatusarticulofecreg').
+struct_dt_elem_i([ 0,7,0 ],7,camelname,estatusarticulofecreg).
+struct_dt_elem_i([ 0,7,0 ],7,length,10).
+struct_dt_elem_i([ 0,7,0 ],7,decimals,8).
+struct_dt_elem_i([ 0,7,0 ],7,type,[ 12,10,8 ]).
+struct_dt_elem_i([ 0,7,0 ],7,pic,'99/99/9999 99:99:99').
+struct_dt_elem_i([ 0,7,0 ],7,collection,'False').
+struct_dt_elem_i([ 0,7,0 ],7,attributeid,'59').
+struct_dt_elem_i([ 0,7,0 ],8,name,'Estatusarticulofecultact').
+struct_dt_elem_i([ 0,7,0 ],8,camelname,estatusarticulofecultact).
+struct_dt_elem_i([ 0,7,0 ],8,length,10).
+struct_dt_elem_i([ 0,7,0 ],8,decimals,8).
+struct_dt_elem_i([ 0,7,0 ],8,type,[ 12,10,8 ]).
+struct_dt_elem_i([ 0,7,0 ],8,pic,'99/99/9999 99:99:99').
+struct_dt_elem_i([ 0,7,0 ],8,collection,'False').
+struct_dt_elem_i([ 0,7,0 ],8,attributeid,'60').
 struct_dt_elem_i([ 26,1,1 ],1,name,'Id').
 struct_dt_elem_i([ 26,1,1 ],1,camelname,'Id').
 struct_dt_elem_i([ 26,1,1 ],1,length,128).
@@ -486,7 +619,7 @@ struct_dt_elem_i([ 26,1,1 ],2,pic,'ZZZZZZZZ9').
  
  
 sub_info_i(146,'Start',1,3,[ [],[ 'Nextvalue' ] ]).
-sub_info_i(146,'''Guardar ''',5,14,[ [ 'Nextvalue','Cambs','Cambsdsc' ],[ 'Cambs' ] ]).
+sub_info_i(146,'''Guardar ''',5,15,[ [ 'Nextvalue','Estatusarticulo','Estatusarticulodsc','Estatusarticulodescuso' ],[ 'Estatusarticulo' ] ]).
  
  
 pgm_callprotocol_i(web,35,'CATALOG_DE_ARTICULO','INTERNAL').

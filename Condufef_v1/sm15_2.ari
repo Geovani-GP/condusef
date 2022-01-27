@@ -55,14 +55,19 @@ called_program_i(13,30,0,14).
 called_program_i(13,30,13,1).
 called_program_i(13,31,0,8).
 called_program_i(13,32,0,19).
-called_program_i(13,34,0,14).
-called_program_i(13,35,0,14).
+called_program_i(13,32,13,1).
+called_program_i(13,34,0,20).
+called_program_i(13,34,13,1).
+called_program_i(13,35,0,7).
 called_program_i(13,35,13,1).
-called_program_i(13,36,0,14).
-called_program_i(13,37,0,14).
-called_program_i(13,38,0,14).
+called_program_i(13,36,0,21).
+called_program_i(13,36,13,1).
+called_program_i(13,37,0,4).
+called_program_i(13,37,13,1).
+called_program_i(13,38,0,17).
 called_program_i(13,38,13,1).
 called_program_i(13,39,0,5).
+called_program_i(13,39,13,1).
 called_program_i(13,40,0,16).
 called_program_i(13,62,13,1).
 called_program_i(13,63,13,1).
@@ -85,7 +90,6 @@ called_program_i(13,79,13,1).
 called_program_i(13,80,13,1).
 called_program_i(13,81,13,1).
 called_program_i(13,82,13,1).
-called_program_i(13,84,13,85).
 called_program_i(13,85,33,1).
 called_program_i(13,86,13,1).
 domain_i(10,'GXDOMAINCryptoSignAlgorithm.cs').
@@ -101,8 +105,11 @@ domain_i(6,'GXDOMAINEffect.cs').
 domain_i(7,'GXDOMAINCallType.cs').
 domain_i(8,'GXDOMAINCryptoEncryptAlgorithm.cs').
 domain_i(9,'GXDOMAINCryptoHashAlgorithm.cs').
+sdt_map_i(15,area,[ 0,17,0 ]).
 sdt_map_i(15,cambs,[ 0,14,0 ]).
 sdt_map_i(15,categorias,[ 0,5,0 ]).
+sdt_map_i(15,entidadfederativa,[ 0,4,0 ]).
+sdt_map_i(15,estatusarticulo,[ 0,7,0 ]).
 sdt_map_i(15,'gpxMenuItems.gpxMenuItem',[ 26,5,6 ]).
 sdt_map_i(15,marcas,[ 0,8,0 ]).
 sdt_map_i(15,'Messages.Message',[ 26,1,1 ]).
@@ -111,5 +118,8 @@ sdt_map_i(15,origen,[ 0,16,0 ]).
 sdt_map_i(15,'SchedulerEvents',[ 26,8,0 ]).
 sdt_map_i(15,'SchedulerEvents.Day',[ 26,8,12 ]).
 sdt_map_i(15,'SchedulerEvents.event',[ 26,8,11 ]).
+sdt_map_i(15,status,[ 0,21,0 ]).
 sdt_map_i(15,'TabsMenuData.TabsMenuDataItem',[ 26,6,7 ]).
 sdt_map_i(15,'TabsMenuData.TabsMenuDataItem.SectionsItem',[ 26,6,8 ]).
+sdt_map_i(15,tipobien,[ 0,1,0 ]).
+sdt_map_i(15,tipodocumento,[ 0,20,0 ]).

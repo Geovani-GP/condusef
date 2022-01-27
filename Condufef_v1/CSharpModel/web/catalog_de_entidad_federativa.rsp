@@ -15,5 +15,5 @@
 /r:bin\GeneXus.Programs.Common.dll
 /r:GxBaseBuilder.dll
 /out:bin\catalog_de_entidad_federativa.dll
+entidadfederativa_bc.cs
 catalog_de_entidad_federativa.cs
-cambs_bc.cs

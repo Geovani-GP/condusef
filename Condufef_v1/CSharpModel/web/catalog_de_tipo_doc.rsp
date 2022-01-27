@@ -15,5 +15,5 @@
 /r:bin\GeneXus.Programs.Common.dll
 /r:GxBaseBuilder.dll
 /out:bin\catalog_de_tipo_doc.dll
-cambs_bc.cs
+tipodocumento_bc.cs
 catalog_de_tipo_doc.cs

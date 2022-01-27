@@ -2,7 +2,7 @@
                File: AppMasterPage
         Description: Application Master Page
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 1/25/2022 21:15:13.1
+       Generated on: 1/26/2022 20:7:45.49
        Program type: Callable routine
           Main DBMS: postgresql
 */
@@ -147,7 +147,7 @@ namespace GeneXus.Programs {
          {
             WebComp_Webcomp1.componentjscripts();
          }
-         context.AddJavascriptSource("appmasterpage.js", "?20221252115135");
+         context.AddJavascriptSource("appmasterpage.js", "?20221262074550");
          context.WriteHtmlTextNl( "</body>") ;
          context.WriteHtmlTextNl( "</html>") ;
          if ( context.isSpaRequest( ) )
@@ -771,7 +771,7 @@ namespace GeneXus.Programs {
 
       protected void define_styles( )
       {
-         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?1734189");
+         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?2071072");
          if ( StringUtil.StrCmp(WebComp_Webcomp1_Component, "") == 0 )
          {
             WebComp_Webcomp1 = getWebComponent(GetType(), "GeneXus.Programs", "sidebar", new Object[] {context} );
@@ -789,7 +789,7 @@ namespace GeneXus.Programs {
          idxLst = 1;
          while ( idxLst <= (getDataAreaObject() == null ? Form : getDataAreaObject().GetForm()).Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((String)(getDataAreaObject() == null ? Form : getDataAreaObject().GetForm()).Jscriptsrc.Item(idxLst))), "?202212521151313");
+            context.AddJavascriptSource(StringUtil.RTrim( ((String)(getDataAreaObject() == null ? Form : getDataAreaObject().GetForm()).Jscriptsrc.Item(idxLst))), "?20221262074558");
             idxLst = (int)(idxLst+1);
          }
          /* End function define_styles */
@@ -797,7 +797,7 @@ namespace GeneXus.Programs {
 
       protected void include_jscripts( )
       {
-         context.AddJavascriptSource("appmasterpage.js", "?202212521151313");
+         context.AddJavascriptSource("appmasterpage.js", "?20221262074558");
          /* End function include_jscripts */
       }
 

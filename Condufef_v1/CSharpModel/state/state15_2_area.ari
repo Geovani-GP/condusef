@@ -14,6 +14,7 @@ ij_object_dependency(area,[],[],[],17).
 obj_parms_i([],[]).
  
  
+has_silent_trn_i(area_bc).
  
  
  

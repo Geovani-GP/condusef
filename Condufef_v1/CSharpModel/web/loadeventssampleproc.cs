@@ -2,7 +2,7 @@
                File: LoadEventsSampleProc
         Description: Stub for LoadEventsSampleProc
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 1/25/2022 19:47:15.30
+       Generated on: 1/26/2022 20:7:12.37
        Program type: Callable routine
           Main DBMS: postgresql
 */

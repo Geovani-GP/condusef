@@ -1,0 +1,60 @@
+ 
+spec_i([ sdt,[ 0,20,0 ],tipodocumento,tipodocumento,0,spa,'10_3_15-115824' ]).
+ 
+struct_dt_i([ 0,20,0 ],name,tipodocumento).
+struct_dt_i([ 0,20,0 ],namespace,'Condufef_v1').
+struct_dt_i([ 0,20,0 ],significantName,tipodocumento).
+struct_dt_i([ 0,20,0 ],'ObjName',tipodocumento).
+struct_dt_i([ 0,20,0 ],'ObjDesc',tipodocumento).
+struct_dt_i([ 0,20,0 ],'ExternalName',tipodocumento).
+struct_dt_i([ 0,20,0 ],'ExternalNamespace','Condufef_v1').
+struct_dt_i([ 0,20,0 ],key,[ 26 ]).
+struct_dt_i([ 0,20,0 ],lvl,20).
+struct_dt_i([ 0,20,0 ],fullname,tipodocumento).
+ 
+struct_dt_elem_i([ 0,20,0 ],1,name,'Tipodocumentoid').
+struct_dt_elem_i([ 0,20,0 ],1,camelname,tipodocumentoid).
+struct_dt_elem_i([ 0,20,0 ],1,length,9).
+struct_dt_elem_i([ 0,20,0 ],1,decimals,0).
+struct_dt_elem_i([ 0,20,0 ],1,sign,0).
+struct_dt_elem_i([ 0,20,0 ],1,type,[ 4,9,0 ]).
+struct_dt_elem_i([ 0,20,0 ],1,pic,'ZZZZZZZZ9').
+struct_dt_elem_i([ 0,20,0 ],1,collection,'False').
+struct_dt_elem_i([ 0,20,0 ],1,attributeid,'26').
+struct_dt_elem_i([ 0,20,0 ],2,name,'Tipodocumentodsc').
+struct_dt_elem_i([ 0,20,0 ],2,camelname,tipodocumentodsc).
+struct_dt_elem_i([ 0,20,0 ],2,length,100).
+struct_dt_elem_i([ 0,20,0 ],2,decimals,0).
+struct_dt_elem_i([ 0,20,0 ],2,type,[ 13,100,0 ]).
+struct_dt_elem_i([ 0,20,0 ],2,pic,'').
+struct_dt_elem_i([ 0,20,0 ],2,collection,'False').
+struct_dt_elem_i([ 0,20,0 ],2,attributeid,'79').
+struct_dt_elem_i([ 0,20,0 ],3,name,'Tipodocumentousuario').
+struct_dt_elem_i([ 0,20,0 ],3,camelname,tipodocumentousuario).
+struct_dt_elem_i([ 0,20,0 ],3,length,15).
+struct_dt_elem_i([ 0,20,0 ],3,decimals,0).
+struct_dt_elem_i([ 0,20,0 ],3,type,[ 13,15,0 ]).
+struct_dt_elem_i([ 0,20,0 ],3,pic,'').
+struct_dt_elem_i([ 0,20,0 ],3,collection,'False').
+struct_dt_elem_i([ 0,20,0 ],3,attributeid,'80').
+struct_dt_elem_i([ 0,20,0 ],4,name,'Tipodocumentofecreg').
+struct_dt_elem_i([ 0,20,0 ],4,camelname,tipodocumentofecreg).
+struct_dt_elem_i([ 0,20,0 ],4,length,10).
+struct_dt_elem_i([ 0,20,0 ],4,decimals,8).
+struct_dt_elem_i([ 0,20,0 ],4,type,[ 12,10,8 ]).
+struct_dt_elem_i([ 0,20,0 ],4,pic,'99/99/9999 99:99:99').
+struct_dt_elem_i([ 0,20,0 ],4,collection,'False').
+struct_dt_elem_i([ 0,20,0 ],4,attributeid,'81').
+struct_dt_elem_i([ 0,20,0 ],5,name,'Tipodocumentofecultact').
+struct_dt_elem_i([ 0,20,0 ],5,camelname,tipodocumentofecultact).
+struct_dt_elem_i([ 0,20,0 ],5,length,10).
+struct_dt_elem_i([ 0,20,0 ],5,decimals,8).
+struct_dt_elem_i([ 0,20,0 ],5,type,[ 12,10,8 ]).
+struct_dt_elem_i([ 0,20,0 ],5,pic,'99/99/9999 99:99:99').
+struct_dt_elem_i([ 0,20,0 ],5,collection,'False').
+struct_dt_elem_i([ 0,20,0 ],5,attributeid,'82').
+ 
+ 
+ 
+ 
+ 

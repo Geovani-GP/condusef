@@ -16,3 +16,4 @@
 /r:GxBaseBuilder.dll
 /out:bin\estatusarticulo.dll
 estatusarticulo.cs
+estatusarticulo_bc.cs

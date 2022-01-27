@@ -2,7 +2,7 @@
                File: gpxMenuDemo
         Description: gpx Menu Demo
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 1/25/2022 23:17:19.48
+       Generated on: 1/26/2022 20:7:12.14
        Program type: Callable routine
           Main DBMS: postgresql
 */
@@ -108,16 +108,72 @@ namespace GeneXus.Programs {
          Gxm1gpxmenuitems.gxTpr_Title = "Catálogos";
          Gxm3gpxmenuitems_subitems = new SdtgpxMenuItems_gpxMenuItem(context);
          Gxm1gpxmenuitems.gxTpr_Subitems.Add(Gxm3gpxmenuitems_subitems, 0);
-         Gxm3gpxmenuitems_subitems.gxTpr_Title = "Catalogo De Cambs";
+         Gxm3gpxmenuitems_subitems.gxTpr_Title = "Cambs";
          Gxm3gpxmenuitems_subitems.gxTpr_Url = "Catalog_De_Cambs.aspx";
          Gxm3gpxmenuitems_subitems = new SdtgpxMenuItems_gpxMenuItem(context);
          Gxm1gpxmenuitems.gxTpr_Subitems.Add(Gxm3gpxmenuitems_subitems, 0);
-         Gxm3gpxmenuitems_subitems.gxTpr_Title = "Detalle de Cambs";
-         Gxm3gpxmenuitems_subitems.gxTpr_Url = "DetallesCambs.aspx";
+         Gxm3gpxmenuitems_subitems.gxTpr_Title = "Marca";
+         Gxm3gpxmenuitems_subitems.gxTpr_Url = "Catalog_De_Marcas.aspx";
          Gxm3gpxmenuitems_subitems = new SdtgpxMenuItems_gpxMenuItem(context);
          Gxm1gpxmenuitems.gxTpr_Subitems.Add(Gxm3gpxmenuitems_subitems, 0);
-         Gxm3gpxmenuitems_subitems.gxTpr_Title = "Download";
-         Gxm3gpxmenuitems_subitems.gxTpr_Url = "https://marketplace.genexus.com/viewproduct.aspx?597";
+         Gxm3gpxmenuitems_subitems.gxTpr_Title = "Modelo";
+         Gxm3gpxmenuitems_subitems.gxTpr_Url = "Catalog_De_Modelo.aspx";
+         Gxm3gpxmenuitems_subitems = new SdtgpxMenuItems_gpxMenuItem(context);
+         Gxm1gpxmenuitems.gxTpr_Subitems.Add(Gxm3gpxmenuitems_subitems, 0);
+         Gxm3gpxmenuitems_subitems.gxTpr_Title = "Categoria";
+         Gxm3gpxmenuitems_subitems.gxTpr_Url = "Catalog_De_Categorias.aspx";
+         Gxm3gpxmenuitems_subitems = new SdtgpxMenuItems_gpxMenuItem(context);
+         Gxm1gpxmenuitems.gxTpr_Subitems.Add(Gxm3gpxmenuitems_subitems, 0);
+         Gxm3gpxmenuitems_subitems.gxTpr_Title = "Producto";
+         Gxm3gpxmenuitems_subitems.gxTpr_Url = "";
+         Gxm3gpxmenuitems_subitems = new SdtgpxMenuItems_gpxMenuItem(context);
+         Gxm1gpxmenuitems.gxTpr_Subitems.Add(Gxm3gpxmenuitems_subitems, 0);
+         Gxm3gpxmenuitems_subitems.gxTpr_Title = "Proveedor";
+         Gxm3gpxmenuitems_subitems.gxTpr_Url = "";
+         Gxm3gpxmenuitems_subitems = new SdtgpxMenuItems_gpxMenuItem(context);
+         Gxm1gpxmenuitems.gxTpr_Subitems.Add(Gxm3gpxmenuitems_subitems, 0);
+         Gxm3gpxmenuitems_subitems.gxTpr_Title = "Almacén";
+         Gxm3gpxmenuitems_subitems.gxTpr_Url = "";
+         Gxm3gpxmenuitems_subitems = new SdtgpxMenuItems_gpxMenuItem(context);
+         Gxm1gpxmenuitems.gxTpr_Subitems.Add(Gxm3gpxmenuitems_subitems, 0);
+         Gxm3gpxmenuitems_subitems.gxTpr_Title = "Origen";
+         Gxm3gpxmenuitems_subitems.gxTpr_Url = "Catalog_De_Origen.aspx";
+         Gxm3gpxmenuitems_subitems = new SdtgpxMenuItems_gpxMenuItem(context);
+         Gxm1gpxmenuitems.gxTpr_Subitems.Add(Gxm3gpxmenuitems_subitems, 0);
+         Gxm3gpxmenuitems_subitems.gxTpr_Title = "TipoBien";
+         Gxm3gpxmenuitems_subitems.gxTpr_Url = "";
+         Gxm3gpxmenuitems_subitems = new SdtgpxMenuItems_gpxMenuItem(context);
+         Gxm1gpxmenuitems.gxTpr_Subitems.Add(Gxm3gpxmenuitems_subitems, 0);
+         Gxm3gpxmenuitems_subitems.gxTpr_Title = "TipoDocumento";
+         Gxm3gpxmenuitems_subitems.gxTpr_Url = "tCatalog_De_Tipo_Doc.aspx";
+         Gxm3gpxmenuitems_subitems = new SdtgpxMenuItems_gpxMenuItem(context);
+         Gxm1gpxmenuitems.gxTpr_Subitems.Add(Gxm3gpxmenuitems_subitems, 0);
+         Gxm3gpxmenuitems_subitems.gxTpr_Title = "EstatusArticulo";
+         Gxm3gpxmenuitems_subitems.gxTpr_Url = "Catalog_De_Articulo.aspx";
+         Gxm3gpxmenuitems_subitems = new SdtgpxMenuItems_gpxMenuItem(context);
+         Gxm1gpxmenuitems.gxTpr_Subitems.Add(Gxm3gpxmenuitems_subitems, 0);
+         Gxm3gpxmenuitems_subitems.gxTpr_Title = "Estatus";
+         Gxm3gpxmenuitems_subitems.gxTpr_Url = "Catalog_De_Status.aspx";
+         Gxm3gpxmenuitems_subitems = new SdtgpxMenuItems_gpxMenuItem(context);
+         Gxm1gpxmenuitems.gxTpr_Subitems.Add(Gxm3gpxmenuitems_subitems, 0);
+         Gxm3gpxmenuitems_subitems.gxTpr_Title = "Entidad Federativa";
+         Gxm3gpxmenuitems_subitems.gxTpr_Url = "Catalog_De_Entidad_Federativa.aspx";
+         Gxm3gpxmenuitems_subitems = new SdtgpxMenuItems_gpxMenuItem(context);
+         Gxm1gpxmenuitems.gxTpr_Subitems.Add(Gxm3gpxmenuitems_subitems, 0);
+         Gxm3gpxmenuitems_subitems.gxTpr_Title = "Empleados";
+         Gxm3gpxmenuitems_subitems.gxTpr_Url = "";
+         Gxm3gpxmenuitems_subitems = new SdtgpxMenuItems_gpxMenuItem(context);
+         Gxm1gpxmenuitems.gxTpr_Subitems.Add(Gxm3gpxmenuitems_subitems, 0);
+         Gxm3gpxmenuitems_subitems.gxTpr_Title = "Area";
+         Gxm3gpxmenuitems_subitems.gxTpr_Url = "Catalog_De_Area.aspx";
+         Gxm3gpxmenuitems_subitems = new SdtgpxMenuItems_gpxMenuItem(context);
+         Gxm1gpxmenuitems.gxTpr_Subitems.Add(Gxm3gpxmenuitems_subitems, 0);
+         Gxm3gpxmenuitems_subitems.gxTpr_Title = "Empleado Piso EXT";
+         Gxm3gpxmenuitems_subitems.gxTpr_Url = "";
+         Gxm3gpxmenuitems_subitems = new SdtgpxMenuItems_gpxMenuItem(context);
+         Gxm1gpxmenuitems.gxTpr_Subitems.Add(Gxm3gpxmenuitems_subitems, 0);
+         Gxm3gpxmenuitems_subitems.gxTpr_Title = "Meses";
+         Gxm3gpxmenuitems_subitems.gxTpr_Url = "";
          Gxm1gpxmenuitems = new SdtgpxMenuItems_gpxMenuItem(context);
          Gxm2rootcol.Add(Gxm1gpxmenuitems, 0);
          Gxm1gpxmenuitems.gxTpr_Title = "Reportes";

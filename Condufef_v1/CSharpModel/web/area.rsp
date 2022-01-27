@@ -16,3 +16,4 @@
 /r:GxBaseBuilder.dll
 /out:bin\area.dll
 area.cs
+area_bc.cs

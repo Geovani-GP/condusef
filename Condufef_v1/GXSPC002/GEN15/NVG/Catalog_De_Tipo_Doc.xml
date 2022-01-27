@@ -45,15 +45,15 @@
 <BaseTable></BaseTable>
 <NavigationTree>
 <Table>
-<TableId>14</TableId>
-<TableName>max( cambsid )  navigation</TableName>
-<Description>cambs</Description>
+<TableId>20</TableId>
+<TableName>max( tipodocumentoid )  navigation</TableName>
+<Description>tipodocumento</Description>
 <RecordsToRead>many</RecordsToRead>
 <Tables>
 <Table>
-<TableId>14</TableId>
-<TableName>CAMBS</TableName>
-<Description>cambs</Description>
+<TableId>20</TableId>
+<TableName>TIPODOCUMENTO</TableName>
+<Description>tipodocumento</Description>
 <RecordsToRead>many</RecordsToRead>
 <Tables></Tables></Table></Tables></Table></NavigationTree></Level></Event>
 <Event>
@@ -61,8 +61,8 @@
 <Command>
 <Expression>
 <Variable>
-<VarId>Cambs</VarId>
-<VarName>&amp;cambs</VarName></Variable>
+<VarId>Tipodocumento</VarId>
+<VarName>&amp;tipodocumento</VarName></Variable>
 <Token>.</Token>
 <Token>save(</Token>
 <Token>)</Token></Expression></Command></Event>
