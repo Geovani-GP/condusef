@@ -18,7 +18,7 @@ called_program_i(0,12,13,76).
 called_program_i(0,12,13,77).
 called_program_i(0,13,13,1).
 called_program_i(0,13,13,78).
-called_program_i(0,14,13,74).
+called_program_i(0,14,13,1).
 called_program_i(0,15,13,1).
 called_program_i(0,15,13,79).
 called_program_i(0,16,13,75).
@@ -53,6 +53,7 @@ called_program_i(13,1,13,85).
 called_program_i(13,29,13,1).
 called_program_i(13,30,0,14).
 called_program_i(13,30,13,1).
+called_program_i(13,30,13,86).
 called_program_i(13,31,0,8).
 called_program_i(13,32,0,19).
 called_program_i(13,32,13,1).
@@ -91,7 +92,9 @@ called_program_i(13,80,13,1).
 called_program_i(13,81,13,1).
 called_program_i(13,82,13,1).
 called_program_i(13,85,33,1).
+called_program_i(13,86,0,14).
 called_program_i(13,86,13,1).
+called_program_i(13,86,13,30).
 domain_i(10,'GXDOMAINCryptoSignAlgorithm.cs').
 domain_i(17,'GXDOMAINAPIAuthorizationStatus.cs').
 domain_i(18,'GXDOMAINMessageTypes.cs').
@@ -99,6 +102,7 @@ domain_i(19,'GXDOMAINProgressIndicatorType.cs').
 domain_i(2,'GXDOMAINIMEMode.cs').
 domain_i(20,'GXDOMAINRecentLinksOptions.cs').
 domain_i(22,'GXDOMAINCallTargetSize.cs').
+domain_i(25,'GXDOMAINGoogleTableFormatter.cs').
 domain_i(4,'GXDOMAINEncoding.cs').
 domain_i(5,'GXDOMAINTimezones.cs').
 domain_i(6,'GXDOMAINEffect.cs').

@@ -1,11 +1,23 @@
  
  
  
-pgm_main_i(web,29,'MENUPRINCIPAL',[ 15,'MENUPRINCIPAL','Menu Principal','','','','' ]).
 pgm_main_i(web,28,'LOGIN',[ 15,'LOGIN','Login','','','','' ]).
+pgm_main_i(web,29,'MENUPRINCIPAL',[ 15,'MENUPRINCIPAL','Menu Principal','','','','' ]).
 pgm_main_i(proc,6,'SCHEDULERREQUESTHANDLER',[ 15,'ASCHEDULERREQUESTHANDLER','Scheduler Request Handler','','','','HTTP' ]).
 pgm_main_i(proc,5,'LOADEVENTSSAMPLEPROC',[ 15,'ALOADEVENTSSAMPLEPROC','Load Events Sample Proc','','','','INTERNAL' ]).
  
+pgm_prop_i(web,86,'DETALLESCAMBS','USE_ENCRYPTION','NO').
+pgm_prop_i(web,86,'DETALLESCAMBS','HTTP_PROTOCOL','Unsecure').
+pgm_prop_i(web,28,'LOGIN','USE_ENCRYPTION','NO').
+pgm_prop_i(web,28,'LOGIN','HTTP_PROTOCOL','Unsecure').
+pgm_prop_i(web,1,'APPMASTERPAGE','WEB_COMP','Master').
+pgm_prop_i(web,1,'APPMASTERPAGE','USE_ENCRYPTION','NO').
+pgm_prop_i(web,1,'APPMASTERPAGE','HTTP_PROTOCOL','Unsecure').
+pgm_prop_i(web,30,'CATALOG_DE_CAMBS','USE_ENCRYPTION','NO').
+pgm_prop_i(web,30,'CATALOG_DE_CAMBS','HTTP_PROTOCOL','Unsecure').
+pgm_prop_i(trn,14,'CAMBS',idISBUSINESSCOMPONENT,'-1').
+pgm_prop_i(trn,14,'CAMBS','USE_ENCRYPTION','NO').
+pgm_prop_i(trn,14,'CAMBS','HTTP_PROTOCOL','Unsecure').
 pgm_prop_i(web,82,'GX00L0','USE_ENCRYPTION','NO').
 pgm_prop_i(web,82,'GX00L0','HTTP_PROTOCOL','Unsecure').
 pgm_prop_i(web,81,'GX00K0','USE_ENCRYPTION','NO').
@@ -48,8 +60,6 @@ pgm_prop_i(web,63,'GX0020','USE_ENCRYPTION','NO').
 pgm_prop_i(web,63,'GX0020','HTTP_PROTOCOL','Unsecure').
 pgm_prop_i(web,62,'GX0010','USE_ENCRYPTION','NO').
 pgm_prop_i(web,62,'GX0010','HTTP_PROTOCOL','Unsecure').
-pgm_prop_i(web,86,'DETALLESCAMBS','USE_ENCRYPTION','NO').
-pgm_prop_i(web,86,'DETALLESCAMBS','HTTP_PROTOCOL','Unsecure').
 pgm_prop_i(web,83,'SCHEDULERDETAILSFORM','USE_ENCRYPTION','NO').
 pgm_prop_i(web,83,'SCHEDULERDETAILSFORM','HTTP_PROTOCOL','Unsecure').
 pgm_prop_i(web,40,'CATALOG_DE_ORIGEN','USE_ENCRYPTION','NO').
@@ -70,15 +80,8 @@ pgm_prop_i(web,32,'CATALOG_DE_MODELO','USE_ENCRYPTION','NO').
 pgm_prop_i(web,32,'CATALOG_DE_MODELO','HTTP_PROTOCOL','Unsecure').
 pgm_prop_i(web,31,'CATALOG_DE_MARCAS','USE_ENCRYPTION','NO').
 pgm_prop_i(web,31,'CATALOG_DE_MARCAS','HTTP_PROTOCOL','Unsecure').
-pgm_prop_i(web,30,'CATALOG_DE_CAMBS','USE_ENCRYPTION','NO').
-pgm_prop_i(web,30,'CATALOG_DE_CAMBS','HTTP_PROTOCOL','Unsecure').
 pgm_prop_i(web,29,'MENUPRINCIPAL','USE_ENCRYPTION','NO').
 pgm_prop_i(web,29,'MENUPRINCIPAL','HTTP_PROTOCOL','Unsecure').
-pgm_prop_i(web,28,'LOGIN','USE_ENCRYPTION','NO').
-pgm_prop_i(web,28,'LOGIN','HTTP_PROTOCOL','Unsecure').
-pgm_prop_i(web,1,'APPMASTERPAGE','WEB_COMP','Master').
-pgm_prop_i(web,1,'APPMASTERPAGE','USE_ENCRYPTION','NO').
-pgm_prop_i(web,1,'APPMASTERPAGE','HTTP_PROTOCOL','Unsecure').
 pgm_prop_i(trn,21,'STATUS',idISBUSINESSCOMPONENT,'-1').
 pgm_prop_i(trn,21,'STATUS','USE_ENCRYPTION','NO').
 pgm_prop_i(trn,21,'STATUS','HTTP_PROTOCOL','Unsecure').
@@ -98,9 +101,6 @@ pgm_prop_i(trn,16,'ORIGEN','USE_ENCRYPTION','NO').
 pgm_prop_i(trn,16,'ORIGEN','HTTP_PROTOCOL','Unsecure').
 pgm_prop_i(trn,15,'USUARIOS','USE_ENCRYPTION','NO').
 pgm_prop_i(trn,15,'USUARIOS','HTTP_PROTOCOL','Unsecure').
-pgm_prop_i(trn,14,'CAMBS',idISBUSINESSCOMPONENT,'-1').
-pgm_prop_i(trn,14,'CAMBS','USE_ENCRYPTION','NO').
-pgm_prop_i(trn,14,'CAMBS','HTTP_PROTOCOL','Unsecure').
 pgm_prop_i(trn,13,'ARTICULOSMOV','USE_ENCRYPTION','NO').
 pgm_prop_i(trn,13,'ARTICULOSMOV','HTTP_PROTOCOL','Unsecure').
 pgm_prop_i(trn,12,'ETIQUETAS','USE_ENCRYPTION','NO').
@@ -192,12 +192,12 @@ datastore_i(1,'CS_RPCPGML','').
 datastore_i(1,'JDBC_DATASOURCE','').
 datastore_i(1,'USE_JDBC_DATASOURCE','0').
 datastore_i(1,'DS_DBMS_ADDINFO','').
-datastore_i(1,'USER_PASSWORD',󻢸蘇�2�5炭).
+datastore_i(1,'USER_PASSWORD',asdf).
 datastore_i(1,'USER_ID',postgres).
 datastore_i(1,'CS_CONNECT','First').
 datastore_i(1,'DBMS_PORT','5432').
 datastore_i(1,'CS_SERVER',localhost).
-datastore_i(1,'CS_DBNAME',postgres).
+datastore_i(1,'CS_DBNAME',condusef).
 datastore_i(1,'CS_FLEDSNAME','').
 datastore_i(1,'CS_DRVNAME','').
 datastore_i(1,'CS_DSNAME','').

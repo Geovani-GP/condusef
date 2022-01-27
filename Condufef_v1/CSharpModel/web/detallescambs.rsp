@@ -15,4 +15,5 @@
 /r:bin\GeneXus.Programs.Common.dll
 /r:GxBaseBuilder.dll
 /out:bin\detallescambs.dll
+cambs_bc.cs
 detallescambs.cs

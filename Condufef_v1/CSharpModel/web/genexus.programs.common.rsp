@@ -26,12 +26,12 @@ SoapParm.cs
 GxWebStd.cs
 GxFullTextSearchReindexer.cs
 GxModelInfoProvider.cs
+type_Sdtcambs.cs
 type_Sdtstatus.cs
 type_Sdttipodocumento.cs
 type_Sdtmodelos.cs
 type_Sdtarea.cs
 type_Sdtorigen.cs
-type_Sdtcambs.cs
 type_Sdtmarcas.cs
 type_Sdtestatusarticulo.cs
 type_Sdtcategorias.cs
@@ -44,6 +44,7 @@ GXDOMAINProgressIndicatorType.cs
 GXDOMAINIMEMode.cs
 GXDOMAINRecentLinksOptions.cs
 GXDOMAINCallTargetSize.cs
+GXDOMAINGoogleTableFormatter.cs
 GXDOMAINEncoding.cs
 GXDOMAINTimezones.cs
 GXDOMAINEffect.cs

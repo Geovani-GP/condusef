@@ -1,6 +1,6 @@
 spec_i([ trn,14,cambs,cambs,[],spa,'10_3_15-115824' ]).
  
-struct_i(14,0,[],[]).
+struct_i(14,0,[ 'Mode','Cambsid' ],[]).
  
 level_i(14,[ 14,[ [ 14,many ] ],[ 25 ],[],[],[],[ 25 ],'CAMBS_PKEY',[ 14,[] ],[] ]).
  
@@ -13,7 +13,7 @@ lwi_i(14,[ [] ]).
  
 ta_i(14,[ [ [ 14,25 ],[ 14,83 ],[ 14,84 ],[ 14,85 ],[ 14,86 ] ] ]).
  
-las_i(14,[ [ 25,83,84,85,86 ] ]).
+las_i(14,[ [ 'Mode','Cambsid',25,83,84,85,86 ] ]).
  
 lac_i(14,[ [ 25,83,84,85,86 ] ]).
  
@@ -47,12 +47,12 @@ rule_i(0,datastore(1,'CS_RPCPGML','')).
 rule_i(0,datastore(1,'JDBC_DATASOURCE','')).
 rule_i(0,datastore(1,'USE_JDBC_DATASOURCE','0')).
 rule_i(0,datastore(1,'DS_DBMS_ADDINFO','')).
-rule_i(0,datastore(1,'USER_PASSWORD',󻢸蘇�2�5炭)).
+rule_i(0,datastore(1,'USER_PASSWORD',asdf)).
 rule_i(0,datastore(1,'USER_ID',postgres)).
 rule_i(0,datastore(1,'CS_CONNECT','First')).
 rule_i(0,datastore(1,'DBMS_PORT','5432')).
 rule_i(0,datastore(1,'CS_SERVER',localhost)).
-rule_i(0,datastore(1,'CS_DBNAME',postgres)).
+rule_i(0,datastore(1,'CS_DBNAME',condusef)).
 rule_i(0,datastore(1,'CS_FLEDSNAME','')).
 rule_i(0,datastore(1,'CS_DRVNAME','')).
 rule_i(0,datastore(1,'CS_DSNAME','')).
@@ -158,10 +158,10 @@ rule_i(0,prop(idBC,'-1')).
 rule_i(0,prop('Folder',o(120,'Root Module'))).
 rule_i(0,prop('ObjDesc',cambs)).
 rule_i(0,prop('ObjName',cambs)).
-rule_i(14,prompt([ 14,[ [ [],25,25 ] ],[],[],[ t(o(13,'Gx00E0'),28),t(25,2) ],[],n,[] ])).
-rule_i(14,rule([ a(23,[ [ 25 ],[ t(o(13,'Gx00E0'),28),t(25,2) ] ]) ],[],[],[ 25 ])).
 rule_i(0,rule([ a(22,[ 'Dlt','"Eliminar"','' ]) ],[],[],[])).
 rule_i(0,maingen(15)).
+rule_i(0,rule([ a(10,[ 'Mode','Cambsid' ]) ],[],[ insert,update,delete,display ],[])).
+rule_i(0,parmio([ [ 'Mode',in ],[ 'Cambsid',in ] ])).
 rule_i(0,p(0,0,fv,19,[ intname,'CAMBS' ])).
 rule_i(0,p(0,0,fv,19,[ table,14 ])).
 rule_i(0,p(0,15,fv,19,[])).
@@ -178,6 +178,8 @@ rule_i(0,file(14,'CAMBS',[ 25,83,84,85,86 ])).
 rule_i(0,loc([ 14 ],'CAMBS','','LAN')).
 rule_i(0,index(14,'CAMBS_PKEY',u,[ 25 ])).
 rule_i(0,loc([ 14,'CAMBS_PKEY' ],cambs_pkey,'','LAN')).
+rule_i(14,rule([ a(3,[ t(25,2) ]) ],[],[ insert,update,delete,display ],[ 25 ])).
+rule_i(14,rule([ a(21,[ [ 25 ] ]) ],[],[ insert,update,delete,display ],[ 25 ])).
 rule_i(0,p(0,0,fv,14,[ intname,'ETIQUETAS' ])).
 rule_i(0,p(0,0,fv,14,[ table,12 ])).
 rule_i(0,p(0,15,fv,14,[])).
@@ -218,14 +220,21 @@ rule_i(0,loc([ 11,'ARTICULOS_PKEY' ],articulos_pkey,'','LAN')).
 rule_i(0,index(11,'PRODUCTOID',k,[ 19 ])).
 rule_i(0,loc([ 11,'PRODUCTOID' ],productoid,'','LAN')).
  
-a_i(1,14,t,14,[],[ [ [ [],25,25 ] ],'CAMBS_PKEY',[] ]).
+a_i(1,14,f,25,[],[ [],[ t('Cambsid',23),t('IF',17),t('.NOT.',8),t('null(',1),t('Cambsid',23),t(')',4),t(';',18) ] ]).
+a_i(2,14,f,[ t(25,2),t('Enabled',3) ],[],[ [],[ t(0,3),t(';',18) ] ]).
+a_i(3,14,t,14,[],[ [ [ [],25,25 ] ],'CAMBS_PKEY',[] ]).
  
-v_i(t,i,1,25).
-v_i(t,o,1,83).
-v_i(t,o,1,84).
-v_i(t,o,1,85).
-v_i(t,o,1,86).
+v_i(f,i,1,'Cambsid').
+v_i(f,o,1,25).
+v_i(f,i,2,[]).
+v_i(f,o,2,[ t(25,2),t('Enabled',3) ]).
+v_i(t,i,3,25).
+v_i(t,o,3,83).
+v_i(t,o,3,84).
+v_i(t,o,3,85).
+v_i(t,o,3,86).
  
+act_info_i(1,[ [ 25 ] ]).
  
  
 tbl_to_delete_i(14,[ 11,[ [ 14,25,21 ] ],c,'IARTICULOS3',[ [ 11,21 ] ],[ 19,20,21 ],'' ]).
@@ -244,6 +253,7 @@ attri_i(84,[ cambsusuario,svchar,15,0,'',0,cambsusuario,'',0 ]).
 attri_i(83,[ cambsdsc,svchar,100,0,'',0,cambsdsc,'',0 ]).
 attri_i(25,[ cambsid,int,9,0,'ZZZZZZZZ9',0,cambsid,'',0 ]).
 attri_i('Gxremove',[ 'GxRemove',int,1,0,'9',0,'Gx Remove','',5 ]).
+attri_i('Cambsid',[ cambsid,int,9,0,'ZZZZZZZZ9',0,cambsid,'',8 ]).
 attri_i('Mode',[ 'Gx_mode',char,3,0,'@!',1,'','',2 ]).
  
 table_i(11,[ 'ARTICULOS',[ 19,20,21 ],articulos,articulos ]).
@@ -433,7 +443,7 @@ html_comp_i(6,'Title','',d,[ str ]).
 html_comp_i(6,'Fill',-1,d,[ bool ]).
 html_comp_i(6,'Backcolor',rgb(255,255,255),d,[ color ]).
 html_comp_i(6,'Forecolor',rgb(0,0,0),d,[ color ]).
-html_comp_i(6,'Font',font('Open Sans Semibold',17,[]),d,[ font ]).
+html_comp_i(6,'Font',font('Microsoft Sans Serif',17,[]),d,[ font ]).
 html_comp_i(7,'Class',row,v,[ str ]).
 html_comp_i(7,'Id','',d,[ str ]).
 html_comp_i(7,'Height',measure(0,px),d,[ measure ]).
@@ -1015,6 +1025,7 @@ tbl_att_prop_i(2,11,19,'AllowNulls',n).
 tbl_att_prop_i(2,11,20,'AllowNulls',n).
 tbl_att_prop_i(2,11,21,'AllowNulls',n).
  
+var_prop_i(2,'Cambsid',idBasedOn,'',v).
  
  
  
@@ -1032,10 +1043,8 @@ trn_level_i(14,[ [ 25,83,84,85,86 ],cambs,cambs,cambs,'',83 ]).
  
  
  
-pgm_parm_i(web,74,'GX00E0',[ [ int,9,0,0 ] ],[ [ pcambsid,out,[] ] ]).
  
 pgm_callprotocol_i(trn,14,'CAMBS','INTERNAL').
-pgm_callprotocol_i(web,74,'GX00E0','INTERNAL').
  
  
  

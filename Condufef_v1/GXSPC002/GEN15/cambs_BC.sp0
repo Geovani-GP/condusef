@@ -41,12 +41,12 @@ rule_i(0,datastore(1,'CS_RPCPGML','')).
 rule_i(0,datastore(1,'JDBC_DATASOURCE','')).
 rule_i(0,datastore(1,'USE_JDBC_DATASOURCE','0')).
 rule_i(0,datastore(1,'DS_DBMS_ADDINFO','')).
-rule_i(0,datastore(1,'USER_PASSWORD',󻢸蘇�2�5炭)).
+rule_i(0,datastore(1,'USER_PASSWORD',asdf)).
 rule_i(0,datastore(1,'USER_ID',postgres)).
 rule_i(0,datastore(1,'CS_CONNECT','First')).
 rule_i(0,datastore(1,'DBMS_PORT','5432')).
 rule_i(0,datastore(1,'CS_SERVER',localhost)).
-rule_i(0,datastore(1,'CS_DBNAME',postgres)).
+rule_i(0,datastore(1,'CS_DBNAME',condusef)).
 rule_i(0,datastore(1,'CS_FLEDSNAME','')).
 rule_i(0,datastore(1,'CS_DRVNAME','')).
 rule_i(0,datastore(1,'CS_DSNAME','')).
@@ -237,6 +237,7 @@ attri_i(84,[ cambsusuario,svchar,15,0,'',0,cambsusuario,'',0 ]).
 attri_i(83,[ cambsdsc,svchar,100,0,'',0,cambsdsc,'',0 ]).
 attri_i(25,[ cambsid,int,9,0,'ZZZZZZZZ9',0,cambsid,'',0 ]).
 attri_i('Gxremove',[ 'GxRemove',int,1,0,'9',0,'Gx Remove','',5 ]).
+attri_i('Cambsid',[ cambsid,int,9,0,'ZZZZZZZZ9',0,cambsid,'',8 ]).
 attri_i('Mode',[ 'Gx_mode',char,3,0,'@!',1,'','',2 ]).
  
 table_i(11,[ 'ARTICULOS',[ 19,20,21 ],articulos,articulos ]).
@@ -472,6 +473,7 @@ tbl_att_prop_i(2,11,19,'AllowNulls',n).
 tbl_att_prop_i(2,11,20,'AllowNulls',n).
 tbl_att_prop_i(2,11,21,'AllowNulls',n).
  
+var_prop_i(2,'Cambsid',idBasedOn,'',v).
  
 i_tbl_best_trn(14,[ 14,1,cambs,cambs,[] ]).
  

@@ -2,7 +2,7 @@
                File: Login
         Description: Login
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 1/26/2022 20:7:45.63
+       Generated on: 1/26/2022 23:11:32.33
        Program type: Main program
           Main DBMS: postgresql
 */
@@ -208,7 +208,7 @@ namespace GeneXus.Programs {
          context.AddJavascriptSource("jquery.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxtimezone.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxgral.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("gxcfg.js", "?20221262074564");
+         context.AddJavascriptSource("gxcfg.js", "?202212623113234");
          if ( context.isSpaRequest( ) )
          {
             enableOutput();
@@ -565,26 +565,22 @@ namespace GeneXus.Programs {
          {
             /* Table start */
             sStyleString = "";
-            sStyleString = sStyleString + " height: " + StringUtil.LTrim( StringUtil.Str( (decimal)(38), 10, 0)) + "px" + ";";
+            sStyleString = sStyleString + " height: " + StringUtil.LTrim( StringUtil.Str( (decimal)(100), 10, 0)) + "%" + ";";
             sStyleString = sStyleString + " width: " + StringUtil.LTrim( StringUtil.Str( (decimal)(100), 10, 0)) + "%" + ";";
             GxWebStd.gx_table_start( context, tblTable1_Internalname, tblTable1_Internalname, "", "Table", 0, "", "", 1, 2, sStyleString, "", 0);
             context.WriteHtmlText( "<tbody>") ;
             context.WriteHtmlText( "<tr>") ;
-            context.WriteHtmlText( "<td>") ;
-            context.WriteHtmlText( "</td>") ;
-            context.WriteHtmlText( "</tr>") ;
-            context.WriteHtmlText( "<tr>") ;
-            context.WriteHtmlText( "<td>") ;
-            wb_table2_8_0S2( true) ;
+            context.WriteHtmlText( "<td data-align=\"center\"  style=\""+CSSHelper.Prettify( "text-align:-khtml-center;text-align:-moz-center;text-align:-webkit-center")+"\">") ;
+            wb_table2_6_0S2( true) ;
          }
          else
          {
-            wb_table2_8_0S2( false) ;
+            wb_table2_6_0S2( false) ;
          }
          return  ;
       }
 
-      protected void wb_table2_8_0S2e( bool wbgen )
+      protected void wb_table2_6_0S2e( bool wbgen )
       {
          if ( wbgen )
          {
@@ -601,19 +597,20 @@ namespace GeneXus.Programs {
          }
       }
 
-      protected void wb_table2_8_0S2( bool wbgen )
+      protected void wb_table2_6_0S2( bool wbgen )
       {
          if ( wbgen )
          {
             /* Table start */
             sStyleString = "";
-            sStyleString = sStyleString + " width: " + StringUtil.LTrim( StringUtil.Str( (decimal)(50), 10, 0)) + "%" + ";";
+            sStyleString = sStyleString + " height: " + StringUtil.LTrim( StringUtil.Str( (decimal)(206), 10, 0)) + "px" + ";";
+            sStyleString = sStyleString + " width: " + StringUtil.LTrim( StringUtil.Str( (decimal)(35), 10, 0)) + "%" + ";";
             GxWebStd.gx_table_start( context, tblTable2_Internalname, tblTable2_Internalname, "", "Table", 0, "center", "", 1, 2, sStyleString, "", 0);
             context.WriteHtmlText( "<tbody>") ;
             context.WriteHtmlText( "<tr>") ;
-            context.WriteHtmlText( "<td style=\""+CSSHelper.Prettify( "height:16px;width:68px")+"\">") ;
+            context.WriteHtmlText( "<td data-align=\"center\"  style=\""+CSSHelper.Prettify( "text-align:-khtml-center;text-align:-moz-center;text-align:-webkit-center;height:16px;width:68px")+"\">") ;
             context.WriteHtmlText( "</td>") ;
-            context.WriteHtmlText( "<td data-align=\"left\"  style=\""+CSSHelper.Prettify( "text-align:-khtml-left;text-align:-moz-left;text-align:-webkit-left;width:25px")+"\">") ;
+            context.WriteHtmlText( "<td data-align=\"center\"  style=\""+CSSHelper.Prettify( "text-align:-khtml-center;text-align:-moz-center;text-align:-webkit-center")+"\">") ;
             /* Static images/pictures */
             ClassString = "Image";
             StyleString = "";
@@ -621,34 +618,34 @@ namespace GeneXus.Programs {
             context.WriteHtmlText( "</td>") ;
             context.WriteHtmlText( "</tr>") ;
             context.WriteHtmlText( "<tr>") ;
-            context.WriteHtmlText( "<td style=\""+CSSHelper.Prettify( "height:16px;width:68px")+"\">") ;
+            context.WriteHtmlText( "<td data-align=\"center\"  style=\""+CSSHelper.Prettify( "text-align:-khtml-center;text-align:-moz-center;text-align:-webkit-center;height:35px")+"\">") ;
             context.WriteHtmlText( "Usuario") ;
             context.WriteHtmlText( "</td>") ;
-            context.WriteHtmlText( "<td data-align=\"left\"  style=\""+CSSHelper.Prettify( "text-align:-khtml-left;text-align:-moz-left;text-align:-webkit-left;width:25px")+"\">") ;
+            context.WriteHtmlText( "<td data-align=\"left\"  style=\""+CSSHelper.Prettify( "text-align:-khtml-left;text-align:-moz-left;text-align:-webkit-left;height:100%;width:100%")+"\">") ;
             /* Single line edit */
-            TempTags = "  onfocus=\"gx.evt.onfocus(this, 16,'',false,'',0)\"";
-            GxWebStd.gx_single_line_edit( context, edtavUsuario_Internalname, AV5usuario, StringUtil.RTrim( context.localUtil.Format( AV5usuario, "")), TempTags+" onchange=\"gx.evt.onchange(this)\" "+" onblur=\""+""+";gx.evt.onblur(this,16);\"", "'"+""+"'"+",false,"+"'"+""+"'", "", "", "", "", edtavUsuario_Jsonclick, 0, "Attribute", "", "", "", 1, 1, 0, "text", "", 25, "chr", 1, "row", 25, 0, 0, 0, 1, -1, -1, true, "", "left", true, "HLP_Login.htm");
+            TempTags = "  onfocus=\"gx.evt.onfocus(this, 14,'',false,'',0)\"";
+            GxWebStd.gx_single_line_edit( context, edtavUsuario_Internalname, AV5usuario, StringUtil.RTrim( context.localUtil.Format( AV5usuario, "")), TempTags+" onchange=\"gx.evt.onchange(this)\" "+" onblur=\""+""+";gx.evt.onblur(this,14);\"", "'"+""+"'"+",false,"+"'"+""+"'", "", "", "", "", edtavUsuario_Jsonclick, 0, "Attribute", "", "", "", 1, 1, 0, "text", "", 100, "%", 100, "%", 25, 0, 0, 0, 1, -1, -1, true, "", "left", true, "HLP_Login.htm");
             context.WriteHtmlText( "</td>") ;
             context.WriteHtmlText( "</tr>") ;
             context.WriteHtmlText( "<tr>") ;
-            context.WriteHtmlText( "<td style=\""+CSSHelper.Prettify( "height:43px")+"\">") ;
+            context.WriteHtmlText( "<td data-align=\"center\"  style=\""+CSSHelper.Prettify( "text-align:-khtml-center;text-align:-moz-center;text-align:-webkit-center;height:35px")+"\">") ;
             context.WriteHtmlText( "Contraseña") ;
             context.WriteHtmlText( "</td>") ;
             context.WriteHtmlText( "<td data-align=\"left\"  style=\""+CSSHelper.Prettify( "text-align:-khtml-left;text-align:-moz-left;text-align:-webkit-left")+"\">") ;
             /* Single line edit */
-            TempTags = "  onfocus=\"gx.evt.onfocus(this, 20,'',false,'',0)\"";
-            GxWebStd.gx_single_line_edit( context, edtavContrasena_Internalname, AV6contrasena, StringUtil.RTrim( context.localUtil.Format( AV6contrasena, "")), TempTags+" onchange=\"gx.evt.onchange(this)\" "+" onblur=\""+""+";gx.evt.onblur(this,20);\"", "'"+""+"'"+",false,"+"'"+""+"'", "", "", "", "", edtavContrasena_Jsonclick, 0, "Attribute", "", "", "", 1, 1, 0, "text", "", 207, "px", 36, "px", 10, -1, 0, 0, 1, 0, -1, true, "", "left", true, "HLP_Login.htm");
+            TempTags = "  onfocus=\"gx.evt.onfocus(this, 18,'',false,'',0)\"";
+            GxWebStd.gx_single_line_edit( context, edtavContrasena_Internalname, AV6contrasena, StringUtil.RTrim( context.localUtil.Format( AV6contrasena, "")), TempTags+" onchange=\"gx.evt.onchange(this)\" "+" onblur=\""+""+";gx.evt.onblur(this,18);\"", "'"+""+"'"+",false,"+"'"+""+"'", "", "", "", "", edtavContrasena_Jsonclick, 0, "Attribute", "", "", "", 1, 1, 0, "text", "", 100, "%", 100, "%", 10, -1, 0, 0, 1, 0, -1, true, "", "left", true, "HLP_Login.htm");
             context.WriteHtmlText( "</td>") ;
             context.WriteHtmlText( "</tr>") ;
             context.WriteHtmlText( "<tr>") ;
-            context.WriteHtmlText( "<td style=\""+CSSHelper.Prettify( "height:35px")+"\">") ;
+            context.WriteHtmlText( "<td>") ;
             ClassString = "ErrorViewer";
             StyleString = "";
             GxWebStd.gx_msg_list( context, "", context.GX_msglist.DisplayMode, StyleString, ClassString, "", "false");
             context.WriteHtmlText( "</td>") ;
             context.WriteHtmlText( "<td>") ;
             context.WriteHtmlText( "&nbsp;") ;
-            TempTags = "  onfocus=\"gx.evt.onfocus(this, 25,'',false,'',0)\"";
+            TempTags = "  onfocus=\"gx.evt.onfocus(this, 23,'',false,'',0)\"";
             ClassString = "Button";
             StyleString = "color:#FFFFFF; background-color:#008080;";
             GxWebStd.gx_button_ctrl( context, bttButton1_Internalname, "", "INICIAR SESIÓN ", bttButton1_Jsonclick, 5, "INICIAR SESIÓN ", "", StyleString, ClassString, 1, 1, "standard", "'"+""+"'"+",false,"+"'"+"E\\'INICIAR SESIÓN \\'."+"'", TempTags, "", context.GetButtonType( ), "HLP_Login.htm");
@@ -657,11 +654,11 @@ namespace GeneXus.Programs {
             context.WriteHtmlText( "</tbody>") ;
             /* End of table */
             context.WriteHtmlText( "</table>") ;
-            wb_table2_8_0S2e( true) ;
+            wb_table2_6_0S2e( true) ;
          }
          else
          {
-            wb_table2_8_0S2e( false) ;
+            wb_table2_6_0S2e( false) ;
          }
       }
 
@@ -696,11 +693,11 @@ namespace GeneXus.Programs {
 
       protected void define_styles( )
       {
-         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?2071072");
+         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?1734189");
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?20221262074571");
+            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?202212623113241");
             idxLst = (int)(idxLst+1);
          }
          /* End function define_styles */
@@ -709,7 +706,7 @@ namespace GeneXus.Programs {
       protected void include_jscripts( )
       {
          context.AddJavascriptSource("messages.spa.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("login.js", "?20221262074571");
+         context.AddJavascriptSource("login.js", "?202212623113241");
          /* End function include_jscripts */
       }
 

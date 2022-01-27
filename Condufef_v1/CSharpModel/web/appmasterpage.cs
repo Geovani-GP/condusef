@@ -2,7 +2,7 @@
                File: AppMasterPage
         Description: Application Master Page
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 1/26/2022 20:7:45.49
+       Generated on: 1/26/2022 23:4:48.33
        Program type: Callable routine
           Main DBMS: postgresql
 */
@@ -147,7 +147,7 @@ namespace GeneXus.Programs {
          {
             WebComp_Webcomp1.componentjscripts();
          }
-         context.AddJavascriptSource("appmasterpage.js", "?20221262074550");
+         context.AddJavascriptSource("appmasterpage.js", "?20221262344834");
          context.WriteHtmlTextNl( "</body>") ;
          context.WriteHtmlTextNl( "</html>") ;
          if ( context.isSpaRequest( ) )
@@ -328,13 +328,13 @@ namespace GeneXus.Programs {
                      sEvtType = StringUtil.Right( sEvt, (short)(StringUtil.Len( sEvt)-2));
                      sEvt = StringUtil.Right( sEvt, (short)(StringUtil.Len( sEvt)-6));
                      nCmpId = (short)(NumberUtil.Val( sEvtType, "."));
-                     if ( nCmpId == 23 )
+                     if ( nCmpId == 30 )
                      {
                         WebComp_Webcomp1 = getWebComponent(GetType(), "GeneXus.Programs", "sidebar", new Object[] {context} );
                         WebComp_Webcomp1.ComponentInit();
                         WebComp_Webcomp1.Name = "sidebar";
                         WebComp_Webcomp1_Component = "sidebar";
-                        WebComp_Webcomp1.componentprocess("MPW0023", "", sEvt);
+                        WebComp_Webcomp1.componentprocess("MPW0030", "", sEvt);
                      }
                   }
                   if ( context.wbHandled == 0 )
@@ -438,12 +438,12 @@ namespace GeneXus.Programs {
                if ( ( StringUtil.Len( WebComp_Webcomp1_Component) != 0 ) && ( StringUtil.StrCmp(WebComp_Webcomp1_Component, "sidebar") == 0 ) )
                {
                   WebComp_Webcomp1.setjustcreated();
-                  WebComp_Webcomp1.componentprepare(new Object[] {(String)"MPW0023",(String)""});
+                  WebComp_Webcomp1.componentprepare(new Object[] {(String)"MPW0030",(String)""});
                   WebComp_Webcomp1.componentbind(new Object[] {});
                }
                if ( isFullAjaxMode( ) )
                {
-                  context.httpAjaxContext.ajax_rspStartCmp("gxHTMLWrpMPW0023"+"");
+                  context.httpAjaxContext.ajax_rspStartCmp("gxHTMLWrpMPW0030"+"");
                   WebComp_Webcomp1.componentdraw();
                   context.httpAjaxContext.ajax_rspEndCmp();
                }
@@ -539,7 +539,7 @@ namespace GeneXus.Programs {
          if ( StringUtil.Len( WebComp_Webcomp1_Component) != 0 )
          {
             WebComp_Webcomp1.setjustcreated();
-            WebComp_Webcomp1.componentprepare(new Object[] {(String)"MPW0023",(String)""});
+            WebComp_Webcomp1.componentprepare(new Object[] {(String)"MPW0030",(String)""});
             WebComp_Webcomp1.componentbind(new Object[] {});
          }
       }
@@ -580,16 +580,16 @@ namespace GeneXus.Programs {
             context.WriteHtmlText( "</tr>") ;
             context.WriteHtmlText( "<tr>") ;
             context.WriteHtmlText( "<td colspan=\"2\" >") ;
-            wb_table3_20_012( true) ;
+            wb_table3_27_012( true) ;
          }
          else
          {
-            wb_table3_20_012( false) ;
+            wb_table3_27_012( false) ;
          }
          return  ;
       }
 
-      protected void wb_table3_20_012e( bool wbgen )
+      protected void wb_table3_27_012e( bool wbgen )
       {
          if ( wbgen )
          {
@@ -606,7 +606,7 @@ namespace GeneXus.Programs {
          }
       }
 
-      protected void wb_table3_20_012( bool wbgen )
+      protected void wb_table3_27_012( bool wbgen )
       {
          if ( wbgen )
          {
@@ -623,13 +623,13 @@ namespace GeneXus.Programs {
                /* WebComponent */
                context.WriteHtmlText( "<div") ;
                GxWebStd.ClassAttribute( context, "gxwebcomponent");
-               context.WriteHtmlText( " id=\""+"gxHTMLWrpMPW0023"+""+"\""+"") ;
+               context.WriteHtmlText( " id=\""+"gxHTMLWrpMPW0030"+""+"\""+"") ;
                context.WriteHtmlText( ">") ;
                if ( StringUtil.Len( WebComp_Webcomp1_Component) != 0 )
                {
                   if ( ! context.isAjaxRequest( ) )
                   {
-                     context.httpAjaxContext.ajax_rspStartCmp("gxHTMLWrpMPW0023"+"");
+                     context.httpAjaxContext.ajax_rspStartCmp("gxHTMLWrpMPW0030"+"");
                   }
                   WebComp_Webcomp1.componentdraw();
                   if ( ! context.isAjaxRequest( ) )
@@ -671,11 +671,11 @@ namespace GeneXus.Programs {
             context.WriteHtmlText( "</tbody>") ;
             /* End of table */
             context.WriteHtmlText( "</table>") ;
-            wb_table3_20_012e( true) ;
+            wb_table3_27_012e( true) ;
          }
          else
          {
-            wb_table3_20_012e( false) ;
+            wb_table3_27_012e( false) ;
          }
       }
 
@@ -686,41 +686,39 @@ namespace GeneXus.Programs {
             /* Table start */
             sStyleString = "";
             sStyleString = sStyleString + "background-color: " + context.BuildHTMLColor( (int)(0x808080)) + ";";
-            sStyleString = sStyleString + " height: " + StringUtil.LTrim( StringUtil.Str( (decimal)(20), 10, 0)) + "%" + ";";
+            sStyleString = sStyleString + " height: " + StringUtil.LTrim( StringUtil.Str( (decimal)(90), 10, 0)) + "px" + ";";
             sStyleString = sStyleString + " width: " + StringUtil.LTrim( StringUtil.Str( (decimal)(100), 10, 0)) + "%" + ";";
-            GxWebStd.gx_table_start( context, tblTable2_Internalname, tblTable2_Internalname, "", "TableTop", 0, "", "", 0, 0, sStyleString, "", 0);
+            GxWebStd.gx_table_start( context, tblTable2_Internalname, tblTable2_Internalname, "", "TableTop", 0, "center", "", 0, 0, sStyleString, "", 0);
             context.WriteHtmlText( "<tbody>") ;
             context.WriteHtmlText( "<tr>") ;
-            context.WriteHtmlText( "<td style=\""+CSSHelper.Prettify( "width:224px")+"\">") ;
-            context.WriteHtmlText( "&nbsp; ") ;
+            context.WriteHtmlText( "<td data-align=\"center\" background=\"\"  style=\""+CSSHelper.Prettify( "text-align:-khtml-center;text-align:-moz-center;text-align:-webkit-center;height:90px;width:150px")+"\" class='GridTabMainTable'>") ;
             /* Static images/pictures */
             ClassString = "Image";
             StyleString = "";
-            GxWebStd.gx_bitmap( context, imgImage1_Internalname, context.GetImagePath( "4501a883-ab40-469d-8b9a-8ccc7365672d", "", context.GetTheme( )), "", "", "", context.GetTheme( ), 1, 1, "", "", 0, 0, 0, "px", 100, "%", 0, 0, 0, "", "", StyleString, ClassString, "", "", "", "", "", "", 1, false, false, "HLP_AppMasterPage.htm");
+            GxWebStd.gx_bitmap( context, imgImage1_Internalname, context.GetImagePath( "4501a883-ab40-469d-8b9a-8ccc7365672d", "", context.GetTheme( )), "", "", "", context.GetTheme( ), 1, 1, "", "", 0, 0, 100, "%", 100, "%", 0, 0, 0, "", "", StyleString, ClassString, "", "", "", "", "", "", 1, false, false, "HLP_AppMasterPage.htm");
+            context.WriteHtmlText( "&nbsp; ") ;
             context.WriteHtmlText( "</td>") ;
             context.WriteHtmlText( "<td style=\""+CSSHelper.Prettify( "width:1px")+"\">") ;
             context.WriteHtmlText( "</td>") ;
-            context.WriteHtmlText( "<td data-align=\"center\"  style=\""+CSSHelper.Prettify( "text-align:-khtml-center;text-align:-moz-center;text-align:-webkit-center;height:75px;width:512px")+"\">") ;
+            context.WriteHtmlText( "<td data-align=\"center\"  style=\""+CSSHelper.Prettify( "text-align:-khtml-center;text-align:-moz-center;text-align:-webkit-center;height:90px;width:512px")+"\">") ;
             /* Single line edit */
             TempTags = "  onfocus=\"gx.evt.onfocus(this, 11,'',true,'',0)\"";
             GxWebStd.gx_single_line_edit( context, edtavTitulo_Internalname, AV11Titulo, StringUtil.RTrim( context.localUtil.Format( AV11Titulo, "")), TempTags+" onchange=\"gx.evt.onchange(this)\" "+" onblur=\""+""+";gx.evt.onblur(this,11);\"", "'"+""+"'"+",true,"+"'"+"E_MPAGE."+"'", "", "", "", "", edtavTitulo_Jsonclick, 0, "Attribute", "font-family:'Verdana'; font-size:17.0pt; font-weight:bold; font-style:normal; color:#FFFFFF;", "", "", 1, edtavTitulo_Enabled, 0, "text", "", 20, "chr", 1, "row", 20, 0, 0, 0, 1, -1, -1, true, "", "left", true, "HLP_AppMasterPage.htm");
             context.WriteHtmlText( "</td>") ;
-            context.WriteHtmlText( "<td data-align=\"left\"  style=\""+CSSHelper.Prettify( "text-align:-khtml-left;text-align:-moz-left;text-align:-webkit-left;width:354px")+"\">") ;
-            context.WriteHtmlText( "<p></p>") ;
-            context.WriteHtmlText( "<p>") ;
-            /* Text block */
-            GxWebStd.gx_label_ctrl( context, lblTextblock2_Internalname, "Usuario: ", "", "", lblTextblock2_Jsonclick, "'"+""+"'"+",true,"+"'"+"E_MPAGE."+"'", "color:#FFFFFF;", "TextBlock", 0, "", 1, 1, 0, "HLP_AppMasterPage.htm");
-            /* Single line edit */
-            TempTags = "  onfocus=\"gx.evt.onfocus(this, 14,'',true,'',0)\"";
-            GxWebStd.gx_single_line_edit( context, edtavUsuario_Internalname, AV8usuario, StringUtil.RTrim( context.localUtil.Format( AV8usuario, "")), TempTags+" onchange=\"gx.evt.onchange(this)\" "+" onblur=\""+""+";gx.evt.onblur(this,14);\"", "'"+""+"'"+",true,"+"'"+"E_MPAGE."+"'", "", "", "", "", edtavUsuario_Jsonclick, 0, "Attribute", "color:#FFFFFF;", "", "", 1, edtavUsuario_Enabled, 0, "text", "", 25, "chr", 1, "row", 25, 0, 0, 0, 1, -1, -1, true, "", "left", true, "HLP_AppMasterPage.htm");
-            context.WriteHtmlText( "</p>") ;
-            context.WriteHtmlText( "<p>") ;
-            /* Text block */
-            GxWebStd.gx_label_ctrl( context, lblTextblock1_Internalname, "Fecha: ", "", "", lblTextblock1_Jsonclick, "'"+""+"'"+",true,"+"'"+"E_MPAGE."+"'", "color:#FFFFFF;", "TextBlock", 0, "", 1, 1, 0, "HLP_AppMasterPage.htm");
-            /* Single line edit */
-            TempTags = "  onfocus=\"gx.evt.onfocus(this, 16,'',true,'',0)\"";
-            GxWebStd.gx_single_line_edit( context, edtavFecha_Internalname, StringUtil.RTrim( AV10fecha), StringUtil.RTrim( context.localUtil.Format( AV10fecha, "")), TempTags+" onchange=\"gx.evt.onchange(this)\" "+" onblur=\""+""+";gx.evt.onblur(this,16);\"", "'"+""+"'"+",true,"+"'"+"E_MPAGE."+"'", "", "", "", "", edtavFecha_Jsonclick, 0, "Attribute", "color:#FFFFFF;", "", "", 1, edtavFecha_Enabled, 0, "text", "", 177, "px", 36, "px", 20, 0, 0, 0, 1, -1, -1, true, "", "left", true, "HLP_AppMasterPage.htm");
-            context.WriteHtmlText( "</p>") ;
+            context.WriteHtmlText( "<td data-align=\"center\"  style=\""+CSSHelper.Prettify( "text-align:-khtml-center;text-align:-moz-center;text-align:-webkit-center;vertical-align:bottom;height:90px")+"\">") ;
+            wb_table4_13_012( true) ;
+         }
+         else
+         {
+            wb_table4_13_012( false) ;
+         }
+         return  ;
+      }
+
+      protected void wb_table4_13_012e( bool wbgen )
+      {
+         if ( wbgen )
+         {
             context.WriteHtmlText( "</td>") ;
             context.WriteHtmlText( "</tr>") ;
             context.WriteHtmlText( "<tr>") ;
@@ -733,6 +731,49 @@ namespace GeneXus.Programs {
          else
          {
             wb_table2_5_012e( false) ;
+         }
+      }
+
+      protected void wb_table4_13_012( bool wbgen )
+      {
+         if ( wbgen )
+         {
+            /* Table start */
+            sStyleString = "";
+            sStyleString = sStyleString + " height: " + StringUtil.LTrim( StringUtil.Str( (decimal)(86), 10, 0)) + "px" + ";";
+            sStyleString = sStyleString + " width: " + StringUtil.LTrim( StringUtil.Str( (decimal)(352), 10, 0)) + "px" + ";";
+            GxWebStd.gx_table_start( context, tblTable4_Internalname, tblTable4_Internalname, "", "Table", 0, "", "", 1, 2, sStyleString, "", 0);
+            context.WriteHtmlText( "<tbody>") ;
+            context.WriteHtmlText( "<tr>") ;
+            context.WriteHtmlText( "<td style=\""+CSSHelper.Prettify( "height:40px;width:1px")+"\">") ;
+            /* Text block */
+            GxWebStd.gx_label_ctrl( context, lblTextblock2_Internalname, "Usuario: ", "", "", lblTextblock2_Jsonclick, "'"+""+"'"+",true,"+"'"+"E_MPAGE."+"'", "color:#FFFFFF;", "TextBlock", 0, "", 1, 1, 0, "HLP_AppMasterPage.htm");
+            context.WriteHtmlText( "</td>") ;
+            context.WriteHtmlText( "<td data-align=\"center\"  style=\""+CSSHelper.Prettify( "text-align:-khtml-center;text-align:-moz-center;text-align:-webkit-center")+"\">") ;
+            /* Single line edit */
+            TempTags = "  onfocus=\"gx.evt.onfocus(this, 18,'',true,'',0)\"";
+            GxWebStd.gx_single_line_edit( context, edtavUsuario_Internalname, AV8usuario, StringUtil.RTrim( context.localUtil.Format( AV8usuario, "")), TempTags+" onchange=\"gx.evt.onchange(this)\" "+" onblur=\""+""+";gx.evt.onblur(this,18);\"", "'"+""+"'"+",true,"+"'"+"E_MPAGE."+"'", "", "", "", "", edtavUsuario_Jsonclick, 0, "Attribute", "color:#FFFFFF;", "", "", 1, edtavUsuario_Enabled, 0, "text", "", 25, "chr", 1, "row", 25, 0, 0, 0, 1, -1, -1, true, "", "left", true, "HLP_AppMasterPage.htm");
+            context.WriteHtmlText( "</td>") ;
+            context.WriteHtmlText( "</tr>") ;
+            context.WriteHtmlText( "<tr>") ;
+            context.WriteHtmlText( "<td>") ;
+            /* Text block */
+            GxWebStd.gx_label_ctrl( context, lblTextblock1_Internalname, "Fecha: ", "", "", lblTextblock1_Jsonclick, "'"+""+"'"+",true,"+"'"+"E_MPAGE."+"'", "color:#FFFFFF;", "TextBlock", 0, "", 1, 1, 0, "HLP_AppMasterPage.htm");
+            context.WriteHtmlText( "</td>") ;
+            context.WriteHtmlText( "<td data-align=\"center\"  style=\""+CSSHelper.Prettify( "text-align:-khtml-center;text-align:-moz-center;text-align:-webkit-center")+"\">") ;
+            /* Single line edit */
+            TempTags = "  onfocus=\"gx.evt.onfocus(this, 23,'',true,'',0)\"";
+            GxWebStd.gx_single_line_edit( context, edtavFecha_Internalname, StringUtil.RTrim( AV10fecha), StringUtil.RTrim( context.localUtil.Format( AV10fecha, "")), TempTags+" onchange=\"gx.evt.onchange(this)\" "+" onblur=\""+""+";gx.evt.onblur(this,23);\"", "'"+""+"'"+",true,"+"'"+"E_MPAGE."+"'", "", "", "", "", edtavFecha_Jsonclick, 0, "Attribute", "color:#FFFFFF;", "", "", 1, edtavFecha_Enabled, 0, "text", "", 184, "px", 36, "px", 20, 0, 0, 0, 1, -1, -1, true, "", "left", true, "HLP_AppMasterPage.htm");
+            context.WriteHtmlText( "</td>") ;
+            context.WriteHtmlText( "</tr>") ;
+            context.WriteHtmlText( "</tbody>") ;
+            /* End of table */
+            context.WriteHtmlText( "</table>") ;
+            wb_table4_13_012e( true) ;
+         }
+         else
+         {
+            wb_table4_13_012e( false) ;
          }
       }
 
@@ -771,7 +812,7 @@ namespace GeneXus.Programs {
 
       protected void define_styles( )
       {
-         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?2071072");
+         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?1734189");
          if ( StringUtil.StrCmp(WebComp_Webcomp1_Component, "") == 0 )
          {
             WebComp_Webcomp1 = getWebComponent(GetType(), "GeneXus.Programs", "sidebar", new Object[] {context} );
@@ -789,7 +830,7 @@ namespace GeneXus.Programs {
          idxLst = 1;
          while ( idxLst <= (getDataAreaObject() == null ? Form : getDataAreaObject().GetForm()).Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((String)(getDataAreaObject() == null ? Form : getDataAreaObject().GetForm()).Jscriptsrc.Item(idxLst))), "?20221262074558");
+            context.AddJavascriptSource(StringUtil.RTrim( ((String)(getDataAreaObject() == null ? Form : getDataAreaObject().GetForm()).Jscriptsrc.Item(idxLst))), "?20221262344841");
             idxLst = (int)(idxLst+1);
          }
          /* End function define_styles */
@@ -797,7 +838,7 @@ namespace GeneXus.Programs {
 
       protected void include_jscripts( )
       {
-         context.AddJavascriptSource("appmasterpage.js", "?20221262074558");
+         context.AddJavascriptSource("appmasterpage.js", "?20221262344841");
          /* End function include_jscripts */
       }
 
@@ -809,6 +850,7 @@ namespace GeneXus.Programs {
          edtavUsuario_Internalname = "vUSUARIO_MPAGE";
          lblTextblock1_Internalname = "TEXTBLOCK1_MPAGE";
          edtavFecha_Internalname = "vFECHA_MPAGE";
+         tblTable4_Internalname = "TABLE4_MPAGE";
          tblTable2_Internalname = "TABLE2_MPAGE";
          tblTable3_Internalname = "TABLE3_MPAGE";
          tblTable1_Internalname = "TABLE1_MPAGE";
@@ -927,6 +969,7 @@ namespace GeneXus.Programs {
       private String imgImage1_Internalname ;
       private String TempTags ;
       private String edtavTitulo_Jsonclick ;
+      private String tblTable4_Internalname ;
       private String lblTextblock2_Internalname ;
       private String lblTextblock2_Jsonclick ;
       private String edtavUsuario_Jsonclick ;

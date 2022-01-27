@@ -40,7 +40,17 @@
 <GenId>15</GenId>
 <GenName>Default (C#)</GenName></Generator>
 <FormClass>HTML</FormClass>
-<Parameters></Parameters>
+<Parameters>
+<Parameter>
+<IO>in</IO>
+<Variable>
+<VarId>Mode</VarId>
+<VarName>&amp;Mode</VarName></Variable></Parameter>
+<Parameter>
+<IO>in</IO>
+<Variable>
+<VarId>Cambsid</VarId>
+<VarName>&amp;cambsid</VarName></Variable></Parameter></Parameters>
 <Levels>
 <Level>
 <LevelType>Trn</LevelType>
@@ -155,24 +165,4 @@
 <Levels></Levels>
 <AfterTrnRules></AfterTrnRules>
 <AfterLevelRules></AfterLevelRules></Level></Levels>
-<Prompts>
-<Prompt>
-<Table>
-<TableId>14</TableId>
-<TableName>CAMBS</TableName>
-<Description>cambs</Description></Table>
-<Object>
-<ObjClsGuid>c9584656-94b6-4ccd-890f-332d11fc2c25</ObjClsGuid>
-<ObjCls>13</ObjCls>
-<ObjId>74</ObjId>
-<ObjName>Gx00E0</ObjName>
-<ObjPgmName>Gx00E0</ObjPgmName>
-<ObjClsName>Web Panel</ObjClsName></Object>
-<InputParameters></InputParameters>
-<OutputParameters>
-<Attribute>
-<AttriId>25</AttriId>
-<AttriName>cambsid</AttriName>
-<Description>cambsid</Description></Attribute></OutputParameters>
-<PromptType>System</PromptType></Prompt></Prompts>
 <Suggests></Suggests></ObjectSpec>

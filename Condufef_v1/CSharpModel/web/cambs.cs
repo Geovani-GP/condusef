@@ -2,7 +2,7 @@
                File: cambs
         Description: cambs
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 1/26/2022 20:7:34.48
+       Generated on: 1/26/2022 22:20:30.69
        Program type: Callable routine
           Main DBMS: postgresql
 */
@@ -93,6 +93,18 @@ namespace GeneXus.Programs {
             }
             gxfirstwebparm = gxfirstwebparm_bkp;
          }
+         if ( ! entryPointCalled && ! ( isAjaxCallMode( ) || isFullAjaxMode( ) ) )
+         {
+            Gx_mode = gxfirstwebparm;
+            context.httpAjaxContext.ajax_rsp_assign_attri("", false, "Gx_mode", Gx_mode);
+            context.httpAjaxContext.ajax_rsp_assign_attri("", false, "gxhash_vMODE", GetSecureSignedToken( "", StringUtil.RTrim( context.localUtil.Format( Gx_mode, "@!"))));
+            if ( StringUtil.StrCmp(gxfirstwebparm, "viewer") != 0 )
+            {
+               AV8cambsid = (int)(NumberUtil.Val( GetNextPar( ), "."));
+               context.httpAjaxContext.ajax_rsp_assign_attri("", false, "AV8cambsid", StringUtil.LTrim( StringUtil.Str( (decimal)(AV8cambsid), 9, 0)));
+               context.httpAjaxContext.ajax_rsp_assign_attri("", false, "gxhash_vCAMBSID", GetSecureSignedToken( "", context.localUtil.Format( (decimal)(AV8cambsid), "ZZZZZZZZ9")));
+            }
+         }
          if ( context.isSpaRequest( ) )
          {
             enableJsOutput();
@@ -125,7 +137,7 @@ namespace GeneXus.Programs {
          if ( StringUtil.StrCmp(context.GetRequestMethod( ), "POST") == 0 )
          {
          }
-         GX_FocusControl = edtcambsid_Internalname;
+         GX_FocusControl = edtcambsdsc_Internalname;
          context.httpAjaxContext.ajax_rsp_assign_attri("", false, "GX_FocusControl", GX_FocusControl);
          wbErr = false;
          context.SetDefaultTheme("Flat");
@@ -155,8 +167,11 @@ namespace GeneXus.Programs {
       {
       }
 
-      public void execute( )
+      public void execute( String aP0_Gx_mode ,
+                           int aP1_cambsid )
       {
+         this.Gx_mode = aP0_Gx_mode;
+         this.AV8cambsid = aP1_cambsid;
          executePrivate();
       }
 
@@ -250,24 +265,24 @@ namespace GeneXus.Programs {
             TempTags = "  onfocus=\"gx.evt.onfocus(this, 11,'',false,'',0)\"";
             ClassString = "BtnFirst";
             StyleString = "";
-            GxWebStd.gx_button_ctrl( context, bttBtn_first_Internalname, "", "|<", bttBtn_first_Jsonclick, 5, "|<", "", StyleString, ClassString, bttBtn_first_Visible, 1, "standard", "'"+""+"'"+",false,"+"'"+"EFIRST."+"'", TempTags, "", context.GetButtonType( ), "HLP_cambs.htm");
+            GxWebStd.gx_button_ctrl( context, bttBtn_first_Internalname, "", "|<", bttBtn_first_Jsonclick, 5, "|<", "", StyleString, ClassString, bttBtn_first_Visible, 0, "standard", "'"+""+"'"+",false,"+"'"+"EFIRST."+"'", TempTags, "", context.GetButtonType( ), "HLP_cambs.htm");
             TempTags = "  onfocus=\"gx.evt.onfocus(this, 12,'',false,'',0)\"";
             ClassString = "BtnPrevious";
             StyleString = "";
-            GxWebStd.gx_button_ctrl( context, bttBtn_previous_Internalname, "", "<", bttBtn_previous_Jsonclick, 5, "<", "", StyleString, ClassString, bttBtn_previous_Visible, 1, "standard", "'"+""+"'"+",false,"+"'"+"EPREVIOUS."+"'", TempTags, "", context.GetButtonType( ), "HLP_cambs.htm");
+            GxWebStd.gx_button_ctrl( context, bttBtn_previous_Internalname, "", "<", bttBtn_previous_Jsonclick, 5, "<", "", StyleString, ClassString, bttBtn_previous_Visible, 0, "standard", "'"+""+"'"+",false,"+"'"+"EPREVIOUS."+"'", TempTags, "", context.GetButtonType( ), "HLP_cambs.htm");
             TempTags = "  onfocus=\"gx.evt.onfocus(this, 13,'',false,'',0)\"";
             ClassString = "BtnNext";
             StyleString = "";
-            GxWebStd.gx_button_ctrl( context, bttBtn_next_Internalname, "", ">", bttBtn_next_Jsonclick, 5, ">", "", StyleString, ClassString, bttBtn_next_Visible, 1, "standard", "'"+""+"'"+",false,"+"'"+"ENEXT."+"'", TempTags, "", context.GetButtonType( ), "HLP_cambs.htm");
+            GxWebStd.gx_button_ctrl( context, bttBtn_next_Internalname, "", ">", bttBtn_next_Jsonclick, 5, ">", "", StyleString, ClassString, bttBtn_next_Visible, 0, "standard", "'"+""+"'"+",false,"+"'"+"ENEXT."+"'", TempTags, "", context.GetButtonType( ), "HLP_cambs.htm");
             TempTags = "  onfocus=\"gx.evt.onfocus(this, 14,'',false,'',0)\"";
             ClassString = "BtnLast";
             StyleString = "";
-            GxWebStd.gx_button_ctrl( context, bttBtn_last_Internalname, "", ">|", bttBtn_last_Jsonclick, 5, ">|", "", StyleString, ClassString, bttBtn_last_Visible, 1, "standard", "'"+""+"'"+",false,"+"'"+"ELAST."+"'", TempTags, "", context.GetButtonType( ), "HLP_cambs.htm");
+            GxWebStd.gx_button_ctrl( context, bttBtn_last_Internalname, "", ">|", bttBtn_last_Jsonclick, 5, ">|", "", StyleString, ClassString, bttBtn_last_Visible, 0, "standard", "'"+""+"'"+",false,"+"'"+"ELAST."+"'", TempTags, "", context.GetButtonType( ), "HLP_cambs.htm");
             GxWebStd.gx_div_end( context, "left", "top");
             TempTags = "  onfocus=\"gx.evt.onfocus(this, 15,'',false,'',0)\"";
             ClassString = "BtnSelect";
             StyleString = "";
-            GxWebStd.gx_button_ctrl( context, bttBtn_select_Internalname, "", "Seleccionar", bttBtn_select_Jsonclick, 4, "Seleccionar", "", StyleString, ClassString, bttBtn_select_Visible, 1, "standard", "'"+""+"'"+",false,"+"'"+"ESELECT."+"'", TempTags, "gx.popup.openPrompt('"+"gx00e0.aspx"+"',["+"{Ctrl:gx.dom.el('"+"CAMBSID"+"'), id:'"+"CAMBSID"+"'"+",IOType:'out',isKey:true,isLastKey:true}"+"],"+"null"+","+"'', false"+","+"true"+");"+"return false;", 2, "HLP_cambs.htm");
+            GxWebStd.gx_button_ctrl( context, bttBtn_select_Internalname, "", "Seleccionar", bttBtn_select_Jsonclick, 5, "Seleccionar", "", StyleString, ClassString, bttBtn_select_Visible, 0, "standard", "'"+""+"'"+",false,"+"'"+"ESELECT."+"'", TempTags, "", 2, "HLP_cambs.htm");
             GxWebStd.gx_div_end( context, "left", "top");
             GxWebStd.gx_div_end( context, "left", "top");
             GxWebStd.gx_div_end( context, "left", "top");
@@ -289,8 +304,7 @@ namespace GeneXus.Programs {
             /* Attribute/Variable Label */
             GxWebStd.gx_label_element( context, edtcambsid_Internalname, "cambsid", "col-sm-3 AttributeLabel", 1, true);
             /* Single line edit */
-            TempTags = "  onfocus=\"gx.evt.onfocus(this, 22,'',false,'',0)\"";
-            GxWebStd.gx_single_line_edit( context, edtcambsid_Internalname, StringUtil.LTrim( StringUtil.NToC( (decimal)(A25cambsid), 9, 0, ",", "")), ((edtcambsid_Enabled!=0) ? StringUtil.LTrim( context.localUtil.Format( (decimal)(A25cambsid), "ZZZZZZZZ9")) : context.localUtil.Format( (decimal)(A25cambsid), "ZZZZZZZZ9")), TempTags+" onchange=\"gx.evt.onchange(this)\" "+" onblur=\""+"gx.num.valid_integer( this,'.');"+";gx.evt.onblur(this,22);\"", "'"+""+"'"+",false,"+"'"+""+"'", "", "", "", "", edtcambsid_Jsonclick, 0, "Attribute", "", "", "", 1, edtcambsid_Enabled, 0, "text", "", 9, "chr", 1, "row", 9, 0, 0, 0, 1, -1, 0, true, "", "right", false, "HLP_cambs.htm");
+            GxWebStd.gx_single_line_edit( context, edtcambsid_Internalname, StringUtil.LTrim( StringUtil.NToC( (decimal)(A25cambsid), 9, 0, ",", "")), ((edtcambsid_Enabled!=0) ? StringUtil.LTrim( context.localUtil.Format( (decimal)(A25cambsid), "ZZZZZZZZ9")) : context.localUtil.Format( (decimal)(A25cambsid), "ZZZZZZZZ9")), "", "'"+""+"'"+",false,"+"'"+""+"'", "", "", "", "", edtcambsid_Jsonclick, 0, "Attribute", "", "", "", 1, edtcambsid_Enabled, 0, "text", "", 9, "chr", 1, "row", 9, 0, 0, 0, 1, -1, 0, true, "", "right", false, "HLP_cambs.htm");
             GxWebStd.gx_div_end( context, "left", "top");
             GxWebStd.gx_div_end( context, "left", "top");
             GxWebStd.gx_div_end( context, "left", "top");
@@ -417,21 +431,8 @@ namespace GeneXus.Programs {
             {
                /* Read saved SDTs. */
                /* Read variables values. */
-               if ( ( ( context.localUtil.CToN( cgiGet( edtcambsid_Internalname), ",", ".") < Convert.ToDecimal( 0 )) ) || ( ( context.localUtil.CToN( cgiGet( edtcambsid_Internalname), ",", ".") > Convert.ToDecimal( 999999999 )) ) )
-               {
-                  GX_msglist.addItem(context.GetMessage( "GXM_badnum", ""), 1, "CAMBSID");
-                  AnyError = 1;
-                  GX_FocusControl = edtcambsid_Internalname;
-                  context.httpAjaxContext.ajax_rsp_assign_attri("", false, "GX_FocusControl", GX_FocusControl);
-                  wbErr = true;
-                  A25cambsid = 0;
-                  context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A25cambsid", StringUtil.LTrim( StringUtil.Str( (decimal)(A25cambsid), 9, 0)));
-               }
-               else
-               {
-                  A25cambsid = (int)(context.localUtil.CToN( cgiGet( edtcambsid_Internalname), ",", "."));
-                  context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A25cambsid", StringUtil.LTrim( StringUtil.Str( (decimal)(A25cambsid), 9, 0)));
-               }
+               A25cambsid = (int)(context.localUtil.CToN( cgiGet( edtcambsid_Internalname), ",", "."));
+               context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A25cambsid", StringUtil.LTrim( StringUtil.Str( (decimal)(A25cambsid), 9, 0)));
                A83cambsdsc = cgiGet( edtcambsdsc_Internalname);
                n83cambsdsc = false;
                context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A83cambsdsc", A83cambsdsc);
@@ -489,10 +490,31 @@ namespace GeneXus.Programs {
                IsConfirmed = (short)(context.localUtil.CToN( cgiGet( "IsConfirmed"), ",", "."));
                IsModified = (short)(context.localUtil.CToN( cgiGet( "IsModified"), ",", "."));
                Gx_mode = cgiGet( "Mode");
+               AV8cambsid = (int)(context.localUtil.CToN( cgiGet( "vCAMBSID"), ",", "."));
                Gx_mode = cgiGet( "vMODE");
                /* Read subfile selected row values. */
                /* Read hidden variables. */
                GXKey = Crypto.Decrypt64( context.GetCookie( "GX_SESSION_ID"), Crypto.GetServerKey( ));
+               forbiddenHiddens = "hsh" + "cambs";
+               A25cambsid = (int)(context.localUtil.CToN( cgiGet( edtcambsid_Internalname), ",", "."));
+               context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A25cambsid", StringUtil.LTrim( StringUtil.Str( (decimal)(A25cambsid), 9, 0)));
+               forbiddenHiddens = forbiddenHiddens + context.localUtil.Format( (decimal)(A25cambsid), "ZZZZZZZZ9");
+               forbiddenHiddens = forbiddenHiddens + StringUtil.RTrim( context.localUtil.Format( Gx_mode, "@!"));
+               hsh = cgiGet( "hsh");
+               if ( ( ! ( ( A25cambsid != Z25cambsid ) ) || ( StringUtil.StrCmp(Gx_mode, "INS") == 0 ) ) && ! GXUtil.CheckEncryptedHash( forbiddenHiddens, hsh, GXKey) )
+               {
+                  GXUtil.WriteLog("cambs:[SecurityCheckFailed value for]"+"cambsid:"+context.localUtil.Format( (decimal)(A25cambsid), "ZZZZZZZZ9"));
+                  GXUtil.WriteLog("cambs:[SecurityCheckFailed value for]"+"Gx_mode:"+StringUtil.RTrim( context.localUtil.Format( Gx_mode, "@!")));
+                  GxWebError = 1;
+                  context.HttpContext.Response.StatusDescription = 403.ToString();
+                  context.HttpContext.Response.StatusCode = 403;
+                  context.WriteHtmlText( "<title>403 Forbidden</title>") ;
+                  context.WriteHtmlText( "<h1>403 Forbidden</h1>") ;
+                  context.WriteHtmlText( "<p /><hr />") ;
+                  GXUtil.WriteLog("send_http_error_code " + 403.ToString());
+                  AnyError = 1;
+                  return  ;
+               }
                standaloneNotModal( ) ;
             }
             else
@@ -502,19 +524,53 @@ namespace GeneXus.Programs {
                {
                   Gx_mode = "DSP";
                   context.httpAjaxContext.ajax_rsp_assign_attri("", false, "Gx_mode", Gx_mode);
+                  context.httpAjaxContext.ajax_rsp_assign_attri("", false, "gxhash_vMODE", GetSecureSignedToken( "", StringUtil.RTrim( context.localUtil.Format( Gx_mode, "@!"))));
                   A25cambsid = (int)(NumberUtil.Val( GetNextPar( ), "."));
                   context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A25cambsid", StringUtil.LTrim( StringUtil.Str( (decimal)(A25cambsid), 9, 0)));
                   getEqualNoModal( ) ;
                   Gx_mode = "DSP";
                   context.httpAjaxContext.ajax_rsp_assign_attri("", false, "Gx_mode", Gx_mode);
-                  disable_std_buttons_dsp( ) ;
+                  context.httpAjaxContext.ajax_rsp_assign_attri("", false, "gxhash_vMODE", GetSecureSignedToken( "", StringUtil.RTrim( context.localUtil.Format( Gx_mode, "@!"))));
+                  disable_std_buttons( ) ;
                   standaloneModal( ) ;
                }
                else
                {
-                  Gx_mode = "INS";
-                  context.httpAjaxContext.ajax_rsp_assign_attri("", false, "Gx_mode", Gx_mode);
+                  if ( StringUtil.StrCmp(Gx_mode, "DSP") == 0 )
+                  {
+                     sMode14 = Gx_mode;
+                     Gx_mode = "UPD";
+                     context.httpAjaxContext.ajax_rsp_assign_attri("", false, "Gx_mode", Gx_mode);
+                     context.httpAjaxContext.ajax_rsp_assign_attri("", false, "gxhash_vMODE", GetSecureSignedToken( "", StringUtil.RTrim( context.localUtil.Format( Gx_mode, "@!"))));
+                     Gx_mode = sMode14;
+                     context.httpAjaxContext.ajax_rsp_assign_attri("", false, "Gx_mode", Gx_mode);
+                     context.httpAjaxContext.ajax_rsp_assign_attri("", false, "gxhash_vMODE", GetSecureSignedToken( "", StringUtil.RTrim( context.localUtil.Format( Gx_mode, "@!"))));
+                  }
                   standaloneModal( ) ;
+                  if ( StringUtil.StrCmp(Gx_mode, "INS") != 0 )
+                  {
+                     getByPrimaryKey( ) ;
+                     if ( RcdFound14 == 1 )
+                     {
+                        if ( StringUtil.StrCmp(Gx_mode, "DLT") == 0 )
+                        {
+                           /* Confirm record */
+                           CONFIRM_0E0( ) ;
+                           if ( AnyError == 0 )
+                           {
+                              GX_FocusControl = bttBtn_enter_Internalname;
+                              context.httpAjaxContext.ajax_rsp_assign_attri("", false, "GX_FocusControl", GX_FocusControl);
+                           }
+                        }
+                     }
+                     else
+                     {
+                        GX_msglist.addItem(context.GetMessage( "GXM_noinsert", ""), 1, "CAMBSID");
+                        AnyError = 1;
+                        GX_FocusControl = edtcambsid_Internalname;
+                        context.httpAjaxContext.ajax_rsp_assign_attri("", false, "GX_FocusControl", GX_FocusControl);
+                     }
+                  }
                }
             }
          }
@@ -543,43 +599,11 @@ namespace GeneXus.Programs {
                         if ( StringUtil.StrCmp(sEvt, "ENTER") == 0 )
                         {
                            context.wbHandled = 1;
-                           btn_enter( ) ;
+                           if ( StringUtil.StrCmp(Gx_mode, "DSP") != 0 )
+                           {
+                              btn_enter( ) ;
+                           }
                            /* No code required for Cancel button. It is implemented as the Reset button. */
-                        }
-                        else if ( StringUtil.StrCmp(sEvt, "FIRST") == 0 )
-                        {
-                           context.wbHandled = 1;
-                           btn_first( ) ;
-                        }
-                        else if ( StringUtil.StrCmp(sEvt, "PREVIOUS") == 0 )
-                        {
-                           context.wbHandled = 1;
-                           btn_previous( ) ;
-                        }
-                        else if ( StringUtil.StrCmp(sEvt, "NEXT") == 0 )
-                        {
-                           context.wbHandled = 1;
-                           btn_next( ) ;
-                        }
-                        else if ( StringUtil.StrCmp(sEvt, "LAST") == 0 )
-                        {
-                           context.wbHandled = 1;
-                           btn_last( ) ;
-                        }
-                        else if ( StringUtil.StrCmp(sEvt, "SELECT") == 0 )
-                        {
-                           context.wbHandled = 1;
-                           btn_select( ) ;
-                        }
-                        else if ( StringUtil.StrCmp(sEvt, "DELETE") == 0 )
-                        {
-                           context.wbHandled = 1;
-                           btn_delete( ) ;
-                        }
-                        else if ( StringUtil.StrCmp(sEvt, "LSCR") == 0 )
-                        {
-                           context.wbHandled = 1;
-                           AfterKeyLoadScreen( ) ;
                         }
                      }
                      else
@@ -621,15 +645,6 @@ namespace GeneXus.Programs {
 
       protected void disable_std_buttons( )
       {
-         if ( StringUtil.StrCmp(Gx_mode, "INS") == 0 )
-         {
-            bttBtn_delete_Enabled = 0;
-            context.httpAjaxContext.ajax_rsp_assign_prop("", false, bttBtn_delete_Internalname, "Enabled", StringUtil.LTrim( StringUtil.Str( (decimal)(bttBtn_delete_Enabled), 5, 0)));
-         }
-      }
-
-      protected void disable_std_buttons_dsp( )
-      {
          bttBtn_delete_Visible = 0;
          context.httpAjaxContext.ajax_rsp_assign_prop("", false, bttBtn_delete_Internalname, "Visible", StringUtil.LTrim( StringUtil.Str( (decimal)(bttBtn_delete_Visible), 5, 0)));
          bttBtn_first_Visible = 0;
@@ -642,14 +657,17 @@ namespace GeneXus.Programs {
          context.httpAjaxContext.ajax_rsp_assign_prop("", false, bttBtn_last_Internalname, "Visible", StringUtil.LTrim( StringUtil.Str( (decimal)(bttBtn_last_Visible), 5, 0)));
          bttBtn_select_Visible = 0;
          context.httpAjaxContext.ajax_rsp_assign_prop("", false, bttBtn_select_Internalname, "Visible", StringUtil.LTrim( StringUtil.Str( (decimal)(bttBtn_select_Visible), 5, 0)));
-         bttBtn_delete_Visible = 0;
-         context.httpAjaxContext.ajax_rsp_assign_prop("", false, bttBtn_delete_Internalname, "Visible", StringUtil.LTrim( StringUtil.Str( (decimal)(bttBtn_delete_Visible), 5, 0)));
-         if ( StringUtil.StrCmp(Gx_mode, "DSP") == 0 )
+         if ( ( StringUtil.StrCmp(Gx_mode, "DSP") == 0 ) || ( StringUtil.StrCmp(Gx_mode, "DLT") == 0 ) )
          {
-            bttBtn_enter_Visible = 0;
-            context.httpAjaxContext.ajax_rsp_assign_prop("", false, bttBtn_enter_Internalname, "Visible", StringUtil.LTrim( StringUtil.Str( (decimal)(bttBtn_enter_Visible), 5, 0)));
+            bttBtn_delete_Visible = 0;
+            context.httpAjaxContext.ajax_rsp_assign_prop("", false, bttBtn_delete_Internalname, "Visible", StringUtil.LTrim( StringUtil.Str( (decimal)(bttBtn_delete_Visible), 5, 0)));
+            if ( StringUtil.StrCmp(Gx_mode, "DSP") == 0 )
+            {
+               bttBtn_enter_Visible = 0;
+               context.httpAjaxContext.ajax_rsp_assign_prop("", false, bttBtn_enter_Internalname, "Visible", StringUtil.LTrim( StringUtil.Str( (decimal)(bttBtn_enter_Visible), 5, 0)));
+            }
+            DisableAttributes0E14( ) ;
          }
-         DisableAttributes0E14( ) ;
       }
 
       protected void set_caption( )
@@ -667,13 +685,35 @@ namespace GeneXus.Programs {
          }
       }
 
+      protected void CONFIRM_0E0( )
+      {
+         BeforeValidate0E14( ) ;
+         if ( AnyError == 0 )
+         {
+            if ( StringUtil.StrCmp(Gx_mode, "DLT") == 0 )
+            {
+               OnDeleteControls0E14( ) ;
+            }
+            else
+            {
+               CheckExtendedTable0E14( ) ;
+               CloseExtendedTableCursors0E14( ) ;
+            }
+         }
+         if ( AnyError == 0 )
+         {
+            IsConfirmed = 1;
+            context.httpAjaxContext.ajax_rsp_assign_attri("", false, "IsConfirmed", StringUtil.LTrim( StringUtil.Str( (decimal)(IsConfirmed), 4, 0)));
+         }
+      }
+
       protected void ResetCaption0E0( )
       {
       }
 
       protected void ZM0E14( short GX_JID )
       {
-         if ( ( GX_JID == 1 ) || ( GX_JID == 0 ) )
+         if ( ( GX_JID == 3 ) || ( GX_JID == 0 ) )
          {
             if ( StringUtil.StrCmp(Gx_mode, "INS") != 0 )
             {
@@ -690,7 +730,7 @@ namespace GeneXus.Programs {
                Z86cambsfecultact = A86cambsfecultact;
             }
          }
-         if ( GX_JID == -1 )
+         if ( GX_JID == -3 )
          {
             Z25cambsid = A25cambsid;
             Z83cambsdsc = A83cambsdsc;
@@ -702,20 +742,21 @@ namespace GeneXus.Programs {
 
       protected void standaloneNotModal( )
       {
+         edtcambsid_Enabled = 0;
+         context.httpAjaxContext.ajax_rsp_assign_prop("", false, edtcambsid_Internalname, "Enabled", StringUtil.LTrim( StringUtil.Str( (decimal)(edtcambsid_Enabled), 5, 0)));
+         edtcambsid_Enabled = 0;
+         context.httpAjaxContext.ajax_rsp_assign_prop("", false, edtcambsid_Internalname, "Enabled", StringUtil.LTrim( StringUtil.Str( (decimal)(edtcambsid_Enabled), 5, 0)));
+         bttBtn_delete_Enabled = 0;
+         context.httpAjaxContext.ajax_rsp_assign_prop("", false, bttBtn_delete_Internalname, "Enabled", StringUtil.LTrim( StringUtil.Str( (decimal)(bttBtn_delete_Enabled), 5, 0)));
+         if ( ! (0==AV8cambsid) )
+         {
+            A25cambsid = AV8cambsid;
+            context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A25cambsid", StringUtil.LTrim( StringUtil.Str( (decimal)(A25cambsid), 9, 0)));
+         }
       }
 
       protected void standaloneModal( )
       {
-         if ( StringUtil.StrCmp(Gx_mode, "INS") == 0 )
-         {
-            bttBtn_delete_Enabled = 0;
-            context.httpAjaxContext.ajax_rsp_assign_prop("", false, bttBtn_delete_Internalname, "Enabled", StringUtil.LTrim( StringUtil.Str( (decimal)(bttBtn_delete_Enabled), 5, 0)));
-         }
-         else
-         {
-            bttBtn_delete_Enabled = 1;
-            context.httpAjaxContext.ajax_rsp_assign_prop("", false, bttBtn_delete_Internalname, "Enabled", StringUtil.LTrim( StringUtil.Str( (decimal)(bttBtn_delete_Enabled), 5, 0)));
-         }
          if ( StringUtil.StrCmp(Gx_mode, "DSP") == 0 )
          {
             bttBtn_enter_Enabled = 0;
@@ -747,7 +788,7 @@ namespace GeneXus.Programs {
             A86cambsfecultact = T000E4_A86cambsfecultact[0];
             context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A86cambsfecultact", context.localUtil.TToC( A86cambsfecultact, 10, 8, 0, 3, "/", ":", " "));
             n86cambsfecultact = T000E4_n86cambsfecultact[0];
-            ZM0E14( -1) ;
+            ZM0E14( -3) ;
          }
          pr_default.close(2);
          OnLoadActions0E14( ) ;
@@ -792,7 +833,7 @@ namespace GeneXus.Programs {
          pr_default.execute(1, new Object[] {A25cambsid});
          if ( (pr_default.getStatus(1) != 101) )
          {
-            ZM0E14( 1) ;
+            ZM0E14( 3) ;
             RcdFound14 = 1;
             A25cambsid = T000E3_A25cambsid[0];
             context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A25cambsid", StringUtil.LTrim( StringUtil.Str( (decimal)(A25cambsid), 9, 0)));
@@ -812,7 +853,7 @@ namespace GeneXus.Programs {
             sMode14 = Gx_mode;
             Gx_mode = "DSP";
             context.httpAjaxContext.ajax_rsp_assign_attri("", false, "Gx_mode", Gx_mode);
-            standaloneModal( ) ;
+            context.httpAjaxContext.ajax_rsp_assign_attri("", false, "gxhash_vMODE", GetSecureSignedToken( "", StringUtil.RTrim( context.localUtil.Format( Gx_mode, "@!"))));
             Load0E14( ) ;
             if ( AnyError == 1 )
             {
@@ -821,6 +862,7 @@ namespace GeneXus.Programs {
             }
             Gx_mode = sMode14;
             context.httpAjaxContext.ajax_rsp_assign_attri("", false, "Gx_mode", Gx_mode);
+            context.httpAjaxContext.ajax_rsp_assign_attri("", false, "gxhash_vMODE", GetSecureSignedToken( "", StringUtil.RTrim( context.localUtil.Format( Gx_mode, "@!"))));
          }
          else
          {
@@ -829,9 +871,11 @@ namespace GeneXus.Programs {
             sMode14 = Gx_mode;
             Gx_mode = "DSP";
             context.httpAjaxContext.ajax_rsp_assign_attri("", false, "Gx_mode", Gx_mode);
+            context.httpAjaxContext.ajax_rsp_assign_attri("", false, "gxhash_vMODE", GetSecureSignedToken( "", StringUtil.RTrim( context.localUtil.Format( Gx_mode, "@!"))));
             standaloneModal( ) ;
             Gx_mode = sMode14;
             context.httpAjaxContext.ajax_rsp_assign_attri("", false, "Gx_mode", Gx_mode);
+            context.httpAjaxContext.ajax_rsp_assign_attri("", false, "gxhash_vMODE", GetSecureSignedToken( "", StringUtil.RTrim( context.localUtil.Format( Gx_mode, "@!"))));
          }
          pr_default.close(1);
       }
@@ -841,13 +885,9 @@ namespace GeneXus.Programs {
          GetKey0E14( ) ;
          if ( RcdFound14 == 0 )
          {
-            Gx_mode = "INS";
-            context.httpAjaxContext.ajax_rsp_assign_attri("", false, "Gx_mode", Gx_mode);
          }
          else
          {
-            Gx_mode = "UPD";
-            context.httpAjaxContext.ajax_rsp_assign_attri("", false, "Gx_mode", Gx_mode);
          }
          getByPrimaryKey( ) ;
       }
@@ -901,7 +941,7 @@ namespace GeneXus.Programs {
          if ( StringUtil.StrCmp(Gx_mode, "INS") == 0 )
          {
             /* Insert record */
-            GX_FocusControl = edtcambsid_Internalname;
+            GX_FocusControl = edtcambsdsc_Internalname;
             context.httpAjaxContext.ajax_rsp_assign_attri("", false, "GX_FocusControl", GX_FocusControl);
             Insert0E14( ) ;
             if ( AnyError == 1 )
@@ -927,16 +967,14 @@ namespace GeneXus.Programs {
                {
                   delete( ) ;
                   AfterTrn( ) ;
-                  GX_FocusControl = edtcambsid_Internalname;
+                  GX_FocusControl = edtcambsdsc_Internalname;
                   context.httpAjaxContext.ajax_rsp_assign_attri("", false, "GX_FocusControl", GX_FocusControl);
                }
                else
                {
-                  Gx_mode = "UPD";
-                  context.httpAjaxContext.ajax_rsp_assign_attri("", false, "Gx_mode", Gx_mode);
                   /* Update record */
                   Update0E14( ) ;
-                  GX_FocusControl = edtcambsid_Internalname;
+                  GX_FocusControl = edtcambsdsc_Internalname;
                   context.httpAjaxContext.ajax_rsp_assign_attri("", false, "GX_FocusControl", GX_FocusControl);
                }
             }
@@ -944,10 +982,8 @@ namespace GeneXus.Programs {
             {
                if ( A25cambsid != Z25cambsid )
                {
-                  Gx_mode = "INS";
-                  context.httpAjaxContext.ajax_rsp_assign_attri("", false, "Gx_mode", Gx_mode);
                   /* Insert record */
-                  GX_FocusControl = edtcambsid_Internalname;
+                  GX_FocusControl = edtcambsdsc_Internalname;
                   context.httpAjaxContext.ajax_rsp_assign_attri("", false, "GX_FocusControl", GX_FocusControl);
                   Insert0E14( ) ;
                   if ( AnyError == 1 )
@@ -967,10 +1003,8 @@ namespace GeneXus.Programs {
                   }
                   else
                   {
-                     Gx_mode = "INS";
-                     context.httpAjaxContext.ajax_rsp_assign_attri("", false, "Gx_mode", Gx_mode);
                      /* Insert record */
-                     GX_FocusControl = edtcambsid_Internalname;
+                     GX_FocusControl = edtcambsdsc_Internalname;
                      context.httpAjaxContext.ajax_rsp_assign_attri("", false, "GX_FocusControl", GX_FocusControl);
                      Insert0E14( ) ;
                      if ( AnyError == 1 )
@@ -983,6 +1017,13 @@ namespace GeneXus.Programs {
             }
          }
          AfterTrn( ) ;
+         if ( ( StringUtil.StrCmp(Gx_mode, "UPD") == 0 ) || ( StringUtil.StrCmp(Gx_mode, "DLT") == 0 ) )
+         {
+            if ( AnyError == 0 )
+            {
+               context.nUserReturn = 1;
+            }
+         }
       }
 
       protected void btn_delete( )
@@ -1000,137 +1041,12 @@ namespace GeneXus.Programs {
          {
             delete( ) ;
             AfterTrn( ) ;
-            GX_FocusControl = edtcambsid_Internalname;
+            GX_FocusControl = edtcambsdsc_Internalname;
             context.httpAjaxContext.ajax_rsp_assign_attri("", false, "GX_FocusControl", GX_FocusControl);
          }
          if ( AnyError != 0 )
          {
-            Gx_mode = "UPD";
-            context.httpAjaxContext.ajax_rsp_assign_attri("", false, "Gx_mode", Gx_mode);
          }
-         else
-         {
-            getByPrimaryKey( ) ;
-         }
-         CloseOpenCursors();
-      }
-
-      protected void btn_get( )
-      {
-         nKeyPressed = 2;
-         IsConfirmed = 0;
-         context.httpAjaxContext.ajax_rsp_assign_attri("", false, "IsConfirmed", StringUtil.LTrim( StringUtil.Str( (decimal)(IsConfirmed), 4, 0)));
-         getEqualNoModal( ) ;
-         if ( RcdFound14 == 0 )
-         {
-            GX_msglist.addItem(context.GetMessage( "GXM_keynfound", ""), "PrimaryKeyNotFound", 1, "CAMBSID");
-            AnyError = 1;
-            GX_FocusControl = edtcambsid_Internalname;
-            context.httpAjaxContext.ajax_rsp_assign_attri("", false, "GX_FocusControl", GX_FocusControl);
-         }
-         GX_FocusControl = edtcambsdsc_Internalname;
-         context.httpAjaxContext.ajax_rsp_assign_attri("", false, "GX_FocusControl", GX_FocusControl);
-         standaloneNotModal( ) ;
-         standaloneModal( ) ;
-      }
-
-      protected void btn_first( )
-      {
-         nKeyPressed = 2;
-         IsConfirmed = 0;
-         context.httpAjaxContext.ajax_rsp_assign_attri("", false, "IsConfirmed", StringUtil.LTrim( StringUtil.Str( (decimal)(IsConfirmed), 4, 0)));
-         ScanStart0E14( ) ;
-         if ( RcdFound14 == 0 )
-         {
-            GX_msglist.addItem(context.GetMessage( "GXM_norectobrow", ""), 0, "", true);
-         }
-         else
-         {
-            Gx_mode = "UPD";
-            context.httpAjaxContext.ajax_rsp_assign_attri("", false, "Gx_mode", Gx_mode);
-         }
-         GX_FocusControl = edtcambsdsc_Internalname;
-         context.httpAjaxContext.ajax_rsp_assign_attri("", false, "GX_FocusControl", GX_FocusControl);
-         ScanEnd0E14( ) ;
-         getByPrimaryKey( ) ;
-         standaloneNotModal( ) ;
-         standaloneModal( ) ;
-      }
-
-      protected void btn_previous( )
-      {
-         nKeyPressed = 2;
-         IsConfirmed = 0;
-         context.httpAjaxContext.ajax_rsp_assign_attri("", false, "IsConfirmed", StringUtil.LTrim( StringUtil.Str( (decimal)(IsConfirmed), 4, 0)));
-         move_previous( ) ;
-         if ( RcdFound14 == 0 )
-         {
-            GX_msglist.addItem(context.GetMessage( "GXM_norectobrow", ""), 0, "", true);
-         }
-         else
-         {
-            Gx_mode = "UPD";
-            context.httpAjaxContext.ajax_rsp_assign_attri("", false, "Gx_mode", Gx_mode);
-         }
-         GX_FocusControl = edtcambsdsc_Internalname;
-         context.httpAjaxContext.ajax_rsp_assign_attri("", false, "GX_FocusControl", GX_FocusControl);
-         getByPrimaryKey( ) ;
-         standaloneNotModal( ) ;
-         standaloneModal( ) ;
-      }
-
-      protected void btn_next( )
-      {
-         nKeyPressed = 2;
-         IsConfirmed = 0;
-         context.httpAjaxContext.ajax_rsp_assign_attri("", false, "IsConfirmed", StringUtil.LTrim( StringUtil.Str( (decimal)(IsConfirmed), 4, 0)));
-         move_next( ) ;
-         if ( RcdFound14 == 0 )
-         {
-            GX_msglist.addItem(context.GetMessage( "GXM_norectobrow", ""), 0, "", true);
-         }
-         else
-         {
-            Gx_mode = "UPD";
-            context.httpAjaxContext.ajax_rsp_assign_attri("", false, "Gx_mode", Gx_mode);
-         }
-         GX_FocusControl = edtcambsdsc_Internalname;
-         context.httpAjaxContext.ajax_rsp_assign_attri("", false, "GX_FocusControl", GX_FocusControl);
-         getByPrimaryKey( ) ;
-         standaloneNotModal( ) ;
-         standaloneModal( ) ;
-      }
-
-      protected void btn_last( )
-      {
-         nKeyPressed = 2;
-         IsConfirmed = 0;
-         context.httpAjaxContext.ajax_rsp_assign_attri("", false, "IsConfirmed", StringUtil.LTrim( StringUtil.Str( (decimal)(IsConfirmed), 4, 0)));
-         ScanStart0E14( ) ;
-         if ( RcdFound14 == 0 )
-         {
-            GX_msglist.addItem(context.GetMessage( "GXM_norectobrow", ""), 0, "", true);
-         }
-         else
-         {
-            while ( RcdFound14 != 0 )
-            {
-               ScanNext0E14( ) ;
-            }
-            Gx_mode = "UPD";
-            context.httpAjaxContext.ajax_rsp_assign_attri("", false, "Gx_mode", Gx_mode);
-         }
-         GX_FocusControl = edtcambsdsc_Internalname;
-         context.httpAjaxContext.ajax_rsp_assign_attri("", false, "GX_FocusControl", GX_FocusControl);
-         ScanEnd0E14( ) ;
-         getByPrimaryKey( ) ;
-         standaloneNotModal( ) ;
-         standaloneModal( ) ;
-      }
-
-      protected void btn_select( )
-      {
-         getEqualNoModal( ) ;
       }
 
       protected void CheckOptimisticConcurrency0E14( )
@@ -1268,9 +1184,13 @@ namespace GeneXus.Programs {
                         /* End of After( update) rules */
                         if ( AnyError == 0 )
                         {
-                           getByPrimaryKey( ) ;
-                           GX_msglist.addItem(context.GetMessage( "GXM_sucupdated", ""), 0, "", true);
-                           ResetCaption0E0( ) ;
+                           if ( ( StringUtil.StrCmp(Gx_mode, "UPD") == 0 ) || ( StringUtil.StrCmp(Gx_mode, "DLT") == 0 ) )
+                           {
+                              if ( AnyError == 0 )
+                              {
+                                 context.nUserReturn = 1;
+                              }
+                           }
                         }
                      }
                      else
@@ -1292,8 +1212,6 @@ namespace GeneXus.Programs {
 
       protected void delete( )
       {
-         Gx_mode = "DLT";
-         context.httpAjaxContext.ajax_rsp_assign_attri("", false, "Gx_mode", Gx_mode);
          BeforeValidate0E14( ) ;
          if ( AnyError == 0 )
          {
@@ -1319,21 +1237,13 @@ namespace GeneXus.Programs {
                      /* End of After( delete) rules */
                      if ( AnyError == 0 )
                      {
-                        move_next( ) ;
-                        if ( RcdFound14 == 0 )
+                        if ( ( StringUtil.StrCmp(Gx_mode, "UPD") == 0 ) || ( StringUtil.StrCmp(Gx_mode, "DLT") == 0 ) )
                         {
-                           InitAll0E14( ) ;
-                           Gx_mode = "INS";
-                           context.httpAjaxContext.ajax_rsp_assign_attri("", false, "Gx_mode", Gx_mode);
+                           if ( AnyError == 0 )
+                           {
+                              context.nUserReturn = 1;
+                           }
                         }
-                        else
-                        {
-                           getByPrimaryKey( ) ;
-                           Gx_mode = "UPD";
-                           context.httpAjaxContext.ajax_rsp_assign_attri("", false, "Gx_mode", Gx_mode);
-                        }
-                        GX_msglist.addItem(context.GetMessage( "GXM_sucdeleted", ""), 0, "", true);
-                        ResetCaption0E0( ) ;
                      }
                   }
                   else
@@ -1347,9 +1257,11 @@ namespace GeneXus.Programs {
          sMode14 = Gx_mode;
          Gx_mode = "DLT";
          context.httpAjaxContext.ajax_rsp_assign_attri("", false, "Gx_mode", Gx_mode);
+         context.httpAjaxContext.ajax_rsp_assign_attri("", false, "gxhash_vMODE", GetSecureSignedToken( "", StringUtil.RTrim( context.localUtil.Format( Gx_mode, "@!"))));
          EndLevel0E14( ) ;
          Gx_mode = sMode14;
          context.httpAjaxContext.ajax_rsp_assign_attri("", false, "Gx_mode", Gx_mode);
+         context.httpAjaxContext.ajax_rsp_assign_attri("", false, "gxhash_vMODE", GetSecureSignedToken( "", StringUtil.RTrim( context.localUtil.Format( Gx_mode, "@!"))));
       }
 
       protected void OnDeleteControls0E14( )
@@ -1412,6 +1324,7 @@ namespace GeneXus.Programs {
 
       public void ScanStart0E14( )
       {
+         /* Scan By routine */
          /* Using cursor T000E13 */
          pr_default.execute(11);
          RcdFound14 = 0;
@@ -1521,7 +1434,7 @@ namespace GeneXus.Programs {
          context.AddJavascriptSource("jquery.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxtimezone.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxgral.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("gxcfg.js", "?20221262073514");
+         context.AddJavascriptSource("gxcfg.js", "?202212622203118");
          if ( context.isSpaRequest( ) )
          {
             enableOutput();
@@ -1546,7 +1459,7 @@ namespace GeneXus.Programs {
          context.WriteHtmlText( " "+"class=\"form-horizontal Form\""+" "+ "style='"+bodyStyle+"'") ;
          context.WriteHtmlText( FormProcess+">") ;
          context.skipLines(1);
-         context.WriteHtmlTextNl( "<form id=\"MAINFORM\" name=\"MAINFORM\" method=\"post\" tabindex=-1  class=\"form-horizontal Form\" novalidate action=\""+formatLink("cambs.aspx") +"\">") ;
+         context.WriteHtmlTextNl( "<form id=\"MAINFORM\" name=\"MAINFORM\" method=\"post\" tabindex=-1  class=\"form-horizontal Form\" novalidate action=\""+formatLink("cambs.aspx") + "?" + UrlEncode(StringUtil.RTrim(Gx_mode)) + "," + UrlEncode("" +AV8cambsid)+"\">") ;
          GxWebStd.gx_hidden_field( context, "_EventName", "");
          GxWebStd.gx_hidden_field( context, "_EventGridId", "");
          GxWebStd.gx_hidden_field( context, "_EventRowId", "");
@@ -1570,8 +1483,17 @@ namespace GeneXus.Programs {
          GxWebStd.gx_hidden_field( context, "IsConfirmed", StringUtil.LTrim( StringUtil.NToC( (decimal)(IsConfirmed), 4, 0, ",", "")));
          GxWebStd.gx_hidden_field( context, "IsModified", StringUtil.LTrim( StringUtil.NToC( (decimal)(IsModified), 4, 0, ",", "")));
          GxWebStd.gx_hidden_field( context, "Mode", StringUtil.RTrim( Gx_mode));
+         GxWebStd.gx_hidden_field( context, "vCAMBSID", StringUtil.LTrim( StringUtil.NToC( (decimal)(AV8cambsid), 9, 0, ",", "")));
          GxWebStd.gx_hidden_field( context, "vMODE", StringUtil.RTrim( Gx_mode));
+         GxWebStd.gx_hidden_field( context, "gxhash_vMODE", GetSecureSignedToken( "", StringUtil.RTrim( context.localUtil.Format( Gx_mode, "@!"))));
+         GxWebStd.gx_hidden_field( context, "gxhash_vCAMBSID", GetSecureSignedToken( "", context.localUtil.Format( (decimal)(AV8cambsid), "ZZZZZZZZ9")));
          GXKey = Crypto.Decrypt64( context.GetCookie( "GX_SESSION_ID"), Crypto.GetServerKey( ));
+         forbiddenHiddens = "hsh" + "cambs";
+         forbiddenHiddens = forbiddenHiddens + context.localUtil.Format( (decimal)(A25cambsid), "ZZZZZZZZ9");
+         forbiddenHiddens = forbiddenHiddens + StringUtil.RTrim( context.localUtil.Format( Gx_mode, "@!"));
+         GxWebStd.gx_hidden_field( context, "hsh", GXUtil.GetEncryptedHash( forbiddenHiddens, GXKey));
+         GXUtil.WriteLog("cambs:[SendSecurityCheck value for]"+"cambsid:"+context.localUtil.Format( (decimal)(A25cambsid), "ZZZZZZZZ9"));
+         GXUtil.WriteLog("cambs:[SendSecurityCheck value for]"+"Gx_mode:"+StringUtil.RTrim( context.localUtil.Format( Gx_mode, "@!")));
       }
 
       public override void RenderHtmlCloseForm( )
@@ -1628,7 +1550,7 @@ namespace GeneXus.Programs {
 
       public override String GetSelfLink( )
       {
-         return formatLink("cambs.aspx")  ;
+         return formatLink("cambs.aspx") + "?" + UrlEncode(StringUtil.RTrim(Gx_mode)) + "," + UrlEncode("" +AV8cambsid) ;
       }
 
       public override String GetPgmname( )
@@ -1678,12 +1600,12 @@ namespace GeneXus.Programs {
 
       protected void define_styles( )
       {
-         AddStyleSheetFile("calendar-system.css", "?13205289");
-         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?2071072");
+         AddStyleSheetFile("calendar-system.css", "?11323129");
+         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?1734189");
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?20221262073518");
+            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?202212622203122");
             idxLst = (int)(idxLst+1);
          }
          /* End function define_styles */
@@ -1693,7 +1615,7 @@ namespace GeneXus.Programs {
       {
          context.AddJavascriptSource("messages.spa.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxdec.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("cambs.js", "?20221262073519");
+         context.AddJavascriptSource("cambs.js", "?202212622203122");
          /* End function include_jscripts */
       }
 
@@ -1756,7 +1678,7 @@ namespace GeneXus.Programs {
          Form.Textcolor = 0;
          Form.Backcolor = (int)(0xFFFFFF);
          Form.Caption = "cambs";
-         bttBtn_delete_Enabled = 1;
+         bttBtn_delete_Enabled = 0;
          bttBtn_delete_Visible = 1;
          bttBtn_cancel_Visible = 1;
          bttBtn_enter_Enabled = 1;
@@ -1770,7 +1692,7 @@ namespace GeneXus.Programs {
          edtcambsdsc_Jsonclick = "";
          edtcambsdsc_Enabled = 1;
          edtcambsid_Jsonclick = "";
-         edtcambsid_Enabled = 1;
+         edtcambsid_Enabled = 0;
          bttBtn_select_Visible = 1;
          bttBtn_last_Visible = 1;
          bttBtn_next_Visible = 1;
@@ -1788,59 +1710,6 @@ namespace GeneXus.Programs {
          /* End function dynload_actions */
       }
 
-      protected void AfterKeyLoadScreen( )
-      {
-         IsConfirmed = 0;
-         context.httpAjaxContext.ajax_rsp_assign_attri("", false, "IsConfirmed", StringUtil.LTrim( StringUtil.Str( (decimal)(IsConfirmed), 4, 0)));
-         getEqualNoModal( ) ;
-         GX_FocusControl = edtcambsdsc_Internalname;
-         context.httpAjaxContext.ajax_rsp_assign_attri("", false, "GX_FocusControl", GX_FocusControl);
-         standaloneNotModal( ) ;
-         standaloneModal( ) ;
-         /* End function AfterKeyLoadScreen */
-      }
-
-      public void Valid_Cambsid( int GX_Parm1 ,
-                                 String GX_Parm2 ,
-                                 String GX_Parm3 ,
-                                 DateTime GX_Parm4 ,
-                                 DateTime GX_Parm5 )
-      {
-         A25cambsid = GX_Parm1;
-         A83cambsdsc = GX_Parm2;
-         n83cambsdsc = false;
-         A84cambsusuario = GX_Parm3;
-         n84cambsusuario = false;
-         A85cambsfecreg = GX_Parm4;
-         n85cambsfecreg = false;
-         A86cambsfecultact = GX_Parm5;
-         n86cambsfecultact = false;
-         context.wbHandled = 1;
-         AfterKeyLoadScreen( ) ;
-         Draw( ) ;
-         SendCloseFormHiddens( ) ;
-         dynload_actions( ) ;
-         if ( AnyError == 1 )
-         {
-         }
-         isValidOutput.Add(A83cambsdsc);
-         isValidOutput.Add(A84cambsusuario);
-         isValidOutput.Add(context.localUtil.TToC( A85cambsfecreg, 10, 8, 0, 3, "/", ":", " "));
-         isValidOutput.Add(context.localUtil.TToC( A86cambsfecultact, 10, 8, 0, 3, "/", ":", " "));
-         isValidOutput.Add(StringUtil.RTrim( Gx_mode));
-         isValidOutput.Add(StringUtil.LTrim( StringUtil.NToC( (decimal)(Z25cambsid), 9, 0, ",", "")));
-         isValidOutput.Add(Z83cambsdsc);
-         isValidOutput.Add(Z84cambsusuario);
-         isValidOutput.Add(context.localUtil.TToC( Z85cambsfecreg, 10, 8, 0, 0, "/", ":", " "));
-         isValidOutput.Add(context.localUtil.TToC( Z86cambsfecultact, 10, 8, 0, 0, "/", ":", " "));
-         isValidOutput.Add(bttBtn_delete_Enabled);
-         isValidOutput.Add(bttBtn_enter_Enabled);
-         isValidOutput.Add(context.GX_msglist.ToJavascriptSource());
-         isValidOutput.Add(context.httpAjaxContext.ajax_rsp_get_hiddens( ));
-         context.GX_webresponse.AddString(isValidOutput.ToJSonString());
-         wbTemp = context.ResponseContentType( "application/json");
-      }
-
       public override bool SupportAjaxEvent( )
       {
          return true ;
@@ -1848,7 +1717,7 @@ namespace GeneXus.Programs {
 
       public override void InitializeDynEvents( )
       {
-         setEventMetadata("ENTER","{handler:'UserMainFullajax',iparms:[{postForm:true}],oparms:[]}");
+         setEventMetadata("ENTER","{handler:'UserMainFullajax',iparms:[{postForm:true},{av:'Gx_mode',fld:'vMODE',pic:'@!',hsh:true,nv:''},{av:'AV8cambsid',fld:'vCAMBSID',pic:'ZZZZZZZZ9',hsh:true,nv:0}],oparms:[]}");
          setEventMetadata("REFRESH","{handler:'Refresh',iparms:[],oparms:[]}");
          return  ;
       }
@@ -1871,6 +1740,7 @@ namespace GeneXus.Programs {
       public override void initialize( )
       {
          sPrefix = "";
+         wcpOGx_mode = "";
          Z83cambsdsc = "";
          Z84cambsusuario = "";
          Z85cambsfecreg = (DateTime)(DateTime.MinValue);
@@ -1899,7 +1769,9 @@ namespace GeneXus.Programs {
          bttBtn_enter_Jsonclick = "";
          bttBtn_cancel_Jsonclick = "";
          bttBtn_delete_Jsonclick = "";
-         Gx_mode = "";
+         forbiddenHiddens = "";
+         hsh = "";
+         sMode14 = "";
          sEvt = "";
          EvtGridId = "";
          EvtRowId = "";
@@ -1923,7 +1795,6 @@ namespace GeneXus.Programs {
          T000E3_n85cambsfecreg = new bool[] {false} ;
          T000E3_A86cambsfecultact = new DateTime[] {DateTime.MinValue} ;
          T000E3_n86cambsfecultact = new bool[] {false} ;
-         sMode14 = "";
          T000E6_A25cambsid = new int[1] ;
          T000E7_A25cambsid = new int[1] ;
          T000E2_A25cambsid = new int[1] ;
@@ -1945,7 +1816,6 @@ namespace GeneXus.Programs {
          sDynURL = "";
          FormProcess = "";
          bodyStyle = "";
-         isValidOutput = new GxUnknownObjectCollection();
          pr_default = new DataStoreProvider(context, new GeneXus.Programs.cambs__default(),
             new Object[][] {
                 new Object[] {
@@ -1992,12 +1862,13 @@ namespace GeneXus.Programs {
       private short AnyError ;
       private short nKeyPressed ;
       private short initialized ;
-      private short GX_JID ;
       private short RcdFound14 ;
+      private short GX_JID ;
       private short Gx_BScreen ;
       private short gxajaxcallmode ;
-      private short wbTemp ;
+      private int wcpOAV8cambsid ;
       private int Z25cambsid ;
+      private int AV8cambsid ;
       private int trnEnded ;
       private int bttBtn_first_Visible ;
       private int bttBtn_previous_Visible ;
@@ -2017,14 +1888,16 @@ namespace GeneXus.Programs {
       private int bttBtn_delete_Enabled ;
       private int idxLst ;
       private String sPrefix ;
+      private String wcpOGx_mode ;
       private String scmdbuf ;
       private String gxfirstwebparm ;
       private String gxfirstwebparm_bkp ;
+      private String Gx_mode ;
       private String GXKey ;
       private String PreviousTooltip ;
       private String PreviousCaption ;
       private String GX_FocusControl ;
-      private String edtcambsid_Internalname ;
+      private String edtcambsdsc_Internalname ;
       private String divTablemain_Internalname ;
       private String lblTitle_Internalname ;
       private String lblTitle_Jsonclick ;
@@ -2041,8 +1914,8 @@ namespace GeneXus.Programs {
       private String bttBtn_last_Jsonclick ;
       private String bttBtn_select_Internalname ;
       private String bttBtn_select_Jsonclick ;
+      private String edtcambsid_Internalname ;
       private String edtcambsid_Jsonclick ;
-      private String edtcambsdsc_Internalname ;
       private String edtcambsdsc_Jsonclick ;
       private String edtcambsusuario_Internalname ;
       private String edtcambsusuario_Jsonclick ;
@@ -2056,12 +1929,13 @@ namespace GeneXus.Programs {
       private String bttBtn_cancel_Jsonclick ;
       private String bttBtn_delete_Internalname ;
       private String bttBtn_delete_Jsonclick ;
-      private String Gx_mode ;
+      private String forbiddenHiddens ;
+      private String hsh ;
+      private String sMode14 ;
       private String sEvt ;
       private String EvtGridId ;
       private String EvtRowId ;
       private String sEvtType ;
-      private String sMode14 ;
       private String sDynURL ;
       private String FormProcess ;
       private String bodyStyle ;
@@ -2081,7 +1955,6 @@ namespace GeneXus.Programs {
       private String Z84cambsusuario ;
       private String A83cambsdsc ;
       private String A84cambsusuario ;
-      private GxUnknownObjectCollection isValidOutput ;
       private IGxDataStore dsDefault ;
       private IDataStoreProvider pr_default ;
       private int[] T000E4_A25cambsid ;
