@@ -2,7 +2,7 @@
                File: type_Sdtmarcas
         Description: marcas
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 1/26/2022 20:7:22.79
+       Generated on: 1/27/2022 13:32:44.94
        Program type: Callable routine
           Main DBMS: postgresql
 */

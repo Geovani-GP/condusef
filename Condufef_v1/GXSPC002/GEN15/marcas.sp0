@@ -1,6 +1,6 @@
 spec_i([ trn,8,marcas,marcas,[],spa,'10_3_15-115824' ]).
  
-struct_i(8,0,[],[]).
+struct_i(8,0,[ 'Mode','Marcaid' ],[]).
  
 level_i(8,[ 8,[ [ 8,many ] ],[ 24 ],[],[],[],[ 24 ],'MARCAS_PKEY',[ 8,[] ],[] ]).
  
@@ -13,7 +13,7 @@ lwi_i(8,[ [] ]).
  
 ta_i(8,[ [ [ 8,24 ],[ 8,112 ],[ 8,113 ],[ 8,114 ],[ 8,115 ] ] ]).
  
-las_i(8,[ [ 24,112,113,114,115 ] ]).
+las_i(8,[ [ 'Mode','Marcaid',24,112,113,114,115 ] ]).
  
 lac_i(8,[ [ 24,112,113,114,115 ] ]).
  
@@ -47,7 +47,7 @@ rule_i(0,datastore(1,'CS_RPCPGML','')).
 rule_i(0,datastore(1,'JDBC_DATASOURCE','')).
 rule_i(0,datastore(1,'USE_JDBC_DATASOURCE','0')).
 rule_i(0,datastore(1,'DS_DBMS_ADDINFO','')).
-rule_i(0,datastore(1,'USER_PASSWORD',󻢸蘇�2�5炭)).
+rule_i(0,datastore(1,'USER_PASSWORD',admin)).
 rule_i(0,datastore(1,'USER_ID',postgres)).
 rule_i(0,datastore(1,'CS_CONNECT','First')).
 rule_i(0,datastore(1,'DBMS_PORT','5432')).
@@ -158,10 +158,10 @@ rule_i(0,prop(idBC,'-1')).
 rule_i(0,prop('Folder',o(120,'Root Module'))).
 rule_i(0,prop('ObjDesc',marcas)).
 rule_i(0,prop('ObjName',marcas)).
-rule_i(8,prompt([ 8,[ [ [],24,24 ] ],[],[],[ t(o(13,'Gx0080'),28),t(24,2) ],[],n,[] ])).
-rule_i(8,rule([ a(23,[ [ 24 ],[ t(o(13,'Gx0080'),28),t(24,2) ] ]) ],[],[],[ 24 ])).
 rule_i(0,rule([ a(22,[ 'Dlt','"Eliminar"','' ]) ],[],[],[])).
 rule_i(0,maingen(15)).
+rule_i(0,rule([ a(10,[ 'Mode','Marcaid' ]) ],[],[ insert,update,delete,display ],[])).
+rule_i(0,parmio([ [ 'Mode',in ],[ 'Marcaid',in ] ])).
 rule_i(0,p(0,0,fv,18,[ intname,'MARCAS' ])).
 rule_i(0,p(0,0,fv,18,[ table,8 ])).
 rule_i(0,p(0,15,fv,18,[])).
@@ -178,15 +178,24 @@ rule_i(0,file(8,'MARCAS',[ 24,112,113,114,115 ])).
 rule_i(0,loc([ 8 ],'MARCAS','','LAN')).
 rule_i(0,index(8,'MARCAS_PKEY',u,[ 24 ])).
 rule_i(0,loc([ 8,'MARCAS_PKEY' ],marcas_pkey,'','LAN')).
+rule_i(8,rule([ a(3,[ t(24,2) ]) ],[],[ insert,update,delete,display ],[ 24 ])).
+rule_i(8,rule([ a(21,[ [ 24 ] ]) ],[],[ insert,update,delete,display ],[ 24 ])).
  
-a_i(1,8,t,8,[],[ [ [ [],24,24 ] ],'MARCAS_PKEY',[] ]).
+a_i(1,8,f,24,[],[ [],[ t('Marcaid',23),t('IF',17),t('.NOT.',8),t('null(',1),t('Marcaid',23),t(')',4),t(';',18) ] ]).
+a_i(2,8,f,[ t(24,2),t('Enabled',3) ],[],[ [],[ t(0,3),t(';',18) ] ]).
+a_i(3,8,t,8,[],[ [ [ [],24,24 ] ],'MARCAS_PKEY',[] ]).
  
-v_i(t,i,1,24).
-v_i(t,o,1,112).
-v_i(t,o,1,113).
-v_i(t,o,1,114).
-v_i(t,o,1,115).
+v_i(f,i,1,'Marcaid').
+v_i(f,o,1,24).
+v_i(f,i,2,[]).
+v_i(f,o,2,[ t(24,2),t('Enabled',3) ]).
+v_i(t,i,3,24).
+v_i(t,o,3,112).
+v_i(t,o,3,113).
+v_i(t,o,3,114).
+v_i(t,o,3,115).
  
+act_info_i(1,[ [ 24 ] ]).
  
  
  
@@ -198,6 +207,7 @@ attri_i(113,[ marcasusuario,svchar,15,0,'',0,marcasusuario,'',0 ]).
 attri_i(112,[ marcasdsc,svchar,100,0,'',0,marcasdsc,'',0 ]).
 attri_i(24,[ marcasid,int,9,0,'ZZZZZZZZ9',0,marcasid,'',0 ]).
 attri_i('Gxremove',[ 'GxRemove',int,1,0,'9',0,'Gx Remove','',5 ]).
+attri_i('Marcaid',[ marcaid,int,18,0,'ZZZZZZZZZZZZZZZZZ9',0,marcaid,'',7 ]).
 attri_i('Mode',[ 'Gx_mode',char,3,0,'@!',1,'','',2 ]).
  
 table_i(8,[ 'MARCAS',[ 24,112,113,114,115 ],marcas,marcas ]).
@@ -342,7 +352,7 @@ html_comp_i(6,'Title','',d,[ str ]).
 html_comp_i(6,'Fill',-1,d,[ bool ]).
 html_comp_i(6,'Backcolor',rgb(255,255,255),d,[ color ]).
 html_comp_i(6,'Forecolor',rgb(0,0,0),d,[ color ]).
-html_comp_i(6,'Font',font('Open Sans Semibold',17,[]),d,[ font ]).
+html_comp_i(6,'Font',font('Microsoft Sans Serif',17,[]),d,[ font ]).
 html_comp_i(7,'Class',row,v,[ str ]).
 html_comp_i(7,'Id','',d,[ str ]).
 html_comp_i(7,'Height',measure(0,px),d,[ measure ]).
@@ -866,6 +876,7 @@ att_prop_i(2,115,'FullName',marcasfecultact,v).
  
 tbl_att_prop_i(2,8,24,'AllowNulls',n).
  
+var_prop_i(2,'Marcaid',idBasedOn,'',v).
  
  
  
@@ -879,10 +890,8 @@ trn_level_i(8,[ [ 24,112,113,114,115 ],marcas,marcas,marcas,'',112 ]).
  
  
  
-pgm_parm_i(web,69,'GX0080',[ [ int,9,0,0 ] ],[ [ pmarcasid,out,[] ] ]).
  
 pgm_callprotocol_i(trn,8,'MARCAS','INTERNAL').
-pgm_callprotocol_i(web,69,'GX0080','INTERNAL').
  
  
  

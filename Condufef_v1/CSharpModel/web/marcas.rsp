@@ -15,5 +15,5 @@
 /r:bin\GeneXus.Programs.Common.dll
 /r:GxBaseBuilder.dll
 /out:bin\marcas.dll
-marcas.cs
 marcas_bc.cs
+marcas.cs

@@ -41,7 +41,7 @@ rule_i(0,datastore(1,'CS_RPCPGML','')).
 rule_i(0,datastore(1,'JDBC_DATASOURCE','')).
 rule_i(0,datastore(1,'USE_JDBC_DATASOURCE','0')).
 rule_i(0,datastore(1,'DS_DBMS_ADDINFO','')).
-rule_i(0,datastore(1,'USER_PASSWORD',󻢸蘇�2�5炭)).
+rule_i(0,datastore(1,'USER_PASSWORD',admin)).
 rule_i(0,datastore(1,'USER_ID',postgres)).
 rule_i(0,datastore(1,'CS_CONNECT','First')).
 rule_i(0,datastore(1,'DBMS_PORT','5432')).
@@ -191,6 +191,7 @@ attri_i(113,[ marcasusuario,svchar,15,0,'',0,marcasusuario,'',0 ]).
 attri_i(112,[ marcasdsc,svchar,100,0,'',0,marcasdsc,'',0 ]).
 attri_i(24,[ marcasid,int,9,0,'ZZZZZZZZ9',0,marcasid,'',0 ]).
 attri_i('Gxremove',[ 'GxRemove',int,1,0,'9',0,'Gx Remove','',5 ]).
+attri_i('Marcaid',[ marcaid,int,18,0,'ZZZZZZZZZZZZZZZZZ9',0,marcaid,'',7 ]).
 attri_i('Mode',[ 'Gx_mode',char,3,0,'@!',1,'','',2 ]).
  
 table_i(8,[ 'MARCAS',[ 24,112,113,114,115 ],marcas,marcas ]).
@@ -323,6 +324,7 @@ att_prop_i(2,115,'FullName',marcasfecultact,v).
  
 tbl_att_prop_i(2,8,24,'AllowNulls',n).
  
+var_prop_i(2,'Marcaid',idBasedOn,'',v).
  
 i_tbl_best_trn(8,[ 8,1,marcas,marcas,[] ]).
  

@@ -2,7 +2,7 @@
                File: Catalog_De_Marcas
         Description: Catalog_De_Marcas
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 1/26/2022 20:7:46.5
+       Generated on: 1/27/2022 13:32:45.12
        Program type: Callable routine
           Main DBMS: postgresql
 */
@@ -215,7 +215,7 @@ namespace GeneXus.Programs {
          context.AddJavascriptSource("jquery.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxtimezone.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxgral.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("gxcfg.js", "?2022126207466");
+         context.AddJavascriptSource("gxcfg.js", "?202212713324513");
          if ( context.isSpaRequest( ) )
          {
             enableOutput();
@@ -437,12 +437,19 @@ namespace GeneXus.Programs {
                               /* Execute user event: E120V2 */
                               E120V2 ();
                            }
-                           else if ( StringUtil.StrCmp(sEvt, "LOAD") == 0 )
+                           else if ( StringUtil.StrCmp(sEvt, "'CONSULTAR '") == 0 )
                            {
                               context.wbHandled = 1;
                               dynload_actions( ) ;
                               /* Execute user event: E130V2 */
                               E130V2 ();
+                           }
+                           else if ( StringUtil.StrCmp(sEvt, "LOAD") == 0 )
+                           {
+                              context.wbHandled = 1;
+                              dynload_actions( ) ;
+                              /* Execute user event: E140V2 */
+                              E140V2 ();
                            }
                            else if ( StringUtil.StrCmp(sEvt, "ENTER") == 0 )
                            {
@@ -456,11 +463,6 @@ namespace GeneXus.Programs {
                                  dynload_actions( ) ;
                               }
                               /* No code required for Cancel button. It is implemented as the Reset button. */
-                           }
-                           else if ( StringUtil.StrCmp(sEvt, "'CONSULTAR '") == 0 )
-                           {
-                              context.wbHandled = 1;
-                              dynload_actions( ) ;
                            }
                            else if ( StringUtil.StrCmp(sEvt, "'CANCELAR'") == 0 )
                            {
@@ -564,8 +566,8 @@ namespace GeneXus.Programs {
          fix_multi_value_controls( ) ;
          if ( String.IsNullOrEmpty(StringUtil.RTrim( context.wjLoc)) && ( context.nUserReturn != 1 ) )
          {
-            /* Execute user event: E130V2 */
-            E130V2 ();
+            /* Execute user event: E140V2 */
+            E140V2 ();
             WB0V0( ) ;
          }
       }
@@ -687,11 +689,18 @@ namespace GeneXus.Programs {
          context.httpAjaxContext.ajax_rsp_assign_sdt_attri("", false, "AV14marcas", AV14marcas);
       }
 
+      protected void E130V2( )
+      {
+         /* 'Consultar ' Routine */
+         context.wjLoc = formatLink("detallesmarcas.aspx") ;
+         context.wjLocDisableFrm = 1;
+      }
+
       protected void nextLoad( )
       {
       }
 
-      protected void E130V2( )
+      protected void E140V2( )
       {
          /* Load Routine */
       }
@@ -766,7 +775,7 @@ namespace GeneXus.Programs {
             TempTags = "  onfocus=\"gx.evt.onfocus(this, 20,'',false,'',0)\"";
             ClassString = "Button";
             StyleString = "color:#FFFFFF; background-color:#008080;";
-            GxWebStd.gx_button_ctrl( context, bttButton1_Internalname, "", "Consultar", bttButton1_Jsonclick, 5, "Consultar", "", StyleString, ClassString, 1, 1, "standard", "'"+""+"'"+",false,"+"'"+"E\\'CONSULTAR \\'."+"'", TempTags, "", context.GetButtonType( ), "HLP_Catalog_De_Marcas.htm");
+            GxWebStd.gx_button_ctrl( context, bttBtnconsultarmarca_Internalname, "", "Consultar", bttBtnconsultarmarca_Jsonclick, 5, "Consultar", "", StyleString, ClassString, 1, 1, "standard", "'"+""+"'"+",false,"+"'"+"E\\'CONSULTAR \\'."+"'", TempTags, "", context.GetButtonType( ), "HLP_Catalog_De_Marcas.htm");
             context.WriteHtmlText( "</td>") ;
             context.WriteHtmlText( "<td>") ;
             TempTags = "  onfocus=\"gx.evt.onfocus(this, 22,'',false,'',0)\"";
@@ -864,11 +873,11 @@ namespace GeneXus.Programs {
 
       protected void define_styles( )
       {
-         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?2071072");
+         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?13551359");
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?20221262074616");
+            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?202212713324520");
             idxLst = (int)(idxLst+1);
          }
          /* End function define_styles */
@@ -878,7 +887,7 @@ namespace GeneXus.Programs {
       {
          context.AddJavascriptSource("messages.spa.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxdec.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("catalog_de_marcas.js", "?20221262074616");
+         context.AddJavascriptSource("catalog_de_marcas.js", "?202212713324520");
          /* End function include_jscripts */
       }
 
@@ -887,7 +896,7 @@ namespace GeneXus.Programs {
          edtavNextvalue_Internalname = "vNEXTVALUE";
          edtavMarcasdsc_Internalname = "vMARCASDSC";
          tblTable2_Internalname = "TABLE2";
-         bttButton1_Internalname = "BUTTON1";
+         bttBtnconsultarmarca_Internalname = "BTNCONSULTARMARCA";
          bttButton2_Internalname = "BUTTON2";
          bttButton3_Internalname = "BUTTON3";
          tblTable3_Internalname = "TABLE3";
@@ -925,6 +934,7 @@ namespace GeneXus.Programs {
       {
          setEventMetadata("REFRESH","{handler:'Refresh',iparms:[],oparms:[]}");
          setEventMetadata("'GUARDAR '","{handler:'E120V2',iparms:[{av:'AV6NextValue',fld:'vNEXTVALUE',pic:'ZZZ9',hsh:true,nv:0},{av:'AV14marcas',fld:'vMARCAS',pic:'',nv:null},{av:'AV15marcasdsc',fld:'vMARCASDSC',pic:'',nv:''}],oparms:[{av:'AV14marcas',fld:'vMARCAS',pic:'',nv:null}]}");
+         setEventMetadata("'CONSULTAR '","{handler:'E130V2',iparms:[],oparms:[]}");
          return  ;
       }
 
@@ -968,7 +978,7 @@ namespace GeneXus.Programs {
          TempTags = "";
          ClassString = "";
          StyleString = "";
-         bttButton1_Jsonclick = "";
+         bttBtnconsultarmarca_Jsonclick = "";
          bttButton2_Jsonclick = "";
          bttButton3_Jsonclick = "";
          BackMsgLst = new msglist();
@@ -1024,8 +1034,8 @@ namespace GeneXus.Programs {
       private String TempTags ;
       private String ClassString ;
       private String StyleString ;
-      private String bttButton1_Internalname ;
-      private String bttButton1_Jsonclick ;
+      private String bttBtnconsultarmarca_Internalname ;
+      private String bttBtnconsultarmarca_Jsonclick ;
       private String bttButton2_Internalname ;
       private String bttButton2_Jsonclick ;
       private String bttButton3_Internalname ;

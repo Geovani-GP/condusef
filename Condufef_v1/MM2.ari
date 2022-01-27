@@ -6,6 +6,13 @@ pgm_main_i(web,29,'MENUPRINCIPAL',[ 15,'MENUPRINCIPAL','Menu Principal','','',''
 pgm_main_i(proc,6,'SCHEDULERREQUESTHANDLER',[ 15,'ASCHEDULERREQUESTHANDLER','Scheduler Request Handler','','','','HTTP' ]).
 pgm_main_i(proc,5,'LOADEVENTSSAMPLEPROC',[ 15,'ALOADEVENTSSAMPLEPROC','Load Events Sample Proc','','','','INTERNAL' ]).
  
+pgm_prop_i(web,92,'DETALLESMARCAS','USE_ENCRYPTION','NO').
+pgm_prop_i(web,92,'DETALLESMARCAS','HTTP_PROTOCOL','Unsecure').
+pgm_prop_i(web,31,'CATALOG_DE_MARCAS','USE_ENCRYPTION','NO').
+pgm_prop_i(web,31,'CATALOG_DE_MARCAS','HTTP_PROTOCOL','Unsecure').
+pgm_prop_i(trn,8,'MARCAS',idISBUSINESSCOMPONENT,'-1').
+pgm_prop_i(trn,8,'MARCAS','USE_ENCRYPTION','NO').
+pgm_prop_i(trn,8,'MARCAS','HTTP_PROTOCOL','Unsecure').
 pgm_prop_i(web,86,'DETALLESCAMBS','USE_ENCRYPTION','NO').
 pgm_prop_i(web,86,'DETALLESCAMBS','HTTP_PROTOCOL','Unsecure').
 pgm_prop_i(web,28,'LOGIN','USE_ENCRYPTION','NO').
@@ -78,8 +85,6 @@ pgm_prop_i(web,34,'CATALOG_DE_TIPO_DOC','USE_ENCRYPTION','NO').
 pgm_prop_i(web,34,'CATALOG_DE_TIPO_DOC','HTTP_PROTOCOL','Unsecure').
 pgm_prop_i(web,32,'CATALOG_DE_MODELO','USE_ENCRYPTION','NO').
 pgm_prop_i(web,32,'CATALOG_DE_MODELO','HTTP_PROTOCOL','Unsecure').
-pgm_prop_i(web,31,'CATALOG_DE_MARCAS','USE_ENCRYPTION','NO').
-pgm_prop_i(web,31,'CATALOG_DE_MARCAS','HTTP_PROTOCOL','Unsecure').
 pgm_prop_i(web,29,'MENUPRINCIPAL','USE_ENCRYPTION','NO').
 pgm_prop_i(web,29,'MENUPRINCIPAL','HTTP_PROTOCOL','Unsecure').
 pgm_prop_i(trn,21,'STATUS',idISBUSINESSCOMPONENT,'-1').
@@ -111,9 +116,6 @@ pgm_prop_i(trn,10,'PROVEEDORES','USE_ENCRYPTION','NO').
 pgm_prop_i(trn,10,'PROVEEDORES','HTTP_PROTOCOL','Unsecure').
 pgm_prop_i(trn,9,'PRODUCTO','USE_ENCRYPTION','NO').
 pgm_prop_i(trn,9,'PRODUCTO','HTTP_PROTOCOL','Unsecure').
-pgm_prop_i(trn,8,'MARCAS',idISBUSINESSCOMPONENT,'-1').
-pgm_prop_i(trn,8,'MARCAS','USE_ENCRYPTION','NO').
-pgm_prop_i(trn,8,'MARCAS','HTTP_PROTOCOL','Unsecure').
 pgm_prop_i(trn,7,'ESTATUSARTICULO',idISBUSINESSCOMPONENT,'-1').
 pgm_prop_i(trn,7,'ESTATUSARTICULO','USE_ENCRYPTION','NO').
 pgm_prop_i(trn,7,'ESTATUSARTICULO','HTTP_PROTOCOL','Unsecure').
@@ -192,12 +194,12 @@ datastore_i(1,'CS_RPCPGML','').
 datastore_i(1,'JDBC_DATASOURCE','').
 datastore_i(1,'USE_JDBC_DATASOURCE','0').
 datastore_i(1,'DS_DBMS_ADDINFO','').
-datastore_i(1,'USER_PASSWORD',asdf).
+datastore_i(1,'USER_PASSWORD',admin).
 datastore_i(1,'USER_ID',postgres).
 datastore_i(1,'CS_CONNECT','First').
 datastore_i(1,'DBMS_PORT','5432').
 datastore_i(1,'CS_SERVER',localhost).
-datastore_i(1,'CS_DBNAME',condusef).
+datastore_i(1,'CS_DBNAME',postgres).
 datastore_i(1,'CS_FLEDSNAME','').
 datastore_i(1,'CS_DRVNAME','').
 datastore_i(1,'CS_DSNAME','').
