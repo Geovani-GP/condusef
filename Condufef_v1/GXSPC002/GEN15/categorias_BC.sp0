@@ -41,7 +41,7 @@ rule_i(0,datastore(1,'CS_RPCPGML','')).
 rule_i(0,datastore(1,'JDBC_DATASOURCE','')).
 rule_i(0,datastore(1,'USE_JDBC_DATASOURCE','0')).
 rule_i(0,datastore(1,'DS_DBMS_ADDINFO','')).
-rule_i(0,datastore(1,'USER_PASSWORD',󻢸蘇�2�5炭)).
+rule_i(0,datastore(1,'USER_PASSWORD',admin)).
 rule_i(0,datastore(1,'USER_ID',postgres)).
 rule_i(0,datastore(1,'CS_CONNECT','First')).
 rule_i(0,datastore(1,'DBMS_PORT','5432')).
@@ -191,6 +191,7 @@ attri_i(95,[ categoriasusuario,svchar,15,0,'',0,categoriasusuario,'',0 ]).
 attri_i(94,[ categoriasdsc,svchar,100,0,'',0,categoriasdsc,'',0 ]).
 attri_i(14,[ categoriasid,int,9,0,'ZZZZZZZZ9',0,categoriasid,'',0 ]).
 attri_i('Gxremove',[ 'GxRemove',int,1,0,'9',0,'Gx Remove','',5 ]).
+attri_i('Categoriasid',[ categoriasid,int,9,0,'ZZZZZZZZ9',0,categoriasid,'',7 ]).
 attri_i('Mode',[ 'Gx_mode',char,3,0,'@!',1,'','',2 ]).
  
 table_i(5,[ 'CATEGORIAS',[ 14,94,95,96,97 ],categorias,categorias ]).
@@ -323,6 +324,7 @@ att_prop_i(2,97,'FullName',categoriasfecultact,v).
  
 tbl_att_prop_i(2,5,14,'AllowNulls',n).
  
+var_prop_i(2,'Categoriasid',idBasedOn,'',v).
  
 i_tbl_best_trn(5,[ 5,1,categorias,categorias,[] ]).
  

@@ -2,7 +2,7 @@
                File: origen_BC
         Description: origen
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 1/26/2022 20:7:37.86
+       Generated on: 1/27/2022 16:5:42.57
        Program type: Callable routine
           Main DBMS: postgresql
 */

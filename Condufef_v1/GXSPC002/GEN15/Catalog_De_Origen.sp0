@@ -45,7 +45,7 @@ rule_i(0,datastore(1,'CS_RPCPGML','')).
 rule_i(0,datastore(1,'JDBC_DATASOURCE','')).
 rule_i(0,datastore(1,'USE_JDBC_DATASOURCE','0')).
 rule_i(0,datastore(1,'DS_DBMS_ADDINFO','')).
-rule_i(0,datastore(1,'USER_PASSWORD',󻢸蘇�2�5炭)).
+rule_i(0,datastore(1,'USER_PASSWORD',admin)).
 rule_i(0,datastore(1,'USER_ID',postgres)).
 rule_i(0,datastore(1,'CS_CONNECT','First')).
 rule_i(0,datastore(1,'DBMS_PORT','5432')).
@@ -121,6 +121,7 @@ rule_i(0,p(0,15,fvix,[ 8,7 ],[ 'LOC','' ])).
 rule_i(0,p(0,15,fvix,[ 8,7 ],[ 'SCHEMA',public ])).
 rule_i(0,p(0,15,fvix,[ 8,7 ],[ 'EXTNAM','YES' ])).
 rule_i(0,rule([ a(22,[ '''Guardar ''','''Guardar ''','' ]) ],[],[],[])).
+rule_i(0,rule([ a(22,[ '''Consultar ''','''Consultar ''','' ]) ],[],[],[])).
  
 a_i(1,1,f,'Err',[],[ [],[ t('0',3) ] ]).
 a_i(2,2,ra,2000,[],[ [],'ORIGEN_PKEY',[],2 ]).
@@ -189,7 +190,8 @@ break_i(2,nvg,1,[],[ [],[],[] ]).
  
 b_group_i(2,1,lit,0,1,1).
 b_group_i(2,2,lit,0,2,5).
-b_group_i(2,3,lit,0,6,0).
+b_group_i(2,3,lit,0,6,17).
+b_group_i(2,4,lit,0,18,0).
  
 b_line_i(1,2,1,cmd,1,[ t('',146,1,0),t('Start',3,1,7) ]).
 b_line_i(2,2,2,cmd,1,[ t('',107,1,0),t('Nextvalue',23,1,0),t(=,10,1,0),t(40000,2,1,0),t(+,5,1,0),t('1',3,1,0) ]).
@@ -205,9 +207,12 @@ b_line_i(12,2,3,cmd,1,[ t('',110,1,0) ]).
 b_line_i(13,2,3,cmd,1,[ t('',157,1,0) ]).
 b_line_i(14,2,3,cmd,1,[ t('',111,1,0) ]).
 b_line_i(15,2,3,cmd,1,[ t('',147,1,0) ]).
-b_line_i(1000,2,3,cmd,0,[ t('',146,0,0),t('Load',3,0,0) ]).
-b_line_i(1001,2,3,cmd,0,[ t('',155,0,0) ]).
-b_line_i(1002,2,3,cmd,0,[ t('',147,0,0) ]).
+b_line_i(17,2,3,cmd,1,[ t('',146,1,0),t('''Consultar ''',3,17,7) ]).
+b_line_i(18,2,4,cmd,1,[ t('',104,1,0),t(o(13,'DetallesOrigen'),28,1,2) ]).
+b_line_i(19,2,4,cmd,1,[ t('',147,1,0) ]).
+b_line_i(1000,2,4,cmd,0,[ t('',146,0,0),t('Load',3,0,0) ]).
+b_line_i(1001,2,4,cmd,0,[ t('',155,0,0) ]).
+b_line_i(1002,2,4,cmd,0,[ t('',147,0,0) ]).
  
  
  
@@ -427,7 +432,6 @@ html_comp_i(28,'Buttonborderstyle',standard,d,[ str ]).
  
  
  
-warn_gen_i(msg([],spc0156,[ 'Event ','''Consultar ''',' for control ''','Button1',''' is not defined.' ])).
 warn_gen_i(msg([],spc0156,[ 'Event ','''Cancelar''',' for control ''','Button3',''' is not defined.' ])).
  
 lit_i(12,1,t('Nextvalue',23),[ ctlname('&Nextvalue'),ctrltype(edit,12),pos(12),ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
@@ -610,9 +614,12 @@ struct_dt_elem_i([ 26,1,1 ],2,pic,'ZZZZZZZZ9').
  
 sub_info_i(146,'Start',1,3,[ [],[ 'Nextvalue' ] ]).
 sub_info_i(146,'''Guardar ''',5,15,[ [ 'Nextvalue','Origen','Origendscorta','Origendsclarga' ],[ 'Origen' ] ]).
+sub_info_i(146,'''Consultar ''',17,19,[ [],[] ]).
  
+pgm_parm_i(web,95,'DETALLESORIGEN',[],[]).
  
 pgm_callprotocol_i(web,40,'CATALOG_DE_ORIGEN','INTERNAL').
+pgm_callprotocol_i(web,95,'DETALLESORIGEN','INTERNAL').
  
  
  

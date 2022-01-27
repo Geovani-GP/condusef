@@ -15,5 +15,5 @@
 /r:bin\GeneXus.Programs.Common.dll
 /r:GxBaseBuilder.dll
 /out:bin\origen.dll
-origen.cs
 origen_bc.cs
+origen.cs

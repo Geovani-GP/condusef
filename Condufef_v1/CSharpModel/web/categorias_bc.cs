@@ -2,7 +2,7 @@
                File: categorias_BC
         Description: categorias
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 1/26/2022 20:7:17.95
+       Generated on: 1/27/2022 15:39:20.76
        Program type: Callable routine
           Main DBMS: postgresql
 */

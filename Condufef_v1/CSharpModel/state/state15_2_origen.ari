@@ -1,6 +1,6 @@
 current_obj_i(2,trn,16).
  
-called_tree_i(0,16,13,75).
+called_tree_i(0,16,13,1).
  
  
  
@@ -10,7 +10,7 @@ called_tree_i(0,16,13,75).
 ij_object_dependency(origen,[],[],[],16).
  
  
-obj_parms_i([],[]).
+obj_parms_i([ 'String aP0_Gx_mode','long aP1_origenid' ],[ [ 'Mode',in ],[ 'Origenid',in ] ]).
  
  
 has_silent_trn_i(origen_bc).

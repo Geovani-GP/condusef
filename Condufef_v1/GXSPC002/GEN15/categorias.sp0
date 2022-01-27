@@ -1,6 +1,6 @@
 spec_i([ trn,5,categorias,categorias,[],spa,'10_3_15-115824' ]).
  
-struct_i(5,0,[],[]).
+struct_i(5,0,[ 'Mode','Categoriasid' ],[]).
  
 level_i(5,[ 5,[ [ 5,many ] ],[ 14 ],[],[],[],[ 14 ],'CATEGORIAS_PKEY',[ 5,[] ],[] ]).
  
@@ -13,7 +13,7 @@ lwi_i(5,[ [] ]).
  
 ta_i(5,[ [ [ 5,14 ],[ 5,94 ],[ 5,95 ],[ 5,96 ],[ 5,97 ] ] ]).
  
-las_i(5,[ [ 14,94,95,96,97 ] ]).
+las_i(5,[ [ 'Mode','Categoriasid',14,94,95,96,97 ] ]).
  
 lac_i(5,[ [ 14,94,95,96,97 ] ]).
  
@@ -47,7 +47,7 @@ rule_i(0,datastore(1,'CS_RPCPGML','')).
 rule_i(0,datastore(1,'JDBC_DATASOURCE','')).
 rule_i(0,datastore(1,'USE_JDBC_DATASOURCE','0')).
 rule_i(0,datastore(1,'DS_DBMS_ADDINFO','')).
-rule_i(0,datastore(1,'USER_PASSWORD',󻢸蘇�2�5炭)).
+rule_i(0,datastore(1,'USER_PASSWORD',admin)).
 rule_i(0,datastore(1,'USER_ID',postgres)).
 rule_i(0,datastore(1,'CS_CONNECT','First')).
 rule_i(0,datastore(1,'DBMS_PORT','5432')).
@@ -158,10 +158,10 @@ rule_i(0,prop(idBC,'-1')).
 rule_i(0,prop('Folder',o(120,'Root Module'))).
 rule_i(0,prop('ObjDesc',categorias)).
 rule_i(0,prop('ObjName',categorias)).
-rule_i(5,prompt([ 5,[ [ [],14,14 ] ],[],[],[ t(o(13,'Gx0050'),28),t(14,2) ],[],n,[] ])).
-rule_i(5,rule([ a(23,[ [ 14 ],[ t(o(13,'Gx0050'),28),t(14,2) ] ]) ],[],[],[ 14 ])).
 rule_i(0,rule([ a(22,[ 'Dlt','"Eliminar"','' ]) ],[],[],[])).
 rule_i(0,maingen(15)).
+rule_i(0,rule([ a(10,[ 'Mode','Categoriasid' ]) ],[],[ insert,update,delete,display ],[])).
+rule_i(0,parmio([ [ 'Mode',in ],[ 'Categoriasid',in ] ])).
 rule_i(0,p(0,0,fv,12,[ intname,'CATEGORIAS' ])).
 rule_i(0,p(0,0,fv,12,[ table,5 ])).
 rule_i(0,p(0,15,fv,12,[])).
@@ -178,15 +178,24 @@ rule_i(0,file(5,'CATEGORIAS',[ 14,94,95,96,97 ])).
 rule_i(0,loc([ 5 ],'CATEGORIAS','','LAN')).
 rule_i(0,index(5,'CATEGORIAS_PKEY',u,[ 14 ])).
 rule_i(0,loc([ 5,'CATEGORIAS_PKEY' ],categorias_pkey,'','LAN')).
+rule_i(5,rule([ a(3,[ t(14,2) ]) ],[],[ insert,update,delete,display ],[ 14 ])).
+rule_i(5,rule([ a(21,[ [ 14 ] ]) ],[],[ insert,update,delete,display ],[ 14 ])).
  
-a_i(1,5,t,5,[],[ [ [ [],14,14 ] ],'CATEGORIAS_PKEY',[] ]).
+a_i(1,5,f,14,[],[ [],[ t('Categoriasid',23),t('IF',17),t('.NOT.',8),t('null(',1),t('Categoriasid',23),t(')',4),t(';',18) ] ]).
+a_i(2,5,f,[ t(14,2),t('Enabled',3) ],[],[ [],[ t(0,3),t(';',18) ] ]).
+a_i(3,5,t,5,[],[ [ [ [],14,14 ] ],'CATEGORIAS_PKEY',[] ]).
  
-v_i(t,i,1,14).
-v_i(t,o,1,94).
-v_i(t,o,1,95).
-v_i(t,o,1,96).
-v_i(t,o,1,97).
+v_i(f,i,1,'Categoriasid').
+v_i(f,o,1,14).
+v_i(f,i,2,[]).
+v_i(f,o,2,[ t(14,2),t('Enabled',3) ]).
+v_i(t,i,3,14).
+v_i(t,o,3,94).
+v_i(t,o,3,95).
+v_i(t,o,3,96).
+v_i(t,o,3,97).
  
+act_info_i(1,[ [ 14 ] ]).
  
  
  
@@ -198,6 +207,7 @@ attri_i(95,[ categoriasusuario,svchar,15,0,'',0,categoriasusuario,'',0 ]).
 attri_i(94,[ categoriasdsc,svchar,100,0,'',0,categoriasdsc,'',0 ]).
 attri_i(14,[ categoriasid,int,9,0,'ZZZZZZZZ9',0,categoriasid,'',0 ]).
 attri_i('Gxremove',[ 'GxRemove',int,1,0,'9',0,'Gx Remove','',5 ]).
+attri_i('Categoriasid',[ categoriasid,int,9,0,'ZZZZZZZZ9',0,categoriasid,'',7 ]).
 attri_i('Mode',[ 'Gx_mode',char,3,0,'@!',1,'','',2 ]).
  
 table_i(5,[ 'CATEGORIAS',[ 14,94,95,96,97 ],categorias,categorias ]).
@@ -342,7 +352,7 @@ html_comp_i(6,'Title','',d,[ str ]).
 html_comp_i(6,'Fill',-1,d,[ bool ]).
 html_comp_i(6,'Backcolor',rgb(255,255,255),d,[ color ]).
 html_comp_i(6,'Forecolor',rgb(0,0,0),d,[ color ]).
-html_comp_i(6,'Font',font('Open Sans Semibold',17,[]),d,[ font ]).
+html_comp_i(6,'Font',font('Microsoft Sans Serif',17,[]),d,[ font ]).
 html_comp_i(7,'Class',row,v,[ str ]).
 html_comp_i(7,'Id','',d,[ str ]).
 html_comp_i(7,'Height',measure(0,px),d,[ measure ]).
@@ -866,6 +876,7 @@ att_prop_i(2,97,'FullName',categoriasfecultact,v).
  
 tbl_att_prop_i(2,5,14,'AllowNulls',n).
  
+var_prop_i(2,'Categoriasid',idBasedOn,'',v).
  
  
  
@@ -879,10 +890,8 @@ trn_level_i(5,[ [ 14,94,95,96,97 ],categorias,categorias,categorias,'',94 ]).
  
  
  
-pgm_parm_i(web,66,'GX0050',[ [ int,9,0,0 ] ],[ [ pcategoriasid,out,[] ] ]).
  
 pgm_callprotocol_i(trn,5,'CATEGORIAS','INTERNAL').
-pgm_callprotocol_i(web,66,'GX0050','INTERNAL').
  
  
  

@@ -1,6 +1,6 @@
 current_obj_i(2,trn,5).
  
-called_tree_i(0,5,13,66).
+called_tree_i(0,5,13,1).
  
  
  
@@ -10,7 +10,7 @@ called_tree_i(0,5,13,66).
 ij_object_dependency(categorias,[],[],[],5).
  
  
-obj_parms_i([],[]).
+obj_parms_i([ 'String aP0_Gx_mode','int aP1_categoriasid' ],[ [ 'Mode',in ],[ 'Categoriasid',in ] ]).
  
  
 has_silent_trn_i(categorias_bc).

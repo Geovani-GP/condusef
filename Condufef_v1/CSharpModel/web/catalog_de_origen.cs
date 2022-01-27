@@ -2,7 +2,7 @@
                File: Catalog_De_Origen
         Description: Catalog_De_Origen
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 1/26/2022 20:7:47.53
+       Generated on: 1/27/2022 16:5:43.1
        Program type: Callable routine
           Main DBMS: postgresql
 */
@@ -215,7 +215,7 @@ namespace GeneXus.Programs {
          context.AddJavascriptSource("jquery.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxtimezone.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxgral.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("gxcfg.js", "?20221262074754");
+         context.AddJavascriptSource("gxcfg.js", "?2022127165432");
          if ( context.isSpaRequest( ) )
          {
             enableOutput();
@@ -432,12 +432,19 @@ namespace GeneXus.Programs {
                               /* Execute user event: E12142 */
                               E12142 ();
                            }
-                           else if ( StringUtil.StrCmp(sEvt, "LOAD") == 0 )
+                           else if ( StringUtil.StrCmp(sEvt, "'CONSULTAR '") == 0 )
                            {
                               context.wbHandled = 1;
                               dynload_actions( ) ;
                               /* Execute user event: E13142 */
                               E13142 ();
+                           }
+                           else if ( StringUtil.StrCmp(sEvt, "LOAD") == 0 )
+                           {
+                              context.wbHandled = 1;
+                              dynload_actions( ) ;
+                              /* Execute user event: E14142 */
+                              E14142 ();
                            }
                            else if ( StringUtil.StrCmp(sEvt, "ENTER") == 0 )
                            {
@@ -451,11 +458,6 @@ namespace GeneXus.Programs {
                                  dynload_actions( ) ;
                               }
                               /* No code required for Cancel button. It is implemented as the Reset button. */
-                           }
-                           else if ( StringUtil.StrCmp(sEvt, "'CONSULTAR '") == 0 )
-                           {
-                              context.wbHandled = 1;
-                              dynload_actions( ) ;
                            }
                            else if ( StringUtil.StrCmp(sEvt, "'CANCELAR'") == 0 )
                            {
@@ -557,8 +559,8 @@ namespace GeneXus.Programs {
          fix_multi_value_controls( ) ;
          if ( String.IsNullOrEmpty(StringUtil.RTrim( context.wjLoc)) && ( context.nUserReturn != 1 ) )
          {
-            /* Execute user event: E13142 */
-            E13142 ();
+            /* Execute user event: E14142 */
+            E14142 ();
             WB140( ) ;
          }
       }
@@ -660,11 +662,18 @@ namespace GeneXus.Programs {
          context.httpAjaxContext.ajax_rsp_assign_sdt_attri("", false, "AV14origen", AV14origen);
       }
 
+      protected void E13142( )
+      {
+         /* 'Consultar ' Routine */
+         context.wjLoc = formatLink("detallesorigen.aspx") ;
+         context.wjLocDisableFrm = 1;
+      }
+
       protected void nextLoad( )
       {
       }
 
-      protected void E13142( )
+      protected void E14142( )
       {
          /* Load Routine */
       }
@@ -847,11 +856,11 @@ namespace GeneXus.Programs {
 
       protected void define_styles( )
       {
-         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?2071072");
+         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?13551359");
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?20221262074765");
+            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?2022127165439");
             idxLst = (int)(idxLst+1);
          }
          /* End function define_styles */
@@ -861,7 +870,7 @@ namespace GeneXus.Programs {
       {
          context.AddJavascriptSource("messages.spa.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxdec.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("catalog_de_origen.js", "?20221262074765");
+         context.AddJavascriptSource("catalog_de_origen.js", "?2022127165439");
          /* End function include_jscripts */
       }
 
@@ -909,6 +918,7 @@ namespace GeneXus.Programs {
       {
          setEventMetadata("REFRESH","{handler:'Refresh',iparms:[],oparms:[]}");
          setEventMetadata("'GUARDAR '","{handler:'E12142',iparms:[{av:'AV6NextValue',fld:'vNEXTVALUE',pic:'ZZZ9',nv:0},{av:'AV14origen',fld:'vORIGEN',pic:'',nv:null},{av:'AV8origendscorta',fld:'vORIGENDSCORTA',pic:'',nv:''},{av:'AV9origendsclarga',fld:'vORIGENDSCLARGA',pic:'',nv:''}],oparms:[{av:'AV14origen',fld:'vORIGEN',pic:'',nv:null}]}");
+         setEventMetadata("'CONSULTAR '","{handler:'E13142',iparms:[],oparms:[]}");
          return  ;
       }
 

@@ -1,6 +1,6 @@
 spec_i([ trn,16,origen,origen,[],spa,'10_3_15-115824' ]).
  
-struct_i(16,0,[],[]).
+struct_i(16,0,[ 'Mode','Origenid' ],[]).
  
 level_i(16,[ 16,[ [ 16,many ] ],[ 10 ],[],[],[],[ 10 ],'ORIGEN_PKEY',[ 16,[] ],[] ]).
  
@@ -13,7 +13,7 @@ lwi_i(16,[ [] ]).
  
 ta_i(16,[ [ [ 16,10 ],[ 16,120 ],[ 16,121 ],[ 16,122 ],[ 16,123 ],[ 16,124 ],[ 16,125 ] ] ]).
  
-las_i(16,[ [ 10,120,121,122,123,124,125 ] ]).
+las_i(16,[ [ 'Mode','Origenid',10,120,121,122,123,124,125 ] ]).
  
 lac_i(16,[ [ 10,120,121,122,123,124,125 ] ]).
  
@@ -49,7 +49,7 @@ rule_i(0,datastore(1,'CS_RPCPGML','')).
 rule_i(0,datastore(1,'JDBC_DATASOURCE','')).
 rule_i(0,datastore(1,'USE_JDBC_DATASOURCE','0')).
 rule_i(0,datastore(1,'DS_DBMS_ADDINFO','')).
-rule_i(0,datastore(1,'USER_PASSWORD',󻢸蘇�2�5炭)).
+rule_i(0,datastore(1,'USER_PASSWORD',admin)).
 rule_i(0,datastore(1,'USER_ID',postgres)).
 rule_i(0,datastore(1,'CS_CONNECT','First')).
 rule_i(0,datastore(1,'DBMS_PORT','5432')).
@@ -160,10 +160,10 @@ rule_i(0,prop(idBC,'-1')).
 rule_i(0,prop('Folder',o(120,'Root Module'))).
 rule_i(0,prop('ObjDesc',origen)).
 rule_i(0,prop('ObjName',origen)).
-rule_i(16,prompt([ 16,[ [ [],10,10 ] ],[],[],[ t(o(13,'Gx00G0'),28),t(10,2) ],[],n,[] ])).
-rule_i(16,rule([ a(23,[ [ 10 ],[ t(o(13,'Gx00G0'),28),t(10,2) ] ]) ],[],[],[ 10 ])).
 rule_i(0,rule([ a(22,[ 'Dlt','"Eliminar"','' ]) ],[],[],[])).
 rule_i(0,maingen(15)).
+rule_i(0,rule([ a(10,[ 'Mode','Origenid' ]) ],[],[ insert,update,delete,display ],[])).
+rule_i(0,parmio([ [ 'Mode',in ],[ 'Origenid',in ] ])).
 rule_i(0,p(0,0,fv,8,[ intname,'ORIGEN' ])).
 rule_i(0,p(0,0,fv,8,[ table,16 ])).
 rule_i(0,p(0,15,fv,8,[])).
@@ -180,6 +180,8 @@ rule_i(0,file(16,'ORIGEN',[ 10,120,121,122,123,124,125 ])).
 rule_i(0,loc([ 16 ],'ORIGEN','','LAN')).
 rule_i(0,index(16,'ORIGEN_PKEY',u,[ 10 ])).
 rule_i(0,loc([ 16,'ORIGEN_PKEY' ],origen_pkey,'','LAN')).
+rule_i(16,rule([ a(3,[ t(10,2) ]) ],[],[ insert,update,delete,display ],[ 10 ])).
+rule_i(16,rule([ a(21,[ [ 10 ] ]) ],[],[ insert,update,delete,display ],[ 10 ])).
 rule_i(0,p(0,0,fv,15,[ intname,'ARTICULOS' ])).
 rule_i(0,p(0,0,fv,15,[ table,11 ])).
 rule_i(0,p(0,15,fv,15,[])).
@@ -204,16 +206,23 @@ rule_i(0,loc([ 11,'ARTICULOS_PKEY' ],articulos_pkey,'','LAN')).
 rule_i(0,index(11,'PRODUCTOID',k,[ 19 ])).
 rule_i(0,loc([ 11,'PRODUCTOID' ],productoid,'','LAN')).
  
-a_i(1,16,t,16,[],[ [ [ [],10,10 ] ],'ORIGEN_PKEY',[] ]).
+a_i(1,16,f,10,[],[ [],[ t('Origenid',23),t('IF',17),t('.NOT.',8),t('null(',1),t('Origenid',23),t(')',4),t(';',18) ] ]).
+a_i(2,16,f,[ t(10,2),t('Enabled',3) ],[],[ [],[ t(0,3),t(';',18) ] ]).
+a_i(3,16,t,16,[],[ [ [ [],10,10 ] ],'ORIGEN_PKEY',[] ]).
  
-v_i(t,i,1,10).
-v_i(t,o,1,120).
-v_i(t,o,1,121).
-v_i(t,o,1,122).
-v_i(t,o,1,123).
-v_i(t,o,1,124).
-v_i(t,o,1,125).
+v_i(f,i,1,'Origenid').
+v_i(f,o,1,10).
+v_i(f,i,2,[]).
+v_i(f,o,2,[ t(10,2),t('Enabled',3) ]).
+v_i(t,i,3,10).
+v_i(t,o,3,120).
+v_i(t,o,3,121).
+v_i(t,o,3,122).
+v_i(t,o,3,123).
+v_i(t,o,3,124).
+v_i(t,o,3,125).
  
+act_info_i(1,[ [ 10 ] ]).
  
  
 tbl_to_delete_i(16,[ 11,[ [ 16,10,10 ] ],c,'IARTICULOS5',[ [ 11,10 ] ],[ 19,20,21 ],'' ]).
@@ -231,6 +240,7 @@ attri_i(121,[ origendsclarga,svchar,100,0,'',0,origendsclarga,'',0 ]).
 attri_i(120,[ origendscorta,svchar,50,0,'',0,origendscorta,'',0 ]).
 attri_i(10,[ origenid,int,18,0,'ZZZZZZZZZZZZZZZZZ9',0,origenid,'',0 ]).
 attri_i('Gxremove',[ 'GxRemove',int,1,0,'9',0,'Gx Remove','',5 ]).
+attri_i('Origenid',[ origenid,int,18,0,'ZZZZZZZZZZZZZZZZZ9',0,origenid,'',7 ]).
 attri_i('Mode',[ 'Gx_mode',char,3,0,'@!',1,'','',2 ]).
  
 table_i(11,[ 'ARTICULOS',[ 19,20,21,10 ],articulos,articulos ]).
@@ -416,7 +426,7 @@ html_comp_i(6,'Title','',d,[ str ]).
 html_comp_i(6,'Fill',-1,d,[ bool ]).
 html_comp_i(6,'Backcolor',rgb(255,255,255),d,[ color ]).
 html_comp_i(6,'Forecolor',rgb(0,0,0),d,[ color ]).
-html_comp_i(6,'Font',font('Open Sans Semibold',17,[]),d,[ font ]).
+html_comp_i(6,'Font',font('Microsoft Sans Serif',17,[]),d,[ font ]).
 html_comp_i(7,'Class',row,v,[ str ]).
 html_comp_i(7,'Id','',d,[ str ]).
 html_comp_i(7,'Height',measure(0,px),d,[ measure ]).
@@ -1104,6 +1114,7 @@ tbl_att_prop_i(2,11,19,'AllowNulls',n).
 tbl_att_prop_i(2,11,20,'AllowNulls',n).
 tbl_att_prop_i(2,11,21,'AllowNulls',n).
  
+var_prop_i(2,'Origenid',idBasedOn,'',v).
  
  
  
@@ -1117,10 +1128,8 @@ trn_level_i(16,[ [ 10,120,121,122,123,124,125 ],origen,origen,origen,'',120 ]).
  
  
  
-pgm_parm_i(web,75,'GX00G0',[ [ int,18,0,0 ] ],[ [ porigenid,out,[] ] ]).
  
 pgm_callprotocol_i(trn,16,'ORIGEN','INTERNAL').
-pgm_callprotocol_i(web,75,'GX00G0','INTERNAL').
  
  
  
