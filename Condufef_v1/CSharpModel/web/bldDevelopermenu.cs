@@ -82,6 +82,7 @@ public class bldDevelopermenu : GxBaseBuilder
       sc.Add( @"sidebar", "dll");
       sc.Add( @"detallescambs", "dll");
       sc.Add( @"detallesmarcas", "dll");
+      sc.Add( @"detallemodelos", "dll");
       sc.Add( @"tipobien", "dll");
       sc.Add( @"parametros", "dll");
       sc.Add( @"meses", "dll");
@@ -145,6 +146,8 @@ public class bldDevelopermenu : GxBaseBuilder
             return true;
          if (checkTime(obj, cs_path + @"\GxModelInfoProvider.cs" ))
             return true;
+         if (checkTime(obj, cs_path + @"\type_Sdtmodelos.cs" ))
+            return true;
          if (checkTime(obj, cs_path + @"\type_Sdtmarcas.cs" ))
             return true;
          if (checkTime(obj, cs_path + @"\type_Sdtcambs.cs" ))
@@ -152,8 +155,6 @@ public class bldDevelopermenu : GxBaseBuilder
          if (checkTime(obj, cs_path + @"\type_Sdtstatus.cs" ))
             return true;
          if (checkTime(obj, cs_path + @"\type_Sdttipodocumento.cs" ))
-            return true;
-         if (checkTime(obj, cs_path + @"\type_Sdtmodelos.cs" ))
             return true;
          if (checkTime(obj, cs_path + @"\type_Sdtarea.cs" ))
             return true;

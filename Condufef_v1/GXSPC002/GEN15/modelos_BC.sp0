@@ -41,7 +41,7 @@ rule_i(0,datastore(1,'CS_RPCPGML','')).
 rule_i(0,datastore(1,'JDBC_DATASOURCE','')).
 rule_i(0,datastore(1,'USE_JDBC_DATASOURCE','0')).
 rule_i(0,datastore(1,'DS_DBMS_ADDINFO','')).
-rule_i(0,datastore(1,'USER_PASSWORD',󻢸蘇�2�5炭)).
+rule_i(0,datastore(1,'USER_PASSWORD',admin)).
 rule_i(0,datastore(1,'USER_ID',postgres)).
 rule_i(0,datastore(1,'CS_CONNECT','First')).
 rule_i(0,datastore(1,'DBMS_PORT','5432')).
@@ -262,6 +262,7 @@ attri_i(117,[ modelosusuario,svchar,15,0,'',0,modelosusuario,'',0 ]).
 attri_i(116,[ modelosdsc,svchar,100,0,'',0,modelosdsc,'',0 ]).
 attri_i(15,[ modelosid,int,9,0,'ZZZZZZZZ9',0,modelosid,'',0 ]).
 attri_i('Gxremove',[ 'GxRemove',int,1,0,'9',0,'Gx Remove','',5 ]).
+attri_i('Modelosid',[ modelosid,int,9,0,'ZZZZZZZZ9',0,productoid,'',7 ]).
 attri_i('Mode',[ 'Gx_mode',char,3,0,'@!',1,'','',2 ]).
  
 table_i(11,[ 'ARTICULOS',[ 19,20,21 ],articulos,articulos ]).
@@ -520,6 +521,7 @@ tbl_att_prop_i(2,11,19,'AllowNulls',n).
 tbl_att_prop_i(2,11,20,'AllowNulls',n).
 tbl_att_prop_i(2,11,21,'AllowNulls',n).
  
+var_prop_i(2,'Modelosid',idBasedOn,'',v).
  
 i_tbl_best_trn(19,[ 19,1,modelos,modelos,[] ]).
  
