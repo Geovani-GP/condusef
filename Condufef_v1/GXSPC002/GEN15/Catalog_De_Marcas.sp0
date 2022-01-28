@@ -26,6 +26,7 @@ pos_i('Nextvalue',[ 0,0,0 ]).
 pos_i('Marcasdsc',[ 0,0,0 ]).
  
  
+default_i(e('Today',2,2,'''today''')).
  
 rule_i(0,datastore(1,'DS_LAST_CHANGE','')).
 rule_i(0,datastore(1,'POSTGRESQL_VERSION','8_3')).
@@ -44,12 +45,12 @@ rule_i(0,datastore(1,'CS_RPCPGML','')).
 rule_i(0,datastore(1,'JDBC_DATASOURCE','')).
 rule_i(0,datastore(1,'USE_JDBC_DATASOURCE','0')).
 rule_i(0,datastore(1,'DS_DBMS_ADDINFO','')).
-rule_i(0,datastore(1,'USER_PASSWORD',admin)).
+rule_i(0,datastore(1,'USER_PASSWORD',asdf)).
 rule_i(0,datastore(1,'USER_ID',postgres)).
 rule_i(0,datastore(1,'CS_CONNECT','First')).
 rule_i(0,datastore(1,'DBMS_PORT','5432')).
 rule_i(0,datastore(1,'CS_SERVER',localhost)).
-rule_i(0,datastore(1,'CS_DBNAME',postgres)).
+rule_i(0,datastore(1,'CS_DBNAME',condusef)).
 rule_i(0,datastore(1,'CS_FLEDSNAME','')).
 rule_i(0,datastore(1,'CS_DRVNAME','')).
 rule_i(0,datastore(1,'CS_DSNAME','')).
@@ -121,30 +122,36 @@ rule_i(0,p(0,15,fvix,[ 18,19 ],[ 'SCHEMA',public ])).
 rule_i(0,p(0,15,fvix,[ 18,19 ],[ 'EXTNAM','YES' ])).
 rule_i(0,rule([ a(22,[ '''Guardar ''','''Guardar ''','' ]) ],[],[],[])).
 rule_i(0,rule([ a(22,[ '''Consultar ''','''Consultar ''','' ]) ],[],[],[])).
+rule_i(0,rule([ a(22,[ '''Cancelar''','''Cancelar''','' ]) ],[],[],[])).
  
-a_i(1,1,f,'Err',[],[ [],[ t('0',3) ] ]).
-a_i(2,2,ra,2000,[],[ [],'MARCAS_PKEY',[],2 ]).
-a_i(3,1,f,[ t('&Nextvalue',23),t('Enabled',3) ],[],[ [],[ t(0,3),t(';',18) ] ]).
+a_i(1,1,f,'Today',[],[ [],[ t('today(',1),t(')',4) ] ]).
+a_i(2,1,f,'Err',[],[ [],[ t('0',3) ] ]).
+a_i(3,2,ra,2000,[],[ [],'MARCAS_PKEY',[],2 ]).
+a_i(4,1,f,[ t('&Nextvalue',23),t('Enabled',3) ],[],[ [],[ t(0,3),t(';',18) ] ]).
  
 v_i(f,i,1,[]).
-v_i(f,o,1,'Err').
-v_i(ra,i,2,[]).
-v_i(ra,o,2,40000).
-v_i(f,i,3,[]).
-v_i(f,o,3,[ t('&Nextvalue',23),t('Enabled',3) ]).
+v_i(f,o,1,'Today').
+v_i(f,i,2,[]).
+v_i(f,o,2,'Err').
+v_i(ra,i,3,[]).
+v_i(ra,o,3,40000).
+v_i(f,i,4,[]).
+v_i(f,o,4,[ t('&Nextvalue',23),t('Enabled',3) ]).
  
  
  
  
  
  
+attri_i('Today',[ 'Gx_date',date,8,0,'99/99/99',1,'','',20 ]).
 attri_i(40000,[ 'GXC1',int,9,0,'',0,'',[],0 ]).
 attri_i(24,[ marcasid,int,9,0,'ZZZZZZZZ9',0,marcasid,'',0 ]).
-attri_i('Errmsg',[ 'Gx_emsg',char,70,0,'',1,'Error text','',18 ]).
-attri_i('Err',[ 'Gx_err',int,3,0,'ZZ9',1,'Error code','',17 ]).
-attri_i('Marcaid',[ marcaid,int,18,0,'ZZZZZZZZZZZZZZZZZ9',0,marcaid,'',16 ]).
+attri_i('Errmsg',[ 'Gx_emsg',char,70,0,'',1,'Error text','',19 ]).
+attri_i('Err',[ 'Gx_err',int,3,0,'ZZ9',1,'Error code','',18 ]).
+attri_i('Websession',[ 'WebSession',o(websession),4,0,'',0,'Web Session','',17 ]).
 attri_i('Nextvalue',[ 'NextValue',int,4,0,'ZZZ9',0,'Next Value','',6 ]).
 attri_i('Marcas',[ marcas,o(marcas),0,0,'',0,marcas,'',14 ]).
+attri_i('Marcaid',[ marcaid,int,18,0,'ZZZZZZZZZZZZZZZZZ9',0,marcaid,'',16 ]).
 attri_i('Marcasdsc',[ marcasdsc,svchar,100,0,'',0,marcasdsc,'',15 ]).
  
 table_i(8,[ 'MARCAS',[ 24 ],marcas,marcas ]).
@@ -189,8 +196,9 @@ break_i(2,nvg,1,[],[ [],[],[] ]).
  
 b_group_i(2,1,lit,0,1,1).
 b_group_i(2,2,lit,0,2,5).
-b_group_i(2,3,lit,0,6,16).
-b_group_i(2,4,lit,0,17,0).
+b_group_i(2,3,lit,0,6,19).
+b_group_i(2,4,lit,0,20,23).
+b_group_i(2,5,lit,0,24,0).
  
 b_line_i(1,2,1,cmd,1,[ t('',146,1,0),t('Start',3,1,7) ]).
 b_line_i(2,2,2,cmd,1,[ t('',107,1,0),t('Nextvalue',23,1,0),t(=,10,1,0),t(40000,2,1,0),t(+,5,1,0),t('1',3,1,0) ]).
@@ -198,19 +206,25 @@ b_line_i(3,2,2,cmd,1,[ t('',147,1,0) ]).
 b_line_i(5,2,2,cmd,1,[ t('',146,1,0),t('''Guardar ''',3,5,7) ]).
 b_line_i(6,2,3,cmd,1,[ t('',107,1,0),t([ t('Marcas',23,1,0),t('Marcasid',3,1,0) ],29,1,0),t(=,10,1,0),t('Nextvalue',23,1,0) ]).
 b_line_i(7,2,3,cmd,1,[ t('',107,1,0),t([ t('Marcas',23,1,0),t('Marcasdsc',3,1,0) ],29,1,0),t(=,10,1,0),t('Marcasdsc',23,1,0) ]).
-b_line_i(8,2,3,cmd,1,[ t('',107,1,0),t([ t('Marcas',23,8,2),t('save(',1,8,10) ],31,8,10),t(')',4,1,16) ]).
-b_line_i(9,2,3,cmd,1,[ t('',109,1,0),t([ t('Marcas',23,9,5),t('success(',1,9,13) ],31,9,13),t(')',4,1,22) ]).
-b_line_i(10,2,3,cmd,1,[ t('',132,1,0) ]).
-b_line_i(11,2,3,cmd,1,[ t('',110,1,0) ]).
-b_line_i(12,2,3,cmd,1,[ t('',157,1,0) ]).
-b_line_i(13,2,3,cmd,1,[ t('',111,1,0) ]).
-b_line_i(14,2,3,cmd,1,[ t('',147,1,0) ]).
-b_line_i(16,2,3,cmd,1,[ t('',146,1,0),t('''Consultar ''',3,16,7) ]).
-b_line_i(17,2,4,cmd,1,[ t('',104,1,0),t(o(13,'DetallesMarcas'),28,1,2) ]).
-b_line_i(18,2,4,cmd,1,[ t('',147,1,0) ]).
-b_line_i(1000,2,4,cmd,0,[ t('',146,0,0),t('Load',3,0,0) ]).
-b_line_i(1001,2,4,cmd,0,[ t('',155,0,0) ]).
-b_line_i(1002,2,4,cmd,0,[ t('',147,0,0) ]).
+b_line_i(8,2,3,cmd,1,[ t('',107,1,0),t([ t('Marcas',23,1,0),t('Marcasfecreg',3,1,0) ],29,1,0),t(=,10,1,0),t('Today',23,1,0) ]).
+b_line_i(9,2,3,cmd,1,[ t('',107,1,0),t([ t('Marcas',23,1,0),t('Marcasusuario',3,1,0) ],29,1,0),t(=,10,1,0),t([ t('Websession',23,1,0),t('get(',1,1,0) ],31,1,0),t('''usuario''',3,1,0),t(')',4,1,0) ]).
+b_line_i(10,2,3,cmd,1,[ t('',107,1,0),t([ t('Marcas',23,10,2),t('save(',1,10,10) ],31,10,10),t(')',4,1,16) ]).
+b_line_i(11,2,3,cmd,1,[ t('',109,1,0),t([ t('Marcas',23,11,5),t('success(',1,11,13) ],31,11,13),t(')',4,1,22) ]).
+b_line_i(12,2,3,cmd,1,[ t('',132,1,0) ]).
+b_line_i(13,2,3,cmd,1,[ t('',104,1,0),t(o(13,'Catalog_De_Marcas'),28,1,3) ]).
+b_line_i(14,2,3,cmd,1,[ t('',110,1,0) ]).
+b_line_i(15,2,3,cmd,1,[ t('',157,1,0) ]).
+b_line_i(16,2,3,cmd,1,[ t('',111,1,0) ]).
+b_line_i(17,2,3,cmd,1,[ t('',147,1,0) ]).
+b_line_i(19,2,3,cmd,1,[ t('',146,1,0),t('''Consultar ''',3,19,7) ]).
+b_line_i(20,2,4,cmd,1,[ t('',104,1,0),t(o(13,'DetallesMarcas'),28,1,2) ]).
+b_line_i(21,2,4,cmd,1,[ t('',147,1,0) ]).
+b_line_i(23,2,4,cmd,1,[ t('',146,1,0),t('''Cancelar''',3,23,7) ]).
+b_line_i(24,2,5,cmd,1,[ t('',104,1,0),t(o(13,'MenuPrincipal'),28,1,2) ]).
+b_line_i(25,2,5,cmd,1,[ t('',147,1,0) ]).
+b_line_i(1000,2,5,cmd,0,[ t('',146,0,0),t('Load',3,0,0) ]).
+b_line_i(1001,2,5,cmd,0,[ t('',155,0,0) ]).
+b_line_i(1002,2,5,cmd,0,[ t('',147,0,0) ]).
  
  
  
@@ -395,7 +409,6 @@ html_comp_i(24,'Buttonborderstyle',standard,d,[ str ]).
  
  
  
-warn_gen_i(msg([],spc0156,[ 'Event ','''Cancelar''',' for control ''','Button3',''' is not defined.' ])).
  
 lit_i(12,1,t('Nextvalue',23),[ ctlname('&Nextvalue'),ctrltype(edit,12),pos(12),readonly,ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
 lit_i(16,1,t('Marcasdsc',23),[ ctlname('&Marcasdsc'),ctrltype(edit,16),pos(16),ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
@@ -421,7 +434,6 @@ att_prop_i(2,24,'EmptyAsNull','Yes',d).
 att_prop_i(2,24,idBasedOn,'',d).
 att_prop_i(2,24,'AUTONUMBER','0',d).
 att_prop_i(2,24,'ATT_INITIAL_VALUE','',d).
-att_prop_i(2,24,'AttRegEx','',d).
 att_prop_i(2,24,'AttValidationFailedMsg','',d).
 att_prop_i(2,24,'FullName',marcasid,v).
 att_prop_i(2,40000,'ExternalName',marcasid,d).
@@ -430,7 +442,6 @@ att_prop_i(2,40000,'EmptyAsNull','Yes',d).
 att_prop_i(2,40000,idBasedOn,'',d).
 att_prop_i(2,40000,'AUTONUMBER','0',d).
 att_prop_i(2,40000,'ATT_INITIAL_VALUE','',d).
-att_prop_i(2,40000,'AttRegEx','',d).
 att_prop_i(2,40000,'AttValidationFailedMsg','',d).
 att_prop_i(2,40000,'FullName',marcasid,v).
  
@@ -558,14 +569,20 @@ struct_dt_elem_i([ 26,1,1 ],2,pic,'ZZZZZZZZ9').
  
  
 sub_info_i(146,'Start',1,3,[ [],[ 'Nextvalue' ] ]).
-sub_info_i(146,'''Guardar ''',5,14,[ [ 'Nextvalue','Marcas','Marcasdsc' ],[ 'Marcas' ] ]).
-sub_info_i(146,'''Consultar ''',16,18,[ [],[] ]).
+sub_info_i(146,'''Guardar ''',5,17,[ [ 'Nextvalue','Marcas','Marcasdsc','Today','Websession' ],[ 'Marcas' ] ]).
+sub_info_i(146,'''Consultar ''',19,21,[ [],[] ]).
+sub_info_i(146,'''Cancelar''',23,25,[ [],[] ]).
  
+pgm_parm_i(web,29,'MENUPRINCIPAL',[],[]).
 pgm_parm_i(web,92,'DETALLESMARCAS',[],[]).
+pgm_parm_i(web,31,'CATALOG_DE_MARCAS',[],[]).
  
 pgm_callprotocol_i(web,31,'CATALOG_DE_MARCAS','INTERNAL').
+pgm_callprotocol_i(web,29,'MENUPRINCIPAL','INTERNAL').
 pgm_callprotocol_i(web,92,'DETALLESMARCAS','INTERNAL').
+pgm_callprotocol_i(web,31,'CATALOG_DE_MARCAS','INTERNAL').
  
+pgm_main_info_i(web,29,'MENUPRINCIPAL',[ 15,'MENUPRINCIPAL','','','','','INTERNAL' ]).
  
  
  

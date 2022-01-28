@@ -1,0 +1,18 @@
+current_obj_i(2,web,97).
+ 
+called_tree_i(13,97,13,1).
+ 
+ 
+ 
+ 
+ 
+ 
+ij_object_dependency(gx00m0,[],[],[],97).
+ 
+ 
+obj_parms_i([ 'short aP0_pproductoid','int aP1_pcambsid' ],[ [ 'Pproductoid',out ],[ 'Pcambsid',out ] ]).
+ 
+ 
+ 
+ 
+ 

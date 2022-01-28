@@ -2,8 +2,8 @@ CREATE  TABLE "public".cambs (
 	cambsid              integer  NOT NULL ,
 	cambsdsc             varchar(100)   ,
 	cambsusuario         varchar(15)   ,
-	cambsfecreg          timestamp   ,
-	cambsfecultact       timestamp   ,
+	cambsfecreg          date   ,
+	cambsfecultact       date   ,
 	CONSTRAINT pk_cambs_cambsid PRIMARY KEY ( cambsid )
  );
 
@@ -18,8 +18,8 @@ CREATE TABLE "public".marcas(
  marcasid  integer  NOT NULL ,
  marcasdsc varchar(100)   ,
  marcasusuario varchar(15)   ,
- marcasfecreg  timestamp   ,
- marcasfecultact timestamp,   
+ marcasfecreg  date   ,
+ marcasfecultact date,   
  CONSTRAINT pk_marcas_marcasid PRIMARY KEY (marcasid)
 );
 
@@ -27,8 +27,8 @@ CREATE TABLE "public".modelos(
 modelosid integer  NOT NULL ,
 modelosdsc varchar(100)   ,
 modelosusuario varchar(15)   ,
-modelosfecreg timestamp   ,
-modelosfecultact timestamp , 
+modelosfecreg date   ,
+modelosfecultact date , 
  CONSTRAINT pk_modelos_modelosid PRIMARY KEY (modelosid)
 );
 
@@ -36,8 +36,8 @@ CREATE TABLE "public".categorias(
 categoriasid integer  NOT NULL ,
 categoriasdsc  varchar(100)   ,
 categoriasusuario  varchar(15)   ,
-categoriasfecreg timestamp   ,
-categoriasfecultact timestamp   ,
+categoriasfecreg date   ,
+categoriasfecultact date   ,
 CONSTRAINT pk_categorias_categoriasid PRIMARY KEY (categoriasid)
 );
 
@@ -47,8 +47,8 @@ origendscorta varchar(50)   ,
 origendsclarga varchar(100)   ,
 origenusuario  varchar(15)   ,
 origentotal  varchar(50)   ,
-origenfecreg timestamp   ,
-origenfecultact timestamp   ,
+origenfecreg date   ,
+origenfecultact date   ,
 CONSTRAINT pk_origen_origenid PRIMARY KEY (origenid)
 );
 
@@ -56,8 +56,8 @@ CREATE TABLE "public".tipobien(
 tipobienid integer  NOT NULL ,
 tipobiendsc  varchar(100)   ,
 tipobienusuario varchar(15)   ,
-tipobienfecreg timestamp   ,
-ipobienfecultact  timestamp   ,
+tipobienfecreg date   ,
+ipobienfecultact  date   ,
 CONSTRAINT pk_tipobien_tipobienid PRIMARY KEY (tipobienid)
 );
 
@@ -66,8 +66,8 @@ CREATE TABLE "public".tipodocumento(
 tipodocumentoid integer  NOT NULL ,
 tipodocumentodsc varchar(100)   ,
 tipodocumentousuario varchar(15)   ,
-tipodocumentofecreg timestamp   ,
-tipodocumentofecultact timestamp   ,
+tipodocumentofecreg date   ,
+tipodocumentofecultact date   ,
 CONSTRAINT pk_tipodocumento_tipodocumentoid PRIMARY KEY (tipodocumentoid)
 );
 
@@ -78,8 +78,8 @@ estatusarticulodescuso varchar(100)   ,
 estatusarticuloaplicamov numeric (4),
 estatusarticulousotabla varchar(50),
 estatusarticulousuario  varchar(15),
-estatusarticulofecreg timestamp   ,
-estatusarticulofecultact timestamp   ,
+estatusarticulofecreg date   ,
+estatusarticulofecultact date   ,
 CONSTRAINT pk_estatusarticulo_estatusarticuloid PRIMARY KEY (estatusarticuloid)
 );
 
@@ -89,8 +89,8 @@ statusdsc varchar(50)   ,
 statususotabla varchar(50)   ,
 statusdesc varchar(50)   ,
 statususuario varchar(15)   ,
-statusfecreg timestamp   ,
-statusfecultact timestamp   ,
+statusfecreg date   ,
+statusfecultact date   ,
 CONSTRAINT pk_status_statusid PRIMARY KEY (statusid)
 );
 
@@ -98,8 +98,8 @@ CREATE TABLE "public".entidadfederativa(
 entidafederativaid integer  NOT NULL ,
 entidadfederativadsc varchar(100)   ,
 entidadfederativausuario  varchar(15)   ,
-entidadfederativafecreg timestamp   ,
-entidadfederativafecultact timestamp   ,
+entidadfederativafecreg date   ,
+entidadfederativafecultact date   ,
 CONSTRAINT pk_entidadfederativa_entidafederativaid PRIMARY KEY (entidafederativaid)
 );
 
@@ -120,16 +120,16 @@ articuloscantdepreacum double(8,0),
 articulosnumserie varchar(20)   ,
 articulosrefdocumento varchar(20)   ,
 articulosfechacoteja  varchar(20)   ,
-articulosfechaentraalmacen  timestamp   ,
-articulosfechabajaalma timestamp   ,
+articulosfechaentraalmacen  date   ,
+articulosfechabajaalma date   ,
 articulosstatus integer(11),
 articuloscontejado varchar(1)   ,
 articulosusuario  varchar(15)   ,
 articulosidtrasfer integer  NOT NULL ,
 articulosestatusariticulo integer  NOT NULL ,
 articulostipobien nteger  NOT NULL ,
-articulosfecreg  timestamp   ,
-articulosfecultact timestamp   ,
+articulosfecreg  date   ,
+articulosfecultact date   ,
 CONSTRAINT pk_articulos_articulosid PRIMARY KEY (articulosid)
 ); 
 
@@ -140,12 +140,12 @@ productoid integer  NOT NULL ,
 cambsid   integer  NOT NULL ,
 articulosmovarticuloid  integer  NOT NULL ,
 articulosmovdepositario integer(3),
-articulosmovfechamov timestamp   ,
+articulosmovfechamov date   ,
 articulosmovstatus varchar(100)   ,
 articulosmovagregomovsist varchar(50)   ,
 articulosmovususuario varchar(15)   ,
-articulosmovfecreg timestamp   ,
-articulosmovfecultact timestamp   ,
+articulosmovfecreg date   ,
+articulosmovfecultact date   ,
 CONSTRAINT pk_artículosmov_articulosmovid PRIMARY KEY (articulosmovid)
 );
 
@@ -159,8 +159,8 @@ empleadosstatus  varchar(1)   ,
 empleadosusuario varchar(15)   ,
 empleadoscorreo  varchar(50)   ,
 empleadosext     varchar(4),
-empleadosfecreg  timestamp   ,
-empleadosfecultact timestamp   ,
+empleadosfecreg  date   ,
+empleadosfecultact date   ,
 CONSTRAINT pk_empleados_empleadosid PRIMARY KEY (empleadosid)
 );
 
@@ -169,8 +169,8 @@ areaid integer  NOT NULL ,
 areadsc varchar(100)   ,
 areastatusadsc varchar(100)   ,
 areausuario   varchar(15)   ,
-areafecreg    timestamp   ,
-areafecultact timestamp   ,
+areafecreg    date   ,
+areafecultact date   ,
 CONSTRAINT pk_area_areaid PRIMARY KEY (areaid)
 );
 
@@ -182,8 +182,8 @@ parametroscadena varchar(30)   ,
 parametrosstatus varchar(30)   ,
 parametrosuso varchar(100)   ,
 parametrosusuario  varchar(15)   ,
-parametrosfecgre timestamp   ,
-parametrosfecact timestamp   ,
+parametrosfecgre date   ,
+parametrosfecact date   ,
 CONSTRAINT pk_parametros_parametrosid PRIMARY KEY (parametrosid)
 ); 
 
@@ -194,8 +194,8 @@ empleadospisoextext  varchar(10)   ,
 empleadospisoextcorreo varchar(50)   ,
 empleadopisoextprofesion numeric (11),
 empleadospisoextusuario varchar(15)   ,
-empleadospisoextfecgre  timestamp   ,
-empleadospisoextfeact  timestamp   ,
+empleadospisoextfecgre  date   ,
+empleadospisoextfeact  date   ,
 CONSTRAINT pk_empleadospisoext_empleadospisoextid PRIMARY KEY (empleadospisoextid)
 );
 
@@ -203,8 +203,8 @@ CREATE TABLE "public".meses(
 mesesid integer  NOT NULL ,
 mesesanio  varchar(5)   ,
 mesesusuario varchar(15)   ,
-mesesfecgre timestamp   ,
-mesesfeact  timestamp   ,
+mesesfecgre date   ,
+mesesfeact  date   ,
 CONSTRAINT pk_meses_mesesid PRIMARY KEY (mesesid)
 );
 
@@ -220,8 +220,8 @@ alamcencodigopostal varchar(5)   ,
 almacentelefono     numeric(10)   ,
 alamcenobservaciones varchar(50)   ,
 alamcenusuario varchar(15)   ,
-almacenfecreg  timestamp   ,
-almacenfecultact timestamp   ,
+almacenfecreg  date   ,
+almacenfecultact date   ,
 CONSTRAINT pk_almacen_almacenid PRIMARY KEY (almacenid)
 );
 
@@ -238,8 +238,8 @@ proveedorestelefono2 numeric(10),
 proveedoresfax   varchar(15)   ,
 proveedoresrfc varchar(13)   ,
 proveedoresusuario  varchar(15)   ,
-proveedoresfecreg  timestamp   ,
-proveedoresfecultact  timestamp   ,
+proveedoresfecreg  date   ,
+proveedoresfecultact  date   ,
 CONSTRAINT pk_proveedores_proveedoresid PRIMARY KEY (proveedoresid)
 );
 
@@ -250,11 +250,11 @@ cambsid    integer  NOT NULL ,
 articuloid  integer  NOT NULL ,
 etiquetasnumero numeric(11),
 etiquetastatus varchar(100),
-etiquetafecharealizada timestamp   ,
+etiquetafecharealizada date   ,
 etiquetasreimpresión varchar(100),
 etiquetasusuario varchar(15),
-etiquetasfecreg    timestamp   ,
-etiquetasfecultact timestamp   ,
+etiquetasfecreg    date   ,
+etiquetasfecultact date   ,
 CONSTRAINT pk_etiquetas_etiquetasid PRIMARY KEY (etiquetasid)
 );
 
@@ -266,8 +266,8 @@ marcaid      integer  NOT NULL ,
 categoriaid   integer  NOT NULL ,
 productodsc varchar(100),
 productousuario varchar(15),
-productofecreg timestamp   ,
-productofecultact timestamp   ,
+productofecreg date   ,
+productofecultact date   ,
 CONSTRAINT pk_producto_productoid PRIMARY KEY (productoid)
 );
 

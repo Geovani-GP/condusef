@@ -16,3 +16,4 @@
 /r:GxBaseBuilder.dll
 /out:bin\producto.dll
 producto.cs
+producto_bc.cs

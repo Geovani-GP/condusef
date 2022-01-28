@@ -2,7 +2,7 @@
                File: reorg
         Description: Table Manager
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 1/21/2022 2:50:38.78
+       Generated on: 1/27/2022 22:50:59.65
        Program type: Callable routine
           Main DBMS: postgresql
 */
@@ -60,64 +60,69 @@ namespace GeneXus.Programs {
 
       void executePrivate( )
       {
-         SetCreateDataBase( ) ;
-         CreateDataBase( ) ;
          if ( PreviousCheck() )
          {
             ExecuteReorganization( ) ;
          }
       }
 
-      private void CreateDataBase( )
-      {
-         DS = (GxDataStore)(context.GetDataStore( "Default"));
-         ErrCode = DS.Connection.FullConnect();
-         DataBaseName = DS.Connection.Database;
-         if ( ErrCode != 0 )
-         {
-            DS.Connection.Database = "postgres";
-            ErrCode = DS.Connection.FullConnect();
-            if ( ErrCode == 0 )
-            {
-               try
-               {
-                  GeneXus.Reorg.GXReorganization.AddMsg( GXResourceManager.GetMessage("GXM_dbcrea")+ " " +DataBaseName , null);
-                  cmdBuffer = "CREATE DATABASE " + "\"" + DataBaseName + "\"";
-                  RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
-                  RGZ.ErrorMask = GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK;
-                  RGZ.ExecuteStmt() ;
-                  RGZ.Drop();
-                  Count = 1;
-               }
-               catch ( Exception ex )
-               {
-                  ErrCode = 1;
-                  GeneXus.Reorg.GXReorganization.AddMsg( ex.Message , null);
-                  throw ex ;
-               }
-               ErrCode = DS.Connection.Disconnect();
-               DS.Connection.Database = DataBaseName;
-               ErrCode = DS.Connection.FullConnect();
-               while ( ( ErrCode != 0 ) && ( Count > 0 ) && ( Count < 30 ) )
-               {
-                  Res = GXUtil.Sleep( 1);
-                  ErrCode = DS.Connection.FullConnect();
-                  Count = (short)(Count+1);
-               }
-            }
-            if ( ErrCode != 0 )
-            {
-               ErrMsg = DS.ErrDescription;
-               GeneXus.Reorg.GXReorganization.AddMsg( ErrMsg , null);
-               ErrCode = 1;
-               throw new Exception( ErrMsg) ;
-            }
-         }
-      }
-
       private void FirstActions( )
       {
          /* Load data into tables. */
+      }
+
+      public void Createproducto( )
+      {
+         String cmdBuffer = "" ;
+         /* Indices for table producto */
+         try
+         {
+            cmdBuffer=" CREATE TABLE producto (productoid  smallint NOT NULL , cambsid  integer NOT NULL , modeloid  bigint , marcaid  bigint , categoriaid  bigint , productodsc  VARCHAR(100) , productousuario  VARCHAR(15) , productofecreg  timestamp without time zone , productofecultact  timestamp without time zone , PRIMARY KEY(productoid, cambsid))  "
+            ;
+            RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
+            RGZ.ErrorMask = GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK;
+            RGZ.ExecuteStmt() ;
+            RGZ.Drop();
+         }
+         catch ( Exception ex )
+         {
+            cmdBuffer=" DROP TABLE producto CASCADE "
+            ;
+            RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
+            RGZ.ErrorMask = GxErrorMask.GX_MASKNOTFOUND | GxErrorMask.GX_MASKLOOPLOCK;
+            RGZ.ExecuteStmt() ;
+            RGZ.Drop();
+            cmdBuffer=" CREATE TABLE producto (productoid  smallint NOT NULL , cambsid  integer NOT NULL , modeloid  bigint , marcaid  bigint , categoriaid  bigint , productodsc  VARCHAR(100) , productousuario  VARCHAR(15) , productofecreg  timestamp without time zone , productofecultact  timestamp without time zone , PRIMARY KEY(productoid, cambsid))  "
+            ;
+            RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
+            RGZ.ErrorMask = GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK;
+            RGZ.ExecuteStmt() ;
+            RGZ.Drop();
+         }
+         try
+         {
+            cmdBuffer=" CREATE INDEX IPRODUCTO1 ON producto (cambsid ) "
+            ;
+            RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
+            RGZ.ErrorMask = GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK;
+            RGZ.ExecuteStmt() ;
+            RGZ.Drop();
+         }
+         catch ( Exception ex )
+         {
+            cmdBuffer=" DROP INDEX IPRODUCTO1 "
+            ;
+            RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
+            RGZ.ErrorMask = GxErrorMask.GX_MASKNOTFOUND | GxErrorMask.GX_MASKLOOPLOCK;
+            RGZ.ExecuteStmt() ;
+            RGZ.Drop();
+            cmdBuffer=" CREATE INDEX IPRODUCTO1 ON producto (cambsid ) "
+            ;
+            RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
+            RGZ.ErrorMask = GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK;
+            RGZ.ExecuteStmt() ;
+            RGZ.Drop();
+         }
       }
 
       private void TablesCount( )
@@ -136,6 +141,7 @@ namespace GeneXus.Programs {
 
       private void ExecuteOnlyTablesReorganization( )
       {
+         ReorgExecute.RegisterBlockForSubmit( 1 ,  "Createproducto" , new Object[]{ });
       }
 
       private void ExecuteOnlyRisReorganization( )
@@ -157,6 +163,7 @@ namespace GeneXus.Programs {
 
       private void SetPrecedencetables( )
       {
+         GXReorganization.SetMsg( 1 ,  GXResourceManager.GetMessage("GXM_filecrea", new   object[]  {"producto", ""}) );
       }
 
       private void SetPrecedenceris( )
@@ -193,22 +200,12 @@ namespace GeneXus.Programs {
 
       public override void initialize( )
       {
-         DS = new GxDataStore();
-         ErrMsg = "";
-         DataBaseName = "";
-         cmdBuffer = "";
          sSchemaVar = "";
          /* GeneXus formulas. */
       }
 
       protected short ErrCode ;
-      protected short Count ;
-      protected short Res ;
-      protected String ErrMsg ;
-      protected String DataBaseName ;
-      protected String cmdBuffer ;
       protected String sSchemaVar ;
-      protected GxDataStore DS ;
       protected IGxDataStore dsDefault ;
       protected GxCommand RGZ ;
    }

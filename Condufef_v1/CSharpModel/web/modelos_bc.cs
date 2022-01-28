@@ -2,7 +2,7 @@
                File: modelos_BC
         Description: modelos
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 1/27/2022 14:26:54.50
+       Generated on: 1/27/2022 22:51:44.32
        Program type: Callable routine
           Main DBMS: postgresql
 */
@@ -469,14 +469,6 @@ namespace GeneXus.Programs {
                AnyError = 1;
             }
             pr_default.close(8);
-            /* Using cursor BC000J11 */
-            pr_default.execute(9, new Object[] {A15modelosid});
-            if ( (pr_default.getStatus(9) != 101) )
-            {
-               GX_msglist.addItem(context.GetMessage( "GXM_del", new   object[]  {"producto"}), "CannotDeleteReferencedRecord", 1, "");
-               AnyError = 1;
-            }
-            pr_default.close(9);
          }
       }
 
@@ -509,21 +501,21 @@ namespace GeneXus.Programs {
 
       public void ScanKeyStart0J19( )
       {
-         /* Using cursor BC000J12 */
-         pr_default.execute(10, new Object[] {A15modelosid});
+         /* Using cursor BC000J11 */
+         pr_default.execute(9, new Object[] {A15modelosid});
          RcdFound19 = 0;
-         if ( (pr_default.getStatus(10) != 101) )
+         if ( (pr_default.getStatus(9) != 101) )
          {
             RcdFound19 = 1;
-            A15modelosid = BC000J12_A15modelosid[0];
-            A116modelosdsc = BC000J12_A116modelosdsc[0];
-            n116modelosdsc = BC000J12_n116modelosdsc[0];
-            A117modelosusuario = BC000J12_A117modelosusuario[0];
-            n117modelosusuario = BC000J12_n117modelosusuario[0];
-            A118modelosfecreg = BC000J12_A118modelosfecreg[0];
-            n118modelosfecreg = BC000J12_n118modelosfecreg[0];
-            A119modelosfecultact = BC000J12_A119modelosfecultact[0];
-            n119modelosfecultact = BC000J12_n119modelosfecultact[0];
+            A15modelosid = BC000J11_A15modelosid[0];
+            A116modelosdsc = BC000J11_A116modelosdsc[0];
+            n116modelosdsc = BC000J11_n116modelosdsc[0];
+            A117modelosusuario = BC000J11_A117modelosusuario[0];
+            n117modelosusuario = BC000J11_n117modelosusuario[0];
+            A118modelosfecreg = BC000J11_A118modelosfecreg[0];
+            n118modelosfecreg = BC000J11_n118modelosfecreg[0];
+            A119modelosfecultact = BC000J11_A119modelosfecultact[0];
+            n119modelosfecultact = BC000J11_n119modelosfecultact[0];
          }
          /* Load Subordinate Levels */
       }
@@ -531,7 +523,7 @@ namespace GeneXus.Programs {
       protected void ScanKeyNext0J19( )
       {
          /* Scan next routine */
-         pr_default.readNext(10);
+         pr_default.readNext(9);
          RcdFound19 = 0;
          ScanKeyLoad0J19( ) ;
       }
@@ -540,25 +532,25 @@ namespace GeneXus.Programs {
       {
          sMode19 = Gx_mode;
          Gx_mode = "DSP";
-         if ( (pr_default.getStatus(10) != 101) )
+         if ( (pr_default.getStatus(9) != 101) )
          {
             RcdFound19 = 1;
-            A15modelosid = BC000J12_A15modelosid[0];
-            A116modelosdsc = BC000J12_A116modelosdsc[0];
-            n116modelosdsc = BC000J12_n116modelosdsc[0];
-            A117modelosusuario = BC000J12_A117modelosusuario[0];
-            n117modelosusuario = BC000J12_n117modelosusuario[0];
-            A118modelosfecreg = BC000J12_A118modelosfecreg[0];
-            n118modelosfecreg = BC000J12_n118modelosfecreg[0];
-            A119modelosfecultact = BC000J12_A119modelosfecultact[0];
-            n119modelosfecultact = BC000J12_n119modelosfecultact[0];
+            A15modelosid = BC000J11_A15modelosid[0];
+            A116modelosdsc = BC000J11_A116modelosdsc[0];
+            n116modelosdsc = BC000J11_n116modelosdsc[0];
+            A117modelosusuario = BC000J11_A117modelosusuario[0];
+            n117modelosusuario = BC000J11_n117modelosusuario[0];
+            A118modelosfecreg = BC000J11_A118modelosfecreg[0];
+            n118modelosfecreg = BC000J11_n118modelosfecreg[0];
+            A119modelosfecultact = BC000J11_A119modelosfecultact[0];
+            n119modelosfecultact = BC000J11_n119modelosfecultact[0];
          }
          Gx_mode = sMode19;
       }
 
       protected void ScanKeyEnd0J19( )
       {
-         pr_default.close(10);
+         pr_default.close(9);
       }
 
       protected void AfterConfirm0J19( )
@@ -1035,16 +1027,14 @@ namespace GeneXus.Programs {
          BC000J10_A18etiquetascambsid = new int[1] ;
          BC000J10_A19almacenid = new long[1] ;
          BC000J11_A15modelosid = new int[1] ;
-         BC000J11_A16productocambsid = new String[] {""} ;
-         BC000J12_A15modelosid = new int[1] ;
-         BC000J12_A116modelosdsc = new String[] {""} ;
-         BC000J12_n116modelosdsc = new bool[] {false} ;
-         BC000J12_A117modelosusuario = new String[] {""} ;
-         BC000J12_n117modelosusuario = new bool[] {false} ;
-         BC000J12_A118modelosfecreg = new DateTime[] {DateTime.MinValue} ;
-         BC000J12_n118modelosfecreg = new bool[] {false} ;
-         BC000J12_A119modelosfecultact = new DateTime[] {DateTime.MinValue} ;
-         BC000J12_n119modelosfecultact = new bool[] {false} ;
+         BC000J11_A116modelosdsc = new String[] {""} ;
+         BC000J11_n116modelosdsc = new bool[] {false} ;
+         BC000J11_A117modelosusuario = new String[] {""} ;
+         BC000J11_n117modelosusuario = new bool[] {false} ;
+         BC000J11_A118modelosfecreg = new DateTime[] {DateTime.MinValue} ;
+         BC000J11_n118modelosfecreg = new bool[] {false} ;
+         BC000J11_A119modelosfecultact = new DateTime[] {DateTime.MinValue} ;
+         BC000J11_n119modelosfecultact = new bool[] {false} ;
          BackMsgLst = new msglist();
          LclMsgLst = new msglist();
          pr_default = new DataStoreProvider(context, new GeneXus.Programs.modelos_bc__default(),
@@ -1074,10 +1064,7 @@ namespace GeneXus.Programs {
                BC000J10_A17etiquetasproductoid, BC000J10_A18etiquetascambsid, BC000J10_A19almacenid
                }
                , new Object[] {
-               BC000J11_A15modelosid, BC000J11_A16productocambsid
-               }
-               , new Object[] {
-               BC000J12_A15modelosid, BC000J12_A116modelosdsc, BC000J12_n116modelosdsc, BC000J12_A117modelosusuario, BC000J12_n117modelosusuario, BC000J12_A118modelosfecreg, BC000J12_n118modelosfecreg, BC000J12_A119modelosfecultact, BC000J12_n119modelosfecultact
+               BC000J11_A15modelosid, BC000J11_A116modelosdsc, BC000J11_n116modelosdsc, BC000J11_A117modelosusuario, BC000J11_n117modelosusuario, BC000J11_A118modelosfecreg, BC000J11_n118modelosfecreg, BC000J11_A119modelosfecultact, BC000J11_n119modelosfecultact
                }
             }
          );
@@ -1150,16 +1137,14 @@ namespace GeneXus.Programs {
       private int[] BC000J10_A18etiquetascambsid ;
       private long[] BC000J10_A19almacenid ;
       private int[] BC000J11_A15modelosid ;
-      private String[] BC000J11_A16productocambsid ;
-      private int[] BC000J12_A15modelosid ;
-      private String[] BC000J12_A116modelosdsc ;
-      private bool[] BC000J12_n116modelosdsc ;
-      private String[] BC000J12_A117modelosusuario ;
-      private bool[] BC000J12_n117modelosusuario ;
-      private DateTime[] BC000J12_A118modelosfecreg ;
-      private bool[] BC000J12_n118modelosfecreg ;
-      private DateTime[] BC000J12_A119modelosfecultact ;
-      private bool[] BC000J12_n119modelosfecultact ;
+      private String[] BC000J11_A116modelosdsc ;
+      private bool[] BC000J11_n116modelosdsc ;
+      private String[] BC000J11_A117modelosusuario ;
+      private bool[] BC000J11_n117modelosusuario ;
+      private DateTime[] BC000J11_A118modelosfecreg ;
+      private bool[] BC000J11_n118modelosfecreg ;
+      private DateTime[] BC000J11_A119modelosfecultact ;
+      private bool[] BC000J11_n119modelosfecultact ;
       private msglist BackMsgLst ;
       private msglist LclMsgLst ;
    }
@@ -1180,7 +1165,6 @@ namespace GeneXus.Programs {
          ,new ForEachCursor(def[7])
          ,new ForEachCursor(def[8])
          ,new ForEachCursor(def[9])
-         ,new ForEachCursor(def[10])
        };
     }
 
@@ -1237,22 +1221,17 @@ namespace GeneXus.Programs {
           prmBC000J11 = new Object[] {
           new Object[] {"modelosid",NpgsqlDbType.Integer,9,0}
           } ;
-          Object[] prmBC000J12 ;
-          prmBC000J12 = new Object[] {
-          new Object[] {"modelosid",NpgsqlDbType.Integer,9,0}
-          } ;
           def= new CursorDef[] {
               new CursorDef("BC000J2", "SELECT modelosid, modelosdsc, modelosusuario, modelosfecreg, modelosfecultact FROM public.modelos WHERE modelosid = :modelosid  FOR UPDATE OF modelos",true, GxErrorMask.GX_NOMASK, false, this,prmBC000J2,1,0,true,false )
              ,new CursorDef("BC000J3", "SELECT modelosid, modelosdsc, modelosusuario, modelosfecreg, modelosfecultact FROM public.modelos WHERE modelosid = :modelosid ",true, GxErrorMask.GX_NOMASK, false, this,prmBC000J3,1,0,true,false )
-             ,new CursorDef("BC000J4", "SELECT TM1.modelosid AS modelosid, TM1.modelosdsc, TM1.modelosusuario, TM1.modelosfecreg, TM1.modelosfecultact FROM public.modelos TM1 WHERE TM1.modelosid = :modelosid ORDER BY TM1.modelosid ",true, GxErrorMask.GX_NOMASK, false, this,prmBC000J4,100,0,true,false )
+             ,new CursorDef("BC000J4", "SELECT TM1.modelosid, TM1.modelosdsc, TM1.modelosusuario, TM1.modelosfecreg, TM1.modelosfecultact FROM public.modelos TM1 WHERE TM1.modelosid = :modelosid ORDER BY TM1.modelosid ",true, GxErrorMask.GX_NOMASK, false, this,prmBC000J4,100,0,true,false )
              ,new CursorDef("BC000J5", "SELECT modelosid FROM public.modelos WHERE modelosid = :modelosid ",true, GxErrorMask.GX_NOMASK, false, this,prmBC000J5,1,0,true,false )
              ,new CursorDef("BC000J6", "SAVEPOINT gxupdate;INSERT INTO public.modelos(modelosid, modelosdsc, modelosusuario, modelosfecreg, modelosfecultact) VALUES(:modelosid, :modelosdsc, :modelosusuario, :modelosfecreg, :modelosfecultact);RELEASE SAVEPOINT gxupdate", GxErrorMask.GX_ROLLBACKSAVEPOINT,prmBC000J6)
              ,new CursorDef("BC000J7", "SAVEPOINT gxupdate;UPDATE public.modelos SET modelosdsc=:modelosdsc, modelosusuario=:modelosusuario, modelosfecreg=:modelosfecreg, modelosfecultact=:modelosfecultact  WHERE modelosid = :modelosid;RELEASE SAVEPOINT gxupdate", GxErrorMask.GX_ROLLBACKSAVEPOINT | GxErrorMask.GX_NOMASK,prmBC000J7)
              ,new CursorDef("BC000J8", "SAVEPOINT gxupdate;DELETE FROM public.modelos  WHERE modelosid = :modelosid;RELEASE SAVEPOINT gxupdate", GxErrorMask.GX_ROLLBACKSAVEPOINT | GxErrorMask.GX_NOMASK,prmBC000J8)
              ,new CursorDef("BC000J9", "SELECT articulosid, productoid AS articulosproductoid, cambsid AS articuloscambsid FROM public.articulos WHERE productoid = :modelosid ",true, GxErrorMask.GX_NOMASK, false, this,prmBC000J9,1,0,true,true )
              ,new CursorDef("BC000J10", "SELECT productoid AS etiquetasproductoid, cambsid AS etiquetascambsid, articuloid FROM public.etiquetas WHERE productoid = :modelosid ",true, GxErrorMask.GX_NOMASK, false, this,prmBC000J10,1,0,true,true )
-             ,new CursorDef("BC000J11", "SELECT productoid AS modelosid, cambsid AS productocambsid FROM public.producto WHERE productoid = :modelosid ",true, GxErrorMask.GX_NOMASK, false, this,prmBC000J11,1,0,true,true )
-             ,new CursorDef("BC000J12", "SELECT TM1.modelosid AS modelosid, TM1.modelosdsc, TM1.modelosusuario, TM1.modelosfecreg, TM1.modelosfecultact FROM public.modelos TM1 WHERE TM1.modelosid = :modelosid ORDER BY TM1.modelosid ",true, GxErrorMask.GX_NOMASK, false, this,prmBC000J12,100,0,true,false )
+             ,new CursorDef("BC000J11", "SELECT TM1.modelosid, TM1.modelosdsc, TM1.modelosusuario, TM1.modelosfecreg, TM1.modelosfecultact FROM public.modelos TM1 WHERE TM1.modelosid = :modelosid ORDER BY TM1.modelosid ",true, GxErrorMask.GX_NOMASK, false, this,prmBC000J11,100,0,true,false )
           };
        }
     }
@@ -1310,10 +1289,6 @@ namespace GeneXus.Programs {
                 ((long[]) buf[2])[0] = rslt.getLong(3) ;
                 return;
              case 9 :
-                ((int[]) buf[0])[0] = rslt.getInt(1) ;
-                ((String[]) buf[1])[0] = rslt.getVarchar(2) ;
-                return;
-             case 10 :
                 ((int[]) buf[0])[0] = rslt.getInt(1) ;
                 ((String[]) buf[1])[0] = rslt.getVarchar(2) ;
                 ((bool[]) buf[2])[0] = rslt.wasNull(2);
@@ -1425,9 +1400,6 @@ namespace GeneXus.Programs {
                 stmt.SetParameter(1, (int)parms[0]);
                 return;
              case 9 :
-                stmt.SetParameter(1, (int)parms[0]);
-                return;
-             case 10 :
                 stmt.SetParameter(1, (int)parms[0]);
                 return;
        }

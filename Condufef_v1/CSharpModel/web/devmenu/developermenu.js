@@ -425,7 +425,7 @@ var DeveloperMenu = {
 			var qrcodeEls = DeveloperMenu.Dom.byClass('qrcode', 'img', boxEl);
 			if (qrcodeEls)
 				qrcodeEls[0].style.maxWidth = '200px';
-			el.style.display = 'none';
+			el.style.display = 'block';
 		},
 
 		checkSDDownloadLinks: function () {

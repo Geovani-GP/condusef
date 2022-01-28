@@ -1,0 +1,3 @@
+CREATE TABLE producto (productoid  smallint NOT NULL , cambsid  integer NOT NULL , modeloid  bigint , marcaid  bigint , categoriaid  bigint , productodsc  VARCHAR(100) , productousuario  VARCHAR(15) , productofecreg  timestamp without time zone , productofecultact  timestamp without time zone , PRIMARY KEY(productoid, cambsid))
+CREATE INDEX IPRODUCTO1 ON producto (cambsid )
+

@@ -1,8 +1,8 @@
 current_obj_i(2,trn,9).
  
 called_tree_i(0,9,13,1).
-called_tree_i(0,9,13,70).
-called_tree_i(0,9,13,71).
+called_tree_i(0,9,13,74).
+called_tree_i(0,9,13,97).
  
  
  
@@ -15,6 +15,7 @@ ij_object_dependency(producto,[],[],[],9).
 obj_parms_i([],[]).
  
  
+has_silent_trn_i(producto_bc).
  
  
  

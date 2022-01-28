@@ -1,0 +1,96 @@
+ 
+spec_i([ sdt,[ 0,9,0 ],producto,producto,0,spa,'10_3_15-115824' ]).
+ 
+struct_dt_i([ 0,9,0 ],name,producto).
+struct_dt_i([ 0,9,0 ],namespace,'Condufef_v1').
+struct_dt_i([ 0,9,0 ],significantName,producto).
+struct_dt_i([ 0,9,0 ],'ObjName',producto).
+struct_dt_i([ 0,9,0 ],'ObjDesc',producto).
+struct_dt_i([ 0,9,0 ],'ExternalName',producto).
+struct_dt_i([ 0,9,0 ],'ExternalNamespace','Condufef_v1').
+struct_dt_i([ 0,9,0 ],key,[ 175,25 ]).
+struct_dt_i([ 0,9,0 ],lvl,22).
+struct_dt_i([ 0,9,0 ],fullname,producto).
+ 
+struct_dt_elem_i([ 0,9,0 ],1,name,'Productoid').
+struct_dt_elem_i([ 0,9,0 ],1,camelname,productoid).
+struct_dt_elem_i([ 0,9,0 ],1,length,4).
+struct_dt_elem_i([ 0,9,0 ],1,decimals,0).
+struct_dt_elem_i([ 0,9,0 ],1,sign,0).
+struct_dt_elem_i([ 0,9,0 ],1,type,[ 4,4,0 ]).
+struct_dt_elem_i([ 0,9,0 ],1,pic,'ZZZ9').
+struct_dt_elem_i([ 0,9,0 ],1,collection,'False').
+struct_dt_elem_i([ 0,9,0 ],1,attributeid,'175').
+struct_dt_elem_i([ 0,9,0 ],2,name,'Cambsid').
+struct_dt_elem_i([ 0,9,0 ],2,camelname,cambsid).
+struct_dt_elem_i([ 0,9,0 ],2,length,9).
+struct_dt_elem_i([ 0,9,0 ],2,decimals,0).
+struct_dt_elem_i([ 0,9,0 ],2,sign,0).
+struct_dt_elem_i([ 0,9,0 ],2,type,[ 4,9,0 ]).
+struct_dt_elem_i([ 0,9,0 ],2,pic,'ZZZZZZZZ9').
+struct_dt_elem_i([ 0,9,0 ],2,collection,'False').
+struct_dt_elem_i([ 0,9,0 ],2,attributeid,'25').
+struct_dt_elem_i([ 0,9,0 ],3,name,'Modeloid').
+struct_dt_elem_i([ 0,9,0 ],3,camelname,modeloid).
+struct_dt_elem_i([ 0,9,0 ],3,length,18).
+struct_dt_elem_i([ 0,9,0 ],3,decimals,0).
+struct_dt_elem_i([ 0,9,0 ],3,sign,0).
+struct_dt_elem_i([ 0,9,0 ],3,type,[ 4,18,0 ]).
+struct_dt_elem_i([ 0,9,0 ],3,pic,'ZZZZZZZZZZZZZZZZZ9').
+struct_dt_elem_i([ 0,9,0 ],3,collection,'False').
+struct_dt_elem_i([ 0,9,0 ],3,attributeid,'88').
+struct_dt_elem_i([ 0,9,0 ],4,name,'Marcaid').
+struct_dt_elem_i([ 0,9,0 ],4,camelname,marcaid).
+struct_dt_elem_i([ 0,9,0 ],4,length,18).
+struct_dt_elem_i([ 0,9,0 ],4,decimals,0).
+struct_dt_elem_i([ 0,9,0 ],4,sign,0).
+struct_dt_elem_i([ 0,9,0 ],4,type,[ 4,18,0 ]).
+struct_dt_elem_i([ 0,9,0 ],4,pic,'ZZZZZZZZZZZZZZZZZ9').
+struct_dt_elem_i([ 0,9,0 ],4,collection,'False').
+struct_dt_elem_i([ 0,9,0 ],4,attributeid,'89').
+struct_dt_elem_i([ 0,9,0 ],5,name,'Categoriaid').
+struct_dt_elem_i([ 0,9,0 ],5,camelname,categoriaid).
+struct_dt_elem_i([ 0,9,0 ],5,length,18).
+struct_dt_elem_i([ 0,9,0 ],5,decimals,0).
+struct_dt_elem_i([ 0,9,0 ],5,sign,0).
+struct_dt_elem_i([ 0,9,0 ],5,type,[ 4,18,0 ]).
+struct_dt_elem_i([ 0,9,0 ],5,pic,'ZZZZZZZZZZZZZZZZZ9').
+struct_dt_elem_i([ 0,9,0 ],5,collection,'False').
+struct_dt_elem_i([ 0,9,0 ],5,attributeid,'90').
+struct_dt_elem_i([ 0,9,0 ],6,name,'Productodsc').
+struct_dt_elem_i([ 0,9,0 ],6,camelname,productodsc).
+struct_dt_elem_i([ 0,9,0 ],6,length,100).
+struct_dt_elem_i([ 0,9,0 ],6,decimals,0).
+struct_dt_elem_i([ 0,9,0 ],6,type,[ 13,100,0 ]).
+struct_dt_elem_i([ 0,9,0 ],6,pic,'').
+struct_dt_elem_i([ 0,9,0 ],6,collection,'False').
+struct_dt_elem_i([ 0,9,0 ],6,attributeid,'87').
+struct_dt_elem_i([ 0,9,0 ],7,name,'Productousuario').
+struct_dt_elem_i([ 0,9,0 ],7,camelname,productousuario).
+struct_dt_elem_i([ 0,9,0 ],7,length,15).
+struct_dt_elem_i([ 0,9,0 ],7,decimals,0).
+struct_dt_elem_i([ 0,9,0 ],7,type,[ 13,15,0 ]).
+struct_dt_elem_i([ 0,9,0 ],7,pic,'').
+struct_dt_elem_i([ 0,9,0 ],7,collection,'False').
+struct_dt_elem_i([ 0,9,0 ],7,attributeid,'91').
+struct_dt_elem_i([ 0,9,0 ],8,name,'Productofecreg').
+struct_dt_elem_i([ 0,9,0 ],8,camelname,productofecreg).
+struct_dt_elem_i([ 0,9,0 ],8,length,10).
+struct_dt_elem_i([ 0,9,0 ],8,decimals,8).
+struct_dt_elem_i([ 0,9,0 ],8,type,[ 12,10,8 ]).
+struct_dt_elem_i([ 0,9,0 ],8,pic,'99/99/9999 99:99:99').
+struct_dt_elem_i([ 0,9,0 ],8,collection,'False').
+struct_dt_elem_i([ 0,9,0 ],8,attributeid,'92').
+struct_dt_elem_i([ 0,9,0 ],9,name,'Productofecultact').
+struct_dt_elem_i([ 0,9,0 ],9,camelname,productofecultact).
+struct_dt_elem_i([ 0,9,0 ],9,length,10).
+struct_dt_elem_i([ 0,9,0 ],9,decimals,8).
+struct_dt_elem_i([ 0,9,0 ],9,type,[ 12,10,8 ]).
+struct_dt_elem_i([ 0,9,0 ],9,pic,'99/99/9999 99:99:99').
+struct_dt_elem_i([ 0,9,0 ],9,collection,'False').
+struct_dt_elem_i([ 0,9,0 ],9,attributeid,'93').
+ 
+ 
+ 
+ 
+ 

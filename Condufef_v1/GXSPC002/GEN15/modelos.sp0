@@ -47,12 +47,12 @@ rule_i(0,datastore(1,'CS_RPCPGML','')).
 rule_i(0,datastore(1,'JDBC_DATASOURCE','')).
 rule_i(0,datastore(1,'USE_JDBC_DATASOURCE','0')).
 rule_i(0,datastore(1,'DS_DBMS_ADDINFO','')).
-rule_i(0,datastore(1,'USER_PASSWORD',admin)).
+rule_i(0,datastore(1,'USER_PASSWORD',asdf)).
 rule_i(0,datastore(1,'USER_ID',postgres)).
 rule_i(0,datastore(1,'CS_CONNECT','First')).
 rule_i(0,datastore(1,'DBMS_PORT','5432')).
 rule_i(0,datastore(1,'CS_SERVER',localhost)).
-rule_i(0,datastore(1,'CS_DBNAME',postgres)).
+rule_i(0,datastore(1,'CS_DBNAME',condusef)).
 rule_i(0,datastore(1,'CS_FLEDSNAME','')).
 rule_i(0,datastore(1,'CS_DRVNAME','')).
 rule_i(0,datastore(1,'CS_DSNAME','')).
@@ -180,29 +180,6 @@ rule_i(0,index(19,'MODELOS_PKEY',u,[ 15 ])).
 rule_i(0,loc([ 19,'MODELOS_PKEY' ],modelos_pkey,'','LAN')).
 rule_i(19,rule([ a(3,[ t(15,2) ]) ],[],[ insert,update,delete,display ],[ 15 ])).
 rule_i(19,rule([ a(21,[ [ 15 ] ]) ],[],[ insert,update,delete,display ],[ 15 ])).
-rule_i(0,p(0,0,fv,13,[ intname,'PRODUCTO' ])).
-rule_i(0,p(0,0,fv,13,[ table,9 ])).
-rule_i(0,p(0,15,fv,13,[])).
-rule_i(0,p(0,15,fv,13,[ 'NAME',producto ])).
-rule_i(0,p(0,15,fv,13,[ 'LOC','' ])).
-rule_i(0,p(0,15,fv,13,[ 'SCHEMA',public ])).
-rule_i(0,p(0,15,fv,13,[ 'EXTNAM','YES' ])).
-rule_i(0,p(0,15,fvix,[ 13,12 ],[])).
-rule_i(0,p(0,15,fvix,[ 13,12 ],[ 'NAME',producto_pkey ])).
-rule_i(0,p(0,15,fvix,[ 13,12 ],[ 'LOC','' ])).
-rule_i(0,p(0,15,fvix,[ 13,12 ],[ 'SCHEMA',public ])).
-rule_i(0,p(0,15,fvix,[ 13,12 ],[ 'EXTNAM','YES' ])).
-rule_i(0,p(0,15,fvix,[ 13,13 ],[])).
-rule_i(0,p(0,15,fvix,[ 13,13 ],[ 'NAME',producto_id ])).
-rule_i(0,p(0,15,fvix,[ 13,13 ],[ 'LOC','' ])).
-rule_i(0,p(0,15,fvix,[ 13,13 ],[ 'SCHEMA',public ])).
-rule_i(0,p(0,15,fvix,[ 13,13 ],[ 'EXTNAM','YES' ])).
-rule_i(0,file(9,'PRODUCTO',[ 15,16,87,88,89,90,91,92,93 ])).
-rule_i(0,loc([ 9 ],'PRODUCTO','','LAN')).
-rule_i(0,index(9,'PRODUCTO_PKEY',u,[ 15,16 ])).
-rule_i(0,loc([ 9,'PRODUCTO_PKEY' ],producto_pkey,'','LAN')).
-rule_i(0,index(9,'PRODUCTO_ID',k,[ 15 ])).
-rule_i(0,loc([ 9,'PRODUCTO_ID' ],producto_id,'','LAN')).
 rule_i(0,p(0,0,fv,14,[ intname,'ETIQUETAS' ])).
 rule_i(0,p(0,0,fv,14,[ table,12 ])).
 rule_i(0,p(0,15,fv,14,[])).
@@ -262,7 +239,6 @@ act_info_i(1,[ [ 15 ] ]).
  
 tbl_to_delete_i(19,[ 11,[ [ 19,15,20 ] ],c,'IARTICULOS4',[ [ 11,20 ] ],[ 19,20,21 ],'' ]).
 tbl_to_delete_i(19,[ 12,[ [ 19,15,17 ] ],c,'ETIQUETAS_PKEY',[ [ 12,17 ],[ 12,18 ],[ 12,19 ] ],[ 17,18,19 ],'' ]).
-tbl_to_delete_i(19,[ 9,[ [ 19,15,15 ] ],c,'PRODUCTO_PKEY',[ [ 9,15 ],[ 9,16 ] ],[ 15,16 ],'' ]).
  
  
  
@@ -271,7 +247,6 @@ attri_i(20,[ articulosproductoid,int,9,0,'ZZZZZZZZ9',0,articulosproductoid,'',0 
 attri_i(19,[ almacenid,int,18,0,'ZZZZZZZZZZZZZZZZZ9',0,almacenid,'',0 ]).
 attri_i(18,[ etiquetascambsid,int,9,0,'ZZZZZZZZ9',0,etiquetascambsid,'',0 ]).
 attri_i(17,[ etiquetasproductoid,int,9,0,'ZZZZZZZZ9',0,etiquetasproductoid,'',0 ]).
-attri_i(16,[ productocambsid,svchar,10,0,'',0,productocambsid,'',0 ]).
 attri_i(119,[ modelosfecultact,dtime,10,8,'99/99/9999 99:99:99',0,modelosfecultact,'',0 ]).
 attri_i(118,[ modelosfecreg,dtime,10,8,'99/99/9999 99:99:99',0,modelosfecreg,'',0 ]).
 attri_i(117,[ modelosusuario,svchar,15,0,'',0,modelosusuario,'',0 ]).
@@ -283,11 +258,9 @@ attri_i('Mode',[ 'Gx_mode',char,3,0,'@!',1,'','',2 ]).
  
 table_i(11,[ 'ARTICULOS',[ 19,20,21 ],articulos,articulos ]).
 table_i(12,[ 'ETIQUETAS',[ 17,18,19 ],etiquetas,etiquetas ]).
-table_i(9,[ 'PRODUCTO',[ 15,16 ],producto,producto ]).
 table_i(19,[ 'MODELOS',[ 15,116,117,118,119 ],modelos,modelos ]).
  
 index_i(19,[ 'MODELOS_PKEY',u,[ 15 ],'MODELOS_PKEY' ]).
-index_i(9,[ 'PRODUCTO_PKEY',u,[ 15,16 ],'PRODUCTO_PKEY' ]).
 index_i(12,[ 'ETIQUETAS_PKEY',u,[ 17,18,19 ],'ETIQUETAS_PKEY' ]).
 index_i(11,[ 'ARTICULOS_PKEY',u,[ 19,20,21 ],'ARTICULOS_PKEY' ]).
 index_i(11,[ 'IARTICULOS4',d,[ 20 ],'Iarticulos4' ]).
@@ -351,17 +324,6 @@ map_i(12,a,32,[ etiquetasnumero ]).
 map_i(12,a,19,[ articuloid ]).
 map_i(12,a,18,[ cambsid ]).
 map_i(12,a,17,[ productoid ]).
-map_i(9,i,'PRODUCTO_ID',[ 'PRODUCTO_ID' ]).
-map_i(9,i,'PRODUCTO_PKEY',[ 'PRODUCTO_PKEY' ]).
-map_i(9,a,93,[ productofecultact ]).
-map_i(9,a,92,[ productofecreg ]).
-map_i(9,a,91,[ productousuario ]).
-map_i(9,a,90,[ categoriaid ]).
-map_i(9,a,89,[ marcaid ]).
-map_i(9,a,88,[ modeloid ]).
-map_i(9,a,87,[ productodsc ]).
-map_i(9,a,16,[ cambsid ]).
-map_i(9,a,15,[ productoid ]).
 map_i(19,i,'MODELOS_PKEY',[ 'MODELOS_PKEY' ]).
 map_i(19,a,119,[ modelosfecultact ]).
 map_i(19,a,118,[ modelosfecreg ]).
@@ -1001,16 +963,6 @@ att_prop_i(2,119,'AttValidationFailedMsg','',d).
 att_prop_i(2,119,idDATEFORMAT,idDATEFORMAT_LONG,v).
 att_prop_i(2,119,idHOURFORMAT,idHOURFORMAT_HOURMINSEC,v).
 att_prop_i(2,119,'FullName',modelosfecultact,v).
-att_prop_i(2,16,'HORIZONTAL_DESCRIPTION',productocambsid,v).
-att_prop_i(2,16,'ExternalName',productocambsid,d).
-att_prop_i(2,16,'ExternalNamespace','Condufef_v1',d).
-att_prop_i(2,16,'EmptyAsNull','Yes',d).
-att_prop_i(2,16,idBasedOn,'',d).
-att_prop_i(2,16,'ATT_INITIAL_VALUE','',d).
-att_prop_i(2,16,'DB_NLS_SUPPORT','No',d).
-att_prop_i(2,16,'AttRegEx','',d).
-att_prop_i(2,16,'AttValidationFailedMsg','',d).
-att_prop_i(2,16,'FullName',productocambsid,v).
 att_prop_i(2,17,'HORIZONTAL_DESCRIPTION',etiquetasproductoid,v).
 att_prop_i(2,17,'ExternalName',etiquetasproductoid,d).
 att_prop_i(2,17,'ExternalNamespace','Condufef_v1',d).
@@ -1064,8 +1016,6 @@ att_prop_i(2,21,'FullName',articuloscambsid,v).
  
  
 tbl_att_prop_i(2,19,15,'AllowNulls',n).
-tbl_att_prop_i(2,9,15,'AllowNulls',n).
-tbl_att_prop_i(2,9,16,'AllowNulls',n).
 tbl_att_prop_i(2,12,17,'AllowNulls',n).
 tbl_att_prop_i(2,12,18,'AllowNulls',n).
 tbl_att_prop_i(2,12,19,'AllowNulls',n).
@@ -1077,12 +1027,10 @@ var_prop_i(2,'Modelosid',idBasedOn,'',v).
  
  
  
-a_alias_i(17,etiquetasproductoid).
-a_alias_i(15,modelosid).
-a_alias_i(18,etiquetascambsid).
-a_alias_i(16,productocambsid).
 a_alias_i(20,articulosproductoid).
+a_alias_i(17,etiquetasproductoid).
 a_alias_i(21,articuloscambsid).
+a_alias_i(18,etiquetascambsid).
  
 trn_level_i(19,[ [ 15,116,117,118,119 ],modelos,modelos,modelos,'',116 ]).
  

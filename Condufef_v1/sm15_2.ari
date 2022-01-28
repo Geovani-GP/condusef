@@ -45,36 +45,47 @@ called_program_i(0,7,13,1).
 called_program_i(0,7,13,68).
 called_program_i(0,8,13,1).
 called_program_i(0,9,13,1).
-called_program_i(0,9,13,70).
-called_program_i(0,9,13,71).
+called_program_i(0,9,13,74).
+called_program_i(0,9,13,97).
 called_program_i(1,0,1,5).
 called_program_i(1,0,1,6).
 called_program_i(13,1,13,85).
 called_program_i(13,29,13,1).
 called_program_i(13,30,0,14).
 called_program_i(13,30,13,1).
+called_program_i(13,30,13,30).
 called_program_i(13,30,13,86).
 called_program_i(13,31,0,8).
 called_program_i(13,31,13,1).
+called_program_i(13,31,13,31).
 called_program_i(13,31,13,92).
 called_program_i(13,32,0,19).
 called_program_i(13,32,13,1).
+called_program_i(13,32,13,32).
 called_program_i(13,32,13,93).
 called_program_i(13,34,0,20).
 called_program_i(13,34,13,1).
+called_program_i(13,34,13,34).
+called_program_i(13,35,0,14).
 called_program_i(13,35,0,7).
 called_program_i(13,35,13,1).
+called_program_i(13,35,13,35).
 called_program_i(13,36,0,21).
 called_program_i(13,36,13,1).
+called_program_i(13,36,13,36).
 called_program_i(13,37,0,4).
 called_program_i(13,37,13,1).
+called_program_i(13,37,13,37).
 called_program_i(13,38,0,17).
 called_program_i(13,38,13,1).
+called_program_i(13,38,13,38).
 called_program_i(13,39,0,5).
 called_program_i(13,39,13,1).
+called_program_i(13,39,13,39).
 called_program_i(13,39,13,94).
 called_program_i(13,40,0,16).
 called_program_i(13,40,13,1).
+called_program_i(13,40,13,40).
 called_program_i(13,40,13,95).
 called_program_i(13,62,13,1).
 called_program_i(13,63,13,1).
@@ -113,6 +124,9 @@ called_program_i(13,94,13,39).
 called_program_i(13,95,0,16).
 called_program_i(13,95,13,1).
 called_program_i(13,95,13,40).
+called_program_i(13,96,0,9).
+called_program_i(13,96,13,1).
+called_program_i(13,97,13,1).
 domain_i(10,'GXDOMAINCryptoSignAlgorithm.cs').
 domain_i(17,'GXDOMAINAPIAuthorizationStatus.cs').
 domain_i(18,'GXDOMAINMessageTypes.cs').
@@ -137,6 +151,7 @@ sdt_map_i(15,marcas,[ 0,8,0 ]).
 sdt_map_i(15,'Messages.Message',[ 26,1,1 ]).
 sdt_map_i(15,modelos,[ 0,19,0 ]).
 sdt_map_i(15,origen,[ 0,16,0 ]).
+sdt_map_i(15,producto,[ 0,9,0 ]).
 sdt_map_i(15,'SchedulerEvents',[ 26,8,0 ]).
 sdt_map_i(15,'SchedulerEvents.Day',[ 26,8,12 ]).
 sdt_map_i(15,'SchedulerEvents.event',[ 26,8,11 ]).

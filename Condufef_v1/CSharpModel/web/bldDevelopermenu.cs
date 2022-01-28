@@ -65,7 +65,6 @@ public class bldDevelopermenu : GxBaseBuilder
       sc.Add( @"gx0060", "dll");
       sc.Add( @"gx0070", "dll");
       sc.Add( @"gx0080", "dll");
-      sc.Add( @"gx0090", "dll");
       sc.Add( @"gx00j0", "dll");
       sc.Add( @"gx00a0", "dll");
       sc.Add( @"gx00b0", "dll");
@@ -85,6 +84,8 @@ public class bldDevelopermenu : GxBaseBuilder
       sc.Add( @"detallemodelos", "dll");
       sc.Add( @"detallecategorias", "dll");
       sc.Add( @"detallesorigen", "dll");
+      sc.Add( @"catalog_de_productos", "dll");
+      sc.Add( @"gx00m0", "dll");
       sc.Add( @"tipobien", "dll");
       sc.Add( @"parametros", "dll");
       sc.Add( @"meses", "dll");
@@ -148,11 +149,13 @@ public class bldDevelopermenu : GxBaseBuilder
             return true;
          if (checkTime(obj, cs_path + @"\GxModelInfoProvider.cs" ))
             return true;
+         if (checkTime(obj, cs_path + @"\type_Sdtmodelos.cs" ))
+            return true;
+         if (checkTime(obj, cs_path + @"\type_Sdtproducto.cs" ))
+            return true;
          if (checkTime(obj, cs_path + @"\type_Sdtorigen.cs" ))
             return true;
          if (checkTime(obj, cs_path + @"\type_Sdtcategorias.cs" ))
-            return true;
-         if (checkTime(obj, cs_path + @"\type_Sdtmodelos.cs" ))
             return true;
          if (checkTime(obj, cs_path + @"\type_Sdtmarcas.cs" ))
             return true;

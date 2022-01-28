@@ -26,9 +26,10 @@ SoapParm.cs
 GxWebStd.cs
 GxFullTextSearchReindexer.cs
 GxModelInfoProvider.cs
+type_Sdtmodelos.cs
+type_Sdtproducto.cs
 type_Sdtorigen.cs
 type_Sdtcategorias.cs
-type_Sdtmodelos.cs
 type_Sdtmarcas.cs
 type_Sdtcambs.cs
 type_Sdtstatus.cs

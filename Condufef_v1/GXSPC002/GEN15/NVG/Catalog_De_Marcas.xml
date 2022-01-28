@@ -10,15 +10,7 @@
 <ObjPgmName>Catalog_De_Marcas</ObjPgmName>
 <ObjClsName>Web Panel</ObjClsName></Object>
 <Result>genreq</Result>
-<Warnings>
-<Warning>
-<MsgCode>spc0156</MsgCode>
-<Message>
-<Token>Event </Token>
-<Token>'Cancelar'</Token>
-<Token> for control '</Token>
-<Token>Button3</Token>
-<Token>' is not defined.</Token></Message></Warning></Warnings>
+<Warnings></Warnings>
 <Errors></Errors>
 <Generator>
 <GenId>15</GenId>
@@ -57,7 +49,17 @@
 <VarName>&amp;marcas</VarName></Variable>
 <Token>.</Token>
 <Token>save(</Token>
-<Token>)</Token></Expression></Command></Event>
+<Token>)</Token></Expression></Command>
+<CALL>
+<Object>
+<ObjClsGuid>c9584656-94b6-4ccd-890f-332d11fc2c25</ObjClsGuid>
+<ObjCls>13</ObjCls>
+<ObjId>31</ObjId>
+<ObjName>Catalog_De_Marcas</ObjName>
+<ObjPgmName>Catalog_De_Marcas</ObjPgmName>
+<ObjClsName>Web Panel</ObjClsName></Object>
+<Parameters></Parameters>
+<IF></IF></CALL></Event>
 <Event>
 <EventName>'Consultar '</EventName>
 <CALL>
@@ -67,6 +69,18 @@
 <ObjId>92</ObjId>
 <ObjName>DetallesMarcas</ObjName>
 <ObjPgmName>DetallesMarcas</ObjPgmName>
+<ObjClsName>Web Panel</ObjClsName></Object>
+<Parameters></Parameters>
+<IF></IF></CALL></Event>
+<Event>
+<EventName>'Cancelar'</EventName>
+<CALL>
+<Object>
+<ObjClsGuid>c9584656-94b6-4ccd-890f-332d11fc2c25</ObjClsGuid>
+<ObjCls>13</ObjCls>
+<ObjId>29</ObjId>
+<ObjName>MenuPrincipal</ObjName>
+<ObjPgmName>MenuPrincipal</ObjPgmName>
 <ObjClsName>Web Panel</ObjClsName></Object>
 <Parameters></Parameters>
 <IF></IF></CALL></Event>
