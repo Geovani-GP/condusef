@@ -41,7 +41,7 @@ rule_i(0,datastore(1,'CS_RPCPGML','')).
 rule_i(0,datastore(1,'JDBC_DATASOURCE','')).
 rule_i(0,datastore(1,'USE_JDBC_DATASOURCE','0')).
 rule_i(0,datastore(1,'DS_DBMS_ADDINFO','')).
-rule_i(0,datastore(1,'USER_PASSWORD',󻢸蘇�2�5炭)).
+rule_i(0,datastore(1,'USER_PASSWORD',admin)).
 rule_i(0,datastore(1,'USER_ID',postgres)).
 rule_i(0,datastore(1,'CS_CONNECT','First')).
 rule_i(0,datastore(1,'DBMS_PORT','5432')).
@@ -195,6 +195,7 @@ attri_i(74,[ statususotabla,svchar,50,0,'',0,statususotabla,'',0 ]).
 attri_i(73,[ statusdsc,svchar,50,0,'',0,statusdsc,'',0 ]).
 attri_i(1,[ statusid,int,9,0,'ZZZZZZZZ9',0,statusid,'',0 ]).
 attri_i('Gxremove',[ 'GxRemove',int,1,0,'9',0,'Gx Remove','',5 ]).
+attri_i('Statusid',[ statusid,int,9,0,'ZZZZZZZZ9',0,statusid,'',7 ]).
 attri_i('Mode',[ 'Gx_mode',char,3,0,'@!',1,'','',2 ]).
  
 table_i(21,[ 'STATUS',[ 1,73,74,75,76,77,78 ],status,status ]).
@@ -349,6 +350,7 @@ att_prop_i(2,78,'FullName',statusfecultact,v).
  
 tbl_att_prop_i(2,21,1,'AllowNulls',n).
  
+var_prop_i(2,'Statusid',idBasedOn,'',v).
  
 i_tbl_best_trn(21,[ 21,1,status,status,[] ]).
  

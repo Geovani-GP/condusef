@@ -41,7 +41,7 @@ rule_i(0,datastore(1,'CS_RPCPGML','')).
 rule_i(0,datastore(1,'JDBC_DATASOURCE','')).
 rule_i(0,datastore(1,'USE_JDBC_DATASOURCE','0')).
 rule_i(0,datastore(1,'DS_DBMS_ADDINFO','')).
-rule_i(0,datastore(1,'USER_PASSWORD',󻢸蘇�2�5炭)).
+rule_i(0,datastore(1,'USER_PASSWORD',admin)).
 rule_i(0,datastore(1,'USER_ID',postgres)).
 rule_i(0,datastore(1,'CS_CONNECT','First')).
 rule_i(0,datastore(1,'DBMS_PORT','5432')).
@@ -193,6 +193,7 @@ attri_i(28,[ areastatusadsc,svchar,100,0,'',0,areastatusadsc,'',0 ]).
 attri_i(27,[ areadsc,svchar,100,0,'',0,areadsc,'',0 ]).
 attri_i(22,[ areaareaid,int,9,0,'ZZZZZZZZ9',0,areaareaid,'',0 ]).
 attri_i('Gxremove',[ 'GxRemove',int,1,0,'9',0,'Gx Remove','',5 ]).
+attri_i('Areaareaid',[ areaareaid,int,9,0,'ZZZZZZZZ9',0,areaid,'',7 ]).
 attri_i('Mode',[ 'Gx_mode',char,3,0,'@!',1,'','',2 ]).
  
 table_i(17,[ 'AREA',[ 22,27,28,29,30,31 ],area,area ]).
@@ -336,6 +337,7 @@ att_prop_i(2,31,'FullName',areafecultact,v).
  
 tbl_att_prop_i(2,17,22,'AllowNulls',n).
  
+var_prop_i(2,'Areaareaid',idBasedOn,'',v).
  
 i_tbl_best_trn(17,[ 17,1,area,area,[] ]).
  

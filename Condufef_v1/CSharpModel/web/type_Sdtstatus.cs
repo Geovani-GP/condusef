@@ -2,7 +2,7 @@
                File: type_Sdtstatus
         Description: status
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 1/28/2022 1:40:56.95
+       Generated on: 1/28/2022 12:52:34.86
        Program type: Callable routine
           Main DBMS: postgresql
 */

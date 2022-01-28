@@ -1,6 +1,6 @@
 spec_i([ trn,4,entidadfederativa,entidadfederativa,[],spa,'10_3_15-115824' ]).
  
-struct_i(4,0,[],[]).
+struct_i(4,0,[ 'Mode','Entidafederativaid' ],[]).
  
 level_i(4,[ 4,[ [ 4,many ] ],[ 7 ],[],[],[],[ 7 ],'ENTIDADFEDERATIVA_PKEY',[ 4,[] ],[] ]).
  
@@ -13,7 +13,7 @@ lwi_i(4,[ [] ]).
  
 ta_i(4,[ [ [ 4,7 ],[ 4,108 ],[ 4,109 ],[ 4,110 ],[ 4,111 ] ] ]).
  
-las_i(4,[ [ 7,108,109,110,111 ] ]).
+las_i(4,[ [ 'Mode','Entidafederativaid',7,108,109,110,111 ] ]).
  
 lac_i(4,[ [ 7,108,109,110,111 ] ]).
  
@@ -47,7 +47,7 @@ rule_i(0,datastore(1,'CS_RPCPGML','')).
 rule_i(0,datastore(1,'JDBC_DATASOURCE','')).
 rule_i(0,datastore(1,'USE_JDBC_DATASOURCE','0')).
 rule_i(0,datastore(1,'DS_DBMS_ADDINFO','')).
-rule_i(0,datastore(1,'USER_PASSWORD',󻢸蘇�2�5炭)).
+rule_i(0,datastore(1,'USER_PASSWORD',admin)).
 rule_i(0,datastore(1,'USER_ID',postgres)).
 rule_i(0,datastore(1,'CS_CONNECT','First')).
 rule_i(0,datastore(1,'DBMS_PORT','5432')).
@@ -158,10 +158,10 @@ rule_i(0,prop(idBC,'-1')).
 rule_i(0,prop('Folder',o(120,'Root Module'))).
 rule_i(0,prop('ObjDesc',entidadfederativa)).
 rule_i(0,prop('ObjName',entidadfederativa)).
-rule_i(4,prompt([ 4,[ [ [],7,7 ] ],[],[],[ t(o(13,'Gx0040'),28),t(7,2) ],[],n,[] ])).
-rule_i(4,rule([ a(23,[ [ 7 ],[ t(o(13,'Gx0040'),28),t(7,2) ] ]) ],[],[],[ 7 ])).
 rule_i(0,rule([ a(22,[ 'Dlt','"Eliminar"','' ]) ],[],[],[])).
 rule_i(0,maingen(15)).
+rule_i(0,rule([ a(10,[ 'Mode','Entidafederativaid' ]) ],[],[ insert,update,delete,display ],[])).
+rule_i(0,parmio([ [ 'Mode',in ],[ 'Entidafederativaid',in ] ])).
 rule_i(0,p(0,0,fv,4,[ intname,'ENTIDADFEDERATIVA' ])).
 rule_i(0,p(0,0,fv,4,[ table,4 ])).
 rule_i(0,p(0,15,fv,4,[])).
@@ -178,6 +178,8 @@ rule_i(0,file(4,'ENTIDADFEDERATIVA',[ 7,108,109,110,111 ])).
 rule_i(0,loc([ 4 ],'ENTIDADFEDERATIVA','','LAN')).
 rule_i(0,index(4,'ENTIDADFEDERATIVA_PKEY',u,[ 7 ])).
 rule_i(0,loc([ 4,'ENTIDADFEDERATIVA_PKEY' ],entidadfederativa_pkey,'','LAN')).
+rule_i(4,rule([ a(3,[ t(7,2) ]) ],[],[ insert,update,delete,display ],[ 7 ])).
+rule_i(4,rule([ a(21,[ [ 7 ] ]) ],[],[ insert,update,delete,display ],[ 7 ])).
 rule_i(0,p(0,0,fv,15,[ intname,'ARTICULOS' ])).
 rule_i(0,p(0,0,fv,15,[ table,11 ])).
 rule_i(0,p(0,15,fv,15,[])).
@@ -202,14 +204,21 @@ rule_i(0,loc([ 11,'ARTICULOS_PKEY' ],articulos_pkey,'','LAN')).
 rule_i(0,index(11,'PRODUCTOID',k,[ 19 ])).
 rule_i(0,loc([ 11,'PRODUCTOID' ],productoid,'','LAN')).
  
-a_i(1,4,t,4,[],[ [ [ [],7,7 ] ],'ENTIDADFEDERATIVA_PKEY',[] ]).
+a_i(1,4,f,7,[],[ [],[ t('Entidafederativaid',23),t('IF',17),t('.NOT.',8),t('null(',1),t('Entidafederativaid',23),t(')',4),t(';',18) ] ]).
+a_i(2,4,f,[ t(7,2),t('Enabled',3) ],[],[ [],[ t(0,3),t(';',18) ] ]).
+a_i(3,4,t,4,[],[ [ [ [],7,7 ] ],'ENTIDADFEDERATIVA_PKEY',[] ]).
  
-v_i(t,i,1,7).
-v_i(t,o,1,108).
-v_i(t,o,1,109).
-v_i(t,o,1,110).
-v_i(t,o,1,111).
+v_i(f,i,1,'Entidafederativaid').
+v_i(f,o,1,7).
+v_i(f,i,2,[]).
+v_i(f,o,2,[ t(7,2),t('Enabled',3) ]).
+v_i(t,i,3,7).
+v_i(t,o,3,108).
+v_i(t,o,3,109).
+v_i(t,o,3,110).
+v_i(t,o,3,111).
  
+act_info_i(1,[ [ 7 ] ]).
  
  
 tbl_to_delete_i(4,[ 11,[ [ 4,7,7 ] ],c,'IARTICULOS1',[ [ 11,7 ] ],[ 19,20,21 ],'' ]).
@@ -225,6 +234,7 @@ attri_i(109,[ entidadfederativausuario,svchar,15,0,'',0,entidadfederativausuario
 attri_i(108,[ entidadfederativadsc,svchar,100,0,'',0,entidadfederativadsc,'',0 ]).
 attri_i(7,[ entidafederativaid,int,9,0,'ZZZZZZZZ9',0,entidafederativaid,'',0 ]).
 attri_i('Gxremove',[ 'GxRemove',int,1,0,'9',0,'Gx Remove','',5 ]).
+attri_i('Entidafederativaid',[ entidafederativaid,int,9,0,'ZZZZZZZZ9',0,entidafederativaid,'',7 ]).
 attri_i('Mode',[ 'Gx_mode',char,3,0,'@!',1,'','',2 ]).
  
 table_i(11,[ 'ARTICULOS',[ 19,20,21,7 ],articulos,articulos ]).
@@ -400,7 +410,7 @@ html_comp_i(6,'Title','',d,[ str ]).
 html_comp_i(6,'Fill',-1,d,[ bool ]).
 html_comp_i(6,'Backcolor',rgb(255,255,255),d,[ color ]).
 html_comp_i(6,'Forecolor',rgb(0,0,0),d,[ color ]).
-html_comp_i(6,'Font',font('Open Sans Semibold',17,[]),d,[ font ]).
+html_comp_i(6,'Font',font('Microsoft Sans Serif',17,[]),d,[ font ]).
 html_comp_i(7,'Class',row,v,[ str ]).
 html_comp_i(7,'Id','',d,[ str ]).
 html_comp_i(7,'Height',measure(0,px),d,[ measure ]).
@@ -958,6 +968,7 @@ tbl_att_prop_i(2,11,19,'AllowNulls',n).
 tbl_att_prop_i(2,11,20,'AllowNulls',n).
 tbl_att_prop_i(2,11,21,'AllowNulls',n).
  
+var_prop_i(2,'Entidafederativaid',idBasedOn,'',v).
  
  
  
@@ -971,10 +982,8 @@ trn_level_i(4,[ [ 7,108,109,110,111 ],entidadfederativa,entidadfederativa,entida
  
  
  
-pgm_parm_i(web,65,'GX0040',[ [ int,9,0,0 ] ],[ [ pentidafederativaid,out,[] ] ]).
  
 pgm_callprotocol_i(trn,4,'ENTIDADFEDERATIVA','INTERNAL').
-pgm_callprotocol_i(web,65,'GX0040','INTERNAL').
  
  
  

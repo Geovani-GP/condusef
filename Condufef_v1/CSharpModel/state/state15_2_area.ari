@@ -1,7 +1,6 @@
 current_obj_i(2,trn,17).
  
 called_tree_i(0,17,13,1).
-called_tree_i(0,17,13,80).
  
  
  
@@ -11,7 +10,7 @@ called_tree_i(0,17,13,80).
 ij_object_dependency(area,[],[],[],17).
  
  
-obj_parms_i([],[]).
+obj_parms_i([ 'String aP0_Gx_mode','int aP1_areaareaid' ],[ [ 'Mode',in ],[ 'Areaareaid',in ] ]).
  
  
 has_silent_trn_i(area_bc).

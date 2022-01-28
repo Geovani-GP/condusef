@@ -46,7 +46,7 @@ rule_i(0,datastore(1,'CS_RPCPGML','')).
 rule_i(0,datastore(1,'JDBC_DATASOURCE','')).
 rule_i(0,datastore(1,'USE_JDBC_DATASOURCE','0')).
 rule_i(0,datastore(1,'DS_DBMS_ADDINFO','')).
-rule_i(0,datastore(1,'USER_PASSWORD',󻢸蘇�2�5炭)).
+rule_i(0,datastore(1,'USER_PASSWORD',admin)).
 rule_i(0,datastore(1,'USER_ID',postgres)).
 rule_i(0,datastore(1,'CS_CONNECT','First')).
 rule_i(0,datastore(1,'DBMS_PORT','5432')).
@@ -123,6 +123,7 @@ rule_i(0,p(0,15,fvix,[ 16,17 ],[ 'SCHEMA',public ])).
 rule_i(0,p(0,15,fvix,[ 16,17 ],[ 'EXTNAM','YES' ])).
 rule_i(0,rule([ a(22,[ '''Guardar ''','''Guardar ''','' ]) ],[],[],[])).
 rule_i(0,rule([ a(22,[ '''Cancelar''','''Cancelar''','' ]) ],[],[],[])).
+rule_i(0,rule([ a(22,[ '''Consultar ''','''Consultar ''','' ]) ],[],[],[])).
  
 a_i(1,1,f,'Today',[],[ [],[ t('today(',1),t(')',4) ] ]).
 a_i(2,1,f,'Err',[],[ [],[ t('0',3) ] ]).
@@ -196,7 +197,8 @@ break_i(2,nvg,1,[],[ [],[],[] ]).
 b_group_i(2,1,lit,0,1,1).
 b_group_i(2,2,lit,0,2,5).
 b_group_i(2,3,lit,0,6,20).
-b_group_i(2,4,lit,0,21,0).
+b_group_i(2,4,lit,0,21,24).
+b_group_i(2,5,lit,0,25,0).
  
 b_line_i(1,2,1,cmd,1,[ t('',146,1,0),t('Start',3,1,7) ]).
 b_line_i(2,2,2,cmd,1,[ t('',107,1,0),t('Nextvalue',23,1,0),t(=,10,1,0),t(40000,2,1,0),t(+,5,1,0),t('1',3,1,0) ]).
@@ -218,9 +220,12 @@ b_line_i(18,2,3,cmd,1,[ t('',147,1,0) ]).
 b_line_i(20,2,3,cmd,1,[ t('',146,1,0),t('''Cancelar''',3,20,7) ]).
 b_line_i(21,2,4,cmd,1,[ t('',104,1,0),t(o(13,'MenuPrincipal'),28,1,2) ]).
 b_line_i(22,2,4,cmd,1,[ t('',147,1,0) ]).
-b_line_i(1000,2,4,cmd,0,[ t('',146,0,0),t('Load',3,0,0) ]).
-b_line_i(1001,2,4,cmd,0,[ t('',155,0,0) ]).
-b_line_i(1002,2,4,cmd,0,[ t('',147,0,0) ]).
+b_line_i(24,2,4,cmd,1,[ t('',146,1,0),t('''Consultar ''',3,24,7) ]).
+b_line_i(25,2,5,cmd,1,[ t('',104,1,0),t(o(13,'DetallesArea'),28,1,2) ]).
+b_line_i(26,2,5,cmd,1,[ t('',147,1,0) ]).
+b_line_i(1000,2,5,cmd,0,[ t('',146,0,0),t('Load',3,0,0) ]).
+b_line_i(1001,2,5,cmd,0,[ t('',155,0,0) ]).
+b_line_i(1002,2,5,cmd,0,[ t('',147,0,0) ]).
  
  
  
@@ -440,7 +445,6 @@ html_comp_i(28,'Buttonborderstyle',standard,d,[ str ]).
  
  
  
-warn_gen_i(msg([],spc0156,[ 'Event ','''Consultar ''',' for control ''','Button1',''' is not defined.' ])).
  
 lit_i(12,1,t('Nextvalue',23),[ ctlname('&Nextvalue'),ctrltype(edit,12),pos(12),ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
 lit_i(16,1,t('Areadsc',23),[ ctlname('&Areadsc'),ctrltype(edit,16),pos(16),ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
@@ -615,11 +619,14 @@ struct_dt_elem_i([ 26,1,1 ],2,pic,'ZZZZZZZZ9').
 sub_info_i(146,'Start',1,3,[ [],[ 'Nextvalue' ] ]).
 sub_info_i(146,'''Guardar ''',5,18,[ [ 'Nextvalue','Area','Areadsc','Areastatusadsc','Today','Websession' ],[ 'Area' ] ]).
 sub_info_i(146,'''Cancelar''',20,22,[ [],[] ]).
+sub_info_i(146,'''Consultar ''',24,26,[ [],[] ]).
  
+pgm_parm_i(web,107,'DETALLESAREA',[],[]).
 pgm_parm_i(web,29,'MENUPRINCIPAL',[],[]).
 pgm_parm_i(web,38,'CATALOG_DE_AREA',[],[]).
  
 pgm_callprotocol_i(web,38,'CATALOG_DE_AREA','INTERNAL').
+pgm_callprotocol_i(web,107,'DETALLESAREA','INTERNAL').
 pgm_callprotocol_i(web,29,'MENUPRINCIPAL','INTERNAL').
 pgm_callprotocol_i(web,38,'CATALOG_DE_AREA','INTERNAL').
  

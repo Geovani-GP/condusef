@@ -1,7 +1,6 @@
 current_obj_i(2,trn,4).
  
 called_tree_i(0,4,13,1).
-called_tree_i(0,4,13,65).
  
  
  
@@ -11,7 +10,7 @@ called_tree_i(0,4,13,65).
 ij_object_dependency(entidadfederativa,[],[],[],4).
  
  
-obj_parms_i([],[]).
+obj_parms_i([ 'String aP0_Gx_mode','int aP1_entidafederativaid' ],[ [ 'Mode',in ],[ 'Entidafederativaid',in ] ]).
  
  
 has_silent_trn_i(entidadfederativa_bc).

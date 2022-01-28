@@ -1,6 +1,6 @@
 spec_i([ trn,17,area,area,[],spa,'10_3_15-115824' ]).
  
-struct_i(17,0,[],[]).
+struct_i(17,0,[ 'Mode','Areaareaid' ],[]).
  
 level_i(17,[ 17,[ [ 17,many ] ],[ 22 ],[],[],[],[ 22 ],'AREA_PKEY',[ 17,[] ],[] ]).
  
@@ -13,7 +13,7 @@ lwi_i(17,[ [] ]).
  
 ta_i(17,[ [ [ 17,22 ],[ 17,27 ],[ 17,28 ],[ 17,29 ],[ 17,30 ],[ 17,31 ] ] ]).
  
-las_i(17,[ [ 22,27,28,29,30,31 ] ]).
+las_i(17,[ [ 'Mode','Areaareaid',22,27,28,29,30,31 ] ]).
  
 lac_i(17,[ [ 22,27,28,29,30,31 ] ]).
  
@@ -48,7 +48,7 @@ rule_i(0,datastore(1,'CS_RPCPGML','')).
 rule_i(0,datastore(1,'JDBC_DATASOURCE','')).
 rule_i(0,datastore(1,'USE_JDBC_DATASOURCE','0')).
 rule_i(0,datastore(1,'DS_DBMS_ADDINFO','')).
-rule_i(0,datastore(1,'USER_PASSWORD',󻢸蘇�2�5炭)).
+rule_i(0,datastore(1,'USER_PASSWORD',admin)).
 rule_i(0,datastore(1,'USER_ID',postgres)).
 rule_i(0,datastore(1,'CS_CONNECT','First')).
 rule_i(0,datastore(1,'DBMS_PORT','5432')).
@@ -159,10 +159,10 @@ rule_i(0,prop(idBC,'-1')).
 rule_i(0,prop('Folder',o(120,'Root Module'))).
 rule_i(0,prop('ObjDesc',area)).
 rule_i(0,prop('ObjName',area)).
-rule_i(17,prompt([ 17,[ [ [],22,22 ] ],[],[],[ t(o(13,'Gx00H0'),28),t(22,2) ],[],n,[] ])).
-rule_i(17,rule([ a(23,[ [ 22 ],[ t(o(13,'Gx00H0'),28),t(22,2) ] ]) ],[],[],[ 22 ])).
 rule_i(0,rule([ a(22,[ 'Dlt','"Eliminar"','' ]) ],[],[],[])).
 rule_i(0,maingen(15)).
+rule_i(0,rule([ a(10,[ 'Mode','Areaareaid' ]) ],[],[ insert,update,delete,display ],[])).
+rule_i(0,parmio([ [ 'Mode',in ],[ 'Areaareaid',in ] ])).
 rule_i(0,p(0,0,fv,16,[ intname,'AREA' ])).
 rule_i(0,p(0,0,fv,16,[ table,17 ])).
 rule_i(0,p(0,15,fv,16,[])).
@@ -179,16 +179,25 @@ rule_i(0,file(17,'AREA',[ 22,27,28,29,30,31 ])).
 rule_i(0,loc([ 17 ],'AREA','','LAN')).
 rule_i(0,index(17,'AREA_PKEY',u,[ 22 ])).
 rule_i(0,loc([ 17,'AREA_PKEY' ],area_pkey,'','LAN')).
+rule_i(17,rule([ a(3,[ t(22,2) ]) ],[],[ insert,update,delete,display ],[ 22 ])).
+rule_i(17,rule([ a(21,[ [ 22 ] ]) ],[],[ insert,update,delete,display ],[ 22 ])).
  
-a_i(1,17,t,17,[],[ [ [ [],22,22 ] ],'AREA_PKEY',[] ]).
+a_i(1,17,f,22,[],[ [],[ t('Areaareaid',23),t('IF',17),t('.NOT.',8),t('null(',1),t('Areaareaid',23),t(')',4),t(';',18) ] ]).
+a_i(2,17,f,[ t(22,2),t('Enabled',3) ],[],[ [],[ t(0,3),t(';',18) ] ]).
+a_i(3,17,t,17,[],[ [ [ [],22,22 ] ],'AREA_PKEY',[] ]).
  
-v_i(t,i,1,22).
-v_i(t,o,1,27).
-v_i(t,o,1,28).
-v_i(t,o,1,29).
-v_i(t,o,1,30).
-v_i(t,o,1,31).
+v_i(f,i,1,'Areaareaid').
+v_i(f,o,1,22).
+v_i(f,i,2,[]).
+v_i(f,o,2,[ t(22,2),t('Enabled',3) ]).
+v_i(t,i,3,22).
+v_i(t,o,3,27).
+v_i(t,o,3,28).
+v_i(t,o,3,29).
+v_i(t,o,3,30).
+v_i(t,o,3,31).
  
+act_info_i(1,[ [ 22 ] ]).
  
  
  
@@ -201,6 +210,7 @@ attri_i(28,[ areastatusadsc,svchar,100,0,'',0,areastatusadsc,'',0 ]).
 attri_i(27,[ areadsc,svchar,100,0,'',0,areadsc,'',0 ]).
 attri_i(22,[ areaareaid,int,9,0,'ZZZZZZZZ9',0,areaareaid,'',0 ]).
 attri_i('Gxremove',[ 'GxRemove',int,1,0,'9',0,'Gx Remove','',5 ]).
+attri_i('Areaareaid',[ areaareaid,int,9,0,'ZZZZZZZZ9',0,areaid,'',7 ]).
 attri_i('Mode',[ 'Gx_mode',char,3,0,'@!',1,'','',2 ]).
  
 table_i(17,[ 'AREA',[ 22,27,28,29,30,31 ],area,area ]).
@@ -350,7 +360,7 @@ html_comp_i(6,'Title','',d,[ str ]).
 html_comp_i(6,'Fill',-1,d,[ bool ]).
 html_comp_i(6,'Backcolor',rgb(255,255,255),d,[ color ]).
 html_comp_i(6,'Forecolor',rgb(0,0,0),d,[ color ]).
-html_comp_i(6,'Font',font('Open Sans Semibold',17,[]),d,[ font ]).
+html_comp_i(6,'Font',font('Microsoft Sans Serif',17,[]),d,[ font ]).
 html_comp_i(7,'Class',row,v,[ str ]).
 html_comp_i(7,'Id','',d,[ str ]).
 html_comp_i(7,'Height',measure(0,px),d,[ measure ]).
@@ -939,6 +949,7 @@ att_prop_i(2,31,'FullName',areafecultact,v).
  
 tbl_att_prop_i(2,17,22,'AllowNulls',n).
  
+var_prop_i(2,'Areaareaid',idBasedOn,'',v).
  
  
  
@@ -952,10 +963,8 @@ trn_level_i(17,[ [ 22,27,28,29,30,31 ],area,area,area,'',27 ]).
  
  
  
-pgm_parm_i(web,80,'GX00H0',[ [ int,9,0,0 ] ],[ [ pareaareaid,out,[] ] ]).
  
 pgm_callprotocol_i(trn,17,'AREA','INTERNAL').
-pgm_callprotocol_i(web,80,'GX00H0','INTERNAL').
  
  
  

@@ -2,7 +2,7 @@
                File: Catalog_De_Entidad_Federativa
         Description: Catalog_De_Entidad_Federativa
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 1/28/2022 1:40:59.87
+       Generated on: 1/28/2022 13:7:2.45
        Program type: Callable routine
           Main DBMS: postgresql
 */
@@ -215,7 +215,7 @@ namespace GeneXus.Programs {
          context.AddJavascriptSource("jquery.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxtimezone.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxgral.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("gxcfg.js", "?20221281405988");
+         context.AddJavascriptSource("gxcfg.js", "?2022128137246");
          if ( context.isSpaRequest( ) )
          {
             enableOutput();
@@ -445,12 +445,19 @@ namespace GeneXus.Programs {
                               /* Execute user event: E13112 */
                               E13112 ();
                            }
-                           else if ( StringUtil.StrCmp(sEvt, "LOAD") == 0 )
+                           else if ( StringUtil.StrCmp(sEvt, "'CONSULTAR '") == 0 )
                            {
                               context.wbHandled = 1;
                               dynload_actions( ) ;
                               /* Execute user event: E14112 */
                               E14112 ();
+                           }
+                           else if ( StringUtil.StrCmp(sEvt, "LOAD") == 0 )
+                           {
+                              context.wbHandled = 1;
+                              dynload_actions( ) ;
+                              /* Execute user event: E15112 */
+                              E15112 ();
                            }
                            else if ( StringUtil.StrCmp(sEvt, "ENTER") == 0 )
                            {
@@ -464,11 +471,6 @@ namespace GeneXus.Programs {
                                  dynload_actions( ) ;
                               }
                               /* No code required for Cancel button. It is implemented as the Reset button. */
-                           }
-                           else if ( StringUtil.StrCmp(sEvt, "'CONSULTAR '") == 0 )
-                           {
-                              context.wbHandled = 1;
-                              dynload_actions( ) ;
                            }
                            else if ( StringUtil.StrCmp(sEvt, "LSCR") == 0 )
                            {
@@ -568,8 +570,8 @@ namespace GeneXus.Programs {
          fix_multi_value_controls( ) ;
          if ( String.IsNullOrEmpty(StringUtil.RTrim( context.wjLoc)) && ( context.nUserReturn != 1 ) )
          {
-            /* Execute user event: E14112 */
-            E14112 ();
+            /* Execute user event: E15112 */
+            E15112 ();
             WB110( ) ;
          }
       }
@@ -704,11 +706,18 @@ namespace GeneXus.Programs {
          context.wjLocDisableFrm = 1;
       }
 
+      protected void E14112( )
+      {
+         /* 'Consultar ' Routine */
+         context.wjLoc = formatLink("detallesentidadfederativa.aspx") ;
+         context.wjLocDisableFrm = 1;
+      }
+
       protected void nextLoad( )
       {
       }
 
-      protected void E14112( )
+      protected void E15112( )
       {
          /* Load Routine */
       }
@@ -881,11 +890,11 @@ namespace GeneXus.Programs {
 
       protected void define_styles( )
       {
-         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?1401612");
+         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?13551359");
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?202212814106");
+            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?2022128137253");
             idxLst = (int)(idxLst+1);
          }
          /* End function define_styles */
@@ -894,7 +903,7 @@ namespace GeneXus.Programs {
       protected void include_jscripts( )
       {
          context.AddJavascriptSource("messages.spa.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("catalog_de_entidad_federativa.js", "?202212814106");
+         context.AddJavascriptSource("catalog_de_entidad_federativa.js", "?2022128137253");
          /* End function include_jscripts */
       }
 
@@ -942,6 +951,7 @@ namespace GeneXus.Programs {
          setEventMetadata("REFRESH","{handler:'Refresh',iparms:[],oparms:[]}");
          setEventMetadata("'GUARDAR '","{handler:'E12112',iparms:[{av:'AV6NextValue',fld:'vNEXTVALUE',pic:'ZZZ9',hsh:true,nv:0},{av:'AV8entidadfederativa',fld:'vENTIDADFEDERATIVA',pic:'',nv:null},{av:'AV9entidadfederativadsc',fld:'vENTIDADFEDERATIVADSC',pic:'',nv:''},{av:'Gx_date',fld:'vTODAY',pic:'',nv:''}],oparms:[{av:'AV8entidadfederativa',fld:'vENTIDADFEDERATIVA',pic:'',nv:null}]}");
          setEventMetadata("'CANCELAR'","{handler:'E13112',iparms:[],oparms:[]}");
+         setEventMetadata("'CONSULTAR '","{handler:'E14112',iparms:[],oparms:[]}");
          return  ;
       }
 

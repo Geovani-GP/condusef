@@ -41,7 +41,7 @@ rule_i(0,datastore(1,'CS_RPCPGML','')).
 rule_i(0,datastore(1,'JDBC_DATASOURCE','')).
 rule_i(0,datastore(1,'USE_JDBC_DATASOURCE','0')).
 rule_i(0,datastore(1,'DS_DBMS_ADDINFO','')).
-rule_i(0,datastore(1,'USER_PASSWORD',󻢸蘇�2�5炭)).
+rule_i(0,datastore(1,'USER_PASSWORD',admin)).
 rule_i(0,datastore(1,'USER_ID',postgres)).
 rule_i(0,datastore(1,'CS_CONNECT','First')).
 rule_i(0,datastore(1,'DBMS_PORT','5432')).
@@ -218,6 +218,7 @@ attri_i(109,[ entidadfederativausuario,svchar,15,0,'',0,entidadfederativausuario
 attri_i(108,[ entidadfederativadsc,svchar,100,0,'',0,entidadfederativadsc,'',0 ]).
 attri_i(7,[ entidafederativaid,int,9,0,'ZZZZZZZZ9',0,entidafederativaid,'',0 ]).
 attri_i('Gxremove',[ 'GxRemove',int,1,0,'9',0,'Gx Remove','',5 ]).
+attri_i('Entidafederativaid',[ entidafederativaid,int,9,0,'ZZZZZZZZ9',0,entidafederativaid,'',7 ]).
 attri_i('Mode',[ 'Gx_mode',char,3,0,'@!',1,'','',2 ]).
  
 table_i(11,[ 'ARTICULOS',[ 19,20,21,7 ],articulos,articulos ]).
@@ -415,6 +416,7 @@ tbl_att_prop_i(2,11,19,'AllowNulls',n).
 tbl_att_prop_i(2,11,20,'AllowNulls',n).
 tbl_att_prop_i(2,11,21,'AllowNulls',n).
  
+var_prop_i(2,'Entidafederativaid',idBasedOn,'',v).
  
 i_tbl_best_trn(4,[ 4,1,entidadfederativa,entidadfederativa,[] ]).
  
