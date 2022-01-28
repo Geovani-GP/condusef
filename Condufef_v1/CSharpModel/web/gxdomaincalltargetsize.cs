@@ -2,7 +2,7 @@
                File: CallTargetSize
         Description: CallTargetSize
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 1/26/2022 20:8:21.45
+       Generated on: 1/28/2022 1:41:44.44
        Program type: Callable routine
           Main DBMS: postgresql
 */

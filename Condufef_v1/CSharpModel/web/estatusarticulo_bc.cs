@@ -2,7 +2,7 @@
                File: estatusarticulo_BC
         Description: estatusarticulo
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 1/26/2022 20:7:20.86
+       Generated on: 1/28/2022 1:40:25.96
        Program type: Callable routine
           Main DBMS: postgresql
 */

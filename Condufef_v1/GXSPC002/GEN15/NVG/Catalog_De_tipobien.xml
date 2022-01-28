@@ -4,29 +4,13 @@
 <Object>
 <ObjClsGuid>c9584656-94b6-4ccd-890f-332d11fc2c25</ObjClsGuid>
 <ObjCls>13</ObjCls>
-<ObjId>90</ObjId>
-<ObjName>Catalog_De_tipobien</ObjName>
-<ObjDesc>Catalog_De_tipobien</ObjDesc>
-<ObjPgmName>Catalog_De_tipobien</ObjPgmName>
+<ObjId>100</ObjId>
+<ObjName>Catalog_De_TipoBien</ObjName>
+<ObjDesc>Catalog_De_Tipo Bien</ObjDesc>
+<ObjPgmName>Catalog_De_TipoBien</ObjPgmName>
 <ObjClsName>Web Panel</ObjClsName></Object>
-<Result>nogenreq</Result>
-<Warnings>
-<Warning>
-<MsgCode>spc0156</MsgCode>
-<Message>
-<Token>Event </Token>
-<Token>'Consultar '</Token>
-<Token> for control '</Token>
-<Token>Button1</Token>
-<Token>' is not defined.</Token></Message></Warning>
-<Warning>
-<MsgCode>spc0156</MsgCode>
-<Message>
-<Token>Event </Token>
-<Token>'Cancelar'</Token>
-<Token> for control '</Token>
-<Token>Button3</Token>
-<Token>' is not defined.</Token></Message></Warning></Warnings>
+<Result>genreq</Result>
+<Warnings></Warnings>
 <Errors></Errors>
 <Generator>
 <GenId>15</GenId>
@@ -65,7 +49,41 @@
 <VarName>&amp;tipobien</VarName></Variable>
 <Token>.</Token>
 <Token>save(</Token>
-<Token>)</Token></Expression></Command></Event>
+<Token>)</Token></Expression></Command>
+<CALL>
+<Object>
+<ObjClsGuid>c9584656-94b6-4ccd-890f-332d11fc2c25</ObjClsGuid>
+<ObjCls>13</ObjCls>
+<ObjId>100</ObjId>
+<ObjName>Catalog_De_TipoBien</ObjName>
+<ObjPgmName>Catalog_De_TipoBien</ObjPgmName>
+<ObjClsName>Web Panel</ObjClsName></Object>
+<Parameters></Parameters>
+<IF></IF></CALL></Event>
+<Event>
+<EventName>'Consultar '</EventName>
+<CALL>
+<Object>
+<ObjClsGuid>c9584656-94b6-4ccd-890f-332d11fc2c25</ObjClsGuid>
+<ObjCls>13</ObjCls>
+<ObjId>100</ObjId>
+<ObjName>Catalog_De_TipoBien</ObjName>
+<ObjPgmName>Catalog_De_TipoBien</ObjPgmName>
+<ObjClsName>Web Panel</ObjClsName></Object>
+<Parameters></Parameters>
+<IF></IF></CALL></Event>
+<Event>
+<EventName>'Cancelar'</EventName>
+<CALL>
+<Object>
+<ObjClsGuid>c9584656-94b6-4ccd-890f-332d11fc2c25</ObjClsGuid>
+<ObjCls>13</ObjCls>
+<ObjId>29</ObjId>
+<ObjName>MenuPrincipal</ObjName>
+<ObjPgmName>MenuPrincipal</ObjPgmName>
+<ObjClsName>Web Panel</ObjClsName></Object>
+<Parameters></Parameters>
+<IF></IF></CALL></Event>
 <Event>
 <EventName>Load</EventName></Event>
 <Suggests></Suggests></ObjectSpec>

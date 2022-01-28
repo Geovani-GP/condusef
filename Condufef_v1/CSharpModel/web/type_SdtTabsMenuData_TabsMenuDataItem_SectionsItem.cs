@@ -2,7 +2,7 @@
                File: type_SdtTabsMenuData_TabsMenuDataItem_SectionsItem
         Description: TabsMenuData
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 1/26/2022 20:8:22.3
+       Generated on: 1/28/2022 1:41:45.15
        Program type: Callable routine
           Main DBMS: postgresql
 */

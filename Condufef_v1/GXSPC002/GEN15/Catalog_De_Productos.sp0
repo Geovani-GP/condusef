@@ -56,12 +56,12 @@ rule_i(0,datastore(1,'CS_RPCPGML','')).
 rule_i(0,datastore(1,'JDBC_DATASOURCE','')).
 rule_i(0,datastore(1,'USE_JDBC_DATASOURCE','0')).
 rule_i(0,datastore(1,'DS_DBMS_ADDINFO','')).
-rule_i(0,datastore(1,'USER_PASSWORD',asdf)).
+rule_i(0,datastore(1,'USER_PASSWORD',󻢸蘇�2�5炭)).
 rule_i(0,datastore(1,'USER_ID',postgres)).
 rule_i(0,datastore(1,'CS_CONNECT','First')).
 rule_i(0,datastore(1,'DBMS_PORT','5432')).
 rule_i(0,datastore(1,'CS_SERVER',localhost)).
-rule_i(0,datastore(1,'CS_DBNAME',condusef)).
+rule_i(0,datastore(1,'CS_DBNAME',postgres)).
 rule_i(0,datastore(1,'CS_FLEDSNAME','')).
 rule_i(0,datastore(1,'CS_DRVNAME','')).
 rule_i(0,datastore(1,'CS_DSNAME','')).
@@ -597,7 +597,7 @@ html_comp_i(28,'Emptyasnull','Yes',d,[ str ]).
 html_comp_i(28,'Readonly',0,d,[ bool ]).
 html_comp_i(28,'Autocomplete',-1,d,[ bool ]).
 html_comp_i(28,'Autoresize',0,v,[ bool ]).
-html_comp_i(28,'Gxwidth',measure(80,chr),d,[ measure ]).
+html_comp_i(28,'Gxwidth',measure(197,px),v,[ measure ]).
 html_comp_i(28,'Ismultiline',0,d,[ bool ]).
 html_comp_i(28,'Fill',-1,d,[ bool ]).
 html_comp_i(28,'Backcolor',rgb(255,255,255),d,[ color ]).
@@ -650,8 +650,8 @@ html_comp_i(37,'Notifycontextchange',0,d,[ bool ]).
 html_comp_i(37,'Emptyasnull','Yes',d,[ str ]).
 html_comp_i(37,'Readonly',0,d,[ bool ]).
 html_comp_i(37,'Autocomplete',-1,d,[ bool ]).
-html_comp_i(37,'Autoresize',-1,d,[ bool ]).
-html_comp_i(37,'Gxwidth',measure(80,chr),d,[ measure ]).
+html_comp_i(37,'Autoresize',0,v,[ bool ]).
+html_comp_i(37,'Gxwidth',measure(197,px),v,[ measure ]).
 html_comp_i(37,'Ismultiline',0,d,[ bool ]).
 html_comp_i(37,'Fill',-1,d,[ bool ]).
 html_comp_i(37,'Backcolor',rgb(255,255,255),d,[ color ]).
@@ -693,8 +693,8 @@ html_comp_i(45,'Notifycontextchange',0,d,[ bool ]).
 html_comp_i(45,'Emptyasnull','Yes',d,[ str ]).
 html_comp_i(45,'Readonly',0,d,[ bool ]).
 html_comp_i(45,'Autocomplete',-1,d,[ bool ]).
-html_comp_i(45,'Autoresize',-1,d,[ bool ]).
-html_comp_i(45,'Gxwidth',measure(80,chr),d,[ measure ]).
+html_comp_i(45,'Autoresize',0,v,[ bool ]).
+html_comp_i(45,'Gxwidth',measure(197,px),v,[ measure ]).
 html_comp_i(45,'Ismultiline',0,d,[ bool ]).
 html_comp_i(45,'Fill',-1,d,[ bool ]).
 html_comp_i(45,'Backcolor',rgb(255,255,255),d,[ color ]).
@@ -747,8 +747,8 @@ html_comp_i(54,'Notifycontextchange',0,d,[ bool ]).
 html_comp_i(54,'Emptyasnull','Yes',d,[ str ]).
 html_comp_i(54,'Readonly',0,d,[ bool ]).
 html_comp_i(54,'Autocomplete',-1,d,[ bool ]).
-html_comp_i(54,'Autoresize',-1,d,[ bool ]).
-html_comp_i(54,'Gxwidth',measure(80,chr),d,[ measure ]).
+html_comp_i(54,'Autoresize',0,v,[ bool ]).
+html_comp_i(54,'Gxwidth',measure(197,px),v,[ measure ]).
 html_comp_i(54,'Ismultiline',0,d,[ bool ]).
 html_comp_i(54,'Fill',-1,d,[ bool ]).
 html_comp_i(54,'Backcolor',rgb(255,255,255),d,[ color ]).
@@ -832,6 +832,7 @@ att_prop_i(2,25,'EmptyAsNull','Yes',d).
 att_prop_i(2,25,idBasedOn,'',d).
 att_prop_i(2,25,'AUTONUMBER','0',d).
 att_prop_i(2,25,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,25,'AttRegEx','',d).
 att_prop_i(2,25,'AttValidationFailedMsg','',d).
 att_prop_i(2,25,'FullName',cambsid,v).
 att_prop_i(2,112,'ExternalName',marcasdsc,d).

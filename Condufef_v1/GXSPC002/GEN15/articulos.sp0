@@ -2,9 +2,9 @@ spec_i([ trn,11,articulos,articulos,[],spa,'10_3_15-115824' ]).
  
 struct_i(11,0,[],[]).
  
-level_i(11,[ 11,[ [ 11,many ],[ 18,one ],[ 1,one ],[ 4,one ],[ 16,one ],[ 10,one ],[ 522,one ],[ 525,one ] ],[ 19,20,21 ],[],[],[],[ 19,20,21 ],'ARTICULOS_PKEY',[ 11,[] ],[] ]).
+level_i(11,[ 11,[ [ 11,many ],[ 18,one ],[ 1,one ],[ 4,one ],[ 16,one ],[ 10,one ],[ 523,one ],[ 526,one ] ],[ 19,20,21 ],[],[],[],[ 19,20,21 ],'ARTICULOS_PKEY',[ 11,[] ],[] ]).
  
-tw_i(11,[ [ 18,[ [ 11,19,19 ] ] ],[ 1,[ [ 11,23,23 ] ] ],[ 4,[ [ 11,7,7 ] ] ],[ 16,[ [ 11,10,10 ] ] ],[ 10,[ [ 11,2,2 ] ] ],[ 522,[ [ 11,20,15 ] ] ],[ 525,[ [ 11,21,25 ] ] ] ]).
+tw_i(11,[ [ 18,[ [ 11,19,19 ] ] ],[ 1,[ [ 11,23,23 ] ] ],[ 4,[ [ 11,7,7 ] ] ],[ 16,[ [ 11,10,10 ] ] ],[ 10,[ [ 11,2,2 ] ] ],[ 523,[ [ 11,20,15 ] ] ],[ 526,[ [ 11,21,25 ] ] ] ]).
  
 lwi_i(11,[ [] ]).
  
@@ -171,9 +171,9 @@ rule_i(0,prop(idBC,'0')).
 rule_i(0,prop('Folder',o(120,'Root Module'))).
 rule_i(0,prop('ObjDesc',articulos)).
 rule_i(0,prop('ObjName',articulos)).
-rule_i(11,prompt([ 525,[ [ 11,21,25 ] ],[ 21 ],[ 21 ],[ t(o(13,'Gx00E0'),28),t(21,2) ],[],n,[] ])).
+rule_i(11,prompt([ 526,[ [ 11,21,25 ] ],[ 21 ],[ 21 ],[ t(o(13,'Gx00E0'),28),t(21,2) ],[],n,[] ])).
 rule_i(11,rule([ a(23,[ [ 21 ],[ t(o(13,'Gx00E0'),28),t(21,2) ] ]) ],[],[],[ 21 ])).
-rule_i(11,prompt([ 522,[ [ 11,20,15 ] ],[ 20 ],[ 20 ],[ t(o(13,'Gx00J0'),28),t(20,2) ],[],n,[] ])).
+rule_i(11,prompt([ 523,[ [ 11,20,15 ] ],[ 20 ],[ 20 ],[ t(o(13,'Gx00J0'),28),t(20,2) ],[],n,[] ])).
 rule_i(11,rule([ a(23,[ [ 20 ],[ t(o(13,'Gx00J0'),28),t(20,2) ] ]) ],[],[],[ 20 ])).
 rule_i(11,prompt([ 10,[ [ 11,2,2 ] ],[ 2 ],[ 2 ],[ t(o(13,'Gx00A0'),28),t(2,2) ],[],n,[] ])).
 rule_i(11,rule([ a(23,[ [ 2 ],[ t(o(13,'Gx00A0'),28),t(2,2) ] ]) ],[],[],[ 2 ])).
@@ -308,10 +308,10 @@ rule_i(0,p(0,15,fvix,[ 21,22 ],[ 'NAME',modelos_pkey ])).
 rule_i(0,p(0,15,fvix,[ 21,22 ],[ 'LOC','' ])).
 rule_i(0,p(0,15,fvix,[ 21,22 ],[ 'SCHEMA',public ])).
 rule_i(0,p(0,15,fvix,[ 21,22 ],[ 'EXTNAM','YES' ])).
-rule_i(0,file(522,'MODELOS',[ 20,116,117,118,119 ])).
-rule_i(0,loc([ 522 ],'MODELOS','','LAN')).
-rule_i(0,index(522,'MODELOS_PKEY',u,[ 20 ])).
-rule_i(0,loc([ 522,'MODELOS_PKEY' ],modelos_pkey,'','LAN')).
+rule_i(0,file(523,'MODELOS',[ 20,116,117,118,119 ])).
+rule_i(0,loc([ 523 ],'MODELOS','','LAN')).
+rule_i(0,index(523,'MODELOS_PKEY',u,[ 20 ])).
+rule_i(0,loc([ 523,'MODELOS_PKEY' ],modelos_pkey,'','LAN')).
 rule_i(0,p(0,0,fv,19,[ intname,'CAMBS' ])).
 rule_i(0,p(0,0,fv,19,[ table,14 ])).
 rule_i(0,p(0,15,fv,19,[])).
@@ -324,10 +324,10 @@ rule_i(0,p(0,15,fvix,[ 19,20 ],[ 'NAME',cambs_pkey ])).
 rule_i(0,p(0,15,fvix,[ 19,20 ],[ 'LOC','' ])).
 rule_i(0,p(0,15,fvix,[ 19,20 ],[ 'SCHEMA',public ])).
 rule_i(0,p(0,15,fvix,[ 19,20 ],[ 'EXTNAM','YES' ])).
-rule_i(0,file(525,'CAMBS',[ 21,83,84,85,86 ])).
-rule_i(0,loc([ 525 ],'CAMBS','','LAN')).
-rule_i(0,index(525,'CAMBS_PKEY',u,[ 21 ])).
-rule_i(0,loc([ 525,'CAMBS_PKEY' ],cambs_pkey,'','LAN')).
+rule_i(0,file(526,'CAMBS',[ 21,83,84,85,86 ])).
+rule_i(0,loc([ 526 ],'CAMBS','','LAN')).
+rule_i(0,index(526,'CAMBS_PKEY',u,[ 21 ])).
+rule_i(0,loc([ 526,'CAMBS_PKEY' ],cambs_pkey,'','LAN')).
 rule_i(11,rule([ a(19,[ [ 19 ],msg([ t('"No existe ''almacen''."',3) ],[ t('ForeignKeyNotFound',3) ]) ]) ],[],[ insert,update,delete ],[ 19 ])).
 rule_i(11,rule([ a(19,[ [ 23 ],msg([ t('"No existe ''tipobien''."',3) ],[ t('ForeignKeyNotFound',3) ]) ]) ],[],[ insert,update,delete ],[ 23 ])).
 rule_i(11,rule([ a(19,[ [ 7 ],msg([ t('"No existe ''entidadfederativa''."',3) ],[ t('ForeignKeyNotFound',3) ]) ]) ],[],[ insert,update,delete ],[ 7 ])).
@@ -343,8 +343,8 @@ a_i(4,11,r,1,[],[ [ [ 11,23,23 ] ],'TIPOBIEN_PKEY',[] ]).
 a_i(5,11,r,4,[],[ [ [ 11,7,7 ] ],'ENTIDADFEDERATIVA_PKEY',[] ]).
 a_i(6,11,r,16,[],[ [ [ 11,10,10 ] ],'ORIGEN_PKEY',[] ]).
 a_i(7,11,r,10,[],[ [ [ 11,2,2 ] ],'PROVEEDORES_PKEY',[] ]).
-a_i(8,11,r,522,[],[ [ [ 11,20,15 ] ],'MODELOS_PKEY',[] ]).
-a_i(9,11,r,525,[],[ [ [ 11,21,25 ] ],'CAMBS_PKEY',[] ]).
+a_i(8,11,r,523,[],[ [ [ 11,20,15 ] ],'MODELOS_PKEY',[] ]).
+a_i(9,11,r,526,[],[ [ [ 11,21,25 ] ],'CAMBS_PKEY',[] ]).
  
 v_i(t,i,1,19).
 v_i(t,i,1,20).
@@ -427,8 +427,8 @@ attri_i(15,[ modelosid,int,9,0,'ZZZZZZZZ9',0,modelosid,'',0 ]).
 attri_i('Gxremove',[ 'GxRemove',int,1,0,'9',0,'Gx Remove','',5 ]).
 attri_i('Mode',[ 'Gx_mode',char,3,0,'@!',1,'','',2 ]).
  
-table_i(525,[ 'CAMBS',[ 21 ],cambs,cambs ]).
-table_i(522,[ 'MODELOS',[ 20 ],modelos,modelos ]).
+table_i(526,[ 'CAMBS',[ 21 ],cambs,cambs ]).
+table_i(523,[ 'MODELOS',[ 20 ],modelos,modelos ]).
 table_i(10,[ 'PROVEEDORES',[ 2 ],proveedores,proveedores ]).
 table_i(16,[ 'ORIGEN',[ 10 ],origen,origen ]).
 table_i(4,[ 'ENTIDADFEDERATIVA',[ 7 ],entidadfederativa,entidadfederativa ]).
@@ -443,8 +443,8 @@ index_i(1,[ 'TIPOBIEN_PKEY',u,[ 23 ],'TIPOBIEN_PKEY' ]).
 index_i(4,[ 'ENTIDADFEDERATIVA_PKEY',u,[ 7 ],'ENTIDADFEDERATIVA_PKEY' ]).
 index_i(16,[ 'ORIGEN_PKEY',u,[ 10 ],'ORIGEN_PKEY' ]).
 index_i(10,[ 'PROVEEDORES_PKEY',u,[ 2 ],'PROVEEDORES_PKEY' ]).
-index_i(522,[ 'MODELOS_PKEY',u,[ 20 ],'MODELOS_PKEY' ]).
-index_i(525,[ 'CAMBS_PKEY',u,[ 21 ],'CAMBS_PKEY' ]).
+index_i(523,[ 'MODELOS_PKEY',u,[ 20 ],'MODELOS_PKEY' ]).
+index_i(526,[ 'CAMBS_PKEY',u,[ 21 ],'CAMBS_PKEY' ]).
  
  
  
@@ -466,20 +466,20 @@ upd_i(11,11,d,[ [],[],'ARTICULOS_PKEY',[] ]).
  
  
  
-map_i(525,i,'CAMBS_PKEY',[ 'CAMBS_PKEY' ]).
-map_i(525,a,25,[ cambsid ]).
-map_i(525,a,86,[ cambsfecultact ]).
-map_i(525,a,85,[ cambsfecreg ]).
-map_i(525,a,84,[ cambsusuario ]).
-map_i(525,a,83,[ cambsdsc ]).
-map_i(525,a,21,[ cambsid ]).
-map_i(522,i,'MODELOS_PKEY',[ 'MODELOS_PKEY' ]).
-map_i(522,a,15,[ modelosid ]).
-map_i(522,a,119,[ modelosfecultact ]).
-map_i(522,a,118,[ modelosfecreg ]).
-map_i(522,a,117,[ modelosusuario ]).
-map_i(522,a,116,[ modelosdsc ]).
-map_i(522,a,20,[ modelosid ]).
+map_i(526,i,'CAMBS_PKEY',[ 'CAMBS_PKEY' ]).
+map_i(526,a,25,[ cambsid ]).
+map_i(526,a,86,[ cambsfecultact ]).
+map_i(526,a,85,[ cambsfecreg ]).
+map_i(526,a,84,[ cambsusuario ]).
+map_i(526,a,83,[ cambsdsc ]).
+map_i(526,a,21,[ cambsid ]).
+map_i(523,i,'MODELOS_PKEY',[ 'MODELOS_PKEY' ]).
+map_i(523,a,15,[ modelosid ]).
+map_i(523,a,119,[ modelosfecultact ]).
+map_i(523,a,118,[ modelosfecreg ]).
+map_i(523,a,117,[ modelosusuario ]).
+map_i(523,a,116,[ modelosdsc ]).
+map_i(523,a,20,[ modelosid ]).
 map_i(10,i,'PROVEEDORES_PKEY',[ 'PROVEEDORES_PKEY' ]).
 map_i(10,a,138,[ proveedoresfecultact ]).
 map_i(10,a,137,[ proveedoresfecreg ]).
@@ -2594,8 +2594,8 @@ tbl_att_prop_i(2,1,23,'AllowNulls',n).
 tbl_att_prop_i(2,4,7,'AllowNulls',n).
 tbl_att_prop_i(2,16,10,'AllowNulls',n).
 tbl_att_prop_i(2,10,2,'AllowNulls',n).
-tbl_att_prop_i(2,522,20,'AllowNulls',n).
-tbl_att_prop_i(2,525,21,'AllowNulls',n).
+tbl_att_prop_i(2,523,20,'AllowNulls',n).
+tbl_att_prop_i(2,526,21,'AllowNulls',n).
  
  
  

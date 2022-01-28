@@ -50,6 +50,13 @@ called_program_i(0,9,13,97).
 called_program_i(1,0,1,5).
 called_program_i(1,0,1,6).
 called_program_i(13,1,13,85).
+called_program_i(13,100,0,1).
+called_program_i(13,100,13,1).
+called_program_i(13,100,13,100).
+called_program_i(13,101,0,9).
+called_program_i(13,101,13,1).
+called_program_i(13,102,0,9).
+called_program_i(13,102,13,1).
 called_program_i(13,29,13,1).
 called_program_i(13,30,0,14).
 called_program_i(13,30,13,1).
@@ -95,7 +102,6 @@ called_program_i(13,66,13,1).
 called_program_i(13,67,13,1).
 called_program_i(13,68,13,1).
 called_program_i(13,69,13,1).
-called_program_i(13,70,13,1).
 called_program_i(13,71,13,1).
 called_program_i(13,72,13,1).
 called_program_i(13,73,13,1).
@@ -127,6 +133,10 @@ called_program_i(13,95,13,40).
 called_program_i(13,96,0,9).
 called_program_i(13,96,13,1).
 called_program_i(13,97,13,1).
+called_program_i(13,98,0,9).
+called_program_i(13,98,13,1).
+called_program_i(13,99,0,9).
+called_program_i(13,99,13,1).
 domain_i(10,'GXDOMAINCryptoSignAlgorithm.cs').
 domain_i(17,'GXDOMAINAPIAuthorizationStatus.cs').
 domain_i(18,'GXDOMAINMessageTypes.cs').

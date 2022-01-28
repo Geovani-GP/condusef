@@ -1,8 +1,8 @@
 /*
-               File: Catalog_De_tipobien
-        Description: Catalog_De_tipobien
+               File: Catalog_De_TipoBien
+        Description: Catalog_De_Tipo Bien
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 1/26/2022 2:11:49.71
+       Generated on: 1/28/2022 1:41:3.97
        Program type: Callable routine
           Main DBMS: postgresql
 */
@@ -176,11 +176,11 @@ namespace GeneXus.Programs {
 
       public override short ExecuteStartEvent( )
       {
-         PA2I2( ) ;
+         PA2S2( ) ;
          gxajaxcallmode = (short)((isAjaxCallMode( ) ? 1 : 0));
          if ( ( gxajaxcallmode == 0 ) && ( GxWebError == 0 ) )
          {
-            START2I2( ) ;
+            START2S2( ) ;
          }
          return gxajaxcallmode ;
       }
@@ -215,7 +215,7 @@ namespace GeneXus.Programs {
          context.AddJavascriptSource("jquery.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxtimezone.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxgral.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("gxcfg.js", "?20221262114974");
+         context.AddJavascriptSource("gxcfg.js", "?2022128141398");
          if ( context.isSpaRequest( ) )
          {
             enableOutput();
@@ -258,14 +258,19 @@ namespace GeneXus.Programs {
          /* Send saved values. */
          if ( context.isAjaxRequest( ) )
          {
-            context.httpAjaxContext.ajax_rsp_assign_sdt_attri("", false, "vTIPOBIEN", AV6tipobien);
+            context.httpAjaxContext.ajax_rsp_assign_sdt_attri("", false, "vTIPOBIEN", AV13tipobien);
          }
          else
          {
-            context.httpAjaxContext.ajax_rsp_assign_hidden_sdt("vTIPOBIEN", AV6tipobien);
+            context.httpAjaxContext.ajax_rsp_assign_hidden_sdt("vTIPOBIEN", AV13tipobien);
          }
          GxWebStd.gx_hidden_field( context, "GXC1", StringUtil.LTrim( StringUtil.NToC( (decimal)(A40000GXC1), 9, 0, ",", "")));
+         GxWebStd.gx_hidden_field( context, "gxhash_vNEXTVALUE", GetSecureSignedToken( "", context.localUtil.Format( (decimal)(AV8NextValue), "ZZZ9")));
          GXKey = Crypto.Decrypt64( context.GetCookie( "GX_SESSION_ID"), Crypto.GetServerKey( ));
+         forbiddenHiddens = "hsh" + "Catalog_De_TipoBien";
+         forbiddenHiddens = forbiddenHiddens + context.localUtil.Format( (decimal)(AV8NextValue), "ZZZ9");
+         GxWebStd.gx_hidden_field( context, "hsh", GXUtil.GetEncryptedHash( forbiddenHiddens, GXKey));
+         GXUtil.WriteLog("catalog_de_tipobien:[SendSecurityCheck value for]"+"NextValue:"+context.localUtil.Format( (decimal)(AV8NextValue), "ZZZ9"));
       }
 
       public override void RenderHtmlCloseForm( )
@@ -297,14 +302,14 @@ namespace GeneXus.Programs {
             context.WriteHtmlText( "<div") ;
             GxWebStd.ClassAttribute( context, "gx-ct-body"+" "+(String.IsNullOrEmpty(StringUtil.RTrim( Form.Class)) ? "Form" : Form.Class)+"-fx");
             context.WriteHtmlText( ">") ;
-            WE2I2( ) ;
+            WE2S2( ) ;
             context.WriteHtmlText( "</div>") ;
          }
       }
 
       public override void DispatchEvents( )
       {
-         EVT2I2( ) ;
+         EVT2S2( ) ;
       }
 
       public override bool HasEnterEvent( )
@@ -324,15 +329,15 @@ namespace GeneXus.Programs {
 
       public override String GetPgmname( )
       {
-         return "Catalog_De_tipobien" ;
+         return "Catalog_De_TipoBien" ;
       }
 
       public override String GetPgmdesc( )
       {
-         return "Catalog_De_tipobien" ;
+         return "Catalog_De_Tipo Bien" ;
       }
 
-      protected void WB2I0( )
+      protected void WB2S0( )
       {
          if ( context.isAjaxRequest( ) )
          {
@@ -347,16 +352,16 @@ namespace GeneXus.Programs {
             }
             GxWebStd.gx_msg_list( context, "", context.GX_msglist.DisplayMode, "", "", "", "false");
             context.WriteHtmlText( "<p>") ;
-            wb_table1_3_2I2( true) ;
+            wb_table1_3_2S2( true) ;
          }
          else
          {
-            wb_table1_3_2I2( false) ;
+            wb_table1_3_2S2( false) ;
          }
          return  ;
       }
 
-      protected void wb_table1_3_2I2e( bool wbgen )
+      protected void wb_table1_3_2S2e( bool wbgen )
       {
          if ( wbgen )
          {
@@ -365,7 +370,7 @@ namespace GeneXus.Programs {
          wbLoad = true;
       }
 
-      protected void START2I2( )
+      protected void START2S2( )
       {
          wbLoad = false;
          wbEnd = 0;
@@ -373,7 +378,7 @@ namespace GeneXus.Programs {
          if ( ! context.isSpaRequest( ) )
          {
             Form.Meta.addItem("generator", "GeneXus C# 10_3_15-115824", 0) ;
-            Form.Meta.addItem("description", "Catalog_De_tipobien", 0) ;
+            Form.Meta.addItem("description", "Catalog_De_Tipo Bien", 0) ;
          }
          context.wjLoc = "";
          context.nUserReturn = 0;
@@ -382,16 +387,16 @@ namespace GeneXus.Programs {
          {
          }
          wbErr = false;
-         STRUP2I0( ) ;
+         STRUP2S0( ) ;
       }
 
-      protected void WS2I2( )
+      protected void WS2S2( )
       {
-         START2I2( ) ;
-         EVT2I2( ) ;
+         START2S2( ) ;
+         EVT2S2( ) ;
       }
 
-      protected void EVT2I2( )
+      protected void EVT2S2( )
       {
          if ( StringUtil.StrCmp(context.GetRequestMethod( ), "POST") == 0 )
          {
@@ -422,22 +427,36 @@ namespace GeneXus.Programs {
                            {
                               context.wbHandled = 1;
                               dynload_actions( ) ;
-                              /* Execute user event: E112I2 */
-                              E112I2 ();
+                              /* Execute user event: E112S2 */
+                              E112S2 ();
                            }
                            else if ( StringUtil.StrCmp(sEvt, "'GUARDAR '") == 0 )
                            {
                               context.wbHandled = 1;
                               dynload_actions( ) ;
-                              /* Execute user event: E122I2 */
-                              E122I2 ();
+                              /* Execute user event: E122S2 */
+                              E122S2 ();
+                           }
+                           else if ( StringUtil.StrCmp(sEvt, "'CONSULTAR '") == 0 )
+                           {
+                              context.wbHandled = 1;
+                              dynload_actions( ) ;
+                              /* Execute user event: E132S2 */
+                              E132S2 ();
+                           }
+                           else if ( StringUtil.StrCmp(sEvt, "'CANCELAR'") == 0 )
+                           {
+                              context.wbHandled = 1;
+                              dynload_actions( ) ;
+                              /* Execute user event: E142S2 */
+                              E142S2 ();
                            }
                            else if ( StringUtil.StrCmp(sEvt, "LOAD") == 0 )
                            {
                               context.wbHandled = 1;
                               dynload_actions( ) ;
-                              /* Execute user event: E132I2 */
-                              E132I2 ();
+                              /* Execute user event: E152S2 */
+                              E152S2 ();
                            }
                            else if ( StringUtil.StrCmp(sEvt, "ENTER") == 0 )
                            {
@@ -451,16 +470,6 @@ namespace GeneXus.Programs {
                                  dynload_actions( ) ;
                               }
                               /* No code required for Cancel button. It is implemented as the Reset button. */
-                           }
-                           else if ( StringUtil.StrCmp(sEvt, "'CONSULTAR '") == 0 )
-                           {
-                              context.wbHandled = 1;
-                              dynload_actions( ) ;
-                           }
-                           else if ( StringUtil.StrCmp(sEvt, "'CANCELAR'") == 0 )
-                           {
-                              context.wbHandled = 1;
-                              dynload_actions( ) ;
                            }
                            else if ( StringUtil.StrCmp(sEvt, "LSCR") == 0 )
                            {
@@ -480,7 +489,7 @@ namespace GeneXus.Programs {
          }
       }
 
-      protected void WE2I2( )
+      protected void WE2S2( )
       {
          if ( ! GxWebStd.gx_redirect( context) )
          {
@@ -496,7 +505,7 @@ namespace GeneXus.Programs {
          }
       }
 
-      protected void PA2I2( )
+      protected void PA2S2( )
       {
          if ( nDonePA == 0 )
          {
@@ -542,36 +551,40 @@ namespace GeneXus.Programs {
       public void Refresh( )
       {
          send_integrity_hashes( ) ;
-         RF2I2( ) ;
+         RF2S2( ) ;
       }
 
       protected void initialize_formulas( )
       {
          /* GeneXus formulas. */
          context.Gx_err = 0;
+         edtavNextvalue_Enabled = 0;
+         context.httpAjaxContext.ajax_rsp_assign_prop("", false, edtavNextvalue_Internalname, "Enabled", StringUtil.LTrim( StringUtil.Str( (decimal)(edtavNextvalue_Enabled), 5, 0)));
       }
 
-      protected void RF2I2( )
+      protected void RF2S2( )
       {
          initialize_formulas( ) ;
          fix_multi_value_controls( ) ;
          if ( String.IsNullOrEmpty(StringUtil.RTrim( context.wjLoc)) && ( context.nUserReturn != 1 ) )
          {
-            /* Execute user event: E132I2 */
-            E132I2 ();
-            WB2I0( ) ;
+            /* Execute user event: E152S2 */
+            E152S2 ();
+            WB2S0( ) ;
          }
       }
 
-      protected void STRUP2I0( )
+      protected void STRUP2S0( )
       {
          /* Before Start, stand alone formulas. */
          context.Gx_err = 0;
-         /* Using cursor H002I3 */
+         edtavNextvalue_Enabled = 0;
+         context.httpAjaxContext.ajax_rsp_assign_prop("", false, edtavNextvalue_Internalname, "Enabled", StringUtil.LTrim( StringUtil.Str( (decimal)(edtavNextvalue_Enabled), 5, 0)));
+         /* Using cursor H002S3 */
          pr_default.execute(0);
          if ( (pr_default.getStatus(0) != 101) )
          {
-            A40000GXC1 = H002I3_A40000GXC1[0];
+            A40000GXC1 = H002S3_A40000GXC1[0];
          }
          else
          {
@@ -580,8 +593,8 @@ namespace GeneXus.Programs {
          pr_default.close(0);
          /* Execute Start event if defined. */
          context.wbGlbDoneStart = 0;
-         /* Execute user event: E112I2 */
-         E112I2 ();
+         /* Execute user event: E112S2 */
+         E112S2 ();
          context.wbGlbDoneStart = 1;
          /* After Start, stand alone formulas. */
          if ( StringUtil.StrCmp(context.GetRequestMethod( ), "POST") == 0 )
@@ -594,20 +607,40 @@ namespace GeneXus.Programs {
                GX_FocusControl = edtavNextvalue_Internalname;
                context.httpAjaxContext.ajax_rsp_assign_attri("", false, "GX_FocusControl", GX_FocusControl);
                wbErr = true;
-               AV5NextValue = 0;
-               context.httpAjaxContext.ajax_rsp_assign_attri("", false, "AV5NextValue", StringUtil.LTrim( StringUtil.Str( (decimal)(AV5NextValue), 4, 0)));
+               AV8NextValue = 0;
+               context.httpAjaxContext.ajax_rsp_assign_attri("", false, "AV8NextValue", StringUtil.LTrim( StringUtil.Str( (decimal)(AV8NextValue), 4, 0)));
+               context.httpAjaxContext.ajax_rsp_assign_attri("", false, "gxhash_vNEXTVALUE", GetSecureSignedToken( "", context.localUtil.Format( (decimal)(AV8NextValue), "ZZZ9")));
             }
             else
             {
-               AV5NextValue = (short)(context.localUtil.CToN( cgiGet( edtavNextvalue_Internalname), ",", "."));
-               context.httpAjaxContext.ajax_rsp_assign_attri("", false, "AV5NextValue", StringUtil.LTrim( StringUtil.Str( (decimal)(AV5NextValue), 4, 0)));
+               AV8NextValue = (short)(context.localUtil.CToN( cgiGet( edtavNextvalue_Internalname), ",", "."));
+               context.httpAjaxContext.ajax_rsp_assign_attri("", false, "AV8NextValue", StringUtil.LTrim( StringUtil.Str( (decimal)(AV8NextValue), 4, 0)));
+               context.httpAjaxContext.ajax_rsp_assign_attri("", false, "gxhash_vNEXTVALUE", GetSecureSignedToken( "", context.localUtil.Format( (decimal)(AV8NextValue), "ZZZ9")));
             }
-            AV7tipobiendsc = cgiGet( edtavTipobiendsc_Internalname);
-            context.httpAjaxContext.ajax_rsp_assign_attri("", false, "AV7tipobiendsc", AV7tipobiendsc);
+            AV11tipobiendsc = cgiGet( edtavTipobiendsc_Internalname);
+            context.httpAjaxContext.ajax_rsp_assign_attri("", false, "AV11tipobiendsc", AV11tipobiendsc);
             /* Read saved values. */
             /* Read subfile selected row values. */
             /* Read hidden variables. */
             GXKey = Crypto.Decrypt64( context.GetCookie( "GX_SESSION_ID"), Crypto.GetServerKey( ));
+            forbiddenHiddens = "hsh" + "Catalog_De_TipoBien";
+            AV8NextValue = (short)(context.localUtil.CToN( cgiGet( edtavNextvalue_Internalname), ",", "."));
+            context.httpAjaxContext.ajax_rsp_assign_attri("", false, "AV8NextValue", StringUtil.LTrim( StringUtil.Str( (decimal)(AV8NextValue), 4, 0)));
+            context.httpAjaxContext.ajax_rsp_assign_attri("", false, "gxhash_vNEXTVALUE", GetSecureSignedToken( "", context.localUtil.Format( (decimal)(AV8NextValue), "ZZZ9")));
+            forbiddenHiddens = forbiddenHiddens + context.localUtil.Format( (decimal)(AV8NextValue), "ZZZ9");
+            hsh = cgiGet( "hsh");
+            if ( ! GXUtil.CheckEncryptedHash( forbiddenHiddens, hsh, GXKey) )
+            {
+               GXUtil.WriteLog("catalog_de_tipobien:[SecurityCheckFailed value for]"+"NextValue:"+context.localUtil.Format( (decimal)(AV8NextValue), "ZZZ9"));
+               GxWebError = 1;
+               context.HttpContext.Response.StatusDescription = 403.ToString();
+               context.HttpContext.Response.StatusCode = 403;
+               context.WriteHtmlText( "<title>403 Forbidden</title>") ;
+               context.WriteHtmlText( "<h1>403 Forbidden</h1>") ;
+               context.WriteHtmlText( "<p /><hr />") ;
+               GXUtil.WriteLog("send_http_error_code " + 403.ToString());
+               return  ;
+            }
          }
          else
          {
@@ -617,56 +650,73 @@ namespace GeneXus.Programs {
 
       protected void GXStart( )
       {
-         /* Execute user event: E112I2 */
-         E112I2 ();
+         /* Execute user event: E112S2 */
+         E112S2 ();
          if (returnInSub) return;
       }
 
-      protected void E112I2( )
+      protected void E112S2( )
       {
          /* Start Routine */
-         /* Using cursor H002I5 */
+         /* Using cursor H002S5 */
          pr_default.execute(1);
          if ( (pr_default.getStatus(1) != 101) )
          {
-            A40000GXC1 = H002I5_A40000GXC1[0];
+            A40000GXC1 = H002S5_A40000GXC1[0];
          }
          else
          {
             A40000GXC1 = 0;
          }
          pr_default.close(1);
-         AV5NextValue = (short)(A40000GXC1+1);
-         context.httpAjaxContext.ajax_rsp_assign_attri("", false, "AV5NextValue", StringUtil.LTrim( StringUtil.Str( (decimal)(AV5NextValue), 4, 0)));
+         AV8NextValue = (short)(A40000GXC1+1);
+         context.httpAjaxContext.ajax_rsp_assign_attri("", false, "AV8NextValue", StringUtil.LTrim( StringUtil.Str( (decimal)(AV8NextValue), 4, 0)));
+         context.httpAjaxContext.ajax_rsp_assign_attri("", false, "gxhash_vNEXTVALUE", GetSecureSignedToken( "", context.localUtil.Format( (decimal)(AV8NextValue), "ZZZ9")));
       }
 
-      protected void E122I2( )
+      protected void E122S2( )
       {
          /* 'Guardar ' Routine */
-         AV6tipobien.gxTpr_Tipobienid = AV5NextValue;
-         AV6tipobien.gxTpr_Tipobiendsc = AV7tipobiendsc;
-         AV6tipobien.Save();
-         if ( AV6tipobien.Success() )
+         AV13tipobien.gxTpr_Tipobienid = AV8NextValue;
+         AV13tipobien.gxTpr_Tipobiendsc = AV11tipobiendsc;
+         AV13tipobien.Save();
+         if ( AV13tipobien.Success() )
          {
-            context.CommitDataStores( "Catalog_De_tipobien");
+            context.CommitDataStores( "Catalog_De_TipoBien");
+            context.wjLoc = formatLink("catalog_de_tipobien.aspx") ;
+            context.wjLocDisableFrm = 1;
          }
          else
          {
-            context.RollbackDataStores( "Catalog_De_tipobien");
+            context.RollbackDataStores( "Catalog_De_TipoBien");
          }
-         context.httpAjaxContext.ajax_rsp_assign_sdt_attri("", false, "AV6tipobien", AV6tipobien);
+         context.httpAjaxContext.ajax_rsp_assign_sdt_attri("", false, "AV13tipobien", AV13tipobien);
+      }
+
+      protected void E132S2( )
+      {
+         /* 'Consultar ' Routine */
+         context.wjLoc = formatLink("catalog_de_tipobien.aspx") ;
+         context.wjLocDisableFrm = 1;
+      }
+
+      protected void E142S2( )
+      {
+         /* 'Cancelar' Routine */
+         context.wjLoc = formatLink("menuprincipal.aspx") ;
+         context.wjLocDisableFrm = 1;
       }
 
       protected void nextLoad( )
       {
       }
 
-      protected void E132I2( )
+      protected void E152S2( )
       {
          /* Load Routine */
       }
 
-      protected void wb_table1_3_2I2( bool wbgen )
+      protected void wb_table1_3_2S2( bool wbgen )
       {
          if ( wbgen )
          {
@@ -674,7 +724,7 @@ namespace GeneXus.Programs {
             sStyleString = "";
             sStyleString = sStyleString + " height: " + StringUtil.LTrim( StringUtil.Str( (decimal)(46), 10, 0)) + "px" + ";";
             sStyleString = sStyleString + " width: " + StringUtil.LTrim( StringUtil.Str( (decimal)(100), 10, 0)) + "%" + ";";
-            GxWebStd.gx_table_start( context, tblTable1_Internalname, tblTable1_Internalname, "", "Table", 0, "", "", 1, 2, sStyleString, "", 0);
+            GxWebStd.gx_table_start( context, tblTable1_Internalname, tblTable1_Internalname, "", "Table", 0, "center", "", 1, 2, sStyleString, "", 0);
             context.WriteHtmlText( "<tbody>") ;
             context.WriteHtmlText( "<tr>") ;
             context.WriteHtmlText( "<td>") ;
@@ -682,29 +732,29 @@ namespace GeneXus.Programs {
             context.WriteHtmlText( "</tr>") ;
             context.WriteHtmlText( "<tr>") ;
             context.WriteHtmlText( "<td>") ;
-            wb_table2_8_2I2( true) ;
+            wb_table2_8_2S2( true) ;
          }
          else
          {
-            wb_table2_8_2I2( false) ;
+            wb_table2_8_2S2( false) ;
          }
          return  ;
       }
 
-      protected void wb_table2_8_2I2e( bool wbgen )
+      protected void wb_table2_8_2S2e( bool wbgen )
       {
          if ( wbgen )
          {
-            wb_table3_17_2I2( true) ;
+            wb_table3_17_2S2( true) ;
          }
          else
          {
-            wb_table3_17_2I2( false) ;
+            wb_table3_17_2S2( false) ;
          }
          return  ;
       }
 
-      protected void wb_table3_17_2I2e( bool wbgen )
+      protected void wb_table3_17_2S2e( bool wbgen )
       {
          if ( wbgen )
          {
@@ -713,15 +763,15 @@ namespace GeneXus.Programs {
             context.WriteHtmlText( "</tbody>") ;
             /* End of table */
             context.WriteHtmlText( "</table>") ;
-            wb_table1_3_2I2e( true) ;
+            wb_table1_3_2S2e( true) ;
          }
          else
          {
-            wb_table1_3_2I2e( false) ;
+            wb_table1_3_2S2e( false) ;
          }
       }
 
-      protected void wb_table3_17_2I2( bool wbgen )
+      protected void wb_table3_17_2S2( bool wbgen )
       {
          if ( wbgen )
          {
@@ -736,33 +786,33 @@ namespace GeneXus.Programs {
             TempTags = "  onfocus=\"gx.evt.onfocus(this, 20,'',false,'',0)\"";
             ClassString = "Button";
             StyleString = "color:#FFFFFF; background-color:#008080;";
-            GxWebStd.gx_button_ctrl( context, bttButton1_Internalname, "", "Consultar", bttButton1_Jsonclick, 5, "Consultar", "", StyleString, ClassString, 1, 1, "standard", "'"+""+"'"+",false,"+"'"+"E\\'CONSULTAR \\'."+"'", TempTags, "", context.GetButtonType( ), "HLP_Catalog_De_tipobien.htm");
+            GxWebStd.gx_button_ctrl( context, bttButton1_Internalname, "", "Consultar", bttButton1_Jsonclick, 5, "Consultar", "", StyleString, ClassString, 1, 1, "standard", "'"+""+"'"+",false,"+"'"+"E\\'CONSULTAR \\'."+"'", TempTags, "", context.GetButtonType( ), "HLP_Catalog_De_TipoBien.htm");
             context.WriteHtmlText( "</td>") ;
             context.WriteHtmlText( "<td>") ;
             TempTags = "  onfocus=\"gx.evt.onfocus(this, 22,'',false,'',0)\"";
             ClassString = "Button";
             StyleString = "color:#FFFFFF; background-color:#008080;";
-            GxWebStd.gx_button_ctrl( context, bttButton2_Internalname, "", "Guardar", bttButton2_Jsonclick, 5, "Guardar", "", StyleString, ClassString, 1, 1, "standard", "'"+""+"'"+",false,"+"'"+"E\\'GUARDAR \\'."+"'", TempTags, "", context.GetButtonType( ), "HLP_Catalog_De_tipobien.htm");
+            GxWebStd.gx_button_ctrl( context, bttButton2_Internalname, "", "Guardar", bttButton2_Jsonclick, 5, "Guardar", "", StyleString, ClassString, 1, 1, "standard", "'"+""+"'"+",false,"+"'"+"E\\'GUARDAR \\'."+"'", TempTags, "", context.GetButtonType( ), "HLP_Catalog_De_TipoBien.htm");
             context.WriteHtmlText( "</td>") ;
             context.WriteHtmlText( "<td>") ;
             TempTags = "  onfocus=\"gx.evt.onfocus(this, 24,'',false,'',0)\"";
             ClassString = "Button";
             StyleString = "color:#FFFFFF; background-color:#DC143C;";
-            GxWebStd.gx_button_ctrl( context, bttButton3_Internalname, "", "Cancelar", bttButton3_Jsonclick, 5, "Cancelar", "", StyleString, ClassString, 1, 1, "standard", "'"+""+"'"+",false,"+"'"+"E\\'CANCELAR\\'."+"'", TempTags, "", context.GetButtonType( ), "HLP_Catalog_De_tipobien.htm");
+            GxWebStd.gx_button_ctrl( context, bttButton3_Internalname, "", "Cancelar", bttButton3_Jsonclick, 5, "Cancelar", "", StyleString, ClassString, 1, 1, "standard", "'"+""+"'"+",false,"+"'"+"E\\'CANCELAR\\'."+"'", TempTags, "", context.GetButtonType( ), "HLP_Catalog_De_TipoBien.htm");
             context.WriteHtmlText( "</td>") ;
             context.WriteHtmlText( "</tr>") ;
             context.WriteHtmlText( "</tbody>") ;
             /* End of table */
             context.WriteHtmlText( "</table>") ;
-            wb_table3_17_2I2e( true) ;
+            wb_table3_17_2S2e( true) ;
          }
          else
          {
-            wb_table3_17_2I2e( false) ;
+            wb_table3_17_2S2e( false) ;
          }
       }
 
-      protected void wb_table2_8_2I2( bool wbgen )
+      protected void wb_table2_8_2S2( bool wbgen )
       {
          if ( wbgen )
          {
@@ -779,7 +829,7 @@ namespace GeneXus.Programs {
             context.WriteHtmlText( "<td>") ;
             /* Single line edit */
             TempTags = "  onfocus=\"gx.evt.onfocus(this, 12,'',false,'',0)\"";
-            GxWebStd.gx_single_line_edit( context, edtavNextvalue_Internalname, StringUtil.LTrim( StringUtil.NToC( (decimal)(AV5NextValue), 4, 0, ",", "")), StringUtil.LTrim( context.localUtil.Format( (decimal)(AV5NextValue), "ZZZ9")), TempTags+" onchange=\"gx.evt.onchange(this)\" "+" onblur=\""+"gx.num.valid_integer( this,'.');"+";gx.evt.onblur(this,12);\"", "'"+""+"'"+",false,"+"'"+""+"'", "", "", "", "", edtavNextvalue_Jsonclick, 0, "Attribute", "", "", "", 1, 1, 0, "text", "", 4, "chr", 1, "row", 4, 0, 0, 0, 1, -1, 0, true, "", "right", false, "HLP_Catalog_De_tipobien.htm");
+            GxWebStd.gx_single_line_edit( context, edtavNextvalue_Internalname, StringUtil.LTrim( StringUtil.NToC( (decimal)(AV8NextValue), 4, 0, ",", "")), ((edtavNextvalue_Enabled!=0) ? StringUtil.LTrim( context.localUtil.Format( (decimal)(AV8NextValue), "ZZZ9")) : context.localUtil.Format( (decimal)(AV8NextValue), "ZZZ9")), TempTags+" onchange=\"gx.evt.onchange(this)\" "+" onblur=\""+"gx.num.valid_integer( this,'.');"+";gx.evt.onblur(this,12);\"", "'"+""+"'"+",false,"+"'"+""+"'", "", "", "", "", edtavNextvalue_Jsonclick, 0, "Attribute", "", "", "", 1, edtavNextvalue_Enabled, 0, "text", "", 4, "chr", 1, "row", 4, 0, 0, 0, 1, -1, 0, true, "", "right", false, "HLP_Catalog_De_TipoBien.htm");
             context.WriteHtmlText( "</td>") ;
             context.WriteHtmlText( "</tr>") ;
             context.WriteHtmlText( "<tr>") ;
@@ -789,17 +839,17 @@ namespace GeneXus.Programs {
             context.WriteHtmlText( "<td>") ;
             /* Single line edit */
             TempTags = "  onfocus=\"gx.evt.onfocus(this, 16,'',false,'',0)\"";
-            GxWebStd.gx_single_line_edit( context, edtavTipobiendsc_Internalname, AV7tipobiendsc, StringUtil.RTrim( context.localUtil.Format( AV7tipobiendsc, "")), TempTags+" onchange=\"gx.evt.onchange(this)\" "+" onblur=\""+""+";gx.evt.onblur(this,16);\"", "'"+""+"'"+",false,"+"'"+""+"'", "", "", "", "", edtavTipobiendsc_Jsonclick, 0, "Attribute", "", "", "", 1, 1, 0, "text", "", 80, "chr", 1, "row", 100, 0, 0, 0, 1, -1, -1, true, "", "left", true, "HLP_Catalog_De_tipobien.htm");
+            GxWebStd.gx_single_line_edit( context, edtavTipobiendsc_Internalname, AV11tipobiendsc, StringUtil.RTrim( context.localUtil.Format( AV11tipobiendsc, "")), TempTags+" onchange=\"gx.evt.onchange(this)\" "+" onblur=\""+""+";gx.evt.onblur(this,16);\"", "'"+""+"'"+",false,"+"'"+""+"'", "", "", "", "", edtavTipobiendsc_Jsonclick, 0, "Attribute", "", "", "", 1, 1, 0, "text", "", 80, "chr", 1, "row", 100, 0, 0, 0, 1, -1, -1, true, "", "left", true, "HLP_Catalog_De_TipoBien.htm");
             context.WriteHtmlText( "</td>") ;
             context.WriteHtmlText( "</tr>") ;
             context.WriteHtmlText( "</tbody>") ;
             /* End of table */
             context.WriteHtmlText( "</table>") ;
-            wb_table2_8_2I2e( true) ;
+            wb_table2_8_2S2e( true) ;
          }
          else
          {
-            wb_table2_8_2I2e( false) ;
+            wb_table2_8_2S2e( false) ;
          }
       }
 
@@ -819,9 +869,9 @@ namespace GeneXus.Programs {
          nGotPars = (short)(1);
          nGXWrapped = (short)(1);
          context.SetWrapped(true);
-         PA2I2( ) ;
-         WS2I2( ) ;
-         WE2I2( ) ;
+         PA2S2( ) ;
+         WS2S2( ) ;
+         WE2S2( ) ;
          this.cleanup();
          context.SetWrapped(false);
          context.GX_msglist = BackMsgLst;
@@ -834,11 +884,11 @@ namespace GeneXus.Programs {
 
       protected void define_styles( )
       {
-         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?1433129");
+         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?1401612");
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?20221262114989");
+            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?2022128141414");
             idxLst = (int)(idxLst+1);
          }
          /* End function define_styles */
@@ -847,7 +897,7 @@ namespace GeneXus.Programs {
       protected void include_jscripts( )
       {
          context.AddJavascriptSource("messages.spa.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("catalog_de_tipobien.js", "?20221262114989");
+         context.AddJavascriptSource("catalog_de_tipobien.js", "?2022128141414");
          /* End function include_jscripts */
       }
 
@@ -873,11 +923,12 @@ namespace GeneXus.Programs {
          init_default_properties( ) ;
          edtavTipobiendsc_Jsonclick = "";
          edtavNextvalue_Jsonclick = "";
+         edtavNextvalue_Enabled = 1;
          Form.Headerrawhtml = "";
          Form.Background = "";
          Form.Textcolor = 0;
          Form.Backcolor = (int)(0xFFFFFF);
-         Form.Caption = "Catalog_De_tipobien";
+         Form.Caption = "Catalog_De_Tipo Bien";
          if ( context.isSpaRequest( ) )
          {
             enableJsOutput();
@@ -892,7 +943,9 @@ namespace GeneXus.Programs {
       public override void InitializeDynEvents( )
       {
          setEventMetadata("REFRESH","{handler:'Refresh',iparms:[],oparms:[]}");
-         setEventMetadata("'GUARDAR '","{handler:'E122I2',iparms:[{av:'AV5NextValue',fld:'vNEXTVALUE',pic:'ZZZ9',nv:0},{av:'AV6tipobien',fld:'vTIPOBIEN',pic:'',nv:null},{av:'AV7tipobiendsc',fld:'vTIPOBIENDSC',pic:'',nv:''}],oparms:[{av:'AV6tipobien',fld:'vTIPOBIEN',pic:'',nv:null}]}");
+         setEventMetadata("'GUARDAR '","{handler:'E122S2',iparms:[{av:'AV8NextValue',fld:'vNEXTVALUE',pic:'ZZZ9',hsh:true,nv:0},{av:'AV13tipobien',fld:'vTIPOBIEN',pic:'',nv:null},{av:'AV11tipobiendsc',fld:'vTIPOBIENDSC',pic:'',nv:''}],oparms:[{av:'AV13tipobien',fld:'vTIPOBIEN',pic:'',nv:null}]}");
+         setEventMetadata("'CONSULTAR '","{handler:'E132S2',iparms:[],oparms:[]}");
+         setEventMetadata("'CANCELAR'","{handler:'E142S2',iparms:[],oparms:[]}");
          return  ;
       }
 
@@ -917,8 +970,9 @@ namespace GeneXus.Programs {
          sDynURL = "";
          FormProcess = "";
          bodyStyle = "";
-         AV6tipobien = new Sdttipobien(context);
+         AV13tipobien = new Sdttipobien(context);
          GXKey = "";
+         forbiddenHiddens = "";
          GX_FocusControl = "";
          Form = new GXWebForm();
          sPrefix = "";
@@ -927,9 +981,10 @@ namespace GeneXus.Programs {
          EvtRowId = "";
          sEvtType = "";
          scmdbuf = "";
-         H002I3_A40000GXC1 = new int[1] ;
-         AV7tipobiendsc = "";
-         H002I5_A40000GXC1 = new int[1] ;
+         H002S3_A40000GXC1 = new int[1] ;
+         AV11tipobiendsc = "";
+         hsh = "";
+         H002S5_A40000GXC1 = new int[1] ;
          sStyleString = "";
          TempTags = "";
          ClassString = "";
@@ -942,28 +997,30 @@ namespace GeneXus.Programs {
          pr_default = new DataStoreProvider(context, new GeneXus.Programs.catalog_de_tipobien__default(),
             new Object[][] {
                 new Object[] {
-               H002I3_A40000GXC1
+               H002S3_A40000GXC1
                }
                , new Object[] {
-               H002I5_A40000GXC1
+               H002S5_A40000GXC1
                }
             }
          );
          /* GeneXus formulas. */
          context.Gx_err = 0;
+         edtavNextvalue_Enabled = 0;
       }
 
       private short nGotPars ;
       private short GxWebError ;
       private short initialized ;
       private short gxajaxcallmode ;
+      private short AV8NextValue ;
       private short wbEnd ;
       private short wbStart ;
       private short nDonePA ;
       private short gxcookieaux ;
-      private short AV5NextValue ;
       private short nGXWrapped ;
       private int A40000GXC1 ;
+      private int edtavNextvalue_Enabled ;
       private int idxLst ;
       private String gxfirstwebparm ;
       private String gxfirstwebparm_bkp ;
@@ -971,6 +1028,7 @@ namespace GeneXus.Programs {
       private String FormProcess ;
       private String bodyStyle ;
       private String GXKey ;
+      private String forbiddenHiddens ;
       private String GX_FocusControl ;
       private String sPrefix ;
       private String sEvt ;
@@ -980,6 +1038,7 @@ namespace GeneXus.Programs {
       private String edtavNextvalue_Internalname ;
       private String scmdbuf ;
       private String edtavTipobiendsc_Internalname ;
+      private String hsh ;
       private String sStyleString ;
       private String tblTable1_Internalname ;
       private String tblTable3_Internalname ;
@@ -1001,15 +1060,15 @@ namespace GeneXus.Programs {
       private bool Rfr0gs ;
       private bool wbErr ;
       private bool returnInSub ;
-      private String AV7tipobiendsc ;
+      private String AV11tipobiendsc ;
       private IGxDataStore dsDefault ;
       private IDataStoreProvider pr_default ;
-      private int[] H002I3_A40000GXC1 ;
-      private int[] H002I5_A40000GXC1 ;
+      private int[] H002S3_A40000GXC1 ;
+      private int[] H002S5_A40000GXC1 ;
       private msglist BackMsgLst ;
       private msglist LclMsgLst ;
       private GXWebForm Form ;
-      private Sdttipobien AV6tipobien ;
+      private Sdttipobien AV13tipobien ;
    }
 
    public class catalog_de_tipobien__default : DataStoreHelperBase, IDataStoreHelper
@@ -1028,15 +1087,15 @@ namespace GeneXus.Programs {
     {
        if ( def == null )
        {
-          Object[] prmH002I3 ;
-          prmH002I3 = new Object[] {
+          Object[] prmH002S3 ;
+          prmH002S3 = new Object[] {
           } ;
-          Object[] prmH002I5 ;
-          prmH002I5 = new Object[] {
+          Object[] prmH002S5 ;
+          prmH002S5 = new Object[] {
           } ;
           def= new CursorDef[] {
-              new CursorDef("H002I3", "SELECT COALESCE( T1.GXC1, 0) AS GXC1 FROM (SELECT MAX(tipobienid) AS GXC1 FROM public.tipobien ) T1 ",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmH002I3,1,0,true,false )
-             ,new CursorDef("H002I5", "SELECT COALESCE( T1.GXC1, 0) AS GXC1 FROM (SELECT MAX(tipobienid) AS GXC1 FROM public.tipobien ) T1 ",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmH002I5,1,0,true,false )
+              new CursorDef("H002S3", "SELECT COALESCE( T1.GXC1, 0) AS GXC1 FROM (SELECT MAX(tipobienid) AS GXC1 FROM public.tipobien ) T1 ",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmH002S3,1,0,true,false )
+             ,new CursorDef("H002S5", "SELECT COALESCE( T1.GXC1, 0) AS GXC1 FROM (SELECT MAX(tipobienid) AS GXC1 FROM public.tipobien ) T1 ",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmH002S5,1,0,true,false )
           };
        }
     }

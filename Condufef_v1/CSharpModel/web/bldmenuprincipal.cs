@@ -93,6 +93,8 @@ public class bldmenuprincipal : GxBaseBuilder
             return true;
          if (checkTime(obj, cs_path + @"\type_Sdtcambs.cs" ))
             return true;
+         if (checkTime(obj, cs_path + @"\type_Sdtproducto.cs" ))
+            return true;
          if (checkTime(obj, cs_path + @"\type_Sdtmarcas.cs" ))
             return true;
          if (checkTime(obj, cs_path + @"\type_Sdtestatusarticulo.cs" ))
@@ -116,6 +118,8 @@ public class bldmenuprincipal : GxBaseBuilder
          if (checkTime(obj, cs_path + @"\GXDOMAINRecentLinksOptions.cs" ))
             return true;
          if (checkTime(obj, cs_path + @"\GXDOMAINCallTargetSize.cs" ))
+            return true;
+         if (checkTime(obj, cs_path + @"\GXDOMAINGoogleTableFormatter.cs" ))
             return true;
          if (checkTime(obj, cs_path + @"\GXDOMAINEncoding.cs" ))
             return true;

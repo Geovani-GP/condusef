@@ -114,20 +114,20 @@ origenid  integer  NOT NULL ,
 proveedorid  integer  NOT NULL ,
 articulosnoetiqueta numeric(11),
 articulosdsc varchar(100)   ,
-articulospreciocompra double(8,0),
-articulospreccomprareexp double(8,0),
-articuloscantdepreacum double(8,0),
+articulospreciocompra numeric(8,0),
+articulospreccomprareexp numeric(8,0),
+articuloscantdepreacum numeric(8,0),
 articulosnumserie varchar(20)   ,
 articulosrefdocumento varchar(20)   ,
 articulosfechacoteja  varchar(20)   ,
 articulosfechaentraalmacen  date   ,
 articulosfechabajaalma date   ,
-articulosstatus integer(11),
+articulosstatus numeric(11),
 articuloscontejado varchar(1)   ,
 articulosusuario  varchar(15)   ,
 articulosidtrasfer integer  NOT NULL ,
 articulosestatusariticulo integer  NOT NULL ,
-articulostipobien nteger  NOT NULL ,
+articulostipobien integer  NOT NULL ,
 articulosfecreg  date   ,
 articulosfecultact date   ,
 CONSTRAINT pk_articulos_articulosid PRIMARY KEY (articulosid)
@@ -139,7 +139,7 @@ articulosmovid integer  NOT NULL ,
 productoid integer  NOT NULL ,
 cambsid   integer  NOT NULL ,
 articulosmovarticuloid  integer  NOT NULL ,
-articulosmovdepositario integer(3),
+articulosmovdepositario numeric(3),
 articulosmovfechamov date   ,
 articulosmovstatus varchar(100)   ,
 articulosmovagregomovsist varchar(50)   ,
@@ -273,21 +273,45 @@ CONSTRAINT pk_producto_productoid PRIMARY KEY (productoid)
 
 
 
+CREATE TABLE "public".estados(
+  estadoid integer  NOT NULL ,
+  estado varchar(100) NOT NULL,
+ CONSTRAINT pk_estados_estadoid PRIMARY KEY (estadoid)
+);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+INSERT INTO estados(
+            estadoid, estado)
+    VALUES (1, 'Aguascalientes'),
+(2, 'Baja California'),
+(3, 'Baja California Sur'),
+(4, 'Campeche'),
+(5, 'Coahuila de Zaragoza'),
+(6, 'Colima'),
+(7, 'Chiapas'),
+(8, 'Chihuahua'),
+(9, 'Distrito Federal'),
+(10, 'Durango'),
+(11, 'Guanajuato'),
+(12, 'Guerrero'),
+(13, 'Hidalgo'),
+(14, 'Jalisco'),
+(15, 'México'),
+(16, 'Michoacán de Ocampo'),
+(17, 'Morelos'),
+(18, 'Nayarit'),
+(19, 'Nuevo León'),
+(20, 'Oaxaca de Juárez'),
+(21, 'Puebla'),
+(22, 'Querétaro'),
+(23, 'Quintana Roo'),
+(24, 'San Luis Potosí'),
+(25, 'Sinaloa'),
+(26, 'Sonora'),
+(27, 'Tabasco'),
+(28, 'Tamaulipas'),
+(29, 'Tlaxcala'),
+(30, 'Veracruz de Ignacio de la Llave'),
+(31, 'Yucatán'),
+(32, 'Zacatecas');
 
 

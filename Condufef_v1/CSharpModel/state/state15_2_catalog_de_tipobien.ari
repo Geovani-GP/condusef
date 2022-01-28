@@ -1,14 +1,15 @@
-current_obj_i(2,web,90).
+current_obj_i(2,web,100).
  
-called_tree_i(13,90,1000,1).
-called_tree_i(13,90,13,1).
- 
- 
- 
+called_tree_i(13,100,1000,1).
+called_tree_i(13,100,13,1).
+called_tree_i(13,100,13,100).
  
  
  
-ij_object_dependency(catalog_de_tipobien,[],[],[],90).
+ 
+ 
+ 
+ij_object_dependency(catalog_de_tipobien,[],[],[],100).
  
  
 obj_parms_i([],[]).

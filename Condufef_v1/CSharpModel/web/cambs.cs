@@ -2,7 +2,7 @@
                File: cambs
         Description: cambs
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 1/26/2022 22:20:30.69
+       Generated on: 1/28/2022 1:40:41.14
        Program type: Callable routine
           Main DBMS: postgresql
 */
@@ -1274,7 +1274,7 @@ namespace GeneXus.Programs {
             pr_default.execute(9, new Object[] {A25cambsid});
             if ( (pr_default.getStatus(9) != 101) )
             {
-               GX_msglist.addItem(context.GetMessage( "GXM_del", new   object[]  {"articulos"}), "CannotDeleteReferencedRecord", 1, "");
+               GX_msglist.addItem(context.GetMessage( "GXM_del", new   object[]  {"producto"}), "CannotDeleteReferencedRecord", 1, "");
                AnyError = 1;
             }
             pr_default.close(9);
@@ -1282,10 +1282,18 @@ namespace GeneXus.Programs {
             pr_default.execute(10, new Object[] {A25cambsid});
             if ( (pr_default.getStatus(10) != 101) )
             {
-               GX_msglist.addItem(context.GetMessage( "GXM_del", new   object[]  {"etiquetas"}), "CannotDeleteReferencedRecord", 1, "");
+               GX_msglist.addItem(context.GetMessage( "GXM_del", new   object[]  {"articulos"}), "CannotDeleteReferencedRecord", 1, "");
                AnyError = 1;
             }
             pr_default.close(10);
+            /* Using cursor T000E13 */
+            pr_default.execute(11, new Object[] {A25cambsid});
+            if ( (pr_default.getStatus(11) != 101) )
+            {
+               GX_msglist.addItem(context.GetMessage( "GXM_del", new   object[]  {"etiquetas"}), "CannotDeleteReferencedRecord", 1, "");
+               AnyError = 1;
+            }
+            pr_default.close(11);
          }
       }
 
@@ -1325,13 +1333,13 @@ namespace GeneXus.Programs {
       public void ScanStart0E14( )
       {
          /* Scan By routine */
-         /* Using cursor T000E13 */
-         pr_default.execute(11);
+         /* Using cursor T000E14 */
+         pr_default.execute(12);
          RcdFound14 = 0;
-         if ( (pr_default.getStatus(11) != 101) )
+         if ( (pr_default.getStatus(12) != 101) )
          {
             RcdFound14 = 1;
-            A25cambsid = T000E13_A25cambsid[0];
+            A25cambsid = T000E14_A25cambsid[0];
             context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A25cambsid", StringUtil.LTrim( StringUtil.Str( (decimal)(A25cambsid), 9, 0)));
          }
          /* Load Subordinate Levels */
@@ -1340,19 +1348,19 @@ namespace GeneXus.Programs {
       protected void ScanNext0E14( )
       {
          /* Scan next routine */
-         pr_default.readNext(11);
+         pr_default.readNext(12);
          RcdFound14 = 0;
-         if ( (pr_default.getStatus(11) != 101) )
+         if ( (pr_default.getStatus(12) != 101) )
          {
             RcdFound14 = 1;
-            A25cambsid = T000E13_A25cambsid[0];
+            A25cambsid = T000E14_A25cambsid[0];
             context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A25cambsid", StringUtil.LTrim( StringUtil.Str( (decimal)(A25cambsid), 9, 0)));
          }
       }
 
       protected void ScanEnd0E14( )
       {
-         pr_default.close(11);
+         pr_default.close(12);
       }
 
       protected void AfterConfirm0E14( )
@@ -1434,7 +1442,7 @@ namespace GeneXus.Programs {
          context.AddJavascriptSource("jquery.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxtimezone.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxgral.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("gxcfg.js", "?202212622203118");
+         context.AddJavascriptSource("gxcfg.js", "?20221281404185");
          if ( context.isSpaRequest( ) )
          {
             enableOutput();
@@ -1600,12 +1608,12 @@ namespace GeneXus.Programs {
 
       protected void define_styles( )
       {
-         AddStyleSheetFile("calendar-system.css", "?11323129");
-         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?1734189");
+         AddStyleSheetFile("calendar-system.css", "?13205289");
+         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?1401612");
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?202212622203122");
+            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?20221281404191");
             idxLst = (int)(idxLst+1);
          }
          /* End function define_styles */
@@ -1615,7 +1623,7 @@ namespace GeneXus.Programs {
       {
          context.AddJavascriptSource("messages.spa.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxdec.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("cambs.js", "?202212622203122");
+         context.AddJavascriptSource("cambs.js", "?20221281404191");
          /* End function include_jscripts */
       }
 
@@ -1806,13 +1814,15 @@ namespace GeneXus.Programs {
          T000E2_n85cambsfecreg = new bool[] {false} ;
          T000E2_A86cambsfecultact = new DateTime[] {DateTime.MinValue} ;
          T000E2_n86cambsfecultact = new bool[] {false} ;
-         T000E11_A19almacenid = new long[1] ;
-         T000E11_A20articulosproductoid = new int[1] ;
-         T000E11_A21articuloscambsid = new int[1] ;
-         T000E12_A17etiquetasproductoid = new int[1] ;
-         T000E12_A18etiquetascambsid = new int[1] ;
+         T000E11_A175productoid = new short[1] ;
+         T000E11_A25cambsid = new int[1] ;
          T000E12_A19almacenid = new long[1] ;
-         T000E13_A25cambsid = new int[1] ;
+         T000E12_A20articulosproductoid = new int[1] ;
+         T000E12_A21articuloscambsid = new int[1] ;
+         T000E13_A17etiquetasproductoid = new int[1] ;
+         T000E13_A18etiquetascambsid = new int[1] ;
+         T000E13_A19almacenid = new long[1] ;
+         T000E14_A25cambsid = new int[1] ;
          sDynURL = "";
          FormProcess = "";
          bodyStyle = "";
@@ -1843,13 +1853,16 @@ namespace GeneXus.Programs {
                , new Object[] {
                }
                , new Object[] {
-               T000E11_A19almacenid, T000E11_A20articulosproductoid, T000E11_A21articuloscambsid
+               T000E11_A175productoid, T000E11_A25cambsid
                }
                , new Object[] {
-               T000E12_A17etiquetasproductoid, T000E12_A18etiquetascambsid, T000E12_A19almacenid
+               T000E12_A19almacenid, T000E12_A20articulosproductoid, T000E12_A21articuloscambsid
                }
                , new Object[] {
-               T000E13_A25cambsid
+               T000E13_A17etiquetasproductoid, T000E13_A18etiquetascambsid, T000E13_A19almacenid
+               }
+               , new Object[] {
+               T000E14_A25cambsid
                }
             }
          );
@@ -1987,13 +2000,15 @@ namespace GeneXus.Programs {
       private bool[] T000E2_n85cambsfecreg ;
       private DateTime[] T000E2_A86cambsfecultact ;
       private bool[] T000E2_n86cambsfecultact ;
-      private long[] T000E11_A19almacenid ;
-      private int[] T000E11_A20articulosproductoid ;
-      private int[] T000E11_A21articuloscambsid ;
-      private int[] T000E12_A17etiquetasproductoid ;
-      private int[] T000E12_A18etiquetascambsid ;
+      private short[] T000E11_A175productoid ;
+      private int[] T000E11_A25cambsid ;
       private long[] T000E12_A19almacenid ;
-      private int[] T000E13_A25cambsid ;
+      private int[] T000E12_A20articulosproductoid ;
+      private int[] T000E12_A21articuloscambsid ;
+      private int[] T000E13_A17etiquetasproductoid ;
+      private int[] T000E13_A18etiquetascambsid ;
+      private long[] T000E13_A19almacenid ;
+      private int[] T000E14_A25cambsid ;
       private GXWebForm Form ;
    }
 
@@ -2015,6 +2030,7 @@ namespace GeneXus.Programs {
          ,new ForEachCursor(def[9])
          ,new ForEachCursor(def[10])
          ,new ForEachCursor(def[11])
+         ,new ForEachCursor(def[12])
        };
     }
 
@@ -2077,6 +2093,10 @@ namespace GeneXus.Programs {
           } ;
           Object[] prmT000E13 ;
           prmT000E13 = new Object[] {
+          new Object[] {"cambsid",NpgsqlDbType.Integer,9,0}
+          } ;
+          Object[] prmT000E14 ;
+          prmT000E14 = new Object[] {
           } ;
           def= new CursorDef[] {
               new CursorDef("T000E2", "SELECT cambsid, cambsdsc, cambsusuario, cambsfecreg, cambsfecultact FROM public.cambs WHERE cambsid = :cambsid  FOR UPDATE OF cambs NOWAIT",true, GxErrorMask.GX_NOMASK, false, this,prmT000E2,1,0,true,false )
@@ -2088,9 +2108,10 @@ namespace GeneXus.Programs {
              ,new CursorDef("T000E8", "SAVEPOINT gxupdate;INSERT INTO public.cambs(cambsid, cambsdsc, cambsusuario, cambsfecreg, cambsfecultact) VALUES(:cambsid, :cambsdsc, :cambsusuario, :cambsfecreg, :cambsfecultact);RELEASE SAVEPOINT gxupdate", GxErrorMask.GX_ROLLBACKSAVEPOINT,prmT000E8)
              ,new CursorDef("T000E9", "SAVEPOINT gxupdate;UPDATE public.cambs SET cambsdsc=:cambsdsc, cambsusuario=:cambsusuario, cambsfecreg=:cambsfecreg, cambsfecultact=:cambsfecultact  WHERE cambsid = :cambsid;RELEASE SAVEPOINT gxupdate", GxErrorMask.GX_ROLLBACKSAVEPOINT | GxErrorMask.GX_NOMASK,prmT000E9)
              ,new CursorDef("T000E10", "SAVEPOINT gxupdate;DELETE FROM public.cambs  WHERE cambsid = :cambsid;RELEASE SAVEPOINT gxupdate", GxErrorMask.GX_ROLLBACKSAVEPOINT | GxErrorMask.GX_NOMASK,prmT000E10)
-             ,new CursorDef("T000E11", "SELECT articulosid, productoid AS articulosproductoid, cambsid AS articuloscambsid FROM public.articulos WHERE cambsid = :cambsid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000E11,1,0,true,true )
-             ,new CursorDef("T000E12", "SELECT productoid AS etiquetasproductoid, cambsid AS etiquetascambsid, articuloid FROM public.etiquetas WHERE cambsid = :cambsid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000E12,1,0,true,true )
-             ,new CursorDef("T000E13", "SELECT cambsid FROM public.cambs ORDER BY cambsid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000E13,100,0,true,false )
+             ,new CursorDef("T000E11", "SELECT productoid, cambsid FROM producto WHERE cambsid = :cambsid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000E11,1,0,true,true )
+             ,new CursorDef("T000E12", "SELECT articulosid, productoid AS articulosproductoid, cambsid AS articuloscambsid FROM public.articulos WHERE cambsid = :cambsid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000E12,1,0,true,true )
+             ,new CursorDef("T000E13", "SELECT productoid AS etiquetasproductoid, cambsid AS etiquetascambsid, articuloid FROM public.etiquetas WHERE cambsid = :cambsid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000E13,1,0,true,true )
+             ,new CursorDef("T000E14", "SELECT cambsid FROM public.cambs ORDER BY cambsid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000E14,100,0,true,false )
           };
        }
     }
@@ -2144,16 +2165,20 @@ namespace GeneXus.Programs {
                 ((int[]) buf[0])[0] = rslt.getInt(1) ;
                 return;
              case 9 :
+                ((short[]) buf[0])[0] = rslt.getShort(1) ;
+                ((int[]) buf[1])[0] = rslt.getInt(2) ;
+                return;
+             case 10 :
                 ((long[]) buf[0])[0] = rslt.getLong(1) ;
                 ((int[]) buf[1])[0] = rslt.getInt(2) ;
                 ((int[]) buf[2])[0] = rslt.getInt(3) ;
                 return;
-             case 10 :
+             case 11 :
                 ((int[]) buf[0])[0] = rslt.getInt(1) ;
                 ((int[]) buf[1])[0] = rslt.getInt(2) ;
                 ((long[]) buf[2])[0] = rslt.getLong(3) ;
                 return;
-             case 11 :
+             case 12 :
                 ((int[]) buf[0])[0] = rslt.getInt(1) ;
                 return;
        }
@@ -2260,6 +2285,9 @@ namespace GeneXus.Programs {
                 stmt.SetParameter(1, (int)parms[0]);
                 return;
              case 10 :
+                stmt.SetParameter(1, (int)parms[0]);
+                return;
+             case 11 :
                 stmt.SetParameter(1, (int)parms[0]);
                 return;
        }

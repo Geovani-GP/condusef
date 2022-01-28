@@ -2,7 +2,7 @@
                File: producto_BC
         Description: producto
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 1/27/2022 22:51:42.68
+       Generated on: 1/28/2022 1:40:29.27
        Program type: Callable routine
           Main DBMS: postgresql
 */

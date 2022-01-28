@@ -133,6 +133,16 @@
 <AfterDeleteRules></AfterDeleteRules>
 <TablesToControlOnDelete>
 <Table>
+<TableId>22</TableId>
+<TableName>producto</TableName>
+<Description>producto</Description>
+<RecordsToRead>one</RecordsToRead>
+<KeyAttributes>
+<Attribute>
+<AttriId>25</AttriId>
+<AttriName>cambsid</AttriName>
+<Description>cambsid</Description></Attribute></KeyAttributes></Table>
+<Table>
 <TableId>11</TableId>
 <TableName>ARTICULOS</TableName>
 <Description>articulos</Description>

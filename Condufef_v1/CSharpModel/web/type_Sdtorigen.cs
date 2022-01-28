@@ -2,7 +2,7 @@
                File: type_Sdtorigen
         Description: origen
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 1/27/2022 16:5:42.76
+       Generated on: 1/28/2022 1:40:45.67
        Program type: Callable routine
           Main DBMS: postgresql
 */

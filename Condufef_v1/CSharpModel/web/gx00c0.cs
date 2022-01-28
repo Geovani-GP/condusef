@@ -2,7 +2,7 @@
                File: Gx00C0
         Description: Selection List etiquetas
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 1/26/2022 20:8:12.50
+       Generated on: 1/28/2022 1:41:31.16
        Program type: Callable routine
           Main DBMS: postgresql
 */
@@ -278,7 +278,7 @@ namespace GeneXus.Programs {
          context.AddJavascriptSource("jquery.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxtimezone.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxgral.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("gxcfg.js", "?20221262081256");
+         context.AddJavascriptSource("gxcfg.js", "?20221281413123");
          if ( context.isSpaRequest( ) )
          {
             enableOutput();
@@ -1595,11 +1595,11 @@ namespace GeneXus.Programs {
       protected void define_styles( )
       {
          AddStyleSheetFile("calendar-system.css", "?13205289");
-         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?2071072");
+         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?1401612");
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?20221262081370");
+            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?20221281413266");
             idxLst = (int)(idxLst+1);
          }
          /* End function define_styles */
@@ -1609,7 +1609,7 @@ namespace GeneXus.Programs {
       {
          context.AddJavascriptSource("messages.spa.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxdec.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("gx00c0.js", "?20221262081371");
+         context.AddJavascriptSource("gx00c0.js", "?20221281413266");
          /* End function include_jscripts */
       }
 

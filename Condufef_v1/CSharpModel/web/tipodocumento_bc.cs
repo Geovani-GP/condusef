@@ -2,7 +2,7 @@
                File: tipodocumento_BC
         Description: tipodocumento
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 1/26/2022 20:7:43.66
+       Generated on: 1/28/2022 1:40:54.45
        Program type: Callable routine
           Main DBMS: postgresql
 */

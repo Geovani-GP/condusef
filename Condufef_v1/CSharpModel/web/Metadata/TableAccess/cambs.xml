@@ -3,4 +3,5 @@
   <Table name="articulos" />
   <Table name="etiquetas" />
   <Table name="cambs" />
+  <Table name="producto" />
 </Dependencies>

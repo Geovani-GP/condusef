@@ -70,12 +70,12 @@ rule_i(0,datastore(1,'CS_RPCPGML','')).
 rule_i(0,datastore(1,'JDBC_DATASOURCE','')).
 rule_i(0,datastore(1,'USE_JDBC_DATASOURCE','0')).
 rule_i(0,datastore(1,'DS_DBMS_ADDINFO','')).
-rule_i(0,datastore(1,'USER_PASSWORD',asdf)).
+rule_i(0,datastore(1,'USER_PASSWORD',󻢸蘇�2�5炭)).
 rule_i(0,datastore(1,'USER_ID',postgres)).
 rule_i(0,datastore(1,'CS_CONNECT','First')).
 rule_i(0,datastore(1,'DBMS_PORT','5432')).
 rule_i(0,datastore(1,'CS_SERVER',localhost)).
-rule_i(0,datastore(1,'CS_DBNAME',condusef)).
+rule_i(0,datastore(1,'CS_DBNAME',postgres)).
 rule_i(0,datastore(1,'CS_FLEDSNAME','')).
 rule_i(0,datastore(1,'CS_DRVNAME','')).
 rule_i(0,datastore(1,'CS_DSNAME','')).
@@ -1567,6 +1567,7 @@ att_prop_i(2,25,'EmptyAsNull','Yes',d).
 att_prop_i(2,25,idBasedOn,'',d).
 att_prop_i(2,25,'AUTONUMBER','0',d).
 att_prop_i(2,25,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,25,'AttRegEx','',d).
 att_prop_i(2,25,'AttValidationFailedMsg','',d).
 att_prop_i(2,25,'FullName',cambsid,v).
 att_prop_i(2,88,'ExternalName',modeloid,d).
@@ -1575,6 +1576,7 @@ att_prop_i(2,88,'EmptyAsNull','Yes',d).
 att_prop_i(2,88,idBasedOn,'',d).
 att_prop_i(2,88,'AUTONUMBER','0',d).
 att_prop_i(2,88,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,88,'AttRegEx','',d).
 att_prop_i(2,88,'AttValidationFailedMsg','',d).
 att_prop_i(2,88,'FullName',modeloid,v).
 att_prop_i(2,89,'ExternalName',marcaid,d).
@@ -1583,6 +1585,7 @@ att_prop_i(2,89,'EmptyAsNull','Yes',d).
 att_prop_i(2,89,idBasedOn,'',d).
 att_prop_i(2,89,'AUTONUMBER','0',d).
 att_prop_i(2,89,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,89,'AttRegEx','',d).
 att_prop_i(2,89,'AttValidationFailedMsg','',d).
 att_prop_i(2,89,'FullName',marcaid,v).
 att_prop_i(2,90,'ExternalName',categoriaid,d).
@@ -1591,6 +1594,7 @@ att_prop_i(2,90,'EmptyAsNull','Yes',d).
 att_prop_i(2,90,idBasedOn,'',d).
 att_prop_i(2,90,'AUTONUMBER','0',d).
 att_prop_i(2,90,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,90,'AttRegEx','',d).
 att_prop_i(2,90,'AttValidationFailedMsg','',d).
 att_prop_i(2,90,'FullName',categoriaid,v).
 att_prop_i(2,91,'ExternalName',productousuario,d).
@@ -1607,6 +1611,7 @@ att_prop_i(2,92,'ExternalNamespace','Condufef_v1',d).
 att_prop_i(2,92,'EmptyAsNull','Yes',d).
 att_prop_i(2,92,idBasedOn,'',d).
 att_prop_i(2,92,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,92,'AttRegEx','',d).
 att_prop_i(2,92,'AttValidationFailedMsg','',d).
 att_prop_i(2,92,idDATEFORMAT,idDATEFORMAT_LONG,v).
 att_prop_i(2,92,idHOURFORMAT,idHOURFORMAT_HOURMINSEC,v).

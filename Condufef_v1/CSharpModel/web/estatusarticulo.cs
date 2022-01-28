@@ -2,7 +2,7 @@
                File: estatusarticulo
         Description: estatusarticulo
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 1/26/2022 20:7:19.85
+       Generated on: 1/28/2022 1:40:24.98
        Program type: Callable routine
           Main DBMS: postgresql
 */
@@ -1632,7 +1632,7 @@ namespace GeneXus.Programs {
          context.AddJavascriptSource("jquery.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxtimezone.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxgral.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("gxcfg.js", "?20221262072052");
+         context.AddJavascriptSource("gxcfg.js", "?20221281402565");
          if ( context.isSpaRequest( ) )
          {
             enableOutput();
@@ -1808,11 +1808,11 @@ namespace GeneXus.Programs {
       protected void define_styles( )
       {
          AddStyleSheetFile("calendar-system.css", "?13205289");
-         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?2071072");
+         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?1401612");
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?20221262072057");
+            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?20221281402570");
             idxLst = (int)(idxLst+1);
          }
          /* End function define_styles */
@@ -1822,7 +1822,7 @@ namespace GeneXus.Programs {
       {
          context.AddJavascriptSource("messages.spa.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxdec.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("estatusarticulo.js", "?20221262072057");
+         context.AddJavascriptSource("estatusarticulo.js", "?20221281402570");
          /* End function include_jscripts */
       }
 
