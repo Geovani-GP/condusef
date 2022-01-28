@@ -46,7 +46,7 @@ rule_i(0,datastore(1,'CS_RPCPGML','')).
 rule_i(0,datastore(1,'JDBC_DATASOURCE','')).
 rule_i(0,datastore(1,'USE_JDBC_DATASOURCE','0')).
 rule_i(0,datastore(1,'DS_DBMS_ADDINFO','')).
-rule_i(0,datastore(1,'USER_PASSWORD',󻢸蘇�2�5炭)).
+rule_i(0,datastore(1,'USER_PASSWORD',admin)).
 rule_i(0,datastore(1,'USER_ID',postgres)).
 rule_i(0,datastore(1,'CS_CONNECT','First')).
 rule_i(0,datastore(1,'DBMS_PORT','5432')).
@@ -123,10 +123,12 @@ rule_i(0,p(0,15,fvix,[ 10,9 ],[ 'SCHEMA',public ])).
 rule_i(0,p(0,15,fvix,[ 10,9 ],[ 'EXTNAM','YES' ])).
 rule_i(0,rule([ a(22,[ '''Guardar ''','''Guardar ''','' ]) ],[],[],[])).
 rule_i(0,rule([ a(22,[ '''Cancelar''','''Cancelar''','' ]) ],[],[],[])).
+rule_i(0,rule([ a(22,[ '''Consultar ''','''Consultar ''','' ]) ],[],[],[])).
  
 a_i(1,1,f,'Today',[],[ [],[ t('today(',1),t(')',4) ] ]).
 a_i(2,1,f,'Err',[],[ [],[ t('0',3) ] ]).
 a_i(3,2,ra,2000,[],[ [],'ESTATUSARTICULO_PKEY',[],2 ]).
+a_i(4,1,f,[ t('&Nextvalue',23),t('Enabled',3) ],[],[ [],[ t(0,3),t(';',18) ] ]).
  
 v_i(f,i,1,[]).
 v_i(f,o,1,'Today').
@@ -134,6 +136,8 @@ v_i(f,i,2,[]).
 v_i(f,o,2,'Err').
 v_i(ra,i,3,[]).
 v_i(ra,o,3,40000).
+v_i(f,i,4,[]).
+v_i(f,o,4,[ t('&Nextvalue',23),t('Enabled',3) ]).
  
  
  
@@ -199,7 +203,8 @@ break_i(2,nvg,1,[],[ [],[],[] ]).
 b_group_i(2,1,lit,0,1,1).
 b_group_i(2,2,lit,0,2,5).
 b_group_i(2,3,lit,0,6,20).
-b_group_i(2,4,lit,0,21,0).
+b_group_i(2,4,lit,0,21,24).
+b_group_i(2,5,lit,0,25,0).
  
 b_line_i(1,2,1,cmd,1,[ t('',146,1,0),t('Start',3,1,7) ]).
 b_line_i(2,2,2,cmd,1,[ t('',107,1,0),t('Nextvalue',23,1,0),t(=,10,1,0),t(40000,2,1,0),t(+,5,1,0),t('1',3,1,0) ]).
@@ -221,9 +226,12 @@ b_line_i(18,2,3,cmd,1,[ t('',147,1,0) ]).
 b_line_i(20,2,3,cmd,1,[ t('',146,1,0),t('''Cancelar''',3,20,7) ]).
 b_line_i(21,2,4,cmd,1,[ t('',104,1,0),t(o(13,'MenuPrincipal'),28,1,2) ]).
 b_line_i(22,2,4,cmd,1,[ t('',147,1,0) ]).
-b_line_i(1000,2,4,cmd,0,[ t('',146,0,0),t('Load',3,0,0) ]).
-b_line_i(1001,2,4,cmd,0,[ t('',155,0,0) ]).
-b_line_i(1002,2,4,cmd,0,[ t('',147,0,0) ]).
+b_line_i(24,2,4,cmd,1,[ t('',146,1,0),t('''Consultar ''',3,24,7) ]).
+b_line_i(25,2,5,cmd,1,[ t('',104,1,0),t(o(13,'DetalleArticulo'),28,1,2) ]).
+b_line_i(26,2,5,cmd,1,[ t('',147,1,0) ]).
+b_line_i(1000,2,5,cmd,0,[ t('',146,0,0),t('Load',3,0,0) ]).
+b_line_i(1001,2,5,cmd,0,[ t('',155,0,0) ]).
+b_line_i(1002,2,5,cmd,0,[ t('',147,0,0) ]).
  
  
  
@@ -309,6 +317,7 @@ html_comp_i(12,'Attid',-6,v,[ num ]).
 html_comp_i(12,'Class','Attribute',d,[ str ]).
 html_comp_i(12,'Controlname','&Nextvalue',d,[ str ]).
 html_comp_i(12,'Returnonclick',0,d,[ bool ]).
+html_comp_i(12,'Eventgx','',d,[ str ]).
 html_comp_i(12,'Captionclass','',d,[ str ]).
 html_comp_i(12,'Captionposition','',d,[ str ]).
 html_comp_i(12,'Captionvalue','',d,[ str ]).
@@ -316,15 +325,14 @@ html_comp_i(12,'Controltype',2,d,[ num ]).
 html_comp_i(12,'Inputtype',0,d,[ num ]).
 html_comp_i(12,'Notifycontextchange',0,d,[ bool ]).
 html_comp_i(12,'Emptyasnull','Yes',d,[ str ]).
-html_comp_i(12,'Readonly',0,d,[ bool ]).
+html_comp_i(12,'Readonly',-1,v,[ bool ]).
 html_comp_i(12,'Autocomplete',-1,d,[ bool ]).
 html_comp_i(12,'Ispassword',0,d,[ bool ]).
 html_comp_i(12,'Autoresize',-1,d,[ bool ]).
 html_comp_i(12,'Gxwidth',measure(4,chr),d,[ measure ]).
 html_comp_i(12,'Gxheight',measure(1,row),d,[ measure ]).
 html_comp_i(12,'Ismultiline',0,d,[ bool ]).
-html_comp_i(12,'Fill',-1,d,[ bool ]).
-html_comp_i(12,'Backcolor',rgb(255,255,255),d,[ color ]).
+html_comp_i(12,'Fill',0,d,[ bool ]).
 html_comp_i(12,'Forecolor',rgb(0,0,0),d,[ color ]).
 html_comp_i(12,'Font',font('Verdana',12,[]),d,[ font ]).
 html_comp_i(12,'Horizontalalignment',right,d,[ str ]).
@@ -443,9 +451,8 @@ html_comp_i(28,'Buttonborderstyle',standard,d,[ str ]).
  
  
  
-warn_gen_i(msg([],spc0156,[ 'Event ','''Consultar ''',' for control ''','Button1',''' is not defined.' ])).
  
-lit_i(12,1,t('Nextvalue',23),[ ctlname('&Nextvalue'),ctrltype(edit,12),pos(12),ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
+lit_i(12,1,t('Nextvalue',23),[ ctlname('&Nextvalue'),ctrltype(edit,12),pos(12),readonly,ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
 lit_i(16,1,t('Estatusarticulodsc',23),[ ctlname('&Estatusarticulodsc'),ctrltype(edit,16),pos(16),ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
 lit_i(20,1,t('Estatusarticulodescuso',23),[ ctlname('&Estatusarticulodescuso'),ctrltype(edit,20),pos(20),ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
 lit_i(8,1,table(8),[ ctlname('Table2') ]).
@@ -686,11 +693,14 @@ struct_dt_elem_i([ 26,1,1 ],2,pic,'ZZZZZZZZ9').
 sub_info_i(146,'Start',1,3,[ [],[ 'Nextvalue' ] ]).
 sub_info_i(146,'''Guardar ''',5,18,[ [ 'Nextvalue','Estatusarticulo','Estatusarticulodsc','Estatusarticulodescuso','Today','Websession' ],[ 'Estatusarticulo' ] ]).
 sub_info_i(146,'''Cancelar''',20,22,[ [],[] ]).
+sub_info_i(146,'''Consultar ''',24,26,[ [],[] ]).
  
+pgm_parm_i(web,104,'DETALLEARTICULO',[],[]).
 pgm_parm_i(web,29,'MENUPRINCIPAL',[],[]).
 pgm_parm_i(web,35,'CATALOG_DE_ARTICULO',[],[]).
  
 pgm_callprotocol_i(web,35,'CATALOG_DE_ARTICULO','INTERNAL').
+pgm_callprotocol_i(web,104,'DETALLEARTICULO','INTERNAL').
 pgm_callprotocol_i(web,29,'MENUPRINCIPAL','INTERNAL').
 pgm_callprotocol_i(web,35,'CATALOG_DE_ARTICULO','INTERNAL').
  

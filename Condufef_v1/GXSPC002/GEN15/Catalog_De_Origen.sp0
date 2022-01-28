@@ -46,7 +46,7 @@ rule_i(0,datastore(1,'CS_RPCPGML','')).
 rule_i(0,datastore(1,'JDBC_DATASOURCE','')).
 rule_i(0,datastore(1,'USE_JDBC_DATASOURCE','0')).
 rule_i(0,datastore(1,'DS_DBMS_ADDINFO','')).
-rule_i(0,datastore(1,'USER_PASSWORD',󻢸蘇�2�5炭)).
+rule_i(0,datastore(1,'USER_PASSWORD',admin)).
 rule_i(0,datastore(1,'USER_ID',postgres)).
 rule_i(0,datastore(1,'CS_CONNECT','First')).
 rule_i(0,datastore(1,'DBMS_PORT','5432')).
@@ -128,6 +128,7 @@ rule_i(0,rule([ a(22,[ '''Cancelar''','''Cancelar''','' ]) ],[],[],[])).
 a_i(1,1,f,'Today',[],[ [],[ t('today(',1),t(')',4) ] ]).
 a_i(2,1,f,'Err',[],[ [],[ t('0',3) ] ]).
 a_i(3,2,ra,2000,[],[ [],'ORIGEN_PKEY',[],2 ]).
+a_i(4,1,f,[ t('&Nextvalue',23),t('Enabled',3) ],[],[ [],[ t(0,3),t(';',18) ] ]).
  
 v_i(f,i,1,[]).
 v_i(f,o,1,'Today').
@@ -135,6 +136,8 @@ v_i(f,i,2,[]).
 v_i(f,o,2,'Err').
 v_i(ra,i,3,[]).
 v_i(ra,o,3,40000).
+v_i(f,i,4,[]).
+v_i(f,o,4,[ t('&Nextvalue',23),t('Enabled',3) ]).
  
  
  
@@ -312,6 +315,7 @@ html_comp_i(12,'Attid',-6,v,[ num ]).
 html_comp_i(12,'Class','Attribute',d,[ str ]).
 html_comp_i(12,'Controlname','&Nextvalue',d,[ str ]).
 html_comp_i(12,'Returnonclick',0,d,[ bool ]).
+html_comp_i(12,'Eventgx','',d,[ str ]).
 html_comp_i(12,'Captionclass','',d,[ str ]).
 html_comp_i(12,'Captionposition','',d,[ str ]).
 html_comp_i(12,'Captionvalue','',d,[ str ]).
@@ -319,15 +323,14 @@ html_comp_i(12,'Controltype',2,d,[ num ]).
 html_comp_i(12,'Inputtype',0,d,[ num ]).
 html_comp_i(12,'Notifycontextchange',0,d,[ bool ]).
 html_comp_i(12,'Emptyasnull','Yes',d,[ str ]).
-html_comp_i(12,'Readonly',0,d,[ bool ]).
+html_comp_i(12,'Readonly',-1,v,[ bool ]).
 html_comp_i(12,'Autocomplete',-1,d,[ bool ]).
 html_comp_i(12,'Ispassword',0,d,[ bool ]).
 html_comp_i(12,'Autoresize',-1,d,[ bool ]).
 html_comp_i(12,'Gxwidth',measure(4,chr),d,[ measure ]).
 html_comp_i(12,'Gxheight',measure(1,row),d,[ measure ]).
 html_comp_i(12,'Ismultiline',0,d,[ bool ]).
-html_comp_i(12,'Fill',-1,d,[ bool ]).
-html_comp_i(12,'Backcolor',rgb(255,255,255),d,[ color ]).
+html_comp_i(12,'Fill',0,d,[ bool ]).
 html_comp_i(12,'Forecolor',rgb(0,0,0),d,[ color ]).
 html_comp_i(12,'Font',font('Verdana',12,[]),d,[ font ]).
 html_comp_i(12,'Horizontalalignment',right,d,[ str ]).
@@ -447,7 +450,7 @@ html_comp_i(28,'Buttonborderstyle',standard,d,[ str ]).
  
  
  
-lit_i(12,1,t('Nextvalue',23),[ ctlname('&Nextvalue'),ctrltype(edit,12),pos(12),ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
+lit_i(12,1,t('Nextvalue',23),[ ctlname('&Nextvalue'),ctrltype(edit,12),pos(12),readonly,ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
 lit_i(16,1,t('Origendscorta',23),[ ctlname('&Origendscorta'),ctrltype(edit,16),pos(16),ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
 lit_i(20,1,t('Origendsclarga',23),[ ctlname('&Origendsclarga'),ctrltype(edit,20),pos(20),ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
 lit_i(8,1,table(8),[ ctlname('Table2') ]).
@@ -472,7 +475,6 @@ att_prop_i(2,10,'EmptyAsNull','Yes',d).
 att_prop_i(2,10,idBasedOn,'',d).
 att_prop_i(2,10,'AUTONUMBER','0',d).
 att_prop_i(2,10,'ATT_INITIAL_VALUE','',d).
-att_prop_i(2,10,'AttRegEx','',d).
 att_prop_i(2,10,'AttValidationFailedMsg','',d).
 att_prop_i(2,10,'FullName',origenid,v).
 att_prop_i(2,40000,'ExternalName',origenid,d).
@@ -481,7 +483,6 @@ att_prop_i(2,40000,'EmptyAsNull','Yes',d).
 att_prop_i(2,40000,idBasedOn,'',d).
 att_prop_i(2,40000,'AUTONUMBER','0',d).
 att_prop_i(2,40000,'ATT_INITIAL_VALUE','',d).
-att_prop_i(2,40000,'AttRegEx','',d).
 att_prop_i(2,40000,'AttValidationFailedMsg','',d).
 att_prop_i(2,40000,'FullName',origenid,v).
  

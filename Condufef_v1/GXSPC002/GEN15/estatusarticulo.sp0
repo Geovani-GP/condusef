@@ -1,6 +1,6 @@
 spec_i([ trn,7,estatusarticulo,estatusarticulo,[],spa,'10_3_15-115824' ]).
  
-struct_i(7,0,[],[]).
+struct_i(7,0,[ 'Mode','Estatusarticuloid' ],[]).
  
 level_i(7,[ 7,[ [ 7,many ] ],[ 12 ],[],[],[],[ 12 ],'ESTATUSARTICULO_PKEY',[ 7,[] ],[] ]).
  
@@ -13,7 +13,7 @@ lwi_i(7,[ [] ]).
  
 ta_i(7,[ [ [ 7,12 ],[ 7,54 ],[ 7,55 ],[ 7,56 ],[ 7,57 ],[ 7,58 ],[ 7,59 ],[ 7,60 ] ] ]).
  
-las_i(7,[ [ 12,54,55,56,57,58,59,60 ] ]).
+las_i(7,[ [ 'Mode','Estatusarticuloid',12,54,55,56,57,58,59,60 ] ]).
  
 lac_i(7,[ [ 12,54,55,56,57,58,59,60 ] ]).
  
@@ -50,7 +50,7 @@ rule_i(0,datastore(1,'CS_RPCPGML','')).
 rule_i(0,datastore(1,'JDBC_DATASOURCE','')).
 rule_i(0,datastore(1,'USE_JDBC_DATASOURCE','0')).
 rule_i(0,datastore(1,'DS_DBMS_ADDINFO','')).
-rule_i(0,datastore(1,'USER_PASSWORD',󻢸蘇�2�5炭)).
+rule_i(0,datastore(1,'USER_PASSWORD',admin)).
 rule_i(0,datastore(1,'USER_ID',postgres)).
 rule_i(0,datastore(1,'CS_CONNECT','First')).
 rule_i(0,datastore(1,'DBMS_PORT','5432')).
@@ -161,10 +161,10 @@ rule_i(0,prop(idBC,'-1')).
 rule_i(0,prop('Folder',o(120,'Root Module'))).
 rule_i(0,prop('ObjDesc',estatusarticulo)).
 rule_i(0,prop('ObjName',estatusarticulo)).
-rule_i(7,prompt([ 7,[ [ [],12,12 ] ],[],[],[ t(o(13,'Gx0070'),28),t(12,2) ],[],n,[] ])).
-rule_i(7,rule([ a(23,[ [ 12 ],[ t(o(13,'Gx0070'),28),t(12,2) ] ]) ],[],[],[ 12 ])).
 rule_i(0,rule([ a(22,[ 'Dlt','"Eliminar"','' ]) ],[],[],[])).
 rule_i(0,maingen(15)).
+rule_i(0,rule([ a(10,[ 'Mode','Estatusarticuloid' ]) ],[],[ insert,update,delete,display ],[])).
+rule_i(0,parmio([ [ 'Mode',in ],[ 'Estatusarticuloid',in ] ])).
 rule_i(0,p(0,0,fv,10,[ intname,'ESTATUSARTICULO' ])).
 rule_i(0,p(0,0,fv,10,[ table,7 ])).
 rule_i(0,p(0,15,fv,10,[])).
@@ -181,18 +181,27 @@ rule_i(0,file(7,'ESTATUSARTICULO',[ 12,54,55,56,57,58,59,60 ])).
 rule_i(0,loc([ 7 ],'ESTATUSARTICULO','','LAN')).
 rule_i(0,index(7,'ESTATUSARTICULO_PKEY',u,[ 12 ])).
 rule_i(0,loc([ 7,'ESTATUSARTICULO_PKEY' ],estatusarticulo_pkey,'','LAN')).
+rule_i(7,rule([ a(3,[ t(12,2) ]) ],[],[ insert,update,delete,display ],[ 12 ])).
+rule_i(7,rule([ a(21,[ [ 12 ] ]) ],[],[ insert,update,delete,display ],[ 12 ])).
  
-a_i(1,7,t,7,[],[ [ [ [],12,12 ] ],'ESTATUSARTICULO_PKEY',[] ]).
+a_i(1,7,f,12,[],[ [],[ t('Estatusarticuloid',23),t('IF',17),t('.NOT.',8),t('null(',1),t('Estatusarticuloid',23),t(')',4),t(';',18) ] ]).
+a_i(2,7,f,[ t(12,2),t('Enabled',3) ],[],[ [],[ t(0,3),t(';',18) ] ]).
+a_i(3,7,t,7,[],[ [ [ [],12,12 ] ],'ESTATUSARTICULO_PKEY',[] ]).
  
-v_i(t,i,1,12).
-v_i(t,o,1,54).
-v_i(t,o,1,55).
-v_i(t,o,1,56).
-v_i(t,o,1,57).
-v_i(t,o,1,58).
-v_i(t,o,1,59).
-v_i(t,o,1,60).
+v_i(f,i,1,'Estatusarticuloid').
+v_i(f,o,1,12).
+v_i(f,i,2,[]).
+v_i(f,o,2,[ t(12,2),t('Enabled',3) ]).
+v_i(t,i,3,12).
+v_i(t,o,3,54).
+v_i(t,o,3,55).
+v_i(t,o,3,56).
+v_i(t,o,3,57).
+v_i(t,o,3,58).
+v_i(t,o,3,59).
+v_i(t,o,3,60).
  
+act_info_i(1,[ [ 12 ] ]).
  
  
  
@@ -207,6 +216,7 @@ attri_i(55,[ estatusarticulodescuso,svchar,100,0,'',0,estatusarticulodescuso,'',
 attri_i(54,[ estatusarticulodsc,svchar,100,0,'',0,estatusarticulodsc,'',0 ]).
 attri_i(12,[ estatusarticuloid,int,18,0,'ZZZZZZZZZZZZZZZZZ9',0,estatusarticuloid,'',0 ]).
 attri_i('Gxremove',[ 'GxRemove',int,1,0,'9',0,'Gx Remove','',5 ]).
+attri_i('Estatusarticuloid',[ estatusarticuloid,int,18,0,'ZZZZZZZZZZZZZZZZZ9',0,estatusarticuloid,'',7 ]).
 attri_i('Mode',[ 'Gx_mode',char,3,0,'@!',1,'','',2 ]).
  
 table_i(7,[ 'ESTATUSARTICULO',[ 12,54,55,56,57,58,59,60 ],estatusarticulo,estatusarticulo ]).
@@ -366,7 +376,7 @@ html_comp_i(6,'Title','',d,[ str ]).
 html_comp_i(6,'Fill',-1,d,[ bool ]).
 html_comp_i(6,'Backcolor',rgb(255,255,255),d,[ color ]).
 html_comp_i(6,'Forecolor',rgb(0,0,0),d,[ color ]).
-html_comp_i(6,'Font',font('Open Sans Semibold',17,[]),d,[ font ]).
+html_comp_i(6,'Font',font('Microsoft Sans Serif',17,[]),d,[ font ]).
 html_comp_i(7,'Class',row,v,[ str ]).
 html_comp_i(7,'Id','',d,[ str ]).
 html_comp_i(7,'Height',measure(0,px),d,[ measure ]).
@@ -1082,6 +1092,7 @@ att_prop_i(2,60,'FullName',estatusarticulofecultact,v).
  
 tbl_att_prop_i(2,7,12,'AllowNulls',n).
  
+var_prop_i(2,'Estatusarticuloid',idBasedOn,'',v).
  
  
  
@@ -1095,10 +1106,8 @@ trn_level_i(7,[ [ 12,54,55,56,57,58,59,60 ],estatusarticulo,estatusarticulo,esta
  
  
  
-pgm_parm_i(web,68,'GX0070',[ [ int,18,0,0 ] ],[ [ pestatusarticuloid,out,[] ] ]).
  
 pgm_callprotocol_i(trn,7,'ESTATUSARTICULO','INTERNAL').
-pgm_callprotocol_i(web,68,'GX0070','INTERNAL').
  
  
  

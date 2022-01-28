@@ -1,22 +1,7 @@
 <Objects>
   <Object>
     <Type>c9584656-94b6-4ccd-890f-332d11fc2c25</Type>
-    <Id>30</Id>
-    <Part>c44bd5ff-f918-415b-98e6-aca44fed84fa</Part>
-  </Object>
-  <Object>
-    <Type>c9584656-94b6-4ccd-890f-332d11fc2c25</Type>
     <Id>93</Id>
-    <Part>c44bd5ff-f918-415b-98e6-aca44fed84fa</Part>
-  </Object>
-  <Object>
-    <Type>1db606f2-af09-4cf9-a3b5-b481519d28f6</Type>
-    <Id>19</Id>
-    <Part>9b0a32a3-de6d-4be1-a4dd-1b85d3741534</Part>
-  </Object>
-  <Object>
-    <Type>c9584656-94b6-4ccd-890f-332d11fc2c25</Type>
-    <Id>95</Id>
     <Part>c44bd5ff-f918-415b-98e6-aca44fed84fa</Part>
   </Object>
   <Object>
@@ -24,59 +9,74 @@
     <Id>16</Id>
     <Part>9b0a32a3-de6d-4be1-a4dd-1b85d3741534</Part>
   </Object>
+  <Object>
+    <Type>c9584656-94b6-4ccd-890f-332d11fc2c25</Type>
+    <Id>34</Id>
+    <Part>c44bd5ff-f918-415b-98e6-aca44fed84fa</Part>
+  </Object>
+  <Object>
+    <Type>c9584656-94b6-4ccd-890f-332d11fc2c25</Type>
+    <Id>104</Id>
+    <Part>c44bd5ff-f918-415b-98e6-aca44fed84fa</Part>
+  </Object>
+  <Object>
+    <Type>1db606f2-af09-4cf9-a3b5-b481519d28f6</Type>
+    <Id>7</Id>
+    <Part>9b0a32a3-de6d-4be1-a4dd-1b85d3741534</Part>
+  </Object>
   <Recent>
     <RecentKBObjectsList>
       <MaximumItems>10</MaximumItems>
       <RecentKBObjects>
         <RecentKBObject>
+          <Key>1db606f2-af09-4cf9-a3b5-b481519d28f6-11</Key>
+          <Name>articulos</Name>
+          <LastAccess>2022-01-28T12:23:33.7311971-06:00</LastAccess>
+        </RecentKBObject>
+        <RecentKBObject>
+          <Key>1db606f2-af09-4cf9-a3b5-b481519d28f6-7</Key>
+          <Name>estatusarticulo</Name>
+          <LastAccess>2022-01-28T12:23:09.4748906-06:00</LastAccess>
+        </RecentKBObject>
+        <RecentKBObject>
+          <Key>1db606f2-af09-4cf9-a3b5-b481519d28f6-17</Key>
+          <Name>area</Name>
+          <LastAccess>2022-01-28T12:22:53.9276478-06:00</LastAccess>
+        </RecentKBObject>
+        <RecentKBObject>
+          <Key>1db606f2-af09-4cf9-a3b5-b481519d28f6-13</Key>
+          <Name>articulosmov</Name>
+          <LastAccess>2022-01-28T12:22:48.1302698-06:00</LastAccess>
+        </RecentKBObject>
+        <RecentKBObject>
+          <Key>c9584656-94b6-4ccd-890f-332d11fc2c25-35</Key>
+          <Name>Catalog_De_Articulo</Name>
+          <LastAccess>2022-01-28T12:22:18.0582869-06:00</LastAccess>
+        </RecentKBObject>
+        <RecentKBObject>
+          <Key>1db606f2-af09-4cf9-a3b5-b481519d28f6-20</Key>
+          <Name>tipodocumento</Name>
+          <LastAccess>2022-01-28T11:39:09.3923685-06:00</LastAccess>
+        </RecentKBObject>
+        <RecentKBObject>
+          <Key>c9584656-94b6-4ccd-890f-332d11fc2c25-34</Key>
+          <Name>Catalog_De_Tipo_Doc</Name>
+          <LastAccess>2022-01-28T11:38:49.5699554-06:00</LastAccess>
+        </RecentKBObject>
+        <RecentKBObject>
+          <Key>c9584656-94b6-4ccd-890f-332d11fc2c25-99</Key>
+          <Name>Catalog_De_Almacen</Name>
+          <LastAccess>2022-01-28T10:08:58.1220907-06:00</LastAccess>
+        </RecentKBObject>
+        <RecentKBObject>
+          <Key>c9584656-94b6-4ccd-890f-332d11fc2c25-100</Key>
+          <Name>Catalog_De_TipoBien</Name>
+          <LastAccess>2022-01-28T10:08:12.1441788-06:00</LastAccess>
+        </RecentKBObject>
+        <RecentKBObject>
           <Key>1db606f2-af09-4cf9-a3b5-b481519d28f6-16</Key>
           <Name>origen</Name>
           <LastAccess>2022-01-27T15:57:36.017333-06:00</LastAccess>
-        </RecentKBObject>
-        <RecentKBObject>
-          <Key>c9584656-94b6-4ccd-890f-332d11fc2c25-40</Key>
-          <Name>Catalog_De_Origen</Name>
-          <LastAccess>2022-01-27T15:52:45.8765387-06:00</LastAccess>
-        </RecentKBObject>
-        <RecentKBObject>
-          <Key>1db606f2-af09-4cf9-a3b5-b481519d28f6-5</Key>
-          <Name>categorias</Name>
-          <LastAccess>2022-01-27T15:33:57.0855685-06:00</LastAccess>
-        </RecentKBObject>
-        <RecentKBObject>
-          <Key>c9584656-94b6-4ccd-890f-332d11fc2c25-39</Key>
-          <Name>Catalog_De_Categorias</Name>
-          <LastAccess>2022-01-27T15:31:15.0488586-06:00</LastAccess>
-        </RecentKBObject>
-        <RecentKBObject>
-          <Key>1db606f2-af09-4cf9-a3b5-b481519d28f6-19</Key>
-          <Name>modelos</Name>
-          <LastAccess>2022-01-27T14:24:54.8271305-06:00</LastAccess>
-        </RecentKBObject>
-        <RecentKBObject>
-          <Key>1db606f2-af09-4cf9-a3b5-b481519d28f6-14</Key>
-          <Name>cambs</Name>
-          <LastAccess>2022-01-27T14:23:53.2998678-06:00</LastAccess>
-        </RecentKBObject>
-        <RecentKBObject>
-          <Key>c9584656-94b6-4ccd-890f-332d11fc2c25-32</Key>
-          <Name>Catalog_De_Modelo</Name>
-          <LastAccess>2022-01-27T14:07:54.3012982-06:00</LastAccess>
-        </RecentKBObject>
-        <RecentKBObject>
-          <Key>1db606f2-af09-4cf9-a3b5-b481519d28f6-8</Key>
-          <Name>marcas</Name>
-          <LastAccess>2022-01-27T13:26:16.7362555-06:00</LastAccess>
-        </RecentKBObject>
-        <RecentKBObject>
-          <Key>c9584656-94b6-4ccd-890f-332d11fc2c25-92</Key>
-          <Name>DetallesMarcas</Name>
-          <LastAccess>2022-01-27T13:22:32.2235329-06:00</LastAccess>
-        </RecentKBObject>
-        <RecentKBObject>
-          <Key>c9584656-94b6-4ccd-890f-332d11fc2c25-86</Key>
-          <Name>DetallesCambs</Name>
-          <LastAccess>2022-01-27T13:09:06.0206848-06:00</LastAccess>
         </RecentKBObject>
       </RecentKBObjects>
     </RecentKBObjectsList>

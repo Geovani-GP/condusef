@@ -16,7 +16,17 @@
 <GenId>15</GenId>
 <GenName>Default (C#)</GenName></Generator>
 <FormClass>HTML</FormClass>
-<Parameters></Parameters>
+<Parameters>
+<Parameter>
+<IO>in</IO>
+<Variable>
+<VarId>Mode</VarId>
+<VarName>&amp;Mode</VarName></Variable></Parameter>
+<Parameter>
+<IO>in</IO>
+<Variable>
+<VarId>Tipodocumentoid</VarId>
+<VarName>&amp;tipodocumentoid</VarName></Variable></Parameter></Parameters>
 <Levels>
 <Level>
 <LevelType>Trn</LevelType>
@@ -111,24 +121,4 @@
 <Levels></Levels>
 <AfterTrnRules></AfterTrnRules>
 <AfterLevelRules></AfterLevelRules></Level></Levels>
-<Prompts>
-<Prompt>
-<Table>
-<TableId>20</TableId>
-<TableName>TIPODOCUMENTO</TableName>
-<Description>tipodocumento</Description></Table>
-<Object>
-<ObjClsGuid>c9584656-94b6-4ccd-890f-332d11fc2c25</ObjClsGuid>
-<ObjCls>13</ObjCls>
-<ObjId>81</ObjId>
-<ObjName>Gx00K0</ObjName>
-<ObjPgmName>Gx00K0</ObjPgmName>
-<ObjClsName>Web Panel</ObjClsName></Object>
-<InputParameters></InputParameters>
-<OutputParameters>
-<Attribute>
-<AttriId>26</AttriId>
-<AttriName>tipodocumentoid</AttriName>
-<Description>tipodocumentoid</Description></Attribute></OutputParameters>
-<PromptType>System</PromptType></Prompt></Prompts>
 <Suggests></Suggests></ObjectSpec>

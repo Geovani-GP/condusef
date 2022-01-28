@@ -41,7 +41,7 @@ rule_i(0,datastore(1,'CS_RPCPGML','')).
 rule_i(0,datastore(1,'JDBC_DATASOURCE','')).
 rule_i(0,datastore(1,'USE_JDBC_DATASOURCE','0')).
 rule_i(0,datastore(1,'DS_DBMS_ADDINFO','')).
-rule_i(0,datastore(1,'USER_PASSWORD',󻢸蘇�2�5炭)).
+rule_i(0,datastore(1,'USER_PASSWORD',admin)).
 rule_i(0,datastore(1,'USER_ID',postgres)).
 rule_i(0,datastore(1,'CS_CONNECT','First')).
 rule_i(0,datastore(1,'DBMS_PORT','5432')).
@@ -191,6 +191,7 @@ attri_i(80,[ tipodocumentousuario,svchar,15,0,'',0,tipodocumentousuario,'',0 ]).
 attri_i(79,[ tipodocumentodsc,svchar,100,0,'',0,tipodocumentodsc,'',0 ]).
 attri_i(26,[ tipodocumentoid,int,9,0,'ZZZZZZZZ9',0,tipodocumentoid,'',0 ]).
 attri_i('Gxremove',[ 'GxRemove',int,1,0,'9',0,'Gx Remove','',5 ]).
+attri_i('Tipodocumentoid',[ tipodocumentoid,int,9,0,'ZZZZZZZZ9',0,tipodocumentoid,'',8 ]).
 attri_i('Mode',[ 'Gx_mode',char,3,0,'@!',1,'','',2 ]).
  
 table_i(20,[ 'TIPODOCUMENTO',[ 26,79,80,81,82 ],tipodocumento,tipodocumento ]).
@@ -323,6 +324,7 @@ att_prop_i(2,82,'FullName',tipodocumentofecultact,v).
  
 tbl_att_prop_i(2,20,26,'AllowNulls',n).
  
+var_prop_i(2,'Tipodocumentoid',idBasedOn,'',v).
  
 i_tbl_best_trn(20,[ 20,1,tipodocumento,tipodocumento,[] ]).
  

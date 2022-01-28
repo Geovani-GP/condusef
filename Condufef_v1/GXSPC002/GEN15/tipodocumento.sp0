@@ -1,6 +1,6 @@
 spec_i([ trn,20,tipodocumento,tipodocumento,[],spa,'10_3_15-115824' ]).
  
-struct_i(20,0,[],[]).
+struct_i(20,0,[ 'Mode','Tipodocumentoid' ],[]).
  
 level_i(20,[ 20,[ [ 20,many ] ],[ 26 ],[],[],[],[ 26 ],'TIPODOCUMENTO_PKEY',[ 20,[] ],[] ]).
  
@@ -13,7 +13,7 @@ lwi_i(20,[ [] ]).
  
 ta_i(20,[ [ [ 20,26 ],[ 20,79 ],[ 20,80 ],[ 20,81 ],[ 20,82 ] ] ]).
  
-las_i(20,[ [ 26,79,80,81,82 ] ]).
+las_i(20,[ [ 'Mode','Tipodocumentoid',26,79,80,81,82 ] ]).
  
 lac_i(20,[ [ 26,79,80,81,82 ] ]).
  
@@ -47,7 +47,7 @@ rule_i(0,datastore(1,'CS_RPCPGML','')).
 rule_i(0,datastore(1,'JDBC_DATASOURCE','')).
 rule_i(0,datastore(1,'USE_JDBC_DATASOURCE','0')).
 rule_i(0,datastore(1,'DS_DBMS_ADDINFO','')).
-rule_i(0,datastore(1,'USER_PASSWORD',󻢸蘇�2�5炭)).
+rule_i(0,datastore(1,'USER_PASSWORD',admin)).
 rule_i(0,datastore(1,'USER_ID',postgres)).
 rule_i(0,datastore(1,'CS_CONNECT','First')).
 rule_i(0,datastore(1,'DBMS_PORT','5432')).
@@ -158,10 +158,10 @@ rule_i(0,prop(idBC,'-1')).
 rule_i(0,prop('Folder',o(120,'Root Module'))).
 rule_i(0,prop('ObjDesc',tipodocumento)).
 rule_i(0,prop('ObjName',tipodocumento)).
-rule_i(20,prompt([ 20,[ [ [],26,26 ] ],[],[],[ t(o(13,'Gx00K0'),28),t(26,2) ],[],n,[] ])).
-rule_i(20,rule([ a(23,[ [ 26 ],[ t(o(13,'Gx00K0'),28),t(26,2) ] ]) ],[],[],[ 26 ])).
 rule_i(0,rule([ a(22,[ 'Dlt','"Eliminar"','' ]) ],[],[],[])).
 rule_i(0,maingen(15)).
+rule_i(0,rule([ a(10,[ 'Mode','Tipodocumentoid' ]) ],[],[ insert,update,delete,display ],[])).
+rule_i(0,parmio([ [ 'Mode',in ],[ 'Tipodocumentoid',in ] ])).
 rule_i(0,p(0,0,fv,22,[ intname,'TIPODOCUMENTO' ])).
 rule_i(0,p(0,0,fv,22,[ table,20 ])).
 rule_i(0,p(0,15,fv,22,[])).
@@ -178,15 +178,24 @@ rule_i(0,file(20,'TIPODOCUMENTO',[ 26,79,80,81,82 ])).
 rule_i(0,loc([ 20 ],'TIPODOCUMENTO','','LAN')).
 rule_i(0,index(20,'TIPODOCUMENTO_PKEY',u,[ 26 ])).
 rule_i(0,loc([ 20,'TIPODOCUMENTO_PKEY' ],tipodocumento_pkey,'','LAN')).
+rule_i(20,rule([ a(3,[ t(26,2) ]) ],[],[ insert,update,delete,display ],[ 26 ])).
+rule_i(20,rule([ a(21,[ [ 26 ] ]) ],[],[ insert,update,delete,display ],[ 26 ])).
  
-a_i(1,20,t,20,[],[ [ [ [],26,26 ] ],'TIPODOCUMENTO_PKEY',[] ]).
+a_i(1,20,f,26,[],[ [],[ t('Tipodocumentoid',23),t('IF',17),t('.NOT.',8),t('null(',1),t('Tipodocumentoid',23),t(')',4),t(';',18) ] ]).
+a_i(2,20,f,[ t(26,2),t('Enabled',3) ],[],[ [],[ t(0,3),t(';',18) ] ]).
+a_i(3,20,t,20,[],[ [ [ [],26,26 ] ],'TIPODOCUMENTO_PKEY',[] ]).
  
-v_i(t,i,1,26).
-v_i(t,o,1,79).
-v_i(t,o,1,80).
-v_i(t,o,1,81).
-v_i(t,o,1,82).
+v_i(f,i,1,'Tipodocumentoid').
+v_i(f,o,1,26).
+v_i(f,i,2,[]).
+v_i(f,o,2,[ t(26,2),t('Enabled',3) ]).
+v_i(t,i,3,26).
+v_i(t,o,3,79).
+v_i(t,o,3,80).
+v_i(t,o,3,81).
+v_i(t,o,3,82).
  
+act_info_i(1,[ [ 26 ] ]).
  
  
  
@@ -198,6 +207,7 @@ attri_i(80,[ tipodocumentousuario,svchar,15,0,'',0,tipodocumentousuario,'',0 ]).
 attri_i(79,[ tipodocumentodsc,svchar,100,0,'',0,tipodocumentodsc,'',0 ]).
 attri_i(26,[ tipodocumentoid,int,9,0,'ZZZZZZZZ9',0,tipodocumentoid,'',0 ]).
 attri_i('Gxremove',[ 'GxRemove',int,1,0,'9',0,'Gx Remove','',5 ]).
+attri_i('Tipodocumentoid',[ tipodocumentoid,int,9,0,'ZZZZZZZZ9',0,tipodocumentoid,'',8 ]).
 attri_i('Mode',[ 'Gx_mode',char,3,0,'@!',1,'','',2 ]).
  
 table_i(20,[ 'TIPODOCUMENTO',[ 26,79,80,81,82 ],tipodocumento,tipodocumento ]).
@@ -342,7 +352,7 @@ html_comp_i(6,'Title','',d,[ str ]).
 html_comp_i(6,'Fill',-1,d,[ bool ]).
 html_comp_i(6,'Backcolor',rgb(255,255,255),d,[ color ]).
 html_comp_i(6,'Forecolor',rgb(0,0,0),d,[ color ]).
-html_comp_i(6,'Font',font('Open Sans Semibold',17,[]),d,[ font ]).
+html_comp_i(6,'Font',font('Microsoft Sans Serif',17,[]),d,[ font ]).
 html_comp_i(7,'Class',row,v,[ str ]).
 html_comp_i(7,'Id','',d,[ str ]).
 html_comp_i(7,'Height',measure(0,px),d,[ measure ]).
@@ -866,6 +876,7 @@ att_prop_i(2,82,'FullName',tipodocumentofecultact,v).
  
 tbl_att_prop_i(2,20,26,'AllowNulls',n).
  
+var_prop_i(2,'Tipodocumentoid',idBasedOn,'',v).
  
  
  
@@ -879,10 +890,8 @@ trn_level_i(20,[ [ 26,79,80,81,82 ],tipodocumento,tipodocumento,tipodocumento,''
  
  
  
-pgm_parm_i(web,81,'GX00K0',[ [ int,9,0,0 ] ],[ [ ptipodocumentoid,out,[] ] ]).
  
 pgm_callprotocol_i(trn,20,'TIPODOCUMENTO','INTERNAL').
-pgm_callprotocol_i(web,81,'GX00K0','INTERNAL').
  
  
  

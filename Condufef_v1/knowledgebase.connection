@@ -1,10 +1,10 @@
 <ConnectionInformation>
-	<DBName>CONDUCEF_6_8_9_1</DBName>
+	<DBName>CONDUCEF7</DBName>
 	<IntegratedSecurity>True</IntegratedSecurity>
-	<ServerInstance>JOSBUENO-MX\DELGADO</ServerInstance>
+	<ServerInstance>DESKTOP-OOS5JGC\SQLEXPRESS</ServerInstance>
 	<CreateDbInKbFolder>True</CreateDbInKbFolder>
 	<Directory>C:\Models\condusef\Condufef_v1</Directory>
 	<DataFile>GX_KB_Condufef_v1.mdf</DataFile>
 	<LogFile>GX_KB_Condufef_v1_log.ldf</LogFile>
-	<HostName>JOSBUENO-MX</HostName>
+	<HostName>DESKTOP-OOS5JGC</HostName>
 </ConnectionInformation>

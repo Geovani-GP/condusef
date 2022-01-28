@@ -1,7 +1,6 @@
 current_obj_i(2,trn,7).
  
 called_tree_i(0,7,13,1).
-called_tree_i(0,7,13,68).
  
  
  
@@ -11,7 +10,7 @@ called_tree_i(0,7,13,68).
 ij_object_dependency(estatusarticulo,[],[],[],7).
  
  
-obj_parms_i([],[]).
+obj_parms_i([ 'String aP0_Gx_mode','long aP1_estatusarticuloid' ],[ [ 'Mode',in ],[ 'Estatusarticuloid',in ] ]).
  
  
 has_silent_trn_i(estatusarticulo_bc).

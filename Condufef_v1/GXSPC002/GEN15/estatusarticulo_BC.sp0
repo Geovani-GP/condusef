@@ -41,7 +41,7 @@ rule_i(0,datastore(1,'CS_RPCPGML','')).
 rule_i(0,datastore(1,'JDBC_DATASOURCE','')).
 rule_i(0,datastore(1,'USE_JDBC_DATASOURCE','0')).
 rule_i(0,datastore(1,'DS_DBMS_ADDINFO','')).
-rule_i(0,datastore(1,'USER_PASSWORD',󻢸蘇�2�5炭)).
+rule_i(0,datastore(1,'USER_PASSWORD',admin)).
 rule_i(0,datastore(1,'USER_ID',postgres)).
 rule_i(0,datastore(1,'CS_CONNECT','First')).
 rule_i(0,datastore(1,'DBMS_PORT','5432')).
@@ -197,6 +197,7 @@ attri_i(55,[ estatusarticulodescuso,svchar,100,0,'',0,estatusarticulodescuso,'',
 attri_i(54,[ estatusarticulodsc,svchar,100,0,'',0,estatusarticulodsc,'',0 ]).
 attri_i(12,[ estatusarticuloid,int,18,0,'ZZZZZZZZZZZZZZZZZ9',0,estatusarticuloid,'',0 ]).
 attri_i('Gxremove',[ 'GxRemove',int,1,0,'9',0,'Gx Remove','',5 ]).
+attri_i('Estatusarticuloid',[ estatusarticuloid,int,18,0,'ZZZZZZZZZZZZZZZZZ9',0,estatusarticuloid,'',7 ]).
 attri_i('Mode',[ 'Gx_mode',char,3,0,'@!',1,'','',2 ]).
  
 table_i(7,[ 'ESTATUSARTICULO',[ 12,54,55,56,57,58,59,60 ],estatusarticulo,estatusarticulo ]).
@@ -362,6 +363,7 @@ att_prop_i(2,60,'FullName',estatusarticulofecultact,v).
  
 tbl_att_prop_i(2,7,12,'AllowNulls',n).
  
+var_prop_i(2,'Estatusarticuloid',idBasedOn,'',v).
  
 i_tbl_best_trn(7,[ 7,1,estatusarticulo,estatusarticulo,[] ]).
  

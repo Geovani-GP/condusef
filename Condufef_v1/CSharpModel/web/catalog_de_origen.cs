@@ -2,7 +2,7 @@
                File: Catalog_De_Origen
         Description: Catalog_De_Origen
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 1/28/2022 1:41:0.76
+       Generated on: 1/28/2022 10:12:43.45
        Program type: Callable routine
           Main DBMS: postgresql
 */
@@ -215,7 +215,7 @@ namespace GeneXus.Programs {
          context.AddJavascriptSource("jquery.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxtimezone.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxgral.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("gxcfg.js", "?2022128141079");
+         context.AddJavascriptSource("gxcfg.js", "?202212810124348");
          if ( context.isSpaRequest( ) )
          {
             enableOutput();
@@ -266,7 +266,12 @@ namespace GeneXus.Programs {
          }
          GxWebStd.gx_hidden_field( context, "vTODAY", context.localUtil.DToC( Gx_date, 0, "/"));
          GxWebStd.gx_hidden_field( context, "GXC1", StringUtil.LTrim( StringUtil.NToC( (decimal)(A40000GXC1), 18, 0, ",", "")));
+         GxWebStd.gx_hidden_field( context, "gxhash_vNEXTVALUE", GetSecureSignedToken( "", context.localUtil.Format( (decimal)(AV6NextValue), "ZZZ9")));
          GXKey = Crypto.Decrypt64( context.GetCookie( "GX_SESSION_ID"), Crypto.GetServerKey( ));
+         forbiddenHiddens = "hsh" + "Catalog_De_Origen";
+         forbiddenHiddens = forbiddenHiddens + context.localUtil.Format( (decimal)(AV6NextValue), "ZZZ9");
+         GxWebStd.gx_hidden_field( context, "hsh", GXUtil.GetEncryptedHash( forbiddenHiddens, GXKey));
+         GXUtil.WriteLog("catalog_de_origen:[SendSecurityCheck value for]"+"NextValue:"+context.localUtil.Format( (decimal)(AV6NextValue), "ZZZ9"));
       }
 
       public override void RenderHtmlCloseForm( )
@@ -555,6 +560,8 @@ namespace GeneXus.Programs {
          /* GeneXus formulas. */
          Gx_date = DateTimeUtil.Today( context);
          context.Gx_err = 0;
+         edtavNextvalue_Enabled = 0;
+         context.httpAjaxContext.ajax_rsp_assign_prop("", false, edtavNextvalue_Internalname, "Enabled", StringUtil.LTrim( StringUtil.Str( (decimal)(edtavNextvalue_Enabled), 5, 0)));
       }
 
       protected void RF142( )
@@ -574,6 +581,8 @@ namespace GeneXus.Programs {
          /* Before Start, stand alone formulas. */
          Gx_date = DateTimeUtil.Today( context);
          context.Gx_err = 0;
+         edtavNextvalue_Enabled = 0;
+         context.httpAjaxContext.ajax_rsp_assign_prop("", false, edtavNextvalue_Internalname, "Enabled", StringUtil.LTrim( StringUtil.Str( (decimal)(edtavNextvalue_Enabled), 5, 0)));
          /* Using cursor H00143 */
          pr_default.execute(0);
          if ( (pr_default.getStatus(0) != 101) )
@@ -603,11 +612,13 @@ namespace GeneXus.Programs {
                wbErr = true;
                AV6NextValue = 0;
                context.httpAjaxContext.ajax_rsp_assign_attri("", false, "AV6NextValue", StringUtil.LTrim( StringUtil.Str( (decimal)(AV6NextValue), 4, 0)));
+               context.httpAjaxContext.ajax_rsp_assign_attri("", false, "gxhash_vNEXTVALUE", GetSecureSignedToken( "", context.localUtil.Format( (decimal)(AV6NextValue), "ZZZ9")));
             }
             else
             {
                AV6NextValue = (short)(context.localUtil.CToN( cgiGet( edtavNextvalue_Internalname), ",", "."));
                context.httpAjaxContext.ajax_rsp_assign_attri("", false, "AV6NextValue", StringUtil.LTrim( StringUtil.Str( (decimal)(AV6NextValue), 4, 0)));
+               context.httpAjaxContext.ajax_rsp_assign_attri("", false, "gxhash_vNEXTVALUE", GetSecureSignedToken( "", context.localUtil.Format( (decimal)(AV6NextValue), "ZZZ9")));
             }
             AV8origendscorta = cgiGet( edtavOrigendscorta_Internalname);
             context.httpAjaxContext.ajax_rsp_assign_attri("", false, "AV8origendscorta", AV8origendscorta);
@@ -617,6 +628,24 @@ namespace GeneXus.Programs {
             /* Read subfile selected row values. */
             /* Read hidden variables. */
             GXKey = Crypto.Decrypt64( context.GetCookie( "GX_SESSION_ID"), Crypto.GetServerKey( ));
+            forbiddenHiddens = "hsh" + "Catalog_De_Origen";
+            AV6NextValue = (short)(context.localUtil.CToN( cgiGet( edtavNextvalue_Internalname), ",", "."));
+            context.httpAjaxContext.ajax_rsp_assign_attri("", false, "AV6NextValue", StringUtil.LTrim( StringUtil.Str( (decimal)(AV6NextValue), 4, 0)));
+            context.httpAjaxContext.ajax_rsp_assign_attri("", false, "gxhash_vNEXTVALUE", GetSecureSignedToken( "", context.localUtil.Format( (decimal)(AV6NextValue), "ZZZ9")));
+            forbiddenHiddens = forbiddenHiddens + context.localUtil.Format( (decimal)(AV6NextValue), "ZZZ9");
+            hsh = cgiGet( "hsh");
+            if ( ! GXUtil.CheckEncryptedHash( forbiddenHiddens, hsh, GXKey) )
+            {
+               GXUtil.WriteLog("catalog_de_origen:[SecurityCheckFailed value for]"+"NextValue:"+context.localUtil.Format( (decimal)(AV6NextValue), "ZZZ9"));
+               GxWebError = 1;
+               context.HttpContext.Response.StatusDescription = 403.ToString();
+               context.HttpContext.Response.StatusCode = 403;
+               context.WriteHtmlText( "<title>403 Forbidden</title>") ;
+               context.WriteHtmlText( "<h1>403 Forbidden</h1>") ;
+               context.WriteHtmlText( "<p /><hr />") ;
+               GXUtil.WriteLog("send_http_error_code " + 403.ToString());
+               return  ;
+            }
          }
          else
          {
@@ -647,6 +676,7 @@ namespace GeneXus.Programs {
          pr_default.close(1);
          AV6NextValue = (short)(A40000GXC1+1);
          context.httpAjaxContext.ajax_rsp_assign_attri("", false, "AV6NextValue", StringUtil.LTrim( StringUtil.Str( (decimal)(AV6NextValue), 4, 0)));
+         context.httpAjaxContext.ajax_rsp_assign_attri("", false, "gxhash_vNEXTVALUE", GetSecureSignedToken( "", context.localUtil.Format( (decimal)(AV6NextValue), "ZZZ9")));
       }
 
       protected void E12142( )
@@ -808,7 +838,7 @@ namespace GeneXus.Programs {
             context.WriteHtmlText( "<td>") ;
             /* Single line edit */
             TempTags = "  onfocus=\"gx.evt.onfocus(this, 12,'',false,'',0)\"";
-            GxWebStd.gx_single_line_edit( context, edtavNextvalue_Internalname, StringUtil.LTrim( StringUtil.NToC( (decimal)(AV6NextValue), 4, 0, ",", "")), StringUtil.LTrim( context.localUtil.Format( (decimal)(AV6NextValue), "ZZZ9")), TempTags+" onchange=\"gx.evt.onchange(this)\" "+" onblur=\""+"gx.num.valid_integer( this,'.');"+";gx.evt.onblur(this,12);\"", "'"+""+"'"+",false,"+"'"+""+"'", "", "", "", "", edtavNextvalue_Jsonclick, 0, "Attribute", "", "", "", 1, 1, 0, "text", "", 4, "chr", 1, "row", 4, 0, 0, 0, 1, -1, 0, true, "", "right", false, "HLP_Catalog_De_Origen.htm");
+            GxWebStd.gx_single_line_edit( context, edtavNextvalue_Internalname, StringUtil.LTrim( StringUtil.NToC( (decimal)(AV6NextValue), 4, 0, ",", "")), ((edtavNextvalue_Enabled!=0) ? StringUtil.LTrim( context.localUtil.Format( (decimal)(AV6NextValue), "ZZZ9")) : context.localUtil.Format( (decimal)(AV6NextValue), "ZZZ9")), TempTags+" onchange=\"gx.evt.onchange(this)\" "+" onblur=\""+"gx.num.valid_integer( this,'.');"+";gx.evt.onblur(this,12);\"", "'"+""+"'"+",false,"+"'"+""+"'", "", "", "", "", edtavNextvalue_Jsonclick, 0, "Attribute", "", "", "", 1, edtavNextvalue_Enabled, 0, "text", "", 4, "chr", 1, "row", 4, 0, 0, 0, 1, -1, 0, true, "", "right", false, "HLP_Catalog_De_Origen.htm");
             context.WriteHtmlText( "</td>") ;
             context.WriteHtmlText( "</tr>") ;
             context.WriteHtmlText( "<tr>") ;
@@ -873,11 +903,11 @@ namespace GeneXus.Programs {
 
       protected void define_styles( )
       {
-         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?1401612");
+         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?13551359");
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?2022128141094");
+            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?202212810124365");
             idxLst = (int)(idxLst+1);
          }
          /* End function define_styles */
@@ -887,7 +917,7 @@ namespace GeneXus.Programs {
       {
          context.AddJavascriptSource("messages.spa.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxdec.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("catalog_de_origen.js", "?2022128141094");
+         context.AddJavascriptSource("catalog_de_origen.js", "?202212810124365");
          /* End function include_jscripts */
       }
 
@@ -915,6 +945,7 @@ namespace GeneXus.Programs {
          edtavOrigendsclarga_Jsonclick = "";
          edtavOrigendscorta_Jsonclick = "";
          edtavNextvalue_Jsonclick = "";
+         edtavNextvalue_Enabled = 1;
          Form.Headerrawhtml = "";
          Form.Background = "";
          Form.Textcolor = 0;
@@ -934,7 +965,7 @@ namespace GeneXus.Programs {
       public override void InitializeDynEvents( )
       {
          setEventMetadata("REFRESH","{handler:'Refresh',iparms:[],oparms:[]}");
-         setEventMetadata("'GUARDAR '","{handler:'E12142',iparms:[{av:'AV6NextValue',fld:'vNEXTVALUE',pic:'ZZZ9',nv:0},{av:'AV14origen',fld:'vORIGEN',pic:'',nv:null},{av:'AV8origendscorta',fld:'vORIGENDSCORTA',pic:'',nv:''},{av:'AV9origendsclarga',fld:'vORIGENDSCLARGA',pic:'',nv:''},{av:'Gx_date',fld:'vTODAY',pic:'',nv:''}],oparms:[{av:'AV14origen',fld:'vORIGEN',pic:'',nv:null}]}");
+         setEventMetadata("'GUARDAR '","{handler:'E12142',iparms:[{av:'AV6NextValue',fld:'vNEXTVALUE',pic:'ZZZ9',hsh:true,nv:0},{av:'AV14origen',fld:'vORIGEN',pic:'',nv:null},{av:'AV8origendscorta',fld:'vORIGENDSCORTA',pic:'',nv:''},{av:'AV9origendsclarga',fld:'vORIGENDSCLARGA',pic:'',nv:''},{av:'Gx_date',fld:'vTODAY',pic:'',nv:''}],oparms:[{av:'AV14origen',fld:'vORIGEN',pic:'',nv:null}]}");
          setEventMetadata("'CONSULTAR '","{handler:'E13142',iparms:[],oparms:[]}");
          setEventMetadata("'CANCELAR'","{handler:'E14142',iparms:[],oparms:[]}");
          return  ;
@@ -964,6 +995,7 @@ namespace GeneXus.Programs {
          AV14origen = new Sdtorigen(context);
          Gx_date = DateTime.MinValue;
          GXKey = "";
+         forbiddenHiddens = "";
          GX_FocusControl = "";
          Form = new GXWebForm();
          sPrefix = "";
@@ -975,6 +1007,7 @@ namespace GeneXus.Programs {
          H00143_A40000GXC1 = new long[1] ;
          AV8origendscorta = "";
          AV9origendsclarga = "";
+         hsh = "";
          H00145_A40000GXC1 = new long[1] ;
          GXt_dtime1 = (DateTime)(DateTime.MinValue);
          AV15WebSession = context.GetSession();
@@ -1001,18 +1034,20 @@ namespace GeneXus.Programs {
          /* GeneXus formulas. */
          Gx_date = DateTimeUtil.Today( context);
          context.Gx_err = 0;
+         edtavNextvalue_Enabled = 0;
       }
 
       private short nGotPars ;
       private short GxWebError ;
       private short initialized ;
       private short gxajaxcallmode ;
+      private short AV6NextValue ;
       private short wbEnd ;
       private short wbStart ;
       private short nDonePA ;
       private short gxcookieaux ;
-      private short AV6NextValue ;
       private short nGXWrapped ;
+      private int edtavNextvalue_Enabled ;
       private int idxLst ;
       private long A40000GXC1 ;
       private String gxfirstwebparm ;
@@ -1021,6 +1056,7 @@ namespace GeneXus.Programs {
       private String FormProcess ;
       private String bodyStyle ;
       private String GXKey ;
+      private String forbiddenHiddens ;
       private String GX_FocusControl ;
       private String sPrefix ;
       private String sEvt ;
@@ -1031,6 +1067,7 @@ namespace GeneXus.Programs {
       private String scmdbuf ;
       private String edtavOrigendscorta_Internalname ;
       private String edtavOrigendsclarga_Internalname ;
+      private String hsh ;
       private String sStyleString ;
       private String tblTable1_Internalname ;
       private String tblTable3_Internalname ;
