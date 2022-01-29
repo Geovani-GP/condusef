@@ -57,7 +57,7 @@ tipobienid integer  NOT NULL ,
 tipobiendsc  varchar(100)   ,
 tipobienusuario varchar(15)   ,
 tipobienfecreg date   ,
-ipobienfecultact  date   ,
+tipobienfecultact  date   ,
 CONSTRAINT pk_tipobien_tipobienid PRIMARY KEY (tipobienid)
 );
 
