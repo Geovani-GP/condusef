@@ -2,7 +2,7 @@
                File: Encoding
         Description: Encoding
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 1/28/2022 1:41:44.54
+       Generated on: 1/29/2022 0:1:20.96
        Program type: Callable routine
           Main DBMS: postgresql
 */

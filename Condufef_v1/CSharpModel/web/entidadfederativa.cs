@@ -2,7 +2,7 @@
                File: entidadfederativa
         Description: entidadfederativa
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 1/28/2022 13:7:1.63
+       Generated on: 1/29/2022 0:0:13.30
        Program type: Callable routine
           Main DBMS: postgresql
 */
@@ -1437,7 +1437,7 @@ namespace GeneXus.Programs {
          context.AddJavascriptSource("jquery.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxtimezone.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxgral.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("gxcfg.js", "?2022128137195");
+         context.AddJavascriptSource("gxcfg.js", "?2022129001386");
          if ( context.isSpaRequest( ) )
          {
             enableOutput();
@@ -1604,12 +1604,12 @@ namespace GeneXus.Programs {
 
       protected void define_styles( )
       {
-         AddStyleSheetFile("calendar-system.css", "?13551382");
-         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?13551359");
+         AddStyleSheetFile("calendar-system.css", "?11323129");
+         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?0080");
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?2022128137198");
+            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?2022129001390");
             idxLst = (int)(idxLst+1);
          }
          /* End function define_styles */
@@ -1619,7 +1619,7 @@ namespace GeneXus.Programs {
       {
          context.AddJavascriptSource("messages.spa.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxdec.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("entidadfederativa.js", "?2022128137198");
+         context.AddJavascriptSource("entidadfederativa.js", "?2022129001391");
          /* End function include_jscripts */
       }
 

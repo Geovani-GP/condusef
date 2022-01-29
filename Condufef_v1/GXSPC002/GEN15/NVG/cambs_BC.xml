@@ -133,7 +133,7 @@
 <AfterDeleteRules></AfterDeleteRules>
 <TablesToControlOnDelete>
 <Table>
-<TableId>22</TableId>
+<TableId>23</TableId>
 <TableName>producto</TableName>
 <Description>producto</Description>
 <RecordsToRead>one</RecordsToRead>

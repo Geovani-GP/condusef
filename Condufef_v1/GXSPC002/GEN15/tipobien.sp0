@@ -47,12 +47,12 @@ rule_i(0,datastore(1,'CS_RPCPGML','')).
 rule_i(0,datastore(1,'JDBC_DATASOURCE','')).
 rule_i(0,datastore(1,'USE_JDBC_DATASOURCE','0')).
 rule_i(0,datastore(1,'DS_DBMS_ADDINFO','')).
-rule_i(0,datastore(1,'USER_PASSWORD',󻢸蘇�2�5炭)).
+rule_i(0,datastore(1,'USER_PASSWORD',asdf)).
 rule_i(0,datastore(1,'USER_ID',postgres)).
 rule_i(0,datastore(1,'CS_CONNECT','First')).
 rule_i(0,datastore(1,'DBMS_PORT','5432')).
 rule_i(0,datastore(1,'CS_SERVER',localhost)).
-rule_i(0,datastore(1,'CS_DBNAME',postgres)).
+rule_i(0,datastore(1,'CS_DBNAME',condusef)).
 rule_i(0,datastore(1,'CS_FLEDSNAME','')).
 rule_i(0,datastore(1,'CS_DRVNAME','')).
 rule_i(0,datastore(1,'CS_DSNAME','')).
@@ -212,27 +212,32 @@ v_i(t,o,1,142).
  
  
  
+tbl_to_delete_i(1,[ 23,[ [ 1,23,23 ] ],c,'IPRODUCTO1',[ [ 23,23 ] ],[ 175 ],'' ]).
 tbl_to_delete_i(1,[ 11,[ [ 1,23,23 ] ],c,'IARTICULOS2',[ [ 11,23 ] ],[ 19,20,21 ],'' ]).
  
  
  
+attri_i(175,[ productoid,int,9,0,'ZZZZZZZZ9',0,productoid,'',0 ]).
 attri_i(21,[ articuloscambsid,int,9,0,'ZZZZZZZZ9',0,articuloscambsid,'',0 ]).
 attri_i(20,[ articulosproductoid,int,9,0,'ZZZZZZZZ9',0,articulosproductoid,'',0 ]).
 attri_i(19,[ almacenid,int,18,0,'ZZZZZZZZZZZZZZZZZ9',0,almacenid,'',0 ]).
-attri_i(142,[ tipobienfecultact,dtime,10,8,'99/99/9999 99:99:99',0,tipobienfecultact,'',0 ]).
-attri_i(141,[ tipobienfecreg,dtime,10,8,'99/99/9999 99:99:99',0,tipobienfecreg,'',0 ]).
+attri_i(142,[ tipobienfecultact,date,8,0,'99/99/9999',0,tipobienfecultact,'',0 ]).
+attri_i(141,[ tipobienfecreg,date,8,0,'99/99/9999',0,tipobienfecreg,'',0 ]).
 attri_i(140,[ tipobienusuario,svchar,15,0,'',0,tipobienusuario,'',0 ]).
 attri_i(139,[ tipobiendsc,svchar,100,0,'',0,tipobiendsc,'',0 ]).
 attri_i(23,[ tipobienid,int,9,0,'ZZZZZZZZ9',0,tipobienid,'',0 ]).
 attri_i('Gxremove',[ 'GxRemove',int,1,0,'9',0,'Gx Remove','',5 ]).
 attri_i('Mode',[ 'Gx_mode',char,3,0,'@!',1,'','',2 ]).
  
+table_i(23,[ producto,[ 175,23 ],producto,producto ]).
 table_i(11,[ 'ARTICULOS',[ 19,20,21,23 ],articulos,articulos ]).
 table_i(1,[ 'TIPOBIEN',[ 23,139,140,141,142 ],tipobien,tipobien ]).
  
 index_i(1,[ 'TIPOBIEN_PKEY',u,[ 23 ],'TIPOBIEN_PKEY' ]).
 index_i(11,[ 'ARTICULOS_PKEY',u,[ 19,20,21 ],'ARTICULOS_PKEY' ]).
 index_i(11,[ 'IARTICULOS2',d,[ 23 ],'Iarticulos2' ]).
+index_i(23,[ 'IPRODUCTO',u,[ 175 ],'Iproducto' ]).
+index_i(23,[ 'IPRODUCTO1',d,[ 23 ],'Iproducto1' ]).
  
  
  
@@ -400,7 +405,7 @@ html_comp_i(6,'Title','',d,[ str ]).
 html_comp_i(6,'Fill',-1,d,[ bool ]).
 html_comp_i(6,'Backcolor',rgb(255,255,255),d,[ color ]).
 html_comp_i(6,'Forecolor',rgb(0,0,0),d,[ color ]).
-html_comp_i(6,'Font',font('Open Sans Semibold',17,[]),d,[ font ]).
+html_comp_i(6,'Font',font('Microsoft Sans Serif',17,[]),d,[ font ]).
 html_comp_i(7,'Class',row,v,[ str ]).
 html_comp_i(7,'Id','',d,[ str ]).
 html_comp_i(7,'Height',measure(0,px),d,[ measure ]).
@@ -675,7 +680,7 @@ html_comp_i(33,'Width',measure(0,px),d,[ measure ]).
 html_comp_i(33,'Semanticcontent',div,d,[ str ]).
 html_comp_i(33,'Align',left,d,[ str ]).
 html_comp_i(33,'Valign',top,d,[ str ]).
-html_comp_i(34,'Colcount',19,d,[ num ]).
+html_comp_i(34,'Colcount',10,d,[ num ]).
 html_comp_i(34,'Attid',141,v,[ num ]).
 html_comp_i(34,'Class','Attribute',v,[ str ]).
 html_comp_i(34,'Controlname','Tipobienfecreg',d,[ str ]).
@@ -691,7 +696,7 @@ html_comp_i(34,'Readonly',0,v,[ bool ]).
 html_comp_i(34,'Autocomplete',-1,d,[ bool ]).
 html_comp_i(34,'Ispassword',0,d,[ bool ]).
 html_comp_i(34,'Autoresize',-1,d,[ bool ]).
-html_comp_i(34,'Gxwidth',measure(19,chr),d,[ measure ]).
+html_comp_i(34,'Gxwidth',measure(10,chr),d,[ measure ]).
 html_comp_i(34,'Gxheight',measure(1,row),d,[ measure ]).
 html_comp_i(34,'Ismultiline',0,d,[ bool ]).
 html_comp_i(34,'Fill',-1,d,[ bool ]).
@@ -701,7 +706,6 @@ html_comp_i(34,'Font',font('Verdana',12,[]),d,[ font ]).
 html_comp_i(34,'Horizontalalignment',right,d,[ str ]).
 html_comp_i(34,'Gxformat',0,d,[ num ]).
 html_comp_i(34,'Title','',d,[ str ]).
-html_comp_i(34,'Invitemsg','',v,[ str ]).
 html_comp_i(34,'Use_datepicker',-1,d,[ bool ]).
 html_comp_i(34,'Flat_datepicker',0,d,[ bool ]).
 html_comp_i(35,'Class',row,v,[ str ]).
@@ -725,7 +729,7 @@ html_comp_i(37,'Width',measure(0,px),d,[ measure ]).
 html_comp_i(37,'Semanticcontent',div,d,[ str ]).
 html_comp_i(37,'Align',left,d,[ str ]).
 html_comp_i(37,'Valign',top,d,[ str ]).
-html_comp_i(38,'Colcount',19,d,[ num ]).
+html_comp_i(38,'Colcount',10,d,[ num ]).
 html_comp_i(38,'Attid',142,v,[ num ]).
 html_comp_i(38,'Class','Attribute',v,[ str ]).
 html_comp_i(38,'Controlname','Tipobienfecultact',d,[ str ]).
@@ -741,7 +745,7 @@ html_comp_i(38,'Readonly',0,v,[ bool ]).
 html_comp_i(38,'Autocomplete',-1,d,[ bool ]).
 html_comp_i(38,'Ispassword',0,d,[ bool ]).
 html_comp_i(38,'Autoresize',-1,d,[ bool ]).
-html_comp_i(38,'Gxwidth',measure(19,chr),d,[ measure ]).
+html_comp_i(38,'Gxwidth',measure(10,chr),d,[ measure ]).
 html_comp_i(38,'Gxheight',measure(1,row),d,[ measure ]).
 html_comp_i(38,'Ismultiline',0,d,[ bool ]).
 html_comp_i(38,'Fill',-1,d,[ bool ]).
@@ -751,7 +755,6 @@ html_comp_i(38,'Font',font('Verdana',12,[]),d,[ font ]).
 html_comp_i(38,'Horizontalalignment',right,d,[ str ]).
 html_comp_i(38,'Gxformat',0,d,[ num ]).
 html_comp_i(38,'Title','',d,[ str ]).
-html_comp_i(38,'Invitemsg','',v,[ str ]).
 html_comp_i(38,'Use_datepicker',-1,d,[ bool ]).
 html_comp_i(38,'Flat_datepicker',0,d,[ bool ]).
 html_comp_i(39,'Class',row,v,[ str ]).
@@ -908,7 +911,6 @@ att_prop_i(2,141,'ATT_INITIAL_VALUE','',d).
 att_prop_i(2,141,'AttRegEx','',d).
 att_prop_i(2,141,'AttValidationFailedMsg','',d).
 att_prop_i(2,141,idDATEFORMAT,idDATEFORMAT_LONG,v).
-att_prop_i(2,141,idHOURFORMAT,idHOURFORMAT_HOURMINSEC,v).
 att_prop_i(2,141,'FullName',tipobienfecreg,v).
 att_prop_i(2,142,'HORIZONTAL_DESCRIPTION',tipobienfecultact,v).
 att_prop_i(2,142,'ExternalName',tipobienfecultact,d).
@@ -919,7 +921,6 @@ att_prop_i(2,142,'ATT_INITIAL_VALUE','',d).
 att_prop_i(2,142,'AttRegEx','',d).
 att_prop_i(2,142,'AttValidationFailedMsg','',d).
 att_prop_i(2,142,idDATEFORMAT,idDATEFORMAT_LONG,v).
-att_prop_i(2,142,idHOURFORMAT,idHOURFORMAT_HOURMINSEC,v).
 att_prop_i(2,142,'FullName',tipobienfecultact,v).
 att_prop_i(2,19,'HORIZONTAL_DESCRIPTION',almacenid,v).
 att_prop_i(2,19,'ExternalName',almacenid,d).
@@ -951,12 +952,26 @@ att_prop_i(2,21,'ATT_INITIAL_VALUE','',d).
 att_prop_i(2,21,'AttRegEx','',d).
 att_prop_i(2,21,'AttValidationFailedMsg','',d).
 att_prop_i(2,21,'FullName',articuloscambsid,v).
+att_prop_i(2,175,'HORIZONTAL_DESCRIPTION',productoid,d).
+att_prop_i(2,175,'ExternalName',productoid,d).
+att_prop_i(2,175,'ExternalNamespace','Condufef_v1',d).
+att_prop_i(2,175,'EmptyAsNull','Yes',d).
+att_prop_i(2,175,idBasedOn,'',d).
+att_prop_i(2,175,'AUTONUMBER','0',d).
+att_prop_i(2,175,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,175,'AttRegEx','',d).
+att_prop_i(2,175,'AttValidationFailedMsg','',d).
+att_prop_i(2,175,'FullName',productoid,v).
  
+tbl_prop_i(2,23,'AllDirSuper',[ [ 1,[ 23 ] ] ],v).
+tbl_prop_i(2,23,'DirSuperNull',[ [ 1,[ 23 ] ] ],v).
+tbl_prop_i(2,23,'DirSuper',[ [ 1,[ 23 ] ] ],v).
  
 tbl_att_prop_i(2,1,23,'AllowNulls',n).
 tbl_att_prop_i(2,11,19,'AllowNulls',n).
 tbl_att_prop_i(2,11,20,'AllowNulls',n).
 tbl_att_prop_i(2,11,21,'AllowNulls',n).
+tbl_att_prop_i(2,23,175,'AllowNulls',n).
  
  
  

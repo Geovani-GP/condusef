@@ -2,4 +2,5 @@
 <Dependencies type="guid" guid="e537d5e3-0d04-efde-d16a-f9ee8a80a963">
   <Table name="tipobien" />
   <Table name="articulos" />
+  <Table name="producto" />
 </Dependencies>

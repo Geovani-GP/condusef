@@ -1,21 +1,21 @@
 spec_i([ trn,9,producto,producto_BC,[],spa,'10_3_15-115824' ]).
  
-struct_i(22,0,[],[]).
+struct_i(23,0,[],[]).
  
-level_i(22,[ 22,[ [ 22,many ],[ 14,one ] ],[ 175,25 ],[],[],[],[ 175,25 ],'IPRODUCTO',[ 22,[] ],[] ]).
+level_i(23,[ 23,[ [ 23,many ],[ 14,one ],[ 1,one ] ],[ 175 ],[],[],[],[ 175 ],'IPRODUCTO',[ 23,[] ],[] ]).
  
-tw_i(22,[ [ 14,[ [ 22,25,25 ] ] ] ]).
+tw_i(23,[ [ 14,[ [ 23,25,25 ] ] ],[ 1,[ [ 23,23,23 ] ] ] ]).
  
-lwi_i(22,[ [] ]).
- 
- 
+lwi_i(23,[ [] ]).
  
  
-ta_i(22,[ [ [ 22,175 ],[ 22,88 ],[ 22,89 ],[ 22,90 ],[ 22,87 ],[ 22,91 ],[ 22,92 ],[ 22,93 ],[ 22,25 ] ] ]).
  
-las_i(22,[ [ 175,25,88,89,90,87,91,92,93 ] ]).
  
-lac_i(22,[ [ 175,25,88,89,90,87,91,92,93 ] ]).
+ta_i(23,[ [ [ 23,175 ],[ 23,87 ],[ 23,88 ],[ 23,89 ],[ 23,90 ],[ 23,91 ],[ 23,92 ],[ 23,93 ],[ 23,25 ],[ 23,23 ] ] ]).
+ 
+las_i(23,[ [ 175,25,87,88,89,90,91,92,93,23 ] ]).
+ 
+lac_i(23,[ [ 175,25,87,88,89,90,91,92,93,23 ] ]).
  
  
  
@@ -41,12 +41,12 @@ rule_i(0,datastore(1,'CS_RPCPGML','')).
 rule_i(0,datastore(1,'JDBC_DATASOURCE','')).
 rule_i(0,datastore(1,'USE_JDBC_DATASOURCE','0')).
 rule_i(0,datastore(1,'DS_DBMS_ADDINFO','')).
-rule_i(0,datastore(1,'USER_PASSWORD',󻢸蘇�2�5炭)).
+rule_i(0,datastore(1,'USER_PASSWORD',asdf)).
 rule_i(0,datastore(1,'USER_ID',postgres)).
 rule_i(0,datastore(1,'CS_CONNECT','First')).
 rule_i(0,datastore(1,'DBMS_PORT','5432')).
 rule_i(0,datastore(1,'CS_SERVER',localhost)).
-rule_i(0,datastore(1,'CS_DBNAME',postgres)).
+rule_i(0,datastore(1,'CS_DBNAME',condusef)).
 rule_i(0,datastore(1,'CS_FLEDSNAME','')).
 rule_i(0,datastore(1,'CS_DRVNAME','')).
 rule_i(0,datastore(1,'CS_DSNAME','')).
@@ -155,6 +155,8 @@ rule_i(0,prop('ObjDesc',producto)).
 rule_i(0,prop('ObjName',producto)).
 rule_i(0,rule([ a(22,[ 'Dlt','"Eliminar"','' ]) ],[],[],[])).
 rule_i(0,maingen(15)).
+rule_i(23,rule([ a(18,[ [ 23 ] ]) ],[],[ insert,update,delete ],[ 23 ])).
+rule_i(23,rule([ a(18,[ [ 25 ] ]) ],[],[ insert,update,delete ],[ 25 ])).
 rule_i(0,p(0,0,fv,19,[ intname,'CAMBS' ])).
 rule_i(0,p(0,0,fv,19,[ table,14 ])).
 rule_i(0,p(0,15,fv,19,[])).
@@ -171,45 +173,69 @@ rule_i(0,file(14,'CAMBS',[ 25,83,84,85,86 ])).
 rule_i(0,loc([ 14 ],'CAMBS','','LAN')).
 rule_i(0,index(14,'CAMBS_PKEY',u,[ 25 ])).
 rule_i(0,loc([ 14,'CAMBS_PKEY' ],cambs_pkey,'','LAN')).
-rule_i(22,rule([ a(19,[ [ 25 ],msg([ t('"No existe ''cambs''."',3) ],[ t('ForeignKeyNotFound',3) ]) ]) ],[],[ insert,update,delete ],[ 25 ])).
+rule_i(0,p(0,0,fv,17,[ intname,'TIPOBIEN' ])).
+rule_i(0,p(0,0,fv,17,[ table,1 ])).
+rule_i(0,p(0,15,fv,17,[])).
+rule_i(0,p(0,15,fv,17,[ 'NAME',tipobien ])).
+rule_i(0,p(0,15,fv,17,[ 'LOC','' ])).
+rule_i(0,p(0,15,fv,17,[ 'SCHEMA',public ])).
+rule_i(0,p(0,15,fv,17,[ 'EXTNAM','YES' ])).
+rule_i(0,p(0,15,fvix,[ 17,18 ],[])).
+rule_i(0,p(0,15,fvix,[ 17,18 ],[ 'NAME',tipobien_pkey ])).
+rule_i(0,p(0,15,fvix,[ 17,18 ],[ 'LOC','' ])).
+rule_i(0,p(0,15,fvix,[ 17,18 ],[ 'SCHEMA',public ])).
+rule_i(0,p(0,15,fvix,[ 17,18 ],[ 'EXTNAM','YES' ])).
+rule_i(0,file(1,'TIPOBIEN',[ 23,139,140,141,142 ])).
+rule_i(0,loc([ 1 ],'TIPOBIEN','','LAN')).
+rule_i(0,index(1,'TIPOBIEN_PKEY',u,[ 23 ])).
+rule_i(0,loc([ 1,'TIPOBIEN_PKEY' ],tipobien_pkey,'','LAN')).
+rule_i(23,rule([ a(19,[ [ 25 ],msg([ t('"No existe ''cambs''."',3) ],[ t('ForeignKeyNotFound',3) ]) ]) ],[],[ insert,update,delete ],[ 25 ])).
+rule_i(23,rule([ a(19,[ [ 23 ],msg([ t('"No existe ''tipobien''."',3) ],[ t('ForeignKeyNotFound',3) ]) ]) ],[],[ insert,update,delete ],[ 23 ])).
  
-a_i(1,22,t,22,[],[ [ [ [],175,175 ],[ [],25,25 ] ],'IPRODUCTO',[] ]).
-a_i(2,22,r,14,[],[ [ [ 22,25,25 ] ],'CAMBS_PKEY',[] ]).
+a_i(1,23,t,23,[],[ [ [ [],175,175 ] ],'IPRODUCTO',[] ]).
+a_i(2,23,r,14,[],[ [ [ 23,25,25 ] ],'CAMBS_PKEY',[] ]).
+a_i(3,23,r,1,[],[ [ [ 23,23,23 ] ],'TIPOBIEN_PKEY',[] ]).
  
 v_i(t,i,1,175).
-v_i(t,i,1,25).
+v_i(t,o,1,87).
 v_i(t,o,1,88).
 v_i(t,o,1,89).
 v_i(t,o,1,90).
-v_i(t,o,1,87).
 v_i(t,o,1,91).
 v_i(t,o,1,92).
 v_i(t,o,1,93).
+v_i(t,o,1,25).
+v_i(t,o,1,23).
 v_i(r,i,2,25).
 v_i(r,o,2,[]).
+v_i(r,i,3,23).
+v_i(r,o,3,[]).
  
  
  
  
  
  
+attri_i(23,[ tipobienid,int,9,0,'ZZZZZZZZ9',0,tipobienid,'',0 ]).
 attri_i(93,[ productofecultact,dtime,10,8,'99/99/9999 99:99:99',0,productofecultact,'',0 ]).
 attri_i(92,[ productofecreg,dtime,10,8,'99/99/9999 99:99:99',0,productofecreg,'',0 ]).
 attri_i(91,[ productousuario,svchar,15,0,'',0,productousuario,'',0 ]).
-attri_i(87,[ productodsc,svchar,100,0,'',0,productodsc,'',0 ]).
 attri_i(90,[ categoriaid,int,18,0,'ZZZZZZZZZZZZZZZZZ9',0,categoriaid,'',0 ]).
 attri_i(89,[ marcaid,int,18,0,'ZZZZZZZZZZZZZZZZZ9',0,marcaid,'',0 ]).
 attri_i(88,[ modeloid,int,18,0,'ZZZZZZZZZZZZZZZZZ9',0,modeloid,'',0 ]).
+attri_i(87,[ productodsc,svchar,100,0,'',0,productodsc,'',0 ]).
 attri_i(25,[ cambsid,int,9,0,'ZZZZZZZZ9',0,cambsid,'',0 ]).
-attri_i(175,[ productoid,int,4,0,'ZZZ9',0,productoid,'',0 ]).
+attri_i(175,[ productoid,int,9,0,'ZZZZZZZZ9',0,productoid,'',0 ]).
 attri_i('Gxremove',[ 'GxRemove',int,1,0,'9',0,'Gx Remove','',5 ]).
 attri_i('Mode',[ 'Gx_mode',char,3,0,'@!',1,'','',2 ]).
  
+table_i(1,[ 'TIPOBIEN',[ 23 ],tipobien,tipobien ]).
 table_i(14,[ 'CAMBS',[ 25 ],cambs,cambs ]).
-table_i(22,[ producto,[ 175,25,88,89,90,87,91,92,93 ],producto,producto ]).
+table_i(23,[ producto,[ 175,25,87,88,89,90,91,92,93,23 ],producto,producto ]).
  
-index_i(22,[ 'IPRODUCTO',u,[ 175,25 ],'Iproducto' ]).
+index_i(23,[ 'IPRODUCTO',u,[ 175 ],'Iproducto' ]).
 index_i(14,[ 'CAMBS_PKEY',u,[ 25 ],'CAMBS_PKEY' ]).
+index_i(1,[ 'TIPOBIEN_PKEY',u,[ 23 ],'TIPOBIEN_PKEY' ]).
  
  
  
@@ -222,15 +248,21 @@ index_i(14,[ 'CAMBS_PKEY',u,[ 25 ],'CAMBS_PKEY' ]).
  
  
  
-upd_i(22,22,i,[ [ 175,88,89,90,87,91,92,93,25 ],[],'IPRODUCTO',[ [ [],175,175 ],[ [],25,25 ] ] ]).
-upd_i(22,22,u,[ [ 88,89,90,87,91,92,93 ],[],'IPRODUCTO',[] ]).
-upd_i(22,22,d,[ [],[],'IPRODUCTO',[] ]).
+upd_i(23,23,i,[ [ 175,87,88,89,90,91,92,93,25,23 ],[],'IPRODUCTO',[ [ [],175,175 ] ] ]).
+upd_i(23,23,u,[ [ 87,88,89,90,91,92,93,25,23 ],[],'IPRODUCTO',[] ]).
+upd_i(23,23,d,[ [],[],'IPRODUCTO',[] ]).
  
  
  
  
  
  
+map_i(1,i,'TIPOBIEN_PKEY',[ 'TIPOBIEN_PKEY' ]).
+map_i(1,a,142,[ tipobienfecultact ]).
+map_i(1,a,141,[ tipobienfecreg ]).
+map_i(1,a,140,[ tipobienusuario ]).
+map_i(1,a,139,[ tipobiendsc ]).
+map_i(1,a,23,[ tipobienid ]).
 map_i(14,i,'CAMBS_PKEY',[ 'CAMBS_PKEY' ]).
 map_i(14,a,86,[ cambsfecultact ]).
 map_i(14,a,85,[ cambsfecreg ]).
@@ -301,6 +333,16 @@ att_prop_i(2,25,'ATT_INITIAL_VALUE','',d).
 att_prop_i(2,25,'AttRegEx','',d).
 att_prop_i(2,25,'AttValidationFailedMsg','',d).
 att_prop_i(2,25,'FullName',cambsid,v).
+att_prop_i(2,87,'HORIZONTAL_DESCRIPTION',productodsc,v).
+att_prop_i(2,87,'ExternalName',productodsc,d).
+att_prop_i(2,87,'ExternalNamespace','Condufef_v1',d).
+att_prop_i(2,87,'EmptyAsNull','Yes',d).
+att_prop_i(2,87,idBasedOn,'',d).
+att_prop_i(2,87,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,87,'DB_NLS_SUPPORT','No',d).
+att_prop_i(2,87,'AttRegEx','',d).
+att_prop_i(2,87,'AttValidationFailedMsg','',d).
+att_prop_i(2,87,'FullName',productodsc,v).
 att_prop_i(2,88,'HORIZONTAL_DESCRIPTION',modeloid,v).
 att_prop_i(2,88,'ExternalName',modeloid,d).
 att_prop_i(2,88,'ExternalNamespace','Condufef_v1',d).
@@ -331,16 +373,6 @@ att_prop_i(2,90,'ATT_INITIAL_VALUE','',d).
 att_prop_i(2,90,'AttRegEx','',d).
 att_prop_i(2,90,'AttValidationFailedMsg','',d).
 att_prop_i(2,90,'FullName',categoriaid,v).
-att_prop_i(2,87,'HORIZONTAL_DESCRIPTION',productodsc,v).
-att_prop_i(2,87,'ExternalName',productodsc,d).
-att_prop_i(2,87,'ExternalNamespace','Condufef_v1',d).
-att_prop_i(2,87,'EmptyAsNull','Yes',d).
-att_prop_i(2,87,idBasedOn,'',d).
-att_prop_i(2,87,'ATT_INITIAL_VALUE','',d).
-att_prop_i(2,87,'DB_NLS_SUPPORT','No',d).
-att_prop_i(2,87,'AttRegEx','',d).
-att_prop_i(2,87,'AttValidationFailedMsg','',d).
-att_prop_i(2,87,'FullName',productodsc,v).
 att_prop_i(2,91,'HORIZONTAL_DESCRIPTION',productousuario,v).
 att_prop_i(2,91,'ExternalName',productousuario,d).
 att_prop_i(2,91,'ExternalNamespace','Condufef_v1',d).
@@ -373,21 +405,32 @@ att_prop_i(2,93,'AttValidationFailedMsg','',d).
 att_prop_i(2,93,idDATEFORMAT,idDATEFORMAT_LONG,v).
 att_prop_i(2,93,idHOURFORMAT,idHOURFORMAT_HOURMINSEC,v).
 att_prop_i(2,93,'FullName',productofecultact,v).
+att_prop_i(2,23,'HORIZONTAL_DESCRIPTION',tipobienid,v).
+att_prop_i(2,23,'ExternalName',tipobienid,d).
+att_prop_i(2,23,'ExternalNamespace','Condufef_v1',d).
+att_prop_i(2,23,'EmptyAsNull','Yes',d).
+att_prop_i(2,23,idBasedOn,'',d).
+att_prop_i(2,23,'AUTONUMBER','0',d).
+att_prop_i(2,23,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,23,'AttValidationFailedMsg','',d).
+att_prop_i(2,23,'FullName',tipobienid,v).
  
-tbl_prop_i(2,22,'AllDirSuper',[ [ 14,[ 25 ] ] ],v).
-tbl_prop_i(2,22,'DirSuper',[ [ 14,[ 25 ] ] ],v).
+tbl_prop_i(2,23,'AllDirSuper',[ [ 1,[ 23 ] ],[ 14,[ 25 ] ] ],v).
+tbl_prop_i(2,23,'DirSuperNull',[ [ 1,[ 23 ] ],[ 14,[ 25 ] ] ],v).
+tbl_prop_i(2,23,'DirSuper',[ [ 1,[ 23 ] ],[ 14,[ 25 ] ] ],v).
  
-tbl_att_prop_i(2,22,175,'AllowNulls',n).
-tbl_att_prop_i(2,22,25,'AllowNulls',n).
+tbl_att_prop_i(2,23,175,'AllowNulls',n).
 tbl_att_prop_i(2,14,25,'AllowNulls',n).
+tbl_att_prop_i(2,1,23,'AllowNulls',n).
  
  
-i_tbl_best_trn(22,[ 9,1,producto,producto,[] ]).
+i_tbl_best_trn(23,[ 9,1,producto,producto,[] ]).
 i_tbl_best_trn(14,[ 14,1,cambs,cambs,[] ]).
+i_tbl_best_trn(1,[ 1,1,tipobien,tipobien,[] ]).
  
  
  
-trn_level_i(22,[ [ 175,25,88,89,90,87,91,92,93 ],producto,producto,producto,'',88 ]).
+trn_level_i(23,[ [ 175,25,87,88,89,90,91,92,93,23 ],producto,producto,producto,'',87 ]).
  
 struct_dt_i([ 0,9,0 ],name,producto).
 struct_dt_i([ 0,9,0 ],namespace,'Condufef_v1').
@@ -396,8 +439,8 @@ struct_dt_i([ 0,9,0 ],'ObjName',producto).
 struct_dt_i([ 0,9,0 ],'ObjDesc',producto).
 struct_dt_i([ 0,9,0 ],'ExternalName',producto).
 struct_dt_i([ 0,9,0 ],'ExternalNamespace','Condufef_v1').
-struct_dt_i([ 0,9,0 ],key,[ 175,25 ]).
-struct_dt_i([ 0,9,0 ],lvl,22).
+struct_dt_i([ 0,9,0 ],key,[ 175 ]).
+struct_dt_i([ 0,9,0 ],lvl,23).
 struct_dt_i([ 26,1,0 ],name,'Messages').
 struct_dt_i([ 26,1,0 ],namespace,'Genexus').
 struct_dt_i([ 26,1,0 ],'ObjName','Messages').
@@ -414,11 +457,11 @@ struct_dt_i([ 26,1,1 ],fullname,'Messages.Message').
  
 struct_dt_elem_i([ 0,9,0 ],1,name,'Productoid').
 struct_dt_elem_i([ 0,9,0 ],1,camelname,productoid).
-struct_dt_elem_i([ 0,9,0 ],1,length,4).
+struct_dt_elem_i([ 0,9,0 ],1,length,9).
 struct_dt_elem_i([ 0,9,0 ],1,decimals,0).
 struct_dt_elem_i([ 0,9,0 ],1,sign,0).
-struct_dt_elem_i([ 0,9,0 ],1,type,[ 4,4,0 ]).
-struct_dt_elem_i([ 0,9,0 ],1,pic,'ZZZ9').
+struct_dt_elem_i([ 0,9,0 ],1,type,[ 4,9,0 ]).
+struct_dt_elem_i([ 0,9,0 ],1,pic,'ZZZZZZZZ9').
 struct_dt_elem_i([ 0,9,0 ],1,collection,'False').
 struct_dt_elem_i([ 0,9,0 ],1,attributeid,'175').
 struct_dt_elem_i([ 0,9,0 ],2,name,'Cambsid').
@@ -430,41 +473,41 @@ struct_dt_elem_i([ 0,9,0 ],2,type,[ 4,9,0 ]).
 struct_dt_elem_i([ 0,9,0 ],2,pic,'ZZZZZZZZ9').
 struct_dt_elem_i([ 0,9,0 ],2,collection,'False').
 struct_dt_elem_i([ 0,9,0 ],2,attributeid,'25').
-struct_dt_elem_i([ 0,9,0 ],3,name,'Modeloid').
-struct_dt_elem_i([ 0,9,0 ],3,camelname,modeloid).
-struct_dt_elem_i([ 0,9,0 ],3,length,18).
+struct_dt_elem_i([ 0,9,0 ],3,name,'Productodsc').
+struct_dt_elem_i([ 0,9,0 ],3,camelname,productodsc).
+struct_dt_elem_i([ 0,9,0 ],3,length,100).
 struct_dt_elem_i([ 0,9,0 ],3,decimals,0).
-struct_dt_elem_i([ 0,9,0 ],3,sign,0).
-struct_dt_elem_i([ 0,9,0 ],3,type,[ 4,18,0 ]).
-struct_dt_elem_i([ 0,9,0 ],3,pic,'ZZZZZZZZZZZZZZZZZ9').
+struct_dt_elem_i([ 0,9,0 ],3,type,[ 13,100,0 ]).
+struct_dt_elem_i([ 0,9,0 ],3,pic,'').
 struct_dt_elem_i([ 0,9,0 ],3,collection,'False').
-struct_dt_elem_i([ 0,9,0 ],3,attributeid,'88').
-struct_dt_elem_i([ 0,9,0 ],4,name,'Marcaid').
-struct_dt_elem_i([ 0,9,0 ],4,camelname,marcaid).
+struct_dt_elem_i([ 0,9,0 ],3,attributeid,'87').
+struct_dt_elem_i([ 0,9,0 ],4,name,'Modeloid').
+struct_dt_elem_i([ 0,9,0 ],4,camelname,modeloid).
 struct_dt_elem_i([ 0,9,0 ],4,length,18).
 struct_dt_elem_i([ 0,9,0 ],4,decimals,0).
 struct_dt_elem_i([ 0,9,0 ],4,sign,0).
 struct_dt_elem_i([ 0,9,0 ],4,type,[ 4,18,0 ]).
 struct_dt_elem_i([ 0,9,0 ],4,pic,'ZZZZZZZZZZZZZZZZZ9').
 struct_dt_elem_i([ 0,9,0 ],4,collection,'False').
-struct_dt_elem_i([ 0,9,0 ],4,attributeid,'89').
-struct_dt_elem_i([ 0,9,0 ],5,name,'Categoriaid').
-struct_dt_elem_i([ 0,9,0 ],5,camelname,categoriaid).
+struct_dt_elem_i([ 0,9,0 ],4,attributeid,'88').
+struct_dt_elem_i([ 0,9,0 ],5,name,'Marcaid').
+struct_dt_elem_i([ 0,9,0 ],5,camelname,marcaid).
 struct_dt_elem_i([ 0,9,0 ],5,length,18).
 struct_dt_elem_i([ 0,9,0 ],5,decimals,0).
 struct_dt_elem_i([ 0,9,0 ],5,sign,0).
 struct_dt_elem_i([ 0,9,0 ],5,type,[ 4,18,0 ]).
 struct_dt_elem_i([ 0,9,0 ],5,pic,'ZZZZZZZZZZZZZZZZZ9').
 struct_dt_elem_i([ 0,9,0 ],5,collection,'False').
-struct_dt_elem_i([ 0,9,0 ],5,attributeid,'90').
-struct_dt_elem_i([ 0,9,0 ],6,name,'Productodsc').
-struct_dt_elem_i([ 0,9,0 ],6,camelname,productodsc).
-struct_dt_elem_i([ 0,9,0 ],6,length,100).
+struct_dt_elem_i([ 0,9,0 ],5,attributeid,'89').
+struct_dt_elem_i([ 0,9,0 ],6,name,'Categoriaid').
+struct_dt_elem_i([ 0,9,0 ],6,camelname,categoriaid).
+struct_dt_elem_i([ 0,9,0 ],6,length,18).
 struct_dt_elem_i([ 0,9,0 ],6,decimals,0).
-struct_dt_elem_i([ 0,9,0 ],6,type,[ 13,100,0 ]).
-struct_dt_elem_i([ 0,9,0 ],6,pic,'').
+struct_dt_elem_i([ 0,9,0 ],6,sign,0).
+struct_dt_elem_i([ 0,9,0 ],6,type,[ 4,18,0 ]).
+struct_dt_elem_i([ 0,9,0 ],6,pic,'ZZZZZZZZZZZZZZZZZ9').
 struct_dt_elem_i([ 0,9,0 ],6,collection,'False').
-struct_dt_elem_i([ 0,9,0 ],6,attributeid,'87').
+struct_dt_elem_i([ 0,9,0 ],6,attributeid,'90').
 struct_dt_elem_i([ 0,9,0 ],7,name,'Productousuario').
 struct_dt_elem_i([ 0,9,0 ],7,camelname,productousuario).
 struct_dt_elem_i([ 0,9,0 ],7,length,15).
@@ -489,6 +532,15 @@ struct_dt_elem_i([ 0,9,0 ],9,type,[ 12,10,8 ]).
 struct_dt_elem_i([ 0,9,0 ],9,pic,'99/99/9999 99:99:99').
 struct_dt_elem_i([ 0,9,0 ],9,collection,'False').
 struct_dt_elem_i([ 0,9,0 ],9,attributeid,'93').
+struct_dt_elem_i([ 0,9,0 ],10,name,'Tipobienid').
+struct_dt_elem_i([ 0,9,0 ],10,camelname,tipobienid).
+struct_dt_elem_i([ 0,9,0 ],10,length,9).
+struct_dt_elem_i([ 0,9,0 ],10,decimals,0).
+struct_dt_elem_i([ 0,9,0 ],10,sign,0).
+struct_dt_elem_i([ 0,9,0 ],10,type,[ 4,9,0 ]).
+struct_dt_elem_i([ 0,9,0 ],10,pic,'ZZZZZZZZ9').
+struct_dt_elem_i([ 0,9,0 ],10,collection,'False').
+struct_dt_elem_i([ 0,9,0 ],10,attributeid,'23').
 struct_dt_elem_i([ 26,1,1 ],1,name,'Id').
 struct_dt_elem_i([ 26,1,1 ],1,camelname,'Id').
 struct_dt_elem_i([ 26,1,1 ],1,length,128).

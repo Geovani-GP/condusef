@@ -2,7 +2,7 @@
                File: Catalog_De_TipoBien
         Description: Catalog_De_Tipo Bien
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 1/28/2022 1:41:3.97
+       Generated on: 1/29/2022 1:3:33.41
        Program type: Callable routine
           Main DBMS: postgresql
 */
@@ -215,7 +215,7 @@ namespace GeneXus.Programs {
          context.AddJavascriptSource("jquery.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxtimezone.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxgral.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("gxcfg.js", "?2022128141398");
+         context.AddJavascriptSource("gxcfg.js", "?2022129133342");
          if ( context.isSpaRequest( ) )
          {
             enableOutput();
@@ -267,10 +267,6 @@ namespace GeneXus.Programs {
          GxWebStd.gx_hidden_field( context, "GXC1", StringUtil.LTrim( StringUtil.NToC( (decimal)(A40000GXC1), 9, 0, ",", "")));
          GxWebStd.gx_hidden_field( context, "gxhash_vNEXTVALUE", GetSecureSignedToken( "", context.localUtil.Format( (decimal)(AV8NextValue), "ZZZ9")));
          GXKey = Crypto.Decrypt64( context.GetCookie( "GX_SESSION_ID"), Crypto.GetServerKey( ));
-         forbiddenHiddens = "hsh" + "Catalog_De_TipoBien";
-         forbiddenHiddens = forbiddenHiddens + context.localUtil.Format( (decimal)(AV8NextValue), "ZZZ9");
-         GxWebStd.gx_hidden_field( context, "hsh", GXUtil.GetEncryptedHash( forbiddenHiddens, GXKey));
-         GXUtil.WriteLog("catalog_de_tipobien:[SendSecurityCheck value for]"+"NextValue:"+context.localUtil.Format( (decimal)(AV8NextValue), "ZZZ9"));
       }
 
       public override void RenderHtmlCloseForm( )
@@ -623,24 +619,6 @@ namespace GeneXus.Programs {
             /* Read subfile selected row values. */
             /* Read hidden variables. */
             GXKey = Crypto.Decrypt64( context.GetCookie( "GX_SESSION_ID"), Crypto.GetServerKey( ));
-            forbiddenHiddens = "hsh" + "Catalog_De_TipoBien";
-            AV8NextValue = (short)(context.localUtil.CToN( cgiGet( edtavNextvalue_Internalname), ",", "."));
-            context.httpAjaxContext.ajax_rsp_assign_attri("", false, "AV8NextValue", StringUtil.LTrim( StringUtil.Str( (decimal)(AV8NextValue), 4, 0)));
-            context.httpAjaxContext.ajax_rsp_assign_attri("", false, "gxhash_vNEXTVALUE", GetSecureSignedToken( "", context.localUtil.Format( (decimal)(AV8NextValue), "ZZZ9")));
-            forbiddenHiddens = forbiddenHiddens + context.localUtil.Format( (decimal)(AV8NextValue), "ZZZ9");
-            hsh = cgiGet( "hsh");
-            if ( ! GXUtil.CheckEncryptedHash( forbiddenHiddens, hsh, GXKey) )
-            {
-               GXUtil.WriteLog("catalog_de_tipobien:[SecurityCheckFailed value for]"+"NextValue:"+context.localUtil.Format( (decimal)(AV8NextValue), "ZZZ9"));
-               GxWebError = 1;
-               context.HttpContext.Response.StatusDescription = 403.ToString();
-               context.HttpContext.Response.StatusCode = 403;
-               context.WriteHtmlText( "<title>403 Forbidden</title>") ;
-               context.WriteHtmlText( "<h1>403 Forbidden</h1>") ;
-               context.WriteHtmlText( "<p /><hr />") ;
-               GXUtil.WriteLog("send_http_error_code " + 403.ToString());
-               return  ;
-            }
          }
          else
          {
@@ -677,8 +655,7 @@ namespace GeneXus.Programs {
       protected void E122S2( )
       {
          /* 'Guardar ' Routine */
-         AV13tipobien.gxTpr_Tipobienid = AV8NextValue;
-         AV13tipobien.gxTpr_Tipobiendsc = AV11tipobiendsc;
+         AV13tipobien.gxTpr_Tipobienid = 2;
          AV13tipobien.Save();
          if ( AV13tipobien.Success() )
          {
@@ -884,11 +861,11 @@ namespace GeneXus.Programs {
 
       protected void define_styles( )
       {
-         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?1401612");
+         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?0080");
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?2022128141414");
+            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?2022129133352");
             idxLst = (int)(idxLst+1);
          }
          /* End function define_styles */
@@ -897,7 +874,7 @@ namespace GeneXus.Programs {
       protected void include_jscripts( )
       {
          context.AddJavascriptSource("messages.spa.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("catalog_de_tipobien.js", "?2022128141414");
+         context.AddJavascriptSource("catalog_de_tipobien.js", "?2022129133352");
          /* End function include_jscripts */
       }
 
@@ -943,7 +920,7 @@ namespace GeneXus.Programs {
       public override void InitializeDynEvents( )
       {
          setEventMetadata("REFRESH","{handler:'Refresh',iparms:[],oparms:[]}");
-         setEventMetadata("'GUARDAR '","{handler:'E122S2',iparms:[{av:'AV8NextValue',fld:'vNEXTVALUE',pic:'ZZZ9',hsh:true,nv:0},{av:'AV13tipobien',fld:'vTIPOBIEN',pic:'',nv:null},{av:'AV11tipobiendsc',fld:'vTIPOBIENDSC',pic:'',nv:''}],oparms:[{av:'AV13tipobien',fld:'vTIPOBIEN',pic:'',nv:null}]}");
+         setEventMetadata("'GUARDAR '","{handler:'E122S2',iparms:[{av:'AV13tipobien',fld:'vTIPOBIEN',pic:'',nv:null}],oparms:[{av:'AV13tipobien',fld:'vTIPOBIEN',pic:'',nv:null}]}");
          setEventMetadata("'CONSULTAR '","{handler:'E132S2',iparms:[],oparms:[]}");
          setEventMetadata("'CANCELAR'","{handler:'E142S2',iparms:[],oparms:[]}");
          return  ;
@@ -972,7 +949,6 @@ namespace GeneXus.Programs {
          bodyStyle = "";
          AV13tipobien = new Sdttipobien(context);
          GXKey = "";
-         forbiddenHiddens = "";
          GX_FocusControl = "";
          Form = new GXWebForm();
          sPrefix = "";
@@ -983,7 +959,6 @@ namespace GeneXus.Programs {
          scmdbuf = "";
          H002S3_A40000GXC1 = new int[1] ;
          AV11tipobiendsc = "";
-         hsh = "";
          H002S5_A40000GXC1 = new int[1] ;
          sStyleString = "";
          TempTags = "";
@@ -1028,7 +1003,6 @@ namespace GeneXus.Programs {
       private String FormProcess ;
       private String bodyStyle ;
       private String GXKey ;
-      private String forbiddenHiddens ;
       private String GX_FocusControl ;
       private String sPrefix ;
       private String sEvt ;
@@ -1038,7 +1012,6 @@ namespace GeneXus.Programs {
       private String edtavNextvalue_Internalname ;
       private String scmdbuf ;
       private String edtavTipobiendsc_Internalname ;
-      private String hsh ;
       private String sStyleString ;
       private String tblTable1_Internalname ;
       private String tblTable3_Internalname ;

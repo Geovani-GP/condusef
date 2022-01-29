@@ -2,7 +2,7 @@
                File: type_Sdttipobien
         Description: tipobien
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 1/28/2022 1:40:19.11
+       Generated on: 1/29/2022 1:0:43.60
        Program type: Callable routine
           Main DBMS: postgresql
 */
@@ -46,13 +46,13 @@ namespace GeneXus.Programs {
          /* Constructor for serialization */
          gxTv_Sdttipobien_Tipobiendsc = "";
          gxTv_Sdttipobien_Tipobienusuario = "";
-         gxTv_Sdttipobien_Tipobienfecreg = (DateTime)(DateTime.MinValue);
-         gxTv_Sdttipobien_Tipobienfecultact = (DateTime)(DateTime.MinValue);
+         gxTv_Sdttipobien_Tipobienfecreg = DateTime.MinValue;
+         gxTv_Sdttipobien_Tipobienfecultact = DateTime.MinValue;
          gxTv_Sdttipobien_Mode = "";
          gxTv_Sdttipobien_Tipobiendsc_Z = "";
          gxTv_Sdttipobien_Tipobienusuario_Z = "";
-         gxTv_Sdttipobien_Tipobienfecreg_Z = (DateTime)(DateTime.MinValue);
-         gxTv_Sdttipobien_Tipobienfecultact_Z = (DateTime)(DateTime.MinValue);
+         gxTv_Sdttipobien_Tipobienfecreg_Z = DateTime.MinValue;
+         gxTv_Sdttipobien_Tipobienfecultact_Z = DateTime.MinValue;
       }
 
       public Sdttipobien( IGxContext context )
@@ -231,13 +231,13 @@ namespace GeneXus.Programs {
                }
                if ( StringUtil.StrCmp2( oReader.LocalName, "tipobienfecreg") )
                {
-                  if ( ( StringUtil.StrCmp(oReader.Value, "0000-00-00T00:00:00") == 0 ) || ( oReader.ExistsAttribute("xsi:nil") == 1 ) )
+                  if ( ( StringUtil.StrCmp(oReader.Value, "0000-00-00") == 0 ) || ( oReader.ExistsAttribute("xsi:nil") == 1 ) )
                   {
-                     gxTv_Sdttipobien_Tipobienfecreg = (DateTime)(DateTime.MinValue);
+                     gxTv_Sdttipobien_Tipobienfecreg = DateTime.MinValue;
                   }
                   else
                   {
-                     gxTv_Sdttipobien_Tipobienfecreg = context.localUtil.YMDHMSToT( (short)(NumberUtil.Val( StringUtil.Substring( oReader.Value, 1, 4), ".")), (short)(NumberUtil.Val( StringUtil.Substring( oReader.Value, 6, 2), ".")), (short)(NumberUtil.Val( StringUtil.Substring( oReader.Value, 9, 2), ".")), (short)(NumberUtil.Val( StringUtil.Substring( oReader.Value, 12, 2), ".")), (short)(NumberUtil.Val( StringUtil.Substring( oReader.Value, 15, 2), ".")), (short)(NumberUtil.Val( StringUtil.Substring( oReader.Value, 18, 2), ".")));
+                     gxTv_Sdttipobien_Tipobienfecreg = context.localUtil.YMDToD( (int)(NumberUtil.Val( StringUtil.Substring( oReader.Value, 1, 4), ".")), (int)(NumberUtil.Val( StringUtil.Substring( oReader.Value, 6, 2), ".")), (int)(NumberUtil.Val( StringUtil.Substring( oReader.Value, 9, 2), ".")));
                   }
                   if ( GXSoapError > 0 )
                   {
@@ -247,13 +247,13 @@ namespace GeneXus.Programs {
                }
                if ( StringUtil.StrCmp2( oReader.LocalName, "tipobienfecultact") )
                {
-                  if ( ( StringUtil.StrCmp(oReader.Value, "0000-00-00T00:00:00") == 0 ) || ( oReader.ExistsAttribute("xsi:nil") == 1 ) )
+                  if ( ( StringUtil.StrCmp(oReader.Value, "0000-00-00") == 0 ) || ( oReader.ExistsAttribute("xsi:nil") == 1 ) )
                   {
-                     gxTv_Sdttipobien_Tipobienfecultact = (DateTime)(DateTime.MinValue);
+                     gxTv_Sdttipobien_Tipobienfecultact = DateTime.MinValue;
                   }
                   else
                   {
-                     gxTv_Sdttipobien_Tipobienfecultact = context.localUtil.YMDHMSToT( (short)(NumberUtil.Val( StringUtil.Substring( oReader.Value, 1, 4), ".")), (short)(NumberUtil.Val( StringUtil.Substring( oReader.Value, 6, 2), ".")), (short)(NumberUtil.Val( StringUtil.Substring( oReader.Value, 9, 2), ".")), (short)(NumberUtil.Val( StringUtil.Substring( oReader.Value, 12, 2), ".")), (short)(NumberUtil.Val( StringUtil.Substring( oReader.Value, 15, 2), ".")), (short)(NumberUtil.Val( StringUtil.Substring( oReader.Value, 18, 2), ".")));
+                     gxTv_Sdttipobien_Tipobienfecultact = context.localUtil.YMDToD( (int)(NumberUtil.Val( StringUtil.Substring( oReader.Value, 1, 4), ".")), (int)(NumberUtil.Val( StringUtil.Substring( oReader.Value, 6, 2), ".")), (int)(NumberUtil.Val( StringUtil.Substring( oReader.Value, 9, 2), ".")));
                   }
                   if ( GXSoapError > 0 )
                   {
@@ -308,13 +308,13 @@ namespace GeneXus.Programs {
                }
                if ( StringUtil.StrCmp2( oReader.LocalName, "tipobienfecreg_Z") )
                {
-                  if ( ( StringUtil.StrCmp(oReader.Value, "0000-00-00T00:00:00") == 0 ) || ( oReader.ExistsAttribute("xsi:nil") == 1 ) )
+                  if ( ( StringUtil.StrCmp(oReader.Value, "0000-00-00") == 0 ) || ( oReader.ExistsAttribute("xsi:nil") == 1 ) )
                   {
-                     gxTv_Sdttipobien_Tipobienfecreg_Z = (DateTime)(DateTime.MinValue);
+                     gxTv_Sdttipobien_Tipobienfecreg_Z = DateTime.MinValue;
                   }
                   else
                   {
-                     gxTv_Sdttipobien_Tipobienfecreg_Z = context.localUtil.YMDHMSToT( (short)(NumberUtil.Val( StringUtil.Substring( oReader.Value, 1, 4), ".")), (short)(NumberUtil.Val( StringUtil.Substring( oReader.Value, 6, 2), ".")), (short)(NumberUtil.Val( StringUtil.Substring( oReader.Value, 9, 2), ".")), (short)(NumberUtil.Val( StringUtil.Substring( oReader.Value, 12, 2), ".")), (short)(NumberUtil.Val( StringUtil.Substring( oReader.Value, 15, 2), ".")), (short)(NumberUtil.Val( StringUtil.Substring( oReader.Value, 18, 2), ".")));
+                     gxTv_Sdttipobien_Tipobienfecreg_Z = context.localUtil.YMDToD( (int)(NumberUtil.Val( StringUtil.Substring( oReader.Value, 1, 4), ".")), (int)(NumberUtil.Val( StringUtil.Substring( oReader.Value, 6, 2), ".")), (int)(NumberUtil.Val( StringUtil.Substring( oReader.Value, 9, 2), ".")));
                   }
                   if ( GXSoapError > 0 )
                   {
@@ -324,13 +324,13 @@ namespace GeneXus.Programs {
                }
                if ( StringUtil.StrCmp2( oReader.LocalName, "tipobienfecultact_Z") )
                {
-                  if ( ( StringUtil.StrCmp(oReader.Value, "0000-00-00T00:00:00") == 0 ) || ( oReader.ExistsAttribute("xsi:nil") == 1 ) )
+                  if ( ( StringUtil.StrCmp(oReader.Value, "0000-00-00") == 0 ) || ( oReader.ExistsAttribute("xsi:nil") == 1 ) )
                   {
-                     gxTv_Sdttipobien_Tipobienfecultact_Z = (DateTime)(DateTime.MinValue);
+                     gxTv_Sdttipobien_Tipobienfecultact_Z = DateTime.MinValue;
                   }
                   else
                   {
-                     gxTv_Sdttipobien_Tipobienfecultact_Z = context.localUtil.YMDHMSToT( (short)(NumberUtil.Val( StringUtil.Substring( oReader.Value, 1, 4), ".")), (short)(NumberUtil.Val( StringUtil.Substring( oReader.Value, 6, 2), ".")), (short)(NumberUtil.Val( StringUtil.Substring( oReader.Value, 9, 2), ".")), (short)(NumberUtil.Val( StringUtil.Substring( oReader.Value, 12, 2), ".")), (short)(NumberUtil.Val( StringUtil.Substring( oReader.Value, 15, 2), ".")), (short)(NumberUtil.Val( StringUtil.Substring( oReader.Value, 18, 2), ".")));
+                     gxTv_Sdttipobien_Tipobienfecultact_Z = context.localUtil.YMDToD( (int)(NumberUtil.Val( StringUtil.Substring( oReader.Value, 1, 4), ".")), (int)(NumberUtil.Val( StringUtil.Substring( oReader.Value, 6, 2), ".")), (int)(NumberUtil.Val( StringUtil.Substring( oReader.Value, 9, 2), ".")));
                   }
                   if ( GXSoapError > 0 )
                   {
@@ -458,15 +458,6 @@ namespace GeneXus.Programs {
             sDateCnv = sDateCnv + "-";
             sNumToPad = StringUtil.Trim( StringUtil.Str( (decimal)(DateTimeUtil.Day( gxTv_Sdttipobien_Tipobienfecreg)), 10, 0));
             sDateCnv = sDateCnv + StringUtil.Substring( "00", 1, 2-StringUtil.Len( sNumToPad)) + sNumToPad;
-            sDateCnv = sDateCnv + "T";
-            sNumToPad = StringUtil.Trim( StringUtil.Str( (decimal)(DateTimeUtil.Hour( gxTv_Sdttipobien_Tipobienfecreg)), 10, 0));
-            sDateCnv = sDateCnv + StringUtil.Substring( "00", 1, 2-StringUtil.Len( sNumToPad)) + sNumToPad;
-            sDateCnv = sDateCnv + ":";
-            sNumToPad = StringUtil.Trim( StringUtil.Str( (decimal)(DateTimeUtil.Minute( gxTv_Sdttipobien_Tipobienfecreg)), 10, 0));
-            sDateCnv = sDateCnv + StringUtil.Substring( "00", 1, 2-StringUtil.Len( sNumToPad)) + sNumToPad;
-            sDateCnv = sDateCnv + ":";
-            sNumToPad = StringUtil.Trim( StringUtil.Str( (decimal)(DateTimeUtil.Second( gxTv_Sdttipobien_Tipobienfecreg)), 10, 0));
-            sDateCnv = sDateCnv + StringUtil.Substring( "00", 1, 2-StringUtil.Len( sNumToPad)) + sNumToPad;
             oWriter.WriteElement("tipobienfecreg", sDateCnv);
             if ( StringUtil.StrCmp(sNameSpace, "Condufef_v1") != 0 )
             {
@@ -490,15 +481,6 @@ namespace GeneXus.Programs {
             sDateCnv = sDateCnv + StringUtil.Substring( "00", 1, 2-StringUtil.Len( sNumToPad)) + sNumToPad;
             sDateCnv = sDateCnv + "-";
             sNumToPad = StringUtil.Trim( StringUtil.Str( (decimal)(DateTimeUtil.Day( gxTv_Sdttipobien_Tipobienfecultact)), 10, 0));
-            sDateCnv = sDateCnv + StringUtil.Substring( "00", 1, 2-StringUtil.Len( sNumToPad)) + sNumToPad;
-            sDateCnv = sDateCnv + "T";
-            sNumToPad = StringUtil.Trim( StringUtil.Str( (decimal)(DateTimeUtil.Hour( gxTv_Sdttipobien_Tipobienfecultact)), 10, 0));
-            sDateCnv = sDateCnv + StringUtil.Substring( "00", 1, 2-StringUtil.Len( sNumToPad)) + sNumToPad;
-            sDateCnv = sDateCnv + ":";
-            sNumToPad = StringUtil.Trim( StringUtil.Str( (decimal)(DateTimeUtil.Minute( gxTv_Sdttipobien_Tipobienfecultact)), 10, 0));
-            sDateCnv = sDateCnv + StringUtil.Substring( "00", 1, 2-StringUtil.Len( sNumToPad)) + sNumToPad;
-            sDateCnv = sDateCnv + ":";
-            sNumToPad = StringUtil.Trim( StringUtil.Str( (decimal)(DateTimeUtil.Second( gxTv_Sdttipobien_Tipobienfecultact)), 10, 0));
             sDateCnv = sDateCnv + StringUtil.Substring( "00", 1, 2-StringUtil.Len( sNumToPad)) + sNumToPad;
             oWriter.WriteElement("tipobienfecultact", sDateCnv);
             if ( StringUtil.StrCmp(sNameSpace, "Condufef_v1") != 0 )
@@ -551,15 +533,6 @@ namespace GeneXus.Programs {
                sDateCnv = sDateCnv + "-";
                sNumToPad = StringUtil.Trim( StringUtil.Str( (decimal)(DateTimeUtil.Day( gxTv_Sdttipobien_Tipobienfecreg_Z)), 10, 0));
                sDateCnv = sDateCnv + StringUtil.Substring( "00", 1, 2-StringUtil.Len( sNumToPad)) + sNumToPad;
-               sDateCnv = sDateCnv + "T";
-               sNumToPad = StringUtil.Trim( StringUtil.Str( (decimal)(DateTimeUtil.Hour( gxTv_Sdttipobien_Tipobienfecreg_Z)), 10, 0));
-               sDateCnv = sDateCnv + StringUtil.Substring( "00", 1, 2-StringUtil.Len( sNumToPad)) + sNumToPad;
-               sDateCnv = sDateCnv + ":";
-               sNumToPad = StringUtil.Trim( StringUtil.Str( (decimal)(DateTimeUtil.Minute( gxTv_Sdttipobien_Tipobienfecreg_Z)), 10, 0));
-               sDateCnv = sDateCnv + StringUtil.Substring( "00", 1, 2-StringUtil.Len( sNumToPad)) + sNumToPad;
-               sDateCnv = sDateCnv + ":";
-               sNumToPad = StringUtil.Trim( StringUtil.Str( (decimal)(DateTimeUtil.Second( gxTv_Sdttipobien_Tipobienfecreg_Z)), 10, 0));
-               sDateCnv = sDateCnv + StringUtil.Substring( "00", 1, 2-StringUtil.Len( sNumToPad)) + sNumToPad;
                oWriter.WriteElement("tipobienfecreg_Z", sDateCnv);
                if ( StringUtil.StrCmp(sNameSpace, "Condufef_v1") != 0 )
                {
@@ -583,15 +556,6 @@ namespace GeneXus.Programs {
                sDateCnv = sDateCnv + StringUtil.Substring( "00", 1, 2-StringUtil.Len( sNumToPad)) + sNumToPad;
                sDateCnv = sDateCnv + "-";
                sNumToPad = StringUtil.Trim( StringUtil.Str( (decimal)(DateTimeUtil.Day( gxTv_Sdttipobien_Tipobienfecultact_Z)), 10, 0));
-               sDateCnv = sDateCnv + StringUtil.Substring( "00", 1, 2-StringUtil.Len( sNumToPad)) + sNumToPad;
-               sDateCnv = sDateCnv + "T";
-               sNumToPad = StringUtil.Trim( StringUtil.Str( (decimal)(DateTimeUtil.Hour( gxTv_Sdttipobien_Tipobienfecultact_Z)), 10, 0));
-               sDateCnv = sDateCnv + StringUtil.Substring( "00", 1, 2-StringUtil.Len( sNumToPad)) + sNumToPad;
-               sDateCnv = sDateCnv + ":";
-               sNumToPad = StringUtil.Trim( StringUtil.Str( (decimal)(DateTimeUtil.Minute( gxTv_Sdttipobien_Tipobienfecultact_Z)), 10, 0));
-               sDateCnv = sDateCnv + StringUtil.Substring( "00", 1, 2-StringUtil.Len( sNumToPad)) + sNumToPad;
-               sDateCnv = sDateCnv + ":";
-               sNumToPad = StringUtil.Trim( StringUtil.Str( (decimal)(DateTimeUtil.Second( gxTv_Sdttipobien_Tipobienfecultact_Z)), 10, 0));
                sDateCnv = sDateCnv + StringUtil.Substring( "00", 1, 2-StringUtil.Len( sNumToPad)) + sNumToPad;
                oWriter.WriteElement("tipobienfecultact_Z", sDateCnv);
                if ( StringUtil.StrCmp(sNameSpace, "Condufef_v1") != 0 )
@@ -640,44 +604,24 @@ namespace GeneXus.Programs {
          AddObjectProperty("tipobienid", gxTv_Sdttipobien_Tipobienid, false);
          AddObjectProperty("tipobiendsc", gxTv_Sdttipobien_Tipobiendsc, false);
          AddObjectProperty("tipobienusuario", gxTv_Sdttipobien_Tipobienusuario, false);
-         datetime_STZ = gxTv_Sdttipobien_Tipobienfecreg;
          sDateCnv = "";
-         sNumToPad = StringUtil.Trim( StringUtil.Str( (decimal)(DateTimeUtil.Year( datetime_STZ)), 10, 0));
+         sNumToPad = StringUtil.Trim( StringUtil.Str( (decimal)(DateTimeUtil.Year( gxTv_Sdttipobien_Tipobienfecreg)), 10, 0));
          sDateCnv = sDateCnv + StringUtil.Substring( "0000", 1, 4-StringUtil.Len( sNumToPad)) + sNumToPad;
          sDateCnv = sDateCnv + "-";
-         sNumToPad = StringUtil.Trim( StringUtil.Str( (decimal)(DateTimeUtil.Month( datetime_STZ)), 10, 0));
+         sNumToPad = StringUtil.Trim( StringUtil.Str( (decimal)(DateTimeUtil.Month( gxTv_Sdttipobien_Tipobienfecreg)), 10, 0));
          sDateCnv = sDateCnv + StringUtil.Substring( "00", 1, 2-StringUtil.Len( sNumToPad)) + sNumToPad;
          sDateCnv = sDateCnv + "-";
-         sNumToPad = StringUtil.Trim( StringUtil.Str( (decimal)(DateTimeUtil.Day( datetime_STZ)), 10, 0));
-         sDateCnv = sDateCnv + StringUtil.Substring( "00", 1, 2-StringUtil.Len( sNumToPad)) + sNumToPad;
-         sDateCnv = sDateCnv + "T";
-         sNumToPad = StringUtil.Trim( StringUtil.Str( (decimal)(DateTimeUtil.Hour( datetime_STZ)), 10, 0));
-         sDateCnv = sDateCnv + StringUtil.Substring( "00", 1, 2-StringUtil.Len( sNumToPad)) + sNumToPad;
-         sDateCnv = sDateCnv + ":";
-         sNumToPad = StringUtil.Trim( StringUtil.Str( (decimal)(DateTimeUtil.Minute( datetime_STZ)), 10, 0));
-         sDateCnv = sDateCnv + StringUtil.Substring( "00", 1, 2-StringUtil.Len( sNumToPad)) + sNumToPad;
-         sDateCnv = sDateCnv + ":";
-         sNumToPad = StringUtil.Trim( StringUtil.Str( (decimal)(DateTimeUtil.Second( datetime_STZ)), 10, 0));
+         sNumToPad = StringUtil.Trim( StringUtil.Str( (decimal)(DateTimeUtil.Day( gxTv_Sdttipobien_Tipobienfecreg)), 10, 0));
          sDateCnv = sDateCnv + StringUtil.Substring( "00", 1, 2-StringUtil.Len( sNumToPad)) + sNumToPad;
          AddObjectProperty("tipobienfecreg", sDateCnv, false);
-         datetime_STZ = gxTv_Sdttipobien_Tipobienfecultact;
          sDateCnv = "";
-         sNumToPad = StringUtil.Trim( StringUtil.Str( (decimal)(DateTimeUtil.Year( datetime_STZ)), 10, 0));
+         sNumToPad = StringUtil.Trim( StringUtil.Str( (decimal)(DateTimeUtil.Year( gxTv_Sdttipobien_Tipobienfecultact)), 10, 0));
          sDateCnv = sDateCnv + StringUtil.Substring( "0000", 1, 4-StringUtil.Len( sNumToPad)) + sNumToPad;
          sDateCnv = sDateCnv + "-";
-         sNumToPad = StringUtil.Trim( StringUtil.Str( (decimal)(DateTimeUtil.Month( datetime_STZ)), 10, 0));
+         sNumToPad = StringUtil.Trim( StringUtil.Str( (decimal)(DateTimeUtil.Month( gxTv_Sdttipobien_Tipobienfecultact)), 10, 0));
          sDateCnv = sDateCnv + StringUtil.Substring( "00", 1, 2-StringUtil.Len( sNumToPad)) + sNumToPad;
          sDateCnv = sDateCnv + "-";
-         sNumToPad = StringUtil.Trim( StringUtil.Str( (decimal)(DateTimeUtil.Day( datetime_STZ)), 10, 0));
-         sDateCnv = sDateCnv + StringUtil.Substring( "00", 1, 2-StringUtil.Len( sNumToPad)) + sNumToPad;
-         sDateCnv = sDateCnv + "T";
-         sNumToPad = StringUtil.Trim( StringUtil.Str( (decimal)(DateTimeUtil.Hour( datetime_STZ)), 10, 0));
-         sDateCnv = sDateCnv + StringUtil.Substring( "00", 1, 2-StringUtil.Len( sNumToPad)) + sNumToPad;
-         sDateCnv = sDateCnv + ":";
-         sNumToPad = StringUtil.Trim( StringUtil.Str( (decimal)(DateTimeUtil.Minute( datetime_STZ)), 10, 0));
-         sDateCnv = sDateCnv + StringUtil.Substring( "00", 1, 2-StringUtil.Len( sNumToPad)) + sNumToPad;
-         sDateCnv = sDateCnv + ":";
-         sNumToPad = StringUtil.Trim( StringUtil.Str( (decimal)(DateTimeUtil.Second( datetime_STZ)), 10, 0));
+         sNumToPad = StringUtil.Trim( StringUtil.Str( (decimal)(DateTimeUtil.Day( gxTv_Sdttipobien_Tipobienfecultact)), 10, 0));
          sDateCnv = sDateCnv + StringUtil.Substring( "00", 1, 2-StringUtil.Len( sNumToPad)) + sNumToPad;
          AddObjectProperty("tipobienfecultact", sDateCnv, false);
          if ( includeState )
@@ -687,44 +631,24 @@ namespace GeneXus.Programs {
             AddObjectProperty("tipobienid_Z", gxTv_Sdttipobien_Tipobienid_Z, false);
             AddObjectProperty("tipobiendsc_Z", gxTv_Sdttipobien_Tipobiendsc_Z, false);
             AddObjectProperty("tipobienusuario_Z", gxTv_Sdttipobien_Tipobienusuario_Z, false);
-            datetime_STZ = gxTv_Sdttipobien_Tipobienfecreg_Z;
             sDateCnv = "";
-            sNumToPad = StringUtil.Trim( StringUtil.Str( (decimal)(DateTimeUtil.Year( datetime_STZ)), 10, 0));
+            sNumToPad = StringUtil.Trim( StringUtil.Str( (decimal)(DateTimeUtil.Year( gxTv_Sdttipobien_Tipobienfecreg_Z)), 10, 0));
             sDateCnv = sDateCnv + StringUtil.Substring( "0000", 1, 4-StringUtil.Len( sNumToPad)) + sNumToPad;
             sDateCnv = sDateCnv + "-";
-            sNumToPad = StringUtil.Trim( StringUtil.Str( (decimal)(DateTimeUtil.Month( datetime_STZ)), 10, 0));
+            sNumToPad = StringUtil.Trim( StringUtil.Str( (decimal)(DateTimeUtil.Month( gxTv_Sdttipobien_Tipobienfecreg_Z)), 10, 0));
             sDateCnv = sDateCnv + StringUtil.Substring( "00", 1, 2-StringUtil.Len( sNumToPad)) + sNumToPad;
             sDateCnv = sDateCnv + "-";
-            sNumToPad = StringUtil.Trim( StringUtil.Str( (decimal)(DateTimeUtil.Day( datetime_STZ)), 10, 0));
-            sDateCnv = sDateCnv + StringUtil.Substring( "00", 1, 2-StringUtil.Len( sNumToPad)) + sNumToPad;
-            sDateCnv = sDateCnv + "T";
-            sNumToPad = StringUtil.Trim( StringUtil.Str( (decimal)(DateTimeUtil.Hour( datetime_STZ)), 10, 0));
-            sDateCnv = sDateCnv + StringUtil.Substring( "00", 1, 2-StringUtil.Len( sNumToPad)) + sNumToPad;
-            sDateCnv = sDateCnv + ":";
-            sNumToPad = StringUtil.Trim( StringUtil.Str( (decimal)(DateTimeUtil.Minute( datetime_STZ)), 10, 0));
-            sDateCnv = sDateCnv + StringUtil.Substring( "00", 1, 2-StringUtil.Len( sNumToPad)) + sNumToPad;
-            sDateCnv = sDateCnv + ":";
-            sNumToPad = StringUtil.Trim( StringUtil.Str( (decimal)(DateTimeUtil.Second( datetime_STZ)), 10, 0));
+            sNumToPad = StringUtil.Trim( StringUtil.Str( (decimal)(DateTimeUtil.Day( gxTv_Sdttipobien_Tipobienfecreg_Z)), 10, 0));
             sDateCnv = sDateCnv + StringUtil.Substring( "00", 1, 2-StringUtil.Len( sNumToPad)) + sNumToPad;
             AddObjectProperty("tipobienfecreg_Z", sDateCnv, false);
-            datetime_STZ = gxTv_Sdttipobien_Tipobienfecultact_Z;
             sDateCnv = "";
-            sNumToPad = StringUtil.Trim( StringUtil.Str( (decimal)(DateTimeUtil.Year( datetime_STZ)), 10, 0));
+            sNumToPad = StringUtil.Trim( StringUtil.Str( (decimal)(DateTimeUtil.Year( gxTv_Sdttipobien_Tipobienfecultact_Z)), 10, 0));
             sDateCnv = sDateCnv + StringUtil.Substring( "0000", 1, 4-StringUtil.Len( sNumToPad)) + sNumToPad;
             sDateCnv = sDateCnv + "-";
-            sNumToPad = StringUtil.Trim( StringUtil.Str( (decimal)(DateTimeUtil.Month( datetime_STZ)), 10, 0));
+            sNumToPad = StringUtil.Trim( StringUtil.Str( (decimal)(DateTimeUtil.Month( gxTv_Sdttipobien_Tipobienfecultact_Z)), 10, 0));
             sDateCnv = sDateCnv + StringUtil.Substring( "00", 1, 2-StringUtil.Len( sNumToPad)) + sNumToPad;
             sDateCnv = sDateCnv + "-";
-            sNumToPad = StringUtil.Trim( StringUtil.Str( (decimal)(DateTimeUtil.Day( datetime_STZ)), 10, 0));
-            sDateCnv = sDateCnv + StringUtil.Substring( "00", 1, 2-StringUtil.Len( sNumToPad)) + sNumToPad;
-            sDateCnv = sDateCnv + "T";
-            sNumToPad = StringUtil.Trim( StringUtil.Str( (decimal)(DateTimeUtil.Hour( datetime_STZ)), 10, 0));
-            sDateCnv = sDateCnv + StringUtil.Substring( "00", 1, 2-StringUtil.Len( sNumToPad)) + sNumToPad;
-            sDateCnv = sDateCnv + ":";
-            sNumToPad = StringUtil.Trim( StringUtil.Str( (decimal)(DateTimeUtil.Minute( datetime_STZ)), 10, 0));
-            sDateCnv = sDateCnv + StringUtil.Substring( "00", 1, 2-StringUtil.Len( sNumToPad)) + sNumToPad;
-            sDateCnv = sDateCnv + ":";
-            sNumToPad = StringUtil.Trim( StringUtil.Str( (decimal)(DateTimeUtil.Second( datetime_STZ)), 10, 0));
+            sNumToPad = StringUtil.Trim( StringUtil.Str( (decimal)(DateTimeUtil.Day( gxTv_Sdttipobien_Tipobienfecultact_Z)), 10, 0));
             sDateCnv = sDateCnv + StringUtil.Substring( "00", 1, 2-StringUtil.Len( sNumToPad)) + sNumToPad;
             AddObjectProperty("tipobienfecultact_Z", sDateCnv, false);
             AddObjectProperty("tipobienid_N", gxTv_Sdttipobien_Tipobienid_N, false);
@@ -820,12 +744,12 @@ namespace GeneXus.Programs {
          get {
             if ( gxTv_Sdttipobien_Tipobienfecreg == DateTime.MinValue)
                return null;
-            return new GxDatetimeString(gxTv_Sdttipobien_Tipobienfecreg).value ;
+            return new GxDateString(gxTv_Sdttipobien_Tipobienfecreg).value ;
          }
 
          set {
             gxTv_Sdttipobien_Tipobienfecreg_N = 0;
-            if (value == null || value == GxDatetimeString.NullValue )
+            if (value == null || value == GxDateString.NullValue )
                gxTv_Sdttipobien_Tipobienfecreg = DateTime.MinValue;
             else
                gxTv_Sdttipobien_Tipobienfecreg = DateTime.Parse( value);
@@ -867,12 +791,12 @@ namespace GeneXus.Programs {
          get {
             if ( gxTv_Sdttipobien_Tipobienfecultact == DateTime.MinValue)
                return null;
-            return new GxDatetimeString(gxTv_Sdttipobien_Tipobienfecultact).value ;
+            return new GxDateString(gxTv_Sdttipobien_Tipobienfecultact).value ;
          }
 
          set {
             gxTv_Sdttipobien_Tipobienfecultact_N = 0;
-            if (value == null || value == GxDatetimeString.NullValue )
+            if (value == null || value == GxDateString.NullValue )
                gxTv_Sdttipobien_Tipobienfecultact = DateTime.MinValue;
             else
                gxTv_Sdttipobien_Tipobienfecultact = DateTime.Parse( value);
@@ -1039,11 +963,11 @@ namespace GeneXus.Programs {
          get {
             if ( gxTv_Sdttipobien_Tipobienfecreg_Z == DateTime.MinValue)
                return null;
-            return new GxDatetimeString(gxTv_Sdttipobien_Tipobienfecreg_Z).value ;
+            return new GxDateString(gxTv_Sdttipobien_Tipobienfecreg_Z).value ;
          }
 
          set {
-            if (value == null || value == GxDatetimeString.NullValue )
+            if (value == null || value == GxDateString.NullValue )
                gxTv_Sdttipobien_Tipobienfecreg_Z = DateTime.MinValue;
             else
                gxTv_Sdttipobien_Tipobienfecreg_Z = DateTime.Parse( value);
@@ -1083,11 +1007,11 @@ namespace GeneXus.Programs {
          get {
             if ( gxTv_Sdttipobien_Tipobienfecultact_Z == DateTime.MinValue)
                return null;
-            return new GxDatetimeString(gxTv_Sdttipobien_Tipobienfecultact_Z).value ;
+            return new GxDateString(gxTv_Sdttipobien_Tipobienfecultact_Z).value ;
          }
 
          set {
-            if (value == null || value == GxDatetimeString.NullValue )
+            if (value == null || value == GxDateString.NullValue )
                gxTv_Sdttipobien_Tipobienfecultact_Z = DateTime.MinValue;
             else
                gxTv_Sdttipobien_Tipobienfecultact_Z = DateTime.Parse( value);
@@ -1249,17 +1173,16 @@ namespace GeneXus.Programs {
       {
          gxTv_Sdttipobien_Tipobiendsc = "";
          gxTv_Sdttipobien_Tipobienusuario = "";
-         gxTv_Sdttipobien_Tipobienfecreg = (DateTime)(DateTime.MinValue);
-         gxTv_Sdttipobien_Tipobienfecultact = (DateTime)(DateTime.MinValue);
+         gxTv_Sdttipobien_Tipobienfecreg = DateTime.MinValue;
+         gxTv_Sdttipobien_Tipobienfecultact = DateTime.MinValue;
          gxTv_Sdttipobien_Mode = "";
          gxTv_Sdttipobien_Tipobiendsc_Z = "";
          gxTv_Sdttipobien_Tipobienusuario_Z = "";
-         gxTv_Sdttipobien_Tipobienfecreg_Z = (DateTime)(DateTime.MinValue);
-         gxTv_Sdttipobien_Tipobienfecultact_Z = (DateTime)(DateTime.MinValue);
+         gxTv_Sdttipobien_Tipobienfecreg_Z = DateTime.MinValue;
+         gxTv_Sdttipobien_Tipobienfecultact_Z = DateTime.MinValue;
          sTagName = "";
          sDateCnv = "";
          sNumToPad = "";
-         datetime_STZ = (DateTime)(DateTime.MinValue);
          IGxSilentTrn obj ;
          obj = (IGxSilentTrn)ClassLoader.FindInstance( "tipobien", "GeneXus.Programs.tipobien_bc", new Object[] {context}, constructorCallingAssembly);
          obj.initialize();
@@ -1287,7 +1210,6 @@ namespace GeneXus.Programs {
       private DateTime gxTv_Sdttipobien_Tipobienfecultact ;
       private DateTime gxTv_Sdttipobien_Tipobienfecreg_Z ;
       private DateTime gxTv_Sdttipobien_Tipobienfecultact_Z ;
-      private DateTime datetime_STZ ;
       private String gxTv_Sdttipobien_Tipobiendsc ;
       private String gxTv_Sdttipobien_Tipobienusuario ;
       private String gxTv_Sdttipobien_Tipobiendsc_Z ;
@@ -1353,11 +1275,11 @@ namespace GeneXus.Programs {
       public String gxTpr_Tipobienfecreg
       {
          get {
-            return DateTimeUtil.TToC2( sdt.gxTpr_Tipobienfecreg) ;
+            return DateTimeUtil.DToC2( sdt.gxTpr_Tipobienfecreg) ;
          }
 
          set {
-            sdt.gxTpr_Tipobienfecreg = DateTimeUtil.CToT2( (String)(value));
+            sdt.gxTpr_Tipobienfecreg = DateTimeUtil.CToD2( (String)(value));
          }
 
       }
@@ -1367,11 +1289,11 @@ namespace GeneXus.Programs {
       public String gxTpr_Tipobienfecultact
       {
          get {
-            return DateTimeUtil.TToC2( sdt.gxTpr_Tipobienfecultact) ;
+            return DateTimeUtil.DToC2( sdt.gxTpr_Tipobienfecultact) ;
          }
 
          set {
-            sdt.gxTpr_Tipobienfecultact = DateTimeUtil.CToT2( (String)(value));
+            sdt.gxTpr_Tipobienfecultact = DateTimeUtil.CToD2( (String)(value));
          }
 
       }

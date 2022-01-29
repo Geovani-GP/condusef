@@ -2,7 +2,7 @@
                File: type_Sdtproducto
         Description: producto
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 1/28/2022 1:40:29.67
+       Generated on: 1/29/2022 0:56:23.44
        Program type: Callable routine
           Main DBMS: postgresql
 */
@@ -72,18 +72,17 @@ namespace GeneXus.Programs {
          return (String)mapper[value]; ;
       }
 
-      public void Load( short AV175productoid ,
-                        int AV25cambsid )
+      public void Load( int AV175productoid )
       {
          IGxSilentTrn obj ;
          obj = getTransaction();
-         obj.LoadKey(new Object[] {(short)AV175productoid,(int)AV25cambsid});
+         obj.LoadKey(new Object[] {(int)AV175productoid});
          return  ;
       }
 
       public override Object[][] GetBCKey( )
       {
-         return (Object[][])(new Object[][]{new Object[]{"productoid", typeof(short)}, new Object[]{"cambsid", typeof(int)}}) ;
+         return (Object[][])(new Object[][]{new Object[]{"productoid", typeof(int)}}) ;
       }
 
       public override IGxCollection GetMessages( )
@@ -110,8 +109,8 @@ namespace GeneXus.Programs {
          GXProperties metadata = new GXProperties() ;
          metadata.Set("Name", "producto");
          metadata.Set("BT", "producto");
-         metadata.Set("PK", "[ \"productoid\",\"cambsid\" ]");
-         metadata.Set("FKList", "[ { \"FK\":[ \"cambsid\" ],\"FKMap\":[  ] } ]");
+         metadata.Set("PK", "[ \"productoid\" ]");
+         metadata.Set("FKList", "[ { \"FK\":[ \"cambsid\" ],\"FKMap\":[  ] },{ \"FK\":[ \"tipobienid\" ],\"FKMap\":[  ] } ]");
          metadata.Set("AllowInsert", "True");
          metadata.Set("AllowUpdate", "True");
          metadata.Set("AllowDelete", "True");
@@ -134,20 +133,23 @@ namespace GeneXus.Programs {
             ov.Add(this.GetType(),  "gxTpr_Initialized" , attrs);
             ov.Add(this.GetType(),  "gxTpr_Productoid_Z" , attrs);
             ov.Add(this.GetType(),  "gxTpr_Cambsid_Z" , attrs);
+            ov.Add(this.GetType(),  "gxTpr_Productodsc_Z" , attrs);
             ov.Add(this.GetType(),  "gxTpr_Modeloid_Z" , attrs);
             ov.Add(this.GetType(),  "gxTpr_Marcaid_Z" , attrs);
             ov.Add(this.GetType(),  "gxTpr_Categoriaid_Z" , attrs);
-            ov.Add(this.GetType(),  "gxTpr_Productodsc_Z" , attrs);
             ov.Add(this.GetType(),  "gxTpr_Productousuario_Z" , attrs);
             ov.Add(this.GetType(),  "gxTpr_Productofecreg_Z_Nullable" , attrs);
             ov.Add(this.GetType(),  "gxTpr_Productofecultact_Z_Nullable" , attrs);
+            ov.Add(this.GetType(),  "gxTpr_Tipobienid_Z" , attrs);
+            ov.Add(this.GetType(),  "gxTpr_Cambsid_N" , attrs);
+            ov.Add(this.GetType(),  "gxTpr_Productodsc_N" , attrs);
             ov.Add(this.GetType(),  "gxTpr_Modeloid_N" , attrs);
             ov.Add(this.GetType(),  "gxTpr_Marcaid_N" , attrs);
             ov.Add(this.GetType(),  "gxTpr_Categoriaid_N" , attrs);
-            ov.Add(this.GetType(),  "gxTpr_Productodsc_N" , attrs);
             ov.Add(this.GetType(),  "gxTpr_Productousuario_N" , attrs);
             ov.Add(this.GetType(),  "gxTpr_Productofecreg_N" , attrs);
             ov.Add(this.GetType(),  "gxTpr_Productofecultact_N" , attrs);
+            ov.Add(this.GetType(),  "gxTpr_Tipobienid_N" , attrs);
             xmls = new XmlSerializer(this.GetType(), ov, new Type[0], null, sNameSpace);
          }
          else
@@ -180,31 +182,35 @@ namespace GeneXus.Programs {
          obj = this;
          obj.gxTpr_Productoid = deserialized.gxTpr_Productoid;
          obj.gxTpr_Cambsid = deserialized.gxTpr_Cambsid;
+         obj.gxTpr_Productodsc = deserialized.gxTpr_Productodsc;
          obj.gxTpr_Modeloid = deserialized.gxTpr_Modeloid;
          obj.gxTpr_Marcaid = deserialized.gxTpr_Marcaid;
          obj.gxTpr_Categoriaid = deserialized.gxTpr_Categoriaid;
-         obj.gxTpr_Productodsc = deserialized.gxTpr_Productodsc;
          obj.gxTpr_Productousuario = deserialized.gxTpr_Productousuario;
          obj.gxTpr_Productofecreg = deserialized.gxTpr_Productofecreg;
          obj.gxTpr_Productofecultact = deserialized.gxTpr_Productofecultact;
+         obj.gxTpr_Tipobienid = deserialized.gxTpr_Tipobienid;
          obj.gxTpr_Mode = deserialized.gxTpr_Mode;
          obj.gxTpr_Initialized = deserialized.gxTpr_Initialized;
          obj.gxTpr_Productoid_Z = deserialized.gxTpr_Productoid_Z;
          obj.gxTpr_Cambsid_Z = deserialized.gxTpr_Cambsid_Z;
+         obj.gxTpr_Productodsc_Z = deserialized.gxTpr_Productodsc_Z;
          obj.gxTpr_Modeloid_Z = deserialized.gxTpr_Modeloid_Z;
          obj.gxTpr_Marcaid_Z = deserialized.gxTpr_Marcaid_Z;
          obj.gxTpr_Categoriaid_Z = deserialized.gxTpr_Categoriaid_Z;
-         obj.gxTpr_Productodsc_Z = deserialized.gxTpr_Productodsc_Z;
          obj.gxTpr_Productousuario_Z = deserialized.gxTpr_Productousuario_Z;
          obj.gxTpr_Productofecreg_Z = deserialized.gxTpr_Productofecreg_Z;
          obj.gxTpr_Productofecultact_Z = deserialized.gxTpr_Productofecultact_Z;
+         obj.gxTpr_Tipobienid_Z = deserialized.gxTpr_Tipobienid_Z;
+         obj.gxTpr_Cambsid_N = deserialized.gxTpr_Cambsid_N;
+         obj.gxTpr_Productodsc_N = deserialized.gxTpr_Productodsc_N;
          obj.gxTpr_Modeloid_N = deserialized.gxTpr_Modeloid_N;
          obj.gxTpr_Marcaid_N = deserialized.gxTpr_Marcaid_N;
          obj.gxTpr_Categoriaid_N = deserialized.gxTpr_Categoriaid_N;
-         obj.gxTpr_Productodsc_N = deserialized.gxTpr_Productodsc_N;
          obj.gxTpr_Productousuario_N = deserialized.gxTpr_Productousuario_N;
          obj.gxTpr_Productofecreg_N = deserialized.gxTpr_Productofecreg_N;
          obj.gxTpr_Productofecultact_N = deserialized.gxTpr_Productofecultact_N;
+         obj.gxTpr_Tipobienid_N = deserialized.gxTpr_Tipobienid_N;
          return  ;
       }
 
@@ -222,7 +228,7 @@ namespace GeneXus.Programs {
                readOk = 0;
                if ( StringUtil.StrCmp2( oReader.LocalName, "productoid") )
                {
-                  gxTv_Sdtproducto_Productoid = (short)(NumberUtil.Val( oReader.Value, "."));
+                  gxTv_Sdtproducto_Productoid = (int)(NumberUtil.Val( oReader.Value, "."));
                   if ( GXSoapError > 0 )
                   {
                      readOk = 1;
@@ -232,6 +238,15 @@ namespace GeneXus.Programs {
                if ( StringUtil.StrCmp2( oReader.LocalName, "cambsid") )
                {
                   gxTv_Sdtproducto_Cambsid = (int)(NumberUtil.Val( oReader.Value, "."));
+                  if ( GXSoapError > 0 )
+                  {
+                     readOk = 1;
+                  }
+                  GXSoapError = oReader.Read();
+               }
+               if ( StringUtil.StrCmp2( oReader.LocalName, "productodsc") )
+               {
+                  gxTv_Sdtproducto_Productodsc = oReader.Value;
                   if ( GXSoapError > 0 )
                   {
                      readOk = 1;
@@ -259,15 +274,6 @@ namespace GeneXus.Programs {
                if ( StringUtil.StrCmp2( oReader.LocalName, "categoriaid") )
                {
                   gxTv_Sdtproducto_Categoriaid = (long)(NumberUtil.Val( oReader.Value, "."));
-                  if ( GXSoapError > 0 )
-                  {
-                     readOk = 1;
-                  }
-                  GXSoapError = oReader.Read();
-               }
-               if ( StringUtil.StrCmp2( oReader.LocalName, "productodsc") )
-               {
-                  gxTv_Sdtproducto_Productodsc = oReader.Value;
                   if ( GXSoapError > 0 )
                   {
                      readOk = 1;
@@ -315,6 +321,15 @@ namespace GeneXus.Programs {
                   }
                   GXSoapError = oReader.Read();
                }
+               if ( StringUtil.StrCmp2( oReader.LocalName, "tipobienid") )
+               {
+                  gxTv_Sdtproducto_Tipobienid = (int)(NumberUtil.Val( oReader.Value, "."));
+                  if ( GXSoapError > 0 )
+                  {
+                     readOk = 1;
+                  }
+                  GXSoapError = oReader.Read();
+               }
                if ( StringUtil.StrCmp2( oReader.LocalName, "Mode") )
                {
                   gxTv_Sdtproducto_Mode = oReader.Value;
@@ -335,7 +350,7 @@ namespace GeneXus.Programs {
                }
                if ( StringUtil.StrCmp2( oReader.LocalName, "productoid_Z") )
                {
-                  gxTv_Sdtproducto_Productoid_Z = (short)(NumberUtil.Val( oReader.Value, "."));
+                  gxTv_Sdtproducto_Productoid_Z = (int)(NumberUtil.Val( oReader.Value, "."));
                   if ( GXSoapError > 0 )
                   {
                      readOk = 1;
@@ -345,6 +360,15 @@ namespace GeneXus.Programs {
                if ( StringUtil.StrCmp2( oReader.LocalName, "cambsid_Z") )
                {
                   gxTv_Sdtproducto_Cambsid_Z = (int)(NumberUtil.Val( oReader.Value, "."));
+                  if ( GXSoapError > 0 )
+                  {
+                     readOk = 1;
+                  }
+                  GXSoapError = oReader.Read();
+               }
+               if ( StringUtil.StrCmp2( oReader.LocalName, "productodsc_Z") )
+               {
+                  gxTv_Sdtproducto_Productodsc_Z = oReader.Value;
                   if ( GXSoapError > 0 )
                   {
                      readOk = 1;
@@ -372,15 +396,6 @@ namespace GeneXus.Programs {
                if ( StringUtil.StrCmp2( oReader.LocalName, "categoriaid_Z") )
                {
                   gxTv_Sdtproducto_Categoriaid_Z = (long)(NumberUtil.Val( oReader.Value, "."));
-                  if ( GXSoapError > 0 )
-                  {
-                     readOk = 1;
-                  }
-                  GXSoapError = oReader.Read();
-               }
-               if ( StringUtil.StrCmp2( oReader.LocalName, "productodsc_Z") )
-               {
-                  gxTv_Sdtproducto_Productodsc_Z = oReader.Value;
                   if ( GXSoapError > 0 )
                   {
                      readOk = 1;
@@ -428,6 +443,33 @@ namespace GeneXus.Programs {
                   }
                   GXSoapError = oReader.Read();
                }
+               if ( StringUtil.StrCmp2( oReader.LocalName, "tipobienid_Z") )
+               {
+                  gxTv_Sdtproducto_Tipobienid_Z = (int)(NumberUtil.Val( oReader.Value, "."));
+                  if ( GXSoapError > 0 )
+                  {
+                     readOk = 1;
+                  }
+                  GXSoapError = oReader.Read();
+               }
+               if ( StringUtil.StrCmp2( oReader.LocalName, "cambsid_N") )
+               {
+                  gxTv_Sdtproducto_Cambsid_N = (short)(NumberUtil.Val( oReader.Value, "."));
+                  if ( GXSoapError > 0 )
+                  {
+                     readOk = 1;
+                  }
+                  GXSoapError = oReader.Read();
+               }
+               if ( StringUtil.StrCmp2( oReader.LocalName, "productodsc_N") )
+               {
+                  gxTv_Sdtproducto_Productodsc_N = (short)(NumberUtil.Val( oReader.Value, "."));
+                  if ( GXSoapError > 0 )
+                  {
+                     readOk = 1;
+                  }
+                  GXSoapError = oReader.Read();
+               }
                if ( StringUtil.StrCmp2( oReader.LocalName, "modeloid_N") )
                {
                   gxTv_Sdtproducto_Modeloid_N = (short)(NumberUtil.Val( oReader.Value, "."));
@@ -455,15 +497,6 @@ namespace GeneXus.Programs {
                   }
                   GXSoapError = oReader.Read();
                }
-               if ( StringUtil.StrCmp2( oReader.LocalName, "productodsc_N") )
-               {
-                  gxTv_Sdtproducto_Productodsc_N = (short)(NumberUtil.Val( oReader.Value, "."));
-                  if ( GXSoapError > 0 )
-                  {
-                     readOk = 1;
-                  }
-                  GXSoapError = oReader.Read();
-               }
                if ( StringUtil.StrCmp2( oReader.LocalName, "productousuario_N") )
                {
                   gxTv_Sdtproducto_Productousuario_N = (short)(NumberUtil.Val( oReader.Value, "."));
@@ -485,6 +518,15 @@ namespace GeneXus.Programs {
                if ( StringUtil.StrCmp2( oReader.LocalName, "productofecultact_N") )
                {
                   gxTv_Sdtproducto_Productofecultact_N = (short)(NumberUtil.Val( oReader.Value, "."));
+                  if ( GXSoapError > 0 )
+                  {
+                     readOk = 1;
+                  }
+                  GXSoapError = oReader.Read();
+               }
+               if ( StringUtil.StrCmp2( oReader.LocalName, "tipobienid_N") )
+               {
+                  gxTv_Sdtproducto_Tipobienid_N = (short)(NumberUtil.Val( oReader.Value, "."));
                   if ( GXSoapError > 0 )
                   {
                      readOk = 1;
@@ -533,12 +575,17 @@ namespace GeneXus.Programs {
          {
             sNameSpace = StringUtil.Right( sNameSpace, (short)(StringUtil.Len( sNameSpace)-10));
          }
-         oWriter.WriteElement("productoid", StringUtil.Trim( StringUtil.Str( (decimal)(gxTv_Sdtproducto_Productoid), 4, 0)));
+         oWriter.WriteElement("productoid", StringUtil.Trim( StringUtil.Str( (decimal)(gxTv_Sdtproducto_Productoid), 9, 0)));
          if ( StringUtil.StrCmp(sNameSpace, "Condufef_v1") != 0 )
          {
             oWriter.WriteAttribute("xmlns", "Condufef_v1");
          }
          oWriter.WriteElement("cambsid", StringUtil.Trim( StringUtil.Str( (decimal)(gxTv_Sdtproducto_Cambsid), 9, 0)));
+         if ( StringUtil.StrCmp(sNameSpace, "Condufef_v1") != 0 )
+         {
+            oWriter.WriteAttribute("xmlns", "Condufef_v1");
+         }
+         oWriter.WriteElement("productodsc", StringUtil.RTrim( gxTv_Sdtproducto_Productodsc));
          if ( StringUtil.StrCmp(sNameSpace, "Condufef_v1") != 0 )
          {
             oWriter.WriteAttribute("xmlns", "Condufef_v1");
@@ -554,11 +601,6 @@ namespace GeneXus.Programs {
             oWriter.WriteAttribute("xmlns", "Condufef_v1");
          }
          oWriter.WriteElement("categoriaid", StringUtil.Trim( StringUtil.Str( (decimal)(gxTv_Sdtproducto_Categoriaid), 18, 0)));
-         if ( StringUtil.StrCmp(sNameSpace, "Condufef_v1") != 0 )
-         {
-            oWriter.WriteAttribute("xmlns", "Condufef_v1");
-         }
-         oWriter.WriteElement("productodsc", StringUtil.RTrim( gxTv_Sdtproducto_Productodsc));
          if ( StringUtil.StrCmp(sNameSpace, "Condufef_v1") != 0 )
          {
             oWriter.WriteAttribute("xmlns", "Condufef_v1");
@@ -634,6 +676,11 @@ namespace GeneXus.Programs {
                oWriter.WriteAttribute("xmlns", "Condufef_v1");
             }
          }
+         oWriter.WriteElement("tipobienid", StringUtil.Trim( StringUtil.Str( (decimal)(gxTv_Sdtproducto_Tipobienid), 9, 0)));
+         if ( StringUtil.StrCmp(sNameSpace, "Condufef_v1") != 0 )
+         {
+            oWriter.WriteAttribute("xmlns", "Condufef_v1");
+         }
          if ( sIncludeState )
          {
             oWriter.WriteElement("Mode", StringUtil.RTrim( gxTv_Sdtproducto_Mode));
@@ -646,12 +693,17 @@ namespace GeneXus.Programs {
             {
                oWriter.WriteAttribute("xmlns", "Condufef_v1");
             }
-            oWriter.WriteElement("productoid_Z", StringUtil.Trim( StringUtil.Str( (decimal)(gxTv_Sdtproducto_Productoid_Z), 4, 0)));
+            oWriter.WriteElement("productoid_Z", StringUtil.Trim( StringUtil.Str( (decimal)(gxTv_Sdtproducto_Productoid_Z), 9, 0)));
             if ( StringUtil.StrCmp(sNameSpace, "Condufef_v1") != 0 )
             {
                oWriter.WriteAttribute("xmlns", "Condufef_v1");
             }
             oWriter.WriteElement("cambsid_Z", StringUtil.Trim( StringUtil.Str( (decimal)(gxTv_Sdtproducto_Cambsid_Z), 9, 0)));
+            if ( StringUtil.StrCmp(sNameSpace, "Condufef_v1") != 0 )
+            {
+               oWriter.WriteAttribute("xmlns", "Condufef_v1");
+            }
+            oWriter.WriteElement("productodsc_Z", StringUtil.RTrim( gxTv_Sdtproducto_Productodsc_Z));
             if ( StringUtil.StrCmp(sNameSpace, "Condufef_v1") != 0 )
             {
                oWriter.WriteAttribute("xmlns", "Condufef_v1");
@@ -667,11 +719,6 @@ namespace GeneXus.Programs {
                oWriter.WriteAttribute("xmlns", "Condufef_v1");
             }
             oWriter.WriteElement("categoriaid_Z", StringUtil.Trim( StringUtil.Str( (decimal)(gxTv_Sdtproducto_Categoriaid_Z), 18, 0)));
-            if ( StringUtil.StrCmp(sNameSpace, "Condufef_v1") != 0 )
-            {
-               oWriter.WriteAttribute("xmlns", "Condufef_v1");
-            }
-            oWriter.WriteElement("productodsc_Z", StringUtil.RTrim( gxTv_Sdtproducto_Productodsc_Z));
             if ( StringUtil.StrCmp(sNameSpace, "Condufef_v1") != 0 )
             {
                oWriter.WriteAttribute("xmlns", "Condufef_v1");
@@ -747,6 +794,21 @@ namespace GeneXus.Programs {
                   oWriter.WriteAttribute("xmlns", "Condufef_v1");
                }
             }
+            oWriter.WriteElement("tipobienid_Z", StringUtil.Trim( StringUtil.Str( (decimal)(gxTv_Sdtproducto_Tipobienid_Z), 9, 0)));
+            if ( StringUtil.StrCmp(sNameSpace, "Condufef_v1") != 0 )
+            {
+               oWriter.WriteAttribute("xmlns", "Condufef_v1");
+            }
+            oWriter.WriteElement("cambsid_N", StringUtil.Trim( StringUtil.Str( (decimal)(gxTv_Sdtproducto_Cambsid_N), 1, 0)));
+            if ( StringUtil.StrCmp(sNameSpace, "Condufef_v1") != 0 )
+            {
+               oWriter.WriteAttribute("xmlns", "Condufef_v1");
+            }
+            oWriter.WriteElement("productodsc_N", StringUtil.Trim( StringUtil.Str( (decimal)(gxTv_Sdtproducto_Productodsc_N), 1, 0)));
+            if ( StringUtil.StrCmp(sNameSpace, "Condufef_v1") != 0 )
+            {
+               oWriter.WriteAttribute("xmlns", "Condufef_v1");
+            }
             oWriter.WriteElement("modeloid_N", StringUtil.Trim( StringUtil.Str( (decimal)(gxTv_Sdtproducto_Modeloid_N), 1, 0)));
             if ( StringUtil.StrCmp(sNameSpace, "Condufef_v1") != 0 )
             {
@@ -758,11 +820,6 @@ namespace GeneXus.Programs {
                oWriter.WriteAttribute("xmlns", "Condufef_v1");
             }
             oWriter.WriteElement("categoriaid_N", StringUtil.Trim( StringUtil.Str( (decimal)(gxTv_Sdtproducto_Categoriaid_N), 1, 0)));
-            if ( StringUtil.StrCmp(sNameSpace, "Condufef_v1") != 0 )
-            {
-               oWriter.WriteAttribute("xmlns", "Condufef_v1");
-            }
-            oWriter.WriteElement("productodsc_N", StringUtil.Trim( StringUtil.Str( (decimal)(gxTv_Sdtproducto_Productodsc_N), 1, 0)));
             if ( StringUtil.StrCmp(sNameSpace, "Condufef_v1") != 0 )
             {
                oWriter.WriteAttribute("xmlns", "Condufef_v1");
@@ -782,6 +839,11 @@ namespace GeneXus.Programs {
             {
                oWriter.WriteAttribute("xmlns", "Condufef_v1");
             }
+            oWriter.WriteElement("tipobienid_N", StringUtil.Trim( StringUtil.Str( (decimal)(gxTv_Sdtproducto_Tipobienid_N), 1, 0)));
+            if ( StringUtil.StrCmp(sNameSpace, "Condufef_v1") != 0 )
+            {
+               oWriter.WriteAttribute("xmlns", "Condufef_v1");
+            }
          }
          oWriter.WriteEndElement();
          return  ;
@@ -797,10 +859,10 @@ namespace GeneXus.Programs {
       {
          AddObjectProperty("productoid", gxTv_Sdtproducto_Productoid, false);
          AddObjectProperty("cambsid", gxTv_Sdtproducto_Cambsid, false);
+         AddObjectProperty("productodsc", gxTv_Sdtproducto_Productodsc, false);
          AddObjectProperty("modeloid", StringUtil.LTrim( StringUtil.Str( (decimal)(gxTv_Sdtproducto_Modeloid), 18, 0)), false);
          AddObjectProperty("marcaid", StringUtil.LTrim( StringUtil.Str( (decimal)(gxTv_Sdtproducto_Marcaid), 18, 0)), false);
          AddObjectProperty("categoriaid", StringUtil.LTrim( StringUtil.Str( (decimal)(gxTv_Sdtproducto_Categoriaid), 18, 0)), false);
-         AddObjectProperty("productodsc", gxTv_Sdtproducto_Productodsc, false);
          AddObjectProperty("productousuario", gxTv_Sdtproducto_Productousuario, false);
          datetime_STZ = gxTv_Sdtproducto_Productofecreg;
          sDateCnv = "";
@@ -842,16 +904,17 @@ namespace GeneXus.Programs {
          sNumToPad = StringUtil.Trim( StringUtil.Str( (decimal)(DateTimeUtil.Second( datetime_STZ)), 10, 0));
          sDateCnv = sDateCnv + StringUtil.Substring( "00", 1, 2-StringUtil.Len( sNumToPad)) + sNumToPad;
          AddObjectProperty("productofecultact", sDateCnv, false);
+         AddObjectProperty("tipobienid", gxTv_Sdtproducto_Tipobienid, false);
          if ( includeState )
          {
             AddObjectProperty("Mode", gxTv_Sdtproducto_Mode, false);
             AddObjectProperty("Initialized", gxTv_Sdtproducto_Initialized, false);
             AddObjectProperty("productoid_Z", gxTv_Sdtproducto_Productoid_Z, false);
             AddObjectProperty("cambsid_Z", gxTv_Sdtproducto_Cambsid_Z, false);
+            AddObjectProperty("productodsc_Z", gxTv_Sdtproducto_Productodsc_Z, false);
             AddObjectProperty("modeloid_Z", StringUtil.LTrim( StringUtil.Str( (decimal)(gxTv_Sdtproducto_Modeloid_Z), 18, 0)), false);
             AddObjectProperty("marcaid_Z", StringUtil.LTrim( StringUtil.Str( (decimal)(gxTv_Sdtproducto_Marcaid_Z), 18, 0)), false);
             AddObjectProperty("categoriaid_Z", StringUtil.LTrim( StringUtil.Str( (decimal)(gxTv_Sdtproducto_Categoriaid_Z), 18, 0)), false);
-            AddObjectProperty("productodsc_Z", gxTv_Sdtproducto_Productodsc_Z, false);
             AddObjectProperty("productousuario_Z", gxTv_Sdtproducto_Productousuario_Z, false);
             datetime_STZ = gxTv_Sdtproducto_Productofecreg_Z;
             sDateCnv = "";
@@ -893,20 +956,23 @@ namespace GeneXus.Programs {
             sNumToPad = StringUtil.Trim( StringUtil.Str( (decimal)(DateTimeUtil.Second( datetime_STZ)), 10, 0));
             sDateCnv = sDateCnv + StringUtil.Substring( "00", 1, 2-StringUtil.Len( sNumToPad)) + sNumToPad;
             AddObjectProperty("productofecultact_Z", sDateCnv, false);
+            AddObjectProperty("tipobienid_Z", gxTv_Sdtproducto_Tipobienid_Z, false);
+            AddObjectProperty("cambsid_N", gxTv_Sdtproducto_Cambsid_N, false);
+            AddObjectProperty("productodsc_N", gxTv_Sdtproducto_Productodsc_N, false);
             AddObjectProperty("modeloid_N", gxTv_Sdtproducto_Modeloid_N, false);
             AddObjectProperty("marcaid_N", gxTv_Sdtproducto_Marcaid_N, false);
             AddObjectProperty("categoriaid_N", gxTv_Sdtproducto_Categoriaid_N, false);
-            AddObjectProperty("productodsc_N", gxTv_Sdtproducto_Productodsc_N, false);
             AddObjectProperty("productousuario_N", gxTv_Sdtproducto_Productousuario_N, false);
             AddObjectProperty("productofecreg_N", gxTv_Sdtproducto_Productofecreg_N, false);
             AddObjectProperty("productofecultact_N", gxTv_Sdtproducto_Productofecultact_N, false);
+            AddObjectProperty("tipobienid_N", gxTv_Sdtproducto_Tipobienid_N, false);
          }
          return  ;
       }
 
       [  SoapElement( ElementName = "productoid" )]
       [  XmlElement( ElementName = "productoid"   )]
-      public short gxTpr_Productoid
+      public int gxTpr_Productoid
       {
          get {
             return gxTv_Sdtproducto_Productoid ;
@@ -918,15 +984,16 @@ namespace GeneXus.Programs {
                gxTv_Sdtproducto_Mode = "INS";
                this.gxTv_Sdtproducto_Productoid_Z_SetNull( );
                this.gxTv_Sdtproducto_Cambsid_Z_SetNull( );
+               this.gxTv_Sdtproducto_Productodsc_Z_SetNull( );
                this.gxTv_Sdtproducto_Modeloid_Z_SetNull( );
                this.gxTv_Sdtproducto_Marcaid_Z_SetNull( );
                this.gxTv_Sdtproducto_Categoriaid_Z_SetNull( );
-               this.gxTv_Sdtproducto_Productodsc_Z_SetNull( );
                this.gxTv_Sdtproducto_Productousuario_Z_SetNull( );
                this.gxTv_Sdtproducto_Productofecreg_Z_SetNull( );
                this.gxTv_Sdtproducto_Productofecultact_Z_SetNull( );
+               this.gxTv_Sdtproducto_Tipobienid_Z_SetNull( );
             }
-            gxTv_Sdtproducto_Productoid = (short)(value);
+            gxTv_Sdtproducto_Productoid = (int)(value);
          }
 
       }
@@ -940,22 +1007,49 @@ namespace GeneXus.Programs {
          }
 
          set {
-            if ( gxTv_Sdtproducto_Cambsid != value )
-            {
-               gxTv_Sdtproducto_Mode = "INS";
-               this.gxTv_Sdtproducto_Productoid_Z_SetNull( );
-               this.gxTv_Sdtproducto_Cambsid_Z_SetNull( );
-               this.gxTv_Sdtproducto_Modeloid_Z_SetNull( );
-               this.gxTv_Sdtproducto_Marcaid_Z_SetNull( );
-               this.gxTv_Sdtproducto_Categoriaid_Z_SetNull( );
-               this.gxTv_Sdtproducto_Productodsc_Z_SetNull( );
-               this.gxTv_Sdtproducto_Productousuario_Z_SetNull( );
-               this.gxTv_Sdtproducto_Productofecreg_Z_SetNull( );
-               this.gxTv_Sdtproducto_Productofecultact_Z_SetNull( );
-            }
+            gxTv_Sdtproducto_Cambsid_N = 0;
             gxTv_Sdtproducto_Cambsid = (int)(value);
          }
 
+      }
+
+      public void gxTv_Sdtproducto_Cambsid_SetNull( )
+      {
+         gxTv_Sdtproducto_Cambsid_N = 1;
+         gxTv_Sdtproducto_Cambsid = 0;
+         return  ;
+      }
+
+      public bool gxTv_Sdtproducto_Cambsid_IsNull( )
+      {
+         return false ;
+      }
+
+      [  SoapElement( ElementName = "productodsc" )]
+      [  XmlElement( ElementName = "productodsc"   )]
+      public String gxTpr_Productodsc
+      {
+         get {
+            return gxTv_Sdtproducto_Productodsc ;
+         }
+
+         set {
+            gxTv_Sdtproducto_Productodsc_N = 0;
+            gxTv_Sdtproducto_Productodsc = (String)(value);
+         }
+
+      }
+
+      public void gxTv_Sdtproducto_Productodsc_SetNull( )
+      {
+         gxTv_Sdtproducto_Productodsc_N = 1;
+         gxTv_Sdtproducto_Productodsc = "";
+         return  ;
+      }
+
+      public bool gxTv_Sdtproducto_Productodsc_IsNull( )
+      {
+         return false ;
       }
 
       [  SoapElement( ElementName = "modeloid" )]
@@ -1035,33 +1129,6 @@ namespace GeneXus.Programs {
       }
 
       public bool gxTv_Sdtproducto_Categoriaid_IsNull( )
-      {
-         return false ;
-      }
-
-      [  SoapElement( ElementName = "productodsc" )]
-      [  XmlElement( ElementName = "productodsc"   )]
-      public String gxTpr_Productodsc
-      {
-         get {
-            return gxTv_Sdtproducto_Productodsc ;
-         }
-
-         set {
-            gxTv_Sdtproducto_Productodsc_N = 0;
-            gxTv_Sdtproducto_Productodsc = (String)(value);
-         }
-
-      }
-
-      public void gxTv_Sdtproducto_Productodsc_SetNull( )
-      {
-         gxTv_Sdtproducto_Productodsc_N = 1;
-         gxTv_Sdtproducto_Productodsc = "";
-         return  ;
-      }
-
-      public bool gxTv_Sdtproducto_Productodsc_IsNull( )
       {
          return false ;
       }
@@ -1187,6 +1254,33 @@ namespace GeneXus.Programs {
          return false ;
       }
 
+      [  SoapElement( ElementName = "tipobienid" )]
+      [  XmlElement( ElementName = "tipobienid"   )]
+      public int gxTpr_Tipobienid
+      {
+         get {
+            return gxTv_Sdtproducto_Tipobienid ;
+         }
+
+         set {
+            gxTv_Sdtproducto_Tipobienid_N = 0;
+            gxTv_Sdtproducto_Tipobienid = (int)(value);
+         }
+
+      }
+
+      public void gxTv_Sdtproducto_Tipobienid_SetNull( )
+      {
+         gxTv_Sdtproducto_Tipobienid_N = 1;
+         gxTv_Sdtproducto_Tipobienid = 0;
+         return  ;
+      }
+
+      public bool gxTv_Sdtproducto_Tipobienid_IsNull( )
+      {
+         return false ;
+      }
+
       [  SoapElement( ElementName = "Mode" )]
       [  XmlElement( ElementName = "Mode"   )]
       public String gxTpr_Mode
@@ -1239,14 +1333,14 @@ namespace GeneXus.Programs {
 
       [  SoapElement( ElementName = "productoid_Z" )]
       [  XmlElement( ElementName = "productoid_Z"   )]
-      public short gxTpr_Productoid_Z
+      public int gxTpr_Productoid_Z
       {
          get {
             return gxTv_Sdtproducto_Productoid_Z ;
          }
 
          set {
-            gxTv_Sdtproducto_Productoid_Z = (short)(value);
+            gxTv_Sdtproducto_Productoid_Z = (int)(value);
          }
 
       }
@@ -1283,6 +1377,31 @@ namespace GeneXus.Programs {
       }
 
       public bool gxTv_Sdtproducto_Cambsid_Z_IsNull( )
+      {
+         return false ;
+      }
+
+      [  SoapElement( ElementName = "productodsc_Z" )]
+      [  XmlElement( ElementName = "productodsc_Z"   )]
+      public String gxTpr_Productodsc_Z
+      {
+         get {
+            return gxTv_Sdtproducto_Productodsc_Z ;
+         }
+
+         set {
+            gxTv_Sdtproducto_Productodsc_Z = (String)(value);
+         }
+
+      }
+
+      public void gxTv_Sdtproducto_Productodsc_Z_SetNull( )
+      {
+         gxTv_Sdtproducto_Productodsc_Z = "";
+         return  ;
+      }
+
+      public bool gxTv_Sdtproducto_Productodsc_Z_IsNull( )
       {
          return false ;
       }
@@ -1358,31 +1477,6 @@ namespace GeneXus.Programs {
       }
 
       public bool gxTv_Sdtproducto_Categoriaid_Z_IsNull( )
-      {
-         return false ;
-      }
-
-      [  SoapElement( ElementName = "productodsc_Z" )]
-      [  XmlElement( ElementName = "productodsc_Z"   )]
-      public String gxTpr_Productodsc_Z
-      {
-         get {
-            return gxTv_Sdtproducto_Productodsc_Z ;
-         }
-
-         set {
-            gxTv_Sdtproducto_Productodsc_Z = (String)(value);
-         }
-
-      }
-
-      public void gxTv_Sdtproducto_Productodsc_Z_SetNull( )
-      {
-         gxTv_Sdtproducto_Productodsc_Z = "";
-         return  ;
-      }
-
-      public bool gxTv_Sdtproducto_Productodsc_Z_IsNull( )
       {
          return false ;
       }
@@ -1500,6 +1594,81 @@ namespace GeneXus.Programs {
          return false ;
       }
 
+      [  SoapElement( ElementName = "tipobienid_Z" )]
+      [  XmlElement( ElementName = "tipobienid_Z"   )]
+      public int gxTpr_Tipobienid_Z
+      {
+         get {
+            return gxTv_Sdtproducto_Tipobienid_Z ;
+         }
+
+         set {
+            gxTv_Sdtproducto_Tipobienid_Z = (int)(value);
+         }
+
+      }
+
+      public void gxTv_Sdtproducto_Tipobienid_Z_SetNull( )
+      {
+         gxTv_Sdtproducto_Tipobienid_Z = 0;
+         return  ;
+      }
+
+      public bool gxTv_Sdtproducto_Tipobienid_Z_IsNull( )
+      {
+         return false ;
+      }
+
+      [  SoapElement( ElementName = "cambsid_N" )]
+      [  XmlElement( ElementName = "cambsid_N"   )]
+      public short gxTpr_Cambsid_N
+      {
+         get {
+            return gxTv_Sdtproducto_Cambsid_N ;
+         }
+
+         set {
+            gxTv_Sdtproducto_Cambsid_N = (short)(value);
+         }
+
+      }
+
+      public void gxTv_Sdtproducto_Cambsid_N_SetNull( )
+      {
+         gxTv_Sdtproducto_Cambsid_N = 0;
+         return  ;
+      }
+
+      public bool gxTv_Sdtproducto_Cambsid_N_IsNull( )
+      {
+         return false ;
+      }
+
+      [  SoapElement( ElementName = "productodsc_N" )]
+      [  XmlElement( ElementName = "productodsc_N"   )]
+      public short gxTpr_Productodsc_N
+      {
+         get {
+            return gxTv_Sdtproducto_Productodsc_N ;
+         }
+
+         set {
+            gxTv_Sdtproducto_Productodsc_N = (short)(value);
+         }
+
+      }
+
+      public void gxTv_Sdtproducto_Productodsc_N_SetNull( )
+      {
+         gxTv_Sdtproducto_Productodsc_N = 0;
+         return  ;
+      }
+
+      public bool gxTv_Sdtproducto_Productodsc_N_IsNull( )
+      {
+         return false ;
+      }
+
       [  SoapElement( ElementName = "modeloid_N" )]
       [  XmlElement( ElementName = "modeloid_N"   )]
       public short gxTpr_Modeloid_N
@@ -1571,31 +1740,6 @@ namespace GeneXus.Programs {
       }
 
       public bool gxTv_Sdtproducto_Categoriaid_N_IsNull( )
-      {
-         return false ;
-      }
-
-      [  SoapElement( ElementName = "productodsc_N" )]
-      [  XmlElement( ElementName = "productodsc_N"   )]
-      public short gxTpr_Productodsc_N
-      {
-         get {
-            return gxTv_Sdtproducto_Productodsc_N ;
-         }
-
-         set {
-            gxTv_Sdtproducto_Productodsc_N = (short)(value);
-         }
-
-      }
-
-      public void gxTv_Sdtproducto_Productodsc_N_SetNull( )
-      {
-         gxTv_Sdtproducto_Productodsc_N = 0;
-         return  ;
-      }
-
-      public bool gxTv_Sdtproducto_Productodsc_N_IsNull( )
       {
          return false ;
       }
@@ -1675,6 +1819,31 @@ namespace GeneXus.Programs {
          return false ;
       }
 
+      [  SoapElement( ElementName = "tipobienid_N" )]
+      [  XmlElement( ElementName = "tipobienid_N"   )]
+      public short gxTpr_Tipobienid_N
+      {
+         get {
+            return gxTv_Sdtproducto_Tipobienid_N ;
+         }
+
+         set {
+            gxTv_Sdtproducto_Tipobienid_N = (short)(value);
+         }
+
+      }
+
+      public void gxTv_Sdtproducto_Tipobienid_N_SetNull( )
+      {
+         gxTv_Sdtproducto_Tipobienid_N = 0;
+         return  ;
+      }
+
+      public bool gxTv_Sdtproducto_Tipobienid_N_IsNull( )
+      {
+         return false ;
+      }
+
       public void initialize( )
       {
          gxTv_Sdtproducto_Productodsc = "";
@@ -1699,20 +1868,24 @@ namespace GeneXus.Programs {
          return  ;
       }
 
-      private short gxTv_Sdtproducto_Productoid ;
       private short gxTv_Sdtproducto_Initialized ;
-      private short gxTv_Sdtproducto_Productoid_Z ;
+      private short gxTv_Sdtproducto_Cambsid_N ;
+      private short gxTv_Sdtproducto_Productodsc_N ;
       private short gxTv_Sdtproducto_Modeloid_N ;
       private short gxTv_Sdtproducto_Marcaid_N ;
       private short gxTv_Sdtproducto_Categoriaid_N ;
-      private short gxTv_Sdtproducto_Productodsc_N ;
       private short gxTv_Sdtproducto_Productousuario_N ;
       private short gxTv_Sdtproducto_Productofecreg_N ;
       private short gxTv_Sdtproducto_Productofecultact_N ;
+      private short gxTv_Sdtproducto_Tipobienid_N ;
       private short readOk ;
       private short nOutParmCount ;
+      private int gxTv_Sdtproducto_Productoid ;
       private int gxTv_Sdtproducto_Cambsid ;
+      private int gxTv_Sdtproducto_Tipobienid ;
+      private int gxTv_Sdtproducto_Productoid_Z ;
       private int gxTv_Sdtproducto_Cambsid_Z ;
+      private int gxTv_Sdtproducto_Tipobienid_Z ;
       private long gxTv_Sdtproducto_Modeloid ;
       private long gxTv_Sdtproducto_Marcaid ;
       private long gxTv_Sdtproducto_Categoriaid ;
@@ -1748,14 +1921,14 @@ namespace GeneXus.Programs {
 
       [DataMember( Name = "productoid" , Order = 0 )]
       [GxSeudo()]
-      public Nullable<short> gxTpr_Productoid
+      public String gxTpr_Productoid
       {
          get {
-            return sdt.gxTpr_Productoid ;
+            return StringUtil.LTrim( StringUtil.Str( (decimal)(sdt.gxTpr_Productoid), 9, 0)) ;
          }
 
          set {
-            sdt.gxTpr_Productoid = (short)(value.HasValue ? value.Value : 0);
+            sdt.gxTpr_Productoid = (int)(NumberUtil.Val( (String)(value), "."));
          }
 
       }
@@ -1774,7 +1947,21 @@ namespace GeneXus.Programs {
 
       }
 
-      [DataMember( Name = "modeloid" , Order = 2 )]
+      [DataMember( Name = "productodsc" , Order = 2 )]
+      [GxSeudo()]
+      public String gxTpr_Productodsc
+      {
+         get {
+            return sdt.gxTpr_Productodsc ;
+         }
+
+         set {
+            sdt.gxTpr_Productodsc = (String)(value);
+         }
+
+      }
+
+      [DataMember( Name = "modeloid" , Order = 3 )]
       [GxSeudo()]
       public String gxTpr_Modeloid
       {
@@ -1788,7 +1975,7 @@ namespace GeneXus.Programs {
 
       }
 
-      [DataMember( Name = "marcaid" , Order = 3 )]
+      [DataMember( Name = "marcaid" , Order = 4 )]
       [GxSeudo()]
       public String gxTpr_Marcaid
       {
@@ -1802,7 +1989,7 @@ namespace GeneXus.Programs {
 
       }
 
-      [DataMember( Name = "categoriaid" , Order = 4 )]
+      [DataMember( Name = "categoriaid" , Order = 5 )]
       [GxSeudo()]
       public String gxTpr_Categoriaid
       {
@@ -1812,20 +1999,6 @@ namespace GeneXus.Programs {
 
          set {
             sdt.gxTpr_Categoriaid = (long)(NumberUtil.Val( (String)(value), "."));
-         }
-
-      }
-
-      [DataMember( Name = "productodsc" , Order = 5 )]
-      [GxSeudo()]
-      public String gxTpr_Productodsc
-      {
-         get {
-            return sdt.gxTpr_Productodsc ;
-         }
-
-         set {
-            sdt.gxTpr_Productodsc = (String)(value);
          }
 
       }
@@ -1872,6 +2045,20 @@ namespace GeneXus.Programs {
 
       }
 
+      [DataMember( Name = "tipobienid" , Order = 9 )]
+      [GxSeudo()]
+      public String gxTpr_Tipobienid
+      {
+         get {
+            return StringUtil.LTrim( StringUtil.Str( (decimal)(sdt.gxTpr_Tipobienid), 9, 0)) ;
+         }
+
+         set {
+            sdt.gxTpr_Tipobienid = (int)(NumberUtil.Val( (String)(value), "."));
+         }
+
+      }
+
       public Sdtproducto sdt
       {
          get {
@@ -1893,7 +2080,7 @@ namespace GeneXus.Programs {
          }
       }
 
-      [DataMember( Name = "gx_md5_hash", Order = 27 )]
+      [DataMember( Name = "gx_md5_hash", Order = 31 )]
       public string Hash
       {
          get {

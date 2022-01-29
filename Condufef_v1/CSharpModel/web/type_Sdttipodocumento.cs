@@ -2,7 +2,7 @@
                File: type_Sdttipodocumento
         Description: tipodocumento
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 1/28/2022 11:56:27.56
+       Generated on: 1/29/2022 0:0:40.89
        Program type: Callable routine
           Main DBMS: postgresql
 */

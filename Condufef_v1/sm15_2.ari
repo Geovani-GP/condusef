@@ -40,8 +40,9 @@ called_program_i(0,6,13,67).
 called_program_i(0,7,13,1).
 called_program_i(0,8,13,1).
 called_program_i(0,9,13,1).
+called_program_i(0,9,13,108).
+called_program_i(0,9,13,62).
 called_program_i(0,9,13,74).
-called_program_i(0,9,13,97).
 called_program_i(1,0,1,5).
 called_program_i(1,0,1,6).
 called_program_i(13,1,13,85).
@@ -67,6 +68,7 @@ called_program_i(13,106,13,37).
 called_program_i(13,107,0,17).
 called_program_i(13,107,13,1).
 called_program_i(13,107,13,38).
+called_program_i(13,108,13,1).
 called_program_i(13,29,13,1).
 called_program_i(13,30,0,14).
 called_program_i(13,30,13,1).
@@ -147,6 +149,7 @@ called_program_i(13,95,13,1).
 called_program_i(13,95,13,40).
 called_program_i(13,96,0,9).
 called_program_i(13,96,13,1).
+called_program_i(13,96,13,96).
 called_program_i(13,97,13,1).
 called_program_i(13,98,0,9).
 called_program_i(13,98,13,1).

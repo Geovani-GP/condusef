@@ -2,7 +2,7 @@
                File: cambs
         Description: cambs
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 1/28/2022 1:40:41.14
+       Generated on: 1/29/2022 0:44:54.7
        Program type: Callable routine
           Main DBMS: postgresql
 */
@@ -432,6 +432,7 @@ namespace GeneXus.Programs {
                /* Read saved SDTs. */
                /* Read variables values. */
                A25cambsid = (int)(context.localUtil.CToN( cgiGet( edtcambsid_Internalname), ",", "."));
+               n25cambsid = false;
                context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A25cambsid", StringUtil.LTrim( StringUtil.Str( (decimal)(A25cambsid), 9, 0)));
                A83cambsdsc = cgiGet( edtcambsdsc_Internalname);
                n83cambsdsc = false;
@@ -497,6 +498,7 @@ namespace GeneXus.Programs {
                GXKey = Crypto.Decrypt64( context.GetCookie( "GX_SESSION_ID"), Crypto.GetServerKey( ));
                forbiddenHiddens = "hsh" + "cambs";
                A25cambsid = (int)(context.localUtil.CToN( cgiGet( edtcambsid_Internalname), ",", "."));
+               n25cambsid = false;
                context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A25cambsid", StringUtil.LTrim( StringUtil.Str( (decimal)(A25cambsid), 9, 0)));
                forbiddenHiddens = forbiddenHiddens + context.localUtil.Format( (decimal)(A25cambsid), "ZZZZZZZZ9");
                forbiddenHiddens = forbiddenHiddens + StringUtil.RTrim( context.localUtil.Format( Gx_mode, "@!"));
@@ -526,6 +528,7 @@ namespace GeneXus.Programs {
                   context.httpAjaxContext.ajax_rsp_assign_attri("", false, "Gx_mode", Gx_mode);
                   context.httpAjaxContext.ajax_rsp_assign_attri("", false, "gxhash_vMODE", GetSecureSignedToken( "", StringUtil.RTrim( context.localUtil.Format( Gx_mode, "@!"))));
                   A25cambsid = (int)(NumberUtil.Val( GetNextPar( ), "."));
+                  n25cambsid = false;
                   context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A25cambsid", StringUtil.LTrim( StringUtil.Str( (decimal)(A25cambsid), 9, 0)));
                   getEqualNoModal( ) ;
                   Gx_mode = "DSP";
@@ -751,6 +754,7 @@ namespace GeneXus.Programs {
          if ( ! (0==AV8cambsid) )
          {
             A25cambsid = AV8cambsid;
+            n25cambsid = false;
             context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A25cambsid", StringUtil.LTrim( StringUtil.Str( (decimal)(A25cambsid), 9, 0)));
          }
       }
@@ -772,7 +776,7 @@ namespace GeneXus.Programs {
       protected void Load0E14( )
       {
          /* Using cursor T000E4 */
-         pr_default.execute(2, new Object[] {A25cambsid});
+         pr_default.execute(2, new Object[] {n25cambsid, A25cambsid});
          if ( (pr_default.getStatus(2) != 101) )
          {
             RcdFound14 = 1;
@@ -815,7 +819,7 @@ namespace GeneXus.Programs {
       protected void GetKey0E14( )
       {
          /* Using cursor T000E5 */
-         pr_default.execute(3, new Object[] {A25cambsid});
+         pr_default.execute(3, new Object[] {n25cambsid, A25cambsid});
          if ( (pr_default.getStatus(3) != 101) )
          {
             RcdFound14 = 1;
@@ -830,13 +834,14 @@ namespace GeneXus.Programs {
       protected void getByPrimaryKey( )
       {
          /* Using cursor T000E3 */
-         pr_default.execute(1, new Object[] {A25cambsid});
+         pr_default.execute(1, new Object[] {n25cambsid, A25cambsid});
          if ( (pr_default.getStatus(1) != 101) )
          {
             ZM0E14( 3) ;
             RcdFound14 = 1;
             A25cambsid = T000E3_A25cambsid[0];
             context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A25cambsid", StringUtil.LTrim( StringUtil.Str( (decimal)(A25cambsid), 9, 0)));
+            n25cambsid = T000E3_n25cambsid[0];
             A83cambsdsc = T000E3_A83cambsdsc[0];
             context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A83cambsdsc", A83cambsdsc);
             n83cambsdsc = T000E3_n83cambsdsc[0];
@@ -896,7 +901,7 @@ namespace GeneXus.Programs {
       {
          RcdFound14 = 0;
          /* Using cursor T000E6 */
-         pr_default.execute(4, new Object[] {A25cambsid});
+         pr_default.execute(4, new Object[] {n25cambsid, A25cambsid});
          if ( (pr_default.getStatus(4) != 101) )
          {
             while ( (pr_default.getStatus(4) != 101) && ( ( T000E6_A25cambsid[0] < A25cambsid ) ) )
@@ -907,6 +912,7 @@ namespace GeneXus.Programs {
             {
                A25cambsid = T000E6_A25cambsid[0];
                context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A25cambsid", StringUtil.LTrim( StringUtil.Str( (decimal)(A25cambsid), 9, 0)));
+               n25cambsid = T000E6_n25cambsid[0];
                RcdFound14 = 1;
             }
          }
@@ -917,7 +923,7 @@ namespace GeneXus.Programs {
       {
          RcdFound14 = 0;
          /* Using cursor T000E7 */
-         pr_default.execute(5, new Object[] {A25cambsid});
+         pr_default.execute(5, new Object[] {n25cambsid, A25cambsid});
          if ( (pr_default.getStatus(5) != 101) )
          {
             while ( (pr_default.getStatus(5) != 101) && ( ( T000E7_A25cambsid[0] > A25cambsid ) ) )
@@ -928,6 +934,7 @@ namespace GeneXus.Programs {
             {
                A25cambsid = T000E7_A25cambsid[0];
                context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A25cambsid", StringUtil.LTrim( StringUtil.Str( (decimal)(A25cambsid), 9, 0)));
+               n25cambsid = T000E7_n25cambsid[0];
                RcdFound14 = 1;
             }
          }
@@ -957,6 +964,7 @@ namespace GeneXus.Programs {
                if ( A25cambsid != Z25cambsid )
                {
                   A25cambsid = Z25cambsid;
+                  n25cambsid = false;
                   context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A25cambsid", StringUtil.LTrim( StringUtil.Str( (decimal)(A25cambsid), 9, 0)));
                   GX_msglist.addItem(context.GetMessage( "GXM_getbeforeupd", ""), "CandidateKeyNotFound", 1, "CAMBSID");
                   AnyError = 1;
@@ -1031,6 +1039,7 @@ namespace GeneXus.Programs {
          if ( A25cambsid != Z25cambsid )
          {
             A25cambsid = Z25cambsid;
+            n25cambsid = false;
             context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A25cambsid", StringUtil.LTrim( StringUtil.Str( (decimal)(A25cambsid), 9, 0)));
             GX_msglist.addItem(context.GetMessage( "GXM_getbeforedlt", ""), 1, "CAMBSID");
             AnyError = 1;
@@ -1054,7 +1063,7 @@ namespace GeneXus.Programs {
          if ( StringUtil.StrCmp(Gx_mode, "INS") != 0 )
          {
             /* Using cursor T000E2 */
-            pr_default.execute(0, new Object[] {A25cambsid});
+            pr_default.execute(0, new Object[] {n25cambsid, A25cambsid});
             if ( (pr_default.getStatus(0) == 103) )
             {
                GX_msglist.addItem(context.GetMessage( "GXM_lock", new   object[]  {"CAMBS"}), "RecordIsLocked", 1, "");
@@ -1114,7 +1123,7 @@ namespace GeneXus.Programs {
                   if ( AnyError == 0 )
                   {
                      /* Using cursor T000E8 */
-                     pr_default.execute(6, new Object[] {A25cambsid, n83cambsdsc, A83cambsdsc, n84cambsusuario, A84cambsusuario, n85cambsfecreg, A85cambsfecreg, n86cambsfecultact, A86cambsfecultact});
+                     pr_default.execute(6, new Object[] {n25cambsid, A25cambsid, n83cambsdsc, A83cambsdsc, n84cambsusuario, A84cambsusuario, n85cambsfecreg, A85cambsfecreg, n86cambsfecultact, A86cambsfecultact});
                      pr_default.close(6);
                      dsDefault.SmartCacheProvider.SetUpdated("CAMBS") ;
                      if ( (pr_default.getStatus(6) == 1) )
@@ -1169,7 +1178,7 @@ namespace GeneXus.Programs {
                   if ( AnyError == 0 )
                   {
                      /* Using cursor T000E9 */
-                     pr_default.execute(7, new Object[] {n83cambsdsc, A83cambsdsc, n84cambsusuario, A84cambsusuario, n85cambsfecreg, A85cambsfecreg, n86cambsfecultact, A86cambsfecultact, A25cambsid});
+                     pr_default.execute(7, new Object[] {n83cambsdsc, A83cambsdsc, n84cambsusuario, A84cambsusuario, n85cambsfecreg, A85cambsfecreg, n86cambsfecultact, A86cambsfecultact, n25cambsid, A25cambsid});
                      pr_default.close(7);
                      dsDefault.SmartCacheProvider.SetUpdated("CAMBS") ;
                      if ( (pr_default.getStatus(7) == 103) )
@@ -1228,7 +1237,7 @@ namespace GeneXus.Programs {
                {
                   /* No cascading delete specified. */
                   /* Using cursor T000E10 */
-                  pr_default.execute(8, new Object[] {A25cambsid});
+                  pr_default.execute(8, new Object[] {n25cambsid, A25cambsid});
                   pr_default.close(8);
                   dsDefault.SmartCacheProvider.SetUpdated("CAMBS") ;
                   if ( AnyError == 0 )
@@ -1271,7 +1280,7 @@ namespace GeneXus.Programs {
          if ( AnyError == 0 )
          {
             /* Using cursor T000E11 */
-            pr_default.execute(9, new Object[] {A25cambsid});
+            pr_default.execute(9, new Object[] {n25cambsid, A25cambsid});
             if ( (pr_default.getStatus(9) != 101) )
             {
                GX_msglist.addItem(context.GetMessage( "GXM_del", new   object[]  {"producto"}), "CannotDeleteReferencedRecord", 1, "");
@@ -1279,7 +1288,7 @@ namespace GeneXus.Programs {
             }
             pr_default.close(9);
             /* Using cursor T000E12 */
-            pr_default.execute(10, new Object[] {A25cambsid});
+            pr_default.execute(10, new Object[] {n25cambsid, A25cambsid});
             if ( (pr_default.getStatus(10) != 101) )
             {
                GX_msglist.addItem(context.GetMessage( "GXM_del", new   object[]  {"articulos"}), "CannotDeleteReferencedRecord", 1, "");
@@ -1287,7 +1296,7 @@ namespace GeneXus.Programs {
             }
             pr_default.close(10);
             /* Using cursor T000E13 */
-            pr_default.execute(11, new Object[] {A25cambsid});
+            pr_default.execute(11, new Object[] {n25cambsid, A25cambsid});
             if ( (pr_default.getStatus(11) != 101) )
             {
                GX_msglist.addItem(context.GetMessage( "GXM_del", new   object[]  {"etiquetas"}), "CannotDeleteReferencedRecord", 1, "");
@@ -1341,6 +1350,7 @@ namespace GeneXus.Programs {
             RcdFound14 = 1;
             A25cambsid = T000E14_A25cambsid[0];
             context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A25cambsid", StringUtil.LTrim( StringUtil.Str( (decimal)(A25cambsid), 9, 0)));
+            n25cambsid = T000E14_n25cambsid[0];
          }
          /* Load Subordinate Levels */
       }
@@ -1355,6 +1365,7 @@ namespace GeneXus.Programs {
             RcdFound14 = 1;
             A25cambsid = T000E14_A25cambsid[0];
             context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A25cambsid", StringUtil.LTrim( StringUtil.Str( (decimal)(A25cambsid), 9, 0)));
+            n25cambsid = T000E14_n25cambsid[0];
          }
       }
 
@@ -1442,7 +1453,7 @@ namespace GeneXus.Programs {
          context.AddJavascriptSource("jquery.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxtimezone.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxgral.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("gxcfg.js", "?20221281404185");
+         context.AddJavascriptSource("gxcfg.js", "?20221290445456");
          if ( context.isSpaRequest( ) )
          {
             enableOutput();
@@ -1598,6 +1609,7 @@ namespace GeneXus.Programs {
       protected void InitAll0E14( )
       {
          A25cambsid = 0;
+         n25cambsid = false;
          context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A25cambsid", StringUtil.LTrim( StringUtil.Str( (decimal)(A25cambsid), 9, 0)));
          InitializeNonKey0E14( ) ;
       }
@@ -1608,12 +1620,12 @@ namespace GeneXus.Programs {
 
       protected void define_styles( )
       {
-         AddStyleSheetFile("calendar-system.css", "?13205289");
-         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?1401612");
+         AddStyleSheetFile("calendar-system.css", "?11323129");
+         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?0080");
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?20221281404191");
+            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?20221290445460");
             idxLst = (int)(idxLst+1);
          }
          /* End function define_styles */
@@ -1623,7 +1635,7 @@ namespace GeneXus.Programs {
       {
          context.AddJavascriptSource("messages.spa.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxdec.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("cambs.js", "?20221281404191");
+         context.AddJavascriptSource("cambs.js", "?20221290445461");
          /* End function include_jscripts */
       }
 
@@ -1785,6 +1797,7 @@ namespace GeneXus.Programs {
          EvtRowId = "";
          sEvtType = "";
          T000E4_A25cambsid = new int[1] ;
+         T000E4_n25cambsid = new bool[] {false} ;
          T000E4_A83cambsdsc = new String[] {""} ;
          T000E4_n83cambsdsc = new bool[] {false} ;
          T000E4_A84cambsusuario = new String[] {""} ;
@@ -1794,7 +1807,9 @@ namespace GeneXus.Programs {
          T000E4_A86cambsfecultact = new DateTime[] {DateTime.MinValue} ;
          T000E4_n86cambsfecultact = new bool[] {false} ;
          T000E5_A25cambsid = new int[1] ;
+         T000E5_n25cambsid = new bool[] {false} ;
          T000E3_A25cambsid = new int[1] ;
+         T000E3_n25cambsid = new bool[] {false} ;
          T000E3_A83cambsdsc = new String[] {""} ;
          T000E3_n83cambsdsc = new bool[] {false} ;
          T000E3_A84cambsusuario = new String[] {""} ;
@@ -1804,8 +1819,11 @@ namespace GeneXus.Programs {
          T000E3_A86cambsfecultact = new DateTime[] {DateTime.MinValue} ;
          T000E3_n86cambsfecultact = new bool[] {false} ;
          T000E6_A25cambsid = new int[1] ;
+         T000E6_n25cambsid = new bool[] {false} ;
          T000E7_A25cambsid = new int[1] ;
+         T000E7_n25cambsid = new bool[] {false} ;
          T000E2_A25cambsid = new int[1] ;
+         T000E2_n25cambsid = new bool[] {false} ;
          T000E2_A83cambsdsc = new String[] {""} ;
          T000E2_n83cambsdsc = new bool[] {false} ;
          T000E2_A84cambsusuario = new String[] {""} ;
@@ -1814,8 +1832,7 @@ namespace GeneXus.Programs {
          T000E2_n85cambsfecreg = new bool[] {false} ;
          T000E2_A86cambsfecultact = new DateTime[] {DateTime.MinValue} ;
          T000E2_n86cambsfecultact = new bool[] {false} ;
-         T000E11_A175productoid = new short[1] ;
-         T000E11_A25cambsid = new int[1] ;
+         T000E11_A175productoid = new int[1] ;
          T000E12_A19almacenid = new long[1] ;
          T000E12_A20articulosproductoid = new int[1] ;
          T000E12_A21articuloscambsid = new int[1] ;
@@ -1823,6 +1840,7 @@ namespace GeneXus.Programs {
          T000E13_A18etiquetascambsid = new int[1] ;
          T000E13_A19almacenid = new long[1] ;
          T000E14_A25cambsid = new int[1] ;
+         T000E14_n25cambsid = new bool[] {false} ;
          sDynURL = "";
          FormProcess = "";
          bodyStyle = "";
@@ -1853,7 +1871,7 @@ namespace GeneXus.Programs {
                , new Object[] {
                }
                , new Object[] {
-               T000E11_A175productoid, T000E11_A25cambsid
+               T000E11_A175productoid
                }
                , new Object[] {
                T000E12_A19almacenid, T000E12_A20articulosproductoid, T000E12_A21articuloscambsid
@@ -1960,6 +1978,7 @@ namespace GeneXus.Programs {
       private bool entryPointCalled ;
       private bool toggleJsOutput ;
       private bool wbErr ;
+      private bool n25cambsid ;
       private bool n83cambsdsc ;
       private bool n84cambsusuario ;
       private bool n85cambsfecreg ;
@@ -1971,6 +1990,7 @@ namespace GeneXus.Programs {
       private IGxDataStore dsDefault ;
       private IDataStoreProvider pr_default ;
       private int[] T000E4_A25cambsid ;
+      private bool[] T000E4_n25cambsid ;
       private String[] T000E4_A83cambsdsc ;
       private bool[] T000E4_n83cambsdsc ;
       private String[] T000E4_A84cambsusuario ;
@@ -1980,7 +2000,9 @@ namespace GeneXus.Programs {
       private DateTime[] T000E4_A86cambsfecultact ;
       private bool[] T000E4_n86cambsfecultact ;
       private int[] T000E5_A25cambsid ;
+      private bool[] T000E5_n25cambsid ;
       private int[] T000E3_A25cambsid ;
+      private bool[] T000E3_n25cambsid ;
       private String[] T000E3_A83cambsdsc ;
       private bool[] T000E3_n83cambsdsc ;
       private String[] T000E3_A84cambsusuario ;
@@ -1990,8 +2012,11 @@ namespace GeneXus.Programs {
       private DateTime[] T000E3_A86cambsfecultact ;
       private bool[] T000E3_n86cambsfecultact ;
       private int[] T000E6_A25cambsid ;
+      private bool[] T000E6_n25cambsid ;
       private int[] T000E7_A25cambsid ;
+      private bool[] T000E7_n25cambsid ;
       private int[] T000E2_A25cambsid ;
+      private bool[] T000E2_n25cambsid ;
       private String[] T000E2_A83cambsdsc ;
       private bool[] T000E2_n83cambsdsc ;
       private String[] T000E2_A84cambsusuario ;
@@ -2000,8 +2025,7 @@ namespace GeneXus.Programs {
       private bool[] T000E2_n85cambsfecreg ;
       private DateTime[] T000E2_A86cambsfecultact ;
       private bool[] T000E2_n86cambsfecultact ;
-      private short[] T000E11_A175productoid ;
-      private int[] T000E11_A25cambsid ;
+      private int[] T000E11_A175productoid ;
       private long[] T000E12_A19almacenid ;
       private int[] T000E12_A20articulosproductoid ;
       private int[] T000E12_A21articuloscambsid ;
@@ -2009,6 +2033,7 @@ namespace GeneXus.Programs {
       private int[] T000E13_A18etiquetascambsid ;
       private long[] T000E13_A19almacenid ;
       private int[] T000E14_A25cambsid ;
+      private bool[] T000E14_n25cambsid ;
       private GXWebForm Form ;
    }
 
@@ -2108,7 +2133,7 @@ namespace GeneXus.Programs {
              ,new CursorDef("T000E8", "SAVEPOINT gxupdate;INSERT INTO public.cambs(cambsid, cambsdsc, cambsusuario, cambsfecreg, cambsfecultact) VALUES(:cambsid, :cambsdsc, :cambsusuario, :cambsfecreg, :cambsfecultact);RELEASE SAVEPOINT gxupdate", GxErrorMask.GX_ROLLBACKSAVEPOINT,prmT000E8)
              ,new CursorDef("T000E9", "SAVEPOINT gxupdate;UPDATE public.cambs SET cambsdsc=:cambsdsc, cambsusuario=:cambsusuario, cambsfecreg=:cambsfecreg, cambsfecultact=:cambsfecultact  WHERE cambsid = :cambsid;RELEASE SAVEPOINT gxupdate", GxErrorMask.GX_ROLLBACKSAVEPOINT | GxErrorMask.GX_NOMASK,prmT000E9)
              ,new CursorDef("T000E10", "SAVEPOINT gxupdate;DELETE FROM public.cambs  WHERE cambsid = :cambsid;RELEASE SAVEPOINT gxupdate", GxErrorMask.GX_ROLLBACKSAVEPOINT | GxErrorMask.GX_NOMASK,prmT000E10)
-             ,new CursorDef("T000E11", "SELECT productoid, cambsid FROM producto WHERE cambsid = :cambsid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000E11,1,0,true,true )
+             ,new CursorDef("T000E11", "SELECT productoid FROM producto WHERE cambsid = :cambsid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000E11,1,0,true,true )
              ,new CursorDef("T000E12", "SELECT articulosid, productoid AS articulosproductoid, cambsid AS articuloscambsid FROM public.articulos WHERE cambsid = :cambsid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000E12,1,0,true,true )
              ,new CursorDef("T000E13", "SELECT productoid AS etiquetasproductoid, cambsid AS etiquetascambsid, articuloid FROM public.etiquetas WHERE cambsid = :cambsid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000E13,1,0,true,true )
              ,new CursorDef("T000E14", "SELECT cambsid FROM public.cambs ORDER BY cambsid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000E14,100,0,true,false )
@@ -2165,8 +2190,7 @@ namespace GeneXus.Programs {
                 ((int[]) buf[0])[0] = rslt.getInt(1) ;
                 return;
              case 9 :
-                ((short[]) buf[0])[0] = rslt.getShort(1) ;
-                ((int[]) buf[1])[0] = rslt.getInt(2) ;
+                ((int[]) buf[0])[0] = rslt.getInt(1) ;
                 return;
              case 10 :
                 ((long[]) buf[0])[0] = rslt.getLong(1) ;
@@ -2191,56 +2215,105 @@ namespace GeneXus.Programs {
        switch ( cursor )
        {
              case 0 :
-                stmt.SetParameter(1, (int)parms[0]);
+                if ( (bool)parms[0] )
+                {
+                   stmt.setNull( 1 , SqlDbType.Int );
+                }
+                else
+                {
+                   stmt.SetParameter(1, (int)parms[1]);
+                }
                 return;
              case 1 :
-                stmt.SetParameter(1, (int)parms[0]);
+                if ( (bool)parms[0] )
+                {
+                   stmt.setNull( 1 , SqlDbType.Int );
+                }
+                else
+                {
+                   stmt.SetParameter(1, (int)parms[1]);
+                }
                 return;
              case 2 :
-                stmt.SetParameter(1, (int)parms[0]);
+                if ( (bool)parms[0] )
+                {
+                   stmt.setNull( 1 , SqlDbType.Int );
+                }
+                else
+                {
+                   stmt.SetParameter(1, (int)parms[1]);
+                }
                 return;
              case 3 :
-                stmt.SetParameter(1, (int)parms[0]);
+                if ( (bool)parms[0] )
+                {
+                   stmt.setNull( 1 , SqlDbType.Int );
+                }
+                else
+                {
+                   stmt.SetParameter(1, (int)parms[1]);
+                }
                 return;
              case 4 :
-                stmt.SetParameter(1, (int)parms[0]);
+                if ( (bool)parms[0] )
+                {
+                   stmt.setNull( 1 , SqlDbType.Int );
+                }
+                else
+                {
+                   stmt.SetParameter(1, (int)parms[1]);
+                }
                 return;
              case 5 :
-                stmt.SetParameter(1, (int)parms[0]);
+                if ( (bool)parms[0] )
+                {
+                   stmt.setNull( 1 , SqlDbType.Int );
+                }
+                else
+                {
+                   stmt.SetParameter(1, (int)parms[1]);
+                }
                 return;
              case 6 :
-                stmt.SetParameter(1, (int)parms[0]);
-                if ( (bool)parms[1] )
+                if ( (bool)parms[0] )
+                {
+                   stmt.setNull( 1 , SqlDbType.Int );
+                }
+                else
+                {
+                   stmt.SetParameter(1, (int)parms[1]);
+                }
+                if ( (bool)parms[2] )
                 {
                    stmt.setNull( 2 , SqlDbType.VarChar );
                 }
                 else
                 {
-                   stmt.SetParameter(2, (String)parms[2]);
+                   stmt.SetParameter(2, (String)parms[3]);
                 }
-                if ( (bool)parms[3] )
+                if ( (bool)parms[4] )
                 {
                    stmt.setNull( 3 , SqlDbType.VarChar );
                 }
                 else
                 {
-                   stmt.SetParameter(3, (String)parms[4]);
+                   stmt.SetParameter(3, (String)parms[5]);
                 }
-                if ( (bool)parms[5] )
+                if ( (bool)parms[6] )
                 {
                    stmt.setNull( 4 , SqlDbType.DateTime );
                 }
                 else
                 {
-                   stmt.SetParameterDatetime(4, (DateTime)parms[6]);
+                   stmt.SetParameterDatetime(4, (DateTime)parms[7]);
                 }
-                if ( (bool)parms[7] )
+                if ( (bool)parms[8] )
                 {
                    stmt.setNull( 5 , SqlDbType.DateTime );
                 }
                 else
                 {
-                   stmt.SetParameterDatetime(5, (DateTime)parms[8]);
+                   stmt.SetParameterDatetime(5, (DateTime)parms[9]);
                 }
                 return;
              case 7 :
@@ -2276,19 +2349,54 @@ namespace GeneXus.Programs {
                 {
                    stmt.SetParameterDatetime(4, (DateTime)parms[7]);
                 }
-                stmt.SetParameter(5, (int)parms[8]);
+                if ( (bool)parms[8] )
+                {
+                   stmt.setNull( 5 , SqlDbType.Int );
+                }
+                else
+                {
+                   stmt.SetParameter(5, (int)parms[9]);
+                }
                 return;
              case 8 :
-                stmt.SetParameter(1, (int)parms[0]);
+                if ( (bool)parms[0] )
+                {
+                   stmt.setNull( 1 , SqlDbType.Int );
+                }
+                else
+                {
+                   stmt.SetParameter(1, (int)parms[1]);
+                }
                 return;
              case 9 :
-                stmt.SetParameter(1, (int)parms[0]);
+                if ( (bool)parms[0] )
+                {
+                   stmt.setNull( 1 , SqlDbType.Int );
+                }
+                else
+                {
+                   stmt.SetParameter(1, (int)parms[1]);
+                }
                 return;
              case 10 :
-                stmt.SetParameter(1, (int)parms[0]);
+                if ( (bool)parms[0] )
+                {
+                   stmt.setNull( 1 , SqlDbType.Int );
+                }
+                else
+                {
+                   stmt.SetParameter(1, (int)parms[1]);
+                }
                 return;
              case 11 :
-                stmt.SetParameter(1, (int)parms[0]);
+                if ( (bool)parms[0] )
+                {
+                   stmt.setNull( 1 , SqlDbType.Int );
+                }
+                else
+                {
+                   stmt.SetParameter(1, (int)parms[1]);
+                }
                 return;
        }
     }

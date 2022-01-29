@@ -2,7 +2,7 @@
                File: tipobien
         Description: tipobien
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 1/28/2022 1:40:18.11
+       Generated on: 1/29/2022 1:0:42.52
        Program type: Callable routine
           Main DBMS: postgresql
 */
@@ -333,7 +333,7 @@ namespace GeneXus.Programs {
             /* Single line edit */
             TempTags = "  onfocus=\"gx.evt.onfocus(this, 34,'',false,'',0)\"";
             context.WriteHtmlText( "<div id=\""+edttipobienfecreg_Internalname+"_dp_container\" class=\"dp_container\" style=\"white-space:nowrap;display:inline;\">") ;
-            GxWebStd.gx_single_line_edit( context, edttipobienfecreg_Internalname, context.localUtil.TToC( A141tipobienfecreg, 10, 8, 0, 3, "/", ":", " "), context.localUtil.Format( A141tipobienfecreg, "99/99/9999 99:99:99"), TempTags+" onchange=\"gx.evt.onchange(this)\" "+" onblur=\""+"gx.date.valid_date(this, 10,'DMY',8,24,'spa',false,0);"+";gx.evt.onblur(this,34);\"", "'"+""+"'"+",false,"+"'"+""+"'", "", "", "", "", edttipobienfecreg_Jsonclick, 0, "Attribute", "", "", "", 1, edttipobienfecreg_Enabled, 0, "text", "", 19, "chr", 1, "row", 19, 0, 0, 0, 1, -1, 0, true, "", "right", false, "HLP_tipobien.htm");
+            GxWebStd.gx_single_line_edit( context, edttipobienfecreg_Internalname, context.localUtil.Format(A141tipobienfecreg, "99/99/9999"), context.localUtil.Format( A141tipobienfecreg, "99/99/9999"), TempTags+" onchange=\"gx.evt.onchange(this)\" "+" onblur=\""+"gx.date.valid_date(this, 10,'DMY',0,24,'spa',false,0);"+";gx.evt.onblur(this,34);\"", "'"+""+"'"+",false,"+"'"+""+"'", "", "", "", "", edttipobienfecreg_Jsonclick, 0, "Attribute", "", "", "", 1, edttipobienfecreg_Enabled, 0, "text", "", 10, "chr", 1, "row", 10, 0, 0, 0, 1, -1, 0, true, "", "right", false, "HLP_tipobien.htm");
             GxWebStd.gx_bitmap( context, edttipobienfecreg_Internalname+"_dp_trigger", context.GetImagePath( "61b9b5d3-dff6-4d59-9b00-da61bc2cbe93", "", context.GetTheme( )), "", "", "", "", ((1==0)||(edttipobienfecreg_Enabled==0) ? 0 : 1), 0, "Date selector", "Date selector", 0, 1, 0, "", 0, "", 0, 0, 0, "", "", "cursor: pointer;", "", "", "", "", "", "", "", 1, false, false, "HLP_tipobien.htm");
             context.WriteHtmlTextNl( "</div>") ;
             GxWebStd.gx_div_end( context, "left", "top");
@@ -350,7 +350,7 @@ namespace GeneXus.Programs {
             /* Single line edit */
             TempTags = "  onfocus=\"gx.evt.onfocus(this, 38,'',false,'',0)\"";
             context.WriteHtmlText( "<div id=\""+edttipobienfecultact_Internalname+"_dp_container\" class=\"dp_container\" style=\"white-space:nowrap;display:inline;\">") ;
-            GxWebStd.gx_single_line_edit( context, edttipobienfecultact_Internalname, context.localUtil.TToC( A142tipobienfecultact, 10, 8, 0, 3, "/", ":", " "), context.localUtil.Format( A142tipobienfecultact, "99/99/9999 99:99:99"), TempTags+" onchange=\"gx.evt.onchange(this)\" "+" onblur=\""+"gx.date.valid_date(this, 10,'DMY',8,24,'spa',false,0);"+";gx.evt.onblur(this,38);\"", "'"+""+"'"+",false,"+"'"+""+"'", "", "", "", "", edttipobienfecultact_Jsonclick, 0, "Attribute", "", "", "", 1, edttipobienfecultact_Enabled, 0, "text", "", 19, "chr", 1, "row", 19, 0, 0, 0, 1, -1, 0, true, "", "right", false, "HLP_tipobien.htm");
+            GxWebStd.gx_single_line_edit( context, edttipobienfecultact_Internalname, context.localUtil.Format(A142tipobienfecultact, "99/99/9999"), context.localUtil.Format( A142tipobienfecultact, "99/99/9999"), TempTags+" onchange=\"gx.evt.onchange(this)\" "+" onblur=\""+"gx.date.valid_date(this, 10,'DMY',0,24,'spa',false,0);"+";gx.evt.onblur(this,38);\"", "'"+""+"'"+",false,"+"'"+""+"'", "", "", "", "", edttipobienfecultact_Jsonclick, 0, "Attribute", "", "", "", 1, edttipobienfecultact_Enabled, 0, "text", "", 10, "chr", 1, "row", 10, 0, 0, 0, 1, -1, 0, true, "", "right", false, "HLP_tipobien.htm");
             GxWebStd.gx_bitmap( context, edttipobienfecultact_Internalname+"_dp_trigger", context.GetImagePath( "61b9b5d3-dff6-4d59-9b00-da61bc2cbe93", "", context.GetTheme( )), "", "", "", "", ((1==0)||(edttipobienfecultact_Enabled==0) ? 0 : 1), 0, "Date selector", "Date selector", 0, 1, 0, "", 0, "", 0, 0, 0, "", "", "cursor: pointer;", "", "", "", "", "", "", "", 1, false, false, "HLP_tipobien.htm");
             context.WriteHtmlTextNl( "</div>") ;
             GxWebStd.gx_div_end( context, "left", "top");
@@ -442,40 +442,40 @@ namespace GeneXus.Programs {
                n140tipobienusuario = false;
                context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A140tipobienusuario", A140tipobienusuario);
                n140tipobienusuario = (String.IsNullOrEmpty(StringUtil.RTrim( A140tipobienusuario)) ? true : false);
-               if ( context.localUtil.VCDateTime( cgiGet( edttipobienfecreg_Internalname), 2, 0) == 0 )
+               if ( context.localUtil.VCDate( cgiGet( edttipobienfecreg_Internalname), 2) == 0 )
                {
-                  GX_msglist.addItem(context.GetMessage( "GXM_baddatetime", new   object[]  {"tipobienfecreg"}), 1, "TIPOBIENFECREG");
+                  GX_msglist.addItem(context.GetMessage( "GXM_faildate", new   object[]  {"tipobienfecreg"}), 1, "TIPOBIENFECREG");
                   AnyError = 1;
                   GX_FocusControl = edttipobienfecreg_Internalname;
                   context.httpAjaxContext.ajax_rsp_assign_attri("", false, "GX_FocusControl", GX_FocusControl);
                   wbErr = true;
-                  A141tipobienfecreg = (DateTime)(DateTime.MinValue);
+                  A141tipobienfecreg = DateTime.MinValue;
                   n141tipobienfecreg = false;
-                  context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A141tipobienfecreg", context.localUtil.TToC( A141tipobienfecreg, 10, 8, 0, 3, "/", ":", " "));
+                  context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A141tipobienfecreg", context.localUtil.Format(A141tipobienfecreg, "99/99/9999"));
                }
                else
                {
-                  A141tipobienfecreg = context.localUtil.CToT( cgiGet( edttipobienfecreg_Internalname));
+                  A141tipobienfecreg = context.localUtil.CToD( cgiGet( edttipobienfecreg_Internalname), 2);
                   n141tipobienfecreg = false;
-                  context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A141tipobienfecreg", context.localUtil.TToC( A141tipobienfecreg, 10, 8, 0, 3, "/", ":", " "));
+                  context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A141tipobienfecreg", context.localUtil.Format(A141tipobienfecreg, "99/99/9999"));
                }
                n141tipobienfecreg = ((DateTime.MinValue==A141tipobienfecreg) ? true : false);
-               if ( context.localUtil.VCDateTime( cgiGet( edttipobienfecultact_Internalname), 2, 0) == 0 )
+               if ( context.localUtil.VCDate( cgiGet( edttipobienfecultact_Internalname), 2) == 0 )
                {
-                  GX_msglist.addItem(context.GetMessage( "GXM_baddatetime", new   object[]  {"tipobienfecultact"}), 1, "TIPOBIENFECULTACT");
+                  GX_msglist.addItem(context.GetMessage( "GXM_faildate", new   object[]  {"tipobienfecultact"}), 1, "TIPOBIENFECULTACT");
                   AnyError = 1;
                   GX_FocusControl = edttipobienfecultact_Internalname;
                   context.httpAjaxContext.ajax_rsp_assign_attri("", false, "GX_FocusControl", GX_FocusControl);
                   wbErr = true;
-                  A142tipobienfecultact = (DateTime)(DateTime.MinValue);
+                  A142tipobienfecultact = DateTime.MinValue;
                   n142tipobienfecultact = false;
-                  context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A142tipobienfecultact", context.localUtil.TToC( A142tipobienfecultact, 10, 8, 0, 3, "/", ":", " "));
+                  context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A142tipobienfecultact", context.localUtil.Format(A142tipobienfecultact, "99/99/9999"));
                }
                else
                {
-                  A142tipobienfecultact = context.localUtil.CToT( cgiGet( edttipobienfecultact_Internalname));
+                  A142tipobienfecultact = context.localUtil.CToD( cgiGet( edttipobienfecultact_Internalname), 2);
                   n142tipobienfecultact = false;
-                  context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A142tipobienfecultact", context.localUtil.TToC( A142tipobienfecultact, 10, 8, 0, 3, "/", ":", " "));
+                  context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A142tipobienfecultact", context.localUtil.Format(A142tipobienfecultact, "99/99/9999"));
                }
                n142tipobienfecultact = ((DateTime.MinValue==A142tipobienfecultact) ? true : false);
                /* Read saved values. */
@@ -484,9 +484,9 @@ namespace GeneXus.Programs {
                n139tipobiendsc = (String.IsNullOrEmpty(StringUtil.RTrim( A139tipobiendsc)) ? true : false);
                Z140tipobienusuario = cgiGet( "Z140tipobienusuario");
                n140tipobienusuario = (String.IsNullOrEmpty(StringUtil.RTrim( A140tipobienusuario)) ? true : false);
-               Z141tipobienfecreg = context.localUtil.CToT( cgiGet( "Z141tipobienfecreg"), 0);
+               Z141tipobienfecreg = context.localUtil.CToD( cgiGet( "Z141tipobienfecreg"), 0);
                n141tipobienfecreg = ((DateTime.MinValue==A141tipobienfecreg) ? true : false);
-               Z142tipobienfecultact = context.localUtil.CToT( cgiGet( "Z142tipobienfecultact"), 0);
+               Z142tipobienfecultact = context.localUtil.CToD( cgiGet( "Z142tipobienfecultact"), 0);
                n142tipobienfecultact = ((DateTime.MinValue==A142tipobienfecultact) ? true : false);
                IsConfirmed = (short)(context.localUtil.CToN( cgiGet( "IsConfirmed"), ",", "."));
                IsModified = (short)(context.localUtil.CToN( cgiGet( "IsModified"), ",", "."));
@@ -745,10 +745,10 @@ namespace GeneXus.Programs {
             context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A140tipobienusuario", A140tipobienusuario);
             n140tipobienusuario = T00014_n140tipobienusuario[0];
             A141tipobienfecreg = T00014_A141tipobienfecreg[0];
-            context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A141tipobienfecreg", context.localUtil.TToC( A141tipobienfecreg, 10, 8, 0, 3, "/", ":", " "));
+            context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A141tipobienfecreg", context.localUtil.Format(A141tipobienfecreg, "99/99/9999"));
             n141tipobienfecreg = T00014_n141tipobienfecreg[0];
             A142tipobienfecultact = T00014_A142tipobienfecultact[0];
-            context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A142tipobienfecultact", context.localUtil.TToC( A142tipobienfecultact, 10, 8, 0, 3, "/", ":", " "));
+            context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A142tipobienfecultact", context.localUtil.Format(A142tipobienfecultact, "99/99/9999"));
             n142tipobienfecultact = T00014_n142tipobienfecultact[0];
             ZM011( -1) ;
          }
@@ -807,10 +807,10 @@ namespace GeneXus.Programs {
             context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A140tipobienusuario", A140tipobienusuario);
             n140tipobienusuario = T00013_n140tipobienusuario[0];
             A141tipobienfecreg = T00013_A141tipobienfecreg[0];
-            context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A141tipobienfecreg", context.localUtil.TToC( A141tipobienfecreg, 10, 8, 0, 3, "/", ":", " "));
+            context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A141tipobienfecreg", context.localUtil.Format(A141tipobienfecreg, "99/99/9999"));
             n141tipobienfecreg = T00013_n141tipobienfecreg[0];
             A142tipobienfecultact = T00013_A142tipobienfecultact[0];
-            context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A142tipobienfecultact", context.localUtil.TToC( A142tipobienfecultact, 10, 8, 0, 3, "/", ":", " "));
+            context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A142tipobienfecultact", context.localUtil.Format(A142tipobienfecultact, "99/99/9999"));
             n142tipobienfecultact = T00013_n142tipobienfecultact[0];
             Z23tipobienid = A23tipobienid;
             sMode1 = Gx_mode;
@@ -1370,10 +1370,18 @@ namespace GeneXus.Programs {
             pr_default.execute(9, new Object[] {n23tipobienid, A23tipobienid});
             if ( (pr_default.getStatus(9) != 101) )
             {
-               GX_msglist.addItem(context.GetMessage( "GXM_del", new   object[]  {"articulos"}), "CannotDeleteReferencedRecord", 1, "");
+               GX_msglist.addItem(context.GetMessage( "GXM_del", new   object[]  {"producto"}), "CannotDeleteReferencedRecord", 1, "");
                AnyError = 1;
             }
             pr_default.close(9);
+            /* Using cursor T000112 */
+            pr_default.execute(10, new Object[] {n23tipobienid, A23tipobienid});
+            if ( (pr_default.getStatus(10) != 101) )
+            {
+               GX_msglist.addItem(context.GetMessage( "GXM_del", new   object[]  {"articulos"}), "CannotDeleteReferencedRecord", 1, "");
+               AnyError = 1;
+            }
+            pr_default.close(10);
          }
       }
 
@@ -1412,15 +1420,15 @@ namespace GeneXus.Programs {
 
       public void ScanStart011( )
       {
-         /* Using cursor T000112 */
-         pr_default.execute(10);
+         /* Using cursor T000113 */
+         pr_default.execute(11);
          RcdFound1 = 0;
-         if ( (pr_default.getStatus(10) != 101) )
+         if ( (pr_default.getStatus(11) != 101) )
          {
             RcdFound1 = 1;
-            A23tipobienid = T000112_A23tipobienid[0];
+            A23tipobienid = T000113_A23tipobienid[0];
             context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A23tipobienid", StringUtil.LTrim( StringUtil.Str( (decimal)(A23tipobienid), 9, 0)));
-            n23tipobienid = T000112_n23tipobienid[0];
+            n23tipobienid = T000113_n23tipobienid[0];
          }
          /* Load Subordinate Levels */
       }
@@ -1428,20 +1436,20 @@ namespace GeneXus.Programs {
       protected void ScanNext011( )
       {
          /* Scan next routine */
-         pr_default.readNext(10);
+         pr_default.readNext(11);
          RcdFound1 = 0;
-         if ( (pr_default.getStatus(10) != 101) )
+         if ( (pr_default.getStatus(11) != 101) )
          {
             RcdFound1 = 1;
-            A23tipobienid = T000112_A23tipobienid[0];
+            A23tipobienid = T000113_A23tipobienid[0];
             context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A23tipobienid", StringUtil.LTrim( StringUtil.Str( (decimal)(A23tipobienid), 9, 0)));
-            n23tipobienid = T000112_n23tipobienid[0];
+            n23tipobienid = T000113_n23tipobienid[0];
          }
       }
 
       protected void ScanEnd011( )
       {
-         pr_default.close(10);
+         pr_default.close(11);
       }
 
       protected void AfterConfirm011( )
@@ -1523,7 +1531,7 @@ namespace GeneXus.Programs {
          context.AddJavascriptSource("jquery.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxtimezone.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxgral.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("gxcfg.js", "?20221281401860");
+         context.AddJavascriptSource("gxcfg.js", "?202212910439");
          if ( context.isSpaRequest( ) )
          {
             enableOutput();
@@ -1567,8 +1575,8 @@ namespace GeneXus.Programs {
          GxWebStd.gx_hidden_field( context, "Z23tipobienid", StringUtil.LTrim( StringUtil.NToC( (decimal)(Z23tipobienid), 9, 0, ",", "")));
          GxWebStd.gx_hidden_field( context, "Z139tipobiendsc", Z139tipobiendsc);
          GxWebStd.gx_hidden_field( context, "Z140tipobienusuario", Z140tipobienusuario);
-         GxWebStd.gx_hidden_field( context, "Z141tipobienfecreg", context.localUtil.TToC( Z141tipobienfecreg, 10, 8, 0, 0, "/", ":", " "));
-         GxWebStd.gx_hidden_field( context, "Z142tipobienfecultact", context.localUtil.TToC( Z142tipobienfecultact, 10, 8, 0, 0, "/", ":", " "));
+         GxWebStd.gx_hidden_field( context, "Z141tipobienfecreg", context.localUtil.DToC( Z141tipobienfecreg, 0, "/"));
+         GxWebStd.gx_hidden_field( context, "Z142tipobienfecultact", context.localUtil.DToC( Z142tipobienfecultact, 0, "/"));
          GxWebStd.gx_hidden_field( context, "IsConfirmed", StringUtil.LTrim( StringUtil.NToC( (decimal)(IsConfirmed), 4, 0, ",", "")));
          GxWebStd.gx_hidden_field( context, "IsModified", StringUtil.LTrim( StringUtil.NToC( (decimal)(IsModified), 4, 0, ",", "")));
          GxWebStd.gx_hidden_field( context, "Mode", StringUtil.RTrim( Gx_mode));
@@ -1653,18 +1661,18 @@ namespace GeneXus.Programs {
          n140tipobienusuario = false;
          context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A140tipobienusuario", A140tipobienusuario);
          n140tipobienusuario = (String.IsNullOrEmpty(StringUtil.RTrim( A140tipobienusuario)) ? true : false);
-         A141tipobienfecreg = (DateTime)(DateTime.MinValue);
+         A141tipobienfecreg = DateTime.MinValue;
          n141tipobienfecreg = false;
-         context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A141tipobienfecreg", context.localUtil.TToC( A141tipobienfecreg, 10, 8, 0, 3, "/", ":", " "));
+         context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A141tipobienfecreg", context.localUtil.Format(A141tipobienfecreg, "99/99/9999"));
          n141tipobienfecreg = ((DateTime.MinValue==A141tipobienfecreg) ? true : false);
-         A142tipobienfecultact = (DateTime)(DateTime.MinValue);
+         A142tipobienfecultact = DateTime.MinValue;
          n142tipobienfecultact = false;
-         context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A142tipobienfecultact", context.localUtil.TToC( A142tipobienfecultact, 10, 8, 0, 3, "/", ":", " "));
+         context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A142tipobienfecultact", context.localUtil.Format(A142tipobienfecultact, "99/99/9999"));
          n142tipobienfecultact = ((DateTime.MinValue==A142tipobienfecultact) ? true : false);
          Z139tipobiendsc = "";
          Z140tipobienusuario = "";
-         Z141tipobienfecreg = (DateTime)(DateTime.MinValue);
-         Z142tipobienfecultact = (DateTime)(DateTime.MinValue);
+         Z141tipobienfecreg = DateTime.MinValue;
+         Z142tipobienfecultact = DateTime.MinValue;
       }
 
       protected void InitAll011( )
@@ -1681,12 +1689,12 @@ namespace GeneXus.Programs {
 
       protected void define_styles( )
       {
-         AddStyleSheetFile("calendar-system.css", "?13205289");
-         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?1401612");
+         AddStyleSheetFile("calendar-system.css", "?11323129");
+         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?0080");
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?20221281401863");
+            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?2022129104312");
             idxLst = (int)(idxLst+1);
          }
          /* End function define_styles */
@@ -1696,7 +1704,7 @@ namespace GeneXus.Programs {
       {
          context.AddJavascriptSource("messages.spa.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxdec.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("tipobien.js", "?20221281401863");
+         context.AddJavascriptSource("tipobien.js", "?2022129104312");
          /* End function include_jscripts */
       }
 
@@ -1829,14 +1837,14 @@ namespace GeneXus.Programs {
          }
          isValidOutput.Add(A139tipobiendsc);
          isValidOutput.Add(A140tipobienusuario);
-         isValidOutput.Add(context.localUtil.TToC( A141tipobienfecreg, 10, 8, 0, 3, "/", ":", " "));
-         isValidOutput.Add(context.localUtil.TToC( A142tipobienfecultact, 10, 8, 0, 3, "/", ":", " "));
+         isValidOutput.Add(context.localUtil.Format(A141tipobienfecreg, "99/99/9999"));
+         isValidOutput.Add(context.localUtil.Format(A142tipobienfecultact, "99/99/9999"));
          isValidOutput.Add(StringUtil.RTrim( Gx_mode));
          isValidOutput.Add(StringUtil.LTrim( StringUtil.NToC( (decimal)(Z23tipobienid), 9, 0, ",", "")));
          isValidOutput.Add(Z139tipobiendsc);
          isValidOutput.Add(Z140tipobienusuario);
-         isValidOutput.Add(context.localUtil.TToC( Z141tipobienfecreg, 10, 8, 0, 0, "/", ":", " "));
-         isValidOutput.Add(context.localUtil.TToC( Z142tipobienfecultact, 10, 8, 0, 0, "/", ":", " "));
+         isValidOutput.Add(context.localUtil.DToC( Z141tipobienfecreg, 0, "/"));
+         isValidOutput.Add(context.localUtil.DToC( Z142tipobienfecultact, 0, "/"));
          isValidOutput.Add(bttBtn_delete_Enabled);
          isValidOutput.Add(bttBtn_enter_Enabled);
          isValidOutput.Add(context.GX_msglist.ToJavascriptSource());
@@ -1877,8 +1885,8 @@ namespace GeneXus.Programs {
          sPrefix = "";
          Z139tipobiendsc = "";
          Z140tipobienusuario = "";
-         Z141tipobienfecreg = (DateTime)(DateTime.MinValue);
-         Z142tipobienfecultact = (DateTime)(DateTime.MinValue);
+         Z141tipobienfecreg = DateTime.MinValue;
+         Z142tipobienfecultact = DateTime.MinValue;
          scmdbuf = "";
          gxfirstwebparm = "";
          gxfirstwebparm_bkp = "";
@@ -1898,8 +1906,8 @@ namespace GeneXus.Programs {
          bttBtn_select_Jsonclick = "";
          A139tipobiendsc = "";
          A140tipobienusuario = "";
-         A141tipobienfecreg = (DateTime)(DateTime.MinValue);
-         A142tipobienfecultact = (DateTime)(DateTime.MinValue);
+         A141tipobienfecreg = DateTime.MinValue;
+         A142tipobienfecultact = DateTime.MinValue;
          bttBtn_enter_Jsonclick = "";
          bttBtn_cancel_Jsonclick = "";
          bttBtn_delete_Jsonclick = "";
@@ -1945,11 +1953,12 @@ namespace GeneXus.Programs {
          T00012_n141tipobienfecreg = new bool[] {false} ;
          T00012_A142tipobienfecultact = new DateTime[] {DateTime.MinValue} ;
          T00012_n142tipobienfecultact = new bool[] {false} ;
-         T000111_A19almacenid = new long[1] ;
-         T000111_A20articulosproductoid = new int[1] ;
-         T000111_A21articuloscambsid = new int[1] ;
-         T000112_A23tipobienid = new int[1] ;
-         T000112_n23tipobienid = new bool[] {false} ;
+         T000111_A175productoid = new int[1] ;
+         T000112_A19almacenid = new long[1] ;
+         T000112_A20articulosproductoid = new int[1] ;
+         T000112_A21articuloscambsid = new int[1] ;
+         T000113_A23tipobienid = new int[1] ;
+         T000113_n23tipobienid = new bool[] {false} ;
          sDynURL = "";
          FormProcess = "";
          bodyStyle = "";
@@ -1981,10 +1990,13 @@ namespace GeneXus.Programs {
                , new Object[] {
                }
                , new Object[] {
-               T000111_A19almacenid, T000111_A20articulosproductoid, T000111_A21articuloscambsid
+               T000111_A175productoid
                }
                , new Object[] {
-               T000112_A23tipobienid
+               T000112_A19almacenid, T000112_A20articulosproductoid, T000112_A21articuloscambsid
+               }
+               , new Object[] {
+               T000113_A23tipobienid
                }
             }
          );
@@ -2126,11 +2138,12 @@ namespace GeneXus.Programs {
       private bool[] T00012_n141tipobienfecreg ;
       private DateTime[] T00012_A142tipobienfecultact ;
       private bool[] T00012_n142tipobienfecultact ;
-      private long[] T000111_A19almacenid ;
-      private int[] T000111_A20articulosproductoid ;
-      private int[] T000111_A21articuloscambsid ;
-      private int[] T000112_A23tipobienid ;
-      private bool[] T000112_n23tipobienid ;
+      private int[] T000111_A175productoid ;
+      private long[] T000112_A19almacenid ;
+      private int[] T000112_A20articulosproductoid ;
+      private int[] T000112_A21articuloscambsid ;
+      private int[] T000113_A23tipobienid ;
+      private bool[] T000113_n23tipobienid ;
       private GXWebForm Form ;
    }
 
@@ -2151,6 +2164,7 @@ namespace GeneXus.Programs {
          ,new UpdateCursor(def[8])
          ,new ForEachCursor(def[9])
          ,new ForEachCursor(def[10])
+         ,new ForEachCursor(def[11])
        };
     }
 
@@ -2188,15 +2202,15 @@ namespace GeneXus.Programs {
           new Object[] {"tipobienid",NpgsqlDbType.Integer,9,0} ,
           new Object[] {"tipobiendsc",NpgsqlDbType.Varchar,100,0} ,
           new Object[] {"tipobienusuario",NpgsqlDbType.Varchar,15,0} ,
-          new Object[] {"tipobienfecreg",NpgsqlDbType.Timestamp,10,8} ,
-          new Object[] {"tipobienfecultact",NpgsqlDbType.Timestamp,10,8}
+          new Object[] {"tipobienfecreg",NpgsqlDbType.Date,8,0} ,
+          new Object[] {"tipobienfecultact",NpgsqlDbType.Date,8,0}
           } ;
           Object[] prmT00019 ;
           prmT00019 = new Object[] {
           new Object[] {"tipobiendsc",NpgsqlDbType.Varchar,100,0} ,
           new Object[] {"tipobienusuario",NpgsqlDbType.Varchar,15,0} ,
-          new Object[] {"tipobienfecreg",NpgsqlDbType.Timestamp,10,8} ,
-          new Object[] {"tipobienfecultact",NpgsqlDbType.Timestamp,10,8} ,
+          new Object[] {"tipobienfecreg",NpgsqlDbType.Date,8,0} ,
+          new Object[] {"tipobienfecultact",NpgsqlDbType.Date,8,0} ,
           new Object[] {"tipobienid",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT000110 ;
@@ -2209,6 +2223,10 @@ namespace GeneXus.Programs {
           } ;
           Object[] prmT000112 ;
           prmT000112 = new Object[] {
+          new Object[] {"tipobienid",NpgsqlDbType.Integer,9,0}
+          } ;
+          Object[] prmT000113 ;
+          prmT000113 = new Object[] {
           } ;
           def= new CursorDef[] {
               new CursorDef("T00012", "SELECT tipobienid, tipobiendsc, tipobienusuario, tipobienfecreg, tipobienfecultact FROM public.tipobien WHERE tipobienid = :tipobienid  FOR UPDATE OF tipobien NOWAIT",true, GxErrorMask.GX_NOMASK, false, this,prmT00012,1,0,true,false )
@@ -2220,8 +2238,9 @@ namespace GeneXus.Programs {
              ,new CursorDef("T00018", "SAVEPOINT gxupdate;INSERT INTO public.tipobien(tipobienid, tipobiendsc, tipobienusuario, tipobienfecreg, tipobienfecultact) VALUES(:tipobienid, :tipobiendsc, :tipobienusuario, :tipobienfecreg, :tipobienfecultact);RELEASE SAVEPOINT gxupdate", GxErrorMask.GX_ROLLBACKSAVEPOINT,prmT00018)
              ,new CursorDef("T00019", "SAVEPOINT gxupdate;UPDATE public.tipobien SET tipobiendsc=:tipobiendsc, tipobienusuario=:tipobienusuario, tipobienfecreg=:tipobienfecreg, tipobienfecultact=:tipobienfecultact  WHERE tipobienid = :tipobienid;RELEASE SAVEPOINT gxupdate", GxErrorMask.GX_ROLLBACKSAVEPOINT | GxErrorMask.GX_NOMASK,prmT00019)
              ,new CursorDef("T000110", "SAVEPOINT gxupdate;DELETE FROM public.tipobien  WHERE tipobienid = :tipobienid;RELEASE SAVEPOINT gxupdate", GxErrorMask.GX_ROLLBACKSAVEPOINT | GxErrorMask.GX_NOMASK,prmT000110)
-             ,new CursorDef("T000111", "SELECT articulosid, productoid, cambsid FROM public.articulos WHERE tipodocid = :tipobienid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000111,1,0,true,true )
-             ,new CursorDef("T000112", "SELECT tipobienid FROM public.tipobien ORDER BY tipobienid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000112,100,0,true,false )
+             ,new CursorDef("T000111", "SELECT productoid FROM producto WHERE tipobienid = :tipobienid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000111,1,0,true,true )
+             ,new CursorDef("T000112", "SELECT articulosid, productoid, cambsid FROM public.articulos WHERE tipodocid = :tipobienid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000112,1,0,true,true )
+             ,new CursorDef("T000113", "SELECT tipobienid FROM public.tipobien ORDER BY tipobienid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000113,100,0,true,false )
           };
        }
     }
@@ -2238,9 +2257,9 @@ namespace GeneXus.Programs {
                 ((bool[]) buf[2])[0] = rslt.wasNull(2);
                 ((String[]) buf[3])[0] = rslt.getVarchar(3) ;
                 ((bool[]) buf[4])[0] = rslt.wasNull(3);
-                ((DateTime[]) buf[5])[0] = rslt.getGXDateTime(4) ;
+                ((DateTime[]) buf[5])[0] = rslt.getGXDate(4) ;
                 ((bool[]) buf[6])[0] = rslt.wasNull(4);
-                ((DateTime[]) buf[7])[0] = rslt.getGXDateTime(5) ;
+                ((DateTime[]) buf[7])[0] = rslt.getGXDate(5) ;
                 ((bool[]) buf[8])[0] = rslt.wasNull(5);
                 return;
              case 1 :
@@ -2249,9 +2268,9 @@ namespace GeneXus.Programs {
                 ((bool[]) buf[2])[0] = rslt.wasNull(2);
                 ((String[]) buf[3])[0] = rslt.getVarchar(3) ;
                 ((bool[]) buf[4])[0] = rslt.wasNull(3);
-                ((DateTime[]) buf[5])[0] = rslt.getGXDateTime(4) ;
+                ((DateTime[]) buf[5])[0] = rslt.getGXDate(4) ;
                 ((bool[]) buf[6])[0] = rslt.wasNull(4);
-                ((DateTime[]) buf[7])[0] = rslt.getGXDateTime(5) ;
+                ((DateTime[]) buf[7])[0] = rslt.getGXDate(5) ;
                 ((bool[]) buf[8])[0] = rslt.wasNull(5);
                 return;
              case 2 :
@@ -2260,9 +2279,9 @@ namespace GeneXus.Programs {
                 ((bool[]) buf[2])[0] = rslt.wasNull(2);
                 ((String[]) buf[3])[0] = rslt.getVarchar(3) ;
                 ((bool[]) buf[4])[0] = rslt.wasNull(3);
-                ((DateTime[]) buf[5])[0] = rslt.getGXDateTime(4) ;
+                ((DateTime[]) buf[5])[0] = rslt.getGXDate(4) ;
                 ((bool[]) buf[6])[0] = rslt.wasNull(4);
-                ((DateTime[]) buf[7])[0] = rslt.getGXDateTime(5) ;
+                ((DateTime[]) buf[7])[0] = rslt.getGXDate(5) ;
                 ((bool[]) buf[8])[0] = rslt.wasNull(5);
                 return;
              case 3 :
@@ -2275,11 +2294,14 @@ namespace GeneXus.Programs {
                 ((int[]) buf[0])[0] = rslt.getInt(1) ;
                 return;
              case 9 :
+                ((int[]) buf[0])[0] = rslt.getInt(1) ;
+                return;
+             case 10 :
                 ((long[]) buf[0])[0] = rslt.getLong(1) ;
                 ((int[]) buf[1])[0] = rslt.getInt(2) ;
                 ((int[]) buf[2])[0] = rslt.getInt(3) ;
                 return;
-             case 10 :
+             case 11 :
                 ((int[]) buf[0])[0] = rslt.getInt(1) ;
                 return;
        }
@@ -2382,7 +2404,7 @@ namespace GeneXus.Programs {
                 }
                 else
                 {
-                   stmt.SetParameterDatetime(4, (DateTime)parms[7]);
+                   stmt.SetParameter(4, (DateTime)parms[7]);
                 }
                 if ( (bool)parms[8] )
                 {
@@ -2390,7 +2412,7 @@ namespace GeneXus.Programs {
                 }
                 else
                 {
-                   stmt.SetParameterDatetime(5, (DateTime)parms[9]);
+                   stmt.SetParameter(5, (DateTime)parms[9]);
                 }
                 return;
              case 7 :
@@ -2416,7 +2438,7 @@ namespace GeneXus.Programs {
                 }
                 else
                 {
-                   stmt.SetParameterDatetime(3, (DateTime)parms[5]);
+                   stmt.SetParameter(3, (DateTime)parms[5]);
                 }
                 if ( (bool)parms[6] )
                 {
@@ -2424,7 +2446,7 @@ namespace GeneXus.Programs {
                 }
                 else
                 {
-                   stmt.SetParameterDatetime(4, (DateTime)parms[7]);
+                   stmt.SetParameter(4, (DateTime)parms[7]);
                 }
                 if ( (bool)parms[8] )
                 {
@@ -2446,6 +2468,16 @@ namespace GeneXus.Programs {
                 }
                 return;
              case 9 :
+                if ( (bool)parms[0] )
+                {
+                   stmt.setNull( 1 , SqlDbType.Int );
+                }
+                else
+                {
+                   stmt.SetParameter(1, (int)parms[1]);
+                }
+                return;
+             case 10 :
                 if ( (bool)parms[0] )
                 {
                    stmt.setNull( 1 , SqlDbType.Int );

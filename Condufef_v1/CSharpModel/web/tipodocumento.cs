@@ -2,7 +2,7 @@
                File: tipodocumento
         Description: tipodocumento
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 1/28/2022 11:56:26.91
+       Generated on: 1/29/2022 0:0:40.6
        Program type: Callable routine
           Main DBMS: postgresql
 */
@@ -1415,7 +1415,7 @@ namespace GeneXus.Programs {
          context.AddJavascriptSource("jquery.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxtimezone.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxgral.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("gxcfg.js", "?202212811562725");
+         context.AddJavascriptSource("gxcfg.js", "?2022129004050");
          if ( context.isSpaRequest( ) )
          {
             enableOutput();
@@ -1581,12 +1581,12 @@ namespace GeneXus.Programs {
 
       protected void define_styles( )
       {
-         AddStyleSheetFile("calendar-system.css", "?13551382");
-         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?13551359");
+         AddStyleSheetFile("calendar-system.css", "?11323129");
+         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?0080");
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?202212811562728");
+            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?2022129004054");
             idxLst = (int)(idxLst+1);
          }
          /* End function define_styles */
@@ -1595,7 +1595,7 @@ namespace GeneXus.Programs {
       protected void include_jscripts( )
       {
          context.AddJavascriptSource("messages.spa.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("tipodocumento.js", "?202212811562729");
+         context.AddJavascriptSource("tipodocumento.js", "?2022129004054");
          /* End function include_jscripts */
       }
 

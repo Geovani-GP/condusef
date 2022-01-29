@@ -2,7 +2,7 @@
                File: LoadEventsSampleDP
         Description: Load Events Sample DP
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 1/28/2022 1:40:17.91
+       Generated on: 1/29/2022 0:0:10.1
        Program type: Callable routine
           Main DBMS: postgresql
 */

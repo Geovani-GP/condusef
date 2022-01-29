@@ -2,7 +2,7 @@
                File: area
         Description: area
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 1/28/2022 13:13:21.74
+       Generated on: 1/29/2022 0:0:36.0
        Program type: Callable routine
           Main DBMS: postgresql
 */
@@ -1452,7 +1452,7 @@ namespace GeneXus.Programs {
          context.AddJavascriptSource("jquery.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxtimezone.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxgral.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("gxcfg.js", "?20221281313227");
+         context.AddJavascriptSource("gxcfg.js", "?2022129003648");
          if ( context.isSpaRequest( ) )
          {
             enableOutput();
@@ -1624,12 +1624,12 @@ namespace GeneXus.Programs {
 
       protected void define_styles( )
       {
-         AddStyleSheetFile("calendar-system.css", "?13551382");
-         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?13551359");
+         AddStyleSheetFile("calendar-system.css", "?11323129");
+         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?0080");
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?202212813132210");
+            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?2022129003652");
             idxLst = (int)(idxLst+1);
          }
          /* End function define_styles */
@@ -1638,7 +1638,7 @@ namespace GeneXus.Programs {
       protected void include_jscripts( )
       {
          context.AddJavascriptSource("messages.spa.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("area.js", "?202212813132210");
+         context.AddJavascriptSource("area.js", "?2022129003652");
          /* End function include_jscripts */
       }
 

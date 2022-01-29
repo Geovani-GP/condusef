@@ -2,7 +2,7 @@ spec_i([ web,97,'Selection List producto','Gx00M0',0,spa,'10_3_15-115824' ]).
  
 struct_i(2,1,[ 'Advanced_label_template' ],[]).
  
-level_i(2,[ 22,[ [ 22,many ] ],[],[],[ [ [ 22 ],[ 87,92,91,90,89,88,25,175 ] ] ],[ [ [ 22 ],[] ] ],[ 175,25 ],'IPRODUCTO',[],[] ]).
+level_i(2,[ 22,[ [ 22,many ] ],[],[],[ [ [ 22 ],[ 87,23,92,91,90,89,88,25,175 ] ] ],[ [ [ 22 ],[] ] ],[ 175,25 ],'IPRODUCTO',[],[] ]).
  
 tw_i(2,[]).
  
@@ -17,9 +17,9 @@ cond_constraint_i(2,[ [ t(91,2),t('.LIKE.',10),t('Cproductousuario',23) ],[ 91 ]
  
 level_option_i(2,server_paging,[ y,[] ]).
  
-ta_i(2,[ [ [ 22,87 ],[ 22,92 ],[ 22,91 ],[ 22,90 ],[ 22,89 ],[ 22,88 ],[ 22,25 ],[ 22,175 ] ] ]).
+ta_i(2,[ [ [ 22,87 ],[ 22,23 ],[ 22,92 ],[ 22,91 ],[ 22,90 ],[ 22,89 ],[ 22,88 ],[ 22,25 ],[ 22,175 ] ] ]).
  
-las_i(2,[ [ 'Pproductoid','Pcambsid','Cproductoid','Ccambsid','Cmodeloid','Cmarcaid','Ccategoriaid','Cproductodsc','Cproductousuario',87,92,91,90,89,88,25,175 ] ]).
+las_i(2,[ [ 'Pproductoid','Pcambsid','Cproductoid','Ccambsid','Cmodeloid','Cmarcaid','Ccategoriaid','Cproductodsc','Cproductousuario',87,23,92,91,90,89,88,25,175 ] ]).
  
 lac_i(2,[ [ 'Cproductoid','Ccambsid','Cmodeloid','Cmarcaid','Ccategoriaid','Cproductodsc','Cproductousuario' ] ]).
  
@@ -32,7 +32,7 @@ lits_i(categoriaid,5,10).
 lits_i(productodsc,5,10).
 lits_i(productousuario,5,10).
  
-cls_i([ 0,0 ],[ 5,1131 ]).
+cls_i([ 0,0 ],[ 5,1141 ]).
  
 pos_i('Cproductoid',[ 0,0,0 ]).
 pos_i('Ccambsid',[ 0,0,0 ]).
@@ -49,8 +49,9 @@ pos_i(89,[ 1,2,1059 ]).
 pos_i(90,[ 1,2,1078 ]).
 pos_i(91,[ 1,2,1097 ]).
 pos_i(92,[ 1,2,1113 ]).
+pos_i(23,[ 1,2,1133 ]).
  
-repeat_i(2,[ 1,2,[ 'Linkselection',175,25,88,89,90,91,92 ],[] ]).
+repeat_i(2,[ 1,2,[ 'Linkselection',175,25,88,89,90,91,92,23 ],[] ]).
  
  
 rule_i(0,datastore(1,'DS_LAST_CHANGE','')).
@@ -70,12 +71,12 @@ rule_i(0,datastore(1,'CS_RPCPGML','')).
 rule_i(0,datastore(1,'JDBC_DATASOURCE','')).
 rule_i(0,datastore(1,'USE_JDBC_DATASOURCE','0')).
 rule_i(0,datastore(1,'DS_DBMS_ADDINFO','')).
-rule_i(0,datastore(1,'USER_PASSWORD',󻢸蘇�2�5炭)).
+rule_i(0,datastore(1,'USER_PASSWORD',asdf)).
 rule_i(0,datastore(1,'USER_ID',postgres)).
 rule_i(0,datastore(1,'CS_CONNECT','First')).
 rule_i(0,datastore(1,'DBMS_PORT','5432')).
 rule_i(0,datastore(1,'CS_SERVER',localhost)).
-rule_i(0,datastore(1,'CS_DBNAME',postgres)).
+rule_i(0,datastore(1,'CS_DBNAME',condusef)).
 rule_i(0,datastore(1,'CS_FLEDSNAME','')).
 rule_i(0,datastore(1,'CS_DRVNAME','')).
 rule_i(0,datastore(1,'CS_DSNAME','')).
@@ -143,6 +144,7 @@ v_i(f,i,1,[]).
 v_i(f,o,1,'Err').
 v_i(t,i,2,[]).
 v_i(t,o,2,87).
+v_i(t,o,2,23).
 v_i(t,o,2,92).
 v_i(t,o,2,91).
 v_i(t,o,2,90).
@@ -157,6 +159,7 @@ v_i(t,o,2,175).
  
  
 attri_i(87,[ productodsc,svchar,100,0,'',0,productodsc,'',0 ]).
+attri_i(23,[ tipobienid,int,9,0,'ZZZZZZZZ9',0,tipobienid,'',0 ]).
 attri_i(92,[ productofecreg,dtime,10,8,'99/99/9999 99:99:99',0,productofecreg,'',0 ]).
 attri_i(91,[ productousuario,svchar,15,0,'',0,productousuario,'',0 ]).
 attri_i(90,[ categoriaid,int,18,0,'ZZZZZZZZZZZZZZZZZ9',0,categoriaid,'',0 ]).
@@ -179,7 +182,7 @@ attri_i('Ccambsid',[ ccambsid,int,9,0,'ZZZZZZZZ9',0,cambsid,'',7 ]).
 attri_i('Cproductoid',[ cproductoid,int,4,0,'ZZZ9',0,productoid,'',6 ]).
 attri_i('Linkselection',[ 'LinkSelection',bits,1024,0,'',0,'Link Selection','',5 ]).
  
-table_i(22,[ producto,[ 175,25,88,89,90,87,91,92 ],producto,producto ]).
+table_i(22,[ producto,[ 175,25,88,89,90,87,91,92,23 ],producto,producto ]).
  
 index_i(22,[ 'IPRODUCTO',u,[ 175,25 ],'Iproducto' ]).
  
@@ -210,7 +213,7 @@ start_i(2,0,0,[ [ [ 175,23,'Cproductoid',>= ],[ 25,23,'Ccambsid',>= ] ],many ]).
  
  
  
-break_i(2,nvg,1,[ 175,25 ],[ [ 175,25,88,89,90,91,92 ],[],[] ]).
+break_i(2,nvg,1,[ 175,25 ],[ [ 175,25,88,89,90,91,92,23 ],[],[] ]).
  
 b_group_i(2,1,lit,0,1,1).
 b_group_i(2,2,lit,0,2,6).
@@ -409,9 +412,9 @@ html_sub_i(80,81,html_i(0,button('''Toggle'''))).
 html_sub_i(78,82,html_i(1,div(82))).
 html_sub_i(82,83,html_i(0,div(83))).
 html_sub_i(83,84,html_i(0,s(84))).
-html_sub_i(78,93,html_i(2,div(93))).
-html_sub_i(93,94,html_i(0,div(94))).
-html_sub_i(94,95,html_i(0,button('Cancel'))).
+html_sub_i(78,94,html_i(2,div(94))).
+html_sub_i(94,95,html_i(0,div(95))).
+html_sub_i(95,96,html_i(0,button('Cancel'))).
  
 html_tags_i(1,'Class','form-horizontal Form').
 html_tags_i(2,'data-abstract-form','').
@@ -1415,31 +1418,58 @@ html_comp_i(92,'Title','',d,[ str ]).
 html_comp_i(92,'Invitemsg','',d,[ str ]).
 html_comp_i(92,'Use_datepicker',-1,d,[ bool ]).
 html_comp_i(92,'Flat_datepicker',0,d,[ bool ]).
-html_comp_i(93,'Class',row,v,[ str ]).
-html_comp_i(93,'Id','',d,[ str ]).
-html_comp_i(93,'Height',measure(0,px),d,[ measure ]).
-html_comp_i(93,'Width',measure(0,px),d,[ measure ]).
-html_comp_i(93,'Semanticcontent',div,d,[ str ]).
-html_comp_i(93,'Align',left,d,[ str ]).
-html_comp_i(93,'Valign',top,d,[ str ]).
-html_comp_i(94,'Class','col-xs-12',v,[ str ]).
+html_comp_i(93,'Colcount',9,d,[ num ]).
+html_comp_i(93,'Colattid',23,v,[ num ]).
+html_comp_i(93,'Controlname','Tipobienid',d,[ str ]).
+html_comp_i(93,'Class','Attribute',v,[ str ]).
+html_comp_i(93,'Columnclass','WWColumn OptionalColumn',v,[ str ]).
+html_comp_i(93,'Returnonclick',0,d,[ bool ]).
+html_comp_i(93,'Eventgx','',d,[ str ]).
+html_comp_i(93,'Controltype',2,d,[ num ]).
+html_comp_i(93,'Inputtype',0,d,[ num ]).
+html_comp_i(93,'Notifycontextchange',0,d,[ bool ]).
+html_comp_i(93,'Colreadonly',-1,d,[ bool ]).
+html_comp_i(93,'Autocomplete',-1,d,[ bool ]).
+html_comp_i(93,'Emptyasnull','Yes',d,[ str ]).
+html_comp_i(93,'Ispassword',0,d,[ bool ]).
+html_comp_i(93,'Colautoresize',-1,d,[ bool ]).
+html_comp_i(93,'Colwidth',measure(0,px),d,[ measure ]).
+html_comp_i(93,'Height',measure(17,px),d,[ measure ]).
+html_comp_i(93,'Collinesfont',font('Courier New',9,[]),d,[ font ]).
+html_comp_i(93,'Collinescolor',rgb(0,0,0),d,[ color ]).
+html_comp_i(93,'Coltitle',tipobienid,d,[ str ]).
+html_comp_i(93,'Coltitlefont',font('Microsoft Sans Serif',10,[]),d,[ font ]).
+html_comp_i(93,'Coltitlecolor',rgb(0,0,0),d,[ color ]).
+html_comp_i(93,'Horizontalalignment',right,d,[ str ]).
+html_comp_i(93,'Gxformat',0,d,[ num ]).
+html_comp_i(93,'Colvisible',-1,d,[ bool ]).
+html_comp_i(93,'Title','',d,[ str ]).
+html_comp_i(93,'Invitemsg','',d,[ str ]).
+html_comp_i(94,'Class',row,v,[ str ]).
 html_comp_i(94,'Id','',d,[ str ]).
 html_comp_i(94,'Height',measure(0,px),d,[ measure ]).
 html_comp_i(94,'Width',measure(0,px),d,[ measure ]).
 html_comp_i(94,'Semanticcontent',div,d,[ str ]).
 html_comp_i(94,'Align',left,d,[ str ]).
 html_comp_i(94,'Valign',top,d,[ str ]).
-html_comp_i(95,'Controlname','Btn_cancel',v,[ str ]).
-html_comp_i(95,'Class','BtnCancel',v,[ str ]).
-html_comp_i(95,'Event','Cancel',v,[ str ]).
-html_comp_i(95,'Caption','Cancelar',d,[ str ]).
-html_comp_i(95,'Title','Cancelar',d,[ str ]).
-html_comp_i(95,'Font',font('Microsoft Sans Serif',10,[]),d,[ font ]).
-html_comp_i(95,'Forecolor',rgb(0,4,68),d,[ color ]).
-html_comp_i(95,'Backcolor',rgb(255,255,255),d,[ color ]).
-html_comp_i(95,'Border','2',d,[ str ]).
-html_comp_i(95,'Bordercolor',rgb(219,220,222),d,[ color ]).
-html_comp_i(95,'Buttonborderstyle',standard,d,[ str ]).
+html_comp_i(95,'Class','col-xs-12',v,[ str ]).
+html_comp_i(95,'Id','',d,[ str ]).
+html_comp_i(95,'Height',measure(0,px),d,[ measure ]).
+html_comp_i(95,'Width',measure(0,px),d,[ measure ]).
+html_comp_i(95,'Semanticcontent',div,d,[ str ]).
+html_comp_i(95,'Align',left,d,[ str ]).
+html_comp_i(95,'Valign',top,d,[ str ]).
+html_comp_i(96,'Controlname','Btn_cancel',v,[ str ]).
+html_comp_i(96,'Class','BtnCancel',v,[ str ]).
+html_comp_i(96,'Event','Cancel',v,[ str ]).
+html_comp_i(96,'Caption','Cancelar',d,[ str ]).
+html_comp_i(96,'Title','Cancelar',d,[ str ]).
+html_comp_i(96,'Font',font('Microsoft Sans Serif',10,[]),d,[ font ]).
+html_comp_i(96,'Forecolor',rgb(0,4,68),d,[ color ]).
+html_comp_i(96,'Backcolor',rgb(255,255,255),d,[ color ]).
+html_comp_i(96,'Border','2',d,[ str ]).
+html_comp_i(96,'Bordercolor',rgb(219,220,222),d,[ color ]).
+html_comp_i(96,'Buttonborderstyle',standard,d,[ str ]).
  
  
  
@@ -1530,12 +1560,13 @@ lit_i(89,1,s(t(89,2),84),[ ctlname(89),ctrltype(edit,89),pos(89),readonly,ispwd(
 lit_i(90,1,s(t(90,2),84),[ ctlname(90),ctrltype(edit,90),pos(90),readonly,ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
 lit_i(91,1,s(t(91,2),84),[ ctlname(91),ctrltype(edit,91),pos(91),readonly,ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
 lit_i(92,1,s(t(92,2),84),[ ctlname(92),ctrltype(edit,92),pos(92),readonly,ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
-lit_i(84,1,s(84),[ ctlname('Grid1'),el([ t('Linkselection',23),t(175,2),t(25,2),t(88,2),t(89,2),t(90,2),t(91,2),t(92,2) ]),width(0),rect(0,0,10,10),title('Nothing') ]).
+lit_i(93,1,s(t(23,2),84),[ ctlname(23),ctrltype(edit,93),pos(93),readonly,ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
+lit_i(84,1,s(84),[ ctlname('Grid1'),el([ t('Linkselection',23),t(175,2),t(25,2),t(88,2),t(89,2),t(90,2),t(91,2),t(92,2),t(23,2) ]),width(0),rect(0,0,10,10),title('Nothing') ]).
 lit_i(83,1,div(83),[ ctlname('') ]).
 lit_i(82,1,div(82),[ ctlname('') ]).
-lit_i(95,1,button('Cancel'),[ ctlname('Btn_cancel'),width(0),rect(0,0,10,10),title('Nothing') ]).
+lit_i(96,1,button('Cancel'),[ ctlname('Btn_cancel'),width(0),rect(0,0,10,10),title('Nothing') ]).
+lit_i(95,1,div(95),[ ctlname('') ]).
 lit_i(94,1,div(94),[ ctlname('') ]).
-lit_i(93,1,div(93),[ ctlname('') ]).
 lit_i(78,1,div(78),[ ctlname('Gridtable') ]).
 lit_i(77,1,div(77),[ ctlname('') ]).
 lit_i(4,1,div(4),[ ctlname('') ]).
@@ -1616,6 +1647,15 @@ att_prop_i(2,92,'AttValidationFailedMsg','',d).
 att_prop_i(2,92,idDATEFORMAT,idDATEFORMAT_LONG,v).
 att_prop_i(2,92,idHOURFORMAT,idHOURFORMAT_HOURMINSEC,v).
 att_prop_i(2,92,'FullName',productofecreg,v).
+att_prop_i(2,23,'ExternalName',tipobienid,d).
+att_prop_i(2,23,'ExternalNamespace','Condufef_v1',d).
+att_prop_i(2,23,'EmptyAsNull','Yes',d).
+att_prop_i(2,23,idBasedOn,'',d).
+att_prop_i(2,23,'AUTONUMBER','0',d).
+att_prop_i(2,23,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,23,'AttRegEx','',d).
+att_prop_i(2,23,'AttValidationFailedMsg','',d).
+att_prop_i(2,23,'FullName',tipobienid,v).
 att_prop_i(2,87,'ExternalName',productodsc,d).
 att_prop_i(2,87,'ExternalNamespace','Condufef_v1',d).
 att_prop_i(2,87,'EmptyAsNull','Yes',d).
@@ -1629,6 +1669,7 @@ att_prop_i(2,87,'FullName',productodsc,v).
  
 tbl_att_prop_i(2,22,175,'AllowNulls',n).
 tbl_att_prop_i(2,22,25,'AllowNulls',n).
+tbl_att_prop_i(2,22,23,'AllowNulls',n).
  
 var_prop_i(2,'Cproductoid',idBasedOn,'',v).
 var_prop_i(2,'Ccambsid',idBasedOn,'',v).

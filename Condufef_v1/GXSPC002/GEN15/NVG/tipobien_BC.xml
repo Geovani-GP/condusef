@@ -121,6 +121,16 @@
 <AfterDeleteRules></AfterDeleteRules>
 <TablesToControlOnDelete>
 <Table>
+<TableId>23</TableId>
+<TableName>producto</TableName>
+<Description>producto</Description>
+<RecordsToRead>one</RecordsToRead>
+<KeyAttributes>
+<Attribute>
+<AttriId>23</AttriId>
+<AttriName>tipobienid</AttriName>
+<Description>tipobienid</Description></Attribute></KeyAttributes></Table>
+<Table>
 <TableId>11</TableId>
 <TableName>ARTICULOS</TableName>
 <Description>articulos</Description>

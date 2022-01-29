@@ -2,7 +2,7 @@
                File: type_Sdtentidadfederativa
         Description: entidadfederativa
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 1/28/2022 13:7:2.25
+       Generated on: 1/29/2022 0:0:14.33
        Program type: Callable routine
           Main DBMS: postgresql
 */
