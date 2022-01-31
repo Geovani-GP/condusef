@@ -2,7 +2,7 @@
                File: Catalog_De_Empleados
         Description: Catalog_De_Empleados
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 1/29/2022 0:44:56.24
+       Generated on: 1/30/2022 23:38:12.19
        Program type: Callable routine
           Main DBMS: postgresql
 */
@@ -215,11 +215,15 @@ namespace GeneXus.Programs {
          context.AddJavascriptSource("jquery.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxtimezone.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxgral.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("gxcfg.js", "?20221290445625");
+         context.AddJavascriptSource("gxcfg.js", "?202213023381220");
          if ( context.isSpaRequest( ) )
          {
             enableOutput();
          }
+         context.AddJavascriptSource("Shared/jquery/jquery-1.9.0.js", "");
+         context.AddJavascriptSource("Alertify/js/alertify.min.js", "");
+         context.AddJavascriptSource("Alertify/GlobalAlerts.js", "");
+         context.AddJavascriptSource("Alertify/AlertifyRender.js", "");
          context.WriteHtmlText( Form.Headerrawhtml) ;
          context.CloseHtmlHeader();
          if ( context.isSpaRequest( ) )
@@ -256,6 +260,7 @@ namespace GeneXus.Programs {
       {
          /* Send hidden variables. */
          /* Send saved values. */
+         GxWebStd.gx_hidden_field( context, "ALERTIFY1_Type", StringUtil.RTrim( Alertify1_Type));
          GXKey = Crypto.Decrypt64( context.GetCookie( "GX_SESSION_ID"), Crypto.GetServerKey( ));
       }
 
@@ -337,19 +342,24 @@ namespace GeneXus.Programs {
                RenderHtmlOpenForm( ) ;
             }
             GxWebStd.gx_msg_list( context, "", context.GX_msglist.DisplayMode, "", "", "", "false");
-            wb_table1_2_2T2( true) ;
+            context.WriteHtmlText( "&nbsp;") ;
+            /* User Defined Control */
+            context.WriteHtmlText( "<div class=\"gx_usercontrol\" id=\""+"ALERTIFY1Container"+"\"></div>") ;
+            context.WriteHtmlText( "<p>") ;
+            wb_table1_5_2T2( true) ;
          }
          else
          {
-            wb_table1_2_2T2( false) ;
+            wb_table1_5_2T2( false) ;
          }
          return  ;
       }
 
-      protected void wb_table1_2_2T2e( bool wbgen )
+      protected void wb_table1_5_2T2e( bool wbgen )
       {
          if ( wbgen )
          {
+            context.WriteHtmlText( "</p>") ;
          }
          wbLoad = true;
       }
@@ -539,6 +549,7 @@ namespace GeneXus.Programs {
             /* Read saved SDTs. */
             /* Read variables values. */
             /* Read saved values. */
+            Alertify1_Type = cgiGet( "ALERTIFY1_Type");
             /* Read subfile selected row values. */
             /* Read hidden variables. */
             GXKey = Crypto.Decrypt64( context.GetCookie( "GX_SESSION_ID"), Crypto.GetServerKey( ));
@@ -558,7 +569,7 @@ namespace GeneXus.Programs {
          /* Load Routine */
       }
 
-      protected void wb_table1_2_2T2( bool wbgen )
+      protected void wb_table1_5_2T2( bool wbgen )
       {
          if ( wbgen )
          {
@@ -570,16 +581,16 @@ namespace GeneXus.Programs {
             context.WriteHtmlText( "<tbody>") ;
             context.WriteHtmlText( "<tr>") ;
             context.WriteHtmlText( "<td>") ;
-            wb_table2_5_2T2( true) ;
+            wb_table2_8_2T2( true) ;
          }
          else
          {
-            wb_table2_5_2T2( false) ;
+            wb_table2_8_2T2( false) ;
          }
          return  ;
       }
 
-      protected void wb_table2_5_2T2e( bool wbgen )
+      protected void wb_table2_8_2T2e( bool wbgen )
       {
          if ( wbgen )
          {
@@ -587,16 +598,16 @@ namespace GeneXus.Programs {
             context.WriteHtmlText( "</tr>") ;
             context.WriteHtmlText( "<tr>") ;
             context.WriteHtmlText( "<td>") ;
-            wb_table3_24_2T2( true) ;
+            wb_table3_27_2T2( true) ;
          }
          else
          {
-            wb_table3_24_2T2( false) ;
+            wb_table3_27_2T2( false) ;
          }
          return  ;
       }
 
-      protected void wb_table3_24_2T2e( bool wbgen )
+      protected void wb_table3_27_2T2e( bool wbgen )
       {
          if ( wbgen )
          {
@@ -605,15 +616,15 @@ namespace GeneXus.Programs {
             context.WriteHtmlText( "</tbody>") ;
             /* End of table */
             context.WriteHtmlText( "</table>") ;
-            wb_table1_2_2T2e( true) ;
+            wb_table1_5_2T2e( true) ;
          }
          else
          {
-            wb_table1_2_2T2e( false) ;
+            wb_table1_5_2T2e( false) ;
          }
       }
 
-      protected void wb_table3_24_2T2( bool wbgen )
+      protected void wb_table3_27_2T2( bool wbgen )
       {
          if ( wbgen )
          {
@@ -683,13 +694,13 @@ namespace GeneXus.Programs {
             context.WriteHtmlText( "<td style=\""+CSSHelper.Prettify( "height:24px")+"\">") ;
             context.WriteHtmlText( "</td>") ;
             context.WriteHtmlText( "<td>") ;
-            TempTags = "  onfocus=\"gx.evt.onfocus(this, 56,'',false,'',0)\"";
+            TempTags = "  onfocus=\"gx.evt.onfocus(this, 59,'',false,'',0)\"";
             ClassString = "Button";
             StyleString = "color:#FFFFFF; background-color:#008000;";
             GxWebStd.gx_button_ctrl( context, bttButton1_Internalname, "", "CONSULTAR", bttButton1_Jsonclick, 5, "CONSULTAR", "", StyleString, ClassString, 1, 1, "standard", "'"+""+"'"+",false,"+"'"+"EENTER."+"'", TempTags, "", context.GetButtonType( ), "HLP_Catalog_De_Empleados.htm");
             context.WriteHtmlText( "</td>") ;
             context.WriteHtmlText( "<td>") ;
-            TempTags = "  onfocus=\"gx.evt.onfocus(this, 58,'',false,'',0)\"";
+            TempTags = "  onfocus=\"gx.evt.onfocus(this, 61,'',false,'',0)\"";
             ClassString = "Button";
             StyleString = "color:#FFFFFF; background-color:#008000;";
             GxWebStd.gx_button_ctrl( context, bttButton2_Internalname, "", "GUARDAR", bttButton2_Jsonclick, 5, "GUARDAR", "", StyleString, ClassString, 1, 1, "standard", "'"+""+"'"+",false,"+"'"+"EENTER."+"'", TempTags, "", context.GetButtonType( ), "HLP_Catalog_De_Empleados.htm");
@@ -697,7 +708,7 @@ namespace GeneXus.Programs {
             context.WriteHtmlText( "<td>") ;
             context.WriteHtmlText( "</td>") ;
             context.WriteHtmlText( "<td>") ;
-            TempTags = "  onfocus=\"gx.evt.onfocus(this, 61,'',false,'',0)\"";
+            TempTags = "  onfocus=\"gx.evt.onfocus(this, 64,'',false,'',0)\"";
             ClassString = "Button";
             StyleString = "color:#FFFFFF; background-color:#FF0000;";
             GxWebStd.gx_button_ctrl( context, bttButton3_Internalname, "", "CANCELAR", bttButton3_Jsonclick, 5, "CANCELAR", "", StyleString, ClassString, 1, 1, "standard", "'"+""+"'"+",false,"+"'"+"EENTER."+"'", TempTags, "", context.GetButtonType( ), "HLP_Catalog_De_Empleados.htm");
@@ -706,15 +717,15 @@ namespace GeneXus.Programs {
             context.WriteHtmlText( "</tbody>") ;
             /* End of table */
             context.WriteHtmlText( "</table>") ;
-            wb_table3_24_2T2e( true) ;
+            wb_table3_27_2T2e( true) ;
          }
          else
          {
-            wb_table3_24_2T2e( false) ;
+            wb_table3_27_2T2e( false) ;
          }
       }
 
-      protected void wb_table2_5_2T2( bool wbgen )
+      protected void wb_table2_8_2T2( bool wbgen )
       {
          if ( wbgen )
          {
@@ -759,11 +770,11 @@ namespace GeneXus.Programs {
             context.WriteHtmlText( "</tbody>") ;
             /* End of table */
             context.WriteHtmlText( "</table>") ;
-            wb_table2_5_2T2e( true) ;
+            wb_table2_8_2T2e( true) ;
          }
          else
          {
-            wb_table2_5_2T2e( false) ;
+            wb_table2_8_2T2e( false) ;
          }
       }
 
@@ -798,11 +809,13 @@ namespace GeneXus.Programs {
 
       protected void define_styles( )
       {
-         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?0080");
+         AddStyleSheetFile("Alertify/css/alertify.core.css", "?052100");
+         AddStyleSheetFile("Alertify/css/alertify.default.css", "?057280");
+         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?2337534");
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?20221290445633");
+            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?202213023381237");
             idxLst = (int)(idxLst+1);
          }
          /* End function define_styles */
@@ -811,12 +824,17 @@ namespace GeneXus.Programs {
       protected void include_jscripts( )
       {
          context.AddJavascriptSource("messages.spa.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("catalog_de_empleados.js", "?20221290445633");
+         context.AddJavascriptSource("catalog_de_empleados.js", "?202213023381237");
+         context.AddJavascriptSource("Shared/jquery/jquery-1.9.0.js", "");
+         context.AddJavascriptSource("Alertify/js/alertify.min.js", "");
+         context.AddJavascriptSource("Alertify/GlobalAlerts.js", "");
+         context.AddJavascriptSource("Alertify/AlertifyRender.js", "");
          /* End function include_jscripts */
       }
 
       protected void init_default_properties( )
       {
+         Alertify1_Internalname = "ALERTIFY1";
          lblTextblock1_Internalname = "TEXTBLOCK1";
          lblTextblock2_Internalname = "TEXTBLOCK2";
          lblTextblock3_Internalname = "TEXTBLOCK3";
@@ -841,6 +859,7 @@ namespace GeneXus.Programs {
             disableJsOutput();
          }
          init_default_properties( ) ;
+         Alertify1_Type = "error";
          Form.Headerrawhtml = "";
          Form.Background = "";
          Form.Textcolor = 0;
@@ -928,6 +947,7 @@ namespace GeneXus.Programs {
       private String sDynURL ;
       private String FormProcess ;
       private String bodyStyle ;
+      private String Alertify1_Type ;
       private String GXKey ;
       private String GX_FocusControl ;
       private String sPrefix ;
@@ -964,6 +984,7 @@ namespace GeneXus.Programs {
       private String lblTextblock3_Jsonclick ;
       private String lblTextblock4_Internalname ;
       private String lblTextblock4_Jsonclick ;
+      private String Alertify1_Internalname ;
       private bool entryPointCalled ;
       private bool toggleJsOutput ;
       private bool wbLoad ;

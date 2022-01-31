@@ -925,6 +925,7 @@ att_prop_i(2,25,'EmptyAsNull','Yes',d).
 att_prop_i(2,25,idBasedOn,'',d).
 att_prop_i(2,25,'AUTONUMBER','0',d).
 att_prop_i(2,25,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,25,'AttRegEx','',d).
 att_prop_i(2,25,'AttValidationFailedMsg','',d).
 att_prop_i(2,25,'FullName',cambsid,v).
 att_prop_i(2,83,'HORIZONTAL_DESCRIPTION',cambsdsc,v).
@@ -1026,6 +1027,7 @@ att_prop_i(2,175,'EmptyAsNull','Yes',d).
 att_prop_i(2,175,idBasedOn,'',d).
 att_prop_i(2,175,'AUTONUMBER','0',d).
 att_prop_i(2,175,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,175,'AttRegEx','',d).
 att_prop_i(2,175,'AttValidationFailedMsg','',d).
 att_prop_i(2,175,'FullName',productoid,v).
  

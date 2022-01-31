@@ -2,7 +2,7 @@
                File: sidebar
         Description: sidebar
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 1/29/2022 0:0:9.73
+       Generated on: 1/30/2022 23:37:14.8
        Program type: Callable routine
           Main DBMS: postgresql
 */
@@ -253,7 +253,7 @@ namespace GeneXus.Programs {
          context.AddJavascriptSource("jquery.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxtimezone.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxgral.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("gxcfg.js", "?202212900975");
+         context.AddJavascriptSource("gxcfg.js", "?202213023371410");
          if ( context.isSpaRequest( ) )
          {
             enableOutput();
@@ -326,7 +326,7 @@ namespace GeneXus.Programs {
          SendCloseFormHiddens( ) ;
          if ( ( StringUtil.Len( sPrefix) != 0 ) && context.isAjaxRequest( ) )
          {
-            context.AddJavascriptSource("sidebar.js", "?202212900976");
+            context.AddJavascriptSource("sidebar.js", "?202213023371413");
          }
          GxWebStd.gx_hidden_field( context, sPrefix+"GX_FocusControl", GX_FocusControl);
          define_styles( ) ;
@@ -877,11 +877,11 @@ namespace GeneXus.Programs {
       {
          AddStyleSheetFile("gpxMenu/resources/reset.css", "?128300");
          AddStyleSheetFile("gpxMenu/resources/slimmenu.min.css", "?20405388");
-         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?0080");
+         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?2337534");
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?202212900982");
+            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?202213023371428");
             idxLst = (int)(idxLst+1);
          }
          /* End function define_styles */
@@ -889,7 +889,7 @@ namespace GeneXus.Programs {
 
       protected void include_jscripts( )
       {
-         context.AddJavascriptSource("sidebar.js", "?202212900982");
+         context.AddJavascriptSource("sidebar.js", "?202213023371428");
          context.AddJavascriptSource("gpxMenu/gpxMenuRender.js", "");
          /* End function include_jscripts */
       }

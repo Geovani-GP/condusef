@@ -2,7 +2,7 @@
                File: DetallesEstatus
         Description: Detalles Estatus
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 1/29/2022 0:0:49.55
+       Generated on: 1/30/2022 23:48:25.59
        Program type: Callable routine
           Main DBMS: postgresql
 */
@@ -134,22 +134,19 @@ namespace GeneXus.Programs {
             }
             else if ( StringUtil.StrCmp(gxfirstwebparm, "gxajaxGridRefresh_"+"Statusgrid") == 0 )
             {
+               AV5buscar = GetNextPar( );
+               context.httpAjaxContext.ajax_rsp_assign_attri("", false, "AV5buscar", AV5buscar);
                AV7updateImage = GetNextPar( );
                context.httpAjaxContext.ajax_rsp_assign_prop("", false, edtavUpdateimage_Internalname, "Bitmap", (String.IsNullOrEmpty(StringUtil.RTrim( AV7updateImage)) ? AV10Updateimage_GXI : context.convertURL( context.PathToRelativeUrl( AV7updateImage))));
                AV6deleteImage = GetNextPar( );
                context.httpAjaxContext.ajax_rsp_assign_prop("", false, edtavDeleteimage_Internalname, "Bitmap", (String.IsNullOrEmpty(StringUtil.RTrim( AV6deleteImage)) ? AV11Deleteimage_GXI : context.convertURL( context.PathToRelativeUrl( AV6deleteImage))));
-               A1statusid = (int)(NumberUtil.Val( GetNextPar( ), "."));
-               A75statusdesc = GetNextPar( );
-               n75statusdesc = false;
-               AV5buscar = GetNextPar( );
-               context.httpAjaxContext.ajax_rsp_assign_attri("", false, "AV5buscar", AV5buscar);
                setAjaxCallMode();
                if ( ! IsValidAjaxCall( true) )
                {
                   GxWebError = 1;
                   return  ;
                }
-               gxgrStatusgrid_refresh( AV7updateImage, AV6deleteImage, A1statusid, A75statusdesc, AV5buscar) ;
+               gxgrStatusgrid_refresh( AV5buscar, AV7updateImage, AV6deleteImage) ;
                GXKey = Crypto.Decrypt64( context.GetCookie( "GX_SESSION_ID"), Crypto.GetServerKey( ));
                GXKey = Crypto.Decrypt64( context.GetCookie( "GX_SESSION_ID"), Crypto.GetServerKey( ));
                context.GX_webresponse.AddString((String)(context.getJSONResponse( )));
@@ -256,7 +253,7 @@ namespace GeneXus.Programs {
          context.AddJavascriptSource("jquery.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxtimezone.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxgral.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("gxcfg.js", "?2022129004958");
+         context.AddJavascriptSource("gxcfg.js", "?202213023482562");
          if ( context.isSpaRequest( ) )
          {
             enableOutput();
@@ -296,6 +293,7 @@ namespace GeneXus.Programs {
       protected void SendCloseFormHiddens( )
       {
          /* Send hidden variables. */
+         GxWebStd.gx_hidden_field( context, "GXH_vBUSCAR", StringUtil.RTrim( AV5buscar));
          /* Send saved values. */
          GxWebStd.gx_hidden_field( context, "nRC_GXsfl_12", StringUtil.LTrim( StringUtil.NToC( (decimal)(nRC_GXsfl_12), 4, 0, ",", "")));
          GXKey = Crypto.Decrypt64( context.GetCookie( "GX_SESSION_ID"), Crypto.GetServerKey( ));
@@ -581,6 +579,11 @@ namespace GeneXus.Programs {
                               if ( ! wbErr )
                               {
                                  Rfr0gs = false;
+                                 /* Set Refresh If Buscar Changed */
+                                 if ( StringUtil.StrCmp(cgiGet( "GXH_vBUSCAR"), AV5buscar) != 0 )
+                                 {
+                                    Rfr0gs = true;
+                                 }
                                  if ( ! Rfr0gs )
                                  {
                                     /* Execute user event: E112X2 */
@@ -736,11 +739,9 @@ namespace GeneXus.Programs {
          /* End function gxnrStatusgrid_newrow */
       }
 
-      protected void gxgrStatusgrid_refresh( String AV7updateImage ,
-                                             String AV6deleteImage ,
-                                             int A1statusid ,
-                                             String A75statusdesc ,
-                                             String AV5buscar )
+      protected void gxgrStatusgrid_refresh( String AV5buscar ,
+                                             String AV7updateImage ,
+                                             String AV6deleteImage )
       {
          initialize_formulas( ) ;
          GxWebStd.set_html_headers( context, 0, "", "");
@@ -799,24 +800,22 @@ namespace GeneXus.Programs {
          if ( String.IsNullOrEmpty(StringUtil.RTrim( context.wjLoc)) && ( context.nUserReturn != 1 ) )
          {
             SubsflControlProps_122( ) ;
+            lV5buscar = StringUtil.PadR( StringUtil.RTrim( AV5buscar), 20, "%");
+            context.httpAjaxContext.ajax_rsp_assign_attri("", false, "AV5buscar", AV5buscar);
             /* Using cursor H002X2 */
-            pr_default.execute(0);
+            pr_default.execute(0, new Object[] {lV5buscar});
             while ( (pr_default.getStatus(0) != 101) )
             {
-               BRK2X2 = false;
                A75statusdesc = H002X2_A75statusdesc[0];
                n75statusdesc = H002X2_n75statusdesc[0];
-               A1statusid = H002X2_A1statusid[0];
                A74statususotabla = H002X2_A74statususotabla[0];
                n74statususotabla = H002X2_n74statususotabla[0];
+               A1statusid = H002X2_A1statusid[0];
                /* Execute user event: E152X2 */
                E152X2 ();
-               if ( ! BRK2X2 )
-               {
-                  BRK2X2 = true;
-                  pr_default.readNext(0);
-               }
+               pr_default.readNext(0);
             }
+            pr_default.close(0);
             wbEnd = 12;
             WB2X0( ) ;
          }
@@ -877,7 +876,6 @@ namespace GeneXus.Programs {
          E122X2 ();
          if ( returnInSub )
          {
-            pr_default.close(0);
             returnInSub = true;
             if (true) return;
          }
@@ -916,7 +914,6 @@ namespace GeneXus.Programs {
          E112X2 ();
          if ( returnInSub )
          {
-            pr_default.close(0);
             returnInSub = true;
             if (true) return;
          }
@@ -932,28 +929,15 @@ namespace GeneXus.Programs {
       private void E152X2( )
       {
          /* Statusgrid_Load Routine */
-         while ( (pr_default.getStatus(0) != 101) && ( H002X2_A1statusid[0] == A1statusid ) )
+         /* Load Method */
+         if ( wbStart != -1 )
          {
-            BRK2X2 = false;
-            A75statusdesc = H002X2_A75statusdesc[0];
-            n75statusdesc = H002X2_n75statusdesc[0];
-            A74statususotabla = H002X2_A74statususotabla[0];
-            n74statususotabla = H002X2_n74statususotabla[0];
-            if ( String.IsNullOrEmpty(StringUtil.RTrim( AV5buscar)) || ( ( StringUtil.StrCmp(A75statusdesc, AV5buscar) == 0 ) ) )
-            {
-               /* Load Method */
-               if ( wbStart != -1 )
-               {
-                  wbStart = 12;
-               }
-               sendrow_122( ) ;
-               if ( isFullAjaxMode( ) && ( nGXsfl_12_Refreshing == 0 ) )
-               {
-                  context.DoAjaxLoad(12, StatusgridRow);
-               }
-            }
-            BRK2X2 = true;
-            pr_default.readNext(0);
+            wbStart = 12;
+         }
+         sendrow_122( ) ;
+         if ( isFullAjaxMode( ) && ( nGXsfl_12_Refreshing == 0 ) )
+         {
+            context.DoAjaxLoad(12, StatusgridRow);
          }
       }
 
@@ -1026,11 +1010,11 @@ namespace GeneXus.Programs {
 
       protected void define_styles( )
       {
-         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?0080");
+         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?2337534");
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?2022129004975");
+            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?202213023482580");
             idxLst = (int)(idxLst+1);
          }
          /* End function define_styles */
@@ -1039,7 +1023,7 @@ namespace GeneXus.Programs {
       protected void include_jscripts( )
       {
          context.AddJavascriptSource("messages.spa.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("detallesestatus.js", "?2022129004975");
+         context.AddJavascriptSource("detallesestatus.js", "?202213023482580");
          /* End function include_jscripts */
       }
 
@@ -1232,11 +1216,11 @@ namespace GeneXus.Programs {
 
       public override void InitializeDynEvents( )
       {
-         setEventMetadata("REFRESH","{handler:'Refresh',iparms:[{av:'STATUSGRID_nFirstRecordOnPage',nv:0},{av:'STATUSGRID_nEOF',nv:0},{av:'AV7updateImage',fld:'vUPDATEIMAGE',pic:'',nv:''},{av:'AV6deleteImage',fld:'vDELETEIMAGE',pic:'',nv:''},{av:'A1statusid',fld:'STATUSID',pic:'ZZZZZZZZ9',hsh:true,nv:0},{av:'A75statusdesc',fld:'STATUSDESC',pic:'',hsh:true,nv:''},{av:'AV5buscar',fld:'vBUSCAR',pic:'',nv:''}],oparms:[]}");
+         setEventMetadata("REFRESH","{handler:'Refresh',iparms:[{av:'STATUSGRID_nFirstRecordOnPage',nv:0},{av:'STATUSGRID_nEOF',nv:0},{av:'AV5buscar',fld:'vBUSCAR',pic:'',nv:''},{av:'AV7updateImage',fld:'vUPDATEIMAGE',pic:'',nv:''},{av:'AV6deleteImage',fld:'vDELETEIMAGE',pic:'',nv:''}],oparms:[]}");
          setEventMetadata("VUPDATEIMAGE.CLICK","{handler:'E132X2',iparms:[{av:'A1statusid',fld:'STATUSID',pic:'ZZZZZZZZ9',hsh:true,nv:0}],oparms:[]}");
          setEventMetadata("VDELETEIMAGE.CLICK","{handler:'E142X2',iparms:[{av:'A1statusid',fld:'STATUSID',pic:'ZZZZZZZZ9',hsh:true,nv:0}],oparms:[]}");
          setEventMetadata("ENTER","{handler:'E112X2',iparms:[],oparms:[]}");
-         setEventMetadata("STATUSGRID.LOAD","{handler:'E152X2',iparms:[{av:'A1statusid',fld:'STATUSID',pic:'ZZZZZZZZ9',hsh:true,nv:0},{av:'A75statusdesc',fld:'STATUSDESC',pic:'',hsh:true,nv:''},{av:'AV5buscar',fld:'vBUSCAR',pic:'',nv:''}],oparms:[]}");
+         setEventMetadata("STATUSGRID.LOAD","{handler:'E152X2',iparms:[],oparms:[]}");
          return  ;
       }
 
@@ -1252,7 +1236,6 @@ namespace GeneXus.Programs {
 
       protected void CloseOpenCursors( )
       {
-         pr_default.close(0);
       }
 
       public override void initialize( )
@@ -1263,7 +1246,6 @@ namespace GeneXus.Programs {
          AV10Updateimage_GXI = "";
          AV6deleteImage = "";
          AV11Deleteimage_GXI = "";
-         A75statusdesc = "";
          AV5buscar = "";
          GXKey = "";
          sDynURL = "";
@@ -1277,16 +1259,18 @@ namespace GeneXus.Programs {
          subStatusgrid_Linesclass = "";
          StatusgridColumn = new GXWebColumn();
          A74statususotabla = "";
+         A75statusdesc = "";
          sEvt = "";
          EvtGridId = "";
          EvtRowId = "";
          sEvtType = "";
          scmdbuf = "";
+         lV5buscar = "";
          H002X2_A75statusdesc = new String[] {""} ;
          H002X2_n75statusdesc = new bool[] {false} ;
-         H002X2_A1statusid = new int[1] ;
          H002X2_A74statususotabla = new String[] {""} ;
          H002X2_n74statususotabla = new bool[] {false} ;
+         H002X2_A1statusid = new int[1] ;
          StatusgridRow = new GXWebRow();
          TempTags = "";
          lblTextblock1_Jsonclick = "";
@@ -1299,7 +1283,7 @@ namespace GeneXus.Programs {
          pr_default = new DataStoreProvider(context, new GeneXus.Programs.detallesestatus__default(),
             new Object[][] {
                 new Object[] {
-               H002X2_A75statusdesc, H002X2_n75statusdesc, H002X2_A1statusid, H002X2_A74statususotabla, H002X2_n74statususotabla
+               H002X2_A75statusdesc, H002X2_n75statusdesc, H002X2_A74statususotabla, H002X2_n74statususotabla, H002X2_A1statusid
                }
             }
          );
@@ -1307,8 +1291,6 @@ namespace GeneXus.Programs {
          context.Gx_err = 0;
       }
 
-      private short nRcdExists_3 ;
-      private short nIsMod_3 ;
       private short nGotPars ;
       private short GxWebError ;
       private short nRC_GXsfl_12 ;
@@ -1329,9 +1311,9 @@ namespace GeneXus.Programs {
       private short nGXWrapped ;
       private short subStatusgrid_Backstyle ;
       private short STATUSGRID_nEOF ;
-      private int A1statusid ;
       private int subStatusgrid_Titlebackcolor ;
       private int subStatusgrid_Allbackcolor ;
+      private int A1statusid ;
       private int subStatusgrid_Selectioncolor ;
       private int subStatusgrid_Hoveringcolor ;
       private int subStatusgrid_Islastpage ;
@@ -1368,6 +1350,7 @@ namespace GeneXus.Programs {
       private String edtstatusdesc_Internalname ;
       private String edtavBuscar_Internalname ;
       private String scmdbuf ;
+      private String lV5buscar ;
       private String tblTable1_Internalname ;
       private String TempTags ;
       private String edtavBuscar_Jsonclick ;
@@ -1385,20 +1368,19 @@ namespace GeneXus.Programs {
       private String edtavUpdateimage_Jsonclick ;
       private String edtavDeleteimage_Jsonclick ;
       private bool entryPointCalled ;
-      private bool n75statusdesc ;
       private bool toggleJsOutput ;
       private bool wbLoad ;
       private bool Rfr0gs ;
       private bool wbErr ;
       private bool n74statususotabla ;
-      private bool BRK2X2 ;
+      private bool n75statusdesc ;
       private bool returnInSub ;
       private bool AV7updateImage_IsBlob ;
       private bool AV6deleteImage_IsBlob ;
       private String AV10Updateimage_GXI ;
       private String AV11Deleteimage_GXI ;
-      private String A75statusdesc ;
       private String A74statususotabla ;
+      private String A75statusdesc ;
       private String AV7updateImage ;
       private String AV6deleteImage ;
       private GXWebGrid StatusgridContainer ;
@@ -1408,9 +1390,9 @@ namespace GeneXus.Programs {
       private IDataStoreProvider pr_default ;
       private String[] H002X2_A75statusdesc ;
       private bool[] H002X2_n75statusdesc ;
-      private int[] H002X2_A1statusid ;
       private String[] H002X2_A74statususotabla ;
       private bool[] H002X2_n74statususotabla ;
+      private int[] H002X2_A1statusid ;
       private msglist BackMsgLst ;
       private msglist LclMsgLst ;
       private GXWebForm Form ;
@@ -1433,9 +1415,10 @@ namespace GeneXus.Programs {
        {
           Object[] prmH002X2 ;
           prmH002X2 = new Object[] {
+          new Object[] {"lV5buscar",NpgsqlDbType.Text,20,0}
           } ;
           def= new CursorDef[] {
-              new CursorDef("H002X2", "SELECT statusdesc, statusid, statususotabla FROM public.status ORDER BY statusid ",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmH002X2,11,0,true,false )
+              new CursorDef("H002X2", "SELECT statusdesc, statususotabla, statusid FROM public.status WHERE statususotabla like :lV5buscar ORDER BY statusid ",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmH002X2,11,0,true,false )
           };
        }
     }
@@ -1449,9 +1432,9 @@ namespace GeneXus.Programs {
              case 0 :
                 ((String[]) buf[0])[0] = rslt.getVarchar(1) ;
                 ((bool[]) buf[1])[0] = rslt.wasNull(1);
-                ((int[]) buf[2])[0] = rslt.getInt(2) ;
-                ((String[]) buf[3])[0] = rslt.getVarchar(3) ;
-                ((bool[]) buf[4])[0] = rslt.wasNull(3);
+                ((String[]) buf[2])[0] = rslt.getVarchar(2) ;
+                ((bool[]) buf[3])[0] = rslt.wasNull(2);
+                ((int[]) buf[4])[0] = rslt.getInt(3) ;
                 return;
        }
     }
@@ -1462,6 +1445,9 @@ namespace GeneXus.Programs {
     {
        switch ( cursor )
        {
+             case 0 :
+                stmt.SetParameter(1, (String)parms[0]);
+                return;
        }
     }
 

@@ -1,30 +1,21 @@
 spec_i([ web,104,'Detalle Articulo','DetalleArticulo',0,spa,'10_3_15-115824' ]).
  
 struct_i(2,1,[ 'Updateimage','Deleteimage' ],[]).
-struct_i(3,2,[ 12 ],[]).
  
-level_i(2,[ 7,[ [ 7,many ] ],[],[],[ [ [ 7 ],[ 54,12,55 ] ] ],[ [ [ 7 ],[] ] ],[ 12 ],'ESTATUSARTICULO_PKEY',[],[] ]).
-level_i(3,[ 7,[ [ 7,many ] ],[],[],[ [ [ 7 ],[ 12,54 ] ] ],[ [ [ 7 ],[] ] ],[ 12 ],'ESTATUSARTICULO_PKEY',[ 7,[ [ [],12,12 ] ] ],[] ]).
+level_i(2,[ 7,[ [ 7,many ] ],[],[],[ [ [ 7 ],[ 55,54,12 ] ] ],[ [ [ 7 ],[] ] ],[ 12 ],'ESTATUSARTICULO_PKEY',[],[] ]).
  
 tw_i(2,[]).
-tw_i(3,[]).
  
-lwi_i(3,[ [ c([ t('null(',1),t('Buscar',23),t(')',4),t('.OR.',9),t('(',0),t(54,2),t(=,10),t('Buscar',23),t(')',4) ],[ 54 ]) ] ]).
-lwi_i(2,[ [] ]).
+lwi_i(2,[ [ c([ t(54,2),t('.LIKE.',10),t('Buscar',23) ],[ 54 ]) ] ]).
  
  
  
-level_option_i(3,usr_condition,y).
  
-ta_i(3,[ [ [ 7,55 ] ] ]).
-ta_i(2,[ [ [ 7,54 ],[ 7,12 ],[ 7,55 ] ] ]).
-ta_i(3,[ [ [ 7,12 ],[ 7,54 ] ] ]).
+ta_i(2,[ [ [ 7,55 ],[ 7,54 ],[ 7,12 ] ] ]).
  
-las_i(2,[ [ 'Buscar',54,12,55 ] ]).
-las_i(3,[ [ 'Buscar',12,54 ] ]).
+las_i(2,[ [ 'Buscar',55,54,12 ] ]).
  
 lac_i(2,[ [ 'Buscar' ] ]).
-lac_i(3,[ [ 'Buscar' ] ]).
  
  
 lits_i('Detalle Articulos',5,10).
@@ -39,7 +30,6 @@ pos_i('Updateimage',[ 1,2,221 ]).
 pos_i('Deleteimage',[ 1,2,1246 ]).
  
 repeat_i(2,[ 1,2,[ 12,54,55,'Updateimage','Deleteimage' ],[] ]).
-repeat_i(3,[ 1,2,[ 12,54,'Updateimage','Deleteimage' ],[] ]).
  
  
 rule_i(0,datastore(1,'DS_LAST_CHANGE','')).
@@ -136,20 +126,14 @@ rule_i(0,p(0,15,fvix,[ 10,9 ],[ 'SCHEMA',public ])).
 rule_i(0,p(0,15,fvix,[ 10,9 ],[ 'EXTNAM','YES' ])).
  
 a_i(1,1,f,'Err',[],[ [],[ t('0',3) ] ]).
-a_i(2,3,t,7,[],[ [ [ [],12,12 ] ],'ESTATUSARTICULO_PKEY',[] ]).
-a_i(3,2,t,7,[],[ [],'ESTATUSARTICULO_PKEY',[] ]).
-a_i(4,3,c,0,[],[ c([ t('null(',1),t('Buscar',23),t(')',4),t('.OR.',9),t('(',0),t(54,2),t(=,10),t('Buscar',23),t(')',4) ],[ 54 ]) ]).
+a_i(2,2,t,7,[],[ [],'ESTATUSARTICULO_PKEY',[] ]).
  
 v_i(f,i,1,[]).
 v_i(f,o,1,'Err').
-v_i(t,i,2,12).
+v_i(t,i,2,[]).
+v_i(t,o,2,55).
 v_i(t,o,2,54).
-v_i(t,i,3,[]).
-v_i(t,o,3,54).
-v_i(t,o,3,12).
-v_i(t,o,3,55).
-v_i(c,i,4,54).
-v_i(c,o,4,[]).
+v_i(t,o,2,12).
  
  
  
@@ -207,7 +191,6 @@ map_i(7,a,12,[ estatusarticuloid ]).
  
  
  
-break_i(3,nvg,2,[ 12 ],[ [ 12 ],[ 54 ],[] ]).
 break_i(2,nvg,1,[],[ [ 12,54,55 ],[],[] ]).
  
 b_group_i(2,1,lit,0,1,1).
@@ -215,10 +198,7 @@ b_group_i(2,2,lit,0,2,6).
 b_group_i(2,3,lit,0,7,10).
 b_group_i(2,4,lit,0,11,14).
 b_group_i(2,5,lit,0,15,19).
-b_group_i(2,6,lit,0,20,3).
-b_group_i(2,7,nvg,3,20,20).
-b_group_i(3,1,lit,0,21,21).
-b_group_i(2,8,lit,0,24,0).
+b_group_i(2,6,lit,0,20,0).
  
 b_line_i(1,2,1,cmd,1,[ t('',146,1,0),t('Start',3,1,7) ]).
 b_line_i(2,2,2,cmd,1,[ t('',107,1,0),t([ t('Updateimage',23,2,2),t('fromimage(',1,2,15) ],31,2,2),t(i(98,'c7599f2c-228e-49d1-912e-ed139fdd44e8'),69,1,26),t(')',4,1,32) ]).
@@ -236,10 +216,8 @@ b_line_i(14,2,4,cmd,3,[ t('',146,3,0),t('Enter',3,14,7) ]).
 b_line_i(15,2,5,cmd,3,[ t('',104,3,0),t(o(13,'Catalog_De_Articulo'),28,3,2) ]).
 b_line_i(16,2,5,cmd,3,[ t('',147,3,0) ]).
 b_line_i(19,2,5,cmd,3,[ t('',146,3,0),t([ t('Estatusarticulosgrid',3,19,7),t('Load',3,19,28) ],29,19,28) ]).
-b_line_i(20,3,1,cmd,21,[ t('',121,20,0),t('ORDER',39,20,11),t(12,2,20,17) ]).
-b_line_i(22,3,1,cmd,21,[ t('',107,0,0),t([ t('Estatusarticulosgrid',3,0,0),t('load(',1,0,0) ],31,0,0),t(')',4,0,0) ]).
-b_line_i(23,3,1,cmd,21,[ t('',128,21,0) ]).
-b_line_i(24,2,8,cmd,7,[ t('',147,7,0) ]).
+b_line_i(21,2,6,cmd,3,[ t('',107,0,0),t([ t('Estatusarticulosgrid',3,0,0),t('load(',1,0,0) ],31,0,0),t(')',4,0,0) ]).
+b_line_i(21,2,6,cmd,3,[ t('',147,3,0) ]).
  
 sf_break_i(12,2).
  
@@ -342,7 +320,7 @@ html_comp_i(9,'Bordercolor',rgb(0,255,0),v,[ color ]).
 html_comp_i(9,'Buttonborderstyle',standard,d,[ str ]).
 html_comp_i(12,'Controlname','Estatusarticulosgrid',v,[ str ]).
 html_comp_i(12,'Controlorder','',d,[ str ]).
-html_comp_i(12,'Controlwhere','',d,[ str ]).
+html_comp_i(12,'Controlwhere','''.''(''.''(t(54,2),''.''(t($.LIKE.$,10),''.''(t($Buscar$,23),''.''(t($;$,18),$[]$)))),''.''($[]$,$[]$))',v,[ str ]).
 html_comp_i(12,'Iddataselector','',d,[ str ]).
 html_comp_i(12,'Rules',none,d,[ str ]).
 html_comp_i(12,'Sflrender','',d,[ str ]).
@@ -510,7 +488,6 @@ html_comp_i(17,'Vspace',0,d,[ num ]).
  
  
  
-warn_gen_i(msg([],spc0053,[ 'Conditional constraint "',[ att(2,54),' ',=,' ',att(2,'&Buscar') ],'" cannot be generated',[ ' in group starting at line ','20','' ],'. Changed to standard constraint.' ])).
  
 lit_i(5,1,t('Buscar',23),[ ctlname('&Buscar'),ctrltype(edit,5),pos(5),ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
 lit_i(7,1,t('Detalle Articulos',3),[ ctlname('Textblock1') ]).
@@ -580,7 +557,7 @@ sub_info_i(146,'Start',1,4,[ [],[ 'Updateimage','Deleteimage' ] ]).
 sub_info_i(146,[ t('Updateimage',23,6,7),t('Click',3,6,20) ],6,8,[ [ 12 ],[] ]).
 sub_info_i(146,[ t('Deleteimage',23,10,7),t('Click',3,10,20) ],10,12,[ [ 12 ],[] ]).
 sub_info_i(146,'Enter',14,16,[ [],[] ]).
-sub_info_i(146,[ t('Estatusarticulosgrid',3,19,7),t('Load',3,19,28) ],19,24,[ [ 12,54,'Buscar' ],[] ]).
+sub_info_i(146,[ t('Estatusarticulosgrid',3,19,7),t('Load',3,19,28) ],19,21,[ [],[] ]).
  
 pgm_parm_i(web,35,'CATALOG_DE_ARTICULO',[],[]).
 pgm_parm_i(trn,7,'ESTATUSARTICULO',[ [ char,3,0,0 ],[ int,18,0,0 ] ],[ [ 'Mode',in,[] ],[ estatusarticuloid,in,[] ] ]).

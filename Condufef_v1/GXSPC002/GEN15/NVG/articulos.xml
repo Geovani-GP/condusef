@@ -9,7 +9,7 @@
 <ObjDesc>articulos</ObjDesc>
 <ObjPgmName>articulos</ObjPgmName>
 <ObjClsName>Transaction</ObjClsName></Object>
-<Result>nogenreq</Result>
+<Result>genreq</Result>
 <Warnings></Warnings>
 <Errors></Errors>
 <Generator>

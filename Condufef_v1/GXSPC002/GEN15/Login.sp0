@@ -1,29 +1,38 @@
 spec_i([ web,28,'Login','Login',0,spa,'10_3_15-115824' ]).
  
 struct_i(2,1,[],[]).
+struct_i(4,2,[],[]).
 struct_i(3,2,[],[]).
  
 level_i(2,[ 0,[],[],[],[],[],[],[],[],[] ]).
+level_i(4,[ 15,[ [ 15,many ] ],[],[],[ [ [ 15 ],[ 173,174 ] ] ],[ [ [ 15 ],[] ] ],[ 9 ],'USUARIOS_PKEY',[],[] ]).
 level_i(3,[ 15,[ [ 15,many ] ],[],[],[ [ [ 15 ],[ 173,174 ] ] ],[ [ [ 15 ],[] ] ],[ 9 ],'USUARIOS_PKEY',[],[] ]).
  
 tw_i(2,[]).
+tw_i(4,[]).
 tw_i(3,[]).
  
 lwi_i(2,[ [] ]).
+lwi_i(4,[ [ c([ t(173,2),t(=,10),t('Usuario',23) ],[ 173 ]) ] ]).
 lwi_i(3,[ [ c([ t(173,2),t(=,10),t('Usuario',23) ],[ 173 ]) ] ]).
  
  
  
 level_option_i(3,usr_condition,y).
-level_option_i(3,when_none,'GXLvl9').
+level_option_i(3,when_none,'GXLvl11').
+level_option_i(4,usr_condition,y).
+level_option_i(4,when_none,'GXLvl38').
  
 ta_i(2,[ [] ]).
+ta_i(4,[ [ [ 15,173 ],[ 15,174 ] ] ]).
 ta_i(3,[ [ [ 15,173 ],[ 15,174 ] ] ]).
  
 las_i(2,[ [ 'Usuario','Contrasena' ] ]).
+las_i(4,[ [ 'Usuario','Contrasena',173,174 ] ]).
 las_i(3,[ [ 'Usuario','Contrasena',173,174 ] ]).
  
 lac_i(2,[ [ 'Usuario','Contrasena' ] ]).
+lac_i(4,[ [ 'Usuario','Contrasena' ] ]).
 lac_i(3,[ [ 'Usuario','Contrasena' ] ]).
  
  
@@ -132,12 +141,16 @@ rule_i(0,rule([ a(22,[ '''INICIAR SESIÓN ''','''INICIAR SESIÓN ''','' ]) ],[],[]
  
 a_i(1,1,f,'Err',[],[ [],[ t('0',3) ] ]).
 a_i(2,3,t,15,[],[ [],'USUARIOS_PKEY',[] ]).
+a_i(3,4,t,15,[],[ [],'USUARIOS_PKEY',[] ]).
  
 v_i(f,i,1,[]).
 v_i(f,o,1,'Err').
 v_i(t,i,2,[]).
 v_i(t,o,2,173).
 v_i(t,o,2,174).
+v_i(t,i,3,[]).
+v_i(t,o,3,173).
+v_i(t,o,3,174).
  
  
  
@@ -146,8 +159,9 @@ v_i(t,o,2,174).
  
 attri_i(173,[ usuario,svchar,25,0,'',0,usuario,'',0 ]).
 attri_i(9,[ idusuario,int,9,0,'ZZZZZZZZ9',0,idusuario,'',0 ]).
+attri_i('GXLvl38',[ 'GXLvl38',int,1,0,'',0,'',[],16 ]).
 attri_i(174,[ contrasena,svchar,10,0,'',0,contrasena,'',0 ]).
-attri_i('GXLvl9',[ 'GXLvl9',int,1,0,'',0,'',[],15 ]).
+attri_i('GXLvl11',[ 'GXLvl11',int,1,0,'',0,'',[],15 ]).
 attri_i('Errmsg',[ 'Gx_emsg',char,70,0,'',1,'Error text','',14 ]).
 attri_i('Err',[ 'Gx_err',int,3,0,'ZZ9',1,'Error code','',13 ]).
 attri_i('Titulo',[ titulo,char,20,0,'',0,titulo,'',12 ]).
@@ -192,33 +206,62 @@ map_i(15,a,9,[ idusuario ]).
  
  
 break_i(3,nvg,2,[],[ [ 174 ],[ 173 ],[] ]).
+break_i(4,nvg,2,[],[ [ 174 ],[ 173 ],[] ]).
 break_i(2,nvg,1,[],[ [],[],[] ]).
  
-b_group_i(2,1,lit,0,1,5).
-b_group_i(2,2,lit,0,6,5).
-b_group_i(2,3,nvg,3,9,9).
-b_group_i(3,1,lit,0,10,10).
-b_group_i(2,4,lit,0,22,0).
+b_group_i(2,1,lit,0,1,3).
+b_group_i(2,2,lit,0,4,3).
+b_group_i(2,3,nvg,3,11,11).
+b_group_i(3,1,lit,0,12,12).
+b_group_i(2,4,lit,0,24,37).
+b_group_i(2,5,lit,0,38,16).
+b_group_i(2,6,nvg,4,38,38).
+b_group_i(4,1,lit,0,39,39).
+b_group_i(2,7,lit,0,52,59).
+b_group_i(2,8,lit,0,60,0).
  
-b_line_i(5,2,1,cmd,5,[ t('',146,5,0),t('''INICIAR SESIÓN ''',3,5,7) ]).
-b_line_i([ 9,0 ],2,2,cmd,5,[ t('',107,5,0),t('GXLvl9',23,5,0),t(=,10,5,0),t('0',3,5,0) ]).
-b_line_i(9,3,1,cmd,10,[ t('',121,9,0) ]).
-b_line_i([ 9,1 ],3,1,cmd,9,[ t('',107,9,0),t('GXLvl9',23,9,0),t(=,10,9,0),t('1',3,9,0) ]).
-b_line_i(12,3,1,cmd,10,[ t('',109,10,0),t(174,2,10,6),t(=,10,10,17),t('Contrasena',23,10,19) ]).
-b_line_i(14,3,1,cmd,10,[ t('',107,10,0),t([ t('Websession',23,14,4),t('set(',1,14,16) ],31,14,4),t('''usuario''',3,14,21),t(',',7,10,30),t('Usuario',23,14,31),t(')',4,10,51) ]).
-b_line_i(15,3,1,cmd,10,[ t('',107,10,0),t([ t('Websession',23,15,4),t('set(',1,15,16) ],31,15,4),t('''fecha''',3,15,21),t(',',7,10,28),t('today(',1,10,29),t(')',4,10,36),t(')',4,10,37) ]).
-b_line_i(16,3,1,cmd,10,[ t('',104,10,0),t(o(13,'MenuPrincipal'),28,10,4) ]).
-b_line_i(18,3,1,cmd,10,[ t('',110,10,0) ]).
-b_line_i(19,3,1,cmd,10,[ t('',141,10,0),t('''usuario invalida''',3,19,8),t(')',4,10,26) ]).
-b_line_i(20,3,1,cmd,10,[ t('',111,10,0) ]).
-b_line_i(21,3,1,cmd,10,[ t('',128,10,0) ]).
-b_line_i([ 21,1 ],2,4,cmd,17,[ t('',109,17,0),t('GXLvl9',23,17,0),t(=,10,17,0),t('0',3,17,0) ]).
-b_line_i(22,2,4,cmd,18,[ t('',141,18,0),t('''contraseña invalida''',3,22,7),t(')',4,18,28) ]).
-b_line_i(24,2,4,cmd,18,[ t('',111,18,0) ]).
-b_line_i(25,2,4,cmd,18,[ t('',147,18,0) ]).
-b_line_i(1000,2,4,cmd,0,[ t('',146,0,0),t('Load',3,0,0) ]).
-b_line_i(1001,2,4,cmd,0,[ t('',155,0,0) ]).
-b_line_i(1002,2,4,cmd,0,[ t('',147,0,0) ]).
+b_line_i(3,2,1,cmd,3,[ t('',146,3,0),t('''INICIAR SESIÓN ''',3,3,7) ]).
+b_line_i(7,2,2,cmd,3,[ t('',109,3,0),t('null(',1,7,14),t('Usuario',23,3,5),t(')',4,3,23),t('.OR.',9,3,25),t('null(',1,7,42),t('Contrasena',23,3,30),t(')',4,3,51) ]).
+b_line_i(8,2,2,cmd,3,[ t('',141,3,0),t('''Los campos estan vacios''',3,8,7),t(')',4,3,32) ]).
+b_line_i(10,2,2,cmd,3,[ t('',110,3,0) ]).
+b_line_i([ 11,0 ],2,2,cmd,3,[ t('',107,3,0),t('GXLvl11',23,3,0),t(=,10,3,0),t('0',3,3,0) ]).
+b_line_i(11,3,1,cmd,12,[ t('',121,11,0) ]).
+b_line_i([ 11,1 ],3,1,cmd,11,[ t('',107,11,0),t('GXLvl11',23,11,0),t(=,10,11,0),t('1',3,11,0) ]).
+b_line_i(14,3,1,cmd,12,[ t('',109,12,0),t(174,2,12,6),t(=,10,12,17),t('Contrasena',23,12,19) ]).
+b_line_i(16,3,1,cmd,12,[ t('',107,12,0),t([ t('Websession',23,16,4),t('set(',1,16,16) ],31,16,4),t('''usuario''',3,16,21),t(',',7,12,30),t('Usuario',23,16,31),t(')',4,12,51) ]).
+b_line_i(17,3,1,cmd,12,[ t('',107,12,0),t([ t('Websession',23,17,4),t('set(',1,17,16) ],31,17,4),t('''fecha''',3,17,21),t(',',7,12,28),t('today(',1,12,29),t(')',4,12,36),t(')',4,12,37) ]).
+b_line_i(18,3,1,cmd,12,[ t('',104,12,0),t(o(13,'MenuPrincipal'),28,12,4) ]).
+b_line_i(20,3,1,cmd,12,[ t('',110,12,0) ]).
+b_line_i(21,3,1,cmd,12,[ t('',141,12,0),t('''usuario/contraseña invalida''',3,21,8),t(')',4,12,37) ]).
+b_line_i(22,3,1,cmd,12,[ t('',111,12,0) ]).
+b_line_i(23,3,1,cmd,12,[ t('',128,12,0) ]).
+b_line_i([ 23,1 ],2,4,cmd,15,[ t('',109,15,0),t('GXLvl11',23,15,0),t(=,10,15,0),t('0',3,15,0) ]).
+b_line_i(24,2,4,cmd,16,[ t('',141,16,0),t('''usuario/contraseña invalida''',3,24,7),t(')',4,16,36) ]).
+b_line_i(26,2,4,cmd,16,[ t('',111,16,0) ]).
+b_line_i(27,2,4,cmd,16,[ t('',111,16,0) ]).
+b_line_i(31,2,4,cmd,16,[ t('',147,16,0) ]).
+b_line_i(37,2,4,cmd,16,[ t('',146,16,0),t('Enter',3,37,7) ]).
+b_line_i([ 38,0 ],2,5,cmd,16,[ t('',107,16,0),t('GXLvl38',23,16,0),t(=,10,16,0),t('0',3,16,0) ]).
+b_line_i(38,4,1,cmd,39,[ t('',121,38,0) ]).
+b_line_i([ 38,1 ],4,1,cmd,38,[ t('',107,38,0),t('GXLvl38',23,38,0),t(=,10,38,0),t('1',3,38,0) ]).
+b_line_i(41,4,1,cmd,39,[ t('',109,39,0),t(174,2,39,6),t(=,10,39,17),t('Contrasena',23,39,19) ]).
+b_line_i(43,4,1,cmd,39,[ t('',107,39,0),t([ t('Websession',23,43,4),t('set(',1,43,16) ],31,43,4),t('''usuario''',3,43,21),t(',',7,39,30),t('Usuario',23,43,31),t(')',4,39,51) ]).
+b_line_i(44,4,1,cmd,39,[ t('',107,39,0),t([ t('Websession',23,44,4),t('set(',1,44,16) ],31,44,4),t('''fecha''',3,44,21),t(',',7,39,28),t('today(',1,39,29),t(')',4,39,36),t(')',4,39,37) ]).
+b_line_i(45,4,1,cmd,39,[ t('',104,39,0),t(o(13,'MenuPrincipal'),28,39,4) ]).
+b_line_i(47,4,1,cmd,39,[ t('',110,39,0) ]).
+b_line_i(48,4,1,cmd,39,[ t('',141,39,0),t('''usuario invalida''',3,48,8),t(')',4,39,26) ]).
+b_line_i(50,4,1,cmd,39,[ t('',111,39,0) ]).
+b_line_i(51,4,1,cmd,39,[ t('',128,39,0) ]).
+b_line_i([ 51,1 ],2,7,cmd,29,[ t('',109,29,0),t('GXLvl38',23,29,0),t(=,10,29,0),t('0',3,29,0) ]).
+b_line_i(52,2,7,cmd,30,[ t('',141,30,0),t('''contraseña invalida''',3,52,7),t(')',4,30,28) ]).
+b_line_i(55,2,7,cmd,30,[ t('',111,30,0) ]).
+b_line_i(56,2,7,cmd,30,[ t('',147,30,0) ]).
+b_line_i(59,2,7,cmd,30,[ t('',146,30,0),t('Start',3,59,7) ]).
+b_line_i(60,2,8,cmd,30,[ t('',107,30,0),t([ t('Webcomp1',3,30,0),t('Object',3,30,0) ],29,30,0),t(=,10,30,0),t('create(',1,30,0),t(o(13,'Alerts'),28,30,0),t(')',4,30,0) ]).
+b_line_i(63,2,8,cmd,30,[ t('',147,30,0) ]).
+b_line_i(1000,2,8,cmd,0,[ t('',146,0,0),t('Load',3,0,0) ]).
+b_line_i(1001,2,8,cmd,0,[ t('',155,0,0) ]).
+b_line_i(1002,2,8,cmd,0,[ t('',147,0,0) ]).
  
  
  
@@ -232,186 +275,209 @@ b_line_i(1002,2,4,cmd,0,[ t('',147,0,0) ]).
  
  
  
-html_i(2,html('&nbsp; ')).
-html_i(3,table(3)).
+html_i(2,html('&nbsp;')).
+html_i(3,usercontrol(3)).
+html_i(4,table(4)).
+html_i(27,comp(webcomp)).
  
-html_sub_i(3,0,html_i(0,html('<tbody>'))).
-html_sub_i(3,4,html_i(1,row(4))).
-html_sub_i(4,5,html_i(0,cell(5))).
-html_sub_i(5,6,html_i(0,table(6))).
-html_sub_i(6,0,html_i(0,html('<tbody>'))).
-html_sub_i(6,7,html_i(1,row(7))).
-html_sub_i(7,8,html_i(0,cell(8))).
-html_sub_i(7,9,html_i(1,cell(9))).
-html_sub_i(9,10,html_i(0,bitmap('9fb193d9-64a4-4d30-b129-ff7c76830f7e-101'))).
-html_sub_i(6,11,html_i(2,row(11))).
-html_sub_i(11,12,html_i(0,cell(12))).
-html_sub_i(12,0,html_i(0,html('Usuario'))).
-html_sub_i(11,13,html_i(1,cell(13))).
-html_sub_i(13,14,html_i(0,t('Usuario',23))).
-html_sub_i(6,15,html_i(3,row(15))).
-html_sub_i(15,16,html_i(0,cell(16))).
-html_sub_i(16,0,html_i(0,html('Contraseña'))).
-html_sub_i(15,17,html_i(1,cell(17))).
-html_sub_i(17,18,html_i(0,t('Contrasena',23))).
-html_sub_i(6,19,html_i(4,row(19))).
+html_sub_i(4,0,html_i(0,html('<tbody>'))).
+html_sub_i(4,5,html_i(1,row(5))).
+html_sub_i(5,6,html_i(0,cell(6))).
+html_sub_i(6,7,html_i(0,table(7))).
+html_sub_i(7,0,html_i(0,html('<tbody>'))).
+html_sub_i(7,8,html_i(1,row(8))).
+html_sub_i(8,9,html_i(0,cell(9))).
+html_sub_i(8,10,html_i(1,cell(10))).
+html_sub_i(10,11,html_i(0,bitmap('9fb193d9-64a4-4d30-b129-ff7c76830f7e-101'))).
+html_sub_i(7,12,html_i(2,row(12))).
+html_sub_i(12,13,html_i(0,cell(13))).
+html_sub_i(13,0,html_i(0,html('Usuario'))).
+html_sub_i(12,14,html_i(1,cell(14))).
+html_sub_i(14,15,html_i(0,t('Usuario',23))).
+html_sub_i(7,16,html_i(3,row(16))).
+html_sub_i(16,17,html_i(0,cell(17))).
+html_sub_i(16,18,html_i(1,cell(18))).
+html_sub_i(7,19,html_i(4,row(19))).
 html_sub_i(19,20,html_i(0,cell(20))).
-html_sub_i(20,21,html_i(0,comp(errview))).
-html_sub_i(19,22,html_i(1,cell(22))).
-html_sub_i(22,0,html_i(0,html('&nbsp;'))).
-html_sub_i(22,23,html_i(1,button('''INICIAR SESIÓN '''))).
-html_sub_i(6,0,html_i(5,html('</tbody>'))).
-html_sub_i(3,0,html_i(2,html('</tbody>'))).
+html_sub_i(20,0,html_i(0,html('Contraseña'))).
+html_sub_i(19,21,html_i(1,cell(21))).
+html_sub_i(21,22,html_i(0,t('Contrasena',23))).
+html_sub_i(7,23,html_i(5,row(23))).
+html_sub_i(23,24,html_i(0,cell(24))).
+html_sub_i(23,25,html_i(1,cell(25))).
+html_sub_i(25,0,html_i(0,html('&nbsp;'))).
+html_sub_i(25,26,html_i(1,button('''INICIAR SESIÓN '''))).
+html_sub_i(7,0,html_i(6,html('</tbody>'))).
+html_sub_i(4,0,html_i(2,html('</tbody>'))).
  
 html_tags_i(1,'Class','Form').
  
-html_comp_i(21,'Backcolor',rgb(0,0,0),d,[ color ]).
-html_comp_i(3,'Id','Table1',v,[ str ]).
-html_comp_i(3,'Class','Table',v,[ str ]).
-html_comp_i(3,'Title','',d,[ str ]).
-html_comp_i(3,'Align',left,d,[ str ]).
-html_comp_i(3,'Backgroundgx','',d,[ str ]).
-html_comp_i(3,'Bgcolor',rgb(0,0,0),d,[ color ]).
-html_comp_i(3,'Border','0',d,[ str ]).
-html_comp_i(3,'Bordercolor',rgb(0,0,0),d,[ color ]).
-html_comp_i(3,'Cellpadding','1',d,[ str ]).
-html_comp_i(3,'Cellspacing','2',d,[ str ]).
-html_comp_i(3,'Height',measure(100,'%'),v,[ measure ]).
-html_comp_i(3,'Width',measure(100,'%'),v,[ measure ]).
-html_comp_i(3,'Rules',none,d,[ str ]).
-html_comp_i(5,'Align',center,v,[ str ]).
-html_comp_i(6,'Id','Table2',v,[ str ]).
-html_comp_i(6,'Class','Table',v,[ str ]).
-html_comp_i(6,'Title','',d,[ str ]).
+html_comp_i(3,'Usercontroltype','Alertify',d,[ str ]).
+html_comp_i(3,'Constructorname','Alertify',d,[ str ]).
+html_comp_i(3,'Showmethodname',show,d,[ str ]).
+html_comp_i(3,'Controlname','Alertify1',v,[ str ]).
+html_comp_i(3,'Width','100',d,[ str ]).
+html_comp_i(3,'Height','100',d,[ str ]).
+html_comp_i(3,'Type',error,v,[ str ]).
+html_comp_i(3,'Delay','5000',d,[ str ]).
+html_comp_i(3,'Textmessage','Click now!!!',d,[ str ]).
+html_comp_i(3,'Textok','Confirm',d,[ str ]).
+html_comp_i(3,'Textcancel','Cancel',d,[ str ]).
+html_comp_i(3,'Promptresponse','',d,[ str ]).
+html_comp_i(3,'Promptplaceholder','Type here...',d,[ str ]).
+html_comp_i(3,'Setpromptresponse','SetPromptResponse',d,[ str ]).
+html_comp_i(3,'Getpromptresponse','GetPromptResponse',d,[ str ]).
+html_comp_i(3,'Visible',-1,d,[ bool ]).
+html_comp_i(3,'Csssupportfiles',[ [ t('''Alertify\css\alertify.core.css''',3) ],[ t('''Alertify\css\alertify.default.css''',3) ] ],d,[ params ]).
+html_comp_i(3,'Jssupportfiles',[ [ t('''Alertify\js\alertify.min.js''',3) ],[ t('''Alertify\GlobalAlerts.js''',3) ],[ t('''Alertify\AlertifyRender.js''',3) ] ],d,[ params ]).
+html_comp_i(3,'Csssharedsupportfiles',[],d,[ params ]).
+html_comp_i(3,'Jssharedsupportfiles',[ [ t('''Shared/jquery/jquery-1.9.0.js''',3) ] ],d,[ params ]).
+html_comp_i(4,'Id','Table1',v,[ str ]).
+html_comp_i(4,'Class','Table',v,[ str ]).
+html_comp_i(4,'Title','',d,[ str ]).
+html_comp_i(4,'Align',left,d,[ str ]).
+html_comp_i(4,'Backgroundgx','',d,[ str ]).
+html_comp_i(4,'Bgcolor',rgb(0,0,0),d,[ color ]).
+html_comp_i(4,'Border','0',d,[ str ]).
+html_comp_i(4,'Bordercolor',rgb(0,0,0),d,[ color ]).
+html_comp_i(4,'Cellpadding','1',d,[ str ]).
+html_comp_i(4,'Cellspacing','2',d,[ str ]).
+html_comp_i(4,'Height',measure(100,'%'),v,[ measure ]).
+html_comp_i(4,'Width',measure(100,'%'),v,[ measure ]).
+html_comp_i(4,'Rules',none,d,[ str ]).
 html_comp_i(6,'Align',center,v,[ str ]).
-html_comp_i(6,'Backgroundgx','',d,[ str ]).
-html_comp_i(6,'Bgcolor',rgb(0,0,0),d,[ color ]).
-html_comp_i(6,'Border','0',d,[ str ]).
-html_comp_i(6,'Bordercolor',rgb(0,0,0),d,[ color ]).
-html_comp_i(6,'Cellpadding','1',d,[ str ]).
-html_comp_i(6,'Cellspacing','2',d,[ str ]).
-html_comp_i(6,'Height',measure(206,px),v,[ measure ]).
-html_comp_i(6,'Width',measure(35,'%'),v,[ measure ]).
-html_comp_i(6,'Rules',none,d,[ str ]).
-html_comp_i(8,'Align',center,v,[ str ]).
-html_comp_i(8,'Height',measure(16,px),v,[ measure ]).
-html_comp_i(8,'Width',measure(68,px),v,[ measure ]).
+html_comp_i(7,'Id','Table2',v,[ str ]).
+html_comp_i(7,'Class','Table',v,[ str ]).
+html_comp_i(7,'Title','',d,[ str ]).
+html_comp_i(7,'Align',center,v,[ str ]).
+html_comp_i(7,'Backgroundgx','',d,[ str ]).
+html_comp_i(7,'Bgcolor',rgb(0,0,0),d,[ color ]).
+html_comp_i(7,'Border','0',d,[ str ]).
+html_comp_i(7,'Bordercolor',rgb(0,0,0),d,[ color ]).
+html_comp_i(7,'Cellpadding','1',d,[ str ]).
+html_comp_i(7,'Cellspacing','2',d,[ str ]).
+html_comp_i(7,'Height',measure(206,px),v,[ measure ]).
+html_comp_i(7,'Width',measure(35,'%'),v,[ measure ]).
+html_comp_i(7,'Rules',none,d,[ str ]).
 html_comp_i(9,'Align',center,v,[ str ]).
-html_comp_i(10,'Id','Image1',v,[ str ]).
-html_comp_i(10,'Class','Image',v,[ str ]).
-html_comp_i(10,src,i(98,'5f30ca97-9603-4cf3-8c47-b1a261245deb'),v,[ image ]).
-html_comp_i(10,lowsrc,'',d,[ str ]).
-html_comp_i(10,'Returnonclick',0,d,[ bool ]).
-html_comp_i(10,'Eventgx','',d,[ str ]).
-html_comp_i(10,'Height',measure(0,px),d,[ measure ]).
-html_comp_i(10,'Width',measure(0,px),d,[ measure ]).
-html_comp_i(10,'Border','0',d,[ str ]).
-html_comp_i(10,'Alt','',d,[ str ]).
-html_comp_i(10,'Title','',d,[ str ]).
-html_comp_i(10,'Hspace',0,v,[ num ]).
-html_comp_i(10,'Vspace',0,d,[ num ]).
-html_comp_i(10,'Align',left,d,[ str ]).
-html_comp_i(10,'Usemap','',d,[ str ]).
-html_comp_i(12,'Align',center,v,[ str ]).
-html_comp_i(12,'Height',measure(35,px),v,[ measure ]).
-html_comp_i(13,'Align',left,v,[ str ]).
-html_comp_i(13,'Height',measure(100,'%'),v,[ measure ]).
-html_comp_i(13,'Width',measure(100,'%'),v,[ measure ]).
-html_comp_i(14,'Colcount',25,d,[ num ]).
-html_comp_i(14,'Attid',-5,v,[ num ]).
-html_comp_i(14,'Class','Attribute',d,[ str ]).
-html_comp_i(14,'Controlname','&Usuario',d,[ str ]).
-html_comp_i(14,'Returnonclick',0,d,[ bool ]).
-html_comp_i(14,'Captionclass','',d,[ str ]).
-html_comp_i(14,'Captionposition','',d,[ str ]).
-html_comp_i(14,'Captionvalue','',d,[ str ]).
-html_comp_i(14,'Controltype',2,d,[ num ]).
-html_comp_i(14,'Inputtype',0,d,[ num ]).
-html_comp_i(14,'Editautocomplete',0,d,[ num ]).
-html_comp_i(14,'Autocorrection',-1,d,[ bool ]).
-html_comp_i(14,'Autocapitalization','FirstWord',d,[ str ]).
-html_comp_i(14,'Notifycontextchange',0,d,[ bool ]).
-html_comp_i(14,'Emptyasnull','Yes',d,[ str ]).
-html_comp_i(14,'Readonly',0,d,[ bool ]).
-html_comp_i(14,'Autocomplete',-1,d,[ bool ]).
-html_comp_i(14,'Ispassword',0,d,[ bool ]).
-html_comp_i(14,'Autoresize',0,v,[ bool ]).
-html_comp_i(14,'Gxwidth',measure(100,'%'),v,[ measure ]).
-html_comp_i(14,'Gxheight',measure(100,'%'),v,[ measure ]).
-html_comp_i(14,'Ismultiline',0,d,[ bool ]).
-html_comp_i(14,'Fill',-1,d,[ bool ]).
-html_comp_i(14,'Backcolor',rgb(255,255,255),d,[ color ]).
-html_comp_i(14,'Forecolor',rgb(0,0,0),d,[ color ]).
-html_comp_i(14,'Font',font('Verdana',12,[]),d,[ font ]).
-html_comp_i(14,'Horizontalalignment',left,d,[ str ]).
-html_comp_i(14,'Gxformat',0,d,[ num ]).
-html_comp_i(14,'Title','',d,[ str ]).
-html_comp_i(14,'Invitemsg','',d,[ str ]).
-html_comp_i(16,'Align',center,v,[ str ]).
-html_comp_i(16,'Height',measure(35,px),v,[ measure ]).
-html_comp_i(17,'Align',left,v,[ str ]).
-html_comp_i(18,'Colcount',10,d,[ num ]).
-html_comp_i(18,'Attid',-6,v,[ num ]).
-html_comp_i(18,'Class','Attribute',d,[ str ]).
-html_comp_i(18,'Controlname','&Contrasena',d,[ str ]).
-html_comp_i(18,'Returnonclick',0,d,[ bool ]).
-html_comp_i(18,'Captionclass','',d,[ str ]).
-html_comp_i(18,'Captionposition','',d,[ str ]).
-html_comp_i(18,'Captionvalue','',d,[ str ]).
-html_comp_i(18,'Controltype',2,d,[ num ]).
-html_comp_i(18,'Inputtype',0,d,[ num ]).
-html_comp_i(18,'Editautocomplete',0,d,[ num ]).
-html_comp_i(18,'Autocorrection',-1,d,[ bool ]).
-html_comp_i(18,'Autocapitalization','FirstWord',d,[ str ]).
-html_comp_i(18,'Notifycontextchange',0,d,[ bool ]).
-html_comp_i(18,'Emptyasnull','Yes',d,[ str ]).
-html_comp_i(18,'Readonly',0,d,[ bool ]).
-html_comp_i(18,'Autocomplete',0,d,[ bool ]).
-html_comp_i(18,'Ispassword',-1,d,[ bool ]).
-html_comp_i(18,'Autoresize',0,v,[ bool ]).
-html_comp_i(18,'Gxwidth',measure(100,'%'),v,[ measure ]).
-html_comp_i(18,'Gxheight',measure(100,'%'),v,[ measure ]).
-html_comp_i(18,'Ismultiline',0,d,[ bool ]).
-html_comp_i(18,'Fill',-1,d,[ bool ]).
-html_comp_i(18,'Backcolor',rgb(255,255,255),d,[ color ]).
-html_comp_i(18,'Forecolor',rgb(0,0,0),d,[ color ]).
-html_comp_i(18,'Font',font('Verdana',12,[]),d,[ font ]).
-html_comp_i(18,'Horizontalalignment',left,d,[ str ]).
-html_comp_i(18,'Gxformat',0,d,[ num ]).
-html_comp_i(18,'Title','',d,[ str ]).
-html_comp_i(18,'Invitemsg','',d,[ str ]).
-html_comp_i(21,'Controlname','Errviewer1',v,[ str ]).
-html_comp_i(21,'Class','ErrorViewer',d,[ str ]).
-html_comp_i(21,'Displaymode',1,d,[ num ]).
-html_comp_i(21,'Forecolor',rgb(0,0,0),d,[ color ]).
-html_comp_i(21,'Font',font('Microsoft Sans Serif',10,[]),d,[ font ]).
-html_comp_i(21,'Fill',-1,d,[ bool ]).
-html_comp_i(23,'Controlname','Button1',v,[ str ]).
-html_comp_i(23,'Class','Button',d,[ str ]).
-html_comp_i(23,'Event','''INICIAR SESIÓN ''',v,[ str ]).
-html_comp_i(23,'Caption','INICIAR SESIÓN ',d,[ str ]).
-html_comp_i(23,'Title','INICIAR SESIÓN ',d,[ str ]).
-html_comp_i(23,'Font',font('Microsoft Sans Serif',10,[]),d,[ font ]).
-html_comp_i(23,'Forecolor',rgb(255,255,255),v,[ color ]).
-html_comp_i(23,'Backcolor',rgb(0,128,128),v,[ color ]).
-html_comp_i(23,'Border','2',d,[ str ]).
-html_comp_i(23,'Bordercolor',rgb(219,220,222),d,[ color ]).
-html_comp_i(23,'Buttonborderstyle',standard,d,[ str ]).
+html_comp_i(9,'Height',measure(16,px),v,[ measure ]).
+html_comp_i(9,'Width',measure(68,px),v,[ measure ]).
+html_comp_i(10,'Align',center,v,[ str ]).
+html_comp_i(11,'Id','Image1',v,[ str ]).
+html_comp_i(11,'Class','Image',v,[ str ]).
+html_comp_i(11,src,i(98,'5f30ca97-9603-4cf3-8c47-b1a261245deb'),v,[ image ]).
+html_comp_i(11,lowsrc,'',d,[ str ]).
+html_comp_i(11,'Returnonclick',0,d,[ bool ]).
+html_comp_i(11,'Eventgx','',d,[ str ]).
+html_comp_i(11,'Height',measure(0,px),d,[ measure ]).
+html_comp_i(11,'Width',measure(0,px),d,[ measure ]).
+html_comp_i(11,'Border','0',d,[ str ]).
+html_comp_i(11,'Alt','',d,[ str ]).
+html_comp_i(11,'Title','',d,[ str ]).
+html_comp_i(11,'Hspace',0,v,[ num ]).
+html_comp_i(11,'Vspace',0,d,[ num ]).
+html_comp_i(11,'Align',left,d,[ str ]).
+html_comp_i(11,'Usemap','',d,[ str ]).
+html_comp_i(13,'Align',center,v,[ str ]).
+html_comp_i(13,'Height',measure(35,px),v,[ measure ]).
+html_comp_i(14,'Align',left,v,[ str ]).
+html_comp_i(14,'Height',measure(100,'%'),v,[ measure ]).
+html_comp_i(14,'Width',measure(100,'%'),v,[ measure ]).
+html_comp_i(15,'Colcount',25,d,[ num ]).
+html_comp_i(15,'Attid',-5,v,[ num ]).
+html_comp_i(15,'Class','Attribute',d,[ str ]).
+html_comp_i(15,'Controlname','&Usuario',d,[ str ]).
+html_comp_i(15,'Returnonclick',0,d,[ bool ]).
+html_comp_i(15,'Captionclass','',d,[ str ]).
+html_comp_i(15,'Captionposition','',d,[ str ]).
+html_comp_i(15,'Captionvalue','',d,[ str ]).
+html_comp_i(15,'Controltype',2,d,[ num ]).
+html_comp_i(15,'Inputtype',0,d,[ num ]).
+html_comp_i(15,'Editautocomplete',0,d,[ num ]).
+html_comp_i(15,'Autocorrection',-1,d,[ bool ]).
+html_comp_i(15,'Autocapitalization','FirstWord',d,[ str ]).
+html_comp_i(15,'Notifycontextchange',0,d,[ bool ]).
+html_comp_i(15,'Emptyasnull','Yes',d,[ str ]).
+html_comp_i(15,'Readonly',0,d,[ bool ]).
+html_comp_i(15,'Autocomplete',-1,d,[ bool ]).
+html_comp_i(15,'Ispassword',0,d,[ bool ]).
+html_comp_i(15,'Autoresize',0,v,[ bool ]).
+html_comp_i(15,'Gxwidth',measure(100,'%'),v,[ measure ]).
+html_comp_i(15,'Gxheight',measure(100,'%'),v,[ measure ]).
+html_comp_i(15,'Ismultiline',0,d,[ bool ]).
+html_comp_i(15,'Fill',-1,d,[ bool ]).
+html_comp_i(15,'Backcolor',rgb(255,255,255),d,[ color ]).
+html_comp_i(15,'Forecolor',rgb(0,0,0),d,[ color ]).
+html_comp_i(15,'Font',font('Verdana',12,[]),d,[ font ]).
+html_comp_i(15,'Horizontalalignment',left,d,[ str ]).
+html_comp_i(15,'Gxformat',0,d,[ num ]).
+html_comp_i(15,'Title','',d,[ str ]).
+html_comp_i(15,'Invitemsg','',d,[ str ]).
+html_comp_i(20,'Align',center,v,[ str ]).
+html_comp_i(20,'Height',measure(34,px),v,[ measure ]).
+html_comp_i(21,'Align',left,v,[ str ]).
+html_comp_i(22,'Colcount',10,d,[ num ]).
+html_comp_i(22,'Attid',-6,v,[ num ]).
+html_comp_i(22,'Class','Attribute',d,[ str ]).
+html_comp_i(22,'Controlname','&Contrasena',d,[ str ]).
+html_comp_i(22,'Returnonclick',0,d,[ bool ]).
+html_comp_i(22,'Captionclass','',d,[ str ]).
+html_comp_i(22,'Captionposition','',d,[ str ]).
+html_comp_i(22,'Captionvalue','',d,[ str ]).
+html_comp_i(22,'Controltype',2,d,[ num ]).
+html_comp_i(22,'Inputtype',0,d,[ num ]).
+html_comp_i(22,'Editautocomplete',0,d,[ num ]).
+html_comp_i(22,'Autocorrection',-1,d,[ bool ]).
+html_comp_i(22,'Autocapitalization','FirstWord',d,[ str ]).
+html_comp_i(22,'Notifycontextchange',0,d,[ bool ]).
+html_comp_i(22,'Emptyasnull','Yes',d,[ str ]).
+html_comp_i(22,'Readonly',0,d,[ bool ]).
+html_comp_i(22,'Autocomplete',0,d,[ bool ]).
+html_comp_i(22,'Ispassword',-1,d,[ bool ]).
+html_comp_i(22,'Autoresize',0,v,[ bool ]).
+html_comp_i(22,'Gxwidth',measure(100,'%'),v,[ measure ]).
+html_comp_i(22,'Gxheight',measure(100,'%'),v,[ measure ]).
+html_comp_i(22,'Ismultiline',0,d,[ bool ]).
+html_comp_i(22,'Fill',-1,d,[ bool ]).
+html_comp_i(22,'Backcolor',rgb(255,255,255),d,[ color ]).
+html_comp_i(22,'Forecolor',rgb(0,0,0),d,[ color ]).
+html_comp_i(22,'Font',font('Verdana',12,[]),d,[ font ]).
+html_comp_i(22,'Horizontalalignment',left,d,[ str ]).
+html_comp_i(22,'Gxformat',0,d,[ num ]).
+html_comp_i(22,'Title','',d,[ str ]).
+html_comp_i(22,'Invitemsg','',d,[ str ]).
+html_comp_i(24,'Height',measure(57,px),v,[ measure ]).
+html_comp_i(25,'Align',center,v,[ str ]).
+html_comp_i(26,'Controlname','Button1',v,[ str ]).
+html_comp_i(26,'Class','Button',d,[ str ]).
+html_comp_i(26,'Event','''INICIAR SESIÓN ''',v,[ str ]).
+html_comp_i(26,'Caption','INICIAR SESIÓN ',d,[ str ]).
+html_comp_i(26,'Title','INICIAR SESIÓN ',d,[ str ]).
+html_comp_i(26,'Font',font('Microsoft Sans Serif',10,[]),d,[ font ]).
+html_comp_i(26,'Forecolor',rgb(255,255,255),v,[ color ]).
+html_comp_i(26,'Backcolor',rgb(0,128,128),v,[ color ]).
+html_comp_i(26,'Border','2',d,[ str ]).
+html_comp_i(26,'Bordercolor',rgb(219,220,222),d,[ color ]).
+html_comp_i(26,'Buttonborderstyle',standard,d,[ str ]).
+html_comp_i(27,'Controlname','Webcomp1',v,[ str ]).
+html_comp_i(27,'Object',o(13,'Alerts'),v,[ object ]).
+html_comp_i(27,'Params',[],d,[ params ]).
  
  
  
  
  
  
-warn_gen_i(msg(layout(15,[]),spc0023,[ 'Parameter ','today()',' ','for method',' ',set,' has wrong type.' ])).
+warn_gen_i(msg(layout(17,[]),spc0023,[ 'Parameter ','today()',' ','for method',' ',set,' has wrong type.' ])).
  
-lit_i(10,1,bitmap('9fb193d9-64a4-4d30-b129-ff7c76830f7e-101'),[ ctlname('Image1') ]).
-lit_i(14,1,t('Usuario',23),[ ctlname('&Usuario'),ctrltype(edit,14),pos(14),ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
-lit_i(18,1,t('Contrasena',23),[ ctlname('&Contrasena'),ctrltype(edit,18),pos(18),ispwd(1),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
-lit_i(21,1,comp(errview),[ ctlname('Errviewer1'),width(0),rect(0,0,10,10),title('Nothing') ]).
-lit_i(23,1,button('''INICIAR SESIÓN '''),[ ctlname('Button1'),width(0),rect(0,0,10,10),title('Nothing') ]).
-lit_i(6,1,table(6),[ ctlname('Table2') ]).
-lit_i(3,1,table(3),[ ctlname('Table1') ]).
+lit_i(3,1,usercontrol(3),[ ctlname('Alertify1'),ctrltype(alertify),el([]),containers([]) ]).
+lit_i(11,1,bitmap('9fb193d9-64a4-4d30-b129-ff7c76830f7e-101'),[ ctlname('Image1') ]).
+lit_i(15,1,t('Usuario',23),[ ctlname('&Usuario'),ctrltype(edit,15),pos(15),ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
+lit_i(22,1,t('Contrasena',23),[ ctlname('&Contrasena'),ctrltype(edit,22),pos(22),ispwd(1),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
+lit_i(26,1,button('''INICIAR SESIÓN '''),[ ctlname('Button1'),width(0),rect(0,0,10,10),title('Nothing') ]).
+lit_i(7,1,table(7),[ ctlname('Table2') ]).
+lit_i(4,1,table(4),[ ctlname('Table1') ]).
+lit_i(27,1,comp(webcomp),[ ctlname('Webcomp1'),width(0),rect(0,0,10,10),title('Nothing') ]).
 lit_i(1,1,window,[ rect(0,0,1000,1000),ctlname('Form') ]).
  
  
@@ -467,12 +533,16 @@ var_prop_i(2,'Usuario',idBasedOn,'',v).
  
  
  
-sub_info_i(146,'''INICIAR SESIÓN ''',5,25,[ [ 173,'Usuario',174,'Contrasena' ],[] ]).
+sub_info_i(146,'''INICIAR SESIÓN ''',3,31,[ [ 'Usuario','Contrasena',173,174 ],[] ]).
+sub_info_i(146,'Enter',37,56,[ [ 173,'Usuario',174,'Contrasena' ],[] ]).
+sub_info_i(146,'Start',59,63,[ [],[ [ t('Webcomp1',3),t('Object',3) ] ] ]).
  
 pgm_parm_i(web,29,'MENUPRINCIPAL',[],[]).
+pgm_parm_i(web,110,'ALERTS',[],[]).
  
 pgm_callprotocol_i(web,28,'LOGIN','INTERNAL').
 pgm_callprotocol_i(web,29,'MENUPRINCIPAL','INTERNAL').
+pgm_callprotocol_i(web,110,'ALERTS','INTERNAL').
  
 pgm_main_info_i(web,29,'MENUPRINCIPAL',[ 15,'MENUPRINCIPAL','','','','','INTERNAL' ]).
 pgm_main_info_i(web,28,'LOGIN',[ 15,'LOGIN','Login','','','','' ]).

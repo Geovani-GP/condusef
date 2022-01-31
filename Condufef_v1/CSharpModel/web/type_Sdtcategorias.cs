@@ -2,7 +2,7 @@
                File: type_Sdtcategorias
         Description: categorias
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 1/29/2022 0:0:15.67
+       Generated on: 1/30/2022 23:37:25.71
        Program type: Callable routine
           Main DBMS: postgresql
 */

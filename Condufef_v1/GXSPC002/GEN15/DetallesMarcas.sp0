@@ -1,29 +1,21 @@
-spec_i([ web,92,'Detalles Cambs','DetallesMarcas',0,spa,'10_3_15-115824' ]).
+spec_i([ web,92,'Detalles Marcas','DetallesMarcas',0,spa,'10_3_15-115824' ]).
  
 struct_i(2,1,[ 'Updateimage','Deleteimage' ],[]).
-struct_i(3,2,[ 24 ],[]).
  
 level_i(2,[ 8,[ [ 8,many ] ],[],[],[ [ [ 8 ],[ 112,24 ] ] ],[ [ [ 8 ],[] ] ],[ 24 ],'MARCAS_PKEY',[],[] ]).
-level_i(3,[ 8,[ [ 8,many ] ],[],[],[ [ [ 8 ],[ 24,112 ] ] ],[ [ [ 8 ],[] ] ],[ 24 ],'MARCAS_PKEY',[ 8,[ [ [],24,24 ] ] ],[] ]).
  
 tw_i(2,[]).
-tw_i(3,[]).
  
-lwi_i(3,[ [ c([ t('null(',1),t('Buscar',23),t(')',4),t('.OR.',9),t('(',0),t(112,2),t(=,10),t('Buscar',23),t(')',4) ],[ 112 ]) ] ]).
-lwi_i(2,[ [] ]).
+lwi_i(2,[ [ c([ t(112,2),t('.LIKE.',10),t('Buscar',23) ],[ 112 ]) ] ]).
  
  
  
-level_option_i(3,usr_condition,y).
  
 ta_i(2,[ [ [ 8,112 ],[ 8,24 ] ] ]).
-ta_i(3,[ [ [ 8,24 ],[ 8,112 ] ] ]).
  
 las_i(2,[ [ 'Buscar',112,24 ] ]).
-las_i(3,[ [ 'Buscar',24,112 ] ]).
  
 lac_i(2,[ [ 'Buscar' ] ]).
-lac_i(3,[ [ 'Buscar' ] ]).
  
  
 lits_i('Detalles Marcas',5,10).
@@ -37,7 +29,6 @@ pos_i('Updateimage',[ 1,2,111 ]).
 pos_i('Deleteimage',[ 1,2,1136 ]).
  
 repeat_i(2,[ 1,2,[ 24,112,'Updateimage','Deleteimage' ],[] ]).
-repeat_i(3,[ 1,2,[ 24,112,'Updateimage','Deleteimage' ],[] ]).
  
  
 rule_i(0,datastore(1,'DS_LAST_CHANGE','')).
@@ -113,7 +104,7 @@ rule_i(0,prop('MasterPage',o(13,'AppMasterPage'))).
 rule_i(0,prop('WEB_COMP','No')).
 rule_i(0,prop('Theme',o(25,'Flat'))).
 rule_i(0,prop('Folder',o(8,'WebApi'))).
-rule_i(0,prop('ObjDesc','Detalles Cambs')).
+rule_i(0,prop('ObjDesc','Detalles Marcas')).
 rule_i(0,prop('ObjName','DetallesMarcas')).
 rule_i(0,maingen(15)).
 rule_i(0,file(8,'MARCAS',[ 24,112,113,114,115 ])).
@@ -134,19 +125,13 @@ rule_i(0,p(0,15,fvix,[ 18,19 ],[ 'SCHEMA',public ])).
 rule_i(0,p(0,15,fvix,[ 18,19 ],[ 'EXTNAM','YES' ])).
  
 a_i(1,1,f,'Err',[],[ [],[ t('0',3) ] ]).
-a_i(2,3,t,8,[],[ [ [ [],24,24 ] ],'MARCAS_PKEY',[] ]).
-a_i(3,2,t,8,[],[ [],'MARCAS_PKEY',[] ]).
-a_i(4,3,c,0,[],[ c([ t('null(',1),t('Buscar',23),t(')',4),t('.OR.',9),t('(',0),t(112,2),t(=,10),t('Buscar',23),t(')',4) ],[ 112 ]) ]).
+a_i(2,2,t,8,[],[ [],'MARCAS_PKEY',[] ]).
  
 v_i(f,i,1,[]).
 v_i(f,o,1,'Err').
-v_i(t,i,2,24).
+v_i(t,i,2,[]).
 v_i(t,o,2,112).
-v_i(t,i,3,[]).
-v_i(t,o,3,112).
-v_i(t,o,3,24).
-v_i(c,i,4,112).
-v_i(c,o,4,[]).
+v_i(t,o,2,24).
  
  
  
@@ -200,7 +185,6 @@ map_i(8,a,24,[ marcasid ]).
  
  
  
-break_i(3,nvg,2,[ 24 ],[ [ 24 ],[ 112 ],[] ]).
 break_i(2,nvg,1,[],[ [ 24,112 ],[],[] ]).
  
 b_group_i(2,1,lit,0,1,1).
@@ -208,10 +192,7 @@ b_group_i(2,2,lit,0,2,6).
 b_group_i(2,3,lit,0,7,11).
 b_group_i(2,4,lit,0,12,15).
 b_group_i(2,5,lit,0,16,20).
-b_group_i(2,6,lit,0,21,3).
-b_group_i(2,7,nvg,3,21,21).
-b_group_i(3,1,lit,0,22,22).
-b_group_i(2,8,lit,0,25,0).
+b_group_i(2,6,lit,0,21,0).
  
 b_line_i(1,2,1,cmd,1,[ t('',146,1,0),t('Start',3,1,7) ]).
 b_line_i(2,2,2,cmd,1,[ t('',107,1,0),t([ t('Updateimage',23,2,2),t('fromimage(',1,2,15) ],31,2,2),t(i(98,'c7599f2c-228e-49d1-912e-ed139fdd44e8'),69,1,26),t(')',4,1,32) ]).
@@ -229,10 +210,8 @@ b_line_i(15,2,4,cmd,3,[ t('',146,3,0),t('Enter',3,15,7) ]).
 b_line_i(16,2,5,cmd,3,[ t('',104,3,0),t(o(13,'Catalog_De_Marcas'),28,3,2) ]).
 b_line_i(17,2,5,cmd,3,[ t('',147,3,0) ]).
 b_line_i(20,2,5,cmd,3,[ t('',146,3,0),t([ t('Marcagrid',3,20,7),t('Load',3,20,17) ],29,20,17) ]).
-b_line_i(21,3,1,cmd,22,[ t('',121,21,0),t('ORDER',39,21,11),t(24,2,21,17) ]).
-b_line_i(23,3,1,cmd,22,[ t('',107,0,0),t([ t('Marcagrid',3,0,0),t('load(',1,0,0) ],31,0,0),t(')',4,0,0) ]).
-b_line_i(24,3,1,cmd,22,[ t('',128,22,0) ]).
-b_line_i(25,2,8,cmd,7,[ t('',147,7,0) ]).
+b_line_i(22,2,6,cmd,3,[ t('',107,0,0),t([ t('Marcagrid',3,0,0),t('load(',1,0,0) ],31,0,0),t(')',4,0,0) ]).
+b_line_i(22,2,6,cmd,3,[ t('',147,3,0) ]).
  
 sf_break_i(12,2).
  
@@ -335,7 +314,7 @@ html_comp_i(9,'Bordercolor',rgb(219,220,222),d,[ color ]).
 html_comp_i(9,'Buttonborderstyle',standard,d,[ str ]).
 html_comp_i(12,'Controlname','Marcagrid',v,[ str ]).
 html_comp_i(12,'Controlorder','',d,[ str ]).
-html_comp_i(12,'Controlwhere','',d,[ str ]).
+html_comp_i(12,'Controlwhere','''.''(''.''(t(112,2),''.''(t($.LIKE.$,10),''.''(t($Buscar$,23),''.''(t($;$,18),$[]$)))),''.''($[]$,$[]$))',v,[ str ]).
 html_comp_i(12,'Iddataselector','',d,[ str ]).
 html_comp_i(12,'Rules',none,d,[ str ]).
 html_comp_i(12,'Sflrender','',d,[ str ]).
@@ -473,7 +452,6 @@ html_comp_i(16,'Vspace',0,d,[ num ]).
  
  
  
-warn_gen_i(msg([],spc0053,[ 'Conditional constraint "',[ att(2,112),' ',=,' ',att(2,'&Buscar') ],'" cannot be generated',[ ' in group starting at line ','21','' ],'. Changed to standard constraint.' ])).
  
 lit_i(5,1,t('Buscar',23),[ ctlname('&Buscar'),ctrltype(edit,5),pos(5),ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
 lit_i(7,1,t('Detalles Marcas',3),[ ctlname('Textblock1') ]).
@@ -533,7 +511,7 @@ sub_info_i(146,'Start',1,4,[ [],[ 'Updateimage','Deleteimage' ] ]).
 sub_info_i(146,[ t('Updateimage',23,6,7),t('Click',3,6,20) ],6,8,[ [ 24 ],[] ]).
 sub_info_i(146,[ t('Deleteimage',23,11,7),t('Click',3,11,20) ],11,13,[ [ 24 ],[] ]).
 sub_info_i(146,'Enter',15,17,[ [],[] ]).
-sub_info_i(146,[ t('Marcagrid',3,20,7),t('Load',3,20,17) ],20,25,[ [ 24,112,'Buscar' ],[] ]).
+sub_info_i(146,[ t('Marcagrid',3,20,7),t('Load',3,20,17) ],20,22,[ [],[] ]).
  
 pgm_parm_i(web,31,'CATALOG_DE_MARCAS',[],[]).
 pgm_parm_i(trn,8,'MARCAS',[ [ char,3,0,0 ],[ int,18,0,0 ] ],[ [ 'Mode',in,[] ],[ marcaid,in,[] ] ]).

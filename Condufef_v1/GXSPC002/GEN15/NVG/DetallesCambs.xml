@@ -91,7 +91,7 @@
 <AttriName>cambsdsc</AttriName>
 <Description>cambsdsc</Description></Attribute>
 <Sp></Sp>
-<Token>&gt;=</Token>
+<Token>like</Token>
 <Sp></Sp>
 <Variable>
 <VarId>Buscar</VarId>

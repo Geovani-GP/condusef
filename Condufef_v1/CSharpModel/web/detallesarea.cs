@@ -2,7 +2,7 @@
                File: DetallesArea
         Description: Detalles Area
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 1/29/2022 0:0:50.24
+       Generated on: 1/30/2022 23:48:26.38
        Program type: Callable routine
           Main DBMS: postgresql
 */
@@ -134,22 +134,19 @@ namespace GeneXus.Programs {
             }
             else if ( StringUtil.StrCmp(gxfirstwebparm, "gxajaxGridRefresh_"+"Areagrid") == 0 )
             {
+               AV5buscar = GetNextPar( );
+               context.httpAjaxContext.ajax_rsp_assign_attri("", false, "AV5buscar", AV5buscar);
                AV7updateImage = GetNextPar( );
                context.httpAjaxContext.ajax_rsp_assign_prop("", false, edtavUpdateimage_Internalname, "Bitmap", (String.IsNullOrEmpty(StringUtil.RTrim( AV7updateImage)) ? AV10Updateimage_GXI : context.convertURL( context.PathToRelativeUrl( AV7updateImage))));
                AV6deleteImage = GetNextPar( );
                context.httpAjaxContext.ajax_rsp_assign_prop("", false, edtavDeleteimage_Internalname, "Bitmap", (String.IsNullOrEmpty(StringUtil.RTrim( AV6deleteImage)) ? AV11Deleteimage_GXI : context.convertURL( context.PathToRelativeUrl( AV6deleteImage))));
-               A22areaareaid = (int)(NumberUtil.Val( GetNextPar( ), "."));
-               A27areadsc = GetNextPar( );
-               n27areadsc = false;
-               AV5buscar = GetNextPar( );
-               context.httpAjaxContext.ajax_rsp_assign_attri("", false, "AV5buscar", AV5buscar);
                setAjaxCallMode();
                if ( ! IsValidAjaxCall( true) )
                {
                   GxWebError = 1;
                   return  ;
                }
-               gxgrAreagrid_refresh( AV7updateImage, AV6deleteImage, A22areaareaid, A27areadsc, AV5buscar) ;
+               gxgrAreagrid_refresh( AV5buscar, AV7updateImage, AV6deleteImage) ;
                GXKey = Crypto.Decrypt64( context.GetCookie( "GX_SESSION_ID"), Crypto.GetServerKey( ));
                GXKey = Crypto.Decrypt64( context.GetCookie( "GX_SESSION_ID"), Crypto.GetServerKey( ));
                context.GX_webresponse.AddString((String)(context.getJSONResponse( )));
@@ -256,7 +253,7 @@ namespace GeneXus.Programs {
          context.AddJavascriptSource("jquery.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxtimezone.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxgral.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("gxcfg.js", "?2022129005027");
+         context.AddJavascriptSource("gxcfg.js", "?202213023482641");
          if ( context.isSpaRequest( ) )
          {
             enableOutput();
@@ -296,6 +293,7 @@ namespace GeneXus.Programs {
       protected void SendCloseFormHiddens( )
       {
          /* Send hidden variables. */
+         GxWebStd.gx_hidden_field( context, "GXH_vBUSCAR", StringUtil.RTrim( AV5buscar));
          /* Send saved values. */
          GxWebStd.gx_hidden_field( context, "nRC_GXsfl_12", StringUtil.LTrim( StringUtil.NToC( (decimal)(nRC_GXsfl_12), 4, 0, ",", "")));
          GXKey = Crypto.Decrypt64( context.GetCookie( "GX_SESSION_ID"), Crypto.GetServerKey( ));
@@ -581,6 +579,11 @@ namespace GeneXus.Programs {
                               if ( ! wbErr )
                               {
                                  Rfr0gs = false;
+                                 /* Set Refresh If Buscar Changed */
+                                 if ( StringUtil.StrCmp(cgiGet( "GXH_vBUSCAR"), AV5buscar) != 0 )
+                                 {
+                                    Rfr0gs = true;
+                                 }
                                  if ( ! Rfr0gs )
                                  {
                                     /* Execute user event: E112Z2 */
@@ -736,11 +739,9 @@ namespace GeneXus.Programs {
          /* End function gxnrAreagrid_newrow */
       }
 
-      protected void gxgrAreagrid_refresh( String AV7updateImage ,
-                                           String AV6deleteImage ,
-                                           int A22areaareaid ,
-                                           String A27areadsc ,
-                                           String AV5buscar )
+      protected void gxgrAreagrid_refresh( String AV5buscar ,
+                                           String AV7updateImage ,
+                                           String AV6deleteImage )
       {
          initialize_formulas( ) ;
          GxWebStd.set_html_headers( context, 0, "", "");
@@ -799,24 +800,22 @@ namespace GeneXus.Programs {
          if ( String.IsNullOrEmpty(StringUtil.RTrim( context.wjLoc)) && ( context.nUserReturn != 1 ) )
          {
             SubsflControlProps_122( ) ;
+            lV5buscar = StringUtil.PadR( StringUtil.RTrim( AV5buscar), 20, "%");
+            context.httpAjaxContext.ajax_rsp_assign_attri("", false, "AV5buscar", AV5buscar);
             /* Using cursor H002Z2 */
-            pr_default.execute(0);
+            pr_default.execute(0, new Object[] {lV5buscar});
             while ( (pr_default.getStatus(0) != 101) )
             {
-               BRK2Z2 = false;
+               A28areastatusadsc = H002Z2_A28areastatusadsc[0];
+               n28areastatusadsc = H002Z2_n28areastatusadsc[0];
                A27areadsc = H002Z2_A27areadsc[0];
                n27areadsc = H002Z2_n27areadsc[0];
                A22areaareaid = H002Z2_A22areaareaid[0];
-               A28areastatusadsc = H002Z2_A28areastatusadsc[0];
-               n28areastatusadsc = H002Z2_n28areastatusadsc[0];
                /* Execute user event: E152Z2 */
                E152Z2 ();
-               if ( ! BRK2Z2 )
-               {
-                  BRK2Z2 = true;
-                  pr_default.readNext(0);
-               }
+               pr_default.readNext(0);
             }
+            pr_default.close(0);
             wbEnd = 12;
             WB2Z0( ) ;
          }
@@ -877,7 +876,6 @@ namespace GeneXus.Programs {
          E122Z2 ();
          if ( returnInSub )
          {
-            pr_default.close(0);
             returnInSub = true;
             if (true) return;
          }
@@ -916,7 +914,6 @@ namespace GeneXus.Programs {
          E112Z2 ();
          if ( returnInSub )
          {
-            pr_default.close(0);
             returnInSub = true;
             if (true) return;
          }
@@ -932,28 +929,15 @@ namespace GeneXus.Programs {
       private void E152Z2( )
       {
          /* Areagrid_Load Routine */
-         while ( (pr_default.getStatus(0) != 101) && ( H002Z2_A22areaareaid[0] == A22areaareaid ) )
+         /* Load Method */
+         if ( wbStart != -1 )
          {
-            BRK2Z2 = false;
-            A27areadsc = H002Z2_A27areadsc[0];
-            n27areadsc = H002Z2_n27areadsc[0];
-            A28areastatusadsc = H002Z2_A28areastatusadsc[0];
-            n28areastatusadsc = H002Z2_n28areastatusadsc[0];
-            if ( String.IsNullOrEmpty(StringUtil.RTrim( AV5buscar)) || ( ( StringUtil.StrCmp(A27areadsc, AV5buscar) == 0 ) ) )
-            {
-               /* Load Method */
-               if ( wbStart != -1 )
-               {
-                  wbStart = 12;
-               }
-               sendrow_122( ) ;
-               if ( isFullAjaxMode( ) && ( nGXsfl_12_Refreshing == 0 ) )
-               {
-                  context.DoAjaxLoad(12, AreagridRow);
-               }
-            }
-            BRK2Z2 = true;
-            pr_default.readNext(0);
+            wbStart = 12;
+         }
+         sendrow_122( ) ;
+         if ( isFullAjaxMode( ) && ( nGXsfl_12_Refreshing == 0 ) )
+         {
+            context.DoAjaxLoad(12, AreagridRow);
          }
       }
 
@@ -1026,11 +1010,11 @@ namespace GeneXus.Programs {
 
       protected void define_styles( )
       {
-         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?0080");
+         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?2337534");
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?2022129005046");
+            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?202213023482659");
             idxLst = (int)(idxLst+1);
          }
          /* End function define_styles */
@@ -1039,7 +1023,7 @@ namespace GeneXus.Programs {
       protected void include_jscripts( )
       {
          context.AddJavascriptSource("messages.spa.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("detallesarea.js", "?2022129005046");
+         context.AddJavascriptSource("detallesarea.js", "?202213023482659");
          /* End function include_jscripts */
       }
 
@@ -1232,11 +1216,11 @@ namespace GeneXus.Programs {
 
       public override void InitializeDynEvents( )
       {
-         setEventMetadata("REFRESH","{handler:'Refresh',iparms:[{av:'AREAGRID_nFirstRecordOnPage',nv:0},{av:'AREAGRID_nEOF',nv:0},{av:'AV7updateImage',fld:'vUPDATEIMAGE',pic:'',nv:''},{av:'AV6deleteImage',fld:'vDELETEIMAGE',pic:'',nv:''},{av:'A22areaareaid',fld:'AREAAREAID',pic:'ZZZZZZZZ9',hsh:true,nv:0},{av:'A27areadsc',fld:'AREADSC',pic:'',hsh:true,nv:''},{av:'AV5buscar',fld:'vBUSCAR',pic:'',nv:''}],oparms:[]}");
+         setEventMetadata("REFRESH","{handler:'Refresh',iparms:[{av:'AREAGRID_nFirstRecordOnPage',nv:0},{av:'AREAGRID_nEOF',nv:0},{av:'AV5buscar',fld:'vBUSCAR',pic:'',nv:''},{av:'AV7updateImage',fld:'vUPDATEIMAGE',pic:'',nv:''},{av:'AV6deleteImage',fld:'vDELETEIMAGE',pic:'',nv:''}],oparms:[]}");
          setEventMetadata("VUPDATEIMAGE.CLICK","{handler:'E132Z2',iparms:[{av:'A22areaareaid',fld:'AREAAREAID',pic:'ZZZZZZZZ9',hsh:true,nv:0}],oparms:[]}");
          setEventMetadata("VDELETEIMAGE.CLICK","{handler:'E142Z2',iparms:[{av:'A22areaareaid',fld:'AREAAREAID',pic:'ZZZZZZZZ9',hsh:true,nv:0}],oparms:[]}");
          setEventMetadata("ENTER","{handler:'E112Z2',iparms:[],oparms:[]}");
-         setEventMetadata("AREAGRID.LOAD","{handler:'E152Z2',iparms:[{av:'A22areaareaid',fld:'AREAAREAID',pic:'ZZZZZZZZ9',hsh:true,nv:0},{av:'A27areadsc',fld:'AREADSC',pic:'',hsh:true,nv:''},{av:'AV5buscar',fld:'vBUSCAR',pic:'',nv:''}],oparms:[]}");
+         setEventMetadata("AREAGRID.LOAD","{handler:'E152Z2',iparms:[],oparms:[]}");
          return  ;
       }
 
@@ -1252,7 +1236,6 @@ namespace GeneXus.Programs {
 
       protected void CloseOpenCursors( )
       {
-         pr_default.close(0);
       }
 
       public override void initialize( )
@@ -1263,7 +1246,6 @@ namespace GeneXus.Programs {
          AV10Updateimage_GXI = "";
          AV6deleteImage = "";
          AV11Deleteimage_GXI = "";
-         A27areadsc = "";
          AV5buscar = "";
          GXKey = "";
          sDynURL = "";
@@ -1276,17 +1258,19 @@ namespace GeneXus.Programs {
          sStyleString = "";
          subAreagrid_Linesclass = "";
          AreagridColumn = new GXWebColumn();
+         A27areadsc = "";
          A28areastatusadsc = "";
          sEvt = "";
          EvtGridId = "";
          EvtRowId = "";
          sEvtType = "";
          scmdbuf = "";
+         lV5buscar = "";
+         H002Z2_A28areastatusadsc = new String[] {""} ;
+         H002Z2_n28areastatusadsc = new bool[] {false} ;
          H002Z2_A27areadsc = new String[] {""} ;
          H002Z2_n27areadsc = new bool[] {false} ;
          H002Z2_A22areaareaid = new int[1] ;
-         H002Z2_A28areastatusadsc = new String[] {""} ;
-         H002Z2_n28areastatusadsc = new bool[] {false} ;
          AreagridRow = new GXWebRow();
          TempTags = "";
          lblTextblock1_Jsonclick = "";
@@ -1299,7 +1283,7 @@ namespace GeneXus.Programs {
          pr_default = new DataStoreProvider(context, new GeneXus.Programs.detallesarea__default(),
             new Object[][] {
                 new Object[] {
-               H002Z2_A27areadsc, H002Z2_n27areadsc, H002Z2_A22areaareaid, H002Z2_A28areastatusadsc, H002Z2_n28areastatusadsc
+               H002Z2_A28areastatusadsc, H002Z2_n28areastatusadsc, H002Z2_A27areadsc, H002Z2_n27areadsc, H002Z2_A22areaareaid
                }
             }
          );
@@ -1307,8 +1291,6 @@ namespace GeneXus.Programs {
          context.Gx_err = 0;
       }
 
-      private short nRcdExists_3 ;
-      private short nIsMod_3 ;
       private short nGotPars ;
       private short GxWebError ;
       private short nRC_GXsfl_12 ;
@@ -1329,9 +1311,9 @@ namespace GeneXus.Programs {
       private short nGXWrapped ;
       private short subAreagrid_Backstyle ;
       private short AREAGRID_nEOF ;
-      private int A22areaareaid ;
       private int subAreagrid_Titlebackcolor ;
       private int subAreagrid_Allbackcolor ;
+      private int A22areaareaid ;
       private int subAreagrid_Selectioncolor ;
       private int subAreagrid_Hoveringcolor ;
       private int subAreagrid_Islastpage ;
@@ -1368,6 +1350,7 @@ namespace GeneXus.Programs {
       private String edtareastatusadsc_Internalname ;
       private String edtavBuscar_Internalname ;
       private String scmdbuf ;
+      private String lV5buscar ;
       private String tblTable1_Internalname ;
       private String TempTags ;
       private String edtavBuscar_Jsonclick ;
@@ -1385,13 +1368,12 @@ namespace GeneXus.Programs {
       private String edtavUpdateimage_Jsonclick ;
       private String edtavDeleteimage_Jsonclick ;
       private bool entryPointCalled ;
-      private bool n27areadsc ;
       private bool toggleJsOutput ;
       private bool wbLoad ;
       private bool Rfr0gs ;
       private bool wbErr ;
+      private bool n27areadsc ;
       private bool n28areastatusadsc ;
-      private bool BRK2Z2 ;
       private bool returnInSub ;
       private bool AV7updateImage_IsBlob ;
       private bool AV6deleteImage_IsBlob ;
@@ -1406,11 +1388,11 @@ namespace GeneXus.Programs {
       private GXWebColumn AreagridColumn ;
       private IGxDataStore dsDefault ;
       private IDataStoreProvider pr_default ;
+      private String[] H002Z2_A28areastatusadsc ;
+      private bool[] H002Z2_n28areastatusadsc ;
       private String[] H002Z2_A27areadsc ;
       private bool[] H002Z2_n27areadsc ;
       private int[] H002Z2_A22areaareaid ;
-      private String[] H002Z2_A28areastatusadsc ;
-      private bool[] H002Z2_n28areastatusadsc ;
       private msglist BackMsgLst ;
       private msglist LclMsgLst ;
       private GXWebForm Form ;
@@ -1433,9 +1415,10 @@ namespace GeneXus.Programs {
        {
           Object[] prmH002Z2 ;
           prmH002Z2 = new Object[] {
+          new Object[] {"lV5buscar",NpgsqlDbType.Text,20,0}
           } ;
           def= new CursorDef[] {
-              new CursorDef("H002Z2", "SELECT areadsc, areaid, areastatusadsc FROM public.area ORDER BY areaid ",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmH002Z2,11,0,true,false )
+              new CursorDef("H002Z2", "SELECT areastatusadsc, areadsc, areaid FROM public.area WHERE areadsc like :lV5buscar ORDER BY areaid ",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmH002Z2,11,0,true,false )
           };
        }
     }
@@ -1449,9 +1432,9 @@ namespace GeneXus.Programs {
              case 0 :
                 ((String[]) buf[0])[0] = rslt.getVarchar(1) ;
                 ((bool[]) buf[1])[0] = rslt.wasNull(1);
-                ((int[]) buf[2])[0] = rslt.getInt(2) ;
-                ((String[]) buf[3])[0] = rslt.getVarchar(3) ;
-                ((bool[]) buf[4])[0] = rslt.wasNull(3);
+                ((String[]) buf[2])[0] = rslt.getVarchar(2) ;
+                ((bool[]) buf[3])[0] = rslt.wasNull(2);
+                ((int[]) buf[4])[0] = rslt.getInt(3) ;
                 return;
        }
     }
@@ -1462,6 +1445,9 @@ namespace GeneXus.Programs {
     {
        switch ( cursor )
        {
+             case 0 :
+                stmt.SetParameter(1, (String)parms[0]);
+                return;
        }
     }
 

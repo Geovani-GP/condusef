@@ -2,7 +2,7 @@
                File: DetalleTipoDocumento
         Description: Detalle Tipo Documento
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 1/29/2022 0:0:48.82
+       Generated on: 1/30/2022 23:48:24.78
        Program type: Callable routine
           Main DBMS: postgresql
 */
@@ -134,22 +134,19 @@ namespace GeneXus.Programs {
             }
             else if ( StringUtil.StrCmp(gxfirstwebparm, "gxajaxGridRefresh_"+"Tipodocumentogrid") == 0 )
             {
+               AV5buscar = GetNextPar( );
+               context.httpAjaxContext.ajax_rsp_assign_attri("", false, "AV5buscar", AV5buscar);
                AV7updateImage = GetNextPar( );
                context.httpAjaxContext.ajax_rsp_assign_prop("", false, edtavUpdateimage_Internalname, "Bitmap", (String.IsNullOrEmpty(StringUtil.RTrim( AV7updateImage)) ? AV10Updateimage_GXI : context.convertURL( context.PathToRelativeUrl( AV7updateImage))));
                AV6deleteImage = GetNextPar( );
                context.httpAjaxContext.ajax_rsp_assign_prop("", false, edtavDeleteimage_Internalname, "Bitmap", (String.IsNullOrEmpty(StringUtil.RTrim( AV6deleteImage)) ? AV11Deleteimage_GXI : context.convertURL( context.PathToRelativeUrl( AV6deleteImage))));
-               A26tipodocumentoid = (int)(NumberUtil.Val( GetNextPar( ), "."));
-               A79tipodocumentodsc = GetNextPar( );
-               n79tipodocumentodsc = false;
-               AV5buscar = GetNextPar( );
-               context.httpAjaxContext.ajax_rsp_assign_attri("", false, "AV5buscar", AV5buscar);
                setAjaxCallMode();
                if ( ! IsValidAjaxCall( true) )
                {
                   GxWebError = 1;
                   return  ;
                }
-               gxgrTipodocumentogrid_refresh( AV7updateImage, AV6deleteImage, A26tipodocumentoid, A79tipodocumentodsc, AV5buscar) ;
+               gxgrTipodocumentogrid_refresh( AV5buscar, AV7updateImage, AV6deleteImage) ;
                GXKey = Crypto.Decrypt64( context.GetCookie( "GX_SESSION_ID"), Crypto.GetServerKey( ));
                GXKey = Crypto.Decrypt64( context.GetCookie( "GX_SESSION_ID"), Crypto.GetServerKey( ));
                context.GX_webresponse.AddString((String)(context.getJSONResponse( )));
@@ -256,7 +253,7 @@ namespace GeneXus.Programs {
          context.AddJavascriptSource("jquery.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxtimezone.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxgral.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("gxcfg.js", "?2022129004885");
+         context.AddJavascriptSource("gxcfg.js", "?202213023482481");
          if ( context.isSpaRequest( ) )
          {
             enableOutput();
@@ -296,6 +293,7 @@ namespace GeneXus.Programs {
       protected void SendCloseFormHiddens( )
       {
          /* Send hidden variables. */
+         GxWebStd.gx_hidden_field( context, "GXH_vBUSCAR", StringUtil.RTrim( AV5buscar));
          /* Send saved values. */
          GxWebStd.gx_hidden_field( context, "nRC_GXsfl_12", StringUtil.LTrim( StringUtil.NToC( (decimal)(nRC_GXsfl_12), 4, 0, ",", "")));
          GXKey = Crypto.Decrypt64( context.GetCookie( "GX_SESSION_ID"), Crypto.GetServerKey( ));
@@ -575,6 +573,11 @@ namespace GeneXus.Programs {
                               if ( ! wbErr )
                               {
                                  Rfr0gs = false;
+                                 /* Set Refresh If Buscar Changed */
+                                 if ( StringUtil.StrCmp(cgiGet( "GXH_vBUSCAR"), AV5buscar) != 0 )
+                                 {
+                                    Rfr0gs = true;
+                                 }
                                  if ( ! Rfr0gs )
                                  {
                                     /* Execute user event: E112V2 */
@@ -728,11 +731,9 @@ namespace GeneXus.Programs {
          /* End function gxnrTipodocumentogrid_newrow */
       }
 
-      protected void gxgrTipodocumentogrid_refresh( String AV7updateImage ,
-                                                    String AV6deleteImage ,
-                                                    int A26tipodocumentoid ,
-                                                    String A79tipodocumentodsc ,
-                                                    String AV5buscar )
+      protected void gxgrTipodocumentogrid_refresh( String AV5buscar ,
+                                                    String AV7updateImage ,
+                                                    String AV6deleteImage )
       {
          initialize_formulas( ) ;
          GxWebStd.set_html_headers( context, 0, "", "");
@@ -789,22 +790,20 @@ namespace GeneXus.Programs {
          if ( String.IsNullOrEmpty(StringUtil.RTrim( context.wjLoc)) && ( context.nUserReturn != 1 ) )
          {
             SubsflControlProps_122( ) ;
+            lV5buscar = StringUtil.PadR( StringUtil.RTrim( AV5buscar), 20, "%");
+            context.httpAjaxContext.ajax_rsp_assign_attri("", false, "AV5buscar", AV5buscar);
             /* Using cursor H002V2 */
-            pr_default.execute(0);
+            pr_default.execute(0, new Object[] {lV5buscar});
             while ( (pr_default.getStatus(0) != 101) )
             {
-               BRK2V2 = false;
                A79tipodocumentodsc = H002V2_A79tipodocumentodsc[0];
                n79tipodocumentodsc = H002V2_n79tipodocumentodsc[0];
                A26tipodocumentoid = H002V2_A26tipodocumentoid[0];
                /* Execute user event: E152V2 */
                E152V2 ();
-               if ( ! BRK2V2 )
-               {
-                  BRK2V2 = true;
-                  pr_default.readNext(0);
-               }
+               pr_default.readNext(0);
             }
+            pr_default.close(0);
             wbEnd = 12;
             WB2V0( ) ;
          }
@@ -865,7 +864,6 @@ namespace GeneXus.Programs {
          E122V2 ();
          if ( returnInSub )
          {
-            pr_default.close(0);
             returnInSub = true;
             if (true) return;
          }
@@ -904,7 +902,6 @@ namespace GeneXus.Programs {
          E112V2 ();
          if ( returnInSub )
          {
-            pr_default.close(0);
             returnInSub = true;
             if (true) return;
          }
@@ -920,26 +917,15 @@ namespace GeneXus.Programs {
       private void E152V2( )
       {
          /* Tipodocumentogrid_Load Routine */
-         while ( (pr_default.getStatus(0) != 101) && ( H002V2_A26tipodocumentoid[0] == A26tipodocumentoid ) )
+         /* Load Method */
+         if ( wbStart != -1 )
          {
-            BRK2V2 = false;
-            A79tipodocumentodsc = H002V2_A79tipodocumentodsc[0];
-            n79tipodocumentodsc = H002V2_n79tipodocumentodsc[0];
-            if ( String.IsNullOrEmpty(StringUtil.RTrim( AV5buscar)) || ( ( StringUtil.StrCmp(A79tipodocumentodsc, AV5buscar) == 0 ) ) )
-            {
-               /* Load Method */
-               if ( wbStart != -1 )
-               {
-                  wbStart = 12;
-               }
-               sendrow_122( ) ;
-               if ( isFullAjaxMode( ) && ( nGXsfl_12_Refreshing == 0 ) )
-               {
-                  context.DoAjaxLoad(12, TipodocumentogridRow);
-               }
-            }
-            BRK2V2 = true;
-            pr_default.readNext(0);
+            wbStart = 12;
+         }
+         sendrow_122( ) ;
+         if ( isFullAjaxMode( ) && ( nGXsfl_12_Refreshing == 0 ) )
+         {
+            context.DoAjaxLoad(12, TipodocumentogridRow);
          }
       }
 
@@ -1012,11 +998,11 @@ namespace GeneXus.Programs {
 
       protected void define_styles( )
       {
-         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?0080");
+         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?2337534");
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?202212900490");
+            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?20221302348250");
             idxLst = (int)(idxLst+1);
          }
          /* End function define_styles */
@@ -1025,7 +1011,7 @@ namespace GeneXus.Programs {
       protected void include_jscripts( )
       {
          context.AddJavascriptSource("messages.spa.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("detalletipodocumento.js", "?202212900490");
+         context.AddJavascriptSource("detalletipodocumento.js", "?20221302348250");
          /* End function include_jscripts */
       }
 
@@ -1205,11 +1191,11 @@ namespace GeneXus.Programs {
 
       public override void InitializeDynEvents( )
       {
-         setEventMetadata("REFRESH","{handler:'Refresh',iparms:[{av:'TIPODOCUMENTOGRID_nFirstRecordOnPage',nv:0},{av:'TIPODOCUMENTOGRID_nEOF',nv:0},{av:'AV7updateImage',fld:'vUPDATEIMAGE',pic:'',nv:''},{av:'AV6deleteImage',fld:'vDELETEIMAGE',pic:'',nv:''},{av:'A26tipodocumentoid',fld:'TIPODOCUMENTOID',pic:'ZZZZZZZZ9',hsh:true,nv:0},{av:'A79tipodocumentodsc',fld:'TIPODOCUMENTODSC',pic:'',hsh:true,nv:''},{av:'AV5buscar',fld:'vBUSCAR',pic:'',nv:''}],oparms:[]}");
+         setEventMetadata("REFRESH","{handler:'Refresh',iparms:[{av:'TIPODOCUMENTOGRID_nFirstRecordOnPage',nv:0},{av:'TIPODOCUMENTOGRID_nEOF',nv:0},{av:'AV5buscar',fld:'vBUSCAR',pic:'',nv:''},{av:'AV7updateImage',fld:'vUPDATEIMAGE',pic:'',nv:''},{av:'AV6deleteImage',fld:'vDELETEIMAGE',pic:'',nv:''}],oparms:[]}");
          setEventMetadata("VUPDATEIMAGE.CLICK","{handler:'E132V2',iparms:[{av:'A26tipodocumentoid',fld:'TIPODOCUMENTOID',pic:'ZZZZZZZZ9',hsh:true,nv:0}],oparms:[]}");
          setEventMetadata("VDELETEIMAGE.CLICK","{handler:'E142V2',iparms:[{av:'A26tipodocumentoid',fld:'TIPODOCUMENTOID',pic:'ZZZZZZZZ9',hsh:true,nv:0}],oparms:[]}");
          setEventMetadata("ENTER","{handler:'E112V2',iparms:[],oparms:[]}");
-         setEventMetadata("TIPODOCUMENTOGRID.LOAD","{handler:'E152V2',iparms:[{av:'A26tipodocumentoid',fld:'TIPODOCUMENTOID',pic:'ZZZZZZZZ9',hsh:true,nv:0},{av:'A79tipodocumentodsc',fld:'TIPODOCUMENTODSC',pic:'',hsh:true,nv:''},{av:'AV5buscar',fld:'vBUSCAR',pic:'',nv:''}],oparms:[]}");
+         setEventMetadata("TIPODOCUMENTOGRID.LOAD","{handler:'E152V2',iparms:[],oparms:[]}");
          return  ;
       }
 
@@ -1225,7 +1211,6 @@ namespace GeneXus.Programs {
 
       protected void CloseOpenCursors( )
       {
-         pr_default.close(0);
       }
 
       public override void initialize( )
@@ -1236,7 +1221,6 @@ namespace GeneXus.Programs {
          AV10Updateimage_GXI = "";
          AV6deleteImage = "";
          AV11Deleteimage_GXI = "";
-         A79tipodocumentodsc = "";
          AV5buscar = "";
          GXKey = "";
          sDynURL = "";
@@ -1249,11 +1233,13 @@ namespace GeneXus.Programs {
          sStyleString = "";
          subTipodocumentogrid_Linesclass = "";
          TipodocumentogridColumn = new GXWebColumn();
+         A79tipodocumentodsc = "";
          sEvt = "";
          EvtGridId = "";
          EvtRowId = "";
          sEvtType = "";
          scmdbuf = "";
+         lV5buscar = "";
          H002V2_A79tipodocumentodsc = new String[] {""} ;
          H002V2_n79tipodocumentodsc = new bool[] {false} ;
          H002V2_A26tipodocumentoid = new int[1] ;
@@ -1277,8 +1263,6 @@ namespace GeneXus.Programs {
          context.Gx_err = 0;
       }
 
-      private short nRcdExists_3 ;
-      private short nIsMod_3 ;
       private short nGotPars ;
       private short GxWebError ;
       private short nRC_GXsfl_12 ;
@@ -1299,9 +1283,9 @@ namespace GeneXus.Programs {
       private short nGXWrapped ;
       private short subTipodocumentogrid_Backstyle ;
       private short TIPODOCUMENTOGRID_nEOF ;
-      private int A26tipodocumentoid ;
       private int subTipodocumentogrid_Titlebackcolor ;
       private int subTipodocumentogrid_Allbackcolor ;
+      private int A26tipodocumentoid ;
       private int subTipodocumentogrid_Selectioncolor ;
       private int subTipodocumentogrid_Hoveringcolor ;
       private int subTipodocumentogrid_Islastpage ;
@@ -1337,6 +1321,7 @@ namespace GeneXus.Programs {
       private String edttipodocumentodsc_Internalname ;
       private String edtavBuscar_Internalname ;
       private String scmdbuf ;
+      private String lV5buscar ;
       private String tblTable1_Internalname ;
       private String TempTags ;
       private String edtavBuscar_Jsonclick ;
@@ -1353,12 +1338,11 @@ namespace GeneXus.Programs {
       private String edtavUpdateimage_Jsonclick ;
       private String edtavDeleteimage_Jsonclick ;
       private bool entryPointCalled ;
-      private bool n79tipodocumentodsc ;
       private bool toggleJsOutput ;
       private bool wbLoad ;
       private bool Rfr0gs ;
       private bool wbErr ;
-      private bool BRK2V2 ;
+      private bool n79tipodocumentodsc ;
       private bool returnInSub ;
       private bool AV7updateImage_IsBlob ;
       private bool AV6deleteImage_IsBlob ;
@@ -1397,9 +1381,10 @@ namespace GeneXus.Programs {
        {
           Object[] prmH002V2 ;
           prmH002V2 = new Object[] {
+          new Object[] {"lV5buscar",NpgsqlDbType.Text,20,0}
           } ;
           def= new CursorDef[] {
-              new CursorDef("H002V2", "SELECT tipodocumentodsc, tipodocumentoid FROM public.tipodocumento ORDER BY tipodocumentoid ",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmH002V2,11,0,true,false )
+              new CursorDef("H002V2", "SELECT tipodocumentodsc, tipodocumentoid FROM public.tipodocumento WHERE tipodocumentodsc like :lV5buscar ORDER BY tipodocumentoid ",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmH002V2,11,0,true,false )
           };
        }
     }
@@ -1424,6 +1409,9 @@ namespace GeneXus.Programs {
     {
        switch ( cursor )
        {
+             case 0 :
+                stmt.SetParameter(1, (String)parms[0]);
+                return;
        }
     }
 

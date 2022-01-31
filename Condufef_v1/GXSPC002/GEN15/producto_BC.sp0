@@ -412,6 +412,7 @@ att_prop_i(2,23,'EmptyAsNull','Yes',d).
 att_prop_i(2,23,idBasedOn,'',d).
 att_prop_i(2,23,'AUTONUMBER','0',d).
 att_prop_i(2,23,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,23,'AttRegEx','',d).
 att_prop_i(2,23,'AttValidationFailedMsg','',d).
 att_prop_i(2,23,'FullName',tipobienid,v).
  

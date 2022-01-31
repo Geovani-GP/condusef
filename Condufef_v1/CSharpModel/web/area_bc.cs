@@ -2,7 +2,7 @@
                File: area_BC
         Description: area
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 1/29/2022 0:0:36.69
+       Generated on: 1/30/2022 23:37:56.35
        Program type: Callable routine
           Main DBMS: postgresql
 */

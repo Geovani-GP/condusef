@@ -338,6 +338,7 @@ att_prop_i(2,23,'EmptyAsNull','Yes',d).
 att_prop_i(2,23,idBasedOn,'',d).
 att_prop_i(2,23,'AUTONUMBER','0',d).
 att_prop_i(2,23,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,23,'AttRegEx','',d).
 att_prop_i(2,23,'AttValidationFailedMsg','',d).
 att_prop_i(2,23,'FullName',tipobienid,v).
 att_prop_i(2,139,'HORIZONTAL_DESCRIPTION',tipobiendsc,v).
@@ -366,6 +367,7 @@ att_prop_i(2,141,'ExternalNamespace','Condufef_v1',d).
 att_prop_i(2,141,'EmptyAsNull','Yes',d).
 att_prop_i(2,141,idBasedOn,'',d).
 att_prop_i(2,141,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,141,'AttRegEx','',d).
 att_prop_i(2,141,'AttValidationFailedMsg','',d).
 att_prop_i(2,141,idDATEFORMAT,idDATEFORMAT_LONG,v).
 att_prop_i(2,141,'FullName',tipobienfecreg,v).
@@ -375,6 +377,7 @@ att_prop_i(2,142,'ExternalNamespace','Condufef_v1',d).
 att_prop_i(2,142,'EmptyAsNull','Yes',d).
 att_prop_i(2,142,idBasedOn,'',d).
 att_prop_i(2,142,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,142,'AttRegEx','',d).
 att_prop_i(2,142,'AttValidationFailedMsg','',d).
 att_prop_i(2,142,idDATEFORMAT,idDATEFORMAT_LONG,v).
 att_prop_i(2,142,'FullName',tipobienfecultact,v).
@@ -459,6 +462,8 @@ struct_dt_i([ 26,1,1 ],namespace,'Genexus.Messages').
 struct_dt_i([ 0,1,0 ],fullname,tipobien).
 struct_dt_i([ 26,1,0 ],fullname,'Messages').
 struct_dt_i([ 26,1,1 ],fullname,'Messages.Message').
+struct_dt_i([ 26,1,0 ],modified,yes).
+struct_dt_i([ 26,1,1 ],modified,yes).
  
 struct_dt_elem_i([ 0,1,0 ],1,name,'Tipobienid').
 struct_dt_elem_i([ 0,1,0 ],1,camelname,tipobienid).

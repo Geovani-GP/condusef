@@ -2,7 +2,7 @@
                File: DetalleModelos
         Description: Detalle Modelos
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 1/29/2022 0:0:46.15
+       Generated on: 1/30/2022 23:48:23.50
        Program type: Callable routine
           Main DBMS: postgresql
 */
@@ -134,22 +134,19 @@ namespace GeneXus.Programs {
             }
             else if ( StringUtil.StrCmp(gxfirstwebparm, "gxajaxGridRefresh_"+"Modelosgrid") == 0 )
             {
+               AV5buscar = GetNextPar( );
+               context.httpAjaxContext.ajax_rsp_assign_attri("", false, "AV5buscar", AV5buscar);
                AV6updateImage = GetNextPar( );
                context.httpAjaxContext.ajax_rsp_assign_prop("", false, edtavUpdateimage_Internalname, "Bitmap", (String.IsNullOrEmpty(StringUtil.RTrim( AV6updateImage)) ? AV10Updateimage_GXI : context.convertURL( context.PathToRelativeUrl( AV6updateImage))));
                AV7deleteImage = GetNextPar( );
                context.httpAjaxContext.ajax_rsp_assign_prop("", false, edtavDeleteimage_Internalname, "Bitmap", (String.IsNullOrEmpty(StringUtil.RTrim( AV7deleteImage)) ? AV11Deleteimage_GXI : context.convertURL( context.PathToRelativeUrl( AV7deleteImage))));
-               A15modelosid = (int)(NumberUtil.Val( GetNextPar( ), "."));
-               A116modelosdsc = GetNextPar( );
-               n116modelosdsc = false;
-               AV5buscar = GetNextPar( );
-               context.httpAjaxContext.ajax_rsp_assign_attri("", false, "AV5buscar", AV5buscar);
                setAjaxCallMode();
                if ( ! IsValidAjaxCall( true) )
                {
                   GxWebError = 1;
                   return  ;
                }
-               gxgrModelosgrid_refresh( AV6updateImage, AV7deleteImage, A15modelosid, A116modelosdsc, AV5buscar) ;
+               gxgrModelosgrid_refresh( AV5buscar, AV6updateImage, AV7deleteImage) ;
                GXKey = Crypto.Decrypt64( context.GetCookie( "GX_SESSION_ID"), Crypto.GetServerKey( ));
                GXKey = Crypto.Decrypt64( context.GetCookie( "GX_SESSION_ID"), Crypto.GetServerKey( ));
                context.GX_webresponse.AddString((String)(context.getJSONResponse( )));
@@ -256,7 +253,7 @@ namespace GeneXus.Programs {
          context.AddJavascriptSource("jquery.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxtimezone.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxgral.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("gxcfg.js", "?2022129004617");
+         context.AddJavascriptSource("gxcfg.js", "?202213023482353");
          if ( context.isSpaRequest( ) )
          {
             enableOutput();
@@ -296,6 +293,7 @@ namespace GeneXus.Programs {
       protected void SendCloseFormHiddens( )
       {
          /* Send hidden variables. */
+         GxWebStd.gx_hidden_field( context, "GXH_vBUSCAR", StringUtil.RTrim( AV5buscar));
          /* Send saved values. */
          GxWebStd.gx_hidden_field( context, "nRC_GXsfl_11", StringUtil.LTrim( StringUtil.NToC( (decimal)(nRC_GXsfl_11), 4, 0, ",", "")));
          GXKey = Crypto.Decrypt64( context.GetCookie( "GX_SESSION_ID"), Crypto.GetServerKey( ));
@@ -575,6 +573,11 @@ namespace GeneXus.Programs {
                               if ( ! wbErr )
                               {
                                  Rfr0gs = false;
+                                 /* Set Refresh If Buscar Changed */
+                                 if ( StringUtil.StrCmp(cgiGet( "GXH_vBUSCAR"), AV5buscar) != 0 )
+                                 {
+                                    Rfr0gs = true;
+                                 }
                                  if ( ! Rfr0gs )
                                  {
                                     /* Execute user event: E112L2 */
@@ -728,11 +731,9 @@ namespace GeneXus.Programs {
          /* End function gxnrModelosgrid_newrow */
       }
 
-      protected void gxgrModelosgrid_refresh( String AV6updateImage ,
-                                              String AV7deleteImage ,
-                                              int A15modelosid ,
-                                              String A116modelosdsc ,
-                                              String AV5buscar )
+      protected void gxgrModelosgrid_refresh( String AV5buscar ,
+                                              String AV6updateImage ,
+                                              String AV7deleteImage )
       {
          initialize_formulas( ) ;
          GxWebStd.set_html_headers( context, 0, "", "");
@@ -789,22 +790,20 @@ namespace GeneXus.Programs {
          if ( String.IsNullOrEmpty(StringUtil.RTrim( context.wjLoc)) && ( context.nUserReturn != 1 ) )
          {
             SubsflControlProps_112( ) ;
+            lV5buscar = StringUtil.PadR( StringUtil.RTrim( AV5buscar), 20, "%");
+            context.httpAjaxContext.ajax_rsp_assign_attri("", false, "AV5buscar", AV5buscar);
             /* Using cursor H002L2 */
-            pr_default.execute(0);
+            pr_default.execute(0, new Object[] {lV5buscar});
             while ( (pr_default.getStatus(0) != 101) )
             {
-               BRK2L2 = false;
                A116modelosdsc = H002L2_A116modelosdsc[0];
                n116modelosdsc = H002L2_n116modelosdsc[0];
                A15modelosid = H002L2_A15modelosid[0];
                /* Execute user event: E152L2 */
                E152L2 ();
-               if ( ! BRK2L2 )
-               {
-                  BRK2L2 = true;
-                  pr_default.readNext(0);
-               }
+               pr_default.readNext(0);
             }
+            pr_default.close(0);
             wbEnd = 11;
             WB2L0( ) ;
          }
@@ -865,7 +864,6 @@ namespace GeneXus.Programs {
          E122L2 ();
          if ( returnInSub )
          {
-            pr_default.close(0);
             returnInSub = true;
             if (true) return;
          }
@@ -904,7 +902,6 @@ namespace GeneXus.Programs {
          E112L2 ();
          if ( returnInSub )
          {
-            pr_default.close(0);
             returnInSub = true;
             if (true) return;
          }
@@ -920,26 +917,15 @@ namespace GeneXus.Programs {
       private void E152L2( )
       {
          /* Modelosgrid_Load Routine */
-         while ( (pr_default.getStatus(0) != 101) && ( H002L2_A15modelosid[0] == A15modelosid ) )
+         /* Load Method */
+         if ( wbStart != -1 )
          {
-            BRK2L2 = false;
-            A116modelosdsc = H002L2_A116modelosdsc[0];
-            n116modelosdsc = H002L2_n116modelosdsc[0];
-            if ( String.IsNullOrEmpty(StringUtil.RTrim( AV5buscar)) || ( ( StringUtil.StrCmp(A116modelosdsc, AV5buscar) == 0 ) ) )
-            {
-               /* Load Method */
-               if ( wbStart != -1 )
-               {
-                  wbStart = 11;
-               }
-               sendrow_112( ) ;
-               if ( isFullAjaxMode( ) && ( nGXsfl_11_Refreshing == 0 ) )
-               {
-                  context.DoAjaxLoad(11, ModelosgridRow);
-               }
-            }
-            BRK2L2 = true;
-            pr_default.readNext(0);
+            wbStart = 11;
+         }
+         sendrow_112( ) ;
+         if ( isFullAjaxMode( ) && ( nGXsfl_11_Refreshing == 0 ) )
+         {
+            context.DoAjaxLoad(11, ModelosgridRow);
          }
       }
 
@@ -1012,11 +998,11 @@ namespace GeneXus.Programs {
 
       protected void define_styles( )
       {
-         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?0080");
+         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?2337534");
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?2022129004633");
+            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?202213023482371");
             idxLst = (int)(idxLst+1);
          }
          /* End function define_styles */
@@ -1025,7 +1011,7 @@ namespace GeneXus.Programs {
       protected void include_jscripts( )
       {
          context.AddJavascriptSource("messages.spa.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("detallemodelos.js", "?2022129004633");
+         context.AddJavascriptSource("detallemodelos.js", "?202213023482372");
          /* End function include_jscripts */
       }
 
@@ -1205,11 +1191,11 @@ namespace GeneXus.Programs {
 
       public override void InitializeDynEvents( )
       {
-         setEventMetadata("REFRESH","{handler:'Refresh',iparms:[{av:'MODELOSGRID_nFirstRecordOnPage',nv:0},{av:'MODELOSGRID_nEOF',nv:0},{av:'AV6updateImage',fld:'vUPDATEIMAGE',pic:'',nv:''},{av:'AV7deleteImage',fld:'vDELETEIMAGE',pic:'',nv:''},{av:'A15modelosid',fld:'MODELOSID',pic:'ZZZZZZZZ9',hsh:true,nv:0},{av:'A116modelosdsc',fld:'MODELOSDSC',pic:'',hsh:true,nv:''},{av:'AV5buscar',fld:'vBUSCAR',pic:'',nv:''}],oparms:[]}");
+         setEventMetadata("REFRESH","{handler:'Refresh',iparms:[{av:'MODELOSGRID_nFirstRecordOnPage',nv:0},{av:'MODELOSGRID_nEOF',nv:0},{av:'AV5buscar',fld:'vBUSCAR',pic:'',nv:''},{av:'AV6updateImage',fld:'vUPDATEIMAGE',pic:'',nv:''},{av:'AV7deleteImage',fld:'vDELETEIMAGE',pic:'',nv:''}],oparms:[]}");
          setEventMetadata("VUPDATEIMAGE.CLICK","{handler:'E132L2',iparms:[{av:'A15modelosid',fld:'MODELOSID',pic:'ZZZZZZZZ9',hsh:true,nv:0}],oparms:[]}");
          setEventMetadata("VDELETEIMAGE.CLICK","{handler:'E142L2',iparms:[{av:'A15modelosid',fld:'MODELOSID',pic:'ZZZZZZZZ9',hsh:true,nv:0}],oparms:[]}");
          setEventMetadata("ENTER","{handler:'E112L2',iparms:[],oparms:[]}");
-         setEventMetadata("MODELOSGRID.LOAD","{handler:'E152L2',iparms:[{av:'A15modelosid',fld:'MODELOSID',pic:'ZZZZZZZZ9',hsh:true,nv:0},{av:'A116modelosdsc',fld:'MODELOSDSC',pic:'',hsh:true,nv:''},{av:'AV5buscar',fld:'vBUSCAR',pic:'',nv:''}],oparms:[]}");
+         setEventMetadata("MODELOSGRID.LOAD","{handler:'E152L2',iparms:[],oparms:[]}");
          return  ;
       }
 
@@ -1225,7 +1211,6 @@ namespace GeneXus.Programs {
 
       protected void CloseOpenCursors( )
       {
-         pr_default.close(0);
       }
 
       public override void initialize( )
@@ -1236,7 +1221,6 @@ namespace GeneXus.Programs {
          AV10Updateimage_GXI = "";
          AV7deleteImage = "";
          AV11Deleteimage_GXI = "";
-         A116modelosdsc = "";
          AV5buscar = "";
          GXKey = "";
          sDynURL = "";
@@ -1249,11 +1233,13 @@ namespace GeneXus.Programs {
          sStyleString = "";
          subModelosgrid_Linesclass = "";
          ModelosgridColumn = new GXWebColumn();
+         A116modelosdsc = "";
          sEvt = "";
          EvtGridId = "";
          EvtRowId = "";
          sEvtType = "";
          scmdbuf = "";
+         lV5buscar = "";
          H002L2_A116modelosdsc = new String[] {""} ;
          H002L2_n116modelosdsc = new bool[] {false} ;
          H002L2_A15modelosid = new int[1] ;
@@ -1277,8 +1263,6 @@ namespace GeneXus.Programs {
          context.Gx_err = 0;
       }
 
-      private short nRcdExists_3 ;
-      private short nIsMod_3 ;
       private short nGotPars ;
       private short GxWebError ;
       private short nRC_GXsfl_11 ;
@@ -1299,9 +1283,9 @@ namespace GeneXus.Programs {
       private short nGXWrapped ;
       private short subModelosgrid_Backstyle ;
       private short MODELOSGRID_nEOF ;
-      private int A15modelosid ;
       private int subModelosgrid_Titlebackcolor ;
       private int subModelosgrid_Allbackcolor ;
+      private int A15modelosid ;
       private int subModelosgrid_Selectioncolor ;
       private int subModelosgrid_Hoveringcolor ;
       private int subModelosgrid_Islastpage ;
@@ -1337,6 +1321,7 @@ namespace GeneXus.Programs {
       private String edtmodelosdsc_Internalname ;
       private String edtavBuscar_Internalname ;
       private String scmdbuf ;
+      private String lV5buscar ;
       private String tblTable1_Internalname ;
       private String TempTags ;
       private String edtavBuscar_Jsonclick ;
@@ -1353,12 +1338,11 @@ namespace GeneXus.Programs {
       private String edtavUpdateimage_Jsonclick ;
       private String edtavDeleteimage_Jsonclick ;
       private bool entryPointCalled ;
-      private bool n116modelosdsc ;
       private bool toggleJsOutput ;
       private bool wbLoad ;
       private bool Rfr0gs ;
       private bool wbErr ;
-      private bool BRK2L2 ;
+      private bool n116modelosdsc ;
       private bool returnInSub ;
       private bool AV6updateImage_IsBlob ;
       private bool AV7deleteImage_IsBlob ;
@@ -1397,9 +1381,10 @@ namespace GeneXus.Programs {
        {
           Object[] prmH002L2 ;
           prmH002L2 = new Object[] {
+          new Object[] {"lV5buscar",NpgsqlDbType.Text,20,0}
           } ;
           def= new CursorDef[] {
-              new CursorDef("H002L2", "SELECT modelosdsc, modelosid FROM public.modelos ORDER BY modelosid ",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmH002L2,11,0,true,false )
+              new CursorDef("H002L2", "SELECT modelosdsc, modelosid FROM public.modelos WHERE modelosdsc like :lV5buscar ORDER BY modelosid ",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmH002L2,11,0,true,false )
           };
        }
     }
@@ -1424,6 +1409,9 @@ namespace GeneXus.Programs {
     {
        switch ( cursor )
        {
+             case 0 :
+                stmt.SetParameter(1, (String)parms[0]);
+                return;
        }
     }
 

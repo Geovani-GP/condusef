@@ -1,72 +1,62 @@
 <Objects>
   <Object>
     <Type>c9584656-94b6-4ccd-890f-332d11fc2c25</Type>
-    <Id>100</Id>
+    <Id>96</Id>
     <Part>c44bd5ff-f918-415b-98e6-aca44fed84fa</Part>
-  </Object>
-  <Object>
-    <Type>19abc6ff-2cd2-0000-0006-6d172bc2333b</Type>
-    <Id>17</Id>
-    <Part>19abc6ff-2cd2-1000-0006-6d172bc2333b</Part>
-  </Object>
-  <Object>
-    <Type>1db606f2-af09-4cf9-a3b5-b481519d28f6</Type>
-    <Id>1</Id>
-    <Part>264be5fb-1b28-4b25-a598-6ca900dd059f</Part>
   </Object>
   <Recent>
     <RecentKBObjectsList>
       <MaximumItems>10</MaximumItems>
       <RecentKBObjects>
         <RecentKBObject>
-          <Key>1db606f2-af09-4cf9-a3b5-b481519d28f6-14</Key>
-          <Name>cambs</Name>
-          <LastAccess>2022-01-29T00:58:45.1501886-06:00</LastAccess>
+          <Key>c9584656-94b6-4ccd-890f-332d11fc2c25-96</Key>
+          <Name>Catalog_De_Productos</Name>
+          <LastAccess>2022-01-30T23:51:31.7847541-06:00</LastAccess>
         </RecentKBObject>
         <RecentKBObject>
-          <Key>1db606f2-af09-4cf9-a3b5-b481519d28f6-1</Key>
-          <Name>tipobien</Name>
-          <LastAccess>2022-01-29T00:55:06.3178858-06:00</LastAccess>
+          <Key>c9584656-94b6-4ccd-890f-332d11fc2c25-104</Key>
+          <Name>DetalleArticulo</Name>
+          <LastAccess>2022-01-30T23:48:02.4612011-06:00</LastAccess>
         </RecentKBObject>
         <RecentKBObject>
-          <Key>19abc6ff-2cd2-0000-0006-6d172bc2333b-17</Key>
-          <Name>tipobien</Name>
-          <LastAccess>2022-01-29T00:54:35.6300691-06:00</LastAccess>
+          <Key>c9584656-94b6-4ccd-890f-332d11fc2c25-94</Key>
+          <Name>DetalleCategorias</Name>
+          <LastAccess>2022-01-30T23:47:51.2299832-06:00</LastAccess>
         </RecentKBObject>
         <RecentKBObject>
-          <Key>c9584656-94b6-4ccd-890f-332d11fc2c25-100</Key>
-          <Name>Catalog_De_TipoBien</Name>
-          <LastAccess>2022-01-29T00:53:06.6295726-06:00</LastAccess>
+          <Key>c9584656-94b6-4ccd-890f-332d11fc2c25-93</Key>
+          <Name>DetalleModelos</Name>
+          <LastAccess>2022-01-30T23:47:45.8427235-06:00</LastAccess>
         </RecentKBObject>
         <RecentKBObject>
-          <Key>1db606f2-af09-4cf9-a3b5-b481519d28f6-11</Key>
-          <Name>articulos</Name>
-          <LastAccess>2022-01-29T00:51:42.2749187-06:00</LastAccess>
+          <Key>c9584656-94b6-4ccd-890f-332d11fc2c25-107</Key>
+          <Name>DetallesArea</Name>
+          <LastAccess>2022-01-30T23:47:40.3945526-06:00</LastAccess>
         </RecentKBObject>
         <RecentKBObject>
-          <Key>19abc6ff-2cd2-0000-0006-6d172bc2333b-15</Key>
-          <Name>articulos</Name>
-          <LastAccess>2022-01-29T00:51:36.5459294-06:00</LastAccess>
+          <Key>c9584656-94b6-4ccd-890f-332d11fc2c25-86</Key>
+          <Name>DetallesCambs</Name>
+          <LastAccess>2022-01-30T23:47:35.0494004-06:00</LastAccess>
         </RecentKBObject>
         <RecentKBObject>
-          <Key>19abc6ff-2cd2-0000-0006-6d172bc2333b-19</Key>
-          <Name>cambs</Name>
-          <LastAccess>2022-01-29T00:42:47.6806173-06:00</LastAccess>
+          <Key>c9584656-94b6-4ccd-890f-332d11fc2c25-106</Key>
+          <Name>DetallesEntidadFederativa</Name>
+          <LastAccess>2022-01-30T23:47:30.0863021-06:00</LastAccess>
         </RecentKBObject>
         <RecentKBObject>
-          <Key>1db606f2-af09-4cf9-a3b5-b481519d28f6-9</Key>
-          <Name>producto</Name>
-          <LastAccess>2022-01-29T00:34:35.8694534-06:00</LastAccess>
+          <Key>c9584656-94b6-4ccd-890f-332d11fc2c25-105</Key>
+          <Name>DetallesEstatus</Name>
+          <LastAccess>2022-01-30T23:47:23.9003435-06:00</LastAccess>
         </RecentKBObject>
         <RecentKBObject>
-          <Key>19abc6ff-2cd2-0000-0006-6d172bc2333b-13</Key>
-          <Name>producto</Name>
-          <LastAccess>2022-01-29T00:32:29.6442636-06:00</LastAccess>
+          <Key>c9584656-94b6-4ccd-890f-332d11fc2c25-95</Key>
+          <Name>DetallesOrigen</Name>
+          <LastAccess>2022-01-30T23:47:13.1246344-06:00</LastAccess>
         </RecentKBObject>
         <RecentKBObject>
-          <Key>adbb33c9-0906-4971-833c-998de27e0676-175</Key>
-          <Name>productoid</Name>
-          <LastAccess>2022-01-29T00:31:41.9545614-06:00</LastAccess>
+          <Key>c9584656-94b6-4ccd-890f-332d11fc2c25-103</Key>
+          <Name>DetalleTipoDocumento</Name>
+          <LastAccess>2022-01-30T23:47:02.7144333-06:00</LastAccess>
         </RecentKBObject>
       </RecentKBObjects>
     </RecentKBObjectsList>

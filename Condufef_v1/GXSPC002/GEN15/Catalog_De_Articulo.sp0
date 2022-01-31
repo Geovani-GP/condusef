@@ -202,33 +202,37 @@ break_i(2,nvg,1,[],[ [],[],[] ]).
  
 b_group_i(2,1,lit,0,1,1).
 b_group_i(2,2,lit,0,2,5).
-b_group_i(2,3,lit,0,6,20).
-b_group_i(2,4,lit,0,21,24).
-b_group_i(2,5,lit,0,25,0).
+b_group_i(2,3,lit,0,6,24).
+b_group_i(2,4,lit,0,25,28).
+b_group_i(2,5,lit,0,29,0).
  
 b_line_i(1,2,1,cmd,1,[ t('',146,1,0),t('Start',3,1,7) ]).
 b_line_i(2,2,2,cmd,1,[ t('',107,1,0),t('Nextvalue',23,1,0),t(=,10,1,0),t(40000,2,1,0),t(+,5,1,0),t('1',3,1,0) ]).
 b_line_i(3,2,2,cmd,1,[ t('',147,1,0) ]).
 b_line_i(5,2,2,cmd,1,[ t('',146,1,0),t('''Guardar ''',3,5,7) ]).
-b_line_i(6,2,3,cmd,1,[ t('',107,1,0),t([ t('Estatusarticulo',23,1,0),t('Estatusarticuloid',3,1,0) ],29,1,0),t(=,10,1,0),t('Nextvalue',23,1,0) ]).
-b_line_i(7,2,3,cmd,1,[ t('',107,1,0),t([ t('Estatusarticulo',23,1,0),t('Estatusarticulodsc',3,1,0) ],29,1,0),t(=,10,1,0),t('Estatusarticulodsc',23,1,0) ]).
-b_line_i(8,2,3,cmd,1,[ t('',107,1,0),t([ t('Estatusarticulo',23,1,0),t('Estatusarticulodescuso',3,1,0) ],29,1,0),t(=,10,1,0),t('Estatusarticulodescuso',23,1,0) ]).
-b_line_i(9,2,3,cmd,1,[ t('',107,1,0),t([ t('Estatusarticulo',23,1,0),t('Estatusarticulofecreg',3,1,0) ],29,1,0),t(=,10,1,0),t('Today',23,1,0) ]).
-b_line_i(10,2,3,cmd,1,[ t('',107,1,0),t([ t('Estatusarticulo',23,1,0),t('Estatusarticulousuario',3,1,0) ],29,1,0),t(=,10,1,0),t([ t('Websession',23,1,0),t('get(',1,1,0) ],31,1,0),t('''usuario''',3,1,0),t(')',4,1,0) ]).
-b_line_i(11,2,3,cmd,1,[ t('',107,1,0),t([ t('Estatusarticulo',23,11,2),t('save(',1,11,19) ],31,11,19),t(')',4,1,25) ]).
-b_line_i(12,2,3,cmd,1,[ t('',109,1,0),t([ t('Estatusarticulo',23,12,5),t('success(',1,12,22) ],31,12,22),t(')',4,1,31) ]).
-b_line_i(13,2,3,cmd,1,[ t('',132,1,0) ]).
-b_line_i(14,2,3,cmd,1,[ t('',104,1,0),t(o(13,'Catalog_De_Articulo'),28,1,3) ]).
-b_line_i(15,2,3,cmd,1,[ t('',110,1,0) ]).
-b_line_i(16,2,3,cmd,1,[ t('',157,1,0) ]).
-b_line_i(17,2,3,cmd,1,[ t('',111,1,0) ]).
-b_line_i(18,2,3,cmd,1,[ t('',147,1,0) ]).
-b_line_i(20,2,3,cmd,1,[ t('',146,1,0),t('''Cancelar''',3,20,7) ]).
-b_line_i(21,2,4,cmd,1,[ t('',104,1,0),t(o(13,'MenuPrincipal'),28,1,2) ]).
-b_line_i(22,2,4,cmd,1,[ t('',147,1,0) ]).
-b_line_i(24,2,4,cmd,1,[ t('',146,1,0),t('''Consultar ''',3,24,7) ]).
-b_line_i(25,2,5,cmd,1,[ t('',104,1,0),t(o(13,'DetalleArticulo'),28,1,2) ]).
-b_line_i(26,2,5,cmd,1,[ t('',147,1,0) ]).
+b_line_i(6,2,3,cmd,1,[ t('',109,1,0),t('null(',1,6,25),t('Estatusarticulodsc',23,1,5),t(')',4,1,34),t('.AND.',9,1,36),t('null(',1,6,66),t('Estatusarticulodescuso',23,1,42),t(')',4,1,75) ]).
+b_line_i(7,2,3,cmd,1,[ t('',141,1,0),t('''Los campos estan vacios''',3,7,7),t(')',4,1,32) ]).
+b_line_i(8,2,3,cmd,1,[ t('',110,1,0) ]).
+b_line_i(9,2,3,cmd,1,[ t('',107,1,0),t([ t('Estatusarticulo',23,1,0),t('Estatusarticuloid',3,1,0) ],29,1,0),t(=,10,1,0),t('Nextvalue',23,1,0) ]).
+b_line_i(10,2,3,cmd,1,[ t('',107,1,0),t([ t('Estatusarticulo',23,1,0),t('Estatusarticulodsc',3,1,0) ],29,1,0),t(=,10,1,0),t('Estatusarticulodsc',23,1,0) ]).
+b_line_i(11,2,3,cmd,1,[ t('',107,1,0),t([ t('Estatusarticulo',23,1,0),t('Estatusarticulodescuso',3,1,0) ],29,1,0),t(=,10,1,0),t('Estatusarticulodescuso',23,1,0) ]).
+b_line_i(12,2,3,cmd,1,[ t('',107,1,0),t([ t('Estatusarticulo',23,1,0),t('Estatusarticulofecreg',3,1,0) ],29,1,0),t(=,10,1,0),t('Today',23,1,0) ]).
+b_line_i(13,2,3,cmd,1,[ t('',107,1,0),t([ t('Estatusarticulo',23,1,0),t('Estatusarticulousuario',3,1,0) ],29,1,0),t(=,10,1,0),t([ t('Websession',23,1,0),t('get(',1,1,0) ],31,1,0),t('''usuario''',3,1,0),t(')',4,1,0) ]).
+b_line_i(14,2,3,cmd,1,[ t('',107,1,0),t([ t('Estatusarticulo',23,14,3),t('save(',1,14,20) ],31,14,20),t(')',4,1,26) ]).
+b_line_i(15,2,3,cmd,1,[ t('',109,1,0),t([ t('Estatusarticulo',23,15,6),t('success(',1,15,23) ],31,15,23),t(')',4,1,32) ]).
+b_line_i(16,2,3,cmd,1,[ t('',132,1,0) ]).
+b_line_i(17,2,3,cmd,1,[ t('',104,1,0),t(o(13,'Catalog_De_Articulo'),28,1,4) ]).
+b_line_i(18,2,3,cmd,1,[ t('',110,1,0) ]).
+b_line_i(19,2,3,cmd,1,[ t('',157,1,0) ]).
+b_line_i(20,2,3,cmd,1,[ t('',111,1,0) ]).
+b_line_i(21,2,3,cmd,1,[ t('',111,1,0) ]).
+b_line_i(22,2,3,cmd,1,[ t('',147,1,0) ]).
+b_line_i(24,2,3,cmd,1,[ t('',146,1,0),t('''Cancelar''',3,24,7) ]).
+b_line_i(25,2,4,cmd,1,[ t('',104,1,0),t(o(13,'MenuPrincipal'),28,1,2) ]).
+b_line_i(26,2,4,cmd,1,[ t('',147,1,0) ]).
+b_line_i(28,2,4,cmd,1,[ t('',146,1,0),t('''Consultar ''',3,28,7) ]).
+b_line_i(29,2,5,cmd,1,[ t('',104,1,0),t(o(13,'DetalleArticulo'),28,1,2) ]).
+b_line_i(30,2,5,cmd,1,[ t('',147,1,0) ]).
 b_line_i(1000,2,5,cmd,0,[ t('',146,0,0),t('Load',3,0,0) ]).
 b_line_i(1001,2,5,cmd,0,[ t('',155,0,0) ]).
 b_line_i(1002,2,5,cmd,0,[ t('',147,0,0) ]).
@@ -245,206 +249,228 @@ b_line_i(1002,2,5,cmd,0,[ t('',147,0,0) ]).
  
  
  
-html_i(2,html('<p>')).
-html_i(3,table(3)).
-html_i(29,html('</p>')).
+html_i(2,html('&nbsp;')).
+html_i(3,usercontrol(3)).
+html_i(4,html('<p>')).
+html_i(5,table(5)).
+html_i(31,html('</p>')).
  
-html_sub_i(3,0,html_i(0,html('<tbody>'))).
-html_sub_i(3,4,html_i(1,row(4))).
-html_sub_i(4,5,html_i(0,cell(5))).
-html_sub_i(3,6,html_i(2,row(6))).
+html_sub_i(5,0,html_i(0,html('<tbody>'))).
+html_sub_i(5,6,html_i(1,row(6))).
 html_sub_i(6,7,html_i(0,cell(7))).
-html_sub_i(7,8,html_i(0,table(8))).
-html_sub_i(8,0,html_i(0,html('<tbody>'))).
-html_sub_i(8,9,html_i(1,row(9))).
-html_sub_i(9,10,html_i(0,cell(10))).
-html_sub_i(10,0,html_i(0,html('Estatus&nbsp;Articulo'))).
-html_sub_i(9,11,html_i(1,cell(11))).
-html_sub_i(11,12,html_i(0,t('Nextvalue',23))).
-html_sub_i(8,13,html_i(2,row(13))).
-html_sub_i(13,14,html_i(0,cell(14))).
-html_sub_i(14,0,html_i(0,html('Descripción'))).
-html_sub_i(13,15,html_i(1,cell(15))).
-html_sub_i(15,16,html_i(0,t('Estatusarticulodsc',23))).
-html_sub_i(8,17,html_i(3,row(17))).
-html_sub_i(17,18,html_i(0,cell(18))).
-html_sub_i(18,0,html_i(0,html('Uso'))).
-html_sub_i(17,19,html_i(1,cell(19))).
-html_sub_i(19,20,html_i(0,t('Estatusarticulodescuso',23))).
-html_sub_i(8,0,html_i(4,html('</tbody>'))).
-html_sub_i(7,21,html_i(1,table(21))).
-html_sub_i(21,0,html_i(0,html('<tbody>'))).
-html_sub_i(21,22,html_i(1,row(22))).
-html_sub_i(22,23,html_i(0,cell(23))).
-html_sub_i(23,24,html_i(0,button('''Consultar '''))).
-html_sub_i(22,25,html_i(1,cell(25))).
-html_sub_i(25,26,html_i(0,button('''Guardar '''))).
-html_sub_i(22,27,html_i(2,cell(27))).
-html_sub_i(27,28,html_i(0,button('''Cancelar'''))).
-html_sub_i(21,0,html_i(2,html('</tbody>'))).
-html_sub_i(3,0,html_i(3,html('</tbody>'))).
+html_sub_i(5,8,html_i(2,row(8))).
+html_sub_i(8,9,html_i(0,cell(9))).
+html_sub_i(9,10,html_i(0,table(10))).
+html_sub_i(10,0,html_i(0,html('<tbody>'))).
+html_sub_i(10,11,html_i(1,row(11))).
+html_sub_i(11,12,html_i(0,cell(12))).
+html_sub_i(12,0,html_i(0,html('Estatus&nbsp;Articulo'))).
+html_sub_i(11,13,html_i(1,cell(13))).
+html_sub_i(13,14,html_i(0,t('Nextvalue',23))).
+html_sub_i(10,15,html_i(2,row(15))).
+html_sub_i(15,16,html_i(0,cell(16))).
+html_sub_i(16,0,html_i(0,html('Descripción'))).
+html_sub_i(15,17,html_i(1,cell(17))).
+html_sub_i(17,18,html_i(0,t('Estatusarticulodsc',23))).
+html_sub_i(10,19,html_i(3,row(19))).
+html_sub_i(19,20,html_i(0,cell(20))).
+html_sub_i(20,0,html_i(0,html('Uso'))).
+html_sub_i(19,21,html_i(1,cell(21))).
+html_sub_i(21,22,html_i(0,t('Estatusarticulodescuso',23))).
+html_sub_i(10,0,html_i(4,html('</tbody>'))).
+html_sub_i(9,23,html_i(1,table(23))).
+html_sub_i(23,0,html_i(0,html('<tbody>'))).
+html_sub_i(23,24,html_i(1,row(24))).
+html_sub_i(24,25,html_i(0,cell(25))).
+html_sub_i(25,26,html_i(0,button('''Consultar '''))).
+html_sub_i(24,27,html_i(1,cell(27))).
+html_sub_i(27,28,html_i(0,button('''Guardar '''))).
+html_sub_i(24,29,html_i(2,cell(29))).
+html_sub_i(29,30,html_i(0,button('''Cancelar'''))).
+html_sub_i(23,0,html_i(2,html('</tbody>'))).
+html_sub_i(5,0,html_i(3,html('</tbody>'))).
  
 html_tags_i(1,'Class','Form').
  
-html_comp_i(3,'Id','Table1',v,[ str ]).
-html_comp_i(3,'Class','Table',v,[ str ]).
-html_comp_i(3,'Title','',d,[ str ]).
-html_comp_i(3,'Align',left,d,[ str ]).
-html_comp_i(3,'Backgroundgx','',d,[ str ]).
-html_comp_i(3,'Bgcolor',rgb(0,0,0),d,[ color ]).
-html_comp_i(3,'Border','0',d,[ str ]).
-html_comp_i(3,'Bordercolor',rgb(0,0,0),d,[ color ]).
-html_comp_i(3,'Cellpadding','1',d,[ str ]).
-html_comp_i(3,'Cellspacing','2',d,[ str ]).
-html_comp_i(3,'Height',measure(46,px),v,[ measure ]).
-html_comp_i(3,'Width',measure(100,'%'),v,[ measure ]).
-html_comp_i(3,'Rules',none,d,[ str ]).
-html_comp_i(8,'Id','Table2',v,[ str ]).
-html_comp_i(8,'Class','Table',v,[ str ]).
-html_comp_i(8,'Title','',d,[ str ]).
-html_comp_i(8,'Align',left,d,[ str ]).
-html_comp_i(8,'Backgroundgx','',d,[ str ]).
-html_comp_i(8,'Bgcolor',rgb(0,0,0),d,[ color ]).
-html_comp_i(8,'Border','0',d,[ str ]).
-html_comp_i(8,'Bordercolor',rgb(0,0,0),d,[ color ]).
-html_comp_i(8,'Cellpadding','1',d,[ str ]).
-html_comp_i(8,'Cellspacing','2',d,[ str ]).
-html_comp_i(8,'Height',measure(46,px),v,[ measure ]).
-html_comp_i(8,'Width',measure(503,px),v,[ measure ]).
-html_comp_i(8,'Rules',none,d,[ str ]).
-html_comp_i(12,'Colcount',4,d,[ num ]).
-html_comp_i(12,'Attid',-6,v,[ num ]).
-html_comp_i(12,'Class','Attribute',d,[ str ]).
-html_comp_i(12,'Controlname','&Nextvalue',d,[ str ]).
-html_comp_i(12,'Returnonclick',0,d,[ bool ]).
-html_comp_i(12,'Eventgx','',d,[ str ]).
-html_comp_i(12,'Captionclass','',d,[ str ]).
-html_comp_i(12,'Captionposition','',d,[ str ]).
-html_comp_i(12,'Captionvalue','',d,[ str ]).
-html_comp_i(12,'Controltype',2,d,[ num ]).
-html_comp_i(12,'Inputtype',0,d,[ num ]).
-html_comp_i(12,'Notifycontextchange',0,d,[ bool ]).
-html_comp_i(12,'Emptyasnull','Yes',d,[ str ]).
-html_comp_i(12,'Readonly',-1,v,[ bool ]).
-html_comp_i(12,'Autocomplete',-1,d,[ bool ]).
-html_comp_i(12,'Ispassword',0,d,[ bool ]).
-html_comp_i(12,'Autoresize',-1,d,[ bool ]).
-html_comp_i(12,'Gxwidth',measure(4,chr),d,[ measure ]).
-html_comp_i(12,'Gxheight',measure(1,row),d,[ measure ]).
-html_comp_i(12,'Ismultiline',0,d,[ bool ]).
-html_comp_i(12,'Fill',0,d,[ bool ]).
-html_comp_i(12,'Forecolor',rgb(0,0,0),d,[ color ]).
-html_comp_i(12,'Font',font('Verdana',12,[]),d,[ font ]).
-html_comp_i(12,'Horizontalalignment',right,d,[ str ]).
-html_comp_i(12,'Gxformat',0,d,[ num ]).
-html_comp_i(12,'Title','',d,[ str ]).
-html_comp_i(12,'Invitemsg','',d,[ str ]).
-html_comp_i(16,'Colcount',80,d,[ num ]).
-html_comp_i(16,'Attid',-8,v,[ num ]).
-html_comp_i(16,'Class','Attribute',d,[ str ]).
-html_comp_i(16,'Controlname','&Estatusarticulodsc',d,[ str ]).
-html_comp_i(16,'Returnonclick',0,d,[ bool ]).
-html_comp_i(16,'Captionclass','',d,[ str ]).
-html_comp_i(16,'Captionposition','',d,[ str ]).
-html_comp_i(16,'Captionvalue','',d,[ str ]).
-html_comp_i(16,'Controltype',2,d,[ num ]).
-html_comp_i(16,'Inputtype',0,d,[ num ]).
-html_comp_i(16,'Editautocomplete',0,d,[ num ]).
-html_comp_i(16,'Autocorrection',-1,d,[ bool ]).
-html_comp_i(16,'Autocapitalization','FirstWord',d,[ str ]).
-html_comp_i(16,'Notifycontextchange',0,d,[ bool ]).
-html_comp_i(16,'Emptyasnull','Yes',d,[ str ]).
-html_comp_i(16,'Readonly',0,d,[ bool ]).
-html_comp_i(16,'Autocomplete',-1,d,[ bool ]).
-html_comp_i(16,'Ispassword',0,d,[ bool ]).
-html_comp_i(16,'Autoresize',-1,d,[ bool ]).
-html_comp_i(16,'Gxwidth',measure(80,chr),d,[ measure ]).
-html_comp_i(16,'Gxheight',measure(1,row),d,[ measure ]).
-html_comp_i(16,'Ismultiline',0,d,[ bool ]).
-html_comp_i(16,'Fill',-1,d,[ bool ]).
-html_comp_i(16,'Backcolor',rgb(255,255,255),d,[ color ]).
-html_comp_i(16,'Forecolor',rgb(0,0,0),d,[ color ]).
-html_comp_i(16,'Font',font('Verdana',12,[]),d,[ font ]).
-html_comp_i(16,'Horizontalalignment',left,d,[ str ]).
-html_comp_i(16,'Gxformat',0,d,[ num ]).
-html_comp_i(16,'Title','',d,[ str ]).
-html_comp_i(16,'Invitemsg','',d,[ str ]).
-html_comp_i(20,'Colcount',80,d,[ num ]).
-html_comp_i(20,'Attid',-9,v,[ num ]).
-html_comp_i(20,'Class','Attribute',d,[ str ]).
-html_comp_i(20,'Controlname','&Estatusarticulodescuso',d,[ str ]).
-html_comp_i(20,'Returnonclick',0,d,[ bool ]).
-html_comp_i(20,'Captionclass','',d,[ str ]).
-html_comp_i(20,'Captionposition','',d,[ str ]).
-html_comp_i(20,'Captionvalue','',d,[ str ]).
-html_comp_i(20,'Controltype',2,d,[ num ]).
-html_comp_i(20,'Inputtype',0,d,[ num ]).
-html_comp_i(20,'Editautocomplete',0,d,[ num ]).
-html_comp_i(20,'Autocorrection',-1,d,[ bool ]).
-html_comp_i(20,'Autocapitalization','FirstWord',d,[ str ]).
-html_comp_i(20,'Notifycontextchange',0,d,[ bool ]).
-html_comp_i(20,'Emptyasnull','Yes',d,[ str ]).
-html_comp_i(20,'Readonly',0,d,[ bool ]).
-html_comp_i(20,'Autocomplete',-1,d,[ bool ]).
-html_comp_i(20,'Ispassword',0,d,[ bool ]).
-html_comp_i(20,'Autoresize',-1,d,[ bool ]).
-html_comp_i(20,'Gxwidth',measure(80,chr),d,[ measure ]).
-html_comp_i(20,'Gxheight',measure(1,row),d,[ measure ]).
-html_comp_i(20,'Ismultiline',0,d,[ bool ]).
-html_comp_i(20,'Fill',-1,d,[ bool ]).
-html_comp_i(20,'Backcolor',rgb(255,255,255),d,[ color ]).
-html_comp_i(20,'Forecolor',rgb(0,0,0),d,[ color ]).
-html_comp_i(20,'Font',font('Verdana',12,[]),d,[ font ]).
-html_comp_i(20,'Horizontalalignment',left,d,[ str ]).
-html_comp_i(20,'Gxformat',0,d,[ num ]).
-html_comp_i(20,'Title','',d,[ str ]).
-html_comp_i(20,'Invitemsg','',d,[ str ]).
-html_comp_i(21,'Id','Table3',v,[ str ]).
-html_comp_i(21,'Class','Table',v,[ str ]).
-html_comp_i(21,'Title','',d,[ str ]).
-html_comp_i(21,'Align',left,d,[ str ]).
-html_comp_i(21,'Backgroundgx','',d,[ str ]).
-html_comp_i(21,'Bgcolor',rgb(0,0,0),d,[ color ]).
-html_comp_i(21,'Border','0',d,[ str ]).
-html_comp_i(21,'Bordercolor',rgb(0,0,0),d,[ color ]).
-html_comp_i(21,'Cellpadding','1',d,[ str ]).
-html_comp_i(21,'Cellspacing','2',d,[ str ]).
-html_comp_i(21,'Height',measure(24,px),v,[ measure ]).
-html_comp_i(21,'Width',measure(502,px),v,[ measure ]).
-html_comp_i(21,'Rules',none,d,[ str ]).
-html_comp_i(24,'Controlname','Button1',v,[ str ]).
-html_comp_i(24,'Class','Button',d,[ str ]).
-html_comp_i(24,'Event','''Consultar ''',v,[ str ]).
-html_comp_i(24,'Caption','Consultar',d,[ str ]).
-html_comp_i(24,'Title','Consultar',d,[ str ]).
-html_comp_i(24,'Font',font('Microsoft Sans Serif',10,[]),d,[ font ]).
-html_comp_i(24,'Forecolor',rgb(255,255,255),v,[ color ]).
-html_comp_i(24,'Backcolor',rgb(0,128,128),v,[ color ]).
-html_comp_i(24,'Border','2',d,[ str ]).
-html_comp_i(24,'Bordercolor',rgb(219,220,222),d,[ color ]).
-html_comp_i(24,'Buttonborderstyle',standard,d,[ str ]).
-html_comp_i(26,'Controlname','Button2',v,[ str ]).
+html_comp_i(3,'Usercontroltype','Alertify',d,[ str ]).
+html_comp_i(3,'Constructorname','Alertify',d,[ str ]).
+html_comp_i(3,'Showmethodname',show,d,[ str ]).
+html_comp_i(3,'Controlname','Alertify1',v,[ str ]).
+html_comp_i(3,'Width','100',d,[ str ]).
+html_comp_i(3,'Height','100',d,[ str ]).
+html_comp_i(3,'Type',error,v,[ str ]).
+html_comp_i(3,'Delay','5000',d,[ str ]).
+html_comp_i(3,'Textmessage','Click now!!!',d,[ str ]).
+html_comp_i(3,'Textok','Confirm',d,[ str ]).
+html_comp_i(3,'Textcancel','Cancel',d,[ str ]).
+html_comp_i(3,'Promptresponse','',d,[ str ]).
+html_comp_i(3,'Promptplaceholder','Type here...',d,[ str ]).
+html_comp_i(3,'Setpromptresponse','SetPromptResponse',d,[ str ]).
+html_comp_i(3,'Getpromptresponse','GetPromptResponse',d,[ str ]).
+html_comp_i(3,'Visible',-1,d,[ bool ]).
+html_comp_i(3,'Csssupportfiles',[ [ t('''Alertify\css\alertify.core.css''',3) ],[ t('''Alertify\css\alertify.default.css''',3) ] ],d,[ params ]).
+html_comp_i(3,'Jssupportfiles',[ [ t('''Alertify\js\alertify.min.js''',3) ],[ t('''Alertify\GlobalAlerts.js''',3) ],[ t('''Alertify\AlertifyRender.js''',3) ] ],d,[ params ]).
+html_comp_i(3,'Csssharedsupportfiles',[],d,[ params ]).
+html_comp_i(3,'Jssharedsupportfiles',[ [ t('''Shared/jquery/jquery-1.9.0.js''',3) ] ],d,[ params ]).
+html_comp_i(5,'Id','Table1',v,[ str ]).
+html_comp_i(5,'Class','Table',v,[ str ]).
+html_comp_i(5,'Title','',d,[ str ]).
+html_comp_i(5,'Align',left,d,[ str ]).
+html_comp_i(5,'Backgroundgx','',d,[ str ]).
+html_comp_i(5,'Bgcolor',rgb(0,0,0),d,[ color ]).
+html_comp_i(5,'Border','0',d,[ str ]).
+html_comp_i(5,'Bordercolor',rgb(0,0,0),d,[ color ]).
+html_comp_i(5,'Cellpadding','1',d,[ str ]).
+html_comp_i(5,'Cellspacing','2',d,[ str ]).
+html_comp_i(5,'Height',measure(46,px),v,[ measure ]).
+html_comp_i(5,'Width',measure(100,'%'),v,[ measure ]).
+html_comp_i(5,'Rules',none,d,[ str ]).
+html_comp_i(10,'Id','Table2',v,[ str ]).
+html_comp_i(10,'Class','Table',v,[ str ]).
+html_comp_i(10,'Title','',d,[ str ]).
+html_comp_i(10,'Align',left,d,[ str ]).
+html_comp_i(10,'Backgroundgx','',d,[ str ]).
+html_comp_i(10,'Bgcolor',rgb(0,0,0),d,[ color ]).
+html_comp_i(10,'Border','0',d,[ str ]).
+html_comp_i(10,'Bordercolor',rgb(0,0,0),d,[ color ]).
+html_comp_i(10,'Cellpadding','1',d,[ str ]).
+html_comp_i(10,'Cellspacing','2',d,[ str ]).
+html_comp_i(10,'Height',measure(46,px),v,[ measure ]).
+html_comp_i(10,'Width',measure(503,px),v,[ measure ]).
+html_comp_i(10,'Rules',none,d,[ str ]).
+html_comp_i(14,'Colcount',4,d,[ num ]).
+html_comp_i(14,'Attid',-6,v,[ num ]).
+html_comp_i(14,'Class','Attribute',d,[ str ]).
+html_comp_i(14,'Controlname','&Nextvalue',d,[ str ]).
+html_comp_i(14,'Returnonclick',0,d,[ bool ]).
+html_comp_i(14,'Eventgx','',d,[ str ]).
+html_comp_i(14,'Captionclass','',d,[ str ]).
+html_comp_i(14,'Captionposition','',d,[ str ]).
+html_comp_i(14,'Captionvalue','',d,[ str ]).
+html_comp_i(14,'Controltype',2,d,[ num ]).
+html_comp_i(14,'Inputtype',0,d,[ num ]).
+html_comp_i(14,'Notifycontextchange',0,d,[ bool ]).
+html_comp_i(14,'Emptyasnull','Yes',d,[ str ]).
+html_comp_i(14,'Readonly',-1,v,[ bool ]).
+html_comp_i(14,'Autocomplete',-1,d,[ bool ]).
+html_comp_i(14,'Ispassword',0,d,[ bool ]).
+html_comp_i(14,'Autoresize',-1,d,[ bool ]).
+html_comp_i(14,'Gxwidth',measure(4,chr),d,[ measure ]).
+html_comp_i(14,'Gxheight',measure(1,row),d,[ measure ]).
+html_comp_i(14,'Ismultiline',0,d,[ bool ]).
+html_comp_i(14,'Fill',0,d,[ bool ]).
+html_comp_i(14,'Forecolor',rgb(0,0,0),d,[ color ]).
+html_comp_i(14,'Font',font('Verdana',12,[]),d,[ font ]).
+html_comp_i(14,'Horizontalalignment',right,d,[ str ]).
+html_comp_i(14,'Gxformat',0,d,[ num ]).
+html_comp_i(14,'Title','',d,[ str ]).
+html_comp_i(14,'Invitemsg','',d,[ str ]).
+html_comp_i(18,'Colcount',80,d,[ num ]).
+html_comp_i(18,'Attid',-8,v,[ num ]).
+html_comp_i(18,'Class','Attribute',d,[ str ]).
+html_comp_i(18,'Controlname','&Estatusarticulodsc',d,[ str ]).
+html_comp_i(18,'Returnonclick',0,d,[ bool ]).
+html_comp_i(18,'Captionclass','',d,[ str ]).
+html_comp_i(18,'Captionposition','',d,[ str ]).
+html_comp_i(18,'Captionvalue','',d,[ str ]).
+html_comp_i(18,'Controltype',2,d,[ num ]).
+html_comp_i(18,'Inputtype',0,d,[ num ]).
+html_comp_i(18,'Editautocomplete',0,d,[ num ]).
+html_comp_i(18,'Autocorrection',-1,d,[ bool ]).
+html_comp_i(18,'Autocapitalization','FirstWord',d,[ str ]).
+html_comp_i(18,'Notifycontextchange',0,d,[ bool ]).
+html_comp_i(18,'Emptyasnull','Yes',d,[ str ]).
+html_comp_i(18,'Readonly',0,d,[ bool ]).
+html_comp_i(18,'Autocomplete',-1,d,[ bool ]).
+html_comp_i(18,'Ispassword',0,d,[ bool ]).
+html_comp_i(18,'Autoresize',-1,d,[ bool ]).
+html_comp_i(18,'Gxwidth',measure(80,chr),d,[ measure ]).
+html_comp_i(18,'Gxheight',measure(1,row),d,[ measure ]).
+html_comp_i(18,'Ismultiline',0,d,[ bool ]).
+html_comp_i(18,'Fill',-1,d,[ bool ]).
+html_comp_i(18,'Backcolor',rgb(255,255,255),d,[ color ]).
+html_comp_i(18,'Forecolor',rgb(0,0,0),d,[ color ]).
+html_comp_i(18,'Font',font('Verdana',12,[]),d,[ font ]).
+html_comp_i(18,'Horizontalalignment',left,d,[ str ]).
+html_comp_i(18,'Gxformat',0,d,[ num ]).
+html_comp_i(18,'Title','',d,[ str ]).
+html_comp_i(18,'Invitemsg','',d,[ str ]).
+html_comp_i(22,'Colcount',80,d,[ num ]).
+html_comp_i(22,'Attid',-9,v,[ num ]).
+html_comp_i(22,'Class','Attribute',d,[ str ]).
+html_comp_i(22,'Controlname','&Estatusarticulodescuso',d,[ str ]).
+html_comp_i(22,'Returnonclick',0,d,[ bool ]).
+html_comp_i(22,'Captionclass','',d,[ str ]).
+html_comp_i(22,'Captionposition','',d,[ str ]).
+html_comp_i(22,'Captionvalue','',d,[ str ]).
+html_comp_i(22,'Controltype',2,d,[ num ]).
+html_comp_i(22,'Inputtype',0,d,[ num ]).
+html_comp_i(22,'Editautocomplete',0,d,[ num ]).
+html_comp_i(22,'Autocorrection',-1,d,[ bool ]).
+html_comp_i(22,'Autocapitalization','FirstWord',d,[ str ]).
+html_comp_i(22,'Notifycontextchange',0,d,[ bool ]).
+html_comp_i(22,'Emptyasnull','Yes',d,[ str ]).
+html_comp_i(22,'Readonly',0,d,[ bool ]).
+html_comp_i(22,'Autocomplete',-1,d,[ bool ]).
+html_comp_i(22,'Ispassword',0,d,[ bool ]).
+html_comp_i(22,'Autoresize',-1,d,[ bool ]).
+html_comp_i(22,'Gxwidth',measure(80,chr),d,[ measure ]).
+html_comp_i(22,'Gxheight',measure(1,row),d,[ measure ]).
+html_comp_i(22,'Ismultiline',0,d,[ bool ]).
+html_comp_i(22,'Fill',-1,d,[ bool ]).
+html_comp_i(22,'Backcolor',rgb(255,255,255),d,[ color ]).
+html_comp_i(22,'Forecolor',rgb(0,0,0),d,[ color ]).
+html_comp_i(22,'Font',font('Verdana',12,[]),d,[ font ]).
+html_comp_i(22,'Horizontalalignment',left,d,[ str ]).
+html_comp_i(22,'Gxformat',0,d,[ num ]).
+html_comp_i(22,'Title','',d,[ str ]).
+html_comp_i(22,'Invitemsg','',d,[ str ]).
+html_comp_i(23,'Id','Table3',v,[ str ]).
+html_comp_i(23,'Class','Table',v,[ str ]).
+html_comp_i(23,'Title','',d,[ str ]).
+html_comp_i(23,'Align',left,d,[ str ]).
+html_comp_i(23,'Backgroundgx','',d,[ str ]).
+html_comp_i(23,'Bgcolor',rgb(0,0,0),d,[ color ]).
+html_comp_i(23,'Border','0',d,[ str ]).
+html_comp_i(23,'Bordercolor',rgb(0,0,0),d,[ color ]).
+html_comp_i(23,'Cellpadding','1',d,[ str ]).
+html_comp_i(23,'Cellspacing','2',d,[ str ]).
+html_comp_i(23,'Height',measure(24,px),v,[ measure ]).
+html_comp_i(23,'Width',measure(502,px),v,[ measure ]).
+html_comp_i(23,'Rules',none,d,[ str ]).
+html_comp_i(26,'Controlname','Button1',v,[ str ]).
 html_comp_i(26,'Class','Button',d,[ str ]).
-html_comp_i(26,'Event','''Guardar ''',v,[ str ]).
-html_comp_i(26,'Caption','Guardar',d,[ str ]).
-html_comp_i(26,'Title','Guardar',d,[ str ]).
+html_comp_i(26,'Event','''Consultar ''',v,[ str ]).
+html_comp_i(26,'Caption','Consultar',d,[ str ]).
+html_comp_i(26,'Title','Consultar',d,[ str ]).
 html_comp_i(26,'Font',font('Microsoft Sans Serif',10,[]),d,[ font ]).
 html_comp_i(26,'Forecolor',rgb(255,255,255),v,[ color ]).
 html_comp_i(26,'Backcolor',rgb(0,128,128),v,[ color ]).
 html_comp_i(26,'Border','2',d,[ str ]).
 html_comp_i(26,'Bordercolor',rgb(219,220,222),d,[ color ]).
 html_comp_i(26,'Buttonborderstyle',standard,d,[ str ]).
-html_comp_i(28,'Controlname','Button3',v,[ str ]).
+html_comp_i(28,'Controlname','Button2',v,[ str ]).
 html_comp_i(28,'Class','Button',d,[ str ]).
-html_comp_i(28,'Event','''Cancelar''',v,[ str ]).
-html_comp_i(28,'Caption','Cancelar',d,[ str ]).
-html_comp_i(28,'Title','Cancelar',d,[ str ]).
+html_comp_i(28,'Event','''Guardar ''',v,[ str ]).
+html_comp_i(28,'Caption','Guardar',d,[ str ]).
+html_comp_i(28,'Title','Guardar',d,[ str ]).
 html_comp_i(28,'Font',font('Microsoft Sans Serif',10,[]),d,[ font ]).
 html_comp_i(28,'Forecolor',rgb(255,255,255),v,[ color ]).
-html_comp_i(28,'Backcolor',rgb(220,20,60),v,[ color ]).
+html_comp_i(28,'Backcolor',rgb(0,128,128),v,[ color ]).
 html_comp_i(28,'Border','2',d,[ str ]).
 html_comp_i(28,'Bordercolor',rgb(219,220,222),d,[ color ]).
 html_comp_i(28,'Buttonborderstyle',standard,d,[ str ]).
+html_comp_i(30,'Controlname','Button3',v,[ str ]).
+html_comp_i(30,'Class','Button',d,[ str ]).
+html_comp_i(30,'Event','''Cancelar''',v,[ str ]).
+html_comp_i(30,'Caption','Cancelar',d,[ str ]).
+html_comp_i(30,'Title','Cancelar',d,[ str ]).
+html_comp_i(30,'Font',font('Microsoft Sans Serif',10,[]),d,[ font ]).
+html_comp_i(30,'Forecolor',rgb(255,255,255),v,[ color ]).
+html_comp_i(30,'Backcolor',rgb(220,20,60),v,[ color ]).
+html_comp_i(30,'Border','2',d,[ str ]).
+html_comp_i(30,'Bordercolor',rgb(219,220,222),d,[ color ]).
+html_comp_i(30,'Buttonborderstyle',standard,d,[ str ]).
  
  
  
@@ -452,15 +478,16 @@ html_comp_i(28,'Buttonborderstyle',standard,d,[ str ]).
  
  
  
-lit_i(12,1,t('Nextvalue',23),[ ctlname('&Nextvalue'),ctrltype(edit,12),pos(12),readonly,ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
-lit_i(16,1,t('Estatusarticulodsc',23),[ ctlname('&Estatusarticulodsc'),ctrltype(edit,16),pos(16),ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
-lit_i(20,1,t('Estatusarticulodescuso',23),[ ctlname('&Estatusarticulodescuso'),ctrltype(edit,20),pos(20),ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
-lit_i(8,1,table(8),[ ctlname('Table2') ]).
-lit_i(24,1,button('''Consultar '''),[ ctlname('Button1'),width(0),rect(0,0,10,10),title('Nothing') ]).
-lit_i(26,1,button('''Guardar '''),[ ctlname('Button2'),width(0),rect(0,0,10,10),title('Nothing') ]).
-lit_i(28,1,button('''Cancelar'''),[ ctlname('Button3'),width(0),rect(0,0,10,10),title('Nothing') ]).
-lit_i(21,1,table(21),[ ctlname('Table3') ]).
-lit_i(3,1,table(3),[ ctlname('Table1') ]).
+lit_i(3,1,usercontrol(3),[ ctlname('Alertify1'),ctrltype(alertify),el([]),containers([]) ]).
+lit_i(14,1,t('Nextvalue',23),[ ctlname('&Nextvalue'),ctrltype(edit,14),pos(14),readonly,ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
+lit_i(18,1,t('Estatusarticulodsc',23),[ ctlname('&Estatusarticulodsc'),ctrltype(edit,18),pos(18),ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
+lit_i(22,1,t('Estatusarticulodescuso',23),[ ctlname('&Estatusarticulodescuso'),ctrltype(edit,22),pos(22),ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
+lit_i(10,1,table(10),[ ctlname('Table2') ]).
+lit_i(26,1,button('''Consultar '''),[ ctlname('Button1'),width(0),rect(0,0,10,10),title('Nothing') ]).
+lit_i(28,1,button('''Guardar '''),[ ctlname('Button2'),width(0),rect(0,0,10,10),title('Nothing') ]).
+lit_i(30,1,button('''Cancelar'''),[ ctlname('Button3'),width(0),rect(0,0,10,10),title('Nothing') ]).
+lit_i(23,1,table(23),[ ctlname('Table3') ]).
+lit_i(5,1,table(5),[ ctlname('Table1') ]).
 lit_i(1,1,window,[ rect(0,0,1000,1000),ctlname('Form') ]).
  
  
@@ -691,9 +718,9 @@ struct_dt_elem_i([ 26,1,1 ],2,pic,'ZZZZZZZZ9').
  
  
 sub_info_i(146,'Start',1,3,[ [],[ 'Nextvalue' ] ]).
-sub_info_i(146,'''Guardar ''',5,18,[ [ 'Nextvalue','Estatusarticulo','Estatusarticulodsc','Estatusarticulodescuso','Today','Websession' ],[ 'Estatusarticulo' ] ]).
-sub_info_i(146,'''Cancelar''',20,22,[ [],[] ]).
-sub_info_i(146,'''Consultar ''',24,26,[ [],[] ]).
+sub_info_i(146,'''Guardar ''',5,22,[ [ 'Estatusarticulodsc','Estatusarticulodescuso','Nextvalue','Estatusarticulo','Today','Websession' ],[ 'Estatusarticulo' ] ]).
+sub_info_i(146,'''Cancelar''',24,26,[ [],[] ]).
+sub_info_i(146,'''Consultar ''',28,30,[ [],[] ]).
  
 pgm_parm_i(web,104,'DETALLEARTICULO',[],[]).
 pgm_parm_i(web,29,'MENUPRINCIPAL',[],[]).

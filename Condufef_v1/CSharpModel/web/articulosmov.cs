@@ -2,7 +2,7 @@
                File: articulosmov
         Description: articulosmov
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 1/29/2022 0:0:30.93
+       Generated on: 1/30/2022 23:37:48.40
        Program type: Callable routine
           Main DBMS: postgresql
 */
@@ -1800,7 +1800,7 @@ namespace GeneXus.Programs {
          context.AddJavascriptSource("jquery.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxtimezone.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxgral.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("gxcfg.js", "?2022129003195");
+         context.AddJavascriptSource("gxcfg.js", "?202213023374974");
          if ( context.isSpaRequest( ) )
          {
             enableOutput();
@@ -1985,11 +1985,11 @@ namespace GeneXus.Programs {
       protected void define_styles( )
       {
          AddStyleSheetFile("calendar-system.css", "?11323129");
-         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?0080");
+         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?2337534");
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?2022129003199");
+            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?202213023374983");
             idxLst = (int)(idxLst+1);
          }
          /* End function define_styles */
@@ -1999,7 +1999,7 @@ namespace GeneXus.Programs {
       {
          context.AddJavascriptSource("messages.spa.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxdec.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("articulosmov.js", "?202212900320");
+         context.AddJavascriptSource("articulosmov.js", "?202213023374983");
          /* End function include_jscripts */
       }
 

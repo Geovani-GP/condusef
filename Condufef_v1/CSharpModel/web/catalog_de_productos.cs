@@ -2,7 +2,7 @@
                File: Catalog_De_Productos
         Description: Catalog_De_Productos
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 1/29/2022 0:59:7.64
+       Generated on: 1/30/2022 23:56:57.38
        Program type: Callable routine
           Main DBMS: postgresql
 */
@@ -275,11 +275,15 @@ namespace GeneXus.Programs {
          context.AddJavascriptSource("jquery.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxtimezone.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxgral.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("gxcfg.js", "?2022129059767");
+         context.AddJavascriptSource("gxcfg.js", "?202213023565743");
          if ( context.isSpaRequest( ) )
          {
             enableOutput();
          }
+         context.AddJavascriptSource("Shared/jquery/jquery-1.9.0.js", "");
+         context.AddJavascriptSource("Alertify/js/alertify.min.js", "");
+         context.AddJavascriptSource("Alertify/GlobalAlerts.js", "");
+         context.AddJavascriptSource("Alertify/AlertifyRender.js", "");
          context.WriteHtmlText( Form.Headerrawhtml) ;
          context.CloseHtmlHeader();
          if ( context.isSpaRequest( ) )
@@ -327,6 +331,7 @@ namespace GeneXus.Programs {
          GxWebStd.gx_hidden_field( context, "vTODAY", context.localUtil.DToC( Gx_date, 0, "/"));
          GxWebStd.gx_hidden_field( context, "GXC1", StringUtil.LTrim( StringUtil.NToC( (decimal)(A40000GXC1), 9, 0, ",", "")));
          GxWebStd.gx_hidden_field( context, "gxhash_vNEXTVALUE", GetSecureSignedToken( "", context.localUtil.Format( (decimal)(AV20NextValue), "ZZZ9")));
+         GxWebStd.gx_hidden_field( context, "ALERTIFY1_Type", StringUtil.RTrim( Alertify1_Type));
          GXKey = Crypto.Decrypt64( context.GetCookie( "GX_SESSION_ID"), Crypto.GetServerKey( ));
          forbiddenHiddens = "hsh" + "Catalog_De_Productos";
          forbiddenHiddens = forbiddenHiddens + context.localUtil.Format( (decimal)(AV20NextValue), "ZZZ9");
@@ -412,19 +417,24 @@ namespace GeneXus.Programs {
                RenderHtmlOpenForm( ) ;
             }
             GxWebStd.gx_msg_list( context, "", context.GX_msglist.DisplayMode, "", "", "", "false");
-            wb_table1_2_2O2( true) ;
+            context.WriteHtmlText( "&nbsp;") ;
+            /* User Defined Control */
+            context.WriteHtmlText( "<div class=\"gx_usercontrol\" id=\""+"ALERTIFY1Container"+"\"></div>") ;
+            context.WriteHtmlText( "<p>") ;
+            wb_table1_5_2O2( true) ;
          }
          else
          {
-            wb_table1_2_2O2( false) ;
+            wb_table1_5_2O2( false) ;
          }
          return  ;
       }
 
-      protected void wb_table1_2_2O2e( bool wbgen )
+      protected void wb_table1_5_2O2e( bool wbgen )
       {
          if ( wbgen )
          {
+            context.WriteHtmlText( "</p>") ;
          }
          wbLoad = true;
       }
@@ -701,7 +711,7 @@ namespace GeneXus.Programs {
          gxdynajaxctrlcodr.Clear();
          gxdynajaxctrldescr.Clear();
          gxdynajaxctrlcodr.Add(StringUtil.Str( (decimal)(0), 1, 0));
-         gxdynajaxctrldescr.Add("Selecciona");
+         gxdynajaxctrldescr.Add("Selecciona..");
          /* Using cursor H002O3 */
          pr_default.execute(1);
          while ( (pr_default.getStatus(1) != 101) )
@@ -1017,6 +1027,7 @@ namespace GeneXus.Programs {
             AV17tipobienid = (int)(NumberUtil.Val( cgiGet( dynavTipobienid_Internalname), "."));
             context.httpAjaxContext.ajax_rsp_assign_attri("", false, "AV17tipobienid", StringUtil.LTrim( StringUtil.Str( (decimal)(AV17tipobienid), 9, 0)));
             /* Read saved values. */
+            Alertify1_Type = cgiGet( "ALERTIFY1_Type");
             /* Read subfile selected row values. */
             /* Read hidden variables. */
             GXKey = Crypto.Decrypt64( context.GetCookie( "GX_SESSION_ID"), Crypto.GetServerKey( ));
@@ -1079,25 +1090,33 @@ namespace GeneXus.Programs {
       protected void E122O2( )
       {
          /* 'Guardar' Routine */
-         AV7producto.gxTpr_Productoid = AV20NextValue;
-         AV7producto.gxTpr_Cambsid = AV14cambsid;
-         AV7producto.gxTpr_Productodsc = AV6productodsc;
-         AV7producto.gxTpr_Marcaid = AV15marcasid;
-         AV7producto.gxTpr_Modeloid = AV16modelosid;
-         AV7producto.gxTpr_Categoriaid = AV18categoriasid;
-         AV7producto.gxTpr_Productousuario = AV8WebSession.Get("usuario");
-         GXt_dtime1 = DateTimeUtil.ResetTime( Gx_date ) ;
-         AV7producto.gxTpr_Productofecreg = GXt_dtime1;
-         AV7producto.Save();
-         if ( AV7producto.Success() )
+         if ( (0==AV14cambsid) || (0==AV15marcasid) || (0==AV16modelosid) || (0==AV18categoriasid) || (0==AV17tipobienid) || String.IsNullOrEmpty(StringUtil.RTrim( AV6productodsc)) )
          {
-            context.CommitDataStores( "Catalog_De_Productos");
-            context.wjLoc = formatLink("catalog_de_productos.aspx") ;
-            context.wjLocDisableFrm = 1;
+            GX_msglist.addItem("Debe seleccionar un elemento e ingresar una descripcion");
          }
          else
          {
-            context.RollbackDataStores( "Catalog_De_Productos");
+            AV7producto.gxTpr_Productoid = AV20NextValue;
+            AV7producto.gxTpr_Cambsid = AV14cambsid;
+            AV7producto.gxTpr_Productodsc = AV6productodsc;
+            AV7producto.gxTpr_Marcaid = AV15marcasid;
+            AV7producto.gxTpr_Modeloid = AV16modelosid;
+            AV7producto.gxTpr_Categoriaid = AV18categoriasid;
+            AV7producto.gxTpr_Tipobienid = AV17tipobienid;
+            AV7producto.gxTpr_Productousuario = AV8WebSession.Get("usuario");
+            GXt_dtime1 = DateTimeUtil.ResetTime( Gx_date ) ;
+            AV7producto.gxTpr_Productofecreg = GXt_dtime1;
+            AV7producto.Save();
+            if ( AV7producto.Success() )
+            {
+               context.CommitDataStores( "Catalog_De_Productos");
+               context.wjLoc = formatLink("catalog_de_productos.aspx") ;
+               context.wjLocDisableFrm = 1;
+            }
+            else
+            {
+               context.RollbackDataStores( "Catalog_De_Productos");
+            }
          }
          context.httpAjaxContext.ajax_rsp_assign_sdt_attri("", false, "AV7producto", AV7producto);
       }
@@ -1111,7 +1130,7 @@ namespace GeneXus.Programs {
          /* Load Routine */
       }
 
-      protected void wb_table1_2_2O2( bool wbgen )
+      protected void wb_table1_5_2O2( bool wbgen )
       {
          if ( wbgen )
          {
@@ -1123,16 +1142,16 @@ namespace GeneXus.Programs {
             context.WriteHtmlText( "<tbody>") ;
             context.WriteHtmlText( "<tr>") ;
             context.WriteHtmlText( "<td>") ;
-            wb_table2_5_2O2( true) ;
+            wb_table2_8_2O2( true) ;
          }
          else
          {
-            wb_table2_5_2O2( false) ;
+            wb_table2_8_2O2( false) ;
          }
          return  ;
       }
 
-      protected void wb_table2_5_2O2e( bool wbgen )
+      protected void wb_table2_8_2O2e( bool wbgen )
       {
          if ( wbgen )
          {
@@ -1140,16 +1159,16 @@ namespace GeneXus.Programs {
             context.WriteHtmlText( "</tr>") ;
             context.WriteHtmlText( "<tr>") ;
             context.WriteHtmlText( "<td>") ;
-            wb_table3_23_2O2( true) ;
+            wb_table3_26_2O2( true) ;
          }
          else
          {
-            wb_table3_23_2O2( false) ;
+            wb_table3_26_2O2( false) ;
          }
          return  ;
       }
 
-      protected void wb_table3_23_2O2e( bool wbgen )
+      protected void wb_table3_26_2O2e( bool wbgen )
       {
          if ( wbgen )
          {
@@ -1158,15 +1177,15 @@ namespace GeneXus.Programs {
             context.WriteHtmlText( "</tbody>") ;
             /* End of table */
             context.WriteHtmlText( "</table>") ;
-            wb_table1_2_2O2e( true) ;
+            wb_table1_5_2O2e( true) ;
          }
          else
          {
-            wb_table1_2_2O2e( false) ;
+            wb_table1_5_2O2e( false) ;
          }
       }
 
-      protected void wb_table3_23_2O2( bool wbgen )
+      protected void wb_table3_26_2O2( bool wbgen )
       {
          if ( wbgen )
          {
@@ -1182,9 +1201,9 @@ namespace GeneXus.Programs {
             GxWebStd.gx_label_ctrl( context, lblTextblock4_Internalname, "MARCA:", "", "", lblTextblock4_Jsonclick, "'"+""+"'"+",false,"+"'"+""+"'", "", "TextBlock", 0, "", 1, 1, 0, "HLP_Catalog_De_Productos.htm");
             context.WriteHtmlText( "</td>") ;
             context.WriteHtmlText( "<td style=\""+CSSHelper.Prettify( "width:569px")+"\">") ;
-            TempTags = "  onfocus=\"gx.evt.onfocus(this, 28,'',false,'',0)\"";
+            TempTags = "  onfocus=\"gx.evt.onfocus(this, 31,'',false,'',0)\"";
             /* ComboBox */
-            GxWebStd.gx_combobox_ctrl1( context, dynavMarcasid, dynavMarcasid_Internalname, StringUtil.Trim( StringUtil.Str( (decimal)(AV15marcasid), 9, 0)), 1, dynavMarcasid_Jsonclick, 0, "'"+""+"'"+",false,"+"'"+""+"'", "int", "", 1, 1, 0, 0, 197, "px", 0, "", "", "Attribute", "", TempTags+" onchange=\"gx.evt.onchange(this)\" "+" onblur=\""+""+";gx.evt.onblur(this,28);\"", "", true, "HLP_Catalog_De_Productos.htm");
+            GxWebStd.gx_combobox_ctrl1( context, dynavMarcasid, dynavMarcasid_Internalname, StringUtil.Trim( StringUtil.Str( (decimal)(AV15marcasid), 9, 0)), 1, dynavMarcasid_Jsonclick, 0, "'"+""+"'"+",false,"+"'"+""+"'", "int", "", 1, 1, 0, 0, 197, "px", 0, "", "", "Attribute", "", TempTags+" onchange=\"gx.evt.onchange(this)\" "+" onblur=\""+""+";gx.evt.onblur(this,31);\"", "", true, "HLP_Catalog_De_Productos.htm");
             dynavMarcasid.CurrentValue = StringUtil.Trim( StringUtil.Str( (decimal)(AV15marcasid), 9, 0));
             context.httpAjaxContext.ajax_rsp_assign_prop("", false, dynavMarcasid_Internalname, "Values", (String)(dynavMarcasid.ToJavascriptSource()));
             context.WriteHtmlText( "</td>") ;
@@ -1203,9 +1222,9 @@ namespace GeneXus.Programs {
             GxWebStd.gx_label_ctrl( context, lblTextblock5_Internalname, "MODELO:", "", "", lblTextblock5_Jsonclick, "'"+""+"'"+",false,"+"'"+""+"'", "", "TextBlock", 0, "", 1, 1, 0, "HLP_Catalog_De_Productos.htm");
             context.WriteHtmlText( "</td>") ;
             context.WriteHtmlText( "<td>") ;
-            TempTags = "  onfocus=\"gx.evt.onfocus(this, 37,'',false,'',0)\"";
+            TempTags = "  onfocus=\"gx.evt.onfocus(this, 40,'',false,'',0)\"";
             /* ComboBox */
-            GxWebStd.gx_combobox_ctrl1( context, dynavModelosid, dynavModelosid_Internalname, StringUtil.Trim( StringUtil.Str( (decimal)(AV16modelosid), 9, 0)), 1, dynavModelosid_Jsonclick, 0, "'"+""+"'"+",false,"+"'"+""+"'", "int", "", 1, 1, 0, 0, 197, "px", 0, "", "", "Attribute", "", TempTags+" onchange=\"gx.evt.onchange(this)\" "+" onblur=\""+""+";gx.evt.onblur(this,37);\"", "", true, "HLP_Catalog_De_Productos.htm");
+            GxWebStd.gx_combobox_ctrl1( context, dynavModelosid, dynavModelosid_Internalname, StringUtil.Trim( StringUtil.Str( (decimal)(AV16modelosid), 9, 0)), 1, dynavModelosid_Jsonclick, 0, "'"+""+"'"+",false,"+"'"+""+"'", "int", "", 1, 1, 0, 0, 197, "px", 0, "", "", "Attribute", "", TempTags+" onchange=\"gx.evt.onchange(this)\" "+" onblur=\""+""+";gx.evt.onblur(this,40);\"", "", true, "HLP_Catalog_De_Productos.htm");
             dynavModelosid.CurrentValue = StringUtil.Trim( StringUtil.Str( (decimal)(AV16modelosid), 9, 0));
             context.httpAjaxContext.ajax_rsp_assign_prop("", false, dynavModelosid_Internalname, "Values", (String)(dynavModelosid.ToJavascriptSource()));
             context.WriteHtmlText( "</td>") ;
@@ -1222,16 +1241,16 @@ namespace GeneXus.Programs {
             GxWebStd.gx_label_ctrl( context, lblTextblock6_Internalname, "CATEGORÍAS:", "", "", lblTextblock6_Jsonclick, "'"+""+"'"+",false,"+"'"+""+"'", "", "TextBlock", 0, "", 1, 1, 0, "HLP_Catalog_De_Productos.htm");
             context.WriteHtmlText( "</td>") ;
             context.WriteHtmlText( "<td>") ;
-            TempTags = "  onfocus=\"gx.evt.onfocus(this, 45,'',false,'',0)\"";
+            TempTags = "  onfocus=\"gx.evt.onfocus(this, 48,'',false,'',0)\"";
             /* ComboBox */
-            GxWebStd.gx_combobox_ctrl1( context, dynavCategoriasid, dynavCategoriasid_Internalname, StringUtil.Trim( StringUtil.Str( (decimal)(AV18categoriasid), 9, 0)), 1, dynavCategoriasid_Jsonclick, 0, "'"+""+"'"+",false,"+"'"+""+"'", "int", "", 1, 1, 0, 0, 197, "px", 0, "", "", "Attribute", "", TempTags+" onchange=\"gx.evt.onchange(this)\" "+" onblur=\""+""+";gx.evt.onblur(this,45);\"", "", true, "HLP_Catalog_De_Productos.htm");
+            GxWebStd.gx_combobox_ctrl1( context, dynavCategoriasid, dynavCategoriasid_Internalname, StringUtil.Trim( StringUtil.Str( (decimal)(AV18categoriasid), 9, 0)), 1, dynavCategoriasid_Jsonclick, 0, "'"+""+"'"+",false,"+"'"+""+"'", "int", "", 1, 1, 0, 0, 197, "px", 0, "", "", "Attribute", "", TempTags+" onchange=\"gx.evt.onchange(this)\" "+" onblur=\""+""+";gx.evt.onblur(this,48);\"", "", true, "HLP_Catalog_De_Productos.htm");
             dynavCategoriasid.CurrentValue = StringUtil.Trim( StringUtil.Str( (decimal)(AV18categoriasid), 9, 0));
             context.httpAjaxContext.ajax_rsp_assign_prop("", false, dynavCategoriasid_Internalname, "Values", (String)(dynavCategoriasid.ToJavascriptSource()));
             context.WriteHtmlText( "</td>") ;
             context.WriteHtmlText( "<td>") ;
             context.WriteHtmlText( "</td>") ;
             context.WriteHtmlText( "<td>") ;
-            TempTags = "  onfocus=\"gx.evt.onfocus(this, 48,'',false,'',0)\"";
+            TempTags = "  onfocus=\"gx.evt.onfocus(this, 51,'',false,'',0)\"";
             ClassString = "Button";
             StyleString = "color:#FFFFFF; background-color:#008000;";
             GxWebStd.gx_button_ctrl( context, bttButton1_Internalname, "", "CONSULTAR", bttButton1_Jsonclick, 5, "CONSULTAR", "", StyleString, ClassString, 1, 1, "standard", "'"+""+"'"+",false,"+"'"+"EENTER."+"'", TempTags, "", context.GetButtonType( ), "HLP_Catalog_De_Productos.htm");
@@ -1245,22 +1264,22 @@ namespace GeneXus.Programs {
             GxWebStd.gx_label_ctrl( context, lblTextblock7_Internalname, "TIPO BIEN:", "", "", lblTextblock7_Jsonclick, "'"+""+"'"+",false,"+"'"+""+"'", "", "TextBlock", 0, "", 1, 1, 0, "HLP_Catalog_De_Productos.htm");
             context.WriteHtmlText( "</td>") ;
             context.WriteHtmlText( "<td>") ;
-            TempTags = "  onfocus=\"gx.evt.onfocus(this, 54,'',false,'',0)\"";
+            TempTags = "  onfocus=\"gx.evt.onfocus(this, 57,'',false,'',0)\"";
             /* ComboBox */
-            GxWebStd.gx_combobox_ctrl1( context, dynavTipobienid, dynavTipobienid_Internalname, StringUtil.Trim( StringUtil.Str( (decimal)(AV17tipobienid), 9, 0)), 1, dynavTipobienid_Jsonclick, 0, "'"+""+"'"+",false,"+"'"+""+"'", "int", "", 1, 1, 0, 0, 197, "px", 0, "", "", "Attribute", "", TempTags+" onchange=\"gx.evt.onchange(this)\" "+" onblur=\""+""+";gx.evt.onblur(this,54);\"", "", true, "HLP_Catalog_De_Productos.htm");
+            GxWebStd.gx_combobox_ctrl1( context, dynavTipobienid, dynavTipobienid_Internalname, StringUtil.Trim( StringUtil.Str( (decimal)(AV17tipobienid), 9, 0)), 1, dynavTipobienid_Jsonclick, 0, "'"+""+"'"+",false,"+"'"+""+"'", "int", "", 1, 1, 0, 0, 197, "px", 0, "", "", "Attribute", "", TempTags+" onchange=\"gx.evt.onchange(this)\" "+" onblur=\""+""+";gx.evt.onblur(this,57);\"", "", true, "HLP_Catalog_De_Productos.htm");
             dynavTipobienid.CurrentValue = StringUtil.Trim( StringUtil.Str( (decimal)(AV17tipobienid), 9, 0));
             context.httpAjaxContext.ajax_rsp_assign_prop("", false, dynavTipobienid_Internalname, "Values", (String)(dynavTipobienid.ToJavascriptSource()));
             context.WriteHtmlText( "</td>") ;
             context.WriteHtmlText( "<td>") ;
             context.WriteHtmlText( "</td>") ;
             context.WriteHtmlText( "<td>") ;
-            TempTags = "  onfocus=\"gx.evt.onfocus(this, 57,'',false,'',0)\"";
+            TempTags = "  onfocus=\"gx.evt.onfocus(this, 60,'',false,'',0)\"";
             ClassString = "Button";
             StyleString = "color:#FFFFFF; background-color:#008000;";
             GxWebStd.gx_button_ctrl( context, bttGuardar_Internalname, "", "GUARDAR", bttGuardar_Jsonclick, 5, "GUARDAR", "", StyleString, ClassString, 1, 1, "standard", "'"+""+"'"+",false,"+"'"+"E\\'GUARDAR\\'."+"'", TempTags, "", context.GetButtonType( ), "HLP_Catalog_De_Productos.htm");
             context.WriteHtmlText( "</td>") ;
             context.WriteHtmlText( "<td>") ;
-            TempTags = "  onfocus=\"gx.evt.onfocus(this, 59,'',false,'',0)\"";
+            TempTags = "  onfocus=\"gx.evt.onfocus(this, 62,'',false,'',0)\"";
             ClassString = "Button";
             StyleString = "color:#FFFFFF; background-color:#FF0000;";
             GxWebStd.gx_button_ctrl( context, bttButton3_Internalname, "", "CANCELAR", bttButton3_Jsonclick, 5, "CANCELAR", "", StyleString, ClassString, 1, 1, "standard", "'"+""+"'"+",false,"+"'"+"EENTER."+"'", TempTags, "", context.GetButtonType( ), "HLP_Catalog_De_Productos.htm");
@@ -1269,15 +1288,15 @@ namespace GeneXus.Programs {
             context.WriteHtmlText( "</tbody>") ;
             /* End of table */
             context.WriteHtmlText( "</table>") ;
-            wb_table3_23_2O2e( true) ;
+            wb_table3_26_2O2e( true) ;
          }
          else
          {
-            wb_table3_23_2O2e( false) ;
+            wb_table3_26_2O2e( false) ;
          }
       }
 
-      protected void wb_table2_5_2O2( bool wbgen )
+      protected void wb_table2_8_2O2( bool wbgen )
       {
          if ( wbgen )
          {
@@ -1294,8 +1313,8 @@ namespace GeneXus.Programs {
             context.WriteHtmlText( "</td>") ;
             context.WriteHtmlText( "<td style=\""+CSSHelper.Prettify( "width:333px")+"\">") ;
             /* Single line edit */
-            TempTags = "  onfocus=\"gx.evt.onfocus(this, 10,'',false,'',0)\"";
-            GxWebStd.gx_single_line_edit( context, edtavNextvalue_Internalname, StringUtil.LTrim( StringUtil.NToC( (decimal)(AV20NextValue), 4, 0, ",", "")), ((edtavNextvalue_Enabled!=0) ? StringUtil.LTrim( context.localUtil.Format( (decimal)(AV20NextValue), "ZZZ9")) : context.localUtil.Format( (decimal)(AV20NextValue), "ZZZ9")), TempTags+" onchange=\"gx.evt.onchange(this)\" "+" onblur=\""+"gx.num.valid_integer( this,'.');"+";gx.evt.onblur(this,10);\"", "'"+""+"'"+",false,"+"'"+""+"'", "", "", "", "", edtavNextvalue_Jsonclick, 0, "Attribute", "", "", "", 1, edtavNextvalue_Enabled, 0, "text", "", 4, "chr", 1, "row", 4, 0, 0, 0, 1, -1, 0, true, "", "right", false, "HLP_Catalog_De_Productos.htm");
+            TempTags = "  onfocus=\"gx.evt.onfocus(this, 13,'',false,'',0)\"";
+            GxWebStd.gx_single_line_edit( context, edtavNextvalue_Internalname, StringUtil.LTrim( StringUtil.NToC( (decimal)(AV20NextValue), 4, 0, ",", "")), ((edtavNextvalue_Enabled!=0) ? StringUtil.LTrim( context.localUtil.Format( (decimal)(AV20NextValue), "ZZZ9")) : context.localUtil.Format( (decimal)(AV20NextValue), "ZZZ9")), TempTags+" onchange=\"gx.evt.onchange(this)\" "+" onblur=\""+"gx.num.valid_integer( this,'.');"+";gx.evt.onblur(this,13);\"", "'"+""+"'"+",false,"+"'"+""+"'", "", "", "", "", edtavNextvalue_Jsonclick, 0, "Attribute", "", "", "", 1, edtavNextvalue_Enabled, 0, "text", "", 4, "chr", 1, "row", 4, 0, 0, 0, 1, -1, 0, true, "", "right", false, "HLP_Catalog_De_Productos.htm");
             context.WriteHtmlText( "</td>") ;
             context.WriteHtmlText( "</tr>") ;
             context.WriteHtmlText( "<tr>") ;
@@ -1304,9 +1323,9 @@ namespace GeneXus.Programs {
             GxWebStd.gx_label_ctrl( context, lblTextblock2_Internalname, "CLAVE CAMBS:", "", "", lblTextblock2_Jsonclick, "'"+""+"'"+",false,"+"'"+""+"'", "", "TextBlock", 0, "", 1, 1, 0, "HLP_Catalog_De_Productos.htm");
             context.WriteHtmlText( "</td>") ;
             context.WriteHtmlText( "<td>") ;
-            TempTags = "  onfocus=\"gx.evt.onfocus(this, 15,'',false,'',0)\"";
+            TempTags = "  onfocus=\"gx.evt.onfocus(this, 18,'',false,'',0)\"";
             /* ComboBox */
-            GxWebStd.gx_combobox_ctrl1( context, dynavCambsid, dynavCambsid_Internalname, StringUtil.Trim( StringUtil.Str( (decimal)(AV14cambsid), 9, 0)), 1, dynavCambsid_Jsonclick, 0, "'"+""+"'"+",false,"+"'"+""+"'", "int", "", 1, dynavCambsid.Enabled, 0, 0, 197, "px", 0, "", "", "Attribute", "", TempTags+" onchange=\"gx.evt.onchange(this)\" "+" onblur=\""+""+";gx.evt.onblur(this,15);\"", "", true, "HLP_Catalog_De_Productos.htm");
+            GxWebStd.gx_combobox_ctrl1( context, dynavCambsid, dynavCambsid_Internalname, StringUtil.Trim( StringUtil.Str( (decimal)(AV14cambsid), 9, 0)), 1, dynavCambsid_Jsonclick, 0, "'"+""+"'"+",false,"+"'"+""+"'", "int", "", 1, dynavCambsid.Enabled, 0, 0, 197, "px", 0, "", "", "Attribute", "", TempTags+" onchange=\"gx.evt.onchange(this)\" "+" onblur=\""+""+";gx.evt.onblur(this,18);\"", "", true, "HLP_Catalog_De_Productos.htm");
             dynavCambsid.CurrentValue = StringUtil.Trim( StringUtil.Str( (decimal)(AV14cambsid), 9, 0));
             context.httpAjaxContext.ajax_rsp_assign_prop("", false, dynavCambsid_Internalname, "Values", (String)(dynavCambsid.ToJavascriptSource()));
             context.WriteHtmlText( "</td>") ;
@@ -1318,18 +1337,18 @@ namespace GeneXus.Programs {
             context.WriteHtmlText( "</td>") ;
             context.WriteHtmlText( "<td>") ;
             /* Single line edit */
-            TempTags = "  onfocus=\"gx.evt.onfocus(this, 20,'',false,'',0)\"";
-            GxWebStd.gx_single_line_edit( context, edtavProductodsc_Internalname, AV6productodsc, StringUtil.RTrim( context.localUtil.Format( AV6productodsc, "")), TempTags+" onchange=\"gx.evt.onchange(this)\" "+" onblur=\""+""+";gx.evt.onblur(this,20);\"", "'"+""+"'"+",false,"+"'"+""+"'", "", "", "", "", edtavProductodsc_Jsonclick, 0, "Attribute", "", "", "", 1, 1, 0, "text", "", 80, "chr", 1, "row", 100, 0, 0, 0, 1, -1, -1, true, "", "left", true, "HLP_Catalog_De_Productos.htm");
+            TempTags = "  onfocus=\"gx.evt.onfocus(this, 23,'',false,'',0)\"";
+            GxWebStd.gx_single_line_edit( context, edtavProductodsc_Internalname, AV6productodsc, StringUtil.RTrim( context.localUtil.Format( AV6productodsc, "")), TempTags+" onchange=\"gx.evt.onchange(this)\" "+" onblur=\""+""+";gx.evt.onblur(this,23);\"", "'"+""+"'"+",false,"+"'"+""+"'", "", "", "", "", edtavProductodsc_Jsonclick, 0, "Attribute", "", "", "", 1, 1, 0, "text", "", 80, "chr", 1, "row", 100, 0, 0, 0, 1, -1, -1, true, "", "left", true, "HLP_Catalog_De_Productos.htm");
             context.WriteHtmlText( "</td>") ;
             context.WriteHtmlText( "</tr>") ;
             context.WriteHtmlText( "</tbody>") ;
             /* End of table */
             context.WriteHtmlText( "</table>") ;
-            wb_table2_5_2O2e( true) ;
+            wb_table2_8_2O2e( true) ;
          }
          else
          {
-            wb_table2_5_2O2e( false) ;
+            wb_table2_8_2O2e( false) ;
          }
       }
 
@@ -1364,11 +1383,13 @@ namespace GeneXus.Programs {
 
       protected void define_styles( )
       {
-         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?0080");
+         AddStyleSheetFile("Alertify/css/alertify.core.css", "?052100");
+         AddStyleSheetFile("Alertify/css/alertify.default.css", "?057280");
+         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?2337534");
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?202212905983");
+            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?202213023565796");
             idxLst = (int)(idxLst+1);
          }
          /* End function define_styles */
@@ -1377,12 +1398,17 @@ namespace GeneXus.Programs {
       protected void include_jscripts( )
       {
          context.AddJavascriptSource("messages.spa.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("catalog_de_productos.js", "?202212905984");
+         context.AddJavascriptSource("catalog_de_productos.js", "?202213023565796");
+         context.AddJavascriptSource("Shared/jquery/jquery-1.9.0.js", "");
+         context.AddJavascriptSource("Alertify/js/alertify.min.js", "");
+         context.AddJavascriptSource("Alertify/GlobalAlerts.js", "");
+         context.AddJavascriptSource("Alertify/AlertifyRender.js", "");
          /* End function include_jscripts */
       }
 
       protected void init_default_properties( )
       {
+         Alertify1_Internalname = "ALERTIFY1";
          lblTextblock1_Internalname = "TEXTBLOCK1";
          edtavNextvalue_Internalname = "vNEXTVALUE";
          lblTextblock2_Internalname = "TEXTBLOCK2";
@@ -1423,6 +1449,7 @@ namespace GeneXus.Programs {
          dynavCategoriasid_Jsonclick = "";
          dynavModelosid_Jsonclick = "";
          dynavMarcasid_Jsonclick = "";
+         Alertify1_Type = "error";
          Form.Headerrawhtml = "";
          Form.Background = "";
          Form.Textcolor = 0;
@@ -1442,7 +1469,7 @@ namespace GeneXus.Programs {
       public override void InitializeDynEvents( )
       {
          setEventMetadata("REFRESH","{handler:'Refresh',iparms:[],oparms:[]}");
-         setEventMetadata("'GUARDAR'","{handler:'E122O2',iparms:[{av:'AV20NextValue',fld:'vNEXTVALUE',pic:'ZZZ9',hsh:true,nv:0},{av:'AV7producto',fld:'vPRODUCTO',pic:'',nv:null},{av:'AV14cambsid',fld:'vCAMBSID',pic:'ZZZZZZZZ9',nv:0},{av:'AV6productodsc',fld:'vPRODUCTODSC',pic:'',nv:''},{av:'AV15marcasid',fld:'vMARCASID',pic:'ZZZZZZZZ9',nv:0},{av:'AV16modelosid',fld:'vMODELOSID',pic:'ZZZZZZZZ9',nv:0},{av:'AV18categoriasid',fld:'vCATEGORIASID',pic:'ZZZZZZZZ9',nv:0},{av:'Gx_date',fld:'vTODAY',pic:'',nv:''}],oparms:[{av:'AV7producto',fld:'vPRODUCTO',pic:'',nv:null}]}");
+         setEventMetadata("'GUARDAR'","{handler:'E122O2',iparms:[{av:'AV14cambsid',fld:'vCAMBSID',pic:'ZZZZZZZZ9',nv:0},{av:'AV15marcasid',fld:'vMARCASID',pic:'ZZZZZZZZ9',nv:0},{av:'AV16modelosid',fld:'vMODELOSID',pic:'ZZZZZZZZ9',nv:0},{av:'AV18categoriasid',fld:'vCATEGORIASID',pic:'ZZZZZZZZ9',nv:0},{av:'AV17tipobienid',fld:'vTIPOBIENID',pic:'ZZZZZZZZ9',nv:0},{av:'AV6productodsc',fld:'vPRODUCTODSC',pic:'',nv:''},{av:'AV20NextValue',fld:'vNEXTVALUE',pic:'ZZZ9',hsh:true,nv:0},{av:'AV7producto',fld:'vPRODUCTO',pic:'',nv:null},{av:'Gx_date',fld:'vTODAY',pic:'',nv:''}],oparms:[{av:'AV7producto',fld:'vPRODUCTO',pic:'',nv:null}]}");
          return  ;
       }
 
@@ -1576,6 +1603,7 @@ namespace GeneXus.Programs {
       private String sDynURL ;
       private String FormProcess ;
       private String bodyStyle ;
+      private String Alertify1_Type ;
       private String GXKey ;
       private String forbiddenHiddens ;
       private String GX_FocusControl ;
@@ -1630,6 +1658,7 @@ namespace GeneXus.Programs {
       private String lblTextblock3_Internalname ;
       private String lblTextblock3_Jsonclick ;
       private String edtavProductodsc_Jsonclick ;
+      private String Alertify1_Internalname ;
       private DateTime GXt_dtime1 ;
       private DateTime Gx_date ;
       private bool entryPointCalled ;

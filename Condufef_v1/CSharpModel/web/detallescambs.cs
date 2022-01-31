@@ -2,7 +2,7 @@
                File: DetallesCambs
         Description: Detalles Cambs
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 1/29/2022 0:0:45.42
+       Generated on: 1/30/2022 23:48:23.1
        Program type: Callable routine
           Main DBMS: postgresql
 */
@@ -253,7 +253,7 @@ namespace GeneXus.Programs {
          context.AddJavascriptSource("jquery.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxtimezone.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxgral.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("gxcfg.js", "?2022129004545");
+         context.AddJavascriptSource("gxcfg.js", "?20221302348236");
          if ( context.isSpaRequest( ) )
          {
             enableOutput();
@@ -790,8 +790,10 @@ namespace GeneXus.Programs {
          if ( String.IsNullOrEmpty(StringUtil.RTrim( context.wjLoc)) && ( context.nUserReturn != 1 ) )
          {
             SubsflControlProps_122( ) ;
+            lV6buscar = StringUtil.PadR( StringUtil.RTrim( AV6buscar), 20, "%");
+            context.httpAjaxContext.ajax_rsp_assign_attri("", false, "AV6buscar", AV6buscar);
             /* Using cursor H002E2 */
-            pr_default.execute(0, new Object[] {AV6buscar});
+            pr_default.execute(0, new Object[] {lV6buscar});
             while ( (pr_default.getStatus(0) != 101) )
             {
                A83cambsdsc = H002E2_A83cambsdsc[0];
@@ -996,11 +998,11 @@ namespace GeneXus.Programs {
 
       protected void define_styles( )
       {
-         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?0080");
+         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?2337534");
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?2022129004563");
+            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?202213023482328");
             idxLst = (int)(idxLst+1);
          }
          /* End function define_styles */
@@ -1009,7 +1011,7 @@ namespace GeneXus.Programs {
       protected void include_jscripts( )
       {
          context.AddJavascriptSource("messages.spa.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("detallescambs.js", "?2022129004564");
+         context.AddJavascriptSource("detallescambs.js", "?202213023482328");
          /* End function include_jscripts */
       }
 
@@ -1237,6 +1239,7 @@ namespace GeneXus.Programs {
          EvtRowId = "";
          sEvtType = "";
          scmdbuf = "";
+         lV6buscar = "";
          H002E2_A83cambsdsc = new String[] {""} ;
          H002E2_n83cambsdsc = new bool[] {false} ;
          H002E2_A25cambsid = new int[1] ;
@@ -1318,6 +1321,7 @@ namespace GeneXus.Programs {
       private String edtcambsdsc_Internalname ;
       private String edtavBuscar_Internalname ;
       private String scmdbuf ;
+      private String lV6buscar ;
       private String tblTable1_Internalname ;
       private String TempTags ;
       private String edtavBuscar_Jsonclick ;
@@ -1377,10 +1381,10 @@ namespace GeneXus.Programs {
        {
           Object[] prmH002E2 ;
           prmH002E2 = new Object[] {
-          new Object[] {"AV6buscar",NpgsqlDbType.Text,20,0}
+          new Object[] {"lV6buscar",NpgsqlDbType.Text,20,0}
           } ;
           def= new CursorDef[] {
-              new CursorDef("H002E2", "SELECT cambsdsc, cambsid FROM public.cambs WHERE cambsdsc >= ( :AV6buscar) ORDER BY cambsid ",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmH002E2,11,0,true,false )
+              new CursorDef("H002E2", "SELECT cambsdsc, cambsid FROM public.cambs WHERE cambsdsc like :lV6buscar ORDER BY cambsid ",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmH002E2,11,0,true,false )
           };
        }
     }

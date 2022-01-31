@@ -1,0 +1,23 @@
+
+<ObjectSpec>
+<SpecVersion>10_3_15-115824</SpecVersion>
+<Object>
+<ObjClsGuid>c9584656-94b6-4ccd-890f-332d11fc2c25</ObjClsGuid>
+<ObjCls>13</ObjCls>
+<ObjId>109</ObjId>
+<ObjName>WebComponent1</ObjName>
+<ObjDesc>Web Component1</ObjDesc>
+<ObjPgmName>WebComponent1</ObjPgmName>
+<ObjClsName>Web Panel</ObjClsName></Object>
+<Result>genreq</Result>
+<Warnings></Warnings>
+<Errors></Errors>
+<Generator>
+<GenId>15</GenId>
+<GenName>Default (C#)</GenName></Generator>
+<FormClass>HTML</FormClass>
+<Parameters></Parameters>
+<StandAloneRules></StandAloneRules>
+<Event>
+<EventName>Load</EventName></Event>
+<Suggests></Suggests></ObjectSpec>

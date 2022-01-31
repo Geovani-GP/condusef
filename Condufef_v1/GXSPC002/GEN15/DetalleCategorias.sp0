@@ -1,29 +1,21 @@
 spec_i([ web,94,'Detalle Categorias','DetalleCategorias',0,spa,'10_3_15-115824' ]).
  
 struct_i(2,1,[ 'Updateimage','Deleteimage' ],[]).
-struct_i(3,2,[ 14 ],[]).
  
 level_i(2,[ 5,[ [ 5,many ] ],[],[],[ [ [ 5 ],[ 94,14 ] ] ],[ [ [ 5 ],[] ] ],[ 14 ],'CATEGORIAS_PKEY',[],[] ]).
-level_i(3,[ 5,[ [ 5,many ] ],[],[],[ [ [ 5 ],[ 14,94 ] ] ],[ [ [ 5 ],[] ] ],[ 14 ],'CATEGORIAS_PKEY',[ 5,[ [ [],14,14 ] ] ],[] ]).
  
 tw_i(2,[]).
-tw_i(3,[]).
  
-lwi_i(3,[ [ c([ t('null(',1),t('Buscar',23),t(')',4),t('.OR.',9),t('(',0),t(94,2),t(=,10),t('Buscar',23),t(')',4) ],[ 94 ]) ] ]).
-lwi_i(2,[ [] ]).
+lwi_i(2,[ [ c([ t(94,2),t('.LIKE.',10),t('Buscar',23) ],[ 94 ]) ] ]).
  
  
  
-level_option_i(3,usr_condition,y).
  
 ta_i(2,[ [ [ 5,94 ],[ 5,14 ] ] ]).
-ta_i(3,[ [ [ 5,14 ],[ 5,94 ] ] ]).
  
 las_i(2,[ [ 'Buscar',94,14 ] ]).
-las_i(3,[ [ 'Buscar',14,94 ] ]).
  
 lac_i(2,[ [ 'Buscar' ] ]).
-lac_i(3,[ [ 'Buscar' ] ]).
  
  
 lits_i('Detalles Categorias',5,10).
@@ -37,7 +29,6 @@ pos_i('Updateimage',[ 1,2,111 ]).
 pos_i('Deleteimage',[ 1,2,1136 ]).
  
 repeat_i(2,[ 1,2,[ 14,94,'Updateimage','Deleteimage' ],[] ]).
-repeat_i(3,[ 1,2,[ 14,94,'Updateimage','Deleteimage' ],[] ]).
  
  
 rule_i(0,datastore(1,'DS_LAST_CHANGE','')).
@@ -134,19 +125,13 @@ rule_i(0,p(0,15,fvix,[ 12,11 ],[ 'SCHEMA',public ])).
 rule_i(0,p(0,15,fvix,[ 12,11 ],[ 'EXTNAM','YES' ])).
  
 a_i(1,1,f,'Err',[],[ [],[ t('0',3) ] ]).
-a_i(2,3,t,5,[],[ [ [ [],14,14 ] ],'CATEGORIAS_PKEY',[] ]).
-a_i(3,2,t,5,[],[ [],'CATEGORIAS_PKEY',[] ]).
-a_i(4,3,c,0,[],[ c([ t('null(',1),t('Buscar',23),t(')',4),t('.OR.',9),t('(',0),t(94,2),t(=,10),t('Buscar',23),t(')',4) ],[ 94 ]) ]).
+a_i(2,2,t,5,[],[ [],'CATEGORIAS_PKEY',[] ]).
  
 v_i(f,i,1,[]).
 v_i(f,o,1,'Err').
-v_i(t,i,2,14).
+v_i(t,i,2,[]).
 v_i(t,o,2,94).
-v_i(t,i,3,[]).
-v_i(t,o,3,94).
-v_i(t,o,3,14).
-v_i(c,i,4,94).
-v_i(c,o,4,[]).
+v_i(t,o,2,14).
  
  
  
@@ -200,7 +185,6 @@ map_i(5,a,14,[ categoriasid ]).
  
  
  
-break_i(3,nvg,2,[ 14 ],[ [ 14 ],[ 94 ],[] ]).
 break_i(2,nvg,1,[],[ [ 14,94 ],[],[] ]).
  
 b_group_i(2,1,lit,0,1,1).
@@ -208,10 +192,7 @@ b_group_i(2,2,lit,0,2,7).
 b_group_i(2,3,lit,0,8,12).
 b_group_i(2,4,lit,0,13,16).
 b_group_i(2,5,lit,0,17,22).
-b_group_i(2,6,lit,0,23,3).
-b_group_i(2,7,nvg,3,23,23).
-b_group_i(3,1,lit,0,24,24).
-b_group_i(2,8,lit,0,27,0).
+b_group_i(2,6,lit,0,23,0).
  
 b_line_i(1,2,1,cmd,1,[ t('',146,1,0),t('Start',3,1,7) ]).
 b_line_i(2,2,2,cmd,1,[ t('',107,1,0),t([ t('Updateimage',23,2,2),t('fromimage(',1,2,15) ],31,2,2),t(i(98,'c7599f2c-228e-49d1-912e-ed139fdd44e8'),69,1,26),t(')',4,1,32) ]).
@@ -229,10 +210,8 @@ b_line_i(16,2,4,cmd,3,[ t('',146,3,0),t('Enter',3,16,7) ]).
 b_line_i(17,2,5,cmd,3,[ t('',104,3,0),t(o(13,'Catalog_De_Categorias'),28,3,2) ]).
 b_line_i(18,2,5,cmd,3,[ t('',147,3,0) ]).
 b_line_i(22,2,5,cmd,3,[ t('',146,3,0),t([ t('Categoriasgrid',3,22,7),t('Load',3,22,22) ],29,22,22) ]).
-b_line_i(23,3,1,cmd,24,[ t('',121,23,0),t('ORDER',39,23,11),t(14,2,23,17) ]).
-b_line_i(25,3,1,cmd,24,[ t('',107,0,0),t([ t('Categoriasgrid',3,0,0),t('load(',1,0,0) ],31,0,0),t(')',4,0,0) ]).
-b_line_i(26,3,1,cmd,24,[ t('',128,24,0) ]).
-b_line_i(27,2,8,cmd,7,[ t('',147,7,0) ]).
+b_line_i(24,2,6,cmd,3,[ t('',107,0,0),t([ t('Categoriasgrid',3,0,0),t('load(',1,0,0) ],31,0,0),t(')',4,0,0) ]).
+b_line_i(24,2,6,cmd,3,[ t('',147,3,0) ]).
  
 sf_break_i(12,2).
  
@@ -335,7 +314,7 @@ html_comp_i(9,'Bordercolor',rgb(219,220,222),d,[ color ]).
 html_comp_i(9,'Buttonborderstyle',standard,d,[ str ]).
 html_comp_i(12,'Controlname','Categoriasgrid',v,[ str ]).
 html_comp_i(12,'Controlorder','',d,[ str ]).
-html_comp_i(12,'Controlwhere','',d,[ str ]).
+html_comp_i(12,'Controlwhere','''.''(''.''(t(94,2),''.''(t($.LIKE.$,10),''.''(t($Buscar$,23),''.''(t($;$,18),$[]$)))),''.''($[]$,$[]$))',v,[ str ]).
 html_comp_i(12,'Iddataselector','',d,[ str ]).
 html_comp_i(12,'Rules',none,d,[ str ]).
 html_comp_i(12,'Sflrender','',d,[ str ]).
@@ -473,7 +452,6 @@ html_comp_i(16,'Vspace',0,d,[ num ]).
  
  
  
-warn_gen_i(msg([],spc0053,[ 'Conditional constraint "',[ att(2,94),' ',=,' ',att(2,'&Buscar') ],'" cannot be generated',[ ' in group starting at line ','23','' ],'. Changed to standard constraint.' ])).
  
 lit_i(5,1,t('Buscar',23),[ ctlname('&Buscar'),ctrltype(edit,5),pos(5),ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
 lit_i(7,1,t('Detalles Categorias',3),[ ctlname('Textblock1') ]).
@@ -533,7 +511,7 @@ sub_info_i(146,'Start',1,4,[ [],[ 'Updateimage','Deleteimage' ] ]).
 sub_info_i(146,[ t('Updateimage',23,7,7),t('Click',3,7,20) ],7,9,[ [ 14 ],[] ]).
 sub_info_i(146,[ t('Deleteimage',23,12,7),t('Click',3,12,20) ],12,14,[ [ 14 ],[] ]).
 sub_info_i(146,'Enter',16,18,[ [],[] ]).
-sub_info_i(146,[ t('Categoriasgrid',3,22,7),t('Load',3,22,22) ],22,27,[ [ 14,94,'Buscar' ],[] ]).
+sub_info_i(146,[ t('Categoriasgrid',3,22,7),t('Load',3,22,22) ],22,24,[ [],[] ]).
  
 pgm_parm_i(web,39,'CATALOG_DE_CATEGORIAS',[],[]).
 pgm_parm_i(trn,5,'CATEGORIAS',[ [ char,3,0,0 ],[ int,9,0,0 ] ],[ [ 'Mode',in,[] ],[ categoriasid,in,[] ] ]).

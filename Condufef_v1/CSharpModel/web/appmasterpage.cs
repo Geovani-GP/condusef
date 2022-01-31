@@ -2,7 +2,7 @@
                File: AppMasterPage
         Description: Application Master Page
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 1/29/2022 0:0:42.68
+       Generated on: 1/30/2022 23:38:4.40
        Program type: Callable routine
           Main DBMS: postgresql
 */
@@ -147,7 +147,7 @@ namespace GeneXus.Programs {
          {
             WebComp_Webcomp1.componentjscripts();
          }
-         context.AddJavascriptSource("appmasterpage.js", "?2022129004270");
+         context.AddJavascriptSource("appmasterpage.js", "?20221302338441");
          context.WriteHtmlTextNl( "</body>") ;
          context.WriteHtmlTextNl( "</html>") ;
          if ( context.isSpaRequest( ) )
@@ -519,28 +519,36 @@ namespace GeneXus.Programs {
       protected void E11012( )
       {
          /* Start Routine */
-         AV8usuario = AV7WebSession.Get("usuario");
-         context.httpAjaxContext.ajax_rsp_assign_attri("", true, "AV8usuario", AV8usuario);
-         context.httpAjaxContext.ajax_rsp_assign_attri("", true, "gxhash_vUSUARIO_MPAGE", GetSecureSignedToken( "gxmpage_", StringUtil.RTrim( context.localUtil.Format( AV8usuario, ""))));
-         AV10fecha = AV7WebSession.Get("fecha");
-         context.httpAjaxContext.ajax_rsp_assign_attri("", true, "AV10fecha", AV10fecha);
-         context.httpAjaxContext.ajax_rsp_assign_attri("", true, "gxhash_vFECHA_MPAGE", GetSecureSignedToken( "gxmpage_", StringUtil.RTrim( context.localUtil.Format( AV10fecha, ""))));
-         AV11Titulo = "SISTEMA DE INVENTARIOS";
-         context.httpAjaxContext.ajax_rsp_assign_attri("", true, "AV11Titulo", AV11Titulo);
-         context.httpAjaxContext.ajax_rsp_assign_attri("", true, "gxhash_vTITULO_MPAGE", GetSecureSignedToken( "gxmpage_", StringUtil.RTrim( context.localUtil.Format( AV11Titulo, ""))));
-         /* Object Property */
-         if ( StringUtil.StrCmp(StringUtil.Lower( WebComp_Webcomp1_Component), StringUtil.Lower( "sidebar")) != 0 )
+         if ( String.IsNullOrEmpty(StringUtil.RTrim( AV7WebSession.Get("usuario"))) )
          {
-            WebComp_Webcomp1 = getWebComponent(GetType(), "GeneXus.Programs", "sidebar", new Object[] {context} );
-            WebComp_Webcomp1.ComponentInit();
-            WebComp_Webcomp1.Name = "sidebar";
-            WebComp_Webcomp1_Component = "sidebar";
+            context.wjLoc = formatLink("login.aspx") ;
+            context.wjLocDisableFrm = 1;
          }
-         if ( StringUtil.Len( WebComp_Webcomp1_Component) != 0 )
+         else
          {
-            WebComp_Webcomp1.setjustcreated();
-            WebComp_Webcomp1.componentprepare(new Object[] {(String)"MPW0030",(String)""});
-            WebComp_Webcomp1.componentbind(new Object[] {});
+            AV8usuario = AV7WebSession.Get("usuario");
+            context.httpAjaxContext.ajax_rsp_assign_attri("", true, "AV8usuario", AV8usuario);
+            context.httpAjaxContext.ajax_rsp_assign_attri("", true, "gxhash_vUSUARIO_MPAGE", GetSecureSignedToken( "gxmpage_", StringUtil.RTrim( context.localUtil.Format( AV8usuario, ""))));
+            AV10fecha = AV7WebSession.Get("fecha");
+            context.httpAjaxContext.ajax_rsp_assign_attri("", true, "AV10fecha", AV10fecha);
+            context.httpAjaxContext.ajax_rsp_assign_attri("", true, "gxhash_vFECHA_MPAGE", GetSecureSignedToken( "gxmpage_", StringUtil.RTrim( context.localUtil.Format( AV10fecha, ""))));
+            AV11Titulo = "SISTEMA DE INVENTARIOS";
+            context.httpAjaxContext.ajax_rsp_assign_attri("", true, "AV11Titulo", AV11Titulo);
+            context.httpAjaxContext.ajax_rsp_assign_attri("", true, "gxhash_vTITULO_MPAGE", GetSecureSignedToken( "gxmpage_", StringUtil.RTrim( context.localUtil.Format( AV11Titulo, ""))));
+            /* Object Property */
+            if ( StringUtil.StrCmp(StringUtil.Lower( WebComp_Webcomp1_Component), StringUtil.Lower( "sidebar")) != 0 )
+            {
+               WebComp_Webcomp1 = getWebComponent(GetType(), "GeneXus.Programs", "sidebar", new Object[] {context} );
+               WebComp_Webcomp1.ComponentInit();
+               WebComp_Webcomp1.Name = "sidebar";
+               WebComp_Webcomp1_Component = "sidebar";
+            }
+            if ( StringUtil.Len( WebComp_Webcomp1_Component) != 0 )
+            {
+               WebComp_Webcomp1.setjustcreated();
+               WebComp_Webcomp1.componentprepare(new Object[] {(String)"MPW0030",(String)""});
+               WebComp_Webcomp1.componentbind(new Object[] {});
+            }
          }
       }
 
@@ -812,7 +820,7 @@ namespace GeneXus.Programs {
 
       protected void define_styles( )
       {
-         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?0080");
+         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?2337534");
          if ( StringUtil.StrCmp(WebComp_Webcomp1_Component, "") == 0 )
          {
             WebComp_Webcomp1 = getWebComponent(GetType(), "GeneXus.Programs", "sidebar", new Object[] {context} );
@@ -830,7 +838,7 @@ namespace GeneXus.Programs {
          idxLst = 1;
          while ( idxLst <= (getDataAreaObject() == null ? Form : getDataAreaObject().GetForm()).Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((String)(getDataAreaObject() == null ? Form : getDataAreaObject().GetForm()).Jscriptsrc.Item(idxLst))), "?2022129004278");
+            context.AddJavascriptSource(StringUtil.RTrim( ((String)(getDataAreaObject() == null ? Form : getDataAreaObject().GetForm()).Jscriptsrc.Item(idxLst))), "?20221302338454");
             idxLst = (int)(idxLst+1);
          }
          /* End function define_styles */
@@ -838,7 +846,7 @@ namespace GeneXus.Programs {
 
       protected void include_jscripts( )
       {
-         context.AddJavascriptSource("appmasterpage.js", "?2022129004278");
+         context.AddJavascriptSource("appmasterpage.js", "?20221302338454");
          /* End function include_jscripts */
       }
 
