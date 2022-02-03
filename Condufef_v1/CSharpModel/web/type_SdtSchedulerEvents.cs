@@ -2,7 +2,7 @@
                File: type_SdtSchedulerEvents
         Description: SchedulerEvents
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 1/30/2022 23:38:55.89
+       Generated on: 2/2/2022 13:43:37.63
        Program type: Callable routine
           Main DBMS: postgresql
 */

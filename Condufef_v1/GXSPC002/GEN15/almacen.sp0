@@ -55,12 +55,12 @@ rule_i(0,datastore(1,'CS_RPCPGML','')).
 rule_i(0,datastore(1,'JDBC_DATASOURCE','')).
 rule_i(0,datastore(1,'USE_JDBC_DATASOURCE','0')).
 rule_i(0,datastore(1,'DS_DBMS_ADDINFO','')).
-rule_i(0,datastore(1,'USER_PASSWORD',asdf)).
+rule_i(0,datastore(1,'USER_PASSWORD',󻢸蘇�2�5炭)).
 rule_i(0,datastore(1,'USER_ID',postgres)).
 rule_i(0,datastore(1,'CS_CONNECT','First')).
 rule_i(0,datastore(1,'DBMS_PORT','5432')).
 rule_i(0,datastore(1,'CS_SERVER',localhost)).
-rule_i(0,datastore(1,'CS_DBNAME',condusef)).
+rule_i(0,datastore(1,'CS_DBNAME',postgres)).
 rule_i(0,datastore(1,'CS_FLEDSNAME','')).
 rule_i(0,datastore(1,'CS_DRVNAME','')).
 rule_i(0,datastore(1,'CS_DSNAME','')).
@@ -80,6 +80,8 @@ rule_i(0,prop('ObjectVisibility','Public')).
 rule_i(0,prop('FullyQualifiedName',almacen)).
 rule_i(0,prop('PWFCallable','0')).
 rule_i(0,prop('GenerateObject','-1')).
+rule_i(0,prop('SEARCH_VIEWER','')).
+rule_i(0,prop('SEARCHABLE','UMPV')).
 rule_i(0,prop('MTIER_OPT','Yes')).
 rule_i(0,prop('CS_ORA_FORUPD','UMPV')).
 rule_i(0,prop('Hint_firstrows','UMPV')).
@@ -141,6 +143,7 @@ rule_i(0,prop('TRNCFM','UMPV')).
 rule_i(0,prop('CFMTRN','No')).
 rule_i(0,prop('TRNEND','Yes')).
 rule_i(0,prop('IsDwhTrn','0')).
+rule_i(0,prop(idISBCEJB,'0')).
 rule_i(0,prop('WEB_SECURITY_LEVEL','High')).
 rule_i(0,prop('HTTP_PROTOCOL','Unsecure')).
 rule_i(0,prop('USE_ENCRYPTION','NO')).
@@ -149,12 +152,17 @@ rule_i(0,prop('SHOWMASTERPAGE_POPUP','0')).
 rule_i(0,prop('MasterPage',o(13,'AppMasterPage'))).
 rule_i(0,prop('WEB_COMP','No')).
 rule_i(0,prop('Theme',o(25,'Flat'))).
+rule_i(0,prop('WS_Delete','-1')).
+rule_i(0,prop('WS_Update','-1')).
+rule_i(0,prop('WS_Insert','-1')).
+rule_i(0,prop('WS_View','-1')).
 rule_i(0,prop('ExternalNamespace','Condufef_v1')).
 rule_i(0,prop('ExternalName',almacen)).
+rule_i(0,prop(idISBCWEBSERVICE,'0')).
+rule_i(0,prop('CALL_PROTOCOL','INTERNAL')).
 rule_i(0,prop(idConnectivitySupport,idInherit)).
 rule_i(0,prop('OBJECT_METADATA','')).
-rule_i(0,prop('IsMain','0')).
-rule_i(0,prop(idBC,'0')).
+rule_i(0,prop(idBC,'-1')).
 rule_i(0,prop('Folder',o(120,'Root Module'))).
 rule_i(0,prop('ObjDesc',almacen)).
 rule_i(0,prop('ObjName',almacen)).
@@ -193,7 +201,7 @@ rule_i(0,p(0,15,fvix,[ 11,10 ],[ 'NAME',empleados_pkey ])).
 rule_i(0,p(0,15,fvix,[ 11,10 ],[ 'LOC','' ])).
 rule_i(0,p(0,15,fvix,[ 11,10 ],[ 'SCHEMA',public ])).
 rule_i(0,p(0,15,fvix,[ 11,10 ],[ 'EXTNAM','YES' ])).
-rule_i(0,file(6,'EMPLEADOS',[ 13,98,99,100,101,102,103,104,105,106,107 ])).
+rule_i(0,file(6,'EMPLEADOS',[ 13,176,99,100,101,102,103,106,105,107,104 ])).
 rule_i(0,loc([ 6 ],'EMPLEADOS','','LAN')).
 rule_i(0,index(6,'EMPLEADOS_PKEY',u,[ 13 ])).
 rule_i(0,loc([ 6,'EMPLEADOS_PKEY' ],empleados_pkey,'','LAN')).
@@ -268,11 +276,11 @@ attri_i(18,[ etiquetascambsid,int,9,0,'ZZZZZZZZ9',0,etiquetascambsid,'',0 ]).
 attri_i(17,[ etiquetasproductoid,int,9,0,'ZZZZZZZZ9',0,etiquetasproductoid,'',0 ]).
 attri_i(21,[ articuloscambsid,int,9,0,'ZZZZZZZZ9',0,articuloscambsid,'',0 ]).
 attri_i(20,[ articulosproductoid,int,9,0,'ZZZZZZZZ9',0,articulosproductoid,'',0 ]).
-attri_i(153,[ almacenfecultact,dtime,10,8,'99/99/9999 99:99:99',0,almacenfecultact,'',0 ]).
-attri_i(152,[ almacenfecreg,dtime,10,8,'99/99/9999 99:99:99',0,almacenfecreg,'',0 ]).
+attri_i(153,[ almacenfecultact,date,8,0,'99/99/9999',0,almacenfecultact,'',0 ]).
+attri_i(152,[ almacenfecreg,date,8,0,'99/99/9999',0,almacenfecreg,'',0 ]).
 attri_i(151,[ alamcenusuario,svchar,15,0,'',0,alamcenusuario,'',0 ]).
 attri_i(150,[ alamcenobservaciones,svchar,50,0,'',0,alamcenobservaciones,'',0 ]).
-attri_i(149,[ almacentelefono,svchar,10,0,'',0,almacentelefono,'',0 ]).
+attri_i(149,[ almacentelefono,int,10,0,'ZZZZZZZZZ9',0,almacentelefono,'',0 ]).
 attri_i(148,[ alamcencodigopostal,svchar,5,0,'',0,alamcencodigopostal,'',0 ]).
 attri_i(147,[ alamcenestado,svchar,50,0,'',0,alamcenestado,'',0 ]).
 attri_i(146,[ almacenmunicipio,svchar,50,0,'',0,almacenmunicipio,'',0 ]).
@@ -280,7 +288,7 @@ attri_i(145,[ almacencolonia,svchar,50,0,'',0,almacencolonia,'',0 ]).
 attri_i(144,[ almacendireccion,svchar,100,0,'',0,almacendireccion,'',0 ]).
 attri_i(143,[ almacendsc,svchar,100,0,'',0,almacendsc,'',0 ]).
 attri_i(13,[ empleadosid,int,9,0,'ZZZZZZZZ9',0,empleadosid,'',0 ]).
-attri_i(19,[ almacenid,int,18,0,'ZZZZZZZZZZZZZZZZZ9',0,almacenid,'',0 ]).
+attri_i(19,[ almacenid,int,9,0,'ZZZZZZZZ9',0,almacenid,'',0 ]).
 attri_i('Gxremove',[ 'GxRemove',int,1,0,'9',0,'Gx Remove','',5 ]).
 attri_i('Mode',[ 'Gx_mode',char,3,0,'@!',1,'','',2 ]).
  
@@ -355,16 +363,16 @@ map_i(11,a,21,[ cambsid ]).
 map_i(11,a,20,[ productoid ]).
 map_i(11,a,19,[ articulosid ]).
 map_i(6,i,'EMPLEADOS_PKEY',[ 'EMPLEADOS_PKEY' ]).
-map_i(6,a,107,[ empleadosext ]).
-map_i(6,a,106,[ empleadoscorreo ]).
-map_i(6,a,105,[ empleadosfecultact ]).
 map_i(6,a,104,[ empleadosfecreg ]).
+map_i(6,a,107,[ empleadosext ]).
+map_i(6,a,105,[ empleadosfecultact ]).
+map_i(6,a,106,[ empleadoscorreo ]).
 map_i(6,a,103,[ empleadosusuario ]).
 map_i(6,a,102,[ empleadosstatus ]).
 map_i(6,a,101,[ empleadosapmaterno ]).
 map_i(6,a,100,[ empleadosappaterno ]).
 map_i(6,a,99,[ empleadosnomemple ]).
-map_i(6,a,98,[ areaid ]).
+map_i(6,a,176,[ areaid ]).
 map_i(6,a,13,[ empleadosid ]).
 map_i(18,i,'ALMACEN_PKEY',[ 'ALMACEN_PKEY' ]).
 map_i(18,a,153,[ almacenfecultact ]).
@@ -378,7 +386,7 @@ map_i(18,a,146,[ almacenmunicipio ]).
 map_i(18,a,145,[ almacencolonia ]).
 map_i(18,a,144,[ almacendireccion ]).
 map_i(18,a,143,[ almacendsc ]).
-map_i(18,a,13,[ empleadoid ]).
+map_i(18,a,13,[ empleadosid ]).
 map_i(18,a,19,[ almacenid ]).
  
  
@@ -524,7 +532,7 @@ html_comp_i(6,'Title','',d,[ str ]).
 html_comp_i(6,'Fill',-1,d,[ bool ]).
 html_comp_i(6,'Backcolor',rgb(255,255,255),d,[ color ]).
 html_comp_i(6,'Forecolor',rgb(0,0,0),d,[ color ]).
-html_comp_i(6,'Font',font('Microsoft Sans Serif',17,[]),d,[ font ]).
+html_comp_i(6,'Font',font('Open Sans Semibold',17,[]),d,[ font ]).
 html_comp_i(7,'Class',row,v,[ str ]).
 html_comp_i(7,'Id','',d,[ str ]).
 html_comp_i(7,'Height',measure(0,px),d,[ measure ]).
@@ -649,14 +657,14 @@ html_comp_i(21,'Width',measure(0,px),d,[ measure ]).
 html_comp_i(21,'Semanticcontent',div,d,[ str ]).
 html_comp_i(21,'Align',left,d,[ str ]).
 html_comp_i(21,'Valign',top,d,[ str ]).
-html_comp_i(22,'Colcount',18,d,[ num ]).
+html_comp_i(22,'Colcount',9,d,[ num ]).
 html_comp_i(22,'Attid',19,v,[ num ]).
 html_comp_i(22,'Class','Attribute',v,[ str ]).
 html_comp_i(22,'Controlname','Almacenid',d,[ str ]).
 html_comp_i(22,'Returnonclick',0,v,[ bool ]).
 html_comp_i(22,'Captionclass','col-sm-3 AttributeLabel',v,[ str ]).
 html_comp_i(22,'Captionposition','Left',v,[ str ]).
-html_comp_i(22,'Captionvalue',articuloid,d,[ str ]).
+html_comp_i(22,'Captionvalue',almacenid,d,[ str ]).
 html_comp_i(22,'Controltype',2,d,[ num ]).
 html_comp_i(22,'Inputtype',0,d,[ num ]).
 html_comp_i(22,'Notifycontextchange',0,d,[ bool ]).
@@ -665,7 +673,7 @@ html_comp_i(22,'Readonly',0,v,[ bool ]).
 html_comp_i(22,'Autocomplete',-1,d,[ bool ]).
 html_comp_i(22,'Ispassword',0,d,[ bool ]).
 html_comp_i(22,'Autoresize',-1,d,[ bool ]).
-html_comp_i(22,'Gxwidth',measure(18,chr),d,[ measure ]).
+html_comp_i(22,'Gxwidth',measure(9,chr),d,[ measure ]).
 html_comp_i(22,'Gxheight',measure(1,row),d,[ measure ]).
 html_comp_i(22,'Ismultiline',0,d,[ bool ]).
 html_comp_i(22,'Fill',-1,d,[ bool ]).
@@ -1061,9 +1069,6 @@ html_comp_i(54,'Captionposition','Left',v,[ str ]).
 html_comp_i(54,'Captionvalue',almacentelefono,d,[ str ]).
 html_comp_i(54,'Controltype',2,d,[ num ]).
 html_comp_i(54,'Inputtype',0,d,[ num ]).
-html_comp_i(54,'Editautocomplete',0,d,[ num ]).
-html_comp_i(54,'Autocorrection',-1,d,[ bool ]).
-html_comp_i(54,'Autocapitalization','FirstWord',d,[ str ]).
 html_comp_i(54,'Notifycontextchange',0,d,[ bool ]).
 html_comp_i(54,'Emptyasnull','Yes',d,[ str ]).
 html_comp_i(54,'Readonly',0,v,[ bool ]).
@@ -1077,7 +1082,7 @@ html_comp_i(54,'Fill',-1,d,[ bool ]).
 html_comp_i(54,'Backcolor',rgb(255,255,255),d,[ color ]).
 html_comp_i(54,'Forecolor',rgb(0,0,0),d,[ color ]).
 html_comp_i(54,'Font',font('Verdana',12,[]),d,[ font ]).
-html_comp_i(54,'Horizontalalignment',left,d,[ str ]).
+html_comp_i(54,'Horizontalalignment',right,d,[ str ]).
 html_comp_i(54,'Gxformat',0,d,[ num ]).
 html_comp_i(54,'Title','',d,[ str ]).
 html_comp_i(54,'Invitemsg','',v,[ str ]).
@@ -1204,7 +1209,7 @@ html_comp_i(65,'Width',measure(0,px),d,[ measure ]).
 html_comp_i(65,'Semanticcontent',div,d,[ str ]).
 html_comp_i(65,'Align',left,d,[ str ]).
 html_comp_i(65,'Valign',top,d,[ str ]).
-html_comp_i(66,'Colcount',19,d,[ num ]).
+html_comp_i(66,'Colcount',10,d,[ num ]).
 html_comp_i(66,'Attid',152,v,[ num ]).
 html_comp_i(66,'Class','Attribute',v,[ str ]).
 html_comp_i(66,'Controlname','Almacenfecreg',d,[ str ]).
@@ -1220,7 +1225,7 @@ html_comp_i(66,'Readonly',0,v,[ bool ]).
 html_comp_i(66,'Autocomplete',-1,d,[ bool ]).
 html_comp_i(66,'Ispassword',0,d,[ bool ]).
 html_comp_i(66,'Autoresize',-1,d,[ bool ]).
-html_comp_i(66,'Gxwidth',measure(19,chr),d,[ measure ]).
+html_comp_i(66,'Gxwidth',measure(10,chr),d,[ measure ]).
 html_comp_i(66,'Gxheight',measure(1,row),d,[ measure ]).
 html_comp_i(66,'Ismultiline',0,d,[ bool ]).
 html_comp_i(66,'Fill',-1,d,[ bool ]).
@@ -1230,7 +1235,6 @@ html_comp_i(66,'Font',font('Verdana',12,[]),d,[ font ]).
 html_comp_i(66,'Horizontalalignment',right,d,[ str ]).
 html_comp_i(66,'Gxformat',0,d,[ num ]).
 html_comp_i(66,'Title','',d,[ str ]).
-html_comp_i(66,'Invitemsg','',v,[ str ]).
 html_comp_i(66,'Use_datepicker',-1,d,[ bool ]).
 html_comp_i(66,'Flat_datepicker',0,d,[ bool ]).
 html_comp_i(67,'Class',row,v,[ str ]).
@@ -1254,7 +1258,7 @@ html_comp_i(69,'Width',measure(0,px),d,[ measure ]).
 html_comp_i(69,'Semanticcontent',div,d,[ str ]).
 html_comp_i(69,'Align',left,d,[ str ]).
 html_comp_i(69,'Valign',top,d,[ str ]).
-html_comp_i(70,'Colcount',19,d,[ num ]).
+html_comp_i(70,'Colcount',10,d,[ num ]).
 html_comp_i(70,'Attid',153,v,[ num ]).
 html_comp_i(70,'Class','Attribute',v,[ str ]).
 html_comp_i(70,'Controlname','Almacenfecultact',d,[ str ]).
@@ -1270,7 +1274,7 @@ html_comp_i(70,'Readonly',0,v,[ bool ]).
 html_comp_i(70,'Autocomplete',-1,d,[ bool ]).
 html_comp_i(70,'Ispassword',0,d,[ bool ]).
 html_comp_i(70,'Autoresize',-1,d,[ bool ]).
-html_comp_i(70,'Gxwidth',measure(19,chr),d,[ measure ]).
+html_comp_i(70,'Gxwidth',measure(10,chr),d,[ measure ]).
 html_comp_i(70,'Gxheight',measure(1,row),d,[ measure ]).
 html_comp_i(70,'Ismultiline',0,d,[ bool ]).
 html_comp_i(70,'Fill',-1,d,[ bool ]).
@@ -1280,7 +1284,6 @@ html_comp_i(70,'Font',font('Verdana',12,[]),d,[ font ]).
 html_comp_i(70,'Horizontalalignment',right,d,[ str ]).
 html_comp_i(70,'Gxformat',0,d,[ num ]).
 html_comp_i(70,'Title','',d,[ str ]).
-html_comp_i(70,'Invitemsg','',v,[ str ]).
 html_comp_i(70,'Use_datepicker',-1,d,[ bool ]).
 html_comp_i(70,'Flat_datepicker',0,d,[ bool ]).
 html_comp_i(71,'Class',row,v,[ str ]).
@@ -1430,6 +1433,7 @@ lit_i(1,1,window,[ rect(0,0,1000,1000),ctlname('Form') ]).
  
  
  
+att_prop_i(2,19,'HORIZONTAL_DESCRIPTION',almacenid,v).
 att_prop_i(2,19,'ExternalName',almacenid,d).
 att_prop_i(2,19,'ExternalNamespace','Condufef_v1',d).
 att_prop_i(2,19,'EmptyAsNull','Yes',d).
@@ -1439,6 +1443,7 @@ att_prop_i(2,19,'ATT_INITIAL_VALUE','',d).
 att_prop_i(2,19,'AttRegEx','',d).
 att_prop_i(2,19,'AttValidationFailedMsg','',d).
 att_prop_i(2,19,'FullName',almacenid,v).
+att_prop_i(2,13,'HORIZONTAL_DESCRIPTION',empleadosid,v).
 att_prop_i(2,13,'ExternalName',empleadosid,d).
 att_prop_i(2,13,'ExternalNamespace','Condufef_v1',d).
 att_prop_i(2,13,'EmptyAsNull','Yes',d).
@@ -1448,6 +1453,7 @@ att_prop_i(2,13,'ATT_INITIAL_VALUE','',d).
 att_prop_i(2,13,'AttRegEx','',d).
 att_prop_i(2,13,'AttValidationFailedMsg','',d).
 att_prop_i(2,13,'FullName',empleadosid,v).
+att_prop_i(2,143,'HORIZONTAL_DESCRIPTION',almacendsc,v).
 att_prop_i(2,143,'ExternalName',almacendsc,d).
 att_prop_i(2,143,'ExternalNamespace','Condufef_v1',d).
 att_prop_i(2,143,'EmptyAsNull','Yes',d).
@@ -1457,6 +1463,7 @@ att_prop_i(2,143,'DB_NLS_SUPPORT','No',d).
 att_prop_i(2,143,'AttRegEx','',d).
 att_prop_i(2,143,'AttValidationFailedMsg','',d).
 att_prop_i(2,143,'FullName',almacendsc,v).
+att_prop_i(2,144,'HORIZONTAL_DESCRIPTION',almacendireccion,v).
 att_prop_i(2,144,'ExternalName',almacendireccion,d).
 att_prop_i(2,144,'ExternalNamespace','Condufef_v1',d).
 att_prop_i(2,144,'EmptyAsNull','Yes',d).
@@ -1466,6 +1473,7 @@ att_prop_i(2,144,'DB_NLS_SUPPORT','No',d).
 att_prop_i(2,144,'AttRegEx','',d).
 att_prop_i(2,144,'AttValidationFailedMsg','',d).
 att_prop_i(2,144,'FullName',almacendireccion,v).
+att_prop_i(2,145,'HORIZONTAL_DESCRIPTION',almacencolonia,v).
 att_prop_i(2,145,'ExternalName',almacencolonia,d).
 att_prop_i(2,145,'ExternalNamespace','Condufef_v1',d).
 att_prop_i(2,145,'EmptyAsNull','Yes',d).
@@ -1475,6 +1483,7 @@ att_prop_i(2,145,'DB_NLS_SUPPORT','No',d).
 att_prop_i(2,145,'AttRegEx','',d).
 att_prop_i(2,145,'AttValidationFailedMsg','',d).
 att_prop_i(2,145,'FullName',almacencolonia,v).
+att_prop_i(2,146,'HORIZONTAL_DESCRIPTION',almacenmunicipio,v).
 att_prop_i(2,146,'ExternalName',almacenmunicipio,d).
 att_prop_i(2,146,'ExternalNamespace','Condufef_v1',d).
 att_prop_i(2,146,'EmptyAsNull','Yes',d).
@@ -1484,6 +1493,7 @@ att_prop_i(2,146,'DB_NLS_SUPPORT','No',d).
 att_prop_i(2,146,'AttRegEx','',d).
 att_prop_i(2,146,'AttValidationFailedMsg','',d).
 att_prop_i(2,146,'FullName',almacenmunicipio,v).
+att_prop_i(2,147,'HORIZONTAL_DESCRIPTION',alamcenestado,v).
 att_prop_i(2,147,'ExternalName',alamcenestado,d).
 att_prop_i(2,147,'ExternalNamespace','Condufef_v1',d).
 att_prop_i(2,147,'EmptyAsNull','Yes',d).
@@ -1493,6 +1503,7 @@ att_prop_i(2,147,'DB_NLS_SUPPORT','No',d).
 att_prop_i(2,147,'AttRegEx','',d).
 att_prop_i(2,147,'AttValidationFailedMsg','',d).
 att_prop_i(2,147,'FullName',alamcenestado,v).
+att_prop_i(2,148,'HORIZONTAL_DESCRIPTION',alamcencodigopostal,v).
 att_prop_i(2,148,'ExternalName',alamcencodigopostal,d).
 att_prop_i(2,148,'ExternalNamespace','Condufef_v1',d).
 att_prop_i(2,148,'EmptyAsNull','Yes',d).
@@ -1502,15 +1513,17 @@ att_prop_i(2,148,'DB_NLS_SUPPORT','No',d).
 att_prop_i(2,148,'AttRegEx','',d).
 att_prop_i(2,148,'AttValidationFailedMsg','',d).
 att_prop_i(2,148,'FullName',alamcencodigopostal,v).
+att_prop_i(2,149,'HORIZONTAL_DESCRIPTION',almacentelefono,v).
 att_prop_i(2,149,'ExternalName',almacentelefono,d).
 att_prop_i(2,149,'ExternalNamespace','Condufef_v1',d).
 att_prop_i(2,149,'EmptyAsNull','Yes',d).
 att_prop_i(2,149,idBasedOn,'',d).
+att_prop_i(2,149,'AUTONUMBER','0',d).
 att_prop_i(2,149,'ATT_INITIAL_VALUE','',d).
-att_prop_i(2,149,'DB_NLS_SUPPORT','No',d).
 att_prop_i(2,149,'AttRegEx','',d).
 att_prop_i(2,149,'AttValidationFailedMsg','',d).
 att_prop_i(2,149,'FullName',almacentelefono,v).
+att_prop_i(2,150,'HORIZONTAL_DESCRIPTION',alamcenobservaciones,v).
 att_prop_i(2,150,'ExternalName',alamcenobservaciones,d).
 att_prop_i(2,150,'ExternalNamespace','Condufef_v1',d).
 att_prop_i(2,150,'EmptyAsNull','Yes',d).
@@ -1520,6 +1533,7 @@ att_prop_i(2,150,'DB_NLS_SUPPORT','No',d).
 att_prop_i(2,150,'AttRegEx','',d).
 att_prop_i(2,150,'AttValidationFailedMsg','',d).
 att_prop_i(2,150,'FullName',alamcenobservaciones,v).
+att_prop_i(2,151,'HORIZONTAL_DESCRIPTION',alamcenusuario,v).
 att_prop_i(2,151,'ExternalName',alamcenusuario,d).
 att_prop_i(2,151,'ExternalNamespace','Condufef_v1',d).
 att_prop_i(2,151,'EmptyAsNull','Yes',d).
@@ -1529,6 +1543,7 @@ att_prop_i(2,151,'DB_NLS_SUPPORT','No',d).
 att_prop_i(2,151,'AttRegEx','',d).
 att_prop_i(2,151,'AttValidationFailedMsg','',d).
 att_prop_i(2,151,'FullName',alamcenusuario,v).
+att_prop_i(2,152,'HORIZONTAL_DESCRIPTION',almacenfecreg,v).
 att_prop_i(2,152,'ExternalName',almacenfecreg,d).
 att_prop_i(2,152,'ExternalNamespace','Condufef_v1',d).
 att_prop_i(2,152,'EmptyAsNull','Yes',d).
@@ -1537,8 +1552,8 @@ att_prop_i(2,152,'ATT_INITIAL_VALUE','',d).
 att_prop_i(2,152,'AttRegEx','',d).
 att_prop_i(2,152,'AttValidationFailedMsg','',d).
 att_prop_i(2,152,idDATEFORMAT,idDATEFORMAT_LONG,v).
-att_prop_i(2,152,idHOURFORMAT,idHOURFORMAT_HOURMINSEC,v).
 att_prop_i(2,152,'FullName',almacenfecreg,v).
+att_prop_i(2,153,'HORIZONTAL_DESCRIPTION',almacenfecultact,v).
 att_prop_i(2,153,'ExternalName',almacenfecultact,d).
 att_prop_i(2,153,'ExternalNamespace','Condufef_v1',d).
 att_prop_i(2,153,'EmptyAsNull','Yes',d).
@@ -1547,8 +1562,8 @@ att_prop_i(2,153,'ATT_INITIAL_VALUE','',d).
 att_prop_i(2,153,'AttRegEx','',d).
 att_prop_i(2,153,'AttValidationFailedMsg','',d).
 att_prop_i(2,153,idDATEFORMAT,idDATEFORMAT_LONG,v).
-att_prop_i(2,153,idHOURFORMAT,idHOURFORMAT_HOURMINSEC,v).
 att_prop_i(2,153,'FullName',almacenfecultact,v).
+att_prop_i(2,20,'HORIZONTAL_DESCRIPTION',articulosproductoid,v).
 att_prop_i(2,20,'ExternalName',articulosproductoid,d).
 att_prop_i(2,20,'ExternalNamespace','Condufef_v1',d).
 att_prop_i(2,20,'EmptyAsNull','Yes',d).
@@ -1558,6 +1573,7 @@ att_prop_i(2,20,'ATT_INITIAL_VALUE','',d).
 att_prop_i(2,20,'AttRegEx','',d).
 att_prop_i(2,20,'AttValidationFailedMsg','',d).
 att_prop_i(2,20,'FullName',articulosproductoid,v).
+att_prop_i(2,21,'HORIZONTAL_DESCRIPTION',articuloscambsid,v).
 att_prop_i(2,21,'ExternalName',articuloscambsid,d).
 att_prop_i(2,21,'ExternalNamespace','Condufef_v1',d).
 att_prop_i(2,21,'EmptyAsNull','Yes',d).
@@ -1567,6 +1583,7 @@ att_prop_i(2,21,'ATT_INITIAL_VALUE','',d).
 att_prop_i(2,21,'AttRegEx','',d).
 att_prop_i(2,21,'AttValidationFailedMsg','',d).
 att_prop_i(2,21,'FullName',articuloscambsid,v).
+att_prop_i(2,17,'HORIZONTAL_DESCRIPTION',etiquetasproductoid,v).
 att_prop_i(2,17,'ExternalName',etiquetasproductoid,d).
 att_prop_i(2,17,'ExternalNamespace','Condufef_v1',d).
 att_prop_i(2,17,'EmptyAsNull','Yes',d).
@@ -1576,6 +1593,7 @@ att_prop_i(2,17,'ATT_INITIAL_VALUE','',d).
 att_prop_i(2,17,'AttRegEx','',d).
 att_prop_i(2,17,'AttValidationFailedMsg','',d).
 att_prop_i(2,17,'FullName',etiquetasproductoid,v).
+att_prop_i(2,18,'HORIZONTAL_DESCRIPTION',etiquetascambsid,v).
 att_prop_i(2,18,'ExternalName',etiquetascambsid,d).
 att_prop_i(2,18,'ExternalNamespace','Condufef_v1',d).
 att_prop_i(2,18,'EmptyAsNull','Yes',d).
@@ -1613,7 +1631,7 @@ trn_level_i(18,[ [ 19,13,143,144,145,146,147,148,149,150,151,152,153 ],almacen,a
  
  
  
-pgm_parm_i(web,76,'GX00I0',[ [ int,18,0,0 ] ],[ [ palmacenid,out,[] ] ]).
+pgm_parm_i(web,76,'GX00I0',[ [ int,9,0,0 ] ],[ [ palmacenid,out,[] ] ]).
 pgm_parm_i(web,67,'GX0060',[ [ int,9,0,0 ] ],[ [ pempleadosid,out,[] ] ]).
  
 pgm_callprotocol_i(trn,18,'ALMACEN','INTERNAL').

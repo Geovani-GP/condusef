@@ -41,12 +41,12 @@ rule_i(0,datastore(1,'CS_RPCPGML','')).
 rule_i(0,datastore(1,'JDBC_DATASOURCE','')).
 rule_i(0,datastore(1,'USE_JDBC_DATASOURCE','0')).
 rule_i(0,datastore(1,'DS_DBMS_ADDINFO','')).
-rule_i(0,datastore(1,'USER_PASSWORD',asdf)).
+rule_i(0,datastore(1,'USER_PASSWORD',󻢸蘇�2�5炭)).
 rule_i(0,datastore(1,'USER_ID',postgres)).
 rule_i(0,datastore(1,'CS_CONNECT','First')).
 rule_i(0,datastore(1,'DBMS_PORT','5432')).
 rule_i(0,datastore(1,'CS_SERVER',localhost)).
-rule_i(0,datastore(1,'CS_DBNAME',condusef)).
+rule_i(0,datastore(1,'CS_DBNAME',postgres)).
 rule_i(0,datastore(1,'CS_FLEDSNAME','')).
 rule_i(0,datastore(1,'CS_DRVNAME','')).
 rule_i(0,datastore(1,'CS_DSNAME','')).
@@ -213,7 +213,7 @@ tbl_to_delete_i(1,[ 11,[ [ 1,23,23 ] ],c,'IARTICULOS2',[ [ 11,23 ] ],[ 19,20,21 
 attri_i(175,[ productoid,int,9,0,'ZZZZZZZZ9',0,productoid,'',0 ]).
 attri_i(21,[ articuloscambsid,int,9,0,'ZZZZZZZZ9',0,articuloscambsid,'',0 ]).
 attri_i(20,[ articulosproductoid,int,9,0,'ZZZZZZZZ9',0,articulosproductoid,'',0 ]).
-attri_i(19,[ almacenid,int,18,0,'ZZZZZZZZZZZZZZZZZ9',0,almacenid,'',0 ]).
+attri_i(19,[ almacenid,int,9,0,'ZZZZZZZZ9',0,almacenid,'',0 ]).
 attri_i(142,[ tipobienfecultact,date,8,0,'99/99/9999',0,tipobienfecultact,'',0 ]).
 attri_i(141,[ tipobienfecreg,date,8,0,'99/99/9999',0,tipobienfecreg,'',0 ]).
 attri_i(140,[ tipobienusuario,svchar,15,0,'',0,tipobienusuario,'',0 ]).

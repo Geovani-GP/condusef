@@ -2,7 +2,7 @@
                File: Gx0030
         Description: Selection List meses
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 1/30/2022 23:38:18.32
+       Generated on: 2/2/2022 13:43:7.66
        Program type: Callable routine
           Main DBMS: postgresql
 */
@@ -261,7 +261,7 @@ namespace GeneXus.Programs {
          context.AddJavascriptSource("jquery.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxtimezone.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxgral.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("gxcfg.js", "?202213023381837");
+         context.AddJavascriptSource("gxcfg.js", "?2022221343771");
          if ( context.isSpaRequest( ) )
          {
             enableOutput();
@@ -1425,12 +1425,12 @@ namespace GeneXus.Programs {
 
       protected void define_styles( )
       {
-         AddStyleSheetFile("calendar-system.css", "?11323129");
-         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?2337534");
+         AddStyleSheetFile("calendar-system.css", "?13205289");
+         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?1342847");
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?202213023381935");
+            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?2022221343845");
             idxLst = (int)(idxLst+1);
          }
          /* End function define_styles */
@@ -1439,7 +1439,7 @@ namespace GeneXus.Programs {
       protected void include_jscripts( )
       {
          context.AddJavascriptSource("messages.spa.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("gx0030.js", "?202213023381935");
+         context.AddJavascriptSource("gx0030.js", "?2022221343845");
          /* End function include_jscripts */
       }
 

@@ -2,7 +2,7 @@
                File: entidadfederativa_BC
         Description: entidadfederativa
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 1/30/2022 23:37:22.77
+       Generated on: 2/2/2022 13:42:14.47
        Program type: Callable routine
           Main DBMS: postgresql
 */
@@ -1026,7 +1026,7 @@ namespace GeneXus.Programs {
          BC00042_n110entidadfederativafecreg = new bool[] {false} ;
          BC00042_A111entidadfederativafecultact = new DateTime[] {DateTime.MinValue} ;
          BC00042_n111entidadfederativafecultact = new bool[] {false} ;
-         BC00049_A19almacenid = new long[1] ;
+         BC00049_A19almacenid = new int[1] ;
          BC00049_A20articulosproductoid = new int[1] ;
          BC00049_A21articuloscambsid = new int[1] ;
          BC000410_A7entidafederativaid = new int[1] ;
@@ -1136,7 +1136,7 @@ namespace GeneXus.Programs {
       private bool[] BC00042_n110entidadfederativafecreg ;
       private DateTime[] BC00042_A111entidadfederativafecultact ;
       private bool[] BC00042_n111entidadfederativafecultact ;
-      private long[] BC00049_A19almacenid ;
+      private int[] BC00049_A19almacenid ;
       private int[] BC00049_A20articulosproductoid ;
       private int[] BC00049_A21articuloscambsid ;
       private int[] BC000410_A7entidafederativaid ;
@@ -1277,7 +1277,7 @@ namespace GeneXus.Programs {
                 ((int[]) buf[0])[0] = rslt.getInt(1) ;
                 return;
              case 7 :
-                ((long[]) buf[0])[0] = rslt.getLong(1) ;
+                ((int[]) buf[0])[0] = rslt.getInt(1) ;
                 ((int[]) buf[1])[0] = rslt.getInt(2) ;
                 ((int[]) buf[2])[0] = rslt.getInt(3) ;
                 return;

@@ -1,0 +1,109 @@
+ 
+spec_i([ sdt,[ 0,6,0 ],empleados,empleados,0,spa,'10_3_15-115824' ]).
+ 
+struct_dt_i([ 0,6,0 ],name,empleados).
+struct_dt_i([ 0,6,0 ],namespace,'Condufef_v1').
+struct_dt_i([ 0,6,0 ],significantName,empleados).
+struct_dt_i([ 0,6,0 ],'ObjName',empleados).
+struct_dt_i([ 0,6,0 ],'ObjDesc',empleados).
+struct_dt_i([ 0,6,0 ],'ExternalName',empleados).
+struct_dt_i([ 0,6,0 ],'ExternalNamespace','Condufef_v1').
+struct_dt_i([ 0,6,0 ],key,[ 13 ]).
+struct_dt_i([ 0,6,0 ],lvl,6).
+struct_dt_i([ 0,6,0 ],fullname,empleados).
+ 
+struct_dt_elem_i([ 0,6,0 ],1,name,'Empleadosid').
+struct_dt_elem_i([ 0,6,0 ],1,camelname,empleadosid).
+struct_dt_elem_i([ 0,6,0 ],1,length,9).
+struct_dt_elem_i([ 0,6,0 ],1,decimals,0).
+struct_dt_elem_i([ 0,6,0 ],1,sign,0).
+struct_dt_elem_i([ 0,6,0 ],1,type,[ 4,9,0 ]).
+struct_dt_elem_i([ 0,6,0 ],1,pic,'ZZZZZZZZ9').
+struct_dt_elem_i([ 0,6,0 ],1,collection,'False').
+struct_dt_elem_i([ 0,6,0 ],1,attributeid,'13').
+struct_dt_elem_i([ 0,6,0 ],2,name,'Areaid').
+struct_dt_elem_i([ 0,6,0 ],2,camelname,areaid).
+struct_dt_elem_i([ 0,6,0 ],2,length,9).
+struct_dt_elem_i([ 0,6,0 ],2,decimals,0).
+struct_dt_elem_i([ 0,6,0 ],2,sign,0).
+struct_dt_elem_i([ 0,6,0 ],2,type,[ 4,9,0 ]).
+struct_dt_elem_i([ 0,6,0 ],2,pic,'ZZZZZZZZ9').
+struct_dt_elem_i([ 0,6,0 ],2,collection,'False').
+struct_dt_elem_i([ 0,6,0 ],2,attributeid,'176').
+struct_dt_elem_i([ 0,6,0 ],3,name,'Empleadosnomemple').
+struct_dt_elem_i([ 0,6,0 ],3,camelname,empleadosnomemple).
+struct_dt_elem_i([ 0,6,0 ],3,length,30).
+struct_dt_elem_i([ 0,6,0 ],3,decimals,0).
+struct_dt_elem_i([ 0,6,0 ],3,type,[ 13,30,0 ]).
+struct_dt_elem_i([ 0,6,0 ],3,pic,'').
+struct_dt_elem_i([ 0,6,0 ],3,collection,'False').
+struct_dt_elem_i([ 0,6,0 ],3,attributeid,'99').
+struct_dt_elem_i([ 0,6,0 ],4,name,'Empleadosappaterno').
+struct_dt_elem_i([ 0,6,0 ],4,camelname,empleadosappaterno).
+struct_dt_elem_i([ 0,6,0 ],4,length,30).
+struct_dt_elem_i([ 0,6,0 ],4,decimals,0).
+struct_dt_elem_i([ 0,6,0 ],4,type,[ 13,30,0 ]).
+struct_dt_elem_i([ 0,6,0 ],4,pic,'').
+struct_dt_elem_i([ 0,6,0 ],4,collection,'False').
+struct_dt_elem_i([ 0,6,0 ],4,attributeid,'100').
+struct_dt_elem_i([ 0,6,0 ],5,name,'Empleadosapmaterno').
+struct_dt_elem_i([ 0,6,0 ],5,camelname,empleadosapmaterno).
+struct_dt_elem_i([ 0,6,0 ],5,length,30).
+struct_dt_elem_i([ 0,6,0 ],5,decimals,0).
+struct_dt_elem_i([ 0,6,0 ],5,type,[ 13,30,0 ]).
+struct_dt_elem_i([ 0,6,0 ],5,pic,'').
+struct_dt_elem_i([ 0,6,0 ],5,collection,'False').
+struct_dt_elem_i([ 0,6,0 ],5,attributeid,'101').
+struct_dt_elem_i([ 0,6,0 ],6,name,'Empleadosstatus').
+struct_dt_elem_i([ 0,6,0 ],6,camelname,empleadosstatus).
+struct_dt_elem_i([ 0,6,0 ],6,length,1).
+struct_dt_elem_i([ 0,6,0 ],6,decimals,0).
+struct_dt_elem_i([ 0,6,0 ],6,type,[ 13,1,0 ]).
+struct_dt_elem_i([ 0,6,0 ],6,pic,'').
+struct_dt_elem_i([ 0,6,0 ],6,collection,'False').
+struct_dt_elem_i([ 0,6,0 ],6,attributeid,'102').
+struct_dt_elem_i([ 0,6,0 ],7,name,'Empleadosusuario').
+struct_dt_elem_i([ 0,6,0 ],7,camelname,empleadosusuario).
+struct_dt_elem_i([ 0,6,0 ],7,length,15).
+struct_dt_elem_i([ 0,6,0 ],7,decimals,0).
+struct_dt_elem_i([ 0,6,0 ],7,type,[ 13,15,0 ]).
+struct_dt_elem_i([ 0,6,0 ],7,pic,'').
+struct_dt_elem_i([ 0,6,0 ],7,collection,'False').
+struct_dt_elem_i([ 0,6,0 ],7,attributeid,'103').
+struct_dt_elem_i([ 0,6,0 ],8,name,'Empleadoscorreo').
+struct_dt_elem_i([ 0,6,0 ],8,camelname,empleadoscorreo).
+struct_dt_elem_i([ 0,6,0 ],8,length,50).
+struct_dt_elem_i([ 0,6,0 ],8,decimals,0).
+struct_dt_elem_i([ 0,6,0 ],8,type,[ 13,50,0 ]).
+struct_dt_elem_i([ 0,6,0 ],8,pic,'').
+struct_dt_elem_i([ 0,6,0 ],8,collection,'False').
+struct_dt_elem_i([ 0,6,0 ],8,attributeid,'106').
+struct_dt_elem_i([ 0,6,0 ],9,name,'Empleadosext').
+struct_dt_elem_i([ 0,6,0 ],9,camelname,empleadosext).
+struct_dt_elem_i([ 0,6,0 ],9,length,4).
+struct_dt_elem_i([ 0,6,0 ],9,decimals,0).
+struct_dt_elem_i([ 0,6,0 ],9,type,[ 13,4,0 ]).
+struct_dt_elem_i([ 0,6,0 ],9,pic,'').
+struct_dt_elem_i([ 0,6,0 ],9,collection,'False').
+struct_dt_elem_i([ 0,6,0 ],9,attributeid,'107').
+struct_dt_elem_i([ 0,6,0 ],10,name,'Empleadosfecreg').
+struct_dt_elem_i([ 0,6,0 ],10,camelname,empleadosfecreg).
+struct_dt_elem_i([ 0,6,0 ],10,length,8).
+struct_dt_elem_i([ 0,6,0 ],10,decimals,0).
+struct_dt_elem_i([ 0,6,0 ],10,type,[ 6,8,0 ]).
+struct_dt_elem_i([ 0,6,0 ],10,pic,'99/99/9999').
+struct_dt_elem_i([ 0,6,0 ],10,collection,'False').
+struct_dt_elem_i([ 0,6,0 ],10,attributeid,'104').
+struct_dt_elem_i([ 0,6,0 ],11,name,'Empleadosfecultact').
+struct_dt_elem_i([ 0,6,0 ],11,camelname,empleadosfecultact).
+struct_dt_elem_i([ 0,6,0 ],11,length,8).
+struct_dt_elem_i([ 0,6,0 ],11,decimals,0).
+struct_dt_elem_i([ 0,6,0 ],11,type,[ 6,8,0 ]).
+struct_dt_elem_i([ 0,6,0 ],11,pic,'99/99/9999').
+struct_dt_elem_i([ 0,6,0 ],11,collection,'False').
+struct_dt_elem_i([ 0,6,0 ],11,attributeid,'105').
+ 
+ 
+ 
+ 
+ 

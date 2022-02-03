@@ -2,7 +2,7 @@
                File: Catalog_De_TipoBien
         Description: Catalog_De_Tipo Bien
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 1/30/2022 23:38:11.87
+       Generated on: 2/2/2022 13:43:2.64
        Program type: Callable routine
           Main DBMS: postgresql
 */
@@ -215,7 +215,7 @@ namespace GeneXus.Programs {
          context.AddJavascriptSource("jquery.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxtimezone.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxgral.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("gxcfg.js", "?202213023381189");
+         context.AddJavascriptSource("gxcfg.js", "?2022221343265");
          if ( context.isSpaRequest( ) )
          {
             enableOutput();
@@ -271,7 +271,6 @@ namespace GeneXus.Programs {
          GxWebStd.gx_hidden_field( context, "vTODAY", context.localUtil.DToC( Gx_date, 0, "/"));
          GxWebStd.gx_hidden_field( context, "GXC1", StringUtil.LTrim( StringUtil.NToC( (decimal)(A40000GXC1), 9, 0, ",", "")));
          GxWebStd.gx_hidden_field( context, "gxhash_vNEXTVALUE", GetSecureSignedToken( "", context.localUtil.Format( (decimal)(AV8NextValue), "ZZZ9")));
-         GxWebStd.gx_hidden_field( context, "ALERTIFY1_Type", StringUtil.RTrim( Alertify1_Type));
          GXKey = Crypto.Decrypt64( context.GetCookie( "GX_SESSION_ID"), Crypto.GetServerKey( ));
          forbiddenHiddens = "hsh" + "Catalog_De_TipoBien";
          forbiddenHiddens = forbiddenHiddens + context.localUtil.Format( (decimal)(AV8NextValue), "ZZZ9");
@@ -631,7 +630,6 @@ namespace GeneXus.Programs {
             AV11tipobiendsc = cgiGet( edtavTipobiendsc_Internalname);
             context.httpAjaxContext.ajax_rsp_assign_attri("", false, "AV11tipobiendsc", AV11tipobiendsc);
             /* Read saved values. */
-            Alertify1_Type = cgiGet( "ALERTIFY1_Type");
             /* Read subfile selected row values. */
             /* Read hidden variables. */
             GXKey = Crypto.Decrypt64( context.GetCookie( "GX_SESSION_ID"), Crypto.GetServerKey( ));
@@ -905,13 +903,13 @@ namespace GeneXus.Programs {
 
       protected void define_styles( )
       {
-         AddStyleSheetFile("Alertify/css/alertify.core.css", "?052100");
-         AddStyleSheetFile("Alertify/css/alertify.default.css", "?057280");
-         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?2337534");
+         AddStyleSheetFile("Alertify/css/alertify.core.css", "?038420");
+         AddStyleSheetFile("Alertify/css/alertify.default.css", "?038420");
+         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?1342847");
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?20221302338127");
+            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?2022221343276");
             idxLst = (int)(idxLst+1);
          }
          /* End function define_styles */
@@ -920,7 +918,7 @@ namespace GeneXus.Programs {
       protected void include_jscripts( )
       {
          context.AddJavascriptSource("messages.spa.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("catalog_de_tipobien.js", "?20221302338127");
+         context.AddJavascriptSource("catalog_de_tipobien.js", "?2022221343277");
          context.AddJavascriptSource("Shared/jquery/jquery-1.9.0.js", "");
          context.AddJavascriptSource("Alertify/js/alertify.min.js", "");
          context.AddJavascriptSource("Alertify/GlobalAlerts.js", "");
@@ -930,7 +928,6 @@ namespace GeneXus.Programs {
 
       protected void init_default_properties( )
       {
-         Alertify1_Internalname = "ALERTIFY1";
          edtavNextvalue_Internalname = "vNEXTVALUE";
          edtavTipobiendsc_Internalname = "vTIPOBIENDSC";
          tblTable2_Internalname = "TABLE2";
@@ -952,7 +949,6 @@ namespace GeneXus.Programs {
          edtavTipobiendsc_Jsonclick = "";
          edtavNextvalue_Jsonclick = "";
          edtavNextvalue_Enabled = 1;
-         Alertify1_Type = "error";
          Form.Headerrawhtml = "";
          Form.Background = "";
          Form.Textcolor = 0;
@@ -1060,7 +1056,6 @@ namespace GeneXus.Programs {
       private String sDynURL ;
       private String FormProcess ;
       private String bodyStyle ;
-      private String Alertify1_Type ;
       private String GXKey ;
       private String forbiddenHiddens ;
       private String GX_FocusControl ;
@@ -1088,7 +1083,6 @@ namespace GeneXus.Programs {
       private String tblTable2_Internalname ;
       private String edtavNextvalue_Jsonclick ;
       private String edtavTipobiendsc_Jsonclick ;
-      private String Alertify1_Internalname ;
       private DateTime Gx_date ;
       private bool entryPointCalled ;
       private bool toggleJsOutput ;

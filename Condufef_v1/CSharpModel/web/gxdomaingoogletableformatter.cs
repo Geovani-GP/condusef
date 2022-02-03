@@ -2,7 +2,7 @@
                File: GoogleTableFormatter
         Description: GoogleTableFormatter
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 1/30/2022 23:38:55.47
+       Generated on: 2/2/2022 13:43:37.25
        Program type: Callable routine
           Main DBMS: postgresql
 */

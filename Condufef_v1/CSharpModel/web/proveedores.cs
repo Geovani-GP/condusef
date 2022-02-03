@@ -2,7 +2,7 @@
                File: proveedores
         Description: proveedores
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 1/30/2022 23:37:36.94
+       Generated on: 2/2/2022 13:42:25.77
        Program type: Callable routine
           Main DBMS: postgresql
 */
@@ -360,7 +360,7 @@ namespace GeneXus.Programs {
             GxWebStd.gx_label_element( context, edtproveedoresmunicipio_Internalname, "proveedoresmunicipio", "col-sm-3 AttributeLabel", 1, true);
             /* Single line edit */
             TempTags = "  onfocus=\"gx.evt.onfocus(this, 42,'',false,'',0)\"";
-            GxWebStd.gx_single_line_edit( context, edtproveedoresmunicipio_Internalname, A130proveedoresmunicipio, StringUtil.RTrim( context.localUtil.Format( A130proveedoresmunicipio, "")), TempTags+" onchange=\"gx.evt.onchange(this)\" "+" onblur=\""+""+";gx.evt.onblur(this,42);\"", "'"+""+"'"+",false,"+"'"+""+"'", "", "", "", "", edtproveedoresmunicipio_Jsonclick, 0, "Attribute", "", "", "", 1, edtproveedoresmunicipio_Enabled, 0, "text", "", 20, "chr", 1, "row", 20, 0, 0, 0, 1, -1, -1, true, "", "left", true, "HLP_proveedores.htm");
+            GxWebStd.gx_single_line_edit( context, edtproveedoresmunicipio_Internalname, A130proveedoresmunicipio, StringUtil.RTrim( context.localUtil.Format( A130proveedoresmunicipio, "")), TempTags+" onchange=\"gx.evt.onchange(this)\" "+" onblur=\""+""+";gx.evt.onblur(this,42);\"", "'"+""+"'"+",false,"+"'"+""+"'", "", "", "", "", edtproveedoresmunicipio_Jsonclick, 0, "Attribute", "", "", "", 1, edtproveedoresmunicipio_Enabled, 0, "text", "", 25, "chr", 1, "row", 25, 0, 0, 0, 1, -1, -1, true, "", "left", true, "HLP_proveedores.htm");
             GxWebStd.gx_div_end( context, "left", "top");
             GxWebStd.gx_div_end( context, "left", "top");
             GxWebStd.gx_div_end( context, "left", "top");
@@ -388,7 +388,7 @@ namespace GeneXus.Programs {
             GxWebStd.gx_label_element( context, edtproveedorestelefono1_Internalname, "proveedorestelefono1", "col-sm-3 AttributeLabel", 1, true);
             /* Single line edit */
             TempTags = "  onfocus=\"gx.evt.onfocus(this, 50,'',false,'',0)\"";
-            GxWebStd.gx_single_line_edit( context, edtproveedorestelefono1_Internalname, A132proveedorestelefono1, StringUtil.RTrim( context.localUtil.Format( A132proveedorestelefono1, "")), TempTags+" onchange=\"gx.evt.onchange(this)\" "+" onblur=\""+""+";gx.evt.onblur(this,50);\"", "'"+""+"'"+",false,"+"'"+""+"'", "", "", "", "", edtproveedorestelefono1_Jsonclick, 0, "Attribute", "", "", "", 1, edtproveedorestelefono1_Enabled, 0, "text", "", 10, "chr", 1, "row", 10, 0, 0, 0, 1, -1, -1, true, "", "left", true, "HLP_proveedores.htm");
+            GxWebStd.gx_single_line_edit( context, edtproveedorestelefono1_Internalname, StringUtil.LTrim( StringUtil.NToC( (decimal)(A132proveedorestelefono1), 10, 0, ",", "")), ((edtproveedorestelefono1_Enabled!=0) ? StringUtil.LTrim( context.localUtil.Format( (decimal)(A132proveedorestelefono1), "ZZZZZZZZZ9")) : context.localUtil.Format( (decimal)(A132proveedorestelefono1), "ZZZZZZZZZ9")), TempTags+" onchange=\"gx.evt.onchange(this)\" "+" onblur=\""+"gx.num.valid_integer( this,'.');"+";gx.evt.onblur(this,50);\"", "'"+""+"'"+",false,"+"'"+""+"'", "", "", "", "", edtproveedorestelefono1_Jsonclick, 0, "Attribute", "", "", "", 1, edtproveedorestelefono1_Enabled, 0, "text", "", 10, "chr", 1, "row", 10, 0, 0, 0, 1, -1, 0, true, "", "right", false, "HLP_proveedores.htm");
             GxWebStd.gx_div_end( context, "left", "top");
             GxWebStd.gx_div_end( context, "left", "top");
             GxWebStd.gx_div_end( context, "left", "top");
@@ -402,7 +402,7 @@ namespace GeneXus.Programs {
             GxWebStd.gx_label_element( context, edtproveedorestelefono2_Internalname, "proveedorestelefono2", "col-sm-3 AttributeLabel", 1, true);
             /* Single line edit */
             TempTags = "  onfocus=\"gx.evt.onfocus(this, 54,'',false,'',0)\"";
-            GxWebStd.gx_single_line_edit( context, edtproveedorestelefono2_Internalname, A133proveedorestelefono2, StringUtil.RTrim( context.localUtil.Format( A133proveedorestelefono2, "")), TempTags+" onchange=\"gx.evt.onchange(this)\" "+" onblur=\""+""+";gx.evt.onblur(this,54);\"", "'"+""+"'"+",false,"+"'"+""+"'", "", "", "", "", edtproveedorestelefono2_Jsonclick, 0, "Attribute", "", "", "", 1, edtproveedorestelefono2_Enabled, 0, "text", "", 10, "chr", 1, "row", 10, 0, 0, 0, 1, -1, -1, true, "", "left", true, "HLP_proveedores.htm");
+            GxWebStd.gx_single_line_edit( context, edtproveedorestelefono2_Internalname, StringUtil.LTrim( StringUtil.NToC( (decimal)(A133proveedorestelefono2), 10, 0, ",", "")), ((edtproveedorestelefono2_Enabled!=0) ? StringUtil.LTrim( context.localUtil.Format( (decimal)(A133proveedorestelefono2), "ZZZZZZZZZ9")) : context.localUtil.Format( (decimal)(A133proveedorestelefono2), "ZZZZZZZZZ9")), TempTags+" onchange=\"gx.evt.onchange(this)\" "+" onblur=\""+"gx.num.valid_integer( this,'.');"+";gx.evt.onblur(this,54);\"", "'"+""+"'"+",false,"+"'"+""+"'", "", "", "", "", edtproveedorestelefono2_Jsonclick, 0, "Attribute", "", "", "", 1, edtproveedorestelefono2_Enabled, 0, "text", "", 10, "chr", 1, "row", 10, 0, 0, 0, 1, -1, 0, true, "", "right", false, "HLP_proveedores.htm");
             GxWebStd.gx_div_end( context, "left", "top");
             GxWebStd.gx_div_end( context, "left", "top");
             GxWebStd.gx_div_end( context, "left", "top");
@@ -459,7 +459,7 @@ namespace GeneXus.Programs {
             /* Single line edit */
             TempTags = "  onfocus=\"gx.evt.onfocus(this, 70,'',false,'',0)\"";
             context.WriteHtmlText( "<div id=\""+edtproveedoresfecreg_Internalname+"_dp_container\" class=\"dp_container\" style=\"white-space:nowrap;display:inline;\">") ;
-            GxWebStd.gx_single_line_edit( context, edtproveedoresfecreg_Internalname, context.localUtil.TToC( A137proveedoresfecreg, 10, 8, 0, 3, "/", ":", " "), context.localUtil.Format( A137proveedoresfecreg, "99/99/9999 99:99:99"), TempTags+" onchange=\"gx.evt.onchange(this)\" "+" onblur=\""+"gx.date.valid_date(this, 10,'DMY',8,24,'spa',false,0);"+";gx.evt.onblur(this,70);\"", "'"+""+"'"+",false,"+"'"+""+"'", "", "", "", "", edtproveedoresfecreg_Jsonclick, 0, "Attribute", "", "", "", 1, edtproveedoresfecreg_Enabled, 0, "text", "", 19, "chr", 1, "row", 19, 0, 0, 0, 1, -1, 0, true, "", "right", false, "HLP_proveedores.htm");
+            GxWebStd.gx_single_line_edit( context, edtproveedoresfecreg_Internalname, context.localUtil.Format(A137proveedoresfecreg, "99/99/9999"), context.localUtil.Format( A137proveedoresfecreg, "99/99/9999"), TempTags+" onchange=\"gx.evt.onchange(this)\" "+" onblur=\""+"gx.date.valid_date(this, 10,'DMY',0,24,'spa',false,0);"+";gx.evt.onblur(this,70);\"", "'"+""+"'"+",false,"+"'"+""+"'", "", "", "", "", edtproveedoresfecreg_Jsonclick, 0, "Attribute", "", "", "", 1, edtproveedoresfecreg_Enabled, 0, "text", "", 10, "chr", 1, "row", 10, 0, 0, 0, 1, -1, 0, true, "", "right", false, "HLP_proveedores.htm");
             GxWebStd.gx_bitmap( context, edtproveedoresfecreg_Internalname+"_dp_trigger", context.GetImagePath( "61b9b5d3-dff6-4d59-9b00-da61bc2cbe93", "", context.GetTheme( )), "", "", "", "", ((1==0)||(edtproveedoresfecreg_Enabled==0) ? 0 : 1), 0, "Date selector", "Date selector", 0, 1, 0, "", 0, "", 0, 0, 0, "", "", "cursor: pointer;", "", "", "", "", "", "", "", 1, false, false, "HLP_proveedores.htm");
             context.WriteHtmlTextNl( "</div>") ;
             GxWebStd.gx_div_end( context, "left", "top");
@@ -476,7 +476,7 @@ namespace GeneXus.Programs {
             /* Single line edit */
             TempTags = "  onfocus=\"gx.evt.onfocus(this, 74,'',false,'',0)\"";
             context.WriteHtmlText( "<div id=\""+edtproveedoresfecultact_Internalname+"_dp_container\" class=\"dp_container\" style=\"white-space:nowrap;display:inline;\">") ;
-            GxWebStd.gx_single_line_edit( context, edtproveedoresfecultact_Internalname, context.localUtil.TToC( A138proveedoresfecultact, 10, 8, 0, 3, "/", ":", " "), context.localUtil.Format( A138proveedoresfecultact, "99/99/9999 99:99:99"), TempTags+" onchange=\"gx.evt.onchange(this)\" "+" onblur=\""+"gx.date.valid_date(this, 10,'DMY',8,24,'spa',false,0);"+";gx.evt.onblur(this,74);\"", "'"+""+"'"+",false,"+"'"+""+"'", "", "", "", "", edtproveedoresfecultact_Jsonclick, 0, "Attribute", "", "", "", 1, edtproveedoresfecultact_Enabled, 0, "text", "", 19, "chr", 1, "row", 19, 0, 0, 0, 1, -1, 0, true, "", "right", false, "HLP_proveedores.htm");
+            GxWebStd.gx_single_line_edit( context, edtproveedoresfecultact_Internalname, context.localUtil.Format(A138proveedoresfecultact, "99/99/9999"), context.localUtil.Format( A138proveedoresfecultact, "99/99/9999"), TempTags+" onchange=\"gx.evt.onchange(this)\" "+" onblur=\""+"gx.date.valid_date(this, 10,'DMY',0,24,'spa',false,0);"+";gx.evt.onblur(this,74);\"", "'"+""+"'"+",false,"+"'"+""+"'", "", "", "", "", edtproveedoresfecultact_Jsonclick, 0, "Attribute", "", "", "", 1, edtproveedoresfecultact_Enabled, 0, "text", "", 10, "chr", 1, "row", 10, 0, 0, 0, 1, -1, 0, true, "", "right", false, "HLP_proveedores.htm");
             GxWebStd.gx_bitmap( context, edtproveedoresfecultact_Internalname+"_dp_trigger", context.GetImagePath( "61b9b5d3-dff6-4d59-9b00-da61bc2cbe93", "", context.GetTheme( )), "", "", "", "", ((1==0)||(edtproveedoresfecultact_Enabled==0) ? 0 : 1), 0, "Date selector", "Date selector", 0, 1, 0, "", 0, "", 0, 0, 0, "", "", "cursor: pointer;", "", "", "", "", "", "", "", 1, false, false, "HLP_proveedores.htm");
             context.WriteHtmlTextNl( "</div>") ;
             GxWebStd.gx_div_end( context, "left", "top");
@@ -584,14 +584,42 @@ namespace GeneXus.Programs {
                n131proveedorestado = false;
                context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A131proveedorestado", A131proveedorestado);
                n131proveedorestado = (String.IsNullOrEmpty(StringUtil.RTrim( A131proveedorestado)) ? true : false);
-               A132proveedorestelefono1 = cgiGet( edtproveedorestelefono1_Internalname);
-               n132proveedorestelefono1 = false;
-               context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A132proveedorestelefono1", A132proveedorestelefono1);
-               n132proveedorestelefono1 = (String.IsNullOrEmpty(StringUtil.RTrim( A132proveedorestelefono1)) ? true : false);
-               A133proveedorestelefono2 = cgiGet( edtproveedorestelefono2_Internalname);
-               n133proveedorestelefono2 = false;
-               context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A133proveedorestelefono2", A133proveedorestelefono2);
-               n133proveedorestelefono2 = (String.IsNullOrEmpty(StringUtil.RTrim( A133proveedorestelefono2)) ? true : false);
+               if ( ( ( context.localUtil.CToN( cgiGet( edtproveedorestelefono1_Internalname), ",", ".") < Convert.ToDecimal( 0 )) ) || ( ( context.localUtil.CToN( cgiGet( edtproveedorestelefono1_Internalname), ",", ".") > Convert.ToDecimal( 9999999999L )) ) )
+               {
+                  GX_msglist.addItem(context.GetMessage( "GXM_badnum", ""), 1, "PROVEEDORESTELEFONO1");
+                  AnyError = 1;
+                  GX_FocusControl = edtproveedorestelefono1_Internalname;
+                  context.httpAjaxContext.ajax_rsp_assign_attri("", false, "GX_FocusControl", GX_FocusControl);
+                  wbErr = true;
+                  A132proveedorestelefono1 = 0;
+                  n132proveedorestelefono1 = false;
+                  context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A132proveedorestelefono1", StringUtil.LTrim( StringUtil.Str( (decimal)(A132proveedorestelefono1), 10, 0)));
+               }
+               else
+               {
+                  A132proveedorestelefono1 = (long)(context.localUtil.CToN( cgiGet( edtproveedorestelefono1_Internalname), ",", "."));
+                  n132proveedorestelefono1 = false;
+                  context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A132proveedorestelefono1", StringUtil.LTrim( StringUtil.Str( (decimal)(A132proveedorestelefono1), 10, 0)));
+               }
+               n132proveedorestelefono1 = ((0==A132proveedorestelefono1) ? true : false);
+               if ( ( ( context.localUtil.CToN( cgiGet( edtproveedorestelefono2_Internalname), ",", ".") < Convert.ToDecimal( 0 )) ) || ( ( context.localUtil.CToN( cgiGet( edtproveedorestelefono2_Internalname), ",", ".") > Convert.ToDecimal( 9999999999L )) ) )
+               {
+                  GX_msglist.addItem(context.GetMessage( "GXM_badnum", ""), 1, "PROVEEDORESTELEFONO2");
+                  AnyError = 1;
+                  GX_FocusControl = edtproveedorestelefono2_Internalname;
+                  context.httpAjaxContext.ajax_rsp_assign_attri("", false, "GX_FocusControl", GX_FocusControl);
+                  wbErr = true;
+                  A133proveedorestelefono2 = 0;
+                  n133proveedorestelefono2 = false;
+                  context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A133proveedorestelefono2", StringUtil.LTrim( StringUtil.Str( (decimal)(A133proveedorestelefono2), 10, 0)));
+               }
+               else
+               {
+                  A133proveedorestelefono2 = (long)(context.localUtil.CToN( cgiGet( edtproveedorestelefono2_Internalname), ",", "."));
+                  n133proveedorestelefono2 = false;
+                  context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A133proveedorestelefono2", StringUtil.LTrim( StringUtil.Str( (decimal)(A133proveedorestelefono2), 10, 0)));
+               }
+               n133proveedorestelefono2 = ((0==A133proveedorestelefono2) ? true : false);
                A134proveedoresfax = cgiGet( edtproveedoresfax_Internalname);
                n134proveedoresfax = false;
                context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A134proveedoresfax", A134proveedoresfax);
@@ -604,40 +632,40 @@ namespace GeneXus.Programs {
                n136proveedoresusuario = false;
                context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A136proveedoresusuario", A136proveedoresusuario);
                n136proveedoresusuario = (String.IsNullOrEmpty(StringUtil.RTrim( A136proveedoresusuario)) ? true : false);
-               if ( context.localUtil.VCDateTime( cgiGet( edtproveedoresfecreg_Internalname), 2, 0) == 0 )
+               if ( context.localUtil.VCDate( cgiGet( edtproveedoresfecreg_Internalname), 2) == 0 )
                {
-                  GX_msglist.addItem(context.GetMessage( "GXM_baddatetime", new   object[]  {"proveedoresfecreg"}), 1, "PROVEEDORESFECREG");
+                  GX_msglist.addItem(context.GetMessage( "GXM_faildate", new   object[]  {"proveedoresfecreg"}), 1, "PROVEEDORESFECREG");
                   AnyError = 1;
                   GX_FocusControl = edtproveedoresfecreg_Internalname;
                   context.httpAjaxContext.ajax_rsp_assign_attri("", false, "GX_FocusControl", GX_FocusControl);
                   wbErr = true;
-                  A137proveedoresfecreg = (DateTime)(DateTime.MinValue);
+                  A137proveedoresfecreg = DateTime.MinValue;
                   n137proveedoresfecreg = false;
-                  context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A137proveedoresfecreg", context.localUtil.TToC( A137proveedoresfecreg, 10, 8, 0, 3, "/", ":", " "));
+                  context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A137proveedoresfecreg", context.localUtil.Format(A137proveedoresfecreg, "99/99/9999"));
                }
                else
                {
-                  A137proveedoresfecreg = context.localUtil.CToT( cgiGet( edtproveedoresfecreg_Internalname));
+                  A137proveedoresfecreg = context.localUtil.CToD( cgiGet( edtproveedoresfecreg_Internalname), 2);
                   n137proveedoresfecreg = false;
-                  context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A137proveedoresfecreg", context.localUtil.TToC( A137proveedoresfecreg, 10, 8, 0, 3, "/", ":", " "));
+                  context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A137proveedoresfecreg", context.localUtil.Format(A137proveedoresfecreg, "99/99/9999"));
                }
                n137proveedoresfecreg = ((DateTime.MinValue==A137proveedoresfecreg) ? true : false);
-               if ( context.localUtil.VCDateTime( cgiGet( edtproveedoresfecultact_Internalname), 2, 0) == 0 )
+               if ( context.localUtil.VCDate( cgiGet( edtproveedoresfecultact_Internalname), 2) == 0 )
                {
-                  GX_msglist.addItem(context.GetMessage( "GXM_baddatetime", new   object[]  {"proveedoresfecultact"}), 1, "PROVEEDORESFECULTACT");
+                  GX_msglist.addItem(context.GetMessage( "GXM_faildate", new   object[]  {"proveedoresfecultact"}), 1, "PROVEEDORESFECULTACT");
                   AnyError = 1;
                   GX_FocusControl = edtproveedoresfecultact_Internalname;
                   context.httpAjaxContext.ajax_rsp_assign_attri("", false, "GX_FocusControl", GX_FocusControl);
                   wbErr = true;
-                  A138proveedoresfecultact = (DateTime)(DateTime.MinValue);
+                  A138proveedoresfecultact = DateTime.MinValue;
                   n138proveedoresfecultact = false;
-                  context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A138proveedoresfecultact", context.localUtil.TToC( A138proveedoresfecultact, 10, 8, 0, 3, "/", ":", " "));
+                  context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A138proveedoresfecultact", context.localUtil.Format(A138proveedoresfecultact, "99/99/9999"));
                }
                else
                {
-                  A138proveedoresfecultact = context.localUtil.CToT( cgiGet( edtproveedoresfecultact_Internalname));
+                  A138proveedoresfecultact = context.localUtil.CToD( cgiGet( edtproveedoresfecultact_Internalname), 2);
                   n138proveedoresfecultact = false;
-                  context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A138proveedoresfecultact", context.localUtil.TToC( A138proveedoresfecultact, 10, 8, 0, 3, "/", ":", " "));
+                  context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A138proveedoresfecultact", context.localUtil.Format(A138proveedoresfecultact, "99/99/9999"));
                }
                n138proveedoresfecultact = ((DateTime.MinValue==A138proveedoresfecultact) ? true : false);
                /* Read saved values. */
@@ -654,19 +682,19 @@ namespace GeneXus.Programs {
                n130proveedoresmunicipio = (String.IsNullOrEmpty(StringUtil.RTrim( A130proveedoresmunicipio)) ? true : false);
                Z131proveedorestado = cgiGet( "Z131proveedorestado");
                n131proveedorestado = (String.IsNullOrEmpty(StringUtil.RTrim( A131proveedorestado)) ? true : false);
-               Z132proveedorestelefono1 = cgiGet( "Z132proveedorestelefono1");
-               n132proveedorestelefono1 = (String.IsNullOrEmpty(StringUtil.RTrim( A132proveedorestelefono1)) ? true : false);
-               Z133proveedorestelefono2 = cgiGet( "Z133proveedorestelefono2");
-               n133proveedorestelefono2 = (String.IsNullOrEmpty(StringUtil.RTrim( A133proveedorestelefono2)) ? true : false);
+               Z132proveedorestelefono1 = (long)(context.localUtil.CToN( cgiGet( "Z132proveedorestelefono1"), ",", "."));
+               n132proveedorestelefono1 = ((0==A132proveedorestelefono1) ? true : false);
+               Z133proveedorestelefono2 = (long)(context.localUtil.CToN( cgiGet( "Z133proveedorestelefono2"), ",", "."));
+               n133proveedorestelefono2 = ((0==A133proveedorestelefono2) ? true : false);
                Z134proveedoresfax = cgiGet( "Z134proveedoresfax");
                n134proveedoresfax = (String.IsNullOrEmpty(StringUtil.RTrim( A134proveedoresfax)) ? true : false);
                Z135proveedoresrfc = cgiGet( "Z135proveedoresrfc");
                n135proveedoresrfc = (String.IsNullOrEmpty(StringUtil.RTrim( A135proveedoresrfc)) ? true : false);
                Z136proveedoresusuario = cgiGet( "Z136proveedoresusuario");
                n136proveedoresusuario = (String.IsNullOrEmpty(StringUtil.RTrim( A136proveedoresusuario)) ? true : false);
-               Z137proveedoresfecreg = context.localUtil.CToT( cgiGet( "Z137proveedoresfecreg"), 0);
+               Z137proveedoresfecreg = context.localUtil.CToD( cgiGet( "Z137proveedoresfecreg"), 0);
                n137proveedoresfecreg = ((DateTime.MinValue==A137proveedoresfecreg) ? true : false);
-               Z138proveedoresfecultact = context.localUtil.CToT( cgiGet( "Z138proveedoresfecultact"), 0);
+               Z138proveedoresfecultact = context.localUtil.CToD( cgiGet( "Z138proveedoresfecultact"), 0);
                n138proveedoresfecultact = ((DateTime.MinValue==A138proveedoresfecultact) ? true : false);
                IsConfirmed = (short)(context.localUtil.CToN( cgiGet( "IsConfirmed"), ",", "."));
                IsModified = (short)(context.localUtil.CToN( cgiGet( "IsModified"), ",", "."));
@@ -964,10 +992,10 @@ namespace GeneXus.Programs {
             context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A131proveedorestado", A131proveedorestado);
             n131proveedorestado = T000A4_n131proveedorestado[0];
             A132proveedorestelefono1 = T000A4_A132proveedorestelefono1[0];
-            context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A132proveedorestelefono1", A132proveedorestelefono1);
+            context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A132proveedorestelefono1", StringUtil.LTrim( StringUtil.Str( (decimal)(A132proveedorestelefono1), 10, 0)));
             n132proveedorestelefono1 = T000A4_n132proveedorestelefono1[0];
             A133proveedorestelefono2 = T000A4_A133proveedorestelefono2[0];
-            context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A133proveedorestelefono2", A133proveedorestelefono2);
+            context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A133proveedorestelefono2", StringUtil.LTrim( StringUtil.Str( (decimal)(A133proveedorestelefono2), 10, 0)));
             n133proveedorestelefono2 = T000A4_n133proveedorestelefono2[0];
             A134proveedoresfax = T000A4_A134proveedoresfax[0];
             context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A134proveedoresfax", A134proveedoresfax);
@@ -979,10 +1007,10 @@ namespace GeneXus.Programs {
             context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A136proveedoresusuario", A136proveedoresusuario);
             n136proveedoresusuario = T000A4_n136proveedoresusuario[0];
             A137proveedoresfecreg = T000A4_A137proveedoresfecreg[0];
-            context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A137proveedoresfecreg", context.localUtil.TToC( A137proveedoresfecreg, 10, 8, 0, 3, "/", ":", " "));
+            context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A137proveedoresfecreg", context.localUtil.Format(A137proveedoresfecreg, "99/99/9999"));
             n137proveedoresfecreg = T000A4_n137proveedoresfecreg[0];
             A138proveedoresfecultact = T000A4_A138proveedoresfecultact[0];
-            context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A138proveedoresfecultact", context.localUtil.TToC( A138proveedoresfecultact, 10, 8, 0, 3, "/", ":", " "));
+            context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A138proveedoresfecultact", context.localUtil.Format(A138proveedoresfecultact, "99/99/9999"));
             n138proveedoresfecultact = T000A4_n138proveedoresfecultact[0];
             ZM0A10( -1) ;
          }
@@ -1053,10 +1081,10 @@ namespace GeneXus.Programs {
             context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A131proveedorestado", A131proveedorestado);
             n131proveedorestado = T000A3_n131proveedorestado[0];
             A132proveedorestelefono1 = T000A3_A132proveedorestelefono1[0];
-            context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A132proveedorestelefono1", A132proveedorestelefono1);
+            context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A132proveedorestelefono1", StringUtil.LTrim( StringUtil.Str( (decimal)(A132proveedorestelefono1), 10, 0)));
             n132proveedorestelefono1 = T000A3_n132proveedorestelefono1[0];
             A133proveedorestelefono2 = T000A3_A133proveedorestelefono2[0];
-            context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A133proveedorestelefono2", A133proveedorestelefono2);
+            context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A133proveedorestelefono2", StringUtil.LTrim( StringUtil.Str( (decimal)(A133proveedorestelefono2), 10, 0)));
             n133proveedorestelefono2 = T000A3_n133proveedorestelefono2[0];
             A134proveedoresfax = T000A3_A134proveedoresfax[0];
             context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A134proveedoresfax", A134proveedoresfax);
@@ -1068,10 +1096,10 @@ namespace GeneXus.Programs {
             context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A136proveedoresusuario", A136proveedoresusuario);
             n136proveedoresusuario = T000A3_n136proveedoresusuario[0];
             A137proveedoresfecreg = T000A3_A137proveedoresfecreg[0];
-            context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A137proveedoresfecreg", context.localUtil.TToC( A137proveedoresfecreg, 10, 8, 0, 3, "/", ":", " "));
+            context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A137proveedoresfecreg", context.localUtil.Format(A137proveedoresfecreg, "99/99/9999"));
             n137proveedoresfecreg = T000A3_n137proveedoresfecreg[0];
             A138proveedoresfecultact = T000A3_A138proveedoresfecultact[0];
-            context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A138proveedoresfecultact", context.localUtil.TToC( A138proveedoresfecultact, 10, 8, 0, 3, "/", ":", " "));
+            context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A138proveedoresfecultact", context.localUtil.Format(A138proveedoresfecultact, "99/99/9999"));
             n138proveedoresfecultact = T000A3_n138proveedoresfecultact[0];
             Z2proveedoresid = A2proveedoresid;
             sMode10 = Gx_mode;
@@ -1419,7 +1447,7 @@ namespace GeneXus.Programs {
             {
                Gx_longc = true;
             }
-            if ( Gx_longc || ( StringUtil.StrCmp(Z131proveedorestado, T000A2_A131proveedorestado[0]) != 0 ) || ( StringUtil.StrCmp(Z132proveedorestelefono1, T000A2_A132proveedorestelefono1[0]) != 0 ) || ( StringUtil.StrCmp(Z133proveedorestelefono2, T000A2_A133proveedorestelefono2[0]) != 0 ) || ( StringUtil.StrCmp(Z134proveedoresfax, T000A2_A134proveedoresfax[0]) != 0 ) || ( StringUtil.StrCmp(Z135proveedoresrfc, T000A2_A135proveedoresrfc[0]) != 0 ) )
+            if ( Gx_longc || ( StringUtil.StrCmp(Z131proveedorestado, T000A2_A131proveedorestado[0]) != 0 ) || ( Z132proveedorestelefono1 != T000A2_A132proveedorestelefono1[0] ) || ( Z133proveedorestelefono2 != T000A2_A133proveedorestelefono2[0] ) || ( StringUtil.StrCmp(Z134proveedoresfax, T000A2_A134proveedoresfax[0]) != 0 ) || ( StringUtil.StrCmp(Z135proveedoresrfc, T000A2_A135proveedoresrfc[0]) != 0 ) )
             {
                Gx_longc = true;
             }
@@ -1461,13 +1489,13 @@ namespace GeneXus.Programs {
                   GXUtil.WriteLogRaw("Old: ",Z131proveedorestado);
                   GXUtil.WriteLogRaw("Current: ",T000A2_A131proveedorestado[0]);
                }
-               if ( StringUtil.StrCmp(Z132proveedorestelefono1, T000A2_A132proveedorestelefono1[0]) != 0 )
+               if ( Z132proveedorestelefono1 != T000A2_A132proveedorestelefono1[0] )
                {
                   GXUtil.WriteLog("proveedores:[seudo value changed for attri]"+"proveedorestelefono1");
                   GXUtil.WriteLogRaw("Old: ",Z132proveedorestelefono1);
                   GXUtil.WriteLogRaw("Current: ",T000A2_A132proveedorestelefono1[0]);
                }
-               if ( StringUtil.StrCmp(Z133proveedorestelefono2, T000A2_A133proveedorestelefono2[0]) != 0 )
+               if ( Z133proveedorestelefono2 != T000A2_A133proveedorestelefono2[0] )
                {
                   GXUtil.WriteLog("proveedores:[seudo value changed for attri]"+"proveedorestelefono2");
                   GXUtil.WriteLogRaw("Old: ",Z133proveedorestelefono2);
@@ -1865,7 +1893,7 @@ namespace GeneXus.Programs {
          context.AddJavascriptSource("jquery.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxtimezone.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxgral.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("gxcfg.js", "?202213023373845");
+         context.AddJavascriptSource("gxcfg.js", "?20222213422745");
          if ( context.isSpaRequest( ) )
          {
             enableOutput();
@@ -1913,13 +1941,13 @@ namespace GeneXus.Programs {
          GxWebStd.gx_hidden_field( context, "Z129proveedorescodigopostal", Z129proveedorescodigopostal);
          GxWebStd.gx_hidden_field( context, "Z130proveedoresmunicipio", Z130proveedoresmunicipio);
          GxWebStd.gx_hidden_field( context, "Z131proveedorestado", Z131proveedorestado);
-         GxWebStd.gx_hidden_field( context, "Z132proveedorestelefono1", Z132proveedorestelefono1);
-         GxWebStd.gx_hidden_field( context, "Z133proveedorestelefono2", Z133proveedorestelefono2);
+         GxWebStd.gx_hidden_field( context, "Z132proveedorestelefono1", StringUtil.LTrim( StringUtil.NToC( (decimal)(Z132proveedorestelefono1), 10, 0, ",", "")));
+         GxWebStd.gx_hidden_field( context, "Z133proveedorestelefono2", StringUtil.LTrim( StringUtil.NToC( (decimal)(Z133proveedorestelefono2), 10, 0, ",", "")));
          GxWebStd.gx_hidden_field( context, "Z134proveedoresfax", Z134proveedoresfax);
          GxWebStd.gx_hidden_field( context, "Z135proveedoresrfc", Z135proveedoresrfc);
          GxWebStd.gx_hidden_field( context, "Z136proveedoresusuario", Z136proveedoresusuario);
-         GxWebStd.gx_hidden_field( context, "Z137proveedoresfecreg", context.localUtil.TToC( Z137proveedoresfecreg, 10, 8, 0, 0, "/", ":", " "));
-         GxWebStd.gx_hidden_field( context, "Z138proveedoresfecultact", context.localUtil.TToC( Z138proveedoresfecultact, 10, 8, 0, 0, "/", ":", " "));
+         GxWebStd.gx_hidden_field( context, "Z137proveedoresfecreg", context.localUtil.DToC( Z137proveedoresfecreg, 0, "/"));
+         GxWebStd.gx_hidden_field( context, "Z138proveedoresfecultact", context.localUtil.DToC( Z138proveedoresfecultact, 0, "/"));
          GxWebStd.gx_hidden_field( context, "IsConfirmed", StringUtil.LTrim( StringUtil.NToC( (decimal)(IsConfirmed), 4, 0, ",", "")));
          GxWebStd.gx_hidden_field( context, "IsModified", StringUtil.LTrim( StringUtil.NToC( (decimal)(IsModified), 4, 0, ",", "")));
          GxWebStd.gx_hidden_field( context, "Mode", StringUtil.RTrim( Gx_mode));
@@ -2020,14 +2048,14 @@ namespace GeneXus.Programs {
          n131proveedorestado = false;
          context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A131proveedorestado", A131proveedorestado);
          n131proveedorestado = (String.IsNullOrEmpty(StringUtil.RTrim( A131proveedorestado)) ? true : false);
-         A132proveedorestelefono1 = "";
+         A132proveedorestelefono1 = 0;
          n132proveedorestelefono1 = false;
-         context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A132proveedorestelefono1", A132proveedorestelefono1);
-         n132proveedorestelefono1 = (String.IsNullOrEmpty(StringUtil.RTrim( A132proveedorestelefono1)) ? true : false);
-         A133proveedorestelefono2 = "";
+         context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A132proveedorestelefono1", StringUtil.LTrim( StringUtil.Str( (decimal)(A132proveedorestelefono1), 10, 0)));
+         n132proveedorestelefono1 = ((0==A132proveedorestelefono1) ? true : false);
+         A133proveedorestelefono2 = 0;
          n133proveedorestelefono2 = false;
-         context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A133proveedorestelefono2", A133proveedorestelefono2);
-         n133proveedorestelefono2 = (String.IsNullOrEmpty(StringUtil.RTrim( A133proveedorestelefono2)) ? true : false);
+         context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A133proveedorestelefono2", StringUtil.LTrim( StringUtil.Str( (decimal)(A133proveedorestelefono2), 10, 0)));
+         n133proveedorestelefono2 = ((0==A133proveedorestelefono2) ? true : false);
          A134proveedoresfax = "";
          n134proveedoresfax = false;
          context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A134proveedoresfax", A134proveedoresfax);
@@ -2040,13 +2068,13 @@ namespace GeneXus.Programs {
          n136proveedoresusuario = false;
          context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A136proveedoresusuario", A136proveedoresusuario);
          n136proveedoresusuario = (String.IsNullOrEmpty(StringUtil.RTrim( A136proveedoresusuario)) ? true : false);
-         A137proveedoresfecreg = (DateTime)(DateTime.MinValue);
+         A137proveedoresfecreg = DateTime.MinValue;
          n137proveedoresfecreg = false;
-         context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A137proveedoresfecreg", context.localUtil.TToC( A137proveedoresfecreg, 10, 8, 0, 3, "/", ":", " "));
+         context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A137proveedoresfecreg", context.localUtil.Format(A137proveedoresfecreg, "99/99/9999"));
          n137proveedoresfecreg = ((DateTime.MinValue==A137proveedoresfecreg) ? true : false);
-         A138proveedoresfecultact = (DateTime)(DateTime.MinValue);
+         A138proveedoresfecultact = DateTime.MinValue;
          n138proveedoresfecultact = false;
-         context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A138proveedoresfecultact", context.localUtil.TToC( A138proveedoresfecultact, 10, 8, 0, 3, "/", ":", " "));
+         context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A138proveedoresfecultact", context.localUtil.Format(A138proveedoresfecultact, "99/99/9999"));
          n138proveedoresfecultact = ((DateTime.MinValue==A138proveedoresfecultact) ? true : false);
          Z126proveedoresnombre = "";
          Z127proveedoresdireccion = "";
@@ -2054,13 +2082,13 @@ namespace GeneXus.Programs {
          Z129proveedorescodigopostal = "";
          Z130proveedoresmunicipio = "";
          Z131proveedorestado = "";
-         Z132proveedorestelefono1 = "";
-         Z133proveedorestelefono2 = "";
+         Z132proveedorestelefono1 = 0;
+         Z133proveedorestelefono2 = 0;
          Z134proveedoresfax = "";
          Z135proveedoresrfc = "";
          Z136proveedoresusuario = "";
-         Z137proveedoresfecreg = (DateTime)(DateTime.MinValue);
-         Z138proveedoresfecultact = (DateTime)(DateTime.MinValue);
+         Z137proveedoresfecreg = DateTime.MinValue;
+         Z138proveedoresfecultact = DateTime.MinValue;
       }
 
       protected void InitAll0A10( )
@@ -2077,12 +2105,12 @@ namespace GeneXus.Programs {
 
       protected void define_styles( )
       {
-         AddStyleSheetFile("calendar-system.css", "?11323129");
-         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?2337534");
+         AddStyleSheetFile("calendar-system.css", "?13205289");
+         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?1342847");
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?202213023373859");
+            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?20222213422757");
             idxLst = (int)(idxLst+1);
          }
          /* End function define_styles */
@@ -2091,8 +2119,7 @@ namespace GeneXus.Programs {
       protected void include_jscripts( )
       {
          context.AddJavascriptSource("messages.spa.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("gxdec.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("proveedores.js", "?202213023373859");
+         context.AddJavascriptSource("proveedores.js", "?20222213422758");
          /* End function include_jscripts */
       }
 
@@ -2260,8 +2287,8 @@ namespace GeneXus.Programs {
                                        String GX_Parm5 ,
                                        String GX_Parm6 ,
                                        String GX_Parm7 ,
-                                       String GX_Parm8 ,
-                                       String GX_Parm9 ,
+                                       long GX_Parm8 ,
+                                       long GX_Parm9 ,
                                        String GX_Parm10 ,
                                        String GX_Parm11 ,
                                        String GX_Parm12 ,
@@ -2310,13 +2337,13 @@ namespace GeneXus.Programs {
          isValidOutput.Add(A129proveedorescodigopostal);
          isValidOutput.Add(A130proveedoresmunicipio);
          isValidOutput.Add(A131proveedorestado);
-         isValidOutput.Add(A132proveedorestelefono1);
-         isValidOutput.Add(A133proveedorestelefono2);
+         isValidOutput.Add(StringUtil.LTrim( StringUtil.NToC( (decimal)(A132proveedorestelefono1), 10, 0, ".", "")));
+         isValidOutput.Add(StringUtil.LTrim( StringUtil.NToC( (decimal)(A133proveedorestelefono2), 10, 0, ".", "")));
          isValidOutput.Add(A134proveedoresfax);
          isValidOutput.Add(A135proveedoresrfc);
          isValidOutput.Add(A136proveedoresusuario);
-         isValidOutput.Add(context.localUtil.TToC( A137proveedoresfecreg, 10, 8, 0, 3, "/", ":", " "));
-         isValidOutput.Add(context.localUtil.TToC( A138proveedoresfecultact, 10, 8, 0, 3, "/", ":", " "));
+         isValidOutput.Add(context.localUtil.Format(A137proveedoresfecreg, "99/99/9999"));
+         isValidOutput.Add(context.localUtil.Format(A138proveedoresfecultact, "99/99/9999"));
          isValidOutput.Add(StringUtil.RTrim( Gx_mode));
          isValidOutput.Add(StringUtil.LTrim( StringUtil.NToC( (decimal)(Z2proveedoresid), 9, 0, ",", "")));
          isValidOutput.Add(Z126proveedoresnombre);
@@ -2325,13 +2352,13 @@ namespace GeneXus.Programs {
          isValidOutput.Add(Z129proveedorescodigopostal);
          isValidOutput.Add(Z130proveedoresmunicipio);
          isValidOutput.Add(Z131proveedorestado);
-         isValidOutput.Add(Z132proveedorestelefono1);
-         isValidOutput.Add(Z133proveedorestelefono2);
+         isValidOutput.Add(StringUtil.LTrim( StringUtil.NToC( (decimal)(Z132proveedorestelefono1), 10, 0, ",", "")));
+         isValidOutput.Add(StringUtil.LTrim( StringUtil.NToC( (decimal)(Z133proveedorestelefono2), 10, 0, ",", "")));
          isValidOutput.Add(Z134proveedoresfax);
          isValidOutput.Add(Z135proveedoresrfc);
          isValidOutput.Add(Z136proveedoresusuario);
-         isValidOutput.Add(context.localUtil.TToC( Z137proveedoresfecreg, 10, 8, 0, 0, "/", ":", " "));
-         isValidOutput.Add(context.localUtil.TToC( Z138proveedoresfecultact, 10, 8, 0, 0, "/", ":", " "));
+         isValidOutput.Add(context.localUtil.DToC( Z137proveedoresfecreg, 0, "/"));
+         isValidOutput.Add(context.localUtil.DToC( Z138proveedoresfecultact, 0, "/"));
          isValidOutput.Add(bttBtn_delete_Enabled);
          isValidOutput.Add(bttBtn_enter_Enabled);
          isValidOutput.Add(context.GX_msglist.ToJavascriptSource());
@@ -2376,13 +2403,11 @@ namespace GeneXus.Programs {
          Z129proveedorescodigopostal = "";
          Z130proveedoresmunicipio = "";
          Z131proveedorestado = "";
-         Z132proveedorestelefono1 = "";
-         Z133proveedorestelefono2 = "";
          Z134proveedoresfax = "";
          Z135proveedoresrfc = "";
          Z136proveedoresusuario = "";
-         Z137proveedoresfecreg = (DateTime)(DateTime.MinValue);
-         Z138proveedoresfecultact = (DateTime)(DateTime.MinValue);
+         Z137proveedoresfecreg = DateTime.MinValue;
+         Z138proveedoresfecultact = DateTime.MinValue;
          scmdbuf = "";
          gxfirstwebparm = "";
          gxfirstwebparm_bkp = "";
@@ -2406,13 +2431,11 @@ namespace GeneXus.Programs {
          A129proveedorescodigopostal = "";
          A130proveedoresmunicipio = "";
          A131proveedorestado = "";
-         A132proveedorestelefono1 = "";
-         A133proveedorestelefono2 = "";
          A134proveedoresfax = "";
          A135proveedoresrfc = "";
          A136proveedoresusuario = "";
-         A137proveedoresfecreg = (DateTime)(DateTime.MinValue);
-         A138proveedoresfecultact = (DateTime)(DateTime.MinValue);
+         A137proveedoresfecreg = DateTime.MinValue;
+         A138proveedoresfecultact = DateTime.MinValue;
          bttBtn_enter_Jsonclick = "";
          bttBtn_cancel_Jsonclick = "";
          bttBtn_delete_Jsonclick = "";
@@ -2435,9 +2458,9 @@ namespace GeneXus.Programs {
          T000A4_n130proveedoresmunicipio = new bool[] {false} ;
          T000A4_A131proveedorestado = new String[] {""} ;
          T000A4_n131proveedorestado = new bool[] {false} ;
-         T000A4_A132proveedorestelefono1 = new String[] {""} ;
+         T000A4_A132proveedorestelefono1 = new long[1] ;
          T000A4_n132proveedorestelefono1 = new bool[] {false} ;
-         T000A4_A133proveedorestelefono2 = new String[] {""} ;
+         T000A4_A133proveedorestelefono2 = new long[1] ;
          T000A4_n133proveedorestelefono2 = new bool[] {false} ;
          T000A4_A134proveedoresfax = new String[] {""} ;
          T000A4_n134proveedoresfax = new bool[] {false} ;
@@ -2465,9 +2488,9 @@ namespace GeneXus.Programs {
          T000A3_n130proveedoresmunicipio = new bool[] {false} ;
          T000A3_A131proveedorestado = new String[] {""} ;
          T000A3_n131proveedorestado = new bool[] {false} ;
-         T000A3_A132proveedorestelefono1 = new String[] {""} ;
+         T000A3_A132proveedorestelefono1 = new long[1] ;
          T000A3_n132proveedorestelefono1 = new bool[] {false} ;
-         T000A3_A133proveedorestelefono2 = new String[] {""} ;
+         T000A3_A133proveedorestelefono2 = new long[1] ;
          T000A3_n133proveedorestelefono2 = new bool[] {false} ;
          T000A3_A134proveedoresfax = new String[] {""} ;
          T000A3_n134proveedoresfax = new bool[] {false} ;
@@ -2498,9 +2521,9 @@ namespace GeneXus.Programs {
          T000A2_n130proveedoresmunicipio = new bool[] {false} ;
          T000A2_A131proveedorestado = new String[] {""} ;
          T000A2_n131proveedorestado = new bool[] {false} ;
-         T000A2_A132proveedorestelefono1 = new String[] {""} ;
+         T000A2_A132proveedorestelefono1 = new long[1] ;
          T000A2_n132proveedorestelefono1 = new bool[] {false} ;
-         T000A2_A133proveedorestelefono2 = new String[] {""} ;
+         T000A2_A133proveedorestelefono2 = new long[1] ;
          T000A2_n133proveedorestelefono2 = new bool[] {false} ;
          T000A2_A134proveedoresfax = new String[] {""} ;
          T000A2_n134proveedoresfax = new bool[] {false} ;
@@ -2512,7 +2535,7 @@ namespace GeneXus.Programs {
          T000A2_n137proveedoresfecreg = new bool[] {false} ;
          T000A2_A138proveedoresfecultact = new DateTime[] {DateTime.MinValue} ;
          T000A2_n138proveedoresfecultact = new bool[] {false} ;
-         T000A11_A19almacenid = new long[1] ;
+         T000A11_A19almacenid = new int[1] ;
          T000A11_A20articulosproductoid = new int[1] ;
          T000A11_A21articuloscambsid = new int[1] ;
          T000A12_A2proveedoresid = new int[1] ;
@@ -2603,6 +2626,10 @@ namespace GeneXus.Programs {
       private int bttBtn_delete_Visible ;
       private int bttBtn_delete_Enabled ;
       private int idxLst ;
+      private long Z132proveedorestelefono1 ;
+      private long Z133proveedorestelefono2 ;
+      private long A132proveedorestelefono1 ;
+      private long A133proveedorestelefono2 ;
       private String sPrefix ;
       private String scmdbuf ;
       private String gxfirstwebparm ;
@@ -2699,8 +2726,6 @@ namespace GeneXus.Programs {
       private String Z129proveedorescodigopostal ;
       private String Z130proveedoresmunicipio ;
       private String Z131proveedorestado ;
-      private String Z132proveedorestelefono1 ;
-      private String Z133proveedorestelefono2 ;
       private String Z134proveedoresfax ;
       private String Z135proveedoresrfc ;
       private String Z136proveedoresusuario ;
@@ -2710,8 +2735,6 @@ namespace GeneXus.Programs {
       private String A129proveedorescodigopostal ;
       private String A130proveedoresmunicipio ;
       private String A131proveedorestado ;
-      private String A132proveedorestelefono1 ;
-      private String A133proveedorestelefono2 ;
       private String A134proveedoresfax ;
       private String A135proveedoresrfc ;
       private String A136proveedoresusuario ;
@@ -2732,9 +2755,9 @@ namespace GeneXus.Programs {
       private bool[] T000A4_n130proveedoresmunicipio ;
       private String[] T000A4_A131proveedorestado ;
       private bool[] T000A4_n131proveedorestado ;
-      private String[] T000A4_A132proveedorestelefono1 ;
+      private long[] T000A4_A132proveedorestelefono1 ;
       private bool[] T000A4_n132proveedorestelefono1 ;
-      private String[] T000A4_A133proveedorestelefono2 ;
+      private long[] T000A4_A133proveedorestelefono2 ;
       private bool[] T000A4_n133proveedorestelefono2 ;
       private String[] T000A4_A134proveedoresfax ;
       private bool[] T000A4_n134proveedoresfax ;
@@ -2762,9 +2785,9 @@ namespace GeneXus.Programs {
       private bool[] T000A3_n130proveedoresmunicipio ;
       private String[] T000A3_A131proveedorestado ;
       private bool[] T000A3_n131proveedorestado ;
-      private String[] T000A3_A132proveedorestelefono1 ;
+      private long[] T000A3_A132proveedorestelefono1 ;
       private bool[] T000A3_n132proveedorestelefono1 ;
-      private String[] T000A3_A133proveedorestelefono2 ;
+      private long[] T000A3_A133proveedorestelefono2 ;
       private bool[] T000A3_n133proveedorestelefono2 ;
       private String[] T000A3_A134proveedoresfax ;
       private bool[] T000A3_n134proveedoresfax ;
@@ -2794,9 +2817,9 @@ namespace GeneXus.Programs {
       private bool[] T000A2_n130proveedoresmunicipio ;
       private String[] T000A2_A131proveedorestado ;
       private bool[] T000A2_n131proveedorestado ;
-      private String[] T000A2_A132proveedorestelefono1 ;
+      private long[] T000A2_A132proveedorestelefono1 ;
       private bool[] T000A2_n132proveedorestelefono1 ;
-      private String[] T000A2_A133proveedorestelefono2 ;
+      private long[] T000A2_A133proveedorestelefono2 ;
       private bool[] T000A2_n133proveedorestelefono2 ;
       private String[] T000A2_A134proveedoresfax ;
       private bool[] T000A2_n134proveedoresfax ;
@@ -2808,7 +2831,7 @@ namespace GeneXus.Programs {
       private bool[] T000A2_n137proveedoresfecreg ;
       private DateTime[] T000A2_A138proveedoresfecultact ;
       private bool[] T000A2_n138proveedoresfecultact ;
-      private long[] T000A11_A19almacenid ;
+      private int[] T000A11_A19almacenid ;
       private int[] T000A11_A20articulosproductoid ;
       private int[] T000A11_A21articuloscambsid ;
       private int[] T000A12_A2proveedoresid ;
@@ -2872,15 +2895,15 @@ namespace GeneXus.Programs {
           new Object[] {"proveedoresdireccion",NpgsqlDbType.Varchar,50,0} ,
           new Object[] {"proveedorescolonia",NpgsqlDbType.Varchar,25,0} ,
           new Object[] {"proveedorescodigopostal",NpgsqlDbType.Varchar,5,0} ,
-          new Object[] {"proveedoresmunicipio",NpgsqlDbType.Varchar,20,0} ,
+          new Object[] {"proveedoresmunicipio",NpgsqlDbType.Varchar,25,0} ,
           new Object[] {"proveedorestado",NpgsqlDbType.Varchar,20,0} ,
-          new Object[] {"proveedorestelefono1",NpgsqlDbType.Varchar,10,0} ,
-          new Object[] {"proveedorestelefono2",NpgsqlDbType.Varchar,10,0} ,
+          new Object[] {"proveedorestelefono1",NpgsqlDbType.Real,10,0} ,
+          new Object[] {"proveedorestelefono2",NpgsqlDbType.Real,10,0} ,
           new Object[] {"proveedoresfax",NpgsqlDbType.Varchar,15,0} ,
           new Object[] {"proveedoresrfc",NpgsqlDbType.Varchar,13,0} ,
           new Object[] {"proveedoresusuario",NpgsqlDbType.Varchar,15,0} ,
-          new Object[] {"proveedoresfecreg",NpgsqlDbType.Timestamp,10,8} ,
-          new Object[] {"proveedoresfecultact",NpgsqlDbType.Timestamp,10,8}
+          new Object[] {"proveedoresfecreg",NpgsqlDbType.Date,8,0} ,
+          new Object[] {"proveedoresfecultact",NpgsqlDbType.Date,8,0}
           } ;
           Object[] prmT000A9 ;
           prmT000A9 = new Object[] {
@@ -2888,15 +2911,15 @@ namespace GeneXus.Programs {
           new Object[] {"proveedoresdireccion",NpgsqlDbType.Varchar,50,0} ,
           new Object[] {"proveedorescolonia",NpgsqlDbType.Varchar,25,0} ,
           new Object[] {"proveedorescodigopostal",NpgsqlDbType.Varchar,5,0} ,
-          new Object[] {"proveedoresmunicipio",NpgsqlDbType.Varchar,20,0} ,
+          new Object[] {"proveedoresmunicipio",NpgsqlDbType.Varchar,25,0} ,
           new Object[] {"proveedorestado",NpgsqlDbType.Varchar,20,0} ,
-          new Object[] {"proveedorestelefono1",NpgsqlDbType.Varchar,10,0} ,
-          new Object[] {"proveedorestelefono2",NpgsqlDbType.Varchar,10,0} ,
+          new Object[] {"proveedorestelefono1",NpgsqlDbType.Real,10,0} ,
+          new Object[] {"proveedorestelefono2",NpgsqlDbType.Real,10,0} ,
           new Object[] {"proveedoresfax",NpgsqlDbType.Varchar,15,0} ,
           new Object[] {"proveedoresrfc",NpgsqlDbType.Varchar,13,0} ,
           new Object[] {"proveedoresusuario",NpgsqlDbType.Varchar,15,0} ,
-          new Object[] {"proveedoresfecreg",NpgsqlDbType.Timestamp,10,8} ,
-          new Object[] {"proveedoresfecultact",NpgsqlDbType.Timestamp,10,8} ,
+          new Object[] {"proveedoresfecreg",NpgsqlDbType.Date,8,0} ,
+          new Object[] {"proveedoresfecultact",NpgsqlDbType.Date,8,0} ,
           new Object[] {"proveedoresid",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT000A10 ;
@@ -2946,9 +2969,9 @@ namespace GeneXus.Programs {
                 ((bool[]) buf[10])[0] = rslt.wasNull(6);
                 ((String[]) buf[11])[0] = rslt.getVarchar(7) ;
                 ((bool[]) buf[12])[0] = rslt.wasNull(7);
-                ((String[]) buf[13])[0] = rslt.getVarchar(8) ;
+                ((long[]) buf[13])[0] = rslt.getLong(8) ;
                 ((bool[]) buf[14])[0] = rslt.wasNull(8);
-                ((String[]) buf[15])[0] = rslt.getVarchar(9) ;
+                ((long[]) buf[15])[0] = rslt.getLong(9) ;
                 ((bool[]) buf[16])[0] = rslt.wasNull(9);
                 ((String[]) buf[17])[0] = rslt.getVarchar(10) ;
                 ((bool[]) buf[18])[0] = rslt.wasNull(10);
@@ -2956,9 +2979,9 @@ namespace GeneXus.Programs {
                 ((bool[]) buf[20])[0] = rslt.wasNull(11);
                 ((String[]) buf[21])[0] = rslt.getVarchar(12) ;
                 ((bool[]) buf[22])[0] = rslt.wasNull(12);
-                ((DateTime[]) buf[23])[0] = rslt.getGXDateTime(13) ;
+                ((DateTime[]) buf[23])[0] = rslt.getGXDate(13) ;
                 ((bool[]) buf[24])[0] = rslt.wasNull(13);
-                ((DateTime[]) buf[25])[0] = rslt.getGXDateTime(14) ;
+                ((DateTime[]) buf[25])[0] = rslt.getGXDate(14) ;
                 ((bool[]) buf[26])[0] = rslt.wasNull(14);
                 return;
              case 1 :
@@ -2975,9 +2998,9 @@ namespace GeneXus.Programs {
                 ((bool[]) buf[10])[0] = rslt.wasNull(6);
                 ((String[]) buf[11])[0] = rslt.getVarchar(7) ;
                 ((bool[]) buf[12])[0] = rslt.wasNull(7);
-                ((String[]) buf[13])[0] = rslt.getVarchar(8) ;
+                ((long[]) buf[13])[0] = rslt.getLong(8) ;
                 ((bool[]) buf[14])[0] = rslt.wasNull(8);
-                ((String[]) buf[15])[0] = rslt.getVarchar(9) ;
+                ((long[]) buf[15])[0] = rslt.getLong(9) ;
                 ((bool[]) buf[16])[0] = rslt.wasNull(9);
                 ((String[]) buf[17])[0] = rslt.getVarchar(10) ;
                 ((bool[]) buf[18])[0] = rslt.wasNull(10);
@@ -2985,9 +3008,9 @@ namespace GeneXus.Programs {
                 ((bool[]) buf[20])[0] = rslt.wasNull(11);
                 ((String[]) buf[21])[0] = rslt.getVarchar(12) ;
                 ((bool[]) buf[22])[0] = rslt.wasNull(12);
-                ((DateTime[]) buf[23])[0] = rslt.getGXDateTime(13) ;
+                ((DateTime[]) buf[23])[0] = rslt.getGXDate(13) ;
                 ((bool[]) buf[24])[0] = rslt.wasNull(13);
-                ((DateTime[]) buf[25])[0] = rslt.getGXDateTime(14) ;
+                ((DateTime[]) buf[25])[0] = rslt.getGXDate(14) ;
                 ((bool[]) buf[26])[0] = rslt.wasNull(14);
                 return;
              case 2 :
@@ -3004,9 +3027,9 @@ namespace GeneXus.Programs {
                 ((bool[]) buf[10])[0] = rslt.wasNull(6);
                 ((String[]) buf[11])[0] = rslt.getVarchar(7) ;
                 ((bool[]) buf[12])[0] = rslt.wasNull(7);
-                ((String[]) buf[13])[0] = rslt.getVarchar(8) ;
+                ((long[]) buf[13])[0] = rslt.getLong(8) ;
                 ((bool[]) buf[14])[0] = rslt.wasNull(8);
-                ((String[]) buf[15])[0] = rslt.getVarchar(9) ;
+                ((long[]) buf[15])[0] = rslt.getLong(9) ;
                 ((bool[]) buf[16])[0] = rslt.wasNull(9);
                 ((String[]) buf[17])[0] = rslt.getVarchar(10) ;
                 ((bool[]) buf[18])[0] = rslt.wasNull(10);
@@ -3014,9 +3037,9 @@ namespace GeneXus.Programs {
                 ((bool[]) buf[20])[0] = rslt.wasNull(11);
                 ((String[]) buf[21])[0] = rslt.getVarchar(12) ;
                 ((bool[]) buf[22])[0] = rslt.wasNull(12);
-                ((DateTime[]) buf[23])[0] = rslt.getGXDateTime(13) ;
+                ((DateTime[]) buf[23])[0] = rslt.getGXDate(13) ;
                 ((bool[]) buf[24])[0] = rslt.wasNull(13);
-                ((DateTime[]) buf[25])[0] = rslt.getGXDateTime(14) ;
+                ((DateTime[]) buf[25])[0] = rslt.getGXDate(14) ;
                 ((bool[]) buf[26])[0] = rslt.wasNull(14);
                 return;
              case 3 :
@@ -3029,7 +3052,7 @@ namespace GeneXus.Programs {
                 ((int[]) buf[0])[0] = rslt.getInt(1) ;
                 return;
              case 9 :
-                ((long[]) buf[0])[0] = rslt.getLong(1) ;
+                ((int[]) buf[0])[0] = rslt.getInt(1) ;
                 ((int[]) buf[1])[0] = rslt.getInt(2) ;
                 ((int[]) buf[2])[0] = rslt.getInt(3) ;
                 return;
@@ -3164,19 +3187,19 @@ namespace GeneXus.Programs {
                 }
                 if ( (bool)parms[14] )
                 {
-                   stmt.setNull( 8 , SqlDbType.VarChar );
+                   stmt.setNull( 8 , SqlDbType.Decimal );
                 }
                 else
                 {
-                   stmt.SetParameter(8, (String)parms[15]);
+                   stmt.SetParameter(8, (long)parms[15]);
                 }
                 if ( (bool)parms[16] )
                 {
-                   stmt.setNull( 9 , SqlDbType.VarChar );
+                   stmt.setNull( 9 , SqlDbType.Decimal );
                 }
                 else
                 {
-                   stmt.SetParameter(9, (String)parms[17]);
+                   stmt.SetParameter(9, (long)parms[17]);
                 }
                 if ( (bool)parms[18] )
                 {
@@ -3208,7 +3231,7 @@ namespace GeneXus.Programs {
                 }
                 else
                 {
-                   stmt.SetParameterDatetime(13, (DateTime)parms[25]);
+                   stmt.SetParameter(13, (DateTime)parms[25]);
                 }
                 if ( (bool)parms[26] )
                 {
@@ -3216,7 +3239,7 @@ namespace GeneXus.Programs {
                 }
                 else
                 {
-                   stmt.SetParameterDatetime(14, (DateTime)parms[27]);
+                   stmt.SetParameter(14, (DateTime)parms[27]);
                 }
                 return;
              case 7 :
@@ -3270,19 +3293,19 @@ namespace GeneXus.Programs {
                 }
                 if ( (bool)parms[12] )
                 {
-                   stmt.setNull( 7 , SqlDbType.VarChar );
+                   stmt.setNull( 7 , SqlDbType.Decimal );
                 }
                 else
                 {
-                   stmt.SetParameter(7, (String)parms[13]);
+                   stmt.SetParameter(7, (long)parms[13]);
                 }
                 if ( (bool)parms[14] )
                 {
-                   stmt.setNull( 8 , SqlDbType.VarChar );
+                   stmt.setNull( 8 , SqlDbType.Decimal );
                 }
                 else
                 {
-                   stmt.SetParameter(8, (String)parms[15]);
+                   stmt.SetParameter(8, (long)parms[15]);
                 }
                 if ( (bool)parms[16] )
                 {
@@ -3314,7 +3337,7 @@ namespace GeneXus.Programs {
                 }
                 else
                 {
-                   stmt.SetParameterDatetime(12, (DateTime)parms[23]);
+                   stmt.SetParameter(12, (DateTime)parms[23]);
                 }
                 if ( (bool)parms[24] )
                 {
@@ -3322,7 +3345,7 @@ namespace GeneXus.Programs {
                 }
                 else
                 {
-                   stmt.SetParameterDatetime(13, (DateTime)parms[25]);
+                   stmt.SetParameter(13, (DateTime)parms[25]);
                 }
                 if ( (bool)parms[26] )
                 {

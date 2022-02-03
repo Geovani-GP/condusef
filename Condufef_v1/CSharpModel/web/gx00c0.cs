@@ -2,7 +2,7 @@
                File: Gx00C0
         Description: Selection List etiquetas
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 1/30/2022 23:38:41.40
+       Generated on: 2/2/2022 13:43:24.69
        Program type: Callable routine
           Main DBMS: postgresql
 */
@@ -57,7 +57,7 @@ namespace GeneXus.Programs {
 
       public void execute( out int aP0_petiquetasproductoid ,
                            out int aP1_petiquetascambsid ,
-                           out long aP2_palmacenid )
+                           out int aP2_palmacenid )
       {
          this.AV13petiquetasproductoid = 0 ;
          this.AV14petiquetascambsid = 0 ;
@@ -143,8 +143,8 @@ namespace GeneXus.Programs {
                context.httpAjaxContext.ajax_rsp_assign_attri("", false, "AV6cetiquetasproductoid", StringUtil.LTrim( StringUtil.Str( (decimal)(AV6cetiquetasproductoid), 9, 0)));
                AV7cetiquetascambsid = (int)(NumberUtil.Val( GetNextPar( ), "."));
                context.httpAjaxContext.ajax_rsp_assign_attri("", false, "AV7cetiquetascambsid", StringUtil.LTrim( StringUtil.Str( (decimal)(AV7cetiquetascambsid), 9, 0)));
-               AV8calmacenid = (long)(NumberUtil.Val( GetNextPar( ), "."));
-               context.httpAjaxContext.ajax_rsp_assign_attri("", false, "AV8calmacenid", StringUtil.LTrim( StringUtil.Str( (decimal)(AV8calmacenid), 18, 0)));
+               AV8calmacenid = (int)(NumberUtil.Val( GetNextPar( ), "."));
+               context.httpAjaxContext.ajax_rsp_assign_attri("", false, "AV8calmacenid", StringUtil.LTrim( StringUtil.Str( (decimal)(AV8calmacenid), 9, 0)));
                AV9cetiquetasnumero = (long)(NumberUtil.Val( GetNextPar( ), "."));
                context.httpAjaxContext.ajax_rsp_assign_attri("", false, "AV9cetiquetasnumero", StringUtil.LTrim( StringUtil.Str( (decimal)(AV9cetiquetasnumero), 18, 0)));
                AV10cetiquetastatus = (long)(NumberUtil.Val( GetNextPar( ), "."));
@@ -182,8 +182,8 @@ namespace GeneXus.Programs {
                {
                   AV14petiquetascambsid = (int)(NumberUtil.Val( GetNextPar( ), "."));
                   context.httpAjaxContext.ajax_rsp_assign_attri("", false, "AV14petiquetascambsid", StringUtil.LTrim( StringUtil.Str( (decimal)(AV14petiquetascambsid), 9, 0)));
-                  AV15palmacenid = (long)(NumberUtil.Val( GetNextPar( ), "."));
-                  context.httpAjaxContext.ajax_rsp_assign_attri("", false, "AV15palmacenid", StringUtil.LTrim( StringUtil.Str( (decimal)(AV15palmacenid), 18, 0)));
+                  AV15palmacenid = (int)(NumberUtil.Val( GetNextPar( ), "."));
+                  context.httpAjaxContext.ajax_rsp_assign_attri("", false, "AV15palmacenid", StringUtil.LTrim( StringUtil.Str( (decimal)(AV15palmacenid), 9, 0)));
                }
             }
             if ( context.isSpaRequest( ) )
@@ -278,7 +278,7 @@ namespace GeneXus.Programs {
          context.AddJavascriptSource("jquery.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxtimezone.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxgral.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("gxcfg.js", "?202213023384148");
+         context.AddJavascriptSource("gxcfg.js", "?20222213432474");
          if ( context.isSpaRequest( ) )
          {
             enableOutput();
@@ -323,7 +323,7 @@ namespace GeneXus.Programs {
          /* Send hidden variables. */
          GxWebStd.gx_hidden_field( context, "GXH_vCETIQUETASPRODUCTOID", StringUtil.LTrim( StringUtil.NToC( (decimal)(AV6cetiquetasproductoid), 9, 0, ",", "")));
          GxWebStd.gx_hidden_field( context, "GXH_vCETIQUETASCAMBSID", StringUtil.LTrim( StringUtil.NToC( (decimal)(AV7cetiquetascambsid), 9, 0, ",", "")));
-         GxWebStd.gx_hidden_field( context, "GXH_vCALMACENID", StringUtil.LTrim( StringUtil.NToC( (decimal)(AV8calmacenid), 18, 0, ",", "")));
+         GxWebStd.gx_hidden_field( context, "GXH_vCALMACENID", StringUtil.LTrim( StringUtil.NToC( (decimal)(AV8calmacenid), 9, 0, ",", "")));
          GxWebStd.gx_hidden_field( context, "GXH_vCETIQUETASNUMERO", StringUtil.LTrim( StringUtil.NToC( (decimal)(AV9cetiquetasnumero), 18, 0, ",", "")));
          GxWebStd.gx_hidden_field( context, "GXH_vCETIQUETASTATUS", StringUtil.LTrim( StringUtil.NToC( (decimal)(AV10cetiquetastatus), 18, 0, ",", "")));
          GxWebStd.gx_hidden_field( context, "GXH_vCETIQUETAFECHAREALIZADA", context.localUtil.TToC( AV11cetiquetafecharealizada, 10, 8, 0, 3, "/", ":", " "));
@@ -332,7 +332,7 @@ namespace GeneXus.Programs {
          GxWebStd.gx_hidden_field( context, "nRC_GXsfl_84", StringUtil.LTrim( StringUtil.NToC( (decimal)(nRC_GXsfl_84), 4, 0, ",", "")));
          GxWebStd.gx_hidden_field( context, "vPETIQUETASPRODUCTOID", StringUtil.LTrim( StringUtil.NToC( (decimal)(AV13petiquetasproductoid), 9, 0, ",", "")));
          GxWebStd.gx_hidden_field( context, "vPETIQUETASCAMBSID", StringUtil.LTrim( StringUtil.NToC( (decimal)(AV14petiquetascambsid), 9, 0, ",", "")));
-         GxWebStd.gx_hidden_field( context, "vPALMACENID", StringUtil.LTrim( StringUtil.NToC( (decimal)(AV15palmacenid), 18, 0, ",", "")));
+         GxWebStd.gx_hidden_field( context, "vPALMACENID", StringUtil.LTrim( StringUtil.NToC( (decimal)(AV15palmacenid), 9, 0, ",", "")));
          GxWebStd.gx_hidden_field( context, "GRID1_nFirstRecordOnPage", StringUtil.LTrim( StringUtil.NToC( (decimal)(GRID1_nFirstRecordOnPage), 15, 0, ",", "")));
          GxWebStd.gx_hidden_field( context, "GRID1_nEOF", StringUtil.LTrim( StringUtil.NToC( (decimal)(GRID1_nEOF), 1, 0, ",", "")));
          GxWebStd.gx_hidden_field( context, "ADVANCEDCONTAINER_Class", StringUtil.RTrim( divAdvancedcontainer_Class));
@@ -518,10 +518,10 @@ namespace GeneXus.Programs {
             /* Div Control */
             GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", " gx-attribute", "left", "top", "", "", "div");
             /* Attribute/Variable Label */
-            GxWebStd.gx_label_element( context, edtavCalmacenid_Internalname, "articuloid", "col-sm-3 AttributeLabel", 0, true);
+            GxWebStd.gx_label_element( context, edtavCalmacenid_Internalname, "almacenid", "col-sm-3 AttributeLabel", 0, true);
             /* Single line edit */
             TempTags = "  onfocus=\"gx.evt.onfocus(this, 36,'',false,'" + sGXsfl_84_idx + "',0)\"";
-            GxWebStd.gx_single_line_edit( context, edtavCalmacenid_Internalname, StringUtil.LTrim( StringUtil.NToC( (decimal)(AV8calmacenid), 18, 0, ",", "")), ((edtavCalmacenid_Enabled!=0) ? StringUtil.LTrim( context.localUtil.Format( (decimal)(AV8calmacenid), "ZZZZZZZZZZZZZZZZZ9")) : context.localUtil.Format( (decimal)(AV8calmacenid), "ZZZZZZZZZZZZZZZZZ9")), TempTags+" onchange=\"gx.evt.onchange(this)\" "+" onblur=\""+"gx.num.valid_integer( this,'.');"+";gx.evt.onblur(this,36);\"", "'"+""+"'"+",false,"+"'"+""+"'", "", "", "", "", edtavCalmacenid_Jsonclick, 0, "Attribute", "", "", "", edtavCalmacenid_Visible, edtavCalmacenid_Enabled, 0, "text", "", 18, "chr", 1, "row", 18, 0, 0, 0, 1, -1, 0, true, "", "right", false, "HLP_Gx00C0.htm");
+            GxWebStd.gx_single_line_edit( context, edtavCalmacenid_Internalname, StringUtil.LTrim( StringUtil.NToC( (decimal)(AV8calmacenid), 9, 0, ",", "")), ((edtavCalmacenid_Enabled!=0) ? StringUtil.LTrim( context.localUtil.Format( (decimal)(AV8calmacenid), "ZZZZZZZZ9")) : context.localUtil.Format( (decimal)(AV8calmacenid), "ZZZZZZZZ9")), TempTags+" onchange=\"gx.evt.onchange(this)\" "+" onblur=\""+"gx.num.valid_integer( this,'.');"+";gx.evt.onblur(this,36);\"", "'"+""+"'"+",false,"+"'"+""+"'", "", "", "", "", edtavCalmacenid_Jsonclick, 0, "Attribute", "", "", "", edtavCalmacenid_Visible, edtavCalmacenid_Enabled, 0, "text", "", 9, "chr", 1, "row", 9, 0, 0, 0, 1, -1, 0, true, "", "right", false, "HLP_Gx00C0.htm");
             GxWebStd.gx_div_end( context, "left", "top");
             GxWebStd.gx_div_end( context, "left", "top");
             GxWebStd.gx_div_end( context, "left", "top");
@@ -732,6 +732,9 @@ namespace GeneXus.Programs {
                context.WriteHtmlText( "<th align=\""+"right"+"\" "+" nowrap=\"nowrap\" "+" class=\""+subGrid1_Linesclass+"\" "+" style=\""+""+""+"\" "+">") ;
                context.SendWebValue( "etiquetafecharealizada") ;
                context.WriteHtmlTextNl( "</th>") ;
+               context.WriteHtmlText( "<th align=\""+"right"+"\" "+" nowrap=\"nowrap\" "+" class=\""+subGrid1_Linesclass+"\" "+" style=\""+""+""+"\" "+">") ;
+               context.SendWebValue( "etiquetasreimpresión") ;
+               context.WriteHtmlTextNl( "</th>") ;
                context.WriteHtmlTextNl( "</tr>") ;
                Grid1Container.AddObjectProperty("GridName", "Grid1");
             }
@@ -764,7 +767,7 @@ namespace GeneXus.Programs {
                Grid1Column.AddObjectProperty("Value", StringUtil.LTrim( StringUtil.NToC( (decimal)(A18etiquetascambsid), 9, 0, ".", "")));
                Grid1Container.AddColumnProperties(Grid1Column);
                Grid1Column = GXWebColumn.GetNew(isAjaxCallMode( ));
-               Grid1Column.AddObjectProperty("Value", StringUtil.LTrim( StringUtil.NToC( (decimal)(A19almacenid), 18, 0, ".", "")));
+               Grid1Column.AddObjectProperty("Value", StringUtil.LTrim( StringUtil.NToC( (decimal)(A19almacenid), 9, 0, ".", "")));
                Grid1Container.AddColumnProperties(Grid1Column);
                Grid1Column = GXWebColumn.GetNew(isAjaxCallMode( ));
                Grid1Column.AddObjectProperty("Value", StringUtil.LTrim( StringUtil.NToC( (decimal)(A32etiquetasnumero), 18, 0, ".", "")));
@@ -775,6 +778,9 @@ namespace GeneXus.Programs {
                Grid1Container.AddColumnProperties(Grid1Column);
                Grid1Column = GXWebColumn.GetNew(isAjaxCallMode( ));
                Grid1Column.AddObjectProperty("Value", context.localUtil.TToC( A34etiquetafecharealizada, 10, 8, 0, 3, "/", ":", " "));
+               Grid1Container.AddColumnProperties(Grid1Column);
+               Grid1Column = GXWebColumn.GetNew(isAjaxCallMode( ));
+               Grid1Column.AddObjectProperty("Value", StringUtil.LTrim( StringUtil.NToC( (decimal)(A35etiquetasreimpresion), 18, 0, ".", "")));
                Grid1Container.AddColumnProperties(Grid1Column);
                Grid1Container.AddObjectProperty("Allowselection", StringUtil.LTrim( StringUtil.NToC( (decimal)(subGrid1_Allowselection), 1, 0, ".", "")));
                Grid1Container.AddObjectProperty("Selectioncolor", StringUtil.LTrim( StringUtil.NToC( (decimal)(subGrid1_Selectioncolor), 9, 0, ".", "")));
@@ -819,7 +825,7 @@ namespace GeneXus.Programs {
             GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "row", "left", "top", "", "", "div");
             /* Div Control */
             GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "col-xs-12", "left", "top", "", "", "div");
-            TempTags = "  onfocus=\"gx.evt.onfocus(this, 94,'',false,'',0)\"";
+            TempTags = "  onfocus=\"gx.evt.onfocus(this, 95,'',false,'',0)\"";
             ClassString = "BtnCancel";
             StyleString = "";
             GxWebStd.gx_button_ctrl( context, bttBtn_cancel_Internalname, "gx.evt.setGridEvt("+StringUtil.Str( (decimal)(84), 2, 0)+","+"null"+");", "Cancelar", bttBtn_cancel_Jsonclick, 1, "Cancelar", "", StyleString, ClassString, 1, 1, "standard", "'"+""+"'"+",false,"+"'"+"ECANCEL."+"'", TempTags, "", context.GetButtonType( ), "HLP_Gx00C0.htm");
@@ -929,13 +935,15 @@ namespace GeneXus.Programs {
                               context.httpAjaxContext.ajax_rsp_assign_prop("", false, edtavLinkselection_Internalname, "Bitmap", (String.IsNullOrEmpty(StringUtil.RTrim( AV5LinkSelection)) ? AV19Linkselection_GXI : context.convertURL( context.PathToRelativeUrl( AV5LinkSelection))));
                               A17etiquetasproductoid = (int)(context.localUtil.CToN( cgiGet( edtetiquetasproductoid_Internalname), ",", "."));
                               A18etiquetascambsid = (int)(context.localUtil.CToN( cgiGet( edtetiquetascambsid_Internalname), ",", "."));
-                              A19almacenid = (long)(context.localUtil.CToN( cgiGet( edtalmacenid_Internalname), ",", "."));
+                              A19almacenid = (int)(context.localUtil.CToN( cgiGet( edtalmacenid_Internalname), ",", "."));
                               A32etiquetasnumero = (long)(context.localUtil.CToN( cgiGet( edtetiquetasnumero_Internalname), ",", "."));
                               n32etiquetasnumero = false;
                               A33etiquetastatus = (long)(context.localUtil.CToN( cgiGet( edtetiquetastatus_Internalname), ",", "."));
                               n33etiquetastatus = false;
                               A34etiquetafecharealizada = context.localUtil.CToT( cgiGet( edtetiquetafecharealizada_Internalname), 0);
                               n34etiquetafecharealizada = false;
+                              A35etiquetasreimpresion = (long)(context.localUtil.CToN( cgiGet( edtetiquetasreimpresion_Internalname), ",", "."));
+                              n35etiquetasreimpresion = false;
                               sEvtType = StringUtil.Right( sEvt, 1);
                               if ( StringUtil.StrCmp(sEvtType, ".") == 0 )
                               {
@@ -1086,7 +1094,7 @@ namespace GeneXus.Programs {
       protected void gxgrGrid1_refresh( int subGrid1_Rows ,
                                         int AV6cetiquetasproductoid ,
                                         int AV7cetiquetascambsid ,
-                                        long AV8calmacenid ,
+                                        int AV8calmacenid ,
                                         long AV9cetiquetasnumero ,
                                         long AV10cetiquetastatus ,
                                         DateTime AV11cetiquetafecharealizada ,
@@ -1106,14 +1114,16 @@ namespace GeneXus.Programs {
          GxWebStd.gx_hidden_field( context, "ETIQUETASPRODUCTOID", StringUtil.LTrim( StringUtil.NToC( (decimal)(A17etiquetasproductoid), 9, 0, ".", "")));
          GxWebStd.gx_hidden_field( context, "gxhash_ETIQUETASCAMBSID", GetSecureSignedToken( "", context.localUtil.Format( (decimal)(A18etiquetascambsid), "ZZZZZZZZ9")));
          GxWebStd.gx_hidden_field( context, "ETIQUETASCAMBSID", StringUtil.LTrim( StringUtil.NToC( (decimal)(A18etiquetascambsid), 9, 0, ".", "")));
-         GxWebStd.gx_hidden_field( context, "gxhash_ALMACENID", GetSecureSignedToken( "", context.localUtil.Format( (decimal)(A19almacenid), "ZZZZZZZZZZZZZZZZZ9")));
-         GxWebStd.gx_hidden_field( context, "ALMACENID", StringUtil.LTrim( StringUtil.NToC( (decimal)(A19almacenid), 18, 0, ".", "")));
+         GxWebStd.gx_hidden_field( context, "gxhash_ALMACENID", GetSecureSignedToken( "", context.localUtil.Format( (decimal)(A19almacenid), "ZZZZZZZZ9")));
+         GxWebStd.gx_hidden_field( context, "ALMACENID", StringUtil.LTrim( StringUtil.NToC( (decimal)(A19almacenid), 9, 0, ".", "")));
          GxWebStd.gx_hidden_field( context, "gxhash_ETIQUETASNUMERO", GetSecureSignedToken( "", context.localUtil.Format( (decimal)(A32etiquetasnumero), "ZZZZZZZZZZZZZZZZZ9")));
          GxWebStd.gx_hidden_field( context, "ETIQUETASNUMERO", StringUtil.LTrim( StringUtil.NToC( (decimal)(A32etiquetasnumero), 18, 0, ".", "")));
          GxWebStd.gx_hidden_field( context, "gxhash_ETIQUETASTATUS", GetSecureSignedToken( "", context.localUtil.Format( (decimal)(A33etiquetastatus), "ZZZZZZZZZZZZZZZZZ9")));
          GxWebStd.gx_hidden_field( context, "ETIQUETASTATUS", StringUtil.LTrim( StringUtil.NToC( (decimal)(A33etiquetastatus), 18, 0, ".", "")));
          GxWebStd.gx_hidden_field( context, "gxhash_ETIQUETAFECHAREALIZADA", GetSecureSignedToken( "", context.localUtil.Format( A34etiquetafecharealizada, "99/99/9999 99:99:99")));
          GxWebStd.gx_hidden_field( context, "ETIQUETAFECHAREALIZADA", context.localUtil.TToC( A34etiquetafecharealizada, 10, 8, 0, 3, "/", ":", " "));
+         GxWebStd.gx_hidden_field( context, "gxhash_ETIQUETASREIMPRESION", GetSecureSignedToken( "", context.localUtil.Format( (decimal)(A35etiquetasreimpresion), "ZZZZZZZZZZZZZZZZZ9")));
+         GxWebStd.gx_hidden_field( context, "ETIQUETASREIMPRESION", StringUtil.LTrim( StringUtil.NToC( (decimal)(A35etiquetasreimpresion), 18, 0, ".", "")));
       }
 
       protected void fix_multi_value_controls( )
@@ -1172,7 +1182,7 @@ namespace GeneXus.Programs {
                                                  AV8calmacenid },
                                                  new int[] {
                                                  TypeConstants.LONG, TypeConstants.LONG, TypeConstants.DATE, TypeConstants.LONG, TypeConstants.LONG, TypeConstants.BOOLEAN, TypeConstants.LONG, TypeConstants.BOOLEAN, TypeConstants.DATE, TypeConstants.BOOLEAN,
-                                                 TypeConstants.LONG, TypeConstants.BOOLEAN, TypeConstants.INT, TypeConstants.INT, TypeConstants.LONG
+                                                 TypeConstants.LONG, TypeConstants.BOOLEAN, TypeConstants.INT, TypeConstants.INT, TypeConstants.INT
                                                  }
             });
             /* Using cursor H00252 */
@@ -1230,7 +1240,7 @@ namespace GeneXus.Programs {
                                               AV8calmacenid },
                                               new int[] {
                                               TypeConstants.LONG, TypeConstants.LONG, TypeConstants.DATE, TypeConstants.LONG, TypeConstants.LONG, TypeConstants.BOOLEAN, TypeConstants.LONG, TypeConstants.BOOLEAN, TypeConstants.DATE, TypeConstants.BOOLEAN,
-                                              TypeConstants.LONG, TypeConstants.BOOLEAN, TypeConstants.INT, TypeConstants.INT, TypeConstants.LONG
+                                              TypeConstants.LONG, TypeConstants.BOOLEAN, TypeConstants.INT, TypeConstants.INT, TypeConstants.INT
                                               }
          });
          /* Using cursor H00253 */
@@ -1384,19 +1394,19 @@ namespace GeneXus.Programs {
                AV7cetiquetascambsid = (int)(context.localUtil.CToN( cgiGet( edtavCetiquetascambsid_Internalname), ",", "."));
                context.httpAjaxContext.ajax_rsp_assign_attri("", false, "AV7cetiquetascambsid", StringUtil.LTrim( StringUtil.Str( (decimal)(AV7cetiquetascambsid), 9, 0)));
             }
-            if ( ( ( context.localUtil.CToN( cgiGet( edtavCalmacenid_Internalname), ",", ".") < Convert.ToDecimal( 0 )) ) || ( ( context.localUtil.CToN( cgiGet( edtavCalmacenid_Internalname), ",", ".") > Convert.ToDecimal( 999999999999999999L )) ) )
+            if ( ( ( context.localUtil.CToN( cgiGet( edtavCalmacenid_Internalname), ",", ".") < Convert.ToDecimal( 0 )) ) || ( ( context.localUtil.CToN( cgiGet( edtavCalmacenid_Internalname), ",", ".") > Convert.ToDecimal( 999999999 )) ) )
             {
                GX_msglist.addItem(context.GetMessage( "GXM_badnum", ""), 1, "vCALMACENID");
                GX_FocusControl = edtavCalmacenid_Internalname;
                context.httpAjaxContext.ajax_rsp_assign_attri("", false, "GX_FocusControl", GX_FocusControl);
                wbErr = true;
                AV8calmacenid = 0;
-               context.httpAjaxContext.ajax_rsp_assign_attri("", false, "AV8calmacenid", StringUtil.LTrim( StringUtil.Str( (decimal)(AV8calmacenid), 18, 0)));
+               context.httpAjaxContext.ajax_rsp_assign_attri("", false, "AV8calmacenid", StringUtil.LTrim( StringUtil.Str( (decimal)(AV8calmacenid), 9, 0)));
             }
             else
             {
-               AV8calmacenid = (long)(context.localUtil.CToN( cgiGet( edtavCalmacenid_Internalname), ",", "."));
-               context.httpAjaxContext.ajax_rsp_assign_attri("", false, "AV8calmacenid", StringUtil.LTrim( StringUtil.Str( (decimal)(AV8calmacenid), 18, 0)));
+               AV8calmacenid = (int)(context.localUtil.CToN( cgiGet( edtavCalmacenid_Internalname), ",", "."));
+               context.httpAjaxContext.ajax_rsp_assign_attri("", false, "AV8calmacenid", StringUtil.LTrim( StringUtil.Str( (decimal)(AV8calmacenid), 9, 0)));
             }
             if ( ( ( context.localUtil.CToN( cgiGet( edtavCetiquetasnumero_Internalname), ",", ".") < Convert.ToDecimal( 0 )) ) || ( ( context.localUtil.CToN( cgiGet( edtavCetiquetasnumero_Internalname), ",", ".") > Convert.ToDecimal( 999999999999999999L )) ) )
             {
@@ -1549,8 +1559,8 @@ namespace GeneXus.Programs {
          AV14petiquetascambsid = A18etiquetascambsid;
          context.httpAjaxContext.ajax_rsp_assign_attri("", false, "AV14petiquetascambsid", StringUtil.LTrim( StringUtil.Str( (decimal)(AV14petiquetascambsid), 9, 0)));
          AV15palmacenid = A19almacenid;
-         context.httpAjaxContext.ajax_rsp_assign_attri("", false, "AV15palmacenid", StringUtil.LTrim( StringUtil.Str( (decimal)(AV15palmacenid), 18, 0)));
-         context.setWebReturnParms(new Object[] {(int)AV13petiquetasproductoid,(int)AV14petiquetascambsid,(long)AV15palmacenid});
+         context.httpAjaxContext.ajax_rsp_assign_attri("", false, "AV15palmacenid", StringUtil.LTrim( StringUtil.Str( (decimal)(AV15palmacenid), 9, 0)));
+         context.setWebReturnParms(new Object[] {(int)AV13petiquetasproductoid,(int)AV14petiquetascambsid,(int)AV15palmacenid});
          context.wjLocDisableFrm = 1;
          context.nUserReturn = 1;
          returnInSub = true;
@@ -1565,8 +1575,8 @@ namespace GeneXus.Programs {
          context.httpAjaxContext.ajax_rsp_assign_attri("", false, "AV13petiquetasproductoid", StringUtil.LTrim( StringUtil.Str( (decimal)(AV13petiquetasproductoid), 9, 0)));
          AV14petiquetascambsid = Convert.ToInt32(getParm(obj,1));
          context.httpAjaxContext.ajax_rsp_assign_attri("", false, "AV14petiquetascambsid", StringUtil.LTrim( StringUtil.Str( (decimal)(AV14petiquetascambsid), 9, 0)));
-         AV15palmacenid = Convert.ToInt64(getParm(obj,2));
-         context.httpAjaxContext.ajax_rsp_assign_attri("", false, "AV15palmacenid", StringUtil.LTrim( StringUtil.Str( (decimal)(AV15palmacenid), 18, 0)));
+         AV15palmacenid = Convert.ToInt32(getParm(obj,2));
+         context.httpAjaxContext.ajax_rsp_assign_attri("", false, "AV15palmacenid", StringUtil.LTrim( StringUtil.Str( (decimal)(AV15palmacenid), 9, 0)));
       }
 
       public override String getresponse( String sGXDynURL )
@@ -1594,12 +1604,12 @@ namespace GeneXus.Programs {
 
       protected void define_styles( )
       {
-         AddStyleSheetFile("calendar-system.css", "?11323129");
-         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?2337534");
+         AddStyleSheetFile("calendar-system.css", "?13205289");
+         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?1342847");
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?20221302338432");
+            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?2022221343262");
             idxLst = (int)(idxLst+1);
          }
          /* End function define_styles */
@@ -1609,7 +1619,7 @@ namespace GeneXus.Programs {
       {
          context.AddJavascriptSource("messages.spa.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxdec.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("gx00c0.js", "?20221302338432");
+         context.AddJavascriptSource("gx00c0.js", "?2022221343262");
          /* End function include_jscripts */
       }
 
@@ -1622,6 +1632,7 @@ namespace GeneXus.Programs {
          edtetiquetasnumero_Internalname = "ETIQUETASNUMERO_"+sGXsfl_84_idx;
          edtetiquetastatus_Internalname = "ETIQUETASTATUS_"+sGXsfl_84_idx;
          edtetiquetafecharealizada_Internalname = "ETIQUETAFECHAREALIZADA_"+sGXsfl_84_idx;
+         edtetiquetasreimpresion_Internalname = "ETIQUETASREIMPRESION_"+sGXsfl_84_idx;
       }
 
       protected void SubsflControlProps_fel_842( )
@@ -1633,6 +1644,7 @@ namespace GeneXus.Programs {
          edtetiquetasnumero_Internalname = "ETIQUETASNUMERO_"+sGXsfl_84_fel_idx;
          edtetiquetastatus_Internalname = "ETIQUETASTATUS_"+sGXsfl_84_fel_idx;
          edtetiquetafecharealizada_Internalname = "ETIQUETAFECHAREALIZADA_"+sGXsfl_84_fel_idx;
+         edtetiquetasreimpresion_Internalname = "ETIQUETASREIMPRESION_"+sGXsfl_84_fel_idx;
       }
 
       protected void sendrow_842( )
@@ -1704,7 +1716,7 @@ namespace GeneXus.Programs {
                context.WriteHtmlText( "<td valign=\"middle\" align=\""+""+"\""+" style=\""+""+"\">") ;
             }
             /* Static Bitmap Variable */
-            edtavLinkselection_Link = "javascript:gx.popup.gxReturn(["+"'"+GXUtil.EncodeJSConstant( StringUtil.LTrim( StringUtil.NToC( (decimal)(A17etiquetasproductoid), 9, 0, ",", "")))+"'"+", "+"'"+GXUtil.EncodeJSConstant( StringUtil.LTrim( StringUtil.NToC( (decimal)(A18etiquetascambsid), 9, 0, ",", "")))+"'"+", "+"'"+GXUtil.EncodeJSConstant( StringUtil.LTrim( StringUtil.NToC( (decimal)(A19almacenid), 18, 0, ",", "")))+"'"+"]);";
+            edtavLinkselection_Link = "javascript:gx.popup.gxReturn(["+"'"+GXUtil.EncodeJSConstant( StringUtil.LTrim( StringUtil.NToC( (decimal)(A17etiquetasproductoid), 9, 0, ",", "")))+"'"+", "+"'"+GXUtil.EncodeJSConstant( StringUtil.LTrim( StringUtil.NToC( (decimal)(A18etiquetascambsid), 9, 0, ",", "")))+"'"+", "+"'"+GXUtil.EncodeJSConstant( StringUtil.LTrim( StringUtil.NToC( (decimal)(A19almacenid), 9, 0, ",", "")))+"'"+"]);";
             context.httpAjaxContext.ajax_rsp_assign_prop("", false, edtavLinkselection_Internalname, "Link", edtavLinkselection_Link);
             ClassString = "SelectionAttribute";
             StyleString = "";
@@ -1733,7 +1745,7 @@ namespace GeneXus.Programs {
             }
             /* Single line edit */
             ROClassString = "Attribute";
-            Grid1Row.AddColumnProperties("edit", 1, isAjaxCallMode( ), new Object[] {(String)edtalmacenid_Internalname,StringUtil.LTrim( StringUtil.NToC( (decimal)(A19almacenid), 18, 0, ",", "")),context.localUtil.Format( (decimal)(A19almacenid), "ZZZZZZZZZZZZZZZZZ9"),(String)"",(String)"'"+""+"'"+",false,"+"'"+""+"'",(String)"",(String)"",(String)"",(String)"",(String)edtalmacenid_Jsonclick,(short)0,(String)"Attribute",(String)"",(String)ROClassString,(String)"WWColumn OptionalColumn",(short)-1,(short)0,(short)0,(String)"text",(String)"",(short)0,(String)"px",(short)17,(String)"px",(short)18,(short)0,(short)0,(short)84,(short)1,(short)-1,(short)0,(bool)true,(String)"",(String)"right",(bool)false});
+            Grid1Row.AddColumnProperties("edit", 1, isAjaxCallMode( ), new Object[] {(String)edtalmacenid_Internalname,StringUtil.LTrim( StringUtil.NToC( (decimal)(A19almacenid), 9, 0, ",", "")),context.localUtil.Format( (decimal)(A19almacenid), "ZZZZZZZZ9"),(String)"",(String)"'"+""+"'"+",false,"+"'"+""+"'",(String)"",(String)"",(String)"",(String)"",(String)edtalmacenid_Jsonclick,(short)0,(String)"Attribute",(String)"",(String)ROClassString,(String)"WWColumn OptionalColumn",(short)-1,(short)0,(short)0,(String)"text",(String)"",(short)0,(String)"px",(short)17,(String)"px",(short)9,(short)0,(short)0,(short)84,(short)1,(short)-1,(short)0,(bool)true,(String)"",(String)"right",(bool)false});
             /* Subfile cell */
             if ( Grid1Container.GetWrapped() == 1 )
             {
@@ -1741,7 +1753,7 @@ namespace GeneXus.Programs {
             }
             /* Single line edit */
             ROClassString = "DescriptionAttribute";
-            edtetiquetasnumero_Link = "javascript:gx.popup.gxReturn(["+"'"+GXUtil.EncodeJSConstant( StringUtil.LTrim( StringUtil.NToC( (decimal)(A17etiquetasproductoid), 9, 0, ",", "")))+"'"+", "+"'"+GXUtil.EncodeJSConstant( StringUtil.LTrim( StringUtil.NToC( (decimal)(A18etiquetascambsid), 9, 0, ",", "")))+"'"+", "+"'"+GXUtil.EncodeJSConstant( StringUtil.LTrim( StringUtil.NToC( (decimal)(A19almacenid), 18, 0, ",", "")))+"'"+"]);";
+            edtetiquetasnumero_Link = "javascript:gx.popup.gxReturn(["+"'"+GXUtil.EncodeJSConstant( StringUtil.LTrim( StringUtil.NToC( (decimal)(A17etiquetasproductoid), 9, 0, ",", "")))+"'"+", "+"'"+GXUtil.EncodeJSConstant( StringUtil.LTrim( StringUtil.NToC( (decimal)(A18etiquetascambsid), 9, 0, ",", "")))+"'"+", "+"'"+GXUtil.EncodeJSConstant( StringUtil.LTrim( StringUtil.NToC( (decimal)(A19almacenid), 9, 0, ",", "")))+"'"+"]);";
             context.httpAjaxContext.ajax_rsp_assign_prop("", false, edtetiquetasnumero_Internalname, "Link", edtetiquetasnumero_Link);
             Grid1Row.AddColumnProperties("edit", 1, isAjaxCallMode( ), new Object[] {(String)edtetiquetasnumero_Internalname,StringUtil.LTrim( StringUtil.NToC( (decimal)(A32etiquetasnumero), 18, 0, ",", "")),context.localUtil.Format( (decimal)(A32etiquetasnumero), "ZZZZZZZZZZZZZZZZZ9"),(String)"",(String)"'"+""+"'"+",false,"+"'"+""+"'",(String)edtetiquetasnumero_Link,(String)"",(String)"",(String)"",(String)edtetiquetasnumero_Jsonclick,(short)0,(String)"DescriptionAttribute",(String)"",(String)ROClassString,(String)"WWColumn",(short)-1,(short)0,(short)0,(String)"text",(String)"",(short)0,(String)"px",(short)17,(String)"px",(short)18,(short)0,(short)0,(short)84,(short)1,(short)-1,(short)0,(bool)true,(String)"",(String)"right",(bool)false});
             /* Subfile cell */
@@ -1760,12 +1772,21 @@ namespace GeneXus.Programs {
             /* Single line edit */
             ROClassString = "Attribute";
             Grid1Row.AddColumnProperties("edit", 1, isAjaxCallMode( ), new Object[] {(String)edtetiquetafecharealizada_Internalname,context.localUtil.TToC( A34etiquetafecharealizada, 10, 8, 0, 3, "/", ":", " "),context.localUtil.Format( A34etiquetafecharealizada, "99/99/9999 99:99:99"),(String)"",(String)"'"+""+"'"+",false,"+"'"+""+"'",(String)"",(String)"",(String)"",(String)"",(String)edtetiquetafecharealizada_Jsonclick,(short)0,(String)"Attribute",(String)"",(String)ROClassString,(String)"WWColumn OptionalColumn",(short)-1,(short)0,(short)0,(String)"text",(String)"",(short)0,(String)"px",(short)17,(String)"px",(short)19,(short)0,(short)0,(short)84,(short)1,(short)-1,(short)0,(bool)true,(String)"",(String)"right",(bool)false});
+            /* Subfile cell */
+            if ( Grid1Container.GetWrapped() == 1 )
+            {
+               context.WriteHtmlText( "<td valign=\"middle\" align=\""+"right"+"\""+" style=\""+""+"\">") ;
+            }
+            /* Single line edit */
+            ROClassString = "Attribute";
+            Grid1Row.AddColumnProperties("edit", 1, isAjaxCallMode( ), new Object[] {(String)edtetiquetasreimpresion_Internalname,StringUtil.LTrim( StringUtil.NToC( (decimal)(A35etiquetasreimpresion), 18, 0, ",", "")),context.localUtil.Format( (decimal)(A35etiquetasreimpresion), "ZZZZZZZZZZZZZZZZZ9"),(String)"",(String)"'"+""+"'"+",false,"+"'"+""+"'",(String)"",(String)"",(String)"",(String)"",(String)edtetiquetasreimpresion_Jsonclick,(short)0,(String)"Attribute",(String)"",(String)ROClassString,(String)"WWColumn OptionalColumn",(short)-1,(short)0,(short)0,(String)"text",(String)"",(short)0,(String)"px",(short)17,(String)"px",(short)18,(short)0,(short)0,(short)84,(short)1,(short)-1,(short)0,(bool)true,(String)"",(String)"right",(bool)false});
             GxWebStd.gx_hidden_field( context, "gxhash_ETIQUETASPRODUCTOID"+"_"+sGXsfl_84_idx, GetSecureSignedToken( sGXsfl_84_idx, context.localUtil.Format( (decimal)(A17etiquetasproductoid), "ZZZZZZZZ9")));
             GxWebStd.gx_hidden_field( context, "gxhash_ETIQUETASCAMBSID"+"_"+sGXsfl_84_idx, GetSecureSignedToken( sGXsfl_84_idx, context.localUtil.Format( (decimal)(A18etiquetascambsid), "ZZZZZZZZ9")));
-            GxWebStd.gx_hidden_field( context, "gxhash_ALMACENID"+"_"+sGXsfl_84_idx, GetSecureSignedToken( sGXsfl_84_idx, context.localUtil.Format( (decimal)(A19almacenid), "ZZZZZZZZZZZZZZZZZ9")));
+            GxWebStd.gx_hidden_field( context, "gxhash_ALMACENID"+"_"+sGXsfl_84_idx, GetSecureSignedToken( sGXsfl_84_idx, context.localUtil.Format( (decimal)(A19almacenid), "ZZZZZZZZ9")));
             GxWebStd.gx_hidden_field( context, "gxhash_ETIQUETASNUMERO"+"_"+sGXsfl_84_idx, GetSecureSignedToken( sGXsfl_84_idx, context.localUtil.Format( (decimal)(A32etiquetasnumero), "ZZZZZZZZZZZZZZZZZ9")));
             GxWebStd.gx_hidden_field( context, "gxhash_ETIQUETASTATUS"+"_"+sGXsfl_84_idx, GetSecureSignedToken( sGXsfl_84_idx, context.localUtil.Format( (decimal)(A33etiquetastatus), "ZZZZZZZZZZZZZZZZZ9")));
             GxWebStd.gx_hidden_field( context, "gxhash_ETIQUETAFECHAREALIZADA"+"_"+sGXsfl_84_idx, GetSecureSignedToken( sGXsfl_84_idx, context.localUtil.Format( A34etiquetafecharealizada, "99/99/9999 99:99:99")));
+            GxWebStd.gx_hidden_field( context, "gxhash_ETIQUETASREIMPRESION"+"_"+sGXsfl_84_idx, GetSecureSignedToken( sGXsfl_84_idx, context.localUtil.Format( (decimal)(A35etiquetasreimpresion), "ZZZZZZZZZZZZZZZZZ9")));
             Grid1Container.AddRow(Grid1Row);
             nGXsfl_84_idx = (short)(((subGrid1_Islastpage==1)&&(nGXsfl_84_idx+1>subGrid1_Recordsperpage( )) ? 1 : nGXsfl_84_idx+1));
             sGXsfl_84_idx = StringUtil.PadL( StringUtil.LTrim( StringUtil.Str( (decimal)(nGXsfl_84_idx), 4, 0)), 4, "0");
@@ -1858,6 +1879,7 @@ namespace GeneXus.Programs {
          edtetiquetasnumero_Internalname = "ETIQUETASNUMERO";
          edtetiquetastatus_Internalname = "ETIQUETASTATUS";
          edtetiquetafecharealizada_Internalname = "ETIQUETAFECHAREALIZADA";
+         edtetiquetasreimpresion_Internalname = "ETIQUETASREIMPRESION";
          div_Internalname = "";
          div_Internalname = "";
          bttBtn_cancel_Internalname = "BTN_CANCEL";
@@ -1879,6 +1901,7 @@ namespace GeneXus.Programs {
             disableJsOutput();
          }
          init_default_properties( ) ;
+         edtetiquetasreimpresion_Jsonclick = "";
          edtetiquetafecharealizada_Jsonclick = "";
          edtetiquetastatus_Jsonclick = "";
          edtetiquetasnumero_Jsonclick = "";
@@ -1939,7 +1962,7 @@ namespace GeneXus.Programs {
 
       public override void InitializeDynEvents( )
       {
-         setEventMetadata("REFRESH","{handler:'Refresh',iparms:[{av:'GRID1_nFirstRecordOnPage',nv:0},{av:'GRID1_nEOF',nv:0},{av:'subGrid1_Rows',nv:0},{av:'AV6cetiquetasproductoid',fld:'vCETIQUETASPRODUCTOID',pic:'ZZZZZZZZ9',nv:0},{av:'AV7cetiquetascambsid',fld:'vCETIQUETASCAMBSID',pic:'ZZZZZZZZ9',nv:0},{av:'AV8calmacenid',fld:'vCALMACENID',pic:'ZZZZZZZZZZZZZZZZZ9',nv:0},{av:'AV9cetiquetasnumero',fld:'vCETIQUETASNUMERO',pic:'ZZZZZZZZZZZZZZZZZ9',nv:0},{av:'AV10cetiquetastatus',fld:'vCETIQUETASTATUS',pic:'ZZZZZZZZZZZZZZZZZ9',nv:0},{av:'AV11cetiquetafecharealizada',fld:'vCETIQUETAFECHAREALIZADA',pic:'99/99/9999 99:99:99',nv:''},{av:'AV12cetiquetasreimpresion',fld:'vCETIQUETASREIMPRESION',pic:'ZZZZZZZZZZZZZZZZZ9',nv:0}],oparms:[]}");
+         setEventMetadata("REFRESH","{handler:'Refresh',iparms:[{av:'GRID1_nFirstRecordOnPage',nv:0},{av:'GRID1_nEOF',nv:0},{av:'subGrid1_Rows',nv:0},{av:'AV6cetiquetasproductoid',fld:'vCETIQUETASPRODUCTOID',pic:'ZZZZZZZZ9',nv:0},{av:'AV7cetiquetascambsid',fld:'vCETIQUETASCAMBSID',pic:'ZZZZZZZZ9',nv:0},{av:'AV8calmacenid',fld:'vCALMACENID',pic:'ZZZZZZZZ9',nv:0},{av:'AV9cetiquetasnumero',fld:'vCETIQUETASNUMERO',pic:'ZZZZZZZZZZZZZZZZZ9',nv:0},{av:'AV10cetiquetastatus',fld:'vCETIQUETASTATUS',pic:'ZZZZZZZZZZZZZZZZZ9',nv:0},{av:'AV11cetiquetafecharealizada',fld:'vCETIQUETAFECHAREALIZADA',pic:'99/99/9999 99:99:99',nv:''},{av:'AV12cetiquetasreimpresion',fld:'vCETIQUETASREIMPRESION',pic:'ZZZZZZZZZZZZZZZZZ9',nv:0}],oparms:[]}");
          setEventMetadata("'TOGGLE'","{handler:'E18251',iparms:[{av:'divAdvancedcontainer_Class',ctrl:'ADVANCEDCONTAINER',prop:'Class'},{ctrl:'BTNTOGGLE',prop:'Class'}],oparms:[{av:'divAdvancedcontainer_Class',ctrl:'ADVANCEDCONTAINER',prop:'Class'},{ctrl:'BTNTOGGLE',prop:'Class'}]}");
          setEventMetadata("LBLETIQUETASPRODUCTOIDFILTER.CLICK","{handler:'E11251',iparms:[{av:'divEtiquetasproductoidfiltercontainer_Class',ctrl:'ETIQUETASPRODUCTOIDFILTERCONTAINER',prop:'Class'}],oparms:[{av:'divEtiquetasproductoidfiltercontainer_Class',ctrl:'ETIQUETASPRODUCTOIDFILTERCONTAINER',prop:'Class'},{av:'edtavCetiquetasproductoid_Visible',ctrl:'vCETIQUETASPRODUCTOID',prop:'Visible'}]}");
          setEventMetadata("LBLETIQUETASCAMBSIDFILTER.CLICK","{handler:'E12251',iparms:[{av:'divEtiquetascambsidfiltercontainer_Class',ctrl:'ETIQUETASCAMBSIDFILTERCONTAINER',prop:'Class'}],oparms:[{av:'divEtiquetascambsidfiltercontainer_Class',ctrl:'ETIQUETASCAMBSIDFILTERCONTAINER',prop:'Class'},{av:'edtavCetiquetascambsid_Visible',ctrl:'vCETIQUETASCAMBSID',prop:'Visible'}]}");
@@ -1948,11 +1971,11 @@ namespace GeneXus.Programs {
          setEventMetadata("LBLETIQUETASTATUSFILTER.CLICK","{handler:'E15251',iparms:[{av:'divEtiquetastatusfiltercontainer_Class',ctrl:'ETIQUETASTATUSFILTERCONTAINER',prop:'Class'}],oparms:[{av:'divEtiquetastatusfiltercontainer_Class',ctrl:'ETIQUETASTATUSFILTERCONTAINER',prop:'Class'},{av:'edtavCetiquetastatus_Visible',ctrl:'vCETIQUETASTATUS',prop:'Visible'}]}");
          setEventMetadata("LBLETIQUETAFECHAREALIZADAFILTER.CLICK","{handler:'E16251',iparms:[{av:'divEtiquetafecharealizadafiltercontainer_Class',ctrl:'ETIQUETAFECHAREALIZADAFILTERCONTAINER',prop:'Class'}],oparms:[{av:'divEtiquetafecharealizadafiltercontainer_Class',ctrl:'ETIQUETAFECHAREALIZADAFILTERCONTAINER',prop:'Class'}]}");
          setEventMetadata("LBLETIQUETASREIMPRESIONFILTER.CLICK","{handler:'E17251',iparms:[{av:'divEtiquetasreimpresionfiltercontainer_Class',ctrl:'ETIQUETASREIMPRESIONFILTERCONTAINER',prop:'Class'}],oparms:[{av:'divEtiquetasreimpresionfiltercontainer_Class',ctrl:'ETIQUETASREIMPRESIONFILTERCONTAINER',prop:'Class'},{av:'edtavCetiquetasreimpresion_Visible',ctrl:'vCETIQUETASREIMPRESION',prop:'Visible'}]}");
-         setEventMetadata("ENTER","{handler:'E21252',iparms:[{av:'A17etiquetasproductoid',fld:'ETIQUETASPRODUCTOID',pic:'ZZZZZZZZ9',hsh:true,nv:0},{av:'A18etiquetascambsid',fld:'ETIQUETASCAMBSID',pic:'ZZZZZZZZ9',hsh:true,nv:0},{av:'A19almacenid',fld:'ALMACENID',pic:'ZZZZZZZZZZZZZZZZZ9',hsh:true,nv:0}],oparms:[{av:'AV13petiquetasproductoid',fld:'vPETIQUETASPRODUCTOID',pic:'ZZZZZZZZ9',nv:0},{av:'AV14petiquetascambsid',fld:'vPETIQUETASCAMBSID',pic:'ZZZZZZZZ9',nv:0},{av:'AV15palmacenid',fld:'vPALMACENID',pic:'ZZZZZZZZZZZZZZZZZ9',nv:0}]}");
-         setEventMetadata("GRID1_FIRSTPAGE","{handler:'subgrid1_firstpage',iparms:[{av:'GRID1_nFirstRecordOnPage',nv:0},{av:'GRID1_nEOF',nv:0},{av:'subGrid1_Rows',nv:0},{av:'AV6cetiquetasproductoid',fld:'vCETIQUETASPRODUCTOID',pic:'ZZZZZZZZ9',nv:0},{av:'AV7cetiquetascambsid',fld:'vCETIQUETASCAMBSID',pic:'ZZZZZZZZ9',nv:0},{av:'AV8calmacenid',fld:'vCALMACENID',pic:'ZZZZZZZZZZZZZZZZZ9',nv:0},{av:'AV9cetiquetasnumero',fld:'vCETIQUETASNUMERO',pic:'ZZZZZZZZZZZZZZZZZ9',nv:0},{av:'AV10cetiquetastatus',fld:'vCETIQUETASTATUS',pic:'ZZZZZZZZZZZZZZZZZ9',nv:0},{av:'AV11cetiquetafecharealizada',fld:'vCETIQUETAFECHAREALIZADA',pic:'99/99/9999 99:99:99',nv:''},{av:'AV12cetiquetasreimpresion',fld:'vCETIQUETASREIMPRESION',pic:'ZZZZZZZZZZZZZZZZZ9',nv:0}],oparms:[]}");
-         setEventMetadata("GRID1_PREVPAGE","{handler:'subgrid1_previouspage',iparms:[{av:'GRID1_nFirstRecordOnPage',nv:0},{av:'GRID1_nEOF',nv:0},{av:'subGrid1_Rows',nv:0},{av:'AV6cetiquetasproductoid',fld:'vCETIQUETASPRODUCTOID',pic:'ZZZZZZZZ9',nv:0},{av:'AV7cetiquetascambsid',fld:'vCETIQUETASCAMBSID',pic:'ZZZZZZZZ9',nv:0},{av:'AV8calmacenid',fld:'vCALMACENID',pic:'ZZZZZZZZZZZZZZZZZ9',nv:0},{av:'AV9cetiquetasnumero',fld:'vCETIQUETASNUMERO',pic:'ZZZZZZZZZZZZZZZZZ9',nv:0},{av:'AV10cetiquetastatus',fld:'vCETIQUETASTATUS',pic:'ZZZZZZZZZZZZZZZZZ9',nv:0},{av:'AV11cetiquetafecharealizada',fld:'vCETIQUETAFECHAREALIZADA',pic:'99/99/9999 99:99:99',nv:''},{av:'AV12cetiquetasreimpresion',fld:'vCETIQUETASREIMPRESION',pic:'ZZZZZZZZZZZZZZZZZ9',nv:0}],oparms:[]}");
-         setEventMetadata("GRID1_NEXTPAGE","{handler:'subgrid1_nextpage',iparms:[{av:'GRID1_nFirstRecordOnPage',nv:0},{av:'GRID1_nEOF',nv:0},{av:'subGrid1_Rows',nv:0},{av:'AV6cetiquetasproductoid',fld:'vCETIQUETASPRODUCTOID',pic:'ZZZZZZZZ9',nv:0},{av:'AV7cetiquetascambsid',fld:'vCETIQUETASCAMBSID',pic:'ZZZZZZZZ9',nv:0},{av:'AV8calmacenid',fld:'vCALMACENID',pic:'ZZZZZZZZZZZZZZZZZ9',nv:0},{av:'AV9cetiquetasnumero',fld:'vCETIQUETASNUMERO',pic:'ZZZZZZZZZZZZZZZZZ9',nv:0},{av:'AV10cetiquetastatus',fld:'vCETIQUETASTATUS',pic:'ZZZZZZZZZZZZZZZZZ9',nv:0},{av:'AV11cetiquetafecharealizada',fld:'vCETIQUETAFECHAREALIZADA',pic:'99/99/9999 99:99:99',nv:''},{av:'AV12cetiquetasreimpresion',fld:'vCETIQUETASREIMPRESION',pic:'ZZZZZZZZZZZZZZZZZ9',nv:0}],oparms:[]}");
-         setEventMetadata("GRID1_LASTPAGE","{handler:'subgrid1_lastpage',iparms:[{av:'GRID1_nFirstRecordOnPage',nv:0},{av:'GRID1_nEOF',nv:0},{av:'subGrid1_Rows',nv:0},{av:'AV6cetiquetasproductoid',fld:'vCETIQUETASPRODUCTOID',pic:'ZZZZZZZZ9',nv:0},{av:'AV7cetiquetascambsid',fld:'vCETIQUETASCAMBSID',pic:'ZZZZZZZZ9',nv:0},{av:'AV8calmacenid',fld:'vCALMACENID',pic:'ZZZZZZZZZZZZZZZZZ9',nv:0},{av:'AV9cetiquetasnumero',fld:'vCETIQUETASNUMERO',pic:'ZZZZZZZZZZZZZZZZZ9',nv:0},{av:'AV10cetiquetastatus',fld:'vCETIQUETASTATUS',pic:'ZZZZZZZZZZZZZZZZZ9',nv:0},{av:'AV11cetiquetafecharealizada',fld:'vCETIQUETAFECHAREALIZADA',pic:'99/99/9999 99:99:99',nv:''},{av:'AV12cetiquetasreimpresion',fld:'vCETIQUETASREIMPRESION',pic:'ZZZZZZZZZZZZZZZZZ9',nv:0}],oparms:[]}");
+         setEventMetadata("ENTER","{handler:'E21252',iparms:[{av:'A17etiquetasproductoid',fld:'ETIQUETASPRODUCTOID',pic:'ZZZZZZZZ9',hsh:true,nv:0},{av:'A18etiquetascambsid',fld:'ETIQUETASCAMBSID',pic:'ZZZZZZZZ9',hsh:true,nv:0},{av:'A19almacenid',fld:'ALMACENID',pic:'ZZZZZZZZ9',hsh:true,nv:0}],oparms:[{av:'AV13petiquetasproductoid',fld:'vPETIQUETASPRODUCTOID',pic:'ZZZZZZZZ9',nv:0},{av:'AV14petiquetascambsid',fld:'vPETIQUETASCAMBSID',pic:'ZZZZZZZZ9',nv:0},{av:'AV15palmacenid',fld:'vPALMACENID',pic:'ZZZZZZZZ9',nv:0}]}");
+         setEventMetadata("GRID1_FIRSTPAGE","{handler:'subgrid1_firstpage',iparms:[{av:'GRID1_nFirstRecordOnPage',nv:0},{av:'GRID1_nEOF',nv:0},{av:'subGrid1_Rows',nv:0},{av:'AV6cetiquetasproductoid',fld:'vCETIQUETASPRODUCTOID',pic:'ZZZZZZZZ9',nv:0},{av:'AV7cetiquetascambsid',fld:'vCETIQUETASCAMBSID',pic:'ZZZZZZZZ9',nv:0},{av:'AV8calmacenid',fld:'vCALMACENID',pic:'ZZZZZZZZ9',nv:0},{av:'AV9cetiquetasnumero',fld:'vCETIQUETASNUMERO',pic:'ZZZZZZZZZZZZZZZZZ9',nv:0},{av:'AV10cetiquetastatus',fld:'vCETIQUETASTATUS',pic:'ZZZZZZZZZZZZZZZZZ9',nv:0},{av:'AV11cetiquetafecharealizada',fld:'vCETIQUETAFECHAREALIZADA',pic:'99/99/9999 99:99:99',nv:''},{av:'AV12cetiquetasreimpresion',fld:'vCETIQUETASREIMPRESION',pic:'ZZZZZZZZZZZZZZZZZ9',nv:0}],oparms:[]}");
+         setEventMetadata("GRID1_PREVPAGE","{handler:'subgrid1_previouspage',iparms:[{av:'GRID1_nFirstRecordOnPage',nv:0},{av:'GRID1_nEOF',nv:0},{av:'subGrid1_Rows',nv:0},{av:'AV6cetiquetasproductoid',fld:'vCETIQUETASPRODUCTOID',pic:'ZZZZZZZZ9',nv:0},{av:'AV7cetiquetascambsid',fld:'vCETIQUETASCAMBSID',pic:'ZZZZZZZZ9',nv:0},{av:'AV8calmacenid',fld:'vCALMACENID',pic:'ZZZZZZZZ9',nv:0},{av:'AV9cetiquetasnumero',fld:'vCETIQUETASNUMERO',pic:'ZZZZZZZZZZZZZZZZZ9',nv:0},{av:'AV10cetiquetastatus',fld:'vCETIQUETASTATUS',pic:'ZZZZZZZZZZZZZZZZZ9',nv:0},{av:'AV11cetiquetafecharealizada',fld:'vCETIQUETAFECHAREALIZADA',pic:'99/99/9999 99:99:99',nv:''},{av:'AV12cetiquetasreimpresion',fld:'vCETIQUETASREIMPRESION',pic:'ZZZZZZZZZZZZZZZZZ9',nv:0}],oparms:[]}");
+         setEventMetadata("GRID1_NEXTPAGE","{handler:'subgrid1_nextpage',iparms:[{av:'GRID1_nFirstRecordOnPage',nv:0},{av:'GRID1_nEOF',nv:0},{av:'subGrid1_Rows',nv:0},{av:'AV6cetiquetasproductoid',fld:'vCETIQUETASPRODUCTOID',pic:'ZZZZZZZZ9',nv:0},{av:'AV7cetiquetascambsid',fld:'vCETIQUETASCAMBSID',pic:'ZZZZZZZZ9',nv:0},{av:'AV8calmacenid',fld:'vCALMACENID',pic:'ZZZZZZZZ9',nv:0},{av:'AV9cetiquetasnumero',fld:'vCETIQUETASNUMERO',pic:'ZZZZZZZZZZZZZZZZZ9',nv:0},{av:'AV10cetiquetastatus',fld:'vCETIQUETASTATUS',pic:'ZZZZZZZZZZZZZZZZZ9',nv:0},{av:'AV11cetiquetafecharealizada',fld:'vCETIQUETAFECHAREALIZADA',pic:'99/99/9999 99:99:99',nv:''},{av:'AV12cetiquetasreimpresion',fld:'vCETIQUETASREIMPRESION',pic:'ZZZZZZZZZZZZZZZZZ9',nv:0}],oparms:[]}");
+         setEventMetadata("GRID1_LASTPAGE","{handler:'subgrid1_lastpage',iparms:[{av:'GRID1_nFirstRecordOnPage',nv:0},{av:'GRID1_nEOF',nv:0},{av:'subGrid1_Rows',nv:0},{av:'AV6cetiquetasproductoid',fld:'vCETIQUETASPRODUCTOID',pic:'ZZZZZZZZ9',nv:0},{av:'AV7cetiquetascambsid',fld:'vCETIQUETASCAMBSID',pic:'ZZZZZZZZ9',nv:0},{av:'AV8calmacenid',fld:'vCALMACENID',pic:'ZZZZZZZZ9',nv:0},{av:'AV9cetiquetasnumero',fld:'vCETIQUETASNUMERO',pic:'ZZZZZZZZZZZZZZZZZ9',nv:0},{av:'AV10cetiquetastatus',fld:'vCETIQUETASTATUS',pic:'ZZZZZZZZZZZZZZZZZ9',nv:0},{av:'AV11cetiquetafecharealizada',fld:'vCETIQUETAFECHAREALIZADA',pic:'99/99/9999 99:99:99',nv:''},{av:'AV12cetiquetasreimpresion',fld:'vCETIQUETASREIMPRESION',pic:'ZZZZZZZZZZZZZZZZZ9',nv:0}],oparms:[]}");
          return  ;
       }
 
@@ -2014,7 +2037,7 @@ namespace GeneXus.Programs {
          H00252_n33etiquetastatus = new bool[] {false} ;
          H00252_A32etiquetasnumero = new long[1] ;
          H00252_n32etiquetasnumero = new bool[] {false} ;
-         H00252_A19almacenid = new long[1] ;
+         H00252_A19almacenid = new int[1] ;
          H00252_A18etiquetascambsid = new int[1] ;
          H00252_A17etiquetasproductoid = new int[1] ;
          H00253_AGRID1_nRecordCount = new long[1] ;
@@ -2061,8 +2084,10 @@ namespace GeneXus.Programs {
       private int subGrid1_Rows ;
       private int AV6cetiquetasproductoid ;
       private int AV7cetiquetascambsid ;
+      private int AV8calmacenid ;
       private int AV13petiquetasproductoid ;
       private int AV14petiquetascambsid ;
+      private int AV15palmacenid ;
       private int edtavCetiquetasproductoid_Enabled ;
       private int edtavCetiquetasproductoid_Visible ;
       private int edtavCetiquetascambsid_Enabled ;
@@ -2080,6 +2105,7 @@ namespace GeneXus.Programs {
       private int subGrid1_Allbackcolor ;
       private int A17etiquetasproductoid ;
       private int A18etiquetascambsid ;
+      private int A19almacenid ;
       private int subGrid1_Selectioncolor ;
       private int subGrid1_Hoveringcolor ;
       private int subGrid1_Islastpage ;
@@ -2087,17 +2113,14 @@ namespace GeneXus.Programs {
       private int GXPagingTo2 ;
       private int idxLst ;
       private int subGrid1_Backcolor ;
-      private long AV8calmacenid ;
       private long AV9cetiquetasnumero ;
       private long AV10cetiquetastatus ;
       private long AV12cetiquetasreimpresion ;
-      private long AV15palmacenid ;
       private long GRID1_nFirstRecordOnPage ;
-      private long A19almacenid ;
       private long A32etiquetasnumero ;
       private long A33etiquetastatus ;
-      private long GRID1_nCurrentRecord ;
       private long A35etiquetasreimpresion ;
+      private long GRID1_nCurrentRecord ;
       private long GRID1_nRecordCount ;
       private String divAdvancedcontainer_Class ;
       private String bttBtntoggle_Class ;
@@ -2179,6 +2202,7 @@ namespace GeneXus.Programs {
       private String edtetiquetasnumero_Internalname ;
       private String edtetiquetastatus_Internalname ;
       private String edtetiquetafecharealizada_Internalname ;
+      private String edtetiquetasreimpresion_Internalname ;
       private String scmdbuf ;
       private String AV16ADVANCED_LABEL_TEMPLATE ;
       private String sGXsfl_84_fel_idx="0001" ;
@@ -2189,6 +2213,7 @@ namespace GeneXus.Programs {
       private String edtetiquetasnumero_Jsonclick ;
       private String edtetiquetastatus_Jsonclick ;
       private String edtetiquetafecharealizada_Jsonclick ;
+      private String edtetiquetasreimpresion_Jsonclick ;
       private String div_Internalname ;
       private DateTime AV11cetiquetafecharealizada ;
       private DateTime A34etiquetafecharealizada ;
@@ -2218,7 +2243,7 @@ namespace GeneXus.Programs {
       private bool[] H00252_n33etiquetastatus ;
       private long[] H00252_A32etiquetasnumero ;
       private bool[] H00252_n32etiquetasnumero ;
-      private long[] H00252_A19almacenid ;
+      private int[] H00252_A19almacenid ;
       private int[] H00252_A18etiquetascambsid ;
       private int[] H00252_A17etiquetasproductoid ;
       private long[] H00253_AGRID1_nRecordCount ;
@@ -2226,7 +2251,7 @@ namespace GeneXus.Programs {
       private msglist LclMsgLst ;
       private int aP0_petiquetasproductoid ;
       private int aP1_petiquetascambsid ;
-      private long aP2_palmacenid ;
+      private int aP2_palmacenid ;
       private GXWebForm Form ;
    }
 
@@ -2243,7 +2268,7 @@ namespace GeneXus.Programs {
                                              long A35etiquetasreimpresion ,
                                              int AV6cetiquetasproductoid ,
                                              int AV7cetiquetascambsid ,
-                                             long AV8calmacenid )
+                                             int AV8calmacenid )
       {
          String sWhereString = "" ;
          String scmdbuf ;
@@ -2308,7 +2333,7 @@ namespace GeneXus.Programs {
                                              long A35etiquetasreimpresion ,
                                              int AV6cetiquetasproductoid ,
                                              int AV7cetiquetascambsid ,
-                                             long AV8calmacenid )
+                                             int AV8calmacenid )
       {
          String sWhereString = "" ;
          String scmdbuf ;
@@ -2364,9 +2389,9 @@ namespace GeneXus.Programs {
          switch ( cursor )
          {
                case 0 :
-                     return conditional_H00252(context, (long)dynConstraints[0] , (long)dynConstraints[1] , (DateTime)dynConstraints[2] , (long)dynConstraints[3] , (long)dynConstraints[4] , (long)dynConstraints[5] , (DateTime)dynConstraints[6] , (long)dynConstraints[7] , (int)dynConstraints[8] , (int)dynConstraints[9] , (long)dynConstraints[10] );
+                     return conditional_H00252(context, (long)dynConstraints[0] , (long)dynConstraints[1] , (DateTime)dynConstraints[2] , (long)dynConstraints[3] , (long)dynConstraints[4] , (long)dynConstraints[5] , (DateTime)dynConstraints[6] , (long)dynConstraints[7] , (int)dynConstraints[8] , (int)dynConstraints[9] , (int)dynConstraints[10] );
                case 1 :
-                     return conditional_H00253(context, (long)dynConstraints[0] , (long)dynConstraints[1] , (DateTime)dynConstraints[2] , (long)dynConstraints[3] , (long)dynConstraints[4] , (long)dynConstraints[5] , (DateTime)dynConstraints[6] , (long)dynConstraints[7] , (int)dynConstraints[8] , (int)dynConstraints[9] , (long)dynConstraints[10] );
+                     return conditional_H00253(context, (long)dynConstraints[0] , (long)dynConstraints[1] , (DateTime)dynConstraints[2] , (long)dynConstraints[3] , (long)dynConstraints[4] , (long)dynConstraints[5] , (DateTime)dynConstraints[6] , (long)dynConstraints[7] , (int)dynConstraints[8] , (int)dynConstraints[9] , (int)dynConstraints[10] );
          }
          return base.getDynamicStatement(cursor, context, dynConstraints);
       }
@@ -2389,7 +2414,7 @@ namespace GeneXus.Programs {
           prmH00252 = new Object[] {
           new Object[] {"AV6cetiquetasproductoid",NpgsqlDbType.Integer,9,0} ,
           new Object[] {"AV7cetiquetascambsid",NpgsqlDbType.Integer,9,0} ,
-          new Object[] {"AV8calmacenid",NpgsqlDbType.Real,18,0} ,
+          new Object[] {"AV8calmacenid",NpgsqlDbType.Integer,9,0} ,
           new Object[] {"AV9cetiquetasnumero",NpgsqlDbType.Real,18,0} ,
           new Object[] {"AV10cetiquetastatus",NpgsqlDbType.Real,18,0} ,
           new Object[] {"AV11cetiquetafecharealizada",NpgsqlDbType.Timestamp,10,8} ,
@@ -2402,7 +2427,7 @@ namespace GeneXus.Programs {
           prmH00253 = new Object[] {
           new Object[] {"AV6cetiquetasproductoid",NpgsqlDbType.Integer,9,0} ,
           new Object[] {"AV7cetiquetascambsid",NpgsqlDbType.Integer,9,0} ,
-          new Object[] {"AV8calmacenid",NpgsqlDbType.Real,18,0} ,
+          new Object[] {"AV8calmacenid",NpgsqlDbType.Integer,9,0} ,
           new Object[] {"AV9cetiquetasnumero",NpgsqlDbType.Real,18,0} ,
           new Object[] {"AV10cetiquetastatus",NpgsqlDbType.Real,18,0} ,
           new Object[] {"AV11cetiquetafecharealizada",NpgsqlDbType.Timestamp,10,8} ,
@@ -2430,7 +2455,7 @@ namespace GeneXus.Programs {
                 ((bool[]) buf[5])[0] = rslt.wasNull(3);
                 ((long[]) buf[6])[0] = rslt.getLong(4) ;
                 ((bool[]) buf[7])[0] = rslt.wasNull(4);
-                ((long[]) buf[8])[0] = rslt.getLong(5) ;
+                ((int[]) buf[8])[0] = rslt.getInt(5) ;
                 ((int[]) buf[9])[0] = rslt.getInt(6) ;
                 ((int[]) buf[10])[0] = rslt.getInt(7) ;
                 return;
@@ -2462,7 +2487,7 @@ namespace GeneXus.Programs {
                 if ( (short)parms[2] == 0 )
                 {
                    sIdx = (short)(sIdx+1);
-                   stmt.SetParameter(sIdx, (long)parms[12]);
+                   stmt.SetParameter(sIdx, (int)parms[12]);
                 }
                 if ( (short)parms[3] == 0 )
                 {
@@ -2515,7 +2540,7 @@ namespace GeneXus.Programs {
                 if ( (short)parms[2] == 0 )
                 {
                    sIdx = (short)(sIdx+1);
-                   stmt.SetParameter(sIdx, (long)parms[9]);
+                   stmt.SetParameter(sIdx, (int)parms[9]);
                 }
                 if ( (short)parms[3] == 0 )
                 {

@@ -2,7 +2,7 @@
                File: tipobien
         Description: tipobien
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 1/30/2022 23:37:15.13
+       Generated on: 2/2/2022 13:42:10.41
        Program type: Callable routine
           Main DBMS: postgresql
 */
@@ -1531,7 +1531,7 @@ namespace GeneXus.Programs {
          context.AddJavascriptSource("jquery.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxtimezone.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxgral.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("gxcfg.js", "?202213023371635");
+         context.AddJavascriptSource("gxcfg.js", "?2022221342110");
          if ( context.isSpaRequest( ) )
          {
             enableOutput();
@@ -1689,12 +1689,12 @@ namespace GeneXus.Programs {
 
       protected void define_styles( )
       {
-         AddStyleSheetFile("calendar-system.css", "?11323129");
-         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?2337534");
+         AddStyleSheetFile("calendar-system.css", "?13205289");
+         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?1342847");
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?202213023371643");
+            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?2022221342113");
             idxLst = (int)(idxLst+1);
          }
          /* End function define_styles */
@@ -1703,8 +1703,7 @@ namespace GeneXus.Programs {
       protected void include_jscripts( )
       {
          context.AddJavascriptSource("messages.spa.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("gxdec.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("tipobien.js", "?202213023371643");
+         context.AddJavascriptSource("tipobien.js", "?2022221342114");
          /* End function include_jscripts */
       }
 
@@ -1954,7 +1953,7 @@ namespace GeneXus.Programs {
          T00012_A142tipobienfecultact = new DateTime[] {DateTime.MinValue} ;
          T00012_n142tipobienfecultact = new bool[] {false} ;
          T000111_A175productoid = new int[1] ;
-         T000112_A19almacenid = new long[1] ;
+         T000112_A19almacenid = new int[1] ;
          T000112_A20articulosproductoid = new int[1] ;
          T000112_A21articuloscambsid = new int[1] ;
          T000113_A23tipobienid = new int[1] ;
@@ -2139,7 +2138,7 @@ namespace GeneXus.Programs {
       private DateTime[] T00012_A142tipobienfecultact ;
       private bool[] T00012_n142tipobienfecultact ;
       private int[] T000111_A175productoid ;
-      private long[] T000112_A19almacenid ;
+      private int[] T000112_A19almacenid ;
       private int[] T000112_A20articulosproductoid ;
       private int[] T000112_A21articuloscambsid ;
       private int[] T000113_A23tipobienid ;
@@ -2297,7 +2296,7 @@ namespace GeneXus.Programs {
                 ((int[]) buf[0])[0] = rslt.getInt(1) ;
                 return;
              case 10 :
-                ((long[]) buf[0])[0] = rslt.getLong(1) ;
+                ((int[]) buf[0])[0] = rslt.getInt(1) ;
                 ((int[]) buf[1])[0] = rslt.getInt(2) ;
                 ((int[]) buf[2])[0] = rslt.getInt(3) ;
                 return;

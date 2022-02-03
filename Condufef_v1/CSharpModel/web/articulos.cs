@@ -2,7 +2,7 @@
                File: articulos
         Description: articulos
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 1/30/2022 23:37:39.30
+       Generated on: 2/2/2022 13:42:29.80
        Program type: Callable routine
           Main DBMS: postgresql
 */
@@ -67,8 +67,8 @@ namespace GeneXus.Programs {
          }
          else if ( StringUtil.StrCmp(gxfirstwebparm, "gxajaxExecAct_"+"gxLoad_3") == 0 )
          {
-            A19almacenid = (long)(NumberUtil.Val( GetNextPar( ), "."));
-            context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A19almacenid", StringUtil.LTrim( StringUtil.Str( (decimal)(A19almacenid), 18, 0)));
+            A19almacenid = (int)(NumberUtil.Val( GetNextPar( ), "."));
+            context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A19almacenid", StringUtil.LTrim( StringUtil.Str( (decimal)(A19almacenid), 9, 0)));
             setAjaxCallMode();
             if ( ! IsValidAjaxCall( true) )
             {
@@ -385,7 +385,7 @@ namespace GeneXus.Programs {
             GxWebStd.gx_label_element( context, edtalmacenid_Internalname, "almacenid", "col-sm-3 AttributeLabel", 1, true);
             /* Single line edit */
             TempTags = "  onfocus=\"gx.evt.onfocus(this, 22,'',false,'',0)\"";
-            GxWebStd.gx_single_line_edit( context, edtalmacenid_Internalname, StringUtil.LTrim( StringUtil.NToC( (decimal)(A19almacenid), 18, 0, ",", "")), ((edtalmacenid_Enabled!=0) ? StringUtil.LTrim( context.localUtil.Format( (decimal)(A19almacenid), "ZZZZZZZZZZZZZZZZZ9")) : context.localUtil.Format( (decimal)(A19almacenid), "ZZZZZZZZZZZZZZZZZ9")), TempTags+" onchange=\"gx.evt.onchange(this)\" "+" onblur=\""+"gx.num.valid_integer( this,'.');"+";gx.evt.onblur(this,22);\"", "'"+""+"'"+",false,"+"'"+""+"'", "", "", "", "", edtalmacenid_Jsonclick, 0, "Attribute", "", "", "", 1, edtalmacenid_Enabled, 0, "text", "", 18, "chr", 1, "row", 18, 0, 0, 0, 1, -1, 0, true, "", "right", false, "HLP_articulos.htm");
+            GxWebStd.gx_single_line_edit( context, edtalmacenid_Internalname, StringUtil.LTrim( StringUtil.NToC( (decimal)(A19almacenid), 9, 0, ",", "")), ((edtalmacenid_Enabled!=0) ? StringUtil.LTrim( context.localUtil.Format( (decimal)(A19almacenid), "ZZZZZZZZ9")) : context.localUtil.Format( (decimal)(A19almacenid), "ZZZZZZZZ9")), TempTags+" onchange=\"gx.evt.onchange(this)\" "+" onblur=\""+"gx.num.valid_integer( this,'.');"+";gx.evt.onblur(this,22);\"", "'"+""+"'"+",false,"+"'"+""+"'", "", "", "", "", edtalmacenid_Jsonclick, 0, "Attribute", "", "", "", 1, edtalmacenid_Enabled, 0, "text", "", 9, "chr", 1, "row", 9, 0, 0, 0, 1, -1, 0, true, "", "right", false, "HLP_articulos.htm");
             /* Static images/pictures */
             ClassString = "gx-prompt Image";
             StyleString = "";
@@ -843,7 +843,7 @@ namespace GeneXus.Programs {
             {
                /* Read saved SDTs. */
                /* Read variables values. */
-               if ( ( ( context.localUtil.CToN( cgiGet( edtalmacenid_Internalname), ",", ".") < Convert.ToDecimal( 0 )) ) || ( ( context.localUtil.CToN( cgiGet( edtalmacenid_Internalname), ",", ".") > Convert.ToDecimal( 999999999999999999L )) ) )
+               if ( ( ( context.localUtil.CToN( cgiGet( edtalmacenid_Internalname), ",", ".") < Convert.ToDecimal( 0 )) ) || ( ( context.localUtil.CToN( cgiGet( edtalmacenid_Internalname), ",", ".") > Convert.ToDecimal( 999999999 )) ) )
                {
                   GX_msglist.addItem(context.GetMessage( "GXM_badnum", ""), 1, "ALMACENID");
                   AnyError = 1;
@@ -851,12 +851,12 @@ namespace GeneXus.Programs {
                   context.httpAjaxContext.ajax_rsp_assign_attri("", false, "GX_FocusControl", GX_FocusControl);
                   wbErr = true;
                   A19almacenid = 0;
-                  context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A19almacenid", StringUtil.LTrim( StringUtil.Str( (decimal)(A19almacenid), 18, 0)));
+                  context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A19almacenid", StringUtil.LTrim( StringUtil.Str( (decimal)(A19almacenid), 9, 0)));
                }
                else
                {
-                  A19almacenid = (long)(context.localUtil.CToN( cgiGet( edtalmacenid_Internalname), ",", "."));
-                  context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A19almacenid", StringUtil.LTrim( StringUtil.Str( (decimal)(A19almacenid), 18, 0)));
+                  A19almacenid = (int)(context.localUtil.CToN( cgiGet( edtalmacenid_Internalname), ",", "."));
+                  context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A19almacenid", StringUtil.LTrim( StringUtil.Str( (decimal)(A19almacenid), 9, 0)));
                }
                if ( ( ( context.localUtil.CToN( cgiGet( edtarticulosproductoid_Internalname), ",", ".") < Convert.ToDecimal( 0 )) ) || ( ( context.localUtil.CToN( cgiGet( edtarticulosproductoid_Internalname), ",", ".") > Convert.ToDecimal( 999999999 )) ) )
                {
@@ -1247,7 +1247,7 @@ namespace GeneXus.Programs {
                }
                n172articulosfecultact = ((DateTime.MinValue==A172articulosfecultact) ? true : false);
                /* Read saved values. */
-               Z19almacenid = (long)(context.localUtil.CToN( cgiGet( "Z19almacenid"), ",", "."));
+               Z19almacenid = (int)(context.localUtil.CToN( cgiGet( "Z19almacenid"), ",", "."));
                Z20articulosproductoid = (int)(context.localUtil.CToN( cgiGet( "Z20articulosproductoid"), ",", "."));
                Z21articuloscambsid = (int)(context.localUtil.CToN( cgiGet( "Z21articuloscambsid"), ",", "."));
                Z154alamcenid = (long)(context.localUtil.CToN( cgiGet( "Z154alamcenid"), ",", "."));
@@ -1312,8 +1312,8 @@ namespace GeneXus.Programs {
                {
                   Gx_mode = "DSP";
                   context.httpAjaxContext.ajax_rsp_assign_attri("", false, "Gx_mode", Gx_mode);
-                  A19almacenid = (long)(NumberUtil.Val( GetNextPar( ), "."));
-                  context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A19almacenid", StringUtil.LTrim( StringUtil.Str( (decimal)(A19almacenid), 18, 0)));
+                  A19almacenid = (int)(NumberUtil.Val( GetNextPar( ), "."));
+                  context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A19almacenid", StringUtil.LTrim( StringUtil.Str( (decimal)(A19almacenid), 9, 0)));
                   A20articulosproductoid = (int)(NumberUtil.Val( GetNextPar( ), "."));
                   context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A20articulosproductoid", StringUtil.LTrim( StringUtil.Str( (decimal)(A20articulosproductoid), 9, 0)));
                   A21articuloscambsid = (int)(NumberUtil.Val( GetNextPar( ), "."));
@@ -1807,7 +1807,7 @@ namespace GeneXus.Programs {
       {
       }
 
-      protected void gxLoad_3( long A19almacenid )
+      protected void gxLoad_3( int A19almacenid )
       {
          /* Using cursor T000B13 */
          pr_default.execute(11, new Object[] {A19almacenid});
@@ -2068,7 +2068,7 @@ namespace GeneXus.Programs {
             context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A172articulosfecultact", context.localUtil.TToC( A172articulosfecultact, 10, 8, 0, 3, "/", ":", " "));
             n172articulosfecultact = T000B3_n172articulosfecultact[0];
             A19almacenid = T000B3_A19almacenid[0];
-            context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A19almacenid", StringUtil.LTrim( StringUtil.Str( (decimal)(A19almacenid), 18, 0)));
+            context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A19almacenid", StringUtil.LTrim( StringUtil.Str( (decimal)(A19almacenid), 9, 0)));
             A23tipobienid = T000B3_A23tipobienid[0];
             context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A23tipobienid", StringUtil.LTrim( StringUtil.Str( (decimal)(A23tipobienid), 9, 0)));
             n23tipobienid = T000B3_n23tipobienid[0];
@@ -2145,7 +2145,7 @@ namespace GeneXus.Programs {
             if ( (pr_default.getStatus(19) != 101) && ( ( T000B21_A19almacenid[0] > A19almacenid ) || ( T000B21_A19almacenid[0] == A19almacenid ) && ( T000B21_A20articulosproductoid[0] > A20articulosproductoid ) || ( T000B21_A20articulosproductoid[0] == A20articulosproductoid ) && ( T000B21_A19almacenid[0] == A19almacenid ) && ( T000B21_A21articuloscambsid[0] > A21articuloscambsid ) ) )
             {
                A19almacenid = T000B21_A19almacenid[0];
-               context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A19almacenid", StringUtil.LTrim( StringUtil.Str( (decimal)(A19almacenid), 18, 0)));
+               context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A19almacenid", StringUtil.LTrim( StringUtil.Str( (decimal)(A19almacenid), 9, 0)));
                A20articulosproductoid = T000B21_A20articulosproductoid[0];
                context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A20articulosproductoid", StringUtil.LTrim( StringUtil.Str( (decimal)(A20articulosproductoid), 9, 0)));
                A21articuloscambsid = T000B21_A21articuloscambsid[0];
@@ -2170,7 +2170,7 @@ namespace GeneXus.Programs {
             if ( (pr_default.getStatus(20) != 101) && ( ( T000B22_A19almacenid[0] < A19almacenid ) || ( T000B22_A19almacenid[0] == A19almacenid ) && ( T000B22_A20articulosproductoid[0] < A20articulosproductoid ) || ( T000B22_A20articulosproductoid[0] == A20articulosproductoid ) && ( T000B22_A19almacenid[0] == A19almacenid ) && ( T000B22_A21articuloscambsid[0] < A21articuloscambsid ) ) )
             {
                A19almacenid = T000B22_A19almacenid[0];
-               context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A19almacenid", StringUtil.LTrim( StringUtil.Str( (decimal)(A19almacenid), 18, 0)));
+               context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A19almacenid", StringUtil.LTrim( StringUtil.Str( (decimal)(A19almacenid), 9, 0)));
                A20articulosproductoid = T000B22_A20articulosproductoid[0];
                context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A20articulosproductoid", StringUtil.LTrim( StringUtil.Str( (decimal)(A20articulosproductoid), 9, 0)));
                A21articuloscambsid = T000B22_A21articuloscambsid[0];
@@ -2204,7 +2204,7 @@ namespace GeneXus.Programs {
                if ( ( A19almacenid != Z19almacenid ) || ( A20articulosproductoid != Z20articulosproductoid ) || ( A21articuloscambsid != Z21articuloscambsid ) )
                {
                   A19almacenid = Z19almacenid;
-                  context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A19almacenid", StringUtil.LTrim( StringUtil.Str( (decimal)(A19almacenid), 18, 0)));
+                  context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A19almacenid", StringUtil.LTrim( StringUtil.Str( (decimal)(A19almacenid), 9, 0)));
                   A20articulosproductoid = Z20articulosproductoid;
                   context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A20articulosproductoid", StringUtil.LTrim( StringUtil.Str( (decimal)(A20articulosproductoid), 9, 0)));
                   A21articuloscambsid = Z21articuloscambsid;
@@ -2281,7 +2281,7 @@ namespace GeneXus.Programs {
          if ( ( A19almacenid != Z19almacenid ) || ( A20articulosproductoid != Z20articulosproductoid ) || ( A21articuloscambsid != Z21articuloscambsid ) )
          {
             A19almacenid = Z19almacenid;
-            context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A19almacenid", StringUtil.LTrim( StringUtil.Str( (decimal)(A19almacenid), 18, 0)));
+            context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A19almacenid", StringUtil.LTrim( StringUtil.Str( (decimal)(A19almacenid), 9, 0)));
             A20articulosproductoid = Z20articulosproductoid;
             context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A20articulosproductoid", StringUtil.LTrim( StringUtil.Str( (decimal)(A20articulosproductoid), 9, 0)));
             A21articuloscambsid = Z21articuloscambsid;
@@ -2826,7 +2826,7 @@ namespace GeneXus.Programs {
          {
             RcdFound11 = 1;
             A19almacenid = T000B26_A19almacenid[0];
-            context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A19almacenid", StringUtil.LTrim( StringUtil.Str( (decimal)(A19almacenid), 18, 0)));
+            context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A19almacenid", StringUtil.LTrim( StringUtil.Str( (decimal)(A19almacenid), 9, 0)));
             A20articulosproductoid = T000B26_A20articulosproductoid[0];
             context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A20articulosproductoid", StringUtil.LTrim( StringUtil.Str( (decimal)(A20articulosproductoid), 9, 0)));
             A21articuloscambsid = T000B26_A21articuloscambsid[0];
@@ -2844,7 +2844,7 @@ namespace GeneXus.Programs {
          {
             RcdFound11 = 1;
             A19almacenid = T000B26_A19almacenid[0];
-            context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A19almacenid", StringUtil.LTrim( StringUtil.Str( (decimal)(A19almacenid), 18, 0)));
+            context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A19almacenid", StringUtil.LTrim( StringUtil.Str( (decimal)(A19almacenid), 9, 0)));
             A20articulosproductoid = T000B26_A20articulosproductoid[0];
             context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A20articulosproductoid", StringUtil.LTrim( StringUtil.Str( (decimal)(A20articulosproductoid), 9, 0)));
             A21articuloscambsid = T000B26_A21articuloscambsid[0];
@@ -2978,7 +2978,7 @@ namespace GeneXus.Programs {
          context.AddJavascriptSource("jquery.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxtimezone.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxgral.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("gxcfg.js", "?202213023374352");
+         context.AddJavascriptSource("gxcfg.js", "?20222213423372");
          if ( context.isSpaRequest( ) )
          {
             enableOutput();
@@ -3019,7 +3019,7 @@ namespace GeneXus.Programs {
       {
          /* Send hidden variables. */
          /* Send saved values. */
-         GxWebStd.gx_hidden_field( context, "Z19almacenid", StringUtil.LTrim( StringUtil.NToC( (decimal)(Z19almacenid), 18, 0, ",", "")));
+         GxWebStd.gx_hidden_field( context, "Z19almacenid", StringUtil.LTrim( StringUtil.NToC( (decimal)(Z19almacenid), 9, 0, ",", "")));
          GxWebStd.gx_hidden_field( context, "Z20articulosproductoid", StringUtil.LTrim( StringUtil.NToC( (decimal)(Z20articulosproductoid), 9, 0, ",", "")));
          GxWebStd.gx_hidden_field( context, "Z21articuloscambsid", StringUtil.LTrim( StringUtil.NToC( (decimal)(Z21articuloscambsid), 9, 0, ",", "")));
          GxWebStd.gx_hidden_field( context, "Z154alamcenid", StringUtil.LTrim( StringUtil.NToC( (decimal)(Z154alamcenid), 18, 0, ",", "")));
@@ -3241,7 +3241,7 @@ namespace GeneXus.Programs {
       protected void InitAll0B11( )
       {
          A19almacenid = 0;
-         context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A19almacenid", StringUtil.LTrim( StringUtil.Str( (decimal)(A19almacenid), 18, 0)));
+         context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A19almacenid", StringUtil.LTrim( StringUtil.Str( (decimal)(A19almacenid), 9, 0)));
          A20articulosproductoid = 0;
          context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A20articulosproductoid", StringUtil.LTrim( StringUtil.Str( (decimal)(A20articulosproductoid), 9, 0)));
          A21articuloscambsid = 0;
@@ -3255,12 +3255,12 @@ namespace GeneXus.Programs {
 
       protected void define_styles( )
       {
-         AddStyleSheetFile("calendar-system.css", "?11323129");
-         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?2337534");
+         AddStyleSheetFile("calendar-system.css", "?13205289");
+         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?1342847");
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?202213023374378");
+            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?20222213423393");
             idxLst = (int)(idxLst+1);
          }
          /* End function define_styles */
@@ -3270,7 +3270,7 @@ namespace GeneXus.Programs {
       {
          context.AddJavascriptSource("messages.spa.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxdec.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("articulos.js", "?202213023374378");
+         context.AddJavascriptSource("articulos.js", "?20222213423393");
          /* End function include_jscripts */
       }
 
@@ -3554,7 +3554,7 @@ namespace GeneXus.Programs {
          /* End function AfterKeyLoadScreen */
       }
 
-      public void Valid_Almacenid( long GX_Parm1 )
+      public void Valid_Almacenid( int GX_Parm1 )
       {
          A19almacenid = GX_Parm1;
          /* Using cursor T000B27 */
@@ -3592,7 +3592,7 @@ namespace GeneXus.Programs {
          wbTemp = context.ResponseContentType( "application/json");
       }
 
-      public void Valid_Articuloscambsid( long GX_Parm1 ,
+      public void Valid_Articuloscambsid( int GX_Parm1 ,
                                           int GX_Parm2 ,
                                           int GX_Parm3 ,
                                           long GX_Parm4 ,
@@ -3718,7 +3718,7 @@ namespace GeneXus.Programs {
          isValidOutput.Add(context.localUtil.TToC( A171articulosfecreg, 10, 8, 0, 3, "/", ":", " "));
          isValidOutput.Add(context.localUtil.TToC( A172articulosfecultact, 10, 8, 0, 3, "/", ":", " "));
          isValidOutput.Add(StringUtil.RTrim( Gx_mode));
-         isValidOutput.Add(StringUtil.LTrim( StringUtil.NToC( (decimal)(Z19almacenid), 18, 0, ",", "")));
+         isValidOutput.Add(StringUtil.LTrim( StringUtil.NToC( (decimal)(Z19almacenid), 9, 0, ",", "")));
          isValidOutput.Add(StringUtil.LTrim( StringUtil.NToC( (decimal)(Z20articulosproductoid), 9, 0, ",", "")));
          isValidOutput.Add(StringUtil.LTrim( StringUtil.NToC( (decimal)(Z21articuloscambsid), 9, 0, ",", "")));
          isValidOutput.Add(StringUtil.LTrim( StringUtil.NToC( (decimal)(Z154alamcenid), 18, 0, ",", "")));
@@ -3962,7 +3962,7 @@ namespace GeneXus.Programs {
          T000B11_n171articulosfecreg = new bool[] {false} ;
          T000B11_A172articulosfecultact = new DateTime[] {DateTime.MinValue} ;
          T000B11_n172articulosfecultact = new bool[] {false} ;
-         T000B11_A19almacenid = new long[1] ;
+         T000B11_A19almacenid = new int[1] ;
          T000B11_A23tipobienid = new int[1] ;
          T000B11_n23tipobienid = new bool[] {false} ;
          T000B11_A7entidafederativaid = new int[1] ;
@@ -3973,10 +3973,10 @@ namespace GeneXus.Programs {
          T000B11_n2proveedoresid = new bool[] {false} ;
          T000B11_A20articulosproductoid = new int[1] ;
          T000B11_A21articuloscambsid = new int[1] ;
-         T000B4_A19almacenid = new long[1] ;
+         T000B4_A19almacenid = new int[1] ;
          T000B9_A20articulosproductoid = new int[1] ;
          T000B10_A21articuloscambsid = new int[1] ;
-         T000B12_A19almacenid = new long[1] ;
+         T000B12_A19almacenid = new int[1] ;
          T000B5_A23tipobienid = new int[1] ;
          T000B5_n23tipobienid = new bool[] {false} ;
          T000B6_A7entidafederativaid = new int[1] ;
@@ -3985,7 +3985,7 @@ namespace GeneXus.Programs {
          T000B7_n10origenid = new bool[] {false} ;
          T000B8_A2proveedoresid = new int[1] ;
          T000B8_n2proveedoresid = new bool[] {false} ;
-         T000B13_A19almacenid = new long[1] ;
+         T000B13_A19almacenid = new int[1] ;
          T000B14_A20articulosproductoid = new int[1] ;
          T000B15_A21articuloscambsid = new int[1] ;
          T000B16_A23tipobienid = new int[1] ;
@@ -3996,7 +3996,7 @@ namespace GeneXus.Programs {
          T000B18_n10origenid = new bool[] {false} ;
          T000B19_A2proveedoresid = new int[1] ;
          T000B19_n2proveedoresid = new bool[] {false} ;
-         T000B20_A19almacenid = new long[1] ;
+         T000B20_A19almacenid = new int[1] ;
          T000B20_A20articulosproductoid = new int[1] ;
          T000B20_A21articuloscambsid = new int[1] ;
          T000B3_A154alamcenid = new long[1] ;
@@ -4037,7 +4037,7 @@ namespace GeneXus.Programs {
          T000B3_n171articulosfecreg = new bool[] {false} ;
          T000B3_A172articulosfecultact = new DateTime[] {DateTime.MinValue} ;
          T000B3_n172articulosfecultact = new bool[] {false} ;
-         T000B3_A19almacenid = new long[1] ;
+         T000B3_A19almacenid = new int[1] ;
          T000B3_A23tipobienid = new int[1] ;
          T000B3_n23tipobienid = new bool[] {false} ;
          T000B3_A7entidafederativaid = new int[1] ;
@@ -4049,10 +4049,10 @@ namespace GeneXus.Programs {
          T000B3_A20articulosproductoid = new int[1] ;
          T000B3_A21articuloscambsid = new int[1] ;
          sMode11 = "";
-         T000B21_A19almacenid = new long[1] ;
+         T000B21_A19almacenid = new int[1] ;
          T000B21_A20articulosproductoid = new int[1] ;
          T000B21_A21articuloscambsid = new int[1] ;
-         T000B22_A19almacenid = new long[1] ;
+         T000B22_A19almacenid = new int[1] ;
          T000B22_A20articulosproductoid = new int[1] ;
          T000B22_A21articuloscambsid = new int[1] ;
          T000B2_A154alamcenid = new long[1] ;
@@ -4093,7 +4093,7 @@ namespace GeneXus.Programs {
          T000B2_n171articulosfecreg = new bool[] {false} ;
          T000B2_A172articulosfecultact = new DateTime[] {DateTime.MinValue} ;
          T000B2_n172articulosfecultact = new bool[] {false} ;
-         T000B2_A19almacenid = new long[1] ;
+         T000B2_A19almacenid = new int[1] ;
          T000B2_A23tipobienid = new int[1] ;
          T000B2_n23tipobienid = new bool[] {false} ;
          T000B2_A7entidafederativaid = new int[1] ;
@@ -4104,17 +4104,17 @@ namespace GeneXus.Programs {
          T000B2_n2proveedoresid = new bool[] {false} ;
          T000B2_A20articulosproductoid = new int[1] ;
          T000B2_A21articuloscambsid = new int[1] ;
-         T000B26_A19almacenid = new long[1] ;
+         T000B26_A19almacenid = new int[1] ;
          T000B26_A20articulosproductoid = new int[1] ;
          T000B26_A21articuloscambsid = new int[1] ;
          sDynURL = "";
          FormProcess = "";
          bodyStyle = "";
-         T000B27_A19almacenid = new long[1] ;
+         T000B27_A19almacenid = new int[1] ;
          T000B28_A20articulosproductoid = new int[1] ;
          T000B29_A21articuloscambsid = new int[1] ;
          isValidOutput = new GxUnknownObjectCollection();
-         T000B30_A19almacenid = new long[1] ;
+         T000B30_A19almacenid = new int[1] ;
          T000B31_A23tipobienid = new int[1] ;
          T000B31_n23tipobienid = new bool[] {false} ;
          T000B32_A7entidafederativaid = new int[1] ;
@@ -4249,12 +4249,14 @@ namespace GeneXus.Programs {
       private short Gx_BScreen ;
       private short gxajaxcallmode ;
       private short wbTemp ;
+      private int Z19almacenid ;
       private int Z20articulosproductoid ;
       private int Z21articuloscambsid ;
       private int Z168articulosidtrasfer ;
       private int Z23tipobienid ;
       private int Z7entidafederativaid ;
       private int Z2proveedoresid ;
+      private int A19almacenid ;
       private int A20articulosproductoid ;
       private int A21articuloscambsid ;
       private int A23tipobienid ;
@@ -4306,7 +4308,6 @@ namespace GeneXus.Programs {
       private int bttBtn_delete_Visible ;
       private int bttBtn_delete_Enabled ;
       private int idxLst ;
-      private long Z19almacenid ;
       private long Z154alamcenid ;
       private long Z155articulosnoetiqueta ;
       private long Z165articulosstatus ;
@@ -4314,7 +4315,6 @@ namespace GeneXus.Programs {
       private long Z169articulosestatusariticulo ;
       private long Z170articulostipobien ;
       private long Z10origenid ;
-      private long A19almacenid ;
       private long A10origenid ;
       private long A154alamcenid ;
       private long A155articulosnoetiqueta ;
@@ -4520,7 +4520,7 @@ namespace GeneXus.Programs {
       private bool[] T000B11_n171articulosfecreg ;
       private DateTime[] T000B11_A172articulosfecultact ;
       private bool[] T000B11_n172articulosfecultact ;
-      private long[] T000B11_A19almacenid ;
+      private int[] T000B11_A19almacenid ;
       private int[] T000B11_A23tipobienid ;
       private bool[] T000B11_n23tipobienid ;
       private int[] T000B11_A7entidafederativaid ;
@@ -4531,10 +4531,10 @@ namespace GeneXus.Programs {
       private bool[] T000B11_n2proveedoresid ;
       private int[] T000B11_A20articulosproductoid ;
       private int[] T000B11_A21articuloscambsid ;
-      private long[] T000B4_A19almacenid ;
+      private int[] T000B4_A19almacenid ;
       private int[] T000B9_A20articulosproductoid ;
       private int[] T000B10_A21articuloscambsid ;
-      private long[] T000B12_A19almacenid ;
+      private int[] T000B12_A19almacenid ;
       private int[] T000B5_A23tipobienid ;
       private bool[] T000B5_n23tipobienid ;
       private int[] T000B6_A7entidafederativaid ;
@@ -4543,7 +4543,7 @@ namespace GeneXus.Programs {
       private bool[] T000B7_n10origenid ;
       private int[] T000B8_A2proveedoresid ;
       private bool[] T000B8_n2proveedoresid ;
-      private long[] T000B13_A19almacenid ;
+      private int[] T000B13_A19almacenid ;
       private int[] T000B14_A20articulosproductoid ;
       private int[] T000B15_A21articuloscambsid ;
       private int[] T000B16_A23tipobienid ;
@@ -4554,7 +4554,7 @@ namespace GeneXus.Programs {
       private bool[] T000B18_n10origenid ;
       private int[] T000B19_A2proveedoresid ;
       private bool[] T000B19_n2proveedoresid ;
-      private long[] T000B20_A19almacenid ;
+      private int[] T000B20_A19almacenid ;
       private int[] T000B20_A20articulosproductoid ;
       private int[] T000B20_A21articuloscambsid ;
       private long[] T000B3_A154alamcenid ;
@@ -4595,7 +4595,7 @@ namespace GeneXus.Programs {
       private bool[] T000B3_n171articulosfecreg ;
       private DateTime[] T000B3_A172articulosfecultact ;
       private bool[] T000B3_n172articulosfecultact ;
-      private long[] T000B3_A19almacenid ;
+      private int[] T000B3_A19almacenid ;
       private int[] T000B3_A23tipobienid ;
       private bool[] T000B3_n23tipobienid ;
       private int[] T000B3_A7entidafederativaid ;
@@ -4606,10 +4606,10 @@ namespace GeneXus.Programs {
       private bool[] T000B3_n2proveedoresid ;
       private int[] T000B3_A20articulosproductoid ;
       private int[] T000B3_A21articuloscambsid ;
-      private long[] T000B21_A19almacenid ;
+      private int[] T000B21_A19almacenid ;
       private int[] T000B21_A20articulosproductoid ;
       private int[] T000B21_A21articuloscambsid ;
-      private long[] T000B22_A19almacenid ;
+      private int[] T000B22_A19almacenid ;
       private int[] T000B22_A20articulosproductoid ;
       private int[] T000B22_A21articuloscambsid ;
       private long[] T000B2_A154alamcenid ;
@@ -4650,7 +4650,7 @@ namespace GeneXus.Programs {
       private bool[] T000B2_n171articulosfecreg ;
       private DateTime[] T000B2_A172articulosfecultact ;
       private bool[] T000B2_n172articulosfecultact ;
-      private long[] T000B2_A19almacenid ;
+      private int[] T000B2_A19almacenid ;
       private int[] T000B2_A23tipobienid ;
       private bool[] T000B2_n23tipobienid ;
       private int[] T000B2_A7entidafederativaid ;
@@ -4661,13 +4661,13 @@ namespace GeneXus.Programs {
       private bool[] T000B2_n2proveedoresid ;
       private int[] T000B2_A20articulosproductoid ;
       private int[] T000B2_A21articuloscambsid ;
-      private long[] T000B26_A19almacenid ;
+      private int[] T000B26_A19almacenid ;
       private int[] T000B26_A20articulosproductoid ;
       private int[] T000B26_A21articuloscambsid ;
-      private long[] T000B27_A19almacenid ;
+      private int[] T000B27_A19almacenid ;
       private int[] T000B28_A20articulosproductoid ;
       private int[] T000B29_A21articuloscambsid ;
-      private long[] T000B30_A19almacenid ;
+      private int[] T000B30_A19almacenid ;
       private int[] T000B31_A23tipobienid ;
       private bool[] T000B31_n23tipobienid ;
       private int[] T000B32_A7entidafederativaid ;
@@ -4728,13 +4728,13 @@ namespace GeneXus.Programs {
        {
           Object[] prmT000B11 ;
           prmT000B11 = new Object[] {
-          new Object[] {"almacenid",NpgsqlDbType.Real,18,0} ,
+          new Object[] {"almacenid",NpgsqlDbType.Integer,9,0} ,
           new Object[] {"articulosproductoid",NpgsqlDbType.Integer,9,0} ,
           new Object[] {"articuloscambsid",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT000B4 ;
           prmT000B4 = new Object[] {
-          new Object[] {"almacenid",NpgsqlDbType.Real,18,0}
+          new Object[] {"almacenid",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT000B9 ;
           prmT000B9 = new Object[] {
@@ -4746,7 +4746,7 @@ namespace GeneXus.Programs {
           } ;
           Object[] prmT000B12 ;
           prmT000B12 = new Object[] {
-          new Object[] {"almacenid",NpgsqlDbType.Real,18,0} ,
+          new Object[] {"almacenid",NpgsqlDbType.Integer,9,0} ,
           new Object[] {"articulosproductoid",NpgsqlDbType.Integer,9,0} ,
           new Object[] {"articuloscambsid",NpgsqlDbType.Integer,9,0}
           } ;
@@ -4768,7 +4768,7 @@ namespace GeneXus.Programs {
           } ;
           Object[] prmT000B13 ;
           prmT000B13 = new Object[] {
-          new Object[] {"almacenid",NpgsqlDbType.Real,18,0}
+          new Object[] {"almacenid",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT000B14 ;
           prmT000B14 = new Object[] {
@@ -4796,31 +4796,31 @@ namespace GeneXus.Programs {
           } ;
           Object[] prmT000B20 ;
           prmT000B20 = new Object[] {
-          new Object[] {"almacenid",NpgsqlDbType.Real,18,0} ,
+          new Object[] {"almacenid",NpgsqlDbType.Integer,9,0} ,
           new Object[] {"articulosproductoid",NpgsqlDbType.Integer,9,0} ,
           new Object[] {"articuloscambsid",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT000B3 ;
           prmT000B3 = new Object[] {
-          new Object[] {"almacenid",NpgsqlDbType.Real,18,0} ,
+          new Object[] {"almacenid",NpgsqlDbType.Integer,9,0} ,
           new Object[] {"articulosproductoid",NpgsqlDbType.Integer,9,0} ,
           new Object[] {"articuloscambsid",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT000B21 ;
           prmT000B21 = new Object[] {
-          new Object[] {"almacenid",NpgsqlDbType.Real,18,0} ,
+          new Object[] {"almacenid",NpgsqlDbType.Integer,9,0} ,
           new Object[] {"articulosproductoid",NpgsqlDbType.Integer,9,0} ,
           new Object[] {"articuloscambsid",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT000B22 ;
           prmT000B22 = new Object[] {
-          new Object[] {"almacenid",NpgsqlDbType.Real,18,0} ,
+          new Object[] {"almacenid",NpgsqlDbType.Integer,9,0} ,
           new Object[] {"articulosproductoid",NpgsqlDbType.Integer,9,0} ,
           new Object[] {"articuloscambsid",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT000B2 ;
           prmT000B2 = new Object[] {
-          new Object[] {"almacenid",NpgsqlDbType.Real,18,0} ,
+          new Object[] {"almacenid",NpgsqlDbType.Integer,9,0} ,
           new Object[] {"articulosproductoid",NpgsqlDbType.Integer,9,0} ,
           new Object[] {"articuloscambsid",NpgsqlDbType.Integer,9,0}
           } ;
@@ -4845,7 +4845,7 @@ namespace GeneXus.Programs {
           new Object[] {"articulostipobien",NpgsqlDbType.Real,18,0} ,
           new Object[] {"articulosfecreg",NpgsqlDbType.Timestamp,10,8} ,
           new Object[] {"articulosfecultact",NpgsqlDbType.Timestamp,10,8} ,
-          new Object[] {"almacenid",NpgsqlDbType.Real,18,0} ,
+          new Object[] {"almacenid",NpgsqlDbType.Integer,9,0} ,
           new Object[] {"tipobienid",NpgsqlDbType.Integer,9,0} ,
           new Object[] {"entidafederativaid",NpgsqlDbType.Integer,9,0} ,
           new Object[] {"origenid",NpgsqlDbType.Real,18,0} ,
@@ -4878,13 +4878,13 @@ namespace GeneXus.Programs {
           new Object[] {"entidafederativaid",NpgsqlDbType.Integer,9,0} ,
           new Object[] {"origenid",NpgsqlDbType.Real,18,0} ,
           new Object[] {"proveedoresid",NpgsqlDbType.Integer,9,0} ,
-          new Object[] {"almacenid",NpgsqlDbType.Real,18,0} ,
+          new Object[] {"almacenid",NpgsqlDbType.Integer,9,0} ,
           new Object[] {"articulosproductoid",NpgsqlDbType.Integer,9,0} ,
           new Object[] {"articuloscambsid",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT000B25 ;
           prmT000B25 = new Object[] {
-          new Object[] {"almacenid",NpgsqlDbType.Real,18,0} ,
+          new Object[] {"almacenid",NpgsqlDbType.Integer,9,0} ,
           new Object[] {"articulosproductoid",NpgsqlDbType.Integer,9,0} ,
           new Object[] {"articuloscambsid",NpgsqlDbType.Integer,9,0}
           } ;
@@ -4893,7 +4893,7 @@ namespace GeneXus.Programs {
           } ;
           Object[] prmT000B27 ;
           prmT000B27 = new Object[] {
-          new Object[] {"almacenid",NpgsqlDbType.Real,18,0}
+          new Object[] {"almacenid",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT000B28 ;
           prmT000B28 = new Object[] {
@@ -4905,7 +4905,7 @@ namespace GeneXus.Programs {
           } ;
           Object[] prmT000B30 ;
           prmT000B30 = new Object[] {
-          new Object[] {"almacenid",NpgsqlDbType.Real,18,0} ,
+          new Object[] {"almacenid",NpgsqlDbType.Integer,9,0} ,
           new Object[] {"articulosproductoid",NpgsqlDbType.Integer,9,0} ,
           new Object[] {"articuloscambsid",NpgsqlDbType.Integer,9,0}
           } ;
@@ -5008,7 +5008,7 @@ namespace GeneXus.Programs {
                 ((bool[]) buf[35])[0] = rslt.wasNull(18);
                 ((DateTime[]) buf[36])[0] = rslt.getGXDateTime(19) ;
                 ((bool[]) buf[37])[0] = rslt.wasNull(19);
-                ((long[]) buf[38])[0] = rslt.getLong(20) ;
+                ((int[]) buf[38])[0] = rslt.getInt(20) ;
                 ((int[]) buf[39])[0] = rslt.getInt(21) ;
                 ((bool[]) buf[40])[0] = rslt.wasNull(21);
                 ((int[]) buf[41])[0] = rslt.getInt(22) ;
@@ -5059,7 +5059,7 @@ namespace GeneXus.Programs {
                 ((bool[]) buf[35])[0] = rslt.wasNull(18);
                 ((DateTime[]) buf[36])[0] = rslt.getGXDateTime(19) ;
                 ((bool[]) buf[37])[0] = rslt.wasNull(19);
-                ((long[]) buf[38])[0] = rslt.getLong(20) ;
+                ((int[]) buf[38])[0] = rslt.getInt(20) ;
                 ((int[]) buf[39])[0] = rslt.getInt(21) ;
                 ((bool[]) buf[40])[0] = rslt.wasNull(21);
                 ((int[]) buf[41])[0] = rslt.getInt(22) ;
@@ -5072,7 +5072,7 @@ namespace GeneXus.Programs {
                 ((int[]) buf[48])[0] = rslt.getInt(26) ;
                 return;
              case 2 :
-                ((long[]) buf[0])[0] = rslt.getLong(1) ;
+                ((int[]) buf[0])[0] = rslt.getInt(1) ;
                 return;
              case 3 :
                 ((int[]) buf[0])[0] = rslt.getInt(1) ;
@@ -5131,7 +5131,7 @@ namespace GeneXus.Programs {
                 ((bool[]) buf[35])[0] = rslt.wasNull(18);
                 ((DateTime[]) buf[36])[0] = rslt.getGXDateTime(19) ;
                 ((bool[]) buf[37])[0] = rslt.wasNull(19);
-                ((long[]) buf[38])[0] = rslt.getLong(20) ;
+                ((int[]) buf[38])[0] = rslt.getInt(20) ;
                 ((int[]) buf[39])[0] = rslt.getInt(21) ;
                 ((bool[]) buf[40])[0] = rslt.wasNull(21);
                 ((int[]) buf[41])[0] = rslt.getInt(22) ;
@@ -5144,10 +5144,10 @@ namespace GeneXus.Programs {
                 ((int[]) buf[48])[0] = rslt.getInt(26) ;
                 return;
              case 10 :
-                ((long[]) buf[0])[0] = rslt.getLong(1) ;
+                ((int[]) buf[0])[0] = rslt.getInt(1) ;
                 return;
              case 11 :
-                ((long[]) buf[0])[0] = rslt.getLong(1) ;
+                ((int[]) buf[0])[0] = rslt.getInt(1) ;
                 return;
              case 12 :
                 ((int[]) buf[0])[0] = rslt.getInt(1) ;
@@ -5168,27 +5168,27 @@ namespace GeneXus.Programs {
                 ((int[]) buf[0])[0] = rslt.getInt(1) ;
                 return;
              case 18 :
-                ((long[]) buf[0])[0] = rslt.getLong(1) ;
+                ((int[]) buf[0])[0] = rslt.getInt(1) ;
                 ((int[]) buf[1])[0] = rslt.getInt(2) ;
                 ((int[]) buf[2])[0] = rslt.getInt(3) ;
                 return;
              case 19 :
-                ((long[]) buf[0])[0] = rslt.getLong(1) ;
+                ((int[]) buf[0])[0] = rslt.getInt(1) ;
                 ((int[]) buf[1])[0] = rslt.getInt(2) ;
                 ((int[]) buf[2])[0] = rslt.getInt(3) ;
                 return;
              case 20 :
-                ((long[]) buf[0])[0] = rslt.getLong(1) ;
+                ((int[]) buf[0])[0] = rslt.getInt(1) ;
                 ((int[]) buf[1])[0] = rslt.getInt(2) ;
                 ((int[]) buf[2])[0] = rslt.getInt(3) ;
                 return;
              case 24 :
-                ((long[]) buf[0])[0] = rslt.getLong(1) ;
+                ((int[]) buf[0])[0] = rslt.getInt(1) ;
                 ((int[]) buf[1])[0] = rslt.getInt(2) ;
                 ((int[]) buf[2])[0] = rslt.getInt(3) ;
                 return;
              case 25 :
-                ((long[]) buf[0])[0] = rslt.getLong(1) ;
+                ((int[]) buf[0])[0] = rslt.getInt(1) ;
                 return;
              case 26 :
                 ((int[]) buf[0])[0] = rslt.getInt(1) ;
@@ -5197,7 +5197,7 @@ namespace GeneXus.Programs {
                 ((int[]) buf[0])[0] = rslt.getInt(1) ;
                 return;
              case 28 :
-                ((long[]) buf[0])[0] = rslt.getLong(1) ;
+                ((int[]) buf[0])[0] = rslt.getInt(1) ;
                 return;
              case 29 :
                 ((int[]) buf[0])[0] = rslt.getInt(1) ;
@@ -5231,17 +5231,17 @@ namespace GeneXus.Programs {
        switch ( cursor )
        {
              case 0 :
-                stmt.SetParameter(1, (long)parms[0]);
+                stmt.SetParameter(1, (int)parms[0]);
                 stmt.SetParameter(2, (int)parms[1]);
                 stmt.SetParameter(3, (int)parms[2]);
                 return;
              case 1 :
-                stmt.SetParameter(1, (long)parms[0]);
+                stmt.SetParameter(1, (int)parms[0]);
                 stmt.SetParameter(2, (int)parms[1]);
                 stmt.SetParameter(3, (int)parms[2]);
                 return;
              case 2 :
-                stmt.SetParameter(1, (long)parms[0]);
+                stmt.SetParameter(1, (int)parms[0]);
                 return;
              case 3 :
                 if ( (bool)parms[0] )
@@ -5290,17 +5290,17 @@ namespace GeneXus.Programs {
                 stmt.SetParameter(1, (int)parms[0]);
                 return;
              case 9 :
-                stmt.SetParameter(1, (long)parms[0]);
+                stmt.SetParameter(1, (int)parms[0]);
                 stmt.SetParameter(2, (int)parms[1]);
                 stmt.SetParameter(3, (int)parms[2]);
                 return;
              case 10 :
-                stmt.SetParameter(1, (long)parms[0]);
+                stmt.SetParameter(1, (int)parms[0]);
                 stmt.SetParameter(2, (int)parms[1]);
                 stmt.SetParameter(3, (int)parms[2]);
                 return;
              case 11 :
-                stmt.SetParameter(1, (long)parms[0]);
+                stmt.SetParameter(1, (int)parms[0]);
                 return;
              case 12 :
                 stmt.SetParameter(1, (int)parms[0]);
@@ -5349,17 +5349,17 @@ namespace GeneXus.Programs {
                 }
                 return;
              case 18 :
-                stmt.SetParameter(1, (long)parms[0]);
+                stmt.SetParameter(1, (int)parms[0]);
                 stmt.SetParameter(2, (int)parms[1]);
                 stmt.SetParameter(3, (int)parms[2]);
                 return;
              case 19 :
-                stmt.SetParameter(1, (long)parms[0]);
+                stmt.SetParameter(1, (int)parms[0]);
                 stmt.SetParameter(2, (int)parms[1]);
                 stmt.SetParameter(3, (int)parms[2]);
                 return;
              case 20 :
-                stmt.SetParameter(1, (long)parms[0]);
+                stmt.SetParameter(1, (int)parms[0]);
                 stmt.SetParameter(2, (int)parms[1]);
                 stmt.SetParameter(3, (int)parms[2]);
                 return;
@@ -5516,7 +5516,7 @@ namespace GeneXus.Programs {
                 {
                    stmt.SetParameterDatetime(19, (DateTime)parms[37]);
                 }
-                stmt.SetParameter(20, (long)parms[38]);
+                stmt.SetParameter(20, (int)parms[38]);
                 if ( (bool)parms[39] )
                 {
                    stmt.setNull( 21 , SqlDbType.Int );
@@ -5737,17 +5737,17 @@ namespace GeneXus.Programs {
                 {
                    stmt.SetParameter(23, (int)parms[45]);
                 }
-                stmt.SetParameter(24, (long)parms[46]);
+                stmt.SetParameter(24, (int)parms[46]);
                 stmt.SetParameter(25, (int)parms[47]);
                 stmt.SetParameter(26, (int)parms[48]);
                 return;
              case 23 :
-                stmt.SetParameter(1, (long)parms[0]);
+                stmt.SetParameter(1, (int)parms[0]);
                 stmt.SetParameter(2, (int)parms[1]);
                 stmt.SetParameter(3, (int)parms[2]);
                 return;
              case 25 :
-                stmt.SetParameter(1, (long)parms[0]);
+                stmt.SetParameter(1, (int)parms[0]);
                 return;
              case 26 :
                 stmt.SetParameter(1, (int)parms[0]);
@@ -5756,7 +5756,7 @@ namespace GeneXus.Programs {
                 stmt.SetParameter(1, (int)parms[0]);
                 return;
              case 28 :
-                stmt.SetParameter(1, (long)parms[0]);
+                stmt.SetParameter(1, (int)parms[0]);
                 stmt.SetParameter(2, (int)parms[1]);
                 stmt.SetParameter(3, (int)parms[2]);
                 return;

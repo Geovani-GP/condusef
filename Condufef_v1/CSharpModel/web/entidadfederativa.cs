@@ -2,7 +2,7 @@
                File: entidadfederativa
         Description: entidadfederativa
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 1/30/2022 23:37:21.32
+       Generated on: 2/2/2022 13:42:13.74
        Program type: Callable routine
           Main DBMS: postgresql
 */
@@ -1437,7 +1437,7 @@ namespace GeneXus.Programs {
          context.AddJavascriptSource("jquery.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxtimezone.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxgral.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("gxcfg.js", "?202213023372233");
+         context.AddJavascriptSource("gxcfg.js", "?20222213421423");
          if ( context.isSpaRequest( ) )
          {
             enableOutput();
@@ -1604,12 +1604,12 @@ namespace GeneXus.Programs {
 
       protected void define_styles( )
       {
-         AddStyleSheetFile("calendar-system.css", "?11323129");
-         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?2337534");
+         AddStyleSheetFile("calendar-system.css", "?13205289");
+         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?1342847");
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?202213023372240");
+            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?20222213421428");
             idxLst = (int)(idxLst+1);
          }
          /* End function define_styles */
@@ -1618,8 +1618,7 @@ namespace GeneXus.Programs {
       protected void include_jscripts( )
       {
          context.AddJavascriptSource("messages.spa.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("gxdec.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("entidadfederativa.js", "?202213023372241");
+         context.AddJavascriptSource("entidadfederativa.js", "?20222213421428");
          /* End function include_jscripts */
       }
 
@@ -1816,7 +1815,7 @@ namespace GeneXus.Programs {
          T00042_n110entidadfederativafecreg = new bool[] {false} ;
          T00042_A111entidadfederativafecultact = new DateTime[] {DateTime.MinValue} ;
          T00042_n111entidadfederativafecultact = new bool[] {false} ;
-         T000411_A19almacenid = new long[1] ;
+         T000411_A19almacenid = new int[1] ;
          T000411_A20articulosproductoid = new int[1] ;
          T000411_A21articuloscambsid = new int[1] ;
          T000412_A7entidafederativaid = new int[1] ;
@@ -1999,7 +1998,7 @@ namespace GeneXus.Programs {
       private bool[] T00042_n110entidadfederativafecreg ;
       private DateTime[] T00042_A111entidadfederativafecultact ;
       private bool[] T00042_n111entidadfederativafecultact ;
-      private long[] T000411_A19almacenid ;
+      private int[] T000411_A19almacenid ;
       private int[] T000411_A20articulosproductoid ;
       private int[] T000411_A21articuloscambsid ;
       private int[] T000412_A7entidafederativaid ;
@@ -2148,7 +2147,7 @@ namespace GeneXus.Programs {
                 ((int[]) buf[0])[0] = rslt.getInt(1) ;
                 return;
              case 9 :
-                ((long[]) buf[0])[0] = rslt.getLong(1) ;
+                ((int[]) buf[0])[0] = rslt.getInt(1) ;
                 ((int[]) buf[1])[0] = rslt.getInt(2) ;
                 ((int[]) buf[2])[0] = rslt.getInt(3) ;
                 return;

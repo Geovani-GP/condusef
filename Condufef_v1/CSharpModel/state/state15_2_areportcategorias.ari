@@ -1,0 +1,19 @@
+current_obj_i(2,proc,8).
+ 
+ 
+is_webproc_i(areportcategorias).
+ 
+ij_main_object(areportcategorias,'Report Categorias','','""','HTTP').
+ 
+ 
+ 
+ 
+ij_object_dependency(areportcategorias,[],[],[],8).
+ 
+ 
+obj_parms_i([],[]).
+ 
+ 
+ 
+ 
+ 

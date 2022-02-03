@@ -1,0 +1,306 @@
+spec_i([ proc,8,'Report Categorias','ReportCategorias',78,spa,'10_3_15-115824' ]).
+ 
+struct_i(2,1,[],[]).
+ 
+level_i(2,[ 5,[ [ 5,many ] ],[],[],[ [ [ 5 ],[ 94,14 ] ] ],[ [ [ 5 ],[] ] ],[ 14 ],'CATEGORIAS_PKEY',[],[] ]).
+ 
+tw_i(2,[]).
+ 
+lwi_i(2,[ [] ]).
+ 
+ 
+ 
+ 
+ta_i(2,[ [ [ 5,94 ],[ 5,14 ] ] ]).
+ 
+las_i(2,[ [ 94,14 ] ]).
+ 
+lac_i(2,[ [] ]).
+ 
+ 
+ 
+ 
+ 
+ 
+default_i(e('Output',2,2,'''FIL''')).
+ 
+rule_i(0,datastore(1,'DS_LAST_CHANGE','')).
+rule_i(0,datastore(1,'POSTGRESQL_VERSION','8_3')).
+rule_i(0,datastore(1,'COMMENT_ON','No')).
+rule_i(0,datastore(1,'DCL_REF_INT_DB','Yes')).
+rule_i(0,datastore(1,'PRIMARY_KEY_TYPE','PK')).
+rule_i(0,datastore(1,'CS_SCHEMA','')).
+rule_i(0,datastore(1,'RecycleRWMin','30')).
+rule_i(0,datastore(1,'RecycleRWType','1')).
+rule_i(0,datastore(1,'RecycleRW','-1')).
+rule_i(0,datastore(1,'POOL_STARTUP','No')).
+rule_i(0,datastore(1,'POOLSIZE_RW','10')).
+rule_i(0,datastore(1,'UnlimitedRWPool','-1')).
+rule_i(0,datastore(1,'PoolRWEnabled','-1')).
+rule_i(0,datastore(1,'CS_RPCPGML','')).
+rule_i(0,datastore(1,'JDBC_DATASOURCE','')).
+rule_i(0,datastore(1,'USE_JDBC_DATASOURCE','0')).
+rule_i(0,datastore(1,'DS_DBMS_ADDINFO','')).
+rule_i(0,datastore(1,'USER_PASSWORD',󻢸蘇�2�5炭)).
+rule_i(0,datastore(1,'USER_ID',postgres)).
+rule_i(0,datastore(1,'CS_CONNECT','First')).
+rule_i(0,datastore(1,'DBMS_PORT','5432')).
+rule_i(0,datastore(1,'CS_SERVER',localhost)).
+rule_i(0,datastore(1,'CS_DBNAME',postgres)).
+rule_i(0,datastore(1,'CS_FLEDSNAME','')).
+rule_i(0,datastore(1,'CS_DRVNAME','')).
+rule_i(0,datastore(1,'CS_DSNAME','')).
+rule_i(0,datastore(1,'DB_URL','')).
+rule_i(0,datastore(1,'JDBC_CUSTOM_URL','0')).
+rule_i(0,datastore(1,'JDBC_CUSTOM_DRIVER','')).
+rule_i(0,datastore(1,'JDBC_DRIVER','org.postgresql.Driver')).
+rule_i(0,datastore(1,'CONNECT_METHOD','OPSYS')).
+rule_i(0,datastore(1,'ACCESS_TECHNO','ADONET')).
+rule_i(0,datastore(1,'MAIN_DS','-1')).
+rule_i(0,datastore(1,'REORG_GEN','8')).
+rule_i(0,datastore(1,'HelpKeyword','20')).
+rule_i(0,datastore(1,'DBMS',15)).
+rule_i(0,datastore(1,'NAME','Default')).
+rule_i(0,prop(idNULLS_BEHAVIOR,idNB_Current)).
+rule_i(0,prop('ObjectVisibility','Public')).
+rule_i(0,prop('FullyQualifiedName','ReportCategorias')).
+rule_i(0,prop('PWFCallable','0')).
+rule_i(0,prop('GenerateObject','-1')).
+rule_i(0,prop('CS_ORA_FORUPD','UMPV')).
+rule_i(0,prop('Optimize_copy','UMPV')).
+rule_i(0,prop('JOIN_TYPE','UMPV')).
+rule_i(0,prop('DBMS_JOINS','UMPV')).
+rule_i(0,prop('BEEPONMSG','UMPV')).
+rule_i(0,prop('GENERATE_ILE','UMPV')).
+rule_i(0,prop('PRT_DDS','UMPV')).
+rule_i(0,prop('TRNCMT','YES')).
+rule_i(0,prop('NULLVALUE_AS_NULL','UMPV')).
+rule_i(0,prop('INITIALIZE_NEW','UMPV')).
+rule_i(0,prop('STD_FUNC_OBJECT','Yes')).
+rule_i(0,prop('SPC_WARNINGS_DISABLED','spc0096 spc0107 spc0142')).
+rule_i(0,prop('TRNEND','Yes')).
+rule_i(0,prop(idISBCEJB,'0')).
+rule_i(0,prop(idISPRCWEBSERVICE,'0')).
+rule_i(0,prop('EXECUTE_IN_NEW_UTL','0')).
+rule_i(0,prop('AUTOCENTER','UMPV')).
+rule_i(0,prop('LSTPFOOT','YES')).
+rule_i(0,prop('CANCEL','YES')).
+rule_i(0,prop('CONFIRM','UMPV')).
+rule_i(0,prop('TRNCFM','UMPV')).
+rule_i(0,prop('PRINT_CUST_LAYOUT','UMPV')).
+rule_i(0,prop('OUTPUT','FIL')).
+rule_i(0,prop(idConnectivitySupport,idInherit)).
+rule_i(0,prop('AppGenerator','1')).
+rule_i(0,prop('AppLocation','')).
+rule_i(0,prop('AppIcon','')).
+rule_i(0,prop('AppTitle','')).
+rule_i(0,prop('WEB_SECURITY_LEVEL','High')).
+rule_i(0,prop('HTTP_PROTOCOL','Unsecure')).
+rule_i(0,prop('USE_ENCRYPTION','NO')).
+rule_i(0,prop('COMPRESS_HTML','UMPV')).
+rule_i(0,prop('Theme',o(25,'Flat'))).
+rule_i(0,prop('OBJECT_METADATA','')).
+rule_i(0,prop('CALL_PROTOCOL','HTTP')).
+rule_i(0,prop('IsMain','-1')).
+rule_i(0,prop('Folder',o(8,'Procedures'))).
+rule_i(0,prop('ObjDesc','Report Categorias')).
+rule_i(0,prop('ObjName','ReportCategorias')).
+rule_i(0,maingen(15)).
+rule_i(0,prop('PGMTYPE',main)).
+rule_i(0,output_file(t('ReporteCategorias',3),t('PDF',3))).
+rule_i(0,output('FIL')).
+rule_i(0,file(5,'CATEGORIAS',[ 14,94,95,96,97 ])).
+rule_i(0,loc([ 5 ],'CATEGORIAS','','LAN')).
+rule_i(0,index(5,'CATEGORIAS_PKEY',u,[ 14 ])).
+rule_i(0,loc([ 5,'CATEGORIAS_PKEY' ],categorias_pkey,'','LAN')).
+rule_i(0,p(0,0,fv,12,[ intname,'CATEGORIAS' ])).
+rule_i(0,p(0,0,fv,12,[ table,5 ])).
+rule_i(0,p(0,15,fv,12,[])).
+rule_i(0,p(0,15,fv,12,[ 'NAME',categorias ])).
+rule_i(0,p(0,15,fv,12,[ 'LOC','' ])).
+rule_i(0,p(0,15,fv,12,[ 'SCHEMA',public ])).
+rule_i(0,p(0,15,fv,12,[ 'EXTNAM','YES' ])).
+rule_i(0,p(0,15,fvix,[ 12,11 ],[])).
+rule_i(0,p(0,15,fvix,[ 12,11 ],[ 'NAME',categorias_pkey ])).
+rule_i(0,p(0,15,fvix,[ 12,11 ],[ 'LOC','' ])).
+rule_i(0,p(0,15,fvix,[ 12,11 ],[ 'SCHEMA',public ])).
+rule_i(0,p(0,15,fvix,[ 12,11 ],[ 'EXTNAM','YES' ])).
+ 
+a_i(1,1,f,'Line',[],[ [],[ t(0,3) ] ]).
+a_i(2,1,f,'Err',[],[ [],[ t('0',3) ] ]).
+a_i(3,2,t,5,[],[ [],'CATEGORIAS_PKEY',[] ]).
+ 
+v_i(f,i,1,[]).
+v_i(f,o,1,'Line').
+v_i(f,i,2,[]).
+v_i(f,o,2,'Err').
+v_i(t,i,3,[]).
+v_i(t,o,3,94).
+v_i(t,o,3,14).
+ 
+ 
+ 
+ 
+ 
+ 
+attri_i('Output',[ 'Gx_out',char,3,0,'',1,'','',7 ]).
+attri_i('Page',[ 'Gx_page',int,6,0,'ZZZZZ9',0,'Page number','',6 ]).
+attri_i('Line',[ 'Gx_line',int,6,0,'ZZZZZ9',0,'Line number','',5 ]).
+attri_i(94,[ categoriasdsc,svchar,100,0,'',0,categoriasdsc,'',0 ]).
+attri_i(14,[ categoriasid,int,9,0,'ZZZZZZZZ9',0,categoriasid,'',0 ]).
+attri_i('Errmsg',[ 'Gx_emsg',char,70,0,'',1,'Error text','',3 ]).
+attri_i('Err',[ 'Gx_err',int,3,0,'ZZ9',1,'Error code','',2 ]).
+ 
+table_i(5,[ 'CATEGORIAS',[ 14,94 ],categorias,categorias ]).
+ 
+index_i(5,[ 'CATEGORIAS_PKEY',u,[ 14 ],'CATEGORIAS_PKEY' ]).
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+map_i(5,i,'CATEGORIAS_PKEY',[ 'CATEGORIAS_PKEY' ]).
+map_i(5,a,97,[ categoriasfecultact ]).
+map_i(5,a,96,[ categoriasfecreg ]).
+map_i(5,a,95,[ categoriasusuario ]).
+map_i(5,a,94,[ categoriasdsc ]).
+map_i(5,a,14,[ categoriasid ]).
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+break_i(2,nvg,1,[],[ [ 14,94 ],[],[] ]).
+break_i(1,rpt,0,[],[ [],[],[] ]).
+ 
+b_group_i(1,1,lit,0,1,20).
+b_group_i(1,2,nvg,2,3,3).
+b_group_i(2,1,lit,0,22,35).
+b_group_i(1,3,lit,0,36,0).
+ 
+b_line_i(0,1,1,cmd,0,[]).
+b_line_i(1,1,1,pb,0,[ t('Title',29,0,7) ]).
+b_line_i([ 1,0 ],1,1,line,0,[ t(' ',3,0,0) ]).
+b_line_i([ 1,1 ],1,1,line,1,[ t('CATALOGOS CATEGORIAS ',3,1,19) ]).
+b_line_i([ 1,5 ],1,1,line,5,[ t(' ',3,5,0) ]).
+b_line_i(2,1,1,pb,6,[ t('Titulobanner',29,6,7) ]).
+b_line_i([ 2,0 ],1,1,line,6,[ t(' ',3,0,0) ]).
+b_line_i([ 2,1 ],1,1,line,7,[ t('Comisi髇 Nacional para la Protecci髇 y Defensa de los Usuarios de Servicios Financieros',3,1,0) ]).
+b_line_i([ 2,13 ],1,1,line,19,[ t(' ',3,13,0) ]).
+b_line_i(3,2,1,cmd,22,[ t('',121,3,0) ]).
+b_line_i(4,2,1,pb,22,[ t('Categorias',29,22,8) ]).
+b_line_i([ 4,0 ],2,1,line,22,[ t('Clave Categorias',3,0,1),t('Descripci髇',3,0,38) ]).
+b_line_i([ 4,2 ],2,1,line,24,[ t(14,2,2,7),t(94,2,2,40) ]).
+b_line_i([ 4,12 ],2,1,line,34,[ t(' ',3,12,0) ]).
+b_line_i(5,2,1,cmd,35,[ t('',128,35,0) ]).
+ 
+ 
+ 
+ 
+ 
+page_layout_i([ 66,0,6 ]).
+ 
+ 
+ 
+paper_info_i([ 0,256,'',14789,16834,0,0,0,0,1 ]).
+ 
+ppi_i([ 96,96 ]).
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+lit_i(4,1,t('CATALOGOS CATEGORIAS ',3),[ font('Courier New',10,[]),rect(152,17,392,34),outstyle(none),align(left),valign(top),fore(rgb(0,0,0)),border(1),ctlname('Gxreportlabel2'),gxcolor([]) ]).
+lit_i(3,1,window,[ title('Text'),rect(0,0,8216,102),outstyle(none),fill,text,back(rgb(0,0,0)),fore(rgb(0,0,0)),border(0),ctlname('Title'),align(left),valign(top),gxcolor([]),defgxcolor('BLK','WHT+') ]).
+lit_i(2,2,t('Comisi髇 Nacional para la Protecci髇 y Defensa de los Usuarios de Servicios Financieros',3),[ font('Courier New',10,[]),rect(0,17,672,119),outstyle(none),align(left),valign(top),fore(rgb(0,0,0)),border(1),ctlname('Gxreportlabel1'),gxcolor([]) ]).
+lit_i(1,2,window,[ title('Text'),rect(0,0,8216,238),outstyle(none),fill,text,back(rgb(0,0,0)),fore(rgb(0,0,0)),border(0),ctlname('Titulobanner'),align(left),valign(top),gxcolor([]),defgxcolor('BLK','WHT+') ]).
+lit_i(6,4,t('Descripci髇',3),[ font('Courier New',10,[]),rect(304,0,504,17),outstyle(none),align(left),valign(top),fore(rgb(0,0,0)),border(1),ctlname('Gxreportlabel3'),gxcolor([]) ]).
+lit_i(7,4,t('Clave Categorias',3),[ font('Courier New',10,[]),rect(8,0,208,17),outstyle(none),align(left),valign(top),fore(rgb(0,0,0)),border(1),ctlname('Gxreportlabel4'),gxcolor([]) ]).
+lit_i(8,4,t(14,2),[ font('Courier New',10,[ underline ]),rect(56,34,128,51),outstyle(none),align(right),valign(top),noclip,fore(rgb(0,0,0)),border(1),format(0),ctlname('14'),ctrltype(edit,8),ispwd(0),gxcolor([]) ]).
+lit_i(9,4,t(94,2),[ font('Courier New',10,[ underline ]),rect(320,34,512,51),outstyle(none),align(left),valign(top),fore(rgb(0,0,0)),border(1),format(0),ctlname('94'),ctrltype(edit,9),ispwd(0),gxcolor([]) ]).
+lit_i(5,4,window,[ title('Text'),rect(0,0,8216,221),outstyle(none),fill,text,back(rgb(0,0,0)),fore(rgb(0,0,0)),border(0),ctlname('Categorias'),align(left),valign(top),gxcolor([]),defgxcolor('BLK','WHT+') ]).
+ 
+grid_i(8,17).
+ 
+ 
+ 
+form_class_i(2,'Text').
+ 
+ 
+ 
+ 
+ 
+att_prop_i(2,14,'ExternalName',categoriasid,d).
+att_prop_i(2,14,'ExternalNamespace','Condufef_v1',d).
+att_prop_i(2,14,'EmptyAsNull','Yes',d).
+att_prop_i(2,14,idBasedOn,'',d).
+att_prop_i(2,14,'AUTONUMBER','0',d).
+att_prop_i(2,14,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,14,'AttRegEx','',d).
+att_prop_i(2,14,'AttValidationFailedMsg','',d).
+att_prop_i(2,14,'FullName',categoriasid,v).
+att_prop_i(2,94,'ExternalName',categoriasdsc,d).
+att_prop_i(2,94,'ExternalNamespace','Condufef_v1',d).
+att_prop_i(2,94,'EmptyAsNull','Yes',d).
+att_prop_i(2,94,idBasedOn,'',d).
+att_prop_i(2,94,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,94,'DB_NLS_SUPPORT','No',d).
+att_prop_i(2,94,'AttRegEx','',d).
+att_prop_i(2,94,'AttValidationFailedMsg','',d).
+att_prop_i(2,94,'FullName',categoriasdsc,v).
+ 
+ 
+tbl_att_prop_i(2,5,14,'AllowNulls',n).
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+pgm_callprotocol_i(proc,8,'REPORTCATEGORIAS','HTTP').
+ 
+pgm_main_info_i(proc,8,'REPORTCATEGORIAS',[ 15,'AREPORTCATEGORIAS','Report Categorias','','','','HTTP' ]).
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

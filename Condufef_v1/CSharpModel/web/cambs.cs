@@ -2,7 +2,7 @@
                File: cambs
         Description: cambs
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 1/30/2022 23:37:50.38
+       Generated on: 2/2/2022 13:42:40.90
        Program type: Callable routine
           Main DBMS: postgresql
 */
@@ -1453,7 +1453,7 @@ namespace GeneXus.Programs {
          context.AddJavascriptSource("jquery.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxtimezone.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxgral.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("gxcfg.js", "?202213023375121");
+         context.AddJavascriptSource("gxcfg.js", "?20222213424158");
          if ( context.isSpaRequest( ) )
          {
             enableOutput();
@@ -1620,12 +1620,12 @@ namespace GeneXus.Programs {
 
       protected void define_styles( )
       {
-         AddStyleSheetFile("calendar-system.css", "?11323129");
-         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?2337534");
+         AddStyleSheetFile("calendar-system.css", "?13205289");
+         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?1342847");
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?202213023375128");
+            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?20222213424163");
             idxLst = (int)(idxLst+1);
          }
          /* End function define_styles */
@@ -1634,8 +1634,7 @@ namespace GeneXus.Programs {
       protected void include_jscripts( )
       {
          context.AddJavascriptSource("messages.spa.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("gxdec.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("cambs.js", "?202213023375128");
+         context.AddJavascriptSource("cambs.js", "?20222213424163");
          /* End function include_jscripts */
       }
 
@@ -1833,12 +1832,12 @@ namespace GeneXus.Programs {
          T000E2_A86cambsfecultact = new DateTime[] {DateTime.MinValue} ;
          T000E2_n86cambsfecultact = new bool[] {false} ;
          T000E11_A175productoid = new int[1] ;
-         T000E12_A19almacenid = new long[1] ;
+         T000E12_A19almacenid = new int[1] ;
          T000E12_A20articulosproductoid = new int[1] ;
          T000E12_A21articuloscambsid = new int[1] ;
          T000E13_A17etiquetasproductoid = new int[1] ;
          T000E13_A18etiquetascambsid = new int[1] ;
-         T000E13_A19almacenid = new long[1] ;
+         T000E13_A19almacenid = new int[1] ;
          T000E14_A25cambsid = new int[1] ;
          T000E14_n25cambsid = new bool[] {false} ;
          sDynURL = "";
@@ -2026,12 +2025,12 @@ namespace GeneXus.Programs {
       private DateTime[] T000E2_A86cambsfecultact ;
       private bool[] T000E2_n86cambsfecultact ;
       private int[] T000E11_A175productoid ;
-      private long[] T000E12_A19almacenid ;
+      private int[] T000E12_A19almacenid ;
       private int[] T000E12_A20articulosproductoid ;
       private int[] T000E12_A21articuloscambsid ;
       private int[] T000E13_A17etiquetasproductoid ;
       private int[] T000E13_A18etiquetascambsid ;
-      private long[] T000E13_A19almacenid ;
+      private int[] T000E13_A19almacenid ;
       private int[] T000E14_A25cambsid ;
       private bool[] T000E14_n25cambsid ;
       private GXWebForm Form ;
@@ -2193,14 +2192,14 @@ namespace GeneXus.Programs {
                 ((int[]) buf[0])[0] = rslt.getInt(1) ;
                 return;
              case 10 :
-                ((long[]) buf[0])[0] = rslt.getLong(1) ;
+                ((int[]) buf[0])[0] = rslt.getInt(1) ;
                 ((int[]) buf[1])[0] = rslt.getInt(2) ;
                 ((int[]) buf[2])[0] = rslt.getInt(3) ;
                 return;
              case 11 :
                 ((int[]) buf[0])[0] = rslt.getInt(1) ;
                 ((int[]) buf[1])[0] = rslt.getInt(2) ;
-                ((long[]) buf[2])[0] = rslt.getLong(3) ;
+                ((int[]) buf[2])[0] = rslt.getInt(3) ;
                 return;
              case 12 :
                 ((int[]) buf[0])[0] = rslt.getInt(1) ;

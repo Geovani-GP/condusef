@@ -2,9 +2,9 @@ spec_i([ trn,11,articulos,articulos,[],spa,'10_3_15-115824' ]).
  
 struct_i(11,0,[],[]).
  
-level_i(11,[ 11,[ [ 11,many ],[ 18,one ],[ 1,one ],[ 4,one ],[ 16,one ],[ 10,one ],[ 524,one ],[ 527,one ] ],[ 19,20,21 ],[],[],[],[ 19,20,21 ],'ARTICULOS_PKEY',[ 11,[] ],[] ]).
+level_i(11,[ 11,[ [ 11,many ],[ 18,one ],[ 1,one ],[ 4,one ],[ 16,one ],[ 10,one ],[ 525,one ],[ 528,one ] ],[ 19,20,21 ],[],[],[],[ 19,20,21 ],'ARTICULOS_PKEY',[ 11,[] ],[] ]).
  
-tw_i(11,[ [ 18,[ [ 11,19,19 ] ] ],[ 1,[ [ 11,23,23 ] ] ],[ 4,[ [ 11,7,7 ] ] ],[ 16,[ [ 11,10,10 ] ] ],[ 10,[ [ 11,2,2 ] ] ],[ 524,[ [ 11,20,15 ] ] ],[ 527,[ [ 11,21,25 ] ] ] ]).
+tw_i(11,[ [ 18,[ [ 11,19,19 ] ] ],[ 1,[ [ 11,23,23 ] ] ],[ 4,[ [ 11,7,7 ] ] ],[ 16,[ [ 11,10,10 ] ] ],[ 10,[ [ 11,2,2 ] ] ],[ 525,[ [ 11,20,15 ] ] ],[ 528,[ [ 11,21,25 ] ] ] ]).
  
 lwi_i(11,[ [] ]).
  
@@ -68,12 +68,12 @@ rule_i(0,datastore(1,'CS_RPCPGML','')).
 rule_i(0,datastore(1,'JDBC_DATASOURCE','')).
 rule_i(0,datastore(1,'USE_JDBC_DATASOURCE','0')).
 rule_i(0,datastore(1,'DS_DBMS_ADDINFO','')).
-rule_i(0,datastore(1,'USER_PASSWORD',asdf)).
+rule_i(0,datastore(1,'USER_PASSWORD',󻢸蘇�2�5炭)).
 rule_i(0,datastore(1,'USER_ID',postgres)).
 rule_i(0,datastore(1,'CS_CONNECT','First')).
 rule_i(0,datastore(1,'DBMS_PORT','5432')).
 rule_i(0,datastore(1,'CS_SERVER',localhost)).
-rule_i(0,datastore(1,'CS_DBNAME',condusef)).
+rule_i(0,datastore(1,'CS_DBNAME',postgres)).
 rule_i(0,datastore(1,'CS_FLEDSNAME','')).
 rule_i(0,datastore(1,'CS_DRVNAME','')).
 rule_i(0,datastore(1,'CS_DSNAME','')).
@@ -171,9 +171,9 @@ rule_i(0,prop(idBC,'0')).
 rule_i(0,prop('Folder',o(120,'Root Module'))).
 rule_i(0,prop('ObjDesc',articulos)).
 rule_i(0,prop('ObjName',articulos)).
-rule_i(11,prompt([ 527,[ [ 11,21,25 ] ],[ 21 ],[ 21 ],[ t(o(13,'Gx00E0'),28),t(21,2) ],[],n,[] ])).
+rule_i(11,prompt([ 528,[ [ 11,21,25 ] ],[ 21 ],[ 21 ],[ t(o(13,'Gx00E0'),28),t(21,2) ],[],n,[] ])).
 rule_i(11,rule([ a(23,[ [ 21 ],[ t(o(13,'Gx00E0'),28),t(21,2) ] ]) ],[],[],[ 21 ])).
-rule_i(11,prompt([ 524,[ [ 11,20,15 ] ],[ 20 ],[ 20 ],[ t(o(13,'Gx00J0'),28),t(20,2) ],[],n,[] ])).
+rule_i(11,prompt([ 525,[ [ 11,20,15 ] ],[ 20 ],[ 20 ],[ t(o(13,'Gx00J0'),28),t(20,2) ],[],n,[] ])).
 rule_i(11,rule([ a(23,[ [ 20 ],[ t(o(13,'Gx00J0'),28),t(20,2) ] ]) ],[],[],[ 20 ])).
 rule_i(11,prompt([ 10,[ [ 11,2,2 ] ],[ 2 ],[ 2 ],[ t(o(13,'Gx00A0'),28),t(2,2) ],[],n,[] ])).
 rule_i(11,rule([ a(23,[ [ 2 ],[ t(o(13,'Gx00A0'),28),t(2,2) ] ]) ],[],[],[ 2 ])).
@@ -308,10 +308,10 @@ rule_i(0,p(0,15,fvix,[ 21,22 ],[ 'NAME',modelos_pkey ])).
 rule_i(0,p(0,15,fvix,[ 21,22 ],[ 'LOC','' ])).
 rule_i(0,p(0,15,fvix,[ 21,22 ],[ 'SCHEMA',public ])).
 rule_i(0,p(0,15,fvix,[ 21,22 ],[ 'EXTNAM','YES' ])).
-rule_i(0,file(524,'MODELOS',[ 20,116,117,118,119 ])).
-rule_i(0,loc([ 524 ],'MODELOS','','LAN')).
-rule_i(0,index(524,'MODELOS_PKEY',u,[ 20 ])).
-rule_i(0,loc([ 524,'MODELOS_PKEY' ],modelos_pkey,'','LAN')).
+rule_i(0,file(525,'MODELOS',[ 20,116,117,118,119 ])).
+rule_i(0,loc([ 525 ],'MODELOS','','LAN')).
+rule_i(0,index(525,'MODELOS_PKEY',u,[ 20 ])).
+rule_i(0,loc([ 525,'MODELOS_PKEY' ],modelos_pkey,'','LAN')).
 rule_i(0,p(0,0,fv,19,[ intname,'CAMBS' ])).
 rule_i(0,p(0,0,fv,19,[ table,14 ])).
 rule_i(0,p(0,15,fv,19,[])).
@@ -324,10 +324,10 @@ rule_i(0,p(0,15,fvix,[ 19,20 ],[ 'NAME',cambs_pkey ])).
 rule_i(0,p(0,15,fvix,[ 19,20 ],[ 'LOC','' ])).
 rule_i(0,p(0,15,fvix,[ 19,20 ],[ 'SCHEMA',public ])).
 rule_i(0,p(0,15,fvix,[ 19,20 ],[ 'EXTNAM','YES' ])).
-rule_i(0,file(527,'CAMBS',[ 21,83,84,85,86 ])).
-rule_i(0,loc([ 527 ],'CAMBS','','LAN')).
-rule_i(0,index(527,'CAMBS_PKEY',u,[ 21 ])).
-rule_i(0,loc([ 527,'CAMBS_PKEY' ],cambs_pkey,'','LAN')).
+rule_i(0,file(528,'CAMBS',[ 21,83,84,85,86 ])).
+rule_i(0,loc([ 528 ],'CAMBS','','LAN')).
+rule_i(0,index(528,'CAMBS_PKEY',u,[ 21 ])).
+rule_i(0,loc([ 528,'CAMBS_PKEY' ],cambs_pkey,'','LAN')).
 rule_i(11,rule([ a(19,[ [ 19 ],msg([ t('"No existe ''almacen''."',3) ],[ t('ForeignKeyNotFound',3) ]) ]) ],[],[ insert,update,delete ],[ 19 ])).
 rule_i(11,rule([ a(19,[ [ 23 ],msg([ t('"No existe ''tipobien''."',3) ],[ t('ForeignKeyNotFound',3) ]) ]) ],[],[ insert,update,delete ],[ 23 ])).
 rule_i(11,rule([ a(19,[ [ 7 ],msg([ t('"No existe ''entidadfederativa''."',3) ],[ t('ForeignKeyNotFound',3) ]) ]) ],[],[ insert,update,delete ],[ 7 ])).
@@ -343,8 +343,8 @@ a_i(4,11,r,1,[],[ [ [ 11,23,23 ] ],'TIPOBIEN_PKEY',[] ]).
 a_i(5,11,r,4,[],[ [ [ 11,7,7 ] ],'ENTIDADFEDERATIVA_PKEY',[] ]).
 a_i(6,11,r,16,[],[ [ [ 11,10,10 ] ],'ORIGEN_PKEY',[] ]).
 a_i(7,11,r,10,[],[ [ [ 11,2,2 ] ],'PROVEEDORES_PKEY',[] ]).
-a_i(8,11,r,524,[],[ [ [ 11,20,15 ] ],'MODELOS_PKEY',[] ]).
-a_i(9,11,r,527,[],[ [ [ 11,21,25 ] ],'CAMBS_PKEY',[] ]).
+a_i(8,11,r,525,[],[ [ [ 11,20,15 ] ],'MODELOS_PKEY',[] ]).
+a_i(9,11,r,528,[],[ [ [ 11,21,25 ] ],'CAMBS_PKEY',[] ]).
  
 v_i(t,i,1,19).
 v_i(t,i,1,20).
@@ -421,14 +421,14 @@ attri_i(155,[ articulosnoetiqueta,int,18,0,'ZZZZZZZZZZZZZZZZZ9',0,articulosnoeti
 attri_i(154,[ alamcenid,int,18,0,'ZZZZZZZZZZZZZZZZZ9',0,alamcenid,'',0 ]).
 attri_i(21,[ articuloscambsid,int,9,0,'ZZZZZZZZ9',0,articuloscambsid,'',0 ]).
 attri_i(20,[ articulosproductoid,int,9,0,'ZZZZZZZZ9',0,articulosproductoid,'',0 ]).
-attri_i(19,[ almacenid,int,18,0,'ZZZZZZZZZZZZZZZZZ9',0,almacenid,'',0 ]).
+attri_i(19,[ almacenid,int,9,0,'ZZZZZZZZ9',0,almacenid,'',0 ]).
 attri_i(25,[ cambsid,int,9,0,'ZZZZZZZZ9',0,cambsid,'',0 ]).
 attri_i(15,[ modelosid,int,9,0,'ZZZZZZZZ9',0,modelosid,'',0 ]).
 attri_i('Gxremove',[ 'GxRemove',int,1,0,'9',0,'Gx Remove','',5 ]).
 attri_i('Mode',[ 'Gx_mode',char,3,0,'@!',1,'','',2 ]).
  
-table_i(527,[ 'CAMBS',[ 21 ],cambs,cambs ]).
-table_i(524,[ 'MODELOS',[ 20 ],modelos,modelos ]).
+table_i(528,[ 'CAMBS',[ 21 ],cambs,cambs ]).
+table_i(525,[ 'MODELOS',[ 20 ],modelos,modelos ]).
 table_i(10,[ 'PROVEEDORES',[ 2 ],proveedores,proveedores ]).
 table_i(16,[ 'ORIGEN',[ 10 ],origen,origen ]).
 table_i(4,[ 'ENTIDADFEDERATIVA',[ 7 ],entidadfederativa,entidadfederativa ]).
@@ -443,8 +443,8 @@ index_i(1,[ 'TIPOBIEN_PKEY',u,[ 23 ],'TIPOBIEN_PKEY' ]).
 index_i(4,[ 'ENTIDADFEDERATIVA_PKEY',u,[ 7 ],'ENTIDADFEDERATIVA_PKEY' ]).
 index_i(16,[ 'ORIGEN_PKEY',u,[ 10 ],'ORIGEN_PKEY' ]).
 index_i(10,[ 'PROVEEDORES_PKEY',u,[ 2 ],'PROVEEDORES_PKEY' ]).
-index_i(524,[ 'MODELOS_PKEY',u,[ 20 ],'MODELOS_PKEY' ]).
-index_i(527,[ 'CAMBS_PKEY',u,[ 21 ],'CAMBS_PKEY' ]).
+index_i(525,[ 'MODELOS_PKEY',u,[ 20 ],'MODELOS_PKEY' ]).
+index_i(528,[ 'CAMBS_PKEY',u,[ 21 ],'CAMBS_PKEY' ]).
  
  
  
@@ -466,20 +466,20 @@ upd_i(11,11,d,[ [],[],'ARTICULOS_PKEY',[] ]).
  
  
  
-map_i(527,i,'CAMBS_PKEY',[ 'CAMBS_PKEY' ]).
-map_i(527,a,25,[ cambsid ]).
-map_i(527,a,86,[ cambsfecultact ]).
-map_i(527,a,85,[ cambsfecreg ]).
-map_i(527,a,84,[ cambsusuario ]).
-map_i(527,a,83,[ cambsdsc ]).
-map_i(527,a,21,[ cambsid ]).
-map_i(524,i,'MODELOS_PKEY',[ 'MODELOS_PKEY' ]).
-map_i(524,a,15,[ modelosid ]).
-map_i(524,a,119,[ modelosfecultact ]).
-map_i(524,a,118,[ modelosfecreg ]).
-map_i(524,a,117,[ modelosusuario ]).
-map_i(524,a,116,[ modelosdsc ]).
-map_i(524,a,20,[ modelosid ]).
+map_i(528,i,'CAMBS_PKEY',[ 'CAMBS_PKEY' ]).
+map_i(528,a,25,[ cambsid ]).
+map_i(528,a,86,[ cambsfecultact ]).
+map_i(528,a,85,[ cambsfecreg ]).
+map_i(528,a,84,[ cambsusuario ]).
+map_i(528,a,83,[ cambsdsc ]).
+map_i(528,a,21,[ cambsid ]).
+map_i(525,i,'MODELOS_PKEY',[ 'MODELOS_PKEY' ]).
+map_i(525,a,15,[ modelosid ]).
+map_i(525,a,119,[ modelosfecultact ]).
+map_i(525,a,118,[ modelosfecreg ]).
+map_i(525,a,117,[ modelosusuario ]).
+map_i(525,a,116,[ modelosdsc ]).
+map_i(525,a,20,[ modelosid ]).
 map_i(10,i,'PROVEEDORES_PKEY',[ 'PROVEEDORES_PKEY' ]).
 map_i(10,a,138,[ proveedoresfecultact ]).
 map_i(10,a,137,[ proveedoresfecreg ]).
@@ -527,7 +527,7 @@ map_i(18,a,146,[ almacenmunicipio ]).
 map_i(18,a,145,[ almacencolonia ]).
 map_i(18,a,144,[ almacendireccion ]).
 map_i(18,a,143,[ almacendsc ]).
-map_i(18,a,13,[ empleadoid ]).
+map_i(18,a,13,[ empleadosid ]).
 map_i(18,a,19,[ almacenid ]).
 map_i(11,i,'PRODUCTOID',[ 'PRODUCTOID' ]).
 map_i(11,i,'ARTICULOS_PKEY',[ 'ARTICULOS_PKEY' ]).
@@ -753,7 +753,7 @@ html_comp_i(6,'Title','',d,[ str ]).
 html_comp_i(6,'Fill',-1,d,[ bool ]).
 html_comp_i(6,'Backcolor',rgb(255,255,255),d,[ color ]).
 html_comp_i(6,'Forecolor',rgb(0,0,0),d,[ color ]).
-html_comp_i(6,'Font',font('Microsoft Sans Serif',17,[]),d,[ font ]).
+html_comp_i(6,'Font',font('Open Sans Semibold',17,[]),d,[ font ]).
 html_comp_i(7,'Class',row,v,[ str ]).
 html_comp_i(7,'Id','',d,[ str ]).
 html_comp_i(7,'Height',measure(0,px),d,[ measure ]).
@@ -878,7 +878,7 @@ html_comp_i(21,'Width',measure(0,px),d,[ measure ]).
 html_comp_i(21,'Semanticcontent',div,d,[ str ]).
 html_comp_i(21,'Align',left,d,[ str ]).
 html_comp_i(21,'Valign',top,d,[ str ]).
-html_comp_i(22,'Colcount',18,d,[ num ]).
+html_comp_i(22,'Colcount',9,d,[ num ]).
 html_comp_i(22,'Attid',19,v,[ num ]).
 html_comp_i(22,'Class','Attribute',v,[ str ]).
 html_comp_i(22,'Controlname','Almacenid',d,[ str ]).
@@ -894,7 +894,7 @@ html_comp_i(22,'Readonly',0,v,[ bool ]).
 html_comp_i(22,'Autocomplete',-1,d,[ bool ]).
 html_comp_i(22,'Ispassword',0,d,[ bool ]).
 html_comp_i(22,'Autoresize',-1,d,[ bool ]).
-html_comp_i(22,'Gxwidth',measure(18,chr),d,[ measure ]).
+html_comp_i(22,'Gxwidth',measure(9,chr),d,[ measure ]).
 html_comp_i(22,'Gxheight',measure(1,row),d,[ measure ]).
 html_comp_i(22,'Ismultiline',0,d,[ bool ]).
 html_comp_i(22,'Fill',-1,d,[ bool ]).
@@ -2594,8 +2594,8 @@ tbl_att_prop_i(2,1,23,'AllowNulls',n).
 tbl_att_prop_i(2,4,7,'AllowNulls',n).
 tbl_att_prop_i(2,16,10,'AllowNulls',n).
 tbl_att_prop_i(2,10,2,'AllowNulls',n).
-tbl_att_prop_i(2,524,20,'AllowNulls',n).
-tbl_att_prop_i(2,527,21,'AllowNulls',n).
+tbl_att_prop_i(2,525,20,'AllowNulls',n).
+tbl_att_prop_i(2,528,21,'AllowNulls',n).
  
  
  
@@ -2612,8 +2612,8 @@ trn_level_i(11,[ [ 19,20,21,154,155,23,7,10,156,2,157,158,159,160,161,162,163,16
  
  
  
-pgm_parm_i(web,73,'GX00B0',[ [ int,18,0,0 ],[ int,9,0,0 ],[ int,9,0,0 ] ],[ [ palmacenid,out,[] ],[ particulosproductoid,out,[] ],[ particuloscambsid,out,[] ] ]).
-pgm_parm_i(web,76,'GX00I0',[ [ int,18,0,0 ] ],[ [ palmacenid,out,[] ] ]).
+pgm_parm_i(web,73,'GX00B0',[ [ int,9,0,0 ],[ int,9,0,0 ],[ int,9,0,0 ] ],[ [ palmacenid,out,[] ],[ particulosproductoid,out,[] ],[ particuloscambsid,out,[] ] ]).
+pgm_parm_i(web,76,'GX00I0',[ [ int,9,0,0 ] ],[ [ palmacenid,out,[] ] ]).
 pgm_parm_i(web,62,'GX0010',[ [ int,9,0,0 ] ],[ [ ptipobienid,out,[] ] ]).
 pgm_parm_i(web,65,'GX0040',[ [ int,9,0,0 ] ],[ [ pentidafederativaid,out,[] ] ]).
 pgm_parm_i(web,75,'GX00G0',[ [ int,18,0,0 ] ],[ [ porigenid,out,[] ] ]).

@@ -67,12 +67,12 @@ rule_i(0,datastore(1,'CS_RPCPGML','')).
 rule_i(0,datastore(1,'JDBC_DATASOURCE','')).
 rule_i(0,datastore(1,'USE_JDBC_DATASOURCE','0')).
 rule_i(0,datastore(1,'DS_DBMS_ADDINFO','')).
-rule_i(0,datastore(1,'USER_PASSWORD',asdf)).
+rule_i(0,datastore(1,'USER_PASSWORD',󻢸蘇�2�5炭)).
 rule_i(0,datastore(1,'USER_ID',postgres)).
 rule_i(0,datastore(1,'CS_CONNECT','First')).
 rule_i(0,datastore(1,'DBMS_PORT','5432')).
 rule_i(0,datastore(1,'CS_SERVER',localhost)).
-rule_i(0,datastore(1,'CS_DBNAME',condusef)).
+rule_i(0,datastore(1,'CS_DBNAME',postgres)).
 rule_i(0,datastore(1,'CS_FLEDSNAME','')).
 rule_i(0,datastore(1,'CS_DRVNAME','')).
 rule_i(0,datastore(1,'CS_DSNAME','')).
@@ -169,7 +169,7 @@ v_i(t,o,2,2).
  
  
 attri_i(131,[ proveedorestado,svchar,20,0,'',0,proveedorestado,'',0 ]).
-attri_i(130,[ proveedoresmunicipio,svchar,20,0,'',0,proveedoresmunicipio,'',0 ]).
+attri_i(130,[ proveedoresmunicipio,svchar,25,0,'',0,proveedoresmunicipio,'',0 ]).
 attri_i(129,[ proveedorescodigopostal,svchar,5,0,'',0,proveedorescodigopostal,'',0 ]).
 attri_i(127,[ proveedoresdireccion,svchar,50,0,'',0,proveedoresdireccion,'',0 ]).
 attri_i(128,[ proveedorescolonia,svchar,25,0,'',0,proveedorescolonia,'',0 ]).
@@ -181,7 +181,7 @@ attri_i('Err',[ 'Gx_err',int,3,0,'ZZ9',1,'Error code','',15 ]).
 attri_i('Advanced_label_template',[ 'ADVANCED_LABEL_TEMPLATE',char,20,0,'',0,'ADVANCED_LABEL_TEMPLATE','',14 ]).
 attri_i('Pproveedoresid',[ pproveedoresid,int,9,0,'ZZZZZZZZ9',0,proveedoresid,'',13 ]).
 attri_i('Cproveedorestado',[ cproveedorestado,svchar,20,0,'',0,proveedorestado,'',12 ]).
-attri_i('Cproveedoresmunicipio',[ cproveedoresmunicipio,svchar,20,0,'',0,proveedoresmunicipio,'',11 ]).
+attri_i('Cproveedoresmunicipio',[ cproveedoresmunicipio,svchar,25,0,'',0,proveedoresmunicipio,'',11 ]).
 attri_i('Cproveedorescodigopostal',[ cproveedorescodigopostal,svchar,5,0,'',0,proveedorescodigopostal,'',10 ]).
 attri_i('Cproveedorescolonia',[ cproveedorescolonia,svchar,25,0,'',0,proveedorescolonia,'',9 ]).
 attri_i('Cproveedoresdireccion',[ cproveedoresdireccion,svchar,50,0,'',0,proveedoresdireccion,'',8 ]).
@@ -1024,7 +1024,7 @@ html_comp_i(65,'Width',measure(0,px),d,[ measure ]).
 html_comp_i(65,'Semanticcontent',div,d,[ str ]).
 html_comp_i(65,'Align',left,d,[ str ]).
 html_comp_i(65,'Valign',top,d,[ str ]).
-html_comp_i(66,'Colcount',20,d,[ num ]).
+html_comp_i(66,'Colcount',25,d,[ num ]).
 html_comp_i(66,'Attid',-11,v,[ num ]).
 html_comp_i(66,'Class','Attribute',v,[ str ]).
 html_comp_i(66,'Controlname','&Cproveedoresmunicipio',d,[ str ]).
@@ -1043,7 +1043,7 @@ html_comp_i(66,'Readonly',0,v,[ bool ]).
 html_comp_i(66,'Autocomplete',-1,d,[ bool ]).
 html_comp_i(66,'Ispassword',0,d,[ bool ]).
 html_comp_i(66,'Autoresize',-1,d,[ bool ]).
-html_comp_i(66,'Gxwidth',measure(20,chr),d,[ measure ]).
+html_comp_i(66,'Gxwidth',measure(25,chr),d,[ measure ]).
 html_comp_i(66,'Gxheight',measure(1,row),d,[ measure ]).
 html_comp_i(66,'Ismultiline',0,d,[ bool ]).
 html_comp_i(66,'Fill',-1,d,[ bool ]).

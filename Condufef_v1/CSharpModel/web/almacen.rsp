@@ -15,4 +15,5 @@
 /r:bin\GeneXus.Programs.Common.dll
 /r:GxBaseBuilder.dll
 /out:bin\almacen.dll
+almacen_bc.cs
 almacen.cs

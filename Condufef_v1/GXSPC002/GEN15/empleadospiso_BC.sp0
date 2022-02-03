@@ -1,0 +1,502 @@
+spec_i([ trn,24,empleadospiso,empleadospiso_BC,[],spa,'10_3_15-115824' ]).
+ 
+struct_i(24,0,[],[]).
+ 
+level_i(24,[ 24,[ [ 24,many ] ],[ 46 ],[],[],[],[ 46 ],'IEMPLEADOSPISO',[ 24,[] ],[] ]).
+ 
+tw_i(24,[]).
+ 
+lwi_i(24,[ [] ]).
+ 
+ 
+ 
+ 
+ta_i(24,[ [ [ 24,46 ],[ 24,47 ],[ 24,48 ],[ 24,49 ],[ 24,50 ],[ 24,51 ],[ 24,52 ],[ 24,53 ] ] ]).
+ 
+las_i(24,[ [ 46,47,48,49,50,51,52,53 ] ]).
+ 
+lac_i(24,[ [ 46,47,48,49,50,51,52,53 ] ]).
+ 
+ 
+ 
+cls_i([ 25,80 ],[ 0,0 ]).
+ 
+ 
+ 
+ 
+rule_i(0,datastore(1,'DS_LAST_CHANGE','')).
+rule_i(0,datastore(1,'POSTGRESQL_VERSION','8_3')).
+rule_i(0,datastore(1,'COMMENT_ON','No')).
+rule_i(0,datastore(1,'DCL_REF_INT_DB','Yes')).
+rule_i(0,datastore(1,'PRIMARY_KEY_TYPE','PK')).
+rule_i(0,datastore(1,'CS_SCHEMA','')).
+rule_i(0,datastore(1,'RecycleRWMin','30')).
+rule_i(0,datastore(1,'RecycleRWType','1')).
+rule_i(0,datastore(1,'RecycleRW','-1')).
+rule_i(0,datastore(1,'POOL_STARTUP','No')).
+rule_i(0,datastore(1,'POOLSIZE_RW','10')).
+rule_i(0,datastore(1,'UnlimitedRWPool','-1')).
+rule_i(0,datastore(1,'PoolRWEnabled','-1')).
+rule_i(0,datastore(1,'CS_RPCPGML','')).
+rule_i(0,datastore(1,'JDBC_DATASOURCE','')).
+rule_i(0,datastore(1,'USE_JDBC_DATASOURCE','0')).
+rule_i(0,datastore(1,'DS_DBMS_ADDINFO','')).
+rule_i(0,datastore(1,'USER_PASSWORD',󻢸蘇�2�5炭)).
+rule_i(0,datastore(1,'USER_ID',postgres)).
+rule_i(0,datastore(1,'CS_CONNECT','First')).
+rule_i(0,datastore(1,'DBMS_PORT','5432')).
+rule_i(0,datastore(1,'CS_SERVER',localhost)).
+rule_i(0,datastore(1,'CS_DBNAME',postgres)).
+rule_i(0,datastore(1,'CS_FLEDSNAME','')).
+rule_i(0,datastore(1,'CS_DRVNAME','')).
+rule_i(0,datastore(1,'CS_DSNAME','')).
+rule_i(0,datastore(1,'DB_URL','')).
+rule_i(0,datastore(1,'JDBC_CUSTOM_URL','0')).
+rule_i(0,datastore(1,'JDBC_CUSTOM_DRIVER','')).
+rule_i(0,datastore(1,'JDBC_DRIVER','org.postgresql.Driver')).
+rule_i(0,datastore(1,'CONNECT_METHOD','OPSYS')).
+rule_i(0,datastore(1,'ACCESS_TECHNO','ADONET')).
+rule_i(0,datastore(1,'MAIN_DS','-1')).
+rule_i(0,datastore(1,'REORG_GEN','8')).
+rule_i(0,datastore(1,'HelpKeyword','20')).
+rule_i(0,datastore(1,'DBMS',15)).
+rule_i(0,datastore(1,'NAME','Default')).
+rule_i(0,prop(idNULLS_BEHAVIOR,idNB_Current)).
+rule_i(0,prop('PKSupFKs',[])).
+rule_i(0,prop('ObjectVisibility','Public')).
+rule_i(0,prop('FullyQualifiedName',empleadospiso)).
+rule_i(0,prop('PWFCallable','0')).
+rule_i(0,prop('GenerateObject','-1')).
+rule_i(0,prop('SEARCH_VIEWER','')).
+rule_i(0,prop('SEARCHABLE','UMPV')).
+rule_i(0,prop('MTIER_OPT','Yes')).
+rule_i(0,prop('CS_ORA_FORUPD','UMPV')).
+rule_i(0,prop('Hint_firstrows','UMPV')).
+rule_i(0,prop('AUTOENTER','UMPV')).
+rule_i(0,prop('BEEPONMSG','UMPV')).
+rule_i(0,prop('BEEPONERROR','UMPV')).
+rule_i(0,prop('GENERATE_ILE','UMPV')).
+rule_i(0,prop('TRNCMT','YES')).
+rule_i(0,prop('NULLVALUE_AS_NULL','UMPV')).
+rule_i(0,prop('INITIALIZE_NEW','UMPV')).
+rule_i(0,prop('STD_FUNC_OBJECT','Yes')).
+rule_i(0,prop('SPC_WARNINGS_DISABLED','spc0096 spc0107 spc0142')).
+rule_i(0,prop('WBCHAR','')).
+rule_i(0,prop('WBATTR',none)).
+rule_i(0,prop('WBCOLOR',none)).
+rule_i(0,prop('WNDPOP','NO')).
+rule_i(0,prop('AUTOCENTER','UMPV')).
+rule_i(0,prop('DLT_BUTTON','')).
+rule_i(0,prop('CNF_BUTTON','')).
+rule_i(0,prop('UPD_BUTTON','')).
+rule_i(0,prop('ADD_BUTTON','')).
+rule_i(0,prop('AUTOSCROLL_FORM','UMPV')).
+rule_i(0,prop('SHOW_FRM','UMPV')).
+rule_i(0,prop('MODAL','PARM')).
+rule_i(0,prop('CTRBOX','YES')).
+rule_i(0,prop('ICON','')).
+rule_i(0,prop('S_TASK','YES')).
+rule_i(0,prop('MINBUT','YES')).
+rule_i(0,prop('MAXBUT','YES')).
+rule_i(0,prop('BORSTY','2')).
+rule_i(0,prop('KEY_MOREKEYS','UMPV')).
+rule_i(0,prop('KEY_ENTER','UMPV')).
+rule_i(0,prop('KEY_LAST','UMPV')).
+rule_i(0,prop('KEY_FIRST','UMPV')).
+rule_i(0,prop('KEY_SELECT','UMPV')).
+rule_i(0,prop('KEY_DISPLAY','UMPV')).
+rule_i(0,prop('KEY_DELETE','UMPV')).
+rule_i(0,prop('KEY_CANCEL','UMPV')).
+rule_i(0,prop('KEY_UPDATE','UMPV')).
+rule_i(0,prop('KEY_MENU','UMPV')).
+rule_i(0,prop('KEY_RETRIEVE','UMPV')).
+rule_i(0,prop('KEY_NEXT','UMPV')).
+rule_i(0,prop('KEY_PREVIOUS','UMPV')).
+rule_i(0,prop('KEY_INSERT','UMPV')).
+rule_i(0,prop('KEY_REFRESH','UMPV')).
+rule_i(0,prop('KEY_PROMPT','UMPV')).
+rule_i(0,prop('KEY_EXIT','UMPV')).
+rule_i(0,prop('KEY_CHECK','UMPV')).
+rule_i(0,prop('KEY_HELP','UMPV')).
+rule_i(0,prop('ASSIGNED_FNC_KEYS','UMPV')).
+rule_i(0,prop('FIRST_WD_DATEPICKER','UMPV')).
+rule_i(0,prop('WNUM_DATEPICKER','UMPV')).
+rule_i(0,prop(idUSE_WEB_DATEPICKER,'UMPV')).
+rule_i(0,prop('WebFormDefaults','0')).
+rule_i(0,prop('WebUX','SMOOTH')).
+rule_i(0,prop('FIELD_TO_FIELD','UMPV')).
+rule_i(0,prop('CONFIRM','UMPV')).
+rule_i(0,prop('TRNCFM','UMPV')).
+rule_i(0,prop('CFMTRN','No')).
+rule_i(0,prop('TRNEND','Yes')).
+rule_i(0,prop('IsDwhTrn','0')).
+rule_i(0,prop(idISBCEJB,'0')).
+rule_i(0,prop('WEB_SECURITY_LEVEL','High')).
+rule_i(0,prop('HTTP_PROTOCOL','Unsecure')).
+rule_i(0,prop('USE_ENCRYPTION','NO')).
+rule_i(0,prop('OnSessionTimeout','Ignore')).
+rule_i(0,prop('SHOWMASTERPAGE_POPUP','0')).
+rule_i(0,prop('MasterPage',o(13,'AppMasterPage'))).
+rule_i(0,prop('WEB_COMP','No')).
+rule_i(0,prop('Theme',o(25,'Flat'))).
+rule_i(0,prop('WS_Delete','-1')).
+rule_i(0,prop('WS_Update','-1')).
+rule_i(0,prop('WS_Insert','-1')).
+rule_i(0,prop('WS_View','-1')).
+rule_i(0,prop('ExternalNamespace','Condufef_v1')).
+rule_i(0,prop('ExternalName',empleadospiso)).
+rule_i(0,prop(idISBCWEBSERVICE,'0')).
+rule_i(0,prop('CALL_PROTOCOL','INTERNAL')).
+rule_i(0,prop(idConnectivitySupport,idInherit)).
+rule_i(0,prop('OBJECT_METADATA','')).
+rule_i(0,prop(idISBUSINESSCOMPONENT,'-1')).
+rule_i(0,prop('Folder',o(120,'Root Module'))).
+rule_i(0,prop('ObjDesc',empleadospiso)).
+rule_i(0,prop('ObjName',empleadospiso)).
+rule_i(0,rule([ a(22,[ 'Dlt','"Eliminar"','' ]) ],[],[],[])).
+rule_i(0,maingen(15)).
+ 
+a_i(1,24,t,24,[],[ [ [ [],46,46 ] ],'IEMPLEADOSPISO',[] ]).
+ 
+v_i(t,i,1,46).
+v_i(t,o,1,47).
+v_i(t,o,1,48).
+v_i(t,o,1,49).
+v_i(t,o,1,50).
+v_i(t,o,1,51).
+v_i(t,o,1,52).
+v_i(t,o,1,53).
+ 
+ 
+ 
+ 
+ 
+ 
+attri_i(53,[ empleadospisoextfeact,date,8,0,'99/99/9999',0,empleadospisoextfeact,'',0 ]).
+attri_i(52,[ empleadospisoextfecgre,date,8,0,'99/99/9999',0,empleadospisoextfecgre,'',0 ]).
+attri_i(51,[ empleadospisoextusuario,svchar,15,0,'',0,empleadospisoextusuario,'',0 ]).
+attri_i(50,[ empleadopisoextprofesion,int,11,0,'ZZZZZZZZZZ9',0,empleadopisoextprofesion,'',0 ]).
+attri_i(49,[ empleadospisoextcorreo,svchar,50,0,'',0,empleadospisoextcorreo,'',0 ]).
+attri_i(48,[ empleadospisoextext,svchar,10,0,'',0,empleadospisoextext,'',0 ]).
+attri_i(47,[ empleadospisoextpiso,svchar,10,0,'',0,empleadospisoextpiso,'',0 ]).
+attri_i(46,[ empleadospisoextid,int,9,0,'ZZZZZZZZ9',0,empleadospisoextid,'',0 ]).
+attri_i('Gxremove',[ 'GxRemove',int,1,0,'9',0,'Gx Remove','',5 ]).
+attri_i('Mode',[ 'Gx_mode',char,3,0,'@!',1,'','',2 ]).
+ 
+table_i(24,[ empleadospiso,[ 46,47,48,49,50,51,52,53 ],empleadospiso,empleadospiso ]).
+ 
+index_i(24,[ 'IEMPLEADOSPISO',u,[ 46 ],'Iempleadospiso' ]).
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+upd_i(24,24,i,[ [ 46,47,48,49,50,51,52,53 ],[],'IEMPLEADOSPISO',[ [ [],46,46 ] ] ]).
+upd_i(24,24,u,[ [ 47,48,49,50,51,52,53 ],[],'IEMPLEADOSPISO',[] ]).
+upd_i(24,24,d,[ [],[],'IEMPLEADOSPISO',[] ]).
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+break_i(2,nvg,1,[],[ [],[],[] ]).
+ 
+b_group_i(2,1,lit,0,1,0).
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+att_prop_i(2,46,'HORIZONTAL_DESCRIPTION',empleadospisoextid,v).
+att_prop_i(2,46,'ExternalName',empleadospisoextid,d).
+att_prop_i(2,46,'ExternalNamespace','Condufef_v1',d).
+att_prop_i(2,46,'EmptyAsNull','Yes',d).
+att_prop_i(2,46,idBasedOn,'',d).
+att_prop_i(2,46,'AUTONUMBER','0',d).
+att_prop_i(2,46,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,46,'AttRegEx','',d).
+att_prop_i(2,46,'AttValidationFailedMsg','',d).
+att_prop_i(2,46,'FullName',empleadospisoextid,v).
+att_prop_i(2,47,'HORIZONTAL_DESCRIPTION',empleadospisoextpiso,v).
+att_prop_i(2,47,'ExternalName',empleadospisoextpiso,d).
+att_prop_i(2,47,'ExternalNamespace','Condufef_v1',d).
+att_prop_i(2,47,'EmptyAsNull','Yes',d).
+att_prop_i(2,47,idBasedOn,'',d).
+att_prop_i(2,47,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,47,'DB_NLS_SUPPORT','No',d).
+att_prop_i(2,47,'AttRegEx','',d).
+att_prop_i(2,47,'AttValidationFailedMsg','',d).
+att_prop_i(2,47,'FullName',empleadospisoextpiso,v).
+att_prop_i(2,48,'HORIZONTAL_DESCRIPTION',empleadospisoextext,v).
+att_prop_i(2,48,'ExternalName',empleadospisoextext,d).
+att_prop_i(2,48,'ExternalNamespace','Condufef_v1',d).
+att_prop_i(2,48,'EmptyAsNull','Yes',d).
+att_prop_i(2,48,idBasedOn,'',d).
+att_prop_i(2,48,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,48,'DB_NLS_SUPPORT','No',d).
+att_prop_i(2,48,'AttRegEx','',d).
+att_prop_i(2,48,'AttValidationFailedMsg','',d).
+att_prop_i(2,48,'FullName',empleadospisoextext,v).
+att_prop_i(2,49,'HORIZONTAL_DESCRIPTION',empleadospisoextcorreo,v).
+att_prop_i(2,49,'ExternalName',empleadospisoextcorreo,d).
+att_prop_i(2,49,'ExternalNamespace','Condufef_v1',d).
+att_prop_i(2,49,'EmptyAsNull','Yes',d).
+att_prop_i(2,49,idBasedOn,'',d).
+att_prop_i(2,49,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,49,'DB_NLS_SUPPORT','No',d).
+att_prop_i(2,49,'AttRegEx','',d).
+att_prop_i(2,49,'AttValidationFailedMsg','',d).
+att_prop_i(2,49,'FullName',empleadospisoextcorreo,v).
+att_prop_i(2,50,'HORIZONTAL_DESCRIPTION',empleadopisoextprofesion,v).
+att_prop_i(2,50,'ExternalName',empleadopisoextprofesion,d).
+att_prop_i(2,50,'ExternalNamespace','Condufef_v1',d).
+att_prop_i(2,50,'EmptyAsNull','Yes',d).
+att_prop_i(2,50,idBasedOn,'',d).
+att_prop_i(2,50,'AUTONUMBER','0',d).
+att_prop_i(2,50,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,50,'AttRegEx','',d).
+att_prop_i(2,50,'AttValidationFailedMsg','',d).
+att_prop_i(2,50,'FullName',empleadopisoextprofesion,v).
+att_prop_i(2,51,'HORIZONTAL_DESCRIPTION',empleadospisoextusuario,v).
+att_prop_i(2,51,'ExternalName',empleadospisoextusuario,d).
+att_prop_i(2,51,'ExternalNamespace','Condufef_v1',d).
+att_prop_i(2,51,'EmptyAsNull','Yes',d).
+att_prop_i(2,51,idBasedOn,'',d).
+att_prop_i(2,51,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,51,'DB_NLS_SUPPORT','No',d).
+att_prop_i(2,51,'AttRegEx','',d).
+att_prop_i(2,51,'AttValidationFailedMsg','',d).
+att_prop_i(2,51,'FullName',empleadospisoextusuario,v).
+att_prop_i(2,52,'HORIZONTAL_DESCRIPTION',empleadospisoextfecgre,v).
+att_prop_i(2,52,'ExternalName',empleadospisoextfecgre,d).
+att_prop_i(2,52,'ExternalNamespace','Condufef_v1',d).
+att_prop_i(2,52,'EmptyAsNull','Yes',d).
+att_prop_i(2,52,idBasedOn,'',d).
+att_prop_i(2,52,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,52,'AttRegEx','',d).
+att_prop_i(2,52,'AttValidationFailedMsg','',d).
+att_prop_i(2,52,idDATEFORMAT,idDATEFORMAT_LONG,v).
+att_prop_i(2,52,'FullName',empleadospisoextfecgre,v).
+att_prop_i(2,53,'HORIZONTAL_DESCRIPTION',empleadospisoextfeact,v).
+att_prop_i(2,53,'ExternalName',empleadospisoextfeact,d).
+att_prop_i(2,53,'ExternalNamespace','Condufef_v1',d).
+att_prop_i(2,53,'EmptyAsNull','Yes',d).
+att_prop_i(2,53,idBasedOn,'',d).
+att_prop_i(2,53,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,53,'AttRegEx','',d).
+att_prop_i(2,53,'AttValidationFailedMsg','',d).
+att_prop_i(2,53,idDATEFORMAT,idDATEFORMAT_LONG,v).
+att_prop_i(2,53,'FullName',empleadospisoextfeact,v).
+ 
+ 
+tbl_att_prop_i(2,24,46,'AllowNulls',n).
+tbl_att_prop_i(2,24,47,'AllowNulls',n).
+tbl_att_prop_i(2,24,48,'AllowNulls',n).
+tbl_att_prop_i(2,24,49,'AllowNulls',n).
+tbl_att_prop_i(2,24,50,'AllowNulls',n).
+tbl_att_prop_i(2,24,51,'AllowNulls',n).
+tbl_att_prop_i(2,24,52,'AllowNulls',n).
+tbl_att_prop_i(2,24,53,'AllowNulls',n).
+ 
+ 
+i_tbl_best_trn(24,[ 24,1,empleadospiso,empleadospiso,[] ]).
+ 
+ 
+ 
+trn_level_i(24,[ [ 46,47,48,49,50,51,52,53 ],empleadospiso,empleadospiso,empleadospiso,'',47 ]).
+ 
+struct_dt_i([ 0,24,0 ],name,empleadospiso).
+struct_dt_i([ 0,24,0 ],namespace,'Condufef_v1').
+struct_dt_i([ 0,24,0 ],significantName,empleadospiso).
+struct_dt_i([ 0,24,0 ],'ObjName',empleadospiso).
+struct_dt_i([ 0,24,0 ],'ObjDesc',empleadospiso).
+struct_dt_i([ 0,24,0 ],'ExternalName',empleadospiso).
+struct_dt_i([ 0,24,0 ],'ExternalNamespace','Condufef_v1').
+struct_dt_i([ 0,24,0 ],key,[ 46 ]).
+struct_dt_i([ 0,24,0 ],lvl,24).
+struct_dt_i([ 26,1,0 ],name,'Messages').
+struct_dt_i([ 26,1,0 ],namespace,'Genexus').
+struct_dt_i([ 26,1,0 ],'ObjName','Messages').
+struct_dt_i([ 26,1,0 ],'ObjDesc','Messages').
+struct_dt_i([ 26,1,0 ],'ExternalName','Messages').
+struct_dt_i([ 26,1,0 ],'ExternalNamespace','Genexus').
+struct_dt_i([ 26,1,0 ],collection,'True').
+struct_dt_i([ 26,1,0 ],datatype,[ 26,1,1 ]).
+struct_dt_i([ 26,1,1 ],name,'Message').
+struct_dt_i([ 26,1,1 ],namespace,'Genexus.Messages').
+struct_dt_i([ 0,24,0 ],fullname,empleadospiso).
+struct_dt_i([ 26,1,0 ],fullname,'Messages').
+struct_dt_i([ 26,1,1 ],fullname,'Messages.Message').
+ 
+struct_dt_elem_i([ 0,24,0 ],1,name,'Empleadospisoextid').
+struct_dt_elem_i([ 0,24,0 ],1,camelname,empleadospisoextid).
+struct_dt_elem_i([ 0,24,0 ],1,length,9).
+struct_dt_elem_i([ 0,24,0 ],1,decimals,0).
+struct_dt_elem_i([ 0,24,0 ],1,sign,0).
+struct_dt_elem_i([ 0,24,0 ],1,type,[ 4,9,0 ]).
+struct_dt_elem_i([ 0,24,0 ],1,pic,'ZZZZZZZZ9').
+struct_dt_elem_i([ 0,24,0 ],1,collection,'False').
+struct_dt_elem_i([ 0,24,0 ],1,attributeid,'46').
+struct_dt_elem_i([ 0,24,0 ],2,name,'Empleadospisoextpiso').
+struct_dt_elem_i([ 0,24,0 ],2,camelname,empleadospisoextpiso).
+struct_dt_elem_i([ 0,24,0 ],2,length,10).
+struct_dt_elem_i([ 0,24,0 ],2,decimals,0).
+struct_dt_elem_i([ 0,24,0 ],2,type,[ 13,10,0 ]).
+struct_dt_elem_i([ 0,24,0 ],2,pic,'').
+struct_dt_elem_i([ 0,24,0 ],2,collection,'False').
+struct_dt_elem_i([ 0,24,0 ],2,attributeid,'47').
+struct_dt_elem_i([ 0,24,0 ],3,name,'Empleadospisoextext').
+struct_dt_elem_i([ 0,24,0 ],3,camelname,empleadospisoextext).
+struct_dt_elem_i([ 0,24,0 ],3,length,10).
+struct_dt_elem_i([ 0,24,0 ],3,decimals,0).
+struct_dt_elem_i([ 0,24,0 ],3,type,[ 13,10,0 ]).
+struct_dt_elem_i([ 0,24,0 ],3,pic,'').
+struct_dt_elem_i([ 0,24,0 ],3,collection,'False').
+struct_dt_elem_i([ 0,24,0 ],3,attributeid,'48').
+struct_dt_elem_i([ 0,24,0 ],4,name,'Empleadospisoextcorreo').
+struct_dt_elem_i([ 0,24,0 ],4,camelname,empleadospisoextcorreo).
+struct_dt_elem_i([ 0,24,0 ],4,length,50).
+struct_dt_elem_i([ 0,24,0 ],4,decimals,0).
+struct_dt_elem_i([ 0,24,0 ],4,type,[ 13,50,0 ]).
+struct_dt_elem_i([ 0,24,0 ],4,pic,'').
+struct_dt_elem_i([ 0,24,0 ],4,collection,'False').
+struct_dt_elem_i([ 0,24,0 ],4,attributeid,'49').
+struct_dt_elem_i([ 0,24,0 ],5,name,'Empleadopisoextprofesion').
+struct_dt_elem_i([ 0,24,0 ],5,camelname,empleadopisoextprofesion).
+struct_dt_elem_i([ 0,24,0 ],5,length,11).
+struct_dt_elem_i([ 0,24,0 ],5,decimals,0).
+struct_dt_elem_i([ 0,24,0 ],5,sign,0).
+struct_dt_elem_i([ 0,24,0 ],5,type,[ 4,11,0 ]).
+struct_dt_elem_i([ 0,24,0 ],5,pic,'ZZZZZZZZZZ9').
+struct_dt_elem_i([ 0,24,0 ],5,collection,'False').
+struct_dt_elem_i([ 0,24,0 ],5,attributeid,'50').
+struct_dt_elem_i([ 0,24,0 ],6,name,'Empleadospisoextusuario').
+struct_dt_elem_i([ 0,24,0 ],6,camelname,empleadospisoextusuario).
+struct_dt_elem_i([ 0,24,0 ],6,length,15).
+struct_dt_elem_i([ 0,24,0 ],6,decimals,0).
+struct_dt_elem_i([ 0,24,0 ],6,type,[ 13,15,0 ]).
+struct_dt_elem_i([ 0,24,0 ],6,pic,'').
+struct_dt_elem_i([ 0,24,0 ],6,collection,'False').
+struct_dt_elem_i([ 0,24,0 ],6,attributeid,'51').
+struct_dt_elem_i([ 0,24,0 ],7,name,'Empleadospisoextfecgre').
+struct_dt_elem_i([ 0,24,0 ],7,camelname,empleadospisoextfecgre).
+struct_dt_elem_i([ 0,24,0 ],7,length,8).
+struct_dt_elem_i([ 0,24,0 ],7,decimals,0).
+struct_dt_elem_i([ 0,24,0 ],7,type,[ 6,8,0 ]).
+struct_dt_elem_i([ 0,24,0 ],7,pic,'99/99/9999').
+struct_dt_elem_i([ 0,24,0 ],7,collection,'False').
+struct_dt_elem_i([ 0,24,0 ],7,attributeid,'52').
+struct_dt_elem_i([ 0,24,0 ],8,name,'Empleadospisoextfeact').
+struct_dt_elem_i([ 0,24,0 ],8,camelname,empleadospisoextfeact).
+struct_dt_elem_i([ 0,24,0 ],8,length,8).
+struct_dt_elem_i([ 0,24,0 ],8,decimals,0).
+struct_dt_elem_i([ 0,24,0 ],8,type,[ 6,8,0 ]).
+struct_dt_elem_i([ 0,24,0 ],8,pic,'99/99/9999').
+struct_dt_elem_i([ 0,24,0 ],8,collection,'False').
+struct_dt_elem_i([ 0,24,0 ],8,attributeid,'53').
+struct_dt_elem_i([ 26,1,1 ],1,name,'Id').
+struct_dt_elem_i([ 26,1,1 ],1,camelname,'Id').
+struct_dt_elem_i([ 26,1,1 ],1,length,128).
+struct_dt_elem_i([ 26,1,1 ],1,decimals,0).
+struct_dt_elem_i([ 26,1,1 ],1,type,[ 13,128,0 ]).
+struct_dt_elem_i([ 26,1,1 ],1,pic,'').
+struct_dt_elem_i([ 26,1,1 ],1,collection,'False').
+struct_dt_elem_i([ 26,1,1 ],1,'XmlType','Element').
+struct_dt_elem_i([ 26,1,1 ],1,'XmlName','').
+struct_dt_elem_i([ 26,1,1 ],1,'XmlNamespace','').
+struct_dt_elem_i([ 26,1,1 ],1,soaptype,'').
+struct_dt_elem_i([ 26,1,1 ],1,'XmlInclude',idXmlIncludeAlways).
+struct_dt_elem_i([ 26,1,1 ],1,'JsonName','').
+struct_dt_elem_i([ 26,1,1 ],2,name,'Type').
+struct_dt_elem_i([ 26,1,1 ],2,camelname,'Type').
+struct_dt_elem_i([ 26,1,1 ],2,basedon,18).
+struct_dt_elem_i([ 26,1,1 ],2,length,2).
+struct_dt_elem_i([ 26,1,1 ],2,decimals,0).
+struct_dt_elem_i([ 26,1,1 ],2,sign,0).
+struct_dt_elem_i([ 26,1,1 ],2,type,[ 4,2,0 ]).
+struct_dt_elem_i([ 26,1,1 ],2,pic,'Z9').
+struct_dt_elem_i([ 26,1,1 ],2,collection,'False').
+struct_dt_elem_i([ 26,1,1 ],2,'XmlType','Element').
+struct_dt_elem_i([ 26,1,1 ],2,'XmlName','').
+struct_dt_elem_i([ 26,1,1 ],2,'XmlNamespace','').
+struct_dt_elem_i([ 26,1,1 ],2,soaptype,'').
+struct_dt_elem_i([ 26,1,1 ],2,'XmlInclude',idXmlIncludeAlways).
+struct_dt_elem_i([ 26,1,1 ],2,'JsonName','').
+struct_dt_elem_i([ 26,1,1 ],3,name,'Description').
+struct_dt_elem_i([ 26,1,1 ],3,camelname,'Description').
+struct_dt_elem_i([ 26,1,1 ],3,length,256).
+struct_dt_elem_i([ 26,1,1 ],3,decimals,0).
+struct_dt_elem_i([ 26,1,1 ],3,type,[ 13,256,0 ]).
+struct_dt_elem_i([ 26,1,1 ],3,pic,'').
+struct_dt_elem_i([ 26,1,1 ],3,collection,'False').
+struct_dt_elem_i([ 26,1,1 ],3,'XmlType','Element').
+struct_dt_elem_i([ 26,1,1 ],3,'XmlName','').
+struct_dt_elem_i([ 26,1,1 ],3,'XmlNamespace','').
+struct_dt_elem_i([ 26,1,1 ],3,soaptype,'').
+struct_dt_elem_i([ 26,1,1 ],3,'XmlInclude',idXmlIncludeAlways).
+struct_dt_elem_i([ 26,1,1 ],3,'JsonName','').
+struct_dt_elem_i([ 26,1,1 ],2,pic,'ZZZZZZZZ9').
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+pgm_callprotocol_i(trn,24,'EMPLEADOSPISO_BC','INTERNAL').
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

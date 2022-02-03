@@ -2,7 +2,7 @@
                File: ProgressIndicatorType
         Description: ProgressIndicatorType
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 1/30/2022 23:38:55.54
+       Generated on: 2/2/2022 13:43:37.29
        Program type: Callable routine
           Main DBMS: postgresql
 */

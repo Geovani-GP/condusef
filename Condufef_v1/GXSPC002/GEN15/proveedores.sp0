@@ -56,12 +56,12 @@ rule_i(0,datastore(1,'CS_RPCPGML','')).
 rule_i(0,datastore(1,'JDBC_DATASOURCE','')).
 rule_i(0,datastore(1,'USE_JDBC_DATASOURCE','0')).
 rule_i(0,datastore(1,'DS_DBMS_ADDINFO','')).
-rule_i(0,datastore(1,'USER_PASSWORD',asdf)).
+rule_i(0,datastore(1,'USER_PASSWORD',󻢸蘇�2�5炭)).
 rule_i(0,datastore(1,'USER_ID',postgres)).
 rule_i(0,datastore(1,'CS_CONNECT','First')).
 rule_i(0,datastore(1,'DBMS_PORT','5432')).
 rule_i(0,datastore(1,'CS_SERVER',localhost)).
-rule_i(0,datastore(1,'CS_DBNAME',condusef)).
+rule_i(0,datastore(1,'CS_DBNAME',postgres)).
 rule_i(0,datastore(1,'CS_FLEDSNAME','')).
 rule_i(0,datastore(1,'CS_DRVNAME','')).
 rule_i(0,datastore(1,'CS_DSNAME','')).
@@ -81,6 +81,8 @@ rule_i(0,prop('ObjectVisibility','Public')).
 rule_i(0,prop('FullyQualifiedName',proveedores)).
 rule_i(0,prop('PWFCallable','0')).
 rule_i(0,prop('GenerateObject','-1')).
+rule_i(0,prop('SEARCH_VIEWER','')).
+rule_i(0,prop('SEARCHABLE','UMPV')).
 rule_i(0,prop('MTIER_OPT','Yes')).
 rule_i(0,prop('CS_ORA_FORUPD','UMPV')).
 rule_i(0,prop('Hint_firstrows','UMPV')).
@@ -142,6 +144,7 @@ rule_i(0,prop('TRNCFM','UMPV')).
 rule_i(0,prop('CFMTRN','No')).
 rule_i(0,prop('TRNEND','Yes')).
 rule_i(0,prop('IsDwhTrn','0')).
+rule_i(0,prop(idISBCEJB,'0')).
 rule_i(0,prop('WEB_SECURITY_LEVEL','High')).
 rule_i(0,prop('HTTP_PROTOCOL','Unsecure')).
 rule_i(0,prop('USE_ENCRYPTION','NO')).
@@ -150,12 +153,17 @@ rule_i(0,prop('SHOWMASTERPAGE_POPUP','0')).
 rule_i(0,prop('MasterPage',o(13,'AppMasterPage'))).
 rule_i(0,prop('WEB_COMP','No')).
 rule_i(0,prop('Theme',o(25,'Flat'))).
+rule_i(0,prop('WS_Delete','-1')).
+rule_i(0,prop('WS_Update','-1')).
+rule_i(0,prop('WS_Insert','-1')).
+rule_i(0,prop('WS_View','-1')).
 rule_i(0,prop('ExternalNamespace','Condufef_v1')).
 rule_i(0,prop('ExternalName',proveedores)).
+rule_i(0,prop(idISBCWEBSERVICE,'0')).
+rule_i(0,prop('CALL_PROTOCOL','INTERNAL')).
 rule_i(0,prop(idConnectivitySupport,idInherit)).
 rule_i(0,prop('OBJECT_METADATA','')).
-rule_i(0,prop('IsMain','0')).
-rule_i(0,prop(idBC,'0')).
+rule_i(0,prop(idBC,'-1')).
 rule_i(0,prop('Folder',o(120,'Root Module'))).
 rule_i(0,prop('ObjDesc',proveedores)).
 rule_i(0,prop('ObjName',proveedores)).
@@ -228,16 +236,16 @@ tbl_to_delete_i(10,[ 11,[ [ 10,2,2 ] ],c,'IARTICULOS',[ [ 11,2 ] ],[ 19,20,21 ],
  
 attri_i(21,[ articuloscambsid,int,9,0,'ZZZZZZZZ9',0,articuloscambsid,'',0 ]).
 attri_i(20,[ articulosproductoid,int,9,0,'ZZZZZZZZ9',0,articulosproductoid,'',0 ]).
-attri_i(19,[ almacenid,int,18,0,'ZZZZZZZZZZZZZZZZZ9',0,almacenid,'',0 ]).
-attri_i(138,[ proveedoresfecultact,dtime,10,8,'99/99/9999 99:99:99',0,proveedoresfecultact,'',0 ]).
-attri_i(137,[ proveedoresfecreg,dtime,10,8,'99/99/9999 99:99:99',0,proveedoresfecreg,'',0 ]).
+attri_i(19,[ almacenid,int,9,0,'ZZZZZZZZ9',0,almacenid,'',0 ]).
+attri_i(138,[ proveedoresfecultact,date,8,0,'99/99/9999',0,proveedoresfecultact,'',0 ]).
+attri_i(137,[ proveedoresfecreg,date,8,0,'99/99/9999',0,proveedoresfecreg,'',0 ]).
 attri_i(136,[ proveedoresusuario,svchar,15,0,'',0,proveedoresusuario,'',0 ]).
 attri_i(135,[ proveedoresrfc,svchar,13,0,'',0,proveedoresrfc,'',0 ]).
 attri_i(134,[ proveedoresfax,svchar,15,0,'',0,proveedoresfax,'',0 ]).
-attri_i(133,[ proveedorestelefono2,svchar,10,0,'',0,proveedorestelefono2,'',0 ]).
-attri_i(132,[ proveedorestelefono1,svchar,10,0,'',0,proveedorestelefono1,'',0 ]).
+attri_i(133,[ proveedorestelefono2,int,10,0,'ZZZZZZZZZ9',0,proveedorestelefono2,'',0 ]).
+attri_i(132,[ proveedorestelefono1,int,10,0,'ZZZZZZZZZ9',0,proveedorestelefono1,'',0 ]).
 attri_i(131,[ proveedorestado,svchar,20,0,'',0,proveedorestado,'',0 ]).
-attri_i(130,[ proveedoresmunicipio,svchar,20,0,'',0,proveedoresmunicipio,'',0 ]).
+attri_i(130,[ proveedoresmunicipio,svchar,25,0,'',0,proveedoresmunicipio,'',0 ]).
 attri_i(129,[ proveedorescodigopostal,svchar,5,0,'',0,proveedorescodigopostal,'',0 ]).
 attri_i(128,[ proveedorescolonia,svchar,25,0,'',0,proveedorescolonia,'',0 ]).
 attri_i(127,[ proveedoresdireccion,svchar,50,0,'',0,proveedoresdireccion,'',0 ]).
@@ -464,7 +472,7 @@ html_comp_i(6,'Title','',d,[ str ]).
 html_comp_i(6,'Fill',-1,d,[ bool ]).
 html_comp_i(6,'Backcolor',rgb(255,255,255),d,[ color ]).
 html_comp_i(6,'Forecolor',rgb(0,0,0),d,[ color ]).
-html_comp_i(6,'Font',font('Microsoft Sans Serif',17,[]),d,[ font ]).
+html_comp_i(6,'Font',font('Open Sans Semibold',17,[]),d,[ font ]).
 html_comp_i(7,'Class',row,v,[ str ]).
 html_comp_i(7,'Id','',d,[ str ]).
 html_comp_i(7,'Height',measure(0,px),d,[ measure ]).
@@ -841,7 +849,7 @@ html_comp_i(41,'Width',measure(0,px),d,[ measure ]).
 html_comp_i(41,'Semanticcontent',div,d,[ str ]).
 html_comp_i(41,'Align',left,d,[ str ]).
 html_comp_i(41,'Valign',top,d,[ str ]).
-html_comp_i(42,'Colcount',20,d,[ num ]).
+html_comp_i(42,'Colcount',25,d,[ num ]).
 html_comp_i(42,'Attid',130,v,[ num ]).
 html_comp_i(42,'Class','Attribute',v,[ str ]).
 html_comp_i(42,'Controlname','Proveedoresmunicipio',d,[ str ]).
@@ -860,7 +868,7 @@ html_comp_i(42,'Readonly',0,v,[ bool ]).
 html_comp_i(42,'Autocomplete',-1,d,[ bool ]).
 html_comp_i(42,'Ispassword',0,d,[ bool ]).
 html_comp_i(42,'Autoresize',-1,d,[ bool ]).
-html_comp_i(42,'Gxwidth',measure(20,chr),d,[ measure ]).
+html_comp_i(42,'Gxwidth',measure(25,chr),d,[ measure ]).
 html_comp_i(42,'Gxheight',measure(1,row),d,[ measure ]).
 html_comp_i(42,'Ismultiline',0,d,[ bool ]).
 html_comp_i(42,'Fill',-1,d,[ bool ]).
@@ -953,9 +961,6 @@ html_comp_i(50,'Captionposition','Left',v,[ str ]).
 html_comp_i(50,'Captionvalue',proveedorestelefono1,d,[ str ]).
 html_comp_i(50,'Controltype',2,d,[ num ]).
 html_comp_i(50,'Inputtype',0,d,[ num ]).
-html_comp_i(50,'Editautocomplete',0,d,[ num ]).
-html_comp_i(50,'Autocorrection',-1,d,[ bool ]).
-html_comp_i(50,'Autocapitalization','FirstWord',d,[ str ]).
 html_comp_i(50,'Notifycontextchange',0,d,[ bool ]).
 html_comp_i(50,'Emptyasnull','Yes',d,[ str ]).
 html_comp_i(50,'Readonly',0,v,[ bool ]).
@@ -969,7 +974,7 @@ html_comp_i(50,'Fill',-1,d,[ bool ]).
 html_comp_i(50,'Backcolor',rgb(255,255,255),d,[ color ]).
 html_comp_i(50,'Forecolor',rgb(0,0,0),d,[ color ]).
 html_comp_i(50,'Font',font('Verdana',12,[]),d,[ font ]).
-html_comp_i(50,'Horizontalalignment',left,d,[ str ]).
+html_comp_i(50,'Horizontalalignment',right,d,[ str ]).
 html_comp_i(50,'Gxformat',0,d,[ num ]).
 html_comp_i(50,'Title','',d,[ str ]).
 html_comp_i(50,'Invitemsg','',v,[ str ]).
@@ -1004,9 +1009,6 @@ html_comp_i(54,'Captionposition','Left',v,[ str ]).
 html_comp_i(54,'Captionvalue',proveedorestelefono2,d,[ str ]).
 html_comp_i(54,'Controltype',2,d,[ num ]).
 html_comp_i(54,'Inputtype',0,d,[ num ]).
-html_comp_i(54,'Editautocomplete',0,d,[ num ]).
-html_comp_i(54,'Autocorrection',-1,d,[ bool ]).
-html_comp_i(54,'Autocapitalization','FirstWord',d,[ str ]).
 html_comp_i(54,'Notifycontextchange',0,d,[ bool ]).
 html_comp_i(54,'Emptyasnull','Yes',d,[ str ]).
 html_comp_i(54,'Readonly',0,v,[ bool ]).
@@ -1020,7 +1022,7 @@ html_comp_i(54,'Fill',-1,d,[ bool ]).
 html_comp_i(54,'Backcolor',rgb(255,255,255),d,[ color ]).
 html_comp_i(54,'Forecolor',rgb(0,0,0),d,[ color ]).
 html_comp_i(54,'Font',font('Verdana',12,[]),d,[ font ]).
-html_comp_i(54,'Horizontalalignment',left,d,[ str ]).
+html_comp_i(54,'Horizontalalignment',right,d,[ str ]).
 html_comp_i(54,'Gxformat',0,d,[ num ]).
 html_comp_i(54,'Title','',d,[ str ]).
 html_comp_i(54,'Invitemsg','',v,[ str ]).
@@ -1198,7 +1200,7 @@ html_comp_i(69,'Width',measure(0,px),d,[ measure ]).
 html_comp_i(69,'Semanticcontent',div,d,[ str ]).
 html_comp_i(69,'Align',left,d,[ str ]).
 html_comp_i(69,'Valign',top,d,[ str ]).
-html_comp_i(70,'Colcount',19,d,[ num ]).
+html_comp_i(70,'Colcount',10,d,[ num ]).
 html_comp_i(70,'Attid',137,v,[ num ]).
 html_comp_i(70,'Class','Attribute',v,[ str ]).
 html_comp_i(70,'Controlname','Proveedoresfecreg',d,[ str ]).
@@ -1214,7 +1216,7 @@ html_comp_i(70,'Readonly',0,v,[ bool ]).
 html_comp_i(70,'Autocomplete',-1,d,[ bool ]).
 html_comp_i(70,'Ispassword',0,d,[ bool ]).
 html_comp_i(70,'Autoresize',-1,d,[ bool ]).
-html_comp_i(70,'Gxwidth',measure(19,chr),d,[ measure ]).
+html_comp_i(70,'Gxwidth',measure(10,chr),d,[ measure ]).
 html_comp_i(70,'Gxheight',measure(1,row),d,[ measure ]).
 html_comp_i(70,'Ismultiline',0,d,[ bool ]).
 html_comp_i(70,'Fill',-1,d,[ bool ]).
@@ -1224,7 +1226,6 @@ html_comp_i(70,'Font',font('Verdana',12,[]),d,[ font ]).
 html_comp_i(70,'Horizontalalignment',right,d,[ str ]).
 html_comp_i(70,'Gxformat',0,d,[ num ]).
 html_comp_i(70,'Title','',d,[ str ]).
-html_comp_i(70,'Invitemsg','',v,[ str ]).
 html_comp_i(70,'Use_datepicker',-1,d,[ bool ]).
 html_comp_i(70,'Flat_datepicker',0,d,[ bool ]).
 html_comp_i(71,'Class',row,v,[ str ]).
@@ -1248,7 +1249,7 @@ html_comp_i(73,'Width',measure(0,px),d,[ measure ]).
 html_comp_i(73,'Semanticcontent',div,d,[ str ]).
 html_comp_i(73,'Align',left,d,[ str ]).
 html_comp_i(73,'Valign',top,d,[ str ]).
-html_comp_i(74,'Colcount',19,d,[ num ]).
+html_comp_i(74,'Colcount',10,d,[ num ]).
 html_comp_i(74,'Attid',138,v,[ num ]).
 html_comp_i(74,'Class','Attribute',v,[ str ]).
 html_comp_i(74,'Controlname','Proveedoresfecultact',d,[ str ]).
@@ -1264,7 +1265,7 @@ html_comp_i(74,'Readonly',0,v,[ bool ]).
 html_comp_i(74,'Autocomplete',-1,d,[ bool ]).
 html_comp_i(74,'Ispassword',0,d,[ bool ]).
 html_comp_i(74,'Autoresize',-1,d,[ bool ]).
-html_comp_i(74,'Gxwidth',measure(19,chr),d,[ measure ]).
+html_comp_i(74,'Gxwidth',measure(10,chr),d,[ measure ]).
 html_comp_i(74,'Gxheight',measure(1,row),d,[ measure ]).
 html_comp_i(74,'Ismultiline',0,d,[ bool ]).
 html_comp_i(74,'Fill',-1,d,[ bool ]).
@@ -1274,7 +1275,6 @@ html_comp_i(74,'Font',font('Verdana',12,[]),d,[ font ]).
 html_comp_i(74,'Horizontalalignment',right,d,[ str ]).
 html_comp_i(74,'Gxformat',0,d,[ num ]).
 html_comp_i(74,'Title','',d,[ str ]).
-html_comp_i(74,'Invitemsg','',v,[ str ]).
 html_comp_i(74,'Use_datepicker',-1,d,[ bool ]).
 html_comp_i(74,'Flat_datepicker',0,d,[ bool ]).
 html_comp_i(75,'Class',row,v,[ str ]).
@@ -1428,6 +1428,7 @@ lit_i(1,1,window,[ rect(0,0,1000,1000),ctlname('Form') ]).
  
  
  
+att_prop_i(2,2,'HORIZONTAL_DESCRIPTION',proveedoresid,v).
 att_prop_i(2,2,'ExternalName',proveedoresid,d).
 att_prop_i(2,2,'ExternalNamespace','Condufef_v1',d).
 att_prop_i(2,2,'EmptyAsNull','Yes',d).
@@ -1437,6 +1438,7 @@ att_prop_i(2,2,'ATT_INITIAL_VALUE','',d).
 att_prop_i(2,2,'AttRegEx','',d).
 att_prop_i(2,2,'AttValidationFailedMsg','',d).
 att_prop_i(2,2,'FullName',proveedoresid,v).
+att_prop_i(2,126,'HORIZONTAL_DESCRIPTION',proveedoresnombre,v).
 att_prop_i(2,126,'ExternalName',proveedoresnombre,d).
 att_prop_i(2,126,'ExternalNamespace','Condufef_v1',d).
 att_prop_i(2,126,'EmptyAsNull','Yes',d).
@@ -1446,6 +1448,7 @@ att_prop_i(2,126,'DB_NLS_SUPPORT','No',d).
 att_prop_i(2,126,'AttRegEx','',d).
 att_prop_i(2,126,'AttValidationFailedMsg','',d).
 att_prop_i(2,126,'FullName',proveedoresnombre,v).
+att_prop_i(2,127,'HORIZONTAL_DESCRIPTION',proveedoresdireccion,v).
 att_prop_i(2,127,'ExternalName',proveedoresdireccion,d).
 att_prop_i(2,127,'ExternalNamespace','Condufef_v1',d).
 att_prop_i(2,127,'EmptyAsNull','Yes',d).
@@ -1455,6 +1458,7 @@ att_prop_i(2,127,'DB_NLS_SUPPORT','No',d).
 att_prop_i(2,127,'AttRegEx','',d).
 att_prop_i(2,127,'AttValidationFailedMsg','',d).
 att_prop_i(2,127,'FullName',proveedoresdireccion,v).
+att_prop_i(2,128,'HORIZONTAL_DESCRIPTION',proveedorescolonia,v).
 att_prop_i(2,128,'ExternalName',proveedorescolonia,d).
 att_prop_i(2,128,'ExternalNamespace','Condufef_v1',d).
 att_prop_i(2,128,'EmptyAsNull','Yes',d).
@@ -1464,6 +1468,7 @@ att_prop_i(2,128,'DB_NLS_SUPPORT','No',d).
 att_prop_i(2,128,'AttRegEx','',d).
 att_prop_i(2,128,'AttValidationFailedMsg','',d).
 att_prop_i(2,128,'FullName',proveedorescolonia,v).
+att_prop_i(2,129,'HORIZONTAL_DESCRIPTION',proveedorescodigopostal,v).
 att_prop_i(2,129,'ExternalName',proveedorescodigopostal,d).
 att_prop_i(2,129,'ExternalNamespace','Condufef_v1',d).
 att_prop_i(2,129,'EmptyAsNull','Yes',d).
@@ -1473,6 +1478,7 @@ att_prop_i(2,129,'DB_NLS_SUPPORT','No',d).
 att_prop_i(2,129,'AttRegEx','',d).
 att_prop_i(2,129,'AttValidationFailedMsg','',d).
 att_prop_i(2,129,'FullName',proveedorescodigopostal,v).
+att_prop_i(2,130,'HORIZONTAL_DESCRIPTION',proveedoresmunicipio,v).
 att_prop_i(2,130,'ExternalName',proveedoresmunicipio,d).
 att_prop_i(2,130,'ExternalNamespace','Condufef_v1',d).
 att_prop_i(2,130,'EmptyAsNull','Yes',d).
@@ -1482,6 +1488,7 @@ att_prop_i(2,130,'DB_NLS_SUPPORT','No',d).
 att_prop_i(2,130,'AttRegEx','',d).
 att_prop_i(2,130,'AttValidationFailedMsg','',d).
 att_prop_i(2,130,'FullName',proveedoresmunicipio,v).
+att_prop_i(2,131,'HORIZONTAL_DESCRIPTION',proveedorestado,v).
 att_prop_i(2,131,'ExternalName',proveedorestado,d).
 att_prop_i(2,131,'ExternalNamespace','Condufef_v1',d).
 att_prop_i(2,131,'EmptyAsNull','Yes',d).
@@ -1491,24 +1498,27 @@ att_prop_i(2,131,'DB_NLS_SUPPORT','No',d).
 att_prop_i(2,131,'AttRegEx','',d).
 att_prop_i(2,131,'AttValidationFailedMsg','',d).
 att_prop_i(2,131,'FullName',proveedorestado,v).
+att_prop_i(2,132,'HORIZONTAL_DESCRIPTION',proveedorestelefono1,v).
 att_prop_i(2,132,'ExternalName',proveedorestelefono1,d).
 att_prop_i(2,132,'ExternalNamespace','Condufef_v1',d).
 att_prop_i(2,132,'EmptyAsNull','Yes',d).
 att_prop_i(2,132,idBasedOn,'',d).
+att_prop_i(2,132,'AUTONUMBER','0',d).
 att_prop_i(2,132,'ATT_INITIAL_VALUE','',d).
-att_prop_i(2,132,'DB_NLS_SUPPORT','No',d).
 att_prop_i(2,132,'AttRegEx','',d).
 att_prop_i(2,132,'AttValidationFailedMsg','',d).
 att_prop_i(2,132,'FullName',proveedorestelefono1,v).
+att_prop_i(2,133,'HORIZONTAL_DESCRIPTION',proveedorestelefono2,v).
 att_prop_i(2,133,'ExternalName',proveedorestelefono2,d).
 att_prop_i(2,133,'ExternalNamespace','Condufef_v1',d).
 att_prop_i(2,133,'EmptyAsNull','Yes',d).
 att_prop_i(2,133,idBasedOn,'',d).
+att_prop_i(2,133,'AUTONUMBER','0',d).
 att_prop_i(2,133,'ATT_INITIAL_VALUE','',d).
-att_prop_i(2,133,'DB_NLS_SUPPORT','No',d).
 att_prop_i(2,133,'AttRegEx','',d).
 att_prop_i(2,133,'AttValidationFailedMsg','',d).
 att_prop_i(2,133,'FullName',proveedorestelefono2,v).
+att_prop_i(2,134,'HORIZONTAL_DESCRIPTION',proveedoresfax,v).
 att_prop_i(2,134,'ExternalName',proveedoresfax,d).
 att_prop_i(2,134,'ExternalNamespace','Condufef_v1',d).
 att_prop_i(2,134,'EmptyAsNull','Yes',d).
@@ -1518,6 +1528,7 @@ att_prop_i(2,134,'DB_NLS_SUPPORT','No',d).
 att_prop_i(2,134,'AttRegEx','',d).
 att_prop_i(2,134,'AttValidationFailedMsg','',d).
 att_prop_i(2,134,'FullName',proveedoresfax,v).
+att_prop_i(2,135,'HORIZONTAL_DESCRIPTION',proveedoresrfc,v).
 att_prop_i(2,135,'ExternalName',proveedoresrfc,d).
 att_prop_i(2,135,'ExternalNamespace','Condufef_v1',d).
 att_prop_i(2,135,'EmptyAsNull','Yes',d).
@@ -1527,6 +1538,7 @@ att_prop_i(2,135,'DB_NLS_SUPPORT','No',d).
 att_prop_i(2,135,'AttRegEx','',d).
 att_prop_i(2,135,'AttValidationFailedMsg','',d).
 att_prop_i(2,135,'FullName',proveedoresrfc,v).
+att_prop_i(2,136,'HORIZONTAL_DESCRIPTION',proveedoresusuario,v).
 att_prop_i(2,136,'ExternalName',proveedoresusuario,d).
 att_prop_i(2,136,'ExternalNamespace','Condufef_v1',d).
 att_prop_i(2,136,'EmptyAsNull','Yes',d).
@@ -1536,6 +1548,7 @@ att_prop_i(2,136,'DB_NLS_SUPPORT','No',d).
 att_prop_i(2,136,'AttRegEx','',d).
 att_prop_i(2,136,'AttValidationFailedMsg','',d).
 att_prop_i(2,136,'FullName',proveedoresusuario,v).
+att_prop_i(2,137,'HORIZONTAL_DESCRIPTION',proveedoresfecreg,v).
 att_prop_i(2,137,'ExternalName',proveedoresfecreg,d).
 att_prop_i(2,137,'ExternalNamespace','Condufef_v1',d).
 att_prop_i(2,137,'EmptyAsNull','Yes',d).
@@ -1544,8 +1557,8 @@ att_prop_i(2,137,'ATT_INITIAL_VALUE','',d).
 att_prop_i(2,137,'AttRegEx','',d).
 att_prop_i(2,137,'AttValidationFailedMsg','',d).
 att_prop_i(2,137,idDATEFORMAT,idDATEFORMAT_LONG,v).
-att_prop_i(2,137,idHOURFORMAT,idHOURFORMAT_HOURMINSEC,v).
 att_prop_i(2,137,'FullName',proveedoresfecreg,v).
+att_prop_i(2,138,'HORIZONTAL_DESCRIPTION',proveedoresfecultact,v).
 att_prop_i(2,138,'ExternalName',proveedoresfecultact,d).
 att_prop_i(2,138,'ExternalNamespace','Condufef_v1',d).
 att_prop_i(2,138,'EmptyAsNull','Yes',d).
@@ -1554,8 +1567,8 @@ att_prop_i(2,138,'ATT_INITIAL_VALUE','',d).
 att_prop_i(2,138,'AttRegEx','',d).
 att_prop_i(2,138,'AttValidationFailedMsg','',d).
 att_prop_i(2,138,idDATEFORMAT,idDATEFORMAT_LONG,v).
-att_prop_i(2,138,idHOURFORMAT,idHOURFORMAT_HOURMINSEC,v).
 att_prop_i(2,138,'FullName',proveedoresfecultact,v).
+att_prop_i(2,19,'HORIZONTAL_DESCRIPTION',almacenid,v).
 att_prop_i(2,19,'ExternalName',almacenid,d).
 att_prop_i(2,19,'ExternalNamespace','Condufef_v1',d).
 att_prop_i(2,19,'EmptyAsNull','Yes',d).
@@ -1565,6 +1578,7 @@ att_prop_i(2,19,'ATT_INITIAL_VALUE','',d).
 att_prop_i(2,19,'AttRegEx','',d).
 att_prop_i(2,19,'AttValidationFailedMsg','',d).
 att_prop_i(2,19,'FullName',almacenid,v).
+att_prop_i(2,20,'HORIZONTAL_DESCRIPTION',articulosproductoid,v).
 att_prop_i(2,20,'ExternalName',articulosproductoid,d).
 att_prop_i(2,20,'ExternalNamespace','Condufef_v1',d).
 att_prop_i(2,20,'EmptyAsNull','Yes',d).
@@ -1574,6 +1588,7 @@ att_prop_i(2,20,'ATT_INITIAL_VALUE','',d).
 att_prop_i(2,20,'AttRegEx','',d).
 att_prop_i(2,20,'AttValidationFailedMsg','',d).
 att_prop_i(2,20,'FullName',articulosproductoid,v).
+att_prop_i(2,21,'HORIZONTAL_DESCRIPTION',articuloscambsid,v).
 att_prop_i(2,21,'ExternalName',articuloscambsid,d).
 att_prop_i(2,21,'ExternalNamespace','Condufef_v1',d).
 att_prop_i(2,21,'EmptyAsNull','Yes',d).

@@ -16,3 +16,4 @@
 /r:GxBaseBuilder.dll
 /out:bin\empleados.dll
 empleados.cs
+empleados_bc.cs

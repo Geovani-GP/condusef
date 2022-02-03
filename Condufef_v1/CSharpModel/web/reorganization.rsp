@@ -14,5 +14,4 @@
 /r:system.data.dll
 /r:bin\Npgsql.dll
 Reorganization.cs
-productoconversion.cs
 reorg.cs

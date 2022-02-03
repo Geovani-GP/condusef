@@ -187,7 +187,7 @@ parametrosfecact date   ,
 CONSTRAINT pk_parametros_parametrosid PRIMARY KEY (parametrosid)
 ); 
 
-CREATE TABLE "public".empleadospisoext (
+CREATE TABLE "public".empleadospiso (
 empleadospisoextid integer  NOT NULL ,
 empleadospisoextpiso varchar(10)   ,
 empleadospisoextext  varchar(10)   ,
@@ -210,7 +210,7 @@ CONSTRAINT pk_meses_mesesid PRIMARY KEY (mesesid)
 
 CREATE TABLE "public".almacen(
 almacenid integer  NOT NULL ,
-empleadoid integer  NOT NULL ,
+empleadosid integer  NOT NULL ,
 almacendsc varchar(100)   ,
 almacendireccion  varchar(100)   ,
 almacencolonia  varchar(50)   ,

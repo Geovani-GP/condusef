@@ -4,8 +4,8 @@
 <Mod>1</Mod>
 <OldMod>2</OldMod>
 <Table>
-<TableId>1</TableId>
-<TableName>tipobien</TableName>
-<Description>tipobien</Description></Table>
-<ReorgAction>#</ReorgAction>
-<ObjNavig>OracleDTI\MDL002\GEN15\tipobienConversion.xml</ObjNavig></Object>
+<TableId>24</TableId>
+<TableName>empleadospiso</TableName>
+<Description>empleadospiso</Description></Table>
+<ReorgAction>*</ReorgAction>
+<ObjNavig>josbueno\MDL002\GEN15\empleadospisoConversion.xml</ObjNavig></Object>

@@ -1,0 +1,134 @@
+ 
+spec_i([ sdt,[ 0,10,0 ],proveedores,proveedores,0,spa,'10_3_15-115824' ]).
+ 
+struct_dt_i([ 0,10,0 ],name,proveedores).
+struct_dt_i([ 0,10,0 ],namespace,'Condufef_v1').
+struct_dt_i([ 0,10,0 ],significantName,proveedores).
+struct_dt_i([ 0,10,0 ],'ObjName',proveedores).
+struct_dt_i([ 0,10,0 ],'ObjDesc',proveedores).
+struct_dt_i([ 0,10,0 ],'ExternalName',proveedores).
+struct_dt_i([ 0,10,0 ],'ExternalNamespace','Condufef_v1').
+struct_dt_i([ 0,10,0 ],key,[ 2 ]).
+struct_dt_i([ 0,10,0 ],lvl,10).
+struct_dt_i([ 0,10,0 ],fullname,proveedores).
+ 
+struct_dt_elem_i([ 0,10,0 ],1,name,'Proveedoresid').
+struct_dt_elem_i([ 0,10,0 ],1,camelname,proveedoresid).
+struct_dt_elem_i([ 0,10,0 ],1,length,9).
+struct_dt_elem_i([ 0,10,0 ],1,decimals,0).
+struct_dt_elem_i([ 0,10,0 ],1,sign,0).
+struct_dt_elem_i([ 0,10,0 ],1,type,[ 4,9,0 ]).
+struct_dt_elem_i([ 0,10,0 ],1,pic,'ZZZZZZZZ9').
+struct_dt_elem_i([ 0,10,0 ],1,collection,'False').
+struct_dt_elem_i([ 0,10,0 ],1,attributeid,'2').
+struct_dt_elem_i([ 0,10,0 ],2,name,'Proveedoresnombre').
+struct_dt_elem_i([ 0,10,0 ],2,camelname,proveedoresnombre).
+struct_dt_elem_i([ 0,10,0 ],2,length,80).
+struct_dt_elem_i([ 0,10,0 ],2,decimals,0).
+struct_dt_elem_i([ 0,10,0 ],2,type,[ 13,80,0 ]).
+struct_dt_elem_i([ 0,10,0 ],2,pic,'').
+struct_dt_elem_i([ 0,10,0 ],2,collection,'False').
+struct_dt_elem_i([ 0,10,0 ],2,attributeid,'126').
+struct_dt_elem_i([ 0,10,0 ],3,name,'Proveedoresdireccion').
+struct_dt_elem_i([ 0,10,0 ],3,camelname,proveedoresdireccion).
+struct_dt_elem_i([ 0,10,0 ],3,length,50).
+struct_dt_elem_i([ 0,10,0 ],3,decimals,0).
+struct_dt_elem_i([ 0,10,0 ],3,type,[ 13,50,0 ]).
+struct_dt_elem_i([ 0,10,0 ],3,pic,'').
+struct_dt_elem_i([ 0,10,0 ],3,collection,'False').
+struct_dt_elem_i([ 0,10,0 ],3,attributeid,'127').
+struct_dt_elem_i([ 0,10,0 ],4,name,'Proveedorescolonia').
+struct_dt_elem_i([ 0,10,0 ],4,camelname,proveedorescolonia).
+struct_dt_elem_i([ 0,10,0 ],4,length,25).
+struct_dt_elem_i([ 0,10,0 ],4,decimals,0).
+struct_dt_elem_i([ 0,10,0 ],4,type,[ 13,25,0 ]).
+struct_dt_elem_i([ 0,10,0 ],4,pic,'').
+struct_dt_elem_i([ 0,10,0 ],4,collection,'False').
+struct_dt_elem_i([ 0,10,0 ],4,attributeid,'128').
+struct_dt_elem_i([ 0,10,0 ],5,name,'Proveedorescodigopostal').
+struct_dt_elem_i([ 0,10,0 ],5,camelname,proveedorescodigopostal).
+struct_dt_elem_i([ 0,10,0 ],5,length,5).
+struct_dt_elem_i([ 0,10,0 ],5,decimals,0).
+struct_dt_elem_i([ 0,10,0 ],5,type,[ 13,5,0 ]).
+struct_dt_elem_i([ 0,10,0 ],5,pic,'').
+struct_dt_elem_i([ 0,10,0 ],5,collection,'False').
+struct_dt_elem_i([ 0,10,0 ],5,attributeid,'129').
+struct_dt_elem_i([ 0,10,0 ],6,name,'Proveedoresmunicipio').
+struct_dt_elem_i([ 0,10,0 ],6,camelname,proveedoresmunicipio).
+struct_dt_elem_i([ 0,10,0 ],6,length,25).
+struct_dt_elem_i([ 0,10,0 ],6,decimals,0).
+struct_dt_elem_i([ 0,10,0 ],6,type,[ 13,25,0 ]).
+struct_dt_elem_i([ 0,10,0 ],6,pic,'').
+struct_dt_elem_i([ 0,10,0 ],6,collection,'False').
+struct_dt_elem_i([ 0,10,0 ],6,attributeid,'130').
+struct_dt_elem_i([ 0,10,0 ],7,name,'Proveedorestado').
+struct_dt_elem_i([ 0,10,0 ],7,camelname,proveedorestado).
+struct_dt_elem_i([ 0,10,0 ],7,length,20).
+struct_dt_elem_i([ 0,10,0 ],7,decimals,0).
+struct_dt_elem_i([ 0,10,0 ],7,type,[ 13,20,0 ]).
+struct_dt_elem_i([ 0,10,0 ],7,pic,'').
+struct_dt_elem_i([ 0,10,0 ],7,collection,'False').
+struct_dt_elem_i([ 0,10,0 ],7,attributeid,'131').
+struct_dt_elem_i([ 0,10,0 ],8,name,'Proveedorestelefono1').
+struct_dt_elem_i([ 0,10,0 ],8,camelname,proveedorestelefono1).
+struct_dt_elem_i([ 0,10,0 ],8,length,10).
+struct_dt_elem_i([ 0,10,0 ],8,decimals,0).
+struct_dt_elem_i([ 0,10,0 ],8,sign,0).
+struct_dt_elem_i([ 0,10,0 ],8,type,[ 4,10,0 ]).
+struct_dt_elem_i([ 0,10,0 ],8,pic,'ZZZZZZZZZ9').
+struct_dt_elem_i([ 0,10,0 ],8,collection,'False').
+struct_dt_elem_i([ 0,10,0 ],8,attributeid,'132').
+struct_dt_elem_i([ 0,10,0 ],9,name,'Proveedorestelefono2').
+struct_dt_elem_i([ 0,10,0 ],9,camelname,proveedorestelefono2).
+struct_dt_elem_i([ 0,10,0 ],9,length,10).
+struct_dt_elem_i([ 0,10,0 ],9,decimals,0).
+struct_dt_elem_i([ 0,10,0 ],9,sign,0).
+struct_dt_elem_i([ 0,10,0 ],9,type,[ 4,10,0 ]).
+struct_dt_elem_i([ 0,10,0 ],9,pic,'ZZZZZZZZZ9').
+struct_dt_elem_i([ 0,10,0 ],9,collection,'False').
+struct_dt_elem_i([ 0,10,0 ],9,attributeid,'133').
+struct_dt_elem_i([ 0,10,0 ],10,name,'Proveedoresfax').
+struct_dt_elem_i([ 0,10,0 ],10,camelname,proveedoresfax).
+struct_dt_elem_i([ 0,10,0 ],10,length,15).
+struct_dt_elem_i([ 0,10,0 ],10,decimals,0).
+struct_dt_elem_i([ 0,10,0 ],10,type,[ 13,15,0 ]).
+struct_dt_elem_i([ 0,10,0 ],10,pic,'').
+struct_dt_elem_i([ 0,10,0 ],10,collection,'False').
+struct_dt_elem_i([ 0,10,0 ],10,attributeid,'134').
+struct_dt_elem_i([ 0,10,0 ],11,name,'Proveedoresrfc').
+struct_dt_elem_i([ 0,10,0 ],11,camelname,proveedoresrfc).
+struct_dt_elem_i([ 0,10,0 ],11,length,13).
+struct_dt_elem_i([ 0,10,0 ],11,decimals,0).
+struct_dt_elem_i([ 0,10,0 ],11,type,[ 13,13,0 ]).
+struct_dt_elem_i([ 0,10,0 ],11,pic,'').
+struct_dt_elem_i([ 0,10,0 ],11,collection,'False').
+struct_dt_elem_i([ 0,10,0 ],11,attributeid,'135').
+struct_dt_elem_i([ 0,10,0 ],12,name,'Proveedoresusuario').
+struct_dt_elem_i([ 0,10,0 ],12,camelname,proveedoresusuario).
+struct_dt_elem_i([ 0,10,0 ],12,length,15).
+struct_dt_elem_i([ 0,10,0 ],12,decimals,0).
+struct_dt_elem_i([ 0,10,0 ],12,type,[ 13,15,0 ]).
+struct_dt_elem_i([ 0,10,0 ],12,pic,'').
+struct_dt_elem_i([ 0,10,0 ],12,collection,'False').
+struct_dt_elem_i([ 0,10,0 ],12,attributeid,'136').
+struct_dt_elem_i([ 0,10,0 ],13,name,'Proveedoresfecreg').
+struct_dt_elem_i([ 0,10,0 ],13,camelname,proveedoresfecreg).
+struct_dt_elem_i([ 0,10,0 ],13,length,8).
+struct_dt_elem_i([ 0,10,0 ],13,decimals,0).
+struct_dt_elem_i([ 0,10,0 ],13,type,[ 6,8,0 ]).
+struct_dt_elem_i([ 0,10,0 ],13,pic,'99/99/9999').
+struct_dt_elem_i([ 0,10,0 ],13,collection,'False').
+struct_dt_elem_i([ 0,10,0 ],13,attributeid,'137').
+struct_dt_elem_i([ 0,10,0 ],14,name,'Proveedoresfecultact').
+struct_dt_elem_i([ 0,10,0 ],14,camelname,proveedoresfecultact).
+struct_dt_elem_i([ 0,10,0 ],14,length,8).
+struct_dt_elem_i([ 0,10,0 ],14,decimals,0).
+struct_dt_elem_i([ 0,10,0 ],14,type,[ 6,8,0 ]).
+struct_dt_elem_i([ 0,10,0 ],14,pic,'99/99/9999').
+struct_dt_elem_i([ 0,10,0 ],14,collection,'False').
+struct_dt_elem_i([ 0,10,0 ],14,attributeid,'138').
+ 
+ 
+ 
+ 
+ 

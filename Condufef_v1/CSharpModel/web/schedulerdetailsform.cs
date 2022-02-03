@@ -2,7 +2,7 @@
                File: SchedulerDetailsForm
         Description: Scheduler Details Form
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 1/30/2022 23:38:8.37
+       Generated on: 2/2/2022 13:42:59.36
        Program type: Callable routine
           Main DBMS: postgresql
 */
@@ -233,7 +233,7 @@ namespace GeneXus.Programs {
          context.AddJavascriptSource("jquery.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxtimezone.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxgral.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("gxcfg.js", "?20221302338838");
+         context.AddJavascriptSource("gxcfg.js", "?20222213425937");
          if ( context.isSpaRequest( ) )
          {
             enableOutput();
@@ -661,12 +661,12 @@ namespace GeneXus.Programs {
 
       protected void define_styles( )
       {
-         AddStyleSheetFile("calendar-system.css", "?11323129");
-         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?2337534");
+         AddStyleSheetFile("calendar-system.css", "?13205289");
+         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?1342847");
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?20221302338846");
+            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?20222213425943");
             idxLst = (int)(idxLst+1);
          }
          /* End function define_styles */
@@ -677,7 +677,7 @@ namespace GeneXus.Programs {
          if ( nGXWrapped != 1 )
          {
             context.AddJavascriptSource("messages.spa.js", "?"+context.GetBuildNumber( 115824));
-            context.AddJavascriptSource("schedulerdetailsform.js", "?20221302338846");
+            context.AddJavascriptSource("schedulerdetailsform.js", "?20222213425943");
          }
          /* End function include_jscripts */
       }

@@ -34,12 +34,12 @@ rule_i(0,datastore(1,'CS_RPCPGML','')).
 rule_i(0,datastore(1,'JDBC_DATASOURCE','')).
 rule_i(0,datastore(1,'USE_JDBC_DATASOURCE','0')).
 rule_i(0,datastore(1,'DS_DBMS_ADDINFO','')).
-rule_i(0,datastore(1,'USER_PASSWORD',asdf)).
+rule_i(0,datastore(1,'USER_PASSWORD',󻢸蘇�2�5炭)).
 rule_i(0,datastore(1,'USER_ID',postgres)).
 rule_i(0,datastore(1,'CS_CONNECT','First')).
 rule_i(0,datastore(1,'DBMS_PORT','5432')).
 rule_i(0,datastore(1,'CS_SERVER',localhost)).
-rule_i(0,datastore(1,'CS_DBNAME',condusef)).
+rule_i(0,datastore(1,'CS_DBNAME',postgres)).
 rule_i(0,datastore(1,'CS_FLEDSNAME','')).
 rule_i(0,datastore(1,'CS_DRVNAME','')).
 rule_i(0,datastore(1,'CS_DSNAME','')).
@@ -92,6 +92,7 @@ rule_i(0,prop('Folder',o(8,'Reportes'))).
 rule_i(0,prop('ObjDesc','Report Cambs')).
 rule_i(0,prop('ObjName','ReportCambs')).
 rule_i(0,maingen(15)).
+rule_i(0,output_file(t('Cambs',3),t('PDF',3))).
 rule_i(0,output('FIL')).
  
 a_i(1,1,f,'Err',[],[ [],[ t('0',3) ] ]).

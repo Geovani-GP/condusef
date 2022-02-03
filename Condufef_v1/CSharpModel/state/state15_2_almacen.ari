@@ -15,6 +15,7 @@ ij_object_dependency(almacen,[],[],[],18).
 obj_parms_i([],[]).
  
  
+has_silent_trn_i(almacen_bc).
  
  
  

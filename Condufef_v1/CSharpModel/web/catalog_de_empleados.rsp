@@ -16,4 +16,4 @@
 /r:GxBaseBuilder.dll
 /out:bin\catalog_de_empleados.dll
 catalog_de_empleados.cs
-producto_bc.cs
+empleados_bc.cs

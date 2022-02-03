@@ -2,7 +2,7 @@
                File: GxSilentTrnGridCollection
         Description: No description for object
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 1/30/2022 23:38:56.38
+       Generated on: 2/2/2022 13:43:38.31
        Program type: Callable routine
           Main DBMS: postgresql
 */

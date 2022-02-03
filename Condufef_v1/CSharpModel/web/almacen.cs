@@ -2,7 +2,7 @@
                File: almacen
         Description: almacen
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 1/30/2022 23:37:57.13
+       Generated on: 2/2/2022 13:42:47.83
        Program type: Callable routine
           Main DBMS: postgresql
 */
@@ -301,10 +301,10 @@ namespace GeneXus.Programs {
             /* Div Control */
             GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "col-sm-9 gx-attribute", "left", "top", "", "", "div");
             /* Attribute/Variable Label */
-            GxWebStd.gx_label_element( context, edtalmacenid_Internalname, "articuloid", "col-sm-3 AttributeLabel", 1, true);
+            GxWebStd.gx_label_element( context, edtalmacenid_Internalname, "almacenid", "col-sm-3 AttributeLabel", 1, true);
             /* Single line edit */
             TempTags = "  onfocus=\"gx.evt.onfocus(this, 22,'',false,'',0)\"";
-            GxWebStd.gx_single_line_edit( context, edtalmacenid_Internalname, StringUtil.LTrim( StringUtil.NToC( (decimal)(A19almacenid), 18, 0, ",", "")), ((edtalmacenid_Enabled!=0) ? StringUtil.LTrim( context.localUtil.Format( (decimal)(A19almacenid), "ZZZZZZZZZZZZZZZZZ9")) : context.localUtil.Format( (decimal)(A19almacenid), "ZZZZZZZZZZZZZZZZZ9")), TempTags+" onchange=\"gx.evt.onchange(this)\" "+" onblur=\""+"gx.num.valid_integer( this,'.');"+";gx.evt.onblur(this,22);\"", "'"+""+"'"+",false,"+"'"+""+"'", "", "", "", "", edtalmacenid_Jsonclick, 0, "Attribute", "", "", "", 1, edtalmacenid_Enabled, 0, "text", "", 18, "chr", 1, "row", 18, 0, 0, 0, 1, -1, 0, true, "", "right", false, "HLP_almacen.htm");
+            GxWebStd.gx_single_line_edit( context, edtalmacenid_Internalname, StringUtil.LTrim( StringUtil.NToC( (decimal)(A19almacenid), 9, 0, ",", "")), ((edtalmacenid_Enabled!=0) ? StringUtil.LTrim( context.localUtil.Format( (decimal)(A19almacenid), "ZZZZZZZZ9")) : context.localUtil.Format( (decimal)(A19almacenid), "ZZZZZZZZ9")), TempTags+" onchange=\"gx.evt.onchange(this)\" "+" onblur=\""+"gx.num.valid_integer( this,'.');"+";gx.evt.onblur(this,22);\"", "'"+""+"'"+",false,"+"'"+""+"'", "", "", "", "", edtalmacenid_Jsonclick, 0, "Attribute", "", "", "", 1, edtalmacenid_Enabled, 0, "text", "", 9, "chr", 1, "row", 9, 0, 0, 0, 1, -1, 0, true, "", "right", false, "HLP_almacen.htm");
             GxWebStd.gx_div_end( context, "left", "top");
             GxWebStd.gx_div_end( context, "left", "top");
             GxWebStd.gx_div_end( context, "left", "top");
@@ -420,7 +420,7 @@ namespace GeneXus.Programs {
             GxWebStd.gx_label_element( context, edtalmacentelefono_Internalname, "almacentelefono", "col-sm-3 AttributeLabel", 1, true);
             /* Single line edit */
             TempTags = "  onfocus=\"gx.evt.onfocus(this, 54,'',false,'',0)\"";
-            GxWebStd.gx_single_line_edit( context, edtalmacentelefono_Internalname, A149almacentelefono, StringUtil.RTrim( context.localUtil.Format( A149almacentelefono, "")), TempTags+" onchange=\"gx.evt.onchange(this)\" "+" onblur=\""+""+";gx.evt.onblur(this,54);\"", "'"+""+"'"+",false,"+"'"+""+"'", "", "", "", "", edtalmacentelefono_Jsonclick, 0, "Attribute", "", "", "", 1, edtalmacentelefono_Enabled, 0, "text", "", 10, "chr", 1, "row", 10, 0, 0, 0, 1, -1, -1, true, "", "left", true, "HLP_almacen.htm");
+            GxWebStd.gx_single_line_edit( context, edtalmacentelefono_Internalname, StringUtil.LTrim( StringUtil.NToC( (decimal)(A149almacentelefono), 10, 0, ",", "")), ((edtalmacentelefono_Enabled!=0) ? StringUtil.LTrim( context.localUtil.Format( (decimal)(A149almacentelefono), "ZZZZZZZZZ9")) : context.localUtil.Format( (decimal)(A149almacentelefono), "ZZZZZZZZZ9")), TempTags+" onchange=\"gx.evt.onchange(this)\" "+" onblur=\""+"gx.num.valid_integer( this,'.');"+";gx.evt.onblur(this,54);\"", "'"+""+"'"+",false,"+"'"+""+"'", "", "", "", "", edtalmacentelefono_Jsonclick, 0, "Attribute", "", "", "", 1, edtalmacentelefono_Enabled, 0, "text", "", 10, "chr", 1, "row", 10, 0, 0, 0, 1, -1, 0, true, "", "right", false, "HLP_almacen.htm");
             GxWebStd.gx_div_end( context, "left", "top");
             GxWebStd.gx_div_end( context, "left", "top");
             GxWebStd.gx_div_end( context, "left", "top");
@@ -463,7 +463,7 @@ namespace GeneXus.Programs {
             /* Single line edit */
             TempTags = "  onfocus=\"gx.evt.onfocus(this, 66,'',false,'',0)\"";
             context.WriteHtmlText( "<div id=\""+edtalmacenfecreg_Internalname+"_dp_container\" class=\"dp_container\" style=\"white-space:nowrap;display:inline;\">") ;
-            GxWebStd.gx_single_line_edit( context, edtalmacenfecreg_Internalname, context.localUtil.TToC( A152almacenfecreg, 10, 8, 0, 3, "/", ":", " "), context.localUtil.Format( A152almacenfecreg, "99/99/9999 99:99:99"), TempTags+" onchange=\"gx.evt.onchange(this)\" "+" onblur=\""+"gx.date.valid_date(this, 10,'DMY',8,24,'spa',false,0);"+";gx.evt.onblur(this,66);\"", "'"+""+"'"+",false,"+"'"+""+"'", "", "", "", "", edtalmacenfecreg_Jsonclick, 0, "Attribute", "", "", "", 1, edtalmacenfecreg_Enabled, 0, "text", "", 19, "chr", 1, "row", 19, 0, 0, 0, 1, -1, 0, true, "", "right", false, "HLP_almacen.htm");
+            GxWebStd.gx_single_line_edit( context, edtalmacenfecreg_Internalname, context.localUtil.Format(A152almacenfecreg, "99/99/9999"), context.localUtil.Format( A152almacenfecreg, "99/99/9999"), TempTags+" onchange=\"gx.evt.onchange(this)\" "+" onblur=\""+"gx.date.valid_date(this, 10,'DMY',0,24,'spa',false,0);"+";gx.evt.onblur(this,66);\"", "'"+""+"'"+",false,"+"'"+""+"'", "", "", "", "", edtalmacenfecreg_Jsonclick, 0, "Attribute", "", "", "", 1, edtalmacenfecreg_Enabled, 0, "text", "", 10, "chr", 1, "row", 10, 0, 0, 0, 1, -1, 0, true, "", "right", false, "HLP_almacen.htm");
             GxWebStd.gx_bitmap( context, edtalmacenfecreg_Internalname+"_dp_trigger", context.GetImagePath( "61b9b5d3-dff6-4d59-9b00-da61bc2cbe93", "", context.GetTheme( )), "", "", "", "", ((1==0)||(edtalmacenfecreg_Enabled==0) ? 0 : 1), 0, "Date selector", "Date selector", 0, 1, 0, "", 0, "", 0, 0, 0, "", "", "cursor: pointer;", "", "", "", "", "", "", "", 1, false, false, "HLP_almacen.htm");
             context.WriteHtmlTextNl( "</div>") ;
             GxWebStd.gx_div_end( context, "left", "top");
@@ -480,7 +480,7 @@ namespace GeneXus.Programs {
             /* Single line edit */
             TempTags = "  onfocus=\"gx.evt.onfocus(this, 70,'',false,'',0)\"";
             context.WriteHtmlText( "<div id=\""+edtalmacenfecultact_Internalname+"_dp_container\" class=\"dp_container\" style=\"white-space:nowrap;display:inline;\">") ;
-            GxWebStd.gx_single_line_edit( context, edtalmacenfecultact_Internalname, context.localUtil.TToC( A153almacenfecultact, 10, 8, 0, 3, "/", ":", " "), context.localUtil.Format( A153almacenfecultact, "99/99/9999 99:99:99"), TempTags+" onchange=\"gx.evt.onchange(this)\" "+" onblur=\""+"gx.date.valid_date(this, 10,'DMY',8,24,'spa',false,0);"+";gx.evt.onblur(this,70);\"", "'"+""+"'"+",false,"+"'"+""+"'", "", "", "", "", edtalmacenfecultact_Jsonclick, 0, "Attribute", "", "", "", 1, edtalmacenfecultact_Enabled, 0, "text", "", 19, "chr", 1, "row", 19, 0, 0, 0, 1, -1, 0, true, "", "right", false, "HLP_almacen.htm");
+            GxWebStd.gx_single_line_edit( context, edtalmacenfecultact_Internalname, context.localUtil.Format(A153almacenfecultact, "99/99/9999"), context.localUtil.Format( A153almacenfecultact, "99/99/9999"), TempTags+" onchange=\"gx.evt.onchange(this)\" "+" onblur=\""+"gx.date.valid_date(this, 10,'DMY',0,24,'spa',false,0);"+";gx.evt.onblur(this,70);\"", "'"+""+"'"+",false,"+"'"+""+"'", "", "", "", "", edtalmacenfecultact_Jsonclick, 0, "Attribute", "", "", "", 1, edtalmacenfecultact_Enabled, 0, "text", "", 10, "chr", 1, "row", 10, 0, 0, 0, 1, -1, 0, true, "", "right", false, "HLP_almacen.htm");
             GxWebStd.gx_bitmap( context, edtalmacenfecultact_Internalname+"_dp_trigger", context.GetImagePath( "61b9b5d3-dff6-4d59-9b00-da61bc2cbe93", "", context.GetTheme( )), "", "", "", "", ((1==0)||(edtalmacenfecultact_Enabled==0) ? 0 : 1), 0, "Date selector", "Date selector", 0, 1, 0, "", 0, "", 0, 0, 0, "", "", "cursor: pointer;", "", "", "", "", "", "", "", 1, false, false, "HLP_almacen.htm");
             context.WriteHtmlTextNl( "</div>") ;
             GxWebStd.gx_div_end( context, "left", "top");
@@ -547,7 +547,7 @@ namespace GeneXus.Programs {
             {
                /* Read saved SDTs. */
                /* Read variables values. */
-               if ( ( ( context.localUtil.CToN( cgiGet( edtalmacenid_Internalname), ",", ".") < Convert.ToDecimal( 0 )) ) || ( ( context.localUtil.CToN( cgiGet( edtalmacenid_Internalname), ",", ".") > Convert.ToDecimal( 999999999999999999L )) ) )
+               if ( ( ( context.localUtil.CToN( cgiGet( edtalmacenid_Internalname), ",", ".") < Convert.ToDecimal( 0 )) ) || ( ( context.localUtil.CToN( cgiGet( edtalmacenid_Internalname), ",", ".") > Convert.ToDecimal( 999999999 )) ) )
                {
                   GX_msglist.addItem(context.GetMessage( "GXM_badnum", ""), 1, "ALMACENID");
                   AnyError = 1;
@@ -555,12 +555,12 @@ namespace GeneXus.Programs {
                   context.httpAjaxContext.ajax_rsp_assign_attri("", false, "GX_FocusControl", GX_FocusControl);
                   wbErr = true;
                   A19almacenid = 0;
-                  context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A19almacenid", StringUtil.LTrim( StringUtil.Str( (decimal)(A19almacenid), 18, 0)));
+                  context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A19almacenid", StringUtil.LTrim( StringUtil.Str( (decimal)(A19almacenid), 9, 0)));
                }
                else
                {
-                  A19almacenid = (long)(context.localUtil.CToN( cgiGet( edtalmacenid_Internalname), ",", "."));
-                  context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A19almacenid", StringUtil.LTrim( StringUtil.Str( (decimal)(A19almacenid), 18, 0)));
+                  A19almacenid = (int)(context.localUtil.CToN( cgiGet( edtalmacenid_Internalname), ",", "."));
+                  context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A19almacenid", StringUtil.LTrim( StringUtil.Str( (decimal)(A19almacenid), 9, 0)));
                }
                if ( ( ( context.localUtil.CToN( cgiGet( edtempleadosid_Internalname), ",", ".") < Convert.ToDecimal( 0 )) ) || ( ( context.localUtil.CToN( cgiGet( edtempleadosid_Internalname), ",", ".") > Convert.ToDecimal( 999999999 )) ) )
                {
@@ -604,10 +604,24 @@ namespace GeneXus.Programs {
                n148alamcencodigopostal = false;
                context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A148alamcencodigopostal", A148alamcencodigopostal);
                n148alamcencodigopostal = (String.IsNullOrEmpty(StringUtil.RTrim( A148alamcencodigopostal)) ? true : false);
-               A149almacentelefono = cgiGet( edtalmacentelefono_Internalname);
-               n149almacentelefono = false;
-               context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A149almacentelefono", A149almacentelefono);
-               n149almacentelefono = (String.IsNullOrEmpty(StringUtil.RTrim( A149almacentelefono)) ? true : false);
+               if ( ( ( context.localUtil.CToN( cgiGet( edtalmacentelefono_Internalname), ",", ".") < Convert.ToDecimal( 0 )) ) || ( ( context.localUtil.CToN( cgiGet( edtalmacentelefono_Internalname), ",", ".") > Convert.ToDecimal( 9999999999L )) ) )
+               {
+                  GX_msglist.addItem(context.GetMessage( "GXM_badnum", ""), 1, "ALMACENTELEFONO");
+                  AnyError = 1;
+                  GX_FocusControl = edtalmacentelefono_Internalname;
+                  context.httpAjaxContext.ajax_rsp_assign_attri("", false, "GX_FocusControl", GX_FocusControl);
+                  wbErr = true;
+                  A149almacentelefono = 0;
+                  n149almacentelefono = false;
+                  context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A149almacentelefono", StringUtil.LTrim( StringUtil.Str( (decimal)(A149almacentelefono), 10, 0)));
+               }
+               else
+               {
+                  A149almacentelefono = (long)(context.localUtil.CToN( cgiGet( edtalmacentelefono_Internalname), ",", "."));
+                  n149almacentelefono = false;
+                  context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A149almacentelefono", StringUtil.LTrim( StringUtil.Str( (decimal)(A149almacentelefono), 10, 0)));
+               }
+               n149almacentelefono = ((0==A149almacentelefono) ? true : false);
                A150alamcenobservaciones = cgiGet( edtalamcenobservaciones_Internalname);
                n150alamcenobservaciones = false;
                context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A150alamcenobservaciones", A150alamcenobservaciones);
@@ -616,44 +630,44 @@ namespace GeneXus.Programs {
                n151alamcenusuario = false;
                context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A151alamcenusuario", A151alamcenusuario);
                n151alamcenusuario = (String.IsNullOrEmpty(StringUtil.RTrim( A151alamcenusuario)) ? true : false);
-               if ( context.localUtil.VCDateTime( cgiGet( edtalmacenfecreg_Internalname), 2, 0) == 0 )
+               if ( context.localUtil.VCDate( cgiGet( edtalmacenfecreg_Internalname), 2) == 0 )
                {
-                  GX_msglist.addItem(context.GetMessage( "GXM_baddatetime", new   object[]  {"almacenfecreg"}), 1, "ALMACENFECREG");
+                  GX_msglist.addItem(context.GetMessage( "GXM_faildate", new   object[]  {"almacenfecreg"}), 1, "ALMACENFECREG");
                   AnyError = 1;
                   GX_FocusControl = edtalmacenfecreg_Internalname;
                   context.httpAjaxContext.ajax_rsp_assign_attri("", false, "GX_FocusControl", GX_FocusControl);
                   wbErr = true;
-                  A152almacenfecreg = (DateTime)(DateTime.MinValue);
+                  A152almacenfecreg = DateTime.MinValue;
                   n152almacenfecreg = false;
-                  context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A152almacenfecreg", context.localUtil.TToC( A152almacenfecreg, 10, 8, 0, 3, "/", ":", " "));
+                  context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A152almacenfecreg", context.localUtil.Format(A152almacenfecreg, "99/99/9999"));
                }
                else
                {
-                  A152almacenfecreg = context.localUtil.CToT( cgiGet( edtalmacenfecreg_Internalname));
+                  A152almacenfecreg = context.localUtil.CToD( cgiGet( edtalmacenfecreg_Internalname), 2);
                   n152almacenfecreg = false;
-                  context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A152almacenfecreg", context.localUtil.TToC( A152almacenfecreg, 10, 8, 0, 3, "/", ":", " "));
+                  context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A152almacenfecreg", context.localUtil.Format(A152almacenfecreg, "99/99/9999"));
                }
                n152almacenfecreg = ((DateTime.MinValue==A152almacenfecreg) ? true : false);
-               if ( context.localUtil.VCDateTime( cgiGet( edtalmacenfecultact_Internalname), 2, 0) == 0 )
+               if ( context.localUtil.VCDate( cgiGet( edtalmacenfecultact_Internalname), 2) == 0 )
                {
-                  GX_msglist.addItem(context.GetMessage( "GXM_baddatetime", new   object[]  {"almacenfecultact"}), 1, "ALMACENFECULTACT");
+                  GX_msglist.addItem(context.GetMessage( "GXM_faildate", new   object[]  {"almacenfecultact"}), 1, "ALMACENFECULTACT");
                   AnyError = 1;
                   GX_FocusControl = edtalmacenfecultact_Internalname;
                   context.httpAjaxContext.ajax_rsp_assign_attri("", false, "GX_FocusControl", GX_FocusControl);
                   wbErr = true;
-                  A153almacenfecultact = (DateTime)(DateTime.MinValue);
+                  A153almacenfecultact = DateTime.MinValue;
                   n153almacenfecultact = false;
-                  context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A153almacenfecultact", context.localUtil.TToC( A153almacenfecultact, 10, 8, 0, 3, "/", ":", " "));
+                  context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A153almacenfecultact", context.localUtil.Format(A153almacenfecultact, "99/99/9999"));
                }
                else
                {
-                  A153almacenfecultact = context.localUtil.CToT( cgiGet( edtalmacenfecultact_Internalname));
+                  A153almacenfecultact = context.localUtil.CToD( cgiGet( edtalmacenfecultact_Internalname), 2);
                   n153almacenfecultact = false;
-                  context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A153almacenfecultact", context.localUtil.TToC( A153almacenfecultact, 10, 8, 0, 3, "/", ":", " "));
+                  context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A153almacenfecultact", context.localUtil.Format(A153almacenfecultact, "99/99/9999"));
                }
                n153almacenfecultact = ((DateTime.MinValue==A153almacenfecultact) ? true : false);
                /* Read saved values. */
-               Z19almacenid = (long)(context.localUtil.CToN( cgiGet( "Z19almacenid"), ",", "."));
+               Z19almacenid = (int)(context.localUtil.CToN( cgiGet( "Z19almacenid"), ",", "."));
                Z143almacendsc = cgiGet( "Z143almacendsc");
                n143almacendsc = (String.IsNullOrEmpty(StringUtil.RTrim( A143almacendsc)) ? true : false);
                Z144almacendireccion = cgiGet( "Z144almacendireccion");
@@ -666,15 +680,15 @@ namespace GeneXus.Programs {
                n147alamcenestado = (String.IsNullOrEmpty(StringUtil.RTrim( A147alamcenestado)) ? true : false);
                Z148alamcencodigopostal = cgiGet( "Z148alamcencodigopostal");
                n148alamcencodigopostal = (String.IsNullOrEmpty(StringUtil.RTrim( A148alamcencodigopostal)) ? true : false);
-               Z149almacentelefono = cgiGet( "Z149almacentelefono");
-               n149almacentelefono = (String.IsNullOrEmpty(StringUtil.RTrim( A149almacentelefono)) ? true : false);
+               Z149almacentelefono = (long)(context.localUtil.CToN( cgiGet( "Z149almacentelefono"), ",", "."));
+               n149almacentelefono = ((0==A149almacentelefono) ? true : false);
                Z150alamcenobservaciones = cgiGet( "Z150alamcenobservaciones");
                n150alamcenobservaciones = (String.IsNullOrEmpty(StringUtil.RTrim( A150alamcenobservaciones)) ? true : false);
                Z151alamcenusuario = cgiGet( "Z151alamcenusuario");
                n151alamcenusuario = (String.IsNullOrEmpty(StringUtil.RTrim( A151alamcenusuario)) ? true : false);
-               Z152almacenfecreg = context.localUtil.CToT( cgiGet( "Z152almacenfecreg"), 0);
+               Z152almacenfecreg = context.localUtil.CToD( cgiGet( "Z152almacenfecreg"), 0);
                n152almacenfecreg = ((DateTime.MinValue==A152almacenfecreg) ? true : false);
-               Z153almacenfecultact = context.localUtil.CToT( cgiGet( "Z153almacenfecultact"), 0);
+               Z153almacenfecultact = context.localUtil.CToD( cgiGet( "Z153almacenfecultact"), 0);
                n153almacenfecultact = ((DateTime.MinValue==A153almacenfecultact) ? true : false);
                Z13empleadosid = (int)(context.localUtil.CToN( cgiGet( "Z13empleadosid"), ",", "."));
                n13empleadosid = ((0==A13empleadosid) ? true : false);
@@ -694,8 +708,8 @@ namespace GeneXus.Programs {
                {
                   Gx_mode = "DSP";
                   context.httpAjaxContext.ajax_rsp_assign_attri("", false, "Gx_mode", Gx_mode);
-                  A19almacenid = (long)(NumberUtil.Val( GetNextPar( ), "."));
-                  context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A19almacenid", StringUtil.LTrim( StringUtil.Str( (decimal)(A19almacenid), 18, 0)));
+                  A19almacenid = (int)(NumberUtil.Val( GetNextPar( ), "."));
+                  context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A19almacenid", StringUtil.LTrim( StringUtil.Str( (decimal)(A19almacenid), 9, 0)));
                   getEqualNoModal( ) ;
                   Gx_mode = "DSP";
                   context.httpAjaxContext.ajax_rsp_assign_attri("", false, "Gx_mode", Gx_mode);
@@ -971,7 +985,7 @@ namespace GeneXus.Programs {
             context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A148alamcencodigopostal", A148alamcencodigopostal);
             n148alamcencodigopostal = T000I5_n148alamcencodigopostal[0];
             A149almacentelefono = T000I5_A149almacentelefono[0];
-            context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A149almacentelefono", A149almacentelefono);
+            context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A149almacentelefono", StringUtil.LTrim( StringUtil.Str( (decimal)(A149almacentelefono), 10, 0)));
             n149almacentelefono = T000I5_n149almacentelefono[0];
             A150alamcenobservaciones = T000I5_A150alamcenobservaciones[0];
             context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A150alamcenobservaciones", A150alamcenobservaciones);
@@ -980,10 +994,10 @@ namespace GeneXus.Programs {
             context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A151alamcenusuario", A151alamcenusuario);
             n151alamcenusuario = T000I5_n151alamcenusuario[0];
             A152almacenfecreg = T000I5_A152almacenfecreg[0];
-            context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A152almacenfecreg", context.localUtil.TToC( A152almacenfecreg, 10, 8, 0, 3, "/", ":", " "));
+            context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A152almacenfecreg", context.localUtil.Format(A152almacenfecreg, "99/99/9999"));
             n152almacenfecreg = T000I5_n152almacenfecreg[0];
             A153almacenfecultact = T000I5_A153almacenfecultact[0];
-            context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A153almacenfecultact", context.localUtil.TToC( A153almacenfecultact, 10, 8, 0, 3, "/", ":", " "));
+            context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A153almacenfecultact", context.localUtil.Format(A153almacenfecultact, "99/99/9999"));
             n153almacenfecultact = T000I5_n153almacenfecultact[0];
             A13empleadosid = T000I5_A13empleadosid[0];
             context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A13empleadosid", StringUtil.LTrim( StringUtil.Str( (decimal)(A13empleadosid), 9, 0)));
@@ -1077,7 +1091,7 @@ namespace GeneXus.Programs {
             ZM0I18( 1) ;
             RcdFound18 = 1;
             A19almacenid = T000I3_A19almacenid[0];
-            context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A19almacenid", StringUtil.LTrim( StringUtil.Str( (decimal)(A19almacenid), 18, 0)));
+            context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A19almacenid", StringUtil.LTrim( StringUtil.Str( (decimal)(A19almacenid), 9, 0)));
             A143almacendsc = T000I3_A143almacendsc[0];
             context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A143almacendsc", A143almacendsc);
             n143almacendsc = T000I3_n143almacendsc[0];
@@ -1097,7 +1111,7 @@ namespace GeneXus.Programs {
             context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A148alamcencodigopostal", A148alamcencodigopostal);
             n148alamcencodigopostal = T000I3_n148alamcencodigopostal[0];
             A149almacentelefono = T000I3_A149almacentelefono[0];
-            context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A149almacentelefono", A149almacentelefono);
+            context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A149almacentelefono", StringUtil.LTrim( StringUtil.Str( (decimal)(A149almacentelefono), 10, 0)));
             n149almacentelefono = T000I3_n149almacentelefono[0];
             A150alamcenobservaciones = T000I3_A150alamcenobservaciones[0];
             context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A150alamcenobservaciones", A150alamcenobservaciones);
@@ -1106,10 +1120,10 @@ namespace GeneXus.Programs {
             context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A151alamcenusuario", A151alamcenusuario);
             n151alamcenusuario = T000I3_n151alamcenusuario[0];
             A152almacenfecreg = T000I3_A152almacenfecreg[0];
-            context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A152almacenfecreg", context.localUtil.TToC( A152almacenfecreg, 10, 8, 0, 3, "/", ":", " "));
+            context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A152almacenfecreg", context.localUtil.Format(A152almacenfecreg, "99/99/9999"));
             n152almacenfecreg = T000I3_n152almacenfecreg[0];
             A153almacenfecultact = T000I3_A153almacenfecultact[0];
-            context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A153almacenfecultact", context.localUtil.TToC( A153almacenfecultact, 10, 8, 0, 3, "/", ":", " "));
+            context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A153almacenfecultact", context.localUtil.Format(A153almacenfecultact, "99/99/9999"));
             n153almacenfecultact = T000I3_n153almacenfecultact[0];
             A13empleadosid = T000I3_A13empleadosid[0];
             context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A13empleadosid", StringUtil.LTrim( StringUtil.Str( (decimal)(A13empleadosid), 9, 0)));
@@ -1172,7 +1186,7 @@ namespace GeneXus.Programs {
             if ( (pr_default.getStatus(6) != 101) && ( ( T000I8_A19almacenid[0] > A19almacenid ) ) )
             {
                A19almacenid = T000I8_A19almacenid[0];
-               context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A19almacenid", StringUtil.LTrim( StringUtil.Str( (decimal)(A19almacenid), 18, 0)));
+               context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A19almacenid", StringUtil.LTrim( StringUtil.Str( (decimal)(A19almacenid), 9, 0)));
                RcdFound18 = 1;
             }
          }
@@ -1193,7 +1207,7 @@ namespace GeneXus.Programs {
             if ( (pr_default.getStatus(7) != 101) && ( ( T000I9_A19almacenid[0] < A19almacenid ) ) )
             {
                A19almacenid = T000I9_A19almacenid[0];
-               context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A19almacenid", StringUtil.LTrim( StringUtil.Str( (decimal)(A19almacenid), 18, 0)));
+               context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A19almacenid", StringUtil.LTrim( StringUtil.Str( (decimal)(A19almacenid), 9, 0)));
                RcdFound18 = 1;
             }
          }
@@ -1223,7 +1237,7 @@ namespace GeneXus.Programs {
                if ( A19almacenid != Z19almacenid )
                {
                   A19almacenid = Z19almacenid;
-                  context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A19almacenid", StringUtil.LTrim( StringUtil.Str( (decimal)(A19almacenid), 18, 0)));
+                  context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A19almacenid", StringUtil.LTrim( StringUtil.Str( (decimal)(A19almacenid), 9, 0)));
                   GX_msglist.addItem(context.GetMessage( "GXM_getbeforeupd", ""), "CandidateKeyNotFound", 1, "ALMACENID");
                   AnyError = 1;
                   GX_FocusControl = edtalmacenid_Internalname;
@@ -1296,7 +1310,7 @@ namespace GeneXus.Programs {
          if ( A19almacenid != Z19almacenid )
          {
             A19almacenid = Z19almacenid;
-            context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A19almacenid", StringUtil.LTrim( StringUtil.Str( (decimal)(A19almacenid), 18, 0)));
+            context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A19almacenid", StringUtil.LTrim( StringUtil.Str( (decimal)(A19almacenid), 9, 0)));
             GX_msglist.addItem(context.GetMessage( "GXM_getbeforedlt", ""), 1, "ALMACENID");
             AnyError = 1;
             GX_FocusControl = edtalmacenid_Internalname;
@@ -1456,7 +1470,7 @@ namespace GeneXus.Programs {
             {
                Gx_longc = true;
             }
-            if ( Gx_longc || ( StringUtil.StrCmp(Z148alamcencodigopostal, T000I2_A148alamcencodigopostal[0]) != 0 ) || ( StringUtil.StrCmp(Z149almacentelefono, T000I2_A149almacentelefono[0]) != 0 ) || ( StringUtil.StrCmp(Z150alamcenobservaciones, T000I2_A150alamcenobservaciones[0]) != 0 ) || ( StringUtil.StrCmp(Z151alamcenusuario, T000I2_A151alamcenusuario[0]) != 0 ) || ( Z152almacenfecreg != T000I2_A152almacenfecreg[0] ) )
+            if ( Gx_longc || ( StringUtil.StrCmp(Z148alamcencodigopostal, T000I2_A148alamcencodigopostal[0]) != 0 ) || ( Z149almacentelefono != T000I2_A149almacentelefono[0] ) || ( StringUtil.StrCmp(Z150alamcenobservaciones, T000I2_A150alamcenobservaciones[0]) != 0 ) || ( StringUtil.StrCmp(Z151alamcenusuario, T000I2_A151alamcenusuario[0]) != 0 ) || ( Z152almacenfecreg != T000I2_A152almacenfecreg[0] ) )
             {
                Gx_longc = true;
             }
@@ -1498,7 +1512,7 @@ namespace GeneXus.Programs {
                   GXUtil.WriteLogRaw("Old: ",Z148alamcencodigopostal);
                   GXUtil.WriteLogRaw("Current: ",T000I2_A148alamcencodigopostal[0]);
                }
-               if ( StringUtil.StrCmp(Z149almacentelefono, T000I2_A149almacentelefono[0]) != 0 )
+               if ( Z149almacentelefono != T000I2_A149almacentelefono[0] )
                {
                   GXUtil.WriteLog("almacen:[seudo value changed for attri]"+"almacentelefono");
                   GXUtil.WriteLogRaw("Old: ",Z149almacentelefono);
@@ -1782,7 +1796,7 @@ namespace GeneXus.Programs {
          {
             RcdFound18 = 1;
             A19almacenid = T000I15_A19almacenid[0];
-            context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A19almacenid", StringUtil.LTrim( StringUtil.Str( (decimal)(A19almacenid), 18, 0)));
+            context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A19almacenid", StringUtil.LTrim( StringUtil.Str( (decimal)(A19almacenid), 9, 0)));
          }
          /* Load Subordinate Levels */
       }
@@ -1796,7 +1810,7 @@ namespace GeneXus.Programs {
          {
             RcdFound18 = 1;
             A19almacenid = T000I15_A19almacenid[0];
-            context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A19almacenid", StringUtil.LTrim( StringUtil.Str( (decimal)(A19almacenid), 18, 0)));
+            context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A19almacenid", StringUtil.LTrim( StringUtil.Str( (decimal)(A19almacenid), 9, 0)));
          }
       }
 
@@ -1900,7 +1914,7 @@ namespace GeneXus.Programs {
          context.AddJavascriptSource("jquery.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxtimezone.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxgral.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("gxcfg.js", "?202213023375843");
+         context.AddJavascriptSource("gxcfg.js", "?20222213424935");
          if ( context.isSpaRequest( ) )
          {
             enableOutput();
@@ -1941,18 +1955,18 @@ namespace GeneXus.Programs {
       {
          /* Send hidden variables. */
          /* Send saved values. */
-         GxWebStd.gx_hidden_field( context, "Z19almacenid", StringUtil.LTrim( StringUtil.NToC( (decimal)(Z19almacenid), 18, 0, ",", "")));
+         GxWebStd.gx_hidden_field( context, "Z19almacenid", StringUtil.LTrim( StringUtil.NToC( (decimal)(Z19almacenid), 9, 0, ",", "")));
          GxWebStd.gx_hidden_field( context, "Z143almacendsc", Z143almacendsc);
          GxWebStd.gx_hidden_field( context, "Z144almacendireccion", Z144almacendireccion);
          GxWebStd.gx_hidden_field( context, "Z145almacencolonia", Z145almacencolonia);
          GxWebStd.gx_hidden_field( context, "Z146almacenmunicipio", Z146almacenmunicipio);
          GxWebStd.gx_hidden_field( context, "Z147alamcenestado", Z147alamcenestado);
          GxWebStd.gx_hidden_field( context, "Z148alamcencodigopostal", Z148alamcencodigopostal);
-         GxWebStd.gx_hidden_field( context, "Z149almacentelefono", Z149almacentelefono);
+         GxWebStd.gx_hidden_field( context, "Z149almacentelefono", StringUtil.LTrim( StringUtil.NToC( (decimal)(Z149almacentelefono), 10, 0, ",", "")));
          GxWebStd.gx_hidden_field( context, "Z150alamcenobservaciones", Z150alamcenobservaciones);
          GxWebStd.gx_hidden_field( context, "Z151alamcenusuario", Z151alamcenusuario);
-         GxWebStd.gx_hidden_field( context, "Z152almacenfecreg", context.localUtil.TToC( Z152almacenfecreg, 10, 8, 0, 0, "/", ":", " "));
-         GxWebStd.gx_hidden_field( context, "Z153almacenfecultact", context.localUtil.TToC( Z153almacenfecultact, 10, 8, 0, 0, "/", ":", " "));
+         GxWebStd.gx_hidden_field( context, "Z152almacenfecreg", context.localUtil.DToC( Z152almacenfecreg, 0, "/"));
+         GxWebStd.gx_hidden_field( context, "Z153almacenfecultact", context.localUtil.DToC( Z153almacenfecultact, 0, "/"));
          GxWebStd.gx_hidden_field( context, "Z13empleadosid", StringUtil.LTrim( StringUtil.NToC( (decimal)(Z13empleadosid), 9, 0, ",", "")));
          GxWebStd.gx_hidden_field( context, "IsConfirmed", StringUtil.LTrim( StringUtil.NToC( (decimal)(IsConfirmed), 4, 0, ",", "")));
          GxWebStd.gx_hidden_field( context, "IsModified", StringUtil.LTrim( StringUtil.NToC( (decimal)(IsModified), 4, 0, ",", "")));
@@ -2058,10 +2072,10 @@ namespace GeneXus.Programs {
          n148alamcencodigopostal = false;
          context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A148alamcencodigopostal", A148alamcencodigopostal);
          n148alamcencodigopostal = (String.IsNullOrEmpty(StringUtil.RTrim( A148alamcencodigopostal)) ? true : false);
-         A149almacentelefono = "";
+         A149almacentelefono = 0;
          n149almacentelefono = false;
-         context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A149almacentelefono", A149almacentelefono);
-         n149almacentelefono = (String.IsNullOrEmpty(StringUtil.RTrim( A149almacentelefono)) ? true : false);
+         context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A149almacentelefono", StringUtil.LTrim( StringUtil.Str( (decimal)(A149almacentelefono), 10, 0)));
+         n149almacentelefono = ((0==A149almacentelefono) ? true : false);
          A150alamcenobservaciones = "";
          n150alamcenobservaciones = false;
          context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A150alamcenobservaciones", A150alamcenobservaciones);
@@ -2070,13 +2084,13 @@ namespace GeneXus.Programs {
          n151alamcenusuario = false;
          context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A151alamcenusuario", A151alamcenusuario);
          n151alamcenusuario = (String.IsNullOrEmpty(StringUtil.RTrim( A151alamcenusuario)) ? true : false);
-         A152almacenfecreg = (DateTime)(DateTime.MinValue);
+         A152almacenfecreg = DateTime.MinValue;
          n152almacenfecreg = false;
-         context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A152almacenfecreg", context.localUtil.TToC( A152almacenfecreg, 10, 8, 0, 3, "/", ":", " "));
+         context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A152almacenfecreg", context.localUtil.Format(A152almacenfecreg, "99/99/9999"));
          n152almacenfecreg = ((DateTime.MinValue==A152almacenfecreg) ? true : false);
-         A153almacenfecultact = (DateTime)(DateTime.MinValue);
+         A153almacenfecultact = DateTime.MinValue;
          n153almacenfecultact = false;
-         context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A153almacenfecultact", context.localUtil.TToC( A153almacenfecultact, 10, 8, 0, 3, "/", ":", " "));
+         context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A153almacenfecultact", context.localUtil.Format(A153almacenfecultact, "99/99/9999"));
          n153almacenfecultact = ((DateTime.MinValue==A153almacenfecultact) ? true : false);
          Z143almacendsc = "";
          Z144almacendireccion = "";
@@ -2084,18 +2098,18 @@ namespace GeneXus.Programs {
          Z146almacenmunicipio = "";
          Z147alamcenestado = "";
          Z148alamcencodigopostal = "";
-         Z149almacentelefono = "";
+         Z149almacentelefono = 0;
          Z150alamcenobservaciones = "";
          Z151alamcenusuario = "";
-         Z152almacenfecreg = (DateTime)(DateTime.MinValue);
-         Z153almacenfecultact = (DateTime)(DateTime.MinValue);
+         Z152almacenfecreg = DateTime.MinValue;
+         Z153almacenfecultact = DateTime.MinValue;
          Z13empleadosid = 0;
       }
 
       protected void InitAll0I18( )
       {
          A19almacenid = 0;
-         context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A19almacenid", StringUtil.LTrim( StringUtil.Str( (decimal)(A19almacenid), 18, 0)));
+         context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A19almacenid", StringUtil.LTrim( StringUtil.Str( (decimal)(A19almacenid), 9, 0)));
          InitializeNonKey0I18( ) ;
       }
 
@@ -2105,12 +2119,12 @@ namespace GeneXus.Programs {
 
       protected void define_styles( )
       {
-         AddStyleSheetFile("calendar-system.css", "?11323129");
-         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?2337534");
+         AddStyleSheetFile("calendar-system.css", "?13205289");
+         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?1342847");
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?202213023375852");
+            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?20222213424944");
             idxLst = (int)(idxLst+1);
          }
          /* End function define_styles */
@@ -2119,8 +2133,7 @@ namespace GeneXus.Programs {
       protected void include_jscripts( )
       {
          context.AddJavascriptSource("messages.spa.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("gxdec.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("almacen.js", "?202213023375852");
+         context.AddJavascriptSource("almacen.js", "?20222213424944");
          /* End function include_jscripts */
       }
 
@@ -2278,14 +2291,14 @@ namespace GeneXus.Programs {
          /* End function AfterKeyLoadScreen */
       }
 
-      public void Valid_Almacenid( long GX_Parm1 ,
+      public void Valid_Almacenid( int GX_Parm1 ,
                                    String GX_Parm2 ,
                                    String GX_Parm3 ,
                                    String GX_Parm4 ,
                                    String GX_Parm5 ,
                                    String GX_Parm6 ,
                                    String GX_Parm7 ,
-                                   String GX_Parm8 ,
+                                   long GX_Parm8 ,
                                    String GX_Parm9 ,
                                    String GX_Parm10 ,
                                    DateTime GX_Parm11 ,
@@ -2332,13 +2345,13 @@ namespace GeneXus.Programs {
          isValidOutput.Add(A146almacenmunicipio);
          isValidOutput.Add(A147alamcenestado);
          isValidOutput.Add(A148alamcencodigopostal);
-         isValidOutput.Add(A149almacentelefono);
+         isValidOutput.Add(StringUtil.LTrim( StringUtil.NToC( (decimal)(A149almacentelefono), 10, 0, ".", "")));
          isValidOutput.Add(A150alamcenobservaciones);
          isValidOutput.Add(A151alamcenusuario);
-         isValidOutput.Add(context.localUtil.TToC( A152almacenfecreg, 10, 8, 0, 3, "/", ":", " "));
-         isValidOutput.Add(context.localUtil.TToC( A153almacenfecultact, 10, 8, 0, 3, "/", ":", " "));
+         isValidOutput.Add(context.localUtil.Format(A152almacenfecreg, "99/99/9999"));
+         isValidOutput.Add(context.localUtil.Format(A153almacenfecultact, "99/99/9999"));
          isValidOutput.Add(StringUtil.RTrim( Gx_mode));
-         isValidOutput.Add(StringUtil.LTrim( StringUtil.NToC( (decimal)(Z19almacenid), 18, 0, ",", "")));
+         isValidOutput.Add(StringUtil.LTrim( StringUtil.NToC( (decimal)(Z19almacenid), 9, 0, ",", "")));
          isValidOutput.Add(StringUtil.LTrim( StringUtil.NToC( (decimal)(Z13empleadosid), 9, 0, ",", "")));
          isValidOutput.Add(Z143almacendsc);
          isValidOutput.Add(Z144almacendireccion);
@@ -2346,11 +2359,11 @@ namespace GeneXus.Programs {
          isValidOutput.Add(Z146almacenmunicipio);
          isValidOutput.Add(Z147alamcenestado);
          isValidOutput.Add(Z148alamcencodigopostal);
-         isValidOutput.Add(Z149almacentelefono);
+         isValidOutput.Add(StringUtil.LTrim( StringUtil.NToC( (decimal)(Z149almacentelefono), 10, 0, ",", "")));
          isValidOutput.Add(Z150alamcenobservaciones);
          isValidOutput.Add(Z151alamcenusuario);
-         isValidOutput.Add(context.localUtil.TToC( Z152almacenfecreg, 10, 8, 0, 0, "/", ":", " "));
-         isValidOutput.Add(context.localUtil.TToC( Z153almacenfecultact, 10, 8, 0, 0, "/", ":", " "));
+         isValidOutput.Add(context.localUtil.DToC( Z152almacenfecreg, 0, "/"));
+         isValidOutput.Add(context.localUtil.DToC( Z153almacenfecultact, 0, "/"));
          isValidOutput.Add(bttBtn_delete_Enabled);
          isValidOutput.Add(bttBtn_enter_Enabled);
          isValidOutput.Add(context.GX_msglist.ToJavascriptSource());
@@ -2419,11 +2432,10 @@ namespace GeneXus.Programs {
          Z146almacenmunicipio = "";
          Z147alamcenestado = "";
          Z148alamcencodigopostal = "";
-         Z149almacentelefono = "";
          Z150alamcenobservaciones = "";
          Z151alamcenusuario = "";
-         Z152almacenfecreg = (DateTime)(DateTime.MinValue);
-         Z153almacenfecultact = (DateTime)(DateTime.MinValue);
+         Z152almacenfecreg = DateTime.MinValue;
+         Z153almacenfecultact = DateTime.MinValue;
          scmdbuf = "";
          gxfirstwebparm = "";
          gxfirstwebparm_bkp = "";
@@ -2447,11 +2459,10 @@ namespace GeneXus.Programs {
          A146almacenmunicipio = "";
          A147alamcenestado = "";
          A148alamcencodigopostal = "";
-         A149almacentelefono = "";
          A150alamcenobservaciones = "";
          A151alamcenusuario = "";
-         A152almacenfecreg = (DateTime)(DateTime.MinValue);
-         A153almacenfecultact = (DateTime)(DateTime.MinValue);
+         A152almacenfecreg = DateTime.MinValue;
+         A153almacenfecultact = DateTime.MinValue;
          bttBtn_enter_Jsonclick = "";
          bttBtn_cancel_Jsonclick = "";
          bttBtn_delete_Jsonclick = "";
@@ -2460,7 +2471,7 @@ namespace GeneXus.Programs {
          EvtGridId = "";
          EvtRowId = "";
          sEvtType = "";
-         T000I5_A19almacenid = new long[1] ;
+         T000I5_A19almacenid = new int[1] ;
          T000I5_A143almacendsc = new String[] {""} ;
          T000I5_n143almacendsc = new bool[] {false} ;
          T000I5_A144almacendireccion = new String[] {""} ;
@@ -2473,7 +2484,7 @@ namespace GeneXus.Programs {
          T000I5_n147alamcenestado = new bool[] {false} ;
          T000I5_A148alamcencodigopostal = new String[] {""} ;
          T000I5_n148alamcencodigopostal = new bool[] {false} ;
-         T000I5_A149almacentelefono = new String[] {""} ;
+         T000I5_A149almacentelefono = new long[1] ;
          T000I5_n149almacentelefono = new bool[] {false} ;
          T000I5_A150alamcenobservaciones = new String[] {""} ;
          T000I5_n150alamcenobservaciones = new bool[] {false} ;
@@ -2489,8 +2500,8 @@ namespace GeneXus.Programs {
          T000I4_n13empleadosid = new bool[] {false} ;
          T000I6_A13empleadosid = new int[1] ;
          T000I6_n13empleadosid = new bool[] {false} ;
-         T000I7_A19almacenid = new long[1] ;
-         T000I3_A19almacenid = new long[1] ;
+         T000I7_A19almacenid = new int[1] ;
+         T000I3_A19almacenid = new int[1] ;
          T000I3_A143almacendsc = new String[] {""} ;
          T000I3_n143almacendsc = new bool[] {false} ;
          T000I3_A144almacendireccion = new String[] {""} ;
@@ -2503,7 +2514,7 @@ namespace GeneXus.Programs {
          T000I3_n147alamcenestado = new bool[] {false} ;
          T000I3_A148alamcencodigopostal = new String[] {""} ;
          T000I3_n148alamcencodigopostal = new bool[] {false} ;
-         T000I3_A149almacentelefono = new String[] {""} ;
+         T000I3_A149almacentelefono = new long[1] ;
          T000I3_n149almacentelefono = new bool[] {false} ;
          T000I3_A150alamcenobservaciones = new String[] {""} ;
          T000I3_n150alamcenobservaciones = new bool[] {false} ;
@@ -2516,9 +2527,9 @@ namespace GeneXus.Programs {
          T000I3_A13empleadosid = new int[1] ;
          T000I3_n13empleadosid = new bool[] {false} ;
          sMode18 = "";
-         T000I8_A19almacenid = new long[1] ;
-         T000I9_A19almacenid = new long[1] ;
-         T000I2_A19almacenid = new long[1] ;
+         T000I8_A19almacenid = new int[1] ;
+         T000I9_A19almacenid = new int[1] ;
+         T000I2_A19almacenid = new int[1] ;
          T000I2_A143almacendsc = new String[] {""} ;
          T000I2_n143almacendsc = new bool[] {false} ;
          T000I2_A144almacendireccion = new String[] {""} ;
@@ -2531,7 +2542,7 @@ namespace GeneXus.Programs {
          T000I2_n147alamcenestado = new bool[] {false} ;
          T000I2_A148alamcencodigopostal = new String[] {""} ;
          T000I2_n148alamcencodigopostal = new bool[] {false} ;
-         T000I2_A149almacentelefono = new String[] {""} ;
+         T000I2_A149almacentelefono = new long[1] ;
          T000I2_n149almacentelefono = new bool[] {false} ;
          T000I2_A150alamcenobservaciones = new String[] {""} ;
          T000I2_n150alamcenobservaciones = new bool[] {false} ;
@@ -2545,11 +2556,11 @@ namespace GeneXus.Programs {
          T000I2_n13empleadosid = new bool[] {false} ;
          T000I13_A17etiquetasproductoid = new int[1] ;
          T000I13_A18etiquetascambsid = new int[1] ;
-         T000I13_A19almacenid = new long[1] ;
-         T000I14_A19almacenid = new long[1] ;
+         T000I13_A19almacenid = new int[1] ;
+         T000I14_A19almacenid = new int[1] ;
          T000I14_A20articulosproductoid = new int[1] ;
          T000I14_A21articuloscambsid = new int[1] ;
-         T000I15_A19almacenid = new long[1] ;
+         T000I15_A19almacenid = new int[1] ;
          sDynURL = "";
          FormProcess = "";
          bodyStyle = "";
@@ -2622,6 +2633,7 @@ namespace GeneXus.Programs {
       private short Gx_BScreen ;
       private short gxajaxcallmode ;
       private short wbTemp ;
+      private int Z19almacenid ;
       private int Z13empleadosid ;
       private int A13empleadosid ;
       private int trnEnded ;
@@ -2630,6 +2642,7 @@ namespace GeneXus.Programs {
       private int bttBtn_next_Visible ;
       private int bttBtn_last_Visible ;
       private int bttBtn_select_Visible ;
+      private int A19almacenid ;
       private int edtalmacenid_Enabled ;
       private int edtempleadosid_Enabled ;
       private int imgprompt_13_Visible ;
@@ -2650,8 +2663,8 @@ namespace GeneXus.Programs {
       private int bttBtn_delete_Visible ;
       private int bttBtn_delete_Enabled ;
       private int idxLst ;
-      private long Z19almacenid ;
-      private long A19almacenid ;
+      private long Z149almacentelefono ;
+      private long A149almacentelefono ;
       private String sPrefix ;
       private String scmdbuf ;
       private String gxfirstwebparm ;
@@ -2746,7 +2759,6 @@ namespace GeneXus.Programs {
       private String Z146almacenmunicipio ;
       private String Z147alamcenestado ;
       private String Z148alamcencodigopostal ;
-      private String Z149almacentelefono ;
       private String Z150alamcenobservaciones ;
       private String Z151alamcenusuario ;
       private String A143almacendsc ;
@@ -2755,13 +2767,12 @@ namespace GeneXus.Programs {
       private String A146almacenmunicipio ;
       private String A147alamcenestado ;
       private String A148alamcencodigopostal ;
-      private String A149almacentelefono ;
       private String A150alamcenobservaciones ;
       private String A151alamcenusuario ;
       private GxUnknownObjectCollection isValidOutput ;
       private IGxDataStore dsDefault ;
       private IDataStoreProvider pr_default ;
-      private long[] T000I5_A19almacenid ;
+      private int[] T000I5_A19almacenid ;
       private String[] T000I5_A143almacendsc ;
       private bool[] T000I5_n143almacendsc ;
       private String[] T000I5_A144almacendireccion ;
@@ -2774,7 +2785,7 @@ namespace GeneXus.Programs {
       private bool[] T000I5_n147alamcenestado ;
       private String[] T000I5_A148alamcencodigopostal ;
       private bool[] T000I5_n148alamcencodigopostal ;
-      private String[] T000I5_A149almacentelefono ;
+      private long[] T000I5_A149almacentelefono ;
       private bool[] T000I5_n149almacentelefono ;
       private String[] T000I5_A150alamcenobservaciones ;
       private bool[] T000I5_n150alamcenobservaciones ;
@@ -2790,8 +2801,8 @@ namespace GeneXus.Programs {
       private bool[] T000I4_n13empleadosid ;
       private int[] T000I6_A13empleadosid ;
       private bool[] T000I6_n13empleadosid ;
-      private long[] T000I7_A19almacenid ;
-      private long[] T000I3_A19almacenid ;
+      private int[] T000I7_A19almacenid ;
+      private int[] T000I3_A19almacenid ;
       private String[] T000I3_A143almacendsc ;
       private bool[] T000I3_n143almacendsc ;
       private String[] T000I3_A144almacendireccion ;
@@ -2804,7 +2815,7 @@ namespace GeneXus.Programs {
       private bool[] T000I3_n147alamcenestado ;
       private String[] T000I3_A148alamcencodigopostal ;
       private bool[] T000I3_n148alamcencodigopostal ;
-      private String[] T000I3_A149almacentelefono ;
+      private long[] T000I3_A149almacentelefono ;
       private bool[] T000I3_n149almacentelefono ;
       private String[] T000I3_A150alamcenobservaciones ;
       private bool[] T000I3_n150alamcenobservaciones ;
@@ -2816,9 +2827,9 @@ namespace GeneXus.Programs {
       private bool[] T000I3_n153almacenfecultact ;
       private int[] T000I3_A13empleadosid ;
       private bool[] T000I3_n13empleadosid ;
-      private long[] T000I8_A19almacenid ;
-      private long[] T000I9_A19almacenid ;
-      private long[] T000I2_A19almacenid ;
+      private int[] T000I8_A19almacenid ;
+      private int[] T000I9_A19almacenid ;
+      private int[] T000I2_A19almacenid ;
       private String[] T000I2_A143almacendsc ;
       private bool[] T000I2_n143almacendsc ;
       private String[] T000I2_A144almacendireccion ;
@@ -2831,7 +2842,7 @@ namespace GeneXus.Programs {
       private bool[] T000I2_n147alamcenestado ;
       private String[] T000I2_A148alamcencodigopostal ;
       private bool[] T000I2_n148alamcencodigopostal ;
-      private String[] T000I2_A149almacentelefono ;
+      private long[] T000I2_A149almacentelefono ;
       private bool[] T000I2_n149almacentelefono ;
       private String[] T000I2_A150alamcenobservaciones ;
       private bool[] T000I2_n150alamcenobservaciones ;
@@ -2845,11 +2856,11 @@ namespace GeneXus.Programs {
       private bool[] T000I2_n13empleadosid ;
       private int[] T000I13_A17etiquetasproductoid ;
       private int[] T000I13_A18etiquetascambsid ;
-      private long[] T000I13_A19almacenid ;
-      private long[] T000I14_A19almacenid ;
+      private int[] T000I13_A19almacenid ;
+      private int[] T000I14_A19almacenid ;
       private int[] T000I14_A20articulosproductoid ;
       private int[] T000I14_A21articuloscambsid ;
-      private long[] T000I15_A19almacenid ;
+      private int[] T000I15_A19almacenid ;
       private int[] T000I16_A13empleadosid ;
       private bool[] T000I16_n13empleadosid ;
       private GXWebForm Form ;
@@ -2886,7 +2897,7 @@ namespace GeneXus.Programs {
        {
           Object[] prmT000I5 ;
           prmT000I5 = new Object[] {
-          new Object[] {"almacenid",NpgsqlDbType.Real,18,0}
+          new Object[] {"almacenid",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT000I4 ;
           prmT000I4 = new Object[] {
@@ -2898,38 +2909,38 @@ namespace GeneXus.Programs {
           } ;
           Object[] prmT000I7 ;
           prmT000I7 = new Object[] {
-          new Object[] {"almacenid",NpgsqlDbType.Real,18,0}
+          new Object[] {"almacenid",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT000I3 ;
           prmT000I3 = new Object[] {
-          new Object[] {"almacenid",NpgsqlDbType.Real,18,0}
+          new Object[] {"almacenid",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT000I8 ;
           prmT000I8 = new Object[] {
-          new Object[] {"almacenid",NpgsqlDbType.Real,18,0}
+          new Object[] {"almacenid",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT000I9 ;
           prmT000I9 = new Object[] {
-          new Object[] {"almacenid",NpgsqlDbType.Real,18,0}
+          new Object[] {"almacenid",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT000I2 ;
           prmT000I2 = new Object[] {
-          new Object[] {"almacenid",NpgsqlDbType.Real,18,0}
+          new Object[] {"almacenid",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT000I10 ;
           prmT000I10 = new Object[] {
-          new Object[] {"almacenid",NpgsqlDbType.Real,18,0} ,
+          new Object[] {"almacenid",NpgsqlDbType.Integer,9,0} ,
           new Object[] {"almacendsc",NpgsqlDbType.Varchar,100,0} ,
           new Object[] {"almacendireccion",NpgsqlDbType.Varchar,100,0} ,
           new Object[] {"almacencolonia",NpgsqlDbType.Varchar,50,0} ,
           new Object[] {"almacenmunicipio",NpgsqlDbType.Varchar,50,0} ,
           new Object[] {"alamcenestado",NpgsqlDbType.Varchar,50,0} ,
           new Object[] {"alamcencodigopostal",NpgsqlDbType.Varchar,5,0} ,
-          new Object[] {"almacentelefono",NpgsqlDbType.Varchar,10,0} ,
+          new Object[] {"almacentelefono",NpgsqlDbType.Real,10,0} ,
           new Object[] {"alamcenobservaciones",NpgsqlDbType.Varchar,50,0} ,
           new Object[] {"alamcenusuario",NpgsqlDbType.Varchar,15,0} ,
-          new Object[] {"almacenfecreg",NpgsqlDbType.Timestamp,10,8} ,
-          new Object[] {"almacenfecultact",NpgsqlDbType.Timestamp,10,8} ,
+          new Object[] {"almacenfecreg",NpgsqlDbType.Date,8,0} ,
+          new Object[] {"almacenfecultact",NpgsqlDbType.Date,8,0} ,
           new Object[] {"empleadosid",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT000I11 ;
@@ -2940,25 +2951,25 @@ namespace GeneXus.Programs {
           new Object[] {"almacenmunicipio",NpgsqlDbType.Varchar,50,0} ,
           new Object[] {"alamcenestado",NpgsqlDbType.Varchar,50,0} ,
           new Object[] {"alamcencodigopostal",NpgsqlDbType.Varchar,5,0} ,
-          new Object[] {"almacentelefono",NpgsqlDbType.Varchar,10,0} ,
+          new Object[] {"almacentelefono",NpgsqlDbType.Real,10,0} ,
           new Object[] {"alamcenobservaciones",NpgsqlDbType.Varchar,50,0} ,
           new Object[] {"alamcenusuario",NpgsqlDbType.Varchar,15,0} ,
-          new Object[] {"almacenfecreg",NpgsqlDbType.Timestamp,10,8} ,
-          new Object[] {"almacenfecultact",NpgsqlDbType.Timestamp,10,8} ,
+          new Object[] {"almacenfecreg",NpgsqlDbType.Date,8,0} ,
+          new Object[] {"almacenfecultact",NpgsqlDbType.Date,8,0} ,
           new Object[] {"empleadosid",NpgsqlDbType.Integer,9,0} ,
-          new Object[] {"almacenid",NpgsqlDbType.Real,18,0}
+          new Object[] {"almacenid",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT000I12 ;
           prmT000I12 = new Object[] {
-          new Object[] {"almacenid",NpgsqlDbType.Real,18,0}
+          new Object[] {"almacenid",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT000I13 ;
           prmT000I13 = new Object[] {
-          new Object[] {"almacenid",NpgsqlDbType.Real,18,0}
+          new Object[] {"almacenid",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT000I14 ;
           prmT000I14 = new Object[] {
-          new Object[] {"almacenid",NpgsqlDbType.Real,18,0}
+          new Object[] {"almacenid",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT000I15 ;
           prmT000I15 = new Object[] {
@@ -2968,16 +2979,16 @@ namespace GeneXus.Programs {
           new Object[] {"empleadosid",NpgsqlDbType.Integer,9,0}
           } ;
           def= new CursorDef[] {
-              new CursorDef("T000I2", "SELECT almacenid, almacendsc, almacendireccion, almacencolonia, almacenmunicipio, alamcenestado, alamcencodigopostal, almacentelefono, alamcenobservaciones, alamcenusuario, almacenfecreg, almacenfecultact, empleadoid FROM public.almacen WHERE almacenid = :almacenid  FOR UPDATE OF almacen NOWAIT",true, GxErrorMask.GX_NOMASK, false, this,prmT000I2,1,0,true,false )
-             ,new CursorDef("T000I3", "SELECT almacenid, almacendsc, almacendireccion, almacencolonia, almacenmunicipio, alamcenestado, alamcencodigopostal, almacentelefono, alamcenobservaciones, alamcenusuario, almacenfecreg, almacenfecultact, empleadoid FROM public.almacen WHERE almacenid = :almacenid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000I3,1,0,true,false )
+              new CursorDef("T000I2", "SELECT almacenid, almacendsc, almacendireccion, almacencolonia, almacenmunicipio, alamcenestado, alamcencodigopostal, almacentelefono, alamcenobservaciones, alamcenusuario, almacenfecreg, almacenfecultact, empleadosid FROM public.almacen WHERE almacenid = :almacenid  FOR UPDATE OF almacen NOWAIT",true, GxErrorMask.GX_NOMASK, false, this,prmT000I2,1,0,true,false )
+             ,new CursorDef("T000I3", "SELECT almacenid, almacendsc, almacendireccion, almacencolonia, almacenmunicipio, alamcenestado, alamcencodigopostal, almacentelefono, alamcenobservaciones, alamcenusuario, almacenfecreg, almacenfecultact, empleadosid FROM public.almacen WHERE almacenid = :almacenid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000I3,1,0,true,false )
              ,new CursorDef("T000I4", "SELECT empleadosid FROM public.empleados WHERE empleadosid = :empleadosid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000I4,1,0,true,false )
-             ,new CursorDef("T000I5", "SELECT TM1.almacenid, TM1.almacendsc, TM1.almacendireccion, TM1.almacencolonia, TM1.almacenmunicipio, TM1.alamcenestado, TM1.alamcencodigopostal, TM1.almacentelefono, TM1.alamcenobservaciones, TM1.alamcenusuario, TM1.almacenfecreg, TM1.almacenfecultact, TM1.empleadoid FROM public.almacen TM1 WHERE TM1.almacenid = :almacenid ORDER BY TM1.almacenid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000I5,100,0,true,false )
+             ,new CursorDef("T000I5", "SELECT TM1.almacenid, TM1.almacendsc, TM1.almacendireccion, TM1.almacencolonia, TM1.almacenmunicipio, TM1.alamcenestado, TM1.alamcencodigopostal, TM1.almacentelefono, TM1.alamcenobservaciones, TM1.alamcenusuario, TM1.almacenfecreg, TM1.almacenfecultact, TM1.empleadosid FROM public.almacen TM1 WHERE TM1.almacenid = :almacenid ORDER BY TM1.almacenid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000I5,100,0,true,false )
              ,new CursorDef("T000I6", "SELECT empleadosid FROM public.empleados WHERE empleadosid = :empleadosid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000I6,1,0,true,false )
              ,new CursorDef("T000I7", "SELECT almacenid FROM public.almacen WHERE almacenid = :almacenid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000I7,1,0,true,false )
              ,new CursorDef("T000I8", "SELECT almacenid FROM public.almacen WHERE ( almacenid > :almacenid) ORDER BY almacenid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000I8,1,0,true,true )
              ,new CursorDef("T000I9", "SELECT almacenid FROM public.almacen WHERE ( almacenid < :almacenid) ORDER BY almacenid DESC ",true, GxErrorMask.GX_NOMASK, false, this,prmT000I9,1,0,true,true )
-             ,new CursorDef("T000I10", "SAVEPOINT gxupdate;INSERT INTO public.almacen(almacenid, almacendsc, almacendireccion, almacencolonia, almacenmunicipio, alamcenestado, alamcencodigopostal, almacentelefono, alamcenobservaciones, alamcenusuario, almacenfecreg, almacenfecultact, empleadoid) VALUES(:almacenid, :almacendsc, :almacendireccion, :almacencolonia, :almacenmunicipio, :alamcenestado, :alamcencodigopostal, :almacentelefono, :alamcenobservaciones, :alamcenusuario, :almacenfecreg, :almacenfecultact, :empleadosid);RELEASE SAVEPOINT gxupdate", GxErrorMask.GX_ROLLBACKSAVEPOINT | GxErrorMask.GX_NOMASK,prmT000I10)
-             ,new CursorDef("T000I11", "SAVEPOINT gxupdate;UPDATE public.almacen SET almacendsc=:almacendsc, almacendireccion=:almacendireccion, almacencolonia=:almacencolonia, almacenmunicipio=:almacenmunicipio, alamcenestado=:alamcenestado, alamcencodigopostal=:alamcencodigopostal, almacentelefono=:almacentelefono, alamcenobservaciones=:alamcenobservaciones, alamcenusuario=:alamcenusuario, almacenfecreg=:almacenfecreg, almacenfecultact=:almacenfecultact, empleadoid=:empleadosid  WHERE almacenid = :almacenid;RELEASE SAVEPOINT gxupdate", GxErrorMask.GX_ROLLBACKSAVEPOINT | GxErrorMask.GX_NOMASK,prmT000I11)
+             ,new CursorDef("T000I10", "SAVEPOINT gxupdate;INSERT INTO public.almacen(almacenid, almacendsc, almacendireccion, almacencolonia, almacenmunicipio, alamcenestado, alamcencodigopostal, almacentelefono, alamcenobservaciones, alamcenusuario, almacenfecreg, almacenfecultact, empleadosid) VALUES(:almacenid, :almacendsc, :almacendireccion, :almacencolonia, :almacenmunicipio, :alamcenestado, :alamcencodigopostal, :almacentelefono, :alamcenobservaciones, :alamcenusuario, :almacenfecreg, :almacenfecultact, :empleadosid);RELEASE SAVEPOINT gxupdate", GxErrorMask.GX_ROLLBACKSAVEPOINT | GxErrorMask.GX_NOMASK,prmT000I10)
+             ,new CursorDef("T000I11", "SAVEPOINT gxupdate;UPDATE public.almacen SET almacendsc=:almacendsc, almacendireccion=:almacendireccion, almacencolonia=:almacencolonia, almacenmunicipio=:almacenmunicipio, alamcenestado=:alamcenestado, alamcencodigopostal=:alamcencodigopostal, almacentelefono=:almacentelefono, alamcenobservaciones=:alamcenobservaciones, alamcenusuario=:alamcenusuario, almacenfecreg=:almacenfecreg, almacenfecultact=:almacenfecultact, empleadosid=:empleadosid  WHERE almacenid = :almacenid;RELEASE SAVEPOINT gxupdate", GxErrorMask.GX_ROLLBACKSAVEPOINT | GxErrorMask.GX_NOMASK,prmT000I11)
              ,new CursorDef("T000I12", "SAVEPOINT gxupdate;DELETE FROM public.almacen  WHERE almacenid = :almacenid;RELEASE SAVEPOINT gxupdate", GxErrorMask.GX_ROLLBACKSAVEPOINT | GxErrorMask.GX_NOMASK,prmT000I12)
              ,new CursorDef("T000I13", "SELECT productoid AS etiquetasproductoid, cambsid AS etiquetascambsid, articuloid FROM public.etiquetas WHERE articuloid = :almacenid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000I13,1,0,true,true )
              ,new CursorDef("T000I14", "SELECT articulosid, productoid AS articulosproductoid, cambsid AS articuloscambsid FROM public.articulos WHERE articulosid = :almacenid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000I14,1,0,true,true )
@@ -2994,7 +3005,7 @@ namespace GeneXus.Programs {
        switch ( cursor )
        {
              case 0 :
-                ((long[]) buf[0])[0] = rslt.getLong(1) ;
+                ((int[]) buf[0])[0] = rslt.getInt(1) ;
                 ((String[]) buf[1])[0] = rslt.getVarchar(2) ;
                 ((bool[]) buf[2])[0] = rslt.wasNull(2);
                 ((String[]) buf[3])[0] = rslt.getVarchar(3) ;
@@ -3007,21 +3018,21 @@ namespace GeneXus.Programs {
                 ((bool[]) buf[10])[0] = rslt.wasNull(6);
                 ((String[]) buf[11])[0] = rslt.getVarchar(7) ;
                 ((bool[]) buf[12])[0] = rslt.wasNull(7);
-                ((String[]) buf[13])[0] = rslt.getVarchar(8) ;
+                ((long[]) buf[13])[0] = rslt.getLong(8) ;
                 ((bool[]) buf[14])[0] = rslt.wasNull(8);
                 ((String[]) buf[15])[0] = rslt.getVarchar(9) ;
                 ((bool[]) buf[16])[0] = rslt.wasNull(9);
                 ((String[]) buf[17])[0] = rslt.getVarchar(10) ;
                 ((bool[]) buf[18])[0] = rslt.wasNull(10);
-                ((DateTime[]) buf[19])[0] = rslt.getGXDateTime(11) ;
+                ((DateTime[]) buf[19])[0] = rslt.getGXDate(11) ;
                 ((bool[]) buf[20])[0] = rslt.wasNull(11);
-                ((DateTime[]) buf[21])[0] = rslt.getGXDateTime(12) ;
+                ((DateTime[]) buf[21])[0] = rslt.getGXDate(12) ;
                 ((bool[]) buf[22])[0] = rslt.wasNull(12);
                 ((int[]) buf[23])[0] = rslt.getInt(13) ;
                 ((bool[]) buf[24])[0] = rslt.wasNull(13);
                 return;
              case 1 :
-                ((long[]) buf[0])[0] = rslt.getLong(1) ;
+                ((int[]) buf[0])[0] = rslt.getInt(1) ;
                 ((String[]) buf[1])[0] = rslt.getVarchar(2) ;
                 ((bool[]) buf[2])[0] = rslt.wasNull(2);
                 ((String[]) buf[3])[0] = rslt.getVarchar(3) ;
@@ -3034,15 +3045,15 @@ namespace GeneXus.Programs {
                 ((bool[]) buf[10])[0] = rslt.wasNull(6);
                 ((String[]) buf[11])[0] = rslt.getVarchar(7) ;
                 ((bool[]) buf[12])[0] = rslt.wasNull(7);
-                ((String[]) buf[13])[0] = rslt.getVarchar(8) ;
+                ((long[]) buf[13])[0] = rslt.getLong(8) ;
                 ((bool[]) buf[14])[0] = rslt.wasNull(8);
                 ((String[]) buf[15])[0] = rslt.getVarchar(9) ;
                 ((bool[]) buf[16])[0] = rslt.wasNull(9);
                 ((String[]) buf[17])[0] = rslt.getVarchar(10) ;
                 ((bool[]) buf[18])[0] = rslt.wasNull(10);
-                ((DateTime[]) buf[19])[0] = rslt.getGXDateTime(11) ;
+                ((DateTime[]) buf[19])[0] = rslt.getGXDate(11) ;
                 ((bool[]) buf[20])[0] = rslt.wasNull(11);
-                ((DateTime[]) buf[21])[0] = rslt.getGXDateTime(12) ;
+                ((DateTime[]) buf[21])[0] = rslt.getGXDate(12) ;
                 ((bool[]) buf[22])[0] = rslt.wasNull(12);
                 ((int[]) buf[23])[0] = rslt.getInt(13) ;
                 ((bool[]) buf[24])[0] = rslt.wasNull(13);
@@ -3051,7 +3062,7 @@ namespace GeneXus.Programs {
                 ((int[]) buf[0])[0] = rslt.getInt(1) ;
                 return;
              case 3 :
-                ((long[]) buf[0])[0] = rslt.getLong(1) ;
+                ((int[]) buf[0])[0] = rslt.getInt(1) ;
                 ((String[]) buf[1])[0] = rslt.getVarchar(2) ;
                 ((bool[]) buf[2])[0] = rslt.wasNull(2);
                 ((String[]) buf[3])[0] = rslt.getVarchar(3) ;
@@ -3064,15 +3075,15 @@ namespace GeneXus.Programs {
                 ((bool[]) buf[10])[0] = rslt.wasNull(6);
                 ((String[]) buf[11])[0] = rslt.getVarchar(7) ;
                 ((bool[]) buf[12])[0] = rslt.wasNull(7);
-                ((String[]) buf[13])[0] = rslt.getVarchar(8) ;
+                ((long[]) buf[13])[0] = rslt.getLong(8) ;
                 ((bool[]) buf[14])[0] = rslt.wasNull(8);
                 ((String[]) buf[15])[0] = rslt.getVarchar(9) ;
                 ((bool[]) buf[16])[0] = rslt.wasNull(9);
                 ((String[]) buf[17])[0] = rslt.getVarchar(10) ;
                 ((bool[]) buf[18])[0] = rslt.wasNull(10);
-                ((DateTime[]) buf[19])[0] = rslt.getGXDateTime(11) ;
+                ((DateTime[]) buf[19])[0] = rslt.getGXDate(11) ;
                 ((bool[]) buf[20])[0] = rslt.wasNull(11);
-                ((DateTime[]) buf[21])[0] = rslt.getGXDateTime(12) ;
+                ((DateTime[]) buf[21])[0] = rslt.getGXDate(12) ;
                 ((bool[]) buf[22])[0] = rslt.wasNull(12);
                 ((int[]) buf[23])[0] = rslt.getInt(13) ;
                 ((bool[]) buf[24])[0] = rslt.wasNull(13);
@@ -3081,26 +3092,26 @@ namespace GeneXus.Programs {
                 ((int[]) buf[0])[0] = rslt.getInt(1) ;
                 return;
              case 5 :
-                ((long[]) buf[0])[0] = rslt.getLong(1) ;
+                ((int[]) buf[0])[0] = rslt.getInt(1) ;
                 return;
              case 6 :
-                ((long[]) buf[0])[0] = rslt.getLong(1) ;
+                ((int[]) buf[0])[0] = rslt.getInt(1) ;
                 return;
              case 7 :
-                ((long[]) buf[0])[0] = rslt.getLong(1) ;
+                ((int[]) buf[0])[0] = rslt.getInt(1) ;
                 return;
              case 11 :
                 ((int[]) buf[0])[0] = rslt.getInt(1) ;
                 ((int[]) buf[1])[0] = rslt.getInt(2) ;
-                ((long[]) buf[2])[0] = rslt.getLong(3) ;
+                ((int[]) buf[2])[0] = rslt.getInt(3) ;
                 return;
              case 12 :
-                ((long[]) buf[0])[0] = rslt.getLong(1) ;
+                ((int[]) buf[0])[0] = rslt.getInt(1) ;
                 ((int[]) buf[1])[0] = rslt.getInt(2) ;
                 ((int[]) buf[2])[0] = rslt.getInt(3) ;
                 return;
              case 13 :
-                ((long[]) buf[0])[0] = rslt.getLong(1) ;
+                ((int[]) buf[0])[0] = rslt.getInt(1) ;
                 return;
              case 14 :
                 ((int[]) buf[0])[0] = rslt.getInt(1) ;
@@ -3115,10 +3126,10 @@ namespace GeneXus.Programs {
        switch ( cursor )
        {
              case 0 :
-                stmt.SetParameter(1, (long)parms[0]);
+                stmt.SetParameter(1, (int)parms[0]);
                 return;
              case 1 :
-                stmt.SetParameter(1, (long)parms[0]);
+                stmt.SetParameter(1, (int)parms[0]);
                 return;
              case 2 :
                 if ( (bool)parms[0] )
@@ -3131,7 +3142,7 @@ namespace GeneXus.Programs {
                 }
                 return;
              case 3 :
-                stmt.SetParameter(1, (long)parms[0]);
+                stmt.SetParameter(1, (int)parms[0]);
                 return;
              case 4 :
                 if ( (bool)parms[0] )
@@ -3144,16 +3155,16 @@ namespace GeneXus.Programs {
                 }
                 return;
              case 5 :
-                stmt.SetParameter(1, (long)parms[0]);
+                stmt.SetParameter(1, (int)parms[0]);
                 return;
              case 6 :
-                stmt.SetParameter(1, (long)parms[0]);
+                stmt.SetParameter(1, (int)parms[0]);
                 return;
              case 7 :
-                stmt.SetParameter(1, (long)parms[0]);
+                stmt.SetParameter(1, (int)parms[0]);
                 return;
              case 8 :
-                stmt.SetParameter(1, (long)parms[0]);
+                stmt.SetParameter(1, (int)parms[0]);
                 if ( (bool)parms[1] )
                 {
                    stmt.setNull( 2 , SqlDbType.VarChar );
@@ -3204,11 +3215,11 @@ namespace GeneXus.Programs {
                 }
                 if ( (bool)parms[13] )
                 {
-                   stmt.setNull( 8 , SqlDbType.VarChar );
+                   stmt.setNull( 8 , SqlDbType.Decimal );
                 }
                 else
                 {
-                   stmt.SetParameter(8, (String)parms[14]);
+                   stmt.SetParameter(8, (long)parms[14]);
                 }
                 if ( (bool)parms[15] )
                 {
@@ -3232,7 +3243,7 @@ namespace GeneXus.Programs {
                 }
                 else
                 {
-                   stmt.SetParameterDatetime(11, (DateTime)parms[20]);
+                   stmt.SetParameter(11, (DateTime)parms[20]);
                 }
                 if ( (bool)parms[21] )
                 {
@@ -3240,7 +3251,7 @@ namespace GeneXus.Programs {
                 }
                 else
                 {
-                   stmt.SetParameterDatetime(12, (DateTime)parms[22]);
+                   stmt.SetParameter(12, (DateTime)parms[22]);
                 }
                 if ( (bool)parms[23] )
                 {
@@ -3302,11 +3313,11 @@ namespace GeneXus.Programs {
                 }
                 if ( (bool)parms[12] )
                 {
-                   stmt.setNull( 7 , SqlDbType.VarChar );
+                   stmt.setNull( 7 , SqlDbType.Decimal );
                 }
                 else
                 {
-                   stmt.SetParameter(7, (String)parms[13]);
+                   stmt.SetParameter(7, (long)parms[13]);
                 }
                 if ( (bool)parms[14] )
                 {
@@ -3330,7 +3341,7 @@ namespace GeneXus.Programs {
                 }
                 else
                 {
-                   stmt.SetParameterDatetime(10, (DateTime)parms[19]);
+                   stmt.SetParameter(10, (DateTime)parms[19]);
                 }
                 if ( (bool)parms[20] )
                 {
@@ -3338,7 +3349,7 @@ namespace GeneXus.Programs {
                 }
                 else
                 {
-                   stmt.SetParameterDatetime(11, (DateTime)parms[21]);
+                   stmt.SetParameter(11, (DateTime)parms[21]);
                 }
                 if ( (bool)parms[22] )
                 {
@@ -3348,16 +3359,16 @@ namespace GeneXus.Programs {
                 {
                    stmt.SetParameter(12, (int)parms[23]);
                 }
-                stmt.SetParameter(13, (long)parms[24]);
+                stmt.SetParameter(13, (int)parms[24]);
                 return;
              case 10 :
-                stmt.SetParameter(1, (long)parms[0]);
+                stmt.SetParameter(1, (int)parms[0]);
                 return;
              case 11 :
-                stmt.SetParameter(1, (long)parms[0]);
+                stmt.SetParameter(1, (int)parms[0]);
                 return;
              case 12 :
-                stmt.SetParameter(1, (long)parms[0]);
+                stmt.SetParameter(1, (int)parms[0]);
                 return;
              case 14 :
                 if ( (bool)parms[0] )

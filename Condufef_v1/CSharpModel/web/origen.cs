@@ -2,7 +2,7 @@
                File: origen
         Description: origen
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 1/30/2022 23:37:53.32
+       Generated on: 2/2/2022 13:42:43.79
        Program type: Callable routine
           Main DBMS: postgresql
 */
@@ -1516,7 +1516,7 @@ namespace GeneXus.Programs {
          context.AddJavascriptSource("jquery.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxtimezone.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxgral.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("gxcfg.js", "?202213023375410");
+         context.AddJavascriptSource("gxcfg.js", "?20222213424465");
          if ( context.isSpaRequest( ) )
          {
             enableOutput();
@@ -1695,12 +1695,12 @@ namespace GeneXus.Programs {
 
       protected void define_styles( )
       {
-         AddStyleSheetFile("calendar-system.css", "?11323129");
-         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?2337534");
+         AddStyleSheetFile("calendar-system.css", "?13205289");
+         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?1342847");
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?202213023375417");
+            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?20222213424474");
             idxLst = (int)(idxLst+1);
          }
          /* End function define_styles */
@@ -1710,7 +1710,7 @@ namespace GeneXus.Programs {
       {
          context.AddJavascriptSource("messages.spa.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxdec.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("origen.js", "?202213023375417");
+         context.AddJavascriptSource("origen.js", "?20222213424474");
          /* End function include_jscripts */
       }
 
@@ -1935,7 +1935,7 @@ namespace GeneXus.Programs {
          T000G2_n124origenfecreg = new bool[] {false} ;
          T000G2_A125origenfecultact = new DateTime[] {DateTime.MinValue} ;
          T000G2_n125origenfecultact = new bool[] {false} ;
-         T000G11_A19almacenid = new long[1] ;
+         T000G11_A19almacenid = new int[1] ;
          T000G11_A20articulosproductoid = new int[1] ;
          T000G11_A21articuloscambsid = new int[1] ;
          T000G12_A10origenid = new long[1] ;
@@ -2146,7 +2146,7 @@ namespace GeneXus.Programs {
       private bool[] T000G2_n124origenfecreg ;
       private DateTime[] T000G2_A125origenfecultact ;
       private bool[] T000G2_n125origenfecultact ;
-      private long[] T000G11_A19almacenid ;
+      private int[] T000G11_A19almacenid ;
       private int[] T000G11_A20articulosproductoid ;
       private int[] T000G11_A21articuloscambsid ;
       private long[] T000G12_A10origenid ;
@@ -2311,7 +2311,7 @@ namespace GeneXus.Programs {
                 ((long[]) buf[0])[0] = rslt.getLong(1) ;
                 return;
              case 9 :
-                ((long[]) buf[0])[0] = rslt.getLong(1) ;
+                ((int[]) buf[0])[0] = rslt.getInt(1) ;
                 ((int[]) buf[1])[0] = rslt.getInt(2) ;
                 ((int[]) buf[2])[0] = rslt.getInt(3) ;
                 return;

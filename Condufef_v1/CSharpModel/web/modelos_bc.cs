@@ -2,7 +2,7 @@
                File: modelos_BC
         Description: modelos
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 1/30/2022 23:38:0.12
+       Generated on: 2/2/2022 13:42:52.47
        Program type: Callable routine
           Main DBMS: postgresql
 */
@@ -1020,12 +1020,12 @@ namespace GeneXus.Programs {
          BC000J2_n118modelosfecreg = new bool[] {false} ;
          BC000J2_A119modelosfecultact = new DateTime[] {DateTime.MinValue} ;
          BC000J2_n119modelosfecultact = new bool[] {false} ;
-         BC000J9_A19almacenid = new long[1] ;
+         BC000J9_A19almacenid = new int[1] ;
          BC000J9_A20articulosproductoid = new int[1] ;
          BC000J9_A21articuloscambsid = new int[1] ;
          BC000J10_A17etiquetasproductoid = new int[1] ;
          BC000J10_A18etiquetascambsid = new int[1] ;
-         BC000J10_A19almacenid = new long[1] ;
+         BC000J10_A19almacenid = new int[1] ;
          BC000J11_A15modelosid = new int[1] ;
          BC000J11_A116modelosdsc = new String[] {""} ;
          BC000J11_n116modelosdsc = new bool[] {false} ;
@@ -1130,12 +1130,12 @@ namespace GeneXus.Programs {
       private bool[] BC000J2_n118modelosfecreg ;
       private DateTime[] BC000J2_A119modelosfecultact ;
       private bool[] BC000J2_n119modelosfecultact ;
-      private long[] BC000J9_A19almacenid ;
+      private int[] BC000J9_A19almacenid ;
       private int[] BC000J9_A20articulosproductoid ;
       private int[] BC000J9_A21articuloscambsid ;
       private int[] BC000J10_A17etiquetasproductoid ;
       private int[] BC000J10_A18etiquetascambsid ;
-      private long[] BC000J10_A19almacenid ;
+      private int[] BC000J10_A19almacenid ;
       private int[] BC000J11_A15modelosid ;
       private String[] BC000J11_A116modelosdsc ;
       private bool[] BC000J11_n116modelosdsc ;
@@ -1279,14 +1279,14 @@ namespace GeneXus.Programs {
                 ((int[]) buf[0])[0] = rslt.getInt(1) ;
                 return;
              case 7 :
-                ((long[]) buf[0])[0] = rslt.getLong(1) ;
+                ((int[]) buf[0])[0] = rslt.getInt(1) ;
                 ((int[]) buf[1])[0] = rslt.getInt(2) ;
                 ((int[]) buf[2])[0] = rslt.getInt(3) ;
                 return;
              case 8 :
                 ((int[]) buf[0])[0] = rslt.getInt(1) ;
                 ((int[]) buf[1])[0] = rslt.getInt(2) ;
-                ((long[]) buf[2])[0] = rslt.getLong(3) ;
+                ((int[]) buf[2])[0] = rslt.getInt(3) ;
                 return;
              case 9 :
                 ((int[]) buf[0])[0] = rslt.getInt(1) ;

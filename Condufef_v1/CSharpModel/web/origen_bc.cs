@@ -2,7 +2,7 @@
                File: origen_BC
         Description: origen
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 1/30/2022 23:37:54.45
+       Generated on: 2/2/2022 13:42:45.10
        Program type: Callable routine
           Main DBMS: postgresql
 */
@@ -1087,7 +1087,7 @@ namespace GeneXus.Programs {
          BC000G2_n124origenfecreg = new bool[] {false} ;
          BC000G2_A125origenfecultact = new DateTime[] {DateTime.MinValue} ;
          BC000G2_n125origenfecultact = new bool[] {false} ;
-         BC000G9_A19almacenid = new long[1] ;
+         BC000G9_A19almacenid = new int[1] ;
          BC000G9_A20articulosproductoid = new int[1] ;
          BC000G9_A21articuloscambsid = new int[1] ;
          BC000G10_A10origenid = new long[1] ;
@@ -1224,7 +1224,7 @@ namespace GeneXus.Programs {
       private bool[] BC000G2_n124origenfecreg ;
       private DateTime[] BC000G2_A125origenfecultact ;
       private bool[] BC000G2_n125origenfecultact ;
-      private long[] BC000G9_A19almacenid ;
+      private int[] BC000G9_A19almacenid ;
       private int[] BC000G9_A20articulosproductoid ;
       private int[] BC000G9_A21articuloscambsid ;
       private long[] BC000G10_A10origenid ;
@@ -1385,7 +1385,7 @@ namespace GeneXus.Programs {
                 ((long[]) buf[0])[0] = rslt.getLong(1) ;
                 return;
              case 7 :
-                ((long[]) buf[0])[0] = rslt.getLong(1) ;
+                ((int[]) buf[0])[0] = rslt.getInt(1) ;
                 ((int[]) buf[1])[0] = rslt.getInt(2) ;
                 ((int[]) buf[2])[0] = rslt.getInt(3) ;
                 return;

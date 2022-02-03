@@ -11,11 +11,11 @@ lwi_i(6,[ [] ]).
  
  
  
-ta_i(6,[ [ [ 6,13 ],[ 6,98 ],[ 6,99 ],[ 6,100 ],[ 6,101 ],[ 6,102 ],[ 6,103 ],[ 6,104 ],[ 6,105 ],[ 6,106 ],[ 6,107 ] ] ]).
+ta_i(6,[ [ [ 6,13 ],[ 6,176 ],[ 6,99 ],[ 6,100 ],[ 6,101 ],[ 6,102 ],[ 6,103 ],[ 6,106 ],[ 6,107 ],[ 6,104 ],[ 6,105 ] ] ]).
  
-las_i(6,[ [ 13,98,99,100,101,102,103,104,105,106,107 ] ]).
+las_i(6,[ [ 13,176,99,100,101,102,103,106,107,104,105 ] ]).
  
-lac_i(6,[ [ 13,98,99,100,101,102,103,104,105,106,107 ] ]).
+lac_i(6,[ [ 13,176,99,100,101,102,103,106,107,104,105 ] ]).
  
  
 lits_i(empleados,5,10).
@@ -23,16 +23,16 @@ lits_i(empleados,5,10).
 cls_i([ 0,0 ],[ 5,49 ]).
  
 pos_i(13,[ 0,0,0 ]).
-pos_i(98,[ 0,0,0 ]).
+pos_i(176,[ 0,0,0 ]).
 pos_i(99,[ 0,0,0 ]).
 pos_i(100,[ 0,0,0 ]).
 pos_i(101,[ 0,0,0 ]).
 pos_i(102,[ 0,0,0 ]).
 pos_i(103,[ 0,0,0 ]).
-pos_i(104,[ 0,0,0 ]).
-pos_i(105,[ 0,0,0 ]).
 pos_i(106,[ 0,0,0 ]).
 pos_i(107,[ 0,0,0 ]).
+pos_i(104,[ 0,0,0 ]).
+pos_i(105,[ 0,0,0 ]).
  
  
  
@@ -53,12 +53,12 @@ rule_i(0,datastore(1,'CS_RPCPGML','')).
 rule_i(0,datastore(1,'JDBC_DATASOURCE','')).
 rule_i(0,datastore(1,'USE_JDBC_DATASOURCE','0')).
 rule_i(0,datastore(1,'DS_DBMS_ADDINFO','')).
-rule_i(0,datastore(1,'USER_PASSWORD',asdf)).
+rule_i(0,datastore(1,'USER_PASSWORD',󻢸蘇�2�5炭)).
 rule_i(0,datastore(1,'USER_ID',postgres)).
 rule_i(0,datastore(1,'CS_CONNECT','First')).
 rule_i(0,datastore(1,'DBMS_PORT','5432')).
 rule_i(0,datastore(1,'CS_SERVER',localhost)).
-rule_i(0,datastore(1,'CS_DBNAME',condusef)).
+rule_i(0,datastore(1,'CS_DBNAME',postgres)).
 rule_i(0,datastore(1,'CS_FLEDSNAME','')).
 rule_i(0,datastore(1,'CS_DRVNAME','')).
 rule_i(0,datastore(1,'CS_DSNAME','')).
@@ -78,6 +78,8 @@ rule_i(0,prop('ObjectVisibility','Public')).
 rule_i(0,prop('FullyQualifiedName',empleados)).
 rule_i(0,prop('PWFCallable','0')).
 rule_i(0,prop('GenerateObject','-1')).
+rule_i(0,prop('SEARCH_VIEWER','')).
+rule_i(0,prop('SEARCHABLE','UMPV')).
 rule_i(0,prop('MTIER_OPT','Yes')).
 rule_i(0,prop('CS_ORA_FORUPD','UMPV')).
 rule_i(0,prop('Hint_firstrows','UMPV')).
@@ -139,6 +141,7 @@ rule_i(0,prop('TRNCFM','UMPV')).
 rule_i(0,prop('CFMTRN','No')).
 rule_i(0,prop('TRNEND','Yes')).
 rule_i(0,prop('IsDwhTrn','0')).
+rule_i(0,prop(idISBCEJB,'0')).
 rule_i(0,prop('WEB_SECURITY_LEVEL','High')).
 rule_i(0,prop('HTTP_PROTOCOL','Unsecure')).
 rule_i(0,prop('USE_ENCRYPTION','NO')).
@@ -147,12 +150,17 @@ rule_i(0,prop('SHOWMASTERPAGE_POPUP','0')).
 rule_i(0,prop('MasterPage',o(13,'AppMasterPage'))).
 rule_i(0,prop('WEB_COMP','No')).
 rule_i(0,prop('Theme',o(25,'Flat'))).
+rule_i(0,prop('WS_Delete','-1')).
+rule_i(0,prop('WS_Update','-1')).
+rule_i(0,prop('WS_Insert','-1')).
+rule_i(0,prop('WS_View','-1')).
 rule_i(0,prop('ExternalNamespace','Condufef_v1')).
 rule_i(0,prop('ExternalName',empleados)).
+rule_i(0,prop(idISBCWEBSERVICE,'0')).
+rule_i(0,prop('CALL_PROTOCOL','INTERNAL')).
 rule_i(0,prop(idConnectivitySupport,idInherit)).
 rule_i(0,prop('OBJECT_METADATA','')).
-rule_i(0,prop('IsMain','0')).
-rule_i(0,prop(idBC,'0')).
+rule_i(0,prop(idBC,'-1')).
 rule_i(0,prop('Folder',o(120,'Root Module'))).
 rule_i(0,prop('ObjDesc',empleados)).
 rule_i(0,prop('ObjName',empleados)).
@@ -172,7 +180,7 @@ rule_i(0,p(0,15,fvix,[ 11,10 ],[ 'NAME',empleados_pkey ])).
 rule_i(0,p(0,15,fvix,[ 11,10 ],[ 'LOC','' ])).
 rule_i(0,p(0,15,fvix,[ 11,10 ],[ 'SCHEMA',public ])).
 rule_i(0,p(0,15,fvix,[ 11,10 ],[ 'EXTNAM','YES' ])).
-rule_i(0,file(6,'EMPLEADOS',[ 13,98,99,100,101,102,103,104,105,106,107 ])).
+rule_i(0,file(6,'EMPLEADOS',[ 13,176,99,100,101,102,103,106,105,107,104 ])).
 rule_i(0,loc([ 6 ],'EMPLEADOS','','LAN')).
 rule_i(0,index(6,'EMPLEADOS_PKEY',u,[ 13 ])).
 rule_i(0,loc([ 6,'EMPLEADOS_PKEY' ],empleados_pkey,'','LAN')).
@@ -196,16 +204,16 @@ rule_i(0,loc([ 18,'ALMACEN_PKEY' ],almacen_pkey,'','LAN')).
 a_i(1,6,t,6,[],[ [ [ [],13,13 ] ],'EMPLEADOS_PKEY',[] ]).
  
 v_i(t,i,1,13).
-v_i(t,o,1,98).
+v_i(t,o,1,176).
 v_i(t,o,1,99).
 v_i(t,o,1,100).
 v_i(t,o,1,101).
 v_i(t,o,1,102).
 v_i(t,o,1,103).
-v_i(t,o,1,104).
-v_i(t,o,1,105).
 v_i(t,o,1,106).
 v_i(t,o,1,107).
+v_i(t,o,1,104).
+v_i(t,o,1,105).
  
  
  
@@ -213,23 +221,23 @@ tbl_to_delete_i(6,[ 18,[ [ 6,13,13 ] ],c,'IALMACEN',[ [ 18,13 ] ],[ 19 ],'' ]).
  
  
  
-attri_i(19,[ almacenid,int,18,0,'ZZZZZZZZZZZZZZZZZ9',0,almacenid,'',0 ]).
-attri_i(107,[ empleadosext,int,9,0,'ZZZZZZZZ9',0,empleadosext,'',0 ]).
+attri_i(19,[ almacenid,int,9,0,'ZZZZZZZZ9',0,almacenid,'',0 ]).
+attri_i(105,[ empleadosfecultact,date,8,0,'99/99/9999',0,empleadosfecultact,'',0 ]).
+attri_i(104,[ empleadosfecreg,date,8,0,'99/99/9999',0,empleadosfecreg,'',0 ]).
+attri_i(107,[ empleadosext,svchar,4,0,'',0,empleadosext,'',0 ]).
 attri_i(106,[ empleadoscorreo,svchar,50,0,'',0,empleadoscorreo,'',0 ]).
-attri_i(105,[ empleadosfecultact,dtime,10,8,'99/99/9999 99:99:99',0,empleadosfecultact,'',0 ]).
-attri_i(104,[ empleadosfecreg,dtime,10,8,'99/99/9999 99:99:99',0,empleadosfecreg,'',0 ]).
 attri_i(103,[ empleadosusuario,svchar,15,0,'',0,empleadosusuario,'',0 ]).
 attri_i(102,[ empleadosstatus,svchar,1,0,'',0,empleadosstatus,'',0 ]).
 attri_i(101,[ empleadosapmaterno,svchar,30,0,'',0,empleadosapmaterno,'',0 ]).
 attri_i(100,[ empleadosappaterno,svchar,30,0,'',0,empleadosappaterno,'',0 ]).
 attri_i(99,[ empleadosnomemple,svchar,30,0,'',0,empleadosnomemple,'',0 ]).
-attri_i(98,[ empleadosareaid,svchar,3,0,'',0,empleadosareaid,'',0 ]).
+attri_i(176,[ areaid,int,9,0,'ZZZZZZZZ9',0,areaid,'',0 ]).
 attri_i(13,[ empleadosid,int,9,0,'ZZZZZZZZ9',0,empleadosid,'',0 ]).
 attri_i('Gxremove',[ 'GxRemove',int,1,0,'9',0,'Gx Remove','',5 ]).
 attri_i('Mode',[ 'Gx_mode',char,3,0,'@!',1,'','',2 ]).
  
 table_i(18,[ 'ALMACEN',[ 19,13 ],almacen,almacen ]).
-table_i(6,[ 'EMPLEADOS',[ 13,98,99,100,101,102,103,104,105,106,107 ],empleados,empleados ]).
+table_i(6,[ 'EMPLEADOS',[ 13,176,99,100,101,102,103,106,105,107,104 ],empleados,empleados ]).
  
 index_i(6,[ 'EMPLEADOS_PKEY',u,[ 13 ],'EMPLEADOS_PKEY' ]).
 index_i(18,[ 'ALMACEN_PKEY',u,[ 19 ],'ALMACEN_PKEY' ]).
@@ -246,8 +254,8 @@ index_i(18,[ 'IALMACEN',d,[ 13 ],'Ialmacen' ]).
  
  
  
-upd_i(6,6,i,[ [ 13,98,99,100,101,102,103,104,105,106,107 ],[],'EMPLEADOS_PKEY',[ [ [],13,13 ] ] ]).
-upd_i(6,6,u,[ [ 98,99,100,101,102,103,104,105,106,107 ],[],'EMPLEADOS_PKEY',[] ]).
+upd_i(6,6,i,[ [ 13,176,99,100,101,102,103,106,107,104,105 ],[],'EMPLEADOS_PKEY',[ [ [],13,13 ] ] ]).
+upd_i(6,6,u,[ [ 176,99,100,101,102,103,106,107,104,105 ],[],'EMPLEADOS_PKEY',[] ]).
 upd_i(6,6,d,[ [],[],'EMPLEADOS_PKEY',[] ]).
  
  
@@ -267,19 +275,19 @@ map_i(18,a,146,[ almacenmunicipio ]).
 map_i(18,a,145,[ almacencolonia ]).
 map_i(18,a,144,[ almacendireccion ]).
 map_i(18,a,143,[ almacendsc ]).
-map_i(18,a,13,[ empleadoid ]).
+map_i(18,a,13,[ empleadosid ]).
 map_i(18,a,19,[ almacenid ]).
 map_i(6,i,'EMPLEADOS_PKEY',[ 'EMPLEADOS_PKEY' ]).
-map_i(6,a,107,[ empleadosext ]).
-map_i(6,a,106,[ empleadoscorreo ]).
-map_i(6,a,105,[ empleadosfecultact ]).
 map_i(6,a,104,[ empleadosfecreg ]).
+map_i(6,a,107,[ empleadosext ]).
+map_i(6,a,105,[ empleadosfecultact ]).
+map_i(6,a,106,[ empleadoscorreo ]).
 map_i(6,a,103,[ empleadosusuario ]).
 map_i(6,a,102,[ empleadosstatus ]).
 map_i(6,a,101,[ empleadosapmaterno ]).
 map_i(6,a,100,[ empleadosappaterno ]).
 map_i(6,a,99,[ empleadosnomemple ]).
-map_i(6,a,98,[ areaid ]).
+map_i(6,a,176,[ areaid ]).
 map_i(6,a,13,[ empleadosid ]).
  
  
@@ -331,7 +339,7 @@ html_sub_i(21,22,html_i(0,t(13,2))).
 html_sub_i(3,23,html_i(4,div(23))).
 html_sub_i(23,24,html_i(0,div(24))).
 html_sub_i(24,25,html_i(0,div(25))).
-html_sub_i(25,26,html_i(0,t(98,2))).
+html_sub_i(25,26,html_i(0,t(176,2))).
 html_sub_i(3,27,html_i(5,div(27))).
 html_sub_i(27,28,html_i(0,div(28))).
 html_sub_i(28,29,html_i(0,div(29))).
@@ -355,19 +363,19 @@ html_sub_i(45,46,html_i(0,t(103,2))).
 html_sub_i(3,47,html_i(10,div(47))).
 html_sub_i(47,48,html_i(0,div(48))).
 html_sub_i(48,49,html_i(0,div(49))).
-html_sub_i(49,50,html_i(0,t(104,2))).
+html_sub_i(49,50,html_i(0,t(106,2))).
 html_sub_i(3,51,html_i(11,div(51))).
 html_sub_i(51,52,html_i(0,div(52))).
 html_sub_i(52,53,html_i(0,div(53))).
-html_sub_i(53,54,html_i(0,t(105,2))).
+html_sub_i(53,54,html_i(0,t(107,2))).
 html_sub_i(3,55,html_i(12,div(55))).
 html_sub_i(55,56,html_i(0,div(56))).
 html_sub_i(56,57,html_i(0,div(57))).
-html_sub_i(57,58,html_i(0,t(106,2))).
+html_sub_i(57,58,html_i(0,t(104,2))).
 html_sub_i(3,59,html_i(13,div(59))).
 html_sub_i(59,60,html_i(0,div(60))).
 html_sub_i(60,61,html_i(0,div(61))).
-html_sub_i(61,62,html_i(0,t(107,2))).
+html_sub_i(61,62,html_i(0,t(105,2))).
 html_sub_i(3,63,html_i(14,div(63))).
 html_sub_i(63,64,html_i(0,div(64))).
 html_sub_i(64,65,html_i(0,div(65))).
@@ -417,7 +425,7 @@ html_comp_i(6,'Title','',d,[ str ]).
 html_comp_i(6,'Fill',-1,d,[ bool ]).
 html_comp_i(6,'Backcolor',rgb(255,255,255),d,[ color ]).
 html_comp_i(6,'Forecolor',rgb(0,0,0),d,[ color ]).
-html_comp_i(6,'Font',font('Microsoft Sans Serif',17,[]),d,[ font ]).
+html_comp_i(6,'Font',font('Open Sans Semibold',17,[]),d,[ font ]).
 html_comp_i(7,'Class',row,v,[ str ]).
 html_comp_i(7,'Id','',d,[ str ]).
 html_comp_i(7,'Height',measure(0,px),d,[ measure ]).
@@ -590,33 +598,30 @@ html_comp_i(25,'Width',measure(0,px),d,[ measure ]).
 html_comp_i(25,'Semanticcontent',div,d,[ str ]).
 html_comp_i(25,'Align',left,d,[ str ]).
 html_comp_i(25,'Valign',top,d,[ str ]).
-html_comp_i(26,'Colcount',3,d,[ num ]).
-html_comp_i(26,'Attid',98,v,[ num ]).
+html_comp_i(26,'Colcount',9,d,[ num ]).
+html_comp_i(26,'Attid',176,v,[ num ]).
 html_comp_i(26,'Class','Attribute',v,[ str ]).
-html_comp_i(26,'Controlname','Empleadosareaid',d,[ str ]).
+html_comp_i(26,'Controlname','Areaid',d,[ str ]).
 html_comp_i(26,'Returnonclick',0,v,[ bool ]).
 html_comp_i(26,'Captionclass','col-sm-3 AttributeLabel',v,[ str ]).
 html_comp_i(26,'Captionposition','Left',v,[ str ]).
 html_comp_i(26,'Captionvalue',areaid,d,[ str ]).
 html_comp_i(26,'Controltype',2,d,[ num ]).
 html_comp_i(26,'Inputtype',0,d,[ num ]).
-html_comp_i(26,'Editautocomplete',0,d,[ num ]).
-html_comp_i(26,'Autocorrection',-1,d,[ bool ]).
-html_comp_i(26,'Autocapitalization','FirstWord',d,[ str ]).
 html_comp_i(26,'Notifycontextchange',0,d,[ bool ]).
 html_comp_i(26,'Emptyasnull','Yes',d,[ str ]).
 html_comp_i(26,'Readonly',0,v,[ bool ]).
 html_comp_i(26,'Autocomplete',-1,d,[ bool ]).
 html_comp_i(26,'Ispassword',0,d,[ bool ]).
 html_comp_i(26,'Autoresize',-1,d,[ bool ]).
-html_comp_i(26,'Gxwidth',measure(3,chr),d,[ measure ]).
+html_comp_i(26,'Gxwidth',measure(9,chr),d,[ measure ]).
 html_comp_i(26,'Gxheight',measure(1,row),d,[ measure ]).
 html_comp_i(26,'Ismultiline',0,d,[ bool ]).
 html_comp_i(26,'Fill',-1,d,[ bool ]).
 html_comp_i(26,'Backcolor',rgb(255,255,255),d,[ color ]).
 html_comp_i(26,'Forecolor',rgb(0,0,0),d,[ color ]).
 html_comp_i(26,'Font',font('Verdana',12,[]),d,[ font ]).
-html_comp_i(26,'Horizontalalignment',left,d,[ str ]).
+html_comp_i(26,'Horizontalalignment',right,d,[ str ]).
 html_comp_i(26,'Gxformat',0,d,[ num ]).
 html_comp_i(26,'Title','',d,[ str ]).
 html_comp_i(26,'Invitemsg','',v,[ str ]).
@@ -896,35 +901,36 @@ html_comp_i(49,'Width',measure(0,px),d,[ measure ]).
 html_comp_i(49,'Semanticcontent',div,d,[ str ]).
 html_comp_i(49,'Align',left,d,[ str ]).
 html_comp_i(49,'Valign',top,d,[ str ]).
-html_comp_i(50,'Colcount',19,d,[ num ]).
-html_comp_i(50,'Attid',104,v,[ num ]).
+html_comp_i(50,'Colcount',50,d,[ num ]).
+html_comp_i(50,'Attid',106,v,[ num ]).
 html_comp_i(50,'Class','Attribute',v,[ str ]).
-html_comp_i(50,'Controlname','Empleadosfecreg',d,[ str ]).
+html_comp_i(50,'Controlname','Empleadoscorreo',d,[ str ]).
 html_comp_i(50,'Returnonclick',0,v,[ bool ]).
 html_comp_i(50,'Captionclass','col-sm-3 AttributeLabel',v,[ str ]).
 html_comp_i(50,'Captionposition','Left',v,[ str ]).
-html_comp_i(50,'Captionvalue',empleadosfecreg,d,[ str ]).
+html_comp_i(50,'Captionvalue',empleadoscorreo,d,[ str ]).
 html_comp_i(50,'Controltype',2,d,[ num ]).
 html_comp_i(50,'Inputtype',0,d,[ num ]).
+html_comp_i(50,'Editautocomplete',0,d,[ num ]).
+html_comp_i(50,'Autocorrection',-1,d,[ bool ]).
+html_comp_i(50,'Autocapitalization','FirstWord',d,[ str ]).
 html_comp_i(50,'Notifycontextchange',0,d,[ bool ]).
 html_comp_i(50,'Emptyasnull','Yes',d,[ str ]).
 html_comp_i(50,'Readonly',0,v,[ bool ]).
 html_comp_i(50,'Autocomplete',-1,d,[ bool ]).
 html_comp_i(50,'Ispassword',0,d,[ bool ]).
 html_comp_i(50,'Autoresize',-1,d,[ bool ]).
-html_comp_i(50,'Gxwidth',measure(19,chr),d,[ measure ]).
+html_comp_i(50,'Gxwidth',measure(50,chr),d,[ measure ]).
 html_comp_i(50,'Gxheight',measure(1,row),d,[ measure ]).
 html_comp_i(50,'Ismultiline',0,d,[ bool ]).
 html_comp_i(50,'Fill',-1,d,[ bool ]).
 html_comp_i(50,'Backcolor',rgb(255,255,255),d,[ color ]).
 html_comp_i(50,'Forecolor',rgb(0,0,0),d,[ color ]).
 html_comp_i(50,'Font',font('Verdana',12,[]),d,[ font ]).
-html_comp_i(50,'Horizontalalignment',right,d,[ str ]).
+html_comp_i(50,'Horizontalalignment',left,d,[ str ]).
 html_comp_i(50,'Gxformat',0,d,[ num ]).
 html_comp_i(50,'Title','',d,[ str ]).
 html_comp_i(50,'Invitemsg','',v,[ str ]).
-html_comp_i(50,'Use_datepicker',-1,d,[ bool ]).
-html_comp_i(50,'Flat_datepicker',0,d,[ bool ]).
 html_comp_i(51,'Class',row,v,[ str ]).
 html_comp_i(51,'Id','',d,[ str ]).
 html_comp_i(51,'Height',measure(0,px),d,[ measure ]).
@@ -946,35 +952,36 @@ html_comp_i(53,'Width',measure(0,px),d,[ measure ]).
 html_comp_i(53,'Semanticcontent',div,d,[ str ]).
 html_comp_i(53,'Align',left,d,[ str ]).
 html_comp_i(53,'Valign',top,d,[ str ]).
-html_comp_i(54,'Colcount',19,d,[ num ]).
-html_comp_i(54,'Attid',105,v,[ num ]).
+html_comp_i(54,'Colcount',4,d,[ num ]).
+html_comp_i(54,'Attid',107,v,[ num ]).
 html_comp_i(54,'Class','Attribute',v,[ str ]).
-html_comp_i(54,'Controlname','Empleadosfecultact',d,[ str ]).
+html_comp_i(54,'Controlname','Empleadosext',d,[ str ]).
 html_comp_i(54,'Returnonclick',0,v,[ bool ]).
 html_comp_i(54,'Captionclass','col-sm-3 AttributeLabel',v,[ str ]).
 html_comp_i(54,'Captionposition','Left',v,[ str ]).
-html_comp_i(54,'Captionvalue',empleadosfecultact,d,[ str ]).
+html_comp_i(54,'Captionvalue',empleadosext,d,[ str ]).
 html_comp_i(54,'Controltype',2,d,[ num ]).
 html_comp_i(54,'Inputtype',0,d,[ num ]).
+html_comp_i(54,'Editautocomplete',0,d,[ num ]).
+html_comp_i(54,'Autocorrection',-1,d,[ bool ]).
+html_comp_i(54,'Autocapitalization','FirstWord',d,[ str ]).
 html_comp_i(54,'Notifycontextchange',0,d,[ bool ]).
 html_comp_i(54,'Emptyasnull','Yes',d,[ str ]).
 html_comp_i(54,'Readonly',0,v,[ bool ]).
 html_comp_i(54,'Autocomplete',-1,d,[ bool ]).
 html_comp_i(54,'Ispassword',0,d,[ bool ]).
 html_comp_i(54,'Autoresize',-1,d,[ bool ]).
-html_comp_i(54,'Gxwidth',measure(19,chr),d,[ measure ]).
+html_comp_i(54,'Gxwidth',measure(4,chr),d,[ measure ]).
 html_comp_i(54,'Gxheight',measure(1,row),d,[ measure ]).
 html_comp_i(54,'Ismultiline',0,d,[ bool ]).
 html_comp_i(54,'Fill',-1,d,[ bool ]).
 html_comp_i(54,'Backcolor',rgb(255,255,255),d,[ color ]).
 html_comp_i(54,'Forecolor',rgb(0,0,0),d,[ color ]).
 html_comp_i(54,'Font',font('Verdana',12,[]),d,[ font ]).
-html_comp_i(54,'Horizontalalignment',right,d,[ str ]).
+html_comp_i(54,'Horizontalalignment',left,d,[ str ]).
 html_comp_i(54,'Gxformat',0,d,[ num ]).
 html_comp_i(54,'Title','',d,[ str ]).
 html_comp_i(54,'Invitemsg','',v,[ str ]).
-html_comp_i(54,'Use_datepicker',-1,d,[ bool ]).
-html_comp_i(54,'Flat_datepicker',0,d,[ bool ]).
 html_comp_i(55,'Class',row,v,[ str ]).
 html_comp_i(55,'Id','',d,[ str ]).
 html_comp_i(55,'Height',measure(0,px),d,[ measure ]).
@@ -996,36 +1003,34 @@ html_comp_i(57,'Width',measure(0,px),d,[ measure ]).
 html_comp_i(57,'Semanticcontent',div,d,[ str ]).
 html_comp_i(57,'Align',left,d,[ str ]).
 html_comp_i(57,'Valign',top,d,[ str ]).
-html_comp_i(58,'Colcount',50,d,[ num ]).
-html_comp_i(58,'Attid',106,v,[ num ]).
+html_comp_i(58,'Colcount',10,d,[ num ]).
+html_comp_i(58,'Attid',104,v,[ num ]).
 html_comp_i(58,'Class','Attribute',v,[ str ]).
-html_comp_i(58,'Controlname','Empleadoscorreo',d,[ str ]).
+html_comp_i(58,'Controlname','Empleadosfecreg',d,[ str ]).
 html_comp_i(58,'Returnonclick',0,v,[ bool ]).
 html_comp_i(58,'Captionclass','col-sm-3 AttributeLabel',v,[ str ]).
 html_comp_i(58,'Captionposition','Left',v,[ str ]).
-html_comp_i(58,'Captionvalue',empleadoscorreo,d,[ str ]).
+html_comp_i(58,'Captionvalue',empleadosfecreg,d,[ str ]).
 html_comp_i(58,'Controltype',2,d,[ num ]).
 html_comp_i(58,'Inputtype',0,d,[ num ]).
-html_comp_i(58,'Editautocomplete',0,d,[ num ]).
-html_comp_i(58,'Autocorrection',-1,d,[ bool ]).
-html_comp_i(58,'Autocapitalization','FirstWord',d,[ str ]).
 html_comp_i(58,'Notifycontextchange',0,d,[ bool ]).
 html_comp_i(58,'Emptyasnull','Yes',d,[ str ]).
 html_comp_i(58,'Readonly',0,v,[ bool ]).
 html_comp_i(58,'Autocomplete',-1,d,[ bool ]).
 html_comp_i(58,'Ispassword',0,d,[ bool ]).
 html_comp_i(58,'Autoresize',-1,d,[ bool ]).
-html_comp_i(58,'Gxwidth',measure(50,chr),d,[ measure ]).
+html_comp_i(58,'Gxwidth',measure(10,chr),d,[ measure ]).
 html_comp_i(58,'Gxheight',measure(1,row),d,[ measure ]).
 html_comp_i(58,'Ismultiline',0,d,[ bool ]).
 html_comp_i(58,'Fill',-1,d,[ bool ]).
 html_comp_i(58,'Backcolor',rgb(255,255,255),d,[ color ]).
 html_comp_i(58,'Forecolor',rgb(0,0,0),d,[ color ]).
 html_comp_i(58,'Font',font('Verdana',12,[]),d,[ font ]).
-html_comp_i(58,'Horizontalalignment',left,d,[ str ]).
+html_comp_i(58,'Horizontalalignment',right,d,[ str ]).
 html_comp_i(58,'Gxformat',0,d,[ num ]).
 html_comp_i(58,'Title','',d,[ str ]).
-html_comp_i(58,'Invitemsg','',v,[ str ]).
+html_comp_i(58,'Use_datepicker',-1,d,[ bool ]).
+html_comp_i(58,'Flat_datepicker',0,d,[ bool ]).
 html_comp_i(59,'Class',row,v,[ str ]).
 html_comp_i(59,'Id','',d,[ str ]).
 html_comp_i(59,'Height',measure(0,px),d,[ measure ]).
@@ -1047,14 +1052,14 @@ html_comp_i(61,'Width',measure(0,px),d,[ measure ]).
 html_comp_i(61,'Semanticcontent',div,d,[ str ]).
 html_comp_i(61,'Align',left,d,[ str ]).
 html_comp_i(61,'Valign',top,d,[ str ]).
-html_comp_i(62,'Colcount',9,d,[ num ]).
-html_comp_i(62,'Attid',107,v,[ num ]).
+html_comp_i(62,'Colcount',10,d,[ num ]).
+html_comp_i(62,'Attid',105,v,[ num ]).
 html_comp_i(62,'Class','Attribute',v,[ str ]).
-html_comp_i(62,'Controlname','Empleadosext',d,[ str ]).
+html_comp_i(62,'Controlname','Empleadosfecultact',d,[ str ]).
 html_comp_i(62,'Returnonclick',0,v,[ bool ]).
 html_comp_i(62,'Captionclass','col-sm-3 AttributeLabel',v,[ str ]).
 html_comp_i(62,'Captionposition','Left',v,[ str ]).
-html_comp_i(62,'Captionvalue',empleadosext,d,[ str ]).
+html_comp_i(62,'Captionvalue',empleadosfecultact,d,[ str ]).
 html_comp_i(62,'Controltype',2,d,[ num ]).
 html_comp_i(62,'Inputtype',0,d,[ num ]).
 html_comp_i(62,'Notifycontextchange',0,d,[ bool ]).
@@ -1063,7 +1068,7 @@ html_comp_i(62,'Readonly',0,v,[ bool ]).
 html_comp_i(62,'Autocomplete',-1,d,[ bool ]).
 html_comp_i(62,'Ispassword',0,d,[ bool ]).
 html_comp_i(62,'Autoresize',-1,d,[ bool ]).
-html_comp_i(62,'Gxwidth',measure(9,chr),d,[ measure ]).
+html_comp_i(62,'Gxwidth',measure(10,chr),d,[ measure ]).
 html_comp_i(62,'Gxheight',measure(1,row),d,[ measure ]).
 html_comp_i(62,'Ismultiline',0,d,[ bool ]).
 html_comp_i(62,'Fill',-1,d,[ bool ]).
@@ -1073,7 +1078,8 @@ html_comp_i(62,'Font',font('Verdana',12,[]),d,[ font ]).
 html_comp_i(62,'Horizontalalignment',right,d,[ str ]).
 html_comp_i(62,'Gxformat',0,d,[ num ]).
 html_comp_i(62,'Title','',d,[ str ]).
-html_comp_i(62,'Invitemsg','',v,[ str ]).
+html_comp_i(62,'Use_datepicker',-1,d,[ bool ]).
+html_comp_i(62,'Flat_datepicker',0,d,[ bool ]).
 html_comp_i(63,'Class',row,v,[ str ]).
 html_comp_i(63,'Id','',d,[ str ]).
 html_comp_i(63,'Height',measure(0,px),d,[ measure ]).
@@ -1155,7 +1161,7 @@ lit_i(22,1,t(13,2),[ ctlname(13),ctrltype(edit,22),pos(22),ispwd(0),e2n(1),width
 lit_i(21,1,div(21),[ ctlname('') ]).
 lit_i(20,1,div(20),[ ctlname('') ]).
 lit_i(19,1,div(19),[ ctlname('') ]).
-lit_i(26,1,t(98,2),[ ctlname(98),ctrltype(edit,26),pos(26),ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
+lit_i(26,1,t(176,2),[ ctlname(176),ctrltype(edit,26),pos(26),ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
 lit_i(25,1,div(25),[ ctlname('') ]).
 lit_i(24,1,div(24),[ ctlname('') ]).
 lit_i(23,1,div(23),[ ctlname('') ]).
@@ -1179,19 +1185,19 @@ lit_i(46,1,t(103,2),[ ctlname(103),ctrltype(edit,46),pos(46),ispwd(0),e2n(1),wid
 lit_i(45,1,div(45),[ ctlname('') ]).
 lit_i(44,1,div(44),[ ctlname('') ]).
 lit_i(43,1,div(43),[ ctlname('') ]).
-lit_i(50,1,t(104,2),[ ctlname(104),ctrltype(edit,50),pos(50),ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
+lit_i(50,1,t(106,2),[ ctlname(106),ctrltype(edit,50),pos(50),ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
 lit_i(49,1,div(49),[ ctlname('') ]).
 lit_i(48,1,div(48),[ ctlname('') ]).
 lit_i(47,1,div(47),[ ctlname('') ]).
-lit_i(54,1,t(105,2),[ ctlname(105),ctrltype(edit,54),pos(54),ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
+lit_i(54,1,t(107,2),[ ctlname(107),ctrltype(edit,54),pos(54),ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
 lit_i(53,1,div(53),[ ctlname('') ]).
 lit_i(52,1,div(52),[ ctlname('') ]).
 lit_i(51,1,div(51),[ ctlname('') ]).
-lit_i(58,1,t(106,2),[ ctlname(106),ctrltype(edit,58),pos(58),ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
+lit_i(58,1,t(104,2),[ ctlname(104),ctrltype(edit,58),pos(58),ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
 lit_i(57,1,div(57),[ ctlname('') ]).
 lit_i(56,1,div(56),[ ctlname('') ]).
 lit_i(55,1,div(55),[ ctlname('') ]).
-lit_i(62,1,t(107,2),[ ctlname(107),ctrltype(edit,62),pos(62),ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
+lit_i(62,1,t(105,2),[ ctlname(105),ctrltype(edit,62),pos(62),ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
 lit_i(61,1,div(61),[ ctlname('') ]).
 lit_i(60,1,div(60),[ ctlname('') ]).
 lit_i(59,1,div(59),[ ctlname('') ]).
@@ -1213,6 +1219,7 @@ lit_i(1,1,window,[ rect(0,0,1000,1000),ctlname('Form') ]).
  
  
  
+att_prop_i(2,13,'HORIZONTAL_DESCRIPTION',empleadosid,v).
 att_prop_i(2,13,'ExternalName',empleadosid,d).
 att_prop_i(2,13,'ExternalNamespace','Condufef_v1',d).
 att_prop_i(2,13,'EmptyAsNull','Yes',d).
@@ -1222,15 +1229,17 @@ att_prop_i(2,13,'ATT_INITIAL_VALUE','',d).
 att_prop_i(2,13,'AttRegEx','',d).
 att_prop_i(2,13,'AttValidationFailedMsg','',d).
 att_prop_i(2,13,'FullName',empleadosid,v).
-att_prop_i(2,98,'ExternalName',empleadosareaid,d).
-att_prop_i(2,98,'ExternalNamespace','Condufef_v1',d).
-att_prop_i(2,98,'EmptyAsNull','Yes',d).
-att_prop_i(2,98,idBasedOn,'',d).
-att_prop_i(2,98,'ATT_INITIAL_VALUE','',d).
-att_prop_i(2,98,'DB_NLS_SUPPORT','No',d).
-att_prop_i(2,98,'AttRegEx','',d).
-att_prop_i(2,98,'AttValidationFailedMsg','',d).
-att_prop_i(2,98,'FullName',empleadosareaid,v).
+att_prop_i(2,176,'HORIZONTAL_DESCRIPTION',areaid,d).
+att_prop_i(2,176,'ExternalName',areaid,d).
+att_prop_i(2,176,'ExternalNamespace','Condufef_v1',d).
+att_prop_i(2,176,'EmptyAsNull','Yes',d).
+att_prop_i(2,176,idBasedOn,'',d).
+att_prop_i(2,176,'AUTONUMBER','0',d).
+att_prop_i(2,176,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,176,'AttRegEx','',d).
+att_prop_i(2,176,'AttValidationFailedMsg','',d).
+att_prop_i(2,176,'FullName',areaid,v).
+att_prop_i(2,99,'HORIZONTAL_DESCRIPTION',empleadosnomemple,v).
 att_prop_i(2,99,'ExternalName',empleadosnomemple,d).
 att_prop_i(2,99,'ExternalNamespace','Condufef_v1',d).
 att_prop_i(2,99,'EmptyAsNull','Yes',d).
@@ -1240,6 +1249,7 @@ att_prop_i(2,99,'DB_NLS_SUPPORT','No',d).
 att_prop_i(2,99,'AttRegEx','',d).
 att_prop_i(2,99,'AttValidationFailedMsg','',d).
 att_prop_i(2,99,'FullName',empleadosnomemple,v).
+att_prop_i(2,100,'HORIZONTAL_DESCRIPTION',empleadosappaterno,v).
 att_prop_i(2,100,'ExternalName',empleadosappaterno,d).
 att_prop_i(2,100,'ExternalNamespace','Condufef_v1',d).
 att_prop_i(2,100,'EmptyAsNull','Yes',d).
@@ -1249,6 +1259,7 @@ att_prop_i(2,100,'DB_NLS_SUPPORT','No',d).
 att_prop_i(2,100,'AttRegEx','',d).
 att_prop_i(2,100,'AttValidationFailedMsg','',d).
 att_prop_i(2,100,'FullName',empleadosappaterno,v).
+att_prop_i(2,101,'HORIZONTAL_DESCRIPTION',empleadosapmaterno,v).
 att_prop_i(2,101,'ExternalName',empleadosapmaterno,d).
 att_prop_i(2,101,'ExternalNamespace','Condufef_v1',d).
 att_prop_i(2,101,'EmptyAsNull','Yes',d).
@@ -1258,6 +1269,7 @@ att_prop_i(2,101,'DB_NLS_SUPPORT','No',d).
 att_prop_i(2,101,'AttRegEx','',d).
 att_prop_i(2,101,'AttValidationFailedMsg','',d).
 att_prop_i(2,101,'FullName',empleadosapmaterno,v).
+att_prop_i(2,102,'HORIZONTAL_DESCRIPTION',empleadosstatus,v).
 att_prop_i(2,102,'ExternalName',empleadosstatus,d).
 att_prop_i(2,102,'ExternalNamespace','Condufef_v1',d).
 att_prop_i(2,102,'EmptyAsNull','Yes',d).
@@ -1267,6 +1279,7 @@ att_prop_i(2,102,'DB_NLS_SUPPORT','No',d).
 att_prop_i(2,102,'AttRegEx','',d).
 att_prop_i(2,102,'AttValidationFailedMsg','',d).
 att_prop_i(2,102,'FullName',empleadosstatus,v).
+att_prop_i(2,103,'HORIZONTAL_DESCRIPTION',empleadosusuario,v).
 att_prop_i(2,103,'ExternalName',empleadosusuario,d).
 att_prop_i(2,103,'ExternalNamespace','Condufef_v1',d).
 att_prop_i(2,103,'EmptyAsNull','Yes',d).
@@ -1276,26 +1289,7 @@ att_prop_i(2,103,'DB_NLS_SUPPORT','No',d).
 att_prop_i(2,103,'AttRegEx','',d).
 att_prop_i(2,103,'AttValidationFailedMsg','',d).
 att_prop_i(2,103,'FullName',empleadosusuario,v).
-att_prop_i(2,104,'ExternalName',empleadosfecreg,d).
-att_prop_i(2,104,'ExternalNamespace','Condufef_v1',d).
-att_prop_i(2,104,'EmptyAsNull','Yes',d).
-att_prop_i(2,104,idBasedOn,'',d).
-att_prop_i(2,104,'ATT_INITIAL_VALUE','',d).
-att_prop_i(2,104,'AttRegEx','',d).
-att_prop_i(2,104,'AttValidationFailedMsg','',d).
-att_prop_i(2,104,idDATEFORMAT,idDATEFORMAT_LONG,v).
-att_prop_i(2,104,idHOURFORMAT,idHOURFORMAT_HOURMINSEC,v).
-att_prop_i(2,104,'FullName',empleadosfecreg,v).
-att_prop_i(2,105,'ExternalName',empleadosfecultact,d).
-att_prop_i(2,105,'ExternalNamespace','Condufef_v1',d).
-att_prop_i(2,105,'EmptyAsNull','Yes',d).
-att_prop_i(2,105,idBasedOn,'',d).
-att_prop_i(2,105,'ATT_INITIAL_VALUE','',d).
-att_prop_i(2,105,'AttRegEx','',d).
-att_prop_i(2,105,'AttValidationFailedMsg','',d).
-att_prop_i(2,105,idDATEFORMAT,idDATEFORMAT_LONG,v).
-att_prop_i(2,105,idHOURFORMAT,idHOURFORMAT_HOURMINSEC,v).
-att_prop_i(2,105,'FullName',empleadosfecultact,v).
+att_prop_i(2,106,'HORIZONTAL_DESCRIPTION',empleadoscorreo,v).
 att_prop_i(2,106,'ExternalName',empleadoscorreo,d).
 att_prop_i(2,106,'ExternalNamespace','Condufef_v1',d).
 att_prop_i(2,106,'EmptyAsNull','Yes',d).
@@ -1305,15 +1299,37 @@ att_prop_i(2,106,'DB_NLS_SUPPORT','No',d).
 att_prop_i(2,106,'AttRegEx','',d).
 att_prop_i(2,106,'AttValidationFailedMsg','',d).
 att_prop_i(2,106,'FullName',empleadoscorreo,v).
+att_prop_i(2,107,'HORIZONTAL_DESCRIPTION',empleadosext,v).
 att_prop_i(2,107,'ExternalName',empleadosext,d).
 att_prop_i(2,107,'ExternalNamespace','Condufef_v1',d).
 att_prop_i(2,107,'EmptyAsNull','Yes',d).
 att_prop_i(2,107,idBasedOn,'',d).
-att_prop_i(2,107,'AUTONUMBER','0',d).
 att_prop_i(2,107,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,107,'DB_NLS_SUPPORT','No',d).
 att_prop_i(2,107,'AttRegEx','',d).
 att_prop_i(2,107,'AttValidationFailedMsg','',d).
 att_prop_i(2,107,'FullName',empleadosext,v).
+att_prop_i(2,104,'HORIZONTAL_DESCRIPTION',empleadosfecreg,v).
+att_prop_i(2,104,'ExternalName',empleadosfecreg,d).
+att_prop_i(2,104,'ExternalNamespace','Condufef_v1',d).
+att_prop_i(2,104,'EmptyAsNull','Yes',d).
+att_prop_i(2,104,idBasedOn,'',d).
+att_prop_i(2,104,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,104,'AttRegEx','',d).
+att_prop_i(2,104,'AttValidationFailedMsg','',d).
+att_prop_i(2,104,idDATEFORMAT,idDATEFORMAT_LONG,v).
+att_prop_i(2,104,'FullName',empleadosfecreg,v).
+att_prop_i(2,105,'HORIZONTAL_DESCRIPTION',empleadosfecultact,v).
+att_prop_i(2,105,'ExternalName',empleadosfecultact,d).
+att_prop_i(2,105,'ExternalNamespace','Condufef_v1',d).
+att_prop_i(2,105,'EmptyAsNull','Yes',d).
+att_prop_i(2,105,idBasedOn,'',d).
+att_prop_i(2,105,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,105,'AttRegEx','',d).
+att_prop_i(2,105,'AttValidationFailedMsg','',d).
+att_prop_i(2,105,idDATEFORMAT,idDATEFORMAT_LONG,v).
+att_prop_i(2,105,'FullName',empleadosfecultact,v).
+att_prop_i(2,19,'HORIZONTAL_DESCRIPTION',almacenid,v).
 att_prop_i(2,19,'ExternalName',almacenid,d).
 att_prop_i(2,19,'ExternalNamespace','Condufef_v1',d).
 att_prop_i(2,19,'EmptyAsNull','Yes',d).
@@ -1326,13 +1342,14 @@ att_prop_i(2,19,'FullName',almacenid,v).
  
  
 tbl_att_prop_i(2,6,13,'AllowNulls',n).
+tbl_att_prop_i(2,6,105,'AllowNulls',n).
 tbl_att_prop_i(2,18,19,'AllowNulls',n).
  
  
  
  
  
-trn_level_i(6,[ [ 13,98,99,100,101,102,103,104,105,106,107 ],empleados,empleados,empleados,'',98 ]).
+trn_level_i(6,[ [ 13,176,99,100,101,102,103,106,107,104,105 ],empleados,empleados,empleados,'',176 ]).
  
  
  

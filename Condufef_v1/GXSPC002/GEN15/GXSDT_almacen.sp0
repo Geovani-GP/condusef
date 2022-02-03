@@ -1,0 +1,126 @@
+ 
+spec_i([ sdt,[ 0,18,0 ],almacen,almacen,0,spa,'10_3_15-115824' ]).
+ 
+struct_dt_i([ 0,18,0 ],name,almacen).
+struct_dt_i([ 0,18,0 ],namespace,'Condufef_v1').
+struct_dt_i([ 0,18,0 ],significantName,almacen).
+struct_dt_i([ 0,18,0 ],'ObjName',almacen).
+struct_dt_i([ 0,18,0 ],'ObjDesc',almacen).
+struct_dt_i([ 0,18,0 ],'ExternalName',almacen).
+struct_dt_i([ 0,18,0 ],'ExternalNamespace','Condufef_v1').
+struct_dt_i([ 0,18,0 ],key,[ 19 ]).
+struct_dt_i([ 0,18,0 ],lvl,18).
+struct_dt_i([ 0,18,0 ],fullname,almacen).
+ 
+struct_dt_elem_i([ 0,18,0 ],1,name,'Almacenid').
+struct_dt_elem_i([ 0,18,0 ],1,camelname,almacenid).
+struct_dt_elem_i([ 0,18,0 ],1,length,9).
+struct_dt_elem_i([ 0,18,0 ],1,decimals,0).
+struct_dt_elem_i([ 0,18,0 ],1,sign,0).
+struct_dt_elem_i([ 0,18,0 ],1,type,[ 4,9,0 ]).
+struct_dt_elem_i([ 0,18,0 ],1,pic,'ZZZZZZZZ9').
+struct_dt_elem_i([ 0,18,0 ],1,collection,'False').
+struct_dt_elem_i([ 0,18,0 ],1,attributeid,'19').
+struct_dt_elem_i([ 0,18,0 ],2,name,'Empleadosid').
+struct_dt_elem_i([ 0,18,0 ],2,camelname,empleadosid).
+struct_dt_elem_i([ 0,18,0 ],2,length,9).
+struct_dt_elem_i([ 0,18,0 ],2,decimals,0).
+struct_dt_elem_i([ 0,18,0 ],2,sign,0).
+struct_dt_elem_i([ 0,18,0 ],2,type,[ 4,9,0 ]).
+struct_dt_elem_i([ 0,18,0 ],2,pic,'ZZZZZZZZ9').
+struct_dt_elem_i([ 0,18,0 ],2,collection,'False').
+struct_dt_elem_i([ 0,18,0 ],2,attributeid,'13').
+struct_dt_elem_i([ 0,18,0 ],3,name,'Almacendsc').
+struct_dt_elem_i([ 0,18,0 ],3,camelname,almacendsc).
+struct_dt_elem_i([ 0,18,0 ],3,length,100).
+struct_dt_elem_i([ 0,18,0 ],3,decimals,0).
+struct_dt_elem_i([ 0,18,0 ],3,type,[ 13,100,0 ]).
+struct_dt_elem_i([ 0,18,0 ],3,pic,'').
+struct_dt_elem_i([ 0,18,0 ],3,collection,'False').
+struct_dt_elem_i([ 0,18,0 ],3,attributeid,'143').
+struct_dt_elem_i([ 0,18,0 ],4,name,'Almacendireccion').
+struct_dt_elem_i([ 0,18,0 ],4,camelname,almacendireccion).
+struct_dt_elem_i([ 0,18,0 ],4,length,100).
+struct_dt_elem_i([ 0,18,0 ],4,decimals,0).
+struct_dt_elem_i([ 0,18,0 ],4,type,[ 13,100,0 ]).
+struct_dt_elem_i([ 0,18,0 ],4,pic,'').
+struct_dt_elem_i([ 0,18,0 ],4,collection,'False').
+struct_dt_elem_i([ 0,18,0 ],4,attributeid,'144').
+struct_dt_elem_i([ 0,18,0 ],5,name,'Almacencolonia').
+struct_dt_elem_i([ 0,18,0 ],5,camelname,almacencolonia).
+struct_dt_elem_i([ 0,18,0 ],5,length,50).
+struct_dt_elem_i([ 0,18,0 ],5,decimals,0).
+struct_dt_elem_i([ 0,18,0 ],5,type,[ 13,50,0 ]).
+struct_dt_elem_i([ 0,18,0 ],5,pic,'').
+struct_dt_elem_i([ 0,18,0 ],5,collection,'False').
+struct_dt_elem_i([ 0,18,0 ],5,attributeid,'145').
+struct_dt_elem_i([ 0,18,0 ],6,name,'Almacenmunicipio').
+struct_dt_elem_i([ 0,18,0 ],6,camelname,almacenmunicipio).
+struct_dt_elem_i([ 0,18,0 ],6,length,50).
+struct_dt_elem_i([ 0,18,0 ],6,decimals,0).
+struct_dt_elem_i([ 0,18,0 ],6,type,[ 13,50,0 ]).
+struct_dt_elem_i([ 0,18,0 ],6,pic,'').
+struct_dt_elem_i([ 0,18,0 ],6,collection,'False').
+struct_dt_elem_i([ 0,18,0 ],6,attributeid,'146').
+struct_dt_elem_i([ 0,18,0 ],7,name,'Alamcenestado').
+struct_dt_elem_i([ 0,18,0 ],7,camelname,alamcenestado).
+struct_dt_elem_i([ 0,18,0 ],7,length,50).
+struct_dt_elem_i([ 0,18,0 ],7,decimals,0).
+struct_dt_elem_i([ 0,18,0 ],7,type,[ 13,50,0 ]).
+struct_dt_elem_i([ 0,18,0 ],7,pic,'').
+struct_dt_elem_i([ 0,18,0 ],7,collection,'False').
+struct_dt_elem_i([ 0,18,0 ],7,attributeid,'147').
+struct_dt_elem_i([ 0,18,0 ],8,name,'Alamcencodigopostal').
+struct_dt_elem_i([ 0,18,0 ],8,camelname,alamcencodigopostal).
+struct_dt_elem_i([ 0,18,0 ],8,length,5).
+struct_dt_elem_i([ 0,18,0 ],8,decimals,0).
+struct_dt_elem_i([ 0,18,0 ],8,type,[ 13,5,0 ]).
+struct_dt_elem_i([ 0,18,0 ],8,pic,'').
+struct_dt_elem_i([ 0,18,0 ],8,collection,'False').
+struct_dt_elem_i([ 0,18,0 ],8,attributeid,'148').
+struct_dt_elem_i([ 0,18,0 ],9,name,'Almacentelefono').
+struct_dt_elem_i([ 0,18,0 ],9,camelname,almacentelefono).
+struct_dt_elem_i([ 0,18,0 ],9,length,10).
+struct_dt_elem_i([ 0,18,0 ],9,decimals,0).
+struct_dt_elem_i([ 0,18,0 ],9,sign,0).
+struct_dt_elem_i([ 0,18,0 ],9,type,[ 4,10,0 ]).
+struct_dt_elem_i([ 0,18,0 ],9,pic,'ZZZZZZZZZ9').
+struct_dt_elem_i([ 0,18,0 ],9,collection,'False').
+struct_dt_elem_i([ 0,18,0 ],9,attributeid,'149').
+struct_dt_elem_i([ 0,18,0 ],10,name,'Alamcenobservaciones').
+struct_dt_elem_i([ 0,18,0 ],10,camelname,alamcenobservaciones).
+struct_dt_elem_i([ 0,18,0 ],10,length,50).
+struct_dt_elem_i([ 0,18,0 ],10,decimals,0).
+struct_dt_elem_i([ 0,18,0 ],10,type,[ 13,50,0 ]).
+struct_dt_elem_i([ 0,18,0 ],10,pic,'').
+struct_dt_elem_i([ 0,18,0 ],10,collection,'False').
+struct_dt_elem_i([ 0,18,0 ],10,attributeid,'150').
+struct_dt_elem_i([ 0,18,0 ],11,name,'Alamcenusuario').
+struct_dt_elem_i([ 0,18,0 ],11,camelname,alamcenusuario).
+struct_dt_elem_i([ 0,18,0 ],11,length,15).
+struct_dt_elem_i([ 0,18,0 ],11,decimals,0).
+struct_dt_elem_i([ 0,18,0 ],11,type,[ 13,15,0 ]).
+struct_dt_elem_i([ 0,18,0 ],11,pic,'').
+struct_dt_elem_i([ 0,18,0 ],11,collection,'False').
+struct_dt_elem_i([ 0,18,0 ],11,attributeid,'151').
+struct_dt_elem_i([ 0,18,0 ],12,name,'Almacenfecreg').
+struct_dt_elem_i([ 0,18,0 ],12,camelname,almacenfecreg).
+struct_dt_elem_i([ 0,18,0 ],12,length,8).
+struct_dt_elem_i([ 0,18,0 ],12,decimals,0).
+struct_dt_elem_i([ 0,18,0 ],12,type,[ 6,8,0 ]).
+struct_dt_elem_i([ 0,18,0 ],12,pic,'99/99/9999').
+struct_dt_elem_i([ 0,18,0 ],12,collection,'False').
+struct_dt_elem_i([ 0,18,0 ],12,attributeid,'152').
+struct_dt_elem_i([ 0,18,0 ],13,name,'Almacenfecultact').
+struct_dt_elem_i([ 0,18,0 ],13,camelname,almacenfecultact).
+struct_dt_elem_i([ 0,18,0 ],13,length,8).
+struct_dt_elem_i([ 0,18,0 ],13,decimals,0).
+struct_dt_elem_i([ 0,18,0 ],13,type,[ 6,8,0 ]).
+struct_dt_elem_i([ 0,18,0 ],13,pic,'99/99/9999').
+struct_dt_elem_i([ 0,18,0 ],13,collection,'False').
+struct_dt_elem_i([ 0,18,0 ],13,attributeid,'153').
+ 
+ 
+ 
+ 
+ 

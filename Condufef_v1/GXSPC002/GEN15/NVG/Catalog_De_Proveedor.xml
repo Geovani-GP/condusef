@@ -17,7 +17,63 @@
 <GenName>Default (C#)</GenName></Generator>
 <FormClass>HTML</FormClass>
 <Parameters></Parameters>
-<StandAloneRules></StandAloneRules>
+<StandAloneRules>
+<Action></Action></StandAloneRules>
+<Event>
+<EventName>Start</EventName>
+<Level>
+<LevelNumber>2</LevelNumber>
+<Optimizations></Optimizations>
+<LevelType>Aggregate Formulas</LevelType>
+<LevelBeginRow>2</LevelBeginRow>
+<BaseTable></BaseTable>
+<NavigationTree>
+<Table>
+<TableId>10</TableId>
+<TableName>max( proveedoresid )  navigation</TableName>
+<Description>proveedores</Description>
+<RecordsToRead>many</RecordsToRead>
+<Tables>
+<Table>
+<TableId>10</TableId>
+<TableName>PROVEEDORES</TableName>
+<Description>proveedores</Description>
+<RecordsToRead>many</RecordsToRead>
+<Tables></Tables></Table></Tables></Table></NavigationTree></Level></Event>
+<Event>
+<EventName>'Guardar '</EventName>
+<Command>
+<Expression>
+<Variable>
+<VarId>Proveedores</VarId>
+<VarName>&amp;proveedores</VarName></Variable>
+<Token>.</Token>
+<Token>save(</Token>
+<Token>)</Token></Expression></Command>
+<CALL>
+<Object>
+<ObjClsGuid>c9584656-94b6-4ccd-890f-332d11fc2c25</ObjClsGuid>
+<ObjCls>13</ObjCls>
+<ObjId>98</ObjId>
+<ObjName>Catalog_De_Proveedor</ObjName>
+<ObjPgmName>Catalog_De_Proveedor</ObjPgmName>
+<ObjClsName>Web Panel</ObjClsName></Object>
+<Parameters></Parameters>
+<IF></IF></CALL></Event>
+<Event>
+<EventName>'Cancelar'</EventName>
+<CALL>
+<Object>
+<ObjClsGuid>c9584656-94b6-4ccd-890f-332d11fc2c25</ObjClsGuid>
+<ObjCls>13</ObjCls>
+<ObjId>29</ObjId>
+<ObjName>MenuPrincipal</ObjName>
+<ObjPgmName>MenuPrincipal</ObjPgmName>
+<ObjClsName>Web Panel</ObjClsName></Object>
+<Parameters></Parameters>
+<IF></IF></CALL></Event>
+<Event>
+<EventName>'Consultar '</EventName></Event>
 <Event>
 <EventName>Load</EventName></Event>
 <Suggests></Suggests></ObjectSpec>

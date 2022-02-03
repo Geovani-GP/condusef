@@ -15,4 +15,5 @@
 /r:bin\GeneXus.Programs.Common.dll
 /r:GxBaseBuilder.dll
 /out:bin\proveedores.dll
+proveedores_bc.cs
 proveedores.cs

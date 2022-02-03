@@ -2,7 +2,7 @@
                File: Catalog_De_Status
         Description: Catalog_De_Status
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 1/30/2022 23:38:6.71
+       Generated on: 2/2/2022 13:42:58.15
        Program type: Callable routine
           Main DBMS: postgresql
 */
@@ -215,7 +215,7 @@ namespace GeneXus.Programs {
          context.AddJavascriptSource("jquery.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxtimezone.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxgral.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("gxcfg.js", "?20221302338673");
+         context.AddJavascriptSource("gxcfg.js", "?20222213425817");
          if ( context.isSpaRequest( ) )
          {
             enableOutput();
@@ -271,7 +271,6 @@ namespace GeneXus.Programs {
          GxWebStd.gx_hidden_field( context, "vTODAY", context.localUtil.DToC( Gx_date, 0, "/"));
          GxWebStd.gx_hidden_field( context, "GXC1", StringUtil.LTrim( StringUtil.NToC( (decimal)(A40000GXC1), 9, 0, ",", "")));
          GxWebStd.gx_hidden_field( context, "gxhash_vNEXTVALUE", GetSecureSignedToken( "", context.localUtil.Format( (decimal)(AV6NextValue), "ZZZ9")));
-         GxWebStd.gx_hidden_field( context, "ALERTIFY1_Type", StringUtil.RTrim( Alertify1_Type));
          GXKey = Crypto.Decrypt64( context.GetCookie( "GX_SESSION_ID"), Crypto.GetServerKey( ));
          forbiddenHiddens = "hsh" + "Catalog_De_Status";
          forbiddenHiddens = forbiddenHiddens + context.localUtil.Format( (decimal)(AV6NextValue), "ZZZ9");
@@ -634,7 +633,6 @@ namespace GeneXus.Programs {
             AV10statususotabla = cgiGet( edtavStatususotabla_Internalname);
             context.httpAjaxContext.ajax_rsp_assign_attri("", false, "AV10statususotabla", AV10statususotabla);
             /* Read saved values. */
-            Alertify1_Type = cgiGet( "ALERTIFY1_Type");
             /* Read subfile selected row values. */
             /* Read hidden variables. */
             GXKey = Crypto.Decrypt64( context.GetCookie( "GX_SESSION_ID"), Crypto.GetServerKey( ));
@@ -920,13 +918,13 @@ namespace GeneXus.Programs {
 
       protected void define_styles( )
       {
-         AddStyleSheetFile("Alertify/css/alertify.core.css", "?052100");
-         AddStyleSheetFile("Alertify/css/alertify.default.css", "?057280");
-         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?2337534");
+         AddStyleSheetFile("Alertify/css/alertify.core.css", "?038420");
+         AddStyleSheetFile("Alertify/css/alertify.default.css", "?038420");
+         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?1342847");
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?20221302338694");
+            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?20222213425831");
             idxLst = (int)(idxLst+1);
          }
          /* End function define_styles */
@@ -935,7 +933,7 @@ namespace GeneXus.Programs {
       protected void include_jscripts( )
       {
          context.AddJavascriptSource("messages.spa.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("catalog_de_status.js", "?20221302338694");
+         context.AddJavascriptSource("catalog_de_status.js", "?20222213425832");
          context.AddJavascriptSource("Shared/jquery/jquery-1.9.0.js", "");
          context.AddJavascriptSource("Alertify/js/alertify.min.js", "");
          context.AddJavascriptSource("Alertify/GlobalAlerts.js", "");
@@ -945,7 +943,6 @@ namespace GeneXus.Programs {
 
       protected void init_default_properties( )
       {
-         Alertify1_Internalname = "ALERTIFY1";
          edtavNextvalue_Internalname = "vNEXTVALUE";
          edtavStatusdesc_Internalname = "vSTATUSDESC";
          edtavStatususotabla_Internalname = "vSTATUSUSOTABLA";
@@ -969,7 +966,6 @@ namespace GeneXus.Programs {
          edtavStatusdesc_Jsonclick = "";
          edtavNextvalue_Jsonclick = "";
          edtavNextvalue_Enabled = 1;
-         Alertify1_Type = "error";
          Form.Headerrawhtml = "";
          Form.Background = "";
          Form.Textcolor = 0;
@@ -1079,7 +1075,6 @@ namespace GeneXus.Programs {
       private String sDynURL ;
       private String FormProcess ;
       private String bodyStyle ;
-      private String Alertify1_Type ;
       private String GXKey ;
       private String forbiddenHiddens ;
       private String GX_FocusControl ;
@@ -1109,7 +1104,6 @@ namespace GeneXus.Programs {
       private String edtavNextvalue_Jsonclick ;
       private String edtavStatusdesc_Jsonclick ;
       private String edtavStatususotabla_Jsonclick ;
-      private String Alertify1_Internalname ;
       private DateTime GXt_dtime1 ;
       private DateTime Gx_date ;
       private bool entryPointCalled ;

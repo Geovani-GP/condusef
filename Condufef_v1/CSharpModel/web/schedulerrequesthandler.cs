@@ -2,7 +2,7 @@
                File: SchedulerRequestHandler
         Description: Stub for SchedulerRequestHandler
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 1/30/2022 23:37:15.2
+       Generated on: 2/2/2022 13:42:10.32
        Program type: Callable routine
           Main DBMS: postgresql
 */

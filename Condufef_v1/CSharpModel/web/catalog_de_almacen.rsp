@@ -16,4 +16,4 @@
 /r:GxBaseBuilder.dll
 /out:bin\catalog_de_almacen.dll
 catalog_de_almacen.cs
-producto_bc.cs
+almacen_bc.cs

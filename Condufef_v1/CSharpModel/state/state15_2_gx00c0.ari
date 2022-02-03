@@ -10,7 +10,7 @@ called_tree_i(13,77,13,1).
 ij_object_dependency(gx00c0,[],[],[],77).
  
  
-obj_parms_i([ 'int aP0_petiquetasproductoid','int aP1_petiquetascambsid','long aP2_palmacenid' ],[ [ 'Petiquetasproductoid',out ],[ 'Petiquetascambsid',out ],[ 'Palmacenid',out ] ]).
+obj_parms_i([ 'int aP0_petiquetasproductoid','int aP1_petiquetascambsid','int aP2_palmacenid' ],[ [ 'Petiquetasproductoid',out ],[ 'Petiquetascambsid',out ],[ 'Palmacenid',out ] ]).
  
  
  

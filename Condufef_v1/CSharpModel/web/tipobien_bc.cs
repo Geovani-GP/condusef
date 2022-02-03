@@ -2,7 +2,7 @@
                File: tipobien_BC
         Description: tipobien
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 1/30/2022 23:37:16.93
+       Generated on: 2/2/2022 13:42:11.25
        Program type: Callable routine
           Main DBMS: postgresql
 */
@@ -1035,7 +1035,7 @@ namespace GeneXus.Programs {
          BC00012_A142tipobienfecultact = new DateTime[] {DateTime.MinValue} ;
          BC00012_n142tipobienfecultact = new bool[] {false} ;
          BC00019_A175productoid = new int[1] ;
-         BC000110_A19almacenid = new long[1] ;
+         BC000110_A19almacenid = new int[1] ;
          BC000110_A20articulosproductoid = new int[1] ;
          BC000110_A21articuloscambsid = new int[1] ;
          BC000111_A23tipobienid = new int[1] ;
@@ -1149,7 +1149,7 @@ namespace GeneXus.Programs {
       private DateTime[] BC00012_A142tipobienfecultact ;
       private bool[] BC00012_n142tipobienfecultact ;
       private int[] BC00019_A175productoid ;
-      private long[] BC000110_A19almacenid ;
+      private int[] BC000110_A19almacenid ;
       private int[] BC000110_A20articulosproductoid ;
       private int[] BC000110_A21articuloscambsid ;
       private int[] BC000111_A23tipobienid ;
@@ -1299,7 +1299,7 @@ namespace GeneXus.Programs {
                 ((int[]) buf[0])[0] = rslt.getInt(1) ;
                 return;
              case 8 :
-                ((long[]) buf[0])[0] = rslt.getLong(1) ;
+                ((int[]) buf[0])[0] = rslt.getInt(1) ;
                 ((int[]) buf[1])[0] = rslt.getInt(2) ;
                 ((int[]) buf[2])[0] = rslt.getInt(3) ;
                 return;

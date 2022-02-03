@@ -2,7 +2,7 @@
                File: ReportCambs
         Description: Report Cambs
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 1/30/2022 23:37:14.78
+       Generated on: 2/2/2022 19:39:41.31
        Program type: Callable routine
           Main DBMS: postgresql
 */
@@ -86,6 +86,11 @@ namespace GeneXus.Programs {
          /* GeneXus formulas */
          /* Output device settings */
          this.cleanup();
+      }
+
+      public override int getOutputType( )
+      {
+         return GxReportUtils.OUTPUT_PDF ;
       }
 
       public override void cleanup( )

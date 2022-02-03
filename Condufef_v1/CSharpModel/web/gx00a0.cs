@@ -2,7 +2,7 @@
                File: Gx00A0
         Description: Selection List proveedores
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 1/30/2022 23:38:30.13
+       Generated on: 2/2/2022 13:43:16.68
        Program type: Callable routine
           Main DBMS: postgresql
 */
@@ -265,7 +265,7 @@ namespace GeneXus.Programs {
          context.AddJavascriptSource("jquery.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxtimezone.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxgral.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("gxcfg.js", "?202213023383021");
+         context.AddJavascriptSource("gxcfg.js", "?20222213431673");
          if ( context.isSpaRequest( ) )
          {
             enableOutput();
@@ -596,7 +596,7 @@ namespace GeneXus.Programs {
             GxWebStd.gx_label_element( context, edtavCproveedoresmunicipio_Internalname, "proveedoresmunicipio", "col-sm-3 AttributeLabel", 0, true);
             /* Single line edit */
             TempTags = "  onfocus=\"gx.evt.onfocus(this, 66,'',false,'" + sGXsfl_84_idx + "',0)\"";
-            GxWebStd.gx_single_line_edit( context, edtavCproveedoresmunicipio_Internalname, AV11cproveedoresmunicipio, StringUtil.RTrim( context.localUtil.Format( AV11cproveedoresmunicipio, "")), TempTags+" onchange=\"gx.evt.onchange(this)\" "+" onblur=\""+""+";gx.evt.onblur(this,66);\"", "'"+""+"'"+",false,"+"'"+""+"'", "", "", "", "", edtavCproveedoresmunicipio_Jsonclick, 0, "Attribute", "", "", "", edtavCproveedoresmunicipio_Visible, edtavCproveedoresmunicipio_Enabled, 0, "text", "", 20, "chr", 1, "row", 20, 0, 0, 0, 1, -1, -1, true, "", "left", true, "HLP_Gx00A0.htm");
+            GxWebStd.gx_single_line_edit( context, edtavCproveedoresmunicipio_Internalname, AV11cproveedoresmunicipio, StringUtil.RTrim( context.localUtil.Format( AV11cproveedoresmunicipio, "")), TempTags+" onchange=\"gx.evt.onchange(this)\" "+" onblur=\""+""+";gx.evt.onblur(this,66);\"", "'"+""+"'"+",false,"+"'"+""+"'", "", "", "", "", edtavCproveedoresmunicipio_Jsonclick, 0, "Attribute", "", "", "", edtavCproveedoresmunicipio_Visible, edtavCproveedoresmunicipio_Enabled, 0, "text", "", 25, "chr", 1, "row", 25, 0, 0, 0, 1, -1, -1, true, "", "left", true, "HLP_Gx00A0.htm");
             GxWebStd.gx_div_end( context, "left", "top");
             GxWebStd.gx_div_end( context, "left", "top");
             GxWebStd.gx_div_end( context, "left", "top");
@@ -1496,11 +1496,11 @@ namespace GeneXus.Programs {
 
       protected void define_styles( )
       {
-         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?2337534");
+         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?1342847");
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?202213023383153");
+            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?20222213431772");
             idxLst = (int)(idxLst+1);
          }
          /* End function define_styles */
@@ -1509,7 +1509,7 @@ namespace GeneXus.Programs {
       protected void include_jscripts( )
       {
          context.AddJavascriptSource("messages.spa.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("gx00a0.js", "?202213023383153");
+         context.AddJavascriptSource("gx00a0.js", "?20222213431772");
          /* End function include_jscripts */
       }
 
@@ -2309,7 +2309,7 @@ namespace GeneXus.Programs {
           new Object[] {"lV8cproveedoresdireccion",NpgsqlDbType.Varchar,50,0} ,
           new Object[] {"lV9cproveedorescolonia",NpgsqlDbType.Varchar,25,0} ,
           new Object[] {"lV10cproveedorescodigopostal",NpgsqlDbType.Varchar,5,0} ,
-          new Object[] {"lV11cproveedoresmunicipio",NpgsqlDbType.Varchar,20,0} ,
+          new Object[] {"lV11cproveedoresmunicipio",NpgsqlDbType.Varchar,25,0} ,
           new Object[] {"lV12cproveedorestado",NpgsqlDbType.Varchar,20,0} ,
           new Object[] {"GXPagingFrom2",NpgsqlDbType.Integer,9,0} ,
           new Object[] {"GXPagingTo2",NpgsqlDbType.Integer,9,0} ,
@@ -2322,7 +2322,7 @@ namespace GeneXus.Programs {
           new Object[] {"lV8cproveedoresdireccion",NpgsqlDbType.Varchar,50,0} ,
           new Object[] {"lV9cproveedorescolonia",NpgsqlDbType.Varchar,25,0} ,
           new Object[] {"lV10cproveedorescodigopostal",NpgsqlDbType.Varchar,5,0} ,
-          new Object[] {"lV11cproveedoresmunicipio",NpgsqlDbType.Varchar,20,0} ,
+          new Object[] {"lV11cproveedoresmunicipio",NpgsqlDbType.Varchar,25,0} ,
           new Object[] {"lV12cproveedorestado",NpgsqlDbType.Varchar,20,0}
           } ;
           def= new CursorDef[] {

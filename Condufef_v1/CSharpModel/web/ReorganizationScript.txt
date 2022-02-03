@@ -1,10 +1,2 @@
-CREATE TABLE GXA0023 (productoid  integer NOT NULL , cambsid  integer , productodsc  VARCHAR(100) , modeloid  bigint , marcaid  bigint , categoriaid  bigint , productousuario  VARCHAR(15) , productofecreg  timestamp without time zone , productofecultact  timestamp without time zone , tipobienid  integer )
-CREATE UNIQUE INDEX productoGXI ON GXA0023 (productoid )
-Run conversion program for table producto
-DROP INDEX productoGXI
-DROP TABLE producto CASCADE
-ALTER TABLE GXA0023 RENAME TO producto
-ALTER TABLE producto ADD CONSTRAINT producto_pkey PRIMARY KEY(productoid)
-CREATE INDEX IPRODUCTO1 ON producto (tipobienid )
-CREATE INDEX IPRODUCTO2 ON producto (cambsid )
+CREATE TABLE empleadospiso (empleadospisoextid  integer NOT NULL , empleadospisoextpiso  VARCHAR(10) NOT NULL , empleadospisoextext  VARCHAR(10) NOT NULL , empleadospisoextcorreo  VARCHAR(50) NOT NULL , empleadopisoextprofesion  bigint NOT NULL , empleadospisoextusuario  VARCHAR(15) NOT NULL , empleadospisoextfecgre  date NOT NULL , empleadospisoextfeact  date NOT NULL , PRIMARY KEY(empleadospisoextid))
 

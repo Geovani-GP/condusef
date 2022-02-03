@@ -2,7 +2,7 @@
                File: type_Sdtestatusarticulo
         Description: estatusarticulo
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 1/30/2022 23:37:30.22
+       Generated on: 2/2/2022 13:42:20.69
        Program type: Callable routine
           Main DBMS: postgresql
 */

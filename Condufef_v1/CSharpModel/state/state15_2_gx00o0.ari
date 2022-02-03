@@ -1,0 +1,18 @@
+current_obj_i(2,web,111).
+ 
+called_tree_i(13,111,13,1).
+ 
+ 
+ 
+ 
+ 
+ 
+ij_object_dependency(gx00o0,[],[],[],111).
+ 
+ 
+obj_parms_i([ 'int aP0_pempleadospisoextid' ],[ [ 'Pempleadospisoextid',out ] ]).
+ 
+ 
+ 
+ 
+ 
