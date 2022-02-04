@@ -1,82 +1,82 @@
 <Objects>
   <Object>
     <Type>c9584656-94b6-4ccd-890f-332d11fc2c25</Type>
-    <Id>93</Id>
+    <Id>112</Id>
     <Part>c44bd5ff-f918-415b-98e6-aca44fed84fa</Part>
   </Object>
   <Object>
     <Type>1db606f2-af09-4cf9-a3b5-b481519d28f6</Type>
-    <Id>16</Id>
+    <Id>10</Id>
     <Part>9b0a32a3-de6d-4be1-a4dd-1b85d3741534</Part>
   </Object>
   <Object>
     <Type>c9584656-94b6-4ccd-890f-332d11fc2c25</Type>
-    <Id>34</Id>
+    <Id>98</Id>
     <Part>c44bd5ff-f918-415b-98e6-aca44fed84fa</Part>
   </Object>
   <Object>
     <Type>c9584656-94b6-4ccd-890f-332d11fc2c25</Type>
-    <Id>107</Id>
-    <Part>d24a58ad-57ba-41b7-9e6e-eaca3543c778</Part>
+    <Id>102</Id>
+    <Part>c44bd5ff-f918-415b-98e6-aca44fed84fa</Part>
   </Object>
   <Object>
-    <Type>1db606f2-af09-4cf9-a3b5-b481519d28f6</Type>
-    <Id>17</Id>
-    <Part>9b0a32a3-de6d-4be1-a4dd-1b85d3741534</Part>
+    <Type>c9584656-94b6-4ccd-890f-332d11fc2c25</Type>
+    <Id>114</Id>
+    <Part>c44bd5ff-f918-415b-98e6-aca44fed84fa</Part>
   </Object>
   <Recent>
     <RecentKBObjectsList>
       <MaximumItems>10</MaximumItems>
       <RecentKBObjects>
         <RecentKBObject>
-          <Key>1db606f2-af09-4cf9-a3b5-b481519d28f6-17</Key>
-          <Name>area</Name>
-          <LastAccess>2022-01-28T13:11:46.7840942-06:00</LastAccess>
+          <Key>1db606f2-af09-4cf9-a3b5-b481519d28f6-24</Key>
+          <Name>empleadospiso</Name>
+          <LastAccess>2022-02-04T12:36:00.1669766-06:00</LastAccess>
         </RecentKBObject>
         <RecentKBObject>
-          <Key>c9584656-94b6-4ccd-890f-332d11fc2c25-38</Key>
-          <Name>Catalog_De_Area</Name>
-          <LastAccess>2022-01-28T13:08:50.69173-06:00</LastAccess>
+          <Key>c9584656-94b6-4ccd-890f-332d11fc2c25-102</Key>
+          <Name>Catalog_De_Empleados_Piso</Name>
+          <LastAccess>2022-02-04T12:19:14.3690148-06:00</LastAccess>
         </RecentKBObject>
         <RecentKBObject>
-          <Key>1db606f2-af09-4cf9-a3b5-b481519d28f6-4</Key>
-          <Name>entidadfederativa</Name>
-          <LastAccess>2022-01-28T12:54:55.1823048-06:00</LastAccess>
+          <Key>1db606f2-af09-4cf9-a3b5-b481519d28f6-6</Key>
+          <Name>empleados</Name>
+          <LastAccess>2022-02-04T12:09:10.0115089-06:00</LastAccess>
         </RecentKBObject>
         <RecentKBObject>
-          <Key>c9584656-94b6-4ccd-890f-332d11fc2c25-37</Key>
-          <Name>Catalog_De_Entidad_Federativa</Name>
-          <LastAccess>2022-01-28T12:54:46.5618134-06:00</LastAccess>
+          <Key>c9584656-94b6-4ccd-890f-332d11fc2c25-101</Key>
+          <Name>Catalog_De_Empleados</Name>
+          <LastAccess>2022-02-03T14:58:40.5488586-06:00</LastAccess>
         </RecentKBObject>
         <RecentKBObject>
-          <Key>1db606f2-af09-4cf9-a3b5-b481519d28f6-21</Key>
-          <Name>status</Name>
-          <LastAccess>2022-01-28T12:44:34.4638327-06:00</LastAccess>
+          <Key>c9584656-94b6-4ccd-890f-332d11fc2c25-98</Key>
+          <Name>Catalog_De_Proveedor</Name>
+          <LastAccess>2022-02-03T14:54:12.9098332-06:00</LastAccess>
         </RecentKBObject>
         <RecentKBObject>
-          <Key>1db606f2-af09-4cf9-a3b5-b481519d28f6-7</Key>
-          <Name>estatusarticulo</Name>
-          <LastAccess>2022-01-28T12:44:19.9739801-06:00</LastAccess>
+          <Key>c9584656-94b6-4ccd-890f-332d11fc2c25-96</Key>
+          <Name>Catalog_De_Productos</Name>
+          <LastAccess>2022-02-03T14:54:01.3469429-06:00</LastAccess>
         </RecentKBObject>
         <RecentKBObject>
-          <Key>c9584656-94b6-4ccd-890f-332d11fc2c25-36</Key>
-          <Name>Catalog_De_Status</Name>
-          <LastAccess>2022-01-28T12:39:05.7502621-06:00</LastAccess>
+          <Key>1db606f2-af09-4cf9-a3b5-b481519d28f6-10</Key>
+          <Name>proveedores</Name>
+          <LastAccess>2022-02-03T14:52:50.8337397-06:00</LastAccess>
         </RecentKBObject>
         <RecentKBObject>
-          <Key>1db606f2-af09-4cf9-a3b5-b481519d28f6-11</Key>
-          <Name>articulos</Name>
-          <LastAccess>2022-01-28T12:23:33.7311971-06:00</LastAccess>
+          <Key>c9584656-94b6-4ccd-890f-332d11fc2c25-86</Key>
+          <Name>DetallesCambs</Name>
+          <LastAccess>2022-02-03T14:45:17.2607961-06:00</LastAccess>
         </RecentKBObject>
         <RecentKBObject>
-          <Key>1db606f2-af09-4cf9-a3b5-b481519d28f6-13</Key>
-          <Name>articulosmov</Name>
-          <LastAccess>2022-01-28T12:22:48.1302698-06:00</LastAccess>
+          <Key>c9584656-94b6-4ccd-890f-332d11fc2c25-95</Key>
+          <Name>DetallesOrigen</Name>
+          <LastAccess>2022-02-03T14:40:13.6113191-06:00</LastAccess>
         </RecentKBObject>
         <RecentKBObject>
-          <Key>c9584656-94b6-4ccd-890f-332d11fc2c25-35</Key>
-          <Name>Catalog_De_Articulo</Name>
-          <LastAccess>2022-01-28T12:22:18.0582869-06:00</LastAccess>
+          <Key>c9584656-94b6-4ccd-890f-332d11fc2c25-92</Key>
+          <Name>DetallesMarcas</Name>
+          <LastAccess>2022-02-03T14:40:08.489793-06:00</LastAccess>
         </RecentKBObject>
       </RecentKBObjects>
     </RecentKBObjectsList>

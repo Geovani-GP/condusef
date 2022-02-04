@@ -1,6 +1,6 @@
 spec_i([ trn,10,proveedores,proveedores,[],spa,'10_3_15-115824' ]).
  
-struct_i(10,0,[],[]).
+struct_i(10,0,[ 'Mode','Proveedoresid' ],[]).
  
 level_i(10,[ 10,[ [ 10,many ] ],[ 2 ],[],[],[],[ 2 ],'PROVEEDORES_PKEY',[ 10,[] ],[] ]).
  
@@ -13,7 +13,7 @@ lwi_i(10,[ [] ]).
  
 ta_i(10,[ [ [ 10,2 ],[ 10,126 ],[ 10,127 ],[ 10,128 ],[ 10,129 ],[ 10,130 ],[ 10,131 ],[ 10,132 ],[ 10,133 ],[ 10,134 ],[ 10,135 ],[ 10,136 ],[ 10,137 ],[ 10,138 ] ] ]).
  
-las_i(10,[ [ 2,126,127,128,129,130,131,132,133,134,135,136,137,138 ] ]).
+las_i(10,[ [ 'Mode','Proveedoresid',2,126,127,128,129,130,131,132,133,134,135,136,137,138 ] ]).
  
 lac_i(10,[ [ 2,126,127,128,129,130,131,132,133,134,135,136,137,138 ] ]).
  
@@ -56,7 +56,7 @@ rule_i(0,datastore(1,'CS_RPCPGML','')).
 rule_i(0,datastore(1,'JDBC_DATASOURCE','')).
 rule_i(0,datastore(1,'USE_JDBC_DATASOURCE','0')).
 rule_i(0,datastore(1,'DS_DBMS_ADDINFO','')).
-rule_i(0,datastore(1,'USER_PASSWORD',󻢸蘇�2�5炭)).
+rule_i(0,datastore(1,'USER_PASSWORD',admin)).
 rule_i(0,datastore(1,'USER_ID',postgres)).
 rule_i(0,datastore(1,'CS_CONNECT','First')).
 rule_i(0,datastore(1,'DBMS_PORT','5432')).
@@ -167,10 +167,10 @@ rule_i(0,prop(idBC,'-1')).
 rule_i(0,prop('Folder',o(120,'Root Module'))).
 rule_i(0,prop('ObjDesc',proveedores)).
 rule_i(0,prop('ObjName',proveedores)).
-rule_i(10,prompt([ 10,[ [ [],2,2 ] ],[],[],[ t(o(13,'Gx00A0'),28),t(2,2) ],[],n,[] ])).
-rule_i(10,rule([ a(23,[ [ 2 ],[ t(o(13,'Gx00A0'),28),t(2,2) ] ]) ],[],[],[ 2 ])).
 rule_i(0,rule([ a(22,[ 'Dlt','"Eliminar"','' ]) ],[],[],[])).
 rule_i(0,maingen(15)).
+rule_i(0,rule([ a(10,[ 'Mode','Proveedoresid' ]) ],[],[ insert,update,delete,display ],[])).
+rule_i(0,parmio([ [ 'Mode',in ],[ 'Proveedoresid',in ] ])).
 rule_i(0,p(0,0,fv,2,[ intname,'PROVEEDORES' ])).
 rule_i(0,p(0,0,fv,2,[ table,10 ])).
 rule_i(0,p(0,15,fv,2,[])).
@@ -187,6 +187,8 @@ rule_i(0,file(10,'PROVEEDORES',[ 2,126,127,128,129,130,131,132,133,134,135,136,1
 rule_i(0,loc([ 10 ],'PROVEEDORES','','LAN')).
 rule_i(0,index(10,'PROVEEDORES_PKEY',u,[ 2 ])).
 rule_i(0,loc([ 10,'PROVEEDORES_PKEY' ],proveedores_pkey,'','LAN')).
+rule_i(10,rule([ a(3,[ t(2,2) ]) ],[],[ insert,update,delete,display ],[ 2 ])).
+rule_i(10,rule([ a(21,[ [ 2 ] ]) ],[],[ insert,update,delete,display ],[ 2 ])).
 rule_i(0,p(0,0,fv,15,[ intname,'ARTICULOS' ])).
 rule_i(0,p(0,0,fv,15,[ table,11 ])).
 rule_i(0,p(0,15,fv,15,[])).
@@ -211,23 +213,30 @@ rule_i(0,loc([ 11,'ARTICULOS_PKEY' ],articulos_pkey,'','LAN')).
 rule_i(0,index(11,'PRODUCTOID',k,[ 19 ])).
 rule_i(0,loc([ 11,'PRODUCTOID' ],productoid,'','LAN')).
  
-a_i(1,10,t,10,[],[ [ [ [],2,2 ] ],'PROVEEDORES_PKEY',[] ]).
+a_i(1,10,f,2,[],[ [],[ t('Proveedoresid',23),t('IF',17),t('.NOT.',8),t('null(',1),t('Proveedoresid',23),t(')',4),t(';',18) ] ]).
+a_i(2,10,f,[ t(2,2),t('Enabled',3) ],[],[ [],[ t(0,3),t(';',18) ] ]).
+a_i(3,10,t,10,[],[ [ [ [],2,2 ] ],'PROVEEDORES_PKEY',[] ]).
  
-v_i(t,i,1,2).
-v_i(t,o,1,126).
-v_i(t,o,1,127).
-v_i(t,o,1,128).
-v_i(t,o,1,129).
-v_i(t,o,1,130).
-v_i(t,o,1,131).
-v_i(t,o,1,132).
-v_i(t,o,1,133).
-v_i(t,o,1,134).
-v_i(t,o,1,135).
-v_i(t,o,1,136).
-v_i(t,o,1,137).
-v_i(t,o,1,138).
+v_i(f,i,1,'Proveedoresid').
+v_i(f,o,1,2).
+v_i(f,i,2,[]).
+v_i(f,o,2,[ t(2,2),t('Enabled',3) ]).
+v_i(t,i,3,2).
+v_i(t,o,3,126).
+v_i(t,o,3,127).
+v_i(t,o,3,128).
+v_i(t,o,3,129).
+v_i(t,o,3,130).
+v_i(t,o,3,131).
+v_i(t,o,3,132).
+v_i(t,o,3,133).
+v_i(t,o,3,134).
+v_i(t,o,3,135).
+v_i(t,o,3,136).
+v_i(t,o,3,137).
+v_i(t,o,3,138).
  
+act_info_i(1,[ [ 2 ] ]).
  
  
 tbl_to_delete_i(10,[ 11,[ [ 10,2,2 ] ],c,'IARTICULOS',[ [ 11,2 ] ],[ 19,20,21 ],'' ]).
@@ -252,6 +261,7 @@ attri_i(127,[ proveedoresdireccion,svchar,50,0,'',0,proveedoresdireccion,'',0 ])
 attri_i(126,[ proveedoresnombre,svchar,80,0,'',0,proveedoresnombre,'',0 ]).
 attri_i(2,[ proveedoresid,int,9,0,'ZZZZZZZZ9',0,proveedoresid,'',0 ]).
 attri_i('Gxremove',[ 'GxRemove',int,1,0,'9',0,'Gx Remove','',5 ]).
+attri_i('Proveedoresid',[ proveedoresid,int,9,0,'ZZZZZZZZ9',0,proveedoresid,'',7 ]).
 attri_i('Mode',[ 'Gx_mode',char,3,0,'@!',1,'','',2 ]).
  
 table_i(11,[ 'ARTICULOS',[ 19,20,21,2 ],articulos,articulos ]).
@@ -472,7 +482,7 @@ html_comp_i(6,'Title','',d,[ str ]).
 html_comp_i(6,'Fill',-1,d,[ bool ]).
 html_comp_i(6,'Backcolor',rgb(255,255,255),d,[ color ]).
 html_comp_i(6,'Forecolor',rgb(0,0,0),d,[ color ]).
-html_comp_i(6,'Font',font('Open Sans Semibold',17,[]),d,[ font ]).
+html_comp_i(6,'Font',font('Microsoft Sans Serif',17,[]),d,[ font ]).
 html_comp_i(7,'Class',row,v,[ str ]).
 html_comp_i(7,'Id','',d,[ str ]).
 html_comp_i(7,'Height',measure(0,px),d,[ measure ]).
@@ -1605,6 +1615,7 @@ tbl_att_prop_i(2,11,19,'AllowNulls',n).
 tbl_att_prop_i(2,11,20,'AllowNulls',n).
 tbl_att_prop_i(2,11,21,'AllowNulls',n).
  
+var_prop_i(2,'Proveedoresid',idBasedOn,'',v).
  
  
  
@@ -1618,10 +1629,8 @@ trn_level_i(10,[ [ 2,126,127,128,129,130,131,132,133,134,135,136,137,138 ],prove
  
  
  
-pgm_parm_i(web,72,'GX00A0',[ [ int,9,0,0 ] ],[ [ pproveedoresid,out,[] ] ]).
  
 pgm_callprotocol_i(trn,10,'PROVEEDORES','INTERNAL').
-pgm_callprotocol_i(web,72,'GX00A0','INTERNAL').
  
  
  

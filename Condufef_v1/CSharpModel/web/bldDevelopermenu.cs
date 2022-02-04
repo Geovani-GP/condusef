@@ -100,6 +100,9 @@ public class bldDevelopermenu : GxBaseBuilder
       sc.Add( @"gx00n0", "dll");
       sc.Add( @"alerts", "dll");
       sc.Add( @"gx00o0", "dll");
+      sc.Add( @"detallesproveedores", "dll");
+      sc.Add( @"detallesempleados", "dll");
+      sc.Add( @"detallesempleadospiso", "dll");
       sc.Add( @"tipobien", "dll");
       sc.Add( @"parametros", "dll");
       sc.Add( @"meses", "dll");
@@ -166,6 +169,10 @@ public class bldDevelopermenu : GxBaseBuilder
             return true;
          if (checkTime(obj, cs_path + @"\type_Sdtempleadospiso.cs" ))
             return true;
+         if (checkTime(obj, cs_path + @"\type_Sdtempleados.cs" ))
+            return true;
+         if (checkTime(obj, cs_path + @"\type_Sdtproveedores.cs" ))
+            return true;
          if (checkTime(obj, cs_path + @"\type_Sdtstatus.cs" ))
             return true;
          if (checkTime(obj, cs_path + @"\type_Sdttipodocumento.cs" ))
@@ -180,15 +187,11 @@ public class bldDevelopermenu : GxBaseBuilder
             return true;
          if (checkTime(obj, cs_path + @"\type_Sdtcambs.cs" ))
             return true;
-         if (checkTime(obj, cs_path + @"\type_Sdtproveedores.cs" ))
-            return true;
          if (checkTime(obj, cs_path + @"\type_Sdtproducto.cs" ))
             return true;
          if (checkTime(obj, cs_path + @"\type_Sdtmarcas.cs" ))
             return true;
          if (checkTime(obj, cs_path + @"\type_Sdtestatusarticulo.cs" ))
-            return true;
-         if (checkTime(obj, cs_path + @"\type_Sdtempleados.cs" ))
             return true;
          if (checkTime(obj, cs_path + @"\type_Sdtcategorias.cs" ))
             return true;

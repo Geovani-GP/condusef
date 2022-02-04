@@ -15,6 +15,5 @@
 /r:bin\GeneXus.Programs.Common.dll
 /r:GxBaseBuilder.dll
 /out:bin\catalog_de_proveedor.dll
-proveedores_bc.cs
 catalog_de_proveedor.cs
-estatusarticulo_bc.cs
+proveedores_bc.cs

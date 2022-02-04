@@ -2,7 +2,7 @@
                File: Catalog_De_Empleados
         Description: Catalog_De_Empleados
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 2/2/2022 13:43:2.84
+       Generated on: 2/3/2022 14:55:29.68
        Program type: Callable routine
           Main DBMS: postgresql
 */
@@ -215,7 +215,7 @@ namespace GeneXus.Programs {
          context.AddJavascriptSource("jquery.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxtimezone.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxgral.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("gxcfg.js", "?2022221343286");
+         context.AddJavascriptSource("gxcfg.js", "?20222314552969");
          if ( context.isSpaRequest( ) )
          {
             enableOutput();
@@ -439,19 +439,26 @@ namespace GeneXus.Programs {
                               /* Execute user event: E122T2 */
                               E122T2 ();
                            }
-                           else if ( StringUtil.StrCmp(sEvt, "'CANCELAR'") == 0 )
+                           else if ( StringUtil.StrCmp(sEvt, "'CONSULTAR '") == 0 )
                            {
                               context.wbHandled = 1;
                               dynload_actions( ) ;
                               /* Execute user event: E132T2 */
                               E132T2 ();
                            }
-                           else if ( StringUtil.StrCmp(sEvt, "LOAD") == 0 )
+                           else if ( StringUtil.StrCmp(sEvt, "'CANCELAR'") == 0 )
                            {
                               context.wbHandled = 1;
                               dynload_actions( ) ;
                               /* Execute user event: E142T2 */
                               E142T2 ();
+                           }
+                           else if ( StringUtil.StrCmp(sEvt, "LOAD") == 0 )
+                           {
+                              context.wbHandled = 1;
+                              dynload_actions( ) ;
+                              /* Execute user event: E152T2 */
+                              E152T2 ();
                            }
                            else if ( StringUtil.StrCmp(sEvt, "ENTER") == 0 )
                            {
@@ -564,8 +571,8 @@ namespace GeneXus.Programs {
          fix_multi_value_controls( ) ;
          if ( String.IsNullOrEmpty(StringUtil.RTrim( context.wjLoc)) && ( context.nUserReturn != 1 ) )
          {
-            /* Execute user event: E142T2 */
-            E142T2 ();
+            /* Execute user event: E152T2 */
+            E152T2 ();
             WB2T0( ) ;
          }
       }
@@ -716,6 +723,13 @@ namespace GeneXus.Programs {
 
       protected void E132T2( )
       {
+         /* 'Consultar ' Routine */
+         context.wjLoc = formatLink("detallesempleados.aspx") ;
+         context.wjLocDisableFrm = 1;
+      }
+
+      protected void E142T2( )
+      {
          /* 'Cancelar' Routine */
          context.wjLoc = formatLink("menuprincipal.aspx") ;
          context.wjLocDisableFrm = 1;
@@ -725,7 +739,7 @@ namespace GeneXus.Programs {
       {
       }
 
-      protected void E142T2( )
+      protected void E152T2( )
       {
          /* Load Routine */
       }
@@ -870,7 +884,7 @@ namespace GeneXus.Programs {
             TempTags = "  onfocus=\"gx.evt.onfocus(this, 65,'',false,'',0)\"";
             ClassString = "Button";
             StyleString = "color:#FFFFFF; background-color:#008000;";
-            GxWebStd.gx_button_ctrl( context, bttButton1_Internalname, "", "CONSULTAR", bttButton1_Jsonclick, 5, "CONSULTAR", "", StyleString, ClassString, 1, 1, "standard", "'"+""+"'"+",false,"+"'"+"EENTER."+"'", TempTags, "", context.GetButtonType( ), "HLP_Catalog_De_Empleados.htm");
+            GxWebStd.gx_button_ctrl( context, bttButton1_Internalname, "", "CONSULTAR", bttButton1_Jsonclick, 5, "CONSULTAR", "", StyleString, ClassString, 1, 1, "standard", "'"+""+"'"+",false,"+"'"+"E\\'CONSULTAR \\'."+"'", TempTags, "", context.GetButtonType( ), "HLP_Catalog_De_Empleados.htm");
             context.WriteHtmlText( "</td>") ;
             context.WriteHtmlText( "<td>") ;
             TempTags = "  onfocus=\"gx.evt.onfocus(this, 67,'',false,'',0)\"";
@@ -991,11 +1005,11 @@ namespace GeneXus.Programs {
 
       protected void define_styles( )
       {
-         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?1342847");
+         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?13551359");
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?202222134338");
+            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?20222314552984");
             idxLst = (int)(idxLst+1);
          }
          /* End function define_styles */
@@ -1004,7 +1018,7 @@ namespace GeneXus.Programs {
       protected void include_jscripts( )
       {
          context.AddJavascriptSource("messages.spa.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("catalog_de_empleados.js", "?202222134338");
+         context.AddJavascriptSource("catalog_de_empleados.js", "?20222314552984");
          /* End function include_jscripts */
       }
 
@@ -1069,7 +1083,8 @@ namespace GeneXus.Programs {
       {
          setEventMetadata("REFRESH","{handler:'Refresh',iparms:[],oparms:[]}");
          setEventMetadata("'GUARDAR '","{handler:'E122T2',iparms:[{av:'AV13empleadosnomemple',fld:'vEMPLEADOSNOMEMPLE',pic:'',nv:''},{av:'AV14empleadosappaterno',fld:'vEMPLEADOSAPPATERNO',pic:'',nv:''},{av:'AV15empleadosapmaterno',fld:'vEMPLEADOSAPMATERNO',pic:'',nv:''},{av:'AV16empleadosstatus',fld:'vEMPLEADOSSTATUS',pic:'',nv:''},{av:'AV18empleadoscorreo',fld:'vEMPLEADOSCORREO',pic:'',nv:''},{av:'AV19empleadosext',fld:'vEMPLEADOSEXT',pic:'',nv:''},{av:'AV11NextValue',fld:'vNEXTVALUE',pic:'ZZZ9',hsh:true,nv:0},{av:'AV24empleados',fld:'vEMPLEADOS',pic:'',nv:null},{av:'Gx_date',fld:'vTODAY',pic:'',nv:''}],oparms:[{av:'AV24empleados',fld:'vEMPLEADOS',pic:'',nv:null}]}");
-         setEventMetadata("'CANCELAR'","{handler:'E132T2',iparms:[],oparms:[]}");
+         setEventMetadata("'CONSULTAR '","{handler:'E132T2',iparms:[],oparms:[]}");
+         setEventMetadata("'CANCELAR'","{handler:'E142T2',iparms:[],oparms:[]}");
          return  ;
       }
 

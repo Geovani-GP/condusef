@@ -41,7 +41,7 @@ rule_i(0,datastore(1,'CS_RPCPGML','')).
 rule_i(0,datastore(1,'JDBC_DATASOURCE','')).
 rule_i(0,datastore(1,'USE_JDBC_DATASOURCE','0')).
 rule_i(0,datastore(1,'DS_DBMS_ADDINFO','')).
-rule_i(0,datastore(1,'USER_PASSWORD',󻢸蘇�2�5炭)).
+rule_i(0,datastore(1,'USER_PASSWORD',admin)).
 rule_i(0,datastore(1,'USER_ID',postgres)).
 rule_i(0,datastore(1,'CS_CONNECT','First')).
 rule_i(0,datastore(1,'DBMS_PORT','5432')).
@@ -181,6 +181,7 @@ attri_i(48,[ empleadospisoextext,svchar,10,0,'',0,empleadospisoextext,'',0 ]).
 attri_i(47,[ empleadospisoextpiso,svchar,10,0,'',0,empleadospisoextpiso,'',0 ]).
 attri_i(46,[ empleadospisoextid,int,9,0,'ZZZZZZZZ9',0,empleadospisoextid,'',0 ]).
 attri_i('Gxremove',[ 'GxRemove',int,1,0,'9',0,'Gx Remove','',5 ]).
+attri_i('Empleadospisoextid',[ empleadospisoextid,int,9,0,'ZZZZZZZZ9',0,empleadospisoextid,'',7 ]).
 attri_i('Mode',[ 'Gx_mode',char,3,0,'@!',1,'','',2 ]).
  
 table_i(24,[ empleadospiso,[ 46,47,48,49,50,51,52,53 ],empleadospiso,empleadospiso ]).
@@ -342,6 +343,7 @@ tbl_att_prop_i(2,24,51,'AllowNulls',n).
 tbl_att_prop_i(2,24,52,'AllowNulls',n).
 tbl_att_prop_i(2,24,53,'AllowNulls',n).
  
+var_prop_i(2,'Empleadospisoextid',idBasedOn,'',v).
  
 i_tbl_best_trn(24,[ 24,1,empleadospiso,empleadospiso,[] ]).
  

@@ -27,6 +27,8 @@ GxWebStd.cs
 GxFullTextSearchReindexer.cs
 GxModelInfoProvider.cs
 type_Sdtempleadospiso.cs
+type_Sdtempleados.cs
+type_Sdtproveedores.cs
 type_Sdtstatus.cs
 type_Sdttipodocumento.cs
 type_Sdtmodelos.cs
@@ -34,11 +36,9 @@ type_Sdtalmacen.cs
 type_Sdtarea.cs
 type_Sdtorigen.cs
 type_Sdtcambs.cs
-type_Sdtproveedores.cs
 type_Sdtproducto.cs
 type_Sdtmarcas.cs
 type_Sdtestatusarticulo.cs
-type_Sdtempleados.cs
 type_Sdtcategorias.cs
 type_Sdtentidadfederativa.cs
 type_Sdttipobien.cs

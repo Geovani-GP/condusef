@@ -1,7 +1,6 @@
 current_obj_i(2,trn,6).
  
 called_tree_i(0,6,13,1).
-called_tree_i(0,6,13,67).
  
  
  
@@ -11,7 +10,7 @@ called_tree_i(0,6,13,67).
 ij_object_dependency(empleados,[],[],[],6).
  
  
-obj_parms_i([],[]).
+obj_parms_i([ 'String aP0_Gx_mode','int aP1_empleadosid' ],[ [ 'Mode',in ],[ 'Empleadosid',in ] ]).
  
  
 has_silent_trn_i(empleados_bc).

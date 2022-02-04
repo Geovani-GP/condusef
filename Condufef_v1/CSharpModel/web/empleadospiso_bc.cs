@@ -2,7 +2,7 @@
                File: empleadospiso_BC
         Description: empleadospiso
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 2/2/2022 13:42:56.20
+       Generated on: 2/4/2022 12:27:50.95
        Program type: Callable routine
           Main DBMS: postgresql
 */

@@ -2,7 +2,7 @@
                File: empleados_BC
         Description: empleados
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 2/2/2022 13:42:17.90
+       Generated on: 2/3/2022 14:55:29.8
        Program type: Callable routine
           Main DBMS: postgresql
 */

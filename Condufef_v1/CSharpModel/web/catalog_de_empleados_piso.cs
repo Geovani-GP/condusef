@@ -2,7 +2,7 @@
                File: Catalog_De_Empleados_Piso
         Description: Catalog_De_Empleados_Piso
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 2/2/2022 13:54:17.14
+       Generated on: 2/4/2022 12:27:51.29
        Program type: Callable routine
           Main DBMS: postgresql
 */
@@ -215,7 +215,7 @@ namespace GeneXus.Programs {
          context.AddJavascriptSource("jquery.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxtimezone.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxgral.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("gxcfg.js", "?20222213541716");
+         context.AddJavascriptSource("gxcfg.js", "?20222412275130");
          if ( context.isSpaRequest( ) )
          {
             enableOutput();
@@ -441,12 +441,19 @@ namespace GeneXus.Programs {
                               /* Execute user event: E132U2 */
                               E132U2 ();
                            }
-                           else if ( StringUtil.StrCmp(sEvt, "LOAD") == 0 )
+                           else if ( StringUtil.StrCmp(sEvt, "'CONSULTAR '") == 0 )
                            {
                               context.wbHandled = 1;
                               dynload_actions( ) ;
                               /* Execute user event: E142U2 */
                               E142U2 ();
+                           }
+                           else if ( StringUtil.StrCmp(sEvt, "LOAD") == 0 )
+                           {
+                              context.wbHandled = 1;
+                              dynload_actions( ) ;
+                              /* Execute user event: E152U2 */
+                              E152U2 ();
                            }
                            else if ( StringUtil.StrCmp(sEvt, "ENTER") == 0 )
                            {
@@ -556,8 +563,8 @@ namespace GeneXus.Programs {
          fix_multi_value_controls( ) ;
          if ( String.IsNullOrEmpty(StringUtil.RTrim( context.wjLoc)) && ( context.nUserReturn != 1 ) )
          {
-            /* Execute user event: E142U2 */
-            E142U2 ();
+            /* Execute user event: E152U2 */
+            E152U2 ();
             WB2U0( ) ;
          }
       }
@@ -695,11 +702,18 @@ namespace GeneXus.Programs {
          context.wjLocDisableFrm = 1;
       }
 
+      protected void E142U2( )
+      {
+         /* 'Consultar ' Routine */
+         context.wjLoc = formatLink("detallesempleadospiso.aspx") ;
+         context.wjLocDisableFrm = 1;
+      }
+
       protected void nextLoad( )
       {
       }
 
-      protected void E142U2( )
+      protected void E152U2( )
       {
          /* Load Routine */
       }
@@ -776,7 +790,7 @@ namespace GeneXus.Programs {
             TempTags = "  onfocus=\"gx.evt.onfocus(this, 37,'',false,'',0)\"";
             ClassString = "Button";
             StyleString = "color:#FFFFFF; background-color:#008000;";
-            GxWebStd.gx_button_ctrl( context, bttButton1_Internalname, "", "CONSULTAR", bttButton1_Jsonclick, 5, "CONSULTAR", "", StyleString, ClassString, 1, 1, "standard", "'"+""+"'"+",false,"+"'"+"EENTER."+"'", TempTags, "", context.GetButtonType( ), "HLP_Catalog_De_Empleados_Piso.htm");
+            GxWebStd.gx_button_ctrl( context, bttButton1_Internalname, "", "CONSULTAR", bttButton1_Jsonclick, 5, "CONSULTAR", "", StyleString, ClassString, 1, 1, "standard", "'"+""+"'"+",false,"+"'"+"E\\'CONSULTAR \\'."+"'", TempTags, "", context.GetButtonType( ), "HLP_Catalog_De_Empleados_Piso.htm");
             context.WriteHtmlText( "</td>") ;
             context.WriteHtmlText( "<td>") ;
             TempTags = "  onfocus=\"gx.evt.onfocus(this, 39,'',false,'',0)\"";
@@ -907,11 +921,11 @@ namespace GeneXus.Programs {
 
       protected void define_styles( )
       {
-         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?1342847");
+         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?13551359");
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?20222213541729");
+            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?20222412275140");
             idxLst = (int)(idxLst+1);
          }
          /* End function define_styles */
@@ -920,7 +934,7 @@ namespace GeneXus.Programs {
       protected void include_jscripts( )
       {
          context.AddJavascriptSource("messages.spa.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("catalog_de_empleados_piso.js", "?20222213541729");
+         context.AddJavascriptSource("catalog_de_empleados_piso.js", "?20222412275140");
          /* End function include_jscripts */
       }
 
@@ -978,6 +992,7 @@ namespace GeneXus.Programs {
          setEventMetadata("REFRESH","{handler:'Refresh',iparms:[],oparms:[]}");
          setEventMetadata("'GUARDAR '","{handler:'E122U2',iparms:[{av:'AV14empleadopisoextprofesion',fld:'vEMPLEADOPISOEXTPROFESION',pic:'ZZZZZZZZZZ9',nv:0},{av:'AV11empleadospisoextpiso',fld:'vEMPLEADOSPISOEXTPISO',pic:'',nv:''},{av:'AV13empleadospisoextcorreo',fld:'vEMPLEADOSPISOEXTCORREO',pic:'',nv:''},{av:'AV12empleadospisoextext',fld:'vEMPLEADOSPISOEXTEXT',pic:'',nv:''},{av:'AV9NextValue',fld:'vNEXTVALUE',pic:'ZZZ9',nv:0},{av:'AV19empleadospiso',fld:'vEMPLEADOSPISO',pic:'',nv:null},{av:'AV16empleadospisoextfecgre',fld:'vEMPLEADOSPISOEXTFECGRE',pic:'',nv:''}],oparms:[{av:'AV19empleadospiso',fld:'vEMPLEADOSPISO',pic:'',nv:null}]}");
          setEventMetadata("'CANCELAR'","{handler:'E132U2',iparms:[],oparms:[]}");
+         setEventMetadata("'CONSULTAR '","{handler:'E142U2',iparms:[],oparms:[]}");
          return  ;
       }
 

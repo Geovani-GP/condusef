@@ -1,6 +1,6 @@
 spec_i([ trn,6,empleados,empleados,[],spa,'10_3_15-115824' ]).
  
-struct_i(6,0,[],[]).
+struct_i(6,0,[ 'Mode','Empleadosid' ],[]).
  
 level_i(6,[ 6,[ [ 6,many ] ],[ 13 ],[],[],[],[ 13 ],'EMPLEADOS_PKEY',[ 6,[] ],[] ]).
  
@@ -13,7 +13,7 @@ lwi_i(6,[ [] ]).
  
 ta_i(6,[ [ [ 6,13 ],[ 6,176 ],[ 6,99 ],[ 6,100 ],[ 6,101 ],[ 6,102 ],[ 6,103 ],[ 6,106 ],[ 6,107 ],[ 6,104 ],[ 6,105 ] ] ]).
  
-las_i(6,[ [ 13,176,99,100,101,102,103,106,107,104,105 ] ]).
+las_i(6,[ [ 'Mode','Empleadosid',13,176,99,100,101,102,103,106,107,104,105 ] ]).
  
 lac_i(6,[ [ 13,176,99,100,101,102,103,106,107,104,105 ] ]).
  
@@ -53,7 +53,7 @@ rule_i(0,datastore(1,'CS_RPCPGML','')).
 rule_i(0,datastore(1,'JDBC_DATASOURCE','')).
 rule_i(0,datastore(1,'USE_JDBC_DATASOURCE','0')).
 rule_i(0,datastore(1,'DS_DBMS_ADDINFO','')).
-rule_i(0,datastore(1,'USER_PASSWORD',󻢸蘇�2�5炭)).
+rule_i(0,datastore(1,'USER_PASSWORD',admin)).
 rule_i(0,datastore(1,'USER_ID',postgres)).
 rule_i(0,datastore(1,'CS_CONNECT','First')).
 rule_i(0,datastore(1,'DBMS_PORT','5432')).
@@ -164,10 +164,10 @@ rule_i(0,prop(idBC,'-1')).
 rule_i(0,prop('Folder',o(120,'Root Module'))).
 rule_i(0,prop('ObjDesc',empleados)).
 rule_i(0,prop('ObjName',empleados)).
-rule_i(6,prompt([ 6,[ [ [],13,13 ] ],[],[],[ t(o(13,'Gx0060'),28),t(13,2) ],[],n,[] ])).
-rule_i(6,rule([ a(23,[ [ 13 ],[ t(o(13,'Gx0060'),28),t(13,2) ] ]) ],[],[],[ 13 ])).
 rule_i(0,rule([ a(22,[ 'Dlt','"Eliminar"','' ]) ],[],[],[])).
 rule_i(0,maingen(15)).
+rule_i(0,rule([ a(10,[ 'Mode','Empleadosid' ]) ],[],[ insert,update,delete,display ],[])).
+rule_i(0,parmio([ [ 'Mode',in ],[ 'Empleadosid',in ] ])).
 rule_i(0,p(0,0,fv,11,[ intname,'EMPLEADOS' ])).
 rule_i(0,p(0,0,fv,11,[ table,6 ])).
 rule_i(0,p(0,15,fv,11,[])).
@@ -184,6 +184,8 @@ rule_i(0,file(6,'EMPLEADOS',[ 13,176,99,100,101,102,103,106,105,107,104 ])).
 rule_i(0,loc([ 6 ],'EMPLEADOS','','LAN')).
 rule_i(0,index(6,'EMPLEADOS_PKEY',u,[ 13 ])).
 rule_i(0,loc([ 6,'EMPLEADOS_PKEY' ],empleados_pkey,'','LAN')).
+rule_i(6,rule([ a(3,[ t(13,2) ]) ],[],[ insert,update,delete,display ],[ 13 ])).
+rule_i(6,rule([ a(21,[ [ 13 ] ]) ],[],[ insert,update,delete,display ],[ 13 ])).
 rule_i(0,p(0,0,fv,20,[ intname,'ALMACEN' ])).
 rule_i(0,p(0,0,fv,20,[ table,18 ])).
 rule_i(0,p(0,15,fv,20,[])).
@@ -201,20 +203,27 @@ rule_i(0,loc([ 18 ],'ALMACEN','','LAN')).
 rule_i(0,index(18,'ALMACEN_PKEY',u,[ 19 ])).
 rule_i(0,loc([ 18,'ALMACEN_PKEY' ],almacen_pkey,'','LAN')).
  
-a_i(1,6,t,6,[],[ [ [ [],13,13 ] ],'EMPLEADOS_PKEY',[] ]).
+a_i(1,6,f,13,[],[ [],[ t('Empleadosid',23),t('IF',17),t('.NOT.',8),t('null(',1),t('Empleadosid',23),t(')',4),t(';',18) ] ]).
+a_i(2,6,f,[ t(13,2),t('Enabled',3) ],[],[ [],[ t(0,3),t(';',18) ] ]).
+a_i(3,6,t,6,[],[ [ [ [],13,13 ] ],'EMPLEADOS_PKEY',[] ]).
  
-v_i(t,i,1,13).
-v_i(t,o,1,176).
-v_i(t,o,1,99).
-v_i(t,o,1,100).
-v_i(t,o,1,101).
-v_i(t,o,1,102).
-v_i(t,o,1,103).
-v_i(t,o,1,106).
-v_i(t,o,1,107).
-v_i(t,o,1,104).
-v_i(t,o,1,105).
+v_i(f,i,1,'Empleadosid').
+v_i(f,o,1,13).
+v_i(f,i,2,[]).
+v_i(f,o,2,[ t(13,2),t('Enabled',3) ]).
+v_i(t,i,3,13).
+v_i(t,o,3,176).
+v_i(t,o,3,99).
+v_i(t,o,3,100).
+v_i(t,o,3,101).
+v_i(t,o,3,102).
+v_i(t,o,3,103).
+v_i(t,o,3,106).
+v_i(t,o,3,107).
+v_i(t,o,3,104).
+v_i(t,o,3,105).
  
+act_info_i(1,[ [ 13 ] ]).
  
  
 tbl_to_delete_i(6,[ 18,[ [ 6,13,13 ] ],c,'IALMACEN',[ [ 18,13 ] ],[ 19 ],'' ]).
@@ -234,6 +243,7 @@ attri_i(99,[ empleadosnomemple,svchar,30,0,'',0,empleadosnomemple,'',0 ]).
 attri_i(176,[ areaid,int,9,0,'ZZZZZZZZ9',0,areaid,'',0 ]).
 attri_i(13,[ empleadosid,int,9,0,'ZZZZZZZZ9',0,empleadosid,'',0 ]).
 attri_i('Gxremove',[ 'GxRemove',int,1,0,'9',0,'Gx Remove','',5 ]).
+attri_i('Empleadosid',[ empleadosid,int,9,0,'ZZZZZZZZ9',0,empleadosid,'',7 ]).
 attri_i('Mode',[ 'Gx_mode',char,3,0,'@!',1,'','',2 ]).
  
 table_i(18,[ 'ALMACEN',[ 19,13 ],almacen,almacen ]).
@@ -425,7 +435,7 @@ html_comp_i(6,'Title','',d,[ str ]).
 html_comp_i(6,'Fill',-1,d,[ bool ]).
 html_comp_i(6,'Backcolor',rgb(255,255,255),d,[ color ]).
 html_comp_i(6,'Forecolor',rgb(0,0,0),d,[ color ]).
-html_comp_i(6,'Font',font('Open Sans Semibold',17,[]),d,[ font ]).
+html_comp_i(6,'Font',font('Microsoft Sans Serif',17,[]),d,[ font ]).
 html_comp_i(7,'Class',row,v,[ str ]).
 html_comp_i(7,'Id','',d,[ str ]).
 html_comp_i(7,'Height',measure(0,px),d,[ measure ]).
@@ -1345,6 +1355,7 @@ tbl_att_prop_i(2,6,13,'AllowNulls',n).
 tbl_att_prop_i(2,6,105,'AllowNulls',n).
 tbl_att_prop_i(2,18,19,'AllowNulls',n).
  
+var_prop_i(2,'Empleadosid',idBasedOn,'',v).
  
  
  
@@ -1358,10 +1369,8 @@ trn_level_i(6,[ [ 13,176,99,100,101,102,103,106,107,104,105 ],empleados,empleado
  
  
  
-pgm_parm_i(web,67,'GX0060',[ [ int,9,0,0 ] ],[ [ pempleadosid,out,[] ] ]).
  
 pgm_callprotocol_i(trn,6,'EMPLEADOS','INTERNAL').
-pgm_callprotocol_i(web,67,'GX0060','INTERNAL').
  
  
  

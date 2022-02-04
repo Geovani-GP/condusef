@@ -58,7 +58,7 @@ rule_i(0,datastore(1,'CS_RPCPGML','')).
 rule_i(0,datastore(1,'JDBC_DATASOURCE','')).
 rule_i(0,datastore(1,'USE_JDBC_DATASOURCE','0')).
 rule_i(0,datastore(1,'DS_DBMS_ADDINFO','')).
-rule_i(0,datastore(1,'USER_PASSWORD',󻢸蘇�2�5炭)).
+rule_i(0,datastore(1,'USER_PASSWORD',admin)).
 rule_i(0,datastore(1,'USER_ID',postgres)).
 rule_i(0,datastore(1,'CS_CONNECT','First')).
 rule_i(0,datastore(1,'DBMS_PORT','5432')).
@@ -253,6 +253,7 @@ b_line_i(24,2,3,cmd,1,[ t('',111,1,0) ]).
 b_line_i(25,2,3,cmd,1,[ t('',111,1,0) ]).
 b_line_i(26,2,3,cmd,1,[ t('',147,1,0) ]).
 b_line_i(28,2,3,cmd,1,[ t('',146,1,0),t('''Consultar ''',3,28,7) ]).
+b_line_i(29,2,4,cmd,1,[ t('',104,1,0),t(o(13,'DetallesEmpleados'),28,1,2) ]).
 b_line_i(30,2,4,cmd,1,[ t('',147,1,0) ]).
 b_line_i(32,2,4,cmd,1,[ t('',146,1,0),t('''Cancelar''',3,32,7) ]).
 b_line_i(33,2,5,cmd,1,[ t('',104,1,0),t(o(13,'MenuPrincipal'),28,1,2) ]).
@@ -342,7 +343,7 @@ html_sub_i(54,61,html_i(4,cell(61))).
 html_sub_i(29,62,html_i(5,row(62))).
 html_sub_i(62,63,html_i(0,cell(63))).
 html_sub_i(62,64,html_i(1,cell(64))).
-html_sub_i(64,65,html_i(0,button('Enter'))).
+html_sub_i(64,65,html_i(0,button('''Consultar '''))).
 html_sub_i(62,66,html_i(2,cell(66))).
 html_sub_i(66,67,html_i(0,button('''Guardar '''))).
 html_sub_i(62,68,html_i(3,cell(68))).
@@ -698,7 +699,7 @@ html_comp_i(58,'Invitemsg','',d,[ str ]).
 html_comp_i(63,'Height',measure(24,px),v,[ measure ]).
 html_comp_i(65,'Controlname','Button1',v,[ str ]).
 html_comp_i(65,'Class','Button',d,[ str ]).
-html_comp_i(65,'Event','Enter',d,[ str ]).
+html_comp_i(65,'Event','''Consultar ''',v,[ str ]).
 html_comp_i(65,'Caption','CONSULTAR',d,[ str ]).
 html_comp_i(65,'Title','CONSULTAR',d,[ str ]).
 html_comp_i(65,'Font',font('Microsoft Sans Serif',10,[]),d,[ font ]).
@@ -752,7 +753,7 @@ lit_i(48,1,t('Correo:',3),[ ctlname('Textblock7') ]).
 lit_i(50,1,t('Empleadoscorreo',23),[ ctlname('&Empleadoscorreo'),ctrltype(edit,50),pos(50),ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
 lit_i(56,1,t('Exit:',3),[ ctlname('Textblock8') ]).
 lit_i(58,1,t('Empleadosext',23),[ ctlname('&Empleadosext'),ctrltype(edit,58),pos(58),ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
-lit_i(65,1,button('Enter'),[ ctlname('Button1'),width(0),rect(0,0,10,10),title('Nothing') ]).
+lit_i(65,1,button('''Consultar '''),[ ctlname('Button1'),width(0),rect(0,0,10,10),title('Nothing') ]).
 lit_i(67,1,button('''Guardar '''),[ ctlname('Button2'),width(0),rect(0,0,10,10),title('Nothing') ]).
 lit_i(70,1,button('Enter'),[ ctlname('Button3'),width(0),rect(0,0,10,10),title('Nothing') ]).
 lit_i(29,1,table(29),[ ctlname('Table3') ]).
@@ -972,10 +973,12 @@ sub_info_i(146,'''Consultar ''',28,30,[ [],[] ]).
 sub_info_i(146,'''Cancelar''',32,34,[ [],[] ]).
  
 pgm_parm_i(web,29,'MENUPRINCIPAL',[],[]).
+pgm_parm_i(web,113,'DETALLESEMPLEADOS',[],[]).
 pgm_parm_i(web,101,'CATALOG_DE_EMPLEADOS',[],[]).
  
 pgm_callprotocol_i(web,101,'CATALOG_DE_EMPLEADOS','INTERNAL').
 pgm_callprotocol_i(web,29,'MENUPRINCIPAL','INTERNAL').
+pgm_callprotocol_i(web,113,'DETALLESEMPLEADOS','INTERNAL').
 pgm_callprotocol_i(web,101,'CATALOG_DE_EMPLEADOS','INTERNAL').
  
 pgm_main_info_i(web,29,'MENUPRINCIPAL',[ 15,'MENUPRINCIPAL','','','','','INTERNAL' ]).

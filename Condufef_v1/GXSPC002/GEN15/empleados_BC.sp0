@@ -41,7 +41,7 @@ rule_i(0,datastore(1,'CS_RPCPGML','')).
 rule_i(0,datastore(1,'JDBC_DATASOURCE','')).
 rule_i(0,datastore(1,'USE_JDBC_DATASOURCE','0')).
 rule_i(0,datastore(1,'DS_DBMS_ADDINFO','')).
-rule_i(0,datastore(1,'USER_PASSWORD',󻢸蘇�2�5炭)).
+rule_i(0,datastore(1,'USER_PASSWORD',admin)).
 rule_i(0,datastore(1,'USER_ID',postgres)).
 rule_i(0,datastore(1,'CS_CONNECT','First')).
 rule_i(0,datastore(1,'DBMS_PORT','5432')).
@@ -221,6 +221,7 @@ attri_i(99,[ empleadosnomemple,svchar,30,0,'',0,empleadosnomemple,'',0 ]).
 attri_i(176,[ areaid,int,9,0,'ZZZZZZZZ9',0,areaid,'',0 ]).
 attri_i(13,[ empleadosid,int,9,0,'ZZZZZZZZ9',0,empleadosid,'',0 ]).
 attri_i('Gxremove',[ 'GxRemove',int,1,0,'9',0,'Gx Remove','',5 ]).
+attri_i('Empleadosid',[ empleadosid,int,9,0,'ZZZZZZZZ9',0,empleadosid,'',7 ]).
 attri_i('Mode',[ 'Gx_mode',char,3,0,'@!',1,'','',2 ]).
  
 table_i(18,[ 'ALMACEN',[ 19,13 ],almacen,almacen ]).
@@ -447,6 +448,7 @@ tbl_att_prop_i(2,6,13,'AllowNulls',n).
 tbl_att_prop_i(2,6,105,'AllowNulls',n).
 tbl_att_prop_i(2,18,19,'AllowNulls',n).
  
+var_prop_i(2,'Empleadosid',idBasedOn,'',v).
  
 i_tbl_best_trn(6,[ 6,1,empleados,empleados,[] ]).
 i_tbl_best_trn(18,[ 18,1,almacen,almacen,[] ]).

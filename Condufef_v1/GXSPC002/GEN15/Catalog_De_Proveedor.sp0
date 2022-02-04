@@ -64,7 +64,7 @@ rule_i(0,datastore(1,'CS_RPCPGML','')).
 rule_i(0,datastore(1,'JDBC_DATASOURCE','')).
 rule_i(0,datastore(1,'USE_JDBC_DATASOURCE','0')).
 rule_i(0,datastore(1,'DS_DBMS_ADDINFO','')).
-rule_i(0,datastore(1,'USER_PASSWORD',󻢸蘇�2�5炭)).
+rule_i(0,datastore(1,'USER_PASSWORD',admin)).
 rule_i(0,datastore(1,'USER_ID',postgres)).
 rule_i(0,datastore(1,'CS_CONNECT','First')).
 rule_i(0,datastore(1,'DBMS_PORT','5432')).
@@ -270,6 +270,7 @@ b_line_i(30,2,3,cmd,1,[ t('',146,1,0),t('''Cancelar''',3,30,7) ]).
 b_line_i(31,2,4,cmd,1,[ t('',104,1,0),t(o(13,'MenuPrincipal'),28,1,2) ]).
 b_line_i(32,2,4,cmd,1,[ t('',147,1,0) ]).
 b_line_i(34,2,4,cmd,1,[ t('',146,1,0),t('''Consultar ''',3,34,7) ]).
+b_line_i(35,2,5,cmd,1,[ t('',104,1,0),t(o(13,'DetallesProveedores'),28,1,2) ]).
 b_line_i(36,2,5,cmd,1,[ t('',147,1,0) ]).
 b_line_i(1000,2,5,cmd,0,[ t('',146,0,0),t('Load',3,0,0) ]).
 b_line_i(1001,2,5,cmd,0,[ t('',155,0,0) ]).
@@ -360,7 +361,7 @@ html_sub_i(64,65,html_i(0,t('Proveedorestelefono1',23))).
 html_sub_i(61,66,html_i(2,cell(66))).
 html_sub_i(61,67,html_i(3,cell(67))).
 html_sub_i(61,68,html_i(4,cell(68))).
-html_sub_i(68,69,html_i(0,button('Enter'))).
+html_sub_i(68,69,html_i(0,button('''Consultar '''))).
 html_sub_i(45,70,html_i(4,row(70))).
 html_sub_i(70,71,html_i(0,cell(71))).
 html_sub_i(71,72,html_i(0,t('Tel閒ono:',3))).
@@ -796,7 +797,7 @@ html_comp_i(65,'Title','',d,[ str ]).
 html_comp_i(65,'Invitemsg','',d,[ str ]).
 html_comp_i(69,'Controlname','Button1',v,[ str ]).
 html_comp_i(69,'Class','Button',d,[ str ]).
-html_comp_i(69,'Event','Enter',d,[ str ]).
+html_comp_i(69,'Event','''Consultar ''',v,[ str ]).
 html_comp_i(69,'Caption','CONSULTAR',d,[ str ]).
 html_comp_i(69,'Title','CONSULTAR',d,[ str ]).
 html_comp_i(69,'Font',font('Microsoft Sans Serif',10,[]),d,[ font ]).
@@ -893,7 +894,7 @@ lit_i(55,1,t('Fax:',3),[ ctlname('Textblock9') ]).
 lit_i(57,1,t('Proveedoresfax',23),[ ctlname('&Proveedoresfax'),ctrltype(edit,57),pos(57),ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
 lit_i(63,1,t('Tel閒ono1:',3),[ ctlname('Textblock10') ]).
 lit_i(65,1,t('Proveedorestelefono1',23),[ ctlname('&Proveedorestelefono1'),ctrltype(edit,65),pos(65),ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
-lit_i(69,1,button('Enter'),[ ctlname('Button1'),width(0),rect(0,0,10,10),title('Nothing') ]).
+lit_i(69,1,button('''Consultar '''),[ ctlname('Button1'),width(0),rect(0,0,10,10),title('Nothing') ]).
 lit_i(72,1,t('Tel閒ono:',3),[ ctlname('Textblock11') ]).
 lit_i(74,1,t('Proveedorestelefono2',23),[ ctlname('&Proveedorestelefono2'),ctrltype(edit,74),pos(74),ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
 lit_i(77,1,button('''Guardar '''),[ ctlname('Button2'),width(0),rect(0,0,10,10),title('Nothing') ]).
@@ -916,7 +917,6 @@ att_prop_i(2,2,'EmptyAsNull','Yes',d).
 att_prop_i(2,2,idBasedOn,'',d).
 att_prop_i(2,2,'AUTONUMBER','0',d).
 att_prop_i(2,2,'ATT_INITIAL_VALUE','',d).
-att_prop_i(2,2,'AttRegEx','',d).
 att_prop_i(2,2,'AttValidationFailedMsg','',d).
 att_prop_i(2,2,'FullName',proveedoresid,v).
 att_prop_i(2,40000,'ExternalName',proveedoresid,d).
@@ -925,7 +925,6 @@ att_prop_i(2,40000,'EmptyAsNull','Yes',d).
 att_prop_i(2,40000,idBasedOn,'',d).
 att_prop_i(2,40000,'AUTONUMBER','0',d).
 att_prop_i(2,40000,'ATT_INITIAL_VALUE','',d).
-att_prop_i(2,40000,'AttRegEx','',d).
 att_prop_i(2,40000,'AttValidationFailedMsg','',d).
 att_prop_i(2,40000,'FullName',proveedoresid,v).
  
@@ -1141,10 +1140,12 @@ sub_info_i(146,'''Guardar ''',4,28,[ [ 'Proveedoresnombre','Proveedoresrfc','Pro
 sub_info_i(146,'''Cancelar''',30,32,[ [],[] ]).
 sub_info_i(146,'''Consultar ''',34,36,[ [],[] ]).
  
+pgm_parm_i(web,112,'DETALLESPROVEEDORES',[],[]).
 pgm_parm_i(web,29,'MENUPRINCIPAL',[],[]).
 pgm_parm_i(web,98,'CATALOG_DE_PROVEEDOR',[],[]).
  
 pgm_callprotocol_i(web,98,'CATALOG_DE_PROVEEDOR','INTERNAL').
+pgm_callprotocol_i(web,112,'DETALLESPROVEEDORES','INTERNAL').
 pgm_callprotocol_i(web,29,'MENUPRINCIPAL','INTERNAL').
 pgm_callprotocol_i(web,98,'CATALOG_DE_PROVEEDOR','INTERNAL').
  

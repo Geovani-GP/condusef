@@ -2,7 +2,7 @@
                File: proveedores_BC
         Description: proveedores
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 2/2/2022 13:42:28.27
+       Generated on: 2/3/2022 13:40:37.9
        Program type: Callable routine
           Main DBMS: postgresql
 */
