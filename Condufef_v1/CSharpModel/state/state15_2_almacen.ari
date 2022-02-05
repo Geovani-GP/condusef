@@ -2,7 +2,6 @@ current_obj_i(2,trn,18).
  
 called_tree_i(0,18,13,1).
 called_tree_i(0,18,13,67).
-called_tree_i(0,18,13,76).
  
  
  
@@ -12,7 +11,7 @@ called_tree_i(0,18,13,76).
 ij_object_dependency(almacen,[],[],[],18).
  
  
-obj_parms_i([],[]).
+obj_parms_i([ 'String aP0_Gx_mode','int aP1_almacenid' ],[ [ 'Mode',in ],[ 'Almacenid',in ] ]).
  
  
 has_silent_trn_i(almacen_bc).

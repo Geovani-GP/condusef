@@ -1,6 +1,6 @@
 spec_i([ trn,18,almacen,almacen,[],spa,'10_3_15-115824' ]).
  
-struct_i(18,0,[],[]).
+struct_i(18,0,[ 'Mode','Almacenid' ],[]).
  
 level_i(18,[ 18,[ [ 18,many ],[ 6,one ] ],[ 19 ],[],[],[],[ 19 ],'ALMACEN_PKEY',[ 18,[] ],[] ]).
  
@@ -13,7 +13,7 @@ lwi_i(18,[ [] ]).
  
 ta_i(18,[ [ [ 18,19 ],[ 18,143 ],[ 18,144 ],[ 18,145 ],[ 18,146 ],[ 18,147 ],[ 18,148 ],[ 18,149 ],[ 18,150 ],[ 18,151 ],[ 18,152 ],[ 18,153 ],[ 18,13 ] ] ]).
  
-las_i(18,[ [ 19,13,143,144,145,146,147,148,149,150,151,152,153 ] ]).
+las_i(18,[ [ 'Mode','Almacenid',19,13,143,144,145,146,147,148,149,150,151,152,153 ] ]).
  
 lac_i(18,[ [ 19,13,143,144,145,146,147,148,149,150,151,152,153 ] ]).
  
@@ -55,7 +55,7 @@ rule_i(0,datastore(1,'CS_RPCPGML','')).
 rule_i(0,datastore(1,'JDBC_DATASOURCE','')).
 rule_i(0,datastore(1,'USE_JDBC_DATASOURCE','0')).
 rule_i(0,datastore(1,'DS_DBMS_ADDINFO','')).
-rule_i(0,datastore(1,'USER_PASSWORD',󻢸蘇�2�5炭)).
+rule_i(0,datastore(1,'USER_PASSWORD',admin)).
 rule_i(0,datastore(1,'USER_ID',postgres)).
 rule_i(0,datastore(1,'CS_CONNECT','First')).
 rule_i(0,datastore(1,'DBMS_PORT','5432')).
@@ -168,10 +168,10 @@ rule_i(0,prop('ObjDesc',almacen)).
 rule_i(0,prop('ObjName',almacen)).
 rule_i(18,prompt([ 6,[ [ 18,13,13 ] ],[ 13 ],[ 13 ],[ t(o(13,'Gx0060'),28),t(13,2) ],[],n,[] ])).
 rule_i(18,rule([ a(23,[ [ 13 ],[ t(o(13,'Gx0060'),28),t(13,2) ] ]) ],[],[],[ 13 ])).
-rule_i(18,prompt([ 18,[ [ [],19,19 ] ],[],[],[ t(o(13,'Gx00I0'),28),t(19,2) ],[],n,[] ])).
-rule_i(18,rule([ a(23,[ [ 19 ],[ t(o(13,'Gx00I0'),28),t(19,2) ] ]) ],[],[],[ 19 ])).
 rule_i(0,rule([ a(22,[ 'Dlt','"Eliminar"','' ]) ],[],[],[])).
 rule_i(0,maingen(15)).
+rule_i(0,rule([ a(10,[ 'Mode','Almacenid' ]) ],[],[ insert,update,delete,display ],[])).
+rule_i(0,parmio([ [ 'Mode',in ],[ 'Almacenid',in ] ])).
 rule_i(18,rule([ a(18,[ [ 13 ] ]) ],[],[ insert,update,delete ],[ 13 ])).
 rule_i(0,p(0,0,fv,20,[ intname,'ALMACEN' ])).
 rule_i(0,p(0,0,fv,20,[ table,18 ])).
@@ -205,6 +205,8 @@ rule_i(0,file(6,'EMPLEADOS',[ 13,176,99,100,101,102,103,106,105,107,104 ])).
 rule_i(0,loc([ 6 ],'EMPLEADOS','','LAN')).
 rule_i(0,index(6,'EMPLEADOS_PKEY',u,[ 13 ])).
 rule_i(0,loc([ 6,'EMPLEADOS_PKEY' ],empleados_pkey,'','LAN')).
+rule_i(18,rule([ a(3,[ t(19,2) ]) ],[],[ insert,update,delete,display ],[ 19 ])).
+rule_i(18,rule([ a(21,[ [ 19 ] ]) ],[],[ insert,update,delete,display ],[ 19 ])).
 rule_i(18,rule([ a(19,[ [ 13 ],msg([ t('"No existe ''empleados''."',3) ],[ t('ForeignKeyNotFound',3) ]) ]) ],[],[ insert,update,delete ],[ 13 ])).
 rule_i(0,p(0,0,fv,15,[ intname,'ARTICULOS' ])).
 rule_i(0,p(0,0,fv,15,[ table,11 ])).
@@ -246,25 +248,32 @@ rule_i(0,loc([ 12 ],'ETIQUETAS','','LAN')).
 rule_i(0,index(12,'ETIQUETAS_PKEY',u,[ 17,18,19 ])).
 rule_i(0,loc([ 12,'ETIQUETAS_PKEY' ],etiquetas_pkey,'','LAN')).
  
-a_i(1,18,t,18,[],[ [ [ [],19,19 ] ],'ALMACEN_PKEY',[] ]).
-a_i(2,18,r,6,[],[ [ [ 18,13,13 ] ],'EMPLEADOS_PKEY',[] ]).
+a_i(1,18,f,19,[],[ [],[ t('Almacenid',23),t('IF',17),t('.NOT.',8),t('null(',1),t('Almacenid',23),t(')',4),t(';',18) ] ]).
+a_i(2,18,f,[ t(19,2),t('Enabled',3) ],[],[ [],[ t(0,3),t(';',18) ] ]).
+a_i(3,18,t,18,[],[ [ [ [],19,19 ] ],'ALMACEN_PKEY',[] ]).
+a_i(4,18,r,6,[],[ [ [ 18,13,13 ] ],'EMPLEADOS_PKEY',[] ]).
  
-v_i(t,i,1,19).
-v_i(t,o,1,143).
-v_i(t,o,1,144).
-v_i(t,o,1,145).
-v_i(t,o,1,146).
-v_i(t,o,1,147).
-v_i(t,o,1,148).
-v_i(t,o,1,149).
-v_i(t,o,1,150).
-v_i(t,o,1,151).
-v_i(t,o,1,152).
-v_i(t,o,1,153).
-v_i(t,o,1,13).
-v_i(r,i,2,13).
-v_i(r,o,2,[]).
+v_i(f,i,1,'Almacenid').
+v_i(f,o,1,19).
+v_i(f,i,2,[]).
+v_i(f,o,2,[ t(19,2),t('Enabled',3) ]).
+v_i(t,i,3,19).
+v_i(t,o,3,143).
+v_i(t,o,3,144).
+v_i(t,o,3,145).
+v_i(t,o,3,146).
+v_i(t,o,3,147).
+v_i(t,o,3,148).
+v_i(t,o,3,149).
+v_i(t,o,3,150).
+v_i(t,o,3,151).
+v_i(t,o,3,152).
+v_i(t,o,3,153).
+v_i(t,o,3,13).
+v_i(r,i,4,13).
+v_i(r,o,4,[]).
  
+act_info_i(1,[ [ 19 ] ]).
  
  
 tbl_to_delete_i(18,[ 12,[ [ 18,19,19 ] ],c,'IETIQUETAS2',[ [ 12,19 ] ],[ 17,18,19 ],'' ]).
@@ -290,6 +299,7 @@ attri_i(143,[ almacendsc,svchar,100,0,'',0,almacendsc,'',0 ]).
 attri_i(13,[ empleadosid,int,9,0,'ZZZZZZZZ9',0,empleadosid,'',0 ]).
 attri_i(19,[ almacenid,int,9,0,'ZZZZZZZZ9',0,almacenid,'',0 ]).
 attri_i('Gxremove',[ 'GxRemove',int,1,0,'9',0,'Gx Remove','',5 ]).
+attri_i('Almacenid',[ almacenid,int,9,0,'ZZZZZZZZ9',0,almacenid,'',7 ]).
 attri_i('Mode',[ 'Gx_mode',char,3,0,'@!',1,'','',2 ]).
  
 table_i(12,[ 'ETIQUETAS',[ 17,18,19 ],etiquetas,etiquetas ]).
@@ -532,7 +542,7 @@ html_comp_i(6,'Title','',d,[ str ]).
 html_comp_i(6,'Fill',-1,d,[ bool ]).
 html_comp_i(6,'Backcolor',rgb(255,255,255),d,[ color ]).
 html_comp_i(6,'Forecolor',rgb(0,0,0),d,[ color ]).
-html_comp_i(6,'Font',font('Open Sans Semibold',17,[]),d,[ font ]).
+html_comp_i(6,'Font',font('Microsoft Sans Serif',17,[]),d,[ font ]).
 html_comp_i(7,'Class',row,v,[ str ]).
 html_comp_i(7,'Id','',d,[ str ]).
 html_comp_i(7,'Height',measure(0,px),d,[ measure ]).
@@ -1614,6 +1624,7 @@ tbl_att_prop_i(2,12,17,'AllowNulls',n).
 tbl_att_prop_i(2,12,18,'AllowNulls',n).
 tbl_att_prop_i(2,12,19,'AllowNulls',n).
  
+var_prop_i(2,'Almacenid',idBasedOn,'',v).
  
  
  
@@ -1631,11 +1642,9 @@ trn_level_i(18,[ [ 19,13,143,144,145,146,147,148,149,150,151,152,153 ],almacen,a
  
  
  
-pgm_parm_i(web,76,'GX00I0',[ [ int,9,0,0 ] ],[ [ palmacenid,out,[] ] ]).
 pgm_parm_i(web,67,'GX0060',[ [ int,9,0,0 ] ],[ [ pempleadosid,out,[] ] ]).
  
 pgm_callprotocol_i(trn,18,'ALMACEN','INTERNAL').
-pgm_callprotocol_i(web,76,'GX00I0','INTERNAL').
 pgm_callprotocol_i(web,67,'GX0060','INTERNAL').
  
  

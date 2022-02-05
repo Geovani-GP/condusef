@@ -56,7 +56,7 @@ rule_i(0,datastore(1,'CS_RPCPGML','')).
 rule_i(0,datastore(1,'JDBC_DATASOURCE','')).
 rule_i(0,datastore(1,'USE_JDBC_DATASOURCE','0')).
 rule_i(0,datastore(1,'DS_DBMS_ADDINFO','')).
-rule_i(0,datastore(1,'USER_PASSWORD',󻢸蘇�2�5炭)).
+rule_i(0,datastore(1,'USER_PASSWORD',admin)).
 rule_i(0,datastore(1,'USER_ID',postgres)).
 rule_i(0,datastore(1,'CS_CONNECT','First')).
 rule_i(0,datastore(1,'DBMS_PORT','5432')).
@@ -253,6 +253,7 @@ b_line_i(28,2,3,cmd,1,[ t('',146,1,0),t('''Cancelar''',3,28,7) ]).
 b_line_i(29,2,4,cmd,1,[ t('',104,1,0),t(o(13,'MenuPrincipal'),28,1,2) ]).
 b_line_i(30,2,4,cmd,1,[ t('',147,1,0) ]).
 b_line_i(32,2,4,cmd,1,[ t('',146,1,0),t('''Consultar ''',3,32,7) ]).
+b_line_i(33,2,5,cmd,1,[ t('',104,1,0),t(o(13,'DetallesAlmacen'),28,1,2) ]).
 b_line_i(34,2,5,cmd,1,[ t('',147,1,0) ]).
 b_line_i(1000,2,5,cmd,0,[ t('',146,0,0),t('Load',3,0,0) ]).
 b_line_i(1001,2,5,cmd,0,[ t('',155,0,0) ]).
@@ -328,7 +329,7 @@ html_sub_i(49,50,html_i(0,t('Alamcencodigopostal',23))).
 html_sub_i(46,51,html_i(2,cell(51))).
 html_sub_i(46,52,html_i(3,cell(52))).
 html_sub_i(46,53,html_i(4,cell(53))).
-html_sub_i(53,54,html_i(0,button('Enter'))).
+html_sub_i(53,54,html_i(0,button('''Consultar '''))).
 html_sub_i(30,55,html_i(4,row(55))).
 html_sub_i(55,56,html_i(0,cell(56))).
 html_sub_i(55,57,html_i(1,cell(57))).
@@ -639,7 +640,7 @@ html_comp_i(50,'Title','',d,[ str ]).
 html_comp_i(50,'Invitemsg','',d,[ str ]).
 html_comp_i(54,'Controlname','Button1',v,[ str ]).
 html_comp_i(54,'Class','Button',d,[ str ]).
-html_comp_i(54,'Event','Enter',d,[ str ]).
+html_comp_i(54,'Event','''Consultar ''',v,[ str ]).
 html_comp_i(54,'Caption','CONSULTAR',d,[ str ]).
 html_comp_i(54,'Title','CONSULTAR',d,[ str ]).
 html_comp_i(54,'Font',font('Microsoft Sans Serif',10,[]),d,[ font ]).
@@ -692,7 +693,7 @@ lit_i(40,1,t('Tel閒ono:',3),[ ctlname('Textblock6') ]).
 lit_i(42,1,t('Almacentelefono',23),[ ctlname('&Almacentelefono'),ctrltype(edit,42),pos(42),ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
 lit_i(48,1,t('C骴igo Postal:',3),[ ctlname('Textblock7') ]).
 lit_i(50,1,t('Alamcencodigopostal',23),[ ctlname('&Alamcencodigopostal'),ctrltype(edit,50),pos(50),ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
-lit_i(54,1,button('Enter'),[ ctlname('Button1'),width(0),rect(0,0,10,10),title('Nothing') ]).
+lit_i(54,1,button('''Consultar '''),[ ctlname('Button1'),width(0),rect(0,0,10,10),title('Nothing') ]).
 lit_i(60,1,button('''Guardar '''),[ ctlname('Button2'),width(0),rect(0,0,10,10),title('Nothing') ]).
 lit_i(62,1,button('Enter'),[ ctlname('Button3'),width(0),rect(0,0,10,10),title('Nothing') ]).
 lit_i(30,1,table(30),[ ctlname('Table3') ]).
@@ -926,10 +927,12 @@ sub_info_i(146,'''Guardar ''',4,26,[ [ 'Almacendsc','Almacendireccion','Almacenm
 sub_info_i(146,'''Cancelar''',28,30,[ [],[] ]).
 sub_info_i(146,'''Consultar ''',32,34,[ [],[] ]).
  
+pgm_parm_i(web,115,'DETALLESALMACEN',[],[]).
 pgm_parm_i(web,29,'MENUPRINCIPAL',[],[]).
 pgm_parm_i(web,99,'CATALOG_DE_ALMACEN',[],[]).
  
 pgm_callprotocol_i(web,99,'CATALOG_DE_ALMACEN','INTERNAL').
+pgm_callprotocol_i(web,115,'DETALLESALMACEN','INTERNAL').
 pgm_callprotocol_i(web,29,'MENUPRINCIPAL','INTERNAL').
 pgm_callprotocol_i(web,99,'CATALOG_DE_ALMACEN','INTERNAL').
  

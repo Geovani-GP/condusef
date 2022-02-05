@@ -24,7 +24,6 @@ called_program_i(0,16,13,1).
 called_program_i(0,17,13,1).
 called_program_i(0,18,13,1).
 called_program_i(0,18,13,67).
-called_program_i(0,18,13,76).
 called_program_i(0,19,13,1).
 called_program_i(0,2,13,1).
 called_program_i(0,2,13,63).
@@ -91,6 +90,9 @@ called_program_i(13,113,13,101).
 called_program_i(13,114,0,24).
 called_program_i(13,114,13,1).
 called_program_i(13,114,13,102).
+called_program_i(13,115,0,18).
+called_program_i(13,115,13,1).
+called_program_i(13,115,13,99).
 called_program_i(13,28,13,110).
 called_program_i(13,29,13,1).
 called_program_i(13,30,0,14).
@@ -179,6 +181,7 @@ called_program_i(13,98,13,112).
 called_program_i(13,98,13,98).
 called_program_i(13,99,0,18).
 called_program_i(13,99,13,1).
+called_program_i(13,99,13,115).
 called_program_i(13,99,13,99).
 domain_i(10,'GXDOMAINCryptoSignAlgorithm.cs').
 domain_i(17,'GXDOMAINAPIAuthorizationStatus.cs').

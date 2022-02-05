@@ -12,22 +12,47 @@
   <Object>
     <Type>c9584656-94b6-4ccd-890f-332d11fc2c25</Type>
     <Id>98</Id>
-    <Part>c44bd5ff-f918-415b-98e6-aca44fed84fa</Part>
+    <Part>d24a58ad-57ba-41b7-9e6e-eaca3543c778</Part>
   </Object>
   <Object>
     <Type>c9584656-94b6-4ccd-890f-332d11fc2c25</Type>
-    <Id>102</Id>
-    <Part>c44bd5ff-f918-415b-98e6-aca44fed84fa</Part>
+    <Id>115</Id>
+    <Part>d24a58ad-57ba-41b7-9e6e-eaca3543c778</Part>
   </Object>
   <Object>
-    <Type>c9584656-94b6-4ccd-890f-332d11fc2c25</Type>
-    <Id>114</Id>
-    <Part>c44bd5ff-f918-415b-98e6-aca44fed84fa</Part>
+    <Type>1db606f2-af09-4cf9-a3b5-b481519d28f6</Type>
+    <Id>18</Id>
+    <Part>9b0a32a3-de6d-4be1-a4dd-1b85d3741534</Part>
   </Object>
   <Recent>
     <RecentKBObjectsList>
       <MaximumItems>10</MaximumItems>
       <RecentKBObjects>
+        <RecentKBObject>
+          <Key>1db606f2-af09-4cf9-a3b5-b481519d28f6-18</Key>
+          <Name>almacen</Name>
+          <LastAccess>2022-02-04T20:16:01.6784067-06:00</LastAccess>
+        </RecentKBObject>
+        <RecentKBObject>
+          <Key>c9584656-94b6-4ccd-890f-332d11fc2c25-99</Key>
+          <Name>Catalog_De_Almacen</Name>
+          <LastAccess>2022-02-04T20:01:55.425959-06:00</LastAccess>
+        </RecentKBObject>
+        <RecentKBObject>
+          <Key>c9584656-94b6-4ccd-890f-332d11fc2c25-114</Key>
+          <Name>DetallesEmpleadosPiso</Name>
+          <LastAccess>2022-02-04T19:59:30.8675304-06:00</LastAccess>
+        </RecentKBObject>
+        <RecentKBObject>
+          <Key>c9584656-94b6-4ccd-890f-332d11fc2c25-113</Key>
+          <Name>DetallesEmpleados</Name>
+          <LastAccess>2022-02-04T19:57:34.1848251-06:00</LastAccess>
+        </RecentKBObject>
+        <RecentKBObject>
+          <Key>c9584656-94b6-4ccd-890f-332d11fc2c25-86</Key>
+          <Name>DetallesCambs</Name>
+          <LastAccess>2022-02-04T19:54:39.6781201-06:00</LastAccess>
+        </RecentKBObject>
         <RecentKBObject>
           <Key>1db606f2-af09-4cf9-a3b5-b481519d28f6-24</Key>
           <Name>empleadospiso</Name>
@@ -52,31 +77,6 @@
           <Key>c9584656-94b6-4ccd-890f-332d11fc2c25-98</Key>
           <Name>Catalog_De_Proveedor</Name>
           <LastAccess>2022-02-03T14:54:12.9098332-06:00</LastAccess>
-        </RecentKBObject>
-        <RecentKBObject>
-          <Key>c9584656-94b6-4ccd-890f-332d11fc2c25-96</Key>
-          <Name>Catalog_De_Productos</Name>
-          <LastAccess>2022-02-03T14:54:01.3469429-06:00</LastAccess>
-        </RecentKBObject>
-        <RecentKBObject>
-          <Key>1db606f2-af09-4cf9-a3b5-b481519d28f6-10</Key>
-          <Name>proveedores</Name>
-          <LastAccess>2022-02-03T14:52:50.8337397-06:00</LastAccess>
-        </RecentKBObject>
-        <RecentKBObject>
-          <Key>c9584656-94b6-4ccd-890f-332d11fc2c25-86</Key>
-          <Name>DetallesCambs</Name>
-          <LastAccess>2022-02-03T14:45:17.2607961-06:00</LastAccess>
-        </RecentKBObject>
-        <RecentKBObject>
-          <Key>c9584656-94b6-4ccd-890f-332d11fc2c25-95</Key>
-          <Name>DetallesOrigen</Name>
-          <LastAccess>2022-02-03T14:40:13.6113191-06:00</LastAccess>
-        </RecentKBObject>
-        <RecentKBObject>
-          <Key>c9584656-94b6-4ccd-890f-332d11fc2c25-92</Key>
-          <Name>DetallesMarcas</Name>
-          <LastAccess>2022-02-03T14:40:08.489793-06:00</LastAccess>
         </RecentKBObject>
       </RecentKBObjects>
     </RecentKBObjectsList>

@@ -9,7 +9,7 @@
 <ObjDesc>Detalles Proveedores</ObjDesc>
 <ObjPgmName>DetallesProveedores</ObjPgmName>
 <ObjClsName>Web Panel</ObjClsName></Object>
-<Result>genreq</Result>
+<Result>nogenreq</Result>
 <Warnings></Warnings>
 <Errors></Errors>
 <Generator>
@@ -96,7 +96,18 @@
 <LoopWhile>
 <Condition>
 <Token>NotEndOfTable</Token></Condition></LoopWhile></OptimizedWhere>
-<NonOptimizedWhere></NonOptimizedWhere>
+<NonOptimizedWhere>
+<Condition>
+<Attribute>
+<AttriId>126</AttriId>
+<AttriName>proveedoresnombre</AttriName>
+<Description>proveedoresnombre</Description></Attribute>
+<Sp></Sp>
+<Token>like</Token>
+<Sp></Sp>
+<Variable>
+<VarId>Buscar</VarId>
+<VarName>&amp;buscar</VarName></Variable></Condition></NonOptimizedWhere>
 <NavigationTree>
 <Table>
 <TableId>10</TableId>

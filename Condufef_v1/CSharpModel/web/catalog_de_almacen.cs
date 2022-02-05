@@ -2,7 +2,7 @@
                File: Catalog_De_Almacen
         Description: Catalog_De_Almacen
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 2/2/2022 13:43:2.31
+       Generated on: 2/4/2022 20:6:36.73
        Program type: Callable routine
           Main DBMS: postgresql
 */
@@ -215,7 +215,7 @@ namespace GeneXus.Programs {
          context.AddJavascriptSource("jquery.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxtimezone.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxgral.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("gxcfg.js", "?2022221343234");
+         context.AddJavascriptSource("gxcfg.js", "?2022242063674");
          if ( context.isSpaRequest( ) )
          {
             enableOutput();
@@ -446,12 +446,19 @@ namespace GeneXus.Programs {
                               /* Execute user event: E132R2 */
                               E132R2 ();
                            }
-                           else if ( StringUtil.StrCmp(sEvt, "LOAD") == 0 )
+                           else if ( StringUtil.StrCmp(sEvt, "'CONSULTAR '") == 0 )
                            {
                               context.wbHandled = 1;
                               dynload_actions( ) ;
                               /* Execute user event: E142R2 */
                               E142R2 ();
+                           }
+                           else if ( StringUtil.StrCmp(sEvt, "LOAD") == 0 )
+                           {
+                              context.wbHandled = 1;
+                              dynload_actions( ) ;
+                              /* Execute user event: E152R2 */
+                              E152R2 ();
                            }
                            else if ( StringUtil.StrCmp(sEvt, "ENTER") == 0 )
                            {
@@ -564,8 +571,8 @@ namespace GeneXus.Programs {
          fix_multi_value_controls( ) ;
          if ( String.IsNullOrEmpty(StringUtil.RTrim( context.wjLoc)) && ( context.nUserReturn != 1 ) )
          {
-            /* Execute user event: E142R2 */
-            E142R2 ();
+            /* Execute user event: E152R2 */
+            E152R2 ();
             WB2R0( ) ;
          }
       }
@@ -730,11 +737,18 @@ namespace GeneXus.Programs {
          context.wjLocDisableFrm = 1;
       }
 
+      protected void E142R2( )
+      {
+         /* 'Consultar ' Routine */
+         context.wjLoc = formatLink("detallesalmacen.aspx") ;
+         context.wjLocDisableFrm = 1;
+      }
+
       protected void nextLoad( )
       {
       }
 
-      protected void E142R2( )
+      protected void E152R2( )
       {
          /* Load Routine */
       }
@@ -853,7 +867,7 @@ namespace GeneXus.Programs {
             TempTags = "  onfocus=\"gx.evt.onfocus(this, 54,'',false,'',0)\"";
             ClassString = "Button";
             StyleString = "color:#FFFFFF; background-color:#008000;";
-            GxWebStd.gx_button_ctrl( context, bttButton1_Internalname, "", "CONSULTAR", bttButton1_Jsonclick, 5, "CONSULTAR", "", StyleString, ClassString, 1, 1, "standard", "'"+""+"'"+",false,"+"'"+"EENTER."+"'", TempTags, "", context.GetButtonType( ), "HLP_Catalog_De_Almacen.htm");
+            GxWebStd.gx_button_ctrl( context, bttButton1_Internalname, "", "CONSULTAR", bttButton1_Jsonclick, 5, "CONSULTAR", "", StyleString, ClassString, 1, 1, "standard", "'"+""+"'"+",false,"+"'"+"E\\'CONSULTAR \\'."+"'", TempTags, "", context.GetButtonType( ), "HLP_Catalog_De_Almacen.htm");
             context.WriteHtmlText( "</td>") ;
             context.WriteHtmlText( "</tr>") ;
             context.WriteHtmlText( "<tr>") ;
@@ -983,11 +997,11 @@ namespace GeneXus.Programs {
 
       protected void define_styles( )
       {
-         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?1342847");
+         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?13551359");
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?2022221343254");
+            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?2022242063687");
             idxLst = (int)(idxLst+1);
          }
          /* End function define_styles */
@@ -996,7 +1010,7 @@ namespace GeneXus.Programs {
       protected void include_jscripts( )
       {
          context.AddJavascriptSource("messages.spa.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("catalog_de_almacen.js", "?2022221343254");
+         context.AddJavascriptSource("catalog_de_almacen.js", "?2022242063687");
          /* End function include_jscripts */
       }
 
@@ -1059,6 +1073,7 @@ namespace GeneXus.Programs {
          setEventMetadata("REFRESH","{handler:'Refresh',iparms:[],oparms:[]}");
          setEventMetadata("'GUARDAR '","{handler:'E122R2',iparms:[{av:'AV10almacendsc',fld:'vALMACENDSC',pic:'',nv:''},{av:'AV11almacendireccion',fld:'vALMACENDIRECCION',pic:'',nv:''},{av:'AV12almacenmunicipio',fld:'vALMACENMUNICIPIO',pic:'',nv:''},{av:'AV13almacentelefono',fld:'vALMACENTELEFONO',pic:'ZZZZZZZZZ9',nv:0},{av:'AV14alamcencodigopostal',fld:'vALAMCENCODIGOPOSTAL',pic:'',nv:''},{av:'AV15NextValue',fld:'vNEXTVALUE',pic:'ZZZ9',hsh:true,nv:0},{av:'AV18almacen',fld:'vALMACEN',pic:'',nv:null},{av:'Gx_date',fld:'vTODAY',pic:'',nv:''}],oparms:[{av:'AV18almacen',fld:'vALMACEN',pic:'',nv:null}]}");
          setEventMetadata("'CANCELAR'","{handler:'E132R2',iparms:[],oparms:[]}");
+         setEventMetadata("'CONSULTAR '","{handler:'E142R2',iparms:[],oparms:[]}");
          return  ;
       }
 

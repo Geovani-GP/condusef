@@ -6,7 +6,7 @@ level_i(2,[ 10,[ [ 10,many ] ],[],[],[ [ [ 10 ],[ 133,132,134,131,130,129,128,12
  
 tw_i(2,[]).
  
-lwi_i(2,[ [] ]).
+lwi_i(2,[ [ c([ t(126,2),t('.LIKE.',10),t('Buscar',23) ],[ 126 ]) ] ]).
  
  
  
@@ -350,7 +350,7 @@ html_comp_i(9,'Bordercolor',rgb(219,220,222),d,[ color ]).
 html_comp_i(9,'Buttonborderstyle',standard,d,[ str ]).
 html_comp_i(11,'Controlname','Proveedoresgrid',v,[ str ]).
 html_comp_i(11,'Controlorder','',d,[ str ]).
-html_comp_i(11,'Controlwhere','',d,[ str ]).
+html_comp_i(11,'Controlwhere','''.''(''.''(t(126,2),''.''(t($.LIKE.$,10),''.''(t($Buscar$,23),''.''(t($;$,18),$[]$)))),''.''($[]$,$[]$))',v,[ str ]).
 html_comp_i(11,'Iddataselector','',d,[ str ]).
 html_comp_i(11,'Rules',none,d,[ str ]).
 html_comp_i(11,'Sflrender','',d,[ str ]).

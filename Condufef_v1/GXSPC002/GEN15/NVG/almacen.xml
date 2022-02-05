@@ -28,7 +28,17 @@
 <GenId>15</GenId>
 <GenName>Default (C#)</GenName></Generator>
 <FormClass>HTML</FormClass>
-<Parameters></Parameters>
+<Parameters>
+<Parameter>
+<IO>in</IO>
+<Variable>
+<VarId>Mode</VarId>
+<VarName>&amp;Mode</VarName></Variable></Parameter>
+<Parameter>
+<IO>in</IO>
+<Variable>
+<VarId>Almacenid</VarId>
+<VarName>&amp;almacenid</VarName></Variable></Parameter></Parameters>
 <Levels>
 <Level>
 <LevelType>Trn</LevelType>
@@ -238,24 +248,5 @@
 <AttriId>13</AttriId>
 <AttriName>empleadosid</AttriName>
 <Description>empleadosid</Description></Attribute></OutputParameters>
-<PromptType>System</PromptType></Prompt>
-<Prompt>
-<Table>
-<TableId>18</TableId>
-<TableName>ALMACEN</TableName>
-<Description>almacen</Description></Table>
-<Object>
-<ObjClsGuid>c9584656-94b6-4ccd-890f-332d11fc2c25</ObjClsGuid>
-<ObjCls>13</ObjCls>
-<ObjId>76</ObjId>
-<ObjName>Gx00I0</ObjName>
-<ObjPgmName>Gx00I0</ObjPgmName>
-<ObjClsName>Web Panel</ObjClsName></Object>
-<InputParameters></InputParameters>
-<OutputParameters>
-<Attribute>
-<AttriId>19</AttriId>
-<AttriName>almacenid</AttriName>
-<Description>almacenid</Description></Attribute></OutputParameters>
 <PromptType>System</PromptType></Prompt></Prompts>
 <Suggests></Suggests></ObjectSpec>

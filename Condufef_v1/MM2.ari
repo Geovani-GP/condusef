@@ -15,8 +15,19 @@ pgm_main_i(web,28,'LOGIN',[ 15,'LOGIN','Login','','','','' ]).
 pgm_main_i(proc,6,'SCHEDULERREQUESTHANDLER',[ 15,'ASCHEDULERREQUESTHANDLER','Scheduler Request Handler','','','','HTTP' ]).
 pgm_main_i(proc,5,'LOADEVENTSSAMPLEPROC',[ 15,'ALOADEVENTSSAMPLEPROC','Load Events Sample Proc','','','','INTERNAL' ]).
  
+pgm_prop_i(web,115,'DETALLESALMACEN','USE_ENCRYPTION','NO').
+pgm_prop_i(web,115,'DETALLESALMACEN','HTTP_PROTOCOL','Unsecure').
+pgm_prop_i(web,112,'DETALLESPROVEEDORES','USE_ENCRYPTION','NO').
+pgm_prop_i(web,112,'DETALLESPROVEEDORES','HTTP_PROTOCOL','Unsecure').
+pgm_prop_i(web,99,'CATALOG_DE_ALMACEN','USE_ENCRYPTION','NO').
+pgm_prop_i(web,99,'CATALOG_DE_ALMACEN','HTTP_PROTOCOL','Unsecure').
+pgm_prop_i(trn,18,'ALMACEN',idISBUSINESSCOMPONENT,'-1').
+pgm_prop_i(trn,18,'ALMACEN','USE_ENCRYPTION','NO').
+pgm_prop_i(trn,18,'ALMACEN','HTTP_PROTOCOL','Unsecure').
 pgm_prop_i(web,114,'DETALLESEMPLEADOSPISO','USE_ENCRYPTION','NO').
 pgm_prop_i(web,114,'DETALLESEMPLEADOSPISO','HTTP_PROTOCOL','Unsecure').
+pgm_prop_i(web,113,'DETALLESEMPLEADOS','USE_ENCRYPTION','NO').
+pgm_prop_i(web,113,'DETALLESEMPLEADOS','HTTP_PROTOCOL','Unsecure').
 pgm_prop_i(web,102,'CATALOG_DE_EMPLEADOS_PISO','USE_ENCRYPTION','NO').
 pgm_prop_i(web,102,'CATALOG_DE_EMPLEADOS_PISO','HTTP_PROTOCOL','Unsecure').
 pgm_prop_i(web,98,'CATALOG_DE_PROVEEDOR','USE_ENCRYPTION','NO').
@@ -24,15 +35,11 @@ pgm_prop_i(web,98,'CATALOG_DE_PROVEEDOR','HTTP_PROTOCOL','Unsecure').
 pgm_prop_i(trn,24,'EMPLEADOSPISO',idISBUSINESSCOMPONENT,'-1').
 pgm_prop_i(trn,24,'EMPLEADOSPISO','USE_ENCRYPTION','NO').
 pgm_prop_i(trn,24,'EMPLEADOSPISO','HTTP_PROTOCOL','Unsecure').
-pgm_prop_i(web,113,'DETALLESEMPLEADOS','USE_ENCRYPTION','NO').
-pgm_prop_i(web,113,'DETALLESEMPLEADOS','HTTP_PROTOCOL','Unsecure').
 pgm_prop_i(web,101,'CATALOG_DE_EMPLEADOS','USE_ENCRYPTION','NO').
 pgm_prop_i(web,101,'CATALOG_DE_EMPLEADOS','HTTP_PROTOCOL','Unsecure').
 pgm_prop_i(trn,6,'EMPLEADOS',idISBUSINESSCOMPONENT,'-1').
 pgm_prop_i(trn,6,'EMPLEADOS','USE_ENCRYPTION','NO').
 pgm_prop_i(trn,6,'EMPLEADOS','HTTP_PROTOCOL','Unsecure').
-pgm_prop_i(web,112,'DETALLESPROVEEDORES','USE_ENCRYPTION','NO').
-pgm_prop_i(web,112,'DETALLESPROVEEDORES','HTTP_PROTOCOL','Unsecure').
 pgm_prop_i(trn,10,'PROVEEDORES',idISBUSINESSCOMPONENT,'-1').
 pgm_prop_i(trn,10,'PROVEEDORES','USE_ENCRYPTION','NO').
 pgm_prop_i(trn,10,'PROVEEDORES','HTTP_PROTOCOL','Unsecure').
@@ -115,8 +122,6 @@ pgm_prop_i(web,103,'DETALLETIPODOCUMENTO','USE_ENCRYPTION','NO').
 pgm_prop_i(web,103,'DETALLETIPODOCUMENTO','HTTP_PROTOCOL','Unsecure').
 pgm_prop_i(web,100,'CATALOG_DE_TIPOBIEN','USE_ENCRYPTION','NO').
 pgm_prop_i(web,100,'CATALOG_DE_TIPOBIEN','HTTP_PROTOCOL','Unsecure').
-pgm_prop_i(web,99,'CATALOG_DE_ALMACEN','USE_ENCRYPTION','NO').
-pgm_prop_i(web,99,'CATALOG_DE_ALMACEN','HTTP_PROTOCOL','Unsecure').
 pgm_prop_i(web,96,'CATALOG_DE_PRODUCTOS','USE_ENCRYPTION','NO').
 pgm_prop_i(web,96,'CATALOG_DE_PRODUCTOS','HTTP_PROTOCOL','Unsecure').
 pgm_prop_i(web,95,'DETALLESORIGEN','USE_ENCRYPTION','NO').
@@ -165,9 +170,6 @@ pgm_prop_i(trn,20,'TIPODOCUMENTO','HTTP_PROTOCOL','Unsecure').
 pgm_prop_i(trn,19,'MODELOS',idISBUSINESSCOMPONENT,'-1').
 pgm_prop_i(trn,19,'MODELOS','USE_ENCRYPTION','NO').
 pgm_prop_i(trn,19,'MODELOS','HTTP_PROTOCOL','Unsecure').
-pgm_prop_i(trn,18,'ALMACEN',idISBUSINESSCOMPONENT,'-1').
-pgm_prop_i(trn,18,'ALMACEN','USE_ENCRYPTION','NO').
-pgm_prop_i(trn,18,'ALMACEN','HTTP_PROTOCOL','Unsecure').
 pgm_prop_i(trn,17,'AREA',idISBUSINESSCOMPONENT,'-1').
 pgm_prop_i(trn,17,'AREA','USE_ENCRYPTION','NO').
 pgm_prop_i(trn,17,'AREA','HTTP_PROTOCOL','Unsecure').
