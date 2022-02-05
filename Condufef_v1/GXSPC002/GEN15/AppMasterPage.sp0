@@ -46,12 +46,12 @@ rule_i(0,datastore(1,'CS_RPCPGML','')).
 rule_i(0,datastore(1,'JDBC_DATASOURCE','')).
 rule_i(0,datastore(1,'USE_JDBC_DATASOURCE','0')).
 rule_i(0,datastore(1,'DS_DBMS_ADDINFO','')).
-rule_i(0,datastore(1,'USER_PASSWORD',󻢸蘇�2�5炭)).
+rule_i(0,datastore(1,'USER_PASSWORD',asdf)).
 rule_i(0,datastore(1,'USER_ID',postgres)).
 rule_i(0,datastore(1,'CS_CONNECT','First')).
 rule_i(0,datastore(1,'DBMS_PORT','5432')).
 rule_i(0,datastore(1,'CS_SERVER',localhost)).
-rule_i(0,datastore(1,'CS_DBNAME',postgres)).
+rule_i(0,datastore(1,'CS_DBNAME',condusef)).
 rule_i(0,datastore(1,'CS_FLEDSNAME','')).
 rule_i(0,datastore(1,'CS_DRVNAME','')).
 rule_i(0,datastore(1,'CS_DSNAME','')).
@@ -123,14 +123,15 @@ v_i(f,o,4,[ t('&Fecha',23),t('Enabled',3) ]).
  
  
  
-attri_i('Errmsg',[ 'Gx_emsg',char,70,0,'',1,'Error text','',15 ]).
-attri_i('Err',[ 'Gx_err',int,3,0,'ZZ9',1,'Error code','',14 ]).
-attri_i('Gpxmenuitems',[ gpxMenuItems,o(objectcollection('gpxMenuItems.gpxMenuItem')),0,0,'',0,'gpx Menu Items','',13 ]).
-attri_i('Tabsmenudata',[ 'TabsMenuData',o(objectcollection('TabsMenuData.TabsMenuDataItem')),0,0,'',0,'Tabs Menu Data','',12 ]).
-attri_i('Titulo',[ 'Titulo',svchar,20,0,'',0,'Titulo','',11 ]).
-attri_i('Fecha',[ fecha,char,20,0,'',0,fecha,'',10 ]).
+attri_i('Errmsg',[ 'Gx_emsg',char,70,0,'',1,'Error text','',17 ]).
+attri_i('Err',[ 'Gx_err',int,3,0,'ZZ9',1,'Error code','',16 ]).
 attri_i('Websession',[ 'WebSession',o(websession),4,0,'',0,'Web Session','',7 ]).
 attri_i('Usuario',[ usuario,svchar,25,0,'',0,usuario,'',8 ]).
+attri_i('Titulo',[ 'Titulo',svchar,20,0,'',0,'Titulo','',11 ]).
+attri_i('Tabsmenudata',[ 'TabsMenuData',o(objectcollection('TabsMenuData.TabsMenuDataItem')),0,0,'',0,'Tabs Menu Data','',12 ]).
+attri_i('Sdthugaomessages',[ 'SdtHugaoMessages',o(objectcollection('Messages.Message')),0,0,'',0,'Sdt Hugao Messages','',15 ]).
+attri_i('Gpxmenuitems',[ gpxMenuItems,o(objectcollection('gpxMenuItems.gpxMenuItem')),0,0,'',0,'gpx Menu Items','',13 ]).
+attri_i('Fecha',[ fecha,char,20,0,'',0,fecha,'',10 ]).
  
  
  
@@ -161,19 +162,19 @@ attri_i('Usuario',[ usuario,svchar,25,0,'',0,usuario,'',8 ]).
  
 break_i(2,nvg,1,[],[ [],[],[] ]).
  
-b_group_i(2,1,lit,0,1,1).
-b_group_i(2,2,lit,0,2,0).
+b_group_i(2,1,lit,0,1,2).
+b_group_i(2,2,lit,0,3,0).
  
-b_line_i(1,2,1,cmd,1,[ t('',146,1,0),t('Start',3,1,7) ]).
-b_line_i(2,2,2,cmd,1,[ t('',109,1,0),t('null(',1,2,33),t([ t('Websession',23,2,5),t('get(',1,2,17) ],31,1,17),t('''usuario''',3,2,22),t(')',4,1,31),t(')',4,1,42) ]).
-b_line_i(3,2,2,cmd,1,[ t('',104,1,0),t(o(13,'Login'),28,1,3) ]).
-b_line_i(4,2,2,cmd,1,[ t('',110,1,0) ]).
-b_line_i(5,2,2,cmd,1,[ t('',107,1,0),t('Usuario',23,1,0),t(=,10,1,0),t([ t('Websession',23,1,0),t('get(',1,1,0) ],31,1,0),t('''usuario''',3,1,0),t(')',4,1,0) ]).
-b_line_i(6,2,2,cmd,1,[ t('',107,1,0),t('Fecha',23,1,0),t(=,10,1,0),t([ t('Websession',23,1,0),t('get(',1,1,0) ],31,1,0),t('''fecha''',3,1,0),t(')',4,1,0) ]).
-b_line_i(7,2,2,cmd,1,[ t('',107,1,0),t('Titulo',23,1,0),t(=,10,1,0),t('''SISTEMA DE INVENTARIOS''',3,1,0) ]).
-b_line_i(8,2,2,cmd,1,[ t('',107,1,0),t([ t('Webcomp1',3,1,0),t('Object',3,1,0) ],29,1,0),t(=,10,1,0),t('create(',1,1,0),t(o(13,sidebar),28,1,0),t(')',4,1,0) ]).
-b_line_i(9,2,2,cmd,1,[ t('',111,1,0) ]).
-b_line_i(10,2,2,cmd,1,[ t('',147,1,0) ]).
+b_line_i(2,2,1,cmd,2,[ t('',146,2,0),t('Start',3,2,7) ]).
+b_line_i(3,2,2,cmd,2,[ t('',109,2,0),t('null(',1,3,33),t([ t('Websession',23,3,5),t('get(',1,3,17) ],31,2,17),t('''usuario''',3,3,22),t(')',4,2,31),t(')',4,2,42) ]).
+b_line_i(4,2,2,cmd,2,[ t('',104,2,0),t(o(13,'Login'),28,2,3) ]).
+b_line_i(5,2,2,cmd,2,[ t('',110,2,0) ]).
+b_line_i(6,2,2,cmd,2,[ t('',107,2,0),t('Usuario',23,2,0),t(=,10,2,0),t([ t('Websession',23,2,0),t('get(',1,2,0) ],31,2,0),t('''usuario''',3,2,0),t(')',4,2,0) ]).
+b_line_i(7,2,2,cmd,2,[ t('',107,2,0),t('Fecha',23,2,0),t(=,10,2,0),t([ t('Websession',23,2,0),t('get(',1,2,0) ],31,2,0),t('''fecha''',3,2,0),t(')',4,2,0) ]).
+b_line_i(8,2,2,cmd,2,[ t('',107,2,0),t('Titulo',23,2,0),t(=,10,2,0),t('''SISTEMA DE INVENTARIOS''',3,2,0) ]).
+b_line_i(9,2,2,cmd,2,[ t('',107,2,0),t([ t('Webcomp1',3,2,0),t('Object',3,2,0) ],29,2,0),t(=,10,2,0),t('create(',1,2,0),t(o(13,sidebar),28,2,0),t(')',4,2,0) ]).
+b_line_i(10,2,2,cmd,2,[ t('',111,2,0) ]).
+b_line_i(11,2,2,cmd,2,[ t('',147,2,0) ]).
 b_line_i(1000,2,2,cmd,0,[ t('',146,0,0),t('Load',3,0,0) ]).
 b_line_i(1001,2,2,cmd,0,[ t('',155,0,0) ]).
 b_line_i(1002,2,2,cmd,0,[ t('',147,0,0) ]).
@@ -191,7 +192,8 @@ b_line_i(1002,2,2,cmd,0,[ t('',147,0,0) ]).
  
  
 html_i(2,table(2)).
-html_i(33,html('<p></p>')).
+html_i(33,usercontrol(33)).
+html_i(34,html('<p></p>')).
  
 html_sub_i(2,0,html_i(0,html('<tbody>'))).
 html_sub_i(2,3,html_i(1,row(3))).
@@ -438,6 +440,16 @@ html_comp_i(30,'Controlname','Webcomp1',v,[ str ]).
 html_comp_i(30,'Object',o(13,sidebar),v,[ object ]).
 html_comp_i(30,'Params',[],d,[ params ]).
 html_comp_i(32,'Controlname','Contholder1',v,[ str ]).
+html_comp_i(33,'Usercontroltype','HugaoMessages',d,[ str ]).
+html_comp_i(33,'Constructorname','HugaoMessages',d,[ str ]).
+html_comp_i(33,'Showmethodname',show,d,[ str ]).
+html_comp_i(33,'Controlname','HugaoMessages1',v,[ str ]).
+html_comp_i(33,'Type',jgrowl,d,[ str ]).
+html_comp_i(33,'Visible',-1,d,[ bool ]).
+html_comp_i(33,'Csssupportfiles',[ [ t('''HugaoMessages\css\jquery.growl.min.css''',3) ] ],d,[ params ]).
+html_comp_i(33,'Jssupportfiles',[ [ t('''HugaoMessages\js\jquery.growl.min.js''',3) ],[ t('''HugaoMessages\HugaoMessagesRender.js''',3) ] ],d,[ params ]).
+html_comp_i(33,'Csssharedsupportfiles',[],d,[ params ]).
+html_comp_i(33,'Jssharedsupportfiles',[],d,[ params ]).
  
  
  
@@ -457,6 +469,7 @@ lit_i(30,1,comp(webcomp),[ ctlname('Webcomp1'),width(0),rect(0,0,10,10),title('N
 lit_i(32,1,comp(conthold),[ ctlname('Contholder1'),width(0),rect(0,0,10,10),title('Nothing') ]).
 lit_i(27,1,table(27),[ ctlname('Table3') ]).
 lit_i(2,1,table(2),[ ctlname('Table1') ]).
+lit_i(33,1,usercontrol(33),[ ctlname('Hugaomessages1'),ctrltype(hugaomessages),el([]),containers([]) ]).
 lit_i(1,1,window,[ rect(0,0,1000,1000),ctlname('Form') ]).
  
  
@@ -476,6 +489,26 @@ var_prop_i(2,'Usuario',idBasedOn,'',v).
  
  
  
+struct_dt_i([ 26,5,0 ],name,gpxMenuItems).
+struct_dt_i([ 26,5,0 ],namespace,'Condufef_v1').
+struct_dt_i([ 26,5,0 ],'ObjName',gpxMenuItems).
+struct_dt_i([ 26,5,0 ],'ObjDesc','gpx Menu Items').
+struct_dt_i([ 26,5,0 ],'ExternalName',gpxMenuItems).
+struct_dt_i([ 26,5,0 ],'ExternalNamespace','Condufef_v1').
+struct_dt_i([ 26,5,0 ],collection,'True').
+struct_dt_i([ 26,5,0 ],datatype,[ 26,5,6 ]).
+struct_dt_i([ 26,5,6 ],name,gpxMenuItem).
+struct_dt_i([ 26,5,6 ],namespace,'Condufef_v1.gpxMenuItems').
+struct_dt_i([ 26,1,0 ],name,'Messages').
+struct_dt_i([ 26,1,0 ],namespace,'Genexus').
+struct_dt_i([ 26,1,0 ],'ObjName','Messages').
+struct_dt_i([ 26,1,0 ],'ObjDesc','Messages').
+struct_dt_i([ 26,1,0 ],'ExternalName','Messages').
+struct_dt_i([ 26,1,0 ],'ExternalNamespace','Genexus').
+struct_dt_i([ 26,1,0 ],collection,'True').
+struct_dt_i([ 26,1,0 ],datatype,[ 26,1,1 ]).
+struct_dt_i([ 26,1,1 ],name,'Message').
+struct_dt_i([ 26,1,1 ],namespace,'Genexus.Messages').
 struct_dt_i([ 26,6,0 ],name,'TabsMenuData').
 struct_dt_i([ 26,6,0 ],namespace,'Condufef_v1').
 struct_dt_i([ 26,6,0 ],'ObjName','TabsMenuData').
@@ -488,22 +521,159 @@ struct_dt_i([ 26,6,7 ],name,'TabsMenuDataItem').
 struct_dt_i([ 26,6,7 ],namespace,'Condufef_v1.TabsMenuData').
 struct_dt_i([ 26,6,8 ],name,'SectionsItem').
 struct_dt_i([ 26,6,8 ],namespace,'Condufef_v1.TabsMenuData.TabsMenuDataItem').
-struct_dt_i([ 26,5,0 ],name,gpxMenuItems).
-struct_dt_i([ 26,5,0 ],namespace,'Condufef_v1').
-struct_dt_i([ 26,5,0 ],'ObjName',gpxMenuItems).
-struct_dt_i([ 26,5,0 ],'ObjDesc','gpx Menu Items').
-struct_dt_i([ 26,5,0 ],'ExternalName',gpxMenuItems).
-struct_dt_i([ 26,5,0 ],'ExternalNamespace','Condufef_v1').
-struct_dt_i([ 26,5,0 ],collection,'True').
-struct_dt_i([ 26,5,0 ],datatype,[ 26,5,6 ]).
-struct_dt_i([ 26,5,6 ],name,gpxMenuItem).
-struct_dt_i([ 26,5,6 ],namespace,'Condufef_v1.gpxMenuItems').
+struct_dt_i([ 26,5,0 ],fullname,gpxMenuItems).
+struct_dt_i([ 26,5,6 ],fullname,'gpxMenuItems.gpxMenuItem').
+struct_dt_i([ 26,1,0 ],fullname,'Messages').
+struct_dt_i([ 26,1,1 ],fullname,'Messages.Message').
 struct_dt_i([ 26,6,0 ],fullname,'TabsMenuData').
 struct_dt_i([ 26,6,7 ],fullname,'TabsMenuData.TabsMenuDataItem').
 struct_dt_i([ 26,6,8 ],fullname,'TabsMenuData.TabsMenuDataItem.SectionsItem').
-struct_dt_i([ 26,5,0 ],fullname,gpxMenuItems).
-struct_dt_i([ 26,5,6 ],fullname,'gpxMenuItems.gpxMenuItem').
  
+struct_dt_elem_i([ 26,5,6 ],1,name,'Code').
+struct_dt_elem_i([ 26,5,6 ],1,camelname,'Code').
+struct_dt_elem_i([ 26,5,6 ],1,length,20).
+struct_dt_elem_i([ 26,5,6 ],1,decimals,0).
+struct_dt_elem_i([ 26,5,6 ],1,type,[ 5,20,0 ]).
+struct_dt_elem_i([ 26,5,6 ],1,pic,'').
+struct_dt_elem_i([ 26,5,6 ],1,collection,'False').
+struct_dt_elem_i([ 26,5,6 ],1,'XmlType','Element').
+struct_dt_elem_i([ 26,5,6 ],1,'XmlName','').
+struct_dt_elem_i([ 26,5,6 ],1,'XmlNamespace','').
+struct_dt_elem_i([ 26,5,6 ],1,soaptype,'').
+struct_dt_elem_i([ 26,5,6 ],1,'XmlInclude',idXmlIncludeAlways).
+struct_dt_elem_i([ 26,5,6 ],1,'JsonName','').
+struct_dt_elem_i([ 26,5,6 ],2,name,'Title').
+struct_dt_elem_i([ 26,5,6 ],2,camelname,'Title').
+struct_dt_elem_i([ 26,5,6 ],2,length,64).
+struct_dt_elem_i([ 26,5,6 ],2,decimals,0).
+struct_dt_elem_i([ 26,5,6 ],2,type,[ 5,64,0 ]).
+struct_dt_elem_i([ 26,5,6 ],2,pic,'').
+struct_dt_elem_i([ 26,5,6 ],2,collection,'False').
+struct_dt_elem_i([ 26,5,6 ],2,'XmlType','Element').
+struct_dt_elem_i([ 26,5,6 ],2,'XmlName','').
+struct_dt_elem_i([ 26,5,6 ],2,'XmlNamespace','').
+struct_dt_elem_i([ 26,5,6 ],2,soaptype,'').
+struct_dt_elem_i([ 26,5,6 ],2,'XmlInclude',idXmlIncludeAlways).
+struct_dt_elem_i([ 26,5,6 ],2,'JsonName','').
+struct_dt_elem_i([ 26,5,6 ],3,name,'Url').
+struct_dt_elem_i([ 26,5,6 ],3,camelname,'URL').
+struct_dt_elem_i([ 26,5,6 ],3,length,256).
+struct_dt_elem_i([ 26,5,6 ],3,decimals,0).
+struct_dt_elem_i([ 26,5,6 ],3,type,[ 5,256,0 ]).
+struct_dt_elem_i([ 26,5,6 ],3,pic,'').
+struct_dt_elem_i([ 26,5,6 ],3,collection,'False').
+struct_dt_elem_i([ 26,5,6 ],3,'XmlType','Element').
+struct_dt_elem_i([ 26,5,6 ],3,'XmlName','').
+struct_dt_elem_i([ 26,5,6 ],3,'XmlNamespace','').
+struct_dt_elem_i([ 26,5,6 ],3,soaptype,'').
+struct_dt_elem_i([ 26,5,6 ],3,'XmlInclude',idXmlIncludeAlways).
+struct_dt_elem_i([ 26,5,6 ],3,'JsonName','').
+struct_dt_elem_i([ 26,5,6 ],4,name,'Linktarget').
+struct_dt_elem_i([ 26,5,6 ],4,camelname,'LinkTarget').
+struct_dt_elem_i([ 26,5,6 ],4,length,20).
+struct_dt_elem_i([ 26,5,6 ],4,decimals,0).
+struct_dt_elem_i([ 26,5,6 ],4,type,[ 5,20,0 ]).
+struct_dt_elem_i([ 26,5,6 ],4,pic,'').
+struct_dt_elem_i([ 26,5,6 ],4,collection,'False').
+struct_dt_elem_i([ 26,5,6 ],4,'XmlType','Element').
+struct_dt_elem_i([ 26,5,6 ],4,'XmlName','').
+struct_dt_elem_i([ 26,5,6 ],4,'XmlNamespace','').
+struct_dt_elem_i([ 26,5,6 ],4,soaptype,'').
+struct_dt_elem_i([ 26,5,6 ],4,'XmlInclude',idXmlIncludeAlways).
+struct_dt_elem_i([ 26,5,6 ],4,'JsonName','').
+struct_dt_elem_i([ 26,5,6 ],5,name,'Image').
+struct_dt_elem_i([ 26,5,6 ],5,camelname,'Image').
+struct_dt_elem_i([ 26,5,6 ],5,length,256).
+struct_dt_elem_i([ 26,5,6 ],5,decimals,0).
+struct_dt_elem_i([ 26,5,6 ],5,type,[ 5,256,0 ]).
+struct_dt_elem_i([ 26,5,6 ],5,pic,'').
+struct_dt_elem_i([ 26,5,6 ],5,collection,'False').
+struct_dt_elem_i([ 26,5,6 ],5,'XmlType','Element').
+struct_dt_elem_i([ 26,5,6 ],5,'XmlName','').
+struct_dt_elem_i([ 26,5,6 ],5,'XmlNamespace','').
+struct_dt_elem_i([ 26,5,6 ],5,soaptype,'').
+struct_dt_elem_i([ 26,5,6 ],5,'XmlInclude',idXmlIncludeAlways).
+struct_dt_elem_i([ 26,5,6 ],5,'JsonName','').
+struct_dt_elem_i([ 26,5,6 ],6,name,'Description').
+struct_dt_elem_i([ 26,5,6 ],6,camelname,'Description').
+struct_dt_elem_i([ 26,5,6 ],6,length,64).
+struct_dt_elem_i([ 26,5,6 ],6,decimals,0).
+struct_dt_elem_i([ 26,5,6 ],6,type,[ 5,64,0 ]).
+struct_dt_elem_i([ 26,5,6 ],6,pic,'').
+struct_dt_elem_i([ 26,5,6 ],6,collection,'False').
+struct_dt_elem_i([ 26,5,6 ],6,'XmlType','Element').
+struct_dt_elem_i([ 26,5,6 ],6,'XmlName','').
+struct_dt_elem_i([ 26,5,6 ],6,'XmlNamespace','').
+struct_dt_elem_i([ 26,5,6 ],6,soaptype,'').
+struct_dt_elem_i([ 26,5,6 ],6,'XmlInclude',idXmlIncludeAlways).
+struct_dt_elem_i([ 26,5,6 ],6,'JsonName','').
+struct_dt_elem_i([ 26,5,6 ],7,name,'Index').
+struct_dt_elem_i([ 26,5,6 ],7,camelname,'Index').
+struct_dt_elem_i([ 26,5,6 ],7,length,4).
+struct_dt_elem_i([ 26,5,6 ],7,decimals,0).
+struct_dt_elem_i([ 26,5,6 ],7,sign,0).
+struct_dt_elem_i([ 26,5,6 ],7,type,[ 4,4,0 ]).
+struct_dt_elem_i([ 26,5,6 ],7,pic,'ZZZ9').
+struct_dt_elem_i([ 26,5,6 ],7,collection,'False').
+struct_dt_elem_i([ 26,5,6 ],7,'XmlType','Element').
+struct_dt_elem_i([ 26,5,6 ],7,'XmlName','').
+struct_dt_elem_i([ 26,5,6 ],7,'XmlNamespace','').
+struct_dt_elem_i([ 26,5,6 ],7,soaptype,'').
+struct_dt_elem_i([ 26,5,6 ],7,'XmlInclude',idXmlIncludeAlways).
+struct_dt_elem_i([ 26,5,6 ],7,'JsonName','').
+struct_dt_elem_i([ 26,5,6 ],8,name,'Subitems').
+struct_dt_elem_i([ 26,5,6 ],8,camelname,'SubItems').
+struct_dt_elem_i([ 26,5,6 ],8,length,4).
+struct_dt_elem_i([ 26,5,6 ],8,decimals,0).
+struct_dt_elem_i([ 26,5,6 ],8,type,[ [ 26,5,0 ],4,0 ]).
+struct_dt_elem_i([ 26,5,6 ],8,pic,'').
+struct_dt_elem_i([ 26,5,6 ],8,collection,'False').
+struct_dt_elem_i([ 26,5,6 ],8,'XmlName','').
+struct_dt_elem_i([ 26,5,6 ],8,'XmlNamespace','').
+struct_dt_elem_i([ 26,5,6 ],8,soaptype,'').
+struct_dt_elem_i([ 26,5,6 ],8,'XmlInclude',idXmlIncludeAlways).
+struct_dt_elem_i([ 26,5,6 ],8,'JsonName','').
+struct_dt_elem_i([ 26,1,1 ],1,name,'Id').
+struct_dt_elem_i([ 26,1,1 ],1,camelname,'Id').
+struct_dt_elem_i([ 26,1,1 ],1,length,128).
+struct_dt_elem_i([ 26,1,1 ],1,decimals,0).
+struct_dt_elem_i([ 26,1,1 ],1,type,[ 13,128,0 ]).
+struct_dt_elem_i([ 26,1,1 ],1,pic,'').
+struct_dt_elem_i([ 26,1,1 ],1,collection,'False').
+struct_dt_elem_i([ 26,1,1 ],1,'XmlType','Element').
+struct_dt_elem_i([ 26,1,1 ],1,'XmlName','').
+struct_dt_elem_i([ 26,1,1 ],1,'XmlNamespace','').
+struct_dt_elem_i([ 26,1,1 ],1,soaptype,'').
+struct_dt_elem_i([ 26,1,1 ],1,'XmlInclude',idXmlIncludeAlways).
+struct_dt_elem_i([ 26,1,1 ],1,'JsonName','').
+struct_dt_elem_i([ 26,1,1 ],2,name,'Type').
+struct_dt_elem_i([ 26,1,1 ],2,camelname,'Type').
+struct_dt_elem_i([ 26,1,1 ],2,basedon,18).
+struct_dt_elem_i([ 26,1,1 ],2,length,2).
+struct_dt_elem_i([ 26,1,1 ],2,decimals,0).
+struct_dt_elem_i([ 26,1,1 ],2,sign,0).
+struct_dt_elem_i([ 26,1,1 ],2,type,[ 4,2,0 ]).
+struct_dt_elem_i([ 26,1,1 ],2,pic,'Z9').
+struct_dt_elem_i([ 26,1,1 ],2,collection,'False').
+struct_dt_elem_i([ 26,1,1 ],2,'XmlType','Element').
+struct_dt_elem_i([ 26,1,1 ],2,'XmlName','').
+struct_dt_elem_i([ 26,1,1 ],2,'XmlNamespace','').
+struct_dt_elem_i([ 26,1,1 ],2,soaptype,'').
+struct_dt_elem_i([ 26,1,1 ],2,'XmlInclude',idXmlIncludeAlways).
+struct_dt_elem_i([ 26,1,1 ],2,'JsonName','').
+struct_dt_elem_i([ 26,1,1 ],3,name,'Description').
+struct_dt_elem_i([ 26,1,1 ],3,camelname,'Description').
+struct_dt_elem_i([ 26,1,1 ],3,length,256).
+struct_dt_elem_i([ 26,1,1 ],3,decimals,0).
+struct_dt_elem_i([ 26,1,1 ],3,type,[ 13,256,0 ]).
+struct_dt_elem_i([ 26,1,1 ],3,pic,'').
+struct_dt_elem_i([ 26,1,1 ],3,collection,'False').
+struct_dt_elem_i([ 26,1,1 ],3,'XmlType','Element').
+struct_dt_elem_i([ 26,1,1 ],3,'XmlName','').
+struct_dt_elem_i([ 26,1,1 ],3,'XmlNamespace','').
+struct_dt_elem_i([ 26,1,1 ],3,soaptype,'').
+struct_dt_elem_i([ 26,1,1 ],3,'XmlInclude',idXmlIncludeAlways).
+struct_dt_elem_i([ 26,1,1 ],3,'JsonName','').
 struct_dt_elem_i([ 26,6,7 ],1,name,'Menuid').
 struct_dt_elem_i([ 26,6,7 ],1,camelname,'MenuId').
 struct_dt_elem_i([ 26,6,7 ],1,length,4).
@@ -629,110 +799,7 @@ struct_dt_elem_i([ 26,6,8 ],4,'XmlNamespace','').
 struct_dt_elem_i([ 26,6,8 ],4,soaptype,'').
 struct_dt_elem_i([ 26,6,8 ],4,'XmlInclude',idXmlIncludeAlways).
 struct_dt_elem_i([ 26,6,8 ],4,'JsonName','').
-struct_dt_elem_i([ 26,5,6 ],1,name,'Code').
-struct_dt_elem_i([ 26,5,6 ],1,camelname,'Code').
-struct_dt_elem_i([ 26,5,6 ],1,length,20).
-struct_dt_elem_i([ 26,5,6 ],1,decimals,0).
-struct_dt_elem_i([ 26,5,6 ],1,type,[ 5,20,0 ]).
-struct_dt_elem_i([ 26,5,6 ],1,pic,'').
-struct_dt_elem_i([ 26,5,6 ],1,collection,'False').
-struct_dt_elem_i([ 26,5,6 ],1,'XmlType','Element').
-struct_dt_elem_i([ 26,5,6 ],1,'XmlName','').
-struct_dt_elem_i([ 26,5,6 ],1,'XmlNamespace','').
-struct_dt_elem_i([ 26,5,6 ],1,soaptype,'').
-struct_dt_elem_i([ 26,5,6 ],1,'XmlInclude',idXmlIncludeAlways).
-struct_dt_elem_i([ 26,5,6 ],1,'JsonName','').
-struct_dt_elem_i([ 26,5,6 ],2,name,'Title').
-struct_dt_elem_i([ 26,5,6 ],2,camelname,'Title').
-struct_dt_elem_i([ 26,5,6 ],2,length,64).
-struct_dt_elem_i([ 26,5,6 ],2,decimals,0).
-struct_dt_elem_i([ 26,5,6 ],2,type,[ 5,64,0 ]).
-struct_dt_elem_i([ 26,5,6 ],2,pic,'').
-struct_dt_elem_i([ 26,5,6 ],2,collection,'False').
-struct_dt_elem_i([ 26,5,6 ],2,'XmlType','Element').
-struct_dt_elem_i([ 26,5,6 ],2,'XmlName','').
-struct_dt_elem_i([ 26,5,6 ],2,'XmlNamespace','').
-struct_dt_elem_i([ 26,5,6 ],2,soaptype,'').
-struct_dt_elem_i([ 26,5,6 ],2,'XmlInclude',idXmlIncludeAlways).
-struct_dt_elem_i([ 26,5,6 ],2,'JsonName','').
-struct_dt_elem_i([ 26,5,6 ],3,name,'Url').
-struct_dt_elem_i([ 26,5,6 ],3,camelname,'URL').
-struct_dt_elem_i([ 26,5,6 ],3,length,256).
-struct_dt_elem_i([ 26,5,6 ],3,decimals,0).
-struct_dt_elem_i([ 26,5,6 ],3,type,[ 5,256,0 ]).
-struct_dt_elem_i([ 26,5,6 ],3,pic,'').
-struct_dt_elem_i([ 26,5,6 ],3,collection,'False').
-struct_dt_elem_i([ 26,5,6 ],3,'XmlType','Element').
-struct_dt_elem_i([ 26,5,6 ],3,'XmlName','').
-struct_dt_elem_i([ 26,5,6 ],3,'XmlNamespace','').
-struct_dt_elem_i([ 26,5,6 ],3,soaptype,'').
-struct_dt_elem_i([ 26,5,6 ],3,'XmlInclude',idXmlIncludeAlways).
-struct_dt_elem_i([ 26,5,6 ],3,'JsonName','').
-struct_dt_elem_i([ 26,5,6 ],4,name,'Linktarget').
-struct_dt_elem_i([ 26,5,6 ],4,camelname,'LinkTarget').
-struct_dt_elem_i([ 26,5,6 ],4,length,20).
-struct_dt_elem_i([ 26,5,6 ],4,decimals,0).
-struct_dt_elem_i([ 26,5,6 ],4,type,[ 5,20,0 ]).
-struct_dt_elem_i([ 26,5,6 ],4,pic,'').
-struct_dt_elem_i([ 26,5,6 ],4,collection,'False').
-struct_dt_elem_i([ 26,5,6 ],4,'XmlType','Element').
-struct_dt_elem_i([ 26,5,6 ],4,'XmlName','').
-struct_dt_elem_i([ 26,5,6 ],4,'XmlNamespace','').
-struct_dt_elem_i([ 26,5,6 ],4,soaptype,'').
-struct_dt_elem_i([ 26,5,6 ],4,'XmlInclude',idXmlIncludeAlways).
-struct_dt_elem_i([ 26,5,6 ],4,'JsonName','').
-struct_dt_elem_i([ 26,5,6 ],5,name,'Image').
-struct_dt_elem_i([ 26,5,6 ],5,camelname,'Image').
-struct_dt_elem_i([ 26,5,6 ],5,length,256).
-struct_dt_elem_i([ 26,5,6 ],5,decimals,0).
-struct_dt_elem_i([ 26,5,6 ],5,type,[ 5,256,0 ]).
-struct_dt_elem_i([ 26,5,6 ],5,pic,'').
-struct_dt_elem_i([ 26,5,6 ],5,collection,'False').
-struct_dt_elem_i([ 26,5,6 ],5,'XmlType','Element').
-struct_dt_elem_i([ 26,5,6 ],5,'XmlName','').
-struct_dt_elem_i([ 26,5,6 ],5,'XmlNamespace','').
-struct_dt_elem_i([ 26,5,6 ],5,soaptype,'').
-struct_dt_elem_i([ 26,5,6 ],5,'XmlInclude',idXmlIncludeAlways).
-struct_dt_elem_i([ 26,5,6 ],5,'JsonName','').
-struct_dt_elem_i([ 26,5,6 ],6,name,'Description').
-struct_dt_elem_i([ 26,5,6 ],6,camelname,'Description').
-struct_dt_elem_i([ 26,5,6 ],6,length,64).
-struct_dt_elem_i([ 26,5,6 ],6,decimals,0).
-struct_dt_elem_i([ 26,5,6 ],6,type,[ 5,64,0 ]).
-struct_dt_elem_i([ 26,5,6 ],6,pic,'').
-struct_dt_elem_i([ 26,5,6 ],6,collection,'False').
-struct_dt_elem_i([ 26,5,6 ],6,'XmlType','Element').
-struct_dt_elem_i([ 26,5,6 ],6,'XmlName','').
-struct_dt_elem_i([ 26,5,6 ],6,'XmlNamespace','').
-struct_dt_elem_i([ 26,5,6 ],6,soaptype,'').
-struct_dt_elem_i([ 26,5,6 ],6,'XmlInclude',idXmlIncludeAlways).
-struct_dt_elem_i([ 26,5,6 ],6,'JsonName','').
-struct_dt_elem_i([ 26,5,6 ],7,name,'Index').
-struct_dt_elem_i([ 26,5,6 ],7,camelname,'Index').
-struct_dt_elem_i([ 26,5,6 ],7,length,4).
-struct_dt_elem_i([ 26,5,6 ],7,decimals,0).
-struct_dt_elem_i([ 26,5,6 ],7,sign,0).
-struct_dt_elem_i([ 26,5,6 ],7,type,[ 4,4,0 ]).
-struct_dt_elem_i([ 26,5,6 ],7,pic,'ZZZ9').
-struct_dt_elem_i([ 26,5,6 ],7,collection,'False').
-struct_dt_elem_i([ 26,5,6 ],7,'XmlType','Element').
-struct_dt_elem_i([ 26,5,6 ],7,'XmlName','').
-struct_dt_elem_i([ 26,5,6 ],7,'XmlNamespace','').
-struct_dt_elem_i([ 26,5,6 ],7,soaptype,'').
-struct_dt_elem_i([ 26,5,6 ],7,'XmlInclude',idXmlIncludeAlways).
-struct_dt_elem_i([ 26,5,6 ],7,'JsonName','').
-struct_dt_elem_i([ 26,5,6 ],8,name,'Subitems').
-struct_dt_elem_i([ 26,5,6 ],8,camelname,'SubItems').
-struct_dt_elem_i([ 26,5,6 ],8,length,4).
-struct_dt_elem_i([ 26,5,6 ],8,decimals,0).
-struct_dt_elem_i([ 26,5,6 ],8,type,[ [ 26,5,0 ],4,0 ]).
-struct_dt_elem_i([ 26,5,6 ],8,pic,'').
-struct_dt_elem_i([ 26,5,6 ],8,collection,'False').
-struct_dt_elem_i([ 26,5,6 ],8,'XmlName','').
-struct_dt_elem_i([ 26,5,6 ],8,'XmlNamespace','').
-struct_dt_elem_i([ 26,5,6 ],8,soaptype,'').
-struct_dt_elem_i([ 26,5,6 ],8,'XmlInclude',idXmlIncludeAlways).
-struct_dt_elem_i([ 26,5,6 ],8,'JsonName','').
+struct_dt_elem_i([ 26,1,1 ],2,pic,'ZZZZZZZZ9').
 struct_dt_elem_i([ 26,6,7 ],2,pic,'ZZZZZZZZ9').
 struct_dt_elem_i([ 26,6,7 ],3,pic,'ZZZZZZZZ9').
 struct_dt_elem_i([ 26,6,7 ],4,pic,'ZZZZZZZZ9').
@@ -744,7 +811,7 @@ struct_dt_elem_i([ 26,6,8 ],4,pic,'ZZZZZZZZ9').
  
  
  
-sub_info_i(146,'Start',1,10,[ [ 'Websession' ],[ 'Usuario','Fecha','Titulo',[ t('Webcomp1',3),t('Object',3) ] ] ]).
+sub_info_i(146,'Start',2,11,[ [ 'Websession' ],[ 'Usuario','Fecha','Titulo',[ t('Webcomp1',3),t('Object',3) ] ] ]).
  
 pgm_parm_i(web,28,'LOGIN',[],[]).
 pgm_parm_i(web,85,'SIDEBAR',[],[]).

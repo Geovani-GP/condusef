@@ -1,0 +1,2807 @@
+﻿/* [gx-css-import ignore - start] */
+.BaseRBtn{
+	display:inline-block;
+}
+.BaseRBtn span, .RoundedBtn input{
+	display:block;
+	float: left;
+}
+.BaseRBtn .BtnLeft{
+	background: transparent no-repeat scroll 0 0;
+}
+.BaseRBtn .BtnRight{
+	background: transparent no-repeat scroll right 0;
+}
+.BaseRBtn .BtnBackground{
+	overflow:hidden;
+	background: transparent repeat-x scroll;
+}
+.BaseRBtn .BtnText{
+	border: 0px;
+	background: transparent;
+	margin:0;
+	white-space:nowrap;
+	width:auto;
+	overflow:visible;
+}
+/* [gx-css-import ignore - end] */
+/* [gx-css-import ignore - start] */
+
+@keyframes entermask
+{
+  from {background-color: transparent;}
+  to {background-color: black;}
+}
+
+@keyframes leavemask
+{
+  from {background-color: black;}
+  to {background-color: transparent;}
+}
+
+div[data-align='center'] > div[data-align-outer] {
+	display: table;
+	margin-left: auto;
+	margin-right: auto;
+}
+div[data-align='right'] > div[data-align-outer] {
+	display: table;
+	margin-left: auto;
+}
+div[data-valign='middle'] > div[data-align-outer] {
+	display: table;
+	height: 100%;
+	width: 100%;
+}
+div[data-valign='middle'] > div[data-align-outer] > div[data-align-inner] {
+	display: table-cell;
+	vertical-align: middle;
+}
+div[data-valign='bottom'] > div[data-align-outer] {
+	display: table;
+	height: 100%;
+	width: 100%;
+}
+div[data-valign='bottom'] > div[data-align-outer] > div[data-align-inner] {
+	display: table-cell;
+	vertical-align: bottom;
+}
+td[data-cell-valign='top'] {	
+	vertical-align: top;
+}
+td[data-cell-valign='middle'] {	
+	vertical-align: middle;
+}
+td[data-cell-valign='bottom'] {	
+	vertical-align: bottom;
+}
+div[data-align='center'] > div[data-align-outer] {
+	width: auto;
+}
+div[data-align='right'] > div[data-align-outer] {
+	width: auto;
+}
+
+.gx-responsive-grid .gx-remove-row {
+  position: absolute;
+  z-index: 1;
+}
+
+.gx-popup-frame-mask{
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+}
+
+form[tabindex="-1"]{
+	outline:none;
+}
+.gx-prompt.gx-disabled {
+        display:none;
+}
+.gx-sr-only{
+	display:none !important;
+}
+[data-gx-sr-only]{
+	display:none !important;
+}
+.gx-tbldsp-container {
+	display:table;
+}
+.gx-tbldsp-container > div {
+	display:table-cell;
+}
+
+/* [gx-css-import ignore - end] */
+.GridRow
+{
+	border-style: none;
+	border-width: 0px;
+}
+.Image,.ImageDragging,.ImageAcceptDrag,.ImageNoAcceptDrag,.PoweredBy,.TabPaging,.TabPagingNext,.TabPagingPrevious,.ImageHeaderBackground,.ImageTopHeader,.ResponsiveImage,.ImageInButton,.PagingButtons,.PagingButtonsFirst,.PagingButtonsPrevious,.PagingButtonsNext,.PagingButtonsLast,.ImageTop,.ImageHandCenter,.ImageHandCenter:hover,.HeaderImage1
+{
+	border-style: none;
+	border-width: 0px;
+}
+.PagingButtons,.PagingButtonsFirst,.PagingButtonsPrevious,.PagingButtonsNext,.PagingButtonsLast
+{
+	cursor: pointer;
+}
+.PagingButtonsFirst
+{
+	background-repeat: no-repeat;
+	background-image: url(First.gif);
+	height: 20px;
+	width: 20px;
+}
+.PagingButtonsPrevious
+{
+	background-repeat: no-repeat;
+	background-image: url(Previous.gif);
+	height: 20px;
+	width: 20px;
+}
+.PagingButtonsNext
+{
+	background-repeat: no-repeat;
+	background-image: url(Next.gif);
+	height: 20px;
+	width: 20px;
+}
+.PagingButtonsLast
+{
+	background-repeat: no-repeat;
+	background-image: url(Last.gif);
+	height: 20px;
+	width: 20px;
+}
+.ImageTop
+{
+	cursor: default;
+	vertical-align: top;
+}
+.ImageHandCenter,.ImageHandCenter:hover
+{
+	margin-left: 3px;
+	margin-top: 3px;
+	cursor: pointer;
+	vertical-align: middle;
+}
+.ImageHandCenter:hover
+{
+	margin-left: 2px;
+	margin-top: 2px;
+	background-color: #f0f0f0;
+}
+.HeaderImage1
+{
+	height: 0px;
+	width: 0px;
+}
+.Tab
+{
+	border-style: none;
+	border-width: 0px;
+}
+.EmbeddedPage
+{
+	border-style: none;
+	border-width: 0px;
+}
+.Hyperlink
+{
+	border-style: none;
+	border-width: 0px;
+}
+.GridColumn,.ActionColumn,.WWColumn,.WWActionColumn,.WWOptionalColumn,.OptionalColumn
+{
+	border-style: none;
+	border-width: 0px;
+}
+.Section,.WWActionsCell,.ViewActionsCell,.ViewGridActionsCell,.WWFiltersCell,.OrdersCell,.WWAdvancedBarCell,.ViewAdvancedBarCell,.PromptAdvancedBarCell,.WWGridCell,.ViewGridCell,.ViewGridCellAdvanced,.ToggleCell,.VerticalCenteredCell,.TabContainer
+{
+	border-style: none;
+	border-width: 0px;
+}
+.ActionGroup
+{
+	border-style: none;
+	border-width: 0px;
+}
+BODY
+{
+	height: inherit;
+}
+HTML
+{
+	height: 100%;
+}
+.Calendar 
+{
+	background-color: #fff;
+	border-bottom-color: #000;
+	border-left-color: #fff;
+	border-right-color: #000;
+	border-top-color: #fff;
+	position: relative;
+	display: none;
+	cursor: default;
+	font-family: Verdana, Arial;
+	font-size: 8pt;
+	font-style: normal;
+	font-variant: normal;
+	color: #7d7d7d;
+}
+.Calendar  TABLE
+{
+	background-color: #fff;
+	border-bottom-color: #000;
+	border-left-color: #fff;
+	border-right-color: #000;
+	border-top-color: #fff;
+	border-style: solid;
+	border-width: 1px;
+	cursor: default;
+	font-family: Verdana, Arial;
+	font-size: 8pt;
+	font-style: normal;
+	font-variant: normal;
+	color: #333;
+	text-align: center;
+}
+.Calendar  TABLE .wn 
+{
+	background-color: #d3d4d3;
+	padding-bottom: 2px;
+	padding-left: 2px;
+	padding-right: 2px;
+	padding-top: 2px;
+	font-family: Verdana, Arial;
+	font-size: 8pt;
+	font-style: normal;
+	font-variant: normal;
+	color: #333;
+}
+.Calendar  .CalendarButton 
+{
+	background-color: #e4e5e6;
+	border-bottom-color: #000;
+	border-left-color: #fff;
+	border-right-color: #000;
+	border-top-color: #fff;
+	border-style: solid;
+	border-width: 1px;
+	padding-bottom: 1px;
+	padding-left: 1px;
+	padding-right: 1px;
+	padding-top: 1px;
+	font-family: Verdana, Arial;
+	font-size: 8pt;
+	font-style: normal;
+	font-variant: normal;
+	color: #333;
+	text-align: center;
+}
+.Calendar  .nav 
+{
+	background-color: #e4e5e6;
+	background-image: url(menuarrow.gif);
+	background-position: 100% 100%;
+	background-repeat: no-repeat;
+	font-family: Verdana, Arial;
+	font-size: 8pt;
+	font-style: normal;
+	font-variant: normal;
+	color: #333;
+}
+.Calendar  THEAD
+{
+	font-family: Verdana, Arial;
+	font-size: 8pt;
+	font-style: normal;
+	font-variant: normal;
+}
+.Calendar  THEAD .headrow 
+{
+	font-family: Verdana, Arial;
+	font-size: 8pt;
+	font-style: normal;
+	font-variant: normal;
+	color: #333;
+}
+.Calendar  THEAD .daynames 
+{
+	font-family: Verdana, Arial;
+	font-size: 8pt;
+	font-style: normal;
+	font-variant: normal;
+	color: #333;
+}
+.Calendar  THEAD .name 
+{
+	background-color: #d3d4d3;
+	padding-bottom: 2px;
+	padding-left: 2px;
+	padding-right: 2px;
+	padding-top: 2px;
+	font-family: Verdana, Arial;
+	font-size: 8pt;
+	font-style: normal;
+	font-variant: normal;
+	color: #333;
+	text-align: center;
+}
+.Calendar  THEAD .weekend 
+{
+	font-family: Verdana, Arial;
+	font-size: 8pt;
+	font-style: normal;
+	font-variant: normal;
+	color: #d84523;
+}
+.Calendar  THEAD .hilite 
+{
+	border-bottom-color: #000;
+	border-left-color: #fff;
+	border-right-color: #000;
+	border-top-color: #fff;
+	border-style: solid;
+	border-width: 1px;
+	padding-bottom: 1px;
+	padding-left: 1px;
+	padding-right: 1px;
+	padding-top: 1px;
+	font-family: Verdana, Arial;
+	font-size: 8pt;
+	font-style: normal;
+	font-variant: normal;
+	color: #333;
+}
+.Calendar  THEAD .active 
+{
+	border-bottom-color: #000;
+	border-left-color: #fff;
+	border-right-color: #000;
+	border-top-color: #fff;
+	border-style: solid;
+	border-width: 1px;
+	padding-bottom: 2px;
+	padding-left: 2px;
+	padding-right: 2px;
+	padding-top: 2px;
+	font-family: Verdana, Arial;
+	font-size: 8pt;
+	font-style: normal;
+	font-variant: normal;
+	color: #333;
+}
+.Calendar  THEAD .CalendarTitle 
+{
+	background-color: #747474;
+	border-bottom-color: #000;
+	border-left-color: #000;
+	border-right-color: #000;
+	border-top-color: #000;
+	border-style: solid;
+	border-width: 1px;
+	padding-bottom: 2px;
+	padding-left: 2px;
+	padding-right: 2px;
+	padding-top: 2px;
+	font-family: Verdana, Arial;
+	font-size: 8pt;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: bold;
+	color: #fff;
+	text-align: center;
+}
+.Calendar  TBODY
+{
+	padding-bottom: 2px;
+	padding-left: 2px;
+	padding-right: 2px;
+	padding-top: 2px;
+	font-family: Verdana, Arial;
+	font-size: 8pt;
+	font-style: normal;
+	font-variant: normal;
+	color: #333;
+	text-align: center;
+}
+.Calendar  TBODY .day 
+{
+	padding-bottom: 2px;
+	padding-left: 2px;
+	padding-right: 2px;
+	padding-top: 2px;
+	font-family: Verdana, Arial;
+	font-size: 8pt;
+	font-style: normal;
+	font-variant: normal;
+	color: #333;
+	text-align: center;
+}
+.Calendar  TBODY .rowhilite 
+{
+	padding-bottom: 2px;
+	padding-left: 2px;
+	padding-right: 2px;
+	padding-top: 2px;
+	font-family: Verdana, Arial;
+	font-size: 8pt;
+	font-style: normal;
+	font-variant: normal;
+	color: #333;
+	text-align: center;
+}
+.Calendar  TBODY .rowhilite  TD
+{
+	background-color: #e4e5e6;
+	color: #333;
+}
+.Calendar  TBODY .emptyrow 
+{
+	display: none;
+}
+.Calendar  TBODY .emptycell 
+{
+	visibility: hidden;
+	font-family: Verdana, Arial;
+	font-size: 8pt;
+	font-style: normal;
+	font-variant: normal;
+	color: #333;
+}
+.Calendar  TBODY TD .hilite 
+{
+	border-bottom-color: #fff;
+	border-left-color: #000;
+	border-right-color: #000;
+	border-top-color: #fff;
+	border-style: solid;
+	border-width: 1px;
+	padding-bottom: 1px;
+	padding-left: 1px;
+	padding-right: 3px;
+	padding-top: 1px;
+}
+.Calendar  TBODY TD .active 
+{
+	border-bottom-color: ButtonHighlight;
+	border-left-color: ButtonHighlight;
+	border-right-color: ButtonHighlight;
+	border-top-color: ButtonHighlight;
+	border-style: solid;
+	border-width: 1px;
+	padding-bottom: 0px;
+	padding-left: 2px;
+	padding-right: 2px;
+	padding-top: 2px;
+}
+.Calendar  TBODY TD .selected 
+{
+	background-color: ButtonFace;
+	border-bottom-color: ButtonHighlight;
+	border-left-color: ButtonHighlight;
+	border-right-color: ButtonHighlight;
+	border-top-color: ButtonHighlight;
+	border-style: solid;
+	border-width: 1px;
+	padding-bottom: 0px;
+	padding-left: 2px;
+	padding-right: 2px;
+	padding-top: 2px;
+	font-weight: bold;
+	color: ButtonText;
+}
+.Calendar  TBODY TD .weekend 
+{
+	color: #f00;
+}
+.Calendar  TBODY TD .today 
+{
+	font-weight: bold;
+	color: #00f;
+}
+.Calendar  TBODY TD .disabled 
+{
+	color: GrayText;
+}
+.Calendar  TBODY TD .time 
+{
+	background-color: ButtonFace;
+	padding-bottom: 1px;
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-top: 1px;
+	text-align: center;
+}
+.Calendar  TBODY TD .time  .hour 
+{
+	background-color: Menu;
+	border-bottom-color: #889;
+	border-left-color: #889;
+	border-right-color: #889;
+	border-top-color: #889;
+	border-style: solid;
+	border-width: 1px;
+	padding-bottom: 4px;
+	padding-left: 3px;
+	padding-right: 3px;
+	padding-top: 0px;
+	font-weight: bold;
+}
+.Calendar  TBODY TD .time  .minute 
+{
+	background-color: Menu;
+	border-bottom-color: #889;
+	border-left-color: #889;
+	border-right-color: #889;
+	border-top-color: #889;
+	border-style: solid;
+	border-width: 1px;
+	padding-bottom: 4px;
+	padding-left: 3px;
+	padding-right: 3px;
+	padding-top: 0px;
+	font-weight: bold;
+}
+.Calendar  TBODY TD .time  .ampm 
+{
+	background-color: Menu;
+	border-bottom-color: #889;
+	border-left-color: #889;
+	border-right-color: #889;
+	border-top-color: #889;
+	border-style: solid;
+	border-width: 1px;
+	padding-bottom: 4px;
+	padding-left: 3px;
+	padding-right: 3px;
+	padding-top: 0px;
+	font-weight: bold;
+	text-align: center;
+}
+.Calendar  TBODY TD .time  .colon 
+{
+	padding-bottom: 0px;
+	padding-left: 3px;
+	padding-right: 2px;
+	padding-top: 0px;
+	font-weight: bold;
+}
+.Calendar  TBODY TD .time  SPAN .hilite 
+{
+	background-color: Highlight;
+	border-bottom-color: #000;
+	border-left-color: #000;
+	border-right-color: #000;
+	border-top-color: #000;
+	color: HighlightText;
+}
+.Calendar  TBODY TD .time  SPAN .active 
+{
+	background-color: #000;
+	border-bottom-color: #f00;
+	border-left-color: #f00;
+	border-right-color: #f00;
+	border-top-color: #f00;
+	color: #0f0;
+}
+.Calendar  TBODY TD.hilite
+{
+	border-bottom-color: #000;
+	border-left-color: #fff;
+	border-right-color: #000;
+	border-top-color: #fff;
+	border-style: solid;
+	border-width: 1px;
+	padding-bottom: 2px;
+	padding-left: 2px;
+	padding-right: 2px;
+	padding-top: 2px;
+	font-family: Verdana, Arial;
+	font-size: 8pt;
+	font-style: normal;
+	font-variant: normal;
+	color: #333;
+	text-align: center;
+}
+.Calendar  TBODY TD.active
+{
+	border-bottom-color: #000;
+	border-left-color: #fff;
+	border-right-color: #000;
+	border-top-color: #fff;
+	border-style: solid;
+	border-width: 1px;
+	padding-bottom: 2px;
+	padding-left: 2px;
+	padding-right: 2px;
+	padding-top: 2px;
+	font-family: Verdana, Arial;
+	font-size: 8pt;
+	font-style: normal;
+	font-variant: normal;
+	color: #333;
+}
+.Calendar  TBODY TD.selected
+{
+	background-color: #d3d4d3;
+	border-bottom-color: #fff;
+	border-left-color: #000;
+	border-right-color: #fff;
+	border-top-color: #000;
+	border-style: solid;
+	border-width: 1px;
+	padding-bottom: 2px;
+	padding-left: 2px;
+	padding-right: 2px;
+	padding-top: 2px;
+	font-family: Verdana, Arial;
+	font-size: 8pt;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: bold;
+	color: #333;
+	text-align: center;
+}
+.Calendar  TBODY TD.weekend
+{
+	font-family: Verdana, Arial;
+	font-size: 8pt;
+	font-style: normal;
+	font-variant: normal;
+	color: #d84523;
+}
+.Calendar  TBODY TD.today
+{
+	padding-bottom: 2px;
+	padding-left: 2px;
+	padding-right: 2px;
+	padding-top: 2px;
+	font-family: Verdana, Arial;
+	font-size: 8pt;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: bold;
+	color: #333;
+}
+.Calendar  TBODY TD.disabled
+{
+	color: #e4e5e6;
+}
+.Calendar  TFOOT .footrow 
+{
+	font-family: Verdana, Arial;
+	font-size: 8pt;
+	font-style: normal;
+	font-variant: normal;
+}
+.Calendar  TFOOT .ttip 
+{
+	background-color: #e4e5e6;
+	border-bottom-color: #fff;
+	border-left-color: #767676;
+	border-right-color: #fff;
+	border-top-color: #767676;
+	border-style: solid;
+	border-width: 1px;
+	padding-bottom: 1px;
+	padding-left: 1px;
+	padding-right: 1px;
+	padding-top: 1px;
+	font-family: Verdana, Arial;
+	font-size: 8pt;
+	font-style: normal;
+	font-variant: normal;
+	color: #333;
+	text-align: center;
+}
+.Calendar  TFOOT .hilite 
+{
+	background-color: #d3d4d3;
+	border-bottom-color: #000;
+	border-left-color: #fff;
+	border-right-color: #000;
+	border-top-color: #fff;
+	border-style: solid;
+	border-width: 1px;
+	padding-bottom: 1px;
+	padding-left: 1px;
+	padding-right: 1px;
+	padding-top: 1px;
+	font-family: Verdana, Arial;
+	font-size: 8pt;
+	font-style: normal;
+	font-variant: normal;
+}
+.Calendar  TFOOT .active 
+{
+	border-bottom-color: #fff;
+	border-left-color: #000;
+	border-right-color: #fff;
+	border-top-color: #000;
+	border-style: solid;
+	border-width: 1px;
+	padding-bottom: 0px;
+	padding-left: 2px;
+	padding-right: 0px;
+	padding-top: 2px;
+	font-family: Verdana, Arial;
+	font-size: 8pt;
+	font-style: normal;
+	font-variant: normal;
+	color: #333;
+}
+.Calendar  TD.time
+{
+	background-color: #d3d4d3;
+	padding-bottom: 1px;
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-top: 1px;
+	font-family: Verdana, Arial;
+	font-size: 8pt;
+	font-style: normal;
+	font-variant: normal;
+	text-align: center;
+}
+.Calendar  TD.time .hour 
+{
+	background-color: #fff;
+	border-bottom-color: #969696;
+	border-left-color: #969696;
+	border-right-color: #969696;
+	border-top-color: #969696;
+	border-style: solid;
+	border-width: 1px;
+	padding-bottom: 4px;
+	padding-left: 3px;
+	padding-right: 3px;
+	padding-top: 0px;
+	font-family: Verdana, Arial;
+	font-size: 8pt;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: bold;
+	color: #333;
+}
+.Calendar  TD.time .minute 
+{
+	background-color: #fff;
+	border-bottom-color: #969696;
+	border-left-color: #969696;
+	border-right-color: #969696;
+	border-top-color: #969696;
+	border-style: solid;
+	border-width: 1px;
+	padding-bottom: 4px;
+	padding-left: 3px;
+	padding-right: 3px;
+	padding-top: 0px;
+	font-family: Verdana, Arial;
+	font-size: 8pt;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: bold;
+	color: #333;
+}
+.Calendar  TD.time .ampm 
+{
+	background-color: #fff;
+	border-bottom-color: #969696;
+	border-left-color: #969696;
+	border-right-color: #969696;
+	border-top-color: #969696;
+	border-style: solid;
+	border-width: 1px;
+	padding-bottom: 4px;
+	padding-left: 3px;
+	padding-right: 3px;
+	padding-top: 0px;
+	font-family: Verdana, Arial;
+	font-size: 8pt;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: bold;
+	color: #333;
+	text-align: center;
+}
+.Calendar  TD.time SPAN.hilite
+{
+	background-color: #969696;
+	border-bottom-color: #000;
+	border-left-color: #000;
+	border-right-color: #000;
+	border-top-color: #000;
+	border-style: solid;
+	border-width: 1px;
+	font-family: Verdana, Arial;
+	font-size: 8pt;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: bold;
+	color: #fff;
+}
+.Calendar  TD.time SPAN.active
+{
+	background-color: #767676;
+	border-bottom-color: #fff;
+	border-left-color: #fff;
+	border-right-color: #fff;
+	border-top-color: #fff;
+	border-style: solid;
+	border-width: 2px;
+	margin-bottom: 1px;
+	margin-left: 1px;
+	margin-right: 1px;
+	margin-top: 1px;
+	padding-bottom: 2px;
+	padding-left: 2px;
+	padding-right: 2px;
+	padding-top: 2px;
+	font-family: Verdana, Arial;
+	font-size: 8pt;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: bold;
+	color: #fff;
+}
+.Calendar  TD.time .colon 
+{
+	padding-bottom: 0px;
+	padding-left: 3px;
+	padding-right: 2px;
+	padding-top: 0px;
+	font-family: Verdana, Arial;
+	font-size: 8pt;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: bold;
+	color: #333;
+}
+.CalendarCombo 
+{
+	background-color: #fff;
+	border-bottom-color: #000;
+	border-left-color: #fff;
+	border-right-color: #000;
+	border-top-color: #fff;
+	border-style: solid;
+	border-width: 1px;
+	left: 0px;
+	padding-bottom: 1px;
+	padding-left: 1px;
+	padding-right: 1px;
+	padding-top: 1px;
+	position: absolute;
+	top: 0px;
+	width: 4em;
+	display: none;
+	cursor: default;
+	font-family: Verdana, Arial;
+	font-size: 8pt;
+	font-style: normal;
+	font-variant: normal;
+	color: #333;
+}
+.CalendarCombo  .label 
+{
+	padding-bottom: 1px;
+	padding-left: 1px;
+	padding-right: 1px;
+	padding-top: 1px;
+	font-family: Verdana, Arial;
+	font-size: 8pt;
+	font-style: normal;
+	font-variant: normal;
+	color: #333;
+	text-align: center;
+}
+.CalendarCombo  .label-IEfix 
+{
+	padding-bottom: 1px;
+	padding-left: 1px;
+	padding-right: 1px;
+	padding-top: 1px;
+	width: 4em;
+	font-family: Verdana, Arial;
+	font-size: 8pt;
+	font-style: normal;
+	font-variant: normal;
+	color: #333;
+	text-align: center;
+}
+.CalendarCombo  .active 
+{
+	border-bottom-color: #969696;
+	border-left-color: #969696;
+	border-right-color: #969696;
+	border-top-color: #969696;
+	border-style: solid;
+	border-width: 1px;
+	padding-bottom: 2px;
+	padding-left: 2px;
+	padding-right: 2px;
+	padding-top: 2px;
+	font-family: Verdana, Arial;
+	font-size: 8pt;
+	font-style: normal;
+	font-variant: normal;
+	color: #333;
+}
+.CalendarCombo  .hilite 
+{
+	background-color: #969696;
+	border-bottom-color: #d3d4d3;
+	border-left-color: #d3d4d3;
+	border-right-color: #d3d4d3;
+	border-top-color: #d3d4d3;
+	border-style: solid;
+	border-width: 1px;
+	padding-bottom: 2px;
+	padding-left: 2px;
+	padding-right: 2px;
+	padding-top: 2px;
+	font-family: Verdana, Arial;
+	font-size: 8pt;
+	font-style: normal;
+	font-variant: normal;
+	color: #fff;
+}
+DIV.suggestions
+{
+	background-color: white;
+	border-bottom-color: black;
+	border-left-color: black;
+	border-right-color: black;
+	border-top-color: black;
+	border-style: solid;
+	border-width: 1px;
+	box-sizing: border-box;
+	position: absolute;
+	-moz-box-sizing: border-box;
+	font-family: Arial, Verdana;
+	font-size: 9px;
+}
+DIV.suggestions DIV
+{
+	padding-bottom: 0px;
+	padding-left: 3px;
+	padding-right: 3px;
+	padding-top: 0px;
+	cursor: default;
+	font-family: Arial, Verdana;
+	font-size: 9px;
+}
+DIV.suggestions DIV.current
+{
+	background-color: #b0c4de;
+	font-family: Arial, Verdana;
+	font-size: 9px;
+	color: white;
+}
+.ErrorViewerBullet div 
+{
+	margin-left: 5px;
+	display: list-item;
+	list-style-position: inside;
+}
+.GeoLocOption 
+{
+	margin-left: 4px;
+	margin-right: 4px;
+	position: relative;
+	top: 2px;
+	cursor: pointer;
+}
+.ComponentTrigger 
+{
+	margin-left: 4px;
+	cursor: pointer;
+}
+.dojoDialog 
+{
+	background-color: #eee;
+	border-bottom-color: #999;
+	border-left-color: #999;
+	border-right-color: #999;
+	border-top-color: #999;
+	border-style: solid;
+	border-width: 1px;
+	padding-bottom: 4px;
+	padding-left: 4px;
+	padding-right: 4px;
+	padding-top: 4px;
+}
+#gx_ajax_notification
+{
+	margin-bottom: 0px;
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-top: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-top: 5px;
+	position: absolute;
+	top: 21px;
+	height: 20px;
+	width: 100%;
+	display: block;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 1.3em;
+	font-weight: bold;
+	text-align: center;
+}
+.PopupHeader 
+{
+	background-image: url(popupheader.gif);
+	float: left;
+	width: 100%;
+	cursor: move;
+	font-family: Verdana, Arial;
+	font-size: 9pt;
+	font-weight: bold;
+	color: white;
+	text-indent: 3px;
+	vertical-align: bottom;
+	width:100% !important;
+	 top:0px !important;
+	 left:0px !important;
+}
+.PopupHeaderButton 
+{
+	background-image: url(Close.gif);
+	background-position: right;
+	float: right;
+	margin-right: 2px;
+	margin-top: 2px;
+	height: 16px;
+	width: 16px;
+	cursor: pointer;
+	text-align: right;
+}
+.PopupContent  IFRAME
+{
+	border-width: 0px;
+}
+.RowDeleted 
+{
+	text-decoration: line-through;
+}
+.dp_container 
+{
+	position: relative;
+}
+UL.Tabs
+{
+	margin-bottom: 0px;
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-top: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-top: 0px;
+	list-style-type: none;
+}
+UL.Tabs LI.Tab
+{
+	float: left;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-top: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-top: 0px;
+}
+UL.Tabs LI.Tab A.TabFirst
+{
+	background-attachment: scroll;
+	background-color: transparent;
+	background-image: url(TabBeginUnselected.gif);
+	background-position: 0 0;
+	background-repeat: no-repeat;
+	padding-left: 35px;
+}
+UL.Tabs LI.Tab A
+{
+	display: block;
+	text-decoration: none;
+}
+UL.Tabs LI.Tab A.TabLeft
+{
+	background-attachment: scroll;
+	background-color: transparent;
+	background-image: none;
+	background-position: 0 0;
+	background-repeat: no-repeat;
+	margin-left: -18px;
+	padding-left: 18px;
+}
+UL.Tabs LI.Tab SPAN
+{
+	display: block;
+}
+UL.Tabs LI.Tab SPAN.TabBackground
+{
+	background-attachment: scroll;
+	background-color: transparent;
+	background-image: url(TabUnselected.gif);
+	background-repeat: repeat-x;
+	overflow: hidden;
+}
+UL.Tabs LI.Tab SPAN.TabText
+{
+	padding-bottom: 2px;
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-top: 7px;
+	white-space: nowrap;
+	font-family: Verdana;
+	font-size: 10pt;
+	font-weight: bold;
+	text-decoration: none;
+	color: #6b6b6b;
+}
+UL.Tabs LI.Tab SPAN.TabRight
+{
+	background-attachment: scroll;
+	background-color: transparent;
+	background-image: url(TabUnselectedUnselected.gif);
+	background-position: right 0;
+	background-repeat: no-repeat;
+	padding-right: 35px;
+}
+UL.Tabs LI.Tab SPAN.TabLast
+{
+	background-attachment: scroll;
+	background-color: transparent;
+	background-image: url(TabEndUnselected.gif);
+	background-position: right 0;
+	background-repeat: no-repeat;
+	padding-right: 35px;
+}
+UL.Tabs LI.TabSelected
+{
+	position: relative;
+}
+UL.Tabs LI.TabSelected A
+{
+	float: left;
+	position: relative;
+}
+UL.Tabs LI.TabSelected SPAN
+{
+	float: left;
+	position: relative;
+}
+UL.Tabs LI.TabSelected A.TabFirst
+{
+	background-attachment: scroll;
+	background-color: transparent;
+	background-image: url(TabBeginSelected.gif);
+	background-position: 0 0;
+	background-repeat: no-repeat;
+	padding-left: 35px;
+}
+UL.Tabs LI.TabSelected A.TabLeft
+{
+	background-attachment: scroll;
+	background-color: transparent;
+	background-image: url(TabUnselectedSelected.gif);
+	background-position: 0 0;
+	background-repeat: no-repeat;
+	margin-left: -35px;
+	padding-left: 35px;
+}
+UL.Tabs LI.TabSelected SPAN.TabBackground
+{
+	background-attachment: scroll;
+	background-image: url(TabSelected.gif);
+	background-repeat: repeat-x;
+}
+UL.Tabs LI.TabSelected SPAN.TabText
+{
+	color: white;
+}
+UL.Tabs LI.TabSelected SPAN.TabRight
+{
+	background-attachment: scroll;
+	background-color: transparent;
+	background-image: url(TabSelectedUnselected.gif);
+	background-position: right 0;
+	background-repeat: no-repeat;
+	margin-right: 0px;
+	padding-right: 35px;
+}
+UL.Tabs LI.TabSelected SPAN.TabLast
+{
+	background-attachment: scroll;
+	background-color: transparent;
+	background-image: url(TabEndSelected.gif);
+	background-position: right 0;
+	background-repeat: no-repeat;
+	padding-right: 35px;
+}
+DIV.gx-multimedia-upload
+{
+	border-bottom-color: #ccc;
+	border-left-color: #ccc;
+	border-right-color: #ccc;
+	border-top-color: #ccc;
+	border-style: solid;
+	border-width: 1px;
+	position: relative;
+	height: 72px;
+	width: 128px;
+	display: block;
+	text-align: center;
+	line-height:68px;
+}
+DIV.gx-multimedia-upload *
+{
+	text-align: left;
+	line-height:normal;
+}
+DIV.gx-multimedia-upload DIV.fields-ct
+{
+	background-color: white;
+	border-top-left-radius: 8px;
+	border-top-right-radius: 8px;
+	border-bottom-right-radius: 8px;
+	border-bottom-left-radius: 8px;
+	padding-left: 5px;
+	padding-top: 10px;
+	height: 100%;
+	display: none;
+	white-space: nowrap;
+}
+DIV.gx-multimedia-upload A:first-child
+{
+	right: 20px;
+}
+DIV.gx-multimedia-upload INPUT.field
+{
+	float: none;
+	margin-top: 10px;
+	width: 300px;
+	display: none;
+}
+DIV.gx-multimedia-upload INPUT.field-selected
+{
+	display: inline;
+}
+DIV.gx-multimedia-upload LABEL.option
+{
+	clear: left;
+	float: left;
+	margin-bottom: 10px;
+	margin-right: 15px;
+	width: 150px;
+	display: inline;
+	cursor: pointer;
+	font-size: 11px;
+}
+DIV.gx-multimedia-upload LABEL.option INPUT
+{
+	float: left;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	margin-right: 3px;
+	margin-top: 0px;
+	display: inline;
+	cursor: pointer;
+}
+DIV.gx-multimedia-upload INPUT.Button
+{
+	clear: both;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 25px;
+	display: block;
+}
+DIV.gx-multimedia-upload INPUT.BtnEnter
+{
+	clear: both;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 25px;
+	display: block;
+}
+DIV.gx-multimedia-upload IMG
+{
+	padding-bottom: 2px;
+	padding-top: 2px;
+	vertical-align: middle;
+	max-width:124px;
+	max-height:68px;
+}
+DIV.gx-multimedia-upload A SPAN
+{
+	background-position: center center;
+	background-repeat: no-repeat;
+	height: 68px;
+	width: 124px;
+	color: transparent;
+}
+DIV.gx-multimedia-upload A.gx-multimedia-empty
+{
+	display: block;
+}
+DIV.gx-multimedia-upload A.gx-multimedia-empty SPAN
+{
+	display: block;
+}
+DIV.gx-multimedia-upload A.gx-multimedia-empty IMG
+{
+	display: none;
+}
+DIV.gx-multimedia-upload A.gx-multimedia-empty SPAN.gx-image-placeholder
+{
+	background-image: url(PlaceHolderImage.png);
+}
+DIV.gx-multimedia-upload A.gx-multimedia-empty SPAN.gx-video-placeholder
+{
+	background-image: url(PlaceHolderVideo.png);
+	opacity:1;
+}
+DIV.gx-multimedia-upload A.gx-multimedia-empty SPAN.gx-audio-placeholder
+{
+	background-image: url(PlaceHolderAudio.png);
+	opacity:1;
+}
+DIV.gx-multimedia-upload A.action
+{
+	background-color: #666;
+	padding-bottom: 2px;
+	padding-left: 2px;
+	padding-right: 2px;
+	padding-top: 2px;
+	position: absolute;
+	top: 0px;
+	cursor: pointer;
+	font-size: 11px;
+	color: white;
+	opacity:0;
+	line-height:15px;
+	-moz-transition:opacity .3s ease-in-out;
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+	-ms-transition:opacity .3s ease-in-out;
+	opacity:0;
+	-webkit-transition:opacity .3s ease-in-out;
+}
+DIV.gx-multimedia-upload A.change-action
+{
+	background-image: url(MultimediaEdit.png);
+	background-position: 4px center;
+	background-repeat: no-repeat;
+	padding-left: 16px;
+	padding-right: 4px;
+	right: 20px;
+}
+DIV.gx-multimedia-upload A.clear-action
+{
+	background-image: url(MultimediaClear.png);
+	background-position: center center;;
+	background-repeat: no-repeat;
+	padding-bottom: 10px;
+	padding-left: 10px;
+	padding-right: 9px;
+	padding-top: 9px;
+	right: 0px;
+}
+DIV.gx-multimedia-upload A.action:focus
+{
+	text-decoration: underline;
+	opacity:.9;
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
+}
+DIV.gx-multimedia-upload:hover A.action:hover
+{
+	text-decoration: underline;
+	opacity:.9;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
+}
+DIV.gx-multimedia-upload:hover A.action:focus
+{
+	text-decoration: underline;
+	opacity:.9;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
+}
+DIV.gx-multimedia-upload:hover A.action
+{
+	display: block;
+	opacity:.7;
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
+}
+A:not([href]) SPAN.gx-video-placeholder
+{
+	opacity:.5;
+}
+A:not([href]) SPAN.gx-audio-placeholder
+{
+	opacity:.5;
+}
+DIV.gx-mask
+{
+	background-color: yellow;
+	background-image: none;
+	left: 0px;
+	position: absolute;
+	top: 0px;
+	height: 100%;
+	width: 100%;
+	animation: entermask 1s;
+	-webkit-animation: entermask 1s;
+	-ms-filter:alpha(opacity=10);
+	opacity:.10;
+}
+DIV.gx-unmask
+{
+	background-color: transparent;
+	animation: leavemask .3s;
+	-webkit-animation: leavemask .3s;
+}
+BODY.gx-masked DIV.gx-mask
+{
+	bottom: 0px;
+	position: fixed;
+}
+.gx-masked-relative 
+{
+	position: relative;
+}
+.GXProgressBar  .progress-bar-title 
+{
+	margin-bottom: 3px;
+	margin-left: 3px;
+	margin-right: 3px;
+	margin-top: 3px;
+}
+.Form,.FormBody
+{
+	margin-bottom: 0pt;
+	margin-left: 0pt;
+	margin-right: 0pt;
+	margin-top: 0pt;
+	padding-bottom: 0pt;
+	padding-left: 0pt;
+	padding-right: 0pt;
+	padding-top: 0pt;
+	border-style: none;
+	border-width: 0px;
+	font-family: Verdana, Arial;
+	font-size: 9pt;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	text-decoration: none;
+	color: #747474;
+	height: inherit;
+}
+
+/* [gx-css-import ignore - start] */
+div.gx-content-placeholder > div.gx-ct-body.Form-fx, div.gxwebcomponent > div.gxwebcomponent-body.Form-fx, body.Form-fx
+{
+	transition: all cubic-bezier(0, 1, 1, 0.69) .5s;
+	-moz-transition: all cubic-bezier(0, 1, 1, 0.69) .5s;
+	-ms-transition: all cubic-bezier(0, 1, 1, 0.69) .5s;
+	-o-transition: all cubic-bezier(0, 1, 1, 0.69) .5s;
+	-webkit-transition: all cubic-bezier(0, 1, 1, 0.69) .5s;
+}
+
+div.gx-content-placeholder > div.gx-ct-body.Form-fx.enter-fx-duration, div.gxwebcomponent > div.gxwebcomponent-body.Form-fx.enter-fx-duration, body.Form-fx.enter-fx-duration
+{
+	transition-duration: 0.5s;
+	-moz-transition-duration: 0.5s;
+	-ms-transition-duration: 0.5s;
+	-o-transition-duration: 0.5s;
+	-webkit-transition-duration: 0.5s;
+}
+
+div.gx-content-placeholder > div.gx-ct-body.Form-fx.leave-fx-duration, div.gxwebcomponent > div.gxwebcomponent-body.Form-fx.leave-fx-duration, body.Form-fx.leave-fx-duration
+{
+	transition-duration: 0.5s;
+	-moz-transition-duration: 0.5s;
+	-ms-transition-duration: 0.5s;
+	-o-transition-duration: 0.5s;
+	-webkit-transition-duration: 0.5s;
+}
+
+div.gx-content-placeholder.transitioning, div.gxwebcomponent.transitioning
+{
+	overflow: hidden;
+	position: relative;
+}
+
+.Form-fx.entering
+{
+	opacity: 0.1;
+	position: absolute;
+}
+
+.Form-fx.leaving
+{
+	opacity: 0.1;
+	position: absolute;
+}
+
+/* [gx-css-import ignore - end] */
+/* [gx-css-import ignore - start] */
+div.gx-content-placeholder > div.gx-ct-body.FormBody-fx, div.gxwebcomponent > div.gxwebcomponent-body.FormBody-fx, body.FormBody-fx
+{
+	transition: all cubic-bezier(0, 1, 1, 0.69) .5s;
+	-moz-transition: all cubic-bezier(0, 1, 1, 0.69) .5s;
+	-ms-transition: all cubic-bezier(0, 1, 1, 0.69) .5s;
+	-o-transition: all cubic-bezier(0, 1, 1, 0.69) .5s;
+	-webkit-transition: all cubic-bezier(0, 1, 1, 0.69) .5s;
+}
+
+div.gx-content-placeholder > div.gx-ct-body.FormBody-fx.enter-fx-duration, div.gxwebcomponent > div.gxwebcomponent-body.FormBody-fx.enter-fx-duration, body.FormBody-fx.enter-fx-duration
+{
+	transition-duration: 0.5s;
+	-moz-transition-duration: 0.5s;
+	-ms-transition-duration: 0.5s;
+	-o-transition-duration: 0.5s;
+	-webkit-transition-duration: 0.5s;
+}
+
+div.gx-content-placeholder > div.gx-ct-body.FormBody-fx.leave-fx-duration, div.gxwebcomponent > div.gxwebcomponent-body.FormBody-fx.leave-fx-duration, body.FormBody-fx.leave-fx-duration
+{
+	transition-duration: 0.5s;
+	-moz-transition-duration: 0.5s;
+	-ms-transition-duration: 0.5s;
+	-o-transition-duration: 0.5s;
+	-webkit-transition-duration: 0.5s;
+}
+
+div.gx-content-placeholder.transitioning, div.gxwebcomponent.transitioning
+{
+	overflow: hidden;
+	position: relative;
+}
+
+.FormBody-fx.entering
+{
+	opacity: 0.1;
+	position: absolute;
+}
+
+.FormBody-fx.leaving
+{
+	opacity: 0.1;
+	position: absolute;
+}
+
+/* [gx-css-import ignore - end] */
+.Attribute,.BlobContentAttribute,.ReadonlyBlobContentAttribute,.BlobInputAttribute,.AttributeDragging,.AttributeAcceptDrag,.AttributeNoAcceptDrag,.ImageAttribute,.ActionAttribute,.BlobContentActionAttribute,.ReadonlyBlobContentActionAttribute,.ReadonlyActionAttribute,.UpdateAttribute,.BlobContentUpdateAttribute,.ReadonlyBlobContentUpdateAttribute,.ReadonlyUpdateAttribute,.BlobInputUpdateAttribute,.DeleteAttribute,.BlobContentDeleteAttribute,.ReadonlyBlobContentDeleteAttribute,.ReadonlyDeleteAttribute,.BlobInputDeleteAttribute,.DisplayAttribute,.BlobContentDisplayAttribute,.ReadonlyBlobContentDisplayAttribute,.ReadonlyDisplayAttribute,.BlobInputDisplayAttribute,.SelectionAttribute,.BlobContentSelectionAttribute,.ReadonlyBlobContentSelectionAttribute,.ReadonlySelectionAttribute,.BlobInputSelectionAttribute,.DisabledActionAttribute,.BlobContentDisabledActionAttribute,.ReadonlyBlobContentDisabledActionAttribute,.ReadonlyDisabledActionAttribute,.BlobInputDisabledActionAttribute,.BlobInputActionAttribute,.ResponsiveImageAttribute,.BlobContentResponsiveImageAttribute,.ReadonlyBlobContentResponsiveImageAttribute,.ReadonlyResponsiveImageAttribute,.BlobInputResponsiveImageAttribute,.ReadonlyImageAttribute,.VideoAttribute,.ReadonlyVideoAttribute,.AudioAttribute,.ReadonlyAudioAttribute,.CheckBox,.ReadonlyCheckBox,.BlobContentCheckBox,.ReadonlyBlobContentCheckBox,.BlobInputCheckBox,.FilterAttribute,.BlobContentFilterAttribute,.ReadonlyBlobContentFilterAttribute,.ReadonlyFilterAttribute,.BlobInputFilterAttribute,.DescriptionAttribute,.BlobContentDescriptionAttribute,.ReadonlyBlobContentDescriptionAttribute,.ReadonlyDescriptionAttribute,.BlobInputDescriptionAttribute,.ErrorAttribute,.WarningAttribute,.ReadonlyAttribute,.AttSubTitle,.BlobContentAttSubTitle,.ReadonlyBlobContentAttSubTitle,.ReadonlyAttSubTitle,.BlobInputAttSubTitle,.IME_Active,.BlobContentIME_Active,.ReadonlyBlobContentIME_Active,.BlobInputIME_Active,.ReadonlyIME_Active,.IME_Inactive,.BlobContentIME_Inactive,.ReadonlyBlobContentIME_Inactive,.BlobInputIME_Inactive,.ReadonlyIME_Inactive,.IME_Disabled,.BlobContentIME_Disabled,.ReadonlyBlobContentIME_Disabled,.BlobInputIME_Disabled,.ReadonlyIME_Disabled
+{
+	border-bottom-color: #d3d4d3;
+	border-left-color: #d3d4d3;
+	border-right-color: #d3d4d3;
+	border-top-color: #d3d4d3;
+	border-style: inset;
+	border-width: 1px;
+	font-family: Verdana, Arial;
+	font-size: 9pt;
+	font-style: normal;
+	font-variant: normal;
+	text-decoration: none;
+	color: #333;
+}
+.ReadonlyImageAttribute
+{
+	border-style: none;
+	border-width: 0px;
+}
+.ReadonlyVideoAttribute
+{
+	background-repeat: no-repeat;
+	display: inline-block;
+	background-image: url(VideoDownload.png);
+	border-style: none;
+	border-width: 0px;
+	height: 64px;
+	width: 64px;
+}
+.ReadonlyAudioAttribute
+{
+	background-repeat: no-repeat;
+	display: inline-block;
+	background-image: url(AudioDownload.png);
+	border-style: none;
+	border-width: 0px;
+	height: 64px;
+	width: 64px;
+}
+.ErrorAttribute
+{
+	border-bottom-color: #c60b44;
+	border-left-color: #c60b44;
+	border-right-color: #c60b44;
+	border-top-color: #c60b44;
+	border-style: dotted;
+}
+.WarningAttribute
+{
+	border-bottom-color: #ff8000;
+	border-left-color: #ff8000;
+	border-right-color: #ff8000;
+	border-top-color: #ff8000;
+	border-style: dotted;
+}
+.ReadonlyAttribute
+{
+	padding-bottom: 1px;
+	padding-left: 1px;
+	padding-right: 1px;
+	padding-top: 1px;
+	border-style: none;
+	color: #747474;
+}
+.AttSubTitle,.BlobContentAttSubTitle,.ReadonlyBlobContentAttSubTitle,.ReadonlyAttSubTitle,.BlobInputAttSubTitle
+{
+	box-sizing: border-box;
+	padding-top: 5pt;
+	display: block;
+	-moz-box-sizing: border-box;
+	border-style: none;
+	font-size: 10pt;
+	font-weight: bold;
+	color: #666;
+	height: 30px;
+}
+.IME_Active,.BlobContentIME_Active,.ReadonlyBlobContentIME_Active,.BlobInputIME_Active,.ReadonlyIME_Active
+{
+	ime-mode: active;
+}
+.ReadonlyBlobContentIME_Active
+{
+	border-width: 0px;
+}
+.ReadonlyIME_Active
+{
+	border-width: 0px;
+}
+.IME_Inactive,.BlobContentIME_Inactive,.ReadonlyBlobContentIME_Inactive,.BlobInputIME_Inactive,.ReadonlyIME_Inactive
+{
+	ime-mode: inactive;
+}
+.ReadonlyBlobContentIME_Inactive
+{
+	border-width: 0px;
+}
+.ReadonlyIME_Inactive
+{
+	border-width: 0px;
+}
+.IME_Disabled,.BlobContentIME_Disabled,.ReadonlyBlobContentIME_Disabled,.BlobInputIME_Disabled,.ReadonlyIME_Disabled
+{
+	ime-mode: disabled;
+}
+.ReadonlyBlobContentIME_Disabled
+{
+	border-width: 0px;
+}
+.ReadonlyIME_Disabled
+{
+	border-width: 0px;
+}
+.Button,.SpecialButtons,.BtnCancel,.BtnCheck,.BtnDelete,.BtnEnter,.BtnFirst,.BtnGet,.BtnHelp,.BtnLast,.BtnNext,.BtnPrevious,.BtnRefresh,.BtnSelect,.BtnToggle,.BtnToggleActive,.SpecialButtonsDisabled,.ButtonDisabled,.ActionButtons,.BigButton,.ButtonDragging,.ButtonAcceptDrag,.ButtonNoAcceptDrag
+{
+	margin-bottom: 0pt;
+	margin-left: 0pt;
+	margin-right: 3pt;
+	margin-top: 3pt;
+	padding-bottom: 0pt;
+	padding-left: 0pt;
+	padding-right: 0pt;
+	padding-top: 0pt;
+	background-image: url(Button.gif);
+	border-style: none;
+	border-width: 0px;
+	font-family: "Verdana";
+	font-size: 7.8pt;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: bold;
+	text-decoration: none;
+	color: #fff;
+	height: 19px;
+	width: 80px;
+	text-indent: 0pt;
+	vertical-align: bottom;
+}
+
+.ActionButtons
+{
+	margin-bottom: 3pt;
+}
+
+.BigButton
+{
+	margin-bottom: 3pt;
+	background-image: url(BigButton.gif);
+	width: 150px;
+}
+
+.ButtonDragging
+{
+	margin-bottom: 3pt;
+}
+
+.ButtonAcceptDrag
+{
+	margin-bottom: 3pt;
+}
+
+.ButtonNoAcceptDrag
+{
+	margin-bottom: 3pt;
+}
+
+.Grid,.WorkWith,.PromptGrid,.GridDragging,.GridAcceptDrag,.GridNoAcceptDrag
+{
+	margin-bottom: 1pt;
+	margin-left: 1pt;
+	margin-right: 1pt;
+	margin-top: 1pt;
+	padding-bottom: 1pt;
+	padding-left: 1pt;
+	padding-right: 1pt;
+	padding-top: 1pt;
+	border-bottom-color: #dbecfc;
+	border-left-color: #dbecfc;
+	border-right-color: #dbecfc;
+	border-top-color: #dbecfc;
+	border-style: none;
+	border-width: 0px;
+}
+
+.GridUniform
+{
+	background-color: #d3d4d3;
+	font-family: Verdana,Arial;
+	font-size: 8.5pt;
+	font-style: normal;
+	font-variant: normal;
+}
+
+.GridOdd
+{
+	font-family: Verdana,Arial;
+	font-size: 8.5pt;
+	font-style: normal;
+	font-variant: normal;
+}
+
+.GridEven
+{
+	font-family: Verdana,Arial;
+	font-size: 8.5pt;
+	font-style: normal;
+	font-variant: normal;
+	background-color: #d3d4d3;
+}
+
+.GridUniformTitle
+{
+	background-color: #d3d4d3;
+	color: black;
+}
+
+.GridTitle
+{
+	color: black;
+	background-color: #e0e0e0;
+}
+
+.GridFooter
+{
+	color: black;
+	background-color: #e0e0e0;
+}
+
+.WorkWithUniform
+{
+	background-color: #e4e5e6;
+	font-family: Verdana,Arial;
+	font-size: 8.5pt;
+	font-style: normal;
+	font-variant: normal;
+}
+
+.WorkWithOdd
+{
+	font-family: Verdana,Arial;
+	font-size: 8.5pt;
+	font-style: normal;
+	font-variant: normal;
+	background-color: #d3d4d3;
+}
+
+.WorkWithEven
+{
+	font-family: Verdana,Arial;
+	font-size: 8.5pt;
+	font-style: normal;
+	font-variant: normal;
+	background-color: #fff;
+}
+
+.WorkWithUniformTitle
+{
+	background-color: #e4e5e6;
+	color: #fff;
+	font-family: Verdana;
+	font-size: 9.5pt;
+	font-style: normal;
+	font-weight: bold;
+}
+
+.WorkWithTitle
+{
+	color: #fff;
+	background-color: #7d7d7d;
+	font-family: Verdana;
+	font-size: 9.5pt;
+	font-style: normal;
+	font-weight: bold;
+}
+
+.WorkWithFooter
+{
+	color: #fff;
+	background-color: #7d7d7d;
+	font-family: Verdana;
+	font-size: 9.5pt;
+	font-style: normal;
+	font-weight: bold;
+}
+
+.PromptGridUniform
+{
+	background-color: #e4e5e6;
+	font-family: Verdana,Arial;
+	font-size: 8.5pt;
+	font-style: normal;
+	font-variant: normal;
+}
+
+.PromptGridOdd
+{
+	font-family: Verdana,Arial;
+	font-size: 8.5pt;
+	font-style: normal;
+	font-variant: normal;
+	background-color: #d3d4d3;
+}
+
+.PromptGridEven
+{
+	font-family: Verdana,Arial;
+	font-size: 8.5pt;
+	font-style: normal;
+	font-variant: normal;
+	background-color: #fff;
+}
+
+.PromptGridUniformTitle
+{
+	background-color: #e4e5e6;
+	color: #fff;
+	font-family: Verdana;
+	font-size: 9.5pt;
+	font-style: normal;
+	font-weight: bold;
+}
+
+.PromptGridTitle
+{
+	color: #fff;
+	background-color: #7d7d7d;
+	font-family: Verdana;
+	font-size: 9.5pt;
+	font-style: normal;
+	font-weight: bold;
+}
+
+.PromptGridFooter
+{
+	color: #fff;
+	background-color: #7d7d7d;
+	font-family: Verdana;
+	font-size: 9.5pt;
+	font-style: normal;
+	font-weight: bold;
+}
+
+.GridDraggingUniform
+{
+	background-color: #d3d4d3;
+	font-family: Verdana,Arial;
+	font-size: 8.5pt;
+	font-style: normal;
+	font-variant: normal;
+}
+
+.GridDraggingOdd
+{
+	font-family: Verdana,Arial;
+	font-size: 8.5pt;
+	font-style: normal;
+	font-variant: normal;
+}
+
+.GridDraggingEven
+{
+	font-family: Verdana,Arial;
+	font-size: 8.5pt;
+	font-style: normal;
+	font-variant: normal;
+	background-color: #d3d4d3;
+}
+
+.GridDraggingUniformTitle
+{
+	background-color: #d3d4d3;
+	color: black;
+}
+
+.GridDraggingTitle
+{
+	color: black;
+	background-color: #e0e0e0;
+}
+
+.GridDraggingFooter
+{
+	color: black;
+	background-color: #e0e0e0;
+}
+
+.GridAcceptDragUniform
+{
+	background-color: #d3d4d3;
+	font-family: Verdana,Arial;
+	font-size: 8.5pt;
+	font-style: normal;
+	font-variant: normal;
+}
+
+.GridAcceptDragOdd
+{
+	font-family: Verdana,Arial;
+	font-size: 8.5pt;
+	font-style: normal;
+	font-variant: normal;
+}
+
+.GridAcceptDragEven
+{
+	font-family: Verdana,Arial;
+	font-size: 8.5pt;
+	font-style: normal;
+	font-variant: normal;
+	background-color: #d3d4d3;
+}
+
+.GridAcceptDragUniformTitle
+{
+	background-color: #d3d4d3;
+	color: black;
+}
+
+.GridAcceptDragTitle
+{
+	color: black;
+	background-color: #e0e0e0;
+}
+
+.GridAcceptDragFooter
+{
+	color: black;
+	background-color: #e0e0e0;
+}
+
+.GridNoAcceptDragUniform
+{
+	background-color: #d3d4d3;
+	font-family: Verdana,Arial;
+	font-size: 8.5pt;
+	font-style: normal;
+	font-variant: normal;
+}
+
+.GridNoAcceptDragOdd
+{
+	font-family: Verdana,Arial;
+	font-size: 8.5pt;
+	font-style: normal;
+	font-variant: normal;
+}
+
+.GridNoAcceptDragEven
+{
+	font-family: Verdana,Arial;
+	font-size: 8.5pt;
+	font-style: normal;
+	font-variant: normal;
+	background-color: #d3d4d3;
+}
+
+.GridNoAcceptDragUniformTitle
+{
+	background-color: #d3d4d3;
+	color: black;
+}
+
+.GridNoAcceptDragTitle
+{
+	color: black;
+	background-color: #e0e0e0;
+}
+
+.GridNoAcceptDragFooter
+{
+	color: black;
+	background-color: #e0e0e0;
+}
+
+.Group,.GroupTitle
+{
+	font-family: Verdana, Arial;
+	font-size: 12pt;
+	font-style: italic;
+	font-weight: bold;
+}
+
+.GroupTitle
+{
+	font-family: Verdana, Arial;
+	font-size: 12pt;
+	font-style: italic;
+	font-weight: bold;
+}
+
+.GroupTitleTitle
+{
+	font-family: Verdana, Arial;
+	font-size: 12pt;
+	font-style: italic;
+	font-weight: bold;
+}
+
+.Table,.TableDragging,.TableAcceptDrag,.TableNoAcceptDrag,.Table95,.LevelTable,.BodyContainer,.HeaderContainer,.RecentLinksContainer,.FormContainer,.Container,.ContainerFluid,.AdvancedContainerItem,.AdvancedContainerItemExpanded,.AdvancedContainer,.AdvancedContainerVisible,.OrdersTable,.WWAdvancedContainer,.RecentLinksMainTable,.RecentLinksMainTableExpanded,.PromptContainer,.PromptMainTable,.MainContainer,.GridTabMainTable,.Table960,.TableGreyFooter,.TableBlackFooter,.TableBlackHeader,.TableLogin,.Table80,.TableMargin2,.TableGrid,.TableTop,.TableContent,.Table100x100,.ToolbarMain,.TableBorderBottom,.TableBorder,.TableLeftMenu,.TableTopMenu,.VerticalTab,.ViewTable,.RecentLinksTable,.TableHorizontalLine,.header_pink_line,.HorizontalSpace,.TableBottom
+{
+	margin-bottom: 0pt;
+	margin-left: 0pt;
+	margin-right: 0pt;
+	margin-top: 0pt;
+	padding-bottom: 0pt;
+	padding-left: 0pt;
+	padding-right: 0pt;
+	padding-top: 0pt;
+	border-style: none;
+	border-width: 0px;
+	font-family: Verdana,Arial;
+	font-size: 9pt;
+	font-style: normal;
+	font-variant: normal;
+	text-decoration: none;
+}
+.TableGrid
+{
+	background-color: #e4e5e6;
+	border-bottom-color: #747474;
+	border-left-color: #747474;
+	border-right-color: #747474;
+	border-top-color: #747474;
+	border-style: solid;
+	border-width: 1px;
+}
+.TableTop
+{
+	padding-left: 5pt;
+	padding-right: 5pt;
+	background-image: url(HeaderBackground.gif);
+	color: #fff;
+	height: 60px;
+	width: 100%;
+	vertical-align: middle;
+}
+.TableContent
+{
+	padding-bottom: 10pt;
+	padding-left: 10pt;
+	padding-right: 10pt;
+	padding-top: 10pt;
+	color: #747474;
+	vertical-align: top;
+}
+.Table100x100,.ToolbarMain,.TableBorderBottom,.TableBorder
+{
+	width: 100%;
+	vertical-align: top;
+}
+.TableBorder
+{
+	padding-bottom: 5pt;
+	padding-left: 5pt;
+	padding-right: 5pt;
+	padding-top: 5pt;
+	border-bottom-color: #868686;
+	border-left-color: #868686;
+	border-right-color: #868686;
+	border-top-color: #868686;
+	border-style: solid;
+	border-width: 8px;
+}
+.TableLeftMenu
+{
+	background-color: #e4e5e6;
+	font-family: "Verdana";
+	font-size: 8.25pt;
+	font-weight: normal;
+	width: 100%;
+	text-indent: 15pt;
+}
+.TableTopMenu
+{
+	padding-bottom: 3pt;
+	padding-left: 5pt;
+	padding-right: 3pt;
+	padding-top: 3pt;
+	background-color: #fff;
+	font-size: 8.25pt;
+	font-weight: bold;
+	color: #666;
+	vertical-align: middle;
+}
+.VerticalTab
+{
+	background-color: #d3d4d3;
+}
+.ViewTable
+{
+	background-color: #fff;
+	width: 100%;
+}
+.RecentLinksTable
+{
+	background-image: url(RecentLinksBackground.gif);
+	font-family: "Verdana";
+	font-size: 7.8pt;
+	font-weight: normal;
+	height: 30px;
+	width: 100%;
+	vertical-align: middle;
+}
+.TableHorizontalLine,.header_pink_line
+{
+	background-color: #747474;
+	font-size: 1pt;
+	height: 3px;
+	width: 100%;
+}
+.HorizontalSpace
+{
+	background-color: #fff;
+	height: 10px;
+	width: 100%;
+}
+.TableBottom
+{
+	background-color: #d3d4d3;
+	height: 30px;
+	width: 100%;
+	text-align: center;
+	vertical-align: middle;
+}
+.TextBlock,.TextBlockDragging,.TextBlockAcceptDrag,.TextBlockNoAcceptDrag,.RecentLinkItem,.RecentsTitle,.WWAdvancedLabel,.WWOrderByLabel,.WWFilterLabel,.WWDateFilterLabel,.WWOrderItem,.WWOrderItemSelected,.FooterText,.VerticalMenuOption,.TextTable,.FieldSetTitle,.BtnTextBlock,.bullet,.subBullet,.TBTopMenu,.TBLeftMenu,.Title,.SubTitle,.Label,.LabelDragging,.LabelAcceptDrag,.LabelNoAcceptDrag,.SelectedTab,.UnSelectedTab,.RecentLink,.Separator,.SmallText,.TextBlockHeader
+{
+	padding-right: 3pt;
+	white-space: nowrap;
+	border-style: none;
+	border-width: 0px;
+	font-family: Verdana, Arial;
+	font-size: 9pt;
+	font-style: normal;
+	font-variant: normal;
+	text-decoration: none;
+	color: #747474;
+}
+.bullet,.subBullet
+{
+	text-indent: 5pt;
+}
+.subBullet
+{
+	text-indent: 10pt;
+}
+.TBTopMenu
+{
+	background-color: #000;
+	font-family: "Verdana";
+	font-size: 8.25pt;
+	font-weight: bold;
+	color: #fff;
+	text-indent: 3pt;
+}
+.TBLeftMenu
+{
+	background-color: #dbecfc;
+	font-family: "Verdana";
+	font-size: 8.25pt;
+	font-weight: bold;
+	color: #000;
+}
+.Title,.SubTitle
+{
+	font-size: 12pt;
+	font-weight: bold;
+	color: #333;
+}
+.SubTitle
+{
+	box-sizing: border-box;
+	padding-top: 5pt;
+	display: block;
+	-moz-box-sizing: border-box;
+	font-size: 10pt;
+	color: #666;
+	height: 30px;
+}
+.Label,.LabelDragging,.LabelAcceptDrag,.LabelNoAcceptDrag,.gx-label.AttributeLabel,.gx-label.BlobContentAttributeLabel,.gx-label.ReadonlyBlobContentAttributeLabel,.gx-label.BlobInputAttributeLabel,.gx-label.AttributeDraggingLabel,.gx-label.AttributeAcceptDragLabel,.gx-label.AttributeNoAcceptDragLabel,.gx-label.ImageAttributeLabel,.gx-label.ActionAttributeLabel,.gx-label.BlobContentActionAttributeLabel,.gx-label.ReadonlyBlobContentActionAttributeLabel,.gx-label.ReadonlyActionAttributeLabel,.gx-label.UpdateAttributeLabel,.gx-label.BlobContentUpdateAttributeLabel,.gx-label.ReadonlyBlobContentUpdateAttributeLabel,.gx-label.ReadonlyUpdateAttributeLabel,.gx-label.BlobInputUpdateAttributeLabel,.gx-label.DeleteAttributeLabel,.gx-label.BlobContentDeleteAttributeLabel,.gx-label.ReadonlyBlobContentDeleteAttributeLabel,.gx-label.ReadonlyDeleteAttributeLabel,.gx-label.BlobInputDeleteAttributeLabel,.gx-label.DisplayAttributeLabel,.gx-label.BlobContentDisplayAttributeLabel,.gx-label.ReadonlyBlobContentDisplayAttributeLabel,.gx-label.ReadonlyDisplayAttributeLabel,.gx-label.BlobInputDisplayAttributeLabel,.gx-label.SelectionAttributeLabel,.gx-label.BlobContentSelectionAttributeLabel,.gx-label.ReadonlyBlobContentSelectionAttributeLabel,.gx-label.ReadonlySelectionAttributeLabel,.gx-label.BlobInputSelectionAttributeLabel,.gx-label.DisabledActionAttributeLabel,.gx-label.BlobContentDisabledActionAttributeLabel,.gx-label.ReadonlyBlobContentDisabledActionAttributeLabel,.gx-label.ReadonlyDisabledActionAttributeLabel,.gx-label.BlobInputDisabledActionAttributeLabel,.gx-label.BlobInputActionAttributeLabel,.gx-label.ResponsiveImageAttributeLabel,.gx-label.BlobContentResponsiveImageAttributeLabel,.gx-label.ReadonlyBlobContentResponsiveImageAttributeLabel,.gx-label.ReadonlyResponsiveImageAttributeLabel,.gx-label.BlobInputResponsiveImageAttributeLabel,.gx-label.ReadonlyImageAttributeLabel,.gx-label.VideoAttributeLabel,.gx-label.ReadonlyVideoAttributeLabel,.gx-label.AudioAttributeLabel,.gx-label.ReadonlyAudioAttributeLabel,.gx-label.CheckBoxLabel,.gx-label.ReadonlyCheckBoxLabel,.gx-label.BlobContentCheckBoxLabel,.gx-label.ReadonlyBlobContentCheckBoxLabel,.gx-label.BlobInputCheckBoxLabel,.gx-label.FilterAttributeLabel,.gx-label.BlobContentFilterAttributeLabel,.gx-label.ReadonlyBlobContentFilterAttributeLabel,.gx-label.ReadonlyFilterAttributeLabel,.gx-label.BlobInputFilterAttributeLabel,.gx-label.DescriptionAttributeLabel,.gx-label.BlobContentDescriptionAttributeLabel,.gx-label.ReadonlyBlobContentDescriptionAttributeLabel,.gx-label.ReadonlyDescriptionAttributeLabel,.gx-label.BlobInputDescriptionAttributeLabel,.gx-label.ErrorAttributeLabel,.gx-label.WarningAttributeLabel,.gx-label.ReadonlyAttributeLabel,.gx-label.AttSubTitleLabel,.gx-label.BlobContentAttSubTitleLabel,.gx-label.ReadonlyBlobContentAttSubTitleLabel,.gx-label.ReadonlyAttSubTitleLabel,.gx-label.BlobInputAttSubTitleLabel,.gx-label.IME_ActiveLabel,.gx-label.BlobContentIME_ActiveLabel,.gx-label.ReadonlyBlobContentIME_ActiveLabel,.gx-label.BlobInputIME_ActiveLabel,.gx-label.ReadonlyIME_ActiveLabel,.gx-label.IME_InactiveLabel,.gx-label.BlobContentIME_InactiveLabel,.gx-label.ReadonlyBlobContentIME_InactiveLabel,.gx-label.BlobInputIME_InactiveLabel,.gx-label.ReadonlyIME_InactiveLabel,.gx-label.IME_DisabledLabel,.gx-label.BlobContentIME_DisabledLabel,.gx-label.ReadonlyBlobContentIME_DisabledLabel,.gx-label.BlobInputIME_DisabledLabel,.gx-label.ReadonlyIME_DisabledLabel
+{
+	font-weight: bold;
+}
+.SelectedTab
+{
+	box-sizing: border-box;
+	padding-top: 5pt;
+	display: block;
+	-moz-box-sizing: border-box;
+	background-image: url(TabSelected.gif);
+	font-size: 10pt;
+	font-weight: bold;
+	color: #fff;
+	height: 25px;
+	vertical-align: middle;
+}
+.UnSelectedTab
+{
+	box-sizing: border-box;
+	padding-top: 5pt;
+	display: block;
+	-moz-box-sizing: border-box;
+	background-image: url(TabUnselected.gif);
+	font-size: 10pt;
+	font-weight: bold;
+	color: #6b6b6b;
+	height: 25px;
+	vertical-align: middle;
+}
+.RecentLink
+{
+	margin-bottom: 2px;
+	margin-left: 2px;
+	margin-right: 2px;
+	margin-top: 2px;
+	padding-left: 5pt;
+	font-size: 7.8pt;
+	width: 5%;
+	vertical-align: middle;
+}
+.Separator
+{
+	box-sizing: border-box;
+	display: block;
+	-moz-box-sizing: border-box;
+	font-family: "Verdana";
+	font-size: 7.8pt;
+	font-weight: normal;
+	height: 12px;
+}
+.SmallText
+{
+	font-size: 7.8pt;
+}
+.TextBlockHeader
+{
+	font-size: 18pt;
+	font-style: italic;
+	font-weight: bold;
+	color: white;
+}
+.ErrorViewer
+{
+	border-style: none;
+	border-width: 0px;
+	font-family: "Microsoft Sans Serif";
+	font-size: 8.25pt;
+	font-style: normal;
+	font-weight: bold;
+	text-decoration: none;
+	color: #f00;
+}
+.FreeStyleGrid,.TrnSublevelGrid,.RecentLinksGrid,.FreeStyleGridDragging,.FreeStyleGridAcceptDrag,.FreeStyleGridNoAcceptDrag,.FreeStyleGridBottom,.FreeStyleGridRecent,.VerticalTabGrid
+{
+	background-color: #fff;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-top: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-top: 0px;
+	border-style: none;
+	border-width: 0px;
+}
+
+.FreeStyleGridUniform
+{
+	background-color: #d3d4d3;
+	font-family: Verdana,Arial;
+	font-size: 9pt;
+	font-style: normal;
+	font-variant: normal;
+}
+
+.FreeStyleGridOdd
+{
+	font-family: Verdana,Arial;
+	font-size: 9pt;
+	font-style: normal;
+	font-variant: normal;
+	background-color: #fff;
+}
+
+.FreeStyleGridEven
+{
+	font-family: Verdana,Arial;
+	font-size: 9pt;
+	font-style: normal;
+	font-variant: normal;
+	background-color: #d3d4d3;
+}
+
+.FreeStyleGridUniformTitle
+{
+	background-color: #d3d4d3;
+}
+
+.TrnSublevelGridUniform
+{
+	background-color: #d3d4d3;
+	font-family: Verdana,Arial;
+	font-size: 9pt;
+	font-style: normal;
+	font-variant: normal;
+}
+
+.TrnSublevelGridOdd
+{
+	font-family: Verdana,Arial;
+	font-size: 9pt;
+	font-style: normal;
+	font-variant: normal;
+	background-color: #fff;
+}
+
+.TrnSublevelGridEven
+{
+	font-family: Verdana,Arial;
+	font-size: 9pt;
+	font-style: normal;
+	font-variant: normal;
+	background-color: #d3d4d3;
+}
+
+.TrnSublevelGridUniformTitle
+{
+	background-color: #d3d4d3;
+}
+
+.RecentLinksGridUniform
+{
+	background-color: #d3d4d3;
+	font-family: Verdana,Arial;
+	font-size: 9pt;
+	font-style: normal;
+	font-variant: normal;
+}
+
+.RecentLinksGridOdd
+{
+	font-family: Verdana,Arial;
+	font-size: 9pt;
+	font-style: normal;
+	font-variant: normal;
+	background-color: #fff;
+}
+
+.RecentLinksGridEven
+{
+	font-family: Verdana,Arial;
+	font-size: 9pt;
+	font-style: normal;
+	font-variant: normal;
+	background-color: #d3d4d3;
+}
+
+.RecentLinksGridUniformTitle
+{
+	background-color: #d3d4d3;
+}
+
+.FreeStyleGridDraggingUniform
+{
+	background-color: #d3d4d3;
+	font-family: Verdana,Arial;
+	font-size: 9pt;
+	font-style: normal;
+	font-variant: normal;
+}
+
+.FreeStyleGridDraggingOdd
+{
+	font-family: Verdana,Arial;
+	font-size: 9pt;
+	font-style: normal;
+	font-variant: normal;
+	background-color: #fff;
+}
+
+.FreeStyleGridDraggingEven
+{
+	font-family: Verdana,Arial;
+	font-size: 9pt;
+	font-style: normal;
+	font-variant: normal;
+	background-color: #d3d4d3;
+}
+
+.FreeStyleGridDraggingUniformTitle
+{
+	background-color: #d3d4d3;
+}
+
+.FreeStyleGridAcceptDragUniform
+{
+	background-color: #d3d4d3;
+	font-family: Verdana,Arial;
+	font-size: 9pt;
+	font-style: normal;
+	font-variant: normal;
+}
+
+.FreeStyleGridAcceptDragOdd
+{
+	font-family: Verdana,Arial;
+	font-size: 9pt;
+	font-style: normal;
+	font-variant: normal;
+	background-color: #fff;
+}
+
+.FreeStyleGridAcceptDragEven
+{
+	font-family: Verdana,Arial;
+	font-size: 9pt;
+	font-style: normal;
+	font-variant: normal;
+	background-color: #d3d4d3;
+}
+
+.FreeStyleGridAcceptDragUniformTitle
+{
+	background-color: #d3d4d3;
+}
+
+.FreeStyleGridNoAcceptDragUniform
+{
+	background-color: #d3d4d3;
+	font-family: Verdana,Arial;
+	font-size: 9pt;
+	font-style: normal;
+	font-variant: normal;
+}
+
+.FreeStyleGridNoAcceptDragOdd
+{
+	font-family: Verdana,Arial;
+	font-size: 9pt;
+	font-style: normal;
+	font-variant: normal;
+	background-color: #fff;
+}
+
+.FreeStyleGridNoAcceptDragEven
+{
+	font-family: Verdana,Arial;
+	font-size: 9pt;
+	font-style: normal;
+	font-variant: normal;
+	background-color: #d3d4d3;
+}
+
+.FreeStyleGridNoAcceptDragUniformTitle
+{
+	background-color: #d3d4d3;
+}
+
+.FreeStyleGridBottomUniform
+{
+	background-color: #d3d4d3;
+	font-family: Verdana,Arial;
+	font-size: 9pt;
+	font-style: normal;
+	font-variant: normal;
+}
+
+.FreeStyleGridBottomOdd
+{
+	font-family: Verdana,Arial;
+	font-size: 9pt;
+	font-style: normal;
+	font-variant: normal;
+	background-color: #fff;
+}
+
+.FreeStyleGridBottomEven
+{
+	font-family: Verdana,Arial;
+	font-size: 9pt;
+	font-style: normal;
+	font-variant: normal;
+	background-color: #d3d4d3;
+}
+
+.FreeStyleGridBottomUniformTitle
+{
+	background-color: #d3d4d3;
+}
+
+.FreeStyleGridRecentUniform
+{
+	background-color: #d3d4d3;
+	font-family: Verdana,Arial;
+	font-size: 9pt;
+	font-style: normal;
+	font-variant: normal;
+}
+
+.FreeStyleGridRecentOdd
+{
+	font-family: Verdana,Arial;
+	font-size: 9pt;
+	font-style: normal;
+	font-variant: normal;
+	background-color: #fff;
+}
+
+.FreeStyleGridRecentEven
+{
+	font-family: Verdana,Arial;
+	font-size: 9pt;
+	font-style: normal;
+	font-variant: normal;
+	background-color: #d3d4d3;
+}
+
+.FreeStyleGridRecentUniformTitle
+{
+	background-color: #d3d4d3;
+}
+
+.VerticalTabGridUniform
+{
+	background-color: #fff;
+	font-family: Verdana,Arial;
+	font-size: 9pt;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: bold;
+}
+
+.VerticalTabGridOdd
+{
+	font-family: Verdana,Arial;
+	font-size: 9pt;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: bold;
+	background-color: #fff;
+}
+
+.VerticalTabGridEven
+{
+	font-family: Verdana,Arial;
+	font-size: 9pt;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: bold;
+	background-color: #d3d4d3;
+}
+
+.VerticalTabGridUniformTitle
+{
+	background-color: #fff;
+}
+
+.Messages,.ErrorMessages,.WarningMessages
+{
+	background-color: #f6e2c6;
+	border-bottom-color: #716f64;
+	border-left-color: #716f64;
+	border-right-color: #716f64;
+	border-top-color: #716f64;
+	border-style: solid;
+	border-width: 1px;
+	padding-bottom: 4px;
+	padding-left: 4px;
+	padding-right: 4px;
+	padding-top: 4px;
+	font-family: Verdana, Arial;
+	font-size: 8pt;
+	font-style: normal;
+	font-variant: normal;
+	color: #7d7d7d;
+}
+.ErrorMessages
+{
+	background-color: #d84523;
+	font-weight: bold;
+	color: #fff;
+}
+.WarningMessages
+{
+	background-color: #f6a849;
+	font-weight: bold;
+	color: #fff;
+}
+.UnSelectedTab  A
+{
+	font-family: Verdana, Arial;
+	font-size: 10pt;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: bold;
+	text-decoration: none;
+	color: #6b6b6b;
+	vertical-align: middle;
+}
+DIV.suggestions
+{
+	background-color: #fff;
+	border-bottom-color: #969696;
+	border-left-color: #969696;
+	border-right-color: #969696;
+	border-top-color: #969696;
+	border-style: solid;
+	border-width: 1px;
+	box-sizing: border-box;
+	position: absolute;
+	-moz-box-sizing: border-box;
+	font-family: Verdana, Arial;
+	font-size: 8pt;
+	font-style: normal;
+	font-variant: normal;
+}
+DIV.suggestions DIV
+{
+	padding-bottom: 2px;
+	padding-left: 2px;
+	padding-right: 2px;
+	padding-top: 2px;
+	cursor: default;
+	font-family: Verdana, Arial;
+	font-size: 8pt;
+	font-style: normal;
+	font-variant: normal;
+	color: #333;
+}
+DIV.suggestions DIV.current
+{
+	background-color: #d3d4d3;
+	margin-bottom: 2px;
+	margin-left: 2px;
+	margin-right: 2px;
+	margin-top: 2px;
+	font-family: Verdana, Arial;
+	font-size: 8pt;
+	font-style: normal;
+	font-variant: normal;
+	color: #333;
+}
+.td100 
+{
+	width: 100%;
+}
+.td5 
+{
+	width: 40px;
+}
+.td20x25 
+{
+	height: 25px;
+	width: 20px;
+}
+.FieldSetTitle 
+{
+	font-family: Verdana, Arial;
+	font-size: 12pt;
+	font-style: italic;
+	font-weight: bold;
+	text-decoration: none;
+}
+.PopupBorder 
+{
+	background-color: white;
+	border-bottom-color: #747474;
+	border-left-color: #747474;
+	border-right-color: #747474;
+	border-top-color: #747474;
+	border-style: solid;
+	border-width: 1px;
+}
+.PopupShadow 
+{
+	background-color: #404040;
+}
+.HRDefault 
+{
+	background-color: #baccd6;
+	border-width: 0px;
+	height: 2px;
+	color: #baccd6;
+}
+.gx-ajax-error 
+{
+	background-color: #f2dede;
+	border-bottom-color: #ebccd1;
+	border-left-color: #ebccd1;
+	border-right-color: #ebccd1;
+	border-top-color: #ebccd1;
+	border-width: 1px;
+	border-top-left-radius: 4px;
+	border-top-right-radius: 4px;
+	border-bottom-right-radius: 4px;
+	border-bottom-left-radius: 4px;
+	margin-bottom: 20px;
+	padding-bottom: 15px;
+	padding-left: 15px;
+	padding-right: 35px;
+	padding-top: 15px;
+	color: #a94442;
+}
+.gx-ajax-error  BUTTON.close
+{
+	border-bottom: 0;
+	border-left: 0;
+	border-right: 0;
+	border-top: 0;
+	float: right;
+	padding-bottom: 0px;
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-top: 0px;
+	position: relative;
+	top: -2px;
+	cursor: pointer;
+	font-size: 21px;
+	font-weight: bold;
+	color: #000;
+	text-shadow: 0 1px 0 #fff;
+	opacity: .2;
+}

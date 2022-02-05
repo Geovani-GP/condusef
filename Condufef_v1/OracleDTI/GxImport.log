@@ -2,18 +2,27 @@
 <ImportLog>
 	<RowImport>
 		<Status>Ok</Status>
-		<Type>00972a17-9975-449e-aab1-d26165d51393</Type>
-		<TypeName>Domain</TypeName>
-		<Name>GoogleTableFormatter</Name>
+		<Type>c804fdbd-7c0b-440d-8527-4316c92649a6</Type>
+		<TypeName>Theme</TypeName>
+		<Name>GeneXusX</Name>
 		<Errors />
 		<Warnings />
 		<Info />
 	</RowImport>
 	<RowImport>
 		<Status>Ok</Status>
-		<Type>447527b5-9210-4523-898b-5dccb17be60a</Type>
-		<TypeName>SDT</TypeName>
-		<Name>GoogleTableColumn</Name>
+		<Type>00972a17-9975-449e-aab1-d26165d51393</Type>
+		<TypeName>Domain</TypeName>
+		<Name>DVelopConfirmPanelType</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>9fb193d9-64a4-4d30-b129-ff7c76830f7e</Type>
+		<TypeName>Image</TypeName>
+		<Name>Sprite</Name>
 		<Errors />
 		<Warnings />
 		<Info />

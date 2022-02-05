@@ -15,7 +15,7 @@
 <MsgCode>spc0023</MsgCode>
 <Location>
 <Type>Source</Type>
-<Line>17</Line></Location>
+<Line>16</Line></Location>
 <Message>
 <Token>Parameter </Token>
 <Token>today()</Token>
@@ -37,7 +37,7 @@
 <Level>
 <Optimizations></Optimizations>
 <LevelType>For Each</LevelType>
-<LevelBeginRow>11</LevelBeginRow>
+<LevelBeginRow>10</LevelBeginRow>
 <BaseTable>
 <Table>
 <TableId>15</TableId>
@@ -101,7 +101,7 @@
 <Level>
 <Optimizations></Optimizations>
 <LevelType>For Each</LevelType>
-<LevelBeginRow>38</LevelBeginRow>
+<LevelBeginRow>37</LevelBeginRow>
 <BaseTable>
 <Table>
 <TableId>15</TableId>

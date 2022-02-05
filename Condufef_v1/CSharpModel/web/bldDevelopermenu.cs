@@ -216,6 +216,8 @@ public class bldDevelopermenu : GxBaseBuilder
             return true;
          if (checkTime(obj, cs_path + @"\GXDOMAINGoogleTableFormatter.cs" ))
             return true;
+         if (checkTime(obj, cs_path + @"\GXDOMAINDVelopConfirmPanelType.cs" ))
+            return true;
          if (checkTime(obj, cs_path + @"\GXDOMAINEncoding.cs" ))
             return true;
          if (checkTime(obj, cs_path + @"\GXDOMAINTimezones.cs" ))

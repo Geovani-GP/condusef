@@ -147,7 +147,7 @@ form[tabindex="-1"]{
 	text-indent: 0px;
 }
 
-.Image,.ImageDragging,.ImageAcceptDrag,.ImageNoAcceptDrag,.PoweredBy,.TabPaging,.TabPagingNext,.TabPagingPrevious,.ResponsiveImage,.PagingButtons,.PagingButtonsFirst,.PagingButtonsLast,.PagingButtonsNext,.PagingButtonsPrevious,.ImageHeaderBackground,.ImageTop,.HeaderImage1,.ImageTopHeader,.ImageHandCenter,.ImageHandCenter:hover
+.Image,.ImageDragging,.ImageAcceptDrag,.ImageNoAcceptDrag,.PoweredBy,.TabPaging,.TabPagingNext,.TabPagingPrevious,.ResponsiveImage,.ImageInButton,.PagingButtons,.PagingButtonsFirst,.PagingButtonsLast,.PagingButtonsNext,.PagingButtonsPrevious,.ImageHeaderBackground,.ImageTop,.HeaderImage1,.ImageTopHeader,.ImageHandCenter,.ImageHandCenter:hover
 {
 	border-style: none;
 	border-width: 0px;
@@ -155,6 +155,7 @@ form[tabindex="-1"]{
 .PagingButtons,.PagingButtonsFirst,.PagingButtonsLast,.PagingButtonsNext,.PagingButtonsPrevious
 {
 	background-repeat: no-repeat;
+	background-color: transparent;
 	height: 20px;
 	width: 20px;
 	cursor: pointer;
@@ -250,7 +251,7 @@ HTML
 }
 .Calendar 
 {
-	background-color: #fff;
+	background-color: Window;
 	border-bottom-color: #000;
 	border-left-color: #fff;
 	border-right-color: #000;
@@ -260,19 +261,19 @@ HTML
 	position: relative;
 	display: none;
 	cursor: default;
-	font-family: tahoma,verdana,sans-serif;
-	font-size: 11px ;
+	font-family: tahoma, verdana, sans-serif;
+	font-size: 11px;
 	font-style: normal;
 	font-variant: normal;
-	color: #7d7d7d;
+	color: WindowText;
 }
 .Calendar  .CalendarButton 
 {
-	background-color: #e4e5e6;
-	border-bottom-color: #000;
-	border-left-color: #fff;
-	border-right-color: #000;
-	border-top-color: #fff;
+	background-color: ButtonFace;
+	border-bottom-color: ButtonHighlight;
+	border-left-color: ButtonHighlight;
+	border-right-color: ButtonHighlight;
+	border-top-color: ButtonHighlight;
 	border-style: solid;
 	border-width: 1px;
 	padding-bottom: 1px;
@@ -288,7 +289,7 @@ HTML
 }
 .Calendar  .nav 
 {
-	background-color: #e4e5e6;
+	background-color: ButtonFace;
 	background-image: url(menuarrow.gif);
 	background-position: 100% 100%;
 	background-repeat: no-repeat;
@@ -300,7 +301,7 @@ HTML
 }
 .Calendar  TABLE
 {
-	background-color: #fff;
+	background-color: Window;
 	border-bottom-color: #000;
 	border-left-color: #fff;
 	border-right-color: #000;
@@ -308,16 +309,17 @@ HTML
 	border-style: solid;
 	border-width: 1px;
 	cursor: default;
-	font-family: tahoma,verdana,sans-serif;
+	font-family: tahoma, verdana, sans-serif;
 	font-size: 11px;
 	font-style: normal;
 	font-variant: normal;
-	color: #333;
+	color: WindowText;
 	text-align: center;
 }
 .Calendar  TABLE .wn 
 {
-	background-color: #d3d4d3;
+	background-color: ButtonFace;
+	border-right: 1px solid ButtonShadow;
 	padding-bottom: 2px;
 	padding-left: 2px;
 	padding-right: 3px;
@@ -326,7 +328,7 @@ HTML
 	font-size: 11px;
 	font-style: normal;
 	font-variant: normal;
-	color: #333;
+	color: ButtonText;
 }
 .Calendar  THEAD
 {
@@ -353,7 +355,8 @@ HTML
 }
 .Calendar  THEAD .name 
 {
-	background-color: #c00000;
+	background-color: ButtonFace;
+	border-bottom: 1px solid ButtonShadow;
 	padding-bottom: 2px;
 	padding-left: 2px;
 	padding-right: 2px;
@@ -362,7 +365,7 @@ HTML
 	font-size: 11px;
 	font-style: normal;
 	font-variant: normal;
-	color: #333;
+	color: ButtonText;
 	text-align: center;
 }
 .Calendar  THEAD .weekend 
@@ -371,14 +374,14 @@ HTML
 	font-size: 11px;
 	font-style: normal;
 	font-variant: normal;
-	color: #d84523;
+	color: #f00;
 }
 .Calendar  THEAD .hilite 
 {
-	border-bottom-color: #000;
-	border-left-color: #fff;
-	border-right-color: #000;
-	border-top-color: #fff;
+	border-bottom-color: ButtonHighlight;
+	border-left-color: ButtonHighlight;
+	border-right-color: ButtonHighlight;
+	border-top-color: ButtonHighlight;
 	border-style: solid;
 	border-width: 2px;
 	padding-bottom: 0px;
@@ -393,10 +396,10 @@ HTML
 }
 .Calendar  THEAD .active 
 {
-	border-bottom-color: #000;
-	border-left-color: #fff;
-	border-right-color: #000;
-	border-top-color: #fff;
+	border-bottom-color: ButtonHighlight;
+	border-left-color: ButtonHighlight;
+	border-right-color: ButtonHighlight;
+	border-top-color: ButtonHighlight;
 	border-style: solid;
 	border-width: 1px;
 	padding-bottom: 0px;
@@ -411,7 +414,7 @@ HTML
 }
 .Calendar  THEAD .CalendarTitle 
 {
-	background-color: #747474;
+	background-color: ActiveCaption;
 	border-bottom-color: #000;
 	border-left-color: #000;
 	border-right-color: #000;
@@ -427,7 +430,7 @@ HTML
 	font-style: normal;
 	font-variant: normal;
 	font-weight: bold;
-	color: #fff;
+	color: CaptionText;
 	text-align: center;
 }
 .Calendar  TBODY .day 
@@ -442,12 +445,12 @@ HTML
 	font-style: normal;
 	font-variant: normal;
 	color: #333;
-	text-align: center;
+	text-align: right;
 }
 .Calendar  TBODY .rowhilite  TD
 {
-	background-color: #e4e5e6;
-	color: #333;
+	background-color: Highlight;
+	color: HighlightText;
 }
 .Calendar  TBODY .emptyrow 
 {
@@ -520,6 +523,7 @@ HTML
 .Calendar  TBODY TD .time 
 {
 	background-color: ButtonFace;
+	border-top: 1px solid ButtonShadow;
 	padding-bottom: 1px;
 	padding-left: 0px;
 	padding-right: 0px;
@@ -608,11 +612,11 @@ HTML
 }
 .Calendar  TFOOT .ttip 
 {
-	background-color: #e4e5e6;
-	border-bottom-color: #fff;
-	border-left-color: #767676;
-	border-right-color: #fff;
-	border-top-color: #767676;
+	background-color: ButtonFace;
+	border-bottom-color: ButtonHighlight;
+	border-left-color: ButtonHighlight;
+	border-right-color: ButtonHighlight;
+	border-top-color: ButtonHighlight;
 	border-style: solid;
 	border-width: 1px;
 	padding-bottom: 1px;
@@ -623,12 +627,12 @@ HTML
 	font-size: 11px;
 	font-style: normal;
 	font-variant: normal;
-	color: #333;
+	color: ButtonText;
 	text-align: center;
 }
 .Calendar  TFOOT .hilite 
 {
-	background-color: #d3d4d3;
+	background-color: #e4e0d8;
 	border-bottom-color: #000;
 	border-left-color: #fff;
 	border-right-color: #000;
@@ -664,11 +668,11 @@ HTML
 }
 .CalendarCombo 
 {
-	background-color: #fff;
-	border-bottom-color: #000;
-	border-left-color: #fff;
-	border-right-color: #000;
-	border-top-color: #fff;
+	background-color: Menu;
+	border-bottom-color: ButtonHighlight;
+	border-left-color: ButtonHighlight;
+	border-right-color: ButtonHighlight;
+	border-top-color: ButtonHighlight;
 	border-style: solid;
 	border-width: 1px;
 	left: 0px;
@@ -682,10 +686,10 @@ HTML
 	display: none;
 	cursor: default;
 	font-family: Verdana, Arial;
-	font-size: 8pt;
+	font-size: 10px;
 	font-style: normal;
 	font-variant: normal;
-	color: #333;
+	color: MenuText;
 }
 .CalendarCombo  .label 
 {
@@ -716,16 +720,16 @@ HTML
 }
 .CalendarCombo  .active 
 {
-	border-bottom-color: #969696;
-	border-left-color: #969696;
-	border-right-color: #969696;
-	border-top-color: #969696;
+	border-bottom-color: #000;
+	border-left-color: #000;
+	border-right-color: #000;
+	border-top-color: #000;
 	border-style: solid;
 	border-width: 1px;
-	padding-bottom: 2px;
-	padding-left: 2px;
-	padding-right: 2px;
-	padding-top: 2px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-top: 0px;
 	font-family: Verdana, Arial;
 	font-size: 8pt;
 	font-style: normal;
@@ -734,7 +738,7 @@ HTML
 }
 .CalendarCombo  .hilite 
 {
-	background-color: #969696;
+	background-color: Highlight;
 	border-bottom-color: #d3d4d3;
 	border-left-color: #d3d4d3;
 	border-right-color: #d3d4d3;
@@ -749,7 +753,7 @@ HTML
 	font-size: 8pt;
 	font-style: normal;
 	font-variant: normal;
-	color: #fff;
+	color: HighlightText;
 }
 DIV.suggestions
 {
@@ -825,7 +829,7 @@ DIV.suggestions DIV.current
 	padding-bottom: 0px;
 	padding-left: 0px;
 	padding-right: 0px;
-	padding-top: 5px;
+	padding-top: 0px;
 	position: absolute;
 	top: 21px;
 	z-index: 999;
@@ -839,6 +843,7 @@ DIV.suggestions DIV.current
 }
 .PopupHeader 
 {
+	background-color: blue;
 	background-image: url(popupheader.gif);
 	float: left;
 	width: 100%;
@@ -855,7 +860,7 @@ DIV.suggestions DIV.current
 }
 .PopupHeaderButton 
 {
-	background-image: url(Close.gif);
+	background-image: url(ClosePrompt.gif);
 	background-position: right;
 	float: right;
 	margin-right: 2px;
@@ -1060,9 +1065,50 @@ DIV.gx-multimedia-upload DIV.fields-ct
 	display: none;
 	white-space: nowrap;
 }
-DIV.gx-multimedia-upload A:first-child
+DIV.gx-multimedia-upload A.action
 {
-	right: 20px;
+	background-color: #666;
+	padding-bottom: 2px;
+	padding-left: 2px;
+	padding-right: 2px;
+	padding-top: 2px;
+	position: absolute;
+	top: 0px;
+	cursor: pointer;
+	font-size: 11px;
+	color: white;
+	opacity:0;
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+	line-height:15px;
+	-ms-transition: opacity .3s ease-in-out;
+	-moz-transition: opacity .3s ease-in-out;
+	-webkit-transition: opacity .3s ease-in-out;
+}
+DIV.gx-multimedia-upload A.change-action
+{
+	background-image: url(MultimediaEdit.png);
+	background-position: 4px center;
+	background-repeat: no-repeat;
+	padding-left: 16px;
+	padding-right: 4px;
+	right: 0px;
+}
+DIV.gx-multimedia-upload A.clear-action
+{
+	background-image: url(MultimediaClear.png);
+	background-position: center center;
+	background-repeat: no-repeat;
+	padding-bottom: 10px;
+	padding-left: 10px;
+	padding-right: 9px;
+	padding-top: 9px;
+	right: 0px;
+}
+DIV.gx-multimedia-upload A.action:focus
+{
+	text-decoration: underline;
+	opacity:.9;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
 }
 DIV.gx-multimedia-upload INPUT.field
 {
@@ -1096,7 +1142,7 @@ DIV.gx-multimedia-upload LABEL.option INPUT
 	display: inline;
 	cursor: pointer;
 }
-DIV.gx-multimedia-upload INPUT.BtnEnter
+DIV.gx-multimedia-upload INPUT.Button
 {
 	clear: both;
 	margin-left: auto;
@@ -1104,7 +1150,7 @@ DIV.gx-multimedia-upload INPUT.BtnEnter
 	margin-top: 25px;
 	display: block;
 }
-DIV.gx-multimedia-upload INPUT.Button
+DIV.gx-multimedia-upload INPUT.BtnEnter
 {
 	clear: both;
 	margin-left: auto;
@@ -1154,51 +1200,15 @@ DIV.gx-multimedia-upload A.gx-multimedia-empty SPAN.gx-audio-placeholder
 	background-image: url(PlaceHolderAudio.png);
 	opacity:1;
 }
-DIV.gx-multimedia-upload A.action
+DIV.gx-multimedia-upload A:first-child
 {
-	background-color: #666;
-	padding-bottom: 2px;
-	padding-left: 2px;
-	padding-right: 2px;
-	padding-top: 2px;
-	position: absolute;
-	top: 0px;
-	cursor: pointer;
-	font-size: 11px;
-	color: white;
-	opacity:0;
-	line-height:15px;
-	-moz-transition:opacity .3s ease-in-out;
-	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-	-ms-transition:opacity .3s ease-in-out;
-	opacity:0;
-	-webkit-transition:opacity .3s ease-in-out;
-}
-DIV.gx-multimedia-upload A.change-action
-{
-	background-image: url(MultimediaEdit.png);
-	background-position: 4px center;
-	background-repeat: no-repeat;
-	padding-left: 16px;
-	padding-right: 4px;
 	right: 20px;
 }
-DIV.gx-multimedia-upload A.clear-action
+DIV.gx-multimedia-upload:hover A.action
 {
-	background-image: url(MultimediaClear.png);
-	background-position: center center;;
-	background-repeat: no-repeat;
-	padding-bottom: 10px;
-	padding-left: 10px;
-	padding-right: 9px;
-	padding-top: 9px;
-	right: 0px;
-}
-DIV.gx-multimedia-upload A.action:focus
-{
-	text-decoration: underline;
-	opacity:.9;
-	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
+	display: block;
+	opacity:.7;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
 }
 DIV.gx-multimedia-upload:hover A.action:hover
 {
@@ -1212,12 +1222,6 @@ DIV.gx-multimedia-upload:hover A.action:focus
 	opacity:.9;
 	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
 }
-DIV.gx-multimedia-upload:hover A.action
-{
-	display: block;
-	opacity:.7;
-	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
-}
 A:not([href]) SPAN.gx-video-placeholder
 {
 	opacity:.5;
@@ -1228,7 +1232,7 @@ A:not([href]) SPAN.gx-audio-placeholder
 }
 DIV.gx-mask
 {
-	background-color: yellow;
+	background-color: black;
 	background-image: none;
 	left: 0px;
 	position: absolute;
@@ -1237,7 +1241,7 @@ DIV.gx-mask
 	width: 100%;
 	animation: entermask 1s;
 	-webkit-animation: entermask 1s;
-	-ms-filter:alpha(opacity=10);
+	-ms-filter:"alpha(opacity=10)";
 	opacity:.10;
 }
 DIV.gx-unmask
@@ -1262,7 +1266,673 @@ BODY.gx-masked DIV.gx-mask
 	margin-right: 3px;
 	margin-top: 3px;
 }
-.Form
+.DVelop-Module 
+{
+	list-style-image: none;
+}
+.DVelop-Panel 
+{
+	border-bottom-color: #808080;
+	border-left-color: #808080;
+	border-right-color: #808080;
+	border-top-color: #808080;
+	border-style: solid;
+	left: 0px;
+	position: relative;
+	top: 0px;
+	z-index: 1;
+	border-width:1px 0;
+	*border-width:1px;
+	*zoom:1;
+	_zoom:normal;
+}
+.DVelop-Panel  .Header 
+{
+	background-image: url(Sprite.png);
+	background-position: 0 -200px;
+	background-repeat: repeat-x;
+	border-bottom: solid 1px #ccc;
+	border-left-color: #808080;
+	border-right-color: #808080;
+	border-top-color: #808080;
+	border-style: solid;
+	margin-right: -1px;
+	margin-top: 0px;
+	padding-right: 10px;
+	padding-top: 0px;
+	font-size: 93%;
+	font-weight: bold;
+	border-width:0 1px;
+	*margin:0;
+	*border:0;
+	line-height:2;
+	*line-height:1.9;
+	color:#000;
+}
+.DVelop-Panel  .Header  .TL 
+{
+	background-repeat: no-repeat;
+	left: 0px;
+	position: absolute;
+	top: 0px;
+}
+.DVelop-Panel  .Header  .TR 
+{
+	background-repeat: no-repeat;
+	position: absolute;
+	right: 0px;
+	top: 0px;
+}
+.DVelop-Panel  .Body 
+{
+	background-color: #f2f2f2;
+	border-bottom-color: #808080;
+	border-left-color: #808080;
+	border-right-color: #808080;
+	border-top-color: #808080;
+	border-style: solid;
+	margin-right: -1px;
+	margin-top: 0px;
+	overflow: auto;
+	padding-bottom: 10px;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 10px;
+	height: 100%;
+	border-width:0 1px;
+	*margin:0;
+	*border:0;
+}
+.DVelop-Panel  .Footer 
+{
+	background-color: #f2f2f2;
+	border-bottom-color: #808080;
+	border-left-color: #808080;
+	border-right-color: #808080;
+	border-top-color: #808080;
+	border-style: solid;
+	border-top: solid 1px #808080;
+	margin-bottom: 0px;
+	margin-right: -1px;
+	margin-top: 0px;
+	padding-right: 10px;
+	padding-top: 5px;
+	font-size: 77%;
+	border-width:0 1px;
+	*margin:0;
+	*border:0;
+}
+.DVelop-Panel  .Footer  .BL 
+{
+	background-repeat: no-repeat;
+	bottom: 0px;
+	left: 0px;
+	position: absolute;
+}
+.DVelop-Panel  .Footer  .BR 
+{
+	background-repeat: no-repeat;
+	bottom: 0px;
+	position: absolute;
+	right: 0px;
+}
+.DVelop-Overlay 
+{
+	position: relative;
+	z-index: 2;
+	visibility: hidden;
+}
+.DVelop-Container 
+{
+	position: relative;
+	z-index: 2;
+	visibility: hidden;
+}
+.DVelop-Container  .underlay 
+{
+	left: -1px;
+	right: -1px;
+}
+.DVelop-Container  .Close 
+{
+	background-image: url(Sprite.png);
+	background-position: 0 -300px;
+	background-repeat: no-repeat;
+	overflow: hidden;
+	position: absolute;
+	right: 6px;
+	top: 5px;
+	height: 15px;
+	width: 25px;
+	cursor: pointer;
+	text-decoration: none;
+	text-indent: -10000em;
+}
+.DVelop-Container  FORM
+{
+	margin-bottom: 0px;
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-top: 0px;
+}
+.DVelop-Container  SELECT
+{
+	_visibility:inherit;
+}
+.DVelop-Container  .Collapse 
+{
+	background-image: url(Sprite.png);
+	background-position: 0 -400px;
+	background-repeat: no-repeat;
+	overflow: hidden;
+	position: absolute;
+	right: 6px;
+	top: 5px;
+	height: 15px;
+	width: 15px;
+	cursor: pointer;
+	text-decoration: none;
+	text-indent: -10000em;
+}
+.DVelop-Container  .Expand 
+{
+	background-image: url(Sprite.png);
+	background-position: 0 -350px;
+	background-repeat: no-repeat;
+	overflow: hidden;
+	position: absolute;
+	right: 6px;
+	top: 5px;
+	height: 15px;
+	width: 15px;
+	cursor: pointer;
+	text-decoration: none;
+	text-indent: -10000em;
+}
+.mask 
+{
+	background-color: #000;
+	bottom: 0px;
+	left: 0px;
+	position: absolute;
+	right: 0px;
+	top: 0px;
+	z-index: 1;
+	display: none;
+	opacity:.25;
+	filter:alpha(opacity=25);
+}
+.mask.block-scrollbars 
+{
+	overflow: auto;
+}
+.masked select, .drag select, .hide-select select 
+{
+	_visibility:hidden;
+}
+.hide-scrollbars * 
+{
+	overflow: hidden;
+}
+.hide-scrollbars 
+{
+	overflow: hidden;
+}
+.hide-scrollbars  SELECT
+{
+	display: none;
+}
+.show-scrollbars 
+{
+	overflow: auto;
+}
+.DVelop-tt-shadow 
+{
+	background-color: #000;
+	bottom: -3px;
+	left: -3px;
+	position: absolute;
+	right: -3px;
+	top: 2px;
+}
+.DVelop-override-padding 
+{
+	padding:0!important;
+}
+.DVelop-Container.shadow 
+{
+	_padding:2px 4px 0 2px;
+}
+.DVelop-Container.shadow  .underlay.DVelop-force-redraw 
+{
+	padding-bottom: 1px;
+}
+.DVelop-Container.shadow  .underlay 
+{
+	background-color: #000;
+	bottom: -3px;
+	left: -3px;
+	position: absolute;
+	right: -3px;
+	top: 2px;
+	*top:4px;
+	*left:-1px;
+	*right:-1px;
+	*bottom:-1px;
+	_top:0;
+	_left:0;
+	_right:0;
+	_bottom:0;
+	_margin-top:3px;
+	_margin-left:-1px;
+	opacity:.12;
+	filter:alpha(opacity=12);
+}
+.DVelop-Container.show-scrollbars 
+{
+	overflow: visible;
+}
+.DVelop-Container.show-scrollbars  .underlay 
+{
+	overflow: auto;
+}
+.DVelop-tt.show-scrollbars 
+{
+	overflow: visible;
+}
+.DVelop-tt.show-scrollbars  .DVelop-tt-shadow 
+{
+	overflow: auto;
+}
+.DVelop-tt.show-scrollbars  .Body 
+{
+	overflow: auto;
+}
+.DVelop-effect-fade  .DVelop-tt-shadow 
+{
+	display: none;
+}
+.DVelop-effect-fade  .underlay 
+{
+	display: none;
+}
+.DVelop-Overlay.DVelop-force-redraw 
+{
+	margin-bottom: 1px;
+}
+.DVelop-Container.matte 
+{
+	background-color: #fff;
+	padding-right: 10px;
+	padding-top: 9px;
+}
+.DVelop-Dialog  .Footer 
+{
+	border-top: none;
+	padding-bottom: 10px;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 0px;
+	font-size: 100%;
+}
+.DVelop-Dialog  .Footer  .button-group 
+{
+	display: block;
+	text-align: right;
+}
+.DVelop-Dialog  .Footer  BUTTON.default
+{
+	font-weight: bold;
+}
+.DVelop-Dialog  .Footer  SPAN.default
+{
+	background-position: 0 -1400px;
+	border-bottom-color: #304369;
+	border-left-color: #304369;
+	border-right-color: #304369;
+	border-top-color: #304369;
+}
+.DVelop-Dialog  .Footer  SPAN.default BUTTON
+{
+	color:#fff;
+}
+.DVelop-Dialog  .Footer  SPAN.first-child
+{
+	border-bottom-color: #304369;
+	border-left-color: #304369;
+	border-right-color: #304369;
+	border-top-color: #304369;
+}
+.DVelop-Dialog  .Footer  SPAN.DVelop-button-disabled
+{
+	background-position: 0 -1500px;
+	border-bottom-color: #ccc;
+	border-left-color: #ccc;
+	border-right-color: #ccc;
+	border-top-color: #ccc;
+}
+.DVelop-Dialog  .Footer  SPAN.DVelop-button-disabled BUTTON
+{
+	color:#a6a6a6;
+}
+.DVelop-Dialog  .Footer  SPAN.first-child
+{
+	border-bottom-color: #ccc;
+	border-left-color: #ccc;
+	border-right-color: #ccc;
+	border-top-color: #ccc;
+}
+.DVelop-Dialog  .Body 
+{
+	background-image: none;
+}
+.DVelop-Dialog  .Body  .DVelop-Icon 
+{
+	background-image: url(Sprite.png);
+	background-position: 0 0;
+	background-repeat: no-repeat;
+	float: left;
+	margin-right: 10px;
+	height: 16px;
+	width: 16px;
+}
+.DVelop-Dialog  .Body  SPAN.blckicon
+{
+	background-position: 0 -1100px;
+}
+.DVelop-Dialog  .Body  SPAN.alrticon
+{
+	background-position: 0 -1050px;
+}
+.DVelop-Dialog  .Body  SPAN.hlpicon
+{
+	background-position: 0 -1150px;
+}
+.DVelop-Dialog  .Body  SPAN.infoicon
+{
+	background-position: 0 -1200px;
+}
+.DVelop-Dialog  .Body  SPAN.warnicon
+{
+	background-position: 0 -1900px;
+}
+.DVelop-Dialog  .Body  SPAN.tipicon
+{
+	background-position: 0 -1250px;
+}
+.DVelop-tt  .Body 
+{
+	background-color: #ffee69;
+	border-bottom-color: #a6982b;
+	border-left-color: #a6982b;
+	border-right-color: #a6982b;
+	border-top-color: #d4c237;
+	border-style: solid;
+	border-width: 1px;
+	left: 0px;
+	padding-right: 5px;
+	padding-top: 2px;
+	position: relative;
+	top: 0px;
+	z-index: 1;
+	color:#000;
+}
+.DVelop-tt-shadow-visible 
+{
+	opacity:.12;
+	filter:alpha(opacity=12);
+}
+.UnSelectedTab 
+{
+	background-image: url(TabUnselected.gif);
+	font-family: Arial;
+	font-size: 8pt;
+}
+.UnSelectedTab  A
+{
+	font-family: Verdana, Arial;
+	font-size: 8pt;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: bold;
+	text-decoration: none;
+	vertical-align: bottom;
+}
+.td5 
+{
+	width: 40px;
+}
+.td100 
+{
+	width: 100%;
+}
+.PopupBorder 
+{
+	background-color: white;
+	border-bottom-color: #f77984;
+	border-left-color: #f77984;
+	border-right-color: #f77984;
+	border-top-color: #f77984;
+	border-style: solid;
+	border-width: 1px;
+}
+.PopupShadow 
+{
+	background-color: #404040;
+}
+.HRDefault 
+{
+	background-color: #9d1f1f;
+	border-width: 0px;
+	height: 2px;
+	color: #9d1f1f;
+}
+DIV.suggestions
+{
+	background-color: #fff;
+	border-bottom-color: #969696;
+	border-left-color: #969696;
+	border-right-color: #969696;
+	border-top-color: #969696;
+	border-style: solid;
+	border-width: 1px;
+	box-sizing: border-box;
+	position: absolute;
+	-moz-box-sizing: border-box;
+	font-family: Verdana, Arial;
+	font-size: 8pt;
+	font-style: normal;
+	font-variant: normal;
+}
+DIV.suggestions DIV
+{
+	padding-bottom: 2px;
+	padding-left: 2px;
+	padding-right: 2px;
+	padding-top: 2px;
+	cursor: default;
+	font-family: Verdana, Arial;
+	font-size: 8pt;
+	font-style: normal;
+	font-variant: normal;
+	color: #333;
+}
+DIV.suggestions DIV.current
+{
+	background-color: #d3d4d3;
+	margin-bottom: 2px;
+	margin-left: 2px;
+	margin-right: 2px;
+	margin-top: 2px;
+	font-family: Verdana, Arial;
+	font-size: 8pt;
+	font-style: normal;
+	font-variant: normal;
+	color: #333;
+}
+.Table,.TableDragging,.TableAcceptDrag,.TableNoAcceptDrag,.LevelTable,.BodyContainer,.HeaderContainer,.RecentLinksContainer,.FormContainer,.Container,.ContainerFluid,.AdvancedContainerItem,.AdvancedContainerItemExpanded,.AdvancedContainer,.AdvancedContainerVisible,.OrdersTable,.WWAdvancedContainer,.RecentLinksMainTable,.RecentLinksMainTableExpanded,.PromptContainer,.PromptMainTable,.MainContainer,.GridTabMainTable,.Table960,.TableGreyFooter,.TableBlackFooter,.TableBlackHeader,.TableLogin,.VerticalTab,.TableMargin2,.TableGrid,.TableTop,.TableContent,.Table100x100,.ToolbarMain,.TableBorderBottom,.TableBorder,.TableLeftMenu,.TableTopMenu,.ViewTable,.TableHorizontalLine,.header_pink_line,.HorizontalSpace,.TableBottom,.RecentLinksTable,.Table80,.Table95
+{
+	margin-bottom: 0pt;
+	margin-left: 0pt;
+	margin-right: 0pt;
+	margin-top: 0pt;
+	padding-bottom: 0pt;
+	padding-left: 0pt;
+	padding-right: 0pt;
+	padding-top: 0pt;
+	border-style: none;
+	border-width: 0px;
+	font-family: Verdana,Arial;
+	font-size: 9pt;
+	font-style: normal;
+	text-align: left;
+}
+.TableGrid
+{
+	background-color: #e4e5e6;
+	border-bottom-color: #747474;
+	border-left-color: #747474;
+	border-right-color: #747474;
+	border-top-color: #747474;
+	border-style: solid;
+	border-width: 1px;
+	font-size: 8pt;
+}
+.TableTop
+{
+	background-repeat: repeat-x;
+	list-style-image: none;
+	background-image: url(HeaderBackground.gif);
+	height: 80px;
+	width: 100%;
+}
+.TableContent
+{
+	padding-bottom: 10pt;
+	padding-left: 10pt;
+	padding-right: 10pt;
+	padding-top: 10pt;
+	color: #747474;
+	vertical-align: top;
+}
+.Table100x100,.ToolbarMain,.TableBorderBottom,.TableBorder
+{
+	width: 100%;
+	vertical-align: top;
+}
+.TableBorder
+{
+	border-bottom: 1px;
+	border-left: 1px;
+	border-right: 1px;
+	padding-bottom: 5pt;
+	padding-left: 5pt;
+	padding-right: 5pt;
+	padding-top: 5pt;
+	border-bottom-color: #9d1f1f;
+	border-left-color: #9d1f1f;
+	border-right-color: #9d1f1f;
+	border-style: solid;
+}
+.TableLeftMenu
+{
+	background-color: #e4e5e6;
+	font-family: "Verdana";
+	font-size: 8.25pt;
+	width: 100%;
+	text-indent: 15pt;
+}
+.TableTopMenu
+{
+	padding-bottom: 3pt;
+	padding-left: 5pt;
+	padding-right: 3pt;
+	padding-top: 3pt;
+	font-size: 8.25pt;
+	font-weight: bold;
+	color: #666;
+	vertical-align: middle;
+}
+.ViewTable
+{
+	border-bottom: 1px;
+	border-left: 1px;
+	border-right: 1px;
+	border-top: 1px;
+	background-color: white;
+	border-bottom-color: silver;
+	border-left-color: silver;
+	border-right-color: silver;
+	border-top-color: silver;
+	border-width: 1px;
+	color: #404040;
+	width: 100%;
+}
+.TableHorizontalLine,.header_pink_line
+{
+	background-color: #9d1f1f;
+	height: 1px;
+	width: 100%;
+}
+.HorizontalSpace
+{
+	background-color: #fff;
+	height: 10px;
+	width: 100%;
+}
+.TableBottom
+{
+	background-color: #9d1f1f;
+	height: 30px;
+	width: 100%;
+	text-align: center;
+	vertical-align: middle;
+}
+.RecentLinksTable
+{
+	padding-left: 5pt;
+	padding-right: 5pt;
+	background-color: whitesmoke;
+	border-bottom-color: #9d1f1f;
+	height: 15px;
+	width: 100%;
+}
+.Table80
+{
+	width: 80%;
+}
+.Table95
+{
+	width: 100%;
+}
+.Messages,.ErrorMessages,.WarningMessages
+{
+	background-color: #ffffe1;
+	border-bottom-color: #716f64;
+	border-left-color: #716f64;
+	border-right-color: #716f64;
+	border-top-color: #716f64;
+	border-style: solid;
+	border-width: 1px;
+	padding-bottom: 1px;
+	padding-left: 1px;
+	padding-right: 1px;
+	padding-top: 1px;
+	font-family: Baskerville, serif;
+	font-size: 0.9em;
+	font-style: normal;
+	font-variant: normal;
+	color: #000;
+}
+.ErrorMessages
+{
+	font-weight: bold;
+}
+.WarningMessages
+{
+	font-weight: bold;
+}
+.Form,.FormBody
 {
 	margin-bottom: 0pt;
 	margin-left: 0px;
@@ -1332,6 +2002,53 @@ div.gx-content-placeholder.transitioning, div.gxwebcomponent.transitioning
 }
 
 /* [gx-css-import ignore - end] */
+/* [gx-css-import ignore - start] */
+div.gx-content-placeholder > div.gx-ct-body.FormBody-fx, div.gxwebcomponent > div.gxwebcomponent-body.FormBody-fx, body.FormBody-fx
+{
+	transition: all cubic-bezier(0, 1, 1, 0.69) .5s;
+	-moz-transition: all cubic-bezier(0, 1, 1, 0.69) .5s;
+	-ms-transition: all cubic-bezier(0, 1, 1, 0.69) .5s;
+	-o-transition: all cubic-bezier(0, 1, 1, 0.69) .5s;
+	-webkit-transition: all cubic-bezier(0, 1, 1, 0.69) .5s;
+}
+
+div.gx-content-placeholder > div.gx-ct-body.FormBody-fx.enter-fx-duration, div.gxwebcomponent > div.gxwebcomponent-body.FormBody-fx.enter-fx-duration, body.FormBody-fx.enter-fx-duration
+{
+	transition-duration: 0.5s;
+	-moz-transition-duration: 0.5s;
+	-ms-transition-duration: 0.5s;
+	-o-transition-duration: 0.5s;
+	-webkit-transition-duration: 0.5s;
+}
+
+div.gx-content-placeholder > div.gx-ct-body.FormBody-fx.leave-fx-duration, div.gxwebcomponent > div.gxwebcomponent-body.FormBody-fx.leave-fx-duration, body.FormBody-fx.leave-fx-duration
+{
+	transition-duration: 0.5s;
+	-moz-transition-duration: 0.5s;
+	-ms-transition-duration: 0.5s;
+	-o-transition-duration: 0.5s;
+	-webkit-transition-duration: 0.5s;
+}
+
+div.gx-content-placeholder.transitioning, div.gxwebcomponent.transitioning
+{
+	overflow: hidden;
+	position: relative;
+}
+
+.FormBody-fx.entering
+{
+	opacity: 0.1;
+	position: absolute;
+}
+
+.FormBody-fx.leaving
+{
+	opacity: 0.1;
+	position: absolute;
+}
+
+/* [gx-css-import ignore - end] */
 .Attribute,.BlobContentAttribute,.ReadonlyBlobContentAttribute,.BlobInputAttribute,.AttributeDragging,.AttributeAcceptDrag,.AttributeNoAcceptDrag,.ImageAttribute,.ActionAttribute,.BlobContentActionAttribute,.ReadonlyBlobContentActionAttribute,.ReadonlyActionAttribute,.UpdateAttribute,.BlobContentUpdateAttribute,.ReadonlyBlobContentUpdateAttribute,.ReadonlyUpdateAttribute,.BlobInputUpdateAttribute,.DeleteAttribute,.BlobContentDeleteAttribute,.ReadonlyBlobContentDeleteAttribute,.ReadonlyDeleteAttribute,.BlobInputDeleteAttribute,.DisplayAttribute,.BlobContentDisplayAttribute,.ReadonlyBlobContentDisplayAttribute,.ReadonlyDisplayAttribute,.BlobInputDisplayAttribute,.SelectionAttribute,.BlobContentSelectionAttribute,.ReadonlyBlobContentSelectionAttribute,.ReadonlySelectionAttribute,.BlobInputSelectionAttribute,.DisabledActionAttribute,.BlobContentDisabledActionAttribute,.ReadonlyBlobContentDisabledActionAttribute,.ReadonlyDisabledActionAttribute,.BlobInputDisabledActionAttribute,.BlobInputActionAttribute,.ResponsiveImageAttribute,.BlobContentResponsiveImageAttribute,.ReadonlyBlobContentResponsiveImageAttribute,.ReadonlyResponsiveImageAttribute,.BlobInputResponsiveImageAttribute,.ReadonlyImageAttribute,.VideoAttribute,.ReadonlyVideoAttribute,.AudioAttribute,.ReadonlyAudioAttribute,.CheckBox,.ReadonlyCheckBox,.BlobContentCheckBox,.ReadonlyBlobContentCheckBox,.BlobInputCheckBox,.FilterAttribute,.BlobContentFilterAttribute,.ReadonlyBlobContentFilterAttribute,.ReadonlyFilterAttribute,.BlobInputFilterAttribute,.DescriptionAttribute,.BlobContentDescriptionAttribute,.ReadonlyBlobContentDescriptionAttribute,.ReadonlyDescriptionAttribute,.BlobInputDescriptionAttribute,.ErrorAttribute,.WarningAttribute,.ReadonlyAttribute,.AttSubTitle,.BlobContentAttSubTitle,.ReadonlyBlobContentAttSubTitle,.ReadonlyAttSubTitle,.BlobInputAttSubTitle,.IME_Active,.BlobContentIME_Active,.ReadonlyBlobContentIME_Active,.BlobInputIME_Active,.ReadonlyIME_Active,.IME_Inactive,.BlobContentIME_Inactive,.ReadonlyBlobContentIME_Inactive,.BlobInputIME_Inactive,.ReadonlyIME_Inactive,.IME_Disabled,.BlobContentIME_Disabled,.ReadonlyBlobContentIME_Disabled,.BlobInputIME_Disabled,.ReadonlyIME_Disabled
 {
 	border-bottom-color: #d3d4d3;
@@ -1351,6 +2068,8 @@ div.gx-content-placeholder.transitioning, div.gxwebcomponent.transitioning
 {
 	border-style: none;
 	border-width: 0px;
+	max-width:124px;
+	max-height:68px;
 }
 .ReadonlyVideoAttribute
 {
@@ -3033,140 +3752,6 @@ div.gx-content-placeholder.transitioning, div.gxwebcomponent.transitioning
 	text-indent: 5px;
 }
 
-.Table,.TableDragging,.TableAcceptDrag,.TableNoAcceptDrag,.LevelTable,.BodyContainer,.HeaderContainer,.RecentLinksContainer,.FormContainer,.Container,.ContainerFluid,.AdvancedContainerItem,.AdvancedContainerItemExpanded,.AdvancedContainer,.AdvancedContainerVisible,.OrdersTable,.WWAdvancedContainer,.RecentLinksMainTable,.RecentLinksMainTableExpanded,.PromptContainer,.PromptMainTable,.MainContainer,.GridTabMainTable,.Table960,.TableGreyFooter,.TableBlackFooter,.TableBlackHeader,.TableLogin,.VerticalTab,.TableGrid,.TableTop,.TableContent,.Table100x100,.TableBorder,.TableLeftMenu,.TableTopMenu,.ViewTable,.TableHorizontalLine,.header_pink_line,.HorizontalSpace,.TableBottom,.RecentLinksTable,.Table80,.Table95
-{
-	margin-bottom: 0pt;
-	margin-left: 0pt;
-	margin-right: 0pt;
-	margin-top: 0pt;
-	padding-bottom: 0pt;
-	padding-left: 0pt;
-	padding-right: 0pt;
-	padding-top: 0pt;
-	border-style: none;
-	border-width: 0px;
-	font-family: Verdana,Arial;
-	font-size: 9pt;
-	font-style: normal;
-}
-.TableGrid
-{
-	background-color: #e4e5e6;
-	border-bottom-color: #747474;
-	border-left-color: #747474;
-	border-right-color: #747474;
-	border-top-color: #747474;
-	border-style: solid;
-	border-width: 1px;
-	font-size: 8pt;
-}
-.TableTop
-{
-	background-repeat: repeat-x;
-	list-style-image: none;
-	background-image: url(HeaderBackground.gif);
-	height: 80px;
-	width: 100%;
-}
-.TableContent
-{
-	padding-bottom: 10pt;
-	padding-left: 10pt;
-	padding-right: 10pt;
-	padding-top: 10pt;
-	color: #747474;
-	vertical-align: top;
-}
-.Table100x100,.TableBorder
-{
-	width: 100%;
-	vertical-align: top;
-}
-.TableBorder
-{
-	border-bottom: 1px;
-	border-left: 1px;
-	border-right: 1px;
-	padding-bottom: 5pt;
-	padding-left: 5pt;
-	padding-right: 5pt;
-	padding-top: 5pt;
-	border-bottom-color: #9d1f1f;
-	border-left-color: #9d1f1f;
-	border-right-color: #9d1f1f;
-	border-style: solid;
-}
-.TableLeftMenu
-{
-	background-color: #e4e5e6;
-	font-family: "Verdana";
-	font-size: 8.25pt;
-	width: 100%;
-	text-indent: 15pt;
-}
-.TableTopMenu
-{
-	padding-bottom: 3pt;
-	padding-left: 5pt;
-	padding-right: 3pt;
-	padding-top: 3pt;
-	font-size: 8.25pt;
-	font-weight: bold;
-	color: #666;
-	vertical-align: middle;
-}
-.ViewTable
-{
-	border-bottom: 1px;
-	border-left: 1px;
-	border-right: 1px;
-	border-top: 1px;
-	background-color: white;
-	border-bottom-color: silver;
-	border-left-color: silver;
-	border-right-color: silver;
-	border-top-color: silver;
-	border-width: 1px;
-	color: #404040;
-	width: 100%;
-}
-.TableHorizontalLine,.header_pink_line
-{
-	background-color: #9d1f1f;
-	height: 1px;
-	width: 100%;
-}
-.HorizontalSpace
-{
-	background-color: #fff;
-	height: 10px;
-	width: 100%;
-}
-.TableBottom
-{
-	background-color: #9d1f1f;
-	height: 30px;
-	width: 100%;
-	text-align: center;
-	vertical-align: middle;
-}
-.RecentLinksTable
-{
-	padding-left: 5pt;
-	padding-right: 5pt;
-	background-color: whitesmoke;
-	border-bottom-color: #9d1f1f;
-	height: 15px;
-	width: 100%;
-}
-.Table80
-{
-	width: 80%;
-}
-.Table95
-{
-	width: 100%;
-}
 .TextBlock,.TextBlockDragging,.TextBlockAcceptDrag,.TextBlockNoAcceptDrag,.RecentLinkItem,.RecentsTitle,.WWAdvancedLabel,.WWOrderByLabel,.WWFilterLabel,.WWDateFilterLabel,.WWOrderItem,.WWOrderItemSelected,.FooterText,.VerticalMenuOption,.TextTable,.BtnTextBlock,.bullet,.subBullet,.TBTopMenu,.TBLeftMenu,.Title,.SubTitle,.Label,.LabelDragging,.LabelAcceptDrag,.LabelNoAcceptDrag,.SmallText,.TextBlockHeader,.SelectedTab,.UnSelectedTab,.RecentLink,.FieldSetTitle,.Separator
 {
 	padding-right: 3pt;
@@ -3308,7 +3893,7 @@ div.gx-content-placeholder.transitioning, div.gxwebcomponent.transitioning
 	text-decoration: none;
 	color: #f00;
 }
-.FreeStyleGrid,.TrnSublevelGrid,.RecentLinksGrid,.FreeStyleGridDragging,.FreeStyleGridAcceptDrag,.FreeStyleGridNoAcceptDrag,.VerticalTabGrid
+.FreeStyleGrid,.TrnSublevelGrid,.RecentLinksGrid,.FreeStyleGridDragging,.FreeStyleGridAcceptDrag,.FreeStyleGridNoAcceptDrag,.FreeStyleGridBottom,.FreeStyleGridRecent,.VerticalTabGrid
 {
 	margin-bottom: 0px;
 	margin-left: 0px;
@@ -3496,6 +4081,64 @@ div.gx-content-placeholder.transitioning, div.gxwebcomponent.transitioning
 	background-color: #d3d4d3;
 }
 
+.FreeStyleGridBottomUniform
+{
+	background-color: #d3d4d3;
+	font-family: Verdana,Arial;
+	font-size: 8pt;
+	font-style: normal;
+}
+
+.FreeStyleGridBottomOdd
+{
+	font-family: Verdana,Arial;
+	font-size: 8pt;
+	font-style: normal;
+	background-color: #fff;
+}
+
+.FreeStyleGridBottomEven
+{
+	font-family: Verdana,Arial;
+	font-size: 8pt;
+	font-style: normal;
+	background-color: #d3d4d3;
+}
+
+.FreeStyleGridBottomUniformTitle
+{
+	background-color: #d3d4d3;
+}
+
+.FreeStyleGridRecentUniform
+{
+	background-color: #d3d4d3;
+	font-family: Verdana,Arial;
+	font-size: 8pt;
+	font-style: normal;
+}
+
+.FreeStyleGridRecentOdd
+{
+	font-family: Verdana,Arial;
+	font-size: 8pt;
+	font-style: normal;
+	background-color: #fff;
+}
+
+.FreeStyleGridRecentEven
+{
+	font-family: Verdana,Arial;
+	font-size: 8pt;
+	font-style: normal;
+	background-color: #d3d4d3;
+}
+
+.FreeStyleGridRecentUniformTitle
+{
+	background-color: #d3d4d3;
+}
+
 .VerticalTabGridUniform
 {
 	font-family: Verdana,Arial;
@@ -3534,123 +4177,4 @@ div.gx-content-placeholder.transitioning, div.gxwebcomponent.transitioning
 	font-style: normal;
 	font-weight: normal;
 	text-decoration: underline;
-}
-.Messages,.ErrorMessages,.WarningMessages
-{
-	background-color: #f6e2c6;
-	border-bottom-color: #716f64;
-	border-left-color: #716f64;
-	border-right-color: #716f64;
-	border-top-color: #716f64;
-	border-style: solid;
-	border-width: 1px;
-	padding-bottom: 4px;
-	padding-left: 4px;
-	padding-right: 4px;
-	padding-top: 4px;
-	font-family: Verdana, Arial;
-	font-size: 8pt;
-	font-style: normal;
-	font-variant: normal;
-	color: #7d7d7d;
-}
-.ErrorMessages
-{
-	background-color: #d84523;
-	font-weight: bold;
-	color: #fff;
-}
-.WarningMessages
-{
-	background-color: #f6a849;
-	font-weight: bold;
-	color: #fff;
-}
-.UnSelectedTab 
-{
-	background-image: url(TabUnselected.gif);
-	font-family: Arial;
-	font-size: 8pt;
-}
-.UnSelectedTab  A
-{
-	font-family: Verdana, Arial;
-	font-size: 8pt;
-	font-style: normal;
-	font-variant: normal;
-	font-weight: bold;
-	text-decoration: none;
-	vertical-align: bottom;
-}
-.td5 
-{
-	width: 40px;
-}
-.td100 
-{
-	width: 100%;
-}
-.PopupBorder 
-{
-	background-color: white;
-	border-bottom-color: #f77984;
-	border-left-color: #f77984;
-	border-right-color: #f77984;
-	border-top-color: #f77984;
-	border-style: solid;
-	border-width: 1px;
-}
-.PopupShadow 
-{
-	background-color: #404040;
-}
-.HRDefault 
-{
-	background-color: #9d1f1f;
-	border-width: 0px;
-	height: 2px;
-	color: #9d1f1f;
-}
-DIV.suggestions
-{
-	background-color: #fff;
-	border-bottom-color: #969696;
-	border-left-color: #969696;
-	border-right-color: #969696;
-	border-top-color: #969696;
-	border-style: solid;
-	border-width: 1px;
-	box-sizing: border-box;
-	position: absolute;
-	-moz-box-sizing: border-box;
-	font-family: Verdana, Arial;
-	font-size: 8pt;
-	font-style: normal;
-	font-variant: normal;
-}
-DIV.suggestions DIV
-{
-	padding-bottom: 2px;
-	padding-left: 2px;
-	padding-right: 2px;
-	padding-top: 2px;
-	cursor: default;
-	font-family: Verdana, Arial;
-	font-size: 8pt;
-	font-style: normal;
-	font-variant: normal;
-	color: #333;
-}
-DIV.suggestions DIV.current
-{
-	background-color: #d3d4d3;
-	margin-bottom: 2px;
-	margin-left: 2px;
-	margin-right: 2px;
-	margin-top: 2px;
-	font-family: Verdana, Arial;
-	font-size: 8pt;
-	font-style: normal;
-	font-variant: normal;
-	color: #333;
 }

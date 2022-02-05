@@ -163,7 +163,7 @@ form[tabindex="-1"]{
 	border-style: none;
 	border-width: 0px;
 }
-.Form
+.Form,.FormBody
 {
 	background-color: #eaeaea;
 	font-family: 'Open Sans Regular', Arial;
@@ -213,6 +213,53 @@ div.gx-content-placeholder.transitioning, div.gxwebcomponent.transitioning
 }
 
 .Form-fx.leaving
+{
+	opacity: 0.1;
+	position: absolute;
+}
+
+/* [gx-css-import ignore - end] */
+/* [gx-css-import ignore - start] */
+div.gx-content-placeholder > div.gx-ct-body.FormBody-fx, div.gxwebcomponent > div.gxwebcomponent-body.FormBody-fx, body.FormBody-fx
+{
+	transition: all cubic-bezier(0, 1, 1, 0.69) .5s;
+	-moz-transition: all cubic-bezier(0, 1, 1, 0.69) .5s;
+	-ms-transition: all cubic-bezier(0, 1, 1, 0.69) .5s;
+	-o-transition: all cubic-bezier(0, 1, 1, 0.69) .5s;
+	-webkit-transition: all cubic-bezier(0, 1, 1, 0.69) .5s;
+}
+
+div.gx-content-placeholder > div.gx-ct-body.FormBody-fx.enter-fx-duration, div.gxwebcomponent > div.gxwebcomponent-body.FormBody-fx.enter-fx-duration, body.FormBody-fx.enter-fx-duration
+{
+	transition-duration: 0.5s;
+	-moz-transition-duration: 0.5s;
+	-ms-transition-duration: 0.5s;
+	-o-transition-duration: 0.5s;
+	-webkit-transition-duration: 0.5s;
+}
+
+div.gx-content-placeholder > div.gx-ct-body.FormBody-fx.leave-fx-duration, div.gxwebcomponent > div.gxwebcomponent-body.FormBody-fx.leave-fx-duration, body.FormBody-fx.leave-fx-duration
+{
+	transition-duration: 0.5s;
+	-moz-transition-duration: 0.5s;
+	-ms-transition-duration: 0.5s;
+	-o-transition-duration: 0.5s;
+	-webkit-transition-duration: 0.5s;
+}
+
+div.gx-content-placeholder.transitioning, div.gxwebcomponent.transitioning
+{
+	overflow: hidden;
+	position: relative;
+}
+
+.FormBody-fx.entering
+{
+	opacity: 0.1;
+	position: absolute;
+}
+
+.FormBody-fx.leaving
 {
 	opacity: 0.1;
 	position: absolute;

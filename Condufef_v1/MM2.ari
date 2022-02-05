@@ -1,6 +1,7 @@
  
  
  
+pgm_main_i(web,28,'LOGIN',[ 15,'LOGIN','Login','','','','' ]).
 pgm_main_i(proc,15,'CATEGORIAS_REPORTE',[ 15,'ACATEGORIAS_REPORTE','Categorias_Reporte','','','','HTTP' ]).
 pgm_main_i(proc,14,'ACATEGORIASREPORTE',[ 15,'AACATEGORIASREPORTE',acategoriasreporte,'','','','HTTP' ]).
 pgm_main_i(proc,13,'CATEGORIASREPORTE',[ 15,'ACATEGORIASREPORTE','Categorias Reporte','','','','HTTP' ]).
@@ -11,10 +12,68 @@ pgm_main_i(proc,7,'REPORT_CATEGORIAS',[ 15,'AREPORT_CATEGORIAS','Report_Categori
 pgm_main_i(proc,9,'REPORTECATEGORIAS',[ 15,'AREPORTECATEGORIAS','Reporte Categorias','','','','HTTP' ]).
 pgm_main_i(proc,8,'REPORTCATEGORIAS',[ 15,'AREPORTCATEGORIAS','Report Categorias','','','','HTTP' ]).
 pgm_main_i(web,29,'MENUPRINCIPAL',[ 15,'MENUPRINCIPAL','Menu Principal','','','','' ]).
-pgm_main_i(web,28,'LOGIN',[ 15,'LOGIN','Login','','','','' ]).
 pgm_main_i(proc,6,'SCHEDULERREQUESTHANDLER',[ 15,'ASCHEDULERREQUESTHANDLER','Scheduler Request Handler','','','','HTTP' ]).
 pgm_main_i(proc,5,'LOADEVENTSSAMPLEPROC',[ 15,'ALOADEVENTSSAMPLEPROC','Load Events Sample Proc','','','','INTERNAL' ]).
  
+pgm_prop_i(web,28,'LOGIN','USE_ENCRYPTION','NO').
+pgm_prop_i(web,28,'LOGIN','HTTP_PROTOCOL','Unsecure').
+pgm_prop_i(web,1,'APPMASTERPAGE','WEB_COMP','Master').
+pgm_prop_i(web,1,'APPMASTERPAGE','USE_ENCRYPTION','NO').
+pgm_prop_i(web,1,'APPMASTERPAGE','HTTP_PROTOCOL','Unsecure').
+pgm_prop_i(web,111,'GX00O0','USE_ENCRYPTION','NO').
+pgm_prop_i(web,111,'GX00O0','HTTP_PROTOCOL','Unsecure').
+pgm_prop_i(web,108,'GX00N0','USE_ENCRYPTION','NO').
+pgm_prop_i(web,108,'GX00N0','HTTP_PROTOCOL','Unsecure').
+pgm_prop_i(web,82,'GX00L0','USE_ENCRYPTION','NO').
+pgm_prop_i(web,82,'GX00L0','HTTP_PROTOCOL','Unsecure').
+pgm_prop_i(web,81,'GX00K0','USE_ENCRYPTION','NO').
+pgm_prop_i(web,81,'GX00K0','HTTP_PROTOCOL','Unsecure').
+pgm_prop_i(web,80,'GX00H0','USE_ENCRYPTION','NO').
+pgm_prop_i(web,80,'GX00H0','HTTP_PROTOCOL','Unsecure').
+pgm_prop_i(web,79,'GX00F0','USE_ENCRYPTION','NO').
+pgm_prop_i(web,79,'GX00F0','HTTP_PROTOCOL','Unsecure').
+pgm_prop_i(web,78,'GX00D0','USE_ENCRYPTION','NO').
+pgm_prop_i(web,78,'GX00D0','HTTP_PROTOCOL','Unsecure').
+pgm_prop_i(web,77,'GX00C0','USE_ENCRYPTION','NO').
+pgm_prop_i(web,77,'GX00C0','HTTP_PROTOCOL','Unsecure').
+pgm_prop_i(web,76,'GX00I0','USE_ENCRYPTION','NO').
+pgm_prop_i(web,76,'GX00I0','HTTP_PROTOCOL','Unsecure').
+pgm_prop_i(web,75,'GX00G0','USE_ENCRYPTION','NO').
+pgm_prop_i(web,75,'GX00G0','HTTP_PROTOCOL','Unsecure').
+pgm_prop_i(web,74,'GX00E0','USE_ENCRYPTION','NO').
+pgm_prop_i(web,74,'GX00E0','HTTP_PROTOCOL','Unsecure').
+pgm_prop_i(web,73,'GX00B0','USE_ENCRYPTION','NO').
+pgm_prop_i(web,73,'GX00B0','HTTP_PROTOCOL','Unsecure').
+pgm_prop_i(web,72,'GX00A0','USE_ENCRYPTION','NO').
+pgm_prop_i(web,72,'GX00A0','HTTP_PROTOCOL','Unsecure').
+pgm_prop_i(web,71,'GX00J0','USE_ENCRYPTION','NO').
+pgm_prop_i(web,71,'GX00J0','HTTP_PROTOCOL','Unsecure').
+pgm_prop_i(web,69,'GX0080','USE_ENCRYPTION','NO').
+pgm_prop_i(web,69,'GX0080','HTTP_PROTOCOL','Unsecure').
+pgm_prop_i(web,68,'GX0070','USE_ENCRYPTION','NO').
+pgm_prop_i(web,68,'GX0070','HTTP_PROTOCOL','Unsecure').
+pgm_prop_i(web,67,'GX0060','USE_ENCRYPTION','NO').
+pgm_prop_i(web,67,'GX0060','HTTP_PROTOCOL','Unsecure').
+pgm_prop_i(web,66,'GX0050','USE_ENCRYPTION','NO').
+pgm_prop_i(web,66,'GX0050','HTTP_PROTOCOL','Unsecure').
+pgm_prop_i(web,65,'GX0040','USE_ENCRYPTION','NO').
+pgm_prop_i(web,65,'GX0040','HTTP_PROTOCOL','Unsecure').
+pgm_prop_i(web,64,'GX0030','USE_ENCRYPTION','NO').
+pgm_prop_i(web,64,'GX0030','HTTP_PROTOCOL','Unsecure').
+pgm_prop_i(web,63,'GX0020','USE_ENCRYPTION','NO').
+pgm_prop_i(web,63,'GX0020','HTTP_PROTOCOL','Unsecure').
+pgm_prop_i(web,62,'GX0010','USE_ENCRYPTION','NO').
+pgm_prop_i(web,62,'GX0010','HTTP_PROTOCOL','Unsecure').
+pgm_prop_i(trn,15,'USUARIOS','USE_ENCRYPTION','NO').
+pgm_prop_i(trn,15,'USUARIOS','HTTP_PROTOCOL','Unsecure').
+pgm_prop_i(trn,13,'ARTICULOSMOV','USE_ENCRYPTION','NO').
+pgm_prop_i(trn,13,'ARTICULOSMOV','HTTP_PROTOCOL','Unsecure').
+pgm_prop_i(trn,12,'ETIQUETAS','USE_ENCRYPTION','NO').
+pgm_prop_i(trn,12,'ETIQUETAS','HTTP_PROTOCOL','Unsecure').
+pgm_prop_i(trn,3,'MESES','USE_ENCRYPTION','NO').
+pgm_prop_i(trn,3,'MESES','HTTP_PROTOCOL','Unsecure').
+pgm_prop_i(trn,2,'PARAMETROS','USE_ENCRYPTION','NO').
+pgm_prop_i(trn,2,'PARAMETROS','HTTP_PROTOCOL','Unsecure').
 pgm_prop_i(web,115,'DETALLESALMACEN','USE_ENCRYPTION','NO').
 pgm_prop_i(web,115,'DETALLESALMACEN','HTTP_PROTOCOL','Unsecure').
 pgm_prop_i(web,112,'DETALLESPROVEEDORES','USE_ENCRYPTION','NO').
@@ -66,50 +125,6 @@ pgm_prop_i(proc,8,'AREPORTCATEGORIAS','USE_ENCRYPTION','NO').
 pgm_prop_i(proc,8,'REPORTCATEGORIAS','USE_ENCRYPTION','NO').
 pgm_prop_i(proc,8,'AREPORTCATEGORIAS','HTTP_PROTOCOL','Unsecure').
 pgm_prop_i(proc,8,'REPORTCATEGORIAS','HTTP_PROTOCOL','Unsecure').
-pgm_prop_i(web,111,'GX00O0','USE_ENCRYPTION','NO').
-pgm_prop_i(web,111,'GX00O0','HTTP_PROTOCOL','Unsecure').
-pgm_prop_i(web,108,'GX00N0','USE_ENCRYPTION','NO').
-pgm_prop_i(web,108,'GX00N0','HTTP_PROTOCOL','Unsecure').
-pgm_prop_i(web,82,'GX00L0','USE_ENCRYPTION','NO').
-pgm_prop_i(web,82,'GX00L0','HTTP_PROTOCOL','Unsecure').
-pgm_prop_i(web,81,'GX00K0','USE_ENCRYPTION','NO').
-pgm_prop_i(web,81,'GX00K0','HTTP_PROTOCOL','Unsecure').
-pgm_prop_i(web,80,'GX00H0','USE_ENCRYPTION','NO').
-pgm_prop_i(web,80,'GX00H0','HTTP_PROTOCOL','Unsecure').
-pgm_prop_i(web,79,'GX00F0','USE_ENCRYPTION','NO').
-pgm_prop_i(web,79,'GX00F0','HTTP_PROTOCOL','Unsecure').
-pgm_prop_i(web,78,'GX00D0','USE_ENCRYPTION','NO').
-pgm_prop_i(web,78,'GX00D0','HTTP_PROTOCOL','Unsecure').
-pgm_prop_i(web,77,'GX00C0','USE_ENCRYPTION','NO').
-pgm_prop_i(web,77,'GX00C0','HTTP_PROTOCOL','Unsecure').
-pgm_prop_i(web,76,'GX00I0','USE_ENCRYPTION','NO').
-pgm_prop_i(web,76,'GX00I0','HTTP_PROTOCOL','Unsecure').
-pgm_prop_i(web,75,'GX00G0','USE_ENCRYPTION','NO').
-pgm_prop_i(web,75,'GX00G0','HTTP_PROTOCOL','Unsecure').
-pgm_prop_i(web,74,'GX00E0','USE_ENCRYPTION','NO').
-pgm_prop_i(web,74,'GX00E0','HTTP_PROTOCOL','Unsecure').
-pgm_prop_i(web,73,'GX00B0','USE_ENCRYPTION','NO').
-pgm_prop_i(web,73,'GX00B0','HTTP_PROTOCOL','Unsecure').
-pgm_prop_i(web,72,'GX00A0','USE_ENCRYPTION','NO').
-pgm_prop_i(web,72,'GX00A0','HTTP_PROTOCOL','Unsecure').
-pgm_prop_i(web,71,'GX00J0','USE_ENCRYPTION','NO').
-pgm_prop_i(web,71,'GX00J0','HTTP_PROTOCOL','Unsecure').
-pgm_prop_i(web,69,'GX0080','USE_ENCRYPTION','NO').
-pgm_prop_i(web,69,'GX0080','HTTP_PROTOCOL','Unsecure').
-pgm_prop_i(web,68,'GX0070','USE_ENCRYPTION','NO').
-pgm_prop_i(web,68,'GX0070','HTTP_PROTOCOL','Unsecure').
-pgm_prop_i(web,67,'GX0060','USE_ENCRYPTION','NO').
-pgm_prop_i(web,67,'GX0060','HTTP_PROTOCOL','Unsecure').
-pgm_prop_i(web,66,'GX0050','USE_ENCRYPTION','NO').
-pgm_prop_i(web,66,'GX0050','HTTP_PROTOCOL','Unsecure').
-pgm_prop_i(web,65,'GX0040','USE_ENCRYPTION','NO').
-pgm_prop_i(web,65,'GX0040','HTTP_PROTOCOL','Unsecure').
-pgm_prop_i(web,64,'GX0030','USE_ENCRYPTION','NO').
-pgm_prop_i(web,64,'GX0030','HTTP_PROTOCOL','Unsecure').
-pgm_prop_i(web,63,'GX0020','USE_ENCRYPTION','NO').
-pgm_prop_i(web,63,'GX0020','HTTP_PROTOCOL','Unsecure').
-pgm_prop_i(web,62,'GX0010','USE_ENCRYPTION','NO').
-pgm_prop_i(web,62,'GX0010','HTTP_PROTOCOL','Unsecure').
 pgm_prop_i(web,107,'DETALLESAREA','USE_ENCRYPTION','NO').
 pgm_prop_i(web,107,'DETALLESAREA','HTTP_PROTOCOL','Unsecure').
 pgm_prop_i(web,106,'DETALLESENTIDADFEDERATIVA','USE_ENCRYPTION','NO').
@@ -156,11 +171,6 @@ pgm_prop_i(web,30,'CATALOG_DE_CAMBS','USE_ENCRYPTION','NO').
 pgm_prop_i(web,30,'CATALOG_DE_CAMBS','HTTP_PROTOCOL','Unsecure').
 pgm_prop_i(web,29,'MENUPRINCIPAL','USE_ENCRYPTION','NO').
 pgm_prop_i(web,29,'MENUPRINCIPAL','HTTP_PROTOCOL','Unsecure').
-pgm_prop_i(web,28,'LOGIN','USE_ENCRYPTION','NO').
-pgm_prop_i(web,28,'LOGIN','HTTP_PROTOCOL','Unsecure').
-pgm_prop_i(web,1,'APPMASTERPAGE','WEB_COMP','Master').
-pgm_prop_i(web,1,'APPMASTERPAGE','USE_ENCRYPTION','NO').
-pgm_prop_i(web,1,'APPMASTERPAGE','HTTP_PROTOCOL','Unsecure').
 pgm_prop_i(trn,21,'STATUS',idISBUSINESSCOMPONENT,'-1').
 pgm_prop_i(trn,21,'STATUS','USE_ENCRYPTION','NO').
 pgm_prop_i(trn,21,'STATUS','HTTP_PROTOCOL','Unsecure').
@@ -176,15 +186,9 @@ pgm_prop_i(trn,17,'AREA','HTTP_PROTOCOL','Unsecure').
 pgm_prop_i(trn,16,'ORIGEN',idISBUSINESSCOMPONENT,'-1').
 pgm_prop_i(trn,16,'ORIGEN','USE_ENCRYPTION','NO').
 pgm_prop_i(trn,16,'ORIGEN','HTTP_PROTOCOL','Unsecure').
-pgm_prop_i(trn,15,'USUARIOS','USE_ENCRYPTION','NO').
-pgm_prop_i(trn,15,'USUARIOS','HTTP_PROTOCOL','Unsecure').
 pgm_prop_i(trn,14,'CAMBS',idISBUSINESSCOMPONENT,'-1').
 pgm_prop_i(trn,14,'CAMBS','USE_ENCRYPTION','NO').
 pgm_prop_i(trn,14,'CAMBS','HTTP_PROTOCOL','Unsecure').
-pgm_prop_i(trn,13,'ARTICULOSMOV','USE_ENCRYPTION','NO').
-pgm_prop_i(trn,13,'ARTICULOSMOV','HTTP_PROTOCOL','Unsecure').
-pgm_prop_i(trn,12,'ETIQUETAS','USE_ENCRYPTION','NO').
-pgm_prop_i(trn,12,'ETIQUETAS','HTTP_PROTOCOL','Unsecure').
 pgm_prop_i(trn,11,'ARTICULOS','USE_ENCRYPTION','NO').
 pgm_prop_i(trn,11,'ARTICULOS','HTTP_PROTOCOL','Unsecure').
 pgm_prop_i(trn,9,'PRODUCTO',idISBUSINESSCOMPONENT,'-1').
@@ -202,10 +206,6 @@ pgm_prop_i(trn,5,'CATEGORIAS','HTTP_PROTOCOL','Unsecure').
 pgm_prop_i(trn,4,'ENTIDADFEDERATIVA',idISBUSINESSCOMPONENT,'-1').
 pgm_prop_i(trn,4,'ENTIDADFEDERATIVA','USE_ENCRYPTION','NO').
 pgm_prop_i(trn,4,'ENTIDADFEDERATIVA','HTTP_PROTOCOL','Unsecure').
-pgm_prop_i(trn,3,'MESES','USE_ENCRYPTION','NO').
-pgm_prop_i(trn,3,'MESES','HTTP_PROTOCOL','Unsecure').
-pgm_prop_i(trn,2,'PARAMETROS','USE_ENCRYPTION','NO').
-pgm_prop_i(trn,2,'PARAMETROS','HTTP_PROTOCOL','Unsecure').
 pgm_prop_i(trn,1,'TIPOBIEN',idISBUSINESSCOMPONENT,'-1').
 pgm_prop_i(trn,1,'TIPOBIEN','USE_ENCRYPTION','NO').
 pgm_prop_i(trn,1,'TIPOBIEN','HTTP_PROTOCOL','Unsecure').
@@ -278,12 +278,12 @@ datastore_i(1,'CS_RPCPGML','').
 datastore_i(1,'JDBC_DATASOURCE','').
 datastore_i(1,'USE_JDBC_DATASOURCE','0').
 datastore_i(1,'DS_DBMS_ADDINFO','').
-datastore_i(1,'USER_PASSWORD',admin).
+datastore_i(1,'USER_PASSWORD',asdf).
 datastore_i(1,'USER_ID',postgres).
 datastore_i(1,'CS_CONNECT','First').
 datastore_i(1,'DBMS_PORT','5432').
 datastore_i(1,'CS_SERVER',localhost).
-datastore_i(1,'CS_DBNAME',postgres).
+datastore_i(1,'CS_DBNAME',condusef).
 datastore_i(1,'CS_FLEDSNAME','').
 datastore_i(1,'CS_DRVNAME','').
 datastore_i(1,'CS_DSNAME','').

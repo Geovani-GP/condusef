@@ -2,7 +2,7 @@
                File: AppMasterPage
         Description: Application Master Page
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 2/2/2022 13:42:56.69
+       Generated on: 2/5/2022 1:35:47.19
        Program type: Callable routine
           Main DBMS: postgresql
 */
@@ -147,7 +147,9 @@ namespace GeneXus.Programs {
          {
             WebComp_Webcomp1.componentjscripts();
          }
-         context.AddJavascriptSource("appmasterpage.js", "?20222213425670");
+         context.AddJavascriptSource("HugaoMessages/js/jquery.growl.min.js", "");
+         context.AddJavascriptSource("HugaoMessages/HugaoMessagesRender.js", "");
+         context.AddJavascriptSource("appmasterpage.js", "?2022251354721");
          context.WriteHtmlTextNl( "</body>") ;
          context.WriteHtmlTextNl( "</html>") ;
          if ( context.isSpaRequest( ) )
@@ -219,6 +221,8 @@ namespace GeneXus.Programs {
       {
          if ( wbgen )
          {
+            /* User Defined Control */
+            context.WriteHtmlText( "<div class=\"gx_usercontrol\" id=\""+"HUGAOMESSAGES1_MPAGEContainer"+"\"></div>") ;
             context.WriteHtmlText( "<p></p>") ;
          }
          wbLoad = true;
@@ -820,7 +824,8 @@ namespace GeneXus.Programs {
 
       protected void define_styles( )
       {
-         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?1342847");
+         AddStyleSheetFile("HugaoMessages/css/jquery.growl.min.css", "?1116230");
+         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?0542765");
          if ( StringUtil.StrCmp(WebComp_Webcomp1_Component, "") == 0 )
          {
             WebComp_Webcomp1 = getWebComponent(GetType(), "GeneXus.Programs", "sidebar", new Object[] {context} );
@@ -838,7 +843,7 @@ namespace GeneXus.Programs {
          idxLst = 1;
          while ( idxLst <= (getDataAreaObject() == null ? Form : getDataAreaObject().GetForm()).Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((String)(getDataAreaObject() == null ? Form : getDataAreaObject().GetForm()).Jscriptsrc.Item(idxLst))), "?20222213425679");
+            context.AddJavascriptSource(StringUtil.RTrim( ((String)(getDataAreaObject() == null ? Form : getDataAreaObject().GetForm()).Jscriptsrc.Item(idxLst))), "?2022251354731");
             idxLst = (int)(idxLst+1);
          }
          /* End function define_styles */
@@ -846,7 +851,9 @@ namespace GeneXus.Programs {
 
       protected void include_jscripts( )
       {
-         context.AddJavascriptSource("appmasterpage.js", "?20222213425679");
+         context.AddJavascriptSource("appmasterpage.js", "?2022251354731");
+         context.AddJavascriptSource("HugaoMessages/js/jquery.growl.min.js", "");
+         context.AddJavascriptSource("HugaoMessages/HugaoMessagesRender.js", "");
          /* End function include_jscripts */
       }
 
@@ -862,6 +869,7 @@ namespace GeneXus.Programs {
          tblTable2_Internalname = "TABLE2_MPAGE";
          tblTable3_Internalname = "TABLE3_MPAGE";
          tblTable1_Internalname = "TABLE1_MPAGE";
+         Hugaomessages1_Internalname = "HUGAOMESSAGES1_MPAGE";
          (getDataAreaObject() == null ? Form : getDataAreaObject().GetForm()).Internalname = "FORM_MPAGE";
       }
 
@@ -985,6 +993,7 @@ namespace GeneXus.Programs {
       private String lblTextblock1_Jsonclick ;
       private String edtavFecha_Jsonclick ;
       private String sDynURL ;
+      private String Hugaomessages1_Internalname ;
       private bool wbLoad ;
       private bool Rfr0gs ;
       private bool wbErr ;

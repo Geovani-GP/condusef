@@ -50,6 +50,7 @@ GXDOMAINIMEMode.cs
 GXDOMAINRecentLinksOptions.cs
 GXDOMAINCallTargetSize.cs
 GXDOMAINGoogleTableFormatter.cs
+GXDOMAINDVelopConfirmPanelType.cs
 GXDOMAINEncoding.cs
 GXDOMAINTimezones.cs
 GXDOMAINEffect.cs

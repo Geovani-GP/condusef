@@ -12,6 +12,7 @@ ij_object_dependency(appmasterpage,[],[],[],1).
  
 obj_parms_i([],[]).
  
+ij_usercontrol_directory_i('HugaoMessages').
  
  
  

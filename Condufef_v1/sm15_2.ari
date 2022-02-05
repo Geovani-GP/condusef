@@ -191,6 +191,7 @@ domain_i(2,'GXDOMAINIMEMode.cs').
 domain_i(20,'GXDOMAINRecentLinksOptions.cs').
 domain_i(22,'GXDOMAINCallTargetSize.cs').
 domain_i(25,'GXDOMAINGoogleTableFormatter.cs').
+domain_i(26,'GXDOMAINDVelopConfirmPanelType.cs').
 domain_i(4,'GXDOMAINEncoding.cs').
 domain_i(5,'GXDOMAINTimezones.cs').
 domain_i(6,'GXDOMAINEffect.cs').

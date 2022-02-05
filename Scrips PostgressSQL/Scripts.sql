@@ -215,7 +215,7 @@ almacendsc varchar(100)   ,
 almacendireccion  varchar(100)   ,
 almacencolonia  varchar(50)   ,
 almacenmunicipio varchar(50)   ,
-alamcenestado    varchar(50)   ,
+alamcenestado    integer   ,
 alamcencodigopostal varchar(5)   ,
 almacentelefono     numeric(10)   ,
 alamcenobservaciones varchar(50)   ,
@@ -232,7 +232,7 @@ proveedoresdireccion  varchar(50)   ,
 proveedorescolonia  varchar(25)   ,
 proveedorescodigopostal varchar(5)   ,
 proveedoresmunicipio varchar(25)   ,
-proveedorestado  varchar(20)   ,
+proveedorestado  integer   ,
 proveedorestelefono1 numeric(10),
 proveedorestelefono2 numeric(10),
 proveedoresfax   varchar(15)   ,
@@ -279,6 +279,10 @@ CREATE TABLE "public".estados(
  CONSTRAINT pk_estados_estadoid PRIMARY KEY (estadoid)
 );
 
+INSERT INTO usuarios(idusuario,usuario,contrasena)
+VALUES (1,'admin', 'admin')
+
+
 INSERT INTO estados(
             estadoid, estado)
     VALUES (1, 'Aguascalientes'),
@@ -315,3 +319,4 @@ INSERT INTO estados(
 (32, 'Zacatecas');
 
 
+commit;
