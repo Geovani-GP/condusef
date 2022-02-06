@@ -1,0 +1,36 @@
+ 
+spec_i([ sdt,[ 0,25,0 ],estados,estados,0,spa,'10_3_15-115824' ]).
+ 
+struct_dt_i([ 0,25,0 ],name,estados).
+struct_dt_i([ 0,25,0 ],namespace,'Condufef_v1').
+struct_dt_i([ 0,25,0 ],significantName,estados).
+struct_dt_i([ 0,25,0 ],'ObjName',estados).
+struct_dt_i([ 0,25,0 ],'ObjDesc',estados).
+struct_dt_i([ 0,25,0 ],'ExternalName',estados).
+struct_dt_i([ 0,25,0 ],'ExternalNamespace','Condufef_v1').
+struct_dt_i([ 0,25,0 ],key,[ 177 ]).
+struct_dt_i([ 0,25,0 ],lvl,25).
+struct_dt_i([ 0,25,0 ],fullname,estados).
+ 
+struct_dt_elem_i([ 0,25,0 ],1,name,'Estadoid').
+struct_dt_elem_i([ 0,25,0 ],1,camelname,estadoid).
+struct_dt_elem_i([ 0,25,0 ],1,length,4).
+struct_dt_elem_i([ 0,25,0 ],1,decimals,0).
+struct_dt_elem_i([ 0,25,0 ],1,sign,0).
+struct_dt_elem_i([ 0,25,0 ],1,type,[ 4,4,0 ]).
+struct_dt_elem_i([ 0,25,0 ],1,pic,'ZZZ9').
+struct_dt_elem_i([ 0,25,0 ],1,collection,'False').
+struct_dt_elem_i([ 0,25,0 ],1,attributeid,'177').
+struct_dt_elem_i([ 0,25,0 ],2,name,'Estado').
+struct_dt_elem_i([ 0,25,0 ],2,camelname,estado).
+struct_dt_elem_i([ 0,25,0 ],2,length,100).
+struct_dt_elem_i([ 0,25,0 ],2,decimals,0).
+struct_dt_elem_i([ 0,25,0 ],2,type,[ 13,100,0 ]).
+struct_dt_elem_i([ 0,25,0 ],2,pic,'').
+struct_dt_elem_i([ 0,25,0 ],2,collection,'False').
+struct_dt_elem_i([ 0,25,0 ],2,attributeid,'178').
+ 
+ 
+ 
+ 
+ 

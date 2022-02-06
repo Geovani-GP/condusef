@@ -71,9 +71,9 @@
 <AttriName>empleadosid</AttriName>
 <Description>empleadosid</Description></Attribute>
 <Attribute>
-<AttriId>176</AttriId>
-<AttriName>areaid</AttriName>
-<Description>areaid</Description></Attribute>
+<AttriId>98</AttriId>
+<AttriName>empleadosareaid</AttriName>
+<Description>empleadosareaid</Description></Attribute>
 <Attribute>
 <AttriId>99</AttriId>
 <AttriName>empleadosnomemple</AttriName>
@@ -118,9 +118,9 @@
 <TableAction>update</TableAction>
 <AttrisToUpdate>
 <Attribute>
-<AttriId>176</AttriId>
-<AttriName>areaid</AttriName>
-<Description>areaid</Description></Attribute>
+<AttriId>98</AttriId>
+<AttriName>empleadosareaid</AttriName>
+<Description>empleadosareaid</Description></Attribute>
 <Attribute>
 <AttriId>99</AttriId>
 <AttriName>empleadosnomemple</AttriName>

@@ -55,12 +55,12 @@ rule_i(0,datastore(1,'CS_RPCPGML','')).
 rule_i(0,datastore(1,'JDBC_DATASOURCE','')).
 rule_i(0,datastore(1,'USE_JDBC_DATASOURCE','0')).
 rule_i(0,datastore(1,'DS_DBMS_ADDINFO','')).
-rule_i(0,datastore(1,'USER_PASSWORD',admin)).
+rule_i(0,datastore(1,'USER_PASSWORD',asdf)).
 rule_i(0,datastore(1,'USER_ID',postgres)).
 rule_i(0,datastore(1,'CS_CONNECT','First')).
 rule_i(0,datastore(1,'DBMS_PORT','5432')).
 rule_i(0,datastore(1,'CS_SERVER',localhost)).
-rule_i(0,datastore(1,'CS_DBNAME',postgres)).
+rule_i(0,datastore(1,'CS_DBNAME',condusef)).
 rule_i(0,datastore(1,'CS_FLEDSNAME','')).
 rule_i(0,datastore(1,'CS_DRVNAME','')).
 rule_i(0,datastore(1,'CS_DSNAME','')).
@@ -201,7 +201,7 @@ rule_i(0,p(0,15,fvix,[ 11,10 ],[ 'NAME',empleados_pkey ])).
 rule_i(0,p(0,15,fvix,[ 11,10 ],[ 'LOC','' ])).
 rule_i(0,p(0,15,fvix,[ 11,10 ],[ 'SCHEMA',public ])).
 rule_i(0,p(0,15,fvix,[ 11,10 ],[ 'EXTNAM','YES' ])).
-rule_i(0,file(6,'EMPLEADOS',[ 13,176,99,100,101,102,103,106,105,107,104 ])).
+rule_i(0,file(6,'EMPLEADOS',[ 13,98,99,100,101,102,103,106,105,107,104 ])).
 rule_i(0,loc([ 6 ],'EMPLEADOS','','LAN')).
 rule_i(0,index(6,'EMPLEADOS_PKEY',u,[ 13 ])).
 rule_i(0,loc([ 6,'EMPLEADOS_PKEY' ],empleados_pkey,'','LAN')).
@@ -382,7 +382,7 @@ map_i(6,a,102,[ empleadosstatus ]).
 map_i(6,a,101,[ empleadosapmaterno ]).
 map_i(6,a,100,[ empleadosappaterno ]).
 map_i(6,a,99,[ empleadosnomemple ]).
-map_i(6,a,176,[ areaid ]).
+map_i(6,a,98,[ empleadosareaid ]).
 map_i(6,a,13,[ empleadosid ]).
 map_i(18,i,'ALMACEN_PKEY',[ 'ALMACEN_PKEY' ]).
 map_i(18,a,153,[ almacenfecultact ]).

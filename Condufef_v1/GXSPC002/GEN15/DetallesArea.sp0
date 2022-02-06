@@ -49,12 +49,12 @@ rule_i(0,datastore(1,'CS_RPCPGML','')).
 rule_i(0,datastore(1,'JDBC_DATASOURCE','')).
 rule_i(0,datastore(1,'USE_JDBC_DATASOURCE','0')).
 rule_i(0,datastore(1,'DS_DBMS_ADDINFO','')).
-rule_i(0,datastore(1,'USER_PASSWORD',󻢸蘇�2�5炭)).
+rule_i(0,datastore(1,'USER_PASSWORD',asdf)).
 rule_i(0,datastore(1,'USER_ID',postgres)).
 rule_i(0,datastore(1,'CS_CONNECT','First')).
 rule_i(0,datastore(1,'DBMS_PORT','5432')).
 rule_i(0,datastore(1,'CS_SERVER',localhost)).
-rule_i(0,datastore(1,'CS_DBNAME',postgres)).
+rule_i(0,datastore(1,'CS_DBNAME',condusef)).
 rule_i(0,datastore(1,'CS_FLEDSNAME','')).
 rule_i(0,datastore(1,'CS_DRVNAME','')).
 rule_i(0,datastore(1,'CS_DSNAME','')).
@@ -356,7 +356,7 @@ html_comp_i(13,'Inputtype',0,d,[ num ]).
 html_comp_i(13,'Notifycontextchange',0,d,[ bool ]).
 html_comp_i(13,'Colreadonly',-1,d,[ bool ]).
 html_comp_i(13,'Autocomplete',-1,d,[ bool ]).
-html_comp_i(13,'Emptyasnull','Yes',d,[ str ]).
+html_comp_i(13,'Emptyasnull','No',d,[ str ]).
 html_comp_i(13,'Ispassword',0,d,[ bool ]).
 html_comp_i(13,'Colautoresize',-1,d,[ bool ]).
 html_comp_i(13,'Colwidth',measure(0,px),d,[ measure ]).
@@ -490,7 +490,7 @@ lit_i(5,1,t('Buscar',23),[ ctlname('&Buscar'),ctrltype(edit,5),pos(5),ispwd(0),e
 lit_i(7,1,t('Detalles Area',3),[ ctlname('Textblock1') ]).
 lit_i(9,1,button('Enter'),[ ctlname('Button1'),width(0),rect(0,0,10,10),title('Nothing') ]).
 lit_i(2,1,table(2),[ ctlname('Table1') ]).
-lit_i(13,1,s(t(22,2),12),[ ctlname(22),ctrltype(edit,13),pos(13),readonly,ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
+lit_i(13,1,s(t(22,2),12),[ ctlname(22),ctrltype(edit,13),pos(13),readonly,ispwd(0),e2n(0),width(0),rect(0,0,10,10),title('Nothing') ]).
 lit_i(14,1,s(t(27,2),12),[ ctlname(27),ctrltype(edit,14),pos(14),readonly,ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
 lit_i(15,1,s(t(28,2),12),[ ctlname(28),ctrltype(edit,15),pos(15),readonly,ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
 lit_i(16,1,s(t('Updateimage',23),12),[ ctlname('&Updateimage'),ctrltype(edit,16),pos(16),readonly,ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
@@ -510,7 +510,7 @@ ctrl_info_i(1,17,[ [ 0,0,sort,[],[],0,0,5,0,0 ] ]).
  
 att_prop_i(2,22,'ExternalName',areaareaid,d).
 att_prop_i(2,22,'ExternalNamespace','Condufef_v1',d).
-att_prop_i(2,22,'EmptyAsNull','Yes',d).
+att_prop_i(2,22,'EmptyAsNull','No',v).
 att_prop_i(2,22,idBasedOn,'',d).
 att_prop_i(2,22,'AUTONUMBER','0',d).
 att_prop_i(2,22,'ATT_INITIAL_VALUE','',d).

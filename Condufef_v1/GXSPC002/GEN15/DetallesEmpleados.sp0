@@ -2,7 +2,7 @@ spec_i([ web,113,'Detalles Empleados','DetallesEmpleados',0,spa,'10_3_15-115824'
  
 struct_i(2,1,[ 'Updateimage','Deleteimage' ],[]).
  
-level_i(2,[ 6,[ [ 6,many ] ],[],[],[ [ [ 6 ],[ 107,106,102,101,100,99,13 ] ] ],[ [ [ 6 ],[] ] ],[ 13 ],'EMPLEADOS_PKEY',[],[] ]).
+level_i(2,[ 6,[ [ 6,many ] ],[],[],[ [ [ 6 ],[ 107,106,102,101,100,99,98,13 ] ] ],[ [ [ 6 ],[] ] ],[ 13 ],'EMPLEADOS_PKEY',[],[] ]).
  
 tw_i(2,[]).
  
@@ -11,29 +11,30 @@ lwi_i(2,[ [ c([ t(99,2),t('.LIKE.',10),t('Buscar',23) ],[ 99 ]) ] ]).
  
  
  
-ta_i(2,[ [ [ 6,107 ],[ 6,106 ],[ 6,102 ],[ 6,101 ],[ 6,100 ],[ 6,99 ],[ 6,13 ] ] ]).
+ta_i(2,[ [ [ 6,107 ],[ 6,106 ],[ 6,102 ],[ 6,101 ],[ 6,100 ],[ 6,99 ],[ 6,98 ],[ 6,13 ] ] ]).
  
-las_i(2,[ [ 'Buscar',107,106,102,101,100,99,13 ] ]).
+las_i(2,[ [ 'Buscar',107,106,102,101,100,99,98,13 ] ]).
  
 lac_i(2,[ [ 'Buscar' ] ]).
  
  
 lits_i('Detalles Empleados',5,10).
  
-cls_i([ 0,0 ],[ 5,2209 ]).
+cls_i([ 0,0 ],[ 5,2213 ]).
  
 pos_i('Buscar',[ 0,0,0 ]).
 pos_i(13,[ 1,2,0 ]).
-pos_i(99,[ 1,2,10 ]).
-pos_i(100,[ 1,2,41 ]).
-pos_i(101,[ 1,2,72 ]).
-pos_i(102,[ 1,2,103 ]).
-pos_i(106,[ 1,2,105 ]).
-pos_i(107,[ 1,2,156 ]).
-pos_i('Updateimage',[ 1,2,161 ]).
-pos_i('Deleteimage',[ 1,2,1186 ]).
+pos_i(98,[ 1,2,10 ]).
+pos_i(99,[ 1,2,14 ]).
+pos_i(100,[ 1,2,45 ]).
+pos_i(101,[ 1,2,76 ]).
+pos_i(102,[ 1,2,107 ]).
+pos_i(106,[ 1,2,109 ]).
+pos_i(107,[ 1,2,160 ]).
+pos_i('Updateimage',[ 1,2,165 ]).
+pos_i('Deleteimage',[ 1,2,1190 ]).
  
-repeat_i(2,[ 1,2,[ 13,99,100,101,102,106,107,'Updateimage','Deleteimage' ],[] ]).
+repeat_i(2,[ 1,2,[ 13,98,99,100,101,102,106,107,'Updateimage','Deleteimage' ],[] ]).
  
  
 rule_i(0,datastore(1,'DS_LAST_CHANGE','')).
@@ -53,12 +54,12 @@ rule_i(0,datastore(1,'CS_RPCPGML','')).
 rule_i(0,datastore(1,'JDBC_DATASOURCE','')).
 rule_i(0,datastore(1,'USE_JDBC_DATASOURCE','0')).
 rule_i(0,datastore(1,'DS_DBMS_ADDINFO','')).
-rule_i(0,datastore(1,'USER_PASSWORD',admin)).
+rule_i(0,datastore(1,'USER_PASSWORD',asdf)).
 rule_i(0,datastore(1,'USER_ID',postgres)).
 rule_i(0,datastore(1,'CS_CONNECT','First')).
 rule_i(0,datastore(1,'DBMS_PORT','5432')).
 rule_i(0,datastore(1,'CS_SERVER',localhost)).
-rule_i(0,datastore(1,'CS_DBNAME',postgres)).
+rule_i(0,datastore(1,'CS_DBNAME',condusef)).
 rule_i(0,datastore(1,'CS_FLEDSNAME','')).
 rule_i(0,datastore(1,'CS_DRVNAME','')).
 rule_i(0,datastore(1,'CS_DSNAME','')).
@@ -112,7 +113,7 @@ rule_i(0,prop('Folder',o(8,'WebApi'))).
 rule_i(0,prop('ObjDesc','Detalles Empleados')).
 rule_i(0,prop('ObjName','DetallesEmpleados')).
 rule_i(0,maingen(15)).
-rule_i(0,file(6,'EMPLEADOS',[ 13,176,99,100,101,102,103,106,105,107,104 ])).
+rule_i(0,file(6,'EMPLEADOS',[ 13,98,99,100,101,102,103,106,105,107,104 ])).
 rule_i(0,loc([ 6 ],'EMPLEADOS','','LAN')).
 rule_i(0,index(6,'EMPLEADOS_PKEY',u,[ 13 ])).
 rule_i(0,loc([ 6,'EMPLEADOS_PKEY' ],empleados_pkey,'','LAN')).
@@ -141,6 +142,7 @@ v_i(t,o,2,102).
 v_i(t,o,2,101).
 v_i(t,o,2,100).
 v_i(t,o,2,99).
+v_i(t,o,2,98).
 v_i(t,o,2,13).
  
  
@@ -154,6 +156,7 @@ attri_i(102,[ empleadosstatus,svchar,1,0,'',0,empleadosstatus,'',0 ]).
 attri_i(101,[ empleadosapmaterno,svchar,30,0,'',0,empleadosapmaterno,'',0 ]).
 attri_i(100,[ empleadosappaterno,svchar,30,0,'',0,empleadosappaterno,'',0 ]).
 attri_i(99,[ empleadosnomemple,svchar,30,0,'',0,empleadosnomemple,'',0 ]).
+attri_i(98,[ empleadosareaid,svchar,3,0,'',0,empleadosareaid,'',0 ]).
 attri_i(13,[ empleadosid,int,9,0,'ZZZZZZZZ9',0,empleadosid,'',0 ]).
 attri_i('Deleteimage_GXI',[ 'Deleteimage_GXI',svchar,2048,0,'',0,'',[],11 ]).
 attri_i('Updateimage_GXI',[ 'Updateimage_GXI',svchar,2048,0,'',0,'',[],10 ]).
@@ -163,7 +166,7 @@ attri_i('Updateimage',[ updateImage,bits,1024,0,'',0,'update Image','',7 ]).
 attri_i('Deleteimage',[ deleteImage,bits,1024,0,'',0,'delete Image','',6 ]).
 attri_i('Buscar',[ buscar,char,20,0,'',0,buscar,'',5 ]).
  
-table_i(6,[ 'EMPLEADOS',[ 13,99,100,101,102,106,107 ],empleados,empleados ]).
+table_i(6,[ 'EMPLEADOS',[ 13,98,99,100,101,102,106,107 ],empleados,empleados ]).
  
 index_i(6,[ 'EMPLEADOS_PKEY',u,[ 13 ],'EMPLEADOS_PKEY' ]).
  
@@ -196,7 +199,7 @@ map_i(6,a,102,[ empleadosstatus ]).
 map_i(6,a,101,[ empleadosapmaterno ]).
 map_i(6,a,100,[ empleadosappaterno ]).
 map_i(6,a,99,[ empleadosnomemple ]).
-map_i(6,a,176,[ areaid ]).
+map_i(6,a,98,[ empleadosareaid ]).
 map_i(6,a,13,[ empleadosid ]).
  
  
@@ -206,7 +209,7 @@ map_i(6,a,13,[ empleadosid ]).
  
  
  
-break_i(2,nvg,1,[],[ [ 13,99,100,101,102,106,107 ],[],[] ]).
+break_i(2,nvg,1,[],[ [ 13,98,99,100,101,102,106,107 ],[],[] ]).
  
 b_group_i(2,1,lit,0,1,1).
 b_group_i(2,2,lit,0,2,6).
@@ -250,8 +253,8 @@ sf_break_i(11,2).
 html_i(2,table(2)).
 html_i(10,html('<p>')).
 html_i(11,s(11)).
-html_i(21,html('</p>')).
-html_i(22,html('<p></p>')).
+html_i(22,html('</p>')).
+html_i(23,html('<p></p>')).
  
 html_sub_i(2,0,html_i(0,html('<tbody>'))).
 html_sub_i(2,3,html_i(1,row(3))).
@@ -389,9 +392,9 @@ html_comp_i(12,'Gxformat',0,d,[ num ]).
 html_comp_i(12,'Colvisible',-1,d,[ bool ]).
 html_comp_i(12,'Title','',d,[ str ]).
 html_comp_i(12,'Invitemsg','',d,[ str ]).
-html_comp_i(13,'Colcount',30,d,[ num ]).
-html_comp_i(13,'Colattid',99,v,[ num ]).
-html_comp_i(13,'Controlname','Empleadosnomemple',d,[ str ]).
+html_comp_i(13,'Colcount',3,d,[ num ]).
+html_comp_i(13,'Colattid',98,v,[ num ]).
+html_comp_i(13,'Controlname','Empleadosareaid',d,[ str ]).
 html_comp_i(13,'Class','Attribute',d,[ str ]).
 html_comp_i(13,'Columnclass','',d,[ str ]).
 html_comp_i(13,'Returnonclick',0,d,[ bool ]).
@@ -411,7 +414,7 @@ html_comp_i(13,'Colwidth',measure(0,px),d,[ measure ]).
 html_comp_i(13,'Height',measure(17,px),d,[ measure ]).
 html_comp_i(13,'Collinesfont',font('Courier New',9,[]),d,[ font ]).
 html_comp_i(13,'Collinescolor',rgb(0,0,0),d,[ color ]).
-html_comp_i(13,'Coltitle','Nombre',d,[ str ]).
+html_comp_i(13,'Coltitle','Area',d,[ str ]).
 html_comp_i(13,'Coltitlefont',font('Microsoft Sans Serif',10,[]),d,[ font ]).
 html_comp_i(13,'Coltitlecolor',rgb(0,0,0),d,[ color ]).
 html_comp_i(13,'Horizontalalignment',left,d,[ str ]).
@@ -420,8 +423,8 @@ html_comp_i(13,'Colvisible',-1,d,[ bool ]).
 html_comp_i(13,'Title','',d,[ str ]).
 html_comp_i(13,'Invitemsg','',d,[ str ]).
 html_comp_i(14,'Colcount',30,d,[ num ]).
-html_comp_i(14,'Colattid',100,v,[ num ]).
-html_comp_i(14,'Controlname','Empleadosappaterno',d,[ str ]).
+html_comp_i(14,'Colattid',99,v,[ num ]).
+html_comp_i(14,'Controlname','Empleadosnomemple',d,[ str ]).
 html_comp_i(14,'Class','Attribute',d,[ str ]).
 html_comp_i(14,'Columnclass','',d,[ str ]).
 html_comp_i(14,'Returnonclick',0,d,[ bool ]).
@@ -441,7 +444,7 @@ html_comp_i(14,'Colwidth',measure(0,px),d,[ measure ]).
 html_comp_i(14,'Height',measure(17,px),d,[ measure ]).
 html_comp_i(14,'Collinesfont',font('Courier New',9,[]),d,[ font ]).
 html_comp_i(14,'Collinescolor',rgb(0,0,0),d,[ color ]).
-html_comp_i(14,'Coltitle','Apellido Paterno',d,[ str ]).
+html_comp_i(14,'Coltitle','Nombre',d,[ str ]).
 html_comp_i(14,'Coltitlefont',font('Microsoft Sans Serif',10,[]),d,[ font ]).
 html_comp_i(14,'Coltitlecolor',rgb(0,0,0),d,[ color ]).
 html_comp_i(14,'Horizontalalignment',left,d,[ str ]).
@@ -450,8 +453,8 @@ html_comp_i(14,'Colvisible',-1,d,[ bool ]).
 html_comp_i(14,'Title','',d,[ str ]).
 html_comp_i(14,'Invitemsg','',d,[ str ]).
 html_comp_i(15,'Colcount',30,d,[ num ]).
-html_comp_i(15,'Colattid',101,v,[ num ]).
-html_comp_i(15,'Controlname','Empleadosapmaterno',d,[ str ]).
+html_comp_i(15,'Colattid',100,v,[ num ]).
+html_comp_i(15,'Controlname','Empleadosappaterno',d,[ str ]).
 html_comp_i(15,'Class','Attribute',d,[ str ]).
 html_comp_i(15,'Columnclass','',d,[ str ]).
 html_comp_i(15,'Returnonclick',0,d,[ bool ]).
@@ -471,7 +474,7 @@ html_comp_i(15,'Colwidth',measure(0,px),d,[ measure ]).
 html_comp_i(15,'Height',measure(17,px),d,[ measure ]).
 html_comp_i(15,'Collinesfont',font('Courier New',9,[]),d,[ font ]).
 html_comp_i(15,'Collinescolor',rgb(0,0,0),d,[ color ]).
-html_comp_i(15,'Coltitle','Apellido materno',d,[ str ]).
+html_comp_i(15,'Coltitle','Apellido Paterno',d,[ str ]).
 html_comp_i(15,'Coltitlefont',font('Microsoft Sans Serif',10,[]),d,[ font ]).
 html_comp_i(15,'Coltitlecolor',rgb(0,0,0),d,[ color ]).
 html_comp_i(15,'Horizontalalignment',left,d,[ str ]).
@@ -479,9 +482,9 @@ html_comp_i(15,'Gxformat',0,d,[ num ]).
 html_comp_i(15,'Colvisible',-1,d,[ bool ]).
 html_comp_i(15,'Title','',d,[ str ]).
 html_comp_i(15,'Invitemsg','',d,[ str ]).
-html_comp_i(16,'Colcount',1,d,[ num ]).
-html_comp_i(16,'Colattid',102,v,[ num ]).
-html_comp_i(16,'Controlname','Empleadosstatus',d,[ str ]).
+html_comp_i(16,'Colcount',30,d,[ num ]).
+html_comp_i(16,'Colattid',101,v,[ num ]).
+html_comp_i(16,'Controlname','Empleadosapmaterno',d,[ str ]).
 html_comp_i(16,'Class','Attribute',d,[ str ]).
 html_comp_i(16,'Columnclass','',d,[ str ]).
 html_comp_i(16,'Returnonclick',0,d,[ bool ]).
@@ -501,7 +504,7 @@ html_comp_i(16,'Colwidth',measure(0,px),d,[ measure ]).
 html_comp_i(16,'Height',measure(17,px),d,[ measure ]).
 html_comp_i(16,'Collinesfont',font('Courier New',9,[]),d,[ font ]).
 html_comp_i(16,'Collinescolor',rgb(0,0,0),d,[ color ]).
-html_comp_i(16,'Coltitle','Status',d,[ str ]).
+html_comp_i(16,'Coltitle','Apellido materno',d,[ str ]).
 html_comp_i(16,'Coltitlefont',font('Microsoft Sans Serif',10,[]),d,[ font ]).
 html_comp_i(16,'Coltitlecolor',rgb(0,0,0),d,[ color ]).
 html_comp_i(16,'Horizontalalignment',left,d,[ str ]).
@@ -509,9 +512,9 @@ html_comp_i(16,'Gxformat',0,d,[ num ]).
 html_comp_i(16,'Colvisible',-1,d,[ bool ]).
 html_comp_i(16,'Title','',d,[ str ]).
 html_comp_i(16,'Invitemsg','',d,[ str ]).
-html_comp_i(17,'Colcount',50,d,[ num ]).
-html_comp_i(17,'Colattid',106,v,[ num ]).
-html_comp_i(17,'Controlname','Empleadoscorreo',d,[ str ]).
+html_comp_i(17,'Colcount',1,d,[ num ]).
+html_comp_i(17,'Colattid',102,v,[ num ]).
+html_comp_i(17,'Controlname','Empleadosstatus',d,[ str ]).
 html_comp_i(17,'Class','Attribute',d,[ str ]).
 html_comp_i(17,'Columnclass','',d,[ str ]).
 html_comp_i(17,'Returnonclick',0,d,[ bool ]).
@@ -531,7 +534,7 @@ html_comp_i(17,'Colwidth',measure(0,px),d,[ measure ]).
 html_comp_i(17,'Height',measure(17,px),d,[ measure ]).
 html_comp_i(17,'Collinesfont',font('Courier New',9,[]),d,[ font ]).
 html_comp_i(17,'Collinescolor',rgb(0,0,0),d,[ color ]).
-html_comp_i(17,'Coltitle','Correo',d,[ str ]).
+html_comp_i(17,'Coltitle','Status',d,[ str ]).
 html_comp_i(17,'Coltitlefont',font('Microsoft Sans Serif',10,[]),d,[ font ]).
 html_comp_i(17,'Coltitlecolor',rgb(0,0,0),d,[ color ]).
 html_comp_i(17,'Horizontalalignment',left,d,[ str ]).
@@ -539,9 +542,9 @@ html_comp_i(17,'Gxformat',0,d,[ num ]).
 html_comp_i(17,'Colvisible',-1,d,[ bool ]).
 html_comp_i(17,'Title','',d,[ str ]).
 html_comp_i(17,'Invitemsg','',d,[ str ]).
-html_comp_i(18,'Colcount',4,d,[ num ]).
-html_comp_i(18,'Colattid',107,v,[ num ]).
-html_comp_i(18,'Controlname','Empleadosext',d,[ str ]).
+html_comp_i(18,'Colcount',50,d,[ num ]).
+html_comp_i(18,'Colattid',106,v,[ num ]).
+html_comp_i(18,'Controlname','Empleadoscorreo',d,[ str ]).
 html_comp_i(18,'Class','Attribute',d,[ str ]).
 html_comp_i(18,'Columnclass','',d,[ str ]).
 html_comp_i(18,'Returnonclick',0,d,[ bool ]).
@@ -561,7 +564,7 @@ html_comp_i(18,'Colwidth',measure(0,px),d,[ measure ]).
 html_comp_i(18,'Height',measure(17,px),d,[ measure ]).
 html_comp_i(18,'Collinesfont',font('Courier New',9,[]),d,[ font ]).
 html_comp_i(18,'Collinescolor',rgb(0,0,0),d,[ color ]).
-html_comp_i(18,'Coltitle','Ext',d,[ str ]).
+html_comp_i(18,'Coltitle','Correo',d,[ str ]).
 html_comp_i(18,'Coltitlefont',font('Microsoft Sans Serif',10,[]),d,[ font ]).
 html_comp_i(18,'Coltitlecolor',rgb(0,0,0),d,[ color ]).
 html_comp_i(18,'Horizontalalignment',left,d,[ str ]).
@@ -569,33 +572,39 @@ html_comp_i(18,'Gxformat',0,d,[ num ]).
 html_comp_i(18,'Colvisible',-1,d,[ bool ]).
 html_comp_i(18,'Title','',d,[ str ]).
 html_comp_i(18,'Invitemsg','',d,[ str ]).
-html_comp_i(19,'Colcount',5,d,[ num ]).
-html_comp_i(19,'Colattid',-7,v,[ num ]).
-html_comp_i(19,'Controlname','&Updateimage',d,[ str ]).
-html_comp_i(19,'Class','Image',d,[ str ]).
+html_comp_i(19,'Colcount',4,d,[ num ]).
+html_comp_i(19,'Colattid',107,v,[ num ]).
+html_comp_i(19,'Controlname','Empleadosext',d,[ str ]).
+html_comp_i(19,'Class','Attribute',d,[ str ]).
 html_comp_i(19,'Columnclass','',d,[ str ]).
 html_comp_i(19,'Returnonclick',0,d,[ bool ]).
 html_comp_i(19,'Eventgx','',d,[ str ]).
 html_comp_i(19,'Controltype',2,d,[ num ]).
 html_comp_i(19,'Inputtype',0,d,[ num ]).
+html_comp_i(19,'Editautocomplete',0,d,[ num ]).
+html_comp_i(19,'Autocorrection',-1,d,[ bool ]).
+html_comp_i(19,'Autocapitalization','FirstWord',d,[ str ]).
 html_comp_i(19,'Notifycontextchange',0,d,[ bool ]).
-html_comp_i(19,'Autocomplete',0,d,[ bool ]).
+html_comp_i(19,'Colreadonly',-1,d,[ bool ]).
+html_comp_i(19,'Autocomplete',-1,d,[ bool ]).
 html_comp_i(19,'Emptyasnull','Yes',d,[ str ]).
+html_comp_i(19,'Ispassword',0,d,[ bool ]).
 html_comp_i(19,'Colautoresize',-1,d,[ bool ]).
 html_comp_i(19,'Colwidth',measure(0,px),d,[ measure ]).
 html_comp_i(19,'Height',measure(17,px),d,[ measure ]).
-html_comp_i(19,'Coltitle','',d,[ str ]).
+html_comp_i(19,'Collinesfont',font('Courier New',9,[]),d,[ font ]).
+html_comp_i(19,'Collinescolor',rgb(0,0,0),d,[ color ]).
+html_comp_i(19,'Coltitle','Ext',d,[ str ]).
 html_comp_i(19,'Coltitlefont',font('Microsoft Sans Serif',10,[]),d,[ font ]).
 html_comp_i(19,'Coltitlecolor',rgb(0,0,0),d,[ color ]).
+html_comp_i(19,'Horizontalalignment',left,d,[ str ]).
+html_comp_i(19,'Gxformat',0,d,[ num ]).
 html_comp_i(19,'Colvisible',-1,d,[ bool ]).
-html_comp_i(19,'Border','0',d,[ str ]).
-html_comp_i(19,'Alt','',d,[ str ]).
 html_comp_i(19,'Title','',d,[ str ]).
-html_comp_i(19,'Hspace',0,d,[ num ]).
-html_comp_i(19,'Vspace',0,d,[ num ]).
+html_comp_i(19,'Invitemsg','',d,[ str ]).
 html_comp_i(20,'Colcount',5,d,[ num ]).
-html_comp_i(20,'Colattid',-6,v,[ num ]).
-html_comp_i(20,'Controlname','&Deleteimage',d,[ str ]).
+html_comp_i(20,'Colattid',-7,v,[ num ]).
+html_comp_i(20,'Controlname','&Updateimage',d,[ str ]).
 html_comp_i(20,'Class','Image',d,[ str ]).
 html_comp_i(20,'Columnclass','',d,[ str ]).
 html_comp_i(20,'Returnonclick',0,d,[ bool ]).
@@ -617,6 +626,30 @@ html_comp_i(20,'Alt','',d,[ str ]).
 html_comp_i(20,'Title','',d,[ str ]).
 html_comp_i(20,'Hspace',0,d,[ num ]).
 html_comp_i(20,'Vspace',0,d,[ num ]).
+html_comp_i(21,'Colcount',5,d,[ num ]).
+html_comp_i(21,'Colattid',-6,v,[ num ]).
+html_comp_i(21,'Controlname','&Deleteimage',d,[ str ]).
+html_comp_i(21,'Class','Image',d,[ str ]).
+html_comp_i(21,'Columnclass','',d,[ str ]).
+html_comp_i(21,'Returnonclick',0,d,[ bool ]).
+html_comp_i(21,'Eventgx','',d,[ str ]).
+html_comp_i(21,'Controltype',2,d,[ num ]).
+html_comp_i(21,'Inputtype',0,d,[ num ]).
+html_comp_i(21,'Notifycontextchange',0,d,[ bool ]).
+html_comp_i(21,'Autocomplete',0,d,[ bool ]).
+html_comp_i(21,'Emptyasnull','Yes',d,[ str ]).
+html_comp_i(21,'Colautoresize',-1,d,[ bool ]).
+html_comp_i(21,'Colwidth',measure(0,px),d,[ measure ]).
+html_comp_i(21,'Height',measure(17,px),d,[ measure ]).
+html_comp_i(21,'Coltitle','',d,[ str ]).
+html_comp_i(21,'Coltitlefont',font('Microsoft Sans Serif',10,[]),d,[ font ]).
+html_comp_i(21,'Coltitlecolor',rgb(0,0,0),d,[ color ]).
+html_comp_i(21,'Colvisible',-1,d,[ bool ]).
+html_comp_i(21,'Border','0',d,[ str ]).
+html_comp_i(21,'Alt','',d,[ str ]).
+html_comp_i(21,'Title','',d,[ str ]).
+html_comp_i(21,'Hspace',0,d,[ num ]).
+html_comp_i(21,'Vspace',0,d,[ num ]).
  
  
  
@@ -629,15 +662,16 @@ lit_i(7,1,t('Detalles Empleados',3),[ ctlname('Textblock1') ]).
 lit_i(9,1,button('Enter'),[ ctlname('Button1'),width(0),rect(0,0,10,10),title('Nothing') ]).
 lit_i(2,1,table(2),[ ctlname('Table1') ]).
 lit_i(12,1,s(t(13,2),11),[ ctlname(13),ctrltype(edit,12),pos(12),readonly,ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
-lit_i(13,1,s(t(99,2),11),[ ctlname(99),ctrltype(edit,13),pos(13),readonly,ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
-lit_i(14,1,s(t(100,2),11),[ ctlname(100),ctrltype(edit,14),pos(14),readonly,ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
-lit_i(15,1,s(t(101,2),11),[ ctlname(101),ctrltype(edit,15),pos(15),readonly,ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
-lit_i(16,1,s(t(102,2),11),[ ctlname(102),ctrltype(edit,16),pos(16),readonly,ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
-lit_i(17,1,s(t(106,2),11),[ ctlname(106),ctrltype(edit,17),pos(17),readonly,ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
-lit_i(18,1,s(t(107,2),11),[ ctlname(107),ctrltype(edit,18),pos(18),readonly,ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
-lit_i(19,1,s(t('Updateimage',23),11),[ ctlname('&Updateimage'),ctrltype(edit,19),pos(19),readonly,ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
-lit_i(20,1,s(t('Deleteimage',23),11),[ ctlname('&Deleteimage'),ctrltype(edit,20),pos(20),readonly,ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
-lit_i(11,1,s(11),[ ctlname('Empleadosgrid'),el([ t(13,2),t(99,2),t(100,2),t(101,2),t(102,2),t(106,2),t(107,2),t('Updateimage',23),t('Deleteimage',23) ]),width(0),rect(0,0,10,10),title('Nothing') ]).
+lit_i(13,1,s(t(98,2),11),[ ctlname(98),ctrltype(edit,13),pos(13),readonly,ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
+lit_i(14,1,s(t(99,2),11),[ ctlname(99),ctrltype(edit,14),pos(14),readonly,ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
+lit_i(15,1,s(t(100,2),11),[ ctlname(100),ctrltype(edit,15),pos(15),readonly,ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
+lit_i(16,1,s(t(101,2),11),[ ctlname(101),ctrltype(edit,16),pos(16),readonly,ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
+lit_i(17,1,s(t(102,2),11),[ ctlname(102),ctrltype(edit,17),pos(17),readonly,ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
+lit_i(18,1,s(t(106,2),11),[ ctlname(106),ctrltype(edit,18),pos(18),readonly,ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
+lit_i(19,1,s(t(107,2),11),[ ctlname(107),ctrltype(edit,19),pos(19),readonly,ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
+lit_i(20,1,s(t('Updateimage',23),11),[ ctlname('&Updateimage'),ctrltype(edit,20),pos(20),readonly,ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
+lit_i(21,1,s(t('Deleteimage',23),11),[ ctlname('&Deleteimage'),ctrltype(edit,21),pos(21),readonly,ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
+lit_i(11,1,s(11),[ ctlname('Empleadosgrid'),el([ t(13,2),t(98,2),t(99,2),t(100,2),t(101,2),t(102,2),t(106,2),t(107,2),t('Updateimage',23),t('Deleteimage',23) ]),width(0),rect(0,0,10,10),title('Nothing') ]).
 lit_i(1,1,window,[ rect(0,0,1000,1000),ctlname('Form') ]).
  
  
@@ -645,8 +679,8 @@ lit_i(1,1,window,[ rect(0,0,1000,1000),ctlname('Form') ]).
  
  
  
-ctrl_info_i(1,19,[ [ 0,0,sort,[],[],0,0,5,0,0 ] ]).
 ctrl_info_i(1,20,[ [ 0,0,sort,[],[],0,0,5,0,0 ] ]).
+ctrl_info_i(1,21,[ [ 0,0,sort,[],[],0,0,5,0,0 ] ]).
  
  
  
@@ -659,6 +693,15 @@ att_prop_i(2,13,'ATT_INITIAL_VALUE','',d).
 att_prop_i(2,13,'AttRegEx','',d).
 att_prop_i(2,13,'AttValidationFailedMsg','',d).
 att_prop_i(2,13,'FullName',empleadosid,v).
+att_prop_i(2,98,'ExternalName',empleadosareaid,d).
+att_prop_i(2,98,'ExternalNamespace','Condufef_v1',d).
+att_prop_i(2,98,'EmptyAsNull','Yes',d).
+att_prop_i(2,98,idBasedOn,'',d).
+att_prop_i(2,98,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,98,'DB_NLS_SUPPORT','No',d).
+att_prop_i(2,98,'AttRegEx','',d).
+att_prop_i(2,98,'AttValidationFailedMsg','',d).
+att_prop_i(2,98,'FullName',empleadosareaid,v).
 att_prop_i(2,99,'ExternalName',empleadosnomemple,d).
 att_prop_i(2,99,'ExternalNamespace','Condufef_v1',d).
 att_prop_i(2,99,'EmptyAsNull','Yes',d).

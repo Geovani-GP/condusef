@@ -48,12 +48,12 @@ rule_i(0,datastore(1,'CS_RPCPGML','')).
 rule_i(0,datastore(1,'JDBC_DATASOURCE','')).
 rule_i(0,datastore(1,'USE_JDBC_DATASOURCE','0')).
 rule_i(0,datastore(1,'DS_DBMS_ADDINFO','')).
-rule_i(0,datastore(1,'USER_PASSWORD',󻢸蘇�2�5炭)).
+rule_i(0,datastore(1,'USER_PASSWORD',asdf)).
 rule_i(0,datastore(1,'USER_ID',postgres)).
 rule_i(0,datastore(1,'CS_CONNECT','First')).
 rule_i(0,datastore(1,'DBMS_PORT','5432')).
 rule_i(0,datastore(1,'CS_SERVER',localhost)).
-rule_i(0,datastore(1,'CS_DBNAME',postgres)).
+rule_i(0,datastore(1,'CS_DBNAME',condusef)).
 rule_i(0,datastore(1,'CS_FLEDSNAME','')).
 rule_i(0,datastore(1,'CS_DRVNAME','')).
 rule_i(0,datastore(1,'CS_DSNAME','')).
@@ -360,7 +360,7 @@ html_comp_i(6,'Title','',d,[ str ]).
 html_comp_i(6,'Fill',-1,d,[ bool ]).
 html_comp_i(6,'Backcolor',rgb(255,255,255),d,[ color ]).
 html_comp_i(6,'Forecolor',rgb(0,0,0),d,[ color ]).
-html_comp_i(6,'Font',font('Open Sans Semibold',17,[]),d,[ font ]).
+html_comp_i(6,'Font',font('Microsoft Sans Serif',17,[]),d,[ font ]).
 html_comp_i(7,'Class',row,v,[ str ]).
 html_comp_i(7,'Id','',d,[ str ]).
 html_comp_i(7,'Height',measure(0,px),d,[ measure ]).
@@ -496,7 +496,7 @@ html_comp_i(22,'Captionvalue',areaid,d,[ str ]).
 html_comp_i(22,'Controltype',2,d,[ num ]).
 html_comp_i(22,'Inputtype',0,d,[ num ]).
 html_comp_i(22,'Notifycontextchange',0,d,[ bool ]).
-html_comp_i(22,'Emptyasnull','Yes',d,[ str ]).
+html_comp_i(22,'Emptyasnull','No',d,[ str ]).
 html_comp_i(22,'Readonly',0,v,[ bool ]).
 html_comp_i(22,'Autocomplete',-1,d,[ bool ]).
 html_comp_i(22,'Ispassword',0,d,[ bool ]).
@@ -841,7 +841,7 @@ lit_i(7,1,div(7),[ ctlname('') ]).
 lit_i(18,1,comp(errview),[ ctlname('Errorviewer'),width(0),rect(0,0,10,10),title('Nothing') ]).
 lit_i(17,1,div(17),[ ctlname('') ]).
 lit_i(16,1,div(16),[ ctlname('') ]).
-lit_i(22,1,t(22,2),[ ctlname(22),ctrltype(edit,22),pos(22),ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
+lit_i(22,1,t(22,2),[ ctlname(22),ctrltype(edit,22),pos(22),ispwd(0),e2n(0),width(0),rect(0,0,10,10),title('Nothing') ]).
 lit_i(21,1,div(21),[ ctlname('') ]).
 lit_i(20,1,div(20),[ ctlname('') ]).
 lit_i(19,1,div(19),[ ctlname('') ]).
@@ -886,7 +886,7 @@ lit_i(1,1,window,[ rect(0,0,1000,1000),ctlname('Form') ]).
 att_prop_i(2,22,'HORIZONTAL_DESCRIPTION',areaareaid,v).
 att_prop_i(2,22,'ExternalName',areaareaid,d).
 att_prop_i(2,22,'ExternalNamespace','Condufef_v1',d).
-att_prop_i(2,22,'EmptyAsNull','Yes',d).
+att_prop_i(2,22,'EmptyAsNull','No',v).
 att_prop_i(2,22,idBasedOn,'',d).
 att_prop_i(2,22,'AUTONUMBER','0',d).
 att_prop_i(2,22,'ATT_INITIAL_VALUE','',d).

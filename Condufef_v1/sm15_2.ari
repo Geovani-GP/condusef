@@ -30,6 +30,8 @@ called_program_i(0,2,13,63).
 called_program_i(0,20,13,1).
 called_program_i(0,21,13,1).
 called_program_i(0,24,13,1).
+called_program_i(0,25,13,1).
+called_program_i(0,25,13,116).
 called_program_i(0,3,13,1).
 called_program_i(0,3,13,64).
 called_program_i(0,4,13,1).
@@ -93,6 +95,7 @@ called_program_i(13,114,13,102).
 called_program_i(13,115,0,18).
 called_program_i(13,115,13,1).
 called_program_i(13,115,13,99).
+called_program_i(13,116,13,1).
 called_program_i(13,28,13,110).
 called_program_i(13,29,13,1).
 called_program_i(13,30,0,14).
@@ -205,6 +208,7 @@ sdt_map_i(15,categorias,[ 0,5,0 ]).
 sdt_map_i(15,empleados,[ 0,6,0 ]).
 sdt_map_i(15,empleadospiso,[ 0,24,0 ]).
 sdt_map_i(15,entidadfederativa,[ 0,4,0 ]).
+sdt_map_i(15,estados,[ 0,25,0 ]).
 sdt_map_i(15,estatusarticulo,[ 0,7,0 ]).
 sdt_map_i(15,'gpxMenuItems.gpxMenuItem',[ 26,5,6 ]).
 sdt_map_i(15,marcas,[ 0,8,0 ]).

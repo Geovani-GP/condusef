@@ -1,0 +1,3 @@
+bc_dt_elem_i([ 0,25,0 ],1,allownulls,no).
+bc_dt_elem_i([ 0,25,0 ],2,allownulls,no).
+ 

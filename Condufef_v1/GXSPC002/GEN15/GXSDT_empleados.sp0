@@ -21,15 +21,14 @@ struct_dt_elem_i([ 0,6,0 ],1,type,[ 4,9,0 ]).
 struct_dt_elem_i([ 0,6,0 ],1,pic,'ZZZZZZZZ9').
 struct_dt_elem_i([ 0,6,0 ],1,collection,'False').
 struct_dt_elem_i([ 0,6,0 ],1,attributeid,'13').
-struct_dt_elem_i([ 0,6,0 ],2,name,'Areaid').
-struct_dt_elem_i([ 0,6,0 ],2,camelname,areaid).
-struct_dt_elem_i([ 0,6,0 ],2,length,9).
+struct_dt_elem_i([ 0,6,0 ],2,name,'Empleadosareaid').
+struct_dt_elem_i([ 0,6,0 ],2,camelname,empleadosareaid).
+struct_dt_elem_i([ 0,6,0 ],2,length,3).
 struct_dt_elem_i([ 0,6,0 ],2,decimals,0).
-struct_dt_elem_i([ 0,6,0 ],2,sign,0).
-struct_dt_elem_i([ 0,6,0 ],2,type,[ 4,9,0 ]).
-struct_dt_elem_i([ 0,6,0 ],2,pic,'ZZZZZZZZ9').
+struct_dt_elem_i([ 0,6,0 ],2,type,[ 13,3,0 ]).
+struct_dt_elem_i([ 0,6,0 ],2,pic,'').
 struct_dt_elem_i([ 0,6,0 ],2,collection,'False').
-struct_dt_elem_i([ 0,6,0 ],2,attributeid,'176').
+struct_dt_elem_i([ 0,6,0 ],2,attributeid,'98').
 struct_dt_elem_i([ 0,6,0 ],3,name,'Empleadosnomemple').
 struct_dt_elem_i([ 0,6,0 ],3,camelname,empleadosnomemple).
 struct_dt_elem_i([ 0,6,0 ],3,length,30).

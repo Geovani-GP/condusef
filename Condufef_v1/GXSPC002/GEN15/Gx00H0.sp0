@@ -515,7 +515,7 @@ html_comp_i(16,'Captionvalue',areaid,d,[ str ]).
 html_comp_i(16,'Controltype',2,d,[ num ]).
 html_comp_i(16,'Inputtype',0,d,[ num ]).
 html_comp_i(16,'Notifycontextchange',0,d,[ bool ]).
-html_comp_i(16,'Emptyasnull','Yes',d,[ str ]).
+html_comp_i(16,'Emptyasnull','No',d,[ str ]).
 html_comp_i(16,'Readonly',0,v,[ bool ]).
 html_comp_i(16,'Autocomplete',-1,d,[ bool ]).
 html_comp_i(16,'Ispassword',0,d,[ bool ]).
@@ -1132,7 +1132,7 @@ html_comp_i(76,'Inputtype',0,d,[ num ]).
 html_comp_i(76,'Notifycontextchange',0,d,[ bool ]).
 html_comp_i(76,'Colreadonly',-1,d,[ bool ]).
 html_comp_i(76,'Autocomplete',-1,d,[ bool ]).
-html_comp_i(76,'Emptyasnull','Yes',d,[ str ]).
+html_comp_i(76,'Emptyasnull','No',d,[ str ]).
 html_comp_i(76,'Ispassword',0,d,[ bool ]).
 html_comp_i(76,'Colautoresize',-1,d,[ bool ]).
 html_comp_i(76,'Colwidth',measure(0,px),d,[ measure ]).
@@ -1242,7 +1242,7 @@ html_comp_i(81,'Buttonborderstyle',standard,d,[ str ]).
 lit_i(12,1,t(areaareaid,3),[ ctlname('Lblareaareaidfilter') ]).
 lit_i(11,1,div(11),[ ctlname('') ]).
 lit_i(10,1,div(10),[ ctlname('') ]).
-lit_i(16,1,t('Careaareaid',23),[ ctlname('&Careaareaid'),ctrltype(edit,16),pos(16),ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
+lit_i(16,1,t('Careaareaid',23),[ ctlname('&Careaareaid'),ctrltype(edit,16),pos(16),ispwd(0),e2n(0),width(0),rect(0,0,10,10),title('Nothing') ]).
 lit_i(15,1,div(15),[ ctlname('') ]).
 lit_i(14,1,div(14),[ ctlname('') ]).
 lit_i(13,1,div(13),[ ctlname('') ]).
@@ -1305,7 +1305,7 @@ lit_i(71,1,button('''Toggle'''),[ ctlname('Btntoggle'),width(0),rect(0,0,10,10),
 lit_i(70,1,div(70),[ ctlname('') ]).
 lit_i(69,1,div(69),[ ctlname('') ]).
 lit_i(75,1,s(t('Linkselection',23),74),[ ctlname('&Linkselection'),ctrltype(edit,75),pos(75),readonly,ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
-lit_i(76,1,s(t(22,2),74),[ ctlname(22),ctrltype(edit,76),pos(76),readonly,ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
+lit_i(76,1,s(t(22,2),74),[ ctlname(22),ctrltype(edit,76),pos(76),readonly,ispwd(0),e2n(0),width(0),rect(0,0,10,10),title('Nothing') ]).
 lit_i(77,1,s(t(27,2),74),[ ctlname(27),ctrltype(edit,77),pos(77),readonly,ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
 lit_i(78,1,s(t(29,2),74),[ ctlname(29),ctrltype(edit,78),pos(78),readonly,ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
 lit_i(74,1,s(74),[ ctlname('Grid1'),el([ t('Linkselection',23),t(22,2),t(27,2),t(29,2) ]),width(0),rect(0,0,10,10),title('Nothing') ]).
@@ -1332,7 +1332,7 @@ ctrl_info_i(1,75,[ [ 0,0,sort,[],[],0,0,5,0,0 ] ]).
  
 att_prop_i(2,22,'ExternalName',areaareaid,d).
 att_prop_i(2,22,'ExternalNamespace','Condufef_v1',d).
-att_prop_i(2,22,'EmptyAsNull','Yes',d).
+att_prop_i(2,22,'EmptyAsNull','No',v).
 att_prop_i(2,22,idBasedOn,'',d).
 att_prop_i(2,22,'AUTONUMBER','0',d).
 att_prop_i(2,22,'ATT_INITIAL_VALUE','',d).

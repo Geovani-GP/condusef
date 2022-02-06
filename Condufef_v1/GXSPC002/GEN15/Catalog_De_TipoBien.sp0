@@ -19,8 +19,9 @@ las_i(2,[ [ 'Nextvalue','Tipobiendsc' ] ]).
 lac_i(2,[ [ 'Nextvalue','Tipobiendsc' ] ]).
  
  
+lits_i('CAT罫OGO DE TIPO BIEN',5,10).
  
-cls_i([ 0,0 ],[ 0,99 ]).
+cls_i([ 0,0 ],[ 5,99 ]).
  
 pos_i('Nextvalue',[ 0,0,0 ]).
 pos_i('Tipobiendsc',[ 0,0,0 ]).
@@ -45,12 +46,12 @@ rule_i(0,datastore(1,'CS_RPCPGML','')).
 rule_i(0,datastore(1,'JDBC_DATASOURCE','')).
 rule_i(0,datastore(1,'USE_JDBC_DATASOURCE','0')).
 rule_i(0,datastore(1,'DS_DBMS_ADDINFO','')).
-rule_i(0,datastore(1,'USER_PASSWORD',󻢸蘇�2�5炭)).
+rule_i(0,datastore(1,'USER_PASSWORD',asdf)).
 rule_i(0,datastore(1,'USER_ID',postgres)).
 rule_i(0,datastore(1,'CS_CONNECT','First')).
 rule_i(0,datastore(1,'DBMS_PORT','5432')).
 rule_i(0,datastore(1,'CS_SERVER',localhost)).
-rule_i(0,datastore(1,'CS_DBNAME',postgres)).
+rule_i(0,datastore(1,'CS_DBNAME',condusef)).
 rule_i(0,datastore(1,'CS_FLEDSNAME','')).
 rule_i(0,datastore(1,'CS_DRVNAME','')).
 rule_i(0,datastore(1,'CS_DSNAME','')).
@@ -242,16 +243,16 @@ b_line_i(1002,2,5,cmd,0,[ t('',147,0,0) ]).
  
  
  
-html_i(2,html('&nbsp;')).
-html_i(3,usercontrol(3)).
-html_i(4,html('<p>')).
-html_i(5,table(5)).
+html_i(2,html('&nbsp; ')).
+html_i(3,html('<p>')).
+html_i(4,table(4)).
 html_i(27,html('</p>')).
  
-html_sub_i(5,0,html_i(0,html('<tbody>'))).
-html_sub_i(5,6,html_i(1,row(6))).
-html_sub_i(6,7,html_i(0,cell(7))).
-html_sub_i(5,8,html_i(2,row(8))).
+html_sub_i(4,0,html_i(0,html('<tbody>'))).
+html_sub_i(4,5,html_i(1,row(5))).
+html_sub_i(5,6,html_i(0,cell(6))).
+html_sub_i(6,7,html_i(0,t('CAT罫OGO DE TIPO BIEN',3))).
+html_sub_i(4,8,html_i(2,row(8))).
 html_sub_i(8,9,html_i(0,cell(9))).
 html_sub_i(9,10,html_i(0,table(10))).
 html_sub_i(10,0,html_i(0,html('<tbody>'))).
@@ -276,43 +277,35 @@ html_sub_i(23,24,html_i(0,button('''Guardar '''))).
 html_sub_i(20,25,html_i(2,cell(25))).
 html_sub_i(25,26,html_i(0,button('''Cancelar'''))).
 html_sub_i(19,0,html_i(2,html('</tbody>'))).
-html_sub_i(5,0,html_i(3,html('</tbody>'))).
+html_sub_i(4,0,html_i(3,html('</tbody>'))).
  
 html_tags_i(1,'Class','Form').
  
-html_comp_i(3,'Usercontroltype','Alertify',d,[ str ]).
-html_comp_i(3,'Constructorname','Alertify',d,[ str ]).
-html_comp_i(3,'Showmethodname',show,d,[ str ]).
-html_comp_i(3,'Controlname','Alertify1',v,[ str ]).
-html_comp_i(3,'Width','100',d,[ str ]).
-html_comp_i(3,'Height','100',d,[ str ]).
-html_comp_i(3,'Type',error,v,[ str ]).
-html_comp_i(3,'Delay','5000',d,[ str ]).
-html_comp_i(3,'Textmessage','Click now!!!',d,[ str ]).
-html_comp_i(3,'Textok','Confirm',d,[ str ]).
-html_comp_i(3,'Textcancel','Cancel',d,[ str ]).
-html_comp_i(3,'Promptresponse','',d,[ str ]).
-html_comp_i(3,'Promptplaceholder','Type here...',d,[ str ]).
-html_comp_i(3,'Setpromptresponse','SetPromptResponse',d,[ str ]).
-html_comp_i(3,'Getpromptresponse','GetPromptResponse',d,[ str ]).
-html_comp_i(3,'Visible',-1,d,[ bool ]).
-html_comp_i(3,'Csssupportfiles',[ [ t('''Alertify\css\alertify.core.css''',3) ],[ t('''Alertify\css\alertify.default.css''',3) ] ],d,[ params ]).
-html_comp_i(3,'Jssupportfiles',[ [ t('''Alertify\js\alertify.min.js''',3) ],[ t('''Alertify\GlobalAlerts.js''',3) ],[ t('''Alertify\AlertifyRender.js''',3) ] ],d,[ params ]).
-html_comp_i(3,'Csssharedsupportfiles',[],d,[ params ]).
-html_comp_i(3,'Jssharedsupportfiles',[ [ t('''Shared/jquery/jquery-1.9.0.js''',3) ] ],d,[ params ]).
-html_comp_i(5,'Id','Table1',v,[ str ]).
-html_comp_i(5,'Class','Table',v,[ str ]).
-html_comp_i(5,'Title','',d,[ str ]).
-html_comp_i(5,'Align',center,v,[ str ]).
-html_comp_i(5,'Backgroundgx','',d,[ str ]).
-html_comp_i(5,'Bgcolor',rgb(0,0,0),d,[ color ]).
-html_comp_i(5,'Border','0',d,[ str ]).
-html_comp_i(5,'Bordercolor',rgb(0,0,0),d,[ color ]).
-html_comp_i(5,'Cellpadding','1',d,[ str ]).
-html_comp_i(5,'Cellspacing','2',d,[ str ]).
-html_comp_i(5,'Height',measure(46,px),v,[ measure ]).
-html_comp_i(5,'Width',measure(100,'%'),v,[ measure ]).
-html_comp_i(5,'Rules',none,d,[ str ]).
+html_comp_i(4,'Id','Table1',v,[ str ]).
+html_comp_i(4,'Class','Table',v,[ str ]).
+html_comp_i(4,'Title','',d,[ str ]).
+html_comp_i(4,'Align',center,v,[ str ]).
+html_comp_i(4,'Backgroundgx','',d,[ str ]).
+html_comp_i(4,'Bgcolor',rgb(0,0,0),d,[ color ]).
+html_comp_i(4,'Border','0',d,[ str ]).
+html_comp_i(4,'Bordercolor',rgb(0,0,0),d,[ color ]).
+html_comp_i(4,'Cellpadding','1',d,[ str ]).
+html_comp_i(4,'Cellspacing','2',d,[ str ]).
+html_comp_i(4,'Height',measure(46,px),v,[ measure ]).
+html_comp_i(4,'Width',measure(100,'%'),v,[ measure ]).
+html_comp_i(4,'Rules',none,d,[ str ]).
+html_comp_i(6,'Align',center,v,[ str ]).
+html_comp_i(7,'Caption','CAT罫OGO DE TIPO BIEN',d,[ str ]).
+html_comp_i(7,'Id','Textblock8',v,[ str ]).
+html_comp_i(7,'Class','TextBlock',d,[ str ]).
+html_comp_i(7,'Event','',d,[ str ]).
+html_comp_i(7,'Returnonclick',0,d,[ bool ]).
+html_comp_i(7,'Gxformat',0,d,[ num ]).
+html_comp_i(7,'Title','',d,[ str ]).
+html_comp_i(7,'Fill',-1,d,[ bool ]).
+html_comp_i(7,'Backcolor',rgb(255,255,255),d,[ color ]).
+html_comp_i(7,'Forecolor',rgb(0,0,0),v,[ color ]).
+html_comp_i(7,'Font',font('Microsoft Sans Serif',15,[ bold ]),v,[ font ]).
 html_comp_i(10,'Id','Table2',v,[ str ]).
 html_comp_i(10,'Class','Table',v,[ str ]).
 html_comp_i(10,'Title','',d,[ str ]).
@@ -436,7 +429,7 @@ html_comp_i(26,'Buttonborderstyle',standard,d,[ str ]).
  
  
  
-lit_i(3,1,usercontrol(3),[ ctlname('Alertify1'),ctrltype(alertify),el([]),containers([]) ]).
+lit_i(7,1,t('CAT罫OGO DE TIPO BIEN',3),[ ctlname('Textblock8') ]).
 lit_i(14,1,t('Nextvalue',23),[ ctlname('&Nextvalue'),ctrltype(edit,14),pos(14),readonly,ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
 lit_i(18,1,t('Tipobiendsc',23),[ ctlname('&Tipobiendsc'),ctrltype(edit,18),pos(18),ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
 lit_i(10,1,table(10),[ ctlname('Table2') ]).
@@ -444,7 +437,7 @@ lit_i(22,1,button('''Consultar '''),[ ctlname('Button1'),width(0),rect(0,0,10,10
 lit_i(24,1,button('''Guardar '''),[ ctlname('Button2'),width(0),rect(0,0,10,10),title('Nothing') ]).
 lit_i(26,1,button('''Cancelar'''),[ ctlname('Button3'),width(0),rect(0,0,10,10),title('Nothing') ]).
 lit_i(19,1,table(19),[ ctlname('Table3') ]).
-lit_i(5,1,table(5),[ ctlname('Table1') ]).
+lit_i(4,1,table(4),[ ctlname('Table1') ]).
 lit_i(1,1,window,[ rect(0,0,1000,1000),ctlname('Form') ]).
  
  

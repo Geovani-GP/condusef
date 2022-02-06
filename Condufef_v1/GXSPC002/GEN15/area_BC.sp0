@@ -41,12 +41,12 @@ rule_i(0,datastore(1,'CS_RPCPGML','')).
 rule_i(0,datastore(1,'JDBC_DATASOURCE','')).
 rule_i(0,datastore(1,'USE_JDBC_DATASOURCE','0')).
 rule_i(0,datastore(1,'DS_DBMS_ADDINFO','')).
-rule_i(0,datastore(1,'USER_PASSWORD',󻢸蘇�2�5炭)).
+rule_i(0,datastore(1,'USER_PASSWORD',asdf)).
 rule_i(0,datastore(1,'USER_ID',postgres)).
 rule_i(0,datastore(1,'CS_CONNECT','First')).
 rule_i(0,datastore(1,'DBMS_PORT','5432')).
 rule_i(0,datastore(1,'CS_SERVER',localhost)).
-rule_i(0,datastore(1,'CS_DBNAME',postgres)).
+rule_i(0,datastore(1,'CS_DBNAME',condusef)).
 rule_i(0,datastore(1,'CS_FLEDSNAME','')).
 rule_i(0,datastore(1,'CS_DRVNAME','')).
 rule_i(0,datastore(1,'CS_DSNAME','')).
@@ -274,7 +274,7 @@ b_group_i(2,1,lit,0,1,0).
 att_prop_i(2,22,'HORIZONTAL_DESCRIPTION',areaareaid,v).
 att_prop_i(2,22,'ExternalName',areaareaid,d).
 att_prop_i(2,22,'ExternalNamespace','Condufef_v1',d).
-att_prop_i(2,22,'EmptyAsNull','Yes',d).
+att_prop_i(2,22,'EmptyAsNull','No',v).
 att_prop_i(2,22,idBasedOn,'',d).
 att_prop_i(2,22,'AUTONUMBER','0',d).
 att_prop_i(2,22,'ATT_INITIAL_VALUE','',d).

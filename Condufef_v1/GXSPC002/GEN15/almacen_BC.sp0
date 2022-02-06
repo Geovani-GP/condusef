@@ -41,12 +41,12 @@ rule_i(0,datastore(1,'CS_RPCPGML','')).
 rule_i(0,datastore(1,'JDBC_DATASOURCE','')).
 rule_i(0,datastore(1,'USE_JDBC_DATASOURCE','0')).
 rule_i(0,datastore(1,'DS_DBMS_ADDINFO','')).
-rule_i(0,datastore(1,'USER_PASSWORD',admin)).
+rule_i(0,datastore(1,'USER_PASSWORD',asdf)).
 rule_i(0,datastore(1,'USER_ID',postgres)).
 rule_i(0,datastore(1,'CS_CONNECT','First')).
 rule_i(0,datastore(1,'DBMS_PORT','5432')).
 rule_i(0,datastore(1,'CS_SERVER',localhost)).
-rule_i(0,datastore(1,'CS_DBNAME',postgres)).
+rule_i(0,datastore(1,'CS_DBNAME',condusef)).
 rule_i(0,datastore(1,'CS_FLEDSNAME','')).
 rule_i(0,datastore(1,'CS_DRVNAME','')).
 rule_i(0,datastore(1,'CS_DSNAME','')).
@@ -184,7 +184,7 @@ rule_i(0,p(0,15,fvix,[ 11,10 ],[ 'NAME',empleados_pkey ])).
 rule_i(0,p(0,15,fvix,[ 11,10 ],[ 'LOC','' ])).
 rule_i(0,p(0,15,fvix,[ 11,10 ],[ 'SCHEMA',public ])).
 rule_i(0,p(0,15,fvix,[ 11,10 ],[ 'EXTNAM','YES' ])).
-rule_i(0,file(6,'EMPLEADOS',[ 13,176,99,100,101,102,103,106,105,107,104 ])).
+rule_i(0,file(6,'EMPLEADOS',[ 13,98,99,100,101,102,103,106,105,107,104 ])).
 rule_i(0,loc([ 6 ],'EMPLEADOS','','LAN')).
 rule_i(0,index(6,'EMPLEADOS_PKEY',u,[ 13 ])).
 rule_i(0,loc([ 6,'EMPLEADOS_PKEY' ],empleados_pkey,'','LAN')).
@@ -356,7 +356,7 @@ map_i(6,a,102,[ empleadosstatus ]).
 map_i(6,a,101,[ empleadosapmaterno ]).
 map_i(6,a,100,[ empleadosappaterno ]).
 map_i(6,a,99,[ empleadosnomemple ]).
-map_i(6,a,176,[ areaid ]).
+map_i(6,a,98,[ empleadosareaid ]).
 map_i(6,a,13,[ empleadosid ]).
 map_i(18,i,'ALMACEN_PKEY',[ 'ALMACEN_PKEY' ]).
 map_i(18,a,153,[ almacenfecultact ]).
@@ -424,7 +424,6 @@ att_prop_i(2,19,'EmptyAsNull','Yes',d).
 att_prop_i(2,19,idBasedOn,'',d).
 att_prop_i(2,19,'AUTONUMBER','0',d).
 att_prop_i(2,19,'ATT_INITIAL_VALUE','',d).
-att_prop_i(2,19,'AttRegEx','',d).
 att_prop_i(2,19,'AttValidationFailedMsg','',d).
 att_prop_i(2,19,'FullName',almacenid,v).
 att_prop_i(2,13,'HORIZONTAL_DESCRIPTION',empleadosid,v).
@@ -434,7 +433,6 @@ att_prop_i(2,13,'EmptyAsNull','Yes',d).
 att_prop_i(2,13,idBasedOn,'',d).
 att_prop_i(2,13,'AUTONUMBER','0',d).
 att_prop_i(2,13,'ATT_INITIAL_VALUE','',d).
-att_prop_i(2,13,'AttRegEx','',d).
 att_prop_i(2,13,'AttValidationFailedMsg','',d).
 att_prop_i(2,13,'FullName',empleadosid,v).
 att_prop_i(2,143,'HORIZONTAL_DESCRIPTION',almacendsc,v).
@@ -504,7 +502,6 @@ att_prop_i(2,149,'EmptyAsNull','Yes',d).
 att_prop_i(2,149,idBasedOn,'',d).
 att_prop_i(2,149,'AUTONUMBER','0',d).
 att_prop_i(2,149,'ATT_INITIAL_VALUE','',d).
-att_prop_i(2,149,'AttRegEx','',d).
 att_prop_i(2,149,'AttValidationFailedMsg','',d).
 att_prop_i(2,149,'FullName',almacentelefono,v).
 att_prop_i(2,150,'HORIZONTAL_DESCRIPTION',alamcenobservaciones,v).
@@ -533,7 +530,6 @@ att_prop_i(2,152,'ExternalNamespace','Condufef_v1',d).
 att_prop_i(2,152,'EmptyAsNull','Yes',d).
 att_prop_i(2,152,idBasedOn,'',d).
 att_prop_i(2,152,'ATT_INITIAL_VALUE','',d).
-att_prop_i(2,152,'AttRegEx','',d).
 att_prop_i(2,152,'AttValidationFailedMsg','',d).
 att_prop_i(2,152,idDATEFORMAT,idDATEFORMAT_LONG,v).
 att_prop_i(2,152,'FullName',almacenfecreg,v).
@@ -543,7 +539,6 @@ att_prop_i(2,153,'ExternalNamespace','Condufef_v1',d).
 att_prop_i(2,153,'EmptyAsNull','Yes',d).
 att_prop_i(2,153,idBasedOn,'',d).
 att_prop_i(2,153,'ATT_INITIAL_VALUE','',d).
-att_prop_i(2,153,'AttRegEx','',d).
 att_prop_i(2,153,'AttValidationFailedMsg','',d).
 att_prop_i(2,153,idDATEFORMAT,idDATEFORMAT_LONG,v).
 att_prop_i(2,153,'FullName',almacenfecultact,v).

@@ -2,7 +2,7 @@
                File: Gx0060
         Description: Selection List empleados
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 2/5/2022 0:54:46.87
+       Generated on: 2/5/2022 15:59:37.79
        Program type: Callable routine
           Main DBMS: postgresql
 */
@@ -265,7 +265,7 @@ namespace GeneXus.Programs {
          context.AddJavascriptSource("jquery.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxtimezone.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxgral.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("gxcfg.js", "?2022250544694");
+         context.AddJavascriptSource("gxcfg.js", "?20222515593787");
          if ( context.isSpaRequest( ) )
          {
             enableOutput();
@@ -714,9 +714,6 @@ namespace GeneXus.Programs {
                context.WriteHtmlText( "<th align=\""+"left"+"\" "+" nowrap=\"nowrap\" "+" class=\""+subGrid1_Linesclass+"\" "+" style=\""+""+""+"\" "+">") ;
                context.SendWebValue( "empleadosstatus") ;
                context.WriteHtmlTextNl( "</th>") ;
-               context.WriteHtmlText( "<th align=\""+"right"+"\" "+" nowrap=\"nowrap\" "+" class=\""+subGrid1_Linesclass+"\" "+" style=\""+""+""+"\" "+">") ;
-               context.SendWebValue( "areaid") ;
-               context.WriteHtmlTextNl( "</th>") ;
                context.WriteHtmlTextNl( "</tr>") ;
                Grid1Container.AddObjectProperty("GridName", "Grid1");
             }
@@ -756,10 +753,6 @@ namespace GeneXus.Programs {
                Grid1Container.AddColumnProperties(Grid1Column);
                Grid1Column = GXWebColumn.GetNew(isAjaxCallMode( ));
                Grid1Column.AddObjectProperty("Value", A102empleadosstatus);
-               Grid1Container.AddColumnProperties(Grid1Column);
-               Grid1Column = GXWebColumn.GetNew(isAjaxCallMode( ));
-               Grid1Column.AddObjectProperty("Value", StringUtil.LTrim( StringUtil.NToC( (decimal)(A176areaid), 9, 0, ".", "")));
-               Grid1Column.AddObjectProperty("Link", StringUtil.RTrim( edtareaid_Link));
                Grid1Container.AddColumnProperties(Grid1Column);
                Grid1Container.AddObjectProperty("Allowselection", StringUtil.LTrim( StringUtil.NToC( (decimal)(subGrid1_Allowselection), 1, 0, ".", "")));
                Grid1Container.AddObjectProperty("Selectioncolor", StringUtil.LTrim( StringUtil.NToC( (decimal)(subGrid1_Selectioncolor), 9, 0, ".", "")));
@@ -804,7 +797,7 @@ namespace GeneXus.Programs {
             GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "row", "left", "top", "", "", "div");
             /* Div Control */
             GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "col-xs-12", "left", "top", "", "", "div");
-            TempTags = "  onfocus=\"gx.evt.onfocus(this, 94,'',false,'',0)\"";
+            TempTags = "  onfocus=\"gx.evt.onfocus(this, 93,'',false,'',0)\"";
             ClassString = "BtnCancel";
             StyleString = "";
             GxWebStd.gx_button_ctrl( context, bttBtn_cancel_Internalname, "gx.evt.setGridEvt("+StringUtil.Str( (decimal)(84), 2, 0)+","+"null"+");", "Cancelar", bttBtn_cancel_Jsonclick, 1, "Cancelar", "", StyleString, ClassString, 1, 1, "standard", "'"+""+"'"+",false,"+"'"+"ECANCEL."+"'", TempTags, "", context.GetButtonType( ), "HLP_Gx0060.htm");
@@ -921,8 +914,6 @@ namespace GeneXus.Programs {
                               n101empleadosapmaterno = false;
                               A102empleadosstatus = cgiGet( edtempleadosstatus_Internalname);
                               n102empleadosstatus = false;
-                              A176areaid = (int)(context.localUtil.CToN( cgiGet( edtareaid_Internalname), ",", "."));
-                              n176areaid = false;
                               sEvtType = StringUtil.Right( sEvt, 1);
                               if ( StringUtil.StrCmp(sEvtType, ".") == 0 )
                               {
@@ -1099,8 +1090,6 @@ namespace GeneXus.Programs {
          GxWebStd.gx_hidden_field( context, "EMPLEADOSAPMATERNO", A101empleadosapmaterno);
          GxWebStd.gx_hidden_field( context, "gxhash_EMPLEADOSSTATUS", GetSecureSignedToken( "", StringUtil.RTrim( context.localUtil.Format( A102empleadosstatus, ""))));
          GxWebStd.gx_hidden_field( context, "EMPLEADOSSTATUS", A102empleadosstatus);
-         GxWebStd.gx_hidden_field( context, "gxhash_AREAID", GetSecureSignedToken( "", context.localUtil.Format( (decimal)(A176areaid), "ZZZZZZZZ9")));
-         GxWebStd.gx_hidden_field( context, "AREAID", StringUtil.LTrim( StringUtil.NToC( (decimal)(A176areaid), 9, 0, ".", "")));
       }
 
       protected void fix_multi_value_controls( )
@@ -1183,8 +1172,6 @@ namespace GeneXus.Programs {
                n104empleadosfecreg = H001V2_n104empleadosfecreg[0];
                A103empleadosusuario = H001V2_A103empleadosusuario[0];
                n103empleadosusuario = H001V2_n103empleadosusuario[0];
-               A176areaid = H001V2_A176areaid[0];
-               n176areaid = H001V2_n176areaid[0];
                A102empleadosstatus = H001V2_A102empleadosstatus[0];
                n102empleadosstatus = H001V2_n102empleadosstatus[0];
                A101empleadosapmaterno = H001V2_A101empleadosapmaterno[0];
@@ -1542,11 +1529,11 @@ namespace GeneXus.Programs {
       protected void define_styles( )
       {
          AddStyleSheetFile("calendar-system.css", "?11323129");
-         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?0542765");
+         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?15381859");
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?2022250544813");
+            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?2022251559390");
             idxLst = (int)(idxLst+1);
          }
          /* End function define_styles */
@@ -1555,7 +1542,7 @@ namespace GeneXus.Programs {
       protected void include_jscripts( )
       {
          context.AddJavascriptSource("messages.spa.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("gx0060.js", "?2022250544813");
+         context.AddJavascriptSource("gx0060.js", "?2022251559390");
          /* End function include_jscripts */
       }
 
@@ -1567,7 +1554,6 @@ namespace GeneXus.Programs {
          edtempleadosappaterno_Internalname = "EMPLEADOSAPPATERNO_"+sGXsfl_84_idx;
          edtempleadosapmaterno_Internalname = "EMPLEADOSAPMATERNO_"+sGXsfl_84_idx;
          edtempleadosstatus_Internalname = "EMPLEADOSSTATUS_"+sGXsfl_84_idx;
-         edtareaid_Internalname = "AREAID_"+sGXsfl_84_idx;
       }
 
       protected void SubsflControlProps_fel_842( )
@@ -1578,7 +1564,6 @@ namespace GeneXus.Programs {
          edtempleadosappaterno_Internalname = "EMPLEADOSAPPATERNO_"+sGXsfl_84_fel_idx;
          edtempleadosapmaterno_Internalname = "EMPLEADOSAPMATERNO_"+sGXsfl_84_fel_idx;
          edtempleadosstatus_Internalname = "EMPLEADOSSTATUS_"+sGXsfl_84_fel_idx;
-         edtareaid_Internalname = "AREAID_"+sGXsfl_84_fel_idx;
       }
 
       protected void sendrow_842( )
@@ -1696,22 +1681,11 @@ namespace GeneXus.Programs {
             /* Single line edit */
             ROClassString = "Attribute";
             Grid1Row.AddColumnProperties("edit", 1, isAjaxCallMode( ), new Object[] {(String)edtempleadosstatus_Internalname,(String)A102empleadosstatus,(String)"",(String)"",(String)"'"+""+"'"+",false,"+"'"+""+"'",(String)"",(String)"",(String)"",(String)"",(String)edtempleadosstatus_Jsonclick,(short)0,(String)"Attribute",(String)"",(String)ROClassString,(String)"WWColumn OptionalColumn",(short)-1,(short)0,(short)0,(String)"text",(String)"",(short)0,(String)"px",(short)17,(String)"px",(short)1,(short)0,(short)0,(short)84,(short)1,(short)-1,(short)-1,(bool)true,(String)"",(String)"left",(bool)true});
-            /* Subfile cell */
-            if ( Grid1Container.GetWrapped() == 1 )
-            {
-               context.WriteHtmlText( "<td valign=\"middle\" align=\""+"right"+"\""+" style=\""+""+"\">") ;
-            }
-            /* Single line edit */
-            ROClassString = "DescriptionAttribute";
-            edtareaid_Link = "javascript:gx.popup.gxReturn(["+"'"+GXUtil.EncodeJSConstant( StringUtil.LTrim( StringUtil.NToC( (decimal)(A13empleadosid), 9, 0, ",", "")))+"'"+"]);";
-            context.httpAjaxContext.ajax_rsp_assign_prop("", false, edtareaid_Internalname, "Link", edtareaid_Link);
-            Grid1Row.AddColumnProperties("edit", 1, isAjaxCallMode( ), new Object[] {(String)edtareaid_Internalname,StringUtil.LTrim( StringUtil.NToC( (decimal)(A176areaid), 9, 0, ",", "")),context.localUtil.Format( (decimal)(A176areaid), "ZZZZZZZZ9"),(String)"",(String)"'"+""+"'"+",false,"+"'"+""+"'",(String)edtareaid_Link,(String)"",(String)"",(String)"",(String)edtareaid_Jsonclick,(short)0,(String)"DescriptionAttribute",(String)"",(String)ROClassString,(String)"WWColumn",(short)-1,(short)0,(short)0,(String)"text",(String)"",(short)0,(String)"px",(short)17,(String)"px",(short)9,(short)0,(short)0,(short)84,(short)1,(short)-1,(short)0,(bool)true,(String)"",(String)"right",(bool)false});
             GxWebStd.gx_hidden_field( context, "gxhash_EMPLEADOSID"+"_"+sGXsfl_84_idx, GetSecureSignedToken( sGXsfl_84_idx, context.localUtil.Format( (decimal)(A13empleadosid), "ZZZZZZZZ9")));
             GxWebStd.gx_hidden_field( context, "gxhash_EMPLEADOSNOMEMPLE"+"_"+sGXsfl_84_idx, GetSecureSignedToken( sGXsfl_84_idx, StringUtil.RTrim( context.localUtil.Format( A99empleadosnomemple, ""))));
             GxWebStd.gx_hidden_field( context, "gxhash_EMPLEADOSAPPATERNO"+"_"+sGXsfl_84_idx, GetSecureSignedToken( sGXsfl_84_idx, StringUtil.RTrim( context.localUtil.Format( A100empleadosappaterno, ""))));
             GxWebStd.gx_hidden_field( context, "gxhash_EMPLEADOSAPMATERNO"+"_"+sGXsfl_84_idx, GetSecureSignedToken( sGXsfl_84_idx, StringUtil.RTrim( context.localUtil.Format( A101empleadosapmaterno, ""))));
             GxWebStd.gx_hidden_field( context, "gxhash_EMPLEADOSSTATUS"+"_"+sGXsfl_84_idx, GetSecureSignedToken( sGXsfl_84_idx, StringUtil.RTrim( context.localUtil.Format( A102empleadosstatus, ""))));
-            GxWebStd.gx_hidden_field( context, "gxhash_AREAID"+"_"+sGXsfl_84_idx, GetSecureSignedToken( sGXsfl_84_idx, context.localUtil.Format( (decimal)(A176areaid), "ZZZZZZZZ9")));
             Grid1Container.AddRow(Grid1Row);
             nGXsfl_84_idx = (short)(((subGrid1_Islastpage==1)&&(nGXsfl_84_idx+1>subGrid1_Recordsperpage( )) ? 1 : nGXsfl_84_idx+1));
             sGXsfl_84_idx = StringUtil.PadL( StringUtil.LTrim( StringUtil.Str( (decimal)(nGXsfl_84_idx), 4, 0)), 4, "0");
@@ -1803,7 +1777,6 @@ namespace GeneXus.Programs {
          edtempleadosappaterno_Internalname = "EMPLEADOSAPPATERNO";
          edtempleadosapmaterno_Internalname = "EMPLEADOSAPMATERNO";
          edtempleadosstatus_Internalname = "EMPLEADOSSTATUS";
-         edtareaid_Internalname = "AREAID";
          div_Internalname = "";
          div_Internalname = "";
          bttBtn_cancel_Internalname = "BTN_CANCEL";
@@ -1825,7 +1798,6 @@ namespace GeneXus.Programs {
             disableJsOutput();
          }
          init_default_properties( ) ;
-         edtareaid_Jsonclick = "";
          edtempleadosstatus_Jsonclick = "";
          edtempleadosapmaterno_Jsonclick = "";
          edtempleadosappaterno_Jsonclick = "";
@@ -1833,7 +1805,6 @@ namespace GeneXus.Programs {
          edtempleadosid_Jsonclick = "";
          subGrid1_Allowcollapsing = 0;
          subGrid1_Allowselection = 0;
-         edtareaid_Link = "";
          edtavLinkselection_Link = "";
          subGrid1_Class = "PromptGrid";
          subGrid1_Backcolorstyle = 0;
@@ -1971,8 +1942,6 @@ namespace GeneXus.Programs {
          H001V2_n104empleadosfecreg = new bool[] {false} ;
          H001V2_A103empleadosusuario = new String[] {""} ;
          H001V2_n103empleadosusuario = new bool[] {false} ;
-         H001V2_A176areaid = new int[1] ;
-         H001V2_n176areaid = new bool[] {false} ;
          H001V2_A102empleadosstatus = new String[] {""} ;
          H001V2_n102empleadosstatus = new bool[] {false} ;
          H001V2_A101empleadosapmaterno = new String[] {""} ;
@@ -1991,8 +1960,8 @@ namespace GeneXus.Programs {
          pr_default = new DataStoreProvider(context, new GeneXus.Programs.gx0060__default(),
             new Object[][] {
                 new Object[] {
-               H001V2_A104empleadosfecreg, H001V2_n104empleadosfecreg, H001V2_A103empleadosusuario, H001V2_n103empleadosusuario, H001V2_A176areaid, H001V2_n176areaid, H001V2_A102empleadosstatus, H001V2_n102empleadosstatus, H001V2_A101empleadosapmaterno, H001V2_n101empleadosapmaterno,
-               H001V2_A100empleadosappaterno, H001V2_n100empleadosappaterno, H001V2_A99empleadosnomemple, H001V2_n99empleadosnomemple, H001V2_A13empleadosid
+               H001V2_A104empleadosfecreg, H001V2_n104empleadosfecreg, H001V2_A103empleadosusuario, H001V2_n103empleadosusuario, H001V2_A102empleadosstatus, H001V2_n102empleadosstatus, H001V2_A101empleadosapmaterno, H001V2_n101empleadosapmaterno, H001V2_A100empleadosappaterno, H001V2_n100empleadosappaterno,
+               H001V2_A99empleadosnomemple, H001V2_n99empleadosnomemple, H001V2_A13empleadosid
                }
                , new Object[] {
                H001V3_AGRID1_nRecordCount
@@ -2042,7 +2011,6 @@ namespace GeneXus.Programs {
       private int subGrid1_Titlebackcolor ;
       private int subGrid1_Allbackcolor ;
       private int A13empleadosid ;
-      private int A176areaid ;
       private int subGrid1_Selectioncolor ;
       private int subGrid1_Hoveringcolor ;
       private int subGrid1_Islastpage ;
@@ -2119,7 +2087,6 @@ namespace GeneXus.Programs {
       private String subGrid1_Class ;
       private String subGrid1_Linesclass ;
       private String edtavLinkselection_Link ;
-      private String edtareaid_Link ;
       private String bttBtn_cancel_Internalname ;
       private String bttBtn_cancel_Jsonclick ;
       private String sEvt ;
@@ -2132,7 +2099,6 @@ namespace GeneXus.Programs {
       private String edtempleadosappaterno_Internalname ;
       private String edtempleadosapmaterno_Internalname ;
       private String edtempleadosstatus_Internalname ;
-      private String edtareaid_Internalname ;
       private String scmdbuf ;
       private String AV14ADVANCED_LABEL_TEMPLATE ;
       private String sGXsfl_84_fel_idx="0001" ;
@@ -2142,7 +2108,6 @@ namespace GeneXus.Programs {
       private String edtempleadosappaterno_Jsonclick ;
       private String edtempleadosapmaterno_Jsonclick ;
       private String edtempleadosstatus_Jsonclick ;
-      private String edtareaid_Jsonclick ;
       private String div_Internalname ;
       private DateTime AV15cempleadosfecreg ;
       private DateTime A104empleadosfecreg ;
@@ -2155,7 +2120,6 @@ namespace GeneXus.Programs {
       private bool n100empleadosappaterno ;
       private bool n101empleadosapmaterno ;
       private bool n102empleadosstatus ;
-      private bool n176areaid ;
       private bool n104empleadosfecreg ;
       private bool n103empleadosusuario ;
       private bool returnInSub ;
@@ -2186,8 +2150,6 @@ namespace GeneXus.Programs {
       private bool[] H001V2_n104empleadosfecreg ;
       private String[] H001V2_A103empleadosusuario ;
       private bool[] H001V2_n103empleadosusuario ;
-      private int[] H001V2_A176areaid ;
-      private bool[] H001V2_n176areaid ;
       private String[] H001V2_A102empleadosstatus ;
       private bool[] H001V2_n102empleadosstatus ;
       private String[] H001V2_A101empleadosapmaterno ;
@@ -2230,7 +2192,7 @@ namespace GeneXus.Programs {
          String sSelectString ;
          String sFromString ;
          String sOrderString ;
-         sSelectString = " empleadosfecreg, empleadosusuario, areaid, empleadosstatus, empleadosapmaterno, empleadosappaterno, empleadosnomemple, empleadosid";
+         sSelectString = " empleadosfecreg, empleadosusuario, empleadosstatus, empleadosapmaterno, empleadosappaterno, empleadosnomemple, empleadosid";
          sFromString = " FROM public.empleados";
          sOrderString = "";
          sWhereString = sWhereString + " WHERE (empleadosid >= :AV6cempleadosid)";
@@ -2436,7 +2398,7 @@ namespace GeneXus.Programs {
                 ((bool[]) buf[1])[0] = rslt.wasNull(1);
                 ((String[]) buf[2])[0] = rslt.getVarchar(2) ;
                 ((bool[]) buf[3])[0] = rslt.wasNull(2);
-                ((int[]) buf[4])[0] = rslt.getInt(3) ;
+                ((String[]) buf[4])[0] = rslt.getVarchar(3) ;
                 ((bool[]) buf[5])[0] = rslt.wasNull(3);
                 ((String[]) buf[6])[0] = rslt.getVarchar(4) ;
                 ((bool[]) buf[7])[0] = rslt.wasNull(4);
@@ -2444,9 +2406,7 @@ namespace GeneXus.Programs {
                 ((bool[]) buf[9])[0] = rslt.wasNull(5);
                 ((String[]) buf[10])[0] = rslt.getVarchar(6) ;
                 ((bool[]) buf[11])[0] = rslt.wasNull(6);
-                ((String[]) buf[12])[0] = rslt.getVarchar(7) ;
-                ((bool[]) buf[13])[0] = rslt.wasNull(7);
-                ((int[]) buf[14])[0] = rslt.getInt(8) ;
+                ((int[]) buf[12])[0] = rslt.getInt(7) ;
                 return;
              case 1 :
                 ((long[]) buf[0])[0] = rslt.getLong(1) ;

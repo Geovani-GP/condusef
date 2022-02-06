@@ -2,7 +2,7 @@
                File: Catalog_De_Tipo_Doc
         Description: Catalog_De_Tipo_Doc
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 2/2/2022 13:42:57.65
+       Generated on: 2/5/2022 19:20:54.64
        Program type: Callable routine
           Main DBMS: postgresql
 */
@@ -215,15 +215,11 @@ namespace GeneXus.Programs {
          context.AddJavascriptSource("jquery.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxtimezone.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxgral.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("gxcfg.js", "?20222213425766");
+         context.AddJavascriptSource("gxcfg.js", "?20222519205468");
          if ( context.isSpaRequest( ) )
          {
             enableOutput();
          }
-         context.AddJavascriptSource("Shared/jquery/jquery-1.9.0.js", "");
-         context.AddJavascriptSource("Alertify/js/alertify.min.js", "");
-         context.AddJavascriptSource("Alertify/GlobalAlerts.js", "");
-         context.AddJavascriptSource("Alertify/AlertifyRender.js", "");
          context.WriteHtmlText( Form.Headerrawhtml) ;
          context.CloseHtmlHeader();
          if ( context.isSpaRequest( ) )
@@ -356,21 +352,19 @@ namespace GeneXus.Programs {
                RenderHtmlOpenForm( ) ;
             }
             GxWebStd.gx_msg_list( context, "", context.GX_msglist.DisplayMode, "", "", "", "false");
-            context.WriteHtmlText( "&nbsp;") ;
-            /* User Defined Control */
-            context.WriteHtmlText( "<div class=\"gx_usercontrol\" id=\""+"ALERTIFY1Container"+"\"></div>") ;
+            context.WriteHtmlText( "&nbsp; ") ;
             context.WriteHtmlText( "<p></p>") ;
             context.WriteHtmlText( "<p>") ;
-            wb_table1_6_0Y2( true) ;
+            wb_table1_5_0Y2( true) ;
          }
          else
          {
-            wb_table1_6_0Y2( false) ;
+            wb_table1_5_0Y2( false) ;
          }
          return  ;
       }
 
-      protected void wb_table1_6_0Y2e( bool wbgen )
+      protected void wb_table1_5_0Y2e( bool wbgen )
       {
          if ( wbgen )
          {
@@ -737,7 +731,7 @@ namespace GeneXus.Programs {
          /* Load Routine */
       }
 
-      protected void wb_table1_6_0Y2( bool wbgen )
+      protected void wb_table1_5_0Y2( bool wbgen )
       {
          if ( wbgen )
          {
@@ -748,7 +742,9 @@ namespace GeneXus.Programs {
             GxWebStd.gx_table_start( context, tblTable1_Internalname, tblTable1_Internalname, "", "Table", 0, "", "", 1, 2, sStyleString, "", 0);
             context.WriteHtmlText( "<tbody>") ;
             context.WriteHtmlText( "<tr>") ;
-            context.WriteHtmlText( "<td>") ;
+            context.WriteHtmlText( "<td data-align=\"center\"  style=\""+CSSHelper.Prettify( "text-align:-khtml-center;text-align:-moz-center;text-align:-webkit-center")+"\">") ;
+            /* Text block */
+            GxWebStd.gx_label_ctrl( context, lblTextblock8_Internalname, "CATÁLOGO DE TIPO DOCUMENTO", "", "", lblTextblock8_Jsonclick, "'"+""+"'"+",false,"+"'"+""+"'", "font-family:'Microsoft Sans Serif'; font-size:15.0pt; font-weight:bold; font-style:normal; color:#000000;", "TextBlock", 0, "", 1, 1, 0, "HLP_Catalog_De_Tipo_Doc.htm");
             context.WriteHtmlText( "</td>") ;
             context.WriteHtmlText( "</tr>") ;
             context.WriteHtmlText( "<tr>") ;
@@ -784,11 +780,11 @@ namespace GeneXus.Programs {
             context.WriteHtmlText( "</tbody>") ;
             /* End of table */
             context.WriteHtmlText( "</table>") ;
-            wb_table1_6_0Y2e( true) ;
+            wb_table1_5_0Y2e( true) ;
          }
          else
          {
-            wb_table1_6_0Y2e( false) ;
+            wb_table1_5_0Y2e( false) ;
          }
       }
 
@@ -905,13 +901,11 @@ namespace GeneXus.Programs {
 
       protected void define_styles( )
       {
-         AddStyleSheetFile("Alertify/css/alertify.core.css", "?038420");
-         AddStyleSheetFile("Alertify/css/alertify.default.css", "?038420");
-         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?1342847");
+         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?15381859");
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?20222213425778");
+            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?20222519205496");
             idxLst = (int)(idxLst+1);
          }
          /* End function define_styles */
@@ -920,16 +914,13 @@ namespace GeneXus.Programs {
       protected void include_jscripts( )
       {
          context.AddJavascriptSource("messages.spa.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("catalog_de_tipo_doc.js", "?20222213425779");
-         context.AddJavascriptSource("Shared/jquery/jquery-1.9.0.js", "");
-         context.AddJavascriptSource("Alertify/js/alertify.min.js", "");
-         context.AddJavascriptSource("Alertify/GlobalAlerts.js", "");
-         context.AddJavascriptSource("Alertify/AlertifyRender.js", "");
+         context.AddJavascriptSource("catalog_de_tipo_doc.js", "?20222519205497");
          /* End function include_jscripts */
       }
 
       protected void init_default_properties( )
       {
+         lblTextblock8_Internalname = "TEXTBLOCK8";
          edtavNextvalue_Internalname = "vNEXTVALUE";
          edtavTipodocumentodsc_Internalname = "vTIPODOCUMENTODSC";
          tblTable2_Internalname = "TABLE2";
@@ -1016,6 +1007,7 @@ namespace GeneXus.Programs {
          GXt_dtime1 = (DateTime)(DateTime.MinValue);
          AV10WebSession = context.GetSession();
          sStyleString = "";
+         lblTextblock8_Jsonclick = "";
          TempTags = "";
          ClassString = "";
          StyleString = "";
@@ -1073,6 +1065,8 @@ namespace GeneXus.Programs {
       private String hsh ;
       private String sStyleString ;
       private String tblTable1_Internalname ;
+      private String lblTextblock8_Internalname ;
+      private String lblTextblock8_Jsonclick ;
       private String tblTable3_Internalname ;
       private String TempTags ;
       private String ClassString ;

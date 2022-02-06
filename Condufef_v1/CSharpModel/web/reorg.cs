@@ -2,7 +2,7 @@
                File: reorg
         Description: Table Manager
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 2/2/2022 12:59:36.39
+       Generated on: 2/5/2022 15:38:38.75
        Program type: Callable routine
           Main DBMS: postgresql
 */
@@ -71,13 +71,13 @@ namespace GeneXus.Programs {
          /* Load data into tables. */
       }
 
-      public void Createempleadospiso( )
+      public void Createestados( )
       {
          String cmdBuffer = "" ;
-         /* Indices for table empleadospiso */
+         /* Indices for table estados */
          try
          {
-            cmdBuffer=" CREATE TABLE empleadospiso (empleadospisoextid  integer NOT NULL , empleadospisoextpiso  VARCHAR(10) NOT NULL , empleadospisoextext  VARCHAR(10) NOT NULL , empleadospisoextcorreo  VARCHAR(50) NOT NULL , empleadopisoextprofesion  bigint NOT NULL , empleadospisoextusuario  VARCHAR(15) NOT NULL , empleadospisoextfecgre  date NOT NULL , empleadospisoextfeact  date NOT NULL , PRIMARY KEY(empleadospisoextid))  "
+            cmdBuffer=" CREATE TABLE estados (estadoid  smallint NOT NULL , estado  VARCHAR(100) NOT NULL , PRIMARY KEY(estadoid))  "
             ;
             RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
             RGZ.ErrorMask = GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK;
@@ -86,13 +86,13 @@ namespace GeneXus.Programs {
          }
          catch ( Exception ex )
          {
-            cmdBuffer=" DROP TABLE empleadospiso CASCADE "
+            cmdBuffer=" DROP TABLE estados CASCADE "
             ;
             RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
             RGZ.ErrorMask = GxErrorMask.GX_MASKNOTFOUND | GxErrorMask.GX_MASKLOOPLOCK;
             RGZ.ExecuteStmt() ;
             RGZ.Drop();
-            cmdBuffer=" CREATE TABLE empleadospiso (empleadospisoextid  integer NOT NULL , empleadospisoextpiso  VARCHAR(10) NOT NULL , empleadospisoextext  VARCHAR(10) NOT NULL , empleadospisoextcorreo  VARCHAR(50) NOT NULL , empleadopisoextprofesion  bigint NOT NULL , empleadospisoextusuario  VARCHAR(15) NOT NULL , empleadospisoextfecgre  date NOT NULL , empleadospisoextfeact  date NOT NULL , PRIMARY KEY(empleadospisoextid))  "
+            cmdBuffer=" CREATE TABLE estados (estadoid  smallint NOT NULL , estado  VARCHAR(100) NOT NULL , PRIMARY KEY(estadoid))  "
             ;
             RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
             RGZ.ErrorMask = GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK;
@@ -112,9 +112,9 @@ namespace GeneXus.Programs {
             return true ;
          }
          sSchemaVar = GXUtil.UserId( "Server", context, "DEFAULT");
-         if ( tableexist("empleadospiso",sSchemaVar) )
+         if ( tableexist("estados",sSchemaVar) )
          {
-            SetCheckError ( GXResourceManager.GetMessage("GXM_table_exist", new   object[]  {"empleadospiso"}) ) ;
+            SetCheckError ( GXResourceManager.GetMessage("GXM_table_exist", new   object[]  {"estados"}) ) ;
             return false ;
          }
          return true ;
@@ -142,7 +142,7 @@ namespace GeneXus.Programs {
 
       private void ExecuteOnlyTablesReorganization( )
       {
-         ReorgExecute.RegisterBlockForSubmit( 1 ,  "Createempleadospiso" , new Object[]{ });
+         ReorgExecute.RegisterBlockForSubmit( 1 ,  "Createestados" , new Object[]{ });
       }
 
       private void ExecuteOnlyRisReorganization( )
@@ -164,7 +164,7 @@ namespace GeneXus.Programs {
 
       private void SetPrecedencetables( )
       {
-         GXReorganization.SetMsg( 1 ,  GXResourceManager.GetMessage("GXM_filecrea", new   object[]  {"empleadospiso", ""}) );
+         GXReorganization.SetMsg( 1 ,  GXResourceManager.GetMessage("GXM_filecrea", new   object[]  {"estados", ""}) );
       }
 
       private void SetPrecedenceris( )

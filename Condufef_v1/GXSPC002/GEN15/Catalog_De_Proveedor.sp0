@@ -19,6 +19,7 @@ las_i(2,[ [ 'Nextvalue','Proveedoresnombre','Proveedoresrfc','Proveedoresdirecci
 lac_i(2,[ [ 'Nextvalue','Proveedoresnombre','Proveedoresrfc','Proveedoresdireccion','Proveedorescolonia','Proveedorescodigopostal','Proveedoresmunicipio','Proveedoresfax','Proveedorestelefono1','Proveedorestelefono2' ] ]).
  
  
+lits_i('CATÁLOGO DE PROVEEDOR',5,10).
 lits_i('Proveedor:',5,10).
 lits_i('Nombre:',5,10).
 lits_i('RFC:',5,10).
@@ -64,12 +65,12 @@ rule_i(0,datastore(1,'CS_RPCPGML','')).
 rule_i(0,datastore(1,'JDBC_DATASOURCE','')).
 rule_i(0,datastore(1,'USE_JDBC_DATASOURCE','0')).
 rule_i(0,datastore(1,'DS_DBMS_ADDINFO','')).
-rule_i(0,datastore(1,'USER_PASSWORD',admin)).
+rule_i(0,datastore(1,'USER_PASSWORD',asdf)).
 rule_i(0,datastore(1,'USER_ID',postgres)).
 rule_i(0,datastore(1,'CS_CONNECT','First')).
 rule_i(0,datastore(1,'DBMS_PORT','5432')).
 rule_i(0,datastore(1,'CS_SERVER',localhost)).
-rule_i(0,datastore(1,'CS_DBNAME',postgres)).
+rule_i(0,datastore(1,'CS_DBNAME',condusef)).
 rule_i(0,datastore(1,'CS_FLEDSNAME','')).
 rule_i(0,datastore(1,'CS_DRVNAME','')).
 rule_i(0,datastore(1,'CS_DSNAME','')).
@@ -288,92 +289,95 @@ b_line_i(1002,2,5,cmd,0,[ t('',147,0,0) ]).
  
  
  
-html_i(2,html('&nbsp;')).
+html_i(2,html('&nbsp; ')).
 html_i(3,html('<p>')).
 html_i(4,table(4)).
-html_i(80,html('</p>')).
+html_i(83,html('</p>')).
  
 html_sub_i(4,0,html_i(0,html('<tbody>'))).
 html_sub_i(4,5,html_i(1,row(5))).
 html_sub_i(5,6,html_i(0,cell(6))).
-html_sub_i(6,7,html_i(0,table(7))).
-html_sub_i(7,0,html_i(0,html('<tbody>'))).
-html_sub_i(7,8,html_i(1,row(8))).
+html_sub_i(6,7,html_i(0,t('CATÁLOGO DE PROVEEDOR',3))).
+html_sub_i(4,8,html_i(2,row(8))).
 html_sub_i(8,9,html_i(0,cell(9))).
-html_sub_i(9,10,html_i(0,t('Proveedor:',3))).
-html_sub_i(8,11,html_i(1,cell(11))).
-html_sub_i(11,12,html_i(0,t('Nextvalue',23))).
-html_sub_i(7,13,html_i(2,row(13))).
-html_sub_i(13,14,html_i(0,cell(14))).
-html_sub_i(14,15,html_i(0,t('Nombre:',3))).
-html_sub_i(13,16,html_i(1,cell(16))).
-html_sub_i(16,17,html_i(0,t('Proveedoresnombre',23))).
-html_sub_i(7,18,html_i(3,row(18))).
-html_sub_i(18,19,html_i(0,cell(19))).
-html_sub_i(19,20,html_i(0,t('RFC:',3))).
-html_sub_i(18,21,html_i(1,cell(21))).
-html_sub_i(21,22,html_i(0,t('Proveedoresrfc',23))).
-html_sub_i(7,23,html_i(4,row(23))).
-html_sub_i(23,24,html_i(0,cell(24))).
-html_sub_i(24,25,html_i(0,t('Dirección:',3))).
-html_sub_i(23,26,html_i(1,cell(26))).
-html_sub_i(26,27,html_i(0,t('Proveedoresdireccion',23))).
-html_sub_i(7,28,html_i(5,row(28))).
-html_sub_i(28,29,html_i(0,cell(29))).
-html_sub_i(29,30,html_i(0,t('Colonia:',3))).
-html_sub_i(28,31,html_i(1,cell(31))).
-html_sub_i(31,32,html_i(0,t('Proveedorescolonia',23))).
-html_sub_i(7,33,html_i(6,row(33))).
-html_sub_i(33,34,html_i(0,cell(34))).
-html_sub_i(34,35,html_i(0,t('Código Postal:',3))).
-html_sub_i(33,36,html_i(1,cell(36))).
-html_sub_i(36,37,html_i(0,t('Proveedorescodigopostal',23))).
-html_sub_i(7,38,html_i(7,row(38))).
-html_sub_i(38,39,html_i(0,cell(39))).
-html_sub_i(39,40,html_i(0,t('Municipio:',3))).
-html_sub_i(38,41,html_i(1,cell(41))).
-html_sub_i(41,42,html_i(0,t('Proveedoresmunicipio',23))).
-html_sub_i(7,0,html_i(8,html('</tbody>'))).
-html_sub_i(4,43,html_i(2,row(43))).
-html_sub_i(43,44,html_i(0,cell(44))).
-html_sub_i(44,45,html_i(0,table(45))).
-html_sub_i(45,0,html_i(0,html('<tbody>'))).
-html_sub_i(45,46,html_i(1,row(46))).
+html_sub_i(9,10,html_i(0,table(10))).
+html_sub_i(10,0,html_i(0,html('<tbody>'))).
+html_sub_i(10,11,html_i(1,row(11))).
+html_sub_i(11,12,html_i(0,cell(12))).
+html_sub_i(12,13,html_i(0,t('Proveedor:',3))).
+html_sub_i(11,14,html_i(1,cell(14))).
+html_sub_i(14,15,html_i(0,t('Nextvalue',23))).
+html_sub_i(10,16,html_i(2,row(16))).
+html_sub_i(16,17,html_i(0,cell(17))).
+html_sub_i(17,18,html_i(0,t('Nombre:',3))).
+html_sub_i(16,19,html_i(1,cell(19))).
+html_sub_i(19,20,html_i(0,t('Proveedoresnombre',23))).
+html_sub_i(10,21,html_i(3,row(21))).
+html_sub_i(21,22,html_i(0,cell(22))).
+html_sub_i(22,23,html_i(0,t('RFC:',3))).
+html_sub_i(21,24,html_i(1,cell(24))).
+html_sub_i(24,25,html_i(0,t('Proveedoresrfc',23))).
+html_sub_i(10,26,html_i(4,row(26))).
+html_sub_i(26,27,html_i(0,cell(27))).
+html_sub_i(27,28,html_i(0,t('Dirección:',3))).
+html_sub_i(26,29,html_i(1,cell(29))).
+html_sub_i(29,30,html_i(0,t('Proveedoresdireccion',23))).
+html_sub_i(10,31,html_i(5,row(31))).
+html_sub_i(31,32,html_i(0,cell(32))).
+html_sub_i(32,33,html_i(0,t('Colonia:',3))).
+html_sub_i(31,34,html_i(1,cell(34))).
+html_sub_i(34,35,html_i(0,t('Proveedorescolonia',23))).
+html_sub_i(10,36,html_i(6,row(36))).
+html_sub_i(36,37,html_i(0,cell(37))).
+html_sub_i(37,38,html_i(0,t('Código Postal:',3))).
+html_sub_i(36,39,html_i(1,cell(39))).
+html_sub_i(39,40,html_i(0,t('Proveedorescodigopostal',23))).
+html_sub_i(10,41,html_i(7,row(41))).
+html_sub_i(41,42,html_i(0,cell(42))).
+html_sub_i(42,43,html_i(0,t('Municipio:',3))).
+html_sub_i(41,44,html_i(1,cell(44))).
+html_sub_i(44,45,html_i(0,t('Proveedoresmunicipio',23))).
+html_sub_i(10,0,html_i(8,html('</tbody>'))).
+html_sub_i(4,46,html_i(3,row(46))).
 html_sub_i(46,47,html_i(0,cell(47))).
-html_sub_i(47,48,html_i(0,t('Estado:',3))).
-html_sub_i(46,49,html_i(1,cell(49))).
-html_sub_i(46,50,html_i(2,cell(50))).
-html_sub_i(46,51,html_i(3,cell(51))).
-html_sub_i(46,52,html_i(4,cell(52))).
-html_sub_i(45,53,html_i(2,row(53))).
-html_sub_i(53,54,html_i(0,cell(54))).
-html_sub_i(54,55,html_i(0,t('Fax:',3))).
-html_sub_i(53,56,html_i(1,cell(56))).
-html_sub_i(56,57,html_i(0,t('Proveedoresfax',23))).
-html_sub_i(53,58,html_i(2,cell(58))).
-html_sub_i(53,59,html_i(3,cell(59))).
-html_sub_i(53,60,html_i(4,cell(60))).
-html_sub_i(45,61,html_i(3,row(61))).
-html_sub_i(61,62,html_i(0,cell(62))).
-html_sub_i(62,63,html_i(0,t('Teléfono1:',3))).
-html_sub_i(61,64,html_i(1,cell(64))).
-html_sub_i(64,65,html_i(0,t('Proveedorestelefono1',23))).
-html_sub_i(61,66,html_i(2,cell(66))).
-html_sub_i(61,67,html_i(3,cell(67))).
-html_sub_i(61,68,html_i(4,cell(68))).
-html_sub_i(68,69,html_i(0,button('''Consultar '''))).
-html_sub_i(45,70,html_i(4,row(70))).
-html_sub_i(70,71,html_i(0,cell(71))).
-html_sub_i(71,72,html_i(0,t('Teléfono:',3))).
-html_sub_i(70,73,html_i(1,cell(73))).
-html_sub_i(73,74,html_i(0,t('Proveedorestelefono2',23))).
-html_sub_i(70,75,html_i(2,cell(75))).
-html_sub_i(70,76,html_i(3,cell(76))).
-html_sub_i(76,77,html_i(0,button('''Guardar '''))).
-html_sub_i(70,78,html_i(4,cell(78))).
-html_sub_i(78,79,html_i(0,button('Enter'))).
-html_sub_i(45,0,html_i(5,html('</tbody>'))).
-html_sub_i(4,0,html_i(3,html('</tbody>'))).
+html_sub_i(47,48,html_i(0,table(48))).
+html_sub_i(48,0,html_i(0,html('<tbody>'))).
+html_sub_i(48,49,html_i(1,row(49))).
+html_sub_i(49,50,html_i(0,cell(50))).
+html_sub_i(50,51,html_i(0,t('Estado:',3))).
+html_sub_i(49,52,html_i(1,cell(52))).
+html_sub_i(49,53,html_i(2,cell(53))).
+html_sub_i(49,54,html_i(3,cell(54))).
+html_sub_i(49,55,html_i(4,cell(55))).
+html_sub_i(48,56,html_i(2,row(56))).
+html_sub_i(56,57,html_i(0,cell(57))).
+html_sub_i(57,58,html_i(0,t('Fax:',3))).
+html_sub_i(56,59,html_i(1,cell(59))).
+html_sub_i(59,60,html_i(0,t('Proveedoresfax',23))).
+html_sub_i(56,61,html_i(2,cell(61))).
+html_sub_i(56,62,html_i(3,cell(62))).
+html_sub_i(56,63,html_i(4,cell(63))).
+html_sub_i(48,64,html_i(3,row(64))).
+html_sub_i(64,65,html_i(0,cell(65))).
+html_sub_i(65,66,html_i(0,t('Teléfono1:',3))).
+html_sub_i(64,67,html_i(1,cell(67))).
+html_sub_i(67,68,html_i(0,t('Proveedorestelefono1',23))).
+html_sub_i(64,69,html_i(2,cell(69))).
+html_sub_i(64,70,html_i(3,cell(70))).
+html_sub_i(64,71,html_i(4,cell(71))).
+html_sub_i(71,72,html_i(0,button('''Consultar '''))).
+html_sub_i(48,73,html_i(4,row(73))).
+html_sub_i(73,74,html_i(0,cell(74))).
+html_sub_i(74,75,html_i(0,t('Teléfono:',3))).
+html_sub_i(73,76,html_i(1,cell(76))).
+html_sub_i(76,77,html_i(0,t('Proveedorestelefono2',23))).
+html_sub_i(73,78,html_i(2,cell(78))).
+html_sub_i(73,79,html_i(3,cell(79))).
+html_sub_i(79,80,html_i(0,button('''Guardar '''))).
+html_sub_i(73,81,html_i(4,cell(81))).
+html_sub_i(81,82,html_i(0,button('Enter'))).
+html_sub_i(48,0,html_i(5,html('</tbody>'))).
+html_sub_i(4,0,html_i(4,html('</tbody>'))).
  
 html_tags_i(1,'Class','Form').
  
@@ -390,483 +394,495 @@ html_comp_i(4,'Cellspacing','2',d,[ str ]).
 html_comp_i(4,'Height',measure(114,px),v,[ measure ]).
 html_comp_i(4,'Width',measure(682,px),v,[ measure ]).
 html_comp_i(4,'Rules',none,d,[ str ]).
-html_comp_i(7,'Id','Table2',v,[ str ]).
-html_comp_i(7,'Class','Table',v,[ str ]).
+html_comp_i(6,'Align',center,v,[ str ]).
+html_comp_i(7,'Caption','CATÁLOGO DE PROVEEDOR',d,[ str ]).
+html_comp_i(7,'Id','Textblock',v,[ str ]).
+html_comp_i(7,'Class','TextBlock',d,[ str ]).
+html_comp_i(7,'Event','',d,[ str ]).
+html_comp_i(7,'Returnonclick',0,d,[ bool ]).
+html_comp_i(7,'Gxformat',0,d,[ num ]).
 html_comp_i(7,'Title','',d,[ str ]).
-html_comp_i(7,'Align',left,d,[ str ]).
-html_comp_i(7,'Backgroundgx','',d,[ str ]).
-html_comp_i(7,'Bgcolor',rgb(0,0,0),d,[ color ]).
-html_comp_i(7,'Border','0',d,[ str ]).
-html_comp_i(7,'Bordercolor',rgb(0,0,0),d,[ color ]).
-html_comp_i(7,'Cellpadding','1',d,[ str ]).
-html_comp_i(7,'Cellspacing','2',d,[ str ]).
-html_comp_i(7,'Height',measure(68,px),v,[ measure ]).
-html_comp_i(7,'Width',measure(677,px),v,[ measure ]).
-html_comp_i(7,'Rules',none,d,[ str ]).
-html_comp_i(9,'Width',measure(136,px),v,[ measure ]).
-html_comp_i(10,'Caption','Proveedor:',d,[ str ]).
-html_comp_i(10,'Id','Textblock1',v,[ str ]).
-html_comp_i(10,'Class','TextBlock',d,[ str ]).
-html_comp_i(10,'Event','',d,[ str ]).
-html_comp_i(10,'Returnonclick',0,d,[ bool ]).
-html_comp_i(10,'Gxformat',0,d,[ num ]).
+html_comp_i(7,'Fill',-1,d,[ bool ]).
+html_comp_i(7,'Backcolor',rgb(255,255,255),d,[ color ]).
+html_comp_i(7,'Forecolor',rgb(0,0,0),v,[ color ]).
+html_comp_i(7,'Font',font('Microsoft Sans Serif',15,[ bold ]),v,[ font ]).
+html_comp_i(10,'Id','Table2',v,[ str ]).
+html_comp_i(10,'Class','Table',v,[ str ]).
 html_comp_i(10,'Title','',d,[ str ]).
-html_comp_i(10,'Fill',-1,d,[ bool ]).
-html_comp_i(10,'Backcolor',rgb(255,255,255),d,[ color ]).
-html_comp_i(10,'Forecolor',rgb(0,0,0),d,[ color ]).
-html_comp_i(10,'Font','',d,[ str ]).
-html_comp_i(11,'Width',measure(333,px),v,[ measure ]).
-html_comp_i(12,'Colcount',4,d,[ num ]).
-html_comp_i(12,'Attid',-12,v,[ num ]).
-html_comp_i(12,'Class','Attribute',d,[ str ]).
-html_comp_i(12,'Controlname','&Nextvalue',d,[ str ]).
-html_comp_i(12,'Returnonclick',0,d,[ bool ]).
-html_comp_i(12,'Eventgx','',d,[ str ]).
-html_comp_i(12,'Captionclass','',d,[ str ]).
-html_comp_i(12,'Captionposition','',d,[ str ]).
-html_comp_i(12,'Captionvalue','',d,[ str ]).
-html_comp_i(12,'Controltype',2,d,[ num ]).
-html_comp_i(12,'Inputtype',0,d,[ num ]).
-html_comp_i(12,'Notifycontextchange',0,d,[ bool ]).
-html_comp_i(12,'Emptyasnull','Yes',d,[ str ]).
-html_comp_i(12,'Readonly',-1,v,[ bool ]).
-html_comp_i(12,'Autocomplete',-1,d,[ bool ]).
-html_comp_i(12,'Ispassword',0,d,[ bool ]).
-html_comp_i(12,'Autoresize',-1,d,[ bool ]).
-html_comp_i(12,'Gxwidth',measure(4,chr),d,[ measure ]).
-html_comp_i(12,'Gxheight',measure(1,row),d,[ measure ]).
-html_comp_i(12,'Ismultiline',0,d,[ bool ]).
-html_comp_i(12,'Fill',0,d,[ bool ]).
-html_comp_i(12,'Forecolor',rgb(0,0,0),d,[ color ]).
-html_comp_i(12,'Font',font('Verdana',12,[]),d,[ font ]).
-html_comp_i(12,'Horizontalalignment',right,d,[ str ]).
-html_comp_i(12,'Gxformat',0,d,[ num ]).
-html_comp_i(12,'Title','',d,[ str ]).
-html_comp_i(12,'Invitemsg','',d,[ str ]).
-html_comp_i(15,'Caption','Nombre:',d,[ str ]).
-html_comp_i(15,'Id','Textblock2',v,[ str ]).
-html_comp_i(15,'Class','TextBlock',d,[ str ]).
-html_comp_i(15,'Event','',d,[ str ]).
+html_comp_i(10,'Align',left,d,[ str ]).
+html_comp_i(10,'Backgroundgx','',d,[ str ]).
+html_comp_i(10,'Bgcolor',rgb(0,0,0),d,[ color ]).
+html_comp_i(10,'Border','0',d,[ str ]).
+html_comp_i(10,'Bordercolor',rgb(0,0,0),d,[ color ]).
+html_comp_i(10,'Cellpadding','1',d,[ str ]).
+html_comp_i(10,'Cellspacing','2',d,[ str ]).
+html_comp_i(10,'Height',measure(68,px),v,[ measure ]).
+html_comp_i(10,'Width',measure(677,px),v,[ measure ]).
+html_comp_i(10,'Rules',none,d,[ str ]).
+html_comp_i(12,'Width',measure(136,px),v,[ measure ]).
+html_comp_i(13,'Caption','Proveedor:',d,[ str ]).
+html_comp_i(13,'Id','Textblock1',v,[ str ]).
+html_comp_i(13,'Class','TextBlock',d,[ str ]).
+html_comp_i(13,'Event','',d,[ str ]).
+html_comp_i(13,'Returnonclick',0,d,[ bool ]).
+html_comp_i(13,'Gxformat',0,d,[ num ]).
+html_comp_i(13,'Title','',d,[ str ]).
+html_comp_i(13,'Fill',-1,d,[ bool ]).
+html_comp_i(13,'Backcolor',rgb(255,255,255),d,[ color ]).
+html_comp_i(13,'Forecolor',rgb(0,0,0),d,[ color ]).
+html_comp_i(13,'Font','',d,[ str ]).
+html_comp_i(14,'Width',measure(333,px),v,[ measure ]).
+html_comp_i(15,'Colcount',4,d,[ num ]).
+html_comp_i(15,'Attid',-12,v,[ num ]).
+html_comp_i(15,'Class','Attribute',d,[ str ]).
+html_comp_i(15,'Controlname','&Nextvalue',d,[ str ]).
 html_comp_i(15,'Returnonclick',0,d,[ bool ]).
+html_comp_i(15,'Eventgx','',d,[ str ]).
+html_comp_i(15,'Captionclass','',d,[ str ]).
+html_comp_i(15,'Captionposition','',d,[ str ]).
+html_comp_i(15,'Captionvalue','',d,[ str ]).
+html_comp_i(15,'Controltype',2,d,[ num ]).
+html_comp_i(15,'Inputtype',0,d,[ num ]).
+html_comp_i(15,'Notifycontextchange',0,d,[ bool ]).
+html_comp_i(15,'Emptyasnull','Yes',d,[ str ]).
+html_comp_i(15,'Readonly',-1,v,[ bool ]).
+html_comp_i(15,'Autocomplete',-1,d,[ bool ]).
+html_comp_i(15,'Ispassword',0,d,[ bool ]).
+html_comp_i(15,'Autoresize',-1,d,[ bool ]).
+html_comp_i(15,'Gxwidth',measure(4,chr),d,[ measure ]).
+html_comp_i(15,'Gxheight',measure(1,row),d,[ measure ]).
+html_comp_i(15,'Ismultiline',0,d,[ bool ]).
+html_comp_i(15,'Fill',0,d,[ bool ]).
+html_comp_i(15,'Forecolor',rgb(0,0,0),d,[ color ]).
+html_comp_i(15,'Font',font('Verdana',12,[]),d,[ font ]).
+html_comp_i(15,'Horizontalalignment',right,d,[ str ]).
 html_comp_i(15,'Gxformat',0,d,[ num ]).
 html_comp_i(15,'Title','',d,[ str ]).
-html_comp_i(15,'Fill',-1,d,[ bool ]).
-html_comp_i(15,'Backcolor',rgb(255,255,255),d,[ color ]).
-html_comp_i(15,'Forecolor',rgb(0,0,0),d,[ color ]).
-html_comp_i(15,'Font','',d,[ str ]).
-html_comp_i(17,'Colcount',80,d,[ num ]).
-html_comp_i(17,'Attid',-9,v,[ num ]).
-html_comp_i(17,'Class','Attribute',d,[ str ]).
-html_comp_i(17,'Controlname','&Proveedoresnombre',d,[ str ]).
-html_comp_i(17,'Returnonclick',0,d,[ bool ]).
-html_comp_i(17,'Captionclass','',d,[ str ]).
-html_comp_i(17,'Captionposition','',d,[ str ]).
-html_comp_i(17,'Captionvalue','',d,[ str ]).
-html_comp_i(17,'Controltype',2,d,[ num ]).
-html_comp_i(17,'Inputtype',0,d,[ num ]).
-html_comp_i(17,'Editautocomplete',0,d,[ num ]).
-html_comp_i(17,'Autocorrection',-1,d,[ bool ]).
-html_comp_i(17,'Autocapitalization','FirstWord',d,[ str ]).
-html_comp_i(17,'Notifycontextchange',0,d,[ bool ]).
-html_comp_i(17,'Emptyasnull','Yes',d,[ str ]).
-html_comp_i(17,'Readonly',0,d,[ bool ]).
-html_comp_i(17,'Autocomplete',-1,d,[ bool ]).
-html_comp_i(17,'Ispassword',0,d,[ bool ]).
-html_comp_i(17,'Autoresize',-1,d,[ bool ]).
-html_comp_i(17,'Gxwidth',measure(80,chr),d,[ measure ]).
-html_comp_i(17,'Gxheight',measure(1,row),d,[ measure ]).
-html_comp_i(17,'Ismultiline',0,d,[ bool ]).
-html_comp_i(17,'Fill',-1,d,[ bool ]).
-html_comp_i(17,'Backcolor',rgb(255,255,255),d,[ color ]).
-html_comp_i(17,'Forecolor',rgb(0,0,0),d,[ color ]).
-html_comp_i(17,'Font',font('Verdana',12,[]),d,[ font ]).
-html_comp_i(17,'Horizontalalignment',left,d,[ str ]).
-html_comp_i(17,'Gxformat',0,d,[ num ]).
-html_comp_i(17,'Title','',d,[ str ]).
-html_comp_i(17,'Invitemsg','',d,[ str ]).
-html_comp_i(20,'Caption','RFC:',d,[ str ]).
-html_comp_i(20,'Id','Textblock3',v,[ str ]).
-html_comp_i(20,'Class','TextBlock',d,[ str ]).
-html_comp_i(20,'Event','',d,[ str ]).
+html_comp_i(15,'Invitemsg','',d,[ str ]).
+html_comp_i(18,'Caption','Nombre:',d,[ str ]).
+html_comp_i(18,'Id','Textblock2',v,[ str ]).
+html_comp_i(18,'Class','TextBlock',d,[ str ]).
+html_comp_i(18,'Event','',d,[ str ]).
+html_comp_i(18,'Returnonclick',0,d,[ bool ]).
+html_comp_i(18,'Gxformat',0,d,[ num ]).
+html_comp_i(18,'Title','',d,[ str ]).
+html_comp_i(18,'Fill',-1,d,[ bool ]).
+html_comp_i(18,'Backcolor',rgb(255,255,255),d,[ color ]).
+html_comp_i(18,'Forecolor',rgb(0,0,0),d,[ color ]).
+html_comp_i(18,'Font','',d,[ str ]).
+html_comp_i(20,'Colcount',80,d,[ num ]).
+html_comp_i(20,'Attid',-9,v,[ num ]).
+html_comp_i(20,'Class','Attribute',d,[ str ]).
+html_comp_i(20,'Controlname','&Proveedoresnombre',d,[ str ]).
 html_comp_i(20,'Returnonclick',0,d,[ bool ]).
-html_comp_i(20,'Gxformat',0,d,[ num ]).
-html_comp_i(20,'Title','',d,[ str ]).
+html_comp_i(20,'Captionclass','',d,[ str ]).
+html_comp_i(20,'Captionposition','',d,[ str ]).
+html_comp_i(20,'Captionvalue','',d,[ str ]).
+html_comp_i(20,'Controltype',2,d,[ num ]).
+html_comp_i(20,'Inputtype',0,d,[ num ]).
+html_comp_i(20,'Editautocomplete',0,d,[ num ]).
+html_comp_i(20,'Autocorrection',-1,d,[ bool ]).
+html_comp_i(20,'Autocapitalization','FirstWord',d,[ str ]).
+html_comp_i(20,'Notifycontextchange',0,d,[ bool ]).
+html_comp_i(20,'Emptyasnull','Yes',d,[ str ]).
+html_comp_i(20,'Readonly',0,d,[ bool ]).
+html_comp_i(20,'Autocomplete',-1,d,[ bool ]).
+html_comp_i(20,'Ispassword',0,d,[ bool ]).
+html_comp_i(20,'Autoresize',-1,d,[ bool ]).
+html_comp_i(20,'Gxwidth',measure(80,chr),d,[ measure ]).
+html_comp_i(20,'Gxheight',measure(1,row),d,[ measure ]).
+html_comp_i(20,'Ismultiline',0,d,[ bool ]).
 html_comp_i(20,'Fill',-1,d,[ bool ]).
 html_comp_i(20,'Backcolor',rgb(255,255,255),d,[ color ]).
 html_comp_i(20,'Forecolor',rgb(0,0,0),d,[ color ]).
-html_comp_i(20,'Font','',d,[ str ]).
-html_comp_i(22,'Colcount',13,d,[ num ]).
-html_comp_i(22,'Attid',-13,v,[ num ]).
-html_comp_i(22,'Class','Attribute',d,[ str ]).
-html_comp_i(22,'Controlname','&Proveedoresrfc',d,[ str ]).
-html_comp_i(22,'Returnonclick',0,d,[ bool ]).
-html_comp_i(22,'Captionclass','',d,[ str ]).
-html_comp_i(22,'Captionposition','',d,[ str ]).
-html_comp_i(22,'Captionvalue','',d,[ str ]).
-html_comp_i(22,'Controltype',2,d,[ num ]).
-html_comp_i(22,'Inputtype',0,d,[ num ]).
-html_comp_i(22,'Editautocomplete',0,d,[ num ]).
-html_comp_i(22,'Autocorrection',-1,d,[ bool ]).
-html_comp_i(22,'Autocapitalization','FirstWord',d,[ str ]).
-html_comp_i(22,'Notifycontextchange',0,d,[ bool ]).
-html_comp_i(22,'Emptyasnull','Yes',d,[ str ]).
-html_comp_i(22,'Readonly',0,d,[ bool ]).
-html_comp_i(22,'Autocomplete',-1,d,[ bool ]).
-html_comp_i(22,'Ispassword',0,d,[ bool ]).
-html_comp_i(22,'Autoresize',-1,d,[ bool ]).
-html_comp_i(22,'Gxwidth',measure(13,chr),d,[ measure ]).
-html_comp_i(22,'Gxheight',measure(1,row),d,[ measure ]).
-html_comp_i(22,'Ismultiline',0,d,[ bool ]).
-html_comp_i(22,'Fill',-1,d,[ bool ]).
-html_comp_i(22,'Backcolor',rgb(255,255,255),d,[ color ]).
-html_comp_i(22,'Forecolor',rgb(0,0,0),d,[ color ]).
-html_comp_i(22,'Font',font('Verdana',12,[]),d,[ font ]).
-html_comp_i(22,'Horizontalalignment',left,d,[ str ]).
-html_comp_i(22,'Gxformat',0,d,[ num ]).
-html_comp_i(22,'Title','',d,[ str ]).
-html_comp_i(22,'Invitemsg','',d,[ str ]).
-html_comp_i(25,'Caption','Dirección:',d,[ str ]).
-html_comp_i(25,'Id','Textblock4',v,[ str ]).
-html_comp_i(25,'Class','TextBlock',d,[ str ]).
-html_comp_i(25,'Event','',d,[ str ]).
+html_comp_i(20,'Font',font('Verdana',12,[]),d,[ font ]).
+html_comp_i(20,'Horizontalalignment',left,d,[ str ]).
+html_comp_i(20,'Gxformat',0,d,[ num ]).
+html_comp_i(20,'Title','',d,[ str ]).
+html_comp_i(20,'Invitemsg','',d,[ str ]).
+html_comp_i(23,'Caption','RFC:',d,[ str ]).
+html_comp_i(23,'Id','Textblock3',v,[ str ]).
+html_comp_i(23,'Class','TextBlock',d,[ str ]).
+html_comp_i(23,'Event','',d,[ str ]).
+html_comp_i(23,'Returnonclick',0,d,[ bool ]).
+html_comp_i(23,'Gxformat',0,d,[ num ]).
+html_comp_i(23,'Title','',d,[ str ]).
+html_comp_i(23,'Fill',-1,d,[ bool ]).
+html_comp_i(23,'Backcolor',rgb(255,255,255),d,[ color ]).
+html_comp_i(23,'Forecolor',rgb(0,0,0),d,[ color ]).
+html_comp_i(23,'Font','',d,[ str ]).
+html_comp_i(25,'Colcount',13,d,[ num ]).
+html_comp_i(25,'Attid',-13,v,[ num ]).
+html_comp_i(25,'Class','Attribute',d,[ str ]).
+html_comp_i(25,'Controlname','&Proveedoresrfc',d,[ str ]).
 html_comp_i(25,'Returnonclick',0,d,[ bool ]).
-html_comp_i(25,'Gxformat',0,d,[ num ]).
-html_comp_i(25,'Title','',d,[ str ]).
+html_comp_i(25,'Captionclass','',d,[ str ]).
+html_comp_i(25,'Captionposition','',d,[ str ]).
+html_comp_i(25,'Captionvalue','',d,[ str ]).
+html_comp_i(25,'Controltype',2,d,[ num ]).
+html_comp_i(25,'Inputtype',0,d,[ num ]).
+html_comp_i(25,'Editautocomplete',0,d,[ num ]).
+html_comp_i(25,'Autocorrection',-1,d,[ bool ]).
+html_comp_i(25,'Autocapitalization','FirstWord',d,[ str ]).
+html_comp_i(25,'Notifycontextchange',0,d,[ bool ]).
+html_comp_i(25,'Emptyasnull','Yes',d,[ str ]).
+html_comp_i(25,'Readonly',0,d,[ bool ]).
+html_comp_i(25,'Autocomplete',-1,d,[ bool ]).
+html_comp_i(25,'Ispassword',0,d,[ bool ]).
+html_comp_i(25,'Autoresize',-1,d,[ bool ]).
+html_comp_i(25,'Gxwidth',measure(13,chr),d,[ measure ]).
+html_comp_i(25,'Gxheight',measure(1,row),d,[ measure ]).
+html_comp_i(25,'Ismultiline',0,d,[ bool ]).
 html_comp_i(25,'Fill',-1,d,[ bool ]).
 html_comp_i(25,'Backcolor',rgb(255,255,255),d,[ color ]).
 html_comp_i(25,'Forecolor',rgb(0,0,0),d,[ color ]).
-html_comp_i(25,'Font','',d,[ str ]).
-html_comp_i(27,'Colcount',50,d,[ num ]).
-html_comp_i(27,'Attid',-14,v,[ num ]).
-html_comp_i(27,'Class','Attribute',d,[ str ]).
-html_comp_i(27,'Controlname','&Proveedoresdireccion',d,[ str ]).
-html_comp_i(27,'Returnonclick',0,d,[ bool ]).
-html_comp_i(27,'Captionclass','',d,[ str ]).
-html_comp_i(27,'Captionposition','',d,[ str ]).
-html_comp_i(27,'Captionvalue','',d,[ str ]).
-html_comp_i(27,'Controltype',2,d,[ num ]).
-html_comp_i(27,'Inputtype',0,d,[ num ]).
-html_comp_i(27,'Editautocomplete',0,d,[ num ]).
-html_comp_i(27,'Autocorrection',-1,d,[ bool ]).
-html_comp_i(27,'Autocapitalization','FirstWord',d,[ str ]).
-html_comp_i(27,'Notifycontextchange',0,d,[ bool ]).
-html_comp_i(27,'Emptyasnull','Yes',d,[ str ]).
-html_comp_i(27,'Readonly',0,d,[ bool ]).
-html_comp_i(27,'Autocomplete',-1,d,[ bool ]).
-html_comp_i(27,'Ispassword',0,d,[ bool ]).
-html_comp_i(27,'Autoresize',-1,d,[ bool ]).
-html_comp_i(27,'Gxwidth',measure(50,chr),d,[ measure ]).
-html_comp_i(27,'Gxheight',measure(1,row),d,[ measure ]).
-html_comp_i(27,'Ismultiline',0,d,[ bool ]).
-html_comp_i(27,'Fill',-1,d,[ bool ]).
-html_comp_i(27,'Backcolor',rgb(255,255,255),d,[ color ]).
-html_comp_i(27,'Forecolor',rgb(0,0,0),d,[ color ]).
-html_comp_i(27,'Font',font('Verdana',12,[]),d,[ font ]).
-html_comp_i(27,'Horizontalalignment',left,d,[ str ]).
-html_comp_i(27,'Gxformat',0,d,[ num ]).
-html_comp_i(27,'Title','',d,[ str ]).
-html_comp_i(27,'Invitemsg','',d,[ str ]).
-html_comp_i(30,'Caption','Colonia:',d,[ str ]).
-html_comp_i(30,'Id','Textblock5',v,[ str ]).
-html_comp_i(30,'Class','TextBlock',d,[ str ]).
-html_comp_i(30,'Event','',d,[ str ]).
+html_comp_i(25,'Font',font('Verdana',12,[]),d,[ font ]).
+html_comp_i(25,'Horizontalalignment',left,d,[ str ]).
+html_comp_i(25,'Gxformat',0,d,[ num ]).
+html_comp_i(25,'Title','',d,[ str ]).
+html_comp_i(25,'Invitemsg','',d,[ str ]).
+html_comp_i(28,'Caption','Dirección:',d,[ str ]).
+html_comp_i(28,'Id','Textblock4',v,[ str ]).
+html_comp_i(28,'Class','TextBlock',d,[ str ]).
+html_comp_i(28,'Event','',d,[ str ]).
+html_comp_i(28,'Returnonclick',0,d,[ bool ]).
+html_comp_i(28,'Gxformat',0,d,[ num ]).
+html_comp_i(28,'Title','',d,[ str ]).
+html_comp_i(28,'Fill',-1,d,[ bool ]).
+html_comp_i(28,'Backcolor',rgb(255,255,255),d,[ color ]).
+html_comp_i(28,'Forecolor',rgb(0,0,0),d,[ color ]).
+html_comp_i(28,'Font','',d,[ str ]).
+html_comp_i(30,'Colcount',50,d,[ num ]).
+html_comp_i(30,'Attid',-14,v,[ num ]).
+html_comp_i(30,'Class','Attribute',d,[ str ]).
+html_comp_i(30,'Controlname','&Proveedoresdireccion',d,[ str ]).
 html_comp_i(30,'Returnonclick',0,d,[ bool ]).
-html_comp_i(30,'Gxformat',0,d,[ num ]).
-html_comp_i(30,'Title','',d,[ str ]).
+html_comp_i(30,'Captionclass','',d,[ str ]).
+html_comp_i(30,'Captionposition','',d,[ str ]).
+html_comp_i(30,'Captionvalue','',d,[ str ]).
+html_comp_i(30,'Controltype',2,d,[ num ]).
+html_comp_i(30,'Inputtype',0,d,[ num ]).
+html_comp_i(30,'Editautocomplete',0,d,[ num ]).
+html_comp_i(30,'Autocorrection',-1,d,[ bool ]).
+html_comp_i(30,'Autocapitalization','FirstWord',d,[ str ]).
+html_comp_i(30,'Notifycontextchange',0,d,[ bool ]).
+html_comp_i(30,'Emptyasnull','Yes',d,[ str ]).
+html_comp_i(30,'Readonly',0,d,[ bool ]).
+html_comp_i(30,'Autocomplete',-1,d,[ bool ]).
+html_comp_i(30,'Ispassword',0,d,[ bool ]).
+html_comp_i(30,'Autoresize',-1,d,[ bool ]).
+html_comp_i(30,'Gxwidth',measure(50,chr),d,[ measure ]).
+html_comp_i(30,'Gxheight',measure(1,row),d,[ measure ]).
+html_comp_i(30,'Ismultiline',0,d,[ bool ]).
 html_comp_i(30,'Fill',-1,d,[ bool ]).
 html_comp_i(30,'Backcolor',rgb(255,255,255),d,[ color ]).
 html_comp_i(30,'Forecolor',rgb(0,0,0),d,[ color ]).
-html_comp_i(30,'Font','',d,[ str ]).
-html_comp_i(32,'Colcount',25,d,[ num ]).
-html_comp_i(32,'Attid',-15,v,[ num ]).
-html_comp_i(32,'Class','Attribute',d,[ str ]).
-html_comp_i(32,'Controlname','&Proveedorescolonia',d,[ str ]).
-html_comp_i(32,'Returnonclick',0,d,[ bool ]).
-html_comp_i(32,'Captionclass','',d,[ str ]).
-html_comp_i(32,'Captionposition','',d,[ str ]).
-html_comp_i(32,'Captionvalue','',d,[ str ]).
-html_comp_i(32,'Controltype',2,d,[ num ]).
-html_comp_i(32,'Inputtype',0,d,[ num ]).
-html_comp_i(32,'Editautocomplete',0,d,[ num ]).
-html_comp_i(32,'Autocorrection',-1,d,[ bool ]).
-html_comp_i(32,'Autocapitalization','FirstWord',d,[ str ]).
-html_comp_i(32,'Notifycontextchange',0,d,[ bool ]).
-html_comp_i(32,'Emptyasnull','Yes',d,[ str ]).
-html_comp_i(32,'Readonly',0,d,[ bool ]).
-html_comp_i(32,'Autocomplete',-1,d,[ bool ]).
-html_comp_i(32,'Ispassword',0,d,[ bool ]).
-html_comp_i(32,'Autoresize',-1,d,[ bool ]).
-html_comp_i(32,'Gxwidth',measure(25,chr),d,[ measure ]).
-html_comp_i(32,'Gxheight',measure(1,row),d,[ measure ]).
-html_comp_i(32,'Ismultiline',0,d,[ bool ]).
-html_comp_i(32,'Fill',-1,d,[ bool ]).
-html_comp_i(32,'Backcolor',rgb(255,255,255),d,[ color ]).
-html_comp_i(32,'Forecolor',rgb(0,0,0),d,[ color ]).
-html_comp_i(32,'Font',font('Verdana',12,[]),d,[ font ]).
-html_comp_i(32,'Horizontalalignment',left,d,[ str ]).
-html_comp_i(32,'Gxformat',0,d,[ num ]).
-html_comp_i(32,'Title','',d,[ str ]).
-html_comp_i(32,'Invitemsg','',d,[ str ]).
-html_comp_i(35,'Caption','Código Postal:',d,[ str ]).
-html_comp_i(35,'Id','Textblock6',v,[ str ]).
-html_comp_i(35,'Class','TextBlock',d,[ str ]).
-html_comp_i(35,'Event','',d,[ str ]).
+html_comp_i(30,'Font',font('Verdana',12,[]),d,[ font ]).
+html_comp_i(30,'Horizontalalignment',left,d,[ str ]).
+html_comp_i(30,'Gxformat',0,d,[ num ]).
+html_comp_i(30,'Title','',d,[ str ]).
+html_comp_i(30,'Invitemsg','',d,[ str ]).
+html_comp_i(33,'Caption','Colonia:',d,[ str ]).
+html_comp_i(33,'Id','Textblock5',v,[ str ]).
+html_comp_i(33,'Class','TextBlock',d,[ str ]).
+html_comp_i(33,'Event','',d,[ str ]).
+html_comp_i(33,'Returnonclick',0,d,[ bool ]).
+html_comp_i(33,'Gxformat',0,d,[ num ]).
+html_comp_i(33,'Title','',d,[ str ]).
+html_comp_i(33,'Fill',-1,d,[ bool ]).
+html_comp_i(33,'Backcolor',rgb(255,255,255),d,[ color ]).
+html_comp_i(33,'Forecolor',rgb(0,0,0),d,[ color ]).
+html_comp_i(33,'Font','',d,[ str ]).
+html_comp_i(35,'Colcount',25,d,[ num ]).
+html_comp_i(35,'Attid',-15,v,[ num ]).
+html_comp_i(35,'Class','Attribute',d,[ str ]).
+html_comp_i(35,'Controlname','&Proveedorescolonia',d,[ str ]).
 html_comp_i(35,'Returnonclick',0,d,[ bool ]).
-html_comp_i(35,'Gxformat',0,d,[ num ]).
-html_comp_i(35,'Title','',d,[ str ]).
+html_comp_i(35,'Captionclass','',d,[ str ]).
+html_comp_i(35,'Captionposition','',d,[ str ]).
+html_comp_i(35,'Captionvalue','',d,[ str ]).
+html_comp_i(35,'Controltype',2,d,[ num ]).
+html_comp_i(35,'Inputtype',0,d,[ num ]).
+html_comp_i(35,'Editautocomplete',0,d,[ num ]).
+html_comp_i(35,'Autocorrection',-1,d,[ bool ]).
+html_comp_i(35,'Autocapitalization','FirstWord',d,[ str ]).
+html_comp_i(35,'Notifycontextchange',0,d,[ bool ]).
+html_comp_i(35,'Emptyasnull','Yes',d,[ str ]).
+html_comp_i(35,'Readonly',0,d,[ bool ]).
+html_comp_i(35,'Autocomplete',-1,d,[ bool ]).
+html_comp_i(35,'Ispassword',0,d,[ bool ]).
+html_comp_i(35,'Autoresize',-1,d,[ bool ]).
+html_comp_i(35,'Gxwidth',measure(25,chr),d,[ measure ]).
+html_comp_i(35,'Gxheight',measure(1,row),d,[ measure ]).
+html_comp_i(35,'Ismultiline',0,d,[ bool ]).
 html_comp_i(35,'Fill',-1,d,[ bool ]).
 html_comp_i(35,'Backcolor',rgb(255,255,255),d,[ color ]).
 html_comp_i(35,'Forecolor',rgb(0,0,0),d,[ color ]).
-html_comp_i(35,'Font','',d,[ str ]).
-html_comp_i(37,'Colcount',5,d,[ num ]).
-html_comp_i(37,'Attid',-20,v,[ num ]).
-html_comp_i(37,'Class','Attribute',d,[ str ]).
-html_comp_i(37,'Controlname','&Proveedorescodigopostal',d,[ str ]).
-html_comp_i(37,'Returnonclick',0,d,[ bool ]).
-html_comp_i(37,'Captionclass','',d,[ str ]).
-html_comp_i(37,'Captionposition','',d,[ str ]).
-html_comp_i(37,'Captionvalue','',d,[ str ]).
-html_comp_i(37,'Controltype',2,d,[ num ]).
-html_comp_i(37,'Inputtype',0,d,[ num ]).
-html_comp_i(37,'Editautocomplete',0,d,[ num ]).
-html_comp_i(37,'Autocorrection',-1,d,[ bool ]).
-html_comp_i(37,'Autocapitalization','FirstWord',d,[ str ]).
-html_comp_i(37,'Notifycontextchange',0,d,[ bool ]).
-html_comp_i(37,'Emptyasnull','Yes',d,[ str ]).
-html_comp_i(37,'Readonly',0,d,[ bool ]).
-html_comp_i(37,'Autocomplete',-1,d,[ bool ]).
-html_comp_i(37,'Ispassword',0,d,[ bool ]).
-html_comp_i(37,'Autoresize',-1,d,[ bool ]).
-html_comp_i(37,'Gxwidth',measure(5,chr),d,[ measure ]).
-html_comp_i(37,'Gxheight',measure(1,row),d,[ measure ]).
-html_comp_i(37,'Ismultiline',0,d,[ bool ]).
-html_comp_i(37,'Fill',-1,d,[ bool ]).
-html_comp_i(37,'Backcolor',rgb(255,255,255),d,[ color ]).
-html_comp_i(37,'Forecolor',rgb(0,0,0),d,[ color ]).
-html_comp_i(37,'Font',font('Verdana',12,[]),d,[ font ]).
-html_comp_i(37,'Horizontalalignment',left,d,[ str ]).
-html_comp_i(37,'Gxformat',0,d,[ num ]).
-html_comp_i(37,'Title','',d,[ str ]).
-html_comp_i(37,'Invitemsg','',d,[ str ]).
-html_comp_i(40,'Caption','Municipio:',d,[ str ]).
-html_comp_i(40,'Id','Textblock7',v,[ str ]).
-html_comp_i(40,'Class','TextBlock',d,[ str ]).
-html_comp_i(40,'Event','',d,[ str ]).
+html_comp_i(35,'Font',font('Verdana',12,[]),d,[ font ]).
+html_comp_i(35,'Horizontalalignment',left,d,[ str ]).
+html_comp_i(35,'Gxformat',0,d,[ num ]).
+html_comp_i(35,'Title','',d,[ str ]).
+html_comp_i(35,'Invitemsg','',d,[ str ]).
+html_comp_i(38,'Caption','Código Postal:',d,[ str ]).
+html_comp_i(38,'Id','Textblock6',v,[ str ]).
+html_comp_i(38,'Class','TextBlock',d,[ str ]).
+html_comp_i(38,'Event','',d,[ str ]).
+html_comp_i(38,'Returnonclick',0,d,[ bool ]).
+html_comp_i(38,'Gxformat',0,d,[ num ]).
+html_comp_i(38,'Title','',d,[ str ]).
+html_comp_i(38,'Fill',-1,d,[ bool ]).
+html_comp_i(38,'Backcolor',rgb(255,255,255),d,[ color ]).
+html_comp_i(38,'Forecolor',rgb(0,0,0),d,[ color ]).
+html_comp_i(38,'Font','',d,[ str ]).
+html_comp_i(40,'Colcount',5,d,[ num ]).
+html_comp_i(40,'Attid',-20,v,[ num ]).
+html_comp_i(40,'Class','Attribute',d,[ str ]).
+html_comp_i(40,'Controlname','&Proveedorescodigopostal',d,[ str ]).
 html_comp_i(40,'Returnonclick',0,d,[ bool ]).
-html_comp_i(40,'Gxformat',0,d,[ num ]).
-html_comp_i(40,'Title','',d,[ str ]).
+html_comp_i(40,'Captionclass','',d,[ str ]).
+html_comp_i(40,'Captionposition','',d,[ str ]).
+html_comp_i(40,'Captionvalue','',d,[ str ]).
+html_comp_i(40,'Controltype',2,d,[ num ]).
+html_comp_i(40,'Inputtype',0,d,[ num ]).
+html_comp_i(40,'Editautocomplete',0,d,[ num ]).
+html_comp_i(40,'Autocorrection',-1,d,[ bool ]).
+html_comp_i(40,'Autocapitalization','FirstWord',d,[ str ]).
+html_comp_i(40,'Notifycontextchange',0,d,[ bool ]).
+html_comp_i(40,'Emptyasnull','Yes',d,[ str ]).
+html_comp_i(40,'Readonly',0,d,[ bool ]).
+html_comp_i(40,'Autocomplete',-1,d,[ bool ]).
+html_comp_i(40,'Ispassword',0,d,[ bool ]).
+html_comp_i(40,'Autoresize',-1,d,[ bool ]).
+html_comp_i(40,'Gxwidth',measure(5,chr),d,[ measure ]).
+html_comp_i(40,'Gxheight',measure(1,row),d,[ measure ]).
+html_comp_i(40,'Ismultiline',0,d,[ bool ]).
 html_comp_i(40,'Fill',-1,d,[ bool ]).
 html_comp_i(40,'Backcolor',rgb(255,255,255),d,[ color ]).
 html_comp_i(40,'Forecolor',rgb(0,0,0),d,[ color ]).
-html_comp_i(40,'Font','',d,[ str ]).
-html_comp_i(42,'Colcount',25,d,[ num ]).
-html_comp_i(42,'Attid',-16,v,[ num ]).
-html_comp_i(42,'Class','Attribute',d,[ str ]).
-html_comp_i(42,'Controlname','&Proveedoresmunicipio',d,[ str ]).
-html_comp_i(42,'Returnonclick',0,d,[ bool ]).
-html_comp_i(42,'Captionclass','',d,[ str ]).
-html_comp_i(42,'Captionposition','',d,[ str ]).
-html_comp_i(42,'Captionvalue','',d,[ str ]).
-html_comp_i(42,'Controltype',2,d,[ num ]).
-html_comp_i(42,'Inputtype',0,d,[ num ]).
-html_comp_i(42,'Editautocomplete',0,d,[ num ]).
-html_comp_i(42,'Autocorrection',-1,d,[ bool ]).
-html_comp_i(42,'Autocapitalization','FirstWord',d,[ str ]).
-html_comp_i(42,'Notifycontextchange',0,d,[ bool ]).
-html_comp_i(42,'Emptyasnull','Yes',d,[ str ]).
-html_comp_i(42,'Readonly',0,d,[ bool ]).
-html_comp_i(42,'Autocomplete',-1,d,[ bool ]).
-html_comp_i(42,'Ispassword',0,d,[ bool ]).
-html_comp_i(42,'Autoresize',-1,d,[ bool ]).
-html_comp_i(42,'Gxwidth',measure(25,chr),d,[ measure ]).
-html_comp_i(42,'Gxheight',measure(1,row),d,[ measure ]).
-html_comp_i(42,'Ismultiline',0,d,[ bool ]).
-html_comp_i(42,'Fill',-1,d,[ bool ]).
-html_comp_i(42,'Backcolor',rgb(255,255,255),d,[ color ]).
-html_comp_i(42,'Forecolor',rgb(0,0,0),d,[ color ]).
-html_comp_i(42,'Font',font('Verdana',12,[]),d,[ font ]).
-html_comp_i(42,'Horizontalalignment',left,d,[ str ]).
-html_comp_i(42,'Gxformat',0,d,[ num ]).
-html_comp_i(42,'Title','',d,[ str ]).
-html_comp_i(42,'Invitemsg','',d,[ str ]).
-html_comp_i(45,'Id','Table3',v,[ str ]).
-html_comp_i(45,'Class','Table',v,[ str ]).
+html_comp_i(40,'Font',font('Verdana',12,[]),d,[ font ]).
+html_comp_i(40,'Horizontalalignment',left,d,[ str ]).
+html_comp_i(40,'Gxformat',0,d,[ num ]).
+html_comp_i(40,'Title','',d,[ str ]).
+html_comp_i(40,'Invitemsg','',d,[ str ]).
+html_comp_i(43,'Caption','Municipio:',d,[ str ]).
+html_comp_i(43,'Id','Textblock7',v,[ str ]).
+html_comp_i(43,'Class','TextBlock',d,[ str ]).
+html_comp_i(43,'Event','',d,[ str ]).
+html_comp_i(43,'Returnonclick',0,d,[ bool ]).
+html_comp_i(43,'Gxformat',0,d,[ num ]).
+html_comp_i(43,'Title','',d,[ str ]).
+html_comp_i(43,'Fill',-1,d,[ bool ]).
+html_comp_i(43,'Backcolor',rgb(255,255,255),d,[ color ]).
+html_comp_i(43,'Forecolor',rgb(0,0,0),d,[ color ]).
+html_comp_i(43,'Font','',d,[ str ]).
+html_comp_i(45,'Colcount',25,d,[ num ]).
+html_comp_i(45,'Attid',-16,v,[ num ]).
+html_comp_i(45,'Class','Attribute',d,[ str ]).
+html_comp_i(45,'Controlname','&Proveedoresmunicipio',d,[ str ]).
+html_comp_i(45,'Returnonclick',0,d,[ bool ]).
+html_comp_i(45,'Captionclass','',d,[ str ]).
+html_comp_i(45,'Captionposition','',d,[ str ]).
+html_comp_i(45,'Captionvalue','',d,[ str ]).
+html_comp_i(45,'Controltype',2,d,[ num ]).
+html_comp_i(45,'Inputtype',0,d,[ num ]).
+html_comp_i(45,'Editautocomplete',0,d,[ num ]).
+html_comp_i(45,'Autocorrection',-1,d,[ bool ]).
+html_comp_i(45,'Autocapitalization','FirstWord',d,[ str ]).
+html_comp_i(45,'Notifycontextchange',0,d,[ bool ]).
+html_comp_i(45,'Emptyasnull','Yes',d,[ str ]).
+html_comp_i(45,'Readonly',0,d,[ bool ]).
+html_comp_i(45,'Autocomplete',-1,d,[ bool ]).
+html_comp_i(45,'Ispassword',0,d,[ bool ]).
+html_comp_i(45,'Autoresize',-1,d,[ bool ]).
+html_comp_i(45,'Gxwidth',measure(25,chr),d,[ measure ]).
+html_comp_i(45,'Gxheight',measure(1,row),d,[ measure ]).
+html_comp_i(45,'Ismultiline',0,d,[ bool ]).
+html_comp_i(45,'Fill',-1,d,[ bool ]).
+html_comp_i(45,'Backcolor',rgb(255,255,255),d,[ color ]).
+html_comp_i(45,'Forecolor',rgb(0,0,0),d,[ color ]).
+html_comp_i(45,'Font',font('Verdana',12,[]),d,[ font ]).
+html_comp_i(45,'Horizontalalignment',left,d,[ str ]).
+html_comp_i(45,'Gxformat',0,d,[ num ]).
 html_comp_i(45,'Title','',d,[ str ]).
-html_comp_i(45,'Align',left,d,[ str ]).
-html_comp_i(45,'Backgroundgx','',d,[ str ]).
-html_comp_i(45,'Bgcolor',rgb(0,0,0),d,[ color ]).
-html_comp_i(45,'Border','0',d,[ str ]).
-html_comp_i(45,'Bordercolor',rgb(0,0,0),d,[ color ]).
-html_comp_i(45,'Cellpadding','1',d,[ str ]).
-html_comp_i(45,'Cellspacing','2',d,[ str ]).
-html_comp_i(45,'Height',measure(90,px),v,[ measure ]).
-html_comp_i(45,'Width',measure(678,px),v,[ measure ]).
-html_comp_i(45,'Rules',none,d,[ str ]).
-html_comp_i(48,'Caption','Estado:',d,[ str ]).
-html_comp_i(48,'Id','Textblock8',v,[ str ]).
-html_comp_i(48,'Class','TextBlock',d,[ str ]).
-html_comp_i(48,'Event','',d,[ str ]).
-html_comp_i(48,'Returnonclick',0,d,[ bool ]).
-html_comp_i(48,'Gxformat',0,d,[ num ]).
+html_comp_i(45,'Invitemsg','',d,[ str ]).
+html_comp_i(48,'Id','Table3',v,[ str ]).
+html_comp_i(48,'Class','Table',v,[ str ]).
 html_comp_i(48,'Title','',d,[ str ]).
-html_comp_i(48,'Fill',-1,d,[ bool ]).
-html_comp_i(48,'Backcolor',rgb(255,255,255),d,[ color ]).
-html_comp_i(48,'Forecolor',rgb(0,0,0),d,[ color ]).
-html_comp_i(48,'Font','',d,[ str ]).
-html_comp_i(49,'Width',measure(569,px),v,[ measure ]).
-html_comp_i(50,'Width',measure(131,px),v,[ measure ]).
-html_comp_i(55,'Caption','Fax:',d,[ str ]).
-html_comp_i(55,'Id','Textblock9',v,[ str ]).
-html_comp_i(55,'Class','TextBlock',d,[ str ]).
-html_comp_i(55,'Event','',d,[ str ]).
-html_comp_i(55,'Returnonclick',0,d,[ bool ]).
-html_comp_i(55,'Gxformat',0,d,[ num ]).
-html_comp_i(55,'Title','',d,[ str ]).
-html_comp_i(55,'Fill',-1,d,[ bool ]).
-html_comp_i(55,'Backcolor',rgb(255,255,255),d,[ color ]).
-html_comp_i(55,'Forecolor',rgb(0,0,0),d,[ color ]).
-html_comp_i(55,'Font','',d,[ str ]).
-html_comp_i(57,'Colcount',15,d,[ num ]).
-html_comp_i(57,'Attid',-17,v,[ num ]).
-html_comp_i(57,'Class','Attribute',d,[ str ]).
-html_comp_i(57,'Controlname','&Proveedoresfax',d,[ str ]).
-html_comp_i(57,'Returnonclick',0,d,[ bool ]).
-html_comp_i(57,'Captionclass','',d,[ str ]).
-html_comp_i(57,'Captionposition','',d,[ str ]).
-html_comp_i(57,'Captionvalue','',d,[ str ]).
-html_comp_i(57,'Controltype',2,d,[ num ]).
-html_comp_i(57,'Inputtype',0,d,[ num ]).
-html_comp_i(57,'Editautocomplete',0,d,[ num ]).
-html_comp_i(57,'Autocorrection',-1,d,[ bool ]).
-html_comp_i(57,'Autocapitalization','FirstWord',d,[ str ]).
-html_comp_i(57,'Notifycontextchange',0,d,[ bool ]).
-html_comp_i(57,'Emptyasnull','Yes',d,[ str ]).
-html_comp_i(57,'Readonly',0,d,[ bool ]).
-html_comp_i(57,'Autocomplete',-1,d,[ bool ]).
-html_comp_i(57,'Ispassword',0,d,[ bool ]).
-html_comp_i(57,'Autoresize',-1,d,[ bool ]).
-html_comp_i(57,'Gxwidth',measure(15,chr),d,[ measure ]).
-html_comp_i(57,'Gxheight',measure(1,row),d,[ measure ]).
-html_comp_i(57,'Ismultiline',0,d,[ bool ]).
-html_comp_i(57,'Fill',-1,d,[ bool ]).
-html_comp_i(57,'Backcolor',rgb(255,255,255),d,[ color ]).
-html_comp_i(57,'Forecolor',rgb(0,0,0),d,[ color ]).
-html_comp_i(57,'Font',font('Verdana',12,[]),d,[ font ]).
-html_comp_i(57,'Horizontalalignment',left,d,[ str ]).
-html_comp_i(57,'Gxformat',0,d,[ num ]).
-html_comp_i(57,'Title','',d,[ str ]).
-html_comp_i(57,'Invitemsg','',d,[ str ]).
-html_comp_i(62,'Height',measure(24,px),v,[ measure ]).
-html_comp_i(63,'Caption','Teléfono1:',d,[ str ]).
-html_comp_i(63,'Id','Textblock10',v,[ str ]).
-html_comp_i(63,'Class','TextBlock',d,[ str ]).
-html_comp_i(63,'Event','',d,[ str ]).
-html_comp_i(63,'Returnonclick',0,d,[ bool ]).
-html_comp_i(63,'Gxformat',0,d,[ num ]).
-html_comp_i(63,'Title','',d,[ str ]).
-html_comp_i(63,'Fill',-1,d,[ bool ]).
-html_comp_i(63,'Backcolor',rgb(255,255,255),d,[ color ]).
-html_comp_i(63,'Forecolor',rgb(0,0,0),d,[ color ]).
-html_comp_i(63,'Font','',d,[ str ]).
-html_comp_i(65,'Colcount',10,d,[ num ]).
-html_comp_i(65,'Attid',-18,v,[ num ]).
-html_comp_i(65,'Class','Attribute',d,[ str ]).
-html_comp_i(65,'Controlname','&Proveedorestelefono1',d,[ str ]).
-html_comp_i(65,'Returnonclick',0,d,[ bool ]).
-html_comp_i(65,'Captionclass','',d,[ str ]).
-html_comp_i(65,'Captionposition','',d,[ str ]).
-html_comp_i(65,'Captionvalue','',d,[ str ]).
-html_comp_i(65,'Controltype',2,d,[ num ]).
-html_comp_i(65,'Inputtype',0,d,[ num ]).
-html_comp_i(65,'Notifycontextchange',0,d,[ bool ]).
-html_comp_i(65,'Emptyasnull','Yes',d,[ str ]).
-html_comp_i(65,'Readonly',0,d,[ bool ]).
-html_comp_i(65,'Autocomplete',-1,d,[ bool ]).
-html_comp_i(65,'Ispassword',0,d,[ bool ]).
-html_comp_i(65,'Autoresize',-1,d,[ bool ]).
-html_comp_i(65,'Gxwidth',measure(10,chr),d,[ measure ]).
-html_comp_i(65,'Gxheight',measure(1,row),d,[ measure ]).
-html_comp_i(65,'Ismultiline',0,d,[ bool ]).
-html_comp_i(65,'Fill',-1,d,[ bool ]).
-html_comp_i(65,'Backcolor',rgb(255,255,255),d,[ color ]).
-html_comp_i(65,'Forecolor',rgb(0,0,0),d,[ color ]).
-html_comp_i(65,'Font',font('Verdana',12,[]),d,[ font ]).
-html_comp_i(65,'Horizontalalignment',right,d,[ str ]).
-html_comp_i(65,'Gxformat',0,d,[ num ]).
-html_comp_i(65,'Title','',d,[ str ]).
-html_comp_i(65,'Invitemsg','',d,[ str ]).
-html_comp_i(69,'Controlname','Button1',v,[ str ]).
-html_comp_i(69,'Class','Button',d,[ str ]).
-html_comp_i(69,'Event','''Consultar ''',v,[ str ]).
-html_comp_i(69,'Caption','CONSULTAR',d,[ str ]).
-html_comp_i(69,'Title','CONSULTAR',d,[ str ]).
-html_comp_i(69,'Font',font('Microsoft Sans Serif',10,[]),d,[ font ]).
-html_comp_i(69,'Forecolor',rgb(255,255,255),v,[ color ]).
-html_comp_i(69,'Backcolor',rgb(0,128,0),v,[ color ]).
-html_comp_i(69,'Border','2',d,[ str ]).
-html_comp_i(69,'Bordercolor',rgb(219,220,222),d,[ color ]).
-html_comp_i(69,'Buttonborderstyle',standard,d,[ str ]).
-html_comp_i(71,'Height',measure(24,px),v,[ measure ]).
-html_comp_i(72,'Caption','Teléfono:',d,[ str ]).
-html_comp_i(72,'Id','Textblock11',v,[ str ]).
-html_comp_i(72,'Class','TextBlock',d,[ str ]).
-html_comp_i(72,'Event','',d,[ str ]).
-html_comp_i(72,'Returnonclick',0,d,[ bool ]).
-html_comp_i(72,'Gxformat',0,d,[ num ]).
-html_comp_i(72,'Title','',d,[ str ]).
-html_comp_i(72,'Fill',-1,d,[ bool ]).
-html_comp_i(72,'Backcolor',rgb(255,255,255),d,[ color ]).
-html_comp_i(72,'Forecolor',rgb(0,0,0),d,[ color ]).
-html_comp_i(72,'Font','',d,[ str ]).
-html_comp_i(74,'Colcount',10,d,[ num ]).
-html_comp_i(74,'Attid',-19,v,[ num ]).
-html_comp_i(74,'Class','Attribute',d,[ str ]).
-html_comp_i(74,'Controlname','&Proveedorestelefono2',d,[ str ]).
-html_comp_i(74,'Returnonclick',0,d,[ bool ]).
-html_comp_i(74,'Captionclass','',d,[ str ]).
-html_comp_i(74,'Captionposition','',d,[ str ]).
-html_comp_i(74,'Captionvalue','',d,[ str ]).
-html_comp_i(74,'Controltype',2,d,[ num ]).
-html_comp_i(74,'Inputtype',0,d,[ num ]).
-html_comp_i(74,'Notifycontextchange',0,d,[ bool ]).
-html_comp_i(74,'Emptyasnull','Yes',d,[ str ]).
-html_comp_i(74,'Readonly',0,d,[ bool ]).
-html_comp_i(74,'Autocomplete',-1,d,[ bool ]).
-html_comp_i(74,'Ispassword',0,d,[ bool ]).
-html_comp_i(74,'Autoresize',-1,d,[ bool ]).
-html_comp_i(74,'Gxwidth',measure(10,chr),d,[ measure ]).
-html_comp_i(74,'Gxheight',measure(1,row),d,[ measure ]).
-html_comp_i(74,'Ismultiline',0,d,[ bool ]).
-html_comp_i(74,'Fill',-1,d,[ bool ]).
-html_comp_i(74,'Backcolor',rgb(255,255,255),d,[ color ]).
-html_comp_i(74,'Forecolor',rgb(0,0,0),d,[ color ]).
-html_comp_i(74,'Font',font('Verdana',12,[]),d,[ font ]).
-html_comp_i(74,'Horizontalalignment',right,d,[ str ]).
-html_comp_i(74,'Gxformat',0,d,[ num ]).
-html_comp_i(74,'Title','',d,[ str ]).
-html_comp_i(74,'Invitemsg','',d,[ str ]).
-html_comp_i(77,'Controlname','Button2',v,[ str ]).
-html_comp_i(77,'Class','Button',d,[ str ]).
-html_comp_i(77,'Event','''Guardar ''',v,[ str ]).
-html_comp_i(77,'Caption','GUARDAR',d,[ str ]).
-html_comp_i(77,'Title','GUARDAR',d,[ str ]).
-html_comp_i(77,'Font',font('Microsoft Sans Serif',10,[]),d,[ font ]).
-html_comp_i(77,'Forecolor',rgb(255,255,255),v,[ color ]).
-html_comp_i(77,'Backcolor',rgb(0,128,0),v,[ color ]).
-html_comp_i(77,'Border','2',d,[ str ]).
-html_comp_i(77,'Bordercolor',rgb(219,220,222),d,[ color ]).
-html_comp_i(77,'Buttonborderstyle',standard,d,[ str ]).
-html_comp_i(79,'Controlname','Button3',v,[ str ]).
-html_comp_i(79,'Class','Button',d,[ str ]).
-html_comp_i(79,'Event','Enter',d,[ str ]).
-html_comp_i(79,'Caption','CANCELAR',d,[ str ]).
-html_comp_i(79,'Title','CANCELAR',d,[ str ]).
-html_comp_i(79,'Font',font('Microsoft Sans Serif',10,[]),d,[ font ]).
-html_comp_i(79,'Forecolor',rgb(255,255,255),v,[ color ]).
-html_comp_i(79,'Backcolor',rgb(255,0,0),v,[ color ]).
-html_comp_i(79,'Border','2',d,[ str ]).
-html_comp_i(79,'Bordercolor',rgb(219,220,222),d,[ color ]).
-html_comp_i(79,'Buttonborderstyle',standard,d,[ str ]).
+html_comp_i(48,'Align',left,d,[ str ]).
+html_comp_i(48,'Backgroundgx','',d,[ str ]).
+html_comp_i(48,'Bgcolor',rgb(0,0,0),d,[ color ]).
+html_comp_i(48,'Border','0',d,[ str ]).
+html_comp_i(48,'Bordercolor',rgb(0,0,0),d,[ color ]).
+html_comp_i(48,'Cellpadding','1',d,[ str ]).
+html_comp_i(48,'Cellspacing','2',d,[ str ]).
+html_comp_i(48,'Height',measure(90,px),v,[ measure ]).
+html_comp_i(48,'Width',measure(678,px),v,[ measure ]).
+html_comp_i(48,'Rules',none,d,[ str ]).
+html_comp_i(51,'Caption','Estado:',d,[ str ]).
+html_comp_i(51,'Id','Textblock8',v,[ str ]).
+html_comp_i(51,'Class','TextBlock',d,[ str ]).
+html_comp_i(51,'Event','',d,[ str ]).
+html_comp_i(51,'Returnonclick',0,d,[ bool ]).
+html_comp_i(51,'Gxformat',0,d,[ num ]).
+html_comp_i(51,'Title','',d,[ str ]).
+html_comp_i(51,'Fill',-1,d,[ bool ]).
+html_comp_i(51,'Backcolor',rgb(255,255,255),d,[ color ]).
+html_comp_i(51,'Forecolor',rgb(0,0,0),d,[ color ]).
+html_comp_i(51,'Font','',d,[ str ]).
+html_comp_i(52,'Width',measure(569,px),v,[ measure ]).
+html_comp_i(53,'Width',measure(131,px),v,[ measure ]).
+html_comp_i(58,'Caption','Fax:',d,[ str ]).
+html_comp_i(58,'Id','Textblock9',v,[ str ]).
+html_comp_i(58,'Class','TextBlock',d,[ str ]).
+html_comp_i(58,'Event','',d,[ str ]).
+html_comp_i(58,'Returnonclick',0,d,[ bool ]).
+html_comp_i(58,'Gxformat',0,d,[ num ]).
+html_comp_i(58,'Title','',d,[ str ]).
+html_comp_i(58,'Fill',-1,d,[ bool ]).
+html_comp_i(58,'Backcolor',rgb(255,255,255),d,[ color ]).
+html_comp_i(58,'Forecolor',rgb(0,0,0),d,[ color ]).
+html_comp_i(58,'Font','',d,[ str ]).
+html_comp_i(60,'Colcount',15,d,[ num ]).
+html_comp_i(60,'Attid',-17,v,[ num ]).
+html_comp_i(60,'Class','Attribute',d,[ str ]).
+html_comp_i(60,'Controlname','&Proveedoresfax',d,[ str ]).
+html_comp_i(60,'Returnonclick',0,d,[ bool ]).
+html_comp_i(60,'Captionclass','',d,[ str ]).
+html_comp_i(60,'Captionposition','',d,[ str ]).
+html_comp_i(60,'Captionvalue','',d,[ str ]).
+html_comp_i(60,'Controltype',2,d,[ num ]).
+html_comp_i(60,'Inputtype',0,d,[ num ]).
+html_comp_i(60,'Editautocomplete',0,d,[ num ]).
+html_comp_i(60,'Autocorrection',-1,d,[ bool ]).
+html_comp_i(60,'Autocapitalization','FirstWord',d,[ str ]).
+html_comp_i(60,'Notifycontextchange',0,d,[ bool ]).
+html_comp_i(60,'Emptyasnull','Yes',d,[ str ]).
+html_comp_i(60,'Readonly',0,d,[ bool ]).
+html_comp_i(60,'Autocomplete',-1,d,[ bool ]).
+html_comp_i(60,'Ispassword',0,d,[ bool ]).
+html_comp_i(60,'Autoresize',-1,d,[ bool ]).
+html_comp_i(60,'Gxwidth',measure(15,chr),d,[ measure ]).
+html_comp_i(60,'Gxheight',measure(1,row),d,[ measure ]).
+html_comp_i(60,'Ismultiline',0,d,[ bool ]).
+html_comp_i(60,'Fill',-1,d,[ bool ]).
+html_comp_i(60,'Backcolor',rgb(255,255,255),d,[ color ]).
+html_comp_i(60,'Forecolor',rgb(0,0,0),d,[ color ]).
+html_comp_i(60,'Font',font('Verdana',12,[]),d,[ font ]).
+html_comp_i(60,'Horizontalalignment',left,d,[ str ]).
+html_comp_i(60,'Gxformat',0,d,[ num ]).
+html_comp_i(60,'Title','',d,[ str ]).
+html_comp_i(60,'Invitemsg','',d,[ str ]).
+html_comp_i(65,'Height',measure(24,px),v,[ measure ]).
+html_comp_i(66,'Caption','Teléfono1:',d,[ str ]).
+html_comp_i(66,'Id','Textblock10',v,[ str ]).
+html_comp_i(66,'Class','TextBlock',d,[ str ]).
+html_comp_i(66,'Event','',d,[ str ]).
+html_comp_i(66,'Returnonclick',0,d,[ bool ]).
+html_comp_i(66,'Gxformat',0,d,[ num ]).
+html_comp_i(66,'Title','',d,[ str ]).
+html_comp_i(66,'Fill',-1,d,[ bool ]).
+html_comp_i(66,'Backcolor',rgb(255,255,255),d,[ color ]).
+html_comp_i(66,'Forecolor',rgb(0,0,0),d,[ color ]).
+html_comp_i(66,'Font','',d,[ str ]).
+html_comp_i(68,'Colcount',10,d,[ num ]).
+html_comp_i(68,'Attid',-18,v,[ num ]).
+html_comp_i(68,'Class','Attribute',d,[ str ]).
+html_comp_i(68,'Controlname','&Proveedorestelefono1',d,[ str ]).
+html_comp_i(68,'Returnonclick',0,d,[ bool ]).
+html_comp_i(68,'Captionclass','',d,[ str ]).
+html_comp_i(68,'Captionposition','',d,[ str ]).
+html_comp_i(68,'Captionvalue','',d,[ str ]).
+html_comp_i(68,'Controltype',2,d,[ num ]).
+html_comp_i(68,'Inputtype',0,d,[ num ]).
+html_comp_i(68,'Notifycontextchange',0,d,[ bool ]).
+html_comp_i(68,'Emptyasnull','Yes',d,[ str ]).
+html_comp_i(68,'Readonly',0,d,[ bool ]).
+html_comp_i(68,'Autocomplete',-1,d,[ bool ]).
+html_comp_i(68,'Ispassword',0,d,[ bool ]).
+html_comp_i(68,'Autoresize',-1,d,[ bool ]).
+html_comp_i(68,'Gxwidth',measure(10,chr),d,[ measure ]).
+html_comp_i(68,'Gxheight',measure(1,row),d,[ measure ]).
+html_comp_i(68,'Ismultiline',0,d,[ bool ]).
+html_comp_i(68,'Fill',-1,d,[ bool ]).
+html_comp_i(68,'Backcolor',rgb(255,255,255),d,[ color ]).
+html_comp_i(68,'Forecolor',rgb(0,0,0),d,[ color ]).
+html_comp_i(68,'Font',font('Verdana',12,[]),d,[ font ]).
+html_comp_i(68,'Horizontalalignment',right,d,[ str ]).
+html_comp_i(68,'Gxformat',0,d,[ num ]).
+html_comp_i(68,'Title','',d,[ str ]).
+html_comp_i(68,'Invitemsg','',d,[ str ]).
+html_comp_i(72,'Controlname','Button1',v,[ str ]).
+html_comp_i(72,'Class','Button',d,[ str ]).
+html_comp_i(72,'Event','''Consultar ''',v,[ str ]).
+html_comp_i(72,'Caption','CONSULTAR',d,[ str ]).
+html_comp_i(72,'Title','CONSULTAR',d,[ str ]).
+html_comp_i(72,'Font',font('Microsoft Sans Serif',10,[]),d,[ font ]).
+html_comp_i(72,'Forecolor',rgb(255,255,255),v,[ color ]).
+html_comp_i(72,'Backcolor',rgb(0,128,0),v,[ color ]).
+html_comp_i(72,'Border','2',d,[ str ]).
+html_comp_i(72,'Bordercolor',rgb(219,220,222),d,[ color ]).
+html_comp_i(72,'Buttonborderstyle',standard,d,[ str ]).
+html_comp_i(74,'Height',measure(24,px),v,[ measure ]).
+html_comp_i(75,'Caption','Teléfono:',d,[ str ]).
+html_comp_i(75,'Id','Textblock11',v,[ str ]).
+html_comp_i(75,'Class','TextBlock',d,[ str ]).
+html_comp_i(75,'Event','',d,[ str ]).
+html_comp_i(75,'Returnonclick',0,d,[ bool ]).
+html_comp_i(75,'Gxformat',0,d,[ num ]).
+html_comp_i(75,'Title','',d,[ str ]).
+html_comp_i(75,'Fill',-1,d,[ bool ]).
+html_comp_i(75,'Backcolor',rgb(255,255,255),d,[ color ]).
+html_comp_i(75,'Forecolor',rgb(0,0,0),d,[ color ]).
+html_comp_i(75,'Font','',d,[ str ]).
+html_comp_i(77,'Colcount',10,d,[ num ]).
+html_comp_i(77,'Attid',-19,v,[ num ]).
+html_comp_i(77,'Class','Attribute',d,[ str ]).
+html_comp_i(77,'Controlname','&Proveedorestelefono2',d,[ str ]).
+html_comp_i(77,'Returnonclick',0,d,[ bool ]).
+html_comp_i(77,'Captionclass','',d,[ str ]).
+html_comp_i(77,'Captionposition','',d,[ str ]).
+html_comp_i(77,'Captionvalue','',d,[ str ]).
+html_comp_i(77,'Controltype',2,d,[ num ]).
+html_comp_i(77,'Inputtype',0,d,[ num ]).
+html_comp_i(77,'Notifycontextchange',0,d,[ bool ]).
+html_comp_i(77,'Emptyasnull','Yes',d,[ str ]).
+html_comp_i(77,'Readonly',0,d,[ bool ]).
+html_comp_i(77,'Autocomplete',-1,d,[ bool ]).
+html_comp_i(77,'Ispassword',0,d,[ bool ]).
+html_comp_i(77,'Autoresize',-1,d,[ bool ]).
+html_comp_i(77,'Gxwidth',measure(10,chr),d,[ measure ]).
+html_comp_i(77,'Gxheight',measure(1,row),d,[ measure ]).
+html_comp_i(77,'Ismultiline',0,d,[ bool ]).
+html_comp_i(77,'Fill',-1,d,[ bool ]).
+html_comp_i(77,'Backcolor',rgb(255,255,255),d,[ color ]).
+html_comp_i(77,'Forecolor',rgb(0,0,0),d,[ color ]).
+html_comp_i(77,'Font',font('Verdana',12,[]),d,[ font ]).
+html_comp_i(77,'Horizontalalignment',right,d,[ str ]).
+html_comp_i(77,'Gxformat',0,d,[ num ]).
+html_comp_i(77,'Title','',d,[ str ]).
+html_comp_i(77,'Invitemsg','',d,[ str ]).
+html_comp_i(80,'Controlname','Button2',v,[ str ]).
+html_comp_i(80,'Class','Button',d,[ str ]).
+html_comp_i(80,'Event','''Guardar ''',v,[ str ]).
+html_comp_i(80,'Caption','GUARDAR',d,[ str ]).
+html_comp_i(80,'Title','GUARDAR',d,[ str ]).
+html_comp_i(80,'Font',font('Microsoft Sans Serif',10,[]),d,[ font ]).
+html_comp_i(80,'Forecolor',rgb(255,255,255),v,[ color ]).
+html_comp_i(80,'Backcolor',rgb(0,128,0),v,[ color ]).
+html_comp_i(80,'Border','2',d,[ str ]).
+html_comp_i(80,'Bordercolor',rgb(219,220,222),d,[ color ]).
+html_comp_i(80,'Buttonborderstyle',standard,d,[ str ]).
+html_comp_i(82,'Controlname','Button3',v,[ str ]).
+html_comp_i(82,'Class','Button',d,[ str ]).
+html_comp_i(82,'Event','Enter',d,[ str ]).
+html_comp_i(82,'Caption','CANCELAR',d,[ str ]).
+html_comp_i(82,'Title','CANCELAR',d,[ str ]).
+html_comp_i(82,'Font',font('Microsoft Sans Serif',10,[]),d,[ font ]).
+html_comp_i(82,'Forecolor',rgb(255,255,255),v,[ color ]).
+html_comp_i(82,'Backcolor',rgb(255,0,0),v,[ color ]).
+html_comp_i(82,'Border','2',d,[ str ]).
+html_comp_i(82,'Bordercolor',rgb(219,220,222),d,[ color ]).
+html_comp_i(82,'Buttonborderstyle',standard,d,[ str ]).
  
  
  
@@ -874,32 +890,33 @@ html_comp_i(79,'Buttonborderstyle',standard,d,[ str ]).
  
  
  
-lit_i(10,1,t('Proveedor:',3),[ ctlname('Textblock1') ]).
-lit_i(12,1,t('Nextvalue',23),[ ctlname('&Nextvalue'),ctrltype(edit,12),pos(12),readonly,ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
-lit_i(15,1,t('Nombre:',3),[ ctlname('Textblock2') ]).
-lit_i(17,1,t('Proveedoresnombre',23),[ ctlname('&Proveedoresnombre'),ctrltype(edit,17),pos(17),ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
-lit_i(20,1,t('RFC:',3),[ ctlname('Textblock3') ]).
-lit_i(22,1,t('Proveedoresrfc',23),[ ctlname('&Proveedoresrfc'),ctrltype(edit,22),pos(22),ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
-lit_i(25,1,t('Dirección:',3),[ ctlname('Textblock4') ]).
-lit_i(27,1,t('Proveedoresdireccion',23),[ ctlname('&Proveedoresdireccion'),ctrltype(edit,27),pos(27),ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
-lit_i(30,1,t('Colonia:',3),[ ctlname('Textblock5') ]).
-lit_i(32,1,t('Proveedorescolonia',23),[ ctlname('&Proveedorescolonia'),ctrltype(edit,32),pos(32),ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
-lit_i(35,1,t('Código Postal:',3),[ ctlname('Textblock6') ]).
-lit_i(37,1,t('Proveedorescodigopostal',23),[ ctlname('&Proveedorescodigopostal'),ctrltype(edit,37),pos(37),ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
-lit_i(40,1,t('Municipio:',3),[ ctlname('Textblock7') ]).
-lit_i(42,1,t('Proveedoresmunicipio',23),[ ctlname('&Proveedoresmunicipio'),ctrltype(edit,42),pos(42),ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
-lit_i(7,1,table(7),[ ctlname('Table2') ]).
-lit_i(48,1,t('Estado:',3),[ ctlname('Textblock8') ]).
-lit_i(55,1,t('Fax:',3),[ ctlname('Textblock9') ]).
-lit_i(57,1,t('Proveedoresfax',23),[ ctlname('&Proveedoresfax'),ctrltype(edit,57),pos(57),ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
-lit_i(63,1,t('Teléfono1:',3),[ ctlname('Textblock10') ]).
-lit_i(65,1,t('Proveedorestelefono1',23),[ ctlname('&Proveedorestelefono1'),ctrltype(edit,65),pos(65),ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
-lit_i(69,1,button('''Consultar '''),[ ctlname('Button1'),width(0),rect(0,0,10,10),title('Nothing') ]).
-lit_i(72,1,t('Teléfono:',3),[ ctlname('Textblock11') ]).
-lit_i(74,1,t('Proveedorestelefono2',23),[ ctlname('&Proveedorestelefono2'),ctrltype(edit,74),pos(74),ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
-lit_i(77,1,button('''Guardar '''),[ ctlname('Button2'),width(0),rect(0,0,10,10),title('Nothing') ]).
-lit_i(79,1,button('Enter'),[ ctlname('Button3'),width(0),rect(0,0,10,10),title('Nothing') ]).
-lit_i(45,1,table(45),[ ctlname('Table3') ]).
+lit_i(7,1,t('CATÁLOGO DE PROVEEDOR',3),[ ctlname('Textblock') ]).
+lit_i(13,1,t('Proveedor:',3),[ ctlname('Textblock1') ]).
+lit_i(15,1,t('Nextvalue',23),[ ctlname('&Nextvalue'),ctrltype(edit,15),pos(15),readonly,ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
+lit_i(18,1,t('Nombre:',3),[ ctlname('Textblock2') ]).
+lit_i(20,1,t('Proveedoresnombre',23),[ ctlname('&Proveedoresnombre'),ctrltype(edit,20),pos(20),ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
+lit_i(23,1,t('RFC:',3),[ ctlname('Textblock3') ]).
+lit_i(25,1,t('Proveedoresrfc',23),[ ctlname('&Proveedoresrfc'),ctrltype(edit,25),pos(25),ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
+lit_i(28,1,t('Dirección:',3),[ ctlname('Textblock4') ]).
+lit_i(30,1,t('Proveedoresdireccion',23),[ ctlname('&Proveedoresdireccion'),ctrltype(edit,30),pos(30),ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
+lit_i(33,1,t('Colonia:',3),[ ctlname('Textblock5') ]).
+lit_i(35,1,t('Proveedorescolonia',23),[ ctlname('&Proveedorescolonia'),ctrltype(edit,35),pos(35),ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
+lit_i(38,1,t('Código Postal:',3),[ ctlname('Textblock6') ]).
+lit_i(40,1,t('Proveedorescodigopostal',23),[ ctlname('&Proveedorescodigopostal'),ctrltype(edit,40),pos(40),ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
+lit_i(43,1,t('Municipio:',3),[ ctlname('Textblock7') ]).
+lit_i(45,1,t('Proveedoresmunicipio',23),[ ctlname('&Proveedoresmunicipio'),ctrltype(edit,45),pos(45),ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
+lit_i(10,1,table(10),[ ctlname('Table2') ]).
+lit_i(51,1,t('Estado:',3),[ ctlname('Textblock8') ]).
+lit_i(58,1,t('Fax:',3),[ ctlname('Textblock9') ]).
+lit_i(60,1,t('Proveedoresfax',23),[ ctlname('&Proveedoresfax'),ctrltype(edit,60),pos(60),ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
+lit_i(66,1,t('Teléfono1:',3),[ ctlname('Textblock10') ]).
+lit_i(68,1,t('Proveedorestelefono1',23),[ ctlname('&Proveedorestelefono1'),ctrltype(edit,68),pos(68),ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
+lit_i(72,1,button('''Consultar '''),[ ctlname('Button1'),width(0),rect(0,0,10,10),title('Nothing') ]).
+lit_i(75,1,t('Teléfono:',3),[ ctlname('Textblock11') ]).
+lit_i(77,1,t('Proveedorestelefono2',23),[ ctlname('&Proveedorestelefono2'),ctrltype(edit,77),pos(77),ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
+lit_i(80,1,button('''Guardar '''),[ ctlname('Button2'),width(0),rect(0,0,10,10),title('Nothing') ]).
+lit_i(82,1,button('Enter'),[ ctlname('Button3'),width(0),rect(0,0,10,10),title('Nothing') ]).
+lit_i(48,1,table(48),[ ctlname('Table3') ]).
 lit_i(4,1,table(4),[ ctlname('Table1') ]).
 lit_i(1,1,window,[ rect(0,0,1000,1000),ctlname('Form') ]).
  

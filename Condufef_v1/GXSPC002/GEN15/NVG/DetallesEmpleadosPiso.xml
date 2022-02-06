@@ -9,7 +9,7 @@
 <ObjDesc>Detalles Empleados Piso</ObjDesc>
 <ObjPgmName>DetallesEmpleadosPiso</ObjPgmName>
 <ObjClsName>Web Panel</ObjClsName></Object>
-<Result>genreq</Result>
+<Result>nogenreq</Result>
 <Warnings></Warnings>
 <Errors></Errors>
 <Generator>

@@ -19,8 +19,9 @@ las_i(2,[ [ 'Nextvalue','Categoriasdsc' ] ]).
 lac_i(2,[ [ 'Nextvalue','Categoriasdsc' ] ]).
  
  
+lits_i('CAT罫OGO DE CATEGOR虯S',5,10).
  
-cls_i([ 0,0 ],[ 0,99 ]).
+cls_i([ 0,0 ],[ 5,99 ]).
  
 pos_i('Nextvalue',[ 0,0,0 ]).
 pos_i('Categoriasdsc',[ 0,0,0 ]).
@@ -45,12 +46,12 @@ rule_i(0,datastore(1,'CS_RPCPGML','')).
 rule_i(0,datastore(1,'JDBC_DATASOURCE','')).
 rule_i(0,datastore(1,'USE_JDBC_DATASOURCE','0')).
 rule_i(0,datastore(1,'DS_DBMS_ADDINFO','')).
-rule_i(0,datastore(1,'USER_PASSWORD',󻢸蘇�2�5炭)).
+rule_i(0,datastore(1,'USER_PASSWORD',asdf)).
 rule_i(0,datastore(1,'USER_ID',postgres)).
 rule_i(0,datastore(1,'CS_CONNECT','First')).
 rule_i(0,datastore(1,'DBMS_PORT','5432')).
 rule_i(0,datastore(1,'CS_SERVER',localhost)).
-rule_i(0,datastore(1,'CS_DBNAME',postgres)).
+rule_i(0,datastore(1,'CS_DBNAME',condusef)).
 rule_i(0,datastore(1,'CS_FLEDSNAME','')).
 rule_i(0,datastore(1,'CS_DRVNAME','')).
 rule_i(0,datastore(1,'CS_DSNAME','')).
@@ -242,39 +243,40 @@ b_line_i(1002,2,5,cmd,0,[ t('',147,0,0) ]).
  
  
  
-html_i(2,html('&nbsp;')).
+html_i(2,html('&nbsp; ')).
 html_i(3,html('<p>')).
 html_i(4,table(4)).
-html_i(26,html('</p>')).
+html_i(27,html('</p>')).
  
 html_sub_i(4,0,html_i(0,html('<tbody>'))).
 html_sub_i(4,5,html_i(1,row(5))).
 html_sub_i(5,6,html_i(0,cell(6))).
-html_sub_i(4,7,html_i(2,row(7))).
-html_sub_i(7,8,html_i(0,cell(8))).
-html_sub_i(8,9,html_i(0,table(9))).
-html_sub_i(9,0,html_i(0,html('<tbody>'))).
-html_sub_i(9,10,html_i(1,row(10))).
-html_sub_i(10,11,html_i(0,cell(11))).
-html_sub_i(11,0,html_i(0,html('Categorias'))).
-html_sub_i(10,12,html_i(1,cell(12))).
-html_sub_i(12,13,html_i(0,t('Nextvalue',23))).
-html_sub_i(9,14,html_i(2,row(14))).
-html_sub_i(14,15,html_i(0,cell(15))).
-html_sub_i(15,0,html_i(0,html('Descripci髇'))).
-html_sub_i(14,16,html_i(1,cell(16))).
-html_sub_i(16,17,html_i(0,t('Categoriasdsc',23))).
-html_sub_i(9,0,html_i(3,html('</tbody>'))).
-html_sub_i(8,18,html_i(1,table(18))).
-html_sub_i(18,0,html_i(0,html('<tbody>'))).
-html_sub_i(18,19,html_i(1,row(19))).
-html_sub_i(19,20,html_i(0,cell(20))).
-html_sub_i(20,21,html_i(0,button('''Consultar '''))).
-html_sub_i(19,22,html_i(1,cell(22))).
-html_sub_i(22,23,html_i(0,button('''Guardar '''))).
-html_sub_i(19,24,html_i(2,cell(24))).
-html_sub_i(24,25,html_i(0,button('''Cancelar'''))).
-html_sub_i(18,0,html_i(2,html('</tbody>'))).
+html_sub_i(6,7,html_i(0,t('CAT罫OGO DE CATEGOR虯S',3))).
+html_sub_i(4,8,html_i(2,row(8))).
+html_sub_i(8,9,html_i(0,cell(9))).
+html_sub_i(9,10,html_i(0,table(10))).
+html_sub_i(10,0,html_i(0,html('<tbody>'))).
+html_sub_i(10,11,html_i(1,row(11))).
+html_sub_i(11,12,html_i(0,cell(12))).
+html_sub_i(12,0,html_i(0,html('Categorias'))).
+html_sub_i(11,13,html_i(1,cell(13))).
+html_sub_i(13,14,html_i(0,t('Nextvalue',23))).
+html_sub_i(10,15,html_i(2,row(15))).
+html_sub_i(15,16,html_i(0,cell(16))).
+html_sub_i(16,0,html_i(0,html('Descripci髇'))).
+html_sub_i(15,17,html_i(1,cell(17))).
+html_sub_i(17,18,html_i(0,t('Categoriasdsc',23))).
+html_sub_i(10,0,html_i(3,html('</tbody>'))).
+html_sub_i(9,19,html_i(1,table(19))).
+html_sub_i(19,0,html_i(0,html('<tbody>'))).
+html_sub_i(19,20,html_i(1,row(20))).
+html_sub_i(20,21,html_i(0,cell(21))).
+html_sub_i(21,22,html_i(0,button('''Consultar '''))).
+html_sub_i(20,23,html_i(1,cell(23))).
+html_sub_i(23,24,html_i(0,button('''Guardar '''))).
+html_sub_i(20,25,html_i(2,cell(25))).
+html_sub_i(25,26,html_i(0,button('''Cancelar'''))).
+html_sub_i(19,0,html_i(2,html('</tbody>'))).
 html_sub_i(4,0,html_i(3,html('</tbody>'))).
  
 html_tags_i(1,'Class','Form').
@@ -292,122 +294,134 @@ html_comp_i(4,'Cellspacing','2',d,[ str ]).
 html_comp_i(4,'Height',measure(46,px),v,[ measure ]).
 html_comp_i(4,'Width',measure(100,'%'),v,[ measure ]).
 html_comp_i(4,'Rules',none,d,[ str ]).
-html_comp_i(9,'Id','Table2',v,[ str ]).
-html_comp_i(9,'Class','Table',v,[ str ]).
-html_comp_i(9,'Title','',d,[ str ]).
-html_comp_i(9,'Align',left,d,[ str ]).
-html_comp_i(9,'Backgroundgx','',d,[ str ]).
-html_comp_i(9,'Bgcolor',rgb(0,0,0),d,[ color ]).
-html_comp_i(9,'Border','0',d,[ str ]).
-html_comp_i(9,'Bordercolor',rgb(0,0,0),d,[ color ]).
-html_comp_i(9,'Cellpadding','1',d,[ str ]).
-html_comp_i(9,'Cellspacing','2',d,[ str ]).
-html_comp_i(9,'Height',measure(46,px),v,[ measure ]).
-html_comp_i(9,'Width',measure(503,px),v,[ measure ]).
-html_comp_i(9,'Rules',none,d,[ str ]).
-html_comp_i(13,'Colcount',4,d,[ num ]).
-html_comp_i(13,'Attid',-6,v,[ num ]).
-html_comp_i(13,'Class','Attribute',d,[ str ]).
-html_comp_i(13,'Controlname','&Nextvalue',d,[ str ]).
-html_comp_i(13,'Returnonclick',0,d,[ bool ]).
-html_comp_i(13,'Eventgx','',d,[ str ]).
-html_comp_i(13,'Captionclass','',d,[ str ]).
-html_comp_i(13,'Captionposition','',d,[ str ]).
-html_comp_i(13,'Captionvalue','',d,[ str ]).
-html_comp_i(13,'Controltype',2,d,[ num ]).
-html_comp_i(13,'Inputtype',0,d,[ num ]).
-html_comp_i(13,'Notifycontextchange',0,d,[ bool ]).
-html_comp_i(13,'Emptyasnull','Yes',d,[ str ]).
-html_comp_i(13,'Readonly',-1,v,[ bool ]).
-html_comp_i(13,'Autocomplete',-1,d,[ bool ]).
-html_comp_i(13,'Ispassword',0,d,[ bool ]).
-html_comp_i(13,'Autoresize',-1,d,[ bool ]).
-html_comp_i(13,'Gxwidth',measure(4,chr),d,[ measure ]).
-html_comp_i(13,'Gxheight',measure(1,row),d,[ measure ]).
-html_comp_i(13,'Ismultiline',0,d,[ bool ]).
-html_comp_i(13,'Fill',0,d,[ bool ]).
-html_comp_i(13,'Forecolor',rgb(0,0,0),d,[ color ]).
-html_comp_i(13,'Font',font('Verdana',12,[]),d,[ font ]).
-html_comp_i(13,'Horizontalalignment',right,d,[ str ]).
-html_comp_i(13,'Gxformat',0,d,[ num ]).
-html_comp_i(13,'Title','',d,[ str ]).
-html_comp_i(13,'Invitemsg','',d,[ str ]).
-html_comp_i(17,'Colcount',80,d,[ num ]).
-html_comp_i(17,'Attid',-7,v,[ num ]).
-html_comp_i(17,'Class','Attribute',d,[ str ]).
-html_comp_i(17,'Controlname','&Categoriasdsc',d,[ str ]).
-html_comp_i(17,'Returnonclick',0,d,[ bool ]).
-html_comp_i(17,'Captionclass','',d,[ str ]).
-html_comp_i(17,'Captionposition','',d,[ str ]).
-html_comp_i(17,'Captionvalue','',d,[ str ]).
-html_comp_i(17,'Controltype',2,d,[ num ]).
-html_comp_i(17,'Inputtype',0,d,[ num ]).
-html_comp_i(17,'Editautocomplete',0,d,[ num ]).
-html_comp_i(17,'Autocorrection',-1,d,[ bool ]).
-html_comp_i(17,'Autocapitalization','FirstWord',d,[ str ]).
-html_comp_i(17,'Notifycontextchange',0,d,[ bool ]).
-html_comp_i(17,'Emptyasnull','Yes',d,[ str ]).
-html_comp_i(17,'Readonly',0,d,[ bool ]).
-html_comp_i(17,'Autocomplete',-1,d,[ bool ]).
-html_comp_i(17,'Ispassword',0,d,[ bool ]).
-html_comp_i(17,'Autoresize',-1,d,[ bool ]).
-html_comp_i(17,'Gxwidth',measure(80,chr),d,[ measure ]).
-html_comp_i(17,'Gxheight',measure(1,row),d,[ measure ]).
-html_comp_i(17,'Ismultiline',0,d,[ bool ]).
-html_comp_i(17,'Fill',-1,d,[ bool ]).
-html_comp_i(17,'Backcolor',rgb(255,255,255),d,[ color ]).
-html_comp_i(17,'Forecolor',rgb(0,0,0),d,[ color ]).
-html_comp_i(17,'Font',font('Verdana',12,[]),d,[ font ]).
-html_comp_i(17,'Horizontalalignment',left,d,[ str ]).
-html_comp_i(17,'Gxformat',0,d,[ num ]).
-html_comp_i(17,'Title','',d,[ str ]).
-html_comp_i(17,'Invitemsg','',d,[ str ]).
-html_comp_i(18,'Id','Table3',v,[ str ]).
-html_comp_i(18,'Class','Table',v,[ str ]).
+html_comp_i(6,'Align',center,v,[ str ]).
+html_comp_i(7,'Caption','CAT罫OGO DE CATEGOR虯S',d,[ str ]).
+html_comp_i(7,'Id','Textblock8',v,[ str ]).
+html_comp_i(7,'Class','TextBlock',d,[ str ]).
+html_comp_i(7,'Event','',d,[ str ]).
+html_comp_i(7,'Returnonclick',0,d,[ bool ]).
+html_comp_i(7,'Gxformat',0,d,[ num ]).
+html_comp_i(7,'Title','',d,[ str ]).
+html_comp_i(7,'Fill',-1,d,[ bool ]).
+html_comp_i(7,'Backcolor',rgb(255,255,255),d,[ color ]).
+html_comp_i(7,'Forecolor',rgb(0,0,0),v,[ color ]).
+html_comp_i(7,'Font',font('Microsoft Sans Serif',15,[ bold ]),v,[ font ]).
+html_comp_i(10,'Id','Table2',v,[ str ]).
+html_comp_i(10,'Class','Table',v,[ str ]).
+html_comp_i(10,'Title','',d,[ str ]).
+html_comp_i(10,'Align',left,d,[ str ]).
+html_comp_i(10,'Backgroundgx','',d,[ str ]).
+html_comp_i(10,'Bgcolor',rgb(0,0,0),d,[ color ]).
+html_comp_i(10,'Border','0',d,[ str ]).
+html_comp_i(10,'Bordercolor',rgb(0,0,0),d,[ color ]).
+html_comp_i(10,'Cellpadding','1',d,[ str ]).
+html_comp_i(10,'Cellspacing','2',d,[ str ]).
+html_comp_i(10,'Height',measure(46,px),v,[ measure ]).
+html_comp_i(10,'Width',measure(503,px),v,[ measure ]).
+html_comp_i(10,'Rules',none,d,[ str ]).
+html_comp_i(14,'Colcount',4,d,[ num ]).
+html_comp_i(14,'Attid',-6,v,[ num ]).
+html_comp_i(14,'Class','Attribute',d,[ str ]).
+html_comp_i(14,'Controlname','&Nextvalue',d,[ str ]).
+html_comp_i(14,'Returnonclick',0,d,[ bool ]).
+html_comp_i(14,'Eventgx','',d,[ str ]).
+html_comp_i(14,'Captionclass','',d,[ str ]).
+html_comp_i(14,'Captionposition','',d,[ str ]).
+html_comp_i(14,'Captionvalue','',d,[ str ]).
+html_comp_i(14,'Controltype',2,d,[ num ]).
+html_comp_i(14,'Inputtype',0,d,[ num ]).
+html_comp_i(14,'Notifycontextchange',0,d,[ bool ]).
+html_comp_i(14,'Emptyasnull','Yes',d,[ str ]).
+html_comp_i(14,'Readonly',-1,v,[ bool ]).
+html_comp_i(14,'Autocomplete',-1,d,[ bool ]).
+html_comp_i(14,'Ispassword',0,d,[ bool ]).
+html_comp_i(14,'Autoresize',-1,d,[ bool ]).
+html_comp_i(14,'Gxwidth',measure(4,chr),d,[ measure ]).
+html_comp_i(14,'Gxheight',measure(1,row),d,[ measure ]).
+html_comp_i(14,'Ismultiline',0,d,[ bool ]).
+html_comp_i(14,'Fill',0,d,[ bool ]).
+html_comp_i(14,'Forecolor',rgb(0,0,0),d,[ color ]).
+html_comp_i(14,'Font',font('Verdana',12,[]),d,[ font ]).
+html_comp_i(14,'Horizontalalignment',right,d,[ str ]).
+html_comp_i(14,'Gxformat',0,d,[ num ]).
+html_comp_i(14,'Title','',d,[ str ]).
+html_comp_i(14,'Invitemsg','',d,[ str ]).
+html_comp_i(18,'Colcount',80,d,[ num ]).
+html_comp_i(18,'Attid',-7,v,[ num ]).
+html_comp_i(18,'Class','Attribute',d,[ str ]).
+html_comp_i(18,'Controlname','&Categoriasdsc',d,[ str ]).
+html_comp_i(18,'Returnonclick',0,d,[ bool ]).
+html_comp_i(18,'Captionclass','',d,[ str ]).
+html_comp_i(18,'Captionposition','',d,[ str ]).
+html_comp_i(18,'Captionvalue','',d,[ str ]).
+html_comp_i(18,'Controltype',2,d,[ num ]).
+html_comp_i(18,'Inputtype',0,d,[ num ]).
+html_comp_i(18,'Editautocomplete',0,d,[ num ]).
+html_comp_i(18,'Autocorrection',-1,d,[ bool ]).
+html_comp_i(18,'Autocapitalization','FirstWord',d,[ str ]).
+html_comp_i(18,'Notifycontextchange',0,d,[ bool ]).
+html_comp_i(18,'Emptyasnull','Yes',d,[ str ]).
+html_comp_i(18,'Readonly',0,d,[ bool ]).
+html_comp_i(18,'Autocomplete',-1,d,[ bool ]).
+html_comp_i(18,'Ispassword',0,d,[ bool ]).
+html_comp_i(18,'Autoresize',-1,d,[ bool ]).
+html_comp_i(18,'Gxwidth',measure(80,chr),d,[ measure ]).
+html_comp_i(18,'Gxheight',measure(1,row),d,[ measure ]).
+html_comp_i(18,'Ismultiline',0,d,[ bool ]).
+html_comp_i(18,'Fill',-1,d,[ bool ]).
+html_comp_i(18,'Backcolor',rgb(255,255,255),d,[ color ]).
+html_comp_i(18,'Forecolor',rgb(0,0,0),d,[ color ]).
+html_comp_i(18,'Font',font('Verdana',12,[]),d,[ font ]).
+html_comp_i(18,'Horizontalalignment',left,d,[ str ]).
+html_comp_i(18,'Gxformat',0,d,[ num ]).
 html_comp_i(18,'Title','',d,[ str ]).
-html_comp_i(18,'Align',left,d,[ str ]).
-html_comp_i(18,'Backgroundgx','',d,[ str ]).
-html_comp_i(18,'Bgcolor',rgb(0,0,0),d,[ color ]).
-html_comp_i(18,'Border','0',d,[ str ]).
-html_comp_i(18,'Bordercolor',rgb(0,0,0),d,[ color ]).
-html_comp_i(18,'Cellpadding','1',d,[ str ]).
-html_comp_i(18,'Cellspacing','2',d,[ str ]).
-html_comp_i(18,'Height',measure(24,px),v,[ measure ]).
-html_comp_i(18,'Width',measure(502,px),v,[ measure ]).
-html_comp_i(18,'Rules',none,d,[ str ]).
-html_comp_i(21,'Controlname','Button1',v,[ str ]).
-html_comp_i(21,'Class','Button',d,[ str ]).
-html_comp_i(21,'Event','''Consultar ''',v,[ str ]).
-html_comp_i(21,'Caption','Consultar',d,[ str ]).
-html_comp_i(21,'Title','Consultar',d,[ str ]).
-html_comp_i(21,'Font',font('Microsoft Sans Serif',10,[]),d,[ font ]).
-html_comp_i(21,'Forecolor',rgb(255,255,255),v,[ color ]).
-html_comp_i(21,'Backcolor',rgb(0,128,128),v,[ color ]).
-html_comp_i(21,'Border','2',d,[ str ]).
-html_comp_i(21,'Bordercolor',rgb(219,220,222),d,[ color ]).
-html_comp_i(21,'Buttonborderstyle',standard,d,[ str ]).
-html_comp_i(23,'Controlname','Button2',v,[ str ]).
-html_comp_i(23,'Class','Button',d,[ str ]).
-html_comp_i(23,'Event','''Guardar ''',v,[ str ]).
-html_comp_i(23,'Caption','Guardar',d,[ str ]).
-html_comp_i(23,'Title','Guardar',d,[ str ]).
-html_comp_i(23,'Font',font('Microsoft Sans Serif',10,[]),d,[ font ]).
-html_comp_i(23,'Forecolor',rgb(255,255,255),v,[ color ]).
-html_comp_i(23,'Backcolor',rgb(0,128,128),v,[ color ]).
-html_comp_i(23,'Border','2',d,[ str ]).
-html_comp_i(23,'Bordercolor',rgb(219,220,222),d,[ color ]).
-html_comp_i(23,'Buttonborderstyle',standard,d,[ str ]).
-html_comp_i(25,'Controlname','Button3',v,[ str ]).
-html_comp_i(25,'Class','Button',d,[ str ]).
-html_comp_i(25,'Event','''Cancelar''',v,[ str ]).
-html_comp_i(25,'Caption','Cancelar',d,[ str ]).
-html_comp_i(25,'Title','Cancelar',d,[ str ]).
-html_comp_i(25,'Font',font('Microsoft Sans Serif',10,[]),d,[ font ]).
-html_comp_i(25,'Forecolor',rgb(255,255,255),v,[ color ]).
-html_comp_i(25,'Backcolor',rgb(220,20,60),v,[ color ]).
-html_comp_i(25,'Border','2',d,[ str ]).
-html_comp_i(25,'Bordercolor',rgb(219,220,222),d,[ color ]).
-html_comp_i(25,'Buttonborderstyle',standard,d,[ str ]).
+html_comp_i(18,'Invitemsg','',d,[ str ]).
+html_comp_i(19,'Id','Table3',v,[ str ]).
+html_comp_i(19,'Class','Table',v,[ str ]).
+html_comp_i(19,'Title','',d,[ str ]).
+html_comp_i(19,'Align',left,d,[ str ]).
+html_comp_i(19,'Backgroundgx','',d,[ str ]).
+html_comp_i(19,'Bgcolor',rgb(0,0,0),d,[ color ]).
+html_comp_i(19,'Border','0',d,[ str ]).
+html_comp_i(19,'Bordercolor',rgb(0,0,0),d,[ color ]).
+html_comp_i(19,'Cellpadding','1',d,[ str ]).
+html_comp_i(19,'Cellspacing','2',d,[ str ]).
+html_comp_i(19,'Height',measure(24,px),v,[ measure ]).
+html_comp_i(19,'Width',measure(502,px),v,[ measure ]).
+html_comp_i(19,'Rules',none,d,[ str ]).
+html_comp_i(22,'Controlname','Button1',v,[ str ]).
+html_comp_i(22,'Class','Button',d,[ str ]).
+html_comp_i(22,'Event','''Consultar ''',v,[ str ]).
+html_comp_i(22,'Caption','Consultar',d,[ str ]).
+html_comp_i(22,'Title','Consultar',d,[ str ]).
+html_comp_i(22,'Font',font('Microsoft Sans Serif',10,[]),d,[ font ]).
+html_comp_i(22,'Forecolor',rgb(255,255,255),v,[ color ]).
+html_comp_i(22,'Backcolor',rgb(0,128,128),v,[ color ]).
+html_comp_i(22,'Border','2',d,[ str ]).
+html_comp_i(22,'Bordercolor',rgb(219,220,222),d,[ color ]).
+html_comp_i(22,'Buttonborderstyle',standard,d,[ str ]).
+html_comp_i(24,'Controlname','Button2',v,[ str ]).
+html_comp_i(24,'Class','Button',d,[ str ]).
+html_comp_i(24,'Event','''Guardar ''',v,[ str ]).
+html_comp_i(24,'Caption','Guardar',d,[ str ]).
+html_comp_i(24,'Title','Guardar',d,[ str ]).
+html_comp_i(24,'Font',font('Microsoft Sans Serif',10,[]),d,[ font ]).
+html_comp_i(24,'Forecolor',rgb(255,255,255),v,[ color ]).
+html_comp_i(24,'Backcolor',rgb(0,128,128),v,[ color ]).
+html_comp_i(24,'Border','2',d,[ str ]).
+html_comp_i(24,'Bordercolor',rgb(219,220,222),d,[ color ]).
+html_comp_i(24,'Buttonborderstyle',standard,d,[ str ]).
+html_comp_i(26,'Controlname','Button3',v,[ str ]).
+html_comp_i(26,'Class','Button',d,[ str ]).
+html_comp_i(26,'Event','''Cancelar''',v,[ str ]).
+html_comp_i(26,'Caption','Cancelar',d,[ str ]).
+html_comp_i(26,'Title','Cancelar',d,[ str ]).
+html_comp_i(26,'Font',font('Microsoft Sans Serif',10,[]),d,[ font ]).
+html_comp_i(26,'Forecolor',rgb(255,255,255),v,[ color ]).
+html_comp_i(26,'Backcolor',rgb(220,20,60),v,[ color ]).
+html_comp_i(26,'Border','2',d,[ str ]).
+html_comp_i(26,'Bordercolor',rgb(219,220,222),d,[ color ]).
+html_comp_i(26,'Buttonborderstyle',standard,d,[ str ]).
  
  
  
@@ -415,13 +429,14 @@ html_comp_i(25,'Buttonborderstyle',standard,d,[ str ]).
  
  
  
-lit_i(13,1,t('Nextvalue',23),[ ctlname('&Nextvalue'),ctrltype(edit,13),pos(13),readonly,ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
-lit_i(17,1,t('Categoriasdsc',23),[ ctlname('&Categoriasdsc'),ctrltype(edit,17),pos(17),ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
-lit_i(9,1,table(9),[ ctlname('Table2') ]).
-lit_i(21,1,button('''Consultar '''),[ ctlname('Button1'),width(0),rect(0,0,10,10),title('Nothing') ]).
-lit_i(23,1,button('''Guardar '''),[ ctlname('Button2'),width(0),rect(0,0,10,10),title('Nothing') ]).
-lit_i(25,1,button('''Cancelar'''),[ ctlname('Button3'),width(0),rect(0,0,10,10),title('Nothing') ]).
-lit_i(18,1,table(18),[ ctlname('Table3') ]).
+lit_i(7,1,t('CAT罫OGO DE CATEGOR虯S',3),[ ctlname('Textblock8') ]).
+lit_i(14,1,t('Nextvalue',23),[ ctlname('&Nextvalue'),ctrltype(edit,14),pos(14),readonly,ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
+lit_i(18,1,t('Categoriasdsc',23),[ ctlname('&Categoriasdsc'),ctrltype(edit,18),pos(18),ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
+lit_i(10,1,table(10),[ ctlname('Table2') ]).
+lit_i(22,1,button('''Consultar '''),[ ctlname('Button1'),width(0),rect(0,0,10,10),title('Nothing') ]).
+lit_i(24,1,button('''Guardar '''),[ ctlname('Button2'),width(0),rect(0,0,10,10),title('Nothing') ]).
+lit_i(26,1,button('''Cancelar'''),[ ctlname('Button3'),width(0),rect(0,0,10,10),title('Nothing') ]).
+lit_i(19,1,table(19),[ ctlname('Table3') ]).
 lit_i(4,1,table(4),[ ctlname('Table1') ]).
 lit_i(1,1,window,[ rect(0,0,1000,1000),ctlname('Form') ]).
  
@@ -439,7 +454,6 @@ att_prop_i(2,14,'EmptyAsNull','Yes',d).
 att_prop_i(2,14,idBasedOn,'',d).
 att_prop_i(2,14,'AUTONUMBER','0',d).
 att_prop_i(2,14,'ATT_INITIAL_VALUE','',d).
-att_prop_i(2,14,'AttRegEx','',d).
 att_prop_i(2,14,'AttValidationFailedMsg','',d).
 att_prop_i(2,14,'FullName',categoriasid,v).
 att_prop_i(2,40000,'ExternalName',categoriasid,d).
@@ -448,7 +462,6 @@ att_prop_i(2,40000,'EmptyAsNull','Yes',d).
 att_prop_i(2,40000,idBasedOn,'',d).
 att_prop_i(2,40000,'AUTONUMBER','0',d).
 att_prop_i(2,40000,'ATT_INITIAL_VALUE','',d).
-att_prop_i(2,40000,'AttRegEx','',d).
 att_prop_i(2,40000,'AttValidationFailedMsg','',d).
 att_prop_i(2,40000,'FullName',categoriasid,v).
  

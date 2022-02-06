@@ -2,7 +2,7 @@
                File: empleados_BC
         Description: empleados
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 2/3/2022 14:55:29.8
+       Generated on: 2/5/2022 15:59:29.73
        Program type: Callable routine
           Main DBMS: postgresql
 */
@@ -124,7 +124,7 @@ namespace GeneXus.Programs {
       {
          if ( ( GX_JID == 1 ) || ( GX_JID == 0 ) )
          {
-            Z176areaid = A176areaid;
+            Z98empleadosareaid = A98empleadosareaid;
             Z99empleadosnomemple = A99empleadosnomemple;
             Z100empleadosappaterno = A100empleadosappaterno;
             Z101empleadosapmaterno = A101empleadosapmaterno;
@@ -138,7 +138,7 @@ namespace GeneXus.Programs {
          if ( GX_JID == -1 )
          {
             Z13empleadosid = A13empleadosid;
-            Z176areaid = A176areaid;
+            Z98empleadosareaid = A98empleadosareaid;
             Z99empleadosnomemple = A99empleadosnomemple;
             Z100empleadosappaterno = A100empleadosappaterno;
             Z101empleadosapmaterno = A101empleadosapmaterno;
@@ -166,8 +166,8 @@ namespace GeneXus.Programs {
          if ( (pr_default.getStatus(2) != 101) )
          {
             RcdFound6 = 1;
-            A176areaid = BC00064_A176areaid[0];
-            n176areaid = BC00064_n176areaid[0];
+            A98empleadosareaid = BC00064_A98empleadosareaid[0];
+            n98empleadosareaid = BC00064_n98empleadosareaid[0];
             A99empleadosnomemple = BC00064_A99empleadosnomemple[0];
             n99empleadosnomemple = BC00064_n99empleadosnomemple[0];
             A100empleadosappaterno = BC00064_A100empleadosappaterno[0];
@@ -233,8 +233,8 @@ namespace GeneXus.Programs {
             RcdFound6 = 1;
             A13empleadosid = BC00063_A13empleadosid[0];
             n13empleadosid = BC00063_n13empleadosid[0];
-            A176areaid = BC00063_A176areaid[0];
-            n176areaid = BC00063_n176areaid[0];
+            A98empleadosareaid = BC00063_A98empleadosareaid[0];
+            n98empleadosareaid = BC00063_n98empleadosareaid[0];
             A99empleadosnomemple = BC00063_A99empleadosnomemple[0];
             n99empleadosnomemple = BC00063_n99empleadosnomemple[0];
             A100empleadosappaterno = BC00063_A100empleadosappaterno[0];
@@ -319,7 +319,7 @@ namespace GeneXus.Programs {
                return  ;
             }
             Gx_longc = false;
-            if ( (pr_default.getStatus(0) == 101) || ( Z176areaid != BC00062_A176areaid[0] ) || ( StringUtil.StrCmp(Z99empleadosnomemple, BC00062_A99empleadosnomemple[0]) != 0 ) || ( StringUtil.StrCmp(Z100empleadosappaterno, BC00062_A100empleadosappaterno[0]) != 0 ) || ( StringUtil.StrCmp(Z101empleadosapmaterno, BC00062_A101empleadosapmaterno[0]) != 0 ) || ( StringUtil.StrCmp(Z102empleadosstatus, BC00062_A102empleadosstatus[0]) != 0 ) )
+            if ( (pr_default.getStatus(0) == 101) || ( StringUtil.StrCmp(Z98empleadosareaid, BC00062_A98empleadosareaid[0]) != 0 ) || ( StringUtil.StrCmp(Z99empleadosnomemple, BC00062_A99empleadosnomemple[0]) != 0 ) || ( StringUtil.StrCmp(Z100empleadosappaterno, BC00062_A100empleadosappaterno[0]) != 0 ) || ( StringUtil.StrCmp(Z101empleadosapmaterno, BC00062_A101empleadosapmaterno[0]) != 0 ) || ( StringUtil.StrCmp(Z102empleadosstatus, BC00062_A102empleadosstatus[0]) != 0 ) )
             {
                Gx_longc = true;
             }
@@ -352,7 +352,7 @@ namespace GeneXus.Programs {
                   if ( AnyError == 0 )
                   {
                      /* Using cursor BC00066 */
-                     pr_default.execute(4, new Object[] {n13empleadosid, A13empleadosid, n176areaid, A176areaid, n99empleadosnomemple, A99empleadosnomemple, n100empleadosappaterno, A100empleadosappaterno, n101empleadosapmaterno, A101empleadosapmaterno, n102empleadosstatus, A102empleadosstatus, n103empleadosusuario, A103empleadosusuario, n106empleadoscorreo, A106empleadoscorreo, n107empleadosext, A107empleadosext, n104empleadosfecreg, A104empleadosfecreg, A105empleadosfecultact});
+                     pr_default.execute(4, new Object[] {n13empleadosid, A13empleadosid, n98empleadosareaid, A98empleadosareaid, n99empleadosnomemple, A99empleadosnomemple, n100empleadosappaterno, A100empleadosappaterno, n101empleadosapmaterno, A101empleadosapmaterno, n102empleadosstatus, A102empleadosstatus, n103empleadosusuario, A103empleadosusuario, n106empleadoscorreo, A106empleadoscorreo, n107empleadosext, A107empleadosext, n104empleadosfecreg, A104empleadosfecreg, A105empleadosfecultact});
                      pr_default.close(4);
                      dsDefault.SmartCacheProvider.SetUpdated("EMPLEADOS") ;
                      if ( (pr_default.getStatus(4) == 1) )
@@ -406,7 +406,7 @@ namespace GeneXus.Programs {
                   if ( AnyError == 0 )
                   {
                      /* Using cursor BC00067 */
-                     pr_default.execute(5, new Object[] {n176areaid, A176areaid, n99empleadosnomemple, A99empleadosnomemple, n100empleadosappaterno, A100empleadosappaterno, n101empleadosapmaterno, A101empleadosapmaterno, n102empleadosstatus, A102empleadosstatus, n103empleadosusuario, A103empleadosusuario, n106empleadoscorreo, A106empleadoscorreo, n107empleadosext, A107empleadosext, n104empleadosfecreg, A104empleadosfecreg, A105empleadosfecultact, n13empleadosid, A13empleadosid});
+                     pr_default.execute(5, new Object[] {n98empleadosareaid, A98empleadosareaid, n99empleadosnomemple, A99empleadosnomemple, n100empleadosappaterno, A100empleadosappaterno, n101empleadosapmaterno, A101empleadosapmaterno, n102empleadosstatus, A102empleadosstatus, n103empleadosusuario, A103empleadosusuario, n106empleadoscorreo, A106empleadoscorreo, n107empleadosext, A107empleadosext, n104empleadosfecreg, A104empleadosfecreg, A105empleadosfecultact, n13empleadosid, A13empleadosid});
                      pr_default.close(5);
                      dsDefault.SmartCacheProvider.SetUpdated("EMPLEADOS") ;
                      if ( (pr_default.getStatus(5) == 103) )
@@ -541,8 +541,8 @@ namespace GeneXus.Programs {
             RcdFound6 = 1;
             A13empleadosid = BC000610_A13empleadosid[0];
             n13empleadosid = BC000610_n13empleadosid[0];
-            A176areaid = BC000610_A176areaid[0];
-            n176areaid = BC000610_n176areaid[0];
+            A98empleadosareaid = BC000610_A98empleadosareaid[0];
+            n98empleadosareaid = BC000610_n98empleadosareaid[0];
             A99empleadosnomemple = BC000610_A99empleadosnomemple[0];
             n99empleadosnomemple = BC000610_n99empleadosnomemple[0];
             A100empleadosappaterno = BC000610_A100empleadosappaterno[0];
@@ -581,8 +581,8 @@ namespace GeneXus.Programs {
             RcdFound6 = 1;
             A13empleadosid = BC000610_A13empleadosid[0];
             n13empleadosid = BC000610_n13empleadosid[0];
-            A176areaid = BC000610_A176areaid[0];
-            n176areaid = BC000610_n176areaid[0];
+            A98empleadosareaid = BC000610_A98empleadosareaid[0];
+            n98empleadosareaid = BC000610_n98empleadosareaid[0];
             A99empleadosnomemple = BC000610_A99empleadosnomemple[0];
             n99empleadosnomemple = BC000610_n99empleadosnomemple[0];
             A100empleadosappaterno = BC000610_A100empleadosappaterno[0];
@@ -655,8 +655,8 @@ namespace GeneXus.Programs {
 
       protected void InitializeNonKey066( )
       {
-         A176areaid = 0;
-         n176areaid = false;
+         A98empleadosareaid = "";
+         n98empleadosareaid = false;
          A99empleadosnomemple = "";
          n99empleadosnomemple = false;
          A100empleadosappaterno = "";
@@ -674,7 +674,7 @@ namespace GeneXus.Programs {
          A104empleadosfecreg = DateTime.MinValue;
          n104empleadosfecreg = false;
          A105empleadosfecultact = DateTime.MinValue;
-         Z176areaid = 0;
+         Z98empleadosareaid = "";
          Z99empleadosnomemple = "";
          Z100empleadosappaterno = "";
          Z101empleadosapmaterno = "";
@@ -700,7 +700,7 @@ namespace GeneXus.Programs {
       public void VarsToRow6( Sdtempleados obj6 )
       {
          obj6.gxTpr_Mode = Gx_mode;
-         obj6.gxTpr_Areaid = A176areaid;
+         obj6.gxTpr_Empleadosareaid = A98empleadosareaid;
          obj6.gxTpr_Empleadosnomemple = A99empleadosnomemple;
          obj6.gxTpr_Empleadosappaterno = A100empleadosappaterno;
          obj6.gxTpr_Empleadosapmaterno = A101empleadosapmaterno;
@@ -712,7 +712,7 @@ namespace GeneXus.Programs {
          obj6.gxTpr_Empleadosfecultact = A105empleadosfecultact;
          obj6.gxTpr_Empleadosid = A13empleadosid;
          obj6.gxTpr_Empleadosid_Z = Z13empleadosid;
-         obj6.gxTpr_Areaid_Z = Z176areaid;
+         obj6.gxTpr_Empleadosareaid_Z = Z98empleadosareaid;
          obj6.gxTpr_Empleadosnomemple_Z = Z99empleadosnomemple;
          obj6.gxTpr_Empleadosappaterno_Z = Z100empleadosappaterno;
          obj6.gxTpr_Empleadosapmaterno_Z = Z101empleadosapmaterno;
@@ -723,7 +723,7 @@ namespace GeneXus.Programs {
          obj6.gxTpr_Empleadosfecreg_Z = Z104empleadosfecreg;
          obj6.gxTpr_Empleadosfecultact_Z = Z105empleadosfecultact;
          obj6.gxTpr_Empleadosid_N = (short)(Convert.ToInt16(n13empleadosid));
-         obj6.gxTpr_Areaid_N = (short)(Convert.ToInt16(n176areaid));
+         obj6.gxTpr_Empleadosareaid_N = (short)(Convert.ToInt16(n98empleadosareaid));
          obj6.gxTpr_Empleadosnomemple_N = (short)(Convert.ToInt16(n99empleadosnomemple));
          obj6.gxTpr_Empleadosappaterno_N = (short)(Convert.ToInt16(n100empleadosappaterno));
          obj6.gxTpr_Empleadosapmaterno_N = (short)(Convert.ToInt16(n101empleadosapmaterno));
@@ -746,8 +746,8 @@ namespace GeneXus.Programs {
                               int forceLoad )
       {
          Gx_mode = obj6.gxTpr_Mode;
-         A176areaid = obj6.gxTpr_Areaid;
-         n176areaid = false;
+         A98empleadosareaid = obj6.gxTpr_Empleadosareaid;
+         n98empleadosareaid = false;
          A99empleadosnomemple = obj6.gxTpr_Empleadosnomemple;
          n99empleadosnomemple = false;
          A100empleadosappaterno = obj6.gxTpr_Empleadosappaterno;
@@ -768,7 +768,7 @@ namespace GeneXus.Programs {
          A13empleadosid = obj6.gxTpr_Empleadosid;
          n13empleadosid = false;
          Z13empleadosid = obj6.gxTpr_Empleadosid_Z;
-         Z176areaid = obj6.gxTpr_Areaid_Z;
+         Z98empleadosareaid = obj6.gxTpr_Empleadosareaid_Z;
          Z99empleadosnomemple = obj6.gxTpr_Empleadosnomemple_Z;
          Z100empleadosappaterno = obj6.gxTpr_Empleadosappaterno_Z;
          Z101empleadosapmaterno = obj6.gxTpr_Empleadosapmaterno_Z;
@@ -779,7 +779,7 @@ namespace GeneXus.Programs {
          Z104empleadosfecreg = obj6.gxTpr_Empleadosfecreg_Z;
          Z105empleadosfecultact = obj6.gxTpr_Empleadosfecultact_Z;
          n13empleadosid = (bool)(Convert.ToBoolean(obj6.gxTpr_Empleadosid_N));
-         n176areaid = (bool)(Convert.ToBoolean(obj6.gxTpr_Areaid_N));
+         n98empleadosareaid = (bool)(Convert.ToBoolean(obj6.gxTpr_Empleadosareaid_N));
          n99empleadosnomemple = (bool)(Convert.ToBoolean(obj6.gxTpr_Empleadosnomemple_N));
          n100empleadosappaterno = (bool)(Convert.ToBoolean(obj6.gxTpr_Empleadosappaterno_N));
          n101empleadosapmaterno = (bool)(Convert.ToBoolean(obj6.gxTpr_Empleadosapmaterno_N));
@@ -1102,6 +1102,8 @@ namespace GeneXus.Programs {
          PreviousTooltip = "";
          PreviousCaption = "";
          Gx_mode = "";
+         Z98empleadosareaid = "";
+         A98empleadosareaid = "";
          Z99empleadosnomemple = "";
          A99empleadosnomemple = "";
          Z100empleadosappaterno = "";
@@ -1122,8 +1124,8 @@ namespace GeneXus.Programs {
          A105empleadosfecultact = DateTime.MinValue;
          BC00064_A13empleadosid = new int[1] ;
          BC00064_n13empleadosid = new bool[] {false} ;
-         BC00064_A176areaid = new int[1] ;
-         BC00064_n176areaid = new bool[] {false} ;
+         BC00064_A98empleadosareaid = new String[] {""} ;
+         BC00064_n98empleadosareaid = new bool[] {false} ;
          BC00064_A99empleadosnomemple = new String[] {""} ;
          BC00064_n99empleadosnomemple = new bool[] {false} ;
          BC00064_A100empleadosappaterno = new String[] {""} ;
@@ -1145,8 +1147,8 @@ namespace GeneXus.Programs {
          BC00065_n13empleadosid = new bool[] {false} ;
          BC00063_A13empleadosid = new int[1] ;
          BC00063_n13empleadosid = new bool[] {false} ;
-         BC00063_A176areaid = new int[1] ;
-         BC00063_n176areaid = new bool[] {false} ;
+         BC00063_A98empleadosareaid = new String[] {""} ;
+         BC00063_n98empleadosareaid = new bool[] {false} ;
          BC00063_A99empleadosnomemple = new String[] {""} ;
          BC00063_n99empleadosnomemple = new bool[] {false} ;
          BC00063_A100empleadosappaterno = new String[] {""} ;
@@ -1167,8 +1169,8 @@ namespace GeneXus.Programs {
          sMode6 = "";
          BC00062_A13empleadosid = new int[1] ;
          BC00062_n13empleadosid = new bool[] {false} ;
-         BC00062_A176areaid = new int[1] ;
-         BC00062_n176areaid = new bool[] {false} ;
+         BC00062_A98empleadosareaid = new String[] {""} ;
+         BC00062_n98empleadosareaid = new bool[] {false} ;
          BC00062_A99empleadosnomemple = new String[] {""} ;
          BC00062_n99empleadosnomemple = new bool[] {false} ;
          BC00062_A100empleadosappaterno = new String[] {""} ;
@@ -1189,8 +1191,8 @@ namespace GeneXus.Programs {
          BC00069_A19almacenid = new int[1] ;
          BC000610_A13empleadosid = new int[1] ;
          BC000610_n13empleadosid = new bool[] {false} ;
-         BC000610_A176areaid = new int[1] ;
-         BC000610_n176areaid = new bool[] {false} ;
+         BC000610_A98empleadosareaid = new String[] {""} ;
+         BC000610_n98empleadosareaid = new bool[] {false} ;
          BC000610_A99empleadosnomemple = new String[] {""} ;
          BC000610_n99empleadosnomemple = new bool[] {false} ;
          BC000610_A100empleadosappaterno = new String[] {""} ;
@@ -1213,15 +1215,15 @@ namespace GeneXus.Programs {
          pr_default = new DataStoreProvider(context, new GeneXus.Programs.empleados_bc__default(),
             new Object[][] {
                 new Object[] {
-               BC00062_A13empleadosid, BC00062_A176areaid, BC00062_n176areaid, BC00062_A99empleadosnomemple, BC00062_n99empleadosnomemple, BC00062_A100empleadosappaterno, BC00062_n100empleadosappaterno, BC00062_A101empleadosapmaterno, BC00062_n101empleadosapmaterno, BC00062_A102empleadosstatus,
+               BC00062_A13empleadosid, BC00062_A98empleadosareaid, BC00062_n98empleadosareaid, BC00062_A99empleadosnomemple, BC00062_n99empleadosnomemple, BC00062_A100empleadosappaterno, BC00062_n100empleadosappaterno, BC00062_A101empleadosapmaterno, BC00062_n101empleadosapmaterno, BC00062_A102empleadosstatus,
                BC00062_n102empleadosstatus, BC00062_A103empleadosusuario, BC00062_n103empleadosusuario, BC00062_A106empleadoscorreo, BC00062_n106empleadoscorreo, BC00062_A107empleadosext, BC00062_n107empleadosext, BC00062_A104empleadosfecreg, BC00062_n104empleadosfecreg, BC00062_A105empleadosfecultact
                }
                , new Object[] {
-               BC00063_A13empleadosid, BC00063_A176areaid, BC00063_n176areaid, BC00063_A99empleadosnomemple, BC00063_n99empleadosnomemple, BC00063_A100empleadosappaterno, BC00063_n100empleadosappaterno, BC00063_A101empleadosapmaterno, BC00063_n101empleadosapmaterno, BC00063_A102empleadosstatus,
+               BC00063_A13empleadosid, BC00063_A98empleadosareaid, BC00063_n98empleadosareaid, BC00063_A99empleadosnomemple, BC00063_n99empleadosnomemple, BC00063_A100empleadosappaterno, BC00063_n100empleadosappaterno, BC00063_A101empleadosapmaterno, BC00063_n101empleadosapmaterno, BC00063_A102empleadosstatus,
                BC00063_n102empleadosstatus, BC00063_A103empleadosusuario, BC00063_n103empleadosusuario, BC00063_A106empleadoscorreo, BC00063_n106empleadoscorreo, BC00063_A107empleadosext, BC00063_n107empleadosext, BC00063_A104empleadosfecreg, BC00063_n104empleadosfecreg, BC00063_A105empleadosfecultact
                }
                , new Object[] {
-               BC00064_A13empleadosid, BC00064_A176areaid, BC00064_n176areaid, BC00064_A99empleadosnomemple, BC00064_n99empleadosnomemple, BC00064_A100empleadosappaterno, BC00064_n100empleadosappaterno, BC00064_A101empleadosapmaterno, BC00064_n101empleadosapmaterno, BC00064_A102empleadosstatus,
+               BC00064_A13empleadosid, BC00064_A98empleadosareaid, BC00064_n98empleadosareaid, BC00064_A99empleadosnomemple, BC00064_n99empleadosnomemple, BC00064_A100empleadosappaterno, BC00064_n100empleadosappaterno, BC00064_A101empleadosapmaterno, BC00064_n101empleadosapmaterno, BC00064_A102empleadosstatus,
                BC00064_n102empleadosstatus, BC00064_A103empleadosusuario, BC00064_n103empleadosusuario, BC00064_A106empleadoscorreo, BC00064_n106empleadoscorreo, BC00064_A107empleadosext, BC00064_n107empleadosext, BC00064_A104empleadosfecreg, BC00064_n104empleadosfecreg, BC00064_A105empleadosfecultact
                }
                , new Object[] {
@@ -1237,7 +1239,7 @@ namespace GeneXus.Programs {
                BC00069_A19almacenid
                }
                , new Object[] {
-               BC000610_A13empleadosid, BC000610_A176areaid, BC000610_n176areaid, BC000610_A99empleadosnomemple, BC000610_n99empleadosnomemple, BC000610_A100empleadosappaterno, BC000610_n100empleadosappaterno, BC000610_A101empleadosapmaterno, BC000610_n101empleadosapmaterno, BC000610_A102empleadosstatus,
+               BC000610_A13empleadosid, BC000610_A98empleadosareaid, BC000610_n98empleadosareaid, BC000610_A99empleadosnomemple, BC000610_n99empleadosnomemple, BC000610_A100empleadosappaterno, BC000610_n100empleadosappaterno, BC000610_A101empleadosapmaterno, BC000610_n101empleadosapmaterno, BC000610_A102empleadosstatus,
                BC000610_n102empleadosstatus, BC000610_A103empleadosusuario, BC000610_n103empleadosusuario, BC000610_A106empleadoscorreo, BC000610_n106empleadoscorreo, BC000610_A107empleadosext, BC000610_n107empleadosext, BC000610_A104empleadosfecreg, BC000610_n104empleadosfecreg, BC000610_A105empleadosfecultact
                }
             }
@@ -1256,8 +1258,6 @@ namespace GeneXus.Programs {
       private int trnEnded ;
       private int Z13empleadosid ;
       private int A13empleadosid ;
-      private int Z176areaid ;
-      private int A176areaid ;
       private String scmdbuf ;
       private String PreviousTooltip ;
       private String PreviousCaption ;
@@ -1268,7 +1268,7 @@ namespace GeneXus.Programs {
       private DateTime Z105empleadosfecultact ;
       private DateTime A105empleadosfecultact ;
       private bool n13empleadosid ;
-      private bool n176areaid ;
+      private bool n98empleadosareaid ;
       private bool n99empleadosnomemple ;
       private bool n100empleadosappaterno ;
       private bool n101empleadosapmaterno ;
@@ -1278,6 +1278,8 @@ namespace GeneXus.Programs {
       private bool n107empleadosext ;
       private bool n104empleadosfecreg ;
       private bool Gx_longc ;
+      private String Z98empleadosareaid ;
+      private String A98empleadosareaid ;
       private String Z99empleadosnomemple ;
       private String A99empleadosnomemple ;
       private String Z100empleadosappaterno ;
@@ -1297,8 +1299,8 @@ namespace GeneXus.Programs {
       private IDataStoreProvider pr_default ;
       private int[] BC00064_A13empleadosid ;
       private bool[] BC00064_n13empleadosid ;
-      private int[] BC00064_A176areaid ;
-      private bool[] BC00064_n176areaid ;
+      private String[] BC00064_A98empleadosareaid ;
+      private bool[] BC00064_n98empleadosareaid ;
       private String[] BC00064_A99empleadosnomemple ;
       private bool[] BC00064_n99empleadosnomemple ;
       private String[] BC00064_A100empleadosappaterno ;
@@ -1320,8 +1322,8 @@ namespace GeneXus.Programs {
       private bool[] BC00065_n13empleadosid ;
       private int[] BC00063_A13empleadosid ;
       private bool[] BC00063_n13empleadosid ;
-      private int[] BC00063_A176areaid ;
-      private bool[] BC00063_n176areaid ;
+      private String[] BC00063_A98empleadosareaid ;
+      private bool[] BC00063_n98empleadosareaid ;
       private String[] BC00063_A99empleadosnomemple ;
       private bool[] BC00063_n99empleadosnomemple ;
       private String[] BC00063_A100empleadosappaterno ;
@@ -1341,8 +1343,8 @@ namespace GeneXus.Programs {
       private DateTime[] BC00063_A105empleadosfecultact ;
       private int[] BC00062_A13empleadosid ;
       private bool[] BC00062_n13empleadosid ;
-      private int[] BC00062_A176areaid ;
-      private bool[] BC00062_n176areaid ;
+      private String[] BC00062_A98empleadosareaid ;
+      private bool[] BC00062_n98empleadosareaid ;
       private String[] BC00062_A99empleadosnomemple ;
       private bool[] BC00062_n99empleadosnomemple ;
       private String[] BC00062_A100empleadosappaterno ;
@@ -1363,8 +1365,8 @@ namespace GeneXus.Programs {
       private int[] BC00069_A19almacenid ;
       private int[] BC000610_A13empleadosid ;
       private bool[] BC000610_n13empleadosid ;
-      private int[] BC000610_A176areaid ;
-      private bool[] BC000610_n176areaid ;
+      private String[] BC000610_A98empleadosareaid ;
+      private bool[] BC000610_n98empleadosareaid ;
       private String[] BC000610_A99empleadosnomemple ;
       private bool[] BC000610_n99empleadosnomemple ;
       private String[] BC000610_A100empleadosappaterno ;
@@ -1428,7 +1430,7 @@ namespace GeneXus.Programs {
           Object[] prmBC00066 ;
           prmBC00066 = new Object[] {
           new Object[] {"empleadosid",NpgsqlDbType.Integer,9,0} ,
-          new Object[] {"areaid",NpgsqlDbType.Integer,9,0} ,
+          new Object[] {"empleadosareaid",NpgsqlDbType.Varchar,3,0} ,
           new Object[] {"empleadosnomemple",NpgsqlDbType.Varchar,30,0} ,
           new Object[] {"empleadosappaterno",NpgsqlDbType.Varchar,30,0} ,
           new Object[] {"empleadosapmaterno",NpgsqlDbType.Varchar,30,0} ,
@@ -1441,7 +1443,7 @@ namespace GeneXus.Programs {
           } ;
           Object[] prmBC00067 ;
           prmBC00067 = new Object[] {
-          new Object[] {"areaid",NpgsqlDbType.Integer,9,0} ,
+          new Object[] {"empleadosareaid",NpgsqlDbType.Varchar,3,0} ,
           new Object[] {"empleadosnomemple",NpgsqlDbType.Varchar,30,0} ,
           new Object[] {"empleadosappaterno",NpgsqlDbType.Varchar,30,0} ,
           new Object[] {"empleadosapmaterno",NpgsqlDbType.Varchar,30,0} ,
@@ -1466,15 +1468,15 @@ namespace GeneXus.Programs {
           new Object[] {"empleadosid",NpgsqlDbType.Integer,9,0}
           } ;
           def= new CursorDef[] {
-              new CursorDef("BC00062", "SELECT empleadosid, areaid, empleadosnomemple, empleadosappaterno, empleadosapmaterno, empleadosstatus, empleadosusuario, empleadoscorreo, empleadosext, empleadosfecreg, empleadosfecultact FROM public.empleados WHERE empleadosid = :empleadosid  FOR UPDATE OF empleados",true, GxErrorMask.GX_NOMASK, false, this,prmBC00062,1,0,true,false )
-             ,new CursorDef("BC00063", "SELECT empleadosid, areaid, empleadosnomemple, empleadosappaterno, empleadosapmaterno, empleadosstatus, empleadosusuario, empleadoscorreo, empleadosext, empleadosfecreg, empleadosfecultact FROM public.empleados WHERE empleadosid = :empleadosid ",true, GxErrorMask.GX_NOMASK, false, this,prmBC00063,1,0,true,false )
-             ,new CursorDef("BC00064", "SELECT TM1.empleadosid, TM1.areaid, TM1.empleadosnomemple, TM1.empleadosappaterno, TM1.empleadosapmaterno, TM1.empleadosstatus, TM1.empleadosusuario, TM1.empleadoscorreo, TM1.empleadosext, TM1.empleadosfecreg, TM1.empleadosfecultact FROM public.empleados TM1 WHERE TM1.empleadosid = :empleadosid ORDER BY TM1.empleadosid ",true, GxErrorMask.GX_NOMASK, false, this,prmBC00064,100,0,true,false )
+              new CursorDef("BC00062", "SELECT empleadosid, empleadosareaid, empleadosnomemple, empleadosappaterno, empleadosapmaterno, empleadosstatus, empleadosusuario, empleadoscorreo, empleadosext, empleadosfecreg, empleadosfecultact FROM public.empleados WHERE empleadosid = :empleadosid  FOR UPDATE OF empleados",true, GxErrorMask.GX_NOMASK, false, this,prmBC00062,1,0,true,false )
+             ,new CursorDef("BC00063", "SELECT empleadosid, empleadosareaid, empleadosnomemple, empleadosappaterno, empleadosapmaterno, empleadosstatus, empleadosusuario, empleadoscorreo, empleadosext, empleadosfecreg, empleadosfecultact FROM public.empleados WHERE empleadosid = :empleadosid ",true, GxErrorMask.GX_NOMASK, false, this,prmBC00063,1,0,true,false )
+             ,new CursorDef("BC00064", "SELECT TM1.empleadosid, TM1.empleadosareaid, TM1.empleadosnomemple, TM1.empleadosappaterno, TM1.empleadosapmaterno, TM1.empleadosstatus, TM1.empleadosusuario, TM1.empleadoscorreo, TM1.empleadosext, TM1.empleadosfecreg, TM1.empleadosfecultact FROM public.empleados TM1 WHERE TM1.empleadosid = :empleadosid ORDER BY TM1.empleadosid ",true, GxErrorMask.GX_NOMASK, false, this,prmBC00064,100,0,true,false )
              ,new CursorDef("BC00065", "SELECT empleadosid FROM public.empleados WHERE empleadosid = :empleadosid ",true, GxErrorMask.GX_NOMASK, false, this,prmBC00065,1,0,true,false )
-             ,new CursorDef("BC00066", "SAVEPOINT gxupdate;INSERT INTO public.empleados(empleadosid, areaid, empleadosnomemple, empleadosappaterno, empleadosapmaterno, empleadosstatus, empleadosusuario, empleadoscorreo, empleadosext, empleadosfecreg, empleadosfecultact) VALUES(:empleadosid, :areaid, :empleadosnomemple, :empleadosappaterno, :empleadosapmaterno, :empleadosstatus, :empleadosusuario, :empleadoscorreo, :empleadosext, :empleadosfecreg, :empleadosfecultact);RELEASE SAVEPOINT gxupdate", GxErrorMask.GX_ROLLBACKSAVEPOINT,prmBC00066)
-             ,new CursorDef("BC00067", "SAVEPOINT gxupdate;UPDATE public.empleados SET areaid=:areaid, empleadosnomemple=:empleadosnomemple, empleadosappaterno=:empleadosappaterno, empleadosapmaterno=:empleadosapmaterno, empleadosstatus=:empleadosstatus, empleadosusuario=:empleadosusuario, empleadoscorreo=:empleadoscorreo, empleadosext=:empleadosext, empleadosfecreg=:empleadosfecreg, empleadosfecultact=:empleadosfecultact  WHERE empleadosid = :empleadosid;RELEASE SAVEPOINT gxupdate", GxErrorMask.GX_ROLLBACKSAVEPOINT | GxErrorMask.GX_NOMASK,prmBC00067)
+             ,new CursorDef("BC00066", "SAVEPOINT gxupdate;INSERT INTO public.empleados(empleadosid, empleadosareaid, empleadosnomemple, empleadosappaterno, empleadosapmaterno, empleadosstatus, empleadosusuario, empleadoscorreo, empleadosext, empleadosfecreg, empleadosfecultact) VALUES(:empleadosid, :empleadosareaid, :empleadosnomemple, :empleadosappaterno, :empleadosapmaterno, :empleadosstatus, :empleadosusuario, :empleadoscorreo, :empleadosext, :empleadosfecreg, :empleadosfecultact);RELEASE SAVEPOINT gxupdate", GxErrorMask.GX_ROLLBACKSAVEPOINT,prmBC00066)
+             ,new CursorDef("BC00067", "SAVEPOINT gxupdate;UPDATE public.empleados SET empleadosareaid=:empleadosareaid, empleadosnomemple=:empleadosnomemple, empleadosappaterno=:empleadosappaterno, empleadosapmaterno=:empleadosapmaterno, empleadosstatus=:empleadosstatus, empleadosusuario=:empleadosusuario, empleadoscorreo=:empleadoscorreo, empleadosext=:empleadosext, empleadosfecreg=:empleadosfecreg, empleadosfecultact=:empleadosfecultact  WHERE empleadosid = :empleadosid;RELEASE SAVEPOINT gxupdate", GxErrorMask.GX_ROLLBACKSAVEPOINT | GxErrorMask.GX_NOMASK,prmBC00067)
              ,new CursorDef("BC00068", "SAVEPOINT gxupdate;DELETE FROM public.empleados  WHERE empleadosid = :empleadosid;RELEASE SAVEPOINT gxupdate", GxErrorMask.GX_ROLLBACKSAVEPOINT | GxErrorMask.GX_NOMASK,prmBC00068)
              ,new CursorDef("BC00069", "SELECT almacenid FROM public.almacen WHERE empleadosid = :empleadosid ",true, GxErrorMask.GX_NOMASK, false, this,prmBC00069,1,0,true,true )
-             ,new CursorDef("BC000610", "SELECT TM1.empleadosid, TM1.areaid, TM1.empleadosnomemple, TM1.empleadosappaterno, TM1.empleadosapmaterno, TM1.empleadosstatus, TM1.empleadosusuario, TM1.empleadoscorreo, TM1.empleadosext, TM1.empleadosfecreg, TM1.empleadosfecultact FROM public.empleados TM1 WHERE TM1.empleadosid = :empleadosid ORDER BY TM1.empleadosid ",true, GxErrorMask.GX_NOMASK, false, this,prmBC000610,100,0,true,false )
+             ,new CursorDef("BC000610", "SELECT TM1.empleadosid, TM1.empleadosareaid, TM1.empleadosnomemple, TM1.empleadosappaterno, TM1.empleadosapmaterno, TM1.empleadosstatus, TM1.empleadosusuario, TM1.empleadoscorreo, TM1.empleadosext, TM1.empleadosfecreg, TM1.empleadosfecultact FROM public.empleados TM1 WHERE TM1.empleadosid = :empleadosid ORDER BY TM1.empleadosid ",true, GxErrorMask.GX_NOMASK, false, this,prmBC000610,100,0,true,false )
           };
        }
     }
@@ -1487,7 +1489,7 @@ namespace GeneXus.Programs {
        {
              case 0 :
                 ((int[]) buf[0])[0] = rslt.getInt(1) ;
-                ((int[]) buf[1])[0] = rslt.getInt(2) ;
+                ((String[]) buf[1])[0] = rslt.getVarchar(2) ;
                 ((bool[]) buf[2])[0] = rslt.wasNull(2);
                 ((String[]) buf[3])[0] = rslt.getVarchar(3) ;
                 ((bool[]) buf[4])[0] = rslt.wasNull(3);
@@ -1509,7 +1511,7 @@ namespace GeneXus.Programs {
                 return;
              case 1 :
                 ((int[]) buf[0])[0] = rslt.getInt(1) ;
-                ((int[]) buf[1])[0] = rslt.getInt(2) ;
+                ((String[]) buf[1])[0] = rslt.getVarchar(2) ;
                 ((bool[]) buf[2])[0] = rslt.wasNull(2);
                 ((String[]) buf[3])[0] = rslt.getVarchar(3) ;
                 ((bool[]) buf[4])[0] = rslt.wasNull(3);
@@ -1531,7 +1533,7 @@ namespace GeneXus.Programs {
                 return;
              case 2 :
                 ((int[]) buf[0])[0] = rslt.getInt(1) ;
-                ((int[]) buf[1])[0] = rslt.getInt(2) ;
+                ((String[]) buf[1])[0] = rslt.getVarchar(2) ;
                 ((bool[]) buf[2])[0] = rslt.wasNull(2);
                 ((String[]) buf[3])[0] = rslt.getVarchar(3) ;
                 ((bool[]) buf[4])[0] = rslt.wasNull(3);
@@ -1559,7 +1561,7 @@ namespace GeneXus.Programs {
                 return;
              case 8 :
                 ((int[]) buf[0])[0] = rslt.getInt(1) ;
-                ((int[]) buf[1])[0] = rslt.getInt(2) ;
+                ((String[]) buf[1])[0] = rslt.getVarchar(2) ;
                 ((bool[]) buf[2])[0] = rslt.wasNull(2);
                 ((String[]) buf[3])[0] = rslt.getVarchar(3) ;
                 ((bool[]) buf[4])[0] = rslt.wasNull(3);
@@ -1639,11 +1641,11 @@ namespace GeneXus.Programs {
                 }
                 if ( (bool)parms[2] )
                 {
-                   stmt.setNull( 2 , SqlDbType.Int );
+                   stmt.setNull( 2 , SqlDbType.VarChar );
                 }
                 else
                 {
-                   stmt.SetParameter(2, (int)parms[3]);
+                   stmt.SetParameter(2, (String)parms[3]);
                 }
                 if ( (bool)parms[4] )
                 {
@@ -1714,11 +1716,11 @@ namespace GeneXus.Programs {
              case 5 :
                 if ( (bool)parms[0] )
                 {
-                   stmt.setNull( 1 , SqlDbType.Int );
+                   stmt.setNull( 1 , SqlDbType.VarChar );
                 }
                 else
                 {
-                   stmt.SetParameter(1, (int)parms[1]);
+                   stmt.SetParameter(1, (String)parms[1]);
                 }
                 if ( (bool)parms[2] )
                 {

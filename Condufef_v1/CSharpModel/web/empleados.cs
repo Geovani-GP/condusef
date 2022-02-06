@@ -2,7 +2,7 @@
                File: empleados
         Description: empleados
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 2/3/2022 14:55:28.34
+       Generated on: 2/5/2022 15:59:27.74
        Program type: Callable routine
           Main DBMS: postgresql
 */
@@ -137,7 +137,7 @@ namespace GeneXus.Programs {
          if ( StringUtil.StrCmp(context.GetRequestMethod( ), "POST") == 0 )
          {
          }
-         GX_FocusControl = edtareaid_Internalname;
+         GX_FocusControl = edtempleadosareaid_Internalname;
          context.httpAjaxContext.ajax_rsp_assign_attri("", false, "GX_FocusControl", GX_FocusControl);
          wbErr = false;
          context.SetDefaultTheme("Flat");
@@ -315,10 +315,10 @@ namespace GeneXus.Programs {
             /* Div Control */
             GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "col-sm-9 gx-attribute", "left", "top", "", "", "div");
             /* Attribute/Variable Label */
-            GxWebStd.gx_label_element( context, edtareaid_Internalname, "areaid", "col-sm-3 AttributeLabel", 1, true);
+            GxWebStd.gx_label_element( context, edtempleadosareaid_Internalname, "areaid", "col-sm-3 AttributeLabel", 1, true);
             /* Single line edit */
             TempTags = "  onfocus=\"gx.evt.onfocus(this, 26,'',false,'',0)\"";
-            GxWebStd.gx_single_line_edit( context, edtareaid_Internalname, StringUtil.LTrim( StringUtil.NToC( (decimal)(A176areaid), 9, 0, ",", "")), ((edtareaid_Enabled!=0) ? StringUtil.LTrim( context.localUtil.Format( (decimal)(A176areaid), "ZZZZZZZZ9")) : context.localUtil.Format( (decimal)(A176areaid), "ZZZZZZZZ9")), TempTags+" onchange=\"gx.evt.onchange(this)\" "+" onblur=\""+"gx.num.valid_integer( this,'.');"+";gx.evt.onblur(this,26);\"", "'"+""+"'"+",false,"+"'"+""+"'", "", "", "", "", edtareaid_Jsonclick, 0, "Attribute", "", "", "", 1, edtareaid_Enabled, 0, "text", "", 9, "chr", 1, "row", 9, 0, 0, 0, 1, -1, 0, true, "", "right", false, "HLP_empleados.htm");
+            GxWebStd.gx_single_line_edit( context, edtempleadosareaid_Internalname, A98empleadosareaid, StringUtil.RTrim( context.localUtil.Format( A98empleadosareaid, "")), TempTags+" onchange=\"gx.evt.onchange(this)\" "+" onblur=\""+""+";gx.evt.onblur(this,26);\"", "'"+""+"'"+",false,"+"'"+""+"'", "", "", "", "", edtempleadosareaid_Jsonclick, 0, "Attribute", "", "", "", 1, edtempleadosareaid_Enabled, 0, "text", "", 3, "chr", 1, "row", 3, 0, 0, 0, 1, -1, -1, true, "", "left", true, "HLP_empleados.htm");
             GxWebStd.gx_div_end( context, "left", "top");
             GxWebStd.gx_div_end( context, "left", "top");
             GxWebStd.gx_div_end( context, "left", "top");
@@ -518,24 +518,10 @@ namespace GeneXus.Programs {
                A13empleadosid = (int)(context.localUtil.CToN( cgiGet( edtempleadosid_Internalname), ",", "."));
                n13empleadosid = false;
                context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A13empleadosid", StringUtil.LTrim( StringUtil.Str( (decimal)(A13empleadosid), 9, 0)));
-               if ( ( ( context.localUtil.CToN( cgiGet( edtareaid_Internalname), ",", ".") < Convert.ToDecimal( 0 )) ) || ( ( context.localUtil.CToN( cgiGet( edtareaid_Internalname), ",", ".") > Convert.ToDecimal( 999999999 )) ) )
-               {
-                  GX_msglist.addItem(context.GetMessage( "GXM_badnum", ""), 1, "AREAID");
-                  AnyError = 1;
-                  GX_FocusControl = edtareaid_Internalname;
-                  context.httpAjaxContext.ajax_rsp_assign_attri("", false, "GX_FocusControl", GX_FocusControl);
-                  wbErr = true;
-                  A176areaid = 0;
-                  n176areaid = false;
-                  context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A176areaid", StringUtil.LTrim( StringUtil.Str( (decimal)(A176areaid), 9, 0)));
-               }
-               else
-               {
-                  A176areaid = (int)(context.localUtil.CToN( cgiGet( edtareaid_Internalname), ",", "."));
-                  n176areaid = false;
-                  context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A176areaid", StringUtil.LTrim( StringUtil.Str( (decimal)(A176areaid), 9, 0)));
-               }
-               n176areaid = ((0==A176areaid) ? true : false);
+               A98empleadosareaid = cgiGet( edtempleadosareaid_Internalname);
+               n98empleadosareaid = false;
+               context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A98empleadosareaid", A98empleadosareaid);
+               n98empleadosareaid = (String.IsNullOrEmpty(StringUtil.RTrim( A98empleadosareaid)) ? true : false);
                A99empleadosnomemple = cgiGet( edtempleadosnomemple_Internalname);
                n99empleadosnomemple = false;
                context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A99empleadosnomemple", A99empleadosnomemple);
@@ -599,8 +585,8 @@ namespace GeneXus.Programs {
                }
                /* Read saved values. */
                Z13empleadosid = (int)(context.localUtil.CToN( cgiGet( "Z13empleadosid"), ",", "."));
-               Z176areaid = (int)(context.localUtil.CToN( cgiGet( "Z176areaid"), ",", "."));
-               n176areaid = ((0==A176areaid) ? true : false);
+               Z98empleadosareaid = cgiGet( "Z98empleadosareaid");
+               n98empleadosareaid = (String.IsNullOrEmpty(StringUtil.RTrim( A98empleadosareaid)) ? true : false);
                Z99empleadosnomemple = cgiGet( "Z99empleadosnomemple");
                n99empleadosnomemple = (String.IsNullOrEmpty(StringUtil.RTrim( A99empleadosnomemple)) ? true : false);
                Z100empleadosappaterno = cgiGet( "Z100empleadosappaterno");
@@ -850,7 +836,7 @@ namespace GeneXus.Programs {
          {
             if ( StringUtil.StrCmp(Gx_mode, "INS") != 0 )
             {
-               Z176areaid = T00063_A176areaid[0];
+               Z98empleadosareaid = T00063_A98empleadosareaid[0];
                Z99empleadosnomemple = T00063_A99empleadosnomemple[0];
                Z100empleadosappaterno = T00063_A100empleadosappaterno[0];
                Z101empleadosapmaterno = T00063_A101empleadosapmaterno[0];
@@ -863,7 +849,7 @@ namespace GeneXus.Programs {
             }
             else
             {
-               Z176areaid = A176areaid;
+               Z98empleadosareaid = A98empleadosareaid;
                Z99empleadosnomemple = A99empleadosnomemple;
                Z100empleadosappaterno = A100empleadosappaterno;
                Z101empleadosapmaterno = A101empleadosapmaterno;
@@ -878,7 +864,7 @@ namespace GeneXus.Programs {
          if ( GX_JID == -3 )
          {
             Z13empleadosid = A13empleadosid;
-            Z176areaid = A176areaid;
+            Z98empleadosareaid = A98empleadosareaid;
             Z99empleadosnomemple = A99empleadosnomemple;
             Z100empleadosappaterno = A100empleadosappaterno;
             Z101empleadosapmaterno = A101empleadosapmaterno;
@@ -928,9 +914,9 @@ namespace GeneXus.Programs {
          if ( (pr_default.getStatus(2) != 101) )
          {
             RcdFound6 = 1;
-            A176areaid = T00064_A176areaid[0];
-            context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A176areaid", StringUtil.LTrim( StringUtil.Str( (decimal)(A176areaid), 9, 0)));
-            n176areaid = T00064_n176areaid[0];
+            A98empleadosareaid = T00064_A98empleadosareaid[0];
+            context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A98empleadosareaid", A98empleadosareaid);
+            n98empleadosareaid = T00064_n98empleadosareaid[0];
             A99empleadosnomemple = T00064_A99empleadosnomemple[0];
             context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A99empleadosnomemple", A99empleadosnomemple);
             n99empleadosnomemple = T00064_n99empleadosnomemple[0];
@@ -1007,9 +993,9 @@ namespace GeneXus.Programs {
             A13empleadosid = T00063_A13empleadosid[0];
             context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A13empleadosid", StringUtil.LTrim( StringUtil.Str( (decimal)(A13empleadosid), 9, 0)));
             n13empleadosid = T00063_n13empleadosid[0];
-            A176areaid = T00063_A176areaid[0];
-            context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A176areaid", StringUtil.LTrim( StringUtil.Str( (decimal)(A176areaid), 9, 0)));
-            n176areaid = T00063_n176areaid[0];
+            A98empleadosareaid = T00063_A98empleadosareaid[0];
+            context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A98empleadosareaid", A98empleadosareaid);
+            n98empleadosareaid = T00063_n98empleadosareaid[0];
             A99empleadosnomemple = T00063_A99empleadosnomemple[0];
             context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A99empleadosnomemple", A99empleadosnomemple);
             n99empleadosnomemple = T00063_n99empleadosnomemple[0];
@@ -1130,7 +1116,7 @@ namespace GeneXus.Programs {
          if ( StringUtil.StrCmp(Gx_mode, "INS") == 0 )
          {
             /* Insert record */
-            GX_FocusControl = edtareaid_Internalname;
+            GX_FocusControl = edtempleadosareaid_Internalname;
             context.httpAjaxContext.ajax_rsp_assign_attri("", false, "GX_FocusControl", GX_FocusControl);
             Insert066( ) ;
             if ( AnyError == 1 )
@@ -1157,14 +1143,14 @@ namespace GeneXus.Programs {
                {
                   delete( ) ;
                   AfterTrn( ) ;
-                  GX_FocusControl = edtareaid_Internalname;
+                  GX_FocusControl = edtempleadosareaid_Internalname;
                   context.httpAjaxContext.ajax_rsp_assign_attri("", false, "GX_FocusControl", GX_FocusControl);
                }
                else
                {
                   /* Update record */
                   Update066( ) ;
-                  GX_FocusControl = edtareaid_Internalname;
+                  GX_FocusControl = edtempleadosareaid_Internalname;
                   context.httpAjaxContext.ajax_rsp_assign_attri("", false, "GX_FocusControl", GX_FocusControl);
                }
             }
@@ -1173,7 +1159,7 @@ namespace GeneXus.Programs {
                if ( A13empleadosid != Z13empleadosid )
                {
                   /* Insert record */
-                  GX_FocusControl = edtareaid_Internalname;
+                  GX_FocusControl = edtempleadosareaid_Internalname;
                   context.httpAjaxContext.ajax_rsp_assign_attri("", false, "GX_FocusControl", GX_FocusControl);
                   Insert066( ) ;
                   if ( AnyError == 1 )
@@ -1194,7 +1180,7 @@ namespace GeneXus.Programs {
                   else
                   {
                      /* Insert record */
-                     GX_FocusControl = edtareaid_Internalname;
+                     GX_FocusControl = edtempleadosareaid_Internalname;
                      context.httpAjaxContext.ajax_rsp_assign_attri("", false, "GX_FocusControl", GX_FocusControl);
                      Insert066( ) ;
                      if ( AnyError == 1 )
@@ -1232,7 +1218,7 @@ namespace GeneXus.Programs {
          {
             delete( ) ;
             AfterTrn( ) ;
-            GX_FocusControl = edtareaid_Internalname;
+            GX_FocusControl = edtempleadosareaid_Internalname;
             context.httpAjaxContext.ajax_rsp_assign_attri("", false, "GX_FocusControl", GX_FocusControl);
          }
          if ( AnyError != 0 )
@@ -1253,17 +1239,17 @@ namespace GeneXus.Programs {
                return  ;
             }
             Gx_longc = false;
-            if ( (pr_default.getStatus(0) == 101) || ( Z176areaid != T00062_A176areaid[0] ) || ( StringUtil.StrCmp(Z99empleadosnomemple, T00062_A99empleadosnomemple[0]) != 0 ) || ( StringUtil.StrCmp(Z100empleadosappaterno, T00062_A100empleadosappaterno[0]) != 0 ) || ( StringUtil.StrCmp(Z101empleadosapmaterno, T00062_A101empleadosapmaterno[0]) != 0 ) || ( StringUtil.StrCmp(Z102empleadosstatus, T00062_A102empleadosstatus[0]) != 0 ) )
+            if ( (pr_default.getStatus(0) == 101) || ( StringUtil.StrCmp(Z98empleadosareaid, T00062_A98empleadosareaid[0]) != 0 ) || ( StringUtil.StrCmp(Z99empleadosnomemple, T00062_A99empleadosnomemple[0]) != 0 ) || ( StringUtil.StrCmp(Z100empleadosappaterno, T00062_A100empleadosappaterno[0]) != 0 ) || ( StringUtil.StrCmp(Z101empleadosapmaterno, T00062_A101empleadosapmaterno[0]) != 0 ) || ( StringUtil.StrCmp(Z102empleadosstatus, T00062_A102empleadosstatus[0]) != 0 ) )
             {
                Gx_longc = true;
             }
             if ( Gx_longc || ( StringUtil.StrCmp(Z103empleadosusuario, T00062_A103empleadosusuario[0]) != 0 ) || ( StringUtil.StrCmp(Z106empleadoscorreo, T00062_A106empleadoscorreo[0]) != 0 ) || ( StringUtil.StrCmp(Z107empleadosext, T00062_A107empleadosext[0]) != 0 ) || ( Z104empleadosfecreg != T00062_A104empleadosfecreg[0] ) || ( Z105empleadosfecultact != T00062_A105empleadosfecultact[0] ) )
             {
-               if ( Z176areaid != T00062_A176areaid[0] )
+               if ( StringUtil.StrCmp(Z98empleadosareaid, T00062_A98empleadosareaid[0]) != 0 )
                {
-                  GXUtil.WriteLog("empleados:[seudo value changed for attri]"+"areaid");
-                  GXUtil.WriteLogRaw("Old: ",Z176areaid);
-                  GXUtil.WriteLogRaw("Current: ",T00062_A176areaid[0]);
+                  GXUtil.WriteLog("empleados:[seudo value changed for attri]"+"empleadosareaid");
+                  GXUtil.WriteLogRaw("Old: ",Z98empleadosareaid);
+                  GXUtil.WriteLogRaw("Current: ",T00062_A98empleadosareaid[0]);
                }
                if ( StringUtil.StrCmp(Z99empleadosnomemple, T00062_A99empleadosnomemple[0]) != 0 )
                {
@@ -1346,7 +1332,7 @@ namespace GeneXus.Programs {
                   if ( AnyError == 0 )
                   {
                      /* Using cursor T00068 */
-                     pr_default.execute(6, new Object[] {n13empleadosid, A13empleadosid, n176areaid, A176areaid, n99empleadosnomemple, A99empleadosnomemple, n100empleadosappaterno, A100empleadosappaterno, n101empleadosapmaterno, A101empleadosapmaterno, n102empleadosstatus, A102empleadosstatus, n103empleadosusuario, A103empleadosusuario, n106empleadoscorreo, A106empleadoscorreo, n107empleadosext, A107empleadosext, n104empleadosfecreg, A104empleadosfecreg, A105empleadosfecultact});
+                     pr_default.execute(6, new Object[] {n13empleadosid, A13empleadosid, n98empleadosareaid, A98empleadosareaid, n99empleadosnomemple, A99empleadosnomemple, n100empleadosappaterno, A100empleadosappaterno, n101empleadosapmaterno, A101empleadosapmaterno, n102empleadosstatus, A102empleadosstatus, n103empleadosusuario, A103empleadosusuario, n106empleadoscorreo, A106empleadoscorreo, n107empleadosext, A107empleadosext, n104empleadosfecreg, A104empleadosfecreg, A105empleadosfecultact});
                      pr_default.close(6);
                      dsDefault.SmartCacheProvider.SetUpdated("EMPLEADOS") ;
                      if ( (pr_default.getStatus(6) == 1) )
@@ -1401,7 +1387,7 @@ namespace GeneXus.Programs {
                   if ( AnyError == 0 )
                   {
                      /* Using cursor T00069 */
-                     pr_default.execute(7, new Object[] {n176areaid, A176areaid, n99empleadosnomemple, A99empleadosnomemple, n100empleadosappaterno, A100empleadosappaterno, n101empleadosapmaterno, A101empleadosapmaterno, n102empleadosstatus, A102empleadosstatus, n103empleadosusuario, A103empleadosusuario, n106empleadoscorreo, A106empleadoscorreo, n107empleadosext, A107empleadosext, n104empleadosfecreg, A104empleadosfecreg, A105empleadosfecultact, n13empleadosid, A13empleadosid});
+                     pr_default.execute(7, new Object[] {n98empleadosareaid, A98empleadosareaid, n99empleadosnomemple, A99empleadosnomemple, n100empleadosappaterno, A100empleadosappaterno, n101empleadosapmaterno, A101empleadosapmaterno, n102empleadosstatus, A102empleadosstatus, n103empleadosusuario, A103empleadosusuario, n106empleadoscorreo, A106empleadoscorreo, n107empleadosext, A107empleadosext, n104empleadosfecreg, A104empleadosfecreg, A105empleadosfecultact, n13empleadosid, A13empleadosid});
                      pr_default.close(7);
                      dsDefault.SmartCacheProvider.SetUpdated("EMPLEADOS") ;
                      if ( (pr_default.getStatus(7) == 103) )
@@ -1615,8 +1601,8 @@ namespace GeneXus.Programs {
       {
          edtempleadosid_Enabled = 0;
          context.httpAjaxContext.ajax_rsp_assign_prop("", false, edtempleadosid_Internalname, "Enabled", StringUtil.LTrim( StringUtil.Str( (decimal)(edtempleadosid_Enabled), 5, 0)));
-         edtareaid_Enabled = 0;
-         context.httpAjaxContext.ajax_rsp_assign_prop("", false, edtareaid_Internalname, "Enabled", StringUtil.LTrim( StringUtil.Str( (decimal)(edtareaid_Enabled), 5, 0)));
+         edtempleadosareaid_Enabled = 0;
+         context.httpAjaxContext.ajax_rsp_assign_prop("", false, edtempleadosareaid_Internalname, "Enabled", StringUtil.LTrim( StringUtil.Str( (decimal)(edtempleadosareaid_Enabled), 5, 0)));
          edtempleadosnomemple_Enabled = 0;
          context.httpAjaxContext.ajax_rsp_assign_prop("", false, edtempleadosnomemple_Internalname, "Enabled", StringUtil.LTrim( StringUtil.Str( (decimal)(edtempleadosnomemple_Enabled), 5, 0)));
          edtempleadosappaterno_Enabled = 0;
@@ -1672,7 +1658,7 @@ namespace GeneXus.Programs {
          context.AddJavascriptSource("jquery.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxtimezone.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxgral.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("gxcfg.js", "?20222314552886");
+         context.AddJavascriptSource("gxcfg.js", "?2022251559294");
          if ( context.isSpaRequest( ) )
          {
             enableOutput();
@@ -1714,7 +1700,7 @@ namespace GeneXus.Programs {
          /* Send hidden variables. */
          /* Send saved values. */
          GxWebStd.gx_hidden_field( context, "Z13empleadosid", StringUtil.LTrim( StringUtil.NToC( (decimal)(Z13empleadosid), 9, 0, ",", "")));
-         GxWebStd.gx_hidden_field( context, "Z176areaid", StringUtil.LTrim( StringUtil.NToC( (decimal)(Z176areaid), 9, 0, ",", "")));
+         GxWebStd.gx_hidden_field( context, "Z98empleadosareaid", Z98empleadosareaid);
          GxWebStd.gx_hidden_field( context, "Z99empleadosnomemple", Z99empleadosnomemple);
          GxWebStd.gx_hidden_field( context, "Z100empleadosappaterno", Z100empleadosappaterno);
          GxWebStd.gx_hidden_field( context, "Z101empleadosapmaterno", Z101empleadosapmaterno);
@@ -1809,10 +1795,10 @@ namespace GeneXus.Programs {
 
       protected void InitializeNonKey066( )
       {
-         A176areaid = 0;
-         n176areaid = false;
-         context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A176areaid", StringUtil.LTrim( StringUtil.Str( (decimal)(A176areaid), 9, 0)));
-         n176areaid = ((0==A176areaid) ? true : false);
+         A98empleadosareaid = "";
+         n98empleadosareaid = false;
+         context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A98empleadosareaid", A98empleadosareaid);
+         n98empleadosareaid = (String.IsNullOrEmpty(StringUtil.RTrim( A98empleadosareaid)) ? true : false);
          A99empleadosnomemple = "";
          n99empleadosnomemple = false;
          context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A99empleadosnomemple", A99empleadosnomemple);
@@ -1847,7 +1833,7 @@ namespace GeneXus.Programs {
          n104empleadosfecreg = ((DateTime.MinValue==A104empleadosfecreg) ? true : false);
          A105empleadosfecultact = DateTime.MinValue;
          context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A105empleadosfecultact", context.localUtil.Format(A105empleadosfecultact, "99/99/9999"));
-         Z176areaid = 0;
+         Z98empleadosareaid = "";
          Z99empleadosnomemple = "";
          Z100empleadosappaterno = "";
          Z101empleadosapmaterno = "";
@@ -1873,12 +1859,12 @@ namespace GeneXus.Programs {
 
       protected void define_styles( )
       {
-         AddStyleSheetFile("calendar-system.css", "?13551382");
-         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?13551359");
+         AddStyleSheetFile("calendar-system.css", "?11323129");
+         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?15381859");
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?20222314552890");
+            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?20222515592915");
             idxLst = (int)(idxLst+1);
          }
          /* End function define_styles */
@@ -1887,7 +1873,7 @@ namespace GeneXus.Programs {
       protected void include_jscripts( )
       {
          context.AddJavascriptSource("messages.spa.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("empleados.js", "?20222314552890");
+         context.AddJavascriptSource("empleados.js", "?20222515592915");
          /* End function include_jscripts */
       }
 
@@ -1911,7 +1897,7 @@ namespace GeneXus.Programs {
          div_Internalname = "";
          div_Internalname = "";
          div_Internalname = "";
-         edtareaid_Internalname = "AREAID";
+         edtempleadosareaid_Internalname = "EMPLEADOSAREAID";
          div_Internalname = "";
          div_Internalname = "";
          div_Internalname = "";
@@ -1997,8 +1983,8 @@ namespace GeneXus.Programs {
          edtempleadosappaterno_Enabled = 1;
          edtempleadosnomemple_Jsonclick = "";
          edtempleadosnomemple_Enabled = 1;
-         edtareaid_Jsonclick = "";
-         edtareaid_Enabled = 1;
+         edtempleadosareaid_Jsonclick = "";
+         edtempleadosareaid_Enabled = 1;
          edtempleadosid_Jsonclick = "";
          edtempleadosid_Enabled = 0;
          bttBtn_select_Visible = 1;
@@ -2049,6 +2035,7 @@ namespace GeneXus.Programs {
       {
          sPrefix = "";
          wcpOGx_mode = "";
+         Z98empleadosareaid = "";
          Z99empleadosnomemple = "";
          Z100empleadosappaterno = "";
          Z101empleadosapmaterno = "";
@@ -2075,6 +2062,7 @@ namespace GeneXus.Programs {
          bttBtn_next_Jsonclick = "";
          bttBtn_last_Jsonclick = "";
          bttBtn_select_Jsonclick = "";
+         A98empleadosareaid = "";
          A99empleadosnomemple = "";
          A100empleadosappaterno = "";
          A101empleadosapmaterno = "";
@@ -2096,8 +2084,8 @@ namespace GeneXus.Programs {
          sEvtType = "";
          T00064_A13empleadosid = new int[1] ;
          T00064_n13empleadosid = new bool[] {false} ;
-         T00064_A176areaid = new int[1] ;
-         T00064_n176areaid = new bool[] {false} ;
+         T00064_A98empleadosareaid = new String[] {""} ;
+         T00064_n98empleadosareaid = new bool[] {false} ;
          T00064_A99empleadosnomemple = new String[] {""} ;
          T00064_n99empleadosnomemple = new bool[] {false} ;
          T00064_A100empleadosappaterno = new String[] {""} ;
@@ -2119,8 +2107,8 @@ namespace GeneXus.Programs {
          T00065_n13empleadosid = new bool[] {false} ;
          T00063_A13empleadosid = new int[1] ;
          T00063_n13empleadosid = new bool[] {false} ;
-         T00063_A176areaid = new int[1] ;
-         T00063_n176areaid = new bool[] {false} ;
+         T00063_A98empleadosareaid = new String[] {""} ;
+         T00063_n98empleadosareaid = new bool[] {false} ;
          T00063_A99empleadosnomemple = new String[] {""} ;
          T00063_n99empleadosnomemple = new bool[] {false} ;
          T00063_A100empleadosappaterno = new String[] {""} ;
@@ -2144,8 +2132,8 @@ namespace GeneXus.Programs {
          T00067_n13empleadosid = new bool[] {false} ;
          T00062_A13empleadosid = new int[1] ;
          T00062_n13empleadosid = new bool[] {false} ;
-         T00062_A176areaid = new int[1] ;
-         T00062_n176areaid = new bool[] {false} ;
+         T00062_A98empleadosareaid = new String[] {""} ;
+         T00062_n98empleadosareaid = new bool[] {false} ;
          T00062_A99empleadosnomemple = new String[] {""} ;
          T00062_n99empleadosnomemple = new bool[] {false} ;
          T00062_A100empleadosappaterno = new String[] {""} ;
@@ -2172,15 +2160,15 @@ namespace GeneXus.Programs {
          pr_default = new DataStoreProvider(context, new GeneXus.Programs.empleados__default(),
             new Object[][] {
                 new Object[] {
-               T00062_A13empleadosid, T00062_A176areaid, T00062_n176areaid, T00062_A99empleadosnomemple, T00062_n99empleadosnomemple, T00062_A100empleadosappaterno, T00062_n100empleadosappaterno, T00062_A101empleadosapmaterno, T00062_n101empleadosapmaterno, T00062_A102empleadosstatus,
+               T00062_A13empleadosid, T00062_A98empleadosareaid, T00062_n98empleadosareaid, T00062_A99empleadosnomemple, T00062_n99empleadosnomemple, T00062_A100empleadosappaterno, T00062_n100empleadosappaterno, T00062_A101empleadosapmaterno, T00062_n101empleadosapmaterno, T00062_A102empleadosstatus,
                T00062_n102empleadosstatus, T00062_A103empleadosusuario, T00062_n103empleadosusuario, T00062_A106empleadoscorreo, T00062_n106empleadoscorreo, T00062_A107empleadosext, T00062_n107empleadosext, T00062_A104empleadosfecreg, T00062_n104empleadosfecreg, T00062_A105empleadosfecultact
                }
                , new Object[] {
-               T00063_A13empleadosid, T00063_A176areaid, T00063_n176areaid, T00063_A99empleadosnomemple, T00063_n99empleadosnomemple, T00063_A100empleadosappaterno, T00063_n100empleadosappaterno, T00063_A101empleadosapmaterno, T00063_n101empleadosapmaterno, T00063_A102empleadosstatus,
+               T00063_A13empleadosid, T00063_A98empleadosareaid, T00063_n98empleadosareaid, T00063_A99empleadosnomemple, T00063_n99empleadosnomemple, T00063_A100empleadosappaterno, T00063_n100empleadosappaterno, T00063_A101empleadosapmaterno, T00063_n101empleadosapmaterno, T00063_A102empleadosstatus,
                T00063_n102empleadosstatus, T00063_A103empleadosusuario, T00063_n103empleadosusuario, T00063_A106empleadoscorreo, T00063_n106empleadoscorreo, T00063_A107empleadosext, T00063_n107empleadosext, T00063_A104empleadosfecreg, T00063_n104empleadosfecreg, T00063_A105empleadosfecultact
                }
                , new Object[] {
-               T00064_A13empleadosid, T00064_A176areaid, T00064_n176areaid, T00064_A99empleadosnomemple, T00064_n99empleadosnomemple, T00064_A100empleadosappaterno, T00064_n100empleadosappaterno, T00064_A101empleadosapmaterno, T00064_n101empleadosapmaterno, T00064_A102empleadosstatus,
+               T00064_A13empleadosid, T00064_A98empleadosareaid, T00064_n98empleadosareaid, T00064_A99empleadosnomemple, T00064_n99empleadosnomemple, T00064_A100empleadosappaterno, T00064_n100empleadosappaterno, T00064_A101empleadosapmaterno, T00064_n101empleadosapmaterno, T00064_A102empleadosstatus,
                T00064_n102empleadosstatus, T00064_A103empleadosusuario, T00064_n103empleadosusuario, T00064_A106empleadoscorreo, T00064_n106empleadoscorreo, T00064_A107empleadosext, T00064_n107empleadosext, T00064_A104empleadosfecreg, T00064_n104empleadosfecreg, T00064_A105empleadosfecultact
                }
                , new Object[] {
@@ -2221,7 +2209,6 @@ namespace GeneXus.Programs {
       private short gxajaxcallmode ;
       private int wcpOAV7empleadosid ;
       private int Z13empleadosid ;
-      private int Z176areaid ;
       private int AV7empleadosid ;
       private int trnEnded ;
       private int bttBtn_first_Visible ;
@@ -2231,8 +2218,7 @@ namespace GeneXus.Programs {
       private int bttBtn_select_Visible ;
       private int A13empleadosid ;
       private int edtempleadosid_Enabled ;
-      private int A176areaid ;
-      private int edtareaid_Enabled ;
+      private int edtempleadosareaid_Enabled ;
       private int edtempleadosnomemple_Enabled ;
       private int edtempleadosappaterno_Enabled ;
       private int edtempleadosapmaterno_Enabled ;
@@ -2258,7 +2244,7 @@ namespace GeneXus.Programs {
       private String PreviousTooltip ;
       private String PreviousCaption ;
       private String GX_FocusControl ;
-      private String edtareaid_Internalname ;
+      private String edtempleadosareaid_Internalname ;
       private String divTablemain_Internalname ;
       private String lblTitle_Internalname ;
       private String lblTitle_Jsonclick ;
@@ -2277,7 +2263,7 @@ namespace GeneXus.Programs {
       private String bttBtn_select_Jsonclick ;
       private String edtempleadosid_Internalname ;
       private String edtempleadosid_Jsonclick ;
-      private String edtareaid_Jsonclick ;
+      private String edtempleadosareaid_Jsonclick ;
       private String edtempleadosnomemple_Internalname ;
       private String edtempleadosnomemple_Jsonclick ;
       private String edtempleadosappaterno_Internalname ;
@@ -2321,7 +2307,7 @@ namespace GeneXus.Programs {
       private bool toggleJsOutput ;
       private bool wbErr ;
       private bool n13empleadosid ;
-      private bool n176areaid ;
+      private bool n98empleadosareaid ;
       private bool n99empleadosnomemple ;
       private bool n100empleadosappaterno ;
       private bool n101empleadosapmaterno ;
@@ -2331,6 +2317,7 @@ namespace GeneXus.Programs {
       private bool n107empleadosext ;
       private bool n104empleadosfecreg ;
       private bool Gx_longc ;
+      private String Z98empleadosareaid ;
       private String Z99empleadosnomemple ;
       private String Z100empleadosappaterno ;
       private String Z101empleadosapmaterno ;
@@ -2338,6 +2325,7 @@ namespace GeneXus.Programs {
       private String Z103empleadosusuario ;
       private String Z106empleadoscorreo ;
       private String Z107empleadosext ;
+      private String A98empleadosareaid ;
       private String A99empleadosnomemple ;
       private String A100empleadosappaterno ;
       private String A101empleadosapmaterno ;
@@ -2349,8 +2337,8 @@ namespace GeneXus.Programs {
       private IDataStoreProvider pr_default ;
       private int[] T00064_A13empleadosid ;
       private bool[] T00064_n13empleadosid ;
-      private int[] T00064_A176areaid ;
-      private bool[] T00064_n176areaid ;
+      private String[] T00064_A98empleadosareaid ;
+      private bool[] T00064_n98empleadosareaid ;
       private String[] T00064_A99empleadosnomemple ;
       private bool[] T00064_n99empleadosnomemple ;
       private String[] T00064_A100empleadosappaterno ;
@@ -2372,8 +2360,8 @@ namespace GeneXus.Programs {
       private bool[] T00065_n13empleadosid ;
       private int[] T00063_A13empleadosid ;
       private bool[] T00063_n13empleadosid ;
-      private int[] T00063_A176areaid ;
-      private bool[] T00063_n176areaid ;
+      private String[] T00063_A98empleadosareaid ;
+      private bool[] T00063_n98empleadosareaid ;
       private String[] T00063_A99empleadosnomemple ;
       private bool[] T00063_n99empleadosnomemple ;
       private String[] T00063_A100empleadosappaterno ;
@@ -2397,8 +2385,8 @@ namespace GeneXus.Programs {
       private bool[] T00067_n13empleadosid ;
       private int[] T00062_A13empleadosid ;
       private bool[] T00062_n13empleadosid ;
-      private int[] T00062_A176areaid ;
-      private bool[] T00062_n176areaid ;
+      private String[] T00062_A98empleadosareaid ;
+      private bool[] T00062_n98empleadosareaid ;
       private String[] T00062_A99empleadosnomemple ;
       private bool[] T00062_n99empleadosnomemple ;
       private String[] T00062_A100empleadosappaterno ;
@@ -2474,7 +2462,7 @@ namespace GeneXus.Programs {
           Object[] prmT00068 ;
           prmT00068 = new Object[] {
           new Object[] {"empleadosid",NpgsqlDbType.Integer,9,0} ,
-          new Object[] {"areaid",NpgsqlDbType.Integer,9,0} ,
+          new Object[] {"empleadosareaid",NpgsqlDbType.Varchar,3,0} ,
           new Object[] {"empleadosnomemple",NpgsqlDbType.Varchar,30,0} ,
           new Object[] {"empleadosappaterno",NpgsqlDbType.Varchar,30,0} ,
           new Object[] {"empleadosapmaterno",NpgsqlDbType.Varchar,30,0} ,
@@ -2487,7 +2475,7 @@ namespace GeneXus.Programs {
           } ;
           Object[] prmT00069 ;
           prmT00069 = new Object[] {
-          new Object[] {"areaid",NpgsqlDbType.Integer,9,0} ,
+          new Object[] {"empleadosareaid",NpgsqlDbType.Varchar,3,0} ,
           new Object[] {"empleadosnomemple",NpgsqlDbType.Varchar,30,0} ,
           new Object[] {"empleadosappaterno",NpgsqlDbType.Varchar,30,0} ,
           new Object[] {"empleadosapmaterno",NpgsqlDbType.Varchar,30,0} ,
@@ -2511,14 +2499,14 @@ namespace GeneXus.Programs {
           prmT000612 = new Object[] {
           } ;
           def= new CursorDef[] {
-              new CursorDef("T00062", "SELECT empleadosid, areaid, empleadosnomemple, empleadosappaterno, empleadosapmaterno, empleadosstatus, empleadosusuario, empleadoscorreo, empleadosext, empleadosfecreg, empleadosfecultact FROM public.empleados WHERE empleadosid = :empleadosid  FOR UPDATE OF empleados NOWAIT",true, GxErrorMask.GX_NOMASK, false, this,prmT00062,1,0,true,false )
-             ,new CursorDef("T00063", "SELECT empleadosid, areaid, empleadosnomemple, empleadosappaterno, empleadosapmaterno, empleadosstatus, empleadosusuario, empleadoscorreo, empleadosext, empleadosfecreg, empleadosfecultact FROM public.empleados WHERE empleadosid = :empleadosid ",true, GxErrorMask.GX_NOMASK, false, this,prmT00063,1,0,true,false )
-             ,new CursorDef("T00064", "SELECT TM1.empleadosid, TM1.areaid, TM1.empleadosnomemple, TM1.empleadosappaterno, TM1.empleadosapmaterno, TM1.empleadosstatus, TM1.empleadosusuario, TM1.empleadoscorreo, TM1.empleadosext, TM1.empleadosfecreg, TM1.empleadosfecultact FROM public.empleados TM1 WHERE TM1.empleadosid = :empleadosid ORDER BY TM1.empleadosid ",true, GxErrorMask.GX_NOMASK, false, this,prmT00064,100,0,true,false )
+              new CursorDef("T00062", "SELECT empleadosid, empleadosareaid, empleadosnomemple, empleadosappaterno, empleadosapmaterno, empleadosstatus, empleadosusuario, empleadoscorreo, empleadosext, empleadosfecreg, empleadosfecultact FROM public.empleados WHERE empleadosid = :empleadosid  FOR UPDATE OF empleados NOWAIT",true, GxErrorMask.GX_NOMASK, false, this,prmT00062,1,0,true,false )
+             ,new CursorDef("T00063", "SELECT empleadosid, empleadosareaid, empleadosnomemple, empleadosappaterno, empleadosapmaterno, empleadosstatus, empleadosusuario, empleadoscorreo, empleadosext, empleadosfecreg, empleadosfecultact FROM public.empleados WHERE empleadosid = :empleadosid ",true, GxErrorMask.GX_NOMASK, false, this,prmT00063,1,0,true,false )
+             ,new CursorDef("T00064", "SELECT TM1.empleadosid, TM1.empleadosareaid, TM1.empleadosnomemple, TM1.empleadosappaterno, TM1.empleadosapmaterno, TM1.empleadosstatus, TM1.empleadosusuario, TM1.empleadoscorreo, TM1.empleadosext, TM1.empleadosfecreg, TM1.empleadosfecultact FROM public.empleados TM1 WHERE TM1.empleadosid = :empleadosid ORDER BY TM1.empleadosid ",true, GxErrorMask.GX_NOMASK, false, this,prmT00064,100,0,true,false )
              ,new CursorDef("T00065", "SELECT empleadosid FROM public.empleados WHERE empleadosid = :empleadosid ",true, GxErrorMask.GX_NOMASK, false, this,prmT00065,1,0,true,false )
              ,new CursorDef("T00066", "SELECT empleadosid FROM public.empleados WHERE ( empleadosid > :empleadosid) ORDER BY empleadosid ",true, GxErrorMask.GX_NOMASK, false, this,prmT00066,1,0,true,true )
              ,new CursorDef("T00067", "SELECT empleadosid FROM public.empleados WHERE ( empleadosid < :empleadosid) ORDER BY empleadosid DESC ",true, GxErrorMask.GX_NOMASK, false, this,prmT00067,1,0,true,true )
-             ,new CursorDef("T00068", "SAVEPOINT gxupdate;INSERT INTO public.empleados(empleadosid, areaid, empleadosnomemple, empleadosappaterno, empleadosapmaterno, empleadosstatus, empleadosusuario, empleadoscorreo, empleadosext, empleadosfecreg, empleadosfecultact) VALUES(:empleadosid, :areaid, :empleadosnomemple, :empleadosappaterno, :empleadosapmaterno, :empleadosstatus, :empleadosusuario, :empleadoscorreo, :empleadosext, :empleadosfecreg, :empleadosfecultact);RELEASE SAVEPOINT gxupdate", GxErrorMask.GX_ROLLBACKSAVEPOINT,prmT00068)
-             ,new CursorDef("T00069", "SAVEPOINT gxupdate;UPDATE public.empleados SET areaid=:areaid, empleadosnomemple=:empleadosnomemple, empleadosappaterno=:empleadosappaterno, empleadosapmaterno=:empleadosapmaterno, empleadosstatus=:empleadosstatus, empleadosusuario=:empleadosusuario, empleadoscorreo=:empleadoscorreo, empleadosext=:empleadosext, empleadosfecreg=:empleadosfecreg, empleadosfecultact=:empleadosfecultact  WHERE empleadosid = :empleadosid;RELEASE SAVEPOINT gxupdate", GxErrorMask.GX_ROLLBACKSAVEPOINT | GxErrorMask.GX_NOMASK,prmT00069)
+             ,new CursorDef("T00068", "SAVEPOINT gxupdate;INSERT INTO public.empleados(empleadosid, empleadosareaid, empleadosnomemple, empleadosappaterno, empleadosapmaterno, empleadosstatus, empleadosusuario, empleadoscorreo, empleadosext, empleadosfecreg, empleadosfecultact) VALUES(:empleadosid, :empleadosareaid, :empleadosnomemple, :empleadosappaterno, :empleadosapmaterno, :empleadosstatus, :empleadosusuario, :empleadoscorreo, :empleadosext, :empleadosfecreg, :empleadosfecultact);RELEASE SAVEPOINT gxupdate", GxErrorMask.GX_ROLLBACKSAVEPOINT,prmT00068)
+             ,new CursorDef("T00069", "SAVEPOINT gxupdate;UPDATE public.empleados SET empleadosareaid=:empleadosareaid, empleadosnomemple=:empleadosnomemple, empleadosappaterno=:empleadosappaterno, empleadosapmaterno=:empleadosapmaterno, empleadosstatus=:empleadosstatus, empleadosusuario=:empleadosusuario, empleadoscorreo=:empleadoscorreo, empleadosext=:empleadosext, empleadosfecreg=:empleadosfecreg, empleadosfecultact=:empleadosfecultact  WHERE empleadosid = :empleadosid;RELEASE SAVEPOINT gxupdate", GxErrorMask.GX_ROLLBACKSAVEPOINT | GxErrorMask.GX_NOMASK,prmT00069)
              ,new CursorDef("T000610", "SAVEPOINT gxupdate;DELETE FROM public.empleados  WHERE empleadosid = :empleadosid;RELEASE SAVEPOINT gxupdate", GxErrorMask.GX_ROLLBACKSAVEPOINT | GxErrorMask.GX_NOMASK,prmT000610)
              ,new CursorDef("T000611", "SELECT almacenid FROM public.almacen WHERE empleadosid = :empleadosid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000611,1,0,true,true )
              ,new CursorDef("T000612", "SELECT empleadosid FROM public.empleados ORDER BY empleadosid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000612,100,0,true,false )
@@ -2534,7 +2522,7 @@ namespace GeneXus.Programs {
        {
              case 0 :
                 ((int[]) buf[0])[0] = rslt.getInt(1) ;
-                ((int[]) buf[1])[0] = rslt.getInt(2) ;
+                ((String[]) buf[1])[0] = rslt.getVarchar(2) ;
                 ((bool[]) buf[2])[0] = rslt.wasNull(2);
                 ((String[]) buf[3])[0] = rslt.getVarchar(3) ;
                 ((bool[]) buf[4])[0] = rslt.wasNull(3);
@@ -2556,7 +2544,7 @@ namespace GeneXus.Programs {
                 return;
              case 1 :
                 ((int[]) buf[0])[0] = rslt.getInt(1) ;
-                ((int[]) buf[1])[0] = rslt.getInt(2) ;
+                ((String[]) buf[1])[0] = rslt.getVarchar(2) ;
                 ((bool[]) buf[2])[0] = rslt.wasNull(2);
                 ((String[]) buf[3])[0] = rslt.getVarchar(3) ;
                 ((bool[]) buf[4])[0] = rslt.wasNull(3);
@@ -2578,7 +2566,7 @@ namespace GeneXus.Programs {
                 return;
              case 2 :
                 ((int[]) buf[0])[0] = rslt.getInt(1) ;
-                ((int[]) buf[1])[0] = rslt.getInt(2) ;
+                ((String[]) buf[1])[0] = rslt.getVarchar(2) ;
                 ((bool[]) buf[2])[0] = rslt.wasNull(2);
                 ((String[]) buf[3])[0] = rslt.getVarchar(3) ;
                 ((bool[]) buf[4])[0] = rslt.wasNull(3);
@@ -2693,11 +2681,11 @@ namespace GeneXus.Programs {
                 }
                 if ( (bool)parms[2] )
                 {
-                   stmt.setNull( 2 , SqlDbType.Int );
+                   stmt.setNull( 2 , SqlDbType.VarChar );
                 }
                 else
                 {
-                   stmt.SetParameter(2, (int)parms[3]);
+                   stmt.SetParameter(2, (String)parms[3]);
                 }
                 if ( (bool)parms[4] )
                 {
@@ -2768,11 +2756,11 @@ namespace GeneXus.Programs {
              case 7 :
                 if ( (bool)parms[0] )
                 {
-                   stmt.setNull( 1 , SqlDbType.Int );
+                   stmt.setNull( 1 , SqlDbType.VarChar );
                 }
                 else
                 {
-                   stmt.SetParameter(1, (int)parms[1]);
+                   stmt.SetParameter(1, (String)parms[1]);
                 }
                 if ( (bool)parms[2] )
                 {

@@ -19,8 +19,9 @@ las_i(2,[ [ 'Nextvalue','Statusdesc','Statususotabla' ] ]).
 lac_i(2,[ [ 'Nextvalue','Statusdesc','Statususotabla' ] ]).
  
  
+lits_i('CAT罫OGO DE ESTADO',5,10).
  
-cls_i([ 0,0 ],[ 0,49 ]).
+cls_i([ 0,0 ],[ 5,49 ]).
  
 pos_i('Nextvalue',[ 0,0,0 ]).
 pos_i('Statusdesc',[ 0,0,0 ]).
@@ -46,12 +47,12 @@ rule_i(0,datastore(1,'CS_RPCPGML','')).
 rule_i(0,datastore(1,'JDBC_DATASOURCE','')).
 rule_i(0,datastore(1,'USE_JDBC_DATASOURCE','0')).
 rule_i(0,datastore(1,'DS_DBMS_ADDINFO','')).
-rule_i(0,datastore(1,'USER_PASSWORD',󻢸蘇�2�5炭)).
+rule_i(0,datastore(1,'USER_PASSWORD',asdf)).
 rule_i(0,datastore(1,'USER_ID',postgres)).
 rule_i(0,datastore(1,'CS_CONNECT','First')).
 rule_i(0,datastore(1,'DBMS_PORT','5432')).
 rule_i(0,datastore(1,'CS_SERVER',localhost)).
-rule_i(0,datastore(1,'CS_DBNAME',postgres)).
+rule_i(0,datastore(1,'CS_DBNAME',condusef)).
 rule_i(0,datastore(1,'CS_FLEDSNAME','')).
 rule_i(0,datastore(1,'CS_DRVNAME','')).
 rule_i(0,datastore(1,'CS_DSNAME','')).
@@ -247,17 +248,17 @@ b_line_i(1002,2,5,cmd,0,[ t('',147,0,0) ]).
  
  
  
-html_i(2,html('&nbsp;')).
-html_i(3,usercontrol(3)).
-html_i(4,html('<p></p>')).
-html_i(5,html('<p>')).
-html_i(6,table(6)).
+html_i(2,html('&nbsp; ')).
+html_i(3,html('<p></p>')).
+html_i(4,html('<p>')).
+html_i(5,table(5)).
 html_i(32,html('</p>')).
  
-html_sub_i(6,0,html_i(0,html('<tbody>'))).
-html_sub_i(6,7,html_i(1,row(7))).
-html_sub_i(7,8,html_i(0,cell(8))).
-html_sub_i(6,9,html_i(2,row(9))).
+html_sub_i(5,0,html_i(0,html('<tbody>'))).
+html_sub_i(5,6,html_i(1,row(6))).
+html_sub_i(6,7,html_i(0,cell(7))).
+html_sub_i(7,8,html_i(0,t('CAT罫OGO DE ESTADO',3))).
+html_sub_i(5,9,html_i(2,row(9))).
 html_sub_i(9,10,html_i(0,cell(10))).
 html_sub_i(10,11,html_i(0,table(11))).
 html_sub_i(11,0,html_i(0,html('<tbody>'))).
@@ -287,43 +288,35 @@ html_sub_i(28,29,html_i(0,button('''Guardar '''))).
 html_sub_i(25,30,html_i(2,cell(30))).
 html_sub_i(30,31,html_i(0,button('''Cancelar'''))).
 html_sub_i(24,0,html_i(2,html('</tbody>'))).
-html_sub_i(6,0,html_i(3,html('</tbody>'))).
+html_sub_i(5,0,html_i(3,html('</tbody>'))).
  
 html_tags_i(1,'Class','Form').
  
-html_comp_i(3,'Usercontroltype','Alertify',d,[ str ]).
-html_comp_i(3,'Constructorname','Alertify',d,[ str ]).
-html_comp_i(3,'Showmethodname',show,d,[ str ]).
-html_comp_i(3,'Controlname','Alertify1',v,[ str ]).
-html_comp_i(3,'Width','100',d,[ str ]).
-html_comp_i(3,'Height','100',d,[ str ]).
-html_comp_i(3,'Type',error,v,[ str ]).
-html_comp_i(3,'Delay','5000',d,[ str ]).
-html_comp_i(3,'Textmessage','Click now!!!',d,[ str ]).
-html_comp_i(3,'Textok','Confirm',d,[ str ]).
-html_comp_i(3,'Textcancel','Cancel',d,[ str ]).
-html_comp_i(3,'Promptresponse','',d,[ str ]).
-html_comp_i(3,'Promptplaceholder','Type here...',d,[ str ]).
-html_comp_i(3,'Setpromptresponse','SetPromptResponse',d,[ str ]).
-html_comp_i(3,'Getpromptresponse','GetPromptResponse',d,[ str ]).
-html_comp_i(3,'Visible',-1,d,[ bool ]).
-html_comp_i(3,'Csssupportfiles',[ [ t('''Alertify\css\alertify.core.css''',3) ],[ t('''Alertify\css\alertify.default.css''',3) ] ],d,[ params ]).
-html_comp_i(3,'Jssupportfiles',[ [ t('''Alertify\js\alertify.min.js''',3) ],[ t('''Alertify\GlobalAlerts.js''',3) ],[ t('''Alertify\AlertifyRender.js''',3) ] ],d,[ params ]).
-html_comp_i(3,'Csssharedsupportfiles',[],d,[ params ]).
-html_comp_i(3,'Jssharedsupportfiles',[ [ t('''Shared/jquery/jquery-1.9.0.js''',3) ] ],d,[ params ]).
-html_comp_i(6,'Id','Table1',v,[ str ]).
-html_comp_i(6,'Class','Table',v,[ str ]).
-html_comp_i(6,'Title','',d,[ str ]).
-html_comp_i(6,'Align',left,d,[ str ]).
-html_comp_i(6,'Backgroundgx','',d,[ str ]).
-html_comp_i(6,'Bgcolor',rgb(0,0,0),d,[ color ]).
-html_comp_i(6,'Border','0',d,[ str ]).
-html_comp_i(6,'Bordercolor',rgb(0,0,0),d,[ color ]).
-html_comp_i(6,'Cellpadding','1',d,[ str ]).
-html_comp_i(6,'Cellspacing','2',d,[ str ]).
-html_comp_i(6,'Height',measure(46,px),v,[ measure ]).
-html_comp_i(6,'Width',measure(100,'%'),v,[ measure ]).
-html_comp_i(6,'Rules',none,d,[ str ]).
+html_comp_i(5,'Id','Table1',v,[ str ]).
+html_comp_i(5,'Class','Table',v,[ str ]).
+html_comp_i(5,'Title','',d,[ str ]).
+html_comp_i(5,'Align',left,d,[ str ]).
+html_comp_i(5,'Backgroundgx','',d,[ str ]).
+html_comp_i(5,'Bgcolor',rgb(0,0,0),d,[ color ]).
+html_comp_i(5,'Border','0',d,[ str ]).
+html_comp_i(5,'Bordercolor',rgb(0,0,0),d,[ color ]).
+html_comp_i(5,'Cellpadding','1',d,[ str ]).
+html_comp_i(5,'Cellspacing','2',d,[ str ]).
+html_comp_i(5,'Height',measure(46,px),v,[ measure ]).
+html_comp_i(5,'Width',measure(100,'%'),v,[ measure ]).
+html_comp_i(5,'Rules',none,d,[ str ]).
+html_comp_i(7,'Align',center,v,[ str ]).
+html_comp_i(8,'Caption','CAT罫OGO DE ESTADO',d,[ str ]).
+html_comp_i(8,'Id','Textblock8',v,[ str ]).
+html_comp_i(8,'Class','TextBlock',d,[ str ]).
+html_comp_i(8,'Event','',d,[ str ]).
+html_comp_i(8,'Returnonclick',0,d,[ bool ]).
+html_comp_i(8,'Gxformat',0,d,[ num ]).
+html_comp_i(8,'Title','',d,[ str ]).
+html_comp_i(8,'Fill',-1,d,[ bool ]).
+html_comp_i(8,'Backcolor',rgb(255,255,255),d,[ color ]).
+html_comp_i(8,'Forecolor',rgb(0,0,0),v,[ color ]).
+html_comp_i(8,'Font',font('Microsoft Sans Serif',15,[ bold ]),v,[ font ]).
 html_comp_i(11,'Id','Table2',v,[ str ]).
 html_comp_i(11,'Class','Table',v,[ str ]).
 html_comp_i(11,'Title','',d,[ str ]).
@@ -477,7 +470,7 @@ html_comp_i(31,'Buttonborderstyle',standard,d,[ str ]).
  
  
  
-lit_i(3,1,usercontrol(3),[ ctlname('Alertify1'),ctrltype(alertify),el([]),containers([]) ]).
+lit_i(8,1,t('CAT罫OGO DE ESTADO',3),[ ctlname('Textblock8') ]).
 lit_i(15,1,t('Nextvalue',23),[ ctlname('&Nextvalue'),ctrltype(edit,15),pos(15),readonly,ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
 lit_i(19,1,t('Statusdesc',23),[ ctlname('&Statusdesc'),ctrltype(edit,19),pos(19),ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
 lit_i(23,1,t('Statususotabla',23),[ ctlname('&Statususotabla'),ctrltype(edit,23),pos(23),ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
@@ -486,7 +479,7 @@ lit_i(27,1,button('''Consultar '''),[ ctlname('Button1'),width(0),rect(0,0,10,10
 lit_i(29,1,button('''Guardar '''),[ ctlname('Button2'),width(0),rect(0,0,10,10),title('Nothing') ]).
 lit_i(31,1,button('''Cancelar'''),[ ctlname('Button3'),width(0),rect(0,0,10,10),title('Nothing') ]).
 lit_i(24,1,table(24),[ ctlname('Table3') ]).
-lit_i(6,1,table(6),[ ctlname('Table1') ]).
+lit_i(5,1,table(5),[ ctlname('Table1') ]).
 lit_i(1,1,window,[ rect(0,0,1000,1000),ctlname('Form') ]).
  
  
@@ -503,7 +496,6 @@ att_prop_i(2,1,'EmptyAsNull','Yes',d).
 att_prop_i(2,1,idBasedOn,'',d).
 att_prop_i(2,1,'AUTONUMBER','0',d).
 att_prop_i(2,1,'ATT_INITIAL_VALUE','',d).
-att_prop_i(2,1,'AttRegEx','',d).
 att_prop_i(2,1,'AttValidationFailedMsg','',d).
 att_prop_i(2,1,'FullName',statusid,v).
 att_prop_i(2,40000,'ExternalName',statusid,d).
@@ -512,7 +504,6 @@ att_prop_i(2,40000,'EmptyAsNull','Yes',d).
 att_prop_i(2,40000,idBasedOn,'',d).
 att_prop_i(2,40000,'AUTONUMBER','0',d).
 att_prop_i(2,40000,'ATT_INITIAL_VALUE','',d).
-att_prop_i(2,40000,'AttRegEx','',d).
 att_prop_i(2,40000,'AttValidationFailedMsg','',d).
 att_prop_i(2,40000,'FullName',statusid,v).
  

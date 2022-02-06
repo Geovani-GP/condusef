@@ -11,11 +11,11 @@ lwi_i(6,[ [] ]).
  
  
  
-ta_i(6,[ [ [ 6,13 ],[ 6,176 ],[ 6,99 ],[ 6,100 ],[ 6,101 ],[ 6,102 ],[ 6,103 ],[ 6,106 ],[ 6,107 ],[ 6,104 ],[ 6,105 ] ] ]).
+ta_i(6,[ [ [ 6,13 ],[ 6,98 ],[ 6,99 ],[ 6,100 ],[ 6,101 ],[ 6,102 ],[ 6,103 ],[ 6,106 ],[ 6,107 ],[ 6,104 ],[ 6,105 ] ] ]).
  
-las_i(6,[ [ 13,176,99,100,101,102,103,106,107,104,105 ] ]).
+las_i(6,[ [ 13,98,99,100,101,102,103,106,107,104,105 ] ]).
  
-lac_i(6,[ [ 13,176,99,100,101,102,103,106,107,104,105 ] ]).
+lac_i(6,[ [ 13,98,99,100,101,102,103,106,107,104,105 ] ]).
  
  
  
@@ -41,12 +41,12 @@ rule_i(0,datastore(1,'CS_RPCPGML','')).
 rule_i(0,datastore(1,'JDBC_DATASOURCE','')).
 rule_i(0,datastore(1,'USE_JDBC_DATASOURCE','0')).
 rule_i(0,datastore(1,'DS_DBMS_ADDINFO','')).
-rule_i(0,datastore(1,'USER_PASSWORD',admin)).
+rule_i(0,datastore(1,'USER_PASSWORD',asdf)).
 rule_i(0,datastore(1,'USER_ID',postgres)).
 rule_i(0,datastore(1,'CS_CONNECT','First')).
 rule_i(0,datastore(1,'DBMS_PORT','5432')).
 rule_i(0,datastore(1,'CS_SERVER',localhost)).
-rule_i(0,datastore(1,'CS_DBNAME',postgres)).
+rule_i(0,datastore(1,'CS_DBNAME',condusef)).
 rule_i(0,datastore(1,'CS_FLEDSNAME','')).
 rule_i(0,datastore(1,'CS_DRVNAME','')).
 rule_i(0,datastore(1,'CS_DSNAME','')).
@@ -167,7 +167,7 @@ rule_i(0,p(0,15,fvix,[ 11,10 ],[ 'NAME',empleados_pkey ])).
 rule_i(0,p(0,15,fvix,[ 11,10 ],[ 'LOC','' ])).
 rule_i(0,p(0,15,fvix,[ 11,10 ],[ 'SCHEMA',public ])).
 rule_i(0,p(0,15,fvix,[ 11,10 ],[ 'EXTNAM','YES' ])).
-rule_i(0,file(6,'EMPLEADOS',[ 13,176,99,100,101,102,103,106,105,107,104 ])).
+rule_i(0,file(6,'EMPLEADOS',[ 13,98,99,100,101,102,103,106,105,107,104 ])).
 rule_i(0,loc([ 6 ],'EMPLEADOS','','LAN')).
 rule_i(0,index(6,'EMPLEADOS_PKEY',u,[ 13 ])).
 rule_i(0,loc([ 6,'EMPLEADOS_PKEY' ],empleados_pkey,'','LAN')).
@@ -191,7 +191,7 @@ rule_i(0,loc([ 18,'ALMACEN_PKEY' ],almacen_pkey,'','LAN')).
 a_i(1,6,t,6,[],[ [ [ [],13,13 ] ],'EMPLEADOS_PKEY',[] ]).
  
 v_i(t,i,1,13).
-v_i(t,o,1,176).
+v_i(t,o,1,98).
 v_i(t,o,1,99).
 v_i(t,o,1,100).
 v_i(t,o,1,101).
@@ -218,14 +218,14 @@ attri_i(102,[ empleadosstatus,svchar,1,0,'',0,empleadosstatus,'',0 ]).
 attri_i(101,[ empleadosapmaterno,svchar,30,0,'',0,empleadosapmaterno,'',0 ]).
 attri_i(100,[ empleadosappaterno,svchar,30,0,'',0,empleadosappaterno,'',0 ]).
 attri_i(99,[ empleadosnomemple,svchar,30,0,'',0,empleadosnomemple,'',0 ]).
-attri_i(176,[ areaid,int,9,0,'ZZZZZZZZ9',0,areaid,'',0 ]).
+attri_i(98,[ empleadosareaid,svchar,3,0,'',0,empleadosareaid,'',0 ]).
 attri_i(13,[ empleadosid,int,9,0,'ZZZZZZZZ9',0,empleadosid,'',0 ]).
 attri_i('Gxremove',[ 'GxRemove',int,1,0,'9',0,'Gx Remove','',5 ]).
 attri_i('Empleadosid',[ empleadosid,int,9,0,'ZZZZZZZZ9',0,empleadosid,'',7 ]).
 attri_i('Mode',[ 'Gx_mode',char,3,0,'@!',1,'','',2 ]).
  
 table_i(18,[ 'ALMACEN',[ 19,13 ],almacen,almacen ]).
-table_i(6,[ 'EMPLEADOS',[ 13,176,99,100,101,102,103,106,105,107,104 ],empleados,empleados ]).
+table_i(6,[ 'EMPLEADOS',[ 13,98,99,100,101,102,103,106,105,107,104 ],empleados,empleados ]).
  
 index_i(6,[ 'EMPLEADOS_PKEY',u,[ 13 ],'EMPLEADOS_PKEY' ]).
 index_i(18,[ 'ALMACEN_PKEY',u,[ 19 ],'ALMACEN_PKEY' ]).
@@ -242,8 +242,8 @@ index_i(18,[ 'IALMACEN',d,[ 13 ],'Ialmacen' ]).
  
  
  
-upd_i(6,6,i,[ [ 13,176,99,100,101,102,103,106,107,104,105 ],[],'EMPLEADOS_PKEY',[ [ [],13,13 ] ] ]).
-upd_i(6,6,u,[ [ 176,99,100,101,102,103,106,107,104,105 ],[],'EMPLEADOS_PKEY',[] ]).
+upd_i(6,6,i,[ [ 13,98,99,100,101,102,103,106,107,104,105 ],[],'EMPLEADOS_PKEY',[ [ [],13,13 ] ] ]).
+upd_i(6,6,u,[ [ 98,99,100,101,102,103,106,107,104,105 ],[],'EMPLEADOS_PKEY',[] ]).
 upd_i(6,6,d,[ [],[],'EMPLEADOS_PKEY',[] ]).
  
  
@@ -275,7 +275,7 @@ map_i(6,a,102,[ empleadosstatus ]).
 map_i(6,a,101,[ empleadosapmaterno ]).
 map_i(6,a,100,[ empleadosappaterno ]).
 map_i(6,a,99,[ empleadosnomemple ]).
-map_i(6,a,176,[ areaid ]).
+map_i(6,a,98,[ empleadosareaid ]).
 map_i(6,a,13,[ empleadosid ]).
  
  
@@ -332,16 +332,16 @@ att_prop_i(2,13,'ATT_INITIAL_VALUE','',d).
 att_prop_i(2,13,'AttRegEx','',d).
 att_prop_i(2,13,'AttValidationFailedMsg','',d).
 att_prop_i(2,13,'FullName',empleadosid,v).
-att_prop_i(2,176,'HORIZONTAL_DESCRIPTION',areaid,d).
-att_prop_i(2,176,'ExternalName',areaid,d).
-att_prop_i(2,176,'ExternalNamespace','Condufef_v1',d).
-att_prop_i(2,176,'EmptyAsNull','Yes',d).
-att_prop_i(2,176,idBasedOn,'',d).
-att_prop_i(2,176,'AUTONUMBER','0',d).
-att_prop_i(2,176,'ATT_INITIAL_VALUE','',d).
-att_prop_i(2,176,'AttRegEx','',d).
-att_prop_i(2,176,'AttValidationFailedMsg','',d).
-att_prop_i(2,176,'FullName',areaid,v).
+att_prop_i(2,98,'HORIZONTAL_DESCRIPTION',empleadosareaid,v).
+att_prop_i(2,98,'ExternalName',empleadosareaid,d).
+att_prop_i(2,98,'ExternalNamespace','Condufef_v1',d).
+att_prop_i(2,98,'EmptyAsNull','Yes',d).
+att_prop_i(2,98,idBasedOn,'',d).
+att_prop_i(2,98,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,98,'DB_NLS_SUPPORT','No',d).
+att_prop_i(2,98,'AttRegEx','',d).
+att_prop_i(2,98,'AttValidationFailedMsg','',d).
+att_prop_i(2,98,'FullName',empleadosareaid,v).
 att_prop_i(2,99,'HORIZONTAL_DESCRIPTION',empleadosnomemple,v).
 att_prop_i(2,99,'ExternalName',empleadosnomemple,d).
 att_prop_i(2,99,'ExternalNamespace','Condufef_v1',d).
@@ -455,7 +455,7 @@ i_tbl_best_trn(18,[ 18,1,almacen,almacen,[] ]).
  
  
  
-trn_level_i(6,[ [ 13,176,99,100,101,102,103,106,107,104,105 ],empleados,empleados,empleados,'',176 ]).
+trn_level_i(6,[ [ 13,98,99,100,101,102,103,106,107,104,105 ],empleados,empleados,empleados,'',98 ]).
  
 struct_dt_i([ 0,6,0 ],name,empleados).
 struct_dt_i([ 0,6,0 ],namespace,'Condufef_v1').
@@ -489,15 +489,14 @@ struct_dt_elem_i([ 0,6,0 ],1,type,[ 4,9,0 ]).
 struct_dt_elem_i([ 0,6,0 ],1,pic,'ZZZZZZZZ9').
 struct_dt_elem_i([ 0,6,0 ],1,collection,'False').
 struct_dt_elem_i([ 0,6,0 ],1,attributeid,'13').
-struct_dt_elem_i([ 0,6,0 ],2,name,'Areaid').
-struct_dt_elem_i([ 0,6,0 ],2,camelname,areaid).
-struct_dt_elem_i([ 0,6,0 ],2,length,9).
+struct_dt_elem_i([ 0,6,0 ],2,name,'Empleadosareaid').
+struct_dt_elem_i([ 0,6,0 ],2,camelname,empleadosareaid).
+struct_dt_elem_i([ 0,6,0 ],2,length,3).
 struct_dt_elem_i([ 0,6,0 ],2,decimals,0).
-struct_dt_elem_i([ 0,6,0 ],2,sign,0).
-struct_dt_elem_i([ 0,6,0 ],2,type,[ 4,9,0 ]).
-struct_dt_elem_i([ 0,6,0 ],2,pic,'ZZZZZZZZ9').
+struct_dt_elem_i([ 0,6,0 ],2,type,[ 13,3,0 ]).
+struct_dt_elem_i([ 0,6,0 ],2,pic,'').
 struct_dt_elem_i([ 0,6,0 ],2,collection,'False').
-struct_dt_elem_i([ 0,6,0 ],2,attributeid,'176').
+struct_dt_elem_i([ 0,6,0 ],2,attributeid,'98').
 struct_dt_elem_i([ 0,6,0 ],3,name,'Empleadosnomemple').
 struct_dt_elem_i([ 0,6,0 ],3,camelname,empleadosnomemple).
 struct_dt_elem_i([ 0,6,0 ],3,length,30).

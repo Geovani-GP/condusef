@@ -2,7 +2,7 @@
                File: type_Sdtempleados
         Description: empleados
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 2/3/2022 14:55:29.33
+       Generated on: 2/5/2022 15:59:30.63
        Program type: Callable routine
           Main DBMS: postgresql
 */
@@ -44,6 +44,7 @@ namespace GeneXus.Programs {
       public Sdtempleados( )
       {
          /* Constructor for serialization */
+         gxTv_Sdtempleados_Empleadosareaid = "";
          gxTv_Sdtempleados_Empleadosnomemple = "";
          gxTv_Sdtempleados_Empleadosappaterno = "";
          gxTv_Sdtempleados_Empleadosapmaterno = "";
@@ -54,6 +55,7 @@ namespace GeneXus.Programs {
          gxTv_Sdtempleados_Empleadosfecreg = DateTime.MinValue;
          gxTv_Sdtempleados_Empleadosfecultact = DateTime.MinValue;
          gxTv_Sdtempleados_Mode = "";
+         gxTv_Sdtempleados_Empleadosareaid_Z = "";
          gxTv_Sdtempleados_Empleadosnomemple_Z = "";
          gxTv_Sdtempleados_Empleadosappaterno_Z = "";
          gxTv_Sdtempleados_Empleadosapmaterno_Z = "";
@@ -141,7 +143,7 @@ namespace GeneXus.Programs {
             ov.Add(this.GetType(),  "gxTpr_Mode" , attrs);
             ov.Add(this.GetType(),  "gxTpr_Initialized" , attrs);
             ov.Add(this.GetType(),  "gxTpr_Empleadosid_Z" , attrs);
-            ov.Add(this.GetType(),  "gxTpr_Areaid_Z" , attrs);
+            ov.Add(this.GetType(),  "gxTpr_Empleadosareaid_Z" , attrs);
             ov.Add(this.GetType(),  "gxTpr_Empleadosnomemple_Z" , attrs);
             ov.Add(this.GetType(),  "gxTpr_Empleadosappaterno_Z" , attrs);
             ov.Add(this.GetType(),  "gxTpr_Empleadosapmaterno_Z" , attrs);
@@ -152,7 +154,7 @@ namespace GeneXus.Programs {
             ov.Add(this.GetType(),  "gxTpr_Empleadosfecreg_Z_Nullable" , attrs);
             ov.Add(this.GetType(),  "gxTpr_Empleadosfecultact_Z_Nullable" , attrs);
             ov.Add(this.GetType(),  "gxTpr_Empleadosid_N" , attrs);
-            ov.Add(this.GetType(),  "gxTpr_Areaid_N" , attrs);
+            ov.Add(this.GetType(),  "gxTpr_Empleadosareaid_N" , attrs);
             ov.Add(this.GetType(),  "gxTpr_Empleadosnomemple_N" , attrs);
             ov.Add(this.GetType(),  "gxTpr_Empleadosappaterno_N" , attrs);
             ov.Add(this.GetType(),  "gxTpr_Empleadosapmaterno_N" , attrs);
@@ -192,7 +194,7 @@ namespace GeneXus.Programs {
          Sdtempleados obj ;
          obj = this;
          obj.gxTpr_Empleadosid = deserialized.gxTpr_Empleadosid;
-         obj.gxTpr_Areaid = deserialized.gxTpr_Areaid;
+         obj.gxTpr_Empleadosareaid = deserialized.gxTpr_Empleadosareaid;
          obj.gxTpr_Empleadosnomemple = deserialized.gxTpr_Empleadosnomemple;
          obj.gxTpr_Empleadosappaterno = deserialized.gxTpr_Empleadosappaterno;
          obj.gxTpr_Empleadosapmaterno = deserialized.gxTpr_Empleadosapmaterno;
@@ -205,7 +207,7 @@ namespace GeneXus.Programs {
          obj.gxTpr_Mode = deserialized.gxTpr_Mode;
          obj.gxTpr_Initialized = deserialized.gxTpr_Initialized;
          obj.gxTpr_Empleadosid_Z = deserialized.gxTpr_Empleadosid_Z;
-         obj.gxTpr_Areaid_Z = deserialized.gxTpr_Areaid_Z;
+         obj.gxTpr_Empleadosareaid_Z = deserialized.gxTpr_Empleadosareaid_Z;
          obj.gxTpr_Empleadosnomemple_Z = deserialized.gxTpr_Empleadosnomemple_Z;
          obj.gxTpr_Empleadosappaterno_Z = deserialized.gxTpr_Empleadosappaterno_Z;
          obj.gxTpr_Empleadosapmaterno_Z = deserialized.gxTpr_Empleadosapmaterno_Z;
@@ -216,7 +218,7 @@ namespace GeneXus.Programs {
          obj.gxTpr_Empleadosfecreg_Z = deserialized.gxTpr_Empleadosfecreg_Z;
          obj.gxTpr_Empleadosfecultact_Z = deserialized.gxTpr_Empleadosfecultact_Z;
          obj.gxTpr_Empleadosid_N = deserialized.gxTpr_Empleadosid_N;
-         obj.gxTpr_Areaid_N = deserialized.gxTpr_Areaid_N;
+         obj.gxTpr_Empleadosareaid_N = deserialized.gxTpr_Empleadosareaid_N;
          obj.gxTpr_Empleadosnomemple_N = deserialized.gxTpr_Empleadosnomemple_N;
          obj.gxTpr_Empleadosappaterno_N = deserialized.gxTpr_Empleadosappaterno_N;
          obj.gxTpr_Empleadosapmaterno_N = deserialized.gxTpr_Empleadosapmaterno_N;
@@ -249,9 +251,9 @@ namespace GeneXus.Programs {
                   }
                   GXSoapError = oReader.Read();
                }
-               if ( StringUtil.StrCmp2( oReader.LocalName, "areaid") )
+               if ( StringUtil.StrCmp2( oReader.LocalName, "empleadosareaid") )
                {
-                  gxTv_Sdtempleados_Areaid = (int)(NumberUtil.Val( oReader.Value, "."));
+                  gxTv_Sdtempleados_Empleadosareaid = oReader.Value;
                   if ( GXSoapError > 0 )
                   {
                      readOk = 1;
@@ -380,9 +382,9 @@ namespace GeneXus.Programs {
                   }
                   GXSoapError = oReader.Read();
                }
-               if ( StringUtil.StrCmp2( oReader.LocalName, "areaid_Z") )
+               if ( StringUtil.StrCmp2( oReader.LocalName, "empleadosareaid_Z") )
                {
-                  gxTv_Sdtempleados_Areaid_Z = (int)(NumberUtil.Val( oReader.Value, "."));
+                  gxTv_Sdtempleados_Empleadosareaid_Z = oReader.Value;
                   if ( GXSoapError > 0 )
                   {
                      readOk = 1;
@@ -493,9 +495,9 @@ namespace GeneXus.Programs {
                   }
                   GXSoapError = oReader.Read();
                }
-               if ( StringUtil.StrCmp2( oReader.LocalName, "areaid_N") )
+               if ( StringUtil.StrCmp2( oReader.LocalName, "empleadosareaid_N") )
                {
-                  gxTv_Sdtempleados_Areaid_N = (short)(NumberUtil.Val( oReader.Value, "."));
+                  gxTv_Sdtempleados_Empleadosareaid_N = (short)(NumberUtil.Val( oReader.Value, "."));
                   if ( GXSoapError > 0 )
                   {
                      readOk = 1;
@@ -621,7 +623,7 @@ namespace GeneXus.Programs {
          {
             oWriter.WriteAttribute("xmlns", "Condufef_v1");
          }
-         oWriter.WriteElement("areaid", StringUtil.Trim( StringUtil.Str( (decimal)(gxTv_Sdtempleados_Areaid), 9, 0)));
+         oWriter.WriteElement("empleadosareaid", StringUtil.RTrim( gxTv_Sdtempleados_Empleadosareaid));
          if ( StringUtil.StrCmp(sNameSpace, "Condufef_v1") != 0 )
          {
             oWriter.WriteAttribute("xmlns", "Condufef_v1");
@@ -726,7 +728,7 @@ namespace GeneXus.Programs {
             {
                oWriter.WriteAttribute("xmlns", "Condufef_v1");
             }
-            oWriter.WriteElement("areaid_Z", StringUtil.Trim( StringUtil.Str( (decimal)(gxTv_Sdtempleados_Areaid_Z), 9, 0)));
+            oWriter.WriteElement("empleadosareaid_Z", StringUtil.RTrim( gxTv_Sdtempleados_Empleadosareaid_Z));
             if ( StringUtil.StrCmp(sNameSpace, "Condufef_v1") != 0 )
             {
                oWriter.WriteAttribute("xmlns", "Condufef_v1");
@@ -819,7 +821,7 @@ namespace GeneXus.Programs {
             {
                oWriter.WriteAttribute("xmlns", "Condufef_v1");
             }
-            oWriter.WriteElement("areaid_N", StringUtil.Trim( StringUtil.Str( (decimal)(gxTv_Sdtempleados_Areaid_N), 1, 0)));
+            oWriter.WriteElement("empleadosareaid_N", StringUtil.Trim( StringUtil.Str( (decimal)(gxTv_Sdtempleados_Empleadosareaid_N), 1, 0)));
             if ( StringUtil.StrCmp(sNameSpace, "Condufef_v1") != 0 )
             {
                oWriter.WriteAttribute("xmlns", "Condufef_v1");
@@ -878,7 +880,7 @@ namespace GeneXus.Programs {
       public override void ToJSON( bool includeState )
       {
          AddObjectProperty("empleadosid", gxTv_Sdtempleados_Empleadosid, false);
-         AddObjectProperty("areaid", gxTv_Sdtempleados_Areaid, false);
+         AddObjectProperty("empleadosareaid", gxTv_Sdtempleados_Empleadosareaid, false);
          AddObjectProperty("empleadosnomemple", gxTv_Sdtempleados_Empleadosnomemple, false);
          AddObjectProperty("empleadosappaterno", gxTv_Sdtempleados_Empleadosappaterno, false);
          AddObjectProperty("empleadosapmaterno", gxTv_Sdtempleados_Empleadosapmaterno, false);
@@ -911,7 +913,7 @@ namespace GeneXus.Programs {
             AddObjectProperty("Mode", gxTv_Sdtempleados_Mode, false);
             AddObjectProperty("Initialized", gxTv_Sdtempleados_Initialized, false);
             AddObjectProperty("empleadosid_Z", gxTv_Sdtempleados_Empleadosid_Z, false);
-            AddObjectProperty("areaid_Z", gxTv_Sdtempleados_Areaid_Z, false);
+            AddObjectProperty("empleadosareaid_Z", gxTv_Sdtempleados_Empleadosareaid_Z, false);
             AddObjectProperty("empleadosnomemple_Z", gxTv_Sdtempleados_Empleadosnomemple_Z, false);
             AddObjectProperty("empleadosappaterno_Z", gxTv_Sdtempleados_Empleadosappaterno_Z, false);
             AddObjectProperty("empleadosapmaterno_Z", gxTv_Sdtempleados_Empleadosapmaterno_Z, false);
@@ -940,7 +942,7 @@ namespace GeneXus.Programs {
             sDateCnv = sDateCnv + StringUtil.Substring( "00", 1, 2-StringUtil.Len( sNumToPad)) + sNumToPad;
             AddObjectProperty("empleadosfecultact_Z", sDateCnv, false);
             AddObjectProperty("empleadosid_N", gxTv_Sdtempleados_Empleadosid_N, false);
-            AddObjectProperty("areaid_N", gxTv_Sdtempleados_Areaid_N, false);
+            AddObjectProperty("empleadosareaid_N", gxTv_Sdtempleados_Empleadosareaid_N, false);
             AddObjectProperty("empleadosnomemple_N", gxTv_Sdtempleados_Empleadosnomemple_N, false);
             AddObjectProperty("empleadosappaterno_N", gxTv_Sdtempleados_Empleadosappaterno_N, false);
             AddObjectProperty("empleadosapmaterno_N", gxTv_Sdtempleados_Empleadosapmaterno_N, false);
@@ -966,7 +968,7 @@ namespace GeneXus.Programs {
             {
                gxTv_Sdtempleados_Mode = "INS";
                this.gxTv_Sdtempleados_Empleadosid_Z_SetNull( );
-               this.gxTv_Sdtempleados_Areaid_Z_SetNull( );
+               this.gxTv_Sdtempleados_Empleadosareaid_Z_SetNull( );
                this.gxTv_Sdtempleados_Empleadosnomemple_Z_SetNull( );
                this.gxTv_Sdtempleados_Empleadosappaterno_Z_SetNull( );
                this.gxTv_Sdtempleados_Empleadosapmaterno_Z_SetNull( );
@@ -982,29 +984,29 @@ namespace GeneXus.Programs {
 
       }
 
-      [  SoapElement( ElementName = "areaid" )]
-      [  XmlElement( ElementName = "areaid"   )]
-      public int gxTpr_Areaid
+      [  SoapElement( ElementName = "empleadosareaid" )]
+      [  XmlElement( ElementName = "empleadosareaid"   )]
+      public String gxTpr_Empleadosareaid
       {
          get {
-            return gxTv_Sdtempleados_Areaid ;
+            return gxTv_Sdtempleados_Empleadosareaid ;
          }
 
          set {
-            gxTv_Sdtempleados_Areaid_N = 0;
-            gxTv_Sdtempleados_Areaid = (int)(value);
+            gxTv_Sdtempleados_Empleadosareaid_N = 0;
+            gxTv_Sdtempleados_Empleadosareaid = (String)(value);
          }
 
       }
 
-      public void gxTv_Sdtempleados_Areaid_SetNull( )
+      public void gxTv_Sdtempleados_Empleadosareaid_SetNull( )
       {
-         gxTv_Sdtempleados_Areaid_N = 1;
-         gxTv_Sdtempleados_Areaid = 0;
+         gxTv_Sdtempleados_Empleadosareaid_N = 1;
+         gxTv_Sdtempleados_Empleadosareaid = "";
          return  ;
       }
 
-      public bool gxTv_Sdtempleados_Areaid_IsNull( )
+      public bool gxTv_Sdtempleados_Empleadosareaid_IsNull( )
       {
          return false ;
       }
@@ -1353,27 +1355,27 @@ namespace GeneXus.Programs {
          return false ;
       }
 
-      [  SoapElement( ElementName = "areaid_Z" )]
-      [  XmlElement( ElementName = "areaid_Z"   )]
-      public int gxTpr_Areaid_Z
+      [  SoapElement( ElementName = "empleadosareaid_Z" )]
+      [  XmlElement( ElementName = "empleadosareaid_Z"   )]
+      public String gxTpr_Empleadosareaid_Z
       {
          get {
-            return gxTv_Sdtempleados_Areaid_Z ;
+            return gxTv_Sdtempleados_Empleadosareaid_Z ;
          }
 
          set {
-            gxTv_Sdtempleados_Areaid_Z = (int)(value);
+            gxTv_Sdtempleados_Empleadosareaid_Z = (String)(value);
          }
 
       }
 
-      public void gxTv_Sdtempleados_Areaid_Z_SetNull( )
+      public void gxTv_Sdtempleados_Empleadosareaid_Z_SetNull( )
       {
-         gxTv_Sdtempleados_Areaid_Z = 0;
+         gxTv_Sdtempleados_Empleadosareaid_Z = "";
          return  ;
       }
 
-      public bool gxTv_Sdtempleados_Areaid_Z_IsNull( )
+      public bool gxTv_Sdtempleados_Empleadosareaid_Z_IsNull( )
       {
          return false ;
       }
@@ -1666,27 +1668,27 @@ namespace GeneXus.Programs {
          return false ;
       }
 
-      [  SoapElement( ElementName = "areaid_N" )]
-      [  XmlElement( ElementName = "areaid_N"   )]
-      public short gxTpr_Areaid_N
+      [  SoapElement( ElementName = "empleadosareaid_N" )]
+      [  XmlElement( ElementName = "empleadosareaid_N"   )]
+      public short gxTpr_Empleadosareaid_N
       {
          get {
-            return gxTv_Sdtempleados_Areaid_N ;
+            return gxTv_Sdtempleados_Empleadosareaid_N ;
          }
 
          set {
-            gxTv_Sdtempleados_Areaid_N = (short)(value);
+            gxTv_Sdtempleados_Empleadosareaid_N = (short)(value);
          }
 
       }
 
-      public void gxTv_Sdtempleados_Areaid_N_SetNull( )
+      public void gxTv_Sdtempleados_Empleadosareaid_N_SetNull( )
       {
-         gxTv_Sdtempleados_Areaid_N = 0;
+         gxTv_Sdtempleados_Empleadosareaid_N = 0;
          return  ;
       }
 
-      public bool gxTv_Sdtempleados_Areaid_N_IsNull( )
+      public bool gxTv_Sdtempleados_Empleadosareaid_N_IsNull( )
       {
          return false ;
       }
@@ -1893,6 +1895,7 @@ namespace GeneXus.Programs {
 
       public void initialize( )
       {
+         gxTv_Sdtempleados_Empleadosareaid = "";
          gxTv_Sdtempleados_Empleadosnomemple = "";
          gxTv_Sdtempleados_Empleadosappaterno = "";
          gxTv_Sdtempleados_Empleadosapmaterno = "";
@@ -1903,6 +1906,7 @@ namespace GeneXus.Programs {
          gxTv_Sdtempleados_Empleadosfecreg = DateTime.MinValue;
          gxTv_Sdtempleados_Empleadosfecultact = DateTime.MinValue;
          gxTv_Sdtempleados_Mode = "";
+         gxTv_Sdtempleados_Empleadosareaid_Z = "";
          gxTv_Sdtempleados_Empleadosnomemple_Z = "";
          gxTv_Sdtempleados_Empleadosappaterno_Z = "";
          gxTv_Sdtempleados_Empleadosapmaterno_Z = "";
@@ -1926,7 +1930,7 @@ namespace GeneXus.Programs {
 
       private short gxTv_Sdtempleados_Initialized ;
       private short gxTv_Sdtempleados_Empleadosid_N ;
-      private short gxTv_Sdtempleados_Areaid_N ;
+      private short gxTv_Sdtempleados_Empleadosareaid_N ;
       private short gxTv_Sdtempleados_Empleadosnomemple_N ;
       private short gxTv_Sdtempleados_Empleadosappaterno_N ;
       private short gxTv_Sdtempleados_Empleadosapmaterno_N ;
@@ -1938,9 +1942,7 @@ namespace GeneXus.Programs {
       private short readOk ;
       private short nOutParmCount ;
       private int gxTv_Sdtempleados_Empleadosid ;
-      private int gxTv_Sdtempleados_Areaid ;
       private int gxTv_Sdtempleados_Empleadosid_Z ;
-      private int gxTv_Sdtempleados_Areaid_Z ;
       private String gxTv_Sdtempleados_Mode ;
       private String sTagName ;
       private String sDateCnv ;
@@ -1949,6 +1951,7 @@ namespace GeneXus.Programs {
       private DateTime gxTv_Sdtempleados_Empleadosfecultact ;
       private DateTime gxTv_Sdtempleados_Empleadosfecreg_Z ;
       private DateTime gxTv_Sdtempleados_Empleadosfecultact_Z ;
+      private String gxTv_Sdtempleados_Empleadosareaid ;
       private String gxTv_Sdtempleados_Empleadosnomemple ;
       private String gxTv_Sdtempleados_Empleadosappaterno ;
       private String gxTv_Sdtempleados_Empleadosapmaterno ;
@@ -1956,6 +1959,7 @@ namespace GeneXus.Programs {
       private String gxTv_Sdtempleados_Empleadosusuario ;
       private String gxTv_Sdtempleados_Empleadoscorreo ;
       private String gxTv_Sdtempleados_Empleadosext ;
+      private String gxTv_Sdtempleados_Empleadosareaid_Z ;
       private String gxTv_Sdtempleados_Empleadosnomemple_Z ;
       private String gxTv_Sdtempleados_Empleadosappaterno_Z ;
       private String gxTv_Sdtempleados_Empleadosapmaterno_Z ;
@@ -1991,16 +1995,16 @@ namespace GeneXus.Programs {
 
       }
 
-      [DataMember( Name = "areaid" , Order = 1 )]
+      [DataMember( Name = "empleadosareaid" , Order = 1 )]
       [GxSeudo()]
-      public String gxTpr_Areaid
+      public String gxTpr_Empleadosareaid
       {
          get {
-            return StringUtil.LTrim( StringUtil.Str( (decimal)(sdt.gxTpr_Areaid), 9, 0)) ;
+            return sdt.gxTpr_Empleadosareaid ;
          }
 
          set {
-            sdt.gxTpr_Areaid = (int)(NumberUtil.Val( (String)(value), "."));
+            sdt.gxTpr_Empleadosareaid = (String)(value);
          }
 
       }

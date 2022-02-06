@@ -14,13 +14,14 @@ lwi_i(2,[ [] ]).
 ta_i(2,[ [ [ 2000,se(40000,[ [ 2000,40000 ] ],[ t('coalesce(',1),t(40000,2),t(',',7),t('0',3),t(')',4) ]) ] ] ]).
 ta_i(2,[ [] ]).
  
-las_i(2,[ [ 'Nextvalue','Empleadosnomemple','Empleadosappaterno','Empleadosapmaterno','Empleadosstatus','Empleadoscorreo','Empleadosext' ] ]).
+las_i(2,[ [ 'Nextvalue','Areaareaid','Empleadosnomemple','Empleadosappaterno','Empleadosapmaterno','Empleadosstatus','Empleadoscorreo','Empleadosext' ] ]).
  
-lac_i(2,[ [ 'Nextvalue','Empleadosnomemple','Empleadosappaterno','Empleadosapmaterno','Empleadosstatus','Empleadoscorreo','Empleadosext' ] ]).
+lac_i(2,[ [ 'Nextvalue','Areaareaid','Empleadosnomemple','Empleadosappaterno','Empleadosapmaterno','Empleadosstatus','Empleadoscorreo','Empleadosext' ] ]).
  
  
+lits_i('CATALOGO DE EMPLEADOS',5,10).
 lits_i('Empleado:',5,10).
-lits_i('Departamento:',5,10).
+lits_i('Area:',5,10).
 lits_i('Nombre:',5,10).
 lits_i('ApellidoPaterno:',5,10).
 lits_i('ApellidoMaterno:',5,10).
@@ -31,6 +32,7 @@ lits_i('Exit:',5,10).
 cls_i([ 0,0 ],[ 5,49 ]).
  
 pos_i('Nextvalue',[ 0,0,0 ]).
+pos_i('Areaareaid',[ 0,0,0 ]).
 pos_i('Empleadosnomemple',[ 0,0,0 ]).
 pos_i('Empleadosappaterno',[ 0,0,0 ]).
 pos_i('Empleadosapmaterno',[ 0,0,0 ]).
@@ -58,12 +60,12 @@ rule_i(0,datastore(1,'CS_RPCPGML','')).
 rule_i(0,datastore(1,'JDBC_DATASOURCE','')).
 rule_i(0,datastore(1,'USE_JDBC_DATASOURCE','0')).
 rule_i(0,datastore(1,'DS_DBMS_ADDINFO','')).
-rule_i(0,datastore(1,'USER_PASSWORD',admin)).
+rule_i(0,datastore(1,'USER_PASSWORD',asdf)).
 rule_i(0,datastore(1,'USER_ID',postgres)).
 rule_i(0,datastore(1,'CS_CONNECT','First')).
 rule_i(0,datastore(1,'DBMS_PORT','5432')).
 rule_i(0,datastore(1,'CS_SERVER',localhost)).
-rule_i(0,datastore(1,'CS_DBNAME',postgres)).
+rule_i(0,datastore(1,'CS_DBNAME',condusef)).
 rule_i(0,datastore(1,'CS_FLEDSNAME','')).
 rule_i(0,datastore(1,'CS_DRVNAME','')).
 rule_i(0,datastore(1,'CS_DSNAME','')).
@@ -117,7 +119,23 @@ rule_i(0,prop('Folder',o(8,'WebApi'))).
 rule_i(0,prop('ObjDesc','Catalog_De_Empleados')).
 rule_i(0,prop('ObjName','Catalog_De_Empleados')).
 rule_i(0,maingen(15)).
-rule_i(0,file(6,'EMPLEADOS',[ 13,176,99,100,101,102,103,106,105,107,104 ])).
+rule_i(0,p(0,0,fv,16,[ intname,'AREA' ])).
+rule_i(0,p(0,0,fv,16,[ table,17 ])).
+rule_i(0,p(0,15,fv,16,[])).
+rule_i(0,p(0,15,fv,16,[ 'NAME',area ])).
+rule_i(0,p(0,15,fv,16,[ 'LOC','' ])).
+rule_i(0,p(0,15,fv,16,[ 'SCHEMA',public ])).
+rule_i(0,p(0,15,fv,16,[ 'EXTNAM','YES' ])).
+rule_i(0,p(0,15,fvix,[ 16,17 ],[])).
+rule_i(0,p(0,15,fvix,[ 16,17 ],[ 'NAME',area_pkey ])).
+rule_i(0,p(0,15,fvix,[ 16,17 ],[ 'LOC','' ])).
+rule_i(0,p(0,15,fvix,[ 16,17 ],[ 'SCHEMA',public ])).
+rule_i(0,p(0,15,fvix,[ 16,17 ],[ 'EXTNAM','YES' ])).
+rule_i(0,file(17,'AREA',[ 22,27,28,29,30,31 ])).
+rule_i(0,loc([ 17 ],'AREA','','LAN')).
+rule_i(0,index(17,'AREA_PKEY',u,[ 22 ])).
+rule_i(0,loc([ 17,'AREA_PKEY' ],area_pkey,'','LAN')).
+rule_i(0,file(6,'EMPLEADOS',[ 13,98,99,100,101,102,103,106,105,107,104 ])).
 rule_i(0,loc([ 6 ],'EMPLEADOS','','LAN')).
 rule_i(0,index(6,'EMPLEADOS_PKEY',u,[ 13 ])).
 rule_i(0,loc([ 6,'EMPLEADOS_PKEY' ],empleados_pkey,'','LAN')).
@@ -139,31 +157,37 @@ rule_i(0,rule([ a(22,[ '''Cancelar''','''Cancelar''','' ]) ],[],[],[])).
  
 a_i(1,1,f,'Today',[],[ [],[ t('today(',1),t(')',4) ] ]).
 a_i(2,1,f,'Err',[],[ [],[ t('0',3) ] ]).
-a_i(3,2,ra,2000,[],[ [],'EMPLEADOS_PKEY',[],2 ]).
-a_i(4,1,f,[ t('&Nextvalue',23),t('Enabled',3) ],[],[ [],[ t(0,3),t(';',18) ] ]).
+a_i(3,2,d,t('Areaareaid',23),[],[ 22,27,[ [ [ 17,22 ],[ 17,27 ] ],n,[ [ 17,many ] ],[],[],[ 27 ],[],[],[] ],empty,'Selecciona' ]).
+a_i(4,2,ra,2000,[],[ [],'EMPLEADOS_PKEY',[],2 ]).
+a_i(5,1,f,[ t('&Nextvalue',23),t('Enabled',3) ],[],[ [],[ t(0,3),t(';',18) ] ]).
  
 v_i(f,i,1,[]).
 v_i(f,o,1,'Today').
 v_i(f,i,2,[]).
 v_i(f,o,2,'Err').
-v_i(ra,i,3,[]).
-v_i(ra,o,3,40000).
-v_i(f,i,4,[]).
-v_i(f,o,4,[ t('&Nextvalue',23),t('Enabled',3) ]).
+v_i(d,i,3,[]).
+v_i(d,o,3,'Areaareaid').
+v_i(ra,i,4,[]).
+v_i(ra,o,4,40000).
+v_i(f,i,5,[]).
+v_i(f,o,5,[ t('&Nextvalue',23),t('Enabled',3) ]).
  
  
  
  
  
  
-attri_i('Today',[ 'Gx_date',date,8,0,'99/99/99',1,'','',27 ]).
+attri_i(27,[ areadsc,svchar,100,0,'',0,areadsc,'',0 ]).
+attri_i(22,[ areaareaid,int,9,0,'ZZZZZZZZ9',0,areaareaid,'',0 ]).
+attri_i('Today',[ 'Gx_date',date,8,0,'99/99/99',1,'','',31 ]).
 attri_i(40000,[ 'GXC1',int,9,0,'',0,'',[],0 ]).
 attri_i(13,[ empleadosid,int,9,0,'ZZZZZZZZ9',0,empleadosid,'',0 ]).
-attri_i('Errmsg',[ 'Gx_emsg',char,70,0,'',1,'Error text','',26 ]).
-attri_i('Err',[ 'Gx_err',int,3,0,'ZZ9',1,'Error code','',25 ]).
-attri_i('Empleados',[ empleados,o(empleados),0,0,'',0,empleados,'',24 ]).
+attri_i('Errmsg',[ 'Gx_emsg',char,70,0,'',1,'Error text','',30 ]).
+attri_i('Err',[ 'Gx_err',int,3,0,'ZZ9',1,'Error code','',29 ]).
+attri_i('Areaareaid',[ areaareaid,int,9,0,'ZZZZZZZZ9',0,areaid,'',28 ]).
 attri_i('Websession',[ 'WebSession',o(websession),4,0,'',0,'Web Session','',8 ]).
 attri_i('Nextvalue',[ 'NextValue',int,4,0,'ZZZ9',0,'Next Value','',11 ]).
+attri_i('Estadoid',[ estadoid,int,4,0,'ZZZ9',0,estadoid,'',27 ]).
 attri_i('Empleadosusuario',[ empleadosusuario,svchar,15,0,'',0,empleadosusuario,'',17 ]).
 attri_i('Empleadosstatus',[ empleadosstatus,svchar,1,0,'',0,empleadosstatus,'',16 ]).
 attri_i('Empleadosnomemple',[ empleadosnomemple,svchar,30,0,'',0,empleadosnomemple,'',13 ]).
@@ -174,9 +198,13 @@ attri_i('Empleadosext',[ empleadosext,svchar,4,0,'',0,empleadosext,'',19 ]).
 attri_i('Empleadoscorreo',[ empleadoscorreo,svchar,50,0,'',0,empleadoscorreo,'',18 ]).
 attri_i('Empleadosappaterno',[ empleadosappaterno,svchar,30,0,'',0,empleadosappaterno,'',14 ]).
 attri_i('Empleadosapmaterno',[ empleadosapmaterno,svchar,30,0,'',0,empleadosapmaterno,'',15 ]).
+attri_i('Empleados',[ empleados,o(empleados),0,0,'',0,empleados,'',24 ]).
+attri_i('Areaid',[ areaid,int,9,0,'ZZZZZZZZ9',0,areaid,'',26 ]).
  
 table_i(6,[ 'EMPLEADOS',[ 13 ],empleados,empleados ]).
+table_i(17,[ 'AREA',[ 22,27 ],area,area ]).
  
+index_i(17,[ 'AREA_PKEY',u,[ 22 ],'AREA_PKEY' ]).
 index_i(6,[ 'EMPLEADOS_PKEY',u,[ 13 ],'EMPLEADOS_PKEY' ]).
  
 lv_i(2,2000,6).
@@ -209,8 +237,15 @@ map_i(6,a,102,[ empleadosstatus ]).
 map_i(6,a,101,[ empleadosapmaterno ]).
 map_i(6,a,100,[ empleadosappaterno ]).
 map_i(6,a,99,[ empleadosnomemple ]).
-map_i(6,a,176,[ areaid ]).
+map_i(6,a,98,[ empleadosareaid ]).
 map_i(6,a,13,[ empleadosid ]).
+map_i(17,i,'AREA_PKEY',[ 'AREA_PKEY' ]).
+map_i(17,a,31,[ areafecultact ]).
+map_i(17,a,30,[ areafecreg ]).
+map_i(17,a,29,[ areausuario ]).
+map_i(17,a,28,[ areastatusadsc ]).
+map_i(17,a,27,[ areadsc ]).
+map_i(17,a,22,[ areaid ]).
  
  
  
@@ -223,41 +258,42 @@ break_i(2,nvg,1,[],[ [],[],[] ]).
  
 b_group_i(2,1,lit,0,1,1).
 b_group_i(2,2,lit,0,2,5).
-b_group_i(2,3,lit,0,6,28).
-b_group_i(2,4,lit,0,29,32).
-b_group_i(2,5,lit,0,33,0).
+b_group_i(2,3,lit,0,6,29).
+b_group_i(2,4,lit,0,30,33).
+b_group_i(2,5,lit,0,34,0).
  
 b_line_i(1,2,1,cmd,1,[ t('',146,1,0),t('Start',3,1,7) ]).
 b_line_i(2,2,2,cmd,1,[ t('',107,1,0),t('Nextvalue',23,1,0),t(=,10,1,0),t(40000,2,1,0),t(+,5,1,0),t('1',3,1,0) ]).
 b_line_i(3,2,2,cmd,1,[ t('',147,1,0) ]).
 b_line_i(5,2,2,cmd,1,[ t('',146,1,0),t('''Guardar ''',3,5,7) ]).
-b_line_i(6,2,3,cmd,1,[ t('',109,1,0),t('null(',1,6,24),t('Empleadosnomemple',23,1,5),t(')',4,1,33),t('.OR.',9,1,35),t('null(',1,6,60),t('Empleadosappaterno',23,1,40),t(')',4,1,69),t('.OR.',9,1,71),t('null(',1,6,96),t('Empleadosapmaterno',23,1,76),t(')',4,1,105),t('.OR.',9,1,107),t('null(',1,6,129),t('Empleadosstatus',23,1,112),t(')',4,1,138),t('.OR.',9,1,140),t('null(',1,6,162),t('Empleadoscorreo',23,1,145),t(')',4,1,171),t('.OR.',9,1,173),t('null(',1,6,192),t('Empleadosext',23,1,178),t(')',4,1,201) ]).
+b_line_i(6,2,3,cmd,1,[ t('',109,1,0),t('null(',1,6,24),t('Empleadosnomemple',23,1,5),t(')',4,1,33),t('.OR.',9,1,35),t('null(',1,6,60),t('Empleadosappaterno',23,1,40),t(')',4,1,69),t('.OR.',9,1,71),t('null(',1,6,88),t('Areaareaid',23,1,76),t(')',4,1,97),t('.OR.',9,1,99),t('null(',1,6,124),t('Empleadosapmaterno',23,1,104),t(')',4,1,133),t('.OR.',9,1,135),t('null(',1,6,157),t('Empleadosstatus',23,1,140),t(')',4,1,166),t('.OR.',9,1,168),t('null(',1,6,190),t('Empleadoscorreo',23,1,173),t(')',4,1,199),t('.OR.',9,1,201),t('null(',1,6,220),t('Empleadosext',23,1,206),t(')',4,1,229) ]).
 b_line_i(7,2,3,cmd,1,[ t('',141,1,0),t('''Los campos estan vacios''',3,7,7),t(')',4,1,32) ]).
 b_line_i(8,2,3,cmd,1,[ t('',110,1,0) ]).
 b_line_i(9,2,3,cmd,1,[ t('',107,1,0),t([ t('Empleados',23,1,0),t('Empleadosid',3,1,0) ],29,1,0),t(=,10,1,0),t('Nextvalue',23,1,0) ]).
-b_line_i(10,2,3,cmd,1,[ t('',107,1,0),t([ t('Empleados',23,1,0),t('Empleadosnomemple',3,1,0) ],29,1,0),t(=,10,1,0),t('Empleadosnomemple',23,1,0) ]).
-b_line_i(11,2,3,cmd,1,[ t('',107,1,0),t([ t('Empleados',23,1,0),t('Empleadosappaterno',3,1,0) ],29,1,0),t(=,10,1,0),t('Empleadosappaterno',23,1,0) ]).
-b_line_i(12,2,3,cmd,1,[ t('',107,1,0),t([ t('Empleados',23,1,0),t('Empleadosapmaterno',3,1,0) ],29,1,0),t(=,10,1,0),t('Empleadosapmaterno',23,1,0) ]).
-b_line_i(13,2,3,cmd,1,[ t('',107,1,0),t([ t('Empleados',23,1,0),t('Empleadosstatus',3,1,0) ],29,1,0),t(=,10,1,0),t('Empleadosstatus',23,1,0) ]).
-b_line_i(14,2,3,cmd,1,[ t('',107,1,0),t([ t('Empleados',23,1,0),t('Empleadoscorreo',3,1,0) ],29,1,0),t(=,10,1,0),t('Empleadoscorreo',23,1,0) ]).
-b_line_i(15,2,3,cmd,1,[ t('',107,1,0),t([ t('Empleados',23,1,0),t('Empleadosext',3,1,0) ],29,1,0),t(=,10,1,0),t('Empleadosext',23,1,0) ]).
-b_line_i(16,2,3,cmd,1,[ t('',107,1,0),t([ t('Empleados',23,1,0),t('Empleadosfecreg',3,1,0) ],29,1,0),t(=,10,1,0),t('Today',23,1,0) ]).
-b_line_i(17,2,3,cmd,1,[ t('',107,1,0),t([ t('Empleados',23,1,0),t('Empleadosusuario',3,1,0) ],29,1,0),t(=,10,1,0),t([ t('Websession',23,1,0),t('get(',1,1,0) ],31,1,0),t('''usuario''',3,1,0),t(')',4,1,0) ]).
-b_line_i(18,2,3,cmd,1,[ t('',107,1,0),t([ t('Empleados',23,18,3),t('save(',1,18,14) ],31,18,14),t(')',4,1,20) ]).
-b_line_i(19,2,3,cmd,1,[ t('',109,1,0),t([ t('Empleados',23,19,6),t('success(',1,19,17) ],31,19,17),t(')',4,1,26) ]).
-b_line_i(20,2,3,cmd,1,[ t('',132,1,0) ]).
-b_line_i(21,2,3,cmd,1,[ t('',104,1,0),t(o(13,'Catalog_De_Empleados'),28,1,4) ]).
-b_line_i(22,2,3,cmd,1,[ t('',110,1,0) ]).
-b_line_i(23,2,3,cmd,1,[ t('',157,1,0) ]).
-b_line_i(24,2,3,cmd,1,[ t('',111,1,0) ]).
+b_line_i(10,2,3,cmd,1,[ t('',107,1,0),t([ t('Empleados',23,1,0),t('Empleadosareaid',3,1,0) ],29,1,0),t(=,10,1,0),t('str(',1,1,0),t('Areaareaid',23,1,0),t(',',7,1,0),t(9,3,1,0),t(',',7,1,0),t(0,3,1,0),t(')',4,1,0) ]).
+b_line_i(11,2,3,cmd,1,[ t('',107,1,0),t([ t('Empleados',23,1,0),t('Empleadosnomemple',3,1,0) ],29,1,0),t(=,10,1,0),t('Empleadosnomemple',23,1,0) ]).
+b_line_i(12,2,3,cmd,1,[ t('',107,1,0),t([ t('Empleados',23,1,0),t('Empleadosappaterno',3,1,0) ],29,1,0),t(=,10,1,0),t('Empleadosappaterno',23,1,0) ]).
+b_line_i(13,2,3,cmd,1,[ t('',107,1,0),t([ t('Empleados',23,1,0),t('Empleadosapmaterno',3,1,0) ],29,1,0),t(=,10,1,0),t('Empleadosapmaterno',23,1,0) ]).
+b_line_i(14,2,3,cmd,1,[ t('',107,1,0),t([ t('Empleados',23,1,0),t('Empleadosstatus',3,1,0) ],29,1,0),t(=,10,1,0),t('Empleadosstatus',23,1,0) ]).
+b_line_i(15,2,3,cmd,1,[ t('',107,1,0),t([ t('Empleados',23,1,0),t('Empleadoscorreo',3,1,0) ],29,1,0),t(=,10,1,0),t('Empleadoscorreo',23,1,0) ]).
+b_line_i(16,2,3,cmd,1,[ t('',107,1,0),t([ t('Empleados',23,1,0),t('Empleadosext',3,1,0) ],29,1,0),t(=,10,1,0),t('Empleadosext',23,1,0) ]).
+b_line_i(17,2,3,cmd,1,[ t('',107,1,0),t([ t('Empleados',23,1,0),t('Empleadosfecreg',3,1,0) ],29,1,0),t(=,10,1,0),t('Today',23,1,0) ]).
+b_line_i(18,2,3,cmd,1,[ t('',107,1,0),t([ t('Empleados',23,1,0),t('Empleadosusuario',3,1,0) ],29,1,0),t(=,10,1,0),t([ t('Websession',23,1,0),t('get(',1,1,0) ],31,1,0),t('''usuario''',3,1,0),t(')',4,1,0) ]).
+b_line_i(19,2,3,cmd,1,[ t('',107,1,0),t([ t('Empleados',23,19,3),t('save(',1,19,14) ],31,19,14),t(')',4,1,20) ]).
+b_line_i(20,2,3,cmd,1,[ t('',109,1,0),t([ t('Empleados',23,20,6),t('success(',1,20,17) ],31,20,17),t(')',4,1,26) ]).
+b_line_i(21,2,3,cmd,1,[ t('',132,1,0) ]).
+b_line_i(22,2,3,cmd,1,[ t('',104,1,0),t(o(13,'Catalog_De_Empleados'),28,1,4) ]).
+b_line_i(23,2,3,cmd,1,[ t('',110,1,0) ]).
+b_line_i(24,2,3,cmd,1,[ t('',157,1,0) ]).
 b_line_i(25,2,3,cmd,1,[ t('',111,1,0) ]).
-b_line_i(26,2,3,cmd,1,[ t('',147,1,0) ]).
-b_line_i(28,2,3,cmd,1,[ t('',146,1,0),t('''Consultar ''',3,28,7) ]).
-b_line_i(29,2,4,cmd,1,[ t('',104,1,0),t(o(13,'DetallesEmpleados'),28,1,2) ]).
-b_line_i(30,2,4,cmd,1,[ t('',147,1,0) ]).
-b_line_i(32,2,4,cmd,1,[ t('',146,1,0),t('''Cancelar''',3,32,7) ]).
-b_line_i(33,2,5,cmd,1,[ t('',104,1,0),t(o(13,'MenuPrincipal'),28,1,2) ]).
-b_line_i(34,2,5,cmd,1,[ t('',147,1,0) ]).
+b_line_i(26,2,3,cmd,1,[ t('',111,1,0) ]).
+b_line_i(27,2,3,cmd,1,[ t('',147,1,0) ]).
+b_line_i(29,2,3,cmd,1,[ t('',146,1,0),t('''Consultar ''',3,29,7) ]).
+b_line_i(30,2,4,cmd,1,[ t('',104,1,0),t(o(13,'DetallesEmpleados'),28,1,2) ]).
+b_line_i(31,2,4,cmd,1,[ t('',147,1,0) ]).
+b_line_i(33,2,4,cmd,1,[ t('',146,1,0),t('''Cancelar''',3,33,7) ]).
+b_line_i(34,2,5,cmd,1,[ t('',104,1,0),t(o(13,'MenuPrincipal'),28,1,2) ]).
+b_line_i(35,2,5,cmd,1,[ t('',147,1,0) ]).
 b_line_i(1000,2,5,cmd,0,[ t('',146,0,0),t('Load',3,0,0) ]).
 b_line_i(1001,2,5,cmd,0,[ t('',155,0,0) ]).
 b_line_i(1002,2,5,cmd,0,[ t('',147,0,0) ]).
@@ -274,83 +310,87 @@ b_line_i(1002,2,5,cmd,0,[ t('',147,0,0) ]).
  
  
  
-html_i(2,html('&nbsp;')).
+html_i(2,html('&nbsp; ')).
 html_i(3,html('<p>')).
 html_i(4,table(4)).
-html_i(71,html('</p>')).
+html_i(75,html('</p>')).
  
 html_sub_i(4,0,html_i(0,html('<tbody>'))).
 html_sub_i(4,5,html_i(1,row(5))).
 html_sub_i(5,6,html_i(0,cell(6))).
-html_sub_i(6,7,html_i(0,table(7))).
-html_sub_i(7,0,html_i(0,html('<tbody>'))).
-html_sub_i(7,8,html_i(1,row(8))).
+html_sub_i(6,7,html_i(0,t('CATALOGO DE EMPLEADOS',3))).
+html_sub_i(4,8,html_i(2,row(8))).
 html_sub_i(8,9,html_i(0,cell(9))).
-html_sub_i(9,10,html_i(0,t('Empleado:',3))).
-html_sub_i(8,11,html_i(1,cell(11))).
-html_sub_i(11,12,html_i(0,t('Nextvalue',23))).
-html_sub_i(7,13,html_i(2,row(13))).
-html_sub_i(13,14,html_i(0,cell(14))).
-html_sub_i(14,15,html_i(0,t('Departamento:',3))).
-html_sub_i(13,16,html_i(1,cell(16))).
-html_sub_i(7,17,html_i(3,row(17))).
-html_sub_i(17,18,html_i(0,cell(18))).
-html_sub_i(18,19,html_i(0,t('Nombre:',3))).
-html_sub_i(17,20,html_i(1,cell(20))).
-html_sub_i(20,21,html_i(0,t('Empleadosnomemple',23))).
-html_sub_i(7,22,html_i(4,row(22))).
-html_sub_i(22,23,html_i(0,cell(23))).
-html_sub_i(23,24,html_i(0,t('ApellidoPaterno:',3))).
-html_sub_i(22,25,html_i(1,cell(25))).
-html_sub_i(25,26,html_i(0,t('Empleadosappaterno',23))).
-html_sub_i(7,0,html_i(5,html('</tbody>'))).
-html_sub_i(4,27,html_i(2,row(27))).
-html_sub_i(27,28,html_i(0,cell(28))).
-html_sub_i(28,29,html_i(0,table(29))).
-html_sub_i(29,0,html_i(0,html('<tbody>'))).
-html_sub_i(29,30,html_i(1,row(30))).
-html_sub_i(30,31,html_i(0,cell(31))).
-html_sub_i(31,32,html_i(0,t('ApellidoMaterno:',3))).
-html_sub_i(30,33,html_i(1,cell(33))).
-html_sub_i(33,34,html_i(0,t('Empleadosapmaterno',23))).
-html_sub_i(30,35,html_i(2,cell(35))).
-html_sub_i(30,36,html_i(3,cell(36))).
-html_sub_i(30,37,html_i(4,cell(37))).
-html_sub_i(29,38,html_i(2,row(38))).
-html_sub_i(38,39,html_i(0,cell(39))).
-html_sub_i(39,40,html_i(0,t('Estatus:',3))).
-html_sub_i(38,41,html_i(1,cell(41))).
-html_sub_i(41,42,html_i(0,t('Empleadosstatus',23))).
-html_sub_i(38,43,html_i(2,cell(43))).
-html_sub_i(38,44,html_i(3,cell(44))).
-html_sub_i(38,45,html_i(4,cell(45))).
-html_sub_i(29,46,html_i(3,row(46))).
-html_sub_i(46,47,html_i(0,cell(47))).
-html_sub_i(47,48,html_i(0,t('Correo:',3))).
-html_sub_i(46,49,html_i(1,cell(49))).
-html_sub_i(49,50,html_i(0,t('Empleadoscorreo',23))).
-html_sub_i(46,51,html_i(2,cell(51))).
-html_sub_i(46,52,html_i(3,cell(52))).
-html_sub_i(46,53,html_i(4,cell(53))).
-html_sub_i(29,54,html_i(4,row(54))).
-html_sub_i(54,55,html_i(0,cell(55))).
-html_sub_i(55,56,html_i(0,t('Exit:',3))).
-html_sub_i(54,57,html_i(1,cell(57))).
-html_sub_i(57,58,html_i(0,t('Empleadosext',23))).
-html_sub_i(54,59,html_i(2,cell(59))).
-html_sub_i(54,60,html_i(3,cell(60))).
-html_sub_i(54,61,html_i(4,cell(61))).
-html_sub_i(29,62,html_i(5,row(62))).
-html_sub_i(62,63,html_i(0,cell(63))).
-html_sub_i(62,64,html_i(1,cell(64))).
-html_sub_i(64,65,html_i(0,button('''Consultar '''))).
-html_sub_i(62,66,html_i(2,cell(66))).
-html_sub_i(66,67,html_i(0,button('''Guardar '''))).
-html_sub_i(62,68,html_i(3,cell(68))).
-html_sub_i(62,69,html_i(4,cell(69))).
-html_sub_i(69,70,html_i(0,button('Enter'))).
-html_sub_i(29,0,html_i(6,html('</tbody>'))).
-html_sub_i(4,0,html_i(3,html('</tbody>'))).
+html_sub_i(9,10,html_i(0,table(10))).
+html_sub_i(10,0,html_i(0,html('<tbody>'))).
+html_sub_i(10,11,html_i(1,row(11))).
+html_sub_i(11,12,html_i(0,cell(12))).
+html_sub_i(12,13,html_i(0,t('Empleado:',3))).
+html_sub_i(11,14,html_i(1,cell(14))).
+html_sub_i(14,15,html_i(0,t('Nextvalue',23))).
+html_sub_i(10,16,html_i(2,row(16))).
+html_sub_i(16,17,html_i(0,cell(17))).
+html_sub_i(17,18,html_i(0,t('Area:',3))).
+html_sub_i(16,19,html_i(1,cell(19))).
+html_sub_i(19,20,html_i(0,t('Areaareaid',23))).
+html_sub_i(10,21,html_i(3,row(21))).
+html_sub_i(21,22,html_i(0,cell(22))).
+html_sub_i(22,23,html_i(0,t('Nombre:',3))).
+html_sub_i(21,24,html_i(1,cell(24))).
+html_sub_i(24,25,html_i(0,t('Empleadosnomemple',23))).
+html_sub_i(10,26,html_i(4,row(26))).
+html_sub_i(26,27,html_i(0,cell(27))).
+html_sub_i(27,28,html_i(0,t('ApellidoPaterno:',3))).
+html_sub_i(26,29,html_i(1,cell(29))).
+html_sub_i(29,30,html_i(0,t('Empleadosappaterno',23))).
+html_sub_i(10,0,html_i(5,html('</tbody>'))).
+html_sub_i(4,31,html_i(3,row(31))).
+html_sub_i(31,32,html_i(0,cell(32))).
+html_sub_i(32,33,html_i(0,table(33))).
+html_sub_i(33,0,html_i(0,html('<tbody>'))).
+html_sub_i(33,34,html_i(1,row(34))).
+html_sub_i(34,35,html_i(0,cell(35))).
+html_sub_i(35,36,html_i(0,t('ApellidoMaterno:',3))).
+html_sub_i(34,37,html_i(1,cell(37))).
+html_sub_i(37,38,html_i(0,t('Empleadosapmaterno',23))).
+html_sub_i(34,39,html_i(2,cell(39))).
+html_sub_i(34,40,html_i(3,cell(40))).
+html_sub_i(34,41,html_i(4,cell(41))).
+html_sub_i(33,42,html_i(2,row(42))).
+html_sub_i(42,43,html_i(0,cell(43))).
+html_sub_i(43,44,html_i(0,t('Estatus:',3))).
+html_sub_i(42,45,html_i(1,cell(45))).
+html_sub_i(45,46,html_i(0,t('Empleadosstatus',23))).
+html_sub_i(42,47,html_i(2,cell(47))).
+html_sub_i(42,48,html_i(3,cell(48))).
+html_sub_i(42,49,html_i(4,cell(49))).
+html_sub_i(33,50,html_i(3,row(50))).
+html_sub_i(50,51,html_i(0,cell(51))).
+html_sub_i(51,52,html_i(0,t('Correo:',3))).
+html_sub_i(50,53,html_i(1,cell(53))).
+html_sub_i(53,54,html_i(0,t('Empleadoscorreo',23))).
+html_sub_i(50,55,html_i(2,cell(55))).
+html_sub_i(50,56,html_i(3,cell(56))).
+html_sub_i(50,57,html_i(4,cell(57))).
+html_sub_i(33,58,html_i(4,row(58))).
+html_sub_i(58,59,html_i(0,cell(59))).
+html_sub_i(59,60,html_i(0,t('Exit:',3))).
+html_sub_i(58,61,html_i(1,cell(61))).
+html_sub_i(61,62,html_i(0,t('Empleadosext',23))).
+html_sub_i(58,63,html_i(2,cell(63))).
+html_sub_i(58,64,html_i(3,cell(64))).
+html_sub_i(58,65,html_i(4,cell(65))).
+html_sub_i(33,66,html_i(5,row(66))).
+html_sub_i(66,67,html_i(0,cell(67))).
+html_sub_i(66,68,html_i(1,cell(68))).
+html_sub_i(68,69,html_i(0,button('''Consultar '''))).
+html_sub_i(66,70,html_i(2,cell(70))).
+html_sub_i(70,71,html_i(0,button('''Guardar '''))).
+html_sub_i(66,72,html_i(3,cell(72))).
+html_sub_i(66,73,html_i(4,cell(73))).
+html_sub_i(73,74,html_i(0,button('Enter'))).
+html_sub_i(33,0,html_i(6,html('</tbody>'))).
+html_sub_i(4,0,html_i(4,html('</tbody>'))).
  
 html_tags_i(1,'Class','Form').
  
@@ -367,369 +407,412 @@ html_comp_i(4,'Cellspacing','2',d,[ str ]).
 html_comp_i(4,'Height',measure(114,px),v,[ measure ]).
 html_comp_i(4,'Width',measure(682,px),v,[ measure ]).
 html_comp_i(4,'Rules',none,d,[ str ]).
-html_comp_i(7,'Id','Table2',v,[ str ]).
-html_comp_i(7,'Class','Table',v,[ str ]).
+html_comp_i(6,'Align',center,v,[ str ]).
+html_comp_i(7,'Caption','CATALOGO DE EMPLEADOS',d,[ str ]).
+html_comp_i(7,'Id','Textblock',v,[ str ]).
+html_comp_i(7,'Class','TextBlock',d,[ str ]).
+html_comp_i(7,'Event','',d,[ str ]).
+html_comp_i(7,'Returnonclick',0,d,[ bool ]).
+html_comp_i(7,'Gxformat',0,d,[ num ]).
 html_comp_i(7,'Title','',d,[ str ]).
-html_comp_i(7,'Align',left,d,[ str ]).
-html_comp_i(7,'Backgroundgx','',d,[ str ]).
-html_comp_i(7,'Bgcolor',rgb(0,0,0),d,[ color ]).
-html_comp_i(7,'Border','0',d,[ str ]).
-html_comp_i(7,'Bordercolor',rgb(0,0,0),d,[ color ]).
-html_comp_i(7,'Cellpadding','1',d,[ str ]).
-html_comp_i(7,'Cellspacing','2',d,[ str ]).
-html_comp_i(7,'Height',measure(68,px),v,[ measure ]).
-html_comp_i(7,'Width',measure(677,px),v,[ measure ]).
-html_comp_i(7,'Rules',none,d,[ str ]).
-html_comp_i(9,'Height',measure(22,px),v,[ measure ]).
-html_comp_i(9,'Width',measure(136,px),v,[ measure ]).
-html_comp_i(10,'Caption','Empleado:',d,[ str ]).
-html_comp_i(10,'Id','Textblock1',v,[ str ]).
-html_comp_i(10,'Class','TextBlock',d,[ str ]).
-html_comp_i(10,'Event','',d,[ str ]).
-html_comp_i(10,'Returnonclick',0,d,[ bool ]).
-html_comp_i(10,'Gxformat',0,d,[ num ]).
+html_comp_i(7,'Fill',-1,d,[ bool ]).
+html_comp_i(7,'Backcolor',rgb(255,255,255),d,[ color ]).
+html_comp_i(7,'Forecolor',rgb(0,0,0),v,[ color ]).
+html_comp_i(7,'Font',font('Microsoft Sans Serif',15,[ bold ]),v,[ font ]).
+html_comp_i(10,'Id','Table2',v,[ str ]).
+html_comp_i(10,'Class','Table',v,[ str ]).
 html_comp_i(10,'Title','',d,[ str ]).
-html_comp_i(10,'Fill',-1,d,[ bool ]).
-html_comp_i(10,'Backcolor',rgb(255,255,255),d,[ color ]).
-html_comp_i(10,'Forecolor',rgb(0,0,0),d,[ color ]).
-html_comp_i(10,'Font','',d,[ str ]).
-html_comp_i(11,'Width',measure(333,px),v,[ measure ]).
-html_comp_i(12,'Colcount',4,d,[ num ]).
-html_comp_i(12,'Attid',-11,v,[ num ]).
-html_comp_i(12,'Class','Attribute',d,[ str ]).
-html_comp_i(12,'Controlname','&Nextvalue',d,[ str ]).
-html_comp_i(12,'Returnonclick',0,d,[ bool ]).
-html_comp_i(12,'Eventgx','',d,[ str ]).
-html_comp_i(12,'Captionclass','',d,[ str ]).
-html_comp_i(12,'Captionposition','',d,[ str ]).
-html_comp_i(12,'Captionvalue','',d,[ str ]).
-html_comp_i(12,'Controltype',2,d,[ num ]).
-html_comp_i(12,'Inputtype',0,d,[ num ]).
-html_comp_i(12,'Notifycontextchange',0,d,[ bool ]).
-html_comp_i(12,'Emptyasnull','Yes',d,[ str ]).
-html_comp_i(12,'Readonly',-1,v,[ bool ]).
-html_comp_i(12,'Autocomplete',-1,d,[ bool ]).
-html_comp_i(12,'Ispassword',0,d,[ bool ]).
-html_comp_i(12,'Autoresize',-1,d,[ bool ]).
-html_comp_i(12,'Gxwidth',measure(4,chr),d,[ measure ]).
-html_comp_i(12,'Gxheight',measure(1,row),d,[ measure ]).
-html_comp_i(12,'Ismultiline',0,d,[ bool ]).
-html_comp_i(12,'Fill',0,d,[ bool ]).
-html_comp_i(12,'Forecolor',rgb(0,0,0),d,[ color ]).
-html_comp_i(12,'Font',font('Verdana',12,[]),d,[ font ]).
-html_comp_i(12,'Horizontalalignment',right,d,[ str ]).
-html_comp_i(12,'Gxformat',0,d,[ num ]).
-html_comp_i(12,'Title','',d,[ str ]).
-html_comp_i(12,'Invitemsg','',d,[ str ]).
-html_comp_i(14,'Height',measure(20,px),v,[ measure ]).
-html_comp_i(15,'Caption','Departamento:',d,[ str ]).
-html_comp_i(15,'Id','Textblock2',v,[ str ]).
-html_comp_i(15,'Class','TextBlock',d,[ str ]).
-html_comp_i(15,'Event','',d,[ str ]).
+html_comp_i(10,'Align',left,d,[ str ]).
+html_comp_i(10,'Backgroundgx','',d,[ str ]).
+html_comp_i(10,'Bgcolor',rgb(0,0,0),d,[ color ]).
+html_comp_i(10,'Border','0',d,[ str ]).
+html_comp_i(10,'Bordercolor',rgb(0,0,0),d,[ color ]).
+html_comp_i(10,'Cellpadding','1',d,[ str ]).
+html_comp_i(10,'Cellspacing','2',d,[ str ]).
+html_comp_i(10,'Height',measure(68,px),v,[ measure ]).
+html_comp_i(10,'Width',measure(677,px),v,[ measure ]).
+html_comp_i(10,'Rules',none,d,[ str ]).
+html_comp_i(12,'Height',measure(22,px),v,[ measure ]).
+html_comp_i(12,'Width',measure(136,px),v,[ measure ]).
+html_comp_i(13,'Caption','Empleado:',d,[ str ]).
+html_comp_i(13,'Id','Textblock1',v,[ str ]).
+html_comp_i(13,'Class','TextBlock',d,[ str ]).
+html_comp_i(13,'Event','',d,[ str ]).
+html_comp_i(13,'Returnonclick',0,d,[ bool ]).
+html_comp_i(13,'Gxformat',0,d,[ num ]).
+html_comp_i(13,'Title','',d,[ str ]).
+html_comp_i(13,'Fill',-1,d,[ bool ]).
+html_comp_i(13,'Backcolor',rgb(255,255,255),d,[ color ]).
+html_comp_i(13,'Forecolor',rgb(0,0,0),d,[ color ]).
+html_comp_i(13,'Font','',d,[ str ]).
+html_comp_i(14,'Width',measure(333,px),v,[ measure ]).
+html_comp_i(15,'Colcount',4,d,[ num ]).
+html_comp_i(15,'Attid',-11,v,[ num ]).
+html_comp_i(15,'Class','Attribute',d,[ str ]).
+html_comp_i(15,'Controlname','&Nextvalue',d,[ str ]).
 html_comp_i(15,'Returnonclick',0,d,[ bool ]).
+html_comp_i(15,'Eventgx','',d,[ str ]).
+html_comp_i(15,'Captionclass','',d,[ str ]).
+html_comp_i(15,'Captionposition','',d,[ str ]).
+html_comp_i(15,'Captionvalue','',d,[ str ]).
+html_comp_i(15,'Controltype',2,d,[ num ]).
+html_comp_i(15,'Inputtype',0,d,[ num ]).
+html_comp_i(15,'Notifycontextchange',0,d,[ bool ]).
+html_comp_i(15,'Emptyasnull','Yes',d,[ str ]).
+html_comp_i(15,'Readonly',-1,v,[ bool ]).
+html_comp_i(15,'Autocomplete',-1,d,[ bool ]).
+html_comp_i(15,'Ispassword',0,d,[ bool ]).
+html_comp_i(15,'Autoresize',-1,d,[ bool ]).
+html_comp_i(15,'Gxwidth',measure(4,chr),d,[ measure ]).
+html_comp_i(15,'Gxheight',measure(1,row),d,[ measure ]).
+html_comp_i(15,'Ismultiline',0,d,[ bool ]).
+html_comp_i(15,'Fill',0,d,[ bool ]).
+html_comp_i(15,'Forecolor',rgb(0,0,0),d,[ color ]).
+html_comp_i(15,'Font',font('Verdana',12,[]),d,[ font ]).
+html_comp_i(15,'Horizontalalignment',right,d,[ str ]).
 html_comp_i(15,'Gxformat',0,d,[ num ]).
 html_comp_i(15,'Title','',d,[ str ]).
-html_comp_i(15,'Fill',-1,d,[ bool ]).
-html_comp_i(15,'Backcolor',rgb(255,255,255),d,[ color ]).
-html_comp_i(15,'Forecolor',rgb(0,0,0),d,[ color ]).
-html_comp_i(15,'Font','',d,[ str ]).
-html_comp_i(19,'Caption','Nombre:',d,[ str ]).
-html_comp_i(19,'Id','Textblock3',v,[ str ]).
-html_comp_i(19,'Class','TextBlock',d,[ str ]).
-html_comp_i(19,'Event','',d,[ str ]).
-html_comp_i(19,'Returnonclick',0,d,[ bool ]).
-html_comp_i(19,'Gxformat',0,d,[ num ]).
-html_comp_i(19,'Title','',d,[ str ]).
-html_comp_i(19,'Fill',-1,d,[ bool ]).
-html_comp_i(19,'Backcolor',rgb(255,255,255),d,[ color ]).
-html_comp_i(19,'Forecolor',rgb(0,0,0),d,[ color ]).
-html_comp_i(19,'Font','',d,[ str ]).
-html_comp_i(21,'Colcount',30,d,[ num ]).
-html_comp_i(21,'Attid',-13,v,[ num ]).
-html_comp_i(21,'Class','Attribute',d,[ str ]).
-html_comp_i(21,'Controlname','&Empleadosnomemple',d,[ str ]).
-html_comp_i(21,'Returnonclick',0,d,[ bool ]).
-html_comp_i(21,'Captionclass','',d,[ str ]).
-html_comp_i(21,'Captionposition','',d,[ str ]).
-html_comp_i(21,'Captionvalue','',d,[ str ]).
-html_comp_i(21,'Controltype',2,d,[ num ]).
-html_comp_i(21,'Inputtype',0,d,[ num ]).
-html_comp_i(21,'Editautocomplete',0,d,[ num ]).
-html_comp_i(21,'Autocorrection',-1,d,[ bool ]).
-html_comp_i(21,'Autocapitalization','FirstWord',d,[ str ]).
-html_comp_i(21,'Notifycontextchange',0,d,[ bool ]).
-html_comp_i(21,'Emptyasnull','Yes',d,[ str ]).
-html_comp_i(21,'Readonly',0,d,[ bool ]).
-html_comp_i(21,'Autocomplete',-1,d,[ bool ]).
-html_comp_i(21,'Ispassword',0,d,[ bool ]).
-html_comp_i(21,'Autoresize',-1,d,[ bool ]).
-html_comp_i(21,'Gxwidth',measure(30,chr),d,[ measure ]).
-html_comp_i(21,'Gxheight',measure(1,row),d,[ measure ]).
-html_comp_i(21,'Ismultiline',0,d,[ bool ]).
-html_comp_i(21,'Fill',-1,d,[ bool ]).
-html_comp_i(21,'Backcolor',rgb(255,255,255),d,[ color ]).
-html_comp_i(21,'Forecolor',rgb(0,0,0),d,[ color ]).
-html_comp_i(21,'Font',font('Verdana',12,[]),d,[ font ]).
-html_comp_i(21,'Horizontalalignment',left,d,[ str ]).
-html_comp_i(21,'Gxformat',0,d,[ num ]).
-html_comp_i(21,'Title','',d,[ str ]).
-html_comp_i(21,'Invitemsg','',d,[ str ]).
-html_comp_i(24,'Caption','ApellidoPaterno:',d,[ str ]).
-html_comp_i(24,'Id','Textblock4',v,[ str ]).
-html_comp_i(24,'Class','TextBlock',d,[ str ]).
-html_comp_i(24,'Event','',d,[ str ]).
-html_comp_i(24,'Returnonclick',0,d,[ bool ]).
-html_comp_i(24,'Gxformat',0,d,[ num ]).
-html_comp_i(24,'Title','',d,[ str ]).
-html_comp_i(24,'Fill',-1,d,[ bool ]).
-html_comp_i(24,'Backcolor',rgb(255,255,255),d,[ color ]).
-html_comp_i(24,'Forecolor',rgb(0,0,0),d,[ color ]).
-html_comp_i(24,'Font','',d,[ str ]).
-html_comp_i(26,'Colcount',30,d,[ num ]).
-html_comp_i(26,'Attid',-14,v,[ num ]).
-html_comp_i(26,'Class','Attribute',d,[ str ]).
-html_comp_i(26,'Controlname','&Empleadosappaterno',d,[ str ]).
-html_comp_i(26,'Returnonclick',0,d,[ bool ]).
-html_comp_i(26,'Captionclass','',d,[ str ]).
-html_comp_i(26,'Captionposition','',d,[ str ]).
-html_comp_i(26,'Captionvalue','',d,[ str ]).
-html_comp_i(26,'Controltype',2,d,[ num ]).
-html_comp_i(26,'Inputtype',0,d,[ num ]).
-html_comp_i(26,'Editautocomplete',0,d,[ num ]).
-html_comp_i(26,'Autocorrection',-1,d,[ bool ]).
-html_comp_i(26,'Autocapitalization','FirstWord',d,[ str ]).
-html_comp_i(26,'Notifycontextchange',0,d,[ bool ]).
-html_comp_i(26,'Emptyasnull','Yes',d,[ str ]).
-html_comp_i(26,'Readonly',0,d,[ bool ]).
-html_comp_i(26,'Autocomplete',-1,d,[ bool ]).
-html_comp_i(26,'Ispassword',0,d,[ bool ]).
-html_comp_i(26,'Autoresize',-1,d,[ bool ]).
-html_comp_i(26,'Gxwidth',measure(30,chr),d,[ measure ]).
-html_comp_i(26,'Gxheight',measure(1,row),d,[ measure ]).
-html_comp_i(26,'Ismultiline',0,d,[ bool ]).
-html_comp_i(26,'Fill',-1,d,[ bool ]).
-html_comp_i(26,'Backcolor',rgb(255,255,255),d,[ color ]).
-html_comp_i(26,'Forecolor',rgb(0,0,0),d,[ color ]).
-html_comp_i(26,'Font',font('Verdana',12,[]),d,[ font ]).
-html_comp_i(26,'Horizontalalignment',left,d,[ str ]).
-html_comp_i(26,'Gxformat',0,d,[ num ]).
-html_comp_i(26,'Title','',d,[ str ]).
-html_comp_i(26,'Invitemsg','',d,[ str ]).
-html_comp_i(29,'Id','Table3',v,[ str ]).
-html_comp_i(29,'Class','Table',v,[ str ]).
-html_comp_i(29,'Title','',d,[ str ]).
-html_comp_i(29,'Align',left,d,[ str ]).
-html_comp_i(29,'Backgroundgx','',d,[ str ]).
-html_comp_i(29,'Bgcolor',rgb(0,0,0),d,[ color ]).
-html_comp_i(29,'Border','0',d,[ str ]).
-html_comp_i(29,'Bordercolor',rgb(0,0,0),d,[ color ]).
-html_comp_i(29,'Cellpadding','1',d,[ str ]).
-html_comp_i(29,'Cellspacing','2',d,[ str ]).
-html_comp_i(29,'Height',measure(90,px),v,[ measure ]).
-html_comp_i(29,'Width',measure(678,px),v,[ measure ]).
-html_comp_i(29,'Rules',none,d,[ str ]).
-html_comp_i(31,'Width',measure(337,px),v,[ measure ]).
-html_comp_i(32,'Caption','ApellidoMaterno:',d,[ str ]).
-html_comp_i(32,'Id','Textblock5',v,[ str ]).
-html_comp_i(32,'Class','TextBlock',d,[ str ]).
-html_comp_i(32,'Event','',d,[ str ]).
-html_comp_i(32,'Returnonclick',0,d,[ bool ]).
-html_comp_i(32,'Gxformat',0,d,[ num ]).
-html_comp_i(32,'Title','',d,[ str ]).
-html_comp_i(32,'Fill',-1,d,[ bool ]).
-html_comp_i(32,'Backcolor',rgb(255,255,255),d,[ color ]).
-html_comp_i(32,'Forecolor',rgb(0,0,0),d,[ color ]).
-html_comp_i(32,'Font','',d,[ str ]).
-html_comp_i(33,'Width',measure(468,px),v,[ measure ]).
-html_comp_i(34,'Colcount',30,d,[ num ]).
-html_comp_i(34,'Attid',-15,v,[ num ]).
-html_comp_i(34,'Class','Attribute',d,[ str ]).
-html_comp_i(34,'Controlname','&Empleadosapmaterno',d,[ str ]).
-html_comp_i(34,'Returnonclick',0,d,[ bool ]).
-html_comp_i(34,'Captionclass','',d,[ str ]).
-html_comp_i(34,'Captionposition','',d,[ str ]).
-html_comp_i(34,'Captionvalue','',d,[ str ]).
-html_comp_i(34,'Controltype',2,d,[ num ]).
-html_comp_i(34,'Inputtype',0,d,[ num ]).
-html_comp_i(34,'Editautocomplete',0,d,[ num ]).
-html_comp_i(34,'Autocorrection',-1,d,[ bool ]).
-html_comp_i(34,'Autocapitalization','FirstWord',d,[ str ]).
-html_comp_i(34,'Notifycontextchange',0,d,[ bool ]).
-html_comp_i(34,'Emptyasnull','Yes',d,[ str ]).
-html_comp_i(34,'Readonly',0,d,[ bool ]).
-html_comp_i(34,'Autocomplete',-1,d,[ bool ]).
-html_comp_i(34,'Ispassword',0,d,[ bool ]).
-html_comp_i(34,'Autoresize',-1,d,[ bool ]).
-html_comp_i(34,'Gxwidth',measure(30,chr),d,[ measure ]).
-html_comp_i(34,'Gxheight',measure(1,row),d,[ measure ]).
-html_comp_i(34,'Ismultiline',0,d,[ bool ]).
-html_comp_i(34,'Fill',-1,d,[ bool ]).
-html_comp_i(34,'Backcolor',rgb(255,255,255),d,[ color ]).
-html_comp_i(34,'Forecolor',rgb(0,0,0),d,[ color ]).
-html_comp_i(34,'Font',font('Verdana',12,[]),d,[ font ]).
-html_comp_i(34,'Horizontalalignment',left,d,[ str ]).
-html_comp_i(34,'Gxformat',0,d,[ num ]).
-html_comp_i(34,'Title','',d,[ str ]).
-html_comp_i(34,'Invitemsg','',d,[ str ]).
-html_comp_i(35,'Width',measure(131,px),v,[ measure ]).
-html_comp_i(40,'Caption','Estatus:',d,[ str ]).
-html_comp_i(40,'Id','Textblock6',v,[ str ]).
-html_comp_i(40,'Class','TextBlock',d,[ str ]).
-html_comp_i(40,'Event','',d,[ str ]).
-html_comp_i(40,'Returnonclick',0,d,[ bool ]).
-html_comp_i(40,'Gxformat',0,d,[ num ]).
-html_comp_i(40,'Title','',d,[ str ]).
-html_comp_i(40,'Fill',-1,d,[ bool ]).
-html_comp_i(40,'Backcolor',rgb(255,255,255),d,[ color ]).
-html_comp_i(40,'Forecolor',rgb(0,0,0),d,[ color ]).
-html_comp_i(40,'Font','',d,[ str ]).
-html_comp_i(42,'Colcount',1,d,[ num ]).
-html_comp_i(42,'Attid',-16,v,[ num ]).
-html_comp_i(42,'Class','Attribute',d,[ str ]).
-html_comp_i(42,'Controlname','&Empleadosstatus',d,[ str ]).
-html_comp_i(42,'Returnonclick',0,d,[ bool ]).
-html_comp_i(42,'Captionclass','',d,[ str ]).
-html_comp_i(42,'Captionposition','',d,[ str ]).
-html_comp_i(42,'Captionvalue','',d,[ str ]).
-html_comp_i(42,'Controltype',2,d,[ num ]).
-html_comp_i(42,'Inputtype',0,d,[ num ]).
-html_comp_i(42,'Editautocomplete',0,d,[ num ]).
-html_comp_i(42,'Autocorrection',-1,d,[ bool ]).
-html_comp_i(42,'Autocapitalization','FirstWord',d,[ str ]).
-html_comp_i(42,'Notifycontextchange',0,d,[ bool ]).
-html_comp_i(42,'Emptyasnull','Yes',d,[ str ]).
-html_comp_i(42,'Readonly',0,d,[ bool ]).
-html_comp_i(42,'Autocomplete',-1,d,[ bool ]).
-html_comp_i(42,'Ispassword',0,d,[ bool ]).
-html_comp_i(42,'Autoresize',0,v,[ bool ]).
-html_comp_i(42,'Gxwidth',measure(1,chr),d,[ measure ]).
-html_comp_i(42,'Gxheight',measure(1,row),d,[ measure ]).
-html_comp_i(42,'Ismultiline',0,d,[ bool ]).
-html_comp_i(42,'Fill',-1,d,[ bool ]).
-html_comp_i(42,'Backcolor',rgb(255,255,255),d,[ color ]).
-html_comp_i(42,'Forecolor',rgb(0,0,0),d,[ color ]).
-html_comp_i(42,'Font',font('Verdana',12,[]),d,[ font ]).
-html_comp_i(42,'Horizontalalignment',left,d,[ str ]).
-html_comp_i(42,'Gxformat',0,d,[ num ]).
-html_comp_i(42,'Title','',d,[ str ]).
-html_comp_i(42,'Invitemsg','',d,[ str ]).
-html_comp_i(48,'Caption','Correo:',d,[ str ]).
-html_comp_i(48,'Id','Textblock7',v,[ str ]).
-html_comp_i(48,'Class','TextBlock',d,[ str ]).
-html_comp_i(48,'Event','',d,[ str ]).
-html_comp_i(48,'Returnonclick',0,d,[ bool ]).
-html_comp_i(48,'Gxformat',0,d,[ num ]).
-html_comp_i(48,'Title','',d,[ str ]).
-html_comp_i(48,'Fill',-1,d,[ bool ]).
-html_comp_i(48,'Backcolor',rgb(255,255,255),d,[ color ]).
-html_comp_i(48,'Forecolor',rgb(0,0,0),d,[ color ]).
-html_comp_i(48,'Font','',d,[ str ]).
-html_comp_i(50,'Colcount',50,d,[ num ]).
-html_comp_i(50,'Attid',-18,v,[ num ]).
-html_comp_i(50,'Class','Attribute',d,[ str ]).
-html_comp_i(50,'Controlname','&Empleadoscorreo',d,[ str ]).
-html_comp_i(50,'Returnonclick',0,d,[ bool ]).
-html_comp_i(50,'Captionclass','',d,[ str ]).
-html_comp_i(50,'Captionposition','',d,[ str ]).
-html_comp_i(50,'Captionvalue','',d,[ str ]).
-html_comp_i(50,'Controltype',2,d,[ num ]).
-html_comp_i(50,'Inputtype',0,d,[ num ]).
-html_comp_i(50,'Editautocomplete',0,d,[ num ]).
-html_comp_i(50,'Autocorrection',-1,d,[ bool ]).
-html_comp_i(50,'Autocapitalization','FirstWord',d,[ str ]).
-html_comp_i(50,'Notifycontextchange',0,d,[ bool ]).
-html_comp_i(50,'Emptyasnull','Yes',d,[ str ]).
-html_comp_i(50,'Readonly',0,d,[ bool ]).
-html_comp_i(50,'Autocomplete',-1,d,[ bool ]).
-html_comp_i(50,'Ispassword',0,d,[ bool ]).
-html_comp_i(50,'Autoresize',-1,d,[ bool ]).
-html_comp_i(50,'Gxwidth',measure(50,chr),d,[ measure ]).
-html_comp_i(50,'Gxheight',measure(1,row),d,[ measure ]).
-html_comp_i(50,'Ismultiline',0,d,[ bool ]).
-html_comp_i(50,'Fill',-1,d,[ bool ]).
-html_comp_i(50,'Backcolor',rgb(255,255,255),d,[ color ]).
-html_comp_i(50,'Forecolor',rgb(0,0,0),d,[ color ]).
-html_comp_i(50,'Font',font('Verdana',12,[]),d,[ font ]).
-html_comp_i(50,'Horizontalalignment',left,d,[ str ]).
-html_comp_i(50,'Gxformat',0,d,[ num ]).
-html_comp_i(50,'Title','',d,[ str ]).
-html_comp_i(50,'Invitemsg','',d,[ str ]).
-html_comp_i(55,'Height',measure(24,px),v,[ measure ]).
-html_comp_i(56,'Caption','Exit:',d,[ str ]).
-html_comp_i(56,'Id','Textblock8',v,[ str ]).
-html_comp_i(56,'Class','TextBlock',d,[ str ]).
-html_comp_i(56,'Event','',d,[ str ]).
-html_comp_i(56,'Returnonclick',0,d,[ bool ]).
-html_comp_i(56,'Gxformat',0,d,[ num ]).
-html_comp_i(56,'Title','',d,[ str ]).
-html_comp_i(56,'Fill',-1,d,[ bool ]).
-html_comp_i(56,'Backcolor',rgb(255,255,255),d,[ color ]).
-html_comp_i(56,'Forecolor',rgb(0,0,0),d,[ color ]).
-html_comp_i(56,'Font','',d,[ str ]).
-html_comp_i(58,'Colcount',4,d,[ num ]).
-html_comp_i(58,'Attid',-19,v,[ num ]).
-html_comp_i(58,'Class','Attribute',d,[ str ]).
-html_comp_i(58,'Controlname','&Empleadosext',d,[ str ]).
-html_comp_i(58,'Returnonclick',0,d,[ bool ]).
-html_comp_i(58,'Captionclass','',d,[ str ]).
-html_comp_i(58,'Captionposition','',d,[ str ]).
-html_comp_i(58,'Captionvalue','',d,[ str ]).
-html_comp_i(58,'Controltype',2,d,[ num ]).
-html_comp_i(58,'Inputtype',0,d,[ num ]).
-html_comp_i(58,'Editautocomplete',0,d,[ num ]).
-html_comp_i(58,'Autocorrection',-1,d,[ bool ]).
-html_comp_i(58,'Autocapitalization','FirstWord',d,[ str ]).
-html_comp_i(58,'Notifycontextchange',0,d,[ bool ]).
-html_comp_i(58,'Emptyasnull','Yes',d,[ str ]).
-html_comp_i(58,'Readonly',0,d,[ bool ]).
-html_comp_i(58,'Autocomplete',-1,d,[ bool ]).
-html_comp_i(58,'Ispassword',0,d,[ bool ]).
-html_comp_i(58,'Autoresize',-1,d,[ bool ]).
-html_comp_i(58,'Gxwidth',measure(4,chr),d,[ measure ]).
-html_comp_i(58,'Gxheight',measure(1,row),d,[ measure ]).
-html_comp_i(58,'Ismultiline',0,d,[ bool ]).
-html_comp_i(58,'Fill',-1,d,[ bool ]).
-html_comp_i(58,'Backcolor',rgb(255,255,255),d,[ color ]).
-html_comp_i(58,'Forecolor',rgb(0,0,0),d,[ color ]).
-html_comp_i(58,'Font',font('Verdana',12,[]),d,[ font ]).
-html_comp_i(58,'Horizontalalignment',left,d,[ str ]).
-html_comp_i(58,'Gxformat',0,d,[ num ]).
-html_comp_i(58,'Title','',d,[ str ]).
-html_comp_i(58,'Invitemsg','',d,[ str ]).
-html_comp_i(63,'Height',measure(24,px),v,[ measure ]).
-html_comp_i(65,'Controlname','Button1',v,[ str ]).
-html_comp_i(65,'Class','Button',d,[ str ]).
-html_comp_i(65,'Event','''Consultar ''',v,[ str ]).
-html_comp_i(65,'Caption','CONSULTAR',d,[ str ]).
-html_comp_i(65,'Title','CONSULTAR',d,[ str ]).
-html_comp_i(65,'Font',font('Microsoft Sans Serif',10,[]),d,[ font ]).
-html_comp_i(65,'Forecolor',rgb(255,255,255),v,[ color ]).
-html_comp_i(65,'Backcolor',rgb(0,128,0),v,[ color ]).
-html_comp_i(65,'Border','2',d,[ str ]).
-html_comp_i(65,'Bordercolor',rgb(219,220,222),d,[ color ]).
-html_comp_i(65,'Buttonborderstyle',standard,d,[ str ]).
-html_comp_i(67,'Controlname','Button2',v,[ str ]).
-html_comp_i(67,'Class','Button',d,[ str ]).
-html_comp_i(67,'Event','''Guardar ''',v,[ str ]).
-html_comp_i(67,'Caption','GUARDAR',d,[ str ]).
-html_comp_i(67,'Title','GUARDAR',d,[ str ]).
-html_comp_i(67,'Font',font('Microsoft Sans Serif',10,[]),d,[ font ]).
-html_comp_i(67,'Forecolor',rgb(255,255,255),v,[ color ]).
-html_comp_i(67,'Backcolor',rgb(0,128,0),v,[ color ]).
-html_comp_i(67,'Border','2',d,[ str ]).
-html_comp_i(67,'Bordercolor',rgb(219,220,222),d,[ color ]).
-html_comp_i(67,'Buttonborderstyle',standard,d,[ str ]).
-html_comp_i(70,'Controlname','Button3',v,[ str ]).
-html_comp_i(70,'Class','Button',d,[ str ]).
-html_comp_i(70,'Event','Enter',d,[ str ]).
-html_comp_i(70,'Caption','CANCELAR',d,[ str ]).
-html_comp_i(70,'Title','CANCELAR',d,[ str ]).
-html_comp_i(70,'Font',font('Microsoft Sans Serif',10,[]),d,[ font ]).
-html_comp_i(70,'Forecolor',rgb(255,255,255),v,[ color ]).
-html_comp_i(70,'Backcolor',rgb(255,0,0),v,[ color ]).
-html_comp_i(70,'Border','2',d,[ str ]).
-html_comp_i(70,'Bordercolor',rgb(219,220,222),d,[ color ]).
-html_comp_i(70,'Buttonborderstyle',standard,d,[ str ]).
+html_comp_i(15,'Invitemsg','',d,[ str ]).
+html_comp_i(17,'Height',measure(20,px),v,[ measure ]).
+html_comp_i(18,'Caption','Area:',d,[ str ]).
+html_comp_i(18,'Id','Textblock2',v,[ str ]).
+html_comp_i(18,'Class','TextBlock',d,[ str ]).
+html_comp_i(18,'Event','',d,[ str ]).
+html_comp_i(18,'Returnonclick',0,d,[ bool ]).
+html_comp_i(18,'Gxformat',0,d,[ num ]).
+html_comp_i(18,'Title','',d,[ str ]).
+html_comp_i(18,'Fill',-1,d,[ bool ]).
+html_comp_i(18,'Backcolor',rgb(255,255,255),d,[ color ]).
+html_comp_i(18,'Forecolor',rgb(0,0,0),d,[ color ]).
+html_comp_i(18,'Font','',d,[ str ]).
+html_comp_i(20,'Colcount',80,d,[ num ]).
+html_comp_i(20,'Attid',-28,v,[ num ]).
+html_comp_i(20,'Class','Attribute',d,[ str ]).
+html_comp_i(20,'Controlname','&Areaareaid',d,[ str ]).
+html_comp_i(20,'Returnonclick',0,d,[ bool ]).
+html_comp_i(20,'Captionclass','',d,[ str ]).
+html_comp_i(20,'Captionposition','',d,[ str ]).
+html_comp_i(20,'Captionvalue','',d,[ str ]).
+html_comp_i(20,'Controltype',4,v,[ num ]).
+html_comp_i(20,'Datasourcefrom','Attributes',d,[ str ]).
+html_comp_i(20,'Controlitemvalues',22,d,[ num ]).
+html_comp_i(20,'Controlitemdescription',27,v,[ num ]).
+html_comp_i(20,'Controlsortdescription',-1,d,[ bool ]).
+html_comp_i(20,'Controlwhere','',d,[ str ]).
+html_comp_i(20,'Controlrestrictedby','',d,[ str ]).
+html_comp_i(20,'Addemptyitem',-1,v,[ bool ]).
+html_comp_i(20,'Emptyitemtext','Selecciona',v,[ str ]).
+html_comp_i(20,'Notifycontextchange',0,d,[ bool ]).
+html_comp_i(20,'Emptyasnull','No',d,[ str ]).
+html_comp_i(20,'Readonly',0,v,[ bool ]).
+html_comp_i(20,'Autocomplete',-1,d,[ bool ]).
+html_comp_i(20,'Autoresize',0,v,[ bool ]).
+html_comp_i(20,'Gxwidth',measure(155,px),v,[ measure ]).
+html_comp_i(20,'Ismultiline',0,d,[ bool ]).
+html_comp_i(20,'Fill',-1,d,[ bool ]).
+html_comp_i(20,'Backcolor',rgb(255,255,255),d,[ color ]).
+html_comp_i(20,'Forecolor',rgb(0,0,0),d,[ color ]).
+html_comp_i(20,'Font',font('Verdana',12,[]),d,[ font ]).
+html_comp_i(20,'Horizontalalignment',left,d,[ str ]).
+html_comp_i(20,'Title','',d,[ str ]).
+html_comp_i(20,'Invitemsg','',d,[ str ]).
+html_comp_i(23,'Caption','Nombre:',d,[ str ]).
+html_comp_i(23,'Id','Textblock3',v,[ str ]).
+html_comp_i(23,'Class','TextBlock',d,[ str ]).
+html_comp_i(23,'Event','',d,[ str ]).
+html_comp_i(23,'Returnonclick',0,d,[ bool ]).
+html_comp_i(23,'Gxformat',0,d,[ num ]).
+html_comp_i(23,'Title','',d,[ str ]).
+html_comp_i(23,'Fill',-1,d,[ bool ]).
+html_comp_i(23,'Backcolor',rgb(255,255,255),d,[ color ]).
+html_comp_i(23,'Forecolor',rgb(0,0,0),d,[ color ]).
+html_comp_i(23,'Font','',d,[ str ]).
+html_comp_i(25,'Colcount',30,d,[ num ]).
+html_comp_i(25,'Attid',-13,v,[ num ]).
+html_comp_i(25,'Class','Attribute',d,[ str ]).
+html_comp_i(25,'Controlname','&Empleadosnomemple',d,[ str ]).
+html_comp_i(25,'Returnonclick',0,d,[ bool ]).
+html_comp_i(25,'Captionclass','',d,[ str ]).
+html_comp_i(25,'Captionposition','',d,[ str ]).
+html_comp_i(25,'Captionvalue','',d,[ str ]).
+html_comp_i(25,'Controltype',2,d,[ num ]).
+html_comp_i(25,'Inputtype',0,d,[ num ]).
+html_comp_i(25,'Editautocomplete',0,d,[ num ]).
+html_comp_i(25,'Autocorrection',-1,d,[ bool ]).
+html_comp_i(25,'Autocapitalization','FirstWord',d,[ str ]).
+html_comp_i(25,'Notifycontextchange',0,d,[ bool ]).
+html_comp_i(25,'Emptyasnull','Yes',d,[ str ]).
+html_comp_i(25,'Readonly',0,d,[ bool ]).
+html_comp_i(25,'Autocomplete',-1,d,[ bool ]).
+html_comp_i(25,'Ispassword',0,d,[ bool ]).
+html_comp_i(25,'Autoresize',-1,d,[ bool ]).
+html_comp_i(25,'Gxwidth',measure(30,chr),d,[ measure ]).
+html_comp_i(25,'Gxheight',measure(1,row),d,[ measure ]).
+html_comp_i(25,'Ismultiline',0,d,[ bool ]).
+html_comp_i(25,'Fill',-1,d,[ bool ]).
+html_comp_i(25,'Backcolor',rgb(255,255,255),d,[ color ]).
+html_comp_i(25,'Forecolor',rgb(0,0,0),d,[ color ]).
+html_comp_i(25,'Font',font('Verdana',12,[]),d,[ font ]).
+html_comp_i(25,'Horizontalalignment',left,d,[ str ]).
+html_comp_i(25,'Gxformat',0,d,[ num ]).
+html_comp_i(25,'Title','',d,[ str ]).
+html_comp_i(25,'Invitemsg','',d,[ str ]).
+html_comp_i(28,'Caption','ApellidoPaterno:',d,[ str ]).
+html_comp_i(28,'Id','Textblock4',v,[ str ]).
+html_comp_i(28,'Class','TextBlock',d,[ str ]).
+html_comp_i(28,'Event','',d,[ str ]).
+html_comp_i(28,'Returnonclick',0,d,[ bool ]).
+html_comp_i(28,'Gxformat',0,d,[ num ]).
+html_comp_i(28,'Title','',d,[ str ]).
+html_comp_i(28,'Fill',-1,d,[ bool ]).
+html_comp_i(28,'Backcolor',rgb(255,255,255),d,[ color ]).
+html_comp_i(28,'Forecolor',rgb(0,0,0),d,[ color ]).
+html_comp_i(28,'Font','',d,[ str ]).
+html_comp_i(30,'Colcount',30,d,[ num ]).
+html_comp_i(30,'Attid',-14,v,[ num ]).
+html_comp_i(30,'Class','Attribute',d,[ str ]).
+html_comp_i(30,'Controlname','&Empleadosappaterno',d,[ str ]).
+html_comp_i(30,'Returnonclick',0,d,[ bool ]).
+html_comp_i(30,'Captionclass','',d,[ str ]).
+html_comp_i(30,'Captionposition','',d,[ str ]).
+html_comp_i(30,'Captionvalue','',d,[ str ]).
+html_comp_i(30,'Controltype',2,d,[ num ]).
+html_comp_i(30,'Inputtype',0,d,[ num ]).
+html_comp_i(30,'Editautocomplete',0,d,[ num ]).
+html_comp_i(30,'Autocorrection',-1,d,[ bool ]).
+html_comp_i(30,'Autocapitalization','FirstWord',d,[ str ]).
+html_comp_i(30,'Notifycontextchange',0,d,[ bool ]).
+html_comp_i(30,'Emptyasnull','Yes',d,[ str ]).
+html_comp_i(30,'Readonly',0,d,[ bool ]).
+html_comp_i(30,'Autocomplete',-1,d,[ bool ]).
+html_comp_i(30,'Ispassword',0,d,[ bool ]).
+html_comp_i(30,'Autoresize',-1,d,[ bool ]).
+html_comp_i(30,'Gxwidth',measure(30,chr),d,[ measure ]).
+html_comp_i(30,'Gxheight',measure(1,row),d,[ measure ]).
+html_comp_i(30,'Ismultiline',0,d,[ bool ]).
+html_comp_i(30,'Fill',-1,d,[ bool ]).
+html_comp_i(30,'Backcolor',rgb(255,255,255),d,[ color ]).
+html_comp_i(30,'Forecolor',rgb(0,0,0),d,[ color ]).
+html_comp_i(30,'Font',font('Verdana',12,[]),d,[ font ]).
+html_comp_i(30,'Horizontalalignment',left,d,[ str ]).
+html_comp_i(30,'Gxformat',0,d,[ num ]).
+html_comp_i(30,'Title','',d,[ str ]).
+html_comp_i(30,'Invitemsg','',d,[ str ]).
+html_comp_i(33,'Id','Table3',v,[ str ]).
+html_comp_i(33,'Class','Table',v,[ str ]).
+html_comp_i(33,'Title','',d,[ str ]).
+html_comp_i(33,'Align',left,d,[ str ]).
+html_comp_i(33,'Backgroundgx','',d,[ str ]).
+html_comp_i(33,'Bgcolor',rgb(0,0,0),d,[ color ]).
+html_comp_i(33,'Border','0',d,[ str ]).
+html_comp_i(33,'Bordercolor',rgb(0,0,0),d,[ color ]).
+html_comp_i(33,'Cellpadding','1',d,[ str ]).
+html_comp_i(33,'Cellspacing','2',d,[ str ]).
+html_comp_i(33,'Height',measure(90,px),v,[ measure ]).
+html_comp_i(33,'Width',measure(678,px),v,[ measure ]).
+html_comp_i(33,'Rules',none,d,[ str ]).
+html_comp_i(35,'Width',measure(337,px),v,[ measure ]).
+html_comp_i(36,'Caption','ApellidoMaterno:',d,[ str ]).
+html_comp_i(36,'Id','Textblock5',v,[ str ]).
+html_comp_i(36,'Class','TextBlock',d,[ str ]).
+html_comp_i(36,'Event','',d,[ str ]).
+html_comp_i(36,'Returnonclick',0,d,[ bool ]).
+html_comp_i(36,'Gxformat',0,d,[ num ]).
+html_comp_i(36,'Title','',d,[ str ]).
+html_comp_i(36,'Fill',-1,d,[ bool ]).
+html_comp_i(36,'Backcolor',rgb(255,255,255),d,[ color ]).
+html_comp_i(36,'Forecolor',rgb(0,0,0),d,[ color ]).
+html_comp_i(36,'Font','',d,[ str ]).
+html_comp_i(37,'Width',measure(468,px),v,[ measure ]).
+html_comp_i(38,'Colcount',30,d,[ num ]).
+html_comp_i(38,'Attid',-15,v,[ num ]).
+html_comp_i(38,'Class','Attribute',d,[ str ]).
+html_comp_i(38,'Controlname','&Empleadosapmaterno',d,[ str ]).
+html_comp_i(38,'Returnonclick',0,d,[ bool ]).
+html_comp_i(38,'Captionclass','',d,[ str ]).
+html_comp_i(38,'Captionposition','',d,[ str ]).
+html_comp_i(38,'Captionvalue','',d,[ str ]).
+html_comp_i(38,'Controltype',2,d,[ num ]).
+html_comp_i(38,'Inputtype',0,d,[ num ]).
+html_comp_i(38,'Editautocomplete',0,d,[ num ]).
+html_comp_i(38,'Autocorrection',-1,d,[ bool ]).
+html_comp_i(38,'Autocapitalization','FirstWord',d,[ str ]).
+html_comp_i(38,'Notifycontextchange',0,d,[ bool ]).
+html_comp_i(38,'Emptyasnull','Yes',d,[ str ]).
+html_comp_i(38,'Readonly',0,d,[ bool ]).
+html_comp_i(38,'Autocomplete',-1,d,[ bool ]).
+html_comp_i(38,'Ispassword',0,d,[ bool ]).
+html_comp_i(38,'Autoresize',-1,d,[ bool ]).
+html_comp_i(38,'Gxwidth',measure(30,chr),d,[ measure ]).
+html_comp_i(38,'Gxheight',measure(1,row),d,[ measure ]).
+html_comp_i(38,'Ismultiline',0,d,[ bool ]).
+html_comp_i(38,'Fill',-1,d,[ bool ]).
+html_comp_i(38,'Backcolor',rgb(255,255,255),d,[ color ]).
+html_comp_i(38,'Forecolor',rgb(0,0,0),d,[ color ]).
+html_comp_i(38,'Font',font('Verdana',12,[]),d,[ font ]).
+html_comp_i(38,'Horizontalalignment',left,d,[ str ]).
+html_comp_i(38,'Gxformat',0,d,[ num ]).
+html_comp_i(38,'Title','',d,[ str ]).
+html_comp_i(38,'Invitemsg','',d,[ str ]).
+html_comp_i(39,'Width',measure(131,px),v,[ measure ]).
+html_comp_i(44,'Caption','Estatus:',d,[ str ]).
+html_comp_i(44,'Id','Textblock6',v,[ str ]).
+html_comp_i(44,'Class','TextBlock',d,[ str ]).
+html_comp_i(44,'Event','',d,[ str ]).
+html_comp_i(44,'Returnonclick',0,d,[ bool ]).
+html_comp_i(44,'Gxformat',0,d,[ num ]).
+html_comp_i(44,'Title','',d,[ str ]).
+html_comp_i(44,'Fill',-1,d,[ bool ]).
+html_comp_i(44,'Backcolor',rgb(255,255,255),d,[ color ]).
+html_comp_i(44,'Forecolor',rgb(0,0,0),d,[ color ]).
+html_comp_i(44,'Font','',d,[ str ]).
+html_comp_i(46,'Colcount',1,d,[ num ]).
+html_comp_i(46,'Attid',-16,v,[ num ]).
+html_comp_i(46,'Class','Attribute',d,[ str ]).
+html_comp_i(46,'Controlname','&Empleadosstatus',d,[ str ]).
+html_comp_i(46,'Returnonclick',0,d,[ bool ]).
+html_comp_i(46,'Captionclass','',d,[ str ]).
+html_comp_i(46,'Captionposition','',d,[ str ]).
+html_comp_i(46,'Captionvalue','',d,[ str ]).
+html_comp_i(46,'Controltype',2,d,[ num ]).
+html_comp_i(46,'Inputtype',0,d,[ num ]).
+html_comp_i(46,'Editautocomplete',0,d,[ num ]).
+html_comp_i(46,'Autocorrection',-1,d,[ bool ]).
+html_comp_i(46,'Autocapitalization','FirstWord',d,[ str ]).
+html_comp_i(46,'Notifycontextchange',0,d,[ bool ]).
+html_comp_i(46,'Emptyasnull','Yes',d,[ str ]).
+html_comp_i(46,'Readonly',0,d,[ bool ]).
+html_comp_i(46,'Autocomplete',-1,d,[ bool ]).
+html_comp_i(46,'Ispassword',0,d,[ bool ]).
+html_comp_i(46,'Autoresize',0,v,[ bool ]).
+html_comp_i(46,'Gxwidth',measure(1,chr),d,[ measure ]).
+html_comp_i(46,'Gxheight',measure(1,row),d,[ measure ]).
+html_comp_i(46,'Ismultiline',0,d,[ bool ]).
+html_comp_i(46,'Fill',-1,d,[ bool ]).
+html_comp_i(46,'Backcolor',rgb(255,255,255),d,[ color ]).
+html_comp_i(46,'Forecolor',rgb(0,0,0),d,[ color ]).
+html_comp_i(46,'Font',font('Verdana',12,[]),d,[ font ]).
+html_comp_i(46,'Horizontalalignment',left,d,[ str ]).
+html_comp_i(46,'Gxformat',0,d,[ num ]).
+html_comp_i(46,'Title','',d,[ str ]).
+html_comp_i(46,'Invitemsg','',d,[ str ]).
+html_comp_i(52,'Caption','Correo:',d,[ str ]).
+html_comp_i(52,'Id','Textblock7',v,[ str ]).
+html_comp_i(52,'Class','TextBlock',d,[ str ]).
+html_comp_i(52,'Event','',d,[ str ]).
+html_comp_i(52,'Returnonclick',0,d,[ bool ]).
+html_comp_i(52,'Gxformat',0,d,[ num ]).
+html_comp_i(52,'Title','',d,[ str ]).
+html_comp_i(52,'Fill',-1,d,[ bool ]).
+html_comp_i(52,'Backcolor',rgb(255,255,255),d,[ color ]).
+html_comp_i(52,'Forecolor',rgb(0,0,0),d,[ color ]).
+html_comp_i(52,'Font','',d,[ str ]).
+html_comp_i(54,'Colcount',50,d,[ num ]).
+html_comp_i(54,'Attid',-18,v,[ num ]).
+html_comp_i(54,'Class','Attribute',d,[ str ]).
+html_comp_i(54,'Controlname','&Empleadoscorreo',d,[ str ]).
+html_comp_i(54,'Returnonclick',0,d,[ bool ]).
+html_comp_i(54,'Captionclass','',d,[ str ]).
+html_comp_i(54,'Captionposition','',d,[ str ]).
+html_comp_i(54,'Captionvalue','',d,[ str ]).
+html_comp_i(54,'Controltype',2,d,[ num ]).
+html_comp_i(54,'Inputtype',0,d,[ num ]).
+html_comp_i(54,'Editautocomplete',0,d,[ num ]).
+html_comp_i(54,'Autocorrection',-1,d,[ bool ]).
+html_comp_i(54,'Autocapitalization','FirstWord',d,[ str ]).
+html_comp_i(54,'Notifycontextchange',0,d,[ bool ]).
+html_comp_i(54,'Emptyasnull','Yes',d,[ str ]).
+html_comp_i(54,'Readonly',0,d,[ bool ]).
+html_comp_i(54,'Autocomplete',-1,d,[ bool ]).
+html_comp_i(54,'Ispassword',0,d,[ bool ]).
+html_comp_i(54,'Autoresize',-1,d,[ bool ]).
+html_comp_i(54,'Gxwidth',measure(50,chr),d,[ measure ]).
+html_comp_i(54,'Gxheight',measure(1,row),d,[ measure ]).
+html_comp_i(54,'Ismultiline',0,d,[ bool ]).
+html_comp_i(54,'Fill',-1,d,[ bool ]).
+html_comp_i(54,'Backcolor',rgb(255,255,255),d,[ color ]).
+html_comp_i(54,'Forecolor',rgb(0,0,0),d,[ color ]).
+html_comp_i(54,'Font',font('Verdana',12,[]),d,[ font ]).
+html_comp_i(54,'Horizontalalignment',left,d,[ str ]).
+html_comp_i(54,'Gxformat',0,d,[ num ]).
+html_comp_i(54,'Title','',d,[ str ]).
+html_comp_i(54,'Invitemsg','',d,[ str ]).
+html_comp_i(59,'Height',measure(24,px),v,[ measure ]).
+html_comp_i(60,'Caption','Exit:',d,[ str ]).
+html_comp_i(60,'Id','Textblock8',v,[ str ]).
+html_comp_i(60,'Class','TextBlock',d,[ str ]).
+html_comp_i(60,'Event','',d,[ str ]).
+html_comp_i(60,'Returnonclick',0,d,[ bool ]).
+html_comp_i(60,'Gxformat',0,d,[ num ]).
+html_comp_i(60,'Title','',d,[ str ]).
+html_comp_i(60,'Fill',-1,d,[ bool ]).
+html_comp_i(60,'Backcolor',rgb(255,255,255),d,[ color ]).
+html_comp_i(60,'Forecolor',rgb(0,0,0),d,[ color ]).
+html_comp_i(60,'Font','',d,[ str ]).
+html_comp_i(62,'Colcount',4,d,[ num ]).
+html_comp_i(62,'Attid',-19,v,[ num ]).
+html_comp_i(62,'Class','Attribute',d,[ str ]).
+html_comp_i(62,'Controlname','&Empleadosext',d,[ str ]).
+html_comp_i(62,'Returnonclick',0,d,[ bool ]).
+html_comp_i(62,'Captionclass','',d,[ str ]).
+html_comp_i(62,'Captionposition','',d,[ str ]).
+html_comp_i(62,'Captionvalue','',d,[ str ]).
+html_comp_i(62,'Controltype',2,d,[ num ]).
+html_comp_i(62,'Inputtype',0,d,[ num ]).
+html_comp_i(62,'Editautocomplete',0,d,[ num ]).
+html_comp_i(62,'Autocorrection',-1,d,[ bool ]).
+html_comp_i(62,'Autocapitalization','FirstWord',d,[ str ]).
+html_comp_i(62,'Notifycontextchange',0,d,[ bool ]).
+html_comp_i(62,'Emptyasnull','Yes',d,[ str ]).
+html_comp_i(62,'Readonly',0,d,[ bool ]).
+html_comp_i(62,'Autocomplete',-1,d,[ bool ]).
+html_comp_i(62,'Ispassword',0,d,[ bool ]).
+html_comp_i(62,'Autoresize',-1,d,[ bool ]).
+html_comp_i(62,'Gxwidth',measure(4,chr),d,[ measure ]).
+html_comp_i(62,'Gxheight',measure(1,row),d,[ measure ]).
+html_comp_i(62,'Ismultiline',0,d,[ bool ]).
+html_comp_i(62,'Fill',-1,d,[ bool ]).
+html_comp_i(62,'Backcolor',rgb(255,255,255),d,[ color ]).
+html_comp_i(62,'Forecolor',rgb(0,0,0),d,[ color ]).
+html_comp_i(62,'Font',font('Verdana',12,[]),d,[ font ]).
+html_comp_i(62,'Horizontalalignment',left,d,[ str ]).
+html_comp_i(62,'Gxformat',0,d,[ num ]).
+html_comp_i(62,'Title','',d,[ str ]).
+html_comp_i(62,'Invitemsg','',d,[ str ]).
+html_comp_i(67,'Height',measure(24,px),v,[ measure ]).
+html_comp_i(69,'Controlname','Button1',v,[ str ]).
+html_comp_i(69,'Class','Button',d,[ str ]).
+html_comp_i(69,'Event','''Consultar ''',v,[ str ]).
+html_comp_i(69,'Caption','CONSULTAR',d,[ str ]).
+html_comp_i(69,'Title','CONSULTAR',d,[ str ]).
+html_comp_i(69,'Font',font('Microsoft Sans Serif',10,[]),d,[ font ]).
+html_comp_i(69,'Forecolor',rgb(255,255,255),v,[ color ]).
+html_comp_i(69,'Backcolor',rgb(0,128,0),v,[ color ]).
+html_comp_i(69,'Border','2',d,[ str ]).
+html_comp_i(69,'Bordercolor',rgb(219,220,222),d,[ color ]).
+html_comp_i(69,'Buttonborderstyle',standard,d,[ str ]).
+html_comp_i(71,'Controlname','Button2',v,[ str ]).
+html_comp_i(71,'Class','Button',d,[ str ]).
+html_comp_i(71,'Event','''Guardar ''',v,[ str ]).
+html_comp_i(71,'Caption','GUARDAR',d,[ str ]).
+html_comp_i(71,'Title','GUARDAR',d,[ str ]).
+html_comp_i(71,'Font',font('Microsoft Sans Serif',10,[]),d,[ font ]).
+html_comp_i(71,'Forecolor',rgb(255,255,255),v,[ color ]).
+html_comp_i(71,'Backcolor',rgb(0,128,0),v,[ color ]).
+html_comp_i(71,'Border','2',d,[ str ]).
+html_comp_i(71,'Bordercolor',rgb(219,220,222),d,[ color ]).
+html_comp_i(71,'Buttonborderstyle',standard,d,[ str ]).
+html_comp_i(74,'Controlname','Button3',v,[ str ]).
+html_comp_i(74,'Class','Button',d,[ str ]).
+html_comp_i(74,'Event','Enter',d,[ str ]).
+html_comp_i(74,'Caption','CANCELAR',d,[ str ]).
+html_comp_i(74,'Title','CANCELAR',d,[ str ]).
+html_comp_i(74,'Font',font('Microsoft Sans Serif',10,[]),d,[ font ]).
+html_comp_i(74,'Forecolor',rgb(255,255,255),v,[ color ]).
+html_comp_i(74,'Backcolor',rgb(255,0,0),v,[ color ]).
+html_comp_i(74,'Border','2',d,[ str ]).
+html_comp_i(74,'Bordercolor',rgb(219,220,222),d,[ color ]).
+html_comp_i(74,'Buttonborderstyle',standard,d,[ str ]).
  
  
  
@@ -737,26 +820,28 @@ html_comp_i(70,'Buttonborderstyle',standard,d,[ str ]).
  
  
  
-lit_i(10,1,t('Empleado:',3),[ ctlname('Textblock1') ]).
-lit_i(12,1,t('Nextvalue',23),[ ctlname('&Nextvalue'),ctrltype(edit,12),pos(12),readonly,ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
-lit_i(15,1,t('Departamento:',3),[ ctlname('Textblock2') ]).
-lit_i(19,1,t('Nombre:',3),[ ctlname('Textblock3') ]).
-lit_i(21,1,t('Empleadosnomemple',23),[ ctlname('&Empleadosnomemple'),ctrltype(edit,21),pos(21),ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
-lit_i(24,1,t('ApellidoPaterno:',3),[ ctlname('Textblock4') ]).
-lit_i(26,1,t('Empleadosappaterno',23),[ ctlname('&Empleadosappaterno'),ctrltype(edit,26),pos(26),ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
-lit_i(7,1,table(7),[ ctlname('Table2') ]).
-lit_i(32,1,t('ApellidoMaterno:',3),[ ctlname('Textblock5') ]).
-lit_i(34,1,t('Empleadosapmaterno',23),[ ctlname('&Empleadosapmaterno'),ctrltype(edit,34),pos(34),ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
-lit_i(40,1,t('Estatus:',3),[ ctlname('Textblock6') ]).
-lit_i(42,1,t('Empleadosstatus',23),[ ctlname('&Empleadosstatus'),ctrltype(edit,42),pos(42),ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
-lit_i(48,1,t('Correo:',3),[ ctlname('Textblock7') ]).
-lit_i(50,1,t('Empleadoscorreo',23),[ ctlname('&Empleadoscorreo'),ctrltype(edit,50),pos(50),ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
-lit_i(56,1,t('Exit:',3),[ ctlname('Textblock8') ]).
-lit_i(58,1,t('Empleadosext',23),[ ctlname('&Empleadosext'),ctrltype(edit,58),pos(58),ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
-lit_i(65,1,button('''Consultar '''),[ ctlname('Button1'),width(0),rect(0,0,10,10),title('Nothing') ]).
-lit_i(67,1,button('''Guardar '''),[ ctlname('Button2'),width(0),rect(0,0,10,10),title('Nothing') ]).
-lit_i(70,1,button('Enter'),[ ctlname('Button3'),width(0),rect(0,0,10,10),title('Nothing') ]).
-lit_i(29,1,table(29),[ ctlname('Table3') ]).
+lit_i(7,1,t('CATALOGO DE EMPLEADOS',3),[ ctlname('Textblock') ]).
+lit_i(13,1,t('Empleado:',3),[ ctlname('Textblock1') ]).
+lit_i(15,1,t('Nextvalue',23),[ ctlname('&Nextvalue'),ctrltype(edit,15),pos(15),readonly,ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
+lit_i(18,1,t('Area:',3),[ ctlname('Textblock2') ]).
+lit_i(20,1,t('Areaareaid',23),[ ctlname('&Areaareaid'),ctrltype(dyncombo,20),pos(20),ispwd(0),e2n(0),width(0),rect(0,0,10,10),title('Nothing') ]).
+lit_i(23,1,t('Nombre:',3),[ ctlname('Textblock3') ]).
+lit_i(25,1,t('Empleadosnomemple',23),[ ctlname('&Empleadosnomemple'),ctrltype(edit,25),pos(25),ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
+lit_i(28,1,t('ApellidoPaterno:',3),[ ctlname('Textblock4') ]).
+lit_i(30,1,t('Empleadosappaterno',23),[ ctlname('&Empleadosappaterno'),ctrltype(edit,30),pos(30),ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
+lit_i(10,1,table(10),[ ctlname('Table2') ]).
+lit_i(36,1,t('ApellidoMaterno:',3),[ ctlname('Textblock5') ]).
+lit_i(38,1,t('Empleadosapmaterno',23),[ ctlname('&Empleadosapmaterno'),ctrltype(edit,38),pos(38),ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
+lit_i(44,1,t('Estatus:',3),[ ctlname('Textblock6') ]).
+lit_i(46,1,t('Empleadosstatus',23),[ ctlname('&Empleadosstatus'),ctrltype(edit,46),pos(46),ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
+lit_i(52,1,t('Correo:',3),[ ctlname('Textblock7') ]).
+lit_i(54,1,t('Empleadoscorreo',23),[ ctlname('&Empleadoscorreo'),ctrltype(edit,54),pos(54),ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
+lit_i(60,1,t('Exit:',3),[ ctlname('Textblock8') ]).
+lit_i(62,1,t('Empleadosext',23),[ ctlname('&Empleadosext'),ctrltype(edit,62),pos(62),ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
+lit_i(69,1,button('''Consultar '''),[ ctlname('Button1'),width(0),rect(0,0,10,10),title('Nothing') ]).
+lit_i(71,1,button('''Guardar '''),[ ctlname('Button2'),width(0),rect(0,0,10,10),title('Nothing') ]).
+lit_i(74,1,button('Enter'),[ ctlname('Button3'),width(0),rect(0,0,10,10),title('Nothing') ]).
+lit_i(33,1,table(33),[ ctlname('Table3') ]).
 lit_i(4,1,table(4),[ ctlname('Table1') ]).
 lit_i(1,1,window,[ rect(0,0,1000,1000),ctlname('Form') ]).
  
@@ -774,22 +859,40 @@ att_prop_i(2,13,'EmptyAsNull','Yes',d).
 att_prop_i(2,13,idBasedOn,'',d).
 att_prop_i(2,13,'AUTONUMBER','0',d).
 att_prop_i(2,13,'ATT_INITIAL_VALUE','',d).
-att_prop_i(2,13,'AttRegEx','',d).
 att_prop_i(2,13,'AttValidationFailedMsg','',d).
 att_prop_i(2,13,'FullName',empleadosid,v).
+att_prop_i(2,22,'ExternalName',areaareaid,d).
+att_prop_i(2,22,'ExternalNamespace','Condufef_v1',d).
+att_prop_i(2,22,'EmptyAsNull','No',v).
+att_prop_i(2,22,idBasedOn,'',d).
+att_prop_i(2,22,'AUTONUMBER','0',d).
+att_prop_i(2,22,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,22,'AttRegEx','',d).
+att_prop_i(2,22,'AttValidationFailedMsg','',d).
+att_prop_i(2,22,'FullName',areaareaid,v).
+att_prop_i(2,27,'ExternalName',areadsc,d).
+att_prop_i(2,27,'ExternalNamespace','Condufef_v1',d).
+att_prop_i(2,27,'EmptyAsNull','Yes',d).
+att_prop_i(2,27,idBasedOn,'',d).
+att_prop_i(2,27,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,27,'DB_NLS_SUPPORT','No',d).
+att_prop_i(2,27,'AttRegEx','',d).
+att_prop_i(2,27,'AttValidationFailedMsg','',d).
+att_prop_i(2,27,'FullName',areadsc,v).
 att_prop_i(2,40000,'ExternalName',empleadosid,d).
 att_prop_i(2,40000,'ExternalNamespace','Condufef_v1',d).
 att_prop_i(2,40000,'EmptyAsNull','Yes',d).
 att_prop_i(2,40000,idBasedOn,'',d).
 att_prop_i(2,40000,'AUTONUMBER','0',d).
 att_prop_i(2,40000,'ATT_INITIAL_VALUE','',d).
-att_prop_i(2,40000,'AttRegEx','',d).
 att_prop_i(2,40000,'AttValidationFailedMsg','',d).
 att_prop_i(2,40000,'FullName',empleadosid,v).
  
  
+tbl_att_prop_i(2,17,22,'AllowNulls',n).
 tbl_att_prop_i(2,6,13,'AllowNulls',n).
  
+var_prop_i(2,'Areaid',idBasedOn,'',v).
 var_prop_i(2,'Empleadosapmaterno',idBasedOn,'',v).
 var_prop_i(2,'Empleadosappaterno',idBasedOn,'',v).
 var_prop_i(2,'Empleadoscorreo',idBasedOn,'',v).
@@ -800,6 +903,8 @@ var_prop_i(2,'Empleadosid',idBasedOn,'',v).
 var_prop_i(2,'Empleadosnomemple',idBasedOn,'',v).
 var_prop_i(2,'Empleadosstatus',idBasedOn,'',v).
 var_prop_i(2,'Empleadosusuario',idBasedOn,'',v).
+var_prop_i(2,'Estadoid',idBasedOn,'',v).
+var_prop_i(2,'Areaareaid',idBasedOn,'',v).
  
  
  
@@ -839,15 +944,14 @@ struct_dt_elem_i([ 0,6,0 ],1,type,[ 4,9,0 ]).
 struct_dt_elem_i([ 0,6,0 ],1,pic,'ZZZZZZZZ9').
 struct_dt_elem_i([ 0,6,0 ],1,collection,'False').
 struct_dt_elem_i([ 0,6,0 ],1,attributeid,'13').
-struct_dt_elem_i([ 0,6,0 ],2,name,'Areaid').
-struct_dt_elem_i([ 0,6,0 ],2,camelname,areaid).
-struct_dt_elem_i([ 0,6,0 ],2,length,9).
+struct_dt_elem_i([ 0,6,0 ],2,name,'Empleadosareaid').
+struct_dt_elem_i([ 0,6,0 ],2,camelname,empleadosareaid).
+struct_dt_elem_i([ 0,6,0 ],2,length,3).
 struct_dt_elem_i([ 0,6,0 ],2,decimals,0).
-struct_dt_elem_i([ 0,6,0 ],2,sign,0).
-struct_dt_elem_i([ 0,6,0 ],2,type,[ 4,9,0 ]).
-struct_dt_elem_i([ 0,6,0 ],2,pic,'ZZZZZZZZ9').
+struct_dt_elem_i([ 0,6,0 ],2,type,[ 13,3,0 ]).
+struct_dt_elem_i([ 0,6,0 ],2,pic,'').
 struct_dt_elem_i([ 0,6,0 ],2,collection,'False').
-struct_dt_elem_i([ 0,6,0 ],2,attributeid,'176').
+struct_dt_elem_i([ 0,6,0 ],2,attributeid,'98').
 struct_dt_elem_i([ 0,6,0 ],3,name,'Empleadosnomemple').
 struct_dt_elem_i([ 0,6,0 ],3,camelname,empleadosnomemple).
 struct_dt_elem_i([ 0,6,0 ],3,length,30).
@@ -968,9 +1072,9 @@ struct_dt_elem_i([ 26,1,1 ],2,pic,'ZZZZZZZZ9').
  
  
 sub_info_i(146,'Start',1,3,[ [],[ 'Nextvalue' ] ]).
-sub_info_i(146,'''Guardar ''',5,26,[ [ 'Empleadosnomemple','Empleadosappaterno','Empleadosapmaterno','Empleadosstatus','Empleadoscorreo','Empleadosext','Nextvalue','Empleados','Today','Websession' ],[ 'Empleados' ] ]).
-sub_info_i(146,'''Consultar ''',28,30,[ [],[] ]).
-sub_info_i(146,'''Cancelar''',32,34,[ [],[] ]).
+sub_info_i(146,'''Guardar ''',5,27,[ [ 'Empleadosnomemple','Empleadosappaterno','Areaareaid','Empleadosapmaterno','Empleadosstatus','Empleadoscorreo','Empleadosext','Nextvalue','Empleados','Today','Websession' ],[ 'Empleados' ] ]).
+sub_info_i(146,'''Consultar ''',29,31,[ [],[] ]).
+sub_info_i(146,'''Cancelar''',33,35,[ [],[] ]).
  
 pgm_parm_i(web,29,'MENUPRINCIPAL',[],[]).
 pgm_parm_i(web,113,'DETALLESEMPLEADOS',[],[]).
