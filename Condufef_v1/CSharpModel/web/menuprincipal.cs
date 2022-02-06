@@ -2,7 +2,7 @@
                File: MenuPrincipal
         Description: Menu Principal
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 2/2/2022 13:42:56.99
+       Generated on: 2/5/2022 21:6:6.27
        Program type: Main program
           Main DBMS: postgresql
 */
@@ -215,7 +215,7 @@ namespace GeneXus.Programs {
          context.AddJavascriptSource("jquery.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxtimezone.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxgral.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("gxcfg.js", "?2022221342570");
+         context.AddJavascriptSource("gxcfg.js", "?202225216629");
          if ( context.isSpaRequest( ) )
          {
             enableOutput();
@@ -358,8 +358,6 @@ namespace GeneXus.Programs {
          if ( wbgen )
          {
             context.WriteHtmlText( "</p>") ;
-            context.WriteHtmlText( "<p></p>") ;
-            context.WriteHtmlText( "<p></p>") ;
          }
          wbLoad = true;
       }
@@ -600,9 +598,9 @@ namespace GeneXus.Programs {
             GxWebStd.gx_table_start( context, tblTable1_Internalname, tblTable1_Internalname, "", "Table", 0, "center", "", 1, 2, sStyleString, "", 0);
             context.WriteHtmlText( "<tbody>") ;
             context.WriteHtmlText( "<tr>") ;
-            context.WriteHtmlText( "<td data-align=\"center\" bgcolor=\"#FF8000\"  style=\""+CSSHelper.Prettify( "text-align:-khtml-center;text-align:-moz-center;text-align:-webkit-center")+"\">") ;
+            context.WriteHtmlText( "<td data-align=\"center\" bgcolor=\"#FF8000\" bordercolor=\"#00FFFFFF\"  style=\""+CSSHelper.Prettify( "text-align:-khtml-center;text-align:-moz-center;text-align:-webkit-center;vertical-align:middle;height:30%")+"\">") ;
             /* Text block */
-            GxWebStd.gx_label_ctrl( context, lblTextblock1_Internalname, "MENÚ", "", "", lblTextblock1_Jsonclick, "'"+""+"'"+",false,"+"'"+""+"'", "font-family:'Microsoft Sans Serif'; font-size:13.0pt; font-weight:bold; font-style:normal; color:#FFFFFF;", "TextBlock", 0, "", 1, 1, 0, "HLP_MenuPrincipal.htm");
+            GxWebStd.gx_label_ctrl( context, lblTextblock1_Internalname, "MENÚ", "", "", lblTextblock1_Jsonclick, "'"+""+"'"+",false,"+"'"+""+"'", "font-family:'Microsoft Sans Serif'; font-size:10.0pt; font-weight:bold; font-style:normal; color:#FFFFFF;", "TextBlock", 0, "", 1, 1, 0, "HLP_MenuPrincipal.htm");
             context.WriteHtmlText( "</td>") ;
             context.WriteHtmlText( "</tr>") ;
             context.WriteHtmlText( "<tr>") ;
@@ -663,11 +661,11 @@ namespace GeneXus.Programs {
 
       protected void define_styles( )
       {
-         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?1342847");
+         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?15381859");
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?2022221342573");
+            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?202225216634");
             idxLst = (int)(idxLst+1);
          }
          /* End function define_styles */
@@ -678,7 +676,7 @@ namespace GeneXus.Programs {
          if ( nGXWrapped != 1 )
          {
             context.AddJavascriptSource("messages.spa.js", "?"+context.GetBuildNumber( 115824));
-            context.AddJavascriptSource("menuprincipal.js", "?2022221342573");
+            context.AddJavascriptSource("menuprincipal.js", "?202225216634");
          }
          /* End function include_jscripts */
       }

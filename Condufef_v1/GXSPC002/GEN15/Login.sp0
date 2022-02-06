@@ -249,11 +249,11 @@ b_line_i(42,4,1,cmd,38,[ t('',107,38,0),t([ t('Websession',23,42,4),t('set(',1,4
 b_line_i(43,4,1,cmd,38,[ t('',107,38,0),t([ t('Websession',23,43,4),t('set(',1,43,16) ],31,43,4),t('''fecha''',3,43,21),t(',',7,38,28),t('today(',1,38,29),t(')',4,38,36),t(')',4,38,37) ]).
 b_line_i(44,4,1,cmd,38,[ t('',104,38,0),t(o(13,'MenuPrincipal'),28,38,4) ]).
 b_line_i(46,4,1,cmd,38,[ t('',110,38,0) ]).
-b_line_i(47,4,1,cmd,38,[ t('',141,38,0),t('''usuario invalida''',3,47,8),t(')',4,38,26) ]).
+b_line_i(47,4,1,cmd,38,[ t('',141,38,0),t('''usuario/contraseña invalida''',3,47,8),t(')',4,38,37) ]).
 b_line_i(49,4,1,cmd,38,[ t('',111,38,0) ]).
 b_line_i(50,4,1,cmd,38,[ t('',128,38,0) ]).
 b_line_i([ 50,1 ],2,7,cmd,27,[ t('',109,27,0),t('GXLvl37',23,27,0),t(=,10,27,0),t('0',3,27,0) ]).
-b_line_i(51,2,7,cmd,28,[ t('',141,28,0),t('''contraseña invalida''',3,51,7),t(')',4,28,28) ]).
+b_line_i(51,2,7,cmd,28,[ t('',141,28,0),t('''usuario/contraseña invalida''',3,51,7),t(')',4,28,36) ]).
 b_line_i(54,2,7,cmd,28,[ t('',111,28,0) ]).
 b_line_i(55,2,7,cmd,28,[ t('',147,28,0) ]).
 b_line_i(58,2,7,cmd,28,[ t('',146,28,0),t('Start',3,58,7) ]).
@@ -287,7 +287,7 @@ html_sub_i(6,0,html_i(0,html('<tbody>'))).
 html_sub_i(6,7,html_i(1,row(7))).
 html_sub_i(7,8,html_i(0,cell(8))).
 html_sub_i(7,9,html_i(1,cell(9))).
-html_sub_i(9,10,html_i(0,bitmap('9fb193d9-64a4-4d30-b129-ff7c76830f7e-101'))).
+html_sub_i(9,10,html_i(0,bitmap('9fb193d9-64a4-4d30-b129-ff7c76830f7e-120'))).
 html_sub_i(6,11,html_i(2,row(11))).
 html_sub_i(11,12,html_i(0,cell(12))).
 html_sub_i(12,0,html_i(0,html('Usuario'))).
@@ -337,7 +337,7 @@ html_comp_i(6,'Bordercolor',rgb(0,0,0),d,[ color ]).
 html_comp_i(6,'Cellpadding','1',d,[ str ]).
 html_comp_i(6,'Cellspacing','2',d,[ str ]).
 html_comp_i(6,'Height',measure(206,px),v,[ measure ]).
-html_comp_i(6,'Width',measure(35,'%'),v,[ measure ]).
+html_comp_i(6,'Width',measure(250,px),v,[ measure ]).
 html_comp_i(6,'Rules',none,d,[ str ]).
 html_comp_i(8,'Align',center,v,[ str ]).
 html_comp_i(8,'Height',measure(16,px),v,[ measure ]).
@@ -345,7 +345,7 @@ html_comp_i(8,'Width',measure(68,px),v,[ measure ]).
 html_comp_i(9,'Align',center,v,[ str ]).
 html_comp_i(10,'Id','Image1',v,[ str ]).
 html_comp_i(10,'Class','Image',v,[ str ]).
-html_comp_i(10,src,i(98,'5f30ca97-9603-4cf3-8c47-b1a261245deb'),v,[ image ]).
+html_comp_i(10,src,i(98,'5d9d0499-e4ca-410a-aefe-c3e59a54b528'),v,[ image ]).
 html_comp_i(10,lowsrc,'',d,[ str ]).
 html_comp_i(10,'Returnonclick',0,d,[ bool ]).
 html_comp_i(10,'Eventgx','',d,[ str ]).
@@ -383,7 +383,7 @@ html_comp_i(14,'Autocomplete',-1,d,[ bool ]).
 html_comp_i(14,'Ispassword',0,d,[ bool ]).
 html_comp_i(14,'Autoresize',0,v,[ bool ]).
 html_comp_i(14,'Gxwidth',measure(100,'%'),v,[ measure ]).
-html_comp_i(14,'Gxheight',measure(100,'%'),v,[ measure ]).
+html_comp_i(14,'Gxheight',measure(35,px),v,[ measure ]).
 html_comp_i(14,'Ismultiline',0,d,[ bool ]).
 html_comp_i(14,'Fill',-1,d,[ bool ]).
 html_comp_i(14,'Backcolor',rgb(255,255,255),d,[ color ]).
@@ -393,9 +393,9 @@ html_comp_i(14,'Horizontalalignment',left,d,[ str ]).
 html_comp_i(14,'Gxformat',0,d,[ num ]).
 html_comp_i(14,'Title','',d,[ str ]).
 html_comp_i(14,'Invitemsg','',d,[ str ]).
-html_comp_i(16,'Height',measure(20,px),v,[ measure ]).
+html_comp_i(16,'Height',measure(5,px),v,[ measure ]).
 html_comp_i(19,'Align',center,v,[ str ]).
-html_comp_i(19,'Height',measure(34,px),v,[ measure ]).
+html_comp_i(19,'Height',measure(35,px),v,[ measure ]).
 html_comp_i(20,'Align',left,v,[ str ]).
 html_comp_i(21,'Colcount',10,d,[ num ]).
 html_comp_i(21,'Attid',-6,v,[ num ]).
@@ -417,7 +417,7 @@ html_comp_i(21,'Autocomplete',0,d,[ bool ]).
 html_comp_i(21,'Ispassword',-1,d,[ bool ]).
 html_comp_i(21,'Autoresize',0,v,[ bool ]).
 html_comp_i(21,'Gxwidth',measure(100,'%'),v,[ measure ]).
-html_comp_i(21,'Gxheight',measure(100,'%'),v,[ measure ]).
+html_comp_i(21,'Gxheight',measure(35,px),v,[ measure ]).
 html_comp_i(21,'Ismultiline',0,d,[ bool ]).
 html_comp_i(21,'Fill',-1,d,[ bool ]).
 html_comp_i(21,'Backcolor',rgb(255,255,255),d,[ color ]).
@@ -461,7 +461,7 @@ html_comp_i(27,'Params',[],d,[ params ]).
  
 warn_gen_i(msg(layout(16,[]),spc0023,[ 'Parameter ','today()',' ','for method',' ',set,' has wrong type.' ])).
  
-lit_i(10,1,bitmap('9fb193d9-64a4-4d30-b129-ff7c76830f7e-101'),[ ctlname('Image1') ]).
+lit_i(10,1,bitmap('9fb193d9-64a4-4d30-b129-ff7c76830f7e-120'),[ ctlname('Image1') ]).
 lit_i(14,1,t('Usuario',23),[ ctlname('&Usuario'),ctrltype(edit,14),pos(14),ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
 lit_i(21,1,t('Contrasena',23),[ ctlname('&Contrasena'),ctrltype(edit,21),pos(21),ispwd(1),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
 lit_i(25,1,button('''INICIAR SESIÓN '''),[ ctlname('Button1'),width(0),rect(0,0,10,10),title('Nothing') ]).

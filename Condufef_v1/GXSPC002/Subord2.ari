@@ -15,4 +15,5 @@ dir_subordinates_i(2,23,[]).
 dir_subordinates_i(2,5,[]).
 dir_subordinates_i(2,1,[ [ 11,[ 23 ] ],[ 23,[ 23 ] ] ]).
 dir_subordinates_i(2,10,[ [ 11,[ 2 ] ] ]).
+dir_subordinates_i(2,15,[]).
  

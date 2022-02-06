@@ -1,6 +1,7 @@
  
  
  
+pgm_main_i(web,29,'MENUPRINCIPAL',[ 15,'MENUPRINCIPAL','Menu Principal','','','','' ]).
 pgm_main_i(web,28,'LOGIN',[ 15,'LOGIN','Login','','','','' ]).
 pgm_main_i(proc,15,'CATEGORIAS_REPORTE',[ 15,'ACATEGORIAS_REPORTE','Categorias_Reporte','','','','HTTP' ]).
 pgm_main_i(proc,14,'ACATEGORIASREPORTE',[ 15,'AACATEGORIASREPORTE',acategoriasreporte,'','','','HTTP' ]).
@@ -11,10 +12,19 @@ pgm_main_i(proc,10,'REPORTECATEGORIAS',[ 15,'AREPORTECATEGORIAS','ReporteCategor
 pgm_main_i(proc,7,'REPORT_CATEGORIAS',[ 15,'AREPORT_CATEGORIAS','Report_Categorias','','','','INTERNAL' ]).
 pgm_main_i(proc,9,'REPORTECATEGORIAS',[ 15,'AREPORTECATEGORIAS','Reporte Categorias','','','','HTTP' ]).
 pgm_main_i(proc,8,'REPORTCATEGORIAS',[ 15,'AREPORTCATEGORIAS','Report Categorias','','','','HTTP' ]).
-pgm_main_i(web,29,'MENUPRINCIPAL',[ 15,'MENUPRINCIPAL','Menu Principal','','','','' ]).
 pgm_main_i(proc,6,'SCHEDULERREQUESTHANDLER',[ 15,'ASCHEDULERREQUESTHANDLER','Scheduler Request Handler','','','','HTTP' ]).
 pgm_main_i(proc,5,'LOADEVENTSSAMPLEPROC',[ 15,'ALOADEVENTSSAMPLEPROC','Load Events Sample Proc','','','','INTERNAL' ]).
  
+pgm_prop_i(mnproc,1,'GPXMENUDEMO','OutputSDT',o(26,gpxMenuItems)).
+pgm_prop_i(web,29,'MENUPRINCIPAL','USE_ENCRYPTION','NO').
+pgm_prop_i(web,29,'MENUPRINCIPAL','HTTP_PROTOCOL','Unsecure').
+pgm_prop_i(web,30,'CATALOG_DE_CAMBS','USE_ENCRYPTION','NO').
+pgm_prop_i(web,30,'CATALOG_DE_CAMBS','HTTP_PROTOCOL','Unsecure').
+pgm_prop_i(web,28,'LOGIN','USE_ENCRYPTION','NO').
+pgm_prop_i(web,28,'LOGIN','HTTP_PROTOCOL','Unsecure').
+pgm_prop_i(web,1,'APPMASTERPAGE','WEB_COMP','Master').
+pgm_prop_i(web,1,'APPMASTERPAGE','USE_ENCRYPTION','NO').
+pgm_prop_i(web,1,'APPMASTERPAGE','HTTP_PROTOCOL','Unsecure').
 pgm_prop_i(web,114,'DETALLESEMPLEADOSPISO','USE_ENCRYPTION','NO').
 pgm_prop_i(web,114,'DETALLESEMPLEADOSPISO','HTTP_PROTOCOL','Unsecure').
 pgm_prop_i(web,113,'DETALLESEMPLEADOS','USE_ENCRYPTION','NO').
@@ -67,8 +77,6 @@ pgm_prop_i(web,39,'CATALOG_DE_CATEGORIAS','USE_ENCRYPTION','NO').
 pgm_prop_i(web,39,'CATALOG_DE_CATEGORIAS','HTTP_PROTOCOL','Unsecure').
 pgm_prop_i(web,35,'CATALOG_DE_ARTICULO','USE_ENCRYPTION','NO').
 pgm_prop_i(web,35,'CATALOG_DE_ARTICULO','HTTP_PROTOCOL','Unsecure').
-pgm_prop_i(web,30,'CATALOG_DE_CAMBS','USE_ENCRYPTION','NO').
-pgm_prop_i(web,30,'CATALOG_DE_CAMBS','HTTP_PROTOCOL','Unsecure').
 pgm_prop_i(web,99,'CATALOG_DE_ALMACEN','USE_ENCRYPTION','NO').
 pgm_prop_i(web,99,'CATALOG_DE_ALMACEN','HTTP_PROTOCOL','Unsecure').
 pgm_prop_i(web,116,'GX00P0','USE_ENCRYPTION','NO').
@@ -76,11 +84,6 @@ pgm_prop_i(web,116,'GX00P0','HTTP_PROTOCOL','Unsecure').
 pgm_prop_i(trn,25,'ESTADOS',idISBUSINESSCOMPONENT,'-1').
 pgm_prop_i(trn,25,'ESTADOS','USE_ENCRYPTION','NO').
 pgm_prop_i(trn,25,'ESTADOS','HTTP_PROTOCOL','Unsecure').
-pgm_prop_i(web,28,'LOGIN','USE_ENCRYPTION','NO').
-pgm_prop_i(web,28,'LOGIN','HTTP_PROTOCOL','Unsecure').
-pgm_prop_i(web,1,'APPMASTERPAGE','WEB_COMP','Master').
-pgm_prop_i(web,1,'APPMASTERPAGE','USE_ENCRYPTION','NO').
-pgm_prop_i(web,1,'APPMASTERPAGE','HTTP_PROTOCOL','Unsecure').
 pgm_prop_i(web,108,'GX00N0','USE_ENCRYPTION','NO').
 pgm_prop_i(web,108,'GX00N0','HTTP_PROTOCOL','Unsecure').
 pgm_prop_i(web,82,'GX00L0','USE_ENCRYPTION','NO').
@@ -177,8 +180,6 @@ pgm_prop_i(web,86,'DETALLESCAMBS','USE_ENCRYPTION','NO').
 pgm_prop_i(web,86,'DETALLESCAMBS','HTTP_PROTOCOL','Unsecure').
 pgm_prop_i(web,83,'SCHEDULERDETAILSFORM','USE_ENCRYPTION','NO').
 pgm_prop_i(web,83,'SCHEDULERDETAILSFORM','HTTP_PROTOCOL','Unsecure').
-pgm_prop_i(web,29,'MENUPRINCIPAL','USE_ENCRYPTION','NO').
-pgm_prop_i(web,29,'MENUPRINCIPAL','HTTP_PROTOCOL','Unsecure').
 pgm_prop_i(trn,21,'STATUS',idISBUSINESSCOMPONENT,'-1').
 pgm_prop_i(trn,21,'STATUS','USE_ENCRYPTION','NO').
 pgm_prop_i(trn,21,'STATUS','HTTP_PROTOCOL','Unsecure').
@@ -222,7 +223,6 @@ pgm_prop_i(proc,5,'ALOADEVENTSSAMPLEPROC','USE_ENCRYPTION','NO').
 pgm_prop_i(proc,5,'LOADEVENTSSAMPLEPROC','USE_ENCRYPTION','NO').
 pgm_prop_i(mnproc,3,'LOADEVENTSSAMPLEDP','OutputSDT',o(26,'SchedulerEvents')).
 pgm_prop_i(mnproc,2,'DPTABSMENUDATA','OutputSDT',o(26,'TabsMenuData')).
-pgm_prop_i(mnproc,1,'GPXMENUDEMO','OutputSDT',o(26,gpxMenuItems)).
 pgm_prop_i(web,85,'SIDEBAR','WEB_COMP','Yes').
 pgm_prop_i(web,85,'SIDEBAR','URLAccess','No').
 pgm_prop_i(web,85,'SIDEBAR','USE_ENCRYPTION','NO').

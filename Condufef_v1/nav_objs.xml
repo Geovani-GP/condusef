@@ -1,15 +1,8 @@
 
 <Object>
-<ObjClsGuid>c9584656-94b6-4ccd-890f-332d11fc2c25</ObjClsGuid>
-<ObjCls>13</ObjCls>
-<ObjId>113</ObjId>
-<ObjName>DetallesEmpleados</ObjName>
+<ObjClsGuid>2a9e9aba-d2de-4801-ae7f-5e3819222daf</ObjClsGuid>
+<ObjCls>33</ObjCls>
+<ObjId>1</ObjId>
+<ObjName>gpxMenuDemo</ObjName>
 <ObjStatus>genreq</ObjStatus>
-<ObjNavig>GXSPC002\GEN15\NVG\DetallesEmpleados.xml</ObjNavig></Object>
-<Object>
-<ObjClsGuid>c9584656-94b6-4ccd-890f-332d11fc2c25</ObjClsGuid>
-<ObjCls>13</ObjCls>
-<ObjId>114</ObjId>
-<ObjName>DetallesEmpleadosPiso</ObjName>
-<ObjStatus>nogenreq</ObjStatus>
-<ObjNavig>GXSPC002\GEN15\NVG\DetallesEmpleadosPiso.xml</ObjNavig></Object>
+<ObjNavig>GXSPC002\GEN15\NVG\gpxMenuDemo.xml</ObjNavig></Object>

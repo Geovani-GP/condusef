@@ -2,7 +2,7 @@
                File: Catalog_De_Cambs
         Description: Catalog_De_Cambs
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 2/5/2022 15:49:52.79
+       Generated on: 2/5/2022 21:4:58.91
        Program type: Callable routine
           Main DBMS: postgresql
 */
@@ -215,7 +215,7 @@ namespace GeneXus.Programs {
          context.AddJavascriptSource("jquery.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxtimezone.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxgral.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("gxcfg.js", "?20222515495281");
+         context.AddJavascriptSource("gxcfg.js", "?2022252145893");
          if ( context.isSpaRequest( ) )
          {
             enableOutput();
@@ -352,22 +352,19 @@ namespace GeneXus.Programs {
                RenderHtmlOpenForm( ) ;
             }
             GxWebStd.gx_msg_list( context, "", context.GX_msglist.DisplayMode, "", "", "", "false");
-            context.WriteHtmlText( "&nbsp; ") ;
-            context.WriteHtmlText( "<p>") ;
-            wb_table1_4_0U2( true) ;
+            wb_table1_2_0U2( true) ;
          }
          else
          {
-            wb_table1_4_0U2( false) ;
+            wb_table1_2_0U2( false) ;
          }
          return  ;
       }
 
-      protected void wb_table1_4_0U2e( bool wbgen )
+      protected void wb_table1_2_0U2e( bool wbgen )
       {
          if ( wbgen )
          {
-            context.WriteHtmlText( "</p>") ;
          }
          wbLoad = true;
       }
@@ -730,47 +727,46 @@ namespace GeneXus.Programs {
          /* Load Routine */
       }
 
-      protected void wb_table1_4_0U2( bool wbgen )
+      protected void wb_table1_2_0U2( bool wbgen )
       {
          if ( wbgen )
          {
             /* Table start */
             sStyleString = "";
-            sStyleString = sStyleString + " height: " + StringUtil.LTrim( StringUtil.Str( (decimal)(46), 10, 0)) + "px" + ";";
-            sStyleString = sStyleString + " width: " + StringUtil.LTrim( StringUtil.Str( (decimal)(100), 10, 0)) + "%" + ";";
+            sStyleString = sStyleString + " width: " + StringUtil.LTrim( StringUtil.Str( (decimal)(90), 10, 0)) + "%" + ";";
             GxWebStd.gx_table_start( context, tblTable1_Internalname, tblTable1_Internalname, "", "Table", 0, "center", "", 1, 2, sStyleString, "", 0);
             context.WriteHtmlText( "<tbody>") ;
             context.WriteHtmlText( "<tr>") ;
-            context.WriteHtmlText( "<td data-align=\"center\"  style=\""+CSSHelper.Prettify( "text-align:-khtml-center;text-align:-moz-center;text-align:-webkit-center")+"\">") ;
+            context.WriteHtmlText( "<td data-align=\"center\"  style=\""+CSSHelper.Prettify( "text-align:-khtml-center;text-align:-moz-center;text-align:-webkit-center;height:27px")+"\">") ;
             /* Text block */
             GxWebStd.gx_label_ctrl( context, lblTextblock8_Internalname, "CATALOGO DE CAMBS", "", "", lblTextblock8_Jsonclick, "'"+""+"'"+",false,"+"'"+""+"'", "font-family:'Microsoft Sans Serif'; font-size:15.0pt; font-weight:bold; font-style:normal; color:#000000;", "TextBlock", 0, "", 1, 1, 0, "HLP_Catalog_De_Cambs.htm");
             context.WriteHtmlText( "</td>") ;
             context.WriteHtmlText( "</tr>") ;
             context.WriteHtmlText( "<tr>") ;
-            context.WriteHtmlText( "<td>") ;
-            wb_table2_10_0U2( true) ;
+            context.WriteHtmlText( "<td data-align=\"center\"  style=\""+CSSHelper.Prettify( "text-align:-khtml-center;text-align:-moz-center;text-align:-webkit-center;height:136px")+"\">") ;
+            wb_table2_8_0U2( true) ;
          }
          else
          {
-            wb_table2_10_0U2( false) ;
+            wb_table2_8_0U2( false) ;
          }
          return  ;
       }
 
-      protected void wb_table2_10_0U2e( bool wbgen )
+      protected void wb_table2_8_0U2e( bool wbgen )
       {
          if ( wbgen )
          {
-            wb_table3_19_0U2( true) ;
+            wb_table3_17_0U2( true) ;
          }
          else
          {
-            wb_table3_19_0U2( false) ;
+            wb_table3_17_0U2( false) ;
          }
          return  ;
       }
 
-      protected void wb_table3_19_0U2e( bool wbgen )
+      protected void wb_table3_17_0U2e( bool wbgen )
       {
          if ( wbgen )
          {
@@ -779,39 +775,39 @@ namespace GeneXus.Programs {
             context.WriteHtmlText( "</tbody>") ;
             /* End of table */
             context.WriteHtmlText( "</table>") ;
-            wb_table1_4_0U2e( true) ;
+            wb_table1_2_0U2e( true) ;
          }
          else
          {
-            wb_table1_4_0U2e( false) ;
+            wb_table1_2_0U2e( false) ;
          }
       }
 
-      protected void wb_table3_19_0U2( bool wbgen )
+      protected void wb_table3_17_0U2( bool wbgen )
       {
          if ( wbgen )
          {
             /* Table start */
             sStyleString = "";
             sStyleString = sStyleString + " height: " + StringUtil.LTrim( StringUtil.Str( (decimal)(24), 10, 0)) + "px" + ";";
-            sStyleString = sStyleString + " width: " + StringUtil.LTrim( StringUtil.Str( (decimal)(502), 10, 0)) + "px" + ";";
+            sStyleString = sStyleString + " width: " + StringUtil.LTrim( StringUtil.Str( (decimal)(100), 10, 0)) + "%" + ";";
             GxWebStd.gx_table_start( context, tblTable3_Internalname, tblTable3_Internalname, "", "Table", 0, "", "", 1, 2, sStyleString, "", 0);
             context.WriteHtmlText( "<tbody>") ;
             context.WriteHtmlText( "<tr>") ;
-            context.WriteHtmlText( "<td>") ;
-            TempTags = "  onfocus=\"gx.evt.onfocus(this, 22,'',false,'',0)\"";
+            context.WriteHtmlText( "<td data-align=\"center\"  style=\""+CSSHelper.Prettify( "text-align:-khtml-center;text-align:-moz-center;text-align:-webkit-center")+"\">") ;
+            TempTags = "  onfocus=\"gx.evt.onfocus(this, 20,'',false,'',0)\"";
             ClassString = "Button";
             StyleString = "color:#FFFFFF; background-color:#008080;";
             GxWebStd.gx_button_ctrl( context, bttButton1_Internalname, "", "Consultar", bttButton1_Jsonclick, 5, "Consultar", "", StyleString, ClassString, 1, 1, "standard", "'"+""+"'"+",false,"+"'"+"E\\'CONSULTAR \\'."+"'", TempTags, "", context.GetButtonType( ), "HLP_Catalog_De_Cambs.htm");
             context.WriteHtmlText( "</td>") ;
-            context.WriteHtmlText( "<td>") ;
-            TempTags = "  onfocus=\"gx.evt.onfocus(this, 24,'',false,'',0)\"";
+            context.WriteHtmlText( "<td data-align=\"center\"  style=\""+CSSHelper.Prettify( "text-align:-khtml-center;text-align:-moz-center;text-align:-webkit-center")+"\">") ;
+            TempTags = "  onfocus=\"gx.evt.onfocus(this, 22,'',false,'',0)\"";
             ClassString = "Button";
             StyleString = "color:#FFFFFF; background-color:#008080;";
             GxWebStd.gx_button_ctrl( context, bttButton2_Internalname, "", "Guardar", bttButton2_Jsonclick, 5, "Guardar", "", StyleString, ClassString, 1, 1, "standard", "'"+""+"'"+",false,"+"'"+"E\\'GUARDAR \\'."+"'", TempTags, "", context.GetButtonType( ), "HLP_Catalog_De_Cambs.htm");
             context.WriteHtmlText( "</td>") ;
-            context.WriteHtmlText( "<td>") ;
-            TempTags = "  onfocus=\"gx.evt.onfocus(this, 26,'',false,'',0)\"";
+            context.WriteHtmlText( "<td data-align=\"center\"  style=\""+CSSHelper.Prettify( "text-align:-khtml-center;text-align:-moz-center;text-align:-webkit-center")+"\">") ;
+            TempTags = "  onfocus=\"gx.evt.onfocus(this, 24,'',false,'',0)\"";
             ClassString = "Button";
             StyleString = "color:#FFFFFF; background-color:#DC143C;";
             GxWebStd.gx_button_ctrl( context, bttButton3_Internalname, "", "Cancelar", bttButton3_Jsonclick, 5, "Cancelar", "", StyleString, ClassString, 1, 1, "standard", "'"+""+"'"+",false,"+"'"+"E\\'CANCELAR\\'."+"'", TempTags, "", context.GetButtonType( ), "HLP_Catalog_De_Cambs.htm");
@@ -820,22 +816,22 @@ namespace GeneXus.Programs {
             context.WriteHtmlText( "</tbody>") ;
             /* End of table */
             context.WriteHtmlText( "</table>") ;
-            wb_table3_19_0U2e( true) ;
+            wb_table3_17_0U2e( true) ;
          }
          else
          {
-            wb_table3_19_0U2e( false) ;
+            wb_table3_17_0U2e( false) ;
          }
       }
 
-      protected void wb_table2_10_0U2( bool wbgen )
+      protected void wb_table2_8_0U2( bool wbgen )
       {
          if ( wbgen )
          {
             /* Table start */
             sStyleString = "";
             sStyleString = sStyleString + " height: " + StringUtil.LTrim( StringUtil.Str( (decimal)(46), 10, 0)) + "px" + ";";
-            sStyleString = sStyleString + " width: " + StringUtil.LTrim( StringUtil.Str( (decimal)(503), 10, 0)) + "px" + ";";
+            sStyleString = sStyleString + " width: " + StringUtil.LTrim( StringUtil.Str( (decimal)(100), 10, 0)) + "%" + ";";
             GxWebStd.gx_table_start( context, tblTable2_Internalname, tblTable2_Internalname, "", "Table", 0, "", "", 1, 2, sStyleString, "", 0);
             context.WriteHtmlText( "<tbody>") ;
             context.WriteHtmlText( "<tr>") ;
@@ -844,8 +840,8 @@ namespace GeneXus.Programs {
             context.WriteHtmlText( "</td>") ;
             context.WriteHtmlText( "<td>") ;
             /* Single line edit */
-            TempTags = "  onfocus=\"gx.evt.onfocus(this, 14,'',false,'',0)\"";
-            GxWebStd.gx_single_line_edit( context, edtavNextvalue_Internalname, StringUtil.LTrim( StringUtil.NToC( (decimal)(AV6NextValue), 4, 0, ",", "")), ((edtavNextvalue_Enabled!=0) ? StringUtil.LTrim( context.localUtil.Format( (decimal)(AV6NextValue), "ZZZ9")) : context.localUtil.Format( (decimal)(AV6NextValue), "ZZZ9")), TempTags+" onchange=\"gx.evt.onchange(this)\" "+" onblur=\""+"gx.num.valid_integer( this,'.');"+";gx.evt.onblur(this,14);\"", "'"+""+"'"+",false,"+"'"+""+"'", "", "", "", "", edtavNextvalue_Jsonclick, 0, "AttributeAcceptDrag", "", "", "", 1, edtavNextvalue_Enabled, 0, "text", "", 4, "chr", 1, "row", 4, 0, 0, 0, 1, -1, 0, true, "", "right", false, "HLP_Catalog_De_Cambs.htm");
+            TempTags = "  onfocus=\"gx.evt.onfocus(this, 12,'',false,'',0)\"";
+            GxWebStd.gx_single_line_edit( context, edtavNextvalue_Internalname, StringUtil.LTrim( StringUtil.NToC( (decimal)(AV6NextValue), 4, 0, ",", "")), ((edtavNextvalue_Enabled!=0) ? StringUtil.LTrim( context.localUtil.Format( (decimal)(AV6NextValue), "ZZZ9")) : context.localUtil.Format( (decimal)(AV6NextValue), "ZZZ9")), TempTags+" onchange=\"gx.evt.onchange(this)\" "+" onblur=\""+"gx.num.valid_integer( this,'.');"+";gx.evt.onblur(this,12);\"", "'"+""+"'"+",false,"+"'"+""+"'", "", "", "", "", edtavNextvalue_Jsonclick, 0, "AttributeAcceptDrag", "", "", "", 1, edtavNextvalue_Enabled, 0, "text", "", 4, "chr", 1, "row", 4, 0, 0, 0, 1, -1, 0, true, "", "right", false, "HLP_Catalog_De_Cambs.htm");
             context.WriteHtmlText( "</td>") ;
             context.WriteHtmlText( "</tr>") ;
             context.WriteHtmlText( "<tr>") ;
@@ -854,18 +850,18 @@ namespace GeneXus.Programs {
             context.WriteHtmlText( "</td>") ;
             context.WriteHtmlText( "<td>") ;
             /* Single line edit */
-            TempTags = "  onfocus=\"gx.evt.onfocus(this, 18,'',false,'',0)\"";
-            GxWebStd.gx_single_line_edit( context, edtavCambsdsc_Internalname, AV8cambsdsc, StringUtil.RTrim( context.localUtil.Format( AV8cambsdsc, "")), TempTags+" onchange=\"gx.evt.onchange(this)\" "+" onblur=\""+""+";gx.evt.onblur(this,18);\"", "'"+""+"'"+",false,"+"'"+""+"'", "", "", "", "", edtavCambsdsc_Jsonclick, 0, "Attribute", "", "", "", 1, 1, 0, "text", "", 80, "chr", 1, "row", 100, 0, 0, 0, 1, -1, -1, true, "", "left", true, "HLP_Catalog_De_Cambs.htm");
+            TempTags = "  onfocus=\"gx.evt.onfocus(this, 16,'',false,'',0)\"";
+            GxWebStd.gx_single_line_edit( context, edtavCambsdsc_Internalname, AV8cambsdsc, StringUtil.RTrim( context.localUtil.Format( AV8cambsdsc, "")), TempTags+" onchange=\"gx.evt.onchange(this)\" "+" onblur=\""+""+";gx.evt.onblur(this,16);\"", "'"+""+"'"+",false,"+"'"+""+"'", "", "", "", "", edtavCambsdsc_Jsonclick, 0, "Attribute", "", "", "", 1, 1, 0, "text", "", 80, "chr", 1, "row", 100, 0, 0, 0, 1, -1, -1, true, "", "left", true, "HLP_Catalog_De_Cambs.htm");
             context.WriteHtmlText( "</td>") ;
             context.WriteHtmlText( "</tr>") ;
             context.WriteHtmlText( "</tbody>") ;
             /* End of table */
             context.WriteHtmlText( "</table>") ;
-            wb_table2_10_0U2e( true) ;
+            wb_table2_8_0U2e( true) ;
          }
          else
          {
-            wb_table2_10_0U2e( false) ;
+            wb_table2_8_0U2e( false) ;
          }
       }
 
@@ -904,7 +900,7 @@ namespace GeneXus.Programs {
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?20222515495295");
+            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?202225214597");
             idxLst = (int)(idxLst+1);
          }
          /* End function define_styles */
@@ -913,7 +909,7 @@ namespace GeneXus.Programs {
       protected void include_jscripts( )
       {
          context.AddJavascriptSource("messages.spa.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("catalog_de_cambs.js", "?20222515495295");
+         context.AddJavascriptSource("catalog_de_cambs.js", "?202225214597");
          /* End function include_jscripts */
       }
 

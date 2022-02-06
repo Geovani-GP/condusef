@@ -202,8 +202,8 @@ html_sub_i(4,5,html_i(0,table(5))).
 html_sub_i(5,0,html_i(0,html('<tbody>'))).
 html_sub_i(5,6,html_i(1,row(6))).
 html_sub_i(6,7,html_i(0,cell(7))).
-html_sub_i(7,8,html_i(0,bitmap('9fb193d9-64a4-4d30-b129-ff7c76830f7e-103'))).
-html_sub_i(7,0,html_i(1,html('&nbsp; '))).
+html_sub_i(7,0,html_i(0,html('&nbsp;'))).
+html_sub_i(7,8,html_i(1,bitmap('9fb193d9-64a4-4d30-b129-ff7c76830f7e-119'))).
 html_sub_i(6,9,html_i(1,cell(9))).
 html_sub_i(6,10,html_i(2,cell(10))).
 html_sub_i(10,11,html_i(0,t('Titulo',23))).
@@ -262,33 +262,34 @@ html_comp_i(5,'Border','0',v,[ str ]).
 html_comp_i(5,'Bordercolor',rgb(0,0,0),d,[ color ]).
 html_comp_i(5,'Cellpadding','0',v,[ str ]).
 html_comp_i(5,'Cellspacing','0',v,[ str ]).
-html_comp_i(5,'Height',measure(90,px),v,[ measure ]).
+html_comp_i(5,'Height',measure(10,'%'),v,[ measure ]).
 html_comp_i(5,'Width',measure(100,'%'),v,[ measure ]).
 html_comp_i(5,'Rules',none,d,[ str ]).
 html_comp_i(7,'Align',center,v,[ str ]).
 html_comp_i(7,'Class','GridTabMainTable',v,[ str ]).
 html_comp_i(7,'Backgroundgx','',v,[ str ]).
-html_comp_i(7,'Height',measure(90,px),v,[ measure ]).
-html_comp_i(7,'Width',measure(150,px),v,[ measure ]).
+html_comp_i(7,'Height',measure(20,'%'),v,[ measure ]).
+html_comp_i(7,'Width',measure(20,'%'),v,[ measure ]).
 html_comp_i(8,'Id','Image1',v,[ str ]).
 html_comp_i(8,'Class','Image',v,[ str ]).
-html_comp_i(8,src,i(98,'4501a883-ab40-469d-8b9a-8ccc7365672d'),v,[ image ]).
+html_comp_i(8,src,i(98,'50a9fefa-952a-4474-8e37-0c75e294c1c6'),v,[ image ]).
 html_comp_i(8,lowsrc,'',d,[ str ]).
 html_comp_i(8,'Returnonclick',0,d,[ bool ]).
 html_comp_i(8,'Eventgx','',d,[ str ]).
 html_comp_i(8,'Height',measure(100,'%'),v,[ measure ]).
-html_comp_i(8,'Width',measure(100,'%'),v,[ measure ]).
+html_comp_i(8,'Width',measure(50,'%'),v,[ measure ]).
 html_comp_i(8,'Border','0',d,[ str ]).
 html_comp_i(8,'Alt','',d,[ str ]).
 html_comp_i(8,'Title','',d,[ str ]).
 html_comp_i(8,'Hspace',0,v,[ num ]).
 html_comp_i(8,'Vspace',0,d,[ num ]).
-html_comp_i(8,'Align',middle,v,[ str ]).
+html_comp_i(8,'Align',left,d,[ str ]).
 html_comp_i(8,'Usemap','',d,[ str ]).
 html_comp_i(9,'Width',measure(1,px),v,[ measure ]).
 html_comp_i(10,'Align',center,v,[ str ]).
-html_comp_i(10,'Height',measure(90,px),v,[ measure ]).
-html_comp_i(10,'Width',measure(512,px),v,[ measure ]).
+html_comp_i(10,'Valign',middle,v,[ str ]).
+html_comp_i(10,'Height',measure(10,'%'),v,[ measure ]).
+html_comp_i(10,'Width',measure(60,'%'),v,[ measure ]).
 html_comp_i(11,'Colcount',20,d,[ num ]).
 html_comp_i(11,'Attid',-11,v,[ num ]).
 html_comp_i(11,'Class','Attribute',d,[ str ]).
@@ -315,28 +316,27 @@ html_comp_i(11,'Ismultiline',0,d,[ bool ]).
 html_comp_i(11,'Fill',0,d,[ bool ]).
 html_comp_i(11,'Forecolor',rgb(255,255,255),v,[ color ]).
 html_comp_i(11,'Font',font('Verdana',17,[ bold ]),v,[ font ]).
-html_comp_i(11,'Horizontalalignment',left,d,[ str ]).
+html_comp_i(11,'Horizontalalignment',center,v,[ str ]).
 html_comp_i(11,'Gxformat',0,d,[ num ]).
 html_comp_i(11,'Title','',d,[ str ]).
 html_comp_i(11,'Invitemsg','',d,[ str ]).
 html_comp_i(12,'Align',center,v,[ str ]).
-html_comp_i(12,'Valign',bottom,v,[ str ]).
-html_comp_i(12,'Height',measure(90,px),v,[ measure ]).
+html_comp_i(12,'Valign',middle,v,[ str ]).
+html_comp_i(12,'Height',measure(10,'%'),v,[ measure ]).
 html_comp_i(13,'Id','Table4',v,[ str ]).
 html_comp_i(13,'Class','Table',v,[ str ]).
 html_comp_i(13,'Title','',d,[ str ]).
-html_comp_i(13,'Align',left,d,[ str ]).
+html_comp_i(13,'Align',center,v,[ str ]).
 html_comp_i(13,'Backgroundgx','',d,[ str ]).
 html_comp_i(13,'Bgcolor',rgb(0,0,0),d,[ color ]).
 html_comp_i(13,'Border','0',d,[ str ]).
 html_comp_i(13,'Bordercolor',rgb(0,0,0),d,[ color ]).
-html_comp_i(13,'Cellpadding','1',d,[ str ]).
-html_comp_i(13,'Cellspacing','2',d,[ str ]).
-html_comp_i(13,'Height',measure(86,px),v,[ measure ]).
-html_comp_i(13,'Width',measure(352,px),v,[ measure ]).
+html_comp_i(13,'Cellpadding','2',v,[ str ]).
+html_comp_i(13,'Cellspacing','2',v,[ str ]).
+html_comp_i(13,'Height',measure(50,'%'),v,[ measure ]).
+html_comp_i(13,'Width',measure(100,'%'),v,[ measure ]).
 html_comp_i(13,'Rules',none,d,[ str ]).
-html_comp_i(15,'Height',measure(40,px),v,[ measure ]).
-html_comp_i(15,'Width',measure(1,px),v,[ measure ]).
+html_comp_i(15,'Align',center,v,[ str ]).
 html_comp_i(16,'Caption','Usuario: ',d,[ str ]).
 html_comp_i(16,'Id','Textblock2',v,[ str ]).
 html_comp_i(16,'Class','TextBlock',d,[ str ]).
@@ -347,7 +347,7 @@ html_comp_i(16,'Title','',d,[ str ]).
 html_comp_i(16,'Fill',-1,d,[ bool ]).
 html_comp_i(16,'Backcolor',rgb(255,255,255),d,[ color ]).
 html_comp_i(16,'Forecolor',rgb(255,255,255),v,[ color ]).
-html_comp_i(16,'Font','',d,[ str ]).
+html_comp_i(16,'Font',font('Microsoft Sans Serif',9,[ bold ]),v,[ font ]).
 html_comp_i(17,'Align',center,v,[ str ]).
 html_comp_i(18,'Colcount',25,d,[ num ]).
 html_comp_i(18,'Attid',-8,v,[ num ]).
@@ -369,8 +369,8 @@ html_comp_i(18,'Readonly',-1,v,[ bool ]).
 html_comp_i(18,'Autocomplete',-1,d,[ bool ]).
 html_comp_i(18,'Ispassword',0,d,[ bool ]).
 html_comp_i(18,'Autoresize',0,v,[ bool ]).
-html_comp_i(18,'Gxwidth',measure(25,chr),d,[ measure ]).
-html_comp_i(18,'Gxheight',measure(1,row),d,[ measure ]).
+html_comp_i(18,'Gxwidth',measure(100,'%'),v,[ measure ]).
+html_comp_i(18,'Gxheight',measure(50,'%'),v,[ measure ]).
 html_comp_i(18,'Ismultiline',0,d,[ bool ]).
 html_comp_i(18,'Fill',0,d,[ bool ]).
 html_comp_i(18,'Forecolor',rgb(255,255,255),v,[ color ]).
@@ -379,6 +379,7 @@ html_comp_i(18,'Horizontalalignment',left,d,[ str ]).
 html_comp_i(18,'Gxformat',0,d,[ num ]).
 html_comp_i(18,'Title','',d,[ str ]).
 html_comp_i(18,'Invitemsg','',d,[ str ]).
+html_comp_i(20,'Align',center,v,[ str ]).
 html_comp_i(21,'Caption','Fecha: ',d,[ str ]).
 html_comp_i(21,'Id','Textblock1',v,[ str ]).
 html_comp_i(21,'Class','TextBlock',d,[ str ]).
@@ -389,7 +390,7 @@ html_comp_i(21,'Title','',d,[ str ]).
 html_comp_i(21,'Fill',-1,d,[ bool ]).
 html_comp_i(21,'Backcolor',rgb(255,255,255),d,[ color ]).
 html_comp_i(21,'Forecolor',rgb(255,255,255),v,[ color ]).
-html_comp_i(21,'Font','',d,[ str ]).
+html_comp_i(21,'Font',font('Microsoft Sans Serif',9,[ bold ]),v,[ font ]).
 html_comp_i(22,'Align',center,v,[ str ]).
 html_comp_i(23,'Colcount',20,d,[ num ]).
 html_comp_i(23,'Attid',-10,v,[ num ]).
@@ -411,8 +412,8 @@ html_comp_i(23,'Readonly',-1,v,[ bool ]).
 html_comp_i(23,'Autocomplete',-1,d,[ bool ]).
 html_comp_i(23,'Ispassword',0,d,[ bool ]).
 html_comp_i(23,'Autoresize',0,v,[ bool ]).
-html_comp_i(23,'Gxwidth',measure(184,px),v,[ measure ]).
-html_comp_i(23,'Gxheight',measure(36,px),v,[ measure ]).
+html_comp_i(23,'Gxwidth',measure(100,'%'),v,[ measure ]).
+html_comp_i(23,'Gxheight',measure(50,'%'),v,[ measure ]).
 html_comp_i(23,'Ismultiline',0,d,[ bool ]).
 html_comp_i(23,'Fill',0,d,[ bool ]).
 html_comp_i(23,'Forecolor',rgb(255,255,255),v,[ color ]).
@@ -457,7 +458,7 @@ html_comp_i(33,'Jssharedsupportfiles',[],d,[ params ]).
  
  
  
-lit_i(8,1,bitmap('9fb193d9-64a4-4d30-b129-ff7c76830f7e-103'),[ ctlname('Image1') ]).
+lit_i(8,1,bitmap('9fb193d9-64a4-4d30-b129-ff7c76830f7e-119'),[ ctlname('Image1') ]).
 lit_i(11,1,t('Titulo',23),[ ctlname('&Titulo'),ctrltype(edit,11),pos(11),readonly,ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
 lit_i(16,1,t('Usuario: ',3),[ ctlname('Textblock2') ]).
 lit_i(18,1,t('Usuario',23),[ ctlname('&Usuario'),ctrltype(edit,18),pos(18),readonly,ispwd(0),e2n(0),width(0),rect(0,0,10,10),title('Nothing') ]).

@@ -44,12 +44,12 @@ rule_i(0,datastore(1,'CS_RPCPGML','')).
 rule_i(0,datastore(1,'JDBC_DATASOURCE','')).
 rule_i(0,datastore(1,'USE_JDBC_DATASOURCE','0')).
 rule_i(0,datastore(1,'DS_DBMS_ADDINFO','')).
-rule_i(0,datastore(1,'USER_PASSWORD',Ü5Ú2ÌKê2â5Ì¿)).
+rule_i(0,datastore(1,'USER_PASSWORD',asdf)).
 rule_i(0,datastore(1,'USER_ID',postgres)).
 rule_i(0,datastore(1,'CS_CONNECT','First')).
 rule_i(0,datastore(1,'DBMS_PORT','5432')).
 rule_i(0,datastore(1,'CS_SERVER',localhost)).
-rule_i(0,datastore(1,'CS_DBNAME',postgres)).
+rule_i(0,datastore(1,'CS_DBNAME',condusef)).
 rule_i(0,datastore(1,'CS_FLEDSNAME','')).
 rule_i(0,datastore(1,'CS_DRVNAME','')).
 rule_i(0,datastore(1,'CS_DSNAME','')).
@@ -174,8 +174,6 @@ b_line_i(1002,2,2,cmd,0,[ t('',147,0,0) ]).
 html_i(2,html('<p>')).
 html_i(3,table(3)).
 html_i(15,html('</p>')).
-html_i(16,html('<p></p>')).
-html_i(17,html('<p></p>')).
  
 html_sub_i(3,0,html_i(0,html('<tbody>'))).
 html_sub_i(3,4,html_i(1,row(4))).
@@ -207,7 +205,10 @@ html_comp_i(3,'Height',measure(143,px),v,[ measure ]).
 html_comp_i(3,'Width',measure(90,'%'),v,[ measure ]).
 html_comp_i(3,'Rules',none,d,[ str ]).
 html_comp_i(5,'Align',center,v,[ str ]).
+html_comp_i(5,'Valign',middle,v,[ str ]).
 html_comp_i(5,'Bgcolor',rgb(255,128,0),v,[ color ]).
+html_comp_i(5,'Bordercolor',name_argb('Transparent',0,255,255,255),v,[ color ]).
+html_comp_i(5,'Height',measure(30,'%'),v,[ measure ]).
 html_comp_i(6,'Caption','MENÚ',d,[ str ]).
 html_comp_i(6,'Id','Textblock1',v,[ str ]).
 html_comp_i(6,'Class','TextBlock',d,[ str ]).
@@ -218,7 +219,7 @@ html_comp_i(6,'Title','',d,[ str ]).
 html_comp_i(6,'Fill',-1,d,[ bool ]).
 html_comp_i(6,'Backcolor',rgb(255,255,255),d,[ color ]).
 html_comp_i(6,'Forecolor',rgb(255,255,255),v,[ color ]).
-html_comp_i(6,'Font',font('Microsoft Sans Serif',13,[ bold ]),v,[ font ]).
+html_comp_i(6,'Font',font('Microsoft Sans Serif',10,[ bold ]),v,[ font ]).
 html_comp_i(8,'Align',center,v,[ str ]).
 html_comp_i(9,'Caption','BIENVENIDOS AL SISTEMA DE INVENTARIOS  CONDUSEF',d,[ str ]).
 html_comp_i(9,'Id','Textblock2',v,[ str ]).

@@ -2,7 +2,7 @@
                File: gpxMenuDemo
         Description: gpx Menu Demo
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 2/2/2022 13:42:10.0
+       Generated on: 2/5/2022 21:12:52.98
        Program type: Callable routine
           Main DBMS: postgresql
 */
@@ -108,20 +108,56 @@ namespace GeneXus.Programs {
          Gxm1gpxmenuitems.gxTpr_Title = "Catálogos";
          Gxm3gpxmenuitems_subitems = new SdtgpxMenuItems_gpxMenuItem(context);
          Gxm1gpxmenuitems.gxTpr_Subitems.Add(Gxm3gpxmenuitems_subitems, 0);
+         Gxm3gpxmenuitems_subitems.gxTpr_Title = "Almacén";
+         Gxm3gpxmenuitems_subitems.gxTpr_Url = "Catalog_De_Almacen.aspx";
+         Gxm3gpxmenuitems_subitems = new SdtgpxMenuItems_gpxMenuItem(context);
+         Gxm1gpxmenuitems.gxTpr_Subitems.Add(Gxm3gpxmenuitems_subitems, 0);
+         Gxm3gpxmenuitems_subitems.gxTpr_Title = "Area";
+         Gxm3gpxmenuitems_subitems.gxTpr_Url = "Catalog_De_Area.aspx";
+         Gxm3gpxmenuitems_subitems = new SdtgpxMenuItems_gpxMenuItem(context);
+         Gxm1gpxmenuitems.gxTpr_Subitems.Add(Gxm3gpxmenuitems_subitems, 0);
          Gxm3gpxmenuitems_subitems.gxTpr_Title = "Cambs";
          Gxm3gpxmenuitems_subitems.gxTpr_Url = "Catalog_De_Cambs.aspx";
+         Gxm3gpxmenuitems_subitems = new SdtgpxMenuItems_gpxMenuItem(context);
+         Gxm1gpxmenuitems.gxTpr_Subitems.Add(Gxm3gpxmenuitems_subitems, 0);
+         Gxm3gpxmenuitems_subitems.gxTpr_Title = "Categoria";
+         Gxm3gpxmenuitems_subitems.gxTpr_Url = "Catalog_De_Categorias.aspx";
+         Gxm3gpxmenuitems_subitems = new SdtgpxMenuItems_gpxMenuItem(context);
+         Gxm1gpxmenuitems.gxTpr_Subitems.Add(Gxm3gpxmenuitems_subitems, 0);
+         Gxm3gpxmenuitems_subitems.gxTpr_Title = "Empleados";
+         Gxm3gpxmenuitems_subitems.gxTpr_Url = "Catalog_De_Empleados.aspx";
+         Gxm3gpxmenuitems_subitems = new SdtgpxMenuItems_gpxMenuItem(context);
+         Gxm1gpxmenuitems.gxTpr_Subitems.Add(Gxm3gpxmenuitems_subitems, 0);
+         Gxm3gpxmenuitems_subitems.gxTpr_Title = "Empleado Piso EXT";
+         Gxm3gpxmenuitems_subitems.gxTpr_Url = "Catalog_De_Empleados_Piso.aspx";
+         Gxm3gpxmenuitems_subitems = new SdtgpxMenuItems_gpxMenuItem(context);
+         Gxm1gpxmenuitems.gxTpr_Subitems.Add(Gxm3gpxmenuitems_subitems, 0);
+         Gxm3gpxmenuitems_subitems.gxTpr_Title = "Entidad Federativa";
+         Gxm3gpxmenuitems_subitems.gxTpr_Url = "Catalog_De_Entidad_Federativa.aspx";
+         Gxm3gpxmenuitems_subitems = new SdtgpxMenuItems_gpxMenuItem(context);
+         Gxm1gpxmenuitems.gxTpr_Subitems.Add(Gxm3gpxmenuitems_subitems, 0);
+         Gxm3gpxmenuitems_subitems.gxTpr_Title = "Estatus";
+         Gxm3gpxmenuitems_subitems.gxTpr_Url = "Catalog_De_Status.aspx";
+         Gxm3gpxmenuitems_subitems = new SdtgpxMenuItems_gpxMenuItem(context);
+         Gxm1gpxmenuitems.gxTpr_Subitems.Add(Gxm3gpxmenuitems_subitems, 0);
+         Gxm3gpxmenuitems_subitems.gxTpr_Title = "EstatusArticulo";
+         Gxm3gpxmenuitems_subitems.gxTpr_Url = "Catalog_De_Articulo.aspx";
          Gxm3gpxmenuitems_subitems = new SdtgpxMenuItems_gpxMenuItem(context);
          Gxm1gpxmenuitems.gxTpr_Subitems.Add(Gxm3gpxmenuitems_subitems, 0);
          Gxm3gpxmenuitems_subitems.gxTpr_Title = "Marca";
          Gxm3gpxmenuitems_subitems.gxTpr_Url = "Catalog_De_Marcas.aspx";
          Gxm3gpxmenuitems_subitems = new SdtgpxMenuItems_gpxMenuItem(context);
          Gxm1gpxmenuitems.gxTpr_Subitems.Add(Gxm3gpxmenuitems_subitems, 0);
+         Gxm3gpxmenuitems_subitems.gxTpr_Title = "Meses";
+         Gxm3gpxmenuitems_subitems.gxTpr_Url = "";
+         Gxm3gpxmenuitems_subitems = new SdtgpxMenuItems_gpxMenuItem(context);
+         Gxm1gpxmenuitems.gxTpr_Subitems.Add(Gxm3gpxmenuitems_subitems, 0);
          Gxm3gpxmenuitems_subitems.gxTpr_Title = "Modelo";
          Gxm3gpxmenuitems_subitems.gxTpr_Url = "Catalog_De_Modelo.aspx";
          Gxm3gpxmenuitems_subitems = new SdtgpxMenuItems_gpxMenuItem(context);
          Gxm1gpxmenuitems.gxTpr_Subitems.Add(Gxm3gpxmenuitems_subitems, 0);
-         Gxm3gpxmenuitems_subitems.gxTpr_Title = "Categoria";
-         Gxm3gpxmenuitems_subitems.gxTpr_Url = "Catalog_De_Categorias.aspx";
+         Gxm3gpxmenuitems_subitems.gxTpr_Title = "Origen";
+         Gxm3gpxmenuitems_subitems.gxTpr_Url = "Catalog_De_Origen.aspx";
          Gxm3gpxmenuitems_subitems = new SdtgpxMenuItems_gpxMenuItem(context);
          Gxm1gpxmenuitems.gxTpr_Subitems.Add(Gxm3gpxmenuitems_subitems, 0);
          Gxm3gpxmenuitems_subitems.gxTpr_Title = "Productos";
@@ -132,48 +168,12 @@ namespace GeneXus.Programs {
          Gxm3gpxmenuitems_subitems.gxTpr_Url = "Catalog_De_Proveedor.aspx";
          Gxm3gpxmenuitems_subitems = new SdtgpxMenuItems_gpxMenuItem(context);
          Gxm1gpxmenuitems.gxTpr_Subitems.Add(Gxm3gpxmenuitems_subitems, 0);
-         Gxm3gpxmenuitems_subitems.gxTpr_Title = "Almacén";
-         Gxm3gpxmenuitems_subitems.gxTpr_Url = "Catalog_De_Almacen.aspx";
-         Gxm3gpxmenuitems_subitems = new SdtgpxMenuItems_gpxMenuItem(context);
-         Gxm1gpxmenuitems.gxTpr_Subitems.Add(Gxm3gpxmenuitems_subitems, 0);
-         Gxm3gpxmenuitems_subitems.gxTpr_Title = "Origen";
-         Gxm3gpxmenuitems_subitems.gxTpr_Url = "Catalog_De_Origen.aspx";
-         Gxm3gpxmenuitems_subitems = new SdtgpxMenuItems_gpxMenuItem(context);
-         Gxm1gpxmenuitems.gxTpr_Subitems.Add(Gxm3gpxmenuitems_subitems, 0);
          Gxm3gpxmenuitems_subitems.gxTpr_Title = "TipoBien";
          Gxm3gpxmenuitems_subitems.gxTpr_Url = "Catalog_De_TipoBien.aspx";
          Gxm3gpxmenuitems_subitems = new SdtgpxMenuItems_gpxMenuItem(context);
          Gxm1gpxmenuitems.gxTpr_Subitems.Add(Gxm3gpxmenuitems_subitems, 0);
          Gxm3gpxmenuitems_subitems.gxTpr_Title = "TipoDocumento";
          Gxm3gpxmenuitems_subitems.gxTpr_Url = "Catalog_De_Tipo_Doc.aspx";
-         Gxm3gpxmenuitems_subitems = new SdtgpxMenuItems_gpxMenuItem(context);
-         Gxm1gpxmenuitems.gxTpr_Subitems.Add(Gxm3gpxmenuitems_subitems, 0);
-         Gxm3gpxmenuitems_subitems.gxTpr_Title = "EstatusArticulo";
-         Gxm3gpxmenuitems_subitems.gxTpr_Url = "Catalog_De_Articulo.aspx";
-         Gxm3gpxmenuitems_subitems = new SdtgpxMenuItems_gpxMenuItem(context);
-         Gxm1gpxmenuitems.gxTpr_Subitems.Add(Gxm3gpxmenuitems_subitems, 0);
-         Gxm3gpxmenuitems_subitems.gxTpr_Title = "Estatus";
-         Gxm3gpxmenuitems_subitems.gxTpr_Url = "Catalog_De_Status.aspx";
-         Gxm3gpxmenuitems_subitems = new SdtgpxMenuItems_gpxMenuItem(context);
-         Gxm1gpxmenuitems.gxTpr_Subitems.Add(Gxm3gpxmenuitems_subitems, 0);
-         Gxm3gpxmenuitems_subitems.gxTpr_Title = "Entidad Federativa";
-         Gxm3gpxmenuitems_subitems.gxTpr_Url = "Catalog_De_Entidad_Federativa.aspx";
-         Gxm3gpxmenuitems_subitems = new SdtgpxMenuItems_gpxMenuItem(context);
-         Gxm1gpxmenuitems.gxTpr_Subitems.Add(Gxm3gpxmenuitems_subitems, 0);
-         Gxm3gpxmenuitems_subitems.gxTpr_Title = "Empleados";
-         Gxm3gpxmenuitems_subitems.gxTpr_Url = "Catalog_De_Empleados.aspx";
-         Gxm3gpxmenuitems_subitems = new SdtgpxMenuItems_gpxMenuItem(context);
-         Gxm1gpxmenuitems.gxTpr_Subitems.Add(Gxm3gpxmenuitems_subitems, 0);
-         Gxm3gpxmenuitems_subitems.gxTpr_Title = "Area";
-         Gxm3gpxmenuitems_subitems.gxTpr_Url = "Catalog_De_Area.aspx";
-         Gxm3gpxmenuitems_subitems = new SdtgpxMenuItems_gpxMenuItem(context);
-         Gxm1gpxmenuitems.gxTpr_Subitems.Add(Gxm3gpxmenuitems_subitems, 0);
-         Gxm3gpxmenuitems_subitems.gxTpr_Title = "Empleado Piso EXT";
-         Gxm3gpxmenuitems_subitems.gxTpr_Url = "Catalog_De_Empleados_Piso.aspx";
-         Gxm3gpxmenuitems_subitems = new SdtgpxMenuItems_gpxMenuItem(context);
-         Gxm1gpxmenuitems.gxTpr_Subitems.Add(Gxm3gpxmenuitems_subitems, 0);
-         Gxm3gpxmenuitems_subitems.gxTpr_Title = "Meses";
-         Gxm3gpxmenuitems_subitems.gxTpr_Url = "";
          Gxm1gpxmenuitems = new SdtgpxMenuItems_gpxMenuItem(context);
          Gxm2rootcol.Add(Gxm1gpxmenuitems, 0);
          Gxm1gpxmenuitems.gxTpr_Title = "Reportes";
@@ -181,25 +181,6 @@ namespace GeneXus.Programs {
          Gxm1gpxmenuitems.gxTpr_Subitems.Add(Gxm3gpxmenuitems_subitems, 0);
          Gxm3gpxmenuitems_subitems.gxTpr_Title = "Home";
          Gxm3gpxmenuitems_subitems.gxTpr_Url = "http://www.genexus.com";
-         Gxm3gpxmenuitems_subitems = new SdtgpxMenuItems_gpxMenuItem(context);
-         Gxm1gpxmenuitems.gxTpr_Subitems.Add(Gxm3gpxmenuitems_subitems, 0);
-         Gxm3gpxmenuitems_subitems.gxTpr_Title = "GX Technical";
-         Gxm3gpxmenuitems_subitems.gxTpr_Url = "http://www.gxtechnical.com";
-         Gxm3gpxmenuitems_subitems = new SdtgpxMenuItems_gpxMenuItem(context);
-         Gxm1gpxmenuitems.gxTpr_Subitems.Add(Gxm3gpxmenuitems_subitems, 0);
-         Gxm3gpxmenuitems_subitems.gxTpr_Title = "Wiki";
-         Gxm3gpxmenuitems_subitems.gxTpr_Url = "http://wiki.gxtechnical.com";
-         Gxm3gpxmenuitems_subitems = new SdtgpxMenuItems_gpxMenuItem(context);
-         Gxm1gpxmenuitems.gxTpr_Subitems.Add(Gxm3gpxmenuitems_subitems, 0);
-         Gxm3gpxmenuitems_subitems.gxTpr_Title = "Marketplace";
-         Gxm3gpxmenuitems_subitems.gxTpr_Url = "https://marketplace.genexus.com";
-         Gxm3gpxmenuitems_subitems = new SdtgpxMenuItems_gpxMenuItem(context);
-         Gxm1gpxmenuitems.gxTpr_Subitems.Add(Gxm3gpxmenuitems_subitems, 0);
-         Gxm3gpxmenuitems_subitems.gxTpr_Title = "Submenu";
-         Gxm4gpxmenuitems_subitems_subitems = new SdtgpxMenuItems_gpxMenuItem(context);
-         Gxm3gpxmenuitems_subitems.gxTpr_Subitems.Add(Gxm4gpxmenuitems_subitems_subitems, 0);
-         Gxm4gpxmenuitems_subitems_subitems.gxTpr_Title = "Home";
-         Gxm4gpxmenuitems_subitems_subitems.gxTpr_Url = "http://www.gprojex.com";
          Gxm1gpxmenuitems = new SdtgpxMenuItems_gpxMenuItem(context);
          Gxm2rootcol.Add(Gxm1gpxmenuitems, 0);
          Gxm1gpxmenuitems.gxTpr_Title = "Consultas";
@@ -228,7 +209,6 @@ namespace GeneXus.Programs {
       {
          Gxm1gpxmenuitems = new SdtgpxMenuItems_gpxMenuItem(context);
          Gxm3gpxmenuitems_subitems = new SdtgpxMenuItems_gpxMenuItem(context);
-         Gxm4gpxmenuitems_subitems_subitems = new SdtgpxMenuItems_gpxMenuItem(context);
          /* GeneXus formulas. */
          context.Gx_err = 0;
       }
@@ -238,7 +218,6 @@ namespace GeneXus.Programs {
       private IGxCollection Gxm2rootcol ;
       private SdtgpxMenuItems_gpxMenuItem Gxm1gpxmenuitems ;
       private SdtgpxMenuItems_gpxMenuItem Gxm3gpxmenuitems_subitems ;
-      private SdtgpxMenuItems_gpxMenuItem Gxm4gpxmenuitems_subitems_subitems ;
    }
 
 }

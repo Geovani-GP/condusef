@@ -81,11 +81,15 @@ public class bldlogin : GxBaseBuilder
             return true;
          if (checkTime(obj, cs_path + @"\GxModelInfoProvider.cs" ))
             return true;
-         if (checkTime(obj, cs_path + @"\type_Sdtalmacen.cs" ))
+         if (checkTime(obj, cs_path + @"\type_Sdtarea.cs" ))
             return true;
          if (checkTime(obj, cs_path + @"\type_Sdtempleadospiso.cs" ))
             return true;
+         if (checkTime(obj, cs_path + @"\type_Sdtalmacen.cs" ))
+            return true;
          if (checkTime(obj, cs_path + @"\type_Sdtempleados.cs" ))
+            return true;
+         if (checkTime(obj, cs_path + @"\type_Sdtestados.cs" ))
             return true;
          if (checkTime(obj, cs_path + @"\type_Sdtproveedores.cs" ))
             return true;
@@ -94,8 +98,6 @@ public class bldlogin : GxBaseBuilder
          if (checkTime(obj, cs_path + @"\type_Sdttipodocumento.cs" ))
             return true;
          if (checkTime(obj, cs_path + @"\type_Sdtmodelos.cs" ))
-            return true;
-         if (checkTime(obj, cs_path + @"\type_Sdtarea.cs" ))
             return true;
          if (checkTime(obj, cs_path + @"\type_Sdtorigen.cs" ))
             return true;

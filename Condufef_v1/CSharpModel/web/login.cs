@@ -2,7 +2,7 @@
                File: Login
         Description: Login
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 2/5/2022 1:35:47.38
+       Generated on: 2/5/2022 20:30:22.64
        Program type: Main program
           Main DBMS: postgresql
 */
@@ -208,7 +208,7 @@ namespace GeneXus.Programs {
          context.AddJavascriptSource("jquery.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxtimezone.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxgral.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("gxcfg.js", "?2022251354739");
+         context.AddJavascriptSource("gxcfg.js", "?20222520302266");
          if ( context.isSpaRequest( ) )
          {
             enableOutput();
@@ -669,14 +669,14 @@ namespace GeneXus.Programs {
             }
             else
             {
-               GX_msglist.addItem("usuario invalida");
+               GX_msglist.addItem("usuario/contraseña invalida");
             }
             pr_default.readNext(1);
          }
          pr_default.close(1);
          if ( AV16GXLvl37 == 0 )
          {
-            GX_msglist.addItem("contraseña invalida");
+            GX_msglist.addItem("usuario/contraseña invalida");
          }
       }
 
@@ -762,7 +762,7 @@ namespace GeneXus.Programs {
             /* Table start */
             sStyleString = "";
             sStyleString = sStyleString + " height: " + StringUtil.LTrim( StringUtil.Str( (decimal)(206), 10, 0)) + "px" + ";";
-            sStyleString = sStyleString + " width: " + StringUtil.LTrim( StringUtil.Str( (decimal)(35), 10, 0)) + "%" + ";";
+            sStyleString = sStyleString + " width: " + StringUtil.LTrim( StringUtil.Str( (decimal)(250), 10, 0)) + "px" + ";";
             GxWebStd.gx_table_start( context, tblTable2_Internalname, tblTable2_Internalname, "", "Table", 0, "center", "", 1, 2, sStyleString, "", 0);
             context.WriteHtmlText( "<tbody>") ;
             context.WriteHtmlText( "<tr>") ;
@@ -772,7 +772,7 @@ namespace GeneXus.Programs {
             /* Static images/pictures */
             ClassString = "Image";
             StyleString = "";
-            GxWebStd.gx_bitmap( context, imgImage1_Internalname, context.GetImagePath( "5f30ca97-9603-4cf3-8c47-b1a261245deb", "", context.GetTheme( )), "", "", "", context.GetTheme( ), 1, 1, "", "", 0, 0, 0, "px", 0, "px", 0, 0, 0, "", "", StyleString, ClassString, "", "", "", "", "", "", 1, false, false, "HLP_Login.htm");
+            GxWebStd.gx_bitmap( context, imgImage1_Internalname, context.GetImagePath( "5d9d0499-e4ca-410a-aefe-c3e59a54b528", "", context.GetTheme( )), "", "", "", context.GetTheme( ), 1, 1, "", "", 0, 0, 0, "px", 0, "px", 0, 0, 0, "", "", StyleString, ClassString, "", "", "", "", "", "", 1, false, false, "HLP_Login.htm");
             context.WriteHtmlText( "</td>") ;
             context.WriteHtmlText( "</tr>") ;
             context.WriteHtmlText( "<tr>") ;
@@ -782,23 +782,23 @@ namespace GeneXus.Programs {
             context.WriteHtmlText( "<td data-align=\"left\"  style=\""+CSSHelper.Prettify( "text-align:-khtml-left;text-align:-moz-left;text-align:-webkit-left;height:100%;width:100%")+"\">") ;
             /* Single line edit */
             TempTags = "  onfocus=\"gx.evt.onfocus(this, 14,'',false,'',0)\"";
-            GxWebStd.gx_single_line_edit( context, edtavUsuario_Internalname, AV5usuario, StringUtil.RTrim( context.localUtil.Format( AV5usuario, "")), TempTags+" onchange=\"gx.evt.onchange(this)\" "+" onblur=\""+""+";gx.evt.onblur(this,14);\"", "'"+""+"'"+",false,"+"'"+""+"'", "", "", "", "", edtavUsuario_Jsonclick, 0, "Attribute", "", "", "", 1, 1, 0, "text", "", 100, "%", 100, "%", 25, 0, 0, 0, 1, -1, -1, true, "", "left", true, "HLP_Login.htm");
+            GxWebStd.gx_single_line_edit( context, edtavUsuario_Internalname, AV5usuario, StringUtil.RTrim( context.localUtil.Format( AV5usuario, "")), TempTags+" onchange=\"gx.evt.onchange(this)\" "+" onblur=\""+""+";gx.evt.onblur(this,14);\"", "'"+""+"'"+",false,"+"'"+""+"'", "", "", "", "", edtavUsuario_Jsonclick, 0, "Attribute", "", "", "", 1, 1, 0, "text", "", 100, "%", 35, "px", 25, 0, 0, 0, 1, -1, -1, true, "", "left", true, "HLP_Login.htm");
             context.WriteHtmlText( "</td>") ;
             context.WriteHtmlText( "</tr>") ;
             context.WriteHtmlText( "<tr>") ;
-            context.WriteHtmlText( "<td style=\""+CSSHelper.Prettify( "height:20px")+"\">") ;
+            context.WriteHtmlText( "<td style=\""+CSSHelper.Prettify( "height:5px")+"\">") ;
             context.WriteHtmlText( "</td>") ;
             context.WriteHtmlText( "<td>") ;
             context.WriteHtmlText( "</td>") ;
             context.WriteHtmlText( "</tr>") ;
             context.WriteHtmlText( "<tr>") ;
-            context.WriteHtmlText( "<td data-align=\"center\"  style=\""+CSSHelper.Prettify( "text-align:-khtml-center;text-align:-moz-center;text-align:-webkit-center;height:34px")+"\">") ;
+            context.WriteHtmlText( "<td data-align=\"center\"  style=\""+CSSHelper.Prettify( "text-align:-khtml-center;text-align:-moz-center;text-align:-webkit-center;height:35px")+"\">") ;
             context.WriteHtmlText( "Contraseña") ;
             context.WriteHtmlText( "</td>") ;
             context.WriteHtmlText( "<td data-align=\"left\"  style=\""+CSSHelper.Prettify( "text-align:-khtml-left;text-align:-moz-left;text-align:-webkit-left")+"\">") ;
             /* Single line edit */
             TempTags = "  onfocus=\"gx.evt.onfocus(this, 21,'',false,'',0)\"";
-            GxWebStd.gx_single_line_edit( context, edtavContrasena_Internalname, AV6contrasena, StringUtil.RTrim( context.localUtil.Format( AV6contrasena, "")), TempTags+" onchange=\"gx.evt.onchange(this)\" "+" onblur=\""+""+";gx.evt.onblur(this,21);\"", "'"+""+"'"+",false,"+"'"+""+"'", "", "", "", "", edtavContrasena_Jsonclick, 0, "Attribute", "", "", "", 1, 1, 0, "text", "", 100, "%", 100, "%", 10, -1, 0, 0, 1, 0, -1, true, "", "left", true, "HLP_Login.htm");
+            GxWebStd.gx_single_line_edit( context, edtavContrasena_Internalname, AV6contrasena, StringUtil.RTrim( context.localUtil.Format( AV6contrasena, "")), TempTags+" onchange=\"gx.evt.onchange(this)\" "+" onblur=\""+""+";gx.evt.onblur(this,21);\"", "'"+""+"'"+",false,"+"'"+""+"'", "", "", "", "", edtavContrasena_Jsonclick, 0, "Attribute", "", "", "", 1, 1, 0, "text", "", 100, "%", 35, "px", 10, -1, 0, 0, 1, 0, -1, true, "", "left", true, "HLP_Login.htm");
             context.WriteHtmlText( "</td>") ;
             context.WriteHtmlText( "</tr>") ;
             context.WriteHtmlText( "<tr>") ;
@@ -854,8 +854,8 @@ namespace GeneXus.Programs {
 
       protected void define_styles( )
       {
-         AddStyleSheetFile("HugaoMessages/css/jquery.growl.min.css", "?1116230");
-         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?0542765");
+         AddStyleSheetFile("HugaoMessages/css/jquery.growl.min.css", "?15292364");
+         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?15381859");
          if ( StringUtil.StrCmp(WebComp_Webcomp1_Component, "") == 0 )
          {
             WebComp_Webcomp1 = getWebComponent(GetType(), "GeneXus.Programs", "alerts", new Object[] {context} );
@@ -873,7 +873,7 @@ namespace GeneXus.Programs {
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?2022251354749");
+            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?20222520302278");
             idxLst = (int)(idxLst+1);
          }
          /* End function define_styles */
@@ -882,7 +882,7 @@ namespace GeneXus.Programs {
       protected void include_jscripts( )
       {
          context.AddJavascriptSource("messages.spa.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("login.js", "?2022251354749");
+         context.AddJavascriptSource("login.js", "?20222520302278");
          context.AddJavascriptSource("HugaoMessages/js/jquery.growl.min.js", "");
          context.AddJavascriptSource("HugaoMessages/HugaoMessagesRender.js", "");
          /* End function include_jscripts */

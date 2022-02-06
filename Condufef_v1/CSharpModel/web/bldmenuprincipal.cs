@@ -81,7 +81,17 @@ public class bldmenuprincipal : GxBaseBuilder
             return true;
          if (checkTime(obj, cs_path + @"\GxModelInfoProvider.cs" ))
             return true;
+         if (checkTime(obj, cs_path + @"\type_Sdtarea.cs" ))
+            return true;
          if (checkTime(obj, cs_path + @"\type_Sdtempleadospiso.cs" ))
+            return true;
+         if (checkTime(obj, cs_path + @"\type_Sdtalmacen.cs" ))
+            return true;
+         if (checkTime(obj, cs_path + @"\type_Sdtempleados.cs" ))
+            return true;
+         if (checkTime(obj, cs_path + @"\type_Sdtestados.cs" ))
+            return true;
+         if (checkTime(obj, cs_path + @"\type_Sdtproveedores.cs" ))
             return true;
          if (checkTime(obj, cs_path + @"\type_Sdtstatus.cs" ))
             return true;
@@ -89,23 +99,15 @@ public class bldmenuprincipal : GxBaseBuilder
             return true;
          if (checkTime(obj, cs_path + @"\type_Sdtmodelos.cs" ))
             return true;
-         if (checkTime(obj, cs_path + @"\type_Sdtalmacen.cs" ))
-            return true;
-         if (checkTime(obj, cs_path + @"\type_Sdtarea.cs" ))
-            return true;
          if (checkTime(obj, cs_path + @"\type_Sdtorigen.cs" ))
             return true;
          if (checkTime(obj, cs_path + @"\type_Sdtcambs.cs" ))
-            return true;
-         if (checkTime(obj, cs_path + @"\type_Sdtproveedores.cs" ))
             return true;
          if (checkTime(obj, cs_path + @"\type_Sdtproducto.cs" ))
             return true;
          if (checkTime(obj, cs_path + @"\type_Sdtmarcas.cs" ))
             return true;
          if (checkTime(obj, cs_path + @"\type_Sdtestatusarticulo.cs" ))
-            return true;
-         if (checkTime(obj, cs_path + @"\type_Sdtempleados.cs" ))
             return true;
          if (checkTime(obj, cs_path + @"\type_Sdtcategorias.cs" ))
             return true;
@@ -128,6 +130,8 @@ public class bldmenuprincipal : GxBaseBuilder
          if (checkTime(obj, cs_path + @"\GXDOMAINCallTargetSize.cs" ))
             return true;
          if (checkTime(obj, cs_path + @"\GXDOMAINGoogleTableFormatter.cs" ))
+            return true;
+         if (checkTime(obj, cs_path + @"\GXDOMAINDVelopConfirmPanelType.cs" ))
             return true;
          if (checkTime(obj, cs_path + @"\GXDOMAINEncoding.cs" ))
             return true;
