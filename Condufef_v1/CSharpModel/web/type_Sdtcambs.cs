@@ -2,7 +2,7 @@
                File: type_Sdtcambs
         Description: cambs
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 2/2/2022 13:42:42.35
+       Generated on: 2/10/2022 19:54:32.43
        Program type: Callable routine
           Main DBMS: postgresql
 */
@@ -135,7 +135,6 @@ namespace GeneXus.Programs {
             ov.Add(this.GetType(),  "gxTpr_Cambsusuario_Z" , attrs);
             ov.Add(this.GetType(),  "gxTpr_Cambsfecreg_Z_Nullable" , attrs);
             ov.Add(this.GetType(),  "gxTpr_Cambsfecultact_Z_Nullable" , attrs);
-            ov.Add(this.GetType(),  "gxTpr_Cambsid_N" , attrs);
             ov.Add(this.GetType(),  "gxTpr_Cambsdsc_N" , attrs);
             ov.Add(this.GetType(),  "gxTpr_Cambsusuario_N" , attrs);
             ov.Add(this.GetType(),  "gxTpr_Cambsfecreg_N" , attrs);
@@ -182,7 +181,6 @@ namespace GeneXus.Programs {
          obj.gxTpr_Cambsusuario_Z = deserialized.gxTpr_Cambsusuario_Z;
          obj.gxTpr_Cambsfecreg_Z = deserialized.gxTpr_Cambsfecreg_Z;
          obj.gxTpr_Cambsfecultact_Z = deserialized.gxTpr_Cambsfecultact_Z;
-         obj.gxTpr_Cambsid_N = deserialized.gxTpr_Cambsid_N;
          obj.gxTpr_Cambsdsc_N = deserialized.gxTpr_Cambsdsc_N;
          obj.gxTpr_Cambsusuario_N = deserialized.gxTpr_Cambsusuario_N;
          obj.gxTpr_Cambsfecreg_N = deserialized.gxTpr_Cambsfecreg_N;
@@ -332,15 +330,6 @@ namespace GeneXus.Programs {
                   {
                      gxTv_Sdtcambs_Cambsfecultact_Z = context.localUtil.YMDHMSToT( (short)(NumberUtil.Val( StringUtil.Substring( oReader.Value, 1, 4), ".")), (short)(NumberUtil.Val( StringUtil.Substring( oReader.Value, 6, 2), ".")), (short)(NumberUtil.Val( StringUtil.Substring( oReader.Value, 9, 2), ".")), (short)(NumberUtil.Val( StringUtil.Substring( oReader.Value, 12, 2), ".")), (short)(NumberUtil.Val( StringUtil.Substring( oReader.Value, 15, 2), ".")), (short)(NumberUtil.Val( StringUtil.Substring( oReader.Value, 18, 2), ".")));
                   }
-                  if ( GXSoapError > 0 )
-                  {
-                     readOk = 1;
-                  }
-                  GXSoapError = oReader.Read();
-               }
-               if ( StringUtil.StrCmp2( oReader.LocalName, "cambsid_N") )
-               {
-                  gxTv_Sdtcambs_Cambsid_N = (short)(NumberUtil.Val( oReader.Value, "."));
                   if ( GXSoapError > 0 )
                   {
                      readOk = 1;
@@ -599,11 +588,6 @@ namespace GeneXus.Programs {
                   oWriter.WriteAttribute("xmlns", "Condufef_v1");
                }
             }
-            oWriter.WriteElement("cambsid_N", StringUtil.Trim( StringUtil.Str( (decimal)(gxTv_Sdtcambs_Cambsid_N), 1, 0)));
-            if ( StringUtil.StrCmp(sNameSpace, "Condufef_v1") != 0 )
-            {
-               oWriter.WriteAttribute("xmlns", "Condufef_v1");
-            }
             oWriter.WriteElement("cambsdsc_N", StringUtil.Trim( StringUtil.Str( (decimal)(gxTv_Sdtcambs_Cambsdsc_N), 1, 0)));
             if ( StringUtil.StrCmp(sNameSpace, "Condufef_v1") != 0 )
             {
@@ -727,7 +711,6 @@ namespace GeneXus.Programs {
             sNumToPad = StringUtil.Trim( StringUtil.Str( (decimal)(DateTimeUtil.Second( datetime_STZ)), 10, 0));
             sDateCnv = sDateCnv + StringUtil.Substring( "00", 1, 2-StringUtil.Len( sNumToPad)) + sNumToPad;
             AddObjectProperty("cambsfecultact_Z", sDateCnv, false);
-            AddObjectProperty("cambsid_N", gxTv_Sdtcambs_Cambsid_N, false);
             AddObjectProperty("cambsdsc_N", gxTv_Sdtcambs_Cambsdsc_N, false);
             AddObjectProperty("cambsusuario_N", gxTv_Sdtcambs_Cambsusuario_N, false);
             AddObjectProperty("cambsfecreg_N", gxTv_Sdtcambs_Cambsfecreg_N, false);
@@ -1120,31 +1103,6 @@ namespace GeneXus.Programs {
          return false ;
       }
 
-      [  SoapElement( ElementName = "cambsid_N" )]
-      [  XmlElement( ElementName = "cambsid_N"   )]
-      public short gxTpr_Cambsid_N
-      {
-         get {
-            return gxTv_Sdtcambs_Cambsid_N ;
-         }
-
-         set {
-            gxTv_Sdtcambs_Cambsid_N = (short)(value);
-         }
-
-      }
-
-      public void gxTv_Sdtcambs_Cambsid_N_SetNull( )
-      {
-         gxTv_Sdtcambs_Cambsid_N = 0;
-         return  ;
-      }
-
-      public bool gxTv_Sdtcambs_Cambsid_N_IsNull( )
-      {
-         return false ;
-      }
-
       [  SoapElement( ElementName = "cambsdsc_N" )]
       [  XmlElement( ElementName = "cambsdsc_N"   )]
       public short gxTpr_Cambsdsc_N
@@ -1270,7 +1228,6 @@ namespace GeneXus.Programs {
       }
 
       private short gxTv_Sdtcambs_Initialized ;
-      private short gxTv_Sdtcambs_Cambsid_N ;
       private short gxTv_Sdtcambs_Cambsdsc_N ;
       private short gxTv_Sdtcambs_Cambsusuario_N ;
       private short gxTv_Sdtcambs_Cambsfecreg_N ;
@@ -1397,7 +1354,7 @@ namespace GeneXus.Programs {
          }
       }
 
-      [DataMember( Name = "gx_md5_hash", Order = 17 )]
+      [DataMember( Name = "gx_md5_hash", Order = 16 )]
       public string Hash
       {
          get {

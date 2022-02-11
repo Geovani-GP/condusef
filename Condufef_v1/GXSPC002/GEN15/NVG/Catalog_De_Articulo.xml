@@ -9,7 +9,7 @@
 <ObjDesc>Catalog_De_Articulo</ObjDesc>
 <ObjPgmName>Catalog_De_Articulo</ObjPgmName>
 <ObjClsName>Web Panel</ObjClsName></Object>
-<Result>genreq</Result>
+<Result>nogenreq</Result>
 <Warnings></Warnings>
 <Errors></Errors>
 <Generator>

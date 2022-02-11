@@ -1,0 +1,309 @@
+spec_i([ proc,16,'PDF_cambs','PDF_cambs',78,spa,'10_3_15-115824' ]).
+ 
+struct_i(2,1,[],[]).
+ 
+level_i(2,[ 14,[ [ 14,many ] ],[],[],[ [ [ 14 ],[ 25,83 ] ] ],[ [ [ 14 ],[] ] ],[ 25 ],'CAMBS_PKEY',[],[] ]).
+ 
+tw_i(2,[]).
+ 
+lwi_i(2,[ [] ]).
+ 
+ 
+ 
+ 
+ta_i(2,[ [ [ 14,25 ],[ 14,83 ] ] ]).
+ 
+las_i(2,[ [ 25,83 ] ]).
+ 
+lac_i(2,[ [] ]).
+ 
+ 
+ 
+ 
+ 
+ 
+default_i(e('Output',2,2,'''FIL''')).
+ 
+rule_i(0,datastore(1,'DS_LAST_CHANGE','')).
+rule_i(0,datastore(1,'POSTGRESQL_VERSION','8_3')).
+rule_i(0,datastore(1,'COMMENT_ON','No')).
+rule_i(0,datastore(1,'DCL_REF_INT_DB','Yes')).
+rule_i(0,datastore(1,'PRIMARY_KEY_TYPE','PK')).
+rule_i(0,datastore(1,'CS_SCHEMA','')).
+rule_i(0,datastore(1,'RecycleRWMin','30')).
+rule_i(0,datastore(1,'RecycleRWType','1')).
+rule_i(0,datastore(1,'RecycleRW','-1')).
+rule_i(0,datastore(1,'POOL_STARTUP','No')).
+rule_i(0,datastore(1,'POOLSIZE_RW','10')).
+rule_i(0,datastore(1,'UnlimitedRWPool','-1')).
+rule_i(0,datastore(1,'PoolRWEnabled','-1')).
+rule_i(0,datastore(1,'CS_RPCPGML','')).
+rule_i(0,datastore(1,'JDBC_DATASOURCE','')).
+rule_i(0,datastore(1,'USE_JDBC_DATASOURCE','0')).
+rule_i(0,datastore(1,'DS_DBMS_ADDINFO','')).
+rule_i(0,datastore(1,'USER_PASSWORD',asdf)).
+rule_i(0,datastore(1,'USER_ID',postgres)).
+rule_i(0,datastore(1,'CS_CONNECT','First')).
+rule_i(0,datastore(1,'DBMS_PORT','5432')).
+rule_i(0,datastore(1,'CS_SERVER',localhost)).
+rule_i(0,datastore(1,'CS_DBNAME',condusef)).
+rule_i(0,datastore(1,'CS_FLEDSNAME','')).
+rule_i(0,datastore(1,'CS_DRVNAME','')).
+rule_i(0,datastore(1,'CS_DSNAME','')).
+rule_i(0,datastore(1,'DB_URL','')).
+rule_i(0,datastore(1,'JDBC_CUSTOM_URL','0')).
+rule_i(0,datastore(1,'JDBC_CUSTOM_DRIVER','')).
+rule_i(0,datastore(1,'JDBC_DRIVER','org.postgresql.Driver')).
+rule_i(0,datastore(1,'CONNECT_METHOD','OPSYS')).
+rule_i(0,datastore(1,'ACCESS_TECHNO','ADONET')).
+rule_i(0,datastore(1,'MAIN_DS','-1')).
+rule_i(0,datastore(1,'REORG_GEN','8')).
+rule_i(0,datastore(1,'HelpKeyword','20')).
+rule_i(0,datastore(1,'DBMS',15)).
+rule_i(0,datastore(1,'NAME','Default')).
+rule_i(0,prop(idNULLS_BEHAVIOR,idNB_Current)).
+rule_i(0,prop('ObjectVisibility','Public')).
+rule_i(0,prop('FullyQualifiedName','PDF_cambs')).
+rule_i(0,prop('PWFCallable','0')).
+rule_i(0,prop('GenerateObject','-1')).
+rule_i(0,prop('CS_ORA_FORUPD','UMPV')).
+rule_i(0,prop('Optimize_copy','UMPV')).
+rule_i(0,prop('JOIN_TYPE','UMPV')).
+rule_i(0,prop('DBMS_JOINS','UMPV')).
+rule_i(0,prop('BEEPONMSG','UMPV')).
+rule_i(0,prop('GENERATE_ILE','UMPV')).
+rule_i(0,prop('PRT_DDS','UMPV')).
+rule_i(0,prop('TRNCMT','YES')).
+rule_i(0,prop('NULLVALUE_AS_NULL','UMPV')).
+rule_i(0,prop('INITIALIZE_NEW','UMPV')).
+rule_i(0,prop('STD_FUNC_OBJECT','Yes')).
+rule_i(0,prop('SPC_WARNINGS_DISABLED','spc0096 spc0107 spc0142')).
+rule_i(0,prop('TRNEND','Yes')).
+rule_i(0,prop(idISBCEJB,'0')).
+rule_i(0,prop(idISPRCWEBSERVICE,'0')).
+rule_i(0,prop('EXECUTE_IN_NEW_UTL','0')).
+rule_i(0,prop('AUTOCENTER','UMPV')).
+rule_i(0,prop('LSTPFOOT','NO')).
+rule_i(0,prop('CANCEL','YES')).
+rule_i(0,prop('CONFIRM','UMPV')).
+rule_i(0,prop('TRNCFM','UMPV')).
+rule_i(0,prop('PRINT_CUST_LAYOUT','UMPV')).
+rule_i(0,prop('OUTPUT','FIL')).
+rule_i(0,prop(idConnectivitySupport,idInherit)).
+rule_i(0,prop('AppGenerator','1')).
+rule_i(0,prop('AppLocation','')).
+rule_i(0,prop('AppIcon','')).
+rule_i(0,prop('AppTitle','')).
+rule_i(0,prop('WEB_SECURITY_LEVEL','High')).
+rule_i(0,prop('HTTP_PROTOCOL','Unsecure')).
+rule_i(0,prop('USE_ENCRYPTION','NO')).
+rule_i(0,prop('COMPRESS_HTML','UMPV')).
+rule_i(0,prop('Theme',o(25,'Flat'))).
+rule_i(0,prop('OBJECT_METADATA','')).
+rule_i(0,prop('CALL_PROTOCOL','HTTP')).
+rule_i(0,prop('IsMain','-1')).
+rule_i(0,prop('Folder',o(8,'WebApi'))).
+rule_i(0,prop('ObjDesc','PDF_cambs')).
+rule_i(0,prop('ObjName','PDF_cambs')).
+rule_i(0,maingen(15)).
+rule_i(0,prop('PGMTYPE',main)).
+rule_i(0,output_file(t('Reporte_Cambs.pdf',3),t('PDF',3))).
+rule_i(0,output('FIL')).
+rule_i(0,nolastfooter).
+rule_i(0,file(14,'CAMBS',[ 25,83,84,85,86 ])).
+rule_i(0,loc([ 14 ],'CAMBS','','LAN')).
+rule_i(0,index(14,'CAMBS_PKEY',u,[ 25 ])).
+rule_i(0,loc([ 14,'CAMBS_PKEY' ],cambs_pkey,'','LAN')).
+rule_i(0,p(0,0,fv,19,[ intname,'CAMBS' ])).
+rule_i(0,p(0,0,fv,19,[ table,14 ])).
+rule_i(0,p(0,15,fv,19,[])).
+rule_i(0,p(0,15,fv,19,[ 'NAME',cambs ])).
+rule_i(0,p(0,15,fv,19,[ 'LOC','' ])).
+rule_i(0,p(0,15,fv,19,[ 'SCHEMA',public ])).
+rule_i(0,p(0,15,fv,19,[ 'EXTNAM','YES' ])).
+rule_i(0,p(0,15,fvix,[ 19,20 ],[])).
+rule_i(0,p(0,15,fvix,[ 19,20 ],[ 'NAME',cambs_pkey ])).
+rule_i(0,p(0,15,fvix,[ 19,20 ],[ 'LOC','' ])).
+rule_i(0,p(0,15,fvix,[ 19,20 ],[ 'SCHEMA',public ])).
+rule_i(0,p(0,15,fvix,[ 19,20 ],[ 'EXTNAM','YES' ])).
+ 
+a_i(1,1,f,'Line',[],[ [],[ t(0,3) ] ]).
+a_i(2,1,f,'Err',[],[ [],[ t('0',3) ] ]).
+a_i(3,2,t,14,[],[ [],'CAMBS_PKEY',[] ]).
+ 
+v_i(f,i,1,[]).
+v_i(f,o,1,'Line').
+v_i(f,i,2,[]).
+v_i(f,o,2,'Err').
+v_i(t,i,3,[]).
+v_i(t,o,3,25).
+v_i(t,o,3,83).
+ 
+ 
+ 
+ 
+ 
+ 
+attri_i('Output',[ 'Gx_out',char,3,0,'',1,'','',14 ]).
+attri_i('Page',[ 'Gx_page',int,6,0,'ZZZZZ9',0,'Page number','',13 ]).
+attri_i('Line',[ 'Gx_line',int,6,0,'ZZZZZ9',0,'Line number','',12 ]).
+attri_i(25,[ cambsid,int,9,0,'ZZZZZZZZ9',0,cambsid,'',0 ]).
+attri_i(83,[ cambsdsc,svchar,100,0,'',0,cambsdsc,'',0 ]).
+attri_i('Errmsg',[ 'Gx_emsg',char,70,0,'',1,'Error text','',10 ]).
+attri_i('Err',[ 'Gx_err',int,3,0,'ZZ9',1,'Error code','',9 ]).
+attri_i('Fecha',[ 'FECHA',date,8,0,'99/99/99',0,'FECHA','',8 ]).
+ 
+table_i(14,[ 'CAMBS',[ 25,83 ],cambs,cambs ]).
+ 
+index_i(14,[ 'CAMBS_PKEY',u,[ 25 ],'CAMBS_PKEY' ]).
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+map_i(14,i,'CAMBS_PKEY',[ 'CAMBS_PKEY' ]).
+map_i(14,a,86,[ cambsfecultact ]).
+map_i(14,a,85,[ cambsfecreg ]).
+map_i(14,a,84,[ cambsusuario ]).
+map_i(14,a,83,[ cambsdsc ]).
+map_i(14,a,25,[ cambsid ]).
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+break_i(2,nvg,1,[],[ [ 83,25 ],[],[] ]).
+break_i(1,rpt,0,[],[ [],[],[] ]).
+ 
+b_group_i(1,1,lit,0,1,10).
+b_group_i(1,2,nvg,2,4,4).
+b_group_i(2,1,lit,0,14,16).
+b_group_i(1,3,lit,0,17,0).
+ 
+b_line_i(0,1,1,cmd,0,[]).
+b_line_i(1,1,1,cmd,0,[ t('',107,0,0),t('Fecha',23,0,0),t(=,10,0,0),t('today(',1,0,0),t(')',4,0,0) ]).
+b_line_i(2,1,1,pb,0,[ t('Pb_header',29,0,7) ]).
+b_line_i([ 2,0 ],1,1,line,0,[ t(' ',3,0,0) ]).
+b_line_i([ 2,1 ],1,1,line,1,[ t('COMISION NACIONAL PARA LA PROTECCIÓN Y DEFENSA DE LOS USUARIOS DE SERVICIOS FINANCIEROS',3,1,20) ]).
+b_line_i([ 2,3 ],1,1,line,3,[ t('REPORTE DE CAMBS',3,3,46),t('Fecha',23,3,92) ]).
+b_line_i([ 2,6 ],1,1,line,6,[ t('CLAVE CAMBS',3,6,14),t('DESCRIPCIÓN',3,6,35) ]).
+b_line_i([ 2,9 ],1,1,line,9,[ t(' ',3,9,0) ]).
+b_line_i(3,1,1,cmd,10,[]).
+b_line_i(4,2,1,cmd,14,[ t('',121,4,0),t(table,3,4,10),t(14,3,4,10) ]).
+b_line_i(5,2,1,pb,14,[ t('Pb_body',29,14,8) ]).
+b_line_i([ 5,0 ],2,1,line,14,[ t(25,2,0,7),t(83,2,0,35) ]).
+b_line_i([ 5,1 ],2,1,line,15,[ t(' ',3,1,0) ]).
+b_line_i(6,2,1,cmd,16,[ t('',128,16,0) ]).
+ 
+ 
+ 
+ 
+ 
+page_layout_i([ 66,0,6 ]).
+ 
+ 
+ 
+paper_info_i([ 0,1,'',12240,15840,0,0,0,0,1 ]).
+ 
+ppi_i([ 100,100 ]).
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+lit_i(5,2,bitmap(i(98,'50a9fefa-952a-4474-8e37-0c75e294c1c6')),[ ctlname('Gxreportimage1'),rect(0,0,130,69) ]).
+lit_i(6,2,t('COMISION NACIONAL PARA LA PROTECCIÓN Y DEFENSA DE LOS USUARIOS DE SERVICIOS FINANCIEROS',3),[ font('Microsoft Sans Serif',9,[ bold ]),rect(142,17,1392,37),outstyle(none),align(left),valign(top),fore(rgb(0,0,0)),border(1),ctlname('Gxreportlabel1'),gxcolor([]) ]).
+lit_i(7,2,t('REPORTE DE CAMBS',3),[ font('Microsoft Sans Serif',10,[ bold ]),rect(325,50,525,68),outstyle(none),align(left),valign(top),fore(rgb(0,0,0)),border(1),ctlname('Gxreportlabel2'),gxcolor([]) ]).
+lit_i(8,2,t('CLAVE CAMBS',3),[ font('Microsoft Sans Serif',8,[]),rect(100,100,178,119),outstyle(none),align(left),valign(top),fore(rgb(0,0,0)),border(1),ctlname('Gxreportlabel3'),gxcolor([]) ]).
+lit_i(9,2,t('DESCRIPCIÓN',3),[ font('Microsoft Sans Serif',9,[]),rect(250,100,336,116),outstyle(none),align(left),valign(top),noclip,fore(rgb(0,0,0)),border(1),ctlname('Gxreportlabel4'),gxcolor([]) ]).
+lit_i(10,2,t('Fecha',23),[ font('Microsoft Sans Serif',8,[]),rect(650,50,724,72),outstyle(none),align(right),valign(top),fore(rgb(0,0,0)),border(1),format(0),ctlname('&fecha'),ctrltype(edit,10),ispwd(0),gxcolor([]) ]).
+lit_i(4,2,window,[ title('Text'),rect(0,0,850,153),outstyle(none),fill,graph,back(rgb(0,0,0)),fore(rgb(0,0,0)),border(0),ctlname('Pb_header'),align(left),valign(top),gxcolor([]),defgxcolor('BLK','WHT') ]).
+lit_i(3,5,t(83,2),[ font('Microsoft Sans Serif',9,[]),rect(250,0,750,17),outstyle(none),align(left),valign(top),fore(rgb(0,0,0)),border(1),format(0),ctlname('83'),ctrltype(edit,3),ispwd(0),gxcolor([]) ]).
+lit_i(2,5,t(25,2),[ font('Microsoft Sans Serif',9,[]),rect(50,0,200,17),outstyle(none),align(center),valign(top),fore(rgb(0,0,0)),border(1),format(0),ctlname('25'),ctrltype(edit,2),ispwd(0),gxcolor([]) ]).
+lit_i(1,5,window,[ title('Text'),rect(0,0,850,36),outstyle(none),fill,graph,back(rgb(0,0,0)),fore(rgb(0,0,0)),border(0),ctlname('Pb_body'),align(left),valign(top),gxcolor([]),defgxcolor('BLK','WHT') ]).
+ 
+grid_i(7,15).
+ 
+ 
+ 
+form_class_i(1,'Graphic').
+ 
+ 
+ctrl_info_i(2,10,[ [ 0,0,sort,[],[],0,0,5,0,0 ] ]).
+ 
+ 
+ 
+att_prop_i(2,83,'ExternalName',cambsdsc,d).
+att_prop_i(2,83,'ExternalNamespace','Condufef_v1',d).
+att_prop_i(2,83,'EmptyAsNull','Yes',d).
+att_prop_i(2,83,idBasedOn,'',d).
+att_prop_i(2,83,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,83,'DB_NLS_SUPPORT','No',d).
+att_prop_i(2,83,'AttRegEx','',d).
+att_prop_i(2,83,'AttValidationFailedMsg','',d).
+att_prop_i(2,83,'FullName',cambsdsc,v).
+att_prop_i(2,25,'ExternalName',cambsid,d).
+att_prop_i(2,25,'ExternalNamespace','Condufef_v1',d).
+att_prop_i(2,25,'EmptyAsNull','Yes',d).
+att_prop_i(2,25,idBasedOn,'',d).
+att_prop_i(2,25,'AUTONUMBER','0',d).
+att_prop_i(2,25,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,25,'AttRegEx','',d).
+att_prop_i(2,25,'AttValidationFailedMsg','',d).
+att_prop_i(2,25,'FullName',cambsid,v).
+ 
+ 
+tbl_att_prop_i(2,14,25,'AllowNulls',n).
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+pgm_callprotocol_i(proc,16,'PDF_CAMBS','HTTP').
+ 
+pgm_main_info_i(proc,16,'PDF_CAMBS',[ 15,'APDF_CAMBS','PDF_cambs','','','','HTTP' ]).
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

@@ -41,12 +41,12 @@ rule_i(0,datastore(1,'CS_RPCPGML','')).
 rule_i(0,datastore(1,'JDBC_DATASOURCE','')).
 rule_i(0,datastore(1,'USE_JDBC_DATASOURCE','0')).
 rule_i(0,datastore(1,'DS_DBMS_ADDINFO','')).
-rule_i(0,datastore(1,'USER_PASSWORD',󻢸蘇�2�5炭)).
+rule_i(0,datastore(1,'USER_PASSWORD',asdf)).
 rule_i(0,datastore(1,'USER_ID',postgres)).
 rule_i(0,datastore(1,'CS_CONNECT','First')).
 rule_i(0,datastore(1,'DBMS_PORT','5432')).
 rule_i(0,datastore(1,'CS_SERVER',localhost)).
-rule_i(0,datastore(1,'CS_DBNAME',postgres)).
+rule_i(0,datastore(1,'CS_DBNAME',condusef)).
 rule_i(0,datastore(1,'CS_FLEDSNAME','')).
 rule_i(0,datastore(1,'CS_DRVNAME','')).
 rule_i(0,datastore(1,'CS_DSNAME','')).
@@ -221,13 +221,11 @@ v_i(t,o,1,86).
  
  
  
-tbl_to_delete_i(14,[ 23,[ [ 14,25,25 ] ],c,'IPRODUCTO2',[ [ 23,25 ] ],[ 175 ],'' ]).
 tbl_to_delete_i(14,[ 11,[ [ 14,25,21 ] ],c,'IARTICULOS3',[ [ 11,21 ] ],[ 19,20,21 ],'' ]).
 tbl_to_delete_i(14,[ 12,[ [ 14,25,18 ] ],c,'IETIQUETAS',[ [ 12,18 ] ],[ 17,18,19 ],'' ]).
  
  
  
-attri_i(175,[ productoid,int,9,0,'ZZZZZZZZ9',0,productoid,'',0 ]).
 attri_i(20,[ articulosproductoid,int,9,0,'ZZZZZZZZ9',0,articulosproductoid,'',0 ]).
 attri_i(21,[ articuloscambsid,int,9,0,'ZZZZZZZZ9',0,articuloscambsid,'',0 ]).
 attri_i(19,[ almacenid,int,9,0,'ZZZZZZZZ9',0,almacenid,'',0 ]).
@@ -242,7 +240,6 @@ attri_i('Gxremove',[ 'GxRemove',int,1,0,'9',0,'Gx Remove','',5 ]).
 attri_i('Cambsid',[ cambsid,int,9,0,'ZZZZZZZZ9',0,cambsid,'',8 ]).
 attri_i('Mode',[ 'Gx_mode',char,3,0,'@!',1,'','',2 ]).
  
-table_i(23,[ producto,[ 175,25 ],producto,producto ]).
 table_i(11,[ 'ARTICULOS',[ 19,20,21 ],articulos,articulos ]).
 table_i(12,[ 'ETIQUETAS',[ 17,18,19 ],etiquetas,etiquetas ]).
 table_i(14,[ 'CAMBS',[ 25,83,84,85,86 ],cambs,cambs ]).
@@ -252,8 +249,6 @@ index_i(12,[ 'ETIQUETAS_PKEY',u,[ 17,18,19 ],'ETIQUETAS_PKEY' ]).
 index_i(12,[ 'IETIQUETAS',d,[ 18 ],'Ietiquetas' ]).
 index_i(11,[ 'ARTICULOS_PKEY',u,[ 19,20,21 ],'ARTICULOS_PKEY' ]).
 index_i(11,[ 'IARTICULOS3',d,[ 21 ],'Iarticulos3' ]).
-index_i(23,[ 'IPRODUCTO',u,[ 175 ],'Iproducto' ]).
-index_i(23,[ 'IPRODUCTO2',d,[ 25 ],'Iproducto2' ]).
  
  
  
@@ -468,20 +463,7 @@ att_prop_i(2,20,'ATT_INITIAL_VALUE','',d).
 att_prop_i(2,20,'AttRegEx','',d).
 att_prop_i(2,20,'AttValidationFailedMsg','',d).
 att_prop_i(2,20,'FullName',articulosproductoid,v).
-att_prop_i(2,175,'HORIZONTAL_DESCRIPTION',productoid,d).
-att_prop_i(2,175,'ExternalName',productoid,d).
-att_prop_i(2,175,'ExternalNamespace','Condufef_v1',d).
-att_prop_i(2,175,'EmptyAsNull','Yes',d).
-att_prop_i(2,175,idBasedOn,'',d).
-att_prop_i(2,175,'AUTONUMBER','0',d).
-att_prop_i(2,175,'ATT_INITIAL_VALUE','',d).
-att_prop_i(2,175,'AttRegEx','',d).
-att_prop_i(2,175,'AttValidationFailedMsg','',d).
-att_prop_i(2,175,'FullName',productoid,v).
  
-tbl_prop_i(2,23,'AllDirSuper',[ [ 14,[ 25 ] ] ],v).
-tbl_prop_i(2,23,'DirSuperNull',[ [ 14,[ 25 ] ] ],v).
-tbl_prop_i(2,23,'DirSuper',[ [ 14,[ 25 ] ] ],v).
  
 tbl_att_prop_i(2,14,25,'AllowNulls',n).
 tbl_att_prop_i(2,12,17,'AllowNulls',n).
@@ -490,12 +472,10 @@ tbl_att_prop_i(2,12,19,'AllowNulls',n).
 tbl_att_prop_i(2,11,19,'AllowNulls',n).
 tbl_att_prop_i(2,11,20,'AllowNulls',n).
 tbl_att_prop_i(2,11,21,'AllowNulls',n).
-tbl_att_prop_i(2,23,175,'AllowNulls',n).
  
 var_prop_i(2,'Cambsid',idBasedOn,'',v).
  
 i_tbl_best_trn(14,[ 14,1,cambs,cambs,[] ]).
-i_tbl_best_trn(23,[ 9,1,producto,producto,[] ]).
  
  
 a_alias_i(18,etiquetascambsid).

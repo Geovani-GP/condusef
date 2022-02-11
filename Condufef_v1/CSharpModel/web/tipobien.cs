@@ -2,7 +2,7 @@
                File: tipobien
         Description: tipobien
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 2/2/2022 13:42:10.41
+       Generated on: 2/10/2022 19:54:26.23
        Program type: Callable routine
           Main DBMS: postgresql
 */
@@ -1370,18 +1370,10 @@ namespace GeneXus.Programs {
             pr_default.execute(9, new Object[] {n23tipobienid, A23tipobienid});
             if ( (pr_default.getStatus(9) != 101) )
             {
-               GX_msglist.addItem(context.GetMessage( "GXM_del", new   object[]  {"producto"}), "CannotDeleteReferencedRecord", 1, "");
-               AnyError = 1;
-            }
-            pr_default.close(9);
-            /* Using cursor T000112 */
-            pr_default.execute(10, new Object[] {n23tipobienid, A23tipobienid});
-            if ( (pr_default.getStatus(10) != 101) )
-            {
                GX_msglist.addItem(context.GetMessage( "GXM_del", new   object[]  {"articulos"}), "CannotDeleteReferencedRecord", 1, "");
                AnyError = 1;
             }
-            pr_default.close(10);
+            pr_default.close(9);
          }
       }
 
@@ -1420,15 +1412,15 @@ namespace GeneXus.Programs {
 
       public void ScanStart011( )
       {
-         /* Using cursor T000113 */
-         pr_default.execute(11);
+         /* Using cursor T000112 */
+         pr_default.execute(10);
          RcdFound1 = 0;
-         if ( (pr_default.getStatus(11) != 101) )
+         if ( (pr_default.getStatus(10) != 101) )
          {
             RcdFound1 = 1;
-            A23tipobienid = T000113_A23tipobienid[0];
+            A23tipobienid = T000112_A23tipobienid[0];
             context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A23tipobienid", StringUtil.LTrim( StringUtil.Str( (decimal)(A23tipobienid), 9, 0)));
-            n23tipobienid = T000113_n23tipobienid[0];
+            n23tipobienid = T000112_n23tipobienid[0];
          }
          /* Load Subordinate Levels */
       }
@@ -1436,20 +1428,20 @@ namespace GeneXus.Programs {
       protected void ScanNext011( )
       {
          /* Scan next routine */
-         pr_default.readNext(11);
+         pr_default.readNext(10);
          RcdFound1 = 0;
-         if ( (pr_default.getStatus(11) != 101) )
+         if ( (pr_default.getStatus(10) != 101) )
          {
             RcdFound1 = 1;
-            A23tipobienid = T000113_A23tipobienid[0];
+            A23tipobienid = T000112_A23tipobienid[0];
             context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A23tipobienid", StringUtil.LTrim( StringUtil.Str( (decimal)(A23tipobienid), 9, 0)));
-            n23tipobienid = T000113_n23tipobienid[0];
+            n23tipobienid = T000112_n23tipobienid[0];
          }
       }
 
       protected void ScanEnd011( )
       {
-         pr_default.close(11);
+         pr_default.close(10);
       }
 
       protected void AfterConfirm011( )
@@ -1531,7 +1523,7 @@ namespace GeneXus.Programs {
          context.AddJavascriptSource("jquery.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxtimezone.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxgral.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("gxcfg.js", "?2022221342110");
+         context.AddJavascriptSource("gxcfg.js", "?202221019542666");
          if ( context.isSpaRequest( ) )
          {
             enableOutput();
@@ -1689,12 +1681,12 @@ namespace GeneXus.Programs {
 
       protected void define_styles( )
       {
-         AddStyleSheetFile("calendar-system.css", "?13205289");
-         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?1342847");
+         AddStyleSheetFile("calendar-system.css", "?11323129");
+         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?19483837");
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?2022221342113");
+            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?202221019542669");
             idxLst = (int)(idxLst+1);
          }
          /* End function define_styles */
@@ -1703,7 +1695,7 @@ namespace GeneXus.Programs {
       protected void include_jscripts( )
       {
          context.AddJavascriptSource("messages.spa.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("tipobien.js", "?2022221342114");
+         context.AddJavascriptSource("tipobien.js", "?202221019542669");
          /* End function include_jscripts */
       }
 
@@ -1952,12 +1944,11 @@ namespace GeneXus.Programs {
          T00012_n141tipobienfecreg = new bool[] {false} ;
          T00012_A142tipobienfecultact = new DateTime[] {DateTime.MinValue} ;
          T00012_n142tipobienfecultact = new bool[] {false} ;
-         T000111_A175productoid = new int[1] ;
-         T000112_A19almacenid = new int[1] ;
-         T000112_A20articulosproductoid = new int[1] ;
-         T000112_A21articuloscambsid = new int[1] ;
-         T000113_A23tipobienid = new int[1] ;
-         T000113_n23tipobienid = new bool[] {false} ;
+         T000111_A19almacenid = new int[1] ;
+         T000111_A20articulosproductoid = new int[1] ;
+         T000111_A21articuloscambsid = new int[1] ;
+         T000112_A23tipobienid = new int[1] ;
+         T000112_n23tipobienid = new bool[] {false} ;
          sDynURL = "";
          FormProcess = "";
          bodyStyle = "";
@@ -1989,13 +1980,10 @@ namespace GeneXus.Programs {
                , new Object[] {
                }
                , new Object[] {
-               T000111_A175productoid
+               T000111_A19almacenid, T000111_A20articulosproductoid, T000111_A21articuloscambsid
                }
                , new Object[] {
-               T000112_A19almacenid, T000112_A20articulosproductoid, T000112_A21articuloscambsid
-               }
-               , new Object[] {
-               T000113_A23tipobienid
+               T000112_A23tipobienid
                }
             }
          );
@@ -2137,12 +2125,11 @@ namespace GeneXus.Programs {
       private bool[] T00012_n141tipobienfecreg ;
       private DateTime[] T00012_A142tipobienfecultact ;
       private bool[] T00012_n142tipobienfecultact ;
-      private int[] T000111_A175productoid ;
-      private int[] T000112_A19almacenid ;
-      private int[] T000112_A20articulosproductoid ;
-      private int[] T000112_A21articuloscambsid ;
-      private int[] T000113_A23tipobienid ;
-      private bool[] T000113_n23tipobienid ;
+      private int[] T000111_A19almacenid ;
+      private int[] T000111_A20articulosproductoid ;
+      private int[] T000111_A21articuloscambsid ;
+      private int[] T000112_A23tipobienid ;
+      private bool[] T000112_n23tipobienid ;
       private GXWebForm Form ;
    }
 
@@ -2163,7 +2150,6 @@ namespace GeneXus.Programs {
          ,new UpdateCursor(def[8])
          ,new ForEachCursor(def[9])
          ,new ForEachCursor(def[10])
-         ,new ForEachCursor(def[11])
        };
     }
 
@@ -2222,10 +2208,6 @@ namespace GeneXus.Programs {
           } ;
           Object[] prmT000112 ;
           prmT000112 = new Object[] {
-          new Object[] {"tipobienid",NpgsqlDbType.Integer,9,0}
-          } ;
-          Object[] prmT000113 ;
-          prmT000113 = new Object[] {
           } ;
           def= new CursorDef[] {
               new CursorDef("T00012", "SELECT tipobienid, tipobiendsc, tipobienusuario, tipobienfecreg, tipobienfecultact FROM public.tipobien WHERE tipobienid = :tipobienid  FOR UPDATE OF tipobien NOWAIT",true, GxErrorMask.GX_NOMASK, false, this,prmT00012,1,0,true,false )
@@ -2237,9 +2219,8 @@ namespace GeneXus.Programs {
              ,new CursorDef("T00018", "SAVEPOINT gxupdate;INSERT INTO public.tipobien(tipobienid, tipobiendsc, tipobienusuario, tipobienfecreg, tipobienfecultact) VALUES(:tipobienid, :tipobiendsc, :tipobienusuario, :tipobienfecreg, :tipobienfecultact);RELEASE SAVEPOINT gxupdate", GxErrorMask.GX_ROLLBACKSAVEPOINT,prmT00018)
              ,new CursorDef("T00019", "SAVEPOINT gxupdate;UPDATE public.tipobien SET tipobiendsc=:tipobiendsc, tipobienusuario=:tipobienusuario, tipobienfecreg=:tipobienfecreg, tipobienfecultact=:tipobienfecultact  WHERE tipobienid = :tipobienid;RELEASE SAVEPOINT gxupdate", GxErrorMask.GX_ROLLBACKSAVEPOINT | GxErrorMask.GX_NOMASK,prmT00019)
              ,new CursorDef("T000110", "SAVEPOINT gxupdate;DELETE FROM public.tipobien  WHERE tipobienid = :tipobienid;RELEASE SAVEPOINT gxupdate", GxErrorMask.GX_ROLLBACKSAVEPOINT | GxErrorMask.GX_NOMASK,prmT000110)
-             ,new CursorDef("T000111", "SELECT productoid FROM producto WHERE tipobienid = :tipobienid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000111,1,0,true,true )
-             ,new CursorDef("T000112", "SELECT articulosid, productoid, cambsid FROM public.articulos WHERE tipodocid = :tipobienid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000112,1,0,true,true )
-             ,new CursorDef("T000113", "SELECT tipobienid FROM public.tipobien ORDER BY tipobienid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000113,100,0,true,false )
+             ,new CursorDef("T000111", "SELECT articulosid, productoid, cambsid FROM public.articulos WHERE tipodocid = :tipobienid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000111,1,0,true,true )
+             ,new CursorDef("T000112", "SELECT tipobienid FROM public.tipobien ORDER BY tipobienid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000112,100,0,true,false )
           };
        }
     }
@@ -2294,13 +2275,10 @@ namespace GeneXus.Programs {
                 return;
              case 9 :
                 ((int[]) buf[0])[0] = rslt.getInt(1) ;
-                return;
-             case 10 :
-                ((int[]) buf[0])[0] = rslt.getInt(1) ;
                 ((int[]) buf[1])[0] = rslt.getInt(2) ;
                 ((int[]) buf[2])[0] = rslt.getInt(3) ;
                 return;
-             case 11 :
+             case 10 :
                 ((int[]) buf[0])[0] = rslt.getInt(1) ;
                 return;
        }
@@ -2467,16 +2445,6 @@ namespace GeneXus.Programs {
                 }
                 return;
              case 9 :
-                if ( (bool)parms[0] )
-                {
-                   stmt.setNull( 1 , SqlDbType.Int );
-                }
-                else
-                {
-                   stmt.SetParameter(1, (int)parms[1]);
-                }
-                return;
-             case 10 :
                 if ( (bool)parms[0] )
                 {
                    stmt.setNull( 1 , SqlDbType.Int );

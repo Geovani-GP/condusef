@@ -1,6 +1,9 @@
  
  
  
+pgm_main_i(proc,18,'PDF_MODELOS',[ 15,'APDF_MODELOS','PDF_modelos','','','','HTTP' ]).
+pgm_main_i(proc,17,'PDF_MARCAS',[ 15,'APDF_MARCAS','PDF_marcas','','','','HTTP' ]).
+pgm_main_i(proc,16,'PDF_CAMBS',[ 15,'APDF_CAMBS','PDF_cambs','','','','HTTP' ]).
 pgm_main_i(web,29,'MENUPRINCIPAL',[ 15,'MENUPRINCIPAL','Menu Principal','','','','' ]).
 pgm_main_i(web,28,'LOGIN',[ 15,'LOGIN','Login','','','','' ]).
 pgm_main_i(proc,15,'CATEGORIAS_REPORTE',[ 15,'ACATEGORIAS_REPORTE','Categorias_Reporte','','','','HTTP' ]).
@@ -15,11 +18,62 @@ pgm_main_i(proc,8,'REPORTCATEGORIAS',[ 15,'AREPORTCATEGORIAS','Report Categorias
 pgm_main_i(proc,6,'SCHEDULERREQUESTHANDLER',[ 15,'ASCHEDULERREQUESTHANDLER','Scheduler Request Handler','','','','HTTP' ]).
 pgm_main_i(proc,5,'LOADEVENTSSAMPLEPROC',[ 15,'ALOADEVENTSSAMPLEPROC','Load Events Sample Proc','','','','INTERNAL' ]).
  
+pgm_prop_i(proc,18,'APDF_MODELOS','USE_ENCRYPTION','NO').
+pgm_prop_i(proc,18,'PDF_MODELOS','USE_ENCRYPTION','NO').
+pgm_prop_i(proc,18,'APDF_MODELOS','HTTP_PROTOCOL','Unsecure').
+pgm_prop_i(proc,18,'PDF_MODELOS','HTTP_PROTOCOL','Unsecure').
 pgm_prop_i(mnproc,1,'GPXMENUDEMO','OutputSDT',o(26,gpxMenuItems)).
-pgm_prop_i(web,29,'MENUPRINCIPAL','USE_ENCRYPTION','NO').
-pgm_prop_i(web,29,'MENUPRINCIPAL','HTTP_PROTOCOL','Unsecure').
+pgm_prop_i(web,77,'GX00C0','USE_ENCRYPTION','NO').
+pgm_prop_i(web,77,'GX00C0','HTTP_PROTOCOL','Unsecure').
+pgm_prop_i(web,74,'GX00E0','USE_ENCRYPTION','NO').
+pgm_prop_i(web,74,'GX00E0','HTTP_PROTOCOL','Unsecure').
+pgm_prop_i(web,73,'GX00B0','USE_ENCRYPTION','NO').
+pgm_prop_i(web,73,'GX00B0','HTTP_PROTOCOL','Unsecure').
+pgm_prop_i(web,69,'GX0080','USE_ENCRYPTION','NO').
+pgm_prop_i(web,69,'GX0080','HTTP_PROTOCOL','Unsecure').
+pgm_prop_i(web,96,'CATALOG_DE_PRODUCTOS','USE_ENCRYPTION','NO').
+pgm_prop_i(web,96,'CATALOG_DE_PRODUCTOS','HTTP_PROTOCOL','Unsecure').
+pgm_prop_i(web,92,'DETALLESMARCAS','USE_ENCRYPTION','NO').
+pgm_prop_i(web,92,'DETALLESMARCAS','HTTP_PROTOCOL','Unsecure').
+pgm_prop_i(web,86,'DETALLESCAMBS','USE_ENCRYPTION','NO').
+pgm_prop_i(web,86,'DETALLESCAMBS','HTTP_PROTOCOL','Unsecure').
+pgm_prop_i(web,35,'CATALOG_DE_ARTICULO','USE_ENCRYPTION','NO').
+pgm_prop_i(web,35,'CATALOG_DE_ARTICULO','HTTP_PROTOCOL','Unsecure').
+pgm_prop_i(web,31,'CATALOG_DE_MARCAS','USE_ENCRYPTION','NO').
+pgm_prop_i(web,31,'CATALOG_DE_MARCAS','HTTP_PROTOCOL','Unsecure').
 pgm_prop_i(web,30,'CATALOG_DE_CAMBS','USE_ENCRYPTION','NO').
 pgm_prop_i(web,30,'CATALOG_DE_CAMBS','HTTP_PROTOCOL','Unsecure').
+pgm_prop_i(trn,19,'MODELOS',idISBUSINESSCOMPONENT,'-1').
+pgm_prop_i(trn,19,'MODELOS','USE_ENCRYPTION','NO').
+pgm_prop_i(trn,19,'MODELOS','HTTP_PROTOCOL','Unsecure').
+pgm_prop_i(trn,14,'CAMBS',idISBUSINESSCOMPONENT,'-1').
+pgm_prop_i(trn,14,'CAMBS','USE_ENCRYPTION','NO').
+pgm_prop_i(trn,14,'CAMBS','HTTP_PROTOCOL','Unsecure').
+pgm_prop_i(trn,12,'ETIQUETAS','USE_ENCRYPTION','NO').
+pgm_prop_i(trn,12,'ETIQUETAS','HTTP_PROTOCOL','Unsecure').
+pgm_prop_i(trn,11,'ARTICULOS','USE_ENCRYPTION','NO').
+pgm_prop_i(trn,11,'ARTICULOS','HTTP_PROTOCOL','Unsecure').
+pgm_prop_i(trn,8,'MARCAS',idISBUSINESSCOMPONENT,'-1').
+pgm_prop_i(trn,8,'MARCAS','USE_ENCRYPTION','NO').
+pgm_prop_i(trn,8,'MARCAS','HTTP_PROTOCOL','Unsecure').
+pgm_prop_i(proc,17,'APDF_MARCAS','USE_ENCRYPTION','NO').
+pgm_prop_i(proc,17,'PDF_MARCAS','USE_ENCRYPTION','NO').
+pgm_prop_i(proc,17,'APDF_MARCAS','HTTP_PROTOCOL','Unsecure').
+pgm_prop_i(proc,17,'PDF_MARCAS','HTTP_PROTOCOL','Unsecure').
+pgm_prop_i(proc,16,'APDF_CAMBS','USE_ENCRYPTION','NO').
+pgm_prop_i(proc,16,'PDF_CAMBS','USE_ENCRYPTION','NO').
+pgm_prop_i(proc,16,'APDF_CAMBS','HTTP_PROTOCOL','Unsecure').
+pgm_prop_i(proc,16,'PDF_CAMBS','HTTP_PROTOCOL','Unsecure').
+pgm_prop_i(web,108,'GX00N0','USE_ENCRYPTION','NO').
+pgm_prop_i(web,108,'GX00N0','HTTP_PROTOCOL','Unsecure').
+pgm_prop_i(trn,9,'PRODUCTO',idISBUSINESSCOMPONENT,'-1').
+pgm_prop_i(trn,9,'PRODUCTO','USE_ENCRYPTION','NO').
+pgm_prop_i(trn,9,'PRODUCTO','HTTP_PROTOCOL','Unsecure').
+pgm_prop_i(trn,1,'TIPOBIEN',idISBUSINESSCOMPONENT,'-1').
+pgm_prop_i(trn,1,'TIPOBIEN','USE_ENCRYPTION','NO').
+pgm_prop_i(trn,1,'TIPOBIEN','HTTP_PROTOCOL','Unsecure').
+pgm_prop_i(web,29,'MENUPRINCIPAL','USE_ENCRYPTION','NO').
+pgm_prop_i(web,29,'MENUPRINCIPAL','HTTP_PROTOCOL','Unsecure').
 pgm_prop_i(web,28,'LOGIN','USE_ENCRYPTION','NO').
 pgm_prop_i(web,28,'LOGIN','HTTP_PROTOCOL','Unsecure').
 pgm_prop_i(web,1,'APPMASTERPAGE','WEB_COMP','Master').
@@ -35,8 +89,6 @@ pgm_prop_i(web,100,'CATALOG_DE_TIPOBIEN','USE_ENCRYPTION','NO').
 pgm_prop_i(web,100,'CATALOG_DE_TIPOBIEN','HTTP_PROTOCOL','Unsecure').
 pgm_prop_i(web,98,'CATALOG_DE_PROVEEDOR','USE_ENCRYPTION','NO').
 pgm_prop_i(web,98,'CATALOG_DE_PROVEEDOR','HTTP_PROTOCOL','Unsecure').
-pgm_prop_i(web,96,'CATALOG_DE_PRODUCTOS','USE_ENCRYPTION','NO').
-pgm_prop_i(web,96,'CATALOG_DE_PRODUCTOS','HTTP_PROTOCOL','Unsecure').
 pgm_prop_i(web,40,'CATALOG_DE_ORIGEN','USE_ENCRYPTION','NO').
 pgm_prop_i(web,40,'CATALOG_DE_ORIGEN','HTTP_PROTOCOL','Unsecure').
 pgm_prop_i(web,37,'CATALOG_DE_ENTIDAD_FEDERATIVA','USE_ENCRYPTION','NO').
@@ -47,8 +99,6 @@ pgm_prop_i(web,34,'CATALOG_DE_TIPO_DOC','USE_ENCRYPTION','NO').
 pgm_prop_i(web,34,'CATALOG_DE_TIPO_DOC','HTTP_PROTOCOL','Unsecure').
 pgm_prop_i(web,32,'CATALOG_DE_MODELO','USE_ENCRYPTION','NO').
 pgm_prop_i(web,32,'CATALOG_DE_MODELO','HTTP_PROTOCOL','Unsecure').
-pgm_prop_i(web,31,'CATALOG_DE_MARCAS','USE_ENCRYPTION','NO').
-pgm_prop_i(web,31,'CATALOG_DE_MARCAS','HTTP_PROTOCOL','Unsecure').
 pgm_prop_i(web,101,'CATALOG_DE_EMPLEADOS','USE_ENCRYPTION','NO').
 pgm_prop_i(web,101,'CATALOG_DE_EMPLEADOS','HTTP_PROTOCOL','Unsecure').
 pgm_prop_i(web,80,'GX00H0','USE_ENCRYPTION','NO').
@@ -75,8 +125,6 @@ pgm_prop_i(trn,6,'EMPLEADOS','USE_ENCRYPTION','NO').
 pgm_prop_i(trn,6,'EMPLEADOS','HTTP_PROTOCOL','Unsecure').
 pgm_prop_i(web,39,'CATALOG_DE_CATEGORIAS','USE_ENCRYPTION','NO').
 pgm_prop_i(web,39,'CATALOG_DE_CATEGORIAS','HTTP_PROTOCOL','Unsecure').
-pgm_prop_i(web,35,'CATALOG_DE_ARTICULO','USE_ENCRYPTION','NO').
-pgm_prop_i(web,35,'CATALOG_DE_ARTICULO','HTTP_PROTOCOL','Unsecure').
 pgm_prop_i(web,99,'CATALOG_DE_ALMACEN','USE_ENCRYPTION','NO').
 pgm_prop_i(web,99,'CATALOG_DE_ALMACEN','HTTP_PROTOCOL','Unsecure').
 pgm_prop_i(web,116,'GX00P0','USE_ENCRYPTION','NO').
@@ -84,8 +132,6 @@ pgm_prop_i(web,116,'GX00P0','HTTP_PROTOCOL','Unsecure').
 pgm_prop_i(trn,25,'ESTADOS',idISBUSINESSCOMPONENT,'-1').
 pgm_prop_i(trn,25,'ESTADOS','USE_ENCRYPTION','NO').
 pgm_prop_i(trn,25,'ESTADOS','HTTP_PROTOCOL','Unsecure').
-pgm_prop_i(web,108,'GX00N0','USE_ENCRYPTION','NO').
-pgm_prop_i(web,108,'GX00N0','HTTP_PROTOCOL','Unsecure').
 pgm_prop_i(web,82,'GX00L0','USE_ENCRYPTION','NO').
 pgm_prop_i(web,82,'GX00L0','HTTP_PROTOCOL','Unsecure').
 pgm_prop_i(web,81,'GX00K0','USE_ENCRYPTION','NO').
@@ -94,22 +140,14 @@ pgm_prop_i(web,79,'GX00F0','USE_ENCRYPTION','NO').
 pgm_prop_i(web,79,'GX00F0','HTTP_PROTOCOL','Unsecure').
 pgm_prop_i(web,78,'GX00D0','USE_ENCRYPTION','NO').
 pgm_prop_i(web,78,'GX00D0','HTTP_PROTOCOL','Unsecure').
-pgm_prop_i(web,77,'GX00C0','USE_ENCRYPTION','NO').
-pgm_prop_i(web,77,'GX00C0','HTTP_PROTOCOL','Unsecure').
 pgm_prop_i(web,76,'GX00I0','USE_ENCRYPTION','NO').
 pgm_prop_i(web,76,'GX00I0','HTTP_PROTOCOL','Unsecure').
 pgm_prop_i(web,75,'GX00G0','USE_ENCRYPTION','NO').
 pgm_prop_i(web,75,'GX00G0','HTTP_PROTOCOL','Unsecure').
-pgm_prop_i(web,74,'GX00E0','USE_ENCRYPTION','NO').
-pgm_prop_i(web,74,'GX00E0','HTTP_PROTOCOL','Unsecure').
-pgm_prop_i(web,73,'GX00B0','USE_ENCRYPTION','NO').
-pgm_prop_i(web,73,'GX00B0','HTTP_PROTOCOL','Unsecure').
 pgm_prop_i(web,72,'GX00A0','USE_ENCRYPTION','NO').
 pgm_prop_i(web,72,'GX00A0','HTTP_PROTOCOL','Unsecure').
 pgm_prop_i(web,71,'GX00J0','USE_ENCRYPTION','NO').
 pgm_prop_i(web,71,'GX00J0','HTTP_PROTOCOL','Unsecure').
-pgm_prop_i(web,69,'GX0080','USE_ENCRYPTION','NO').
-pgm_prop_i(web,69,'GX0080','HTTP_PROTOCOL','Unsecure').
 pgm_prop_i(web,68,'GX0070','USE_ENCRYPTION','NO').
 pgm_prop_i(web,68,'GX0070','HTTP_PROTOCOL','Unsecure').
 pgm_prop_i(web,66,'GX0050','USE_ENCRYPTION','NO').
@@ -126,8 +164,6 @@ pgm_prop_i(trn,15,'USUARIOS','USE_ENCRYPTION','NO').
 pgm_prop_i(trn,15,'USUARIOS','HTTP_PROTOCOL','Unsecure').
 pgm_prop_i(trn,13,'ARTICULOSMOV','USE_ENCRYPTION','NO').
 pgm_prop_i(trn,13,'ARTICULOSMOV','HTTP_PROTOCOL','Unsecure').
-pgm_prop_i(trn,12,'ETIQUETAS','USE_ENCRYPTION','NO').
-pgm_prop_i(trn,12,'ETIQUETAS','HTTP_PROTOCOL','Unsecure').
 pgm_prop_i(trn,3,'MESES','USE_ENCRYPTION','NO').
 pgm_prop_i(trn,3,'MESES','HTTP_PROTOCOL','Unsecure').
 pgm_prop_i(trn,2,'PARAMETROS','USE_ENCRYPTION','NO').
@@ -174,10 +210,6 @@ pgm_prop_i(web,94,'DETALLECATEGORIAS','USE_ENCRYPTION','NO').
 pgm_prop_i(web,94,'DETALLECATEGORIAS','HTTP_PROTOCOL','Unsecure').
 pgm_prop_i(web,93,'DETALLEMODELOS','USE_ENCRYPTION','NO').
 pgm_prop_i(web,93,'DETALLEMODELOS','HTTP_PROTOCOL','Unsecure').
-pgm_prop_i(web,92,'DETALLESMARCAS','USE_ENCRYPTION','NO').
-pgm_prop_i(web,92,'DETALLESMARCAS','HTTP_PROTOCOL','Unsecure').
-pgm_prop_i(web,86,'DETALLESCAMBS','USE_ENCRYPTION','NO').
-pgm_prop_i(web,86,'DETALLESCAMBS','HTTP_PROTOCOL','Unsecure').
 pgm_prop_i(web,83,'SCHEDULERDETAILSFORM','USE_ENCRYPTION','NO').
 pgm_prop_i(web,83,'SCHEDULERDETAILSFORM','HTTP_PROTOCOL','Unsecure').
 pgm_prop_i(trn,21,'STATUS',idISBUSINESSCOMPONENT,'-1').
@@ -186,23 +218,9 @@ pgm_prop_i(trn,21,'STATUS','HTTP_PROTOCOL','Unsecure').
 pgm_prop_i(trn,20,'TIPODOCUMENTO',idISBUSINESSCOMPONENT,'-1').
 pgm_prop_i(trn,20,'TIPODOCUMENTO','USE_ENCRYPTION','NO').
 pgm_prop_i(trn,20,'TIPODOCUMENTO','HTTP_PROTOCOL','Unsecure').
-pgm_prop_i(trn,19,'MODELOS',idISBUSINESSCOMPONENT,'-1').
-pgm_prop_i(trn,19,'MODELOS','USE_ENCRYPTION','NO').
-pgm_prop_i(trn,19,'MODELOS','HTTP_PROTOCOL','Unsecure').
 pgm_prop_i(trn,16,'ORIGEN',idISBUSINESSCOMPONENT,'-1').
 pgm_prop_i(trn,16,'ORIGEN','USE_ENCRYPTION','NO').
 pgm_prop_i(trn,16,'ORIGEN','HTTP_PROTOCOL','Unsecure').
-pgm_prop_i(trn,14,'CAMBS',idISBUSINESSCOMPONENT,'-1').
-pgm_prop_i(trn,14,'CAMBS','USE_ENCRYPTION','NO').
-pgm_prop_i(trn,14,'CAMBS','HTTP_PROTOCOL','Unsecure').
-pgm_prop_i(trn,11,'ARTICULOS','USE_ENCRYPTION','NO').
-pgm_prop_i(trn,11,'ARTICULOS','HTTP_PROTOCOL','Unsecure').
-pgm_prop_i(trn,9,'PRODUCTO',idISBUSINESSCOMPONENT,'-1').
-pgm_prop_i(trn,9,'PRODUCTO','USE_ENCRYPTION','NO').
-pgm_prop_i(trn,9,'PRODUCTO','HTTP_PROTOCOL','Unsecure').
-pgm_prop_i(trn,8,'MARCAS',idISBUSINESSCOMPONENT,'-1').
-pgm_prop_i(trn,8,'MARCAS','USE_ENCRYPTION','NO').
-pgm_prop_i(trn,8,'MARCAS','HTTP_PROTOCOL','Unsecure').
 pgm_prop_i(trn,7,'ESTATUSARTICULO',idISBUSINESSCOMPONENT,'-1').
 pgm_prop_i(trn,7,'ESTATUSARTICULO','USE_ENCRYPTION','NO').
 pgm_prop_i(trn,7,'ESTATUSARTICULO','HTTP_PROTOCOL','Unsecure').
@@ -212,9 +230,6 @@ pgm_prop_i(trn,5,'CATEGORIAS','HTTP_PROTOCOL','Unsecure').
 pgm_prop_i(trn,4,'ENTIDADFEDERATIVA',idISBUSINESSCOMPONENT,'-1').
 pgm_prop_i(trn,4,'ENTIDADFEDERATIVA','USE_ENCRYPTION','NO').
 pgm_prop_i(trn,4,'ENTIDADFEDERATIVA','HTTP_PROTOCOL','Unsecure').
-pgm_prop_i(trn,1,'TIPOBIEN',idISBUSINESSCOMPONENT,'-1').
-pgm_prop_i(trn,1,'TIPOBIEN','USE_ENCRYPTION','NO').
-pgm_prop_i(trn,1,'TIPOBIEN','HTTP_PROTOCOL','Unsecure').
 pgm_prop_i(proc,6,'ASCHEDULERREQUESTHANDLER','USE_ENCRYPTION','NO').
 pgm_prop_i(proc,6,'SCHEDULERREQUESTHANDLER','USE_ENCRYPTION','NO').
 pgm_prop_i(proc,6,'ASCHEDULERREQUESTHANDLER','HTTP_PROTOCOL','Unsecure').
@@ -323,7 +338,7 @@ lng_prop_i(1,'LangTimeFormat','24',v).
 lng_prop_i(1,'LangDecimalPoint',',',v).
 lng_prop_i(1,'FullyQualifiedName','Spanish',d).
  
-ver_stamp('20220205.215438').
+ver_stamp('20220211.015540').
  
-ver_stamp(date(2022,2,5),time(15,59,12,43)).
+ver_stamp(date(2022,2,10),time(19,55,45,84)).
  

@@ -2,7 +2,7 @@
                File: tipobien_BC
         Description: tipobien
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 2/2/2022 13:42:11.25
+       Generated on: 2/10/2022 19:54:26.95
        Program type: Callable routine
           Main DBMS: postgresql
 */
@@ -458,18 +458,10 @@ namespace GeneXus.Programs {
             pr_default.execute(7, new Object[] {n23tipobienid, A23tipobienid});
             if ( (pr_default.getStatus(7) != 101) )
             {
-               GX_msglist.addItem(context.GetMessage( "GXM_del", new   object[]  {"producto"}), "CannotDeleteReferencedRecord", 1, "");
-               AnyError = 1;
-            }
-            pr_default.close(7);
-            /* Using cursor BC000110 */
-            pr_default.execute(8, new Object[] {n23tipobienid, A23tipobienid});
-            if ( (pr_default.getStatus(8) != 101) )
-            {
                GX_msglist.addItem(context.GetMessage( "GXM_del", new   object[]  {"articulos"}), "CannotDeleteReferencedRecord", 1, "");
                AnyError = 1;
             }
-            pr_default.close(8);
+            pr_default.close(7);
          }
       }
 
@@ -502,22 +494,22 @@ namespace GeneXus.Programs {
 
       public void ScanKeyStart011( )
       {
-         /* Using cursor BC000111 */
-         pr_default.execute(9, new Object[] {n23tipobienid, A23tipobienid});
+         /* Using cursor BC000110 */
+         pr_default.execute(8, new Object[] {n23tipobienid, A23tipobienid});
          RcdFound1 = 0;
-         if ( (pr_default.getStatus(9) != 101) )
+         if ( (pr_default.getStatus(8) != 101) )
          {
             RcdFound1 = 1;
-            A23tipobienid = BC000111_A23tipobienid[0];
-            n23tipobienid = BC000111_n23tipobienid[0];
-            A139tipobiendsc = BC000111_A139tipobiendsc[0];
-            n139tipobiendsc = BC000111_n139tipobiendsc[0];
-            A140tipobienusuario = BC000111_A140tipobienusuario[0];
-            n140tipobienusuario = BC000111_n140tipobienusuario[0];
-            A141tipobienfecreg = BC000111_A141tipobienfecreg[0];
-            n141tipobienfecreg = BC000111_n141tipobienfecreg[0];
-            A142tipobienfecultact = BC000111_A142tipobienfecultact[0];
-            n142tipobienfecultact = BC000111_n142tipobienfecultact[0];
+            A23tipobienid = BC000110_A23tipobienid[0];
+            n23tipobienid = BC000110_n23tipobienid[0];
+            A139tipobiendsc = BC000110_A139tipobiendsc[0];
+            n139tipobiendsc = BC000110_n139tipobiendsc[0];
+            A140tipobienusuario = BC000110_A140tipobienusuario[0];
+            n140tipobienusuario = BC000110_n140tipobienusuario[0];
+            A141tipobienfecreg = BC000110_A141tipobienfecreg[0];
+            n141tipobienfecreg = BC000110_n141tipobienfecreg[0];
+            A142tipobienfecultact = BC000110_A142tipobienfecultact[0];
+            n142tipobienfecultact = BC000110_n142tipobienfecultact[0];
          }
          /* Load Subordinate Levels */
       }
@@ -525,7 +517,7 @@ namespace GeneXus.Programs {
       protected void ScanKeyNext011( )
       {
          /* Scan next routine */
-         pr_default.readNext(9);
+         pr_default.readNext(8);
          RcdFound1 = 0;
          ScanKeyLoad011( ) ;
       }
@@ -534,26 +526,26 @@ namespace GeneXus.Programs {
       {
          sMode1 = Gx_mode;
          Gx_mode = "DSP";
-         if ( (pr_default.getStatus(9) != 101) )
+         if ( (pr_default.getStatus(8) != 101) )
          {
             RcdFound1 = 1;
-            A23tipobienid = BC000111_A23tipobienid[0];
-            n23tipobienid = BC000111_n23tipobienid[0];
-            A139tipobiendsc = BC000111_A139tipobiendsc[0];
-            n139tipobiendsc = BC000111_n139tipobiendsc[0];
-            A140tipobienusuario = BC000111_A140tipobienusuario[0];
-            n140tipobienusuario = BC000111_n140tipobienusuario[0];
-            A141tipobienfecreg = BC000111_A141tipobienfecreg[0];
-            n141tipobienfecreg = BC000111_n141tipobienfecreg[0];
-            A142tipobienfecultact = BC000111_A142tipobienfecultact[0];
-            n142tipobienfecultact = BC000111_n142tipobienfecultact[0];
+            A23tipobienid = BC000110_A23tipobienid[0];
+            n23tipobienid = BC000110_n23tipobienid[0];
+            A139tipobiendsc = BC000110_A139tipobiendsc[0];
+            n139tipobiendsc = BC000110_n139tipobiendsc[0];
+            A140tipobienusuario = BC000110_A140tipobienusuario[0];
+            n140tipobienusuario = BC000110_n140tipobienusuario[0];
+            A141tipobienfecreg = BC000110_A141tipobienfecreg[0];
+            n141tipobienfecreg = BC000110_n141tipobienfecreg[0];
+            A142tipobienfecultact = BC000110_A142tipobienfecultact[0];
+            n142tipobienfecultact = BC000110_n142tipobienfecultact[0];
          }
          Gx_mode = sMode1;
       }
 
       protected void ScanKeyEnd011( )
       {
-         pr_default.close(9);
+         pr_default.close(8);
       }
 
       protected void AfterConfirm011( )
@@ -1034,20 +1026,19 @@ namespace GeneXus.Programs {
          BC00012_n141tipobienfecreg = new bool[] {false} ;
          BC00012_A142tipobienfecultact = new DateTime[] {DateTime.MinValue} ;
          BC00012_n142tipobienfecultact = new bool[] {false} ;
-         BC00019_A175productoid = new int[1] ;
-         BC000110_A19almacenid = new int[1] ;
-         BC000110_A20articulosproductoid = new int[1] ;
-         BC000110_A21articuloscambsid = new int[1] ;
-         BC000111_A23tipobienid = new int[1] ;
-         BC000111_n23tipobienid = new bool[] {false} ;
-         BC000111_A139tipobiendsc = new String[] {""} ;
-         BC000111_n139tipobiendsc = new bool[] {false} ;
-         BC000111_A140tipobienusuario = new String[] {""} ;
-         BC000111_n140tipobienusuario = new bool[] {false} ;
-         BC000111_A141tipobienfecreg = new DateTime[] {DateTime.MinValue} ;
-         BC000111_n141tipobienfecreg = new bool[] {false} ;
-         BC000111_A142tipobienfecultact = new DateTime[] {DateTime.MinValue} ;
-         BC000111_n142tipobienfecultact = new bool[] {false} ;
+         BC00019_A19almacenid = new int[1] ;
+         BC00019_A20articulosproductoid = new int[1] ;
+         BC00019_A21articuloscambsid = new int[1] ;
+         BC000110_A23tipobienid = new int[1] ;
+         BC000110_n23tipobienid = new bool[] {false} ;
+         BC000110_A139tipobiendsc = new String[] {""} ;
+         BC000110_n139tipobiendsc = new bool[] {false} ;
+         BC000110_A140tipobienusuario = new String[] {""} ;
+         BC000110_n140tipobienusuario = new bool[] {false} ;
+         BC000110_A141tipobienfecreg = new DateTime[] {DateTime.MinValue} ;
+         BC000110_n141tipobienfecreg = new bool[] {false} ;
+         BC000110_A142tipobienfecultact = new DateTime[] {DateTime.MinValue} ;
+         BC000110_n142tipobienfecultact = new bool[] {false} ;
          BackMsgLst = new msglist();
          LclMsgLst = new msglist();
          pr_default = new DataStoreProvider(context, new GeneXus.Programs.tipobien_bc__default(),
@@ -1071,13 +1062,10 @@ namespace GeneXus.Programs {
                , new Object[] {
                }
                , new Object[] {
-               BC00019_A175productoid
+               BC00019_A19almacenid, BC00019_A20articulosproductoid, BC00019_A21articuloscambsid
                }
                , new Object[] {
-               BC000110_A19almacenid, BC000110_A20articulosproductoid, BC000110_A21articuloscambsid
-               }
-               , new Object[] {
-               BC000111_A23tipobienid, BC000111_A139tipobiendsc, BC000111_n139tipobiendsc, BC000111_A140tipobienusuario, BC000111_n140tipobienusuario, BC000111_A141tipobienfecreg, BC000111_n141tipobienfecreg, BC000111_A142tipobienfecultact, BC000111_n142tipobienfecultact
+               BC000110_A23tipobienid, BC000110_A139tipobiendsc, BC000110_n139tipobiendsc, BC000110_A140tipobienusuario, BC000110_n140tipobienusuario, BC000110_A141tipobienfecreg, BC000110_n141tipobienfecreg, BC000110_A142tipobienfecultact, BC000110_n142tipobienfecultact
                }
             }
          );
@@ -1148,20 +1136,19 @@ namespace GeneXus.Programs {
       private bool[] BC00012_n141tipobienfecreg ;
       private DateTime[] BC00012_A142tipobienfecultact ;
       private bool[] BC00012_n142tipobienfecultact ;
-      private int[] BC00019_A175productoid ;
-      private int[] BC000110_A19almacenid ;
-      private int[] BC000110_A20articulosproductoid ;
-      private int[] BC000110_A21articuloscambsid ;
-      private int[] BC000111_A23tipobienid ;
-      private bool[] BC000111_n23tipobienid ;
-      private String[] BC000111_A139tipobiendsc ;
-      private bool[] BC000111_n139tipobiendsc ;
-      private String[] BC000111_A140tipobienusuario ;
-      private bool[] BC000111_n140tipobienusuario ;
-      private DateTime[] BC000111_A141tipobienfecreg ;
-      private bool[] BC000111_n141tipobienfecreg ;
-      private DateTime[] BC000111_A142tipobienfecultact ;
-      private bool[] BC000111_n142tipobienfecultact ;
+      private int[] BC00019_A19almacenid ;
+      private int[] BC00019_A20articulosproductoid ;
+      private int[] BC00019_A21articuloscambsid ;
+      private int[] BC000110_A23tipobienid ;
+      private bool[] BC000110_n23tipobienid ;
+      private String[] BC000110_A139tipobiendsc ;
+      private bool[] BC000110_n139tipobiendsc ;
+      private String[] BC000110_A140tipobienusuario ;
+      private bool[] BC000110_n140tipobienusuario ;
+      private DateTime[] BC000110_A141tipobienfecreg ;
+      private bool[] BC000110_n141tipobienfecreg ;
+      private DateTime[] BC000110_A142tipobienfecultact ;
+      private bool[] BC000110_n142tipobienfecultact ;
       private msglist BackMsgLst ;
       private msglist LclMsgLst ;
    }
@@ -1181,7 +1168,6 @@ namespace GeneXus.Programs {
          ,new UpdateCursor(def[6])
          ,new ForEachCursor(def[7])
          ,new ForEachCursor(def[8])
-         ,new ForEachCursor(def[9])
        };
     }
 
@@ -1234,10 +1220,6 @@ namespace GeneXus.Programs {
           prmBC000110 = new Object[] {
           new Object[] {"tipobienid",NpgsqlDbType.Integer,9,0}
           } ;
-          Object[] prmBC000111 ;
-          prmBC000111 = new Object[] {
-          new Object[] {"tipobienid",NpgsqlDbType.Integer,9,0}
-          } ;
           def= new CursorDef[] {
               new CursorDef("BC00012", "SELECT tipobienid, tipobiendsc, tipobienusuario, tipobienfecreg, tipobienfecultact FROM public.tipobien WHERE tipobienid = :tipobienid  FOR UPDATE OF tipobien",true, GxErrorMask.GX_NOMASK, false, this,prmBC00012,1,0,true,false )
              ,new CursorDef("BC00013", "SELECT tipobienid, tipobiendsc, tipobienusuario, tipobienfecreg, tipobienfecultact FROM public.tipobien WHERE tipobienid = :tipobienid ",true, GxErrorMask.GX_NOMASK, false, this,prmBC00013,1,0,true,false )
@@ -1246,9 +1228,8 @@ namespace GeneXus.Programs {
              ,new CursorDef("BC00016", "SAVEPOINT gxupdate;INSERT INTO public.tipobien(tipobienid, tipobiendsc, tipobienusuario, tipobienfecreg, tipobienfecultact) VALUES(:tipobienid, :tipobiendsc, :tipobienusuario, :tipobienfecreg, :tipobienfecultact);RELEASE SAVEPOINT gxupdate", GxErrorMask.GX_ROLLBACKSAVEPOINT,prmBC00016)
              ,new CursorDef("BC00017", "SAVEPOINT gxupdate;UPDATE public.tipobien SET tipobiendsc=:tipobiendsc, tipobienusuario=:tipobienusuario, tipobienfecreg=:tipobienfecreg, tipobienfecultact=:tipobienfecultact  WHERE tipobienid = :tipobienid;RELEASE SAVEPOINT gxupdate", GxErrorMask.GX_ROLLBACKSAVEPOINT | GxErrorMask.GX_NOMASK,prmBC00017)
              ,new CursorDef("BC00018", "SAVEPOINT gxupdate;DELETE FROM public.tipobien  WHERE tipobienid = :tipobienid;RELEASE SAVEPOINT gxupdate", GxErrorMask.GX_ROLLBACKSAVEPOINT | GxErrorMask.GX_NOMASK,prmBC00018)
-             ,new CursorDef("BC00019", "SELECT productoid FROM producto WHERE tipobienid = :tipobienid ",true, GxErrorMask.GX_NOMASK, false, this,prmBC00019,1,0,true,true )
-             ,new CursorDef("BC000110", "SELECT articulosid, productoid, cambsid FROM public.articulos WHERE tipodocid = :tipobienid ",true, GxErrorMask.GX_NOMASK, false, this,prmBC000110,1,0,true,true )
-             ,new CursorDef("BC000111", "SELECT TM1.tipobienid, TM1.tipobiendsc, TM1.tipobienusuario, TM1.tipobienfecreg, TM1.tipobienfecultact FROM public.tipobien TM1 WHERE TM1.tipobienid = :tipobienid ORDER BY TM1.tipobienid ",true, GxErrorMask.GX_NOMASK, false, this,prmBC000111,100,0,true,false )
+             ,new CursorDef("BC00019", "SELECT articulosid, productoid, cambsid FROM public.articulos WHERE tipodocid = :tipobienid ",true, GxErrorMask.GX_NOMASK, false, this,prmBC00019,1,0,true,true )
+             ,new CursorDef("BC000110", "SELECT TM1.tipobienid, TM1.tipobiendsc, TM1.tipobienusuario, TM1.tipobienfecreg, TM1.tipobienfecultact FROM public.tipobien TM1 WHERE TM1.tipobienid = :tipobienid ORDER BY TM1.tipobienid ",true, GxErrorMask.GX_NOMASK, false, this,prmBC000110,100,0,true,false )
           };
        }
     }
@@ -1297,13 +1278,10 @@ namespace GeneXus.Programs {
                 return;
              case 7 :
                 ((int[]) buf[0])[0] = rslt.getInt(1) ;
-                return;
-             case 8 :
-                ((int[]) buf[0])[0] = rslt.getInt(1) ;
                 ((int[]) buf[1])[0] = rslt.getInt(2) ;
                 ((int[]) buf[2])[0] = rslt.getInt(3) ;
                 return;
-             case 9 :
+             case 8 :
                 ((int[]) buf[0])[0] = rslt.getInt(1) ;
                 ((String[]) buf[1])[0] = rslt.getVarchar(2) ;
                 ((bool[]) buf[2])[0] = rslt.wasNull(2);
@@ -1468,16 +1446,6 @@ namespace GeneXus.Programs {
                 }
                 return;
              case 8 :
-                if ( (bool)parms[0] )
-                {
-                   stmt.setNull( 1 , SqlDbType.Int );
-                }
-                else
-                {
-                   stmt.SetParameter(1, (int)parms[1]);
-                }
-                return;
-             case 9 :
                 if ( (bool)parms[0] )
                 {
                    stmt.setNull( 1 , SqlDbType.Int );

@@ -2,7 +2,7 @@
                File: Catalog_De_Productos
         Description: Catalog_De_Productos
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 2/5/2022 19:20:55.94
+       Generated on: 2/10/2022 20:2:11.88
        Program type: Callable routine
           Main DBMS: postgresql
 */
@@ -275,7 +275,7 @@ namespace GeneXus.Programs {
          context.AddJavascriptSource("jquery.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxtimezone.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxgral.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("gxcfg.js", "?20222519205598");
+         context.AddJavascriptSource("gxcfg.js", "?20222102021190");
          if ( context.isSpaRequest( ) )
          {
             enableOutput();
@@ -1089,12 +1089,12 @@ namespace GeneXus.Programs {
          else
          {
             AV7producto.gxTpr_Productoid = AV20NextValue;
-            AV7producto.gxTpr_Cambsid = AV14cambsid;
+            AV7producto.gxTpr_Pcambsid = (short)(AV14cambsid);
             AV7producto.gxTpr_Productodsc = AV6productodsc;
-            AV7producto.gxTpr_Marcaid = AV15marcasid;
-            AV7producto.gxTpr_Modeloid = AV16modelosid;
-            AV7producto.gxTpr_Categoriaid = AV18categoriasid;
-            AV7producto.gxTpr_Tipobienid = AV17tipobienid;
+            AV7producto.gxTpr_Pmarcaid = (short)(AV15marcasid);
+            AV7producto.gxTpr_Pmodeloid = (short)(AV16modelosid);
+            AV7producto.gxTpr_Pcategoriaid = (short)(AV18categoriasid);
+            AV7producto.gxTpr_Ptipobienid = (short)(AV17tipobienid);
             AV7producto.gxTpr_Productousuario = AV8WebSession.Get("usuario");
             GXt_dtime1 = DateTimeUtil.ResetTime( Gx_date ) ;
             AV7producto.gxTpr_Productofecreg = GXt_dtime1;
@@ -1381,11 +1381,11 @@ namespace GeneXus.Programs {
 
       protected void define_styles( )
       {
-         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?15381859");
+         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?19483837");
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?20222519205646");
+            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?20222102021224");
             idxLst = (int)(idxLst+1);
          }
          /* End function define_styles */
@@ -1394,7 +1394,7 @@ namespace GeneXus.Programs {
       protected void include_jscripts( )
       {
          context.AddJavascriptSource("messages.spa.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("catalog_de_productos.js", "?20222519205646");
+         context.AddJavascriptSource("catalog_de_productos.js", "?20222102021224");
          /* End function include_jscripts */
       }
 
@@ -1741,8 +1741,8 @@ namespace GeneXus.Programs {
              ,new CursorDef("H002O4", "SELECT modelosid, modelosdsc FROM public.modelos ORDER BY modelosdsc ",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmH002O4,0,0,true,false )
              ,new CursorDef("H002O5", "SELECT categoriasid, categoriasdsc FROM public.categorias ORDER BY categoriasdsc ",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmH002O5,0,0,true,false )
              ,new CursorDef("H002O6", "SELECT tipobienid, tipobiendsc FROM public.tipobien ORDER BY tipobiendsc ",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmH002O6,0,0,true,false )
-             ,new CursorDef("H002O8", "SELECT COALESCE( T1.GXC1, 0) AS GXC1 FROM (SELECT MAX(productoid) AS GXC1 FROM producto ) T1 ",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmH002O8,1,0,true,false )
-             ,new CursorDef("H002O10", "SELECT COALESCE( T1.GXC1, 0) AS GXC1 FROM (SELECT MAX(productoid) AS GXC1 FROM producto ) T1 ",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmH002O10,1,0,true,false )
+             ,new CursorDef("H002O8", "SELECT COALESCE( T1.GXC1, 0) AS GXC1 FROM (SELECT MAX(productoid) AS GXC1 FROM public.producto ) T1 ",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmH002O8,1,0,true,false )
+             ,new CursorDef("H002O10", "SELECT COALESCE( T1.GXC1, 0) AS GXC1 FROM (SELECT MAX(productoid) AS GXC1 FROM public.producto ) T1 ",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmH002O10,1,0,true,false )
           };
        }
     }

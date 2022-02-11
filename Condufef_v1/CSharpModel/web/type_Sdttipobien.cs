@@ -2,7 +2,7 @@
                File: type_Sdttipobien
         Description: tipobien
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 2/2/2022 13:42:11.53
+       Generated on: 2/10/2022 19:54:27.18
        Program type: Callable routine
           Main DBMS: postgresql
 */

@@ -2,7 +2,7 @@
                File: DetallesCambs
         Description: Detalles Cambs
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 2/2/2022 13:42:59.49
+       Generated on: 2/10/2022 20:2:11.35
        Program type: Callable routine
           Main DBMS: postgresql
 */
@@ -253,7 +253,7 @@ namespace GeneXus.Programs {
          context.AddJavascriptSource("jquery.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxtimezone.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxgral.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("gxcfg.js", "?20222213425951");
+         context.AddJavascriptSource("gxcfg.js", "?20222102021138");
          if ( context.isSpaRequest( ) )
          {
             enableOutput();
@@ -510,6 +510,10 @@ namespace GeneXus.Programs {
                }
             }
             context.WriteHtmlText( "</p>") ;
+            TempTags = "  onfocus=\"gx.evt.onfocus(this, 18,'',false,'',0)\"";
+            ClassString = "Button";
+            StyleString = "";
+            GxWebStd.gx_button_ctrl( context, bttButton1_Internalname, "gx.evt.setGridEvt("+StringUtil.Str( (decimal)(12), 2, 0)+","+"null"+");", "Imprimir", bttButton1_Jsonclick, 5, "Imprimir", "", StyleString, ClassString, 1, 1, "standard", "'"+""+"'"+",false,"+"'"+"E\\'IMPRIMIR\\'."+"'", TempTags, "", context.GetButtonType( ), "HLP_DetallesCambs.htm");
          }
          wbLoad = true;
       }
@@ -586,6 +590,13 @@ namespace GeneXus.Programs {
                                  dynload_actions( ) ;
                               }
                            }
+                           else if ( StringUtil.StrCmp(sEvt, "'IMPRIMIR'") == 0 )
+                           {
+                              context.wbHandled = 1;
+                              dynload_actions( ) ;
+                              /* Execute user event: E122E2 */
+                              E122E2 ();
+                           }
                            else if ( StringUtil.StrCmp(sEvt, "LSCR") == 0 )
                            {
                               context.wbHandled = 1;
@@ -617,29 +628,29 @@ namespace GeneXus.Programs {
                                  {
                                     context.wbHandled = 1;
                                     dynload_actions( ) ;
-                                    /* Execute user event: E122E2 */
-                                    E122E2 ();
-                                 }
-                                 else if ( StringUtil.StrCmp(sEvt, "VUPDATEIMAGE.CLICK") == 0 )
-                                 {
-                                    context.wbHandled = 1;
-                                    dynload_actions( ) ;
                                     /* Execute user event: E132E2 */
                                     E132E2 ();
                                  }
-                                 else if ( StringUtil.StrCmp(sEvt, "VDELETEIMAGE.CLICK") == 0 )
+                                 else if ( StringUtil.StrCmp(sEvt, "VUPDATEIMAGE.CLICK") == 0 )
                                  {
                                     context.wbHandled = 1;
                                     dynload_actions( ) ;
                                     /* Execute user event: E142E2 */
                                     E142E2 ();
                                  }
-                                 else if ( StringUtil.StrCmp(sEvt, "CAMBSGRID.LOAD") == 0 )
+                                 else if ( StringUtil.StrCmp(sEvt, "VDELETEIMAGE.CLICK") == 0 )
                                  {
                                     context.wbHandled = 1;
                                     dynload_actions( ) ;
                                     /* Execute user event: E152E2 */
                                     E152E2 ();
+                                 }
+                                 else if ( StringUtil.StrCmp(sEvt, "CAMBSGRID.LOAD") == 0 )
+                                 {
+                                    context.wbHandled = 1;
+                                    dynload_actions( ) ;
+                                    /* Execute user event: E162E2 */
+                                    E162E2 ();
                                  }
                                  else if ( StringUtil.StrCmp(sEvt, "CANCEL") == 0 )
                                  {
@@ -799,8 +810,8 @@ namespace GeneXus.Programs {
                A83cambsdsc = H002E2_A83cambsdsc[0];
                n83cambsdsc = H002E2_n83cambsdsc[0];
                A25cambsid = H002E2_A25cambsid[0];
-               /* Execute user event: E152E2 */
-               E152E2 ();
+               /* Execute user event: E162E2 */
+               E162E2 ();
                pr_default.readNext(0);
             }
             pr_default.close(0);
@@ -836,8 +847,8 @@ namespace GeneXus.Programs {
          context.Gx_err = 0;
          /* Execute Start event if defined. */
          context.wbGlbDoneStart = 0;
-         /* Execute user event: E122E2 */
-         E122E2 ();
+         /* Execute user event: E132E2 */
+         E132E2 ();
          context.wbGlbDoneStart = 1;
          /* After Start, stand alone formulas. */
          if ( StringUtil.StrCmp(context.GetRequestMethod( ), "POST") == 0 )
@@ -860,8 +871,8 @@ namespace GeneXus.Programs {
 
       protected void GXStart( )
       {
-         /* Execute user event: E122E2 */
-         E122E2 ();
+         /* Execute user event: E132E2 */
+         E132E2 ();
          if ( returnInSub )
          {
             returnInSub = true;
@@ -869,7 +880,7 @@ namespace GeneXus.Programs {
          }
       }
 
-      protected void E122E2( )
+      protected void E132E2( )
       {
          /* Start Routine */
          AV7updateImage = context.GetImagePath( "c7599f2c-228e-49d1-912e-ed139fdd44e8", "", context.GetTheme( ));
@@ -882,21 +893,21 @@ namespace GeneXus.Programs {
          context.httpAjaxContext.ajax_rsp_assign_prop("", false, edtavDeleteimage_Internalname, "Bitmap", (String.IsNullOrEmpty(StringUtil.RTrim( AV8deleteImage)) ? AV12Deleteimage_GXI : context.convertURL( context.PathToRelativeUrl( AV8deleteImage))));
       }
 
-      protected void E132E2( )
+      protected void E142E2( )
       {
          /* Updateimage_Click Routine */
          context.wjLoc = formatLink("cambs.aspx") + "?" + UrlEncode(StringUtil.RTrim("UPD")) + "," + UrlEncode("" +A25cambsid);
          context.wjLocDisableFrm = 1;
       }
 
-      protected void E142E2( )
+      protected void E152E2( )
       {
          /* Deleteimage_Click Routine */
          context.wjLoc = formatLink("cambs.aspx") + "?" + UrlEncode(StringUtil.RTrim("DLT")) + "," + UrlEncode("" +A25cambsid);
          context.wjLocDisableFrm = 1;
       }
 
-      private void E152E2( )
+      private void E162E2( )
       {
          /* Cambsgrid_Load Routine */
          /* Load Method */
@@ -927,6 +938,13 @@ namespace GeneXus.Programs {
          /* Enter Routine */
          context.wjLoc = formatLink("catalog_de_cambs.aspx") ;
          context.wjLocDisableFrm = 1;
+      }
+
+      protected void E122E2( )
+      {
+         /* 'Imprimir' Routine */
+         context.wjLoc = formatLink("apdf_cambs.aspx") ;
+         context.wjLocDisableFrm = 0;
       }
 
       protected void wb_table1_2_2E2( bool wbgen )
@@ -998,11 +1016,11 @@ namespace GeneXus.Programs {
 
       protected void define_styles( )
       {
-         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?1342847");
+         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?19483837");
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?20222213425964");
+            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?20222102021150");
             idxLst = (int)(idxLst+1);
          }
          /* End function define_styles */
@@ -1011,7 +1029,7 @@ namespace GeneXus.Programs {
       protected void include_jscripts( )
       {
          context.AddJavascriptSource("messages.spa.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("detallescambs.js", "?20222213425964");
+         context.AddJavascriptSource("detallescambs.js", "?20222102021150");
          /* End function include_jscripts */
       }
 
@@ -1149,6 +1167,7 @@ namespace GeneXus.Programs {
          edtcambsdsc_Internalname = "CAMBSDSC";
          edtavUpdateimage_Internalname = "vUPDATEIMAGE";
          edtavDeleteimage_Internalname = "vDELETEIMAGE";
+         bttButton1_Internalname = "BUTTON1";
          Form.Internalname = "FORM";
          subCambsgrid_Internalname = "CAMBSGRID";
       }
@@ -1192,10 +1211,11 @@ namespace GeneXus.Programs {
       public override void InitializeDynEvents( )
       {
          setEventMetadata("REFRESH","{handler:'Refresh',iparms:[{av:'CAMBSGRID_nFirstRecordOnPage',nv:0},{av:'CAMBSGRID_nEOF',nv:0},{av:'AV6buscar',fld:'vBUSCAR',pic:'',nv:''},{av:'AV7updateImage',fld:'vUPDATEIMAGE',pic:'',nv:''},{av:'AV8deleteImage',fld:'vDELETEIMAGE',pic:'',nv:''}],oparms:[]}");
-         setEventMetadata("VUPDATEIMAGE.CLICK","{handler:'E132E2',iparms:[{av:'A25cambsid',fld:'CAMBSID',pic:'ZZZZZZZZ9',hsh:true,nv:0}],oparms:[]}");
-         setEventMetadata("VDELETEIMAGE.CLICK","{handler:'E142E2',iparms:[{av:'A25cambsid',fld:'CAMBSID',pic:'ZZZZZZZZ9',hsh:true,nv:0}],oparms:[]}");
-         setEventMetadata("CAMBSGRID.LOAD","{handler:'E152E2',iparms:[],oparms:[]}");
+         setEventMetadata("VUPDATEIMAGE.CLICK","{handler:'E142E2',iparms:[{av:'A25cambsid',fld:'CAMBSID',pic:'ZZZZZZZZ9',hsh:true,nv:0}],oparms:[]}");
+         setEventMetadata("VDELETEIMAGE.CLICK","{handler:'E152E2',iparms:[{av:'A25cambsid',fld:'CAMBSID',pic:'ZZZZZZZZ9',hsh:true,nv:0}],oparms:[]}");
+         setEventMetadata("CAMBSGRID.LOAD","{handler:'E162E2',iparms:[],oparms:[]}");
          setEventMetadata("ENTER","{handler:'E112E2',iparms:[],oparms:[]}");
+         setEventMetadata("'IMPRIMIR'","{handler:'E122E2',iparms:[],oparms:[]}");
          return  ;
       }
 
@@ -1234,6 +1254,10 @@ namespace GeneXus.Programs {
          subCambsgrid_Linesclass = "";
          CambsgridColumn = new GXWebColumn();
          A83cambsdsc = "";
+         TempTags = "";
+         ClassString = "";
+         StyleString = "";
+         bttButton1_Jsonclick = "";
          sEvt = "";
          EvtGridId = "";
          EvtRowId = "";
@@ -1244,10 +1268,7 @@ namespace GeneXus.Programs {
          H002E2_n83cambsdsc = new bool[] {false} ;
          H002E2_A25cambsid = new int[1] ;
          CambsgridRow = new GXWebRow();
-         TempTags = "";
          lblTextblock1_Jsonclick = "";
-         ClassString = "";
-         StyleString = "";
          bttBtnagregar_Jsonclick = "";
          BackMsgLst = new msglist();
          LclMsgLst = new msglist();
@@ -1313,6 +1334,11 @@ namespace GeneXus.Programs {
       private String subCambsgrid_Internalname ;
       private String subCambsgrid_Class ;
       private String subCambsgrid_Linesclass ;
+      private String TempTags ;
+      private String ClassString ;
+      private String StyleString ;
+      private String bttButton1_Internalname ;
+      private String bttButton1_Jsonclick ;
       private String sEvt ;
       private String EvtGridId ;
       private String EvtRowId ;
@@ -1323,12 +1349,9 @@ namespace GeneXus.Programs {
       private String scmdbuf ;
       private String lV6buscar ;
       private String tblTable1_Internalname ;
-      private String TempTags ;
       private String edtavBuscar_Jsonclick ;
       private String lblTextblock1_Internalname ;
       private String lblTextblock1_Jsonclick ;
-      private String ClassString ;
-      private String StyleString ;
       private String bttBtnagregar_Internalname ;
       private String bttBtnagregar_Jsonclick ;
       private String sGXsfl_12_fel_idx="0001" ;

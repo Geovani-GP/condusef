@@ -1,2 +1,7 @@
-CREATE TABLE estados (estadoid  smallint NOT NULL , estado  VARCHAR(100) NOT NULL , PRIMARY KEY(estadoid))
+ALTER TABLE producto ADD ptipobienid  smallint , ADD pcategoriaid  smallint , ADD pmarcaid  smallint , ADD pmodeloid  smallint , ADD pcambsid  smallint
+DROP INDEX IPRODUCTO1
+DROP INDEX IPRODUCTO2
+ALTER TABLE producto DROP CONSTRAINT IPRODUCTO1
+ALTER TABLE producto DROP CONSTRAINT IPRODUCTO2
+ALTER TABLE producto DROP tipobienid, DROP categoriaid, DROP marcaid, DROP modeloid, DROP cambsid
 

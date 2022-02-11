@@ -2,7 +2,7 @@
                File: producto
         Description: producto
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 2/2/2022 13:42:22.89
+       Generated on: 2/10/2022 19:54:29.86
        Program type: Callable routine
           Main DBMS: postgresql
 */
@@ -63,34 +63,6 @@ namespace GeneXus.Programs {
                return  ;
             }
             dyncall( GetNextPar( )) ;
-            return  ;
-         }
-         else if ( StringUtil.StrCmp(gxfirstwebparm, "gxajaxExecAct_"+"gxLoad_2") == 0 )
-         {
-            A25cambsid = (int)(NumberUtil.Val( GetNextPar( ), "."));
-            n25cambsid = false;
-            context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A25cambsid", StringUtil.LTrim( StringUtil.Str( (decimal)(A25cambsid), 9, 0)));
-            setAjaxCallMode();
-            if ( ! IsValidAjaxCall( true) )
-            {
-               GxWebError = 1;
-               return  ;
-            }
-            gxLoad_2( A25cambsid) ;
-            return  ;
-         }
-         else if ( StringUtil.StrCmp(gxfirstwebparm, "gxajaxExecAct_"+"gxLoad_3") == 0 )
-         {
-            A23tipobienid = (int)(NumberUtil.Val( GetNextPar( ), "."));
-            n23tipobienid = false;
-            context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A23tipobienid", StringUtil.LTrim( StringUtil.Str( (decimal)(A23tipobienid), 9, 0)));
-            setAjaxCallMode();
-            if ( ! IsValidAjaxCall( true) )
-            {
-               GxWebError = 1;
-               return  ;
-            }
-            gxLoad_3( A23tipobienid) ;
             return  ;
          }
          else if ( StringUtil.StrCmp(gxfirstwebparm, "gxajaxEvt") == 0 )
@@ -329,14 +301,10 @@ namespace GeneXus.Programs {
             /* Div Control */
             GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "col-sm-9 gx-attribute", "left", "top", "", "", "div");
             /* Attribute/Variable Label */
-            GxWebStd.gx_label_element( context, edtcambsid_Internalname, "cambsid", "col-sm-3 AttributeLabel", 1, true);
+            GxWebStd.gx_label_element( context, edtpcambsid_Internalname, "pcambsid", "col-sm-3 AttributeLabel", 1, true);
             /* Single line edit */
             TempTags = "  onfocus=\"gx.evt.onfocus(this, 26,'',false,'',0)\"";
-            GxWebStd.gx_single_line_edit( context, edtcambsid_Internalname, StringUtil.LTrim( StringUtil.NToC( (decimal)(A25cambsid), 9, 0, ",", "")), ((edtcambsid_Enabled!=0) ? StringUtil.LTrim( context.localUtil.Format( (decimal)(A25cambsid), "ZZZZZZZZ9")) : context.localUtil.Format( (decimal)(A25cambsid), "ZZZZZZZZ9")), TempTags+" onchange=\"gx.evt.onchange(this)\" "+" onblur=\""+"gx.num.valid_integer( this,'.');"+";gx.evt.onblur(this,26);\"", "'"+""+"'"+",false,"+"'"+""+"'", "", "", "", "", edtcambsid_Jsonclick, 0, "Attribute", "", "", "", 1, edtcambsid_Enabled, 0, "text", "", 9, "chr", 1, "row", 9, 0, 0, 0, 1, -1, 0, true, "", "right", false, "HLP_producto.htm");
-            /* Static images/pictures */
-            ClassString = "gx-prompt Image";
-            StyleString = "";
-            GxWebStd.gx_bitmap( context, imgprompt_25_Internalname, context.GetImagePath( "f5b04895-0024-488b-8e3b-b687ca4598ee", "", context.GetTheme( )), imgprompt_25_Link, "", "", context.GetTheme( ), imgprompt_25_Visible, 1, "", "", 0, 0, 0, "", 0, "", 0, 0, 0, "", "", StyleString, ClassString, "", "", "", "", "", "", 1, false, false, "HLP_producto.htm");
+            GxWebStd.gx_single_line_edit( context, edtpcambsid_Internalname, StringUtil.LTrim( StringUtil.NToC( (decimal)(A179pcambsid), 4, 0, ",", "")), ((edtpcambsid_Enabled!=0) ? StringUtil.LTrim( context.localUtil.Format( (decimal)(A179pcambsid), "ZZZ9")) : context.localUtil.Format( (decimal)(A179pcambsid), "ZZZ9")), TempTags+" onchange=\"gx.evt.onchange(this)\" "+" onblur=\""+"gx.num.valid_integer( this,'.');"+";gx.evt.onblur(this,26);\"", "'"+""+"'"+",false,"+"'"+""+"'", "", "", "", "", edtpcambsid_Jsonclick, 0, "Attribute", "", "", "", 1, edtpcambsid_Enabled, 0, "text", "", 4, "chr", 1, "row", 4, 0, 0, 0, 1, -1, 0, true, "", "right", false, "HLP_producto.htm");
             GxWebStd.gx_div_end( context, "left", "top");
             GxWebStd.gx_div_end( context, "left", "top");
             GxWebStd.gx_div_end( context, "left", "top");
@@ -361,10 +329,10 @@ namespace GeneXus.Programs {
             /* Div Control */
             GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "col-sm-9 gx-attribute", "left", "top", "", "", "div");
             /* Attribute/Variable Label */
-            GxWebStd.gx_label_element( context, edtmodeloid_Internalname, "modeloid", "col-sm-3 AttributeLabel", 1, true);
+            GxWebStd.gx_label_element( context, edtpmodeloid_Internalname, "pmodeloid", "col-sm-3 AttributeLabel", 1, true);
             /* Single line edit */
             TempTags = "  onfocus=\"gx.evt.onfocus(this, 34,'',false,'',0)\"";
-            GxWebStd.gx_single_line_edit( context, edtmodeloid_Internalname, StringUtil.LTrim( StringUtil.NToC( (decimal)(A88modeloid), 18, 0, ",", "")), ((edtmodeloid_Enabled!=0) ? StringUtil.LTrim( context.localUtil.Format( (decimal)(A88modeloid), "ZZZZZZZZZZZZZZZZZ9")) : context.localUtil.Format( (decimal)(A88modeloid), "ZZZZZZZZZZZZZZZZZ9")), TempTags+" onchange=\"gx.evt.onchange(this)\" "+" onblur=\""+"gx.num.valid_integer( this,'.');"+";gx.evt.onblur(this,34);\"", "'"+""+"'"+",false,"+"'"+""+"'", "", "", "", "", edtmodeloid_Jsonclick, 0, "Attribute", "", "", "", 1, edtmodeloid_Enabled, 0, "text", "", 18, "chr", 1, "row", 18, 0, 0, 0, 1, -1, 0, true, "", "right", false, "HLP_producto.htm");
+            GxWebStd.gx_single_line_edit( context, edtpmodeloid_Internalname, StringUtil.LTrim( StringUtil.NToC( (decimal)(A180pmodeloid), 4, 0, ",", "")), ((edtpmodeloid_Enabled!=0) ? StringUtil.LTrim( context.localUtil.Format( (decimal)(A180pmodeloid), "ZZZ9")) : context.localUtil.Format( (decimal)(A180pmodeloid), "ZZZ9")), TempTags+" onchange=\"gx.evt.onchange(this)\" "+" onblur=\""+"gx.num.valid_integer( this,'.');"+";gx.evt.onblur(this,34);\"", "'"+""+"'"+",false,"+"'"+""+"'", "", "", "", "", edtpmodeloid_Jsonclick, 0, "Attribute", "", "", "", 1, edtpmodeloid_Enabled, 0, "text", "", 4, "chr", 1, "row", 4, 0, 0, 0, 1, -1, 0, true, "", "right", false, "HLP_producto.htm");
             GxWebStd.gx_div_end( context, "left", "top");
             GxWebStd.gx_div_end( context, "left", "top");
             GxWebStd.gx_div_end( context, "left", "top");
@@ -375,10 +343,10 @@ namespace GeneXus.Programs {
             /* Div Control */
             GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "col-sm-9 gx-attribute", "left", "top", "", "", "div");
             /* Attribute/Variable Label */
-            GxWebStd.gx_label_element( context, edtmarcaid_Internalname, "marcaid", "col-sm-3 AttributeLabel", 1, true);
+            GxWebStd.gx_label_element( context, edtpmarcaid_Internalname, "pmarcaid", "col-sm-3 AttributeLabel", 1, true);
             /* Single line edit */
             TempTags = "  onfocus=\"gx.evt.onfocus(this, 38,'',false,'',0)\"";
-            GxWebStd.gx_single_line_edit( context, edtmarcaid_Internalname, StringUtil.LTrim( StringUtil.NToC( (decimal)(A89marcaid), 18, 0, ",", "")), ((edtmarcaid_Enabled!=0) ? StringUtil.LTrim( context.localUtil.Format( (decimal)(A89marcaid), "ZZZZZZZZZZZZZZZZZ9")) : context.localUtil.Format( (decimal)(A89marcaid), "ZZZZZZZZZZZZZZZZZ9")), TempTags+" onchange=\"gx.evt.onchange(this)\" "+" onblur=\""+"gx.num.valid_integer( this,'.');"+";gx.evt.onblur(this,38);\"", "'"+""+"'"+",false,"+"'"+""+"'", "", "", "", "", edtmarcaid_Jsonclick, 0, "Attribute", "", "", "", 1, edtmarcaid_Enabled, 0, "text", "", 18, "chr", 1, "row", 18, 0, 0, 0, 1, -1, 0, true, "", "right", false, "HLP_producto.htm");
+            GxWebStd.gx_single_line_edit( context, edtpmarcaid_Internalname, StringUtil.LTrim( StringUtil.NToC( (decimal)(A181pmarcaid), 4, 0, ",", "")), ((edtpmarcaid_Enabled!=0) ? StringUtil.LTrim( context.localUtil.Format( (decimal)(A181pmarcaid), "ZZZ9")) : context.localUtil.Format( (decimal)(A181pmarcaid), "ZZZ9")), TempTags+" onchange=\"gx.evt.onchange(this)\" "+" onblur=\""+"gx.num.valid_integer( this,'.');"+";gx.evt.onblur(this,38);\"", "'"+""+"'"+",false,"+"'"+""+"'", "", "", "", "", edtpmarcaid_Jsonclick, 0, "Attribute", "", "", "", 1, edtpmarcaid_Enabled, 0, "text", "", 4, "chr", 1, "row", 4, 0, 0, 0, 1, -1, 0, true, "", "right", false, "HLP_producto.htm");
             GxWebStd.gx_div_end( context, "left", "top");
             GxWebStd.gx_div_end( context, "left", "top");
             GxWebStd.gx_div_end( context, "left", "top");
@@ -389,10 +357,10 @@ namespace GeneXus.Programs {
             /* Div Control */
             GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "col-sm-9 gx-attribute", "left", "top", "", "", "div");
             /* Attribute/Variable Label */
-            GxWebStd.gx_label_element( context, edtcategoriaid_Internalname, "categoriaid", "col-sm-3 AttributeLabel", 1, true);
+            GxWebStd.gx_label_element( context, edtpcategoriaid_Internalname, "pcategoriaid", "col-sm-3 AttributeLabel", 1, true);
             /* Single line edit */
             TempTags = "  onfocus=\"gx.evt.onfocus(this, 42,'',false,'',0)\"";
-            GxWebStd.gx_single_line_edit( context, edtcategoriaid_Internalname, StringUtil.LTrim( StringUtil.NToC( (decimal)(A90categoriaid), 18, 0, ",", "")), ((edtcategoriaid_Enabled!=0) ? StringUtil.LTrim( context.localUtil.Format( (decimal)(A90categoriaid), "ZZZZZZZZZZZZZZZZZ9")) : context.localUtil.Format( (decimal)(A90categoriaid), "ZZZZZZZZZZZZZZZZZ9")), TempTags+" onchange=\"gx.evt.onchange(this)\" "+" onblur=\""+"gx.num.valid_integer( this,'.');"+";gx.evt.onblur(this,42);\"", "'"+""+"'"+",false,"+"'"+""+"'", "", "", "", "", edtcategoriaid_Jsonclick, 0, "Attribute", "", "", "", 1, edtcategoriaid_Enabled, 0, "text", "", 18, "chr", 1, "row", 18, 0, 0, 0, 1, -1, 0, true, "", "right", false, "HLP_producto.htm");
+            GxWebStd.gx_single_line_edit( context, edtpcategoriaid_Internalname, StringUtil.LTrim( StringUtil.NToC( (decimal)(A182pcategoriaid), 4, 0, ",", "")), ((edtpcategoriaid_Enabled!=0) ? StringUtil.LTrim( context.localUtil.Format( (decimal)(A182pcategoriaid), "ZZZ9")) : context.localUtil.Format( (decimal)(A182pcategoriaid), "ZZZ9")), TempTags+" onchange=\"gx.evt.onchange(this)\" "+" onblur=\""+"gx.num.valid_integer( this,'.');"+";gx.evt.onblur(this,42);\"", "'"+""+"'"+",false,"+"'"+""+"'", "", "", "", "", edtpcategoriaid_Jsonclick, 0, "Attribute", "", "", "", 1, edtpcategoriaid_Enabled, 0, "text", "", 4, "chr", 1, "row", 4, 0, 0, 0, 1, -1, 0, true, "", "right", false, "HLP_producto.htm");
             GxWebStd.gx_div_end( context, "left", "top");
             GxWebStd.gx_div_end( context, "left", "top");
             GxWebStd.gx_div_end( context, "left", "top");
@@ -451,14 +419,10 @@ namespace GeneXus.Programs {
             /* Div Control */
             GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "col-sm-9 gx-attribute", "left", "top", "", "", "div");
             /* Attribute/Variable Label */
-            GxWebStd.gx_label_element( context, edttipobienid_Internalname, "tipobienid", "col-sm-3 AttributeLabel", 1, true);
+            GxWebStd.gx_label_element( context, edtptipobienid_Internalname, "ptipobienid", "col-sm-3 AttributeLabel", 1, true);
             /* Single line edit */
             TempTags = "  onfocus=\"gx.evt.onfocus(this, 58,'',false,'',0)\"";
-            GxWebStd.gx_single_line_edit( context, edttipobienid_Internalname, StringUtil.LTrim( StringUtil.NToC( (decimal)(A23tipobienid), 9, 0, ",", "")), ((edttipobienid_Enabled!=0) ? StringUtil.LTrim( context.localUtil.Format( (decimal)(A23tipobienid), "ZZZZZZZZ9")) : context.localUtil.Format( (decimal)(A23tipobienid), "ZZZZZZZZ9")), TempTags+" onchange=\"gx.evt.onchange(this)\" "+" onblur=\""+"gx.num.valid_integer( this,'.');"+";gx.evt.onblur(this,58);\"", "'"+""+"'"+",false,"+"'"+""+"'", "", "", "", "", edttipobienid_Jsonclick, 0, "Attribute", "", "", "", 1, edttipobienid_Enabled, 0, "text", "", 9, "chr", 1, "row", 9, 0, 0, 0, 1, -1, 0, true, "", "right", false, "HLP_producto.htm");
-            /* Static images/pictures */
-            ClassString = "gx-prompt Image";
-            StyleString = "";
-            GxWebStd.gx_bitmap( context, imgprompt_23_Internalname, context.GetImagePath( "f5b04895-0024-488b-8e3b-b687ca4598ee", "", context.GetTheme( )), imgprompt_23_Link, "", "", context.GetTheme( ), imgprompt_23_Visible, 1, "", "", 0, 0, 0, "", 0, "", 0, 0, 0, "", "", StyleString, ClassString, "", "", "", "", "", "", 1, false, false, "HLP_producto.htm");
+            GxWebStd.gx_single_line_edit( context, edtptipobienid_Internalname, StringUtil.LTrim( StringUtil.NToC( (decimal)(A183ptipobienid), 4, 0, ",", "")), ((edtptipobienid_Enabled!=0) ? StringUtil.LTrim( context.localUtil.Format( (decimal)(A183ptipobienid), "ZZZ9")) : context.localUtil.Format( (decimal)(A183ptipobienid), "ZZZ9")), TempTags+" onchange=\"gx.evt.onchange(this)\" "+" onblur=\""+"gx.num.valid_integer( this,'.');"+";gx.evt.onblur(this,58);\"", "'"+""+"'"+",false,"+"'"+""+"'", "", "", "", "", edtptipobienid_Jsonclick, 0, "Attribute", "", "", "", 1, edtptipobienid_Enabled, 0, "text", "", 4, "chr", 1, "row", 4, 0, 0, 0, 1, -1, 0, true, "", "right", false, "HLP_producto.htm");
             GxWebStd.gx_div_end( context, "left", "top");
             GxWebStd.gx_div_end( context, "left", "top");
             GxWebStd.gx_div_end( context, "left", "top");
@@ -538,82 +502,82 @@ namespace GeneXus.Programs {
                   A175productoid = (int)(context.localUtil.CToN( cgiGet( edtproductoid_Internalname), ",", "."));
                   context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A175productoid", StringUtil.LTrim( StringUtil.Str( (decimal)(A175productoid), 9, 0)));
                }
-               if ( ( ( context.localUtil.CToN( cgiGet( edtcambsid_Internalname), ",", ".") < Convert.ToDecimal( 0 )) ) || ( ( context.localUtil.CToN( cgiGet( edtcambsid_Internalname), ",", ".") > Convert.ToDecimal( 999999999 )) ) )
+               if ( ( ( context.localUtil.CToN( cgiGet( edtpcambsid_Internalname), ",", ".") < Convert.ToDecimal( 0 )) ) || ( ( context.localUtil.CToN( cgiGet( edtpcambsid_Internalname), ",", ".") > Convert.ToDecimal( 9999 )) ) )
                {
-                  GX_msglist.addItem(context.GetMessage( "GXM_badnum", ""), 1, "CAMBSID");
+                  GX_msglist.addItem(context.GetMessage( "GXM_badnum", ""), 1, "PCAMBSID");
                   AnyError = 1;
-                  GX_FocusControl = edtcambsid_Internalname;
+                  GX_FocusControl = edtpcambsid_Internalname;
                   context.httpAjaxContext.ajax_rsp_assign_attri("", false, "GX_FocusControl", GX_FocusControl);
                   wbErr = true;
-                  A25cambsid = 0;
-                  n25cambsid = false;
-                  context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A25cambsid", StringUtil.LTrim( StringUtil.Str( (decimal)(A25cambsid), 9, 0)));
+                  A179pcambsid = 0;
+                  n179pcambsid = false;
+                  context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A179pcambsid", StringUtil.LTrim( StringUtil.Str( (decimal)(A179pcambsid), 4, 0)));
                }
                else
                {
-                  A25cambsid = (int)(context.localUtil.CToN( cgiGet( edtcambsid_Internalname), ",", "."));
-                  n25cambsid = false;
-                  context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A25cambsid", StringUtil.LTrim( StringUtil.Str( (decimal)(A25cambsid), 9, 0)));
+                  A179pcambsid = (short)(context.localUtil.CToN( cgiGet( edtpcambsid_Internalname), ",", "."));
+                  n179pcambsid = false;
+                  context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A179pcambsid", StringUtil.LTrim( StringUtil.Str( (decimal)(A179pcambsid), 4, 0)));
                }
-               n25cambsid = ((0==A25cambsid) ? true : false);
+               n179pcambsid = ((0==A179pcambsid) ? true : false);
                A87productodsc = cgiGet( edtproductodsc_Internalname);
                n87productodsc = false;
                context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A87productodsc", A87productodsc);
                n87productodsc = (String.IsNullOrEmpty(StringUtil.RTrim( A87productodsc)) ? true : false);
-               if ( ( ( context.localUtil.CToN( cgiGet( edtmodeloid_Internalname), ",", ".") < Convert.ToDecimal( 0 )) ) || ( ( context.localUtil.CToN( cgiGet( edtmodeloid_Internalname), ",", ".") > Convert.ToDecimal( 999999999999999999L )) ) )
+               if ( ( ( context.localUtil.CToN( cgiGet( edtpmodeloid_Internalname), ",", ".") < Convert.ToDecimal( 0 )) ) || ( ( context.localUtil.CToN( cgiGet( edtpmodeloid_Internalname), ",", ".") > Convert.ToDecimal( 9999 )) ) )
                {
-                  GX_msglist.addItem(context.GetMessage( "GXM_badnum", ""), 1, "MODELOID");
+                  GX_msglist.addItem(context.GetMessage( "GXM_badnum", ""), 1, "PMODELOID");
                   AnyError = 1;
-                  GX_FocusControl = edtmodeloid_Internalname;
+                  GX_FocusControl = edtpmodeloid_Internalname;
                   context.httpAjaxContext.ajax_rsp_assign_attri("", false, "GX_FocusControl", GX_FocusControl);
                   wbErr = true;
-                  A88modeloid = 0;
-                  n88modeloid = false;
-                  context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A88modeloid", StringUtil.LTrim( StringUtil.Str( (decimal)(A88modeloid), 18, 0)));
+                  A180pmodeloid = 0;
+                  n180pmodeloid = false;
+                  context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A180pmodeloid", StringUtil.LTrim( StringUtil.Str( (decimal)(A180pmodeloid), 4, 0)));
                }
                else
                {
-                  A88modeloid = (long)(context.localUtil.CToN( cgiGet( edtmodeloid_Internalname), ",", "."));
-                  n88modeloid = false;
-                  context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A88modeloid", StringUtil.LTrim( StringUtil.Str( (decimal)(A88modeloid), 18, 0)));
+                  A180pmodeloid = (short)(context.localUtil.CToN( cgiGet( edtpmodeloid_Internalname), ",", "."));
+                  n180pmodeloid = false;
+                  context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A180pmodeloid", StringUtil.LTrim( StringUtil.Str( (decimal)(A180pmodeloid), 4, 0)));
                }
-               n88modeloid = ((0==A88modeloid) ? true : false);
-               if ( ( ( context.localUtil.CToN( cgiGet( edtmarcaid_Internalname), ",", ".") < Convert.ToDecimal( 0 )) ) || ( ( context.localUtil.CToN( cgiGet( edtmarcaid_Internalname), ",", ".") > Convert.ToDecimal( 999999999999999999L )) ) )
+               n180pmodeloid = ((0==A180pmodeloid) ? true : false);
+               if ( ( ( context.localUtil.CToN( cgiGet( edtpmarcaid_Internalname), ",", ".") < Convert.ToDecimal( 0 )) ) || ( ( context.localUtil.CToN( cgiGet( edtpmarcaid_Internalname), ",", ".") > Convert.ToDecimal( 9999 )) ) )
                {
-                  GX_msglist.addItem(context.GetMessage( "GXM_badnum", ""), 1, "MARCAID");
+                  GX_msglist.addItem(context.GetMessage( "GXM_badnum", ""), 1, "PMARCAID");
                   AnyError = 1;
-                  GX_FocusControl = edtmarcaid_Internalname;
+                  GX_FocusControl = edtpmarcaid_Internalname;
                   context.httpAjaxContext.ajax_rsp_assign_attri("", false, "GX_FocusControl", GX_FocusControl);
                   wbErr = true;
-                  A89marcaid = 0;
-                  n89marcaid = false;
-                  context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A89marcaid", StringUtil.LTrim( StringUtil.Str( (decimal)(A89marcaid), 18, 0)));
+                  A181pmarcaid = 0;
+                  n181pmarcaid = false;
+                  context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A181pmarcaid", StringUtil.LTrim( StringUtil.Str( (decimal)(A181pmarcaid), 4, 0)));
                }
                else
                {
-                  A89marcaid = (long)(context.localUtil.CToN( cgiGet( edtmarcaid_Internalname), ",", "."));
-                  n89marcaid = false;
-                  context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A89marcaid", StringUtil.LTrim( StringUtil.Str( (decimal)(A89marcaid), 18, 0)));
+                  A181pmarcaid = (short)(context.localUtil.CToN( cgiGet( edtpmarcaid_Internalname), ",", "."));
+                  n181pmarcaid = false;
+                  context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A181pmarcaid", StringUtil.LTrim( StringUtil.Str( (decimal)(A181pmarcaid), 4, 0)));
                }
-               n89marcaid = ((0==A89marcaid) ? true : false);
-               if ( ( ( context.localUtil.CToN( cgiGet( edtcategoriaid_Internalname), ",", ".") < Convert.ToDecimal( 0 )) ) || ( ( context.localUtil.CToN( cgiGet( edtcategoriaid_Internalname), ",", ".") > Convert.ToDecimal( 999999999999999999L )) ) )
+               n181pmarcaid = ((0==A181pmarcaid) ? true : false);
+               if ( ( ( context.localUtil.CToN( cgiGet( edtpcategoriaid_Internalname), ",", ".") < Convert.ToDecimal( 0 )) ) || ( ( context.localUtil.CToN( cgiGet( edtpcategoriaid_Internalname), ",", ".") > Convert.ToDecimal( 9999 )) ) )
                {
-                  GX_msglist.addItem(context.GetMessage( "GXM_badnum", ""), 1, "CATEGORIAID");
+                  GX_msglist.addItem(context.GetMessage( "GXM_badnum", ""), 1, "PCATEGORIAID");
                   AnyError = 1;
-                  GX_FocusControl = edtcategoriaid_Internalname;
+                  GX_FocusControl = edtpcategoriaid_Internalname;
                   context.httpAjaxContext.ajax_rsp_assign_attri("", false, "GX_FocusControl", GX_FocusControl);
                   wbErr = true;
-                  A90categoriaid = 0;
-                  n90categoriaid = false;
-                  context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A90categoriaid", StringUtil.LTrim( StringUtil.Str( (decimal)(A90categoriaid), 18, 0)));
+                  A182pcategoriaid = 0;
+                  n182pcategoriaid = false;
+                  context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A182pcategoriaid", StringUtil.LTrim( StringUtil.Str( (decimal)(A182pcategoriaid), 4, 0)));
                }
                else
                {
-                  A90categoriaid = (long)(context.localUtil.CToN( cgiGet( edtcategoriaid_Internalname), ",", "."));
-                  n90categoriaid = false;
-                  context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A90categoriaid", StringUtil.LTrim( StringUtil.Str( (decimal)(A90categoriaid), 18, 0)));
+                  A182pcategoriaid = (short)(context.localUtil.CToN( cgiGet( edtpcategoriaid_Internalname), ",", "."));
+                  n182pcategoriaid = false;
+                  context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A182pcategoriaid", StringUtil.LTrim( StringUtil.Str( (decimal)(A182pcategoriaid), 4, 0)));
                }
-               n90categoriaid = ((0==A90categoriaid) ? true : false);
+               n182pcategoriaid = ((0==A182pcategoriaid) ? true : false);
                A91productousuario = cgiGet( edtproductousuario_Internalname);
                n91productousuario = false;
                context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A91productousuario", A91productousuario);
@@ -654,44 +618,44 @@ namespace GeneXus.Programs {
                   context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A93productofecultact", context.localUtil.TToC( A93productofecultact, 10, 8, 0, 3, "/", ":", " "));
                }
                n93productofecultact = ((DateTime.MinValue==A93productofecultact) ? true : false);
-               if ( ( ( context.localUtil.CToN( cgiGet( edttipobienid_Internalname), ",", ".") < Convert.ToDecimal( 0 )) ) || ( ( context.localUtil.CToN( cgiGet( edttipobienid_Internalname), ",", ".") > Convert.ToDecimal( 999999999 )) ) )
+               if ( ( ( context.localUtil.CToN( cgiGet( edtptipobienid_Internalname), ",", ".") < Convert.ToDecimal( 0 )) ) || ( ( context.localUtil.CToN( cgiGet( edtptipobienid_Internalname), ",", ".") > Convert.ToDecimal( 9999 )) ) )
                {
-                  GX_msglist.addItem(context.GetMessage( "GXM_badnum", ""), 1, "TIPOBIENID");
+                  GX_msglist.addItem(context.GetMessage( "GXM_badnum", ""), 1, "PTIPOBIENID");
                   AnyError = 1;
-                  GX_FocusControl = edttipobienid_Internalname;
+                  GX_FocusControl = edtptipobienid_Internalname;
                   context.httpAjaxContext.ajax_rsp_assign_attri("", false, "GX_FocusControl", GX_FocusControl);
                   wbErr = true;
-                  A23tipobienid = 0;
-                  n23tipobienid = false;
-                  context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A23tipobienid", StringUtil.LTrim( StringUtil.Str( (decimal)(A23tipobienid), 9, 0)));
+                  A183ptipobienid = 0;
+                  n183ptipobienid = false;
+                  context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A183ptipobienid", StringUtil.LTrim( StringUtil.Str( (decimal)(A183ptipobienid), 4, 0)));
                }
                else
                {
-                  A23tipobienid = (int)(context.localUtil.CToN( cgiGet( edttipobienid_Internalname), ",", "."));
-                  n23tipobienid = false;
-                  context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A23tipobienid", StringUtil.LTrim( StringUtil.Str( (decimal)(A23tipobienid), 9, 0)));
+                  A183ptipobienid = (short)(context.localUtil.CToN( cgiGet( edtptipobienid_Internalname), ",", "."));
+                  n183ptipobienid = false;
+                  context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A183ptipobienid", StringUtil.LTrim( StringUtil.Str( (decimal)(A183ptipobienid), 4, 0)));
                }
-               n23tipobienid = ((0==A23tipobienid) ? true : false);
+               n183ptipobienid = ((0==A183ptipobienid) ? true : false);
                /* Read saved values. */
                Z175productoid = (int)(context.localUtil.CToN( cgiGet( "Z175productoid"), ",", "."));
+               Z179pcambsid = (short)(context.localUtil.CToN( cgiGet( "Z179pcambsid"), ",", "."));
+               n179pcambsid = ((0==A179pcambsid) ? true : false);
                Z87productodsc = cgiGet( "Z87productodsc");
                n87productodsc = (String.IsNullOrEmpty(StringUtil.RTrim( A87productodsc)) ? true : false);
-               Z88modeloid = (long)(context.localUtil.CToN( cgiGet( "Z88modeloid"), ",", "."));
-               n88modeloid = ((0==A88modeloid) ? true : false);
-               Z89marcaid = (long)(context.localUtil.CToN( cgiGet( "Z89marcaid"), ",", "."));
-               n89marcaid = ((0==A89marcaid) ? true : false);
-               Z90categoriaid = (long)(context.localUtil.CToN( cgiGet( "Z90categoriaid"), ",", "."));
-               n90categoriaid = ((0==A90categoriaid) ? true : false);
+               Z180pmodeloid = (short)(context.localUtil.CToN( cgiGet( "Z180pmodeloid"), ",", "."));
+               n180pmodeloid = ((0==A180pmodeloid) ? true : false);
+               Z181pmarcaid = (short)(context.localUtil.CToN( cgiGet( "Z181pmarcaid"), ",", "."));
+               n181pmarcaid = ((0==A181pmarcaid) ? true : false);
+               Z182pcategoriaid = (short)(context.localUtil.CToN( cgiGet( "Z182pcategoriaid"), ",", "."));
+               n182pcategoriaid = ((0==A182pcategoriaid) ? true : false);
                Z91productousuario = cgiGet( "Z91productousuario");
                n91productousuario = (String.IsNullOrEmpty(StringUtil.RTrim( A91productousuario)) ? true : false);
                Z92productofecreg = context.localUtil.CToT( cgiGet( "Z92productofecreg"), 0);
                n92productofecreg = ((DateTime.MinValue==A92productofecreg) ? true : false);
                Z93productofecultact = context.localUtil.CToT( cgiGet( "Z93productofecultact"), 0);
                n93productofecultact = ((DateTime.MinValue==A93productofecultact) ? true : false);
-               Z25cambsid = (int)(context.localUtil.CToN( cgiGet( "Z25cambsid"), ",", "."));
-               n25cambsid = ((0==A25cambsid) ? true : false);
-               Z23tipobienid = (int)(context.localUtil.CToN( cgiGet( "Z23tipobienid"), ",", "."));
-               n23tipobienid = ((0==A23tipobienid) ? true : false);
+               Z183ptipobienid = (short)(context.localUtil.CToN( cgiGet( "Z183ptipobienid"), ",", "."));
+               n183ptipobienid = ((0==A183ptipobienid) ? true : false);
                IsConfirmed = (short)(context.localUtil.CToN( cgiGet( "IsConfirmed"), ",", "."));
                IsModified = (short)(context.localUtil.CToN( cgiGet( "IsModified"), ",", "."));
                Gx_mode = cgiGet( "Mode");
@@ -883,48 +847,46 @@ namespace GeneXus.Programs {
          {
             if ( StringUtil.StrCmp(Gx_mode, "INS") != 0 )
             {
+               Z179pcambsid = T00093_A179pcambsid[0];
                Z87productodsc = T00093_A87productodsc[0];
-               Z88modeloid = T00093_A88modeloid[0];
-               Z89marcaid = T00093_A89marcaid[0];
-               Z90categoriaid = T00093_A90categoriaid[0];
+               Z180pmodeloid = T00093_A180pmodeloid[0];
+               Z181pmarcaid = T00093_A181pmarcaid[0];
+               Z182pcategoriaid = T00093_A182pcategoriaid[0];
                Z91productousuario = T00093_A91productousuario[0];
                Z92productofecreg = T00093_A92productofecreg[0];
                Z93productofecultact = T00093_A93productofecultact[0];
-               Z25cambsid = T00093_A25cambsid[0];
-               Z23tipobienid = T00093_A23tipobienid[0];
+               Z183ptipobienid = T00093_A183ptipobienid[0];
             }
             else
             {
+               Z179pcambsid = A179pcambsid;
                Z87productodsc = A87productodsc;
-               Z88modeloid = A88modeloid;
-               Z89marcaid = A89marcaid;
-               Z90categoriaid = A90categoriaid;
+               Z180pmodeloid = A180pmodeloid;
+               Z181pmarcaid = A181pmarcaid;
+               Z182pcategoriaid = A182pcategoriaid;
                Z91productousuario = A91productousuario;
                Z92productofecreg = A92productofecreg;
                Z93productofecultact = A93productofecultact;
-               Z25cambsid = A25cambsid;
-               Z23tipobienid = A23tipobienid;
+               Z183ptipobienid = A183ptipobienid;
             }
          }
          if ( GX_JID == -1 )
          {
             Z175productoid = A175productoid;
+            Z179pcambsid = A179pcambsid;
             Z87productodsc = A87productodsc;
-            Z88modeloid = A88modeloid;
-            Z89marcaid = A89marcaid;
-            Z90categoriaid = A90categoriaid;
+            Z180pmodeloid = A180pmodeloid;
+            Z181pmarcaid = A181pmarcaid;
+            Z182pcategoriaid = A182pcategoriaid;
             Z91productousuario = A91productousuario;
             Z92productofecreg = A92productofecreg;
             Z93productofecultact = A93productofecultact;
-            Z25cambsid = A25cambsid;
-            Z23tipobienid = A23tipobienid;
+            Z183ptipobienid = A183ptipobienid;
          }
       }
 
       protected void standaloneNotModal( )
       {
-         imgprompt_25_Link = ((StringUtil.StrCmp(Gx_mode, "DSP")==0) ? "" : "javascript:"+"gx.popup.openPrompt('"+"gx00e0.aspx"+"',["+"{Ctrl:gx.dom.el('"+"CAMBSID"+"'), id:'"+"CAMBSID"+"'"+",IOType:'out'}"+"],"+"null"+","+"'', false"+","+"false"+");");
-         imgprompt_23_Link = ((StringUtil.StrCmp(Gx_mode, "DSP")==0) ? "" : "javascript:"+"gx.popup.openPrompt('"+"gx0010.aspx"+"',["+"{Ctrl:gx.dom.el('"+"TIPOBIENID"+"'), id:'"+"TIPOBIENID"+"'"+",IOType:'out'}"+"],"+"null"+","+"'', false"+","+"false"+");");
       }
 
       protected void standaloneModal( )
@@ -953,41 +915,41 @@ namespace GeneXus.Programs {
 
       protected void Load0923( )
       {
-         /* Using cursor T00096 */
-         pr_default.execute(4, new Object[] {A175productoid});
-         if ( (pr_default.getStatus(4) != 101) )
+         /* Using cursor T00094 */
+         pr_default.execute(2, new Object[] {A175productoid});
+         if ( (pr_default.getStatus(2) != 101) )
          {
             RcdFound23 = 1;
-            A87productodsc = T00096_A87productodsc[0];
+            A179pcambsid = T00094_A179pcambsid[0];
+            context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A179pcambsid", StringUtil.LTrim( StringUtil.Str( (decimal)(A179pcambsid), 4, 0)));
+            n179pcambsid = T00094_n179pcambsid[0];
+            A87productodsc = T00094_A87productodsc[0];
             context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A87productodsc", A87productodsc);
-            n87productodsc = T00096_n87productodsc[0];
-            A88modeloid = T00096_A88modeloid[0];
-            context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A88modeloid", StringUtil.LTrim( StringUtil.Str( (decimal)(A88modeloid), 18, 0)));
-            n88modeloid = T00096_n88modeloid[0];
-            A89marcaid = T00096_A89marcaid[0];
-            context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A89marcaid", StringUtil.LTrim( StringUtil.Str( (decimal)(A89marcaid), 18, 0)));
-            n89marcaid = T00096_n89marcaid[0];
-            A90categoriaid = T00096_A90categoriaid[0];
-            context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A90categoriaid", StringUtil.LTrim( StringUtil.Str( (decimal)(A90categoriaid), 18, 0)));
-            n90categoriaid = T00096_n90categoriaid[0];
-            A91productousuario = T00096_A91productousuario[0];
+            n87productodsc = T00094_n87productodsc[0];
+            A180pmodeloid = T00094_A180pmodeloid[0];
+            context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A180pmodeloid", StringUtil.LTrim( StringUtil.Str( (decimal)(A180pmodeloid), 4, 0)));
+            n180pmodeloid = T00094_n180pmodeloid[0];
+            A181pmarcaid = T00094_A181pmarcaid[0];
+            context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A181pmarcaid", StringUtil.LTrim( StringUtil.Str( (decimal)(A181pmarcaid), 4, 0)));
+            n181pmarcaid = T00094_n181pmarcaid[0];
+            A182pcategoriaid = T00094_A182pcategoriaid[0];
+            context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A182pcategoriaid", StringUtil.LTrim( StringUtil.Str( (decimal)(A182pcategoriaid), 4, 0)));
+            n182pcategoriaid = T00094_n182pcategoriaid[0];
+            A91productousuario = T00094_A91productousuario[0];
             context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A91productousuario", A91productousuario);
-            n91productousuario = T00096_n91productousuario[0];
-            A92productofecreg = T00096_A92productofecreg[0];
+            n91productousuario = T00094_n91productousuario[0];
+            A92productofecreg = T00094_A92productofecreg[0];
             context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A92productofecreg", context.localUtil.TToC( A92productofecreg, 10, 8, 0, 3, "/", ":", " "));
-            n92productofecreg = T00096_n92productofecreg[0];
-            A93productofecultact = T00096_A93productofecultact[0];
+            n92productofecreg = T00094_n92productofecreg[0];
+            A93productofecultact = T00094_A93productofecultact[0];
             context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A93productofecultact", context.localUtil.TToC( A93productofecultact, 10, 8, 0, 3, "/", ":", " "));
-            n93productofecultact = T00096_n93productofecultact[0];
-            A25cambsid = T00096_A25cambsid[0];
-            context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A25cambsid", StringUtil.LTrim( StringUtil.Str( (decimal)(A25cambsid), 9, 0)));
-            n25cambsid = T00096_n25cambsid[0];
-            A23tipobienid = T00096_A23tipobienid[0];
-            context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A23tipobienid", StringUtil.LTrim( StringUtil.Str( (decimal)(A23tipobienid), 9, 0)));
-            n23tipobienid = T00096_n23tipobienid[0];
+            n93productofecultact = T00094_n93productofecultact[0];
+            A183ptipobienid = T00094_A183ptipobienid[0];
+            context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A183ptipobienid", StringUtil.LTrim( StringUtil.Str( (decimal)(A183ptipobienid), 4, 0)));
+            n183ptipobienid = T00094_n183ptipobienid[0];
             ZM0923( -1) ;
          }
-         pr_default.close(4);
+         pr_default.close(2);
          OnLoadActions0923( ) ;
       }
 
@@ -999,103 +961,21 @@ namespace GeneXus.Programs {
       {
          Gx_BScreen = 1;
          standaloneModal( ) ;
-         /* Using cursor T00094 */
-         pr_default.execute(2, new Object[] {n25cambsid, A25cambsid});
-         if ( (pr_default.getStatus(2) == 101) )
-         {
-            if ( ! ( (0==A25cambsid) ) )
-            {
-               GX_msglist.addItem("No existe 'cambs'.", "ForeignKeyNotFound", 1, "CAMBSID");
-               AnyError = 1;
-               GX_FocusControl = edtcambsid_Internalname;
-               context.httpAjaxContext.ajax_rsp_assign_attri("", false, "GX_FocusControl", GX_FocusControl);
-            }
-         }
-         pr_default.close(2);
-         /* Using cursor T00095 */
-         pr_default.execute(3, new Object[] {n23tipobienid, A23tipobienid});
-         if ( (pr_default.getStatus(3) == 101) )
-         {
-            if ( ! ( (0==A23tipobienid) ) )
-            {
-               GX_msglist.addItem("No existe 'tipobien'.", "ForeignKeyNotFound", 1, "TIPOBIENID");
-               AnyError = 1;
-               GX_FocusControl = edttipobienid_Internalname;
-               context.httpAjaxContext.ajax_rsp_assign_attri("", false, "GX_FocusControl", GX_FocusControl);
-            }
-         }
-         pr_default.close(3);
       }
 
       protected void CloseExtendedTableCursors0923( )
       {
-         pr_default.close(2);
-         pr_default.close(3);
       }
 
       protected void enableDisable( )
       {
       }
 
-      protected void gxLoad_2( int A25cambsid )
-      {
-         /* Using cursor T00097 */
-         pr_default.execute(5, new Object[] {n25cambsid, A25cambsid});
-         if ( (pr_default.getStatus(5) == 101) )
-         {
-            if ( ! ( (0==A25cambsid) ) )
-            {
-               GX_msglist.addItem("No existe 'cambs'.", "ForeignKeyNotFound", 1, "CAMBSID");
-               AnyError = 1;
-               GX_FocusControl = edtcambsid_Internalname;
-               context.httpAjaxContext.ajax_rsp_assign_attri("", false, "GX_FocusControl", GX_FocusControl);
-            }
-         }
-         GxWebStd.set_html_headers( context, 0, "", "");
-         context.GX_webresponse.AddString("new Array( new Array(");
-         context.GX_webresponse.AddString("");
-         context.GX_webresponse.AddString(")");
-         if ( (pr_default.getStatus(5) == 101) )
-         {
-            context.GX_webresponse.AddString(",");
-            context.GX_webresponse.AddString("101");
-         }
-         context.GX_webresponse.AddString(")");
-         pr_default.close(5);
-      }
-
-      protected void gxLoad_3( int A23tipobienid )
-      {
-         /* Using cursor T00098 */
-         pr_default.execute(6, new Object[] {n23tipobienid, A23tipobienid});
-         if ( (pr_default.getStatus(6) == 101) )
-         {
-            if ( ! ( (0==A23tipobienid) ) )
-            {
-               GX_msglist.addItem("No existe 'tipobien'.", "ForeignKeyNotFound", 1, "TIPOBIENID");
-               AnyError = 1;
-               GX_FocusControl = edttipobienid_Internalname;
-               context.httpAjaxContext.ajax_rsp_assign_attri("", false, "GX_FocusControl", GX_FocusControl);
-            }
-         }
-         GxWebStd.set_html_headers( context, 0, "", "");
-         context.GX_webresponse.AddString("new Array( new Array(");
-         context.GX_webresponse.AddString("");
-         context.GX_webresponse.AddString(")");
-         if ( (pr_default.getStatus(6) == 101) )
-         {
-            context.GX_webresponse.AddString(",");
-            context.GX_webresponse.AddString("101");
-         }
-         context.GX_webresponse.AddString(")");
-         pr_default.close(6);
-      }
-
       protected void GetKey0923( )
       {
-         /* Using cursor T00099 */
-         pr_default.execute(7, new Object[] {A175productoid});
-         if ( (pr_default.getStatus(7) != 101) )
+         /* Using cursor T00095 */
+         pr_default.execute(3, new Object[] {A175productoid});
+         if ( (pr_default.getStatus(3) != 101) )
          {
             RcdFound23 = 1;
          }
@@ -1103,7 +983,7 @@ namespace GeneXus.Programs {
          {
             RcdFound23 = 0;
          }
-         pr_default.close(7);
+         pr_default.close(3);
       }
 
       protected void getByPrimaryKey( )
@@ -1116,18 +996,21 @@ namespace GeneXus.Programs {
             RcdFound23 = 1;
             A175productoid = T00093_A175productoid[0];
             context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A175productoid", StringUtil.LTrim( StringUtil.Str( (decimal)(A175productoid), 9, 0)));
+            A179pcambsid = T00093_A179pcambsid[0];
+            context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A179pcambsid", StringUtil.LTrim( StringUtil.Str( (decimal)(A179pcambsid), 4, 0)));
+            n179pcambsid = T00093_n179pcambsid[0];
             A87productodsc = T00093_A87productodsc[0];
             context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A87productodsc", A87productodsc);
             n87productodsc = T00093_n87productodsc[0];
-            A88modeloid = T00093_A88modeloid[0];
-            context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A88modeloid", StringUtil.LTrim( StringUtil.Str( (decimal)(A88modeloid), 18, 0)));
-            n88modeloid = T00093_n88modeloid[0];
-            A89marcaid = T00093_A89marcaid[0];
-            context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A89marcaid", StringUtil.LTrim( StringUtil.Str( (decimal)(A89marcaid), 18, 0)));
-            n89marcaid = T00093_n89marcaid[0];
-            A90categoriaid = T00093_A90categoriaid[0];
-            context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A90categoriaid", StringUtil.LTrim( StringUtil.Str( (decimal)(A90categoriaid), 18, 0)));
-            n90categoriaid = T00093_n90categoriaid[0];
+            A180pmodeloid = T00093_A180pmodeloid[0];
+            context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A180pmodeloid", StringUtil.LTrim( StringUtil.Str( (decimal)(A180pmodeloid), 4, 0)));
+            n180pmodeloid = T00093_n180pmodeloid[0];
+            A181pmarcaid = T00093_A181pmarcaid[0];
+            context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A181pmarcaid", StringUtil.LTrim( StringUtil.Str( (decimal)(A181pmarcaid), 4, 0)));
+            n181pmarcaid = T00093_n181pmarcaid[0];
+            A182pcategoriaid = T00093_A182pcategoriaid[0];
+            context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A182pcategoriaid", StringUtil.LTrim( StringUtil.Str( (decimal)(A182pcategoriaid), 4, 0)));
+            n182pcategoriaid = T00093_n182pcategoriaid[0];
             A91productousuario = T00093_A91productousuario[0];
             context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A91productousuario", A91productousuario);
             n91productousuario = T00093_n91productousuario[0];
@@ -1137,12 +1020,9 @@ namespace GeneXus.Programs {
             A93productofecultact = T00093_A93productofecultact[0];
             context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A93productofecultact", context.localUtil.TToC( A93productofecultact, 10, 8, 0, 3, "/", ":", " "));
             n93productofecultact = T00093_n93productofecultact[0];
-            A25cambsid = T00093_A25cambsid[0];
-            context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A25cambsid", StringUtil.LTrim( StringUtil.Str( (decimal)(A25cambsid), 9, 0)));
-            n25cambsid = T00093_n25cambsid[0];
-            A23tipobienid = T00093_A23tipobienid[0];
-            context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A23tipobienid", StringUtil.LTrim( StringUtil.Str( (decimal)(A23tipobienid), 9, 0)));
-            n23tipobienid = T00093_n23tipobienid[0];
+            A183ptipobienid = T00093_A183ptipobienid[0];
+            context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A183ptipobienid", StringUtil.LTrim( StringUtil.Str( (decimal)(A183ptipobienid), 4, 0)));
+            n183ptipobienid = T00093_n183ptipobienid[0];
             Z175productoid = A175productoid;
             sMode23 = Gx_mode;
             Gx_mode = "DSP";
@@ -1190,43 +1070,43 @@ namespace GeneXus.Programs {
       protected void move_next( )
       {
          RcdFound23 = 0;
-         /* Using cursor T000910 */
-         pr_default.execute(8, new Object[] {A175productoid});
-         if ( (pr_default.getStatus(8) != 101) )
+         /* Using cursor T00096 */
+         pr_default.execute(4, new Object[] {A175productoid});
+         if ( (pr_default.getStatus(4) != 101) )
          {
-            while ( (pr_default.getStatus(8) != 101) && ( ( T000910_A175productoid[0] < A175productoid ) ) )
+            while ( (pr_default.getStatus(4) != 101) && ( ( T00096_A175productoid[0] < A175productoid ) ) )
             {
-               pr_default.readNext(8);
+               pr_default.readNext(4);
             }
-            if ( (pr_default.getStatus(8) != 101) && ( ( T000910_A175productoid[0] > A175productoid ) ) )
+            if ( (pr_default.getStatus(4) != 101) && ( ( T00096_A175productoid[0] > A175productoid ) ) )
             {
-               A175productoid = T000910_A175productoid[0];
+               A175productoid = T00096_A175productoid[0];
                context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A175productoid", StringUtil.LTrim( StringUtil.Str( (decimal)(A175productoid), 9, 0)));
                RcdFound23 = 1;
             }
          }
-         pr_default.close(8);
+         pr_default.close(4);
       }
 
       protected void move_previous( )
       {
          RcdFound23 = 0;
-         /* Using cursor T000911 */
-         pr_default.execute(9, new Object[] {A175productoid});
-         if ( (pr_default.getStatus(9) != 101) )
+         /* Using cursor T00097 */
+         pr_default.execute(5, new Object[] {A175productoid});
+         if ( (pr_default.getStatus(5) != 101) )
          {
-            while ( (pr_default.getStatus(9) != 101) && ( ( T000911_A175productoid[0] > A175productoid ) ) )
+            while ( (pr_default.getStatus(5) != 101) && ( ( T00097_A175productoid[0] > A175productoid ) ) )
             {
-               pr_default.readNext(9);
+               pr_default.readNext(5);
             }
-            if ( (pr_default.getStatus(9) != 101) && ( ( T000911_A175productoid[0] < A175productoid ) ) )
+            if ( (pr_default.getStatus(5) != 101) && ( ( T00097_A175productoid[0] < A175productoid ) ) )
             {
-               A175productoid = T000911_A175productoid[0];
+               A175productoid = T00097_A175productoid[0];
                context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A175productoid", StringUtil.LTrim( StringUtil.Str( (decimal)(A175productoid), 9, 0)));
                RcdFound23 = 1;
             }
          }
-         pr_default.close(9);
+         pr_default.close(5);
       }
 
       protected void btn_enter( )
@@ -1363,7 +1243,7 @@ namespace GeneXus.Programs {
             GX_FocusControl = edtproductoid_Internalname;
             context.httpAjaxContext.ajax_rsp_assign_attri("", false, "GX_FocusControl", GX_FocusControl);
          }
-         GX_FocusControl = edtcambsid_Internalname;
+         GX_FocusControl = edtpcambsid_Internalname;
          context.httpAjaxContext.ajax_rsp_assign_attri("", false, "GX_FocusControl", GX_FocusControl);
          standaloneNotModal( ) ;
          standaloneModal( ) ;
@@ -1384,7 +1264,7 @@ namespace GeneXus.Programs {
             Gx_mode = "UPD";
             context.httpAjaxContext.ajax_rsp_assign_attri("", false, "Gx_mode", Gx_mode);
          }
-         GX_FocusControl = edtcambsid_Internalname;
+         GX_FocusControl = edtpcambsid_Internalname;
          context.httpAjaxContext.ajax_rsp_assign_attri("", false, "GX_FocusControl", GX_FocusControl);
          ScanEnd0923( ) ;
          getByPrimaryKey( ) ;
@@ -1407,7 +1287,7 @@ namespace GeneXus.Programs {
             Gx_mode = "UPD";
             context.httpAjaxContext.ajax_rsp_assign_attri("", false, "Gx_mode", Gx_mode);
          }
-         GX_FocusControl = edtcambsid_Internalname;
+         GX_FocusControl = edtpcambsid_Internalname;
          context.httpAjaxContext.ajax_rsp_assign_attri("", false, "GX_FocusControl", GX_FocusControl);
          getByPrimaryKey( ) ;
          standaloneNotModal( ) ;
@@ -1429,7 +1309,7 @@ namespace GeneXus.Programs {
             Gx_mode = "UPD";
             context.httpAjaxContext.ajax_rsp_assign_attri("", false, "Gx_mode", Gx_mode);
          }
-         GX_FocusControl = edtcambsid_Internalname;
+         GX_FocusControl = edtpcambsid_Internalname;
          context.httpAjaxContext.ajax_rsp_assign_attri("", false, "GX_FocusControl", GX_FocusControl);
          getByPrimaryKey( ) ;
          standaloneNotModal( ) ;
@@ -1455,7 +1335,7 @@ namespace GeneXus.Programs {
             Gx_mode = "UPD";
             context.httpAjaxContext.ajax_rsp_assign_attri("", false, "Gx_mode", Gx_mode);
          }
-         GX_FocusControl = edtcambsid_Internalname;
+         GX_FocusControl = edtpcambsid_Internalname;
          context.httpAjaxContext.ajax_rsp_assign_attri("", false, "GX_FocusControl", GX_FocusControl);
          ScanEnd0923( ) ;
          getByPrimaryKey( ) ;
@@ -1481,35 +1361,41 @@ namespace GeneXus.Programs {
                return  ;
             }
             Gx_longc = false;
-            if ( (pr_default.getStatus(0) == 101) || ( StringUtil.StrCmp(Z87productodsc, T00092_A87productodsc[0]) != 0 ) || ( Z88modeloid != T00092_A88modeloid[0] ) || ( Z89marcaid != T00092_A89marcaid[0] ) || ( Z90categoriaid != T00092_A90categoriaid[0] ) || ( StringUtil.StrCmp(Z91productousuario, T00092_A91productousuario[0]) != 0 ) )
+            if ( (pr_default.getStatus(0) == 101) || ( Z179pcambsid != T00092_A179pcambsid[0] ) || ( StringUtil.StrCmp(Z87productodsc, T00092_A87productodsc[0]) != 0 ) || ( Z180pmodeloid != T00092_A180pmodeloid[0] ) || ( Z181pmarcaid != T00092_A181pmarcaid[0] ) || ( Z182pcategoriaid != T00092_A182pcategoriaid[0] ) )
             {
                Gx_longc = true;
             }
-            if ( Gx_longc || ( Z92productofecreg != T00092_A92productofecreg[0] ) || ( Z93productofecultact != T00092_A93productofecultact[0] ) || ( Z25cambsid != T00092_A25cambsid[0] ) || ( Z23tipobienid != T00092_A23tipobienid[0] ) )
+            if ( Gx_longc || ( StringUtil.StrCmp(Z91productousuario, T00092_A91productousuario[0]) != 0 ) || ( Z92productofecreg != T00092_A92productofecreg[0] ) || ( Z93productofecultact != T00092_A93productofecultact[0] ) || ( Z183ptipobienid != T00092_A183ptipobienid[0] ) )
             {
+               if ( Z179pcambsid != T00092_A179pcambsid[0] )
+               {
+                  GXUtil.WriteLog("producto:[seudo value changed for attri]"+"pcambsid");
+                  GXUtil.WriteLogRaw("Old: ",Z179pcambsid);
+                  GXUtil.WriteLogRaw("Current: ",T00092_A179pcambsid[0]);
+               }
                if ( StringUtil.StrCmp(Z87productodsc, T00092_A87productodsc[0]) != 0 )
                {
                   GXUtil.WriteLog("producto:[seudo value changed for attri]"+"productodsc");
                   GXUtil.WriteLogRaw("Old: ",Z87productodsc);
                   GXUtil.WriteLogRaw("Current: ",T00092_A87productodsc[0]);
                }
-               if ( Z88modeloid != T00092_A88modeloid[0] )
+               if ( Z180pmodeloid != T00092_A180pmodeloid[0] )
                {
-                  GXUtil.WriteLog("producto:[seudo value changed for attri]"+"modeloid");
-                  GXUtil.WriteLogRaw("Old: ",Z88modeloid);
-                  GXUtil.WriteLogRaw("Current: ",T00092_A88modeloid[0]);
+                  GXUtil.WriteLog("producto:[seudo value changed for attri]"+"pmodeloid");
+                  GXUtil.WriteLogRaw("Old: ",Z180pmodeloid);
+                  GXUtil.WriteLogRaw("Current: ",T00092_A180pmodeloid[0]);
                }
-               if ( Z89marcaid != T00092_A89marcaid[0] )
+               if ( Z181pmarcaid != T00092_A181pmarcaid[0] )
                {
-                  GXUtil.WriteLog("producto:[seudo value changed for attri]"+"marcaid");
-                  GXUtil.WriteLogRaw("Old: ",Z89marcaid);
-                  GXUtil.WriteLogRaw("Current: ",T00092_A89marcaid[0]);
+                  GXUtil.WriteLog("producto:[seudo value changed for attri]"+"pmarcaid");
+                  GXUtil.WriteLogRaw("Old: ",Z181pmarcaid);
+                  GXUtil.WriteLogRaw("Current: ",T00092_A181pmarcaid[0]);
                }
-               if ( Z90categoriaid != T00092_A90categoriaid[0] )
+               if ( Z182pcategoriaid != T00092_A182pcategoriaid[0] )
                {
-                  GXUtil.WriteLog("producto:[seudo value changed for attri]"+"categoriaid");
-                  GXUtil.WriteLogRaw("Old: ",Z90categoriaid);
-                  GXUtil.WriteLogRaw("Current: ",T00092_A90categoriaid[0]);
+                  GXUtil.WriteLog("producto:[seudo value changed for attri]"+"pcategoriaid");
+                  GXUtil.WriteLogRaw("Old: ",Z182pcategoriaid);
+                  GXUtil.WriteLogRaw("Current: ",T00092_A182pcategoriaid[0]);
                }
                if ( StringUtil.StrCmp(Z91productousuario, T00092_A91productousuario[0]) != 0 )
                {
@@ -1529,17 +1415,11 @@ namespace GeneXus.Programs {
                   GXUtil.WriteLogRaw("Old: ",Z93productofecultact);
                   GXUtil.WriteLogRaw("Current: ",T00092_A93productofecultact[0]);
                }
-               if ( Z25cambsid != T00092_A25cambsid[0] )
+               if ( Z183ptipobienid != T00092_A183ptipobienid[0] )
                {
-                  GXUtil.WriteLog("producto:[seudo value changed for attri]"+"cambsid");
-                  GXUtil.WriteLogRaw("Old: ",Z25cambsid);
-                  GXUtil.WriteLogRaw("Current: ",T00092_A25cambsid[0]);
-               }
-               if ( Z23tipobienid != T00092_A23tipobienid[0] )
-               {
-                  GXUtil.WriteLog("producto:[seudo value changed for attri]"+"tipobienid");
-                  GXUtil.WriteLogRaw("Old: ",Z23tipobienid);
-                  GXUtil.WriteLogRaw("Current: ",T00092_A23tipobienid[0]);
+                  GXUtil.WriteLog("producto:[seudo value changed for attri]"+"ptipobienid");
+                  GXUtil.WriteLogRaw("Old: ",Z183ptipobienid);
+                  GXUtil.WriteLogRaw("Current: ",T00092_A183ptipobienid[0]);
                }
                GX_msglist.addItem(context.GetMessage( "GXM_waschg", new   object[]  {"producto"}), "RecordWasChanged", 1, "");
                AnyError = 1;
@@ -1567,11 +1447,11 @@ namespace GeneXus.Programs {
                   BeforeInsert0923( ) ;
                   if ( AnyError == 0 )
                   {
-                     /* Using cursor T000912 */
-                     pr_default.execute(10, new Object[] {A175productoid, n87productodsc, A87productodsc, n88modeloid, A88modeloid, n89marcaid, A89marcaid, n90categoriaid, A90categoriaid, n91productousuario, A91productousuario, n92productofecreg, A92productofecreg, n93productofecultact, A93productofecultact, n25cambsid, A25cambsid, n23tipobienid, A23tipobienid});
-                     pr_default.close(10);
+                     /* Using cursor T00098 */
+                     pr_default.execute(6, new Object[] {A175productoid, n179pcambsid, A179pcambsid, n87productodsc, A87productodsc, n180pmodeloid, A180pmodeloid, n181pmarcaid, A181pmarcaid, n182pcategoriaid, A182pcategoriaid, n91productousuario, A91productousuario, n92productofecreg, A92productofecreg, n93productofecultact, A93productofecultact, n183ptipobienid, A183ptipobienid});
+                     pr_default.close(6);
                      dsDefault.SmartCacheProvider.SetUpdated("producto") ;
-                     if ( (pr_default.getStatus(10) == 1) )
+                     if ( (pr_default.getStatus(6) == 1) )
                      {
                         GX_msglist.addItem(context.GetMessage( "GXM_noupdate", ""), "DuplicatePrimaryKey", 1, "");
                         AnyError = 1;
@@ -1622,11 +1502,11 @@ namespace GeneXus.Programs {
                   BeforeUpdate0923( ) ;
                   if ( AnyError == 0 )
                   {
-                     /* Using cursor T000913 */
-                     pr_default.execute(11, new Object[] {n87productodsc, A87productodsc, n88modeloid, A88modeloid, n89marcaid, A89marcaid, n90categoriaid, A90categoriaid, n91productousuario, A91productousuario, n92productofecreg, A92productofecreg, n93productofecultact, A93productofecultact, n25cambsid, A25cambsid, n23tipobienid, A23tipobienid, A175productoid});
-                     pr_default.close(11);
+                     /* Using cursor T00099 */
+                     pr_default.execute(7, new Object[] {n179pcambsid, A179pcambsid, n87productodsc, A87productodsc, n180pmodeloid, A180pmodeloid, n181pmarcaid, A181pmarcaid, n182pcategoriaid, A182pcategoriaid, n91productousuario, A91productousuario, n92productofecreg, A92productofecreg, n93productofecultact, A93productofecultact, n183ptipobienid, A183ptipobienid, A175productoid});
+                     pr_default.close(7);
                      dsDefault.SmartCacheProvider.SetUpdated("producto") ;
-                     if ( (pr_default.getStatus(11) == 103) )
+                     if ( (pr_default.getStatus(7) == 103) )
                      {
                         GX_msglist.addItem(context.GetMessage( "GXM_lock", new   object[]  {"producto"}), "RecordIsLocked", 1, "");
                         AnyError = 1;
@@ -1679,9 +1559,9 @@ namespace GeneXus.Programs {
                if ( AnyError == 0 )
                {
                   /* No cascading delete specified. */
-                  /* Using cursor T000914 */
-                  pr_default.execute(12, new Object[] {A175productoid});
-                  pr_default.close(12);
+                  /* Using cursor T000910 */
+                  pr_default.execute(8, new Object[] {A175productoid});
+                  pr_default.close(8);
                   dsDefault.SmartCacheProvider.SetUpdated("producto") ;
                   if ( AnyError == 0 )
                   {
@@ -1763,13 +1643,13 @@ namespace GeneXus.Programs {
 
       public void ScanStart0923( )
       {
-         /* Using cursor T000915 */
-         pr_default.execute(13);
+         /* Using cursor T000911 */
+         pr_default.execute(9);
          RcdFound23 = 0;
-         if ( (pr_default.getStatus(13) != 101) )
+         if ( (pr_default.getStatus(9) != 101) )
          {
             RcdFound23 = 1;
-            A175productoid = T000915_A175productoid[0];
+            A175productoid = T000911_A175productoid[0];
             context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A175productoid", StringUtil.LTrim( StringUtil.Str( (decimal)(A175productoid), 9, 0)));
          }
          /* Load Subordinate Levels */
@@ -1778,19 +1658,19 @@ namespace GeneXus.Programs {
       protected void ScanNext0923( )
       {
          /* Scan next routine */
-         pr_default.readNext(13);
+         pr_default.readNext(9);
          RcdFound23 = 0;
-         if ( (pr_default.getStatus(13) != 101) )
+         if ( (pr_default.getStatus(9) != 101) )
          {
             RcdFound23 = 1;
-            A175productoid = T000915_A175productoid[0];
+            A175productoid = T000911_A175productoid[0];
             context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A175productoid", StringUtil.LTrim( StringUtil.Str( (decimal)(A175productoid), 9, 0)));
          }
       }
 
       protected void ScanEnd0923( )
       {
-         pr_default.close(13);
+         pr_default.close(9);
       }
 
       protected void AfterConfirm0923( )
@@ -1827,24 +1707,24 @@ namespace GeneXus.Programs {
       {
          edtproductoid_Enabled = 0;
          context.httpAjaxContext.ajax_rsp_assign_prop("", false, edtproductoid_Internalname, "Enabled", StringUtil.LTrim( StringUtil.Str( (decimal)(edtproductoid_Enabled), 5, 0)));
-         edtcambsid_Enabled = 0;
-         context.httpAjaxContext.ajax_rsp_assign_prop("", false, edtcambsid_Internalname, "Enabled", StringUtil.LTrim( StringUtil.Str( (decimal)(edtcambsid_Enabled), 5, 0)));
+         edtpcambsid_Enabled = 0;
+         context.httpAjaxContext.ajax_rsp_assign_prop("", false, edtpcambsid_Internalname, "Enabled", StringUtil.LTrim( StringUtil.Str( (decimal)(edtpcambsid_Enabled), 5, 0)));
          edtproductodsc_Enabled = 0;
          context.httpAjaxContext.ajax_rsp_assign_prop("", false, edtproductodsc_Internalname, "Enabled", StringUtil.LTrim( StringUtil.Str( (decimal)(edtproductodsc_Enabled), 5, 0)));
-         edtmodeloid_Enabled = 0;
-         context.httpAjaxContext.ajax_rsp_assign_prop("", false, edtmodeloid_Internalname, "Enabled", StringUtil.LTrim( StringUtil.Str( (decimal)(edtmodeloid_Enabled), 5, 0)));
-         edtmarcaid_Enabled = 0;
-         context.httpAjaxContext.ajax_rsp_assign_prop("", false, edtmarcaid_Internalname, "Enabled", StringUtil.LTrim( StringUtil.Str( (decimal)(edtmarcaid_Enabled), 5, 0)));
-         edtcategoriaid_Enabled = 0;
-         context.httpAjaxContext.ajax_rsp_assign_prop("", false, edtcategoriaid_Internalname, "Enabled", StringUtil.LTrim( StringUtil.Str( (decimal)(edtcategoriaid_Enabled), 5, 0)));
+         edtpmodeloid_Enabled = 0;
+         context.httpAjaxContext.ajax_rsp_assign_prop("", false, edtpmodeloid_Internalname, "Enabled", StringUtil.LTrim( StringUtil.Str( (decimal)(edtpmodeloid_Enabled), 5, 0)));
+         edtpmarcaid_Enabled = 0;
+         context.httpAjaxContext.ajax_rsp_assign_prop("", false, edtpmarcaid_Internalname, "Enabled", StringUtil.LTrim( StringUtil.Str( (decimal)(edtpmarcaid_Enabled), 5, 0)));
+         edtpcategoriaid_Enabled = 0;
+         context.httpAjaxContext.ajax_rsp_assign_prop("", false, edtpcategoriaid_Internalname, "Enabled", StringUtil.LTrim( StringUtil.Str( (decimal)(edtpcategoriaid_Enabled), 5, 0)));
          edtproductousuario_Enabled = 0;
          context.httpAjaxContext.ajax_rsp_assign_prop("", false, edtproductousuario_Internalname, "Enabled", StringUtil.LTrim( StringUtil.Str( (decimal)(edtproductousuario_Enabled), 5, 0)));
          edtproductofecreg_Enabled = 0;
          context.httpAjaxContext.ajax_rsp_assign_prop("", false, edtproductofecreg_Internalname, "Enabled", StringUtil.LTrim( StringUtil.Str( (decimal)(edtproductofecreg_Enabled), 5, 0)));
          edtproductofecultact_Enabled = 0;
          context.httpAjaxContext.ajax_rsp_assign_prop("", false, edtproductofecultact_Internalname, "Enabled", StringUtil.LTrim( StringUtil.Str( (decimal)(edtproductofecultact_Enabled), 5, 0)));
-         edttipobienid_Enabled = 0;
-         context.httpAjaxContext.ajax_rsp_assign_prop("", false, edttipobienid_Internalname, "Enabled", StringUtil.LTrim( StringUtil.Str( (decimal)(edttipobienid_Enabled), 5, 0)));
+         edtptipobienid_Enabled = 0;
+         context.httpAjaxContext.ajax_rsp_assign_prop("", false, edtptipobienid_Internalname, "Enabled", StringUtil.LTrim( StringUtil.Str( (decimal)(edtptipobienid_Enabled), 5, 0)));
       }
 
       protected void assign_properties_default( )
@@ -1882,7 +1762,7 @@ namespace GeneXus.Programs {
          context.AddJavascriptSource("jquery.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxtimezone.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxgral.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("gxcfg.js", "?20222213422394");
+         context.AddJavascriptSource("gxcfg.js", "?202221019543052");
          if ( context.isSpaRequest( ) )
          {
             enableOutput();
@@ -1924,15 +1804,15 @@ namespace GeneXus.Programs {
          /* Send hidden variables. */
          /* Send saved values. */
          GxWebStd.gx_hidden_field( context, "Z175productoid", StringUtil.LTrim( StringUtil.NToC( (decimal)(Z175productoid), 9, 0, ",", "")));
+         GxWebStd.gx_hidden_field( context, "Z179pcambsid", StringUtil.LTrim( StringUtil.NToC( (decimal)(Z179pcambsid), 4, 0, ",", "")));
          GxWebStd.gx_hidden_field( context, "Z87productodsc", Z87productodsc);
-         GxWebStd.gx_hidden_field( context, "Z88modeloid", StringUtil.LTrim( StringUtil.NToC( (decimal)(Z88modeloid), 18, 0, ",", "")));
-         GxWebStd.gx_hidden_field( context, "Z89marcaid", StringUtil.LTrim( StringUtil.NToC( (decimal)(Z89marcaid), 18, 0, ",", "")));
-         GxWebStd.gx_hidden_field( context, "Z90categoriaid", StringUtil.LTrim( StringUtil.NToC( (decimal)(Z90categoriaid), 18, 0, ",", "")));
+         GxWebStd.gx_hidden_field( context, "Z180pmodeloid", StringUtil.LTrim( StringUtil.NToC( (decimal)(Z180pmodeloid), 4, 0, ",", "")));
+         GxWebStd.gx_hidden_field( context, "Z181pmarcaid", StringUtil.LTrim( StringUtil.NToC( (decimal)(Z181pmarcaid), 4, 0, ",", "")));
+         GxWebStd.gx_hidden_field( context, "Z182pcategoriaid", StringUtil.LTrim( StringUtil.NToC( (decimal)(Z182pcategoriaid), 4, 0, ",", "")));
          GxWebStd.gx_hidden_field( context, "Z91productousuario", Z91productousuario);
          GxWebStd.gx_hidden_field( context, "Z92productofecreg", context.localUtil.TToC( Z92productofecreg, 10, 8, 0, 0, "/", ":", " "));
          GxWebStd.gx_hidden_field( context, "Z93productofecultact", context.localUtil.TToC( Z93productofecultact, 10, 8, 0, 0, "/", ":", " "));
-         GxWebStd.gx_hidden_field( context, "Z25cambsid", StringUtil.LTrim( StringUtil.NToC( (decimal)(Z25cambsid), 9, 0, ",", "")));
-         GxWebStd.gx_hidden_field( context, "Z23tipobienid", StringUtil.LTrim( StringUtil.NToC( (decimal)(Z23tipobienid), 9, 0, ",", "")));
+         GxWebStd.gx_hidden_field( context, "Z183ptipobienid", StringUtil.LTrim( StringUtil.NToC( (decimal)(Z183ptipobienid), 4, 0, ",", "")));
          GxWebStd.gx_hidden_field( context, "IsConfirmed", StringUtil.LTrim( StringUtil.NToC( (decimal)(IsConfirmed), 4, 0, ",", "")));
          GxWebStd.gx_hidden_field( context, "IsModified", StringUtil.LTrim( StringUtil.NToC( (decimal)(IsModified), 4, 0, ",", "")));
          GxWebStd.gx_hidden_field( context, "Mode", StringUtil.RTrim( Gx_mode));
@@ -2009,26 +1889,26 @@ namespace GeneXus.Programs {
 
       protected void InitializeNonKey0923( )
       {
-         A25cambsid = 0;
-         n25cambsid = false;
-         context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A25cambsid", StringUtil.LTrim( StringUtil.Str( (decimal)(A25cambsid), 9, 0)));
-         n25cambsid = ((0==A25cambsid) ? true : false);
+         A179pcambsid = 0;
+         n179pcambsid = false;
+         context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A179pcambsid", StringUtil.LTrim( StringUtil.Str( (decimal)(A179pcambsid), 4, 0)));
+         n179pcambsid = ((0==A179pcambsid) ? true : false);
          A87productodsc = "";
          n87productodsc = false;
          context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A87productodsc", A87productodsc);
          n87productodsc = (String.IsNullOrEmpty(StringUtil.RTrim( A87productodsc)) ? true : false);
-         A88modeloid = 0;
-         n88modeloid = false;
-         context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A88modeloid", StringUtil.LTrim( StringUtil.Str( (decimal)(A88modeloid), 18, 0)));
-         n88modeloid = ((0==A88modeloid) ? true : false);
-         A89marcaid = 0;
-         n89marcaid = false;
-         context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A89marcaid", StringUtil.LTrim( StringUtil.Str( (decimal)(A89marcaid), 18, 0)));
-         n89marcaid = ((0==A89marcaid) ? true : false);
-         A90categoriaid = 0;
-         n90categoriaid = false;
-         context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A90categoriaid", StringUtil.LTrim( StringUtil.Str( (decimal)(A90categoriaid), 18, 0)));
-         n90categoriaid = ((0==A90categoriaid) ? true : false);
+         A180pmodeloid = 0;
+         n180pmodeloid = false;
+         context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A180pmodeloid", StringUtil.LTrim( StringUtil.Str( (decimal)(A180pmodeloid), 4, 0)));
+         n180pmodeloid = ((0==A180pmodeloid) ? true : false);
+         A181pmarcaid = 0;
+         n181pmarcaid = false;
+         context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A181pmarcaid", StringUtil.LTrim( StringUtil.Str( (decimal)(A181pmarcaid), 4, 0)));
+         n181pmarcaid = ((0==A181pmarcaid) ? true : false);
+         A182pcategoriaid = 0;
+         n182pcategoriaid = false;
+         context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A182pcategoriaid", StringUtil.LTrim( StringUtil.Str( (decimal)(A182pcategoriaid), 4, 0)));
+         n182pcategoriaid = ((0==A182pcategoriaid) ? true : false);
          A91productousuario = "";
          n91productousuario = false;
          context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A91productousuario", A91productousuario);
@@ -2041,19 +1921,19 @@ namespace GeneXus.Programs {
          n93productofecultact = false;
          context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A93productofecultact", context.localUtil.TToC( A93productofecultact, 10, 8, 0, 3, "/", ":", " "));
          n93productofecultact = ((DateTime.MinValue==A93productofecultact) ? true : false);
-         A23tipobienid = 0;
-         n23tipobienid = false;
-         context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A23tipobienid", StringUtil.LTrim( StringUtil.Str( (decimal)(A23tipobienid), 9, 0)));
-         n23tipobienid = ((0==A23tipobienid) ? true : false);
+         A183ptipobienid = 0;
+         n183ptipobienid = false;
+         context.httpAjaxContext.ajax_rsp_assign_attri("", false, "A183ptipobienid", StringUtil.LTrim( StringUtil.Str( (decimal)(A183ptipobienid), 4, 0)));
+         n183ptipobienid = ((0==A183ptipobienid) ? true : false);
+         Z179pcambsid = 0;
          Z87productodsc = "";
-         Z88modeloid = 0;
-         Z89marcaid = 0;
-         Z90categoriaid = 0;
+         Z180pmodeloid = 0;
+         Z181pmarcaid = 0;
+         Z182pcategoriaid = 0;
          Z91productousuario = "";
          Z92productofecreg = (DateTime)(DateTime.MinValue);
          Z93productofecultact = (DateTime)(DateTime.MinValue);
-         Z25cambsid = 0;
-         Z23tipobienid = 0;
+         Z183ptipobienid = 0;
       }
 
       protected void InitAll0923( )
@@ -2069,12 +1949,12 @@ namespace GeneXus.Programs {
 
       protected void define_styles( )
       {
-         AddStyleSheetFile("calendar-system.css", "?13205289");
-         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?1342847");
+         AddStyleSheetFile("calendar-system.css", "?11323129");
+         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?19483837");
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?2022221342241");
+            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?202221019543056");
             idxLst = (int)(idxLst+1);
          }
          /* End function define_styles */
@@ -2083,8 +1963,7 @@ namespace GeneXus.Programs {
       protected void include_jscripts( )
       {
          context.AddJavascriptSource("messages.spa.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("gxdec.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("producto.js", "?2022221342241");
+         context.AddJavascriptSource("producto.js", "?202221019543056");
          /* End function include_jscripts */
       }
 
@@ -2108,7 +1987,7 @@ namespace GeneXus.Programs {
          div_Internalname = "";
          div_Internalname = "";
          div_Internalname = "";
-         edtcambsid_Internalname = "CAMBSID";
+         edtpcambsid_Internalname = "PCAMBSID";
          div_Internalname = "";
          div_Internalname = "";
          div_Internalname = "";
@@ -2116,15 +1995,15 @@ namespace GeneXus.Programs {
          div_Internalname = "";
          div_Internalname = "";
          div_Internalname = "";
-         edtmodeloid_Internalname = "MODELOID";
+         edtpmodeloid_Internalname = "PMODELOID";
          div_Internalname = "";
          div_Internalname = "";
          div_Internalname = "";
-         edtmarcaid_Internalname = "MARCAID";
+         edtpmarcaid_Internalname = "PMARCAID";
          div_Internalname = "";
          div_Internalname = "";
          div_Internalname = "";
-         edtcategoriaid_Internalname = "CATEGORIAID";
+         edtpcategoriaid_Internalname = "PCATEGORIAID";
          div_Internalname = "";
          div_Internalname = "";
          div_Internalname = "";
@@ -2140,7 +2019,7 @@ namespace GeneXus.Programs {
          div_Internalname = "";
          div_Internalname = "";
          div_Internalname = "";
-         edttipobienid_Internalname = "TIPOBIENID";
+         edtptipobienid_Internalname = "PTIPOBIENID";
          div_Internalname = "";
          div_Internalname = "";
          div_Internalname = "";
@@ -2153,8 +2032,6 @@ namespace GeneXus.Programs {
          divTablemain_Internalname = "TABLEMAIN";
          div_Internalname = "";
          Form.Internalname = "FORM";
-         imgprompt_25_Internalname = "PROMPT_25";
-         imgprompt_23_Internalname = "PROMPT_23";
       }
 
       public override void initialize_properties( )
@@ -2174,28 +2051,24 @@ namespace GeneXus.Programs {
          bttBtn_cancel_Visible = 1;
          bttBtn_enter_Enabled = 1;
          bttBtn_enter_Visible = 1;
-         imgprompt_23_Visible = 1;
-         imgprompt_23_Link = "";
-         edttipobienid_Jsonclick = "";
-         edttipobienid_Enabled = 1;
+         edtptipobienid_Jsonclick = "";
+         edtptipobienid_Enabled = 1;
          edtproductofecultact_Jsonclick = "";
          edtproductofecultact_Enabled = 1;
          edtproductofecreg_Jsonclick = "";
          edtproductofecreg_Enabled = 1;
          edtproductousuario_Jsonclick = "";
          edtproductousuario_Enabled = 1;
-         edtcategoriaid_Jsonclick = "";
-         edtcategoriaid_Enabled = 1;
-         edtmarcaid_Jsonclick = "";
-         edtmarcaid_Enabled = 1;
-         edtmodeloid_Jsonclick = "";
-         edtmodeloid_Enabled = 1;
+         edtpcategoriaid_Jsonclick = "";
+         edtpcategoriaid_Enabled = 1;
+         edtpmarcaid_Jsonclick = "";
+         edtpmarcaid_Enabled = 1;
+         edtpmodeloid_Jsonclick = "";
+         edtpmodeloid_Enabled = 1;
          edtproductodsc_Jsonclick = "";
          edtproductodsc_Enabled = 1;
-         imgprompt_25_Visible = 1;
-         imgprompt_25_Link = "";
-         edtcambsid_Jsonclick = "";
-         edtcambsid_Enabled = 1;
+         edtpcambsid_Jsonclick = "";
+         edtpcambsid_Enabled = 1;
          edtproductoid_Jsonclick = "";
          edtproductoid_Enabled = 1;
          bttBtn_select_Visible = 1;
@@ -2220,7 +2093,7 @@ namespace GeneXus.Programs {
          IsConfirmed = 0;
          context.httpAjaxContext.ajax_rsp_assign_attri("", false, "IsConfirmed", StringUtil.LTrim( StringUtil.Str( (decimal)(IsConfirmed), 4, 0)));
          getEqualNoModal( ) ;
-         GX_FocusControl = edtcambsid_Internalname;
+         GX_FocusControl = edtpcambsid_Internalname;
          context.httpAjaxContext.ajax_rsp_assign_attri("", false, "GX_FocusControl", GX_FocusControl);
          standaloneNotModal( ) ;
          standaloneModal( ) ;
@@ -2228,35 +2101,35 @@ namespace GeneXus.Programs {
       }
 
       public void Valid_Productoid( int GX_Parm1 ,
-                                    String GX_Parm2 ,
-                                    long GX_Parm3 ,
-                                    long GX_Parm4 ,
-                                    long GX_Parm5 ,
-                                    String GX_Parm6 ,
-                                    DateTime GX_Parm7 ,
+                                    short GX_Parm2 ,
+                                    String GX_Parm3 ,
+                                    short GX_Parm4 ,
+                                    short GX_Parm5 ,
+                                    short GX_Parm6 ,
+                                    String GX_Parm7 ,
                                     DateTime GX_Parm8 ,
-                                    int GX_Parm9 ,
-                                    int GX_Parm10 )
+                                    DateTime GX_Parm9 ,
+                                    short GX_Parm10 )
       {
          A175productoid = GX_Parm1;
-         A87productodsc = GX_Parm2;
+         A179pcambsid = GX_Parm2;
+         n179pcambsid = false;
+         A87productodsc = GX_Parm3;
          n87productodsc = false;
-         A88modeloid = GX_Parm3;
-         n88modeloid = false;
-         A89marcaid = GX_Parm4;
-         n89marcaid = false;
-         A90categoriaid = GX_Parm5;
-         n90categoriaid = false;
-         A91productousuario = GX_Parm6;
+         A180pmodeloid = GX_Parm4;
+         n180pmodeloid = false;
+         A181pmarcaid = GX_Parm5;
+         n181pmarcaid = false;
+         A182pcategoriaid = GX_Parm6;
+         n182pcategoriaid = false;
+         A91productousuario = GX_Parm7;
          n91productousuario = false;
-         A92productofecreg = GX_Parm7;
+         A92productofecreg = GX_Parm8;
          n92productofecreg = false;
-         A93productofecultact = GX_Parm8;
+         A93productofecultact = GX_Parm9;
          n93productofecultact = false;
-         A25cambsid = GX_Parm9;
-         n25cambsid = false;
-         A23tipobienid = GX_Parm10;
-         n23tipobienid = false;
+         A183ptipobienid = GX_Parm10;
+         n183ptipobienid = false;
          context.wbHandled = 1;
          AfterKeyLoadScreen( ) ;
          Draw( ) ;
@@ -2265,74 +2138,28 @@ namespace GeneXus.Programs {
          if ( AnyError == 1 )
          {
          }
-         isValidOutput.Add(StringUtil.LTrim( StringUtil.NToC( (decimal)(A25cambsid), 9, 0, ".", "")));
+         isValidOutput.Add(StringUtil.LTrim( StringUtil.NToC( (decimal)(A179pcambsid), 4, 0, ".", "")));
          isValidOutput.Add(A87productodsc);
-         isValidOutput.Add(StringUtil.LTrim( StringUtil.NToC( (decimal)(A88modeloid), 18, 0, ".", "")));
-         isValidOutput.Add(StringUtil.LTrim( StringUtil.NToC( (decimal)(A89marcaid), 18, 0, ".", "")));
-         isValidOutput.Add(StringUtil.LTrim( StringUtil.NToC( (decimal)(A90categoriaid), 18, 0, ".", "")));
+         isValidOutput.Add(StringUtil.LTrim( StringUtil.NToC( (decimal)(A180pmodeloid), 4, 0, ".", "")));
+         isValidOutput.Add(StringUtil.LTrim( StringUtil.NToC( (decimal)(A181pmarcaid), 4, 0, ".", "")));
+         isValidOutput.Add(StringUtil.LTrim( StringUtil.NToC( (decimal)(A182pcategoriaid), 4, 0, ".", "")));
          isValidOutput.Add(A91productousuario);
          isValidOutput.Add(context.localUtil.TToC( A92productofecreg, 10, 8, 0, 3, "/", ":", " "));
          isValidOutput.Add(context.localUtil.TToC( A93productofecultact, 10, 8, 0, 3, "/", ":", " "));
-         isValidOutput.Add(StringUtil.LTrim( StringUtil.NToC( (decimal)(A23tipobienid), 9, 0, ".", "")));
+         isValidOutput.Add(StringUtil.LTrim( StringUtil.NToC( (decimal)(A183ptipobienid), 4, 0, ".", "")));
          isValidOutput.Add(StringUtil.RTrim( Gx_mode));
          isValidOutput.Add(StringUtil.LTrim( StringUtil.NToC( (decimal)(Z175productoid), 9, 0, ",", "")));
-         isValidOutput.Add(StringUtil.LTrim( StringUtil.NToC( (decimal)(Z25cambsid), 9, 0, ",", "")));
+         isValidOutput.Add(StringUtil.LTrim( StringUtil.NToC( (decimal)(Z179pcambsid), 4, 0, ",", "")));
          isValidOutput.Add(Z87productodsc);
-         isValidOutput.Add(StringUtil.LTrim( StringUtil.NToC( (decimal)(Z88modeloid), 18, 0, ",", "")));
-         isValidOutput.Add(StringUtil.LTrim( StringUtil.NToC( (decimal)(Z89marcaid), 18, 0, ",", "")));
-         isValidOutput.Add(StringUtil.LTrim( StringUtil.NToC( (decimal)(Z90categoriaid), 18, 0, ",", "")));
+         isValidOutput.Add(StringUtil.LTrim( StringUtil.NToC( (decimal)(Z180pmodeloid), 4, 0, ",", "")));
+         isValidOutput.Add(StringUtil.LTrim( StringUtil.NToC( (decimal)(Z181pmarcaid), 4, 0, ",", "")));
+         isValidOutput.Add(StringUtil.LTrim( StringUtil.NToC( (decimal)(Z182pcategoriaid), 4, 0, ",", "")));
          isValidOutput.Add(Z91productousuario);
          isValidOutput.Add(context.localUtil.TToC( Z92productofecreg, 10, 8, 0, 0, "/", ":", " "));
          isValidOutput.Add(context.localUtil.TToC( Z93productofecultact, 10, 8, 0, 0, "/", ":", " "));
-         isValidOutput.Add(StringUtil.LTrim( StringUtil.NToC( (decimal)(Z23tipobienid), 9, 0, ",", "")));
+         isValidOutput.Add(StringUtil.LTrim( StringUtil.NToC( (decimal)(Z183ptipobienid), 4, 0, ",", "")));
          isValidOutput.Add(bttBtn_delete_Enabled);
          isValidOutput.Add(bttBtn_enter_Enabled);
-         isValidOutput.Add(context.GX_msglist.ToJavascriptSource());
-         isValidOutput.Add(context.httpAjaxContext.ajax_rsp_get_hiddens( ));
-         context.GX_webresponse.AddString(isValidOutput.ToJSonString());
-         wbTemp = context.ResponseContentType( "application/json");
-      }
-
-      public void Valid_Cambsid( int GX_Parm1 )
-      {
-         A25cambsid = GX_Parm1;
-         n25cambsid = false;
-         /* Using cursor T000916 */
-         pr_default.execute(14, new Object[] {n25cambsid, A25cambsid});
-         if ( (pr_default.getStatus(14) == 101) )
-         {
-            if ( ! ( (0==A25cambsid) ) )
-            {
-               GX_msglist.addItem("No existe 'cambs'.", "ForeignKeyNotFound", 1, "CAMBSID");
-               AnyError = 1;
-               GX_FocusControl = edtcambsid_Internalname;
-            }
-         }
-         pr_default.close(14);
-         dynload_actions( ) ;
-         isValidOutput.Add(context.GX_msglist.ToJavascriptSource());
-         isValidOutput.Add(context.httpAjaxContext.ajax_rsp_get_hiddens( ));
-         context.GX_webresponse.AddString(isValidOutput.ToJSonString());
-         wbTemp = context.ResponseContentType( "application/json");
-      }
-
-      public void Valid_Tipobienid( int GX_Parm1 )
-      {
-         A23tipobienid = GX_Parm1;
-         n23tipobienid = false;
-         /* Using cursor T000917 */
-         pr_default.execute(15, new Object[] {n23tipobienid, A23tipobienid});
-         if ( (pr_default.getStatus(15) == 101) )
-         {
-            if ( ! ( (0==A23tipobienid) ) )
-            {
-               GX_msglist.addItem("No existe 'tipobien'.", "ForeignKeyNotFound", 1, "TIPOBIENID");
-               AnyError = 1;
-               GX_FocusControl = edttipobienid_Internalname;
-            }
-         }
-         pr_default.close(15);
-         dynload_actions( ) ;
          isValidOutput.Add(context.GX_msglist.ToJavascriptSource());
          isValidOutput.Add(context.httpAjaxContext.ajax_rsp_get_hiddens( ));
          context.GX_webresponse.AddString(isValidOutput.ToJSonString());
@@ -2364,8 +2191,6 @@ namespace GeneXus.Programs {
       protected void CloseOpenCursors( )
       {
          pr_default.close(1);
-         pr_default.close(14);
-         pr_default.close(15);
       }
 
       public override void initialize( )
@@ -2404,138 +2229,113 @@ namespace GeneXus.Programs {
          EvtGridId = "";
          EvtRowId = "";
          sEvtType = "";
-         T00096_A175productoid = new int[1] ;
-         T00096_A87productodsc = new String[] {""} ;
-         T00096_n87productodsc = new bool[] {false} ;
-         T00096_A88modeloid = new long[1] ;
-         T00096_n88modeloid = new bool[] {false} ;
-         T00096_A89marcaid = new long[1] ;
-         T00096_n89marcaid = new bool[] {false} ;
-         T00096_A90categoriaid = new long[1] ;
-         T00096_n90categoriaid = new bool[] {false} ;
-         T00096_A91productousuario = new String[] {""} ;
-         T00096_n91productousuario = new bool[] {false} ;
-         T00096_A92productofecreg = new DateTime[] {DateTime.MinValue} ;
-         T00096_n92productofecreg = new bool[] {false} ;
-         T00096_A93productofecultact = new DateTime[] {DateTime.MinValue} ;
-         T00096_n93productofecultact = new bool[] {false} ;
-         T00096_A25cambsid = new int[1] ;
-         T00096_n25cambsid = new bool[] {false} ;
-         T00096_A23tipobienid = new int[1] ;
-         T00096_n23tipobienid = new bool[] {false} ;
-         T00094_A25cambsid = new int[1] ;
-         T00094_n25cambsid = new bool[] {false} ;
-         T00095_A23tipobienid = new int[1] ;
-         T00095_n23tipobienid = new bool[] {false} ;
-         T00097_A25cambsid = new int[1] ;
-         T00097_n25cambsid = new bool[] {false} ;
-         T00098_A23tipobienid = new int[1] ;
-         T00098_n23tipobienid = new bool[] {false} ;
-         T00099_A175productoid = new int[1] ;
+         T00094_A175productoid = new int[1] ;
+         T00094_A179pcambsid = new short[1] ;
+         T00094_n179pcambsid = new bool[] {false} ;
+         T00094_A87productodsc = new String[] {""} ;
+         T00094_n87productodsc = new bool[] {false} ;
+         T00094_A180pmodeloid = new short[1] ;
+         T00094_n180pmodeloid = new bool[] {false} ;
+         T00094_A181pmarcaid = new short[1] ;
+         T00094_n181pmarcaid = new bool[] {false} ;
+         T00094_A182pcategoriaid = new short[1] ;
+         T00094_n182pcategoriaid = new bool[] {false} ;
+         T00094_A91productousuario = new String[] {""} ;
+         T00094_n91productousuario = new bool[] {false} ;
+         T00094_A92productofecreg = new DateTime[] {DateTime.MinValue} ;
+         T00094_n92productofecreg = new bool[] {false} ;
+         T00094_A93productofecultact = new DateTime[] {DateTime.MinValue} ;
+         T00094_n93productofecultact = new bool[] {false} ;
+         T00094_A183ptipobienid = new short[1] ;
+         T00094_n183ptipobienid = new bool[] {false} ;
+         T00095_A175productoid = new int[1] ;
          T00093_A175productoid = new int[1] ;
+         T00093_A179pcambsid = new short[1] ;
+         T00093_n179pcambsid = new bool[] {false} ;
          T00093_A87productodsc = new String[] {""} ;
          T00093_n87productodsc = new bool[] {false} ;
-         T00093_A88modeloid = new long[1] ;
-         T00093_n88modeloid = new bool[] {false} ;
-         T00093_A89marcaid = new long[1] ;
-         T00093_n89marcaid = new bool[] {false} ;
-         T00093_A90categoriaid = new long[1] ;
-         T00093_n90categoriaid = new bool[] {false} ;
+         T00093_A180pmodeloid = new short[1] ;
+         T00093_n180pmodeloid = new bool[] {false} ;
+         T00093_A181pmarcaid = new short[1] ;
+         T00093_n181pmarcaid = new bool[] {false} ;
+         T00093_A182pcategoriaid = new short[1] ;
+         T00093_n182pcategoriaid = new bool[] {false} ;
          T00093_A91productousuario = new String[] {""} ;
          T00093_n91productousuario = new bool[] {false} ;
          T00093_A92productofecreg = new DateTime[] {DateTime.MinValue} ;
          T00093_n92productofecreg = new bool[] {false} ;
          T00093_A93productofecultact = new DateTime[] {DateTime.MinValue} ;
          T00093_n93productofecultact = new bool[] {false} ;
-         T00093_A25cambsid = new int[1] ;
-         T00093_n25cambsid = new bool[] {false} ;
-         T00093_A23tipobienid = new int[1] ;
-         T00093_n23tipobienid = new bool[] {false} ;
+         T00093_A183ptipobienid = new short[1] ;
+         T00093_n183ptipobienid = new bool[] {false} ;
          sMode23 = "";
-         T000910_A175productoid = new int[1] ;
-         T000911_A175productoid = new int[1] ;
+         T00096_A175productoid = new int[1] ;
+         T00097_A175productoid = new int[1] ;
          T00092_A175productoid = new int[1] ;
+         T00092_A179pcambsid = new short[1] ;
+         T00092_n179pcambsid = new bool[] {false} ;
          T00092_A87productodsc = new String[] {""} ;
          T00092_n87productodsc = new bool[] {false} ;
-         T00092_A88modeloid = new long[1] ;
-         T00092_n88modeloid = new bool[] {false} ;
-         T00092_A89marcaid = new long[1] ;
-         T00092_n89marcaid = new bool[] {false} ;
-         T00092_A90categoriaid = new long[1] ;
-         T00092_n90categoriaid = new bool[] {false} ;
+         T00092_A180pmodeloid = new short[1] ;
+         T00092_n180pmodeloid = new bool[] {false} ;
+         T00092_A181pmarcaid = new short[1] ;
+         T00092_n181pmarcaid = new bool[] {false} ;
+         T00092_A182pcategoriaid = new short[1] ;
+         T00092_n182pcategoriaid = new bool[] {false} ;
          T00092_A91productousuario = new String[] {""} ;
          T00092_n91productousuario = new bool[] {false} ;
          T00092_A92productofecreg = new DateTime[] {DateTime.MinValue} ;
          T00092_n92productofecreg = new bool[] {false} ;
          T00092_A93productofecultact = new DateTime[] {DateTime.MinValue} ;
          T00092_n93productofecultact = new bool[] {false} ;
-         T00092_A25cambsid = new int[1] ;
-         T00092_n25cambsid = new bool[] {false} ;
-         T00092_A23tipobienid = new int[1] ;
-         T00092_n23tipobienid = new bool[] {false} ;
-         T000915_A175productoid = new int[1] ;
+         T00092_A183ptipobienid = new short[1] ;
+         T00092_n183ptipobienid = new bool[] {false} ;
+         T000911_A175productoid = new int[1] ;
          sDynURL = "";
          FormProcess = "";
          bodyStyle = "";
          isValidOutput = new GxUnknownObjectCollection();
-         T000916_A25cambsid = new int[1] ;
-         T000916_n25cambsid = new bool[] {false} ;
-         T000917_A23tipobienid = new int[1] ;
-         T000917_n23tipobienid = new bool[] {false} ;
          pr_default = new DataStoreProvider(context, new GeneXus.Programs.producto__default(),
             new Object[][] {
                 new Object[] {
-               T00092_A175productoid, T00092_A87productodsc, T00092_n87productodsc, T00092_A88modeloid, T00092_n88modeloid, T00092_A89marcaid, T00092_n89marcaid, T00092_A90categoriaid, T00092_n90categoriaid, T00092_A91productousuario,
-               T00092_n91productousuario, T00092_A92productofecreg, T00092_n92productofecreg, T00092_A93productofecultact, T00092_n93productofecultact, T00092_A25cambsid, T00092_n25cambsid, T00092_A23tipobienid, T00092_n23tipobienid
+               T00092_A175productoid, T00092_A179pcambsid, T00092_n179pcambsid, T00092_A87productodsc, T00092_n87productodsc, T00092_A180pmodeloid, T00092_n180pmodeloid, T00092_A181pmarcaid, T00092_n181pmarcaid, T00092_A182pcategoriaid,
+               T00092_n182pcategoriaid, T00092_A91productousuario, T00092_n91productousuario, T00092_A92productofecreg, T00092_n92productofecreg, T00092_A93productofecultact, T00092_n93productofecultact, T00092_A183ptipobienid, T00092_n183ptipobienid
                }
                , new Object[] {
-               T00093_A175productoid, T00093_A87productodsc, T00093_n87productodsc, T00093_A88modeloid, T00093_n88modeloid, T00093_A89marcaid, T00093_n89marcaid, T00093_A90categoriaid, T00093_n90categoriaid, T00093_A91productousuario,
-               T00093_n91productousuario, T00093_A92productofecreg, T00093_n92productofecreg, T00093_A93productofecultact, T00093_n93productofecultact, T00093_A25cambsid, T00093_n25cambsid, T00093_A23tipobienid, T00093_n23tipobienid
+               T00093_A175productoid, T00093_A179pcambsid, T00093_n179pcambsid, T00093_A87productodsc, T00093_n87productodsc, T00093_A180pmodeloid, T00093_n180pmodeloid, T00093_A181pmarcaid, T00093_n181pmarcaid, T00093_A182pcategoriaid,
+               T00093_n182pcategoriaid, T00093_A91productousuario, T00093_n91productousuario, T00093_A92productofecreg, T00093_n92productofecreg, T00093_A93productofecultact, T00093_n93productofecultact, T00093_A183ptipobienid, T00093_n183ptipobienid
                }
                , new Object[] {
-               T00094_A25cambsid
+               T00094_A175productoid, T00094_A179pcambsid, T00094_n179pcambsid, T00094_A87productodsc, T00094_n87productodsc, T00094_A180pmodeloid, T00094_n180pmodeloid, T00094_A181pmarcaid, T00094_n181pmarcaid, T00094_A182pcategoriaid,
+               T00094_n182pcategoriaid, T00094_A91productousuario, T00094_n91productousuario, T00094_A92productofecreg, T00094_n92productofecreg, T00094_A93productofecultact, T00094_n93productofecultact, T00094_A183ptipobienid, T00094_n183ptipobienid
                }
                , new Object[] {
-               T00095_A23tipobienid
+               T00095_A175productoid
                }
                , new Object[] {
-               T00096_A175productoid, T00096_A87productodsc, T00096_n87productodsc, T00096_A88modeloid, T00096_n88modeloid, T00096_A89marcaid, T00096_n89marcaid, T00096_A90categoriaid, T00096_n90categoriaid, T00096_A91productousuario,
-               T00096_n91productousuario, T00096_A92productofecreg, T00096_n92productofecreg, T00096_A93productofecultact, T00096_n93productofecultact, T00096_A25cambsid, T00096_n25cambsid, T00096_A23tipobienid, T00096_n23tipobienid
+               T00096_A175productoid
                }
                , new Object[] {
-               T00097_A25cambsid
+               T00097_A175productoid
                }
                , new Object[] {
-               T00098_A23tipobienid
                }
                , new Object[] {
-               T00099_A175productoid
                }
                , new Object[] {
-               T000910_A175productoid
                }
                , new Object[] {
                T000911_A175productoid
-               }
-               , new Object[] {
-               }
-               , new Object[] {
-               }
-               , new Object[] {
-               }
-               , new Object[] {
-               T000915_A175productoid
-               }
-               , new Object[] {
-               T000916_A25cambsid
-               }
-               , new Object[] {
-               T000917_A23tipobienid
                }
             }
          );
       }
 
+      private short Z179pcambsid ;
+      private short Z180pmodeloid ;
+      private short Z181pmarcaid ;
+      private short Z182pcategoriaid ;
+      private short Z183ptipobienid ;
       private short GxWebError ;
       private short gxcookieaux ;
       private short IsConfirmed ;
@@ -2543,16 +2343,17 @@ namespace GeneXus.Programs {
       private short AnyError ;
       private short nKeyPressed ;
       private short initialized ;
+      private short A179pcambsid ;
+      private short A180pmodeloid ;
+      private short A181pmarcaid ;
+      private short A182pcategoriaid ;
+      private short A183ptipobienid ;
       private short GX_JID ;
       private short RcdFound23 ;
       private short Gx_BScreen ;
       private short gxajaxcallmode ;
       private short wbTemp ;
       private int Z175productoid ;
-      private int Z25cambsid ;
-      private int Z23tipobienid ;
-      private int A25cambsid ;
-      private int A23tipobienid ;
       private int trnEnded ;
       private int bttBtn_first_Visible ;
       private int bttBtn_previous_Visible ;
@@ -2561,29 +2362,21 @@ namespace GeneXus.Programs {
       private int bttBtn_select_Visible ;
       private int A175productoid ;
       private int edtproductoid_Enabled ;
-      private int edtcambsid_Enabled ;
-      private int imgprompt_25_Visible ;
+      private int edtpcambsid_Enabled ;
       private int edtproductodsc_Enabled ;
-      private int edtmodeloid_Enabled ;
-      private int edtmarcaid_Enabled ;
-      private int edtcategoriaid_Enabled ;
+      private int edtpmodeloid_Enabled ;
+      private int edtpmarcaid_Enabled ;
+      private int edtpcategoriaid_Enabled ;
       private int edtproductousuario_Enabled ;
       private int edtproductofecreg_Enabled ;
       private int edtproductofecultact_Enabled ;
-      private int edttipobienid_Enabled ;
-      private int imgprompt_23_Visible ;
+      private int edtptipobienid_Enabled ;
       private int bttBtn_enter_Visible ;
       private int bttBtn_enter_Enabled ;
       private int bttBtn_cancel_Visible ;
       private int bttBtn_delete_Visible ;
       private int bttBtn_delete_Enabled ;
       private int idxLst ;
-      private long Z88modeloid ;
-      private long Z89marcaid ;
-      private long Z90categoriaid ;
-      private long A88modeloid ;
-      private long A89marcaid ;
-      private long A90categoriaid ;
       private String sPrefix ;
       private String scmdbuf ;
       private String gxfirstwebparm ;
@@ -2610,28 +2403,24 @@ namespace GeneXus.Programs {
       private String bttBtn_select_Internalname ;
       private String bttBtn_select_Jsonclick ;
       private String edtproductoid_Jsonclick ;
-      private String edtcambsid_Internalname ;
-      private String edtcambsid_Jsonclick ;
-      private String imgprompt_25_Internalname ;
-      private String imgprompt_25_Link ;
+      private String edtpcambsid_Internalname ;
+      private String edtpcambsid_Jsonclick ;
       private String edtproductodsc_Internalname ;
       private String edtproductodsc_Jsonclick ;
-      private String edtmodeloid_Internalname ;
-      private String edtmodeloid_Jsonclick ;
-      private String edtmarcaid_Internalname ;
-      private String edtmarcaid_Jsonclick ;
-      private String edtcategoriaid_Internalname ;
-      private String edtcategoriaid_Jsonclick ;
+      private String edtpmodeloid_Internalname ;
+      private String edtpmodeloid_Jsonclick ;
+      private String edtpmarcaid_Internalname ;
+      private String edtpmarcaid_Jsonclick ;
+      private String edtpcategoriaid_Internalname ;
+      private String edtpcategoriaid_Jsonclick ;
       private String edtproductousuario_Internalname ;
       private String edtproductousuario_Jsonclick ;
       private String edtproductofecreg_Internalname ;
       private String edtproductofecreg_Jsonclick ;
       private String edtproductofecultact_Internalname ;
       private String edtproductofecultact_Jsonclick ;
-      private String edttipobienid_Internalname ;
-      private String edttipobienid_Jsonclick ;
-      private String imgprompt_23_Internalname ;
-      private String imgprompt_23_Link ;
+      private String edtptipobienid_Internalname ;
+      private String edtptipobienid_Jsonclick ;
       private String bttBtn_enter_Internalname ;
       private String bttBtn_enter_Jsonclick ;
       private String bttBtn_cancel_Internalname ;
@@ -2653,17 +2442,17 @@ namespace GeneXus.Programs {
       private DateTime A92productofecreg ;
       private DateTime A93productofecultact ;
       private bool entryPointCalled ;
-      private bool n25cambsid ;
-      private bool n23tipobienid ;
       private bool toggleJsOutput ;
       private bool wbErr ;
+      private bool n179pcambsid ;
       private bool n87productodsc ;
-      private bool n88modeloid ;
-      private bool n89marcaid ;
-      private bool n90categoriaid ;
+      private bool n180pmodeloid ;
+      private bool n181pmarcaid ;
+      private bool n182pcategoriaid ;
       private bool n91productousuario ;
       private bool n92productofecreg ;
       private bool n93productofecultact ;
+      private bool n183ptipobienid ;
       private bool Gx_longc ;
       private String Z87productodsc ;
       private String Z91productousuario ;
@@ -2672,79 +2461,67 @@ namespace GeneXus.Programs {
       private GxUnknownObjectCollection isValidOutput ;
       private IGxDataStore dsDefault ;
       private IDataStoreProvider pr_default ;
-      private int[] T00096_A175productoid ;
-      private String[] T00096_A87productodsc ;
-      private bool[] T00096_n87productodsc ;
-      private long[] T00096_A88modeloid ;
-      private bool[] T00096_n88modeloid ;
-      private long[] T00096_A89marcaid ;
-      private bool[] T00096_n89marcaid ;
-      private long[] T00096_A90categoriaid ;
-      private bool[] T00096_n90categoriaid ;
-      private String[] T00096_A91productousuario ;
-      private bool[] T00096_n91productousuario ;
-      private DateTime[] T00096_A92productofecreg ;
-      private bool[] T00096_n92productofecreg ;
-      private DateTime[] T00096_A93productofecultact ;
-      private bool[] T00096_n93productofecultact ;
-      private int[] T00096_A25cambsid ;
-      private bool[] T00096_n25cambsid ;
-      private int[] T00096_A23tipobienid ;
-      private bool[] T00096_n23tipobienid ;
-      private int[] T00094_A25cambsid ;
-      private bool[] T00094_n25cambsid ;
-      private int[] T00095_A23tipobienid ;
-      private bool[] T00095_n23tipobienid ;
-      private int[] T00097_A25cambsid ;
-      private bool[] T00097_n25cambsid ;
-      private int[] T00098_A23tipobienid ;
-      private bool[] T00098_n23tipobienid ;
-      private int[] T00099_A175productoid ;
+      private int[] T00094_A175productoid ;
+      private short[] T00094_A179pcambsid ;
+      private bool[] T00094_n179pcambsid ;
+      private String[] T00094_A87productodsc ;
+      private bool[] T00094_n87productodsc ;
+      private short[] T00094_A180pmodeloid ;
+      private bool[] T00094_n180pmodeloid ;
+      private short[] T00094_A181pmarcaid ;
+      private bool[] T00094_n181pmarcaid ;
+      private short[] T00094_A182pcategoriaid ;
+      private bool[] T00094_n182pcategoriaid ;
+      private String[] T00094_A91productousuario ;
+      private bool[] T00094_n91productousuario ;
+      private DateTime[] T00094_A92productofecreg ;
+      private bool[] T00094_n92productofecreg ;
+      private DateTime[] T00094_A93productofecultact ;
+      private bool[] T00094_n93productofecultact ;
+      private short[] T00094_A183ptipobienid ;
+      private bool[] T00094_n183ptipobienid ;
+      private int[] T00095_A175productoid ;
       private int[] T00093_A175productoid ;
+      private short[] T00093_A179pcambsid ;
+      private bool[] T00093_n179pcambsid ;
       private String[] T00093_A87productodsc ;
       private bool[] T00093_n87productodsc ;
-      private long[] T00093_A88modeloid ;
-      private bool[] T00093_n88modeloid ;
-      private long[] T00093_A89marcaid ;
-      private bool[] T00093_n89marcaid ;
-      private long[] T00093_A90categoriaid ;
-      private bool[] T00093_n90categoriaid ;
+      private short[] T00093_A180pmodeloid ;
+      private bool[] T00093_n180pmodeloid ;
+      private short[] T00093_A181pmarcaid ;
+      private bool[] T00093_n181pmarcaid ;
+      private short[] T00093_A182pcategoriaid ;
+      private bool[] T00093_n182pcategoriaid ;
       private String[] T00093_A91productousuario ;
       private bool[] T00093_n91productousuario ;
       private DateTime[] T00093_A92productofecreg ;
       private bool[] T00093_n92productofecreg ;
       private DateTime[] T00093_A93productofecultact ;
       private bool[] T00093_n93productofecultact ;
-      private int[] T00093_A25cambsid ;
-      private bool[] T00093_n25cambsid ;
-      private int[] T00093_A23tipobienid ;
-      private bool[] T00093_n23tipobienid ;
-      private int[] T000910_A175productoid ;
-      private int[] T000911_A175productoid ;
+      private short[] T00093_A183ptipobienid ;
+      private bool[] T00093_n183ptipobienid ;
+      private int[] T00096_A175productoid ;
+      private int[] T00097_A175productoid ;
       private int[] T00092_A175productoid ;
+      private short[] T00092_A179pcambsid ;
+      private bool[] T00092_n179pcambsid ;
       private String[] T00092_A87productodsc ;
       private bool[] T00092_n87productodsc ;
-      private long[] T00092_A88modeloid ;
-      private bool[] T00092_n88modeloid ;
-      private long[] T00092_A89marcaid ;
-      private bool[] T00092_n89marcaid ;
-      private long[] T00092_A90categoriaid ;
-      private bool[] T00092_n90categoriaid ;
+      private short[] T00092_A180pmodeloid ;
+      private bool[] T00092_n180pmodeloid ;
+      private short[] T00092_A181pmarcaid ;
+      private bool[] T00092_n181pmarcaid ;
+      private short[] T00092_A182pcategoriaid ;
+      private bool[] T00092_n182pcategoriaid ;
       private String[] T00092_A91productousuario ;
       private bool[] T00092_n91productousuario ;
       private DateTime[] T00092_A92productofecreg ;
       private bool[] T00092_n92productofecreg ;
       private DateTime[] T00092_A93productofecultact ;
       private bool[] T00092_n93productofecultact ;
-      private int[] T00092_A25cambsid ;
-      private bool[] T00092_n25cambsid ;
-      private int[] T00092_A23tipobienid ;
-      private bool[] T00092_n23tipobienid ;
-      private int[] T000915_A175productoid ;
-      private int[] T000916_A25cambsid ;
-      private bool[] T000916_n25cambsid ;
-      private int[] T000917_A23tipobienid ;
-      private bool[] T000917_n23tipobienid ;
+      private short[] T00092_A183ptipobienid ;
+      private bool[] T00092_n183ptipobienid ;
+      private int[] T000911_A175productoid ;
       private GXWebForm Form ;
    }
 
@@ -2760,16 +2537,10 @@ namespace GeneXus.Programs {
          ,new ForEachCursor(def[3])
          ,new ForEachCursor(def[4])
          ,new ForEachCursor(def[5])
-         ,new ForEachCursor(def[6])
-         ,new ForEachCursor(def[7])
-         ,new ForEachCursor(def[8])
+         ,new UpdateCursor(def[6])
+         ,new UpdateCursor(def[7])
+         ,new UpdateCursor(def[8])
          ,new ForEachCursor(def[9])
-         ,new UpdateCursor(def[10])
-         ,new UpdateCursor(def[11])
-         ,new UpdateCursor(def[12])
-         ,new ForEachCursor(def[13])
-         ,new ForEachCursor(def[14])
-         ,new ForEachCursor(def[15])
        };
     }
 
@@ -2778,32 +2549,54 @@ namespace GeneXus.Programs {
     {
        if ( def == null )
        {
-          Object[] prmT00096 ;
-          prmT00096 = new Object[] {
-          new Object[] {"productoid",NpgsqlDbType.Integer,9,0}
-          } ;
           Object[] prmT00094 ;
           prmT00094 = new Object[] {
-          new Object[] {"cambsid",NpgsqlDbType.Integer,9,0}
+          new Object[] {"productoid",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT00095 ;
           prmT00095 = new Object[] {
-          new Object[] {"tipobienid",NpgsqlDbType.Integer,9,0}
-          } ;
-          Object[] prmT00097 ;
-          prmT00097 = new Object[] {
-          new Object[] {"cambsid",NpgsqlDbType.Integer,9,0}
-          } ;
-          Object[] prmT00098 ;
-          prmT00098 = new Object[] {
-          new Object[] {"tipobienid",NpgsqlDbType.Integer,9,0}
-          } ;
-          Object[] prmT00099 ;
-          prmT00099 = new Object[] {
           new Object[] {"productoid",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT00093 ;
           prmT00093 = new Object[] {
+          new Object[] {"productoid",NpgsqlDbType.Integer,9,0}
+          } ;
+          Object[] prmT00096 ;
+          prmT00096 = new Object[] {
+          new Object[] {"productoid",NpgsqlDbType.Integer,9,0}
+          } ;
+          Object[] prmT00097 ;
+          prmT00097 = new Object[] {
+          new Object[] {"productoid",NpgsqlDbType.Integer,9,0}
+          } ;
+          Object[] prmT00092 ;
+          prmT00092 = new Object[] {
+          new Object[] {"productoid",NpgsqlDbType.Integer,9,0}
+          } ;
+          Object[] prmT00098 ;
+          prmT00098 = new Object[] {
+          new Object[] {"productoid",NpgsqlDbType.Integer,9,0} ,
+          new Object[] {"pcambsid",NpgsqlDbType.Smallint,4,0} ,
+          new Object[] {"productodsc",NpgsqlDbType.Varchar,100,0} ,
+          new Object[] {"pmodeloid",NpgsqlDbType.Smallint,4,0} ,
+          new Object[] {"pmarcaid",NpgsqlDbType.Smallint,4,0} ,
+          new Object[] {"pcategoriaid",NpgsqlDbType.Smallint,4,0} ,
+          new Object[] {"productousuario",NpgsqlDbType.Varchar,15,0} ,
+          new Object[] {"productofecreg",NpgsqlDbType.Timestamp,10,8} ,
+          new Object[] {"productofecultact",NpgsqlDbType.Timestamp,10,8} ,
+          new Object[] {"ptipobienid",NpgsqlDbType.Smallint,4,0}
+          } ;
+          Object[] prmT00099 ;
+          prmT00099 = new Object[] {
+          new Object[] {"pcambsid",NpgsqlDbType.Smallint,4,0} ,
+          new Object[] {"productodsc",NpgsqlDbType.Varchar,100,0} ,
+          new Object[] {"pmodeloid",NpgsqlDbType.Smallint,4,0} ,
+          new Object[] {"pmarcaid",NpgsqlDbType.Smallint,4,0} ,
+          new Object[] {"pcategoriaid",NpgsqlDbType.Smallint,4,0} ,
+          new Object[] {"productousuario",NpgsqlDbType.Varchar,15,0} ,
+          new Object[] {"productofecreg",NpgsqlDbType.Timestamp,10,8} ,
+          new Object[] {"productofecultact",NpgsqlDbType.Timestamp,10,8} ,
+          new Object[] {"ptipobienid",NpgsqlDbType.Smallint,4,0} ,
           new Object[] {"productoid",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT000910 ;
@@ -2812,70 +2605,18 @@ namespace GeneXus.Programs {
           } ;
           Object[] prmT000911 ;
           prmT000911 = new Object[] {
-          new Object[] {"productoid",NpgsqlDbType.Integer,9,0}
-          } ;
-          Object[] prmT00092 ;
-          prmT00092 = new Object[] {
-          new Object[] {"productoid",NpgsqlDbType.Integer,9,0}
-          } ;
-          Object[] prmT000912 ;
-          prmT000912 = new Object[] {
-          new Object[] {"productoid",NpgsqlDbType.Integer,9,0} ,
-          new Object[] {"productodsc",NpgsqlDbType.Varchar,100,0} ,
-          new Object[] {"modeloid",NpgsqlDbType.Real,18,0} ,
-          new Object[] {"marcaid",NpgsqlDbType.Real,18,0} ,
-          new Object[] {"categoriaid",NpgsqlDbType.Real,18,0} ,
-          new Object[] {"productousuario",NpgsqlDbType.Varchar,15,0} ,
-          new Object[] {"productofecreg",NpgsqlDbType.Timestamp,10,8} ,
-          new Object[] {"productofecultact",NpgsqlDbType.Timestamp,10,8} ,
-          new Object[] {"cambsid",NpgsqlDbType.Integer,9,0} ,
-          new Object[] {"tipobienid",NpgsqlDbType.Integer,9,0}
-          } ;
-          Object[] prmT000913 ;
-          prmT000913 = new Object[] {
-          new Object[] {"productodsc",NpgsqlDbType.Varchar,100,0} ,
-          new Object[] {"modeloid",NpgsqlDbType.Real,18,0} ,
-          new Object[] {"marcaid",NpgsqlDbType.Real,18,0} ,
-          new Object[] {"categoriaid",NpgsqlDbType.Real,18,0} ,
-          new Object[] {"productousuario",NpgsqlDbType.Varchar,15,0} ,
-          new Object[] {"productofecreg",NpgsqlDbType.Timestamp,10,8} ,
-          new Object[] {"productofecultact",NpgsqlDbType.Timestamp,10,8} ,
-          new Object[] {"cambsid",NpgsqlDbType.Integer,9,0} ,
-          new Object[] {"tipobienid",NpgsqlDbType.Integer,9,0} ,
-          new Object[] {"productoid",NpgsqlDbType.Integer,9,0}
-          } ;
-          Object[] prmT000914 ;
-          prmT000914 = new Object[] {
-          new Object[] {"productoid",NpgsqlDbType.Integer,9,0}
-          } ;
-          Object[] prmT000915 ;
-          prmT000915 = new Object[] {
-          } ;
-          Object[] prmT000916 ;
-          prmT000916 = new Object[] {
-          new Object[] {"cambsid",NpgsqlDbType.Integer,9,0}
-          } ;
-          Object[] prmT000917 ;
-          prmT000917 = new Object[] {
-          new Object[] {"tipobienid",NpgsqlDbType.Integer,9,0}
           } ;
           def= new CursorDef[] {
-              new CursorDef("T00092", "SELECT productoid, productodsc, modeloid, marcaid, categoriaid, productousuario, productofecreg, productofecultact, cambsid, tipobienid FROM producto WHERE productoid = :productoid  FOR UPDATE OF producto NOWAIT",true, GxErrorMask.GX_NOMASK, false, this,prmT00092,1,0,true,false )
-             ,new CursorDef("T00093", "SELECT productoid, productodsc, modeloid, marcaid, categoriaid, productousuario, productofecreg, productofecultact, cambsid, tipobienid FROM producto WHERE productoid = :productoid ",true, GxErrorMask.GX_NOMASK, false, this,prmT00093,1,0,true,false )
-             ,new CursorDef("T00094", "SELECT cambsid FROM public.cambs WHERE cambsid = :cambsid ",true, GxErrorMask.GX_NOMASK, false, this,prmT00094,1,0,true,false )
-             ,new CursorDef("T00095", "SELECT tipobienid FROM public.tipobien WHERE tipobienid = :tipobienid ",true, GxErrorMask.GX_NOMASK, false, this,prmT00095,1,0,true,false )
-             ,new CursorDef("T00096", "SELECT TM1.productoid, TM1.productodsc, TM1.modeloid, TM1.marcaid, TM1.categoriaid, TM1.productousuario, TM1.productofecreg, TM1.productofecultact, TM1.cambsid, TM1.tipobienid FROM producto TM1 WHERE TM1.productoid = :productoid ORDER BY TM1.productoid ",true, GxErrorMask.GX_NOMASK, false, this,prmT00096,100,0,true,false )
-             ,new CursorDef("T00097", "SELECT cambsid FROM public.cambs WHERE cambsid = :cambsid ",true, GxErrorMask.GX_NOMASK, false, this,prmT00097,1,0,true,false )
-             ,new CursorDef("T00098", "SELECT tipobienid FROM public.tipobien WHERE tipobienid = :tipobienid ",true, GxErrorMask.GX_NOMASK, false, this,prmT00098,1,0,true,false )
-             ,new CursorDef("T00099", "SELECT productoid FROM producto WHERE productoid = :productoid ",true, GxErrorMask.GX_NOMASK, false, this,prmT00099,1,0,true,false )
-             ,new CursorDef("T000910", "SELECT productoid FROM producto WHERE ( productoid > :productoid) ORDER BY productoid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000910,1,0,true,true )
-             ,new CursorDef("T000911", "SELECT productoid FROM producto WHERE ( productoid < :productoid) ORDER BY productoid DESC ",true, GxErrorMask.GX_NOMASK, false, this,prmT000911,1,0,true,true )
-             ,new CursorDef("T000912", "SAVEPOINT gxupdate;INSERT INTO producto(productoid, productodsc, modeloid, marcaid, categoriaid, productousuario, productofecreg, productofecultact, cambsid, tipobienid) VALUES(:productoid, :productodsc, :modeloid, :marcaid, :categoriaid, :productousuario, :productofecreg, :productofecultact, :cambsid, :tipobienid);RELEASE SAVEPOINT gxupdate", GxErrorMask.GX_ROLLBACKSAVEPOINT | GxErrorMask.GX_NOMASK,prmT000912)
-             ,new CursorDef("T000913", "SAVEPOINT gxupdate;UPDATE producto SET productodsc=:productodsc, modeloid=:modeloid, marcaid=:marcaid, categoriaid=:categoriaid, productousuario=:productousuario, productofecreg=:productofecreg, productofecultact=:productofecultact, cambsid=:cambsid, tipobienid=:tipobienid  WHERE productoid = :productoid;RELEASE SAVEPOINT gxupdate", GxErrorMask.GX_ROLLBACKSAVEPOINT | GxErrorMask.GX_NOMASK,prmT000913)
-             ,new CursorDef("T000914", "SAVEPOINT gxupdate;DELETE FROM producto  WHERE productoid = :productoid;RELEASE SAVEPOINT gxupdate", GxErrorMask.GX_ROLLBACKSAVEPOINT | GxErrorMask.GX_NOMASK,prmT000914)
-             ,new CursorDef("T000915", "SELECT productoid FROM producto ORDER BY productoid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000915,100,0,true,false )
-             ,new CursorDef("T000916", "SELECT cambsid FROM public.cambs WHERE cambsid = :cambsid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000916,1,0,true,false )
-             ,new CursorDef("T000917", "SELECT tipobienid FROM public.tipobien WHERE tipobienid = :tipobienid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000917,1,0,true,false )
+              new CursorDef("T00092", "SELECT productoid, pcambsid, productodsc, pmodeloid, pmarcaid, pcategoriaid, productousuario, productofecreg, productofecultact, ptipobienid FROM producto WHERE productoid = :productoid  FOR UPDATE OF producto NOWAIT",true, GxErrorMask.GX_NOMASK, false, this,prmT00092,1,0,true,false )
+             ,new CursorDef("T00093", "SELECT productoid, pcambsid, productodsc, pmodeloid, pmarcaid, pcategoriaid, productousuario, productofecreg, productofecultact, ptipobienid FROM producto WHERE productoid = :productoid ",true, GxErrorMask.GX_NOMASK, false, this,prmT00093,1,0,true,false )
+             ,new CursorDef("T00094", "SELECT TM1.productoid, TM1.pcambsid, TM1.productodsc, TM1.pmodeloid, TM1.pmarcaid, TM1.pcategoriaid, TM1.productousuario, TM1.productofecreg, TM1.productofecultact, TM1.ptipobienid FROM producto TM1 WHERE TM1.productoid = :productoid ORDER BY TM1.productoid ",true, GxErrorMask.GX_NOMASK, false, this,prmT00094,100,0,true,false )
+             ,new CursorDef("T00095", "SELECT productoid FROM producto WHERE productoid = :productoid ",true, GxErrorMask.GX_NOMASK, false, this,prmT00095,1,0,true,false )
+             ,new CursorDef("T00096", "SELECT productoid FROM producto WHERE ( productoid > :productoid) ORDER BY productoid ",true, GxErrorMask.GX_NOMASK, false, this,prmT00096,1,0,true,true )
+             ,new CursorDef("T00097", "SELECT productoid FROM producto WHERE ( productoid < :productoid) ORDER BY productoid DESC ",true, GxErrorMask.GX_NOMASK, false, this,prmT00097,1,0,true,true )
+             ,new CursorDef("T00098", "SAVEPOINT gxupdate;INSERT INTO producto(productoid, pcambsid, productodsc, pmodeloid, pmarcaid, pcategoriaid, productousuario, productofecreg, productofecultact, ptipobienid) VALUES(:productoid, :pcambsid, :productodsc, :pmodeloid, :pmarcaid, :pcategoriaid, :productousuario, :productofecreg, :productofecultact, :ptipobienid);RELEASE SAVEPOINT gxupdate", GxErrorMask.GX_ROLLBACKSAVEPOINT,prmT00098)
+             ,new CursorDef("T00099", "SAVEPOINT gxupdate;UPDATE producto SET pcambsid=:pcambsid, productodsc=:productodsc, pmodeloid=:pmodeloid, pmarcaid=:pmarcaid, pcategoriaid=:pcategoriaid, productousuario=:productousuario, productofecreg=:productofecreg, productofecultact=:productofecultact, ptipobienid=:ptipobienid  WHERE productoid = :productoid;RELEASE SAVEPOINT gxupdate", GxErrorMask.GX_ROLLBACKSAVEPOINT | GxErrorMask.GX_NOMASK,prmT00099)
+             ,new CursorDef("T000910", "SAVEPOINT gxupdate;DELETE FROM producto  WHERE productoid = :productoid;RELEASE SAVEPOINT gxupdate", GxErrorMask.GX_ROLLBACKSAVEPOINT | GxErrorMask.GX_NOMASK,prmT000910)
+             ,new CursorDef("T000911", "SELECT productoid FROM producto ORDER BY productoid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000911,100,0,true,false )
           };
        }
     }
@@ -2888,95 +2629,77 @@ namespace GeneXus.Programs {
        {
              case 0 :
                 ((int[]) buf[0])[0] = rslt.getInt(1) ;
-                ((String[]) buf[1])[0] = rslt.getVarchar(2) ;
+                ((short[]) buf[1])[0] = rslt.getShort(2) ;
                 ((bool[]) buf[2])[0] = rslt.wasNull(2);
-                ((long[]) buf[3])[0] = rslt.getLong(3) ;
+                ((String[]) buf[3])[0] = rslt.getVarchar(3) ;
                 ((bool[]) buf[4])[0] = rslt.wasNull(3);
-                ((long[]) buf[5])[0] = rslt.getLong(4) ;
+                ((short[]) buf[5])[0] = rslt.getShort(4) ;
                 ((bool[]) buf[6])[0] = rslt.wasNull(4);
-                ((long[]) buf[7])[0] = rslt.getLong(5) ;
+                ((short[]) buf[7])[0] = rslt.getShort(5) ;
                 ((bool[]) buf[8])[0] = rslt.wasNull(5);
-                ((String[]) buf[9])[0] = rslt.getVarchar(6) ;
+                ((short[]) buf[9])[0] = rslt.getShort(6) ;
                 ((bool[]) buf[10])[0] = rslt.wasNull(6);
-                ((DateTime[]) buf[11])[0] = rslt.getGXDateTime(7) ;
+                ((String[]) buf[11])[0] = rslt.getVarchar(7) ;
                 ((bool[]) buf[12])[0] = rslt.wasNull(7);
                 ((DateTime[]) buf[13])[0] = rslt.getGXDateTime(8) ;
                 ((bool[]) buf[14])[0] = rslt.wasNull(8);
-                ((int[]) buf[15])[0] = rslt.getInt(9) ;
+                ((DateTime[]) buf[15])[0] = rslt.getGXDateTime(9) ;
                 ((bool[]) buf[16])[0] = rslt.wasNull(9);
-                ((int[]) buf[17])[0] = rslt.getInt(10) ;
+                ((short[]) buf[17])[0] = rslt.getShort(10) ;
                 ((bool[]) buf[18])[0] = rslt.wasNull(10);
                 return;
              case 1 :
                 ((int[]) buf[0])[0] = rslt.getInt(1) ;
-                ((String[]) buf[1])[0] = rslt.getVarchar(2) ;
+                ((short[]) buf[1])[0] = rslt.getShort(2) ;
                 ((bool[]) buf[2])[0] = rslt.wasNull(2);
-                ((long[]) buf[3])[0] = rslt.getLong(3) ;
+                ((String[]) buf[3])[0] = rslt.getVarchar(3) ;
                 ((bool[]) buf[4])[0] = rslt.wasNull(3);
-                ((long[]) buf[5])[0] = rslt.getLong(4) ;
+                ((short[]) buf[5])[0] = rslt.getShort(4) ;
                 ((bool[]) buf[6])[0] = rslt.wasNull(4);
-                ((long[]) buf[7])[0] = rslt.getLong(5) ;
+                ((short[]) buf[7])[0] = rslt.getShort(5) ;
                 ((bool[]) buf[8])[0] = rslt.wasNull(5);
-                ((String[]) buf[9])[0] = rslt.getVarchar(6) ;
+                ((short[]) buf[9])[0] = rslt.getShort(6) ;
                 ((bool[]) buf[10])[0] = rslt.wasNull(6);
-                ((DateTime[]) buf[11])[0] = rslt.getGXDateTime(7) ;
+                ((String[]) buf[11])[0] = rslt.getVarchar(7) ;
                 ((bool[]) buf[12])[0] = rslt.wasNull(7);
                 ((DateTime[]) buf[13])[0] = rslt.getGXDateTime(8) ;
                 ((bool[]) buf[14])[0] = rslt.wasNull(8);
-                ((int[]) buf[15])[0] = rslt.getInt(9) ;
+                ((DateTime[]) buf[15])[0] = rslt.getGXDateTime(9) ;
                 ((bool[]) buf[16])[0] = rslt.wasNull(9);
-                ((int[]) buf[17])[0] = rslt.getInt(10) ;
+                ((short[]) buf[17])[0] = rslt.getShort(10) ;
                 ((bool[]) buf[18])[0] = rslt.wasNull(10);
                 return;
              case 2 :
                 ((int[]) buf[0])[0] = rslt.getInt(1) ;
+                ((short[]) buf[1])[0] = rslt.getShort(2) ;
+                ((bool[]) buf[2])[0] = rslt.wasNull(2);
+                ((String[]) buf[3])[0] = rslt.getVarchar(3) ;
+                ((bool[]) buf[4])[0] = rslt.wasNull(3);
+                ((short[]) buf[5])[0] = rslt.getShort(4) ;
+                ((bool[]) buf[6])[0] = rslt.wasNull(4);
+                ((short[]) buf[7])[0] = rslt.getShort(5) ;
+                ((bool[]) buf[8])[0] = rslt.wasNull(5);
+                ((short[]) buf[9])[0] = rslt.getShort(6) ;
+                ((bool[]) buf[10])[0] = rslt.wasNull(6);
+                ((String[]) buf[11])[0] = rslt.getVarchar(7) ;
+                ((bool[]) buf[12])[0] = rslt.wasNull(7);
+                ((DateTime[]) buf[13])[0] = rslt.getGXDateTime(8) ;
+                ((bool[]) buf[14])[0] = rslt.wasNull(8);
+                ((DateTime[]) buf[15])[0] = rslt.getGXDateTime(9) ;
+                ((bool[]) buf[16])[0] = rslt.wasNull(9);
+                ((short[]) buf[17])[0] = rslt.getShort(10) ;
+                ((bool[]) buf[18])[0] = rslt.wasNull(10);
                 return;
              case 3 :
                 ((int[]) buf[0])[0] = rslt.getInt(1) ;
                 return;
              case 4 :
                 ((int[]) buf[0])[0] = rslt.getInt(1) ;
-                ((String[]) buf[1])[0] = rslt.getVarchar(2) ;
-                ((bool[]) buf[2])[0] = rslt.wasNull(2);
-                ((long[]) buf[3])[0] = rslt.getLong(3) ;
-                ((bool[]) buf[4])[0] = rslt.wasNull(3);
-                ((long[]) buf[5])[0] = rslt.getLong(4) ;
-                ((bool[]) buf[6])[0] = rslt.wasNull(4);
-                ((long[]) buf[7])[0] = rslt.getLong(5) ;
-                ((bool[]) buf[8])[0] = rslt.wasNull(5);
-                ((String[]) buf[9])[0] = rslt.getVarchar(6) ;
-                ((bool[]) buf[10])[0] = rslt.wasNull(6);
-                ((DateTime[]) buf[11])[0] = rslt.getGXDateTime(7) ;
-                ((bool[]) buf[12])[0] = rslt.wasNull(7);
-                ((DateTime[]) buf[13])[0] = rslt.getGXDateTime(8) ;
-                ((bool[]) buf[14])[0] = rslt.wasNull(8);
-                ((int[]) buf[15])[0] = rslt.getInt(9) ;
-                ((bool[]) buf[16])[0] = rslt.wasNull(9);
-                ((int[]) buf[17])[0] = rslt.getInt(10) ;
-                ((bool[]) buf[18])[0] = rslt.wasNull(10);
                 return;
              case 5 :
                 ((int[]) buf[0])[0] = rslt.getInt(1) ;
                 return;
-             case 6 :
-                ((int[]) buf[0])[0] = rslt.getInt(1) ;
-                return;
-             case 7 :
-                ((int[]) buf[0])[0] = rslt.getInt(1) ;
-                return;
-             case 8 :
-                ((int[]) buf[0])[0] = rslt.getInt(1) ;
-                return;
              case 9 :
-                ((int[]) buf[0])[0] = rslt.getInt(1) ;
-                return;
-             case 13 :
-                ((int[]) buf[0])[0] = rslt.getInt(1) ;
-                return;
-             case 14 :
-                ((int[]) buf[0])[0] = rslt.getInt(1) ;
-                return;
-             case 15 :
                 ((int[]) buf[0])[0] = rslt.getInt(1) ;
                 return;
        }
@@ -2995,106 +2718,66 @@ namespace GeneXus.Programs {
                 stmt.SetParameter(1, (int)parms[0]);
                 return;
              case 2 :
-                if ( (bool)parms[0] )
-                {
-                   stmt.setNull( 1 , SqlDbType.Int );
-                }
-                else
-                {
-                   stmt.SetParameter(1, (int)parms[1]);
-                }
+                stmt.SetParameter(1, (int)parms[0]);
                 return;
              case 3 :
-                if ( (bool)parms[0] )
-                {
-                   stmt.setNull( 1 , SqlDbType.Int );
-                }
-                else
-                {
-                   stmt.SetParameter(1, (int)parms[1]);
-                }
+                stmt.SetParameter(1, (int)parms[0]);
                 return;
              case 4 :
                 stmt.SetParameter(1, (int)parms[0]);
                 return;
              case 5 :
-                if ( (bool)parms[0] )
-                {
-                   stmt.setNull( 1 , SqlDbType.Int );
-                }
-                else
-                {
-                   stmt.SetParameter(1, (int)parms[1]);
-                }
+                stmt.SetParameter(1, (int)parms[0]);
                 return;
              case 6 :
-                if ( (bool)parms[0] )
-                {
-                   stmt.setNull( 1 , SqlDbType.Int );
-                }
-                else
-                {
-                   stmt.SetParameter(1, (int)parms[1]);
-                }
-                return;
-             case 7 :
-                stmt.SetParameter(1, (int)parms[0]);
-                return;
-             case 8 :
-                stmt.SetParameter(1, (int)parms[0]);
-                return;
-             case 9 :
-                stmt.SetParameter(1, (int)parms[0]);
-                return;
-             case 10 :
                 stmt.SetParameter(1, (int)parms[0]);
                 if ( (bool)parms[1] )
                 {
-                   stmt.setNull( 2 , SqlDbType.VarChar );
+                   stmt.setNull( 2 , SqlDbType.SmallInt );
                 }
                 else
                 {
-                   stmt.SetParameter(2, (String)parms[2]);
+                   stmt.SetParameter(2, (short)parms[2]);
                 }
                 if ( (bool)parms[3] )
                 {
-                   stmt.setNull( 3 , SqlDbType.Decimal );
+                   stmt.setNull( 3 , SqlDbType.VarChar );
                 }
                 else
                 {
-                   stmt.SetParameter(3, (long)parms[4]);
+                   stmt.SetParameter(3, (String)parms[4]);
                 }
                 if ( (bool)parms[5] )
                 {
-                   stmt.setNull( 4 , SqlDbType.Decimal );
+                   stmt.setNull( 4 , SqlDbType.SmallInt );
                 }
                 else
                 {
-                   stmt.SetParameter(4, (long)parms[6]);
+                   stmt.SetParameter(4, (short)parms[6]);
                 }
                 if ( (bool)parms[7] )
                 {
-                   stmt.setNull( 5 , SqlDbType.Decimal );
+                   stmt.setNull( 5 , SqlDbType.SmallInt );
                 }
                 else
                 {
-                   stmt.SetParameter(5, (long)parms[8]);
+                   stmt.SetParameter(5, (short)parms[8]);
                 }
                 if ( (bool)parms[9] )
                 {
-                   stmt.setNull( 6 , SqlDbType.VarChar );
+                   stmt.setNull( 6 , SqlDbType.SmallInt );
                 }
                 else
                 {
-                   stmt.SetParameter(6, (String)parms[10]);
+                   stmt.SetParameter(6, (short)parms[10]);
                 }
                 if ( (bool)parms[11] )
                 {
-                   stmt.setNull( 7 , SqlDbType.DateTime );
+                   stmt.setNull( 7 , SqlDbType.VarChar );
                 }
                 else
                 {
-                   stmt.SetParameterDatetime(7, (DateTime)parms[12]);
+                   stmt.SetParameter(7, (String)parms[12]);
                 }
                 if ( (bool)parms[13] )
                 {
@@ -3106,69 +2789,69 @@ namespace GeneXus.Programs {
                 }
                 if ( (bool)parms[15] )
                 {
-                   stmt.setNull( 9 , SqlDbType.Int );
+                   stmt.setNull( 9 , SqlDbType.DateTime );
                 }
                 else
                 {
-                   stmt.SetParameter(9, (int)parms[16]);
+                   stmt.SetParameterDatetime(9, (DateTime)parms[16]);
                 }
                 if ( (bool)parms[17] )
                 {
-                   stmt.setNull( 10 , SqlDbType.Int );
+                   stmt.setNull( 10 , SqlDbType.SmallInt );
                 }
                 else
                 {
-                   stmt.SetParameter(10, (int)parms[18]);
+                   stmt.SetParameter(10, (short)parms[18]);
                 }
                 return;
-             case 11 :
+             case 7 :
                 if ( (bool)parms[0] )
                 {
-                   stmt.setNull( 1 , SqlDbType.VarChar );
+                   stmt.setNull( 1 , SqlDbType.SmallInt );
                 }
                 else
                 {
-                   stmt.SetParameter(1, (String)parms[1]);
+                   stmt.SetParameter(1, (short)parms[1]);
                 }
                 if ( (bool)parms[2] )
                 {
-                   stmt.setNull( 2 , SqlDbType.Decimal );
+                   stmt.setNull( 2 , SqlDbType.VarChar );
                 }
                 else
                 {
-                   stmt.SetParameter(2, (long)parms[3]);
+                   stmt.SetParameter(2, (String)parms[3]);
                 }
                 if ( (bool)parms[4] )
                 {
-                   stmt.setNull( 3 , SqlDbType.Decimal );
+                   stmt.setNull( 3 , SqlDbType.SmallInt );
                 }
                 else
                 {
-                   stmt.SetParameter(3, (long)parms[5]);
+                   stmt.SetParameter(3, (short)parms[5]);
                 }
                 if ( (bool)parms[6] )
                 {
-                   stmt.setNull( 4 , SqlDbType.Decimal );
+                   stmt.setNull( 4 , SqlDbType.SmallInt );
                 }
                 else
                 {
-                   stmt.SetParameter(4, (long)parms[7]);
+                   stmt.SetParameter(4, (short)parms[7]);
                 }
                 if ( (bool)parms[8] )
                 {
-                   stmt.setNull( 5 , SqlDbType.VarChar );
+                   stmt.setNull( 5 , SqlDbType.SmallInt );
                 }
                 else
                 {
-                   stmt.SetParameter(5, (String)parms[9]);
+                   stmt.SetParameter(5, (short)parms[9]);
                 }
                 if ( (bool)parms[10] )
                 {
-                   stmt.setNull( 6 , SqlDbType.DateTime );
+                   stmt.setNull( 6 , SqlDbType.VarChar );
                 }
                 else
                 {
-                   stmt.SetParameterDatetime(6, (DateTime)parms[11]);
+                   stmt.SetParameter(6, (String)parms[11]);
                 }
                 if ( (bool)parms[12] )
                 {
@@ -3180,44 +2863,24 @@ namespace GeneXus.Programs {
                 }
                 if ( (bool)parms[14] )
                 {
-                   stmt.setNull( 8 , SqlDbType.Int );
+                   stmt.setNull( 8 , SqlDbType.DateTime );
                 }
                 else
                 {
-                   stmt.SetParameter(8, (int)parms[15]);
+                   stmt.SetParameterDatetime(8, (DateTime)parms[15]);
                 }
                 if ( (bool)parms[16] )
                 {
-                   stmt.setNull( 9 , SqlDbType.Int );
+                   stmt.setNull( 9 , SqlDbType.SmallInt );
                 }
                 else
                 {
-                   stmt.SetParameter(9, (int)parms[17]);
+                   stmt.SetParameter(9, (short)parms[17]);
                 }
                 stmt.SetParameter(10, (int)parms[18]);
                 return;
-             case 12 :
+             case 8 :
                 stmt.SetParameter(1, (int)parms[0]);
-                return;
-             case 14 :
-                if ( (bool)parms[0] )
-                {
-                   stmt.setNull( 1 , SqlDbType.Int );
-                }
-                else
-                {
-                   stmt.SetParameter(1, (int)parms[1]);
-                }
-                return;
-             case 15 :
-                if ( (bool)parms[0] )
-                {
-                   stmt.setNull( 1 , SqlDbType.Int );
-                }
-                else
-                {
-                   stmt.SetParameter(1, (int)parms[1]);
-                }
                 return;
        }
     }

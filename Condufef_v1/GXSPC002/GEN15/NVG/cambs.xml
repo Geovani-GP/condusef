@@ -9,7 +9,7 @@
 <ObjDesc>cambs</ObjDesc>
 <ObjPgmName>cambs</ObjPgmName>
 <ObjClsName>Transaction</ObjClsName></Object>
-<Result>genreq</Result>
+<Result>nogenreq</Result>
 <Warnings>
 <Warning>
 <MsgCode>spc0134</MsgCode>
@@ -142,16 +142,6 @@
 <AfterUpdateRules></AfterUpdateRules>
 <AfterDeleteRules></AfterDeleteRules>
 <TablesToControlOnDelete>
-<Table>
-<TableId>23</TableId>
-<TableName>producto</TableName>
-<Description>producto</Description>
-<RecordsToRead>one</RecordsToRead>
-<KeyAttributes>
-<Attribute>
-<AttriId>25</AttriId>
-<AttriName>cambsid</AttriName>
-<Description>cambsid</Description></Attribute></KeyAttributes></Table>
 <Table>
 <TableId>11</TableId>
 <TableName>ARTICULOS</TableName>

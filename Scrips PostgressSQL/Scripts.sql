@@ -258,19 +258,19 @@ etiquetasfecultact date   ,
 CONSTRAINT pk_etiquetas_etiquetasid PRIMARY KEY (etiquetasid)
 );
 
-CREATE TABLE "public".producto(
-productoid   integer  NOT NULL ,
-cambsid      integer  NOT NULL ,
-modeloid     integer  NOT NULL ,
-marcaid      integer  NOT NULL ,
-categoriaid   integer  NOT NULL ,
-productodsc varchar(100),
-productousuario varchar(15),
-productofecreg date   ,
-productofecultact date   ,
-CONSTRAINT pk_producto_productoid PRIMARY KEY (productoid)
-);
-
+CREATE  TABLE "public".producto ( 
+	productoid           integer  NOT NULL ,
+	pcambsid             integer  NOT NULL ,
+	pmodeloid            integer  NOT NULL ,
+	pmarcaid             integer  NOT NULL ,
+	pcategoriaid         integer  NOT NULL ,
+	productodsc          varchar(100)   ,
+	productousuario      varchar(15)   ,
+	productofecreg       date   ,
+	productofecultact    date   ,
+	ptipobienid          integer   ,
+	CONSTRAINT pk_producto_productoid PRIMARY KEY ( productoid )
+ );
 
 
 CREATE TABLE "public".estados(
@@ -280,7 +280,7 @@ CREATE TABLE "public".estados(
 );
 
 INSERT INTO usuarios(idusuario,usuario,contrasena)
-VALUES (1,'admin', 'admin')
+VALUES (1,'admin', 'admin');
 
 
 INSERT INTO estados(

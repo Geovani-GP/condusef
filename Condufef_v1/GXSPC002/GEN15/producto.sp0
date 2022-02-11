@@ -2,20 +2,20 @@ spec_i([ trn,9,producto,producto,[],spa,'10_3_15-115824' ]).
  
 struct_i(23,0,[],[]).
  
-level_i(23,[ 23,[ [ 23,many ],[ 14,one ],[ 1,one ] ],[ 175 ],[],[],[],[ 175 ],'IPRODUCTO',[ 23,[] ],[] ]).
+level_i(23,[ 23,[ [ 23,many ] ],[ 175 ],[],[],[],[ 175 ],'IPRODUCTO',[ 23,[] ],[] ]).
  
-tw_i(23,[ [ 14,[ [ 23,25,25 ] ] ],[ 1,[ [ 23,23,23 ] ] ] ]).
+tw_i(23,[]).
  
 lwi_i(23,[ [] ]).
  
  
  
  
-ta_i(23,[ [ [ 23,175 ],[ 23,87 ],[ 23,88 ],[ 23,89 ],[ 23,90 ],[ 23,91 ],[ 23,92 ],[ 23,93 ],[ 23,25 ],[ 23,23 ] ] ]).
+ta_i(23,[ [ [ 23,175 ],[ 23,179 ],[ 23,87 ],[ 23,180 ],[ 23,181 ],[ 23,182 ],[ 23,91 ],[ 23,92 ],[ 23,93 ],[ 23,183 ] ] ]).
  
-las_i(23,[ [ 175,25,87,88,89,90,91,92,93,23 ] ]).
+las_i(23,[ [ 175,179,87,180,181,182,91,92,93,183 ] ]).
  
-lac_i(23,[ [ 175,25,87,88,89,90,91,92,93,23 ] ]).
+lac_i(23,[ [ 175,179,87,180,181,182,91,92,93,183 ] ]).
  
  
 lits_i(producto,5,10).
@@ -23,15 +23,15 @@ lits_i(producto,5,10).
 cls_i([ 0,0 ],[ 5,99 ]).
  
 pos_i(175,[ 0,0,0 ]).
-pos_i(25,[ 0,0,0 ]).
+pos_i(179,[ 0,0,0 ]).
 pos_i(87,[ 0,0,0 ]).
-pos_i(88,[ 0,0,0 ]).
-pos_i(89,[ 0,0,0 ]).
-pos_i(90,[ 0,0,0 ]).
+pos_i(180,[ 0,0,0 ]).
+pos_i(181,[ 0,0,0 ]).
+pos_i(182,[ 0,0,0 ]).
 pos_i(91,[ 0,0,0 ]).
 pos_i(92,[ 0,0,0 ]).
 pos_i(93,[ 0,0,0 ]).
-pos_i(23,[ 0,0,0 ]).
+pos_i(183,[ 0,0,0 ]).
  
  
  
@@ -52,12 +52,12 @@ rule_i(0,datastore(1,'CS_RPCPGML','')).
 rule_i(0,datastore(1,'JDBC_DATASOURCE','')).
 rule_i(0,datastore(1,'USE_JDBC_DATASOURCE','0')).
 rule_i(0,datastore(1,'DS_DBMS_ADDINFO','')).
-rule_i(0,datastore(1,'USER_PASSWORD',󻢸蘇�2�5炭)).
+rule_i(0,datastore(1,'USER_PASSWORD',asdf)).
 rule_i(0,datastore(1,'USER_ID',postgres)).
 rule_i(0,datastore(1,'CS_CONNECT','First')).
 rule_i(0,datastore(1,'DBMS_PORT','5432')).
 rule_i(0,datastore(1,'CS_SERVER',localhost)).
-rule_i(0,datastore(1,'CS_DBNAME',postgres)).
+rule_i(0,datastore(1,'CS_DBNAME',condusef)).
 rule_i(0,datastore(1,'CS_FLEDSNAME','')).
 rule_i(0,datastore(1,'CS_DRVNAME','')).
 rule_i(0,datastore(1,'CS_DSNAME','')).
@@ -163,95 +163,45 @@ rule_i(0,prop(idBC,'-1')).
 rule_i(0,prop('Folder',o(120,'Root Module'))).
 rule_i(0,prop('ObjDesc',producto)).
 rule_i(0,prop('ObjName',producto)).
-rule_i(23,prompt([ 1,[ [ 23,23,23 ] ],[ 23 ],[ 23 ],[ t(o(13,'Gx0010'),28),t(23,2) ],[],n,[] ])).
-rule_i(23,rule([ a(23,[ [ 23 ],[ t(o(13,'Gx0010'),28),t(23,2) ] ]) ],[],[],[ 23 ])).
-rule_i(23,prompt([ 14,[ [ 23,25,25 ] ],[ 25 ],[ 25 ],[ t(o(13,'Gx00E0'),28),t(25,2) ],[],n,[] ])).
-rule_i(23,rule([ a(23,[ [ 25 ],[ t(o(13,'Gx00E0'),28),t(25,2) ] ]) ],[],[],[ 25 ])).
 rule_i(23,prompt([ 23,[ [ [],175,175 ] ],[],[],[ t(o(13,'Gx00N0'),28),t(175,2) ],[],n,[] ])).
 rule_i(23,rule([ a(23,[ [ 175 ],[ t(o(13,'Gx00N0'),28),t(175,2) ] ]) ],[],[],[ 175 ])).
 rule_i(0,rule([ a(22,[ 'Dlt','"Eliminar"','' ]) ],[],[],[])).
 rule_i(0,maingen(15)).
-rule_i(23,rule([ a(18,[ [ 23 ] ]) ],[],[ insert,update,delete ],[ 23 ])).
-rule_i(23,rule([ a(18,[ [ 25 ] ]) ],[],[ insert,update,delete ],[ 25 ])).
-rule_i(0,p(0,0,fv,19,[ intname,'CAMBS' ])).
-rule_i(0,p(0,0,fv,19,[ table,14 ])).
-rule_i(0,p(0,15,fv,19,[])).
-rule_i(0,p(0,15,fv,19,[ 'NAME',cambs ])).
-rule_i(0,p(0,15,fv,19,[ 'LOC','' ])).
-rule_i(0,p(0,15,fv,19,[ 'SCHEMA',public ])).
-rule_i(0,p(0,15,fv,19,[ 'EXTNAM','YES' ])).
-rule_i(0,p(0,15,fvix,[ 19,20 ],[])).
-rule_i(0,p(0,15,fvix,[ 19,20 ],[ 'NAME',cambs_pkey ])).
-rule_i(0,p(0,15,fvix,[ 19,20 ],[ 'LOC','' ])).
-rule_i(0,p(0,15,fvix,[ 19,20 ],[ 'SCHEMA',public ])).
-rule_i(0,p(0,15,fvix,[ 19,20 ],[ 'EXTNAM','YES' ])).
-rule_i(0,file(14,'CAMBS',[ 25,83,84,85,86 ])).
-rule_i(0,loc([ 14 ],'CAMBS','','LAN')).
-rule_i(0,index(14,'CAMBS_PKEY',u,[ 25 ])).
-rule_i(0,loc([ 14,'CAMBS_PKEY' ],cambs_pkey,'','LAN')).
-rule_i(0,p(0,0,fv,17,[ intname,'TIPOBIEN' ])).
-rule_i(0,p(0,0,fv,17,[ table,1 ])).
-rule_i(0,p(0,15,fv,17,[])).
-rule_i(0,p(0,15,fv,17,[ 'NAME',tipobien ])).
-rule_i(0,p(0,15,fv,17,[ 'LOC','' ])).
-rule_i(0,p(0,15,fv,17,[ 'SCHEMA',public ])).
-rule_i(0,p(0,15,fv,17,[ 'EXTNAM','YES' ])).
-rule_i(0,p(0,15,fvix,[ 17,18 ],[])).
-rule_i(0,p(0,15,fvix,[ 17,18 ],[ 'NAME',tipobien_pkey ])).
-rule_i(0,p(0,15,fvix,[ 17,18 ],[ 'LOC','' ])).
-rule_i(0,p(0,15,fvix,[ 17,18 ],[ 'SCHEMA',public ])).
-rule_i(0,p(0,15,fvix,[ 17,18 ],[ 'EXTNAM','YES' ])).
-rule_i(0,file(1,'TIPOBIEN',[ 23,139,140,141,142 ])).
-rule_i(0,loc([ 1 ],'TIPOBIEN','','LAN')).
-rule_i(0,index(1,'TIPOBIEN_PKEY',u,[ 23 ])).
-rule_i(0,loc([ 1,'TIPOBIEN_PKEY' ],tipobien_pkey,'','LAN')).
-rule_i(23,rule([ a(19,[ [ 25 ],msg([ t('"No existe ''cambs''."',3) ],[ t('ForeignKeyNotFound',3) ]) ]) ],[],[ insert,update,delete ],[ 25 ])).
-rule_i(23,rule([ a(19,[ [ 23 ],msg([ t('"No existe ''tipobien''."',3) ],[ t('ForeignKeyNotFound',3) ]) ]) ],[],[ insert,update,delete ],[ 23 ])).
  
 a_i(1,23,t,23,[],[ [ [ [],175,175 ] ],'IPRODUCTO',[] ]).
-a_i(2,23,r,14,[],[ [ [ 23,25,25 ] ],'CAMBS_PKEY',[] ]).
-a_i(3,23,r,1,[],[ [ [ 23,23,23 ] ],'TIPOBIEN_PKEY',[] ]).
  
 v_i(t,i,1,175).
+v_i(t,o,1,179).
 v_i(t,o,1,87).
-v_i(t,o,1,88).
-v_i(t,o,1,89).
-v_i(t,o,1,90).
+v_i(t,o,1,180).
+v_i(t,o,1,181).
+v_i(t,o,1,182).
 v_i(t,o,1,91).
 v_i(t,o,1,92).
 v_i(t,o,1,93).
-v_i(t,o,1,25).
-v_i(t,o,1,23).
-v_i(r,i,2,25).
-v_i(r,o,2,[]).
-v_i(r,i,3,23).
-v_i(r,o,3,[]).
+v_i(t,o,1,183).
  
  
  
  
  
  
-attri_i(23,[ tipobienid,int,9,0,'ZZZZZZZZ9',0,tipobienid,'',0 ]).
+attri_i(183,[ ptipobienid,int,4,0,'ZZZ9',0,ptipobienid,'',0 ]).
 attri_i(93,[ productofecultact,dtime,10,8,'99/99/9999 99:99:99',0,productofecultact,'',0 ]).
 attri_i(92,[ productofecreg,dtime,10,8,'99/99/9999 99:99:99',0,productofecreg,'',0 ]).
 attri_i(91,[ productousuario,svchar,15,0,'',0,productousuario,'',0 ]).
-attri_i(90,[ categoriaid,int,18,0,'ZZZZZZZZZZZZZZZZZ9',0,categoriaid,'',0 ]).
-attri_i(89,[ marcaid,int,18,0,'ZZZZZZZZZZZZZZZZZ9',0,marcaid,'',0 ]).
-attri_i(88,[ modeloid,int,18,0,'ZZZZZZZZZZZZZZZZZ9',0,modeloid,'',0 ]).
+attri_i(182,[ pcategoriaid,int,4,0,'ZZZ9',0,pcategoriaid,'',0 ]).
+attri_i(181,[ pmarcaid,int,4,0,'ZZZ9',0,pmarcaid,'',0 ]).
+attri_i(180,[ pmodeloid,int,4,0,'ZZZ9',0,pmodeloid,'',0 ]).
 attri_i(87,[ productodsc,svchar,100,0,'',0,productodsc,'',0 ]).
-attri_i(25,[ cambsid,int,9,0,'ZZZZZZZZ9',0,cambsid,'',0 ]).
+attri_i(179,[ pcambsid,int,4,0,'ZZZ9',0,pcambsid,'',0 ]).
 attri_i(175,[ productoid,int,9,0,'ZZZZZZZZ9',0,productoid,'',0 ]).
 attri_i('Gxremove',[ 'GxRemove',int,1,0,'9',0,'Gx Remove','',5 ]).
 attri_i('Mode',[ 'Gx_mode',char,3,0,'@!',1,'','',2 ]).
  
-table_i(1,[ 'TIPOBIEN',[ 23 ],tipobien,tipobien ]).
-table_i(14,[ 'CAMBS',[ 25 ],cambs,cambs ]).
-table_i(23,[ producto,[ 175,25,87,88,89,90,91,92,93,23 ],producto,producto ]).
+table_i(23,[ producto,[ 175,87,91,92,93,179,180,181,182,183 ],producto,producto ]).
  
 index_i(23,[ 'IPRODUCTO',u,[ 175 ],'Iproducto' ]).
-index_i(14,[ 'CAMBS_PKEY',u,[ 25 ],'CAMBS_PKEY' ]).
-index_i(1,[ 'TIPOBIEN_PKEY',u,[ 23 ],'TIPOBIEN_PKEY' ]).
  
  
  
@@ -264,8 +214,8 @@ index_i(1,[ 'TIPOBIEN_PKEY',u,[ 23 ],'TIPOBIEN_PKEY' ]).
  
  
  
-upd_i(23,23,i,[ [ 175,87,88,89,90,91,92,93,25,23 ],[],'IPRODUCTO',[ [ [],175,175 ] ] ]).
-upd_i(23,23,u,[ [ 87,88,89,90,91,92,93,25,23 ],[],'IPRODUCTO',[] ]).
+upd_i(23,23,i,[ [ 175,179,87,180,181,182,91,92,93,183 ],[],'IPRODUCTO',[ [ [],175,175 ] ] ]).
+upd_i(23,23,u,[ [ 179,87,180,181,182,91,92,93,183 ],[],'IPRODUCTO',[] ]).
 upd_i(23,23,d,[ [],[],'IPRODUCTO',[] ]).
  
  
@@ -273,18 +223,6 @@ upd_i(23,23,d,[ [],[],'IPRODUCTO',[] ]).
  
  
  
-map_i(1,i,'TIPOBIEN_PKEY',[ 'TIPOBIEN_PKEY' ]).
-map_i(1,a,142,[ tipobienfecultact ]).
-map_i(1,a,141,[ tipobienfecreg ]).
-map_i(1,a,140,[ tipobienusuario ]).
-map_i(1,a,139,[ tipobiendsc ]).
-map_i(1,a,23,[ tipobienid ]).
-map_i(14,i,'CAMBS_PKEY',[ 'CAMBS_PKEY' ]).
-map_i(14,a,86,[ cambsfecultact ]).
-map_i(14,a,85,[ cambsfecreg ]).
-map_i(14,a,84,[ cambsusuario ]).
-map_i(14,a,83,[ cambsdsc ]).
-map_i(14,a,25,[ cambsid ]).
  
  
  
@@ -335,7 +273,7 @@ html_sub_i(21,22,html_i(0,t(175,2))).
 html_sub_i(3,23,html_i(4,div(23))).
 html_sub_i(23,24,html_i(0,div(24))).
 html_sub_i(24,25,html_i(0,div(25))).
-html_sub_i(25,26,html_i(0,t(25,2))).
+html_sub_i(25,26,html_i(0,t(179,2))).
 html_sub_i(3,27,html_i(5,div(27))).
 html_sub_i(27,28,html_i(0,div(28))).
 html_sub_i(28,29,html_i(0,div(29))).
@@ -343,15 +281,15 @@ html_sub_i(29,30,html_i(0,t(87,2))).
 html_sub_i(3,31,html_i(6,div(31))).
 html_sub_i(31,32,html_i(0,div(32))).
 html_sub_i(32,33,html_i(0,div(33))).
-html_sub_i(33,34,html_i(0,t(88,2))).
+html_sub_i(33,34,html_i(0,t(180,2))).
 html_sub_i(3,35,html_i(7,div(35))).
 html_sub_i(35,36,html_i(0,div(36))).
 html_sub_i(36,37,html_i(0,div(37))).
-html_sub_i(37,38,html_i(0,t(89,2))).
+html_sub_i(37,38,html_i(0,t(181,2))).
 html_sub_i(3,39,html_i(8,div(39))).
 html_sub_i(39,40,html_i(0,div(40))).
 html_sub_i(40,41,html_i(0,div(41))).
-html_sub_i(41,42,html_i(0,t(90,2))).
+html_sub_i(41,42,html_i(0,t(182,2))).
 html_sub_i(3,43,html_i(9,div(43))).
 html_sub_i(43,44,html_i(0,div(44))).
 html_sub_i(44,45,html_i(0,div(45))).
@@ -367,7 +305,7 @@ html_sub_i(53,54,html_i(0,t(93,2))).
 html_sub_i(3,55,html_i(12,div(55))).
 html_sub_i(55,56,html_i(0,div(56))).
 html_sub_i(56,57,html_i(0,div(57))).
-html_sub_i(57,58,html_i(0,t(23,2))).
+html_sub_i(57,58,html_i(0,t(183,2))).
 html_sub_i(3,59,html_i(13,div(59))).
 html_sub_i(59,60,html_i(0,div(60))).
 html_sub_i(60,61,html_i(0,div(61))).
@@ -417,7 +355,7 @@ html_comp_i(6,'Title','',d,[ str ]).
 html_comp_i(6,'Fill',-1,d,[ bool ]).
 html_comp_i(6,'Backcolor',rgb(255,255,255),d,[ color ]).
 html_comp_i(6,'Forecolor',rgb(0,0,0),d,[ color ]).
-html_comp_i(6,'Font',font('Open Sans Semibold',17,[]),d,[ font ]).
+html_comp_i(6,'Font',font('Microsoft Sans Serif',17,[]),d,[ font ]).
 html_comp_i(7,'Class',row,v,[ str ]).
 html_comp_i(7,'Id','',d,[ str ]).
 html_comp_i(7,'Height',measure(0,px),d,[ measure ]).
@@ -590,14 +528,14 @@ html_comp_i(25,'Width',measure(0,px),d,[ measure ]).
 html_comp_i(25,'Semanticcontent',div,d,[ str ]).
 html_comp_i(25,'Align',left,d,[ str ]).
 html_comp_i(25,'Valign',top,d,[ str ]).
-html_comp_i(26,'Colcount',9,d,[ num ]).
-html_comp_i(26,'Attid',25,v,[ num ]).
+html_comp_i(26,'Colcount',4,d,[ num ]).
+html_comp_i(26,'Attid',179,v,[ num ]).
 html_comp_i(26,'Class','Attribute',v,[ str ]).
-html_comp_i(26,'Controlname','Cambsid',d,[ str ]).
+html_comp_i(26,'Controlname','Pcambsid',d,[ str ]).
 html_comp_i(26,'Returnonclick',0,v,[ bool ]).
 html_comp_i(26,'Captionclass','col-sm-3 AttributeLabel',v,[ str ]).
 html_comp_i(26,'Captionposition','Left',v,[ str ]).
-html_comp_i(26,'Captionvalue',cambsid,d,[ str ]).
+html_comp_i(26,'Captionvalue',pcambsid,d,[ str ]).
 html_comp_i(26,'Controltype',2,d,[ num ]).
 html_comp_i(26,'Inputtype',0,d,[ num ]).
 html_comp_i(26,'Notifycontextchange',0,d,[ bool ]).
@@ -606,7 +544,7 @@ html_comp_i(26,'Readonly',0,v,[ bool ]).
 html_comp_i(26,'Autocomplete',-1,d,[ bool ]).
 html_comp_i(26,'Ispassword',0,d,[ bool ]).
 html_comp_i(26,'Autoresize',-1,d,[ bool ]).
-html_comp_i(26,'Gxwidth',measure(9,chr),d,[ measure ]).
+html_comp_i(26,'Gxwidth',measure(4,chr),d,[ measure ]).
 html_comp_i(26,'Gxheight',measure(1,row),d,[ measure ]).
 html_comp_i(26,'Ismultiline',0,d,[ bool ]).
 html_comp_i(26,'Fill',-1,d,[ bool ]).
@@ -689,14 +627,14 @@ html_comp_i(33,'Width',measure(0,px),d,[ measure ]).
 html_comp_i(33,'Semanticcontent',div,d,[ str ]).
 html_comp_i(33,'Align',left,d,[ str ]).
 html_comp_i(33,'Valign',top,d,[ str ]).
-html_comp_i(34,'Colcount',18,d,[ num ]).
-html_comp_i(34,'Attid',88,v,[ num ]).
+html_comp_i(34,'Colcount',4,d,[ num ]).
+html_comp_i(34,'Attid',180,v,[ num ]).
 html_comp_i(34,'Class','Attribute',v,[ str ]).
-html_comp_i(34,'Controlname','Modeloid',d,[ str ]).
+html_comp_i(34,'Controlname','Pmodeloid',d,[ str ]).
 html_comp_i(34,'Returnonclick',0,v,[ bool ]).
 html_comp_i(34,'Captionclass','col-sm-3 AttributeLabel',v,[ str ]).
 html_comp_i(34,'Captionposition','Left',v,[ str ]).
-html_comp_i(34,'Captionvalue',modeloid,d,[ str ]).
+html_comp_i(34,'Captionvalue',pmodeloid,d,[ str ]).
 html_comp_i(34,'Controltype',2,d,[ num ]).
 html_comp_i(34,'Inputtype',0,d,[ num ]).
 html_comp_i(34,'Notifycontextchange',0,d,[ bool ]).
@@ -705,7 +643,7 @@ html_comp_i(34,'Readonly',0,v,[ bool ]).
 html_comp_i(34,'Autocomplete',-1,d,[ bool ]).
 html_comp_i(34,'Ispassword',0,d,[ bool ]).
 html_comp_i(34,'Autoresize',-1,d,[ bool ]).
-html_comp_i(34,'Gxwidth',measure(18,chr),d,[ measure ]).
+html_comp_i(34,'Gxwidth',measure(4,chr),d,[ measure ]).
 html_comp_i(34,'Gxheight',measure(1,row),d,[ measure ]).
 html_comp_i(34,'Ismultiline',0,d,[ bool ]).
 html_comp_i(34,'Fill',-1,d,[ bool ]).
@@ -737,14 +675,14 @@ html_comp_i(37,'Width',measure(0,px),d,[ measure ]).
 html_comp_i(37,'Semanticcontent',div,d,[ str ]).
 html_comp_i(37,'Align',left,d,[ str ]).
 html_comp_i(37,'Valign',top,d,[ str ]).
-html_comp_i(38,'Colcount',18,d,[ num ]).
-html_comp_i(38,'Attid',89,v,[ num ]).
+html_comp_i(38,'Colcount',4,d,[ num ]).
+html_comp_i(38,'Attid',181,v,[ num ]).
 html_comp_i(38,'Class','Attribute',v,[ str ]).
-html_comp_i(38,'Controlname','Marcaid',d,[ str ]).
+html_comp_i(38,'Controlname','Pmarcaid',d,[ str ]).
 html_comp_i(38,'Returnonclick',0,v,[ bool ]).
 html_comp_i(38,'Captionclass','col-sm-3 AttributeLabel',v,[ str ]).
 html_comp_i(38,'Captionposition','Left',v,[ str ]).
-html_comp_i(38,'Captionvalue',marcaid,d,[ str ]).
+html_comp_i(38,'Captionvalue',pmarcaid,d,[ str ]).
 html_comp_i(38,'Controltype',2,d,[ num ]).
 html_comp_i(38,'Inputtype',0,d,[ num ]).
 html_comp_i(38,'Notifycontextchange',0,d,[ bool ]).
@@ -753,7 +691,7 @@ html_comp_i(38,'Readonly',0,v,[ bool ]).
 html_comp_i(38,'Autocomplete',-1,d,[ bool ]).
 html_comp_i(38,'Ispassword',0,d,[ bool ]).
 html_comp_i(38,'Autoresize',-1,d,[ bool ]).
-html_comp_i(38,'Gxwidth',measure(18,chr),d,[ measure ]).
+html_comp_i(38,'Gxwidth',measure(4,chr),d,[ measure ]).
 html_comp_i(38,'Gxheight',measure(1,row),d,[ measure ]).
 html_comp_i(38,'Ismultiline',0,d,[ bool ]).
 html_comp_i(38,'Fill',-1,d,[ bool ]).
@@ -785,14 +723,14 @@ html_comp_i(41,'Width',measure(0,px),d,[ measure ]).
 html_comp_i(41,'Semanticcontent',div,d,[ str ]).
 html_comp_i(41,'Align',left,d,[ str ]).
 html_comp_i(41,'Valign',top,d,[ str ]).
-html_comp_i(42,'Colcount',18,d,[ num ]).
-html_comp_i(42,'Attid',90,v,[ num ]).
+html_comp_i(42,'Colcount',4,d,[ num ]).
+html_comp_i(42,'Attid',182,v,[ num ]).
 html_comp_i(42,'Class','Attribute',v,[ str ]).
-html_comp_i(42,'Controlname','Categoriaid',d,[ str ]).
+html_comp_i(42,'Controlname','Pcategoriaid',d,[ str ]).
 html_comp_i(42,'Returnonclick',0,v,[ bool ]).
 html_comp_i(42,'Captionclass','col-sm-3 AttributeLabel',v,[ str ]).
 html_comp_i(42,'Captionposition','Left',v,[ str ]).
-html_comp_i(42,'Captionvalue',categoriaid,d,[ str ]).
+html_comp_i(42,'Captionvalue',pcategoriaid,d,[ str ]).
 html_comp_i(42,'Controltype',2,d,[ num ]).
 html_comp_i(42,'Inputtype',0,d,[ num ]).
 html_comp_i(42,'Notifycontextchange',0,d,[ bool ]).
@@ -801,7 +739,7 @@ html_comp_i(42,'Readonly',0,v,[ bool ]).
 html_comp_i(42,'Autocomplete',-1,d,[ bool ]).
 html_comp_i(42,'Ispassword',0,d,[ bool ]).
 html_comp_i(42,'Autoresize',-1,d,[ bool ]).
-html_comp_i(42,'Gxwidth',measure(18,chr),d,[ measure ]).
+html_comp_i(42,'Gxwidth',measure(4,chr),d,[ measure ]).
 html_comp_i(42,'Gxheight',measure(1,row),d,[ measure ]).
 html_comp_i(42,'Ismultiline',0,d,[ bool ]).
 html_comp_i(42,'Fill',-1,d,[ bool ]).
@@ -984,14 +922,14 @@ html_comp_i(57,'Width',measure(0,px),d,[ measure ]).
 html_comp_i(57,'Semanticcontent',div,d,[ str ]).
 html_comp_i(57,'Align',left,d,[ str ]).
 html_comp_i(57,'Valign',top,d,[ str ]).
-html_comp_i(58,'Colcount',9,d,[ num ]).
-html_comp_i(58,'Attid',23,v,[ num ]).
+html_comp_i(58,'Colcount',4,d,[ num ]).
+html_comp_i(58,'Attid',183,v,[ num ]).
 html_comp_i(58,'Class','Attribute',v,[ str ]).
-html_comp_i(58,'Controlname','Tipobienid',d,[ str ]).
+html_comp_i(58,'Controlname','Ptipobienid',d,[ str ]).
 html_comp_i(58,'Returnonclick',0,v,[ bool ]).
 html_comp_i(58,'Captionclass','col-sm-3 AttributeLabel',v,[ str ]).
 html_comp_i(58,'Captionposition','Left',v,[ str ]).
-html_comp_i(58,'Captionvalue',tipobienid,d,[ str ]).
+html_comp_i(58,'Captionvalue',ptipobienid,d,[ str ]).
 html_comp_i(58,'Controltype',2,d,[ num ]).
 html_comp_i(58,'Inputtype',0,d,[ num ]).
 html_comp_i(58,'Notifycontextchange',0,d,[ bool ]).
@@ -1000,7 +938,7 @@ html_comp_i(58,'Readonly',0,v,[ bool ]).
 html_comp_i(58,'Autocomplete',-1,d,[ bool ]).
 html_comp_i(58,'Ispassword',0,d,[ bool ]).
 html_comp_i(58,'Autoresize',-1,d,[ bool ]).
-html_comp_i(58,'Gxwidth',measure(9,chr),d,[ measure ]).
+html_comp_i(58,'Gxwidth',measure(4,chr),d,[ measure ]).
 html_comp_i(58,'Gxheight',measure(1,row),d,[ measure ]).
 html_comp_i(58,'Ismultiline',0,d,[ bool ]).
 html_comp_i(58,'Fill',-1,d,[ bool ]).
@@ -1091,7 +1029,7 @@ lit_i(22,1,t(175,2),[ ctlname(175),ctrltype(edit,22),pos(22),ispwd(0),e2n(1),wid
 lit_i(21,1,div(21),[ ctlname('') ]).
 lit_i(20,1,div(20),[ ctlname('') ]).
 lit_i(19,1,div(19),[ ctlname('') ]).
-lit_i(26,1,t(25,2),[ ctlname(25),ctrltype(edit,26),pos(26),ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
+lit_i(26,1,t(179,2),[ ctlname(179),ctrltype(edit,26),pos(26),ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
 lit_i(25,1,div(25),[ ctlname('') ]).
 lit_i(24,1,div(24),[ ctlname('') ]).
 lit_i(23,1,div(23),[ ctlname('') ]).
@@ -1099,15 +1037,15 @@ lit_i(30,1,t(87,2),[ ctlname(87),ctrltype(edit,30),pos(30),ispwd(0),e2n(1),width
 lit_i(29,1,div(29),[ ctlname('') ]).
 lit_i(28,1,div(28),[ ctlname('') ]).
 lit_i(27,1,div(27),[ ctlname('') ]).
-lit_i(34,1,t(88,2),[ ctlname(88),ctrltype(edit,34),pos(34),ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
+lit_i(34,1,t(180,2),[ ctlname(180),ctrltype(edit,34),pos(34),ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
 lit_i(33,1,div(33),[ ctlname('') ]).
 lit_i(32,1,div(32),[ ctlname('') ]).
 lit_i(31,1,div(31),[ ctlname('') ]).
-lit_i(38,1,t(89,2),[ ctlname(89),ctrltype(edit,38),pos(38),ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
+lit_i(38,1,t(181,2),[ ctlname(181),ctrltype(edit,38),pos(38),ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
 lit_i(37,1,div(37),[ ctlname('') ]).
 lit_i(36,1,div(36),[ ctlname('') ]).
 lit_i(35,1,div(35),[ ctlname('') ]).
-lit_i(42,1,t(90,2),[ ctlname(90),ctrltype(edit,42),pos(42),ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
+lit_i(42,1,t(182,2),[ ctlname(182),ctrltype(edit,42),pos(42),ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
 lit_i(41,1,div(41),[ ctlname('') ]).
 lit_i(40,1,div(40),[ ctlname('') ]).
 lit_i(39,1,div(39),[ ctlname('') ]).
@@ -1123,7 +1061,7 @@ lit_i(54,1,t(93,2),[ ctlname(93),ctrltype(edit,54),pos(54),ispwd(0),e2n(1),width
 lit_i(53,1,div(53),[ ctlname('') ]).
 lit_i(52,1,div(52),[ ctlname('') ]).
 lit_i(51,1,div(51),[ ctlname('') ]).
-lit_i(58,1,t(23,2),[ ctlname(23),ctrltype(edit,58),pos(58),ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
+lit_i(58,1,t(183,2),[ ctlname(183),ctrltype(edit,58),pos(58),ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
 lit_i(57,1,div(57),[ ctlname('') ]).
 lit_i(56,1,div(56),[ ctlname('') ]).
 lit_i(55,1,div(55),[ ctlname('') ]).
@@ -1155,16 +1093,16 @@ att_prop_i(2,175,'ATT_INITIAL_VALUE','',d).
 att_prop_i(2,175,'AttRegEx','',d).
 att_prop_i(2,175,'AttValidationFailedMsg','',d).
 att_prop_i(2,175,'FullName',productoid,v).
-att_prop_i(2,25,'HORIZONTAL_DESCRIPTION',cambsid,v).
-att_prop_i(2,25,'ExternalName',cambsid,d).
-att_prop_i(2,25,'ExternalNamespace','Condufef_v1',d).
-att_prop_i(2,25,'EmptyAsNull','Yes',d).
-att_prop_i(2,25,idBasedOn,'',d).
-att_prop_i(2,25,'AUTONUMBER','0',d).
-att_prop_i(2,25,'ATT_INITIAL_VALUE','',d).
-att_prop_i(2,25,'AttRegEx','',d).
-att_prop_i(2,25,'AttValidationFailedMsg','',d).
-att_prop_i(2,25,'FullName',cambsid,v).
+att_prop_i(2,179,'HORIZONTAL_DESCRIPTION',pcambsid,d).
+att_prop_i(2,179,'ExternalName',pcambsid,d).
+att_prop_i(2,179,'ExternalNamespace','Condufef_v1',d).
+att_prop_i(2,179,'EmptyAsNull','Yes',d).
+att_prop_i(2,179,idBasedOn,'',d).
+att_prop_i(2,179,'AUTONUMBER','0',d).
+att_prop_i(2,179,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,179,'AttRegEx','',d).
+att_prop_i(2,179,'AttValidationFailedMsg','',d).
+att_prop_i(2,179,'FullName',pcambsid,v).
 att_prop_i(2,87,'HORIZONTAL_DESCRIPTION',productodsc,v).
 att_prop_i(2,87,'ExternalName',productodsc,d).
 att_prop_i(2,87,'ExternalNamespace','Condufef_v1',d).
@@ -1175,36 +1113,36 @@ att_prop_i(2,87,'DB_NLS_SUPPORT','No',d).
 att_prop_i(2,87,'AttRegEx','',d).
 att_prop_i(2,87,'AttValidationFailedMsg','',d).
 att_prop_i(2,87,'FullName',productodsc,v).
-att_prop_i(2,88,'HORIZONTAL_DESCRIPTION',modeloid,v).
-att_prop_i(2,88,'ExternalName',modeloid,d).
-att_prop_i(2,88,'ExternalNamespace','Condufef_v1',d).
-att_prop_i(2,88,'EmptyAsNull','Yes',d).
-att_prop_i(2,88,idBasedOn,'',d).
-att_prop_i(2,88,'AUTONUMBER','0',d).
-att_prop_i(2,88,'ATT_INITIAL_VALUE','',d).
-att_prop_i(2,88,'AttRegEx','',d).
-att_prop_i(2,88,'AttValidationFailedMsg','',d).
-att_prop_i(2,88,'FullName',modeloid,v).
-att_prop_i(2,89,'HORIZONTAL_DESCRIPTION',marcaid,v).
-att_prop_i(2,89,'ExternalName',marcaid,d).
-att_prop_i(2,89,'ExternalNamespace','Condufef_v1',d).
-att_prop_i(2,89,'EmptyAsNull','Yes',d).
-att_prop_i(2,89,idBasedOn,'',d).
-att_prop_i(2,89,'AUTONUMBER','0',d).
-att_prop_i(2,89,'ATT_INITIAL_VALUE','',d).
-att_prop_i(2,89,'AttRegEx','',d).
-att_prop_i(2,89,'AttValidationFailedMsg','',d).
-att_prop_i(2,89,'FullName',marcaid,v).
-att_prop_i(2,90,'HORIZONTAL_DESCRIPTION',categoriaid,v).
-att_prop_i(2,90,'ExternalName',categoriaid,d).
-att_prop_i(2,90,'ExternalNamespace','Condufef_v1',d).
-att_prop_i(2,90,'EmptyAsNull','Yes',d).
-att_prop_i(2,90,idBasedOn,'',d).
-att_prop_i(2,90,'AUTONUMBER','0',d).
-att_prop_i(2,90,'ATT_INITIAL_VALUE','',d).
-att_prop_i(2,90,'AttRegEx','',d).
-att_prop_i(2,90,'AttValidationFailedMsg','',d).
-att_prop_i(2,90,'FullName',categoriaid,v).
+att_prop_i(2,180,'HORIZONTAL_DESCRIPTION',pmodeloid,d).
+att_prop_i(2,180,'ExternalName',pmodeloid,d).
+att_prop_i(2,180,'ExternalNamespace','Condufef_v1',d).
+att_prop_i(2,180,'EmptyAsNull','Yes',d).
+att_prop_i(2,180,idBasedOn,'',d).
+att_prop_i(2,180,'AUTONUMBER','0',d).
+att_prop_i(2,180,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,180,'AttRegEx','',d).
+att_prop_i(2,180,'AttValidationFailedMsg','',d).
+att_prop_i(2,180,'FullName',pmodeloid,v).
+att_prop_i(2,181,'HORIZONTAL_DESCRIPTION',pmarcaid,d).
+att_prop_i(2,181,'ExternalName',pmarcaid,d).
+att_prop_i(2,181,'ExternalNamespace','Condufef_v1',d).
+att_prop_i(2,181,'EmptyAsNull','Yes',d).
+att_prop_i(2,181,idBasedOn,'',d).
+att_prop_i(2,181,'AUTONUMBER','0',d).
+att_prop_i(2,181,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,181,'AttRegEx','',d).
+att_prop_i(2,181,'AttValidationFailedMsg','',d).
+att_prop_i(2,181,'FullName',pmarcaid,v).
+att_prop_i(2,182,'HORIZONTAL_DESCRIPTION',pcategoriaid,d).
+att_prop_i(2,182,'ExternalName',pcategoriaid,d).
+att_prop_i(2,182,'ExternalNamespace','Condufef_v1',d).
+att_prop_i(2,182,'EmptyAsNull','Yes',d).
+att_prop_i(2,182,idBasedOn,'',d).
+att_prop_i(2,182,'AUTONUMBER','0',d).
+att_prop_i(2,182,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,182,'AttRegEx','',d).
+att_prop_i(2,182,'AttValidationFailedMsg','',d).
+att_prop_i(2,182,'FullName',pcategoriaid,v).
 att_prop_i(2,91,'HORIZONTAL_DESCRIPTION',productousuario,v).
 att_prop_i(2,91,'ExternalName',productousuario,d).
 att_prop_i(2,91,'ExternalNamespace','Condufef_v1',d).
@@ -1237,30 +1175,25 @@ att_prop_i(2,93,'AttValidationFailedMsg','',d).
 att_prop_i(2,93,idDATEFORMAT,idDATEFORMAT_LONG,v).
 att_prop_i(2,93,idHOURFORMAT,idHOURFORMAT_HOURMINSEC,v).
 att_prop_i(2,93,'FullName',productofecultact,v).
-att_prop_i(2,23,'HORIZONTAL_DESCRIPTION',tipobienid,v).
-att_prop_i(2,23,'ExternalName',tipobienid,d).
-att_prop_i(2,23,'ExternalNamespace','Condufef_v1',d).
-att_prop_i(2,23,'EmptyAsNull','Yes',d).
-att_prop_i(2,23,idBasedOn,'',d).
-att_prop_i(2,23,'AUTONUMBER','0',d).
-att_prop_i(2,23,'ATT_INITIAL_VALUE','',d).
-att_prop_i(2,23,'AttRegEx','',d).
-att_prop_i(2,23,'AttValidationFailedMsg','',d).
-att_prop_i(2,23,'FullName',tipobienid,v).
+att_prop_i(2,183,'HORIZONTAL_DESCRIPTION',ptipobienid,d).
+att_prop_i(2,183,'ExternalName',ptipobienid,d).
+att_prop_i(2,183,'ExternalNamespace','Condufef_v1',d).
+att_prop_i(2,183,'EmptyAsNull','Yes',d).
+att_prop_i(2,183,idBasedOn,'',d).
+att_prop_i(2,183,'AUTONUMBER','0',d).
+att_prop_i(2,183,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,183,'AttRegEx','',d).
+att_prop_i(2,183,'AttValidationFailedMsg','',d).
+att_prop_i(2,183,'FullName',ptipobienid,v).
  
-tbl_prop_i(2,23,'AllDirSuper',[ [ 1,[ 23 ] ],[ 14,[ 25 ] ] ],v).
-tbl_prop_i(2,23,'DirSuperNull',[ [ 1,[ 23 ] ],[ 14,[ 25 ] ] ],v).
-tbl_prop_i(2,23,'DirSuper',[ [ 1,[ 23 ] ],[ 14,[ 25 ] ] ],v).
  
 tbl_att_prop_i(2,23,175,'AllowNulls',n).
-tbl_att_prop_i(2,14,25,'AllowNulls',n).
-tbl_att_prop_i(2,1,23,'AllowNulls',n).
  
  
  
  
  
-trn_level_i(23,[ [ 175,25,87,88,89,90,91,92,93,23 ],producto,producto,producto,'',87 ]).
+trn_level_i(23,[ [ 175,179,87,180,181,182,91,92,93,183 ],producto,producto,producto,'',179 ]).
  
  
  
@@ -1270,13 +1203,9 @@ trn_level_i(23,[ [ 175,25,87,88,89,90,91,92,93,23 ],producto,producto,producto,'
  
  
 pgm_parm_i(web,108,'GX00N0',[ [ int,9,0,0 ] ],[ [ pproductoid,out,[] ] ]).
-pgm_parm_i(web,74,'GX00E0',[ [ int,9,0,0 ] ],[ [ pcambsid,out,[] ] ]).
-pgm_parm_i(web,62,'GX0010',[ [ int,9,0,0 ] ],[ [ ptipobienid,out,[] ] ]).
  
 pgm_callprotocol_i(trn,9,'PRODUCTO','INTERNAL').
 pgm_callprotocol_i(web,108,'GX00N0','INTERNAL').
-pgm_callprotocol_i(web,74,'GX00E0','INTERNAL').
-pgm_callprotocol_i(web,62,'GX0010','INTERNAL').
  
  
  

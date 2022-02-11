@@ -41,14 +41,15 @@ called_program_i(0,7,13,1).
 called_program_i(0,8,13,1).
 called_program_i(0,9,13,1).
 called_program_i(0,9,13,108).
-called_program_i(0,9,13,62).
-called_program_i(0,9,13,74).
 called_program_i(1,0,1,10).
 called_program_i(1,0,1,11).
 called_program_i(1,0,1,12).
 called_program_i(1,0,1,13).
 called_program_i(1,0,1,14).
 called_program_i(1,0,1,15).
+called_program_i(1,0,1,16).
+called_program_i(1,0,1,17).
+called_program_i(1,0,1,18).
 called_program_i(1,0,1,5).
 called_program_i(1,0,1,6).
 called_program_i(1,0,1,7).
@@ -161,6 +162,7 @@ called_program_i(13,81,13,1).
 called_program_i(13,82,13,1).
 called_program_i(13,85,33,1).
 called_program_i(13,86,0,14).
+called_program_i(13,86,1,16).
 called_program_i(13,86,13,1).
 called_program_i(13,86,13,30).
 called_program_i(13,92,0,8).

@@ -1,6 +1,4 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Dependencies type="guid" guid="4583cf6f-d813-b9db-b5bb-e6ea22c56952">
-  <Table name="tipobien" />
-  <Table name="cambs" />
   <Table name="producto" />
 </Dependencies>

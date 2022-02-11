@@ -2,7 +2,7 @@
                File: gpxMenuDemo
         Description: gpx Menu Demo
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 2/5/2022 21:12:52.98
+       Generated on: 2/10/2022 20:7:19.33
        Program type: Callable routine
           Main DBMS: postgresql
 */
@@ -176,18 +176,50 @@ namespace GeneXus.Programs {
          Gxm3gpxmenuitems_subitems.gxTpr_Url = "Catalog_De_Tipo_Doc.aspx";
          Gxm1gpxmenuitems = new SdtgpxMenuItems_gpxMenuItem(context);
          Gxm2rootcol.Add(Gxm1gpxmenuitems, 0);
-         Gxm1gpxmenuitems.gxTpr_Title = "Reportes";
-         Gxm3gpxmenuitems_subitems = new SdtgpxMenuItems_gpxMenuItem(context);
-         Gxm1gpxmenuitems.gxTpr_Subitems.Add(Gxm3gpxmenuitems_subitems, 0);
-         Gxm3gpxmenuitems_subitems.gxTpr_Title = "Home";
-         Gxm3gpxmenuitems_subitems.gxTpr_Url = "http://www.genexus.com";
-         Gxm1gpxmenuitems = new SdtgpxMenuItems_gpxMenuItem(context);
-         Gxm2rootcol.Add(Gxm1gpxmenuitems, 0);
          Gxm1gpxmenuitems.gxTpr_Title = "Consultas";
          Gxm3gpxmenuitems_subitems = new SdtgpxMenuItems_gpxMenuItem(context);
          Gxm1gpxmenuitems.gxTpr_Subitems.Add(Gxm3gpxmenuitems_subitems, 0);
          Gxm3gpxmenuitems_subitems.gxTpr_Title = "Consultar Cambs";
-         Gxm3gpxmenuitems_subitems.gxTpr_Url = "cambs.aspx";
+         Gxm3gpxmenuitems_subitems.gxTpr_Url = "DetallesCambs.aspx";
+         Gxm3gpxmenuitems_subitems = new SdtgpxMenuItems_gpxMenuItem(context);
+         Gxm1gpxmenuitems.gxTpr_Subitems.Add(Gxm3gpxmenuitems_subitems, 0);
+         Gxm3gpxmenuitems_subitems.gxTpr_Title = "Consultar Marcas";
+         Gxm3gpxmenuitems_subitems.gxTpr_Url = "DetallesMarcas.aspx";
+         Gxm3gpxmenuitems_subitems = new SdtgpxMenuItems_gpxMenuItem(context);
+         Gxm1gpxmenuitems.gxTpr_Subitems.Add(Gxm3gpxmenuitems_subitems, 0);
+         Gxm3gpxmenuitems_subitems.gxTpr_Title = "Consultar Modelos";
+         Gxm3gpxmenuitems_subitems.gxTpr_Url = "DetalleModelos.aspx";
+         Gxm3gpxmenuitems_subitems = new SdtgpxMenuItems_gpxMenuItem(context);
+         Gxm1gpxmenuitems.gxTpr_Subitems.Add(Gxm3gpxmenuitems_subitems, 0);
+         Gxm3gpxmenuitems_subitems.gxTpr_Title = "Consultar Productos";
+         Gxm3gpxmenuitems_subitems.gxTpr_Url = "#";
+         Gxm3gpxmenuitems_subitems = new SdtgpxMenuItems_gpxMenuItem(context);
+         Gxm1gpxmenuitems.gxTpr_Subitems.Add(Gxm3gpxmenuitems_subitems, 0);
+         Gxm3gpxmenuitems_subitems.gxTpr_Title = "Consultar Proveedores";
+         Gxm3gpxmenuitems_subitems.gxTpr_Url = "DetallesProveedores.aspx";
+         Gxm1gpxmenuitems = new SdtgpxMenuItems_gpxMenuItem(context);
+         Gxm2rootcol.Add(Gxm1gpxmenuitems, 0);
+         Gxm1gpxmenuitems.gxTpr_Title = "Reportes";
+         Gxm3gpxmenuitems_subitems = new SdtgpxMenuItems_gpxMenuItem(context);
+         Gxm1gpxmenuitems.gxTpr_Subitems.Add(Gxm3gpxmenuitems_subitems, 0);
+         Gxm3gpxmenuitems_subitems.gxTpr_Title = "Reporte de Cambs";
+         Gxm3gpxmenuitems_subitems.gxTpr_Url = "apdf_cambs.aspx";
+         Gxm3gpxmenuitems_subitems = new SdtgpxMenuItems_gpxMenuItem(context);
+         Gxm1gpxmenuitems.gxTpr_Subitems.Add(Gxm3gpxmenuitems_subitems, 0);
+         Gxm3gpxmenuitems_subitems.gxTpr_Title = "Reporte de Marcas";
+         Gxm3gpxmenuitems_subitems.gxTpr_Url = "apdf_marcas.aspx";
+         Gxm3gpxmenuitems_subitems = new SdtgpxMenuItems_gpxMenuItem(context);
+         Gxm1gpxmenuitems.gxTpr_Subitems.Add(Gxm3gpxmenuitems_subitems, 0);
+         Gxm3gpxmenuitems_subitems.gxTpr_Title = "Reporte de Modelos";
+         Gxm3gpxmenuitems_subitems.gxTpr_Url = "apdf_Modelos.aspx";
+         Gxm3gpxmenuitems_subitems = new SdtgpxMenuItems_gpxMenuItem(context);
+         Gxm1gpxmenuitems.gxTpr_Subitems.Add(Gxm3gpxmenuitems_subitems, 0);
+         Gxm3gpxmenuitems_subitems.gxTpr_Title = "Reporte de Cambs";
+         Gxm3gpxmenuitems_subitems.gxTpr_Url = "apdf_productos.aspx";
+         Gxm3gpxmenuitems_subitems = new SdtgpxMenuItems_gpxMenuItem(context);
+         Gxm1gpxmenuitems.gxTpr_Subitems.Add(Gxm3gpxmenuitems_subitems, 0);
+         Gxm3gpxmenuitems_subitems.gxTpr_Title = "Reporte de Cambs";
+         Gxm3gpxmenuitems_subitems.gxTpr_Url = "apdf_proveedores.aspx";
          this.cleanup();
       }
 

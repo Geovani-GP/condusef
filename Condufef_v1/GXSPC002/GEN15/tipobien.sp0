@@ -47,12 +47,12 @@ rule_i(0,datastore(1,'CS_RPCPGML','')).
 rule_i(0,datastore(1,'JDBC_DATASOURCE','')).
 rule_i(0,datastore(1,'USE_JDBC_DATASOURCE','0')).
 rule_i(0,datastore(1,'DS_DBMS_ADDINFO','')).
-rule_i(0,datastore(1,'USER_PASSWORD',󻢸蘇�2�5炭)).
+rule_i(0,datastore(1,'USER_PASSWORD',asdf)).
 rule_i(0,datastore(1,'USER_ID',postgres)).
 rule_i(0,datastore(1,'CS_CONNECT','First')).
 rule_i(0,datastore(1,'DBMS_PORT','5432')).
 rule_i(0,datastore(1,'CS_SERVER',localhost)).
-rule_i(0,datastore(1,'CS_DBNAME',postgres)).
+rule_i(0,datastore(1,'CS_DBNAME',condusef)).
 rule_i(0,datastore(1,'CS_FLEDSNAME','')).
 rule_i(0,datastore(1,'CS_DRVNAME','')).
 rule_i(0,datastore(1,'CS_DSNAME','')).
@@ -212,12 +212,10 @@ v_i(t,o,1,142).
  
  
  
-tbl_to_delete_i(1,[ 23,[ [ 1,23,23 ] ],c,'IPRODUCTO1',[ [ 23,23 ] ],[ 175 ],'' ]).
 tbl_to_delete_i(1,[ 11,[ [ 1,23,23 ] ],c,'IARTICULOS2',[ [ 11,23 ] ],[ 19,20,21 ],'' ]).
  
  
  
-attri_i(175,[ productoid,int,9,0,'ZZZZZZZZ9',0,productoid,'',0 ]).
 attri_i(21,[ articuloscambsid,int,9,0,'ZZZZZZZZ9',0,articuloscambsid,'',0 ]).
 attri_i(20,[ articulosproductoid,int,9,0,'ZZZZZZZZ9',0,articulosproductoid,'',0 ]).
 attri_i(19,[ almacenid,int,9,0,'ZZZZZZZZ9',0,almacenid,'',0 ]).
@@ -229,15 +227,12 @@ attri_i(23,[ tipobienid,int,9,0,'ZZZZZZZZ9',0,tipobienid,'',0 ]).
 attri_i('Gxremove',[ 'GxRemove',int,1,0,'9',0,'Gx Remove','',5 ]).
 attri_i('Mode',[ 'Gx_mode',char,3,0,'@!',1,'','',2 ]).
  
-table_i(23,[ producto,[ 175,23 ],producto,producto ]).
 table_i(11,[ 'ARTICULOS',[ 19,20,21,23 ],articulos,articulos ]).
 table_i(1,[ 'TIPOBIEN',[ 23,139,140,141,142 ],tipobien,tipobien ]).
  
 index_i(1,[ 'TIPOBIEN_PKEY',u,[ 23 ],'TIPOBIEN_PKEY' ]).
 index_i(11,[ 'ARTICULOS_PKEY',u,[ 19,20,21 ],'ARTICULOS_PKEY' ]).
 index_i(11,[ 'IARTICULOS2',d,[ 23 ],'Iarticulos2' ]).
-index_i(23,[ 'IPRODUCTO',u,[ 175 ],'Iproducto' ]).
-index_i(23,[ 'IPRODUCTO1',d,[ 23 ],'Iproducto1' ]).
  
  
  
@@ -405,7 +400,7 @@ html_comp_i(6,'Title','',d,[ str ]).
 html_comp_i(6,'Fill',-1,d,[ bool ]).
 html_comp_i(6,'Backcolor',rgb(255,255,255),d,[ color ]).
 html_comp_i(6,'Forecolor',rgb(0,0,0),d,[ color ]).
-html_comp_i(6,'Font',font('Open Sans Semibold',17,[]),d,[ font ]).
+html_comp_i(6,'Font',font('Microsoft Sans Serif',17,[]),d,[ font ]).
 html_comp_i(7,'Class',row,v,[ str ]).
 html_comp_i(7,'Id','',d,[ str ]).
 html_comp_i(7,'Height',measure(0,px),d,[ measure ]).
@@ -952,26 +947,12 @@ att_prop_i(2,21,'ATT_INITIAL_VALUE','',d).
 att_prop_i(2,21,'AttRegEx','',d).
 att_prop_i(2,21,'AttValidationFailedMsg','',d).
 att_prop_i(2,21,'FullName',articuloscambsid,v).
-att_prop_i(2,175,'HORIZONTAL_DESCRIPTION',productoid,d).
-att_prop_i(2,175,'ExternalName',productoid,d).
-att_prop_i(2,175,'ExternalNamespace','Condufef_v1',d).
-att_prop_i(2,175,'EmptyAsNull','Yes',d).
-att_prop_i(2,175,idBasedOn,'',d).
-att_prop_i(2,175,'AUTONUMBER','0',d).
-att_prop_i(2,175,'ATT_INITIAL_VALUE','',d).
-att_prop_i(2,175,'AttRegEx','',d).
-att_prop_i(2,175,'AttValidationFailedMsg','',d).
-att_prop_i(2,175,'FullName',productoid,v).
  
-tbl_prop_i(2,23,'AllDirSuper',[ [ 1,[ 23 ] ] ],v).
-tbl_prop_i(2,23,'DirSuperNull',[ [ 1,[ 23 ] ] ],v).
-tbl_prop_i(2,23,'DirSuper',[ [ 1,[ 23 ] ] ],v).
  
 tbl_att_prop_i(2,1,23,'AllowNulls',n).
 tbl_att_prop_i(2,11,19,'AllowNulls',n).
 tbl_att_prop_i(2,11,20,'AllowNulls',n).
 tbl_att_prop_i(2,11,21,'AllowNulls',n).
-tbl_att_prop_i(2,23,175,'AllowNulls',n).
  
  
  

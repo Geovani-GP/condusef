@@ -2,27 +2,63 @@
 <ImportLog>
 	<RowImport>
 		<Status>Ok</Status>
-		<Type>c804fdbd-7c0b-440d-8527-4316c92649a6</Type>
-		<TypeName>Theme</TypeName>
-		<Name>GeneXusX</Name>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>cambsid</Name>
 		<Errors />
 		<Warnings />
 		<Info />
 	</RowImport>
 	<RowImport>
 		<Status>Ok</Status>
-		<Type>00972a17-9975-449e-aab1-d26165d51393</Type>
-		<TypeName>Domain</TypeName>
-		<Name>DVelopConfirmPanelType</Name>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>cambsdsc</Name>
 		<Errors />
 		<Warnings />
 		<Info />
 	</RowImport>
 	<RowImport>
 		<Status>Ok</Status>
-		<Type>9fb193d9-64a4-4d30-b129-ff7c76830f7e</Type>
-		<TypeName>Image</TypeName>
-		<Name>Sprite</Name>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>marcasid</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>adbb33c9-0906-4971-833c-998de27e0676</Type>
+		<TypeName>Attribute</TypeName>
+		<Name>marcasdsc</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>84a12160-f59b-4ad7-a683-ea4481ac23e9</Type>
+		<TypeName>Procedure</TypeName>
+		<Name>PDF_cambs</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>84a12160-f59b-4ad7-a683-ea4481ac23e9</Type>
+		<TypeName>Procedure</TypeName>
+		<Name>PDF_marcas</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>84a12160-f59b-4ad7-a683-ea4481ac23e9</Type>
+		<TypeName>Procedure</TypeName>
+		<Name>PDF_modelos</Name>
 		<Errors />
 		<Warnings />
 		<Info />

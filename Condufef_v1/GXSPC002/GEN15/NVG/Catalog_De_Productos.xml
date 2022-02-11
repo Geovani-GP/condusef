@@ -276,7 +276,7 @@
 <Tables>
 <Table>
 <TableId>23</TableId>
-<TableName>producto</TableName>
+<TableName>PRODUCTO</TableName>
 <Description>producto</Description>
 <RecordsToRead>many</RecordsToRead>
 <Tables></Tables></Table></Tables></Table></NavigationTree></Level></Event>
