@@ -9,7 +9,7 @@
 <ObjDesc>Selection List empleadospiso</ObjDesc>
 <ObjPgmName>Gx00O0</ObjPgmName>
 <ObjClsName>Web Panel</ObjClsName></Object>
-<Result>nogenreq</Result>
+<Result>genreq</Result>
 <Warnings></Warnings>
 <Errors></Errors>
 <Generator>

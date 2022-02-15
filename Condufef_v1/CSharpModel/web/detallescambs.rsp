@@ -16,5 +16,4 @@
 /r:GxBaseBuilder.dll
 /out:bin\detallescambs.dll
 cambs_bc.cs
-pdf_cambs.cs
 detallescambs.cs

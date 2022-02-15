@@ -354,7 +354,7 @@ html_sub_i(59,62,html_i(2,cell(62))).
 html_sub_i(59,63,html_i(3,cell(63))).
 html_sub_i(63,64,html_i(0,button('''Guardar '''))).
 html_sub_i(59,65,html_i(4,cell(65))).
-html_sub_i(65,66,html_i(0,button('Enter'))).
+html_sub_i(65,66,html_i(0,button('''Cancelar'''))).
 html_sub_i(33,0,html_i(5,html('</tbody>'))).
 html_sub_i(4,0,html_i(4,html('</tbody>'))).
  
@@ -723,7 +723,7 @@ html_comp_i(64,'Bordercolor',rgb(219,220,222),d,[ color ]).
 html_comp_i(64,'Buttonborderstyle',standard,d,[ str ]).
 html_comp_i(66,'Controlname','Button3',v,[ str ]).
 html_comp_i(66,'Class','Button',d,[ str ]).
-html_comp_i(66,'Event','Enter',d,[ str ]).
+html_comp_i(66,'Event','''Cancelar''',v,[ str ]).
 html_comp_i(66,'Caption','CANCELAR',d,[ str ]).
 html_comp_i(66,'Title','CANCELAR',d,[ str ]).
 html_comp_i(66,'Font',font('Microsoft Sans Serif',10,[]),d,[ font ]).
@@ -757,7 +757,7 @@ lit_i(52,1,t('Código Postal:',3),[ ctlname('Textblock7') ]).
 lit_i(54,1,t('Alamcencodigopostal',23),[ ctlname('&Alamcencodigopostal'),ctrltype(edit,54),pos(54),ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
 lit_i(58,1,button('''Consultar '''),[ ctlname('Button1'),width(0),rect(0,0,10,10),title('Nothing') ]).
 lit_i(64,1,button('''Guardar '''),[ ctlname('Button2'),width(0),rect(0,0,10,10),title('Nothing') ]).
-lit_i(66,1,button('Enter'),[ ctlname('Button3'),width(0),rect(0,0,10,10),title('Nothing') ]).
+lit_i(66,1,button('''Cancelar'''),[ ctlname('Button3'),width(0),rect(0,0,10,10),title('Nothing') ]).
 lit_i(33,1,table(33),[ ctlname('Table3') ]).
 lit_i(4,1,table(4),[ ctlname('Table1') ]).
 lit_i(1,1,window,[ rect(0,0,1000,1000),ctlname('Form') ]).
@@ -776,6 +776,7 @@ att_prop_i(2,19,'EmptyAsNull','Yes',d).
 att_prop_i(2,19,idBasedOn,'',d).
 att_prop_i(2,19,'AUTONUMBER','0',d).
 att_prop_i(2,19,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,19,'AttRegEx','',d).
 att_prop_i(2,19,'AttValidationFailedMsg','',d).
 att_prop_i(2,19,'FullName',almacenid,v).
 att_prop_i(2,177,'ExternalName',estadoid,d).
@@ -802,6 +803,7 @@ att_prop_i(2,40000,'EmptyAsNull','Yes',d).
 att_prop_i(2,40000,idBasedOn,'',d).
 att_prop_i(2,40000,'AUTONUMBER','0',d).
 att_prop_i(2,40000,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,40000,'AttRegEx','',d).
 att_prop_i(2,40000,'AttValidationFailedMsg','',d).
 att_prop_i(2,40000,'FullName',almacenid,v).
  

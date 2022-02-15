@@ -2,7 +2,7 @@
                File: producto_BC
         Description: producto
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 2/10/2022 19:54:30.83
+       Generated on: 2/15/2022 5:8:52.39
        Program type: Callable routine
           Main DBMS: postgresql
 */
@@ -309,7 +309,7 @@ namespace GeneXus.Programs {
             pr_default.execute(0, new Object[] {A175productoid});
             if ( (pr_default.getStatus(0) == 103) )
             {
-               GX_msglist.addItem(context.GetMessage( "GXM_lock", new   object[]  {"producto"}), "RecordIsLocked", 1, "");
+               GX_msglist.addItem(context.GetMessage( "GXM_lock", new   object[]  {"PRODUCTO"}), "RecordIsLocked", 1, "");
                AnyError = 1;
                return  ;
             }
@@ -320,7 +320,7 @@ namespace GeneXus.Programs {
             }
             if ( Gx_longc || ( StringUtil.StrCmp(Z91productousuario, BC00092_A91productousuario[0]) != 0 ) || ( Z92productofecreg != BC00092_A92productofecreg[0] ) || ( Z93productofecultact != BC00092_A93productofecultact[0] ) || ( Z183ptipobienid != BC00092_A183ptipobienid[0] ) )
             {
-               GX_msglist.addItem(context.GetMessage( "GXM_waschg", new   object[]  {"producto"}), "RecordWasChanged", 1, "");
+               GX_msglist.addItem(context.GetMessage( "GXM_waschg", new   object[]  {"PRODUCTO"}), "RecordWasChanged", 1, "");
                AnyError = 1;
                return  ;
             }
@@ -349,7 +349,7 @@ namespace GeneXus.Programs {
                      /* Using cursor BC00096 */
                      pr_default.execute(4, new Object[] {A175productoid, n179pcambsid, A179pcambsid, n87productodsc, A87productodsc, n180pmodeloid, A180pmodeloid, n181pmarcaid, A181pmarcaid, n182pcategoriaid, A182pcategoriaid, n91productousuario, A91productousuario, n92productofecreg, A92productofecreg, n93productofecultact, A93productofecultact, n183ptipobienid, A183ptipobienid});
                      pr_default.close(4);
-                     dsDefault.SmartCacheProvider.SetUpdated("producto") ;
+                     dsDefault.SmartCacheProvider.SetUpdated("PRODUCTO") ;
                      if ( (pr_default.getStatus(4) == 1) )
                      {
                         GX_msglist.addItem(context.GetMessage( "GXM_noupdate", ""), "DuplicatePrimaryKey", 1, "");
@@ -401,12 +401,12 @@ namespace GeneXus.Programs {
                   if ( AnyError == 0 )
                   {
                      /* Using cursor BC00097 */
-                     pr_default.execute(5, new Object[] {n179pcambsid, A179pcambsid, n87productodsc, A87productodsc, n180pmodeloid, A180pmodeloid, n181pmarcaid, A181pmarcaid, n182pcategoriaid, A182pcategoriaid, n91productousuario, A91productousuario, n92productofecreg, A92productofecreg, n93productofecultact, A93productofecultact, n183ptipobienid, A183ptipobienid, A175productoid});
+                     pr_default.execute(5, new Object[] {n179pcambsid, A179pcambsid, n87productodsc, A87productodsc, n180pmodeloid, A180pmodeloid, n181pmarcaid, A181pmarcaid, n182pcategoriaid, A182pcategoriaid, n91productousuario, A91productousuario, n92productofecreg, A92productofecreg, n93productofecultact, A93productofecultact, n183ptipobienid, A183ptipobienid});
                      pr_default.close(5);
-                     dsDefault.SmartCacheProvider.SetUpdated("producto") ;
+                     dsDefault.SmartCacheProvider.SetUpdated("PRODUCTO") ;
                      if ( (pr_default.getStatus(5) == 103) )
                      {
-                        GX_msglist.addItem(context.GetMessage( "GXM_lock", new   object[]  {"producto"}), "RecordIsLocked", 1, "");
+                        GX_msglist.addItem(context.GetMessage( "GXM_lock", new   object[]  {"PRODUCTO"}), "RecordIsLocked", 1, "");
                         AnyError = 1;
                      }
                      DeferredUpdate0923( ) ;
@@ -456,9 +456,9 @@ namespace GeneXus.Programs {
                {
                   /* No cascading delete specified. */
                   /* Using cursor BC00098 */
-                  pr_default.execute(6, new Object[] {A175productoid});
+                  pr_default.execute(6);
                   pr_default.close(6);
-                  dsDefault.SmartCacheProvider.SetUpdated("producto") ;
+                  dsDefault.SmartCacheProvider.SetUpdated("PRODUCTO") ;
                   if ( AnyError == 0 )
                   {
                      /* Start of After( delete) rules */
@@ -647,9 +647,9 @@ namespace GeneXus.Programs {
          n182pcategoriaid = false;
          A91productousuario = "";
          n91productousuario = false;
-         A92productofecreg = (DateTime)(DateTime.MinValue);
+         A92productofecreg = DateTime.MinValue;
          n92productofecreg = false;
-         A93productofecultact = (DateTime)(DateTime.MinValue);
+         A93productofecultact = DateTime.MinValue;
          n93productofecultact = false;
          A183ptipobienid = 0;
          n183ptipobienid = false;
@@ -659,8 +659,8 @@ namespace GeneXus.Programs {
          Z181pmarcaid = 0;
          Z182pcategoriaid = 0;
          Z91productousuario = "";
-         Z92productofecreg = (DateTime)(DateTime.MinValue);
-         Z93productofecultact = (DateTime)(DateTime.MinValue);
+         Z92productofecreg = DateTime.MinValue;
+         Z93productofecultact = DateTime.MinValue;
          Z183ptipobienid = 0;
       }
 
@@ -1073,10 +1073,10 @@ namespace GeneXus.Programs {
          A87productodsc = "";
          Z91productousuario = "";
          A91productousuario = "";
-         Z92productofecreg = (DateTime)(DateTime.MinValue);
-         A92productofecreg = (DateTime)(DateTime.MinValue);
-         Z93productofecultact = (DateTime)(DateTime.MinValue);
-         A93productofecultact = (DateTime)(DateTime.MinValue);
+         Z92productofecreg = DateTime.MinValue;
+         A92productofecreg = DateTime.MinValue;
+         Z93productofecultact = DateTime.MinValue;
+         A93productofecultact = DateTime.MinValue;
          BC00094_A175productoid = new int[1] ;
          BC00094_A179pcambsid = new short[1] ;
          BC00094_n179pcambsid = new bool[] {false} ;
@@ -1364,8 +1364,8 @@ namespace GeneXus.Programs {
           new Object[] {"pmarcaid",NpgsqlDbType.Smallint,4,0} ,
           new Object[] {"pcategoriaid",NpgsqlDbType.Smallint,4,0} ,
           new Object[] {"productousuario",NpgsqlDbType.Varchar,15,0} ,
-          new Object[] {"productofecreg",NpgsqlDbType.Timestamp,10,8} ,
-          new Object[] {"productofecultact",NpgsqlDbType.Timestamp,10,8} ,
+          new Object[] {"productofecreg",NpgsqlDbType.Date,8,0} ,
+          new Object[] {"productofecultact",NpgsqlDbType.Date,8,0} ,
           new Object[] {"ptipobienid",NpgsqlDbType.Smallint,4,0}
           } ;
           Object[] prmBC00097 ;
@@ -1376,28 +1376,26 @@ namespace GeneXus.Programs {
           new Object[] {"pmarcaid",NpgsqlDbType.Smallint,4,0} ,
           new Object[] {"pcategoriaid",NpgsqlDbType.Smallint,4,0} ,
           new Object[] {"productousuario",NpgsqlDbType.Varchar,15,0} ,
-          new Object[] {"productofecreg",NpgsqlDbType.Timestamp,10,8} ,
-          new Object[] {"productofecultact",NpgsqlDbType.Timestamp,10,8} ,
-          new Object[] {"ptipobienid",NpgsqlDbType.Smallint,4,0} ,
-          new Object[] {"productoid",NpgsqlDbType.Integer,9,0}
+          new Object[] {"productofecreg",NpgsqlDbType.Date,8,0} ,
+          new Object[] {"productofecultact",NpgsqlDbType.Date,8,0} ,
+          new Object[] {"ptipobienid",NpgsqlDbType.Smallint,4,0}
           } ;
           Object[] prmBC00098 ;
           prmBC00098 = new Object[] {
-          new Object[] {"productoid",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmBC00099 ;
           prmBC00099 = new Object[] {
           new Object[] {"productoid",NpgsqlDbType.Integer,9,0}
           } ;
           def= new CursorDef[] {
-              new CursorDef("BC00092", "SELECT productoid, pcambsid, productodsc, pmodeloid, pmarcaid, pcategoriaid, productousuario, productofecreg, productofecultact, ptipobienid FROM producto WHERE productoid = :productoid  FOR UPDATE OF producto",true, GxErrorMask.GX_NOMASK, false, this,prmBC00092,1,0,true,false )
-             ,new CursorDef("BC00093", "SELECT productoid, pcambsid, productodsc, pmodeloid, pmarcaid, pcategoriaid, productousuario, productofecreg, productofecultact, ptipobienid FROM producto WHERE productoid = :productoid ",true, GxErrorMask.GX_NOMASK, false, this,prmBC00093,1,0,true,false )
-             ,new CursorDef("BC00094", "SELECT TM1.productoid, TM1.pcambsid, TM1.productodsc, TM1.pmodeloid, TM1.pmarcaid, TM1.pcategoriaid, TM1.productousuario, TM1.productofecreg, TM1.productofecultact, TM1.ptipobienid FROM producto TM1 WHERE TM1.productoid = :productoid ORDER BY TM1.productoid ",true, GxErrorMask.GX_NOMASK, false, this,prmBC00094,100,0,true,false )
-             ,new CursorDef("BC00095", "SELECT productoid FROM producto WHERE productoid = :productoid ",true, GxErrorMask.GX_NOMASK, false, this,prmBC00095,1,0,true,false )
-             ,new CursorDef("BC00096", "SAVEPOINT gxupdate;INSERT INTO producto(productoid, pcambsid, productodsc, pmodeloid, pmarcaid, pcategoriaid, productousuario, productofecreg, productofecultact, ptipobienid) VALUES(:productoid, :pcambsid, :productodsc, :pmodeloid, :pmarcaid, :pcategoriaid, :productousuario, :productofecreg, :productofecultact, :ptipobienid);RELEASE SAVEPOINT gxupdate", GxErrorMask.GX_ROLLBACKSAVEPOINT,prmBC00096)
-             ,new CursorDef("BC00097", "SAVEPOINT gxupdate;UPDATE producto SET pcambsid=:pcambsid, productodsc=:productodsc, pmodeloid=:pmodeloid, pmarcaid=:pmarcaid, pcategoriaid=:pcategoriaid, productousuario=:productousuario, productofecreg=:productofecreg, productofecultact=:productofecultact, ptipobienid=:ptipobienid  WHERE productoid = :productoid;RELEASE SAVEPOINT gxupdate", GxErrorMask.GX_ROLLBACKSAVEPOINT | GxErrorMask.GX_NOMASK,prmBC00097)
-             ,new CursorDef("BC00098", "SAVEPOINT gxupdate;DELETE FROM producto  WHERE productoid = :productoid;RELEASE SAVEPOINT gxupdate", GxErrorMask.GX_ROLLBACKSAVEPOINT | GxErrorMask.GX_NOMASK,prmBC00098)
-             ,new CursorDef("BC00099", "SELECT TM1.productoid, TM1.pcambsid, TM1.productodsc, TM1.pmodeloid, TM1.pmarcaid, TM1.pcategoriaid, TM1.productousuario, TM1.productofecreg, TM1.productofecultact, TM1.ptipobienid FROM producto TM1 WHERE TM1.productoid = :productoid ORDER BY TM1.productoid ",true, GxErrorMask.GX_NOMASK, false, this,prmBC00099,100,0,true,false )
+              new CursorDef("BC00092", "SELECT productoid, pcambsid, productodsc, pmodeloid, pmarcaid, pcategoriaid, productousuario, productofecreg, productofecultact, ptipobienid FROM public.producto WHERE productoid = :productoid  FOR UPDATE OF producto",true, GxErrorMask.GX_NOMASK, false, this,prmBC00092,1,0,true,false )
+             ,new CursorDef("BC00093", "SELECT productoid, pcambsid, productodsc, pmodeloid, pmarcaid, pcategoriaid, productousuario, productofecreg, productofecultact, ptipobienid FROM public.producto WHERE productoid = :productoid ",true, GxErrorMask.GX_NOMASK, false, this,prmBC00093,1,0,true,false )
+             ,new CursorDef("BC00094", "SELECT TM1.productoid, TM1.pcambsid, TM1.productodsc, TM1.pmodeloid, TM1.pmarcaid, TM1.pcategoriaid, TM1.productousuario, TM1.productofecreg, TM1.productofecultact, TM1.ptipobienid FROM public.producto TM1 WHERE TM1.productoid = :productoid ORDER BY TM1.productoid ",true, GxErrorMask.GX_NOMASK, false, this,prmBC00094,100,0,true,false )
+             ,new CursorDef("BC00095", "SELECT productoid FROM public.producto WHERE productoid = :productoid ",true, GxErrorMask.GX_NOMASK, false, this,prmBC00095,1,0,true,false )
+             ,new CursorDef("BC00096", "SAVEPOINT gxupdate;INSERT INTO public.producto(productoid, pcambsid, productodsc, pmodeloid, pmarcaid, pcategoriaid, productousuario, productofecreg, productofecultact, ptipobienid) VALUES(:productoid, :pcambsid, :productodsc, :pmodeloid, :pmarcaid, :pcategoriaid, :productousuario, :productofecreg, :productofecultact, :ptipobienid);RELEASE SAVEPOINT gxupdate", GxErrorMask.GX_ROLLBACKSAVEPOINT,prmBC00096)
+             ,new CursorDef("BC00097", "SAVEPOINT gxupdate;UPDATE public.producto SET pcambsid=:pcambsid, productodsc=:productodsc, pmodeloid=:pmodeloid, pmarcaid=:pmarcaid, pcategoriaid=:pcategoriaid, productousuario=:productousuario, productofecreg=:productofecreg, productofecultact=:productofecultact, ptipobienid=:ptipobienid ;RELEASE SAVEPOINT gxupdate", GxErrorMask.GX_ROLLBACKSAVEPOINT | GxErrorMask.GX_NOMASK,prmBC00097)
+             ,new CursorDef("BC00098", "SAVEPOINT gxupdate;DELETE FROM public.producto ;RELEASE SAVEPOINT gxupdate", GxErrorMask.GX_ROLLBACKSAVEPOINT | GxErrorMask.GX_NOMASK,prmBC00098)
+             ,new CursorDef("BC00099", "SELECT TM1.productoid, TM1.pcambsid, TM1.productodsc, TM1.pmodeloid, TM1.pmarcaid, TM1.pcategoriaid, TM1.productousuario, TM1.productofecreg, TM1.productofecultact, TM1.ptipobienid FROM public.producto TM1 WHERE TM1.productoid = :productoid ORDER BY TM1.productoid ",true, GxErrorMask.GX_NOMASK, false, this,prmBC00099,100,0,true,false )
           };
        }
     }
@@ -1422,9 +1420,9 @@ namespace GeneXus.Programs {
                 ((bool[]) buf[10])[0] = rslt.wasNull(6);
                 ((String[]) buf[11])[0] = rslt.getVarchar(7) ;
                 ((bool[]) buf[12])[0] = rslt.wasNull(7);
-                ((DateTime[]) buf[13])[0] = rslt.getGXDateTime(8) ;
+                ((DateTime[]) buf[13])[0] = rslt.getGXDate(8) ;
                 ((bool[]) buf[14])[0] = rslt.wasNull(8);
-                ((DateTime[]) buf[15])[0] = rslt.getGXDateTime(9) ;
+                ((DateTime[]) buf[15])[0] = rslt.getGXDate(9) ;
                 ((bool[]) buf[16])[0] = rslt.wasNull(9);
                 ((short[]) buf[17])[0] = rslt.getShort(10) ;
                 ((bool[]) buf[18])[0] = rslt.wasNull(10);
@@ -1443,9 +1441,9 @@ namespace GeneXus.Programs {
                 ((bool[]) buf[10])[0] = rslt.wasNull(6);
                 ((String[]) buf[11])[0] = rslt.getVarchar(7) ;
                 ((bool[]) buf[12])[0] = rslt.wasNull(7);
-                ((DateTime[]) buf[13])[0] = rslt.getGXDateTime(8) ;
+                ((DateTime[]) buf[13])[0] = rslt.getGXDate(8) ;
                 ((bool[]) buf[14])[0] = rslt.wasNull(8);
-                ((DateTime[]) buf[15])[0] = rslt.getGXDateTime(9) ;
+                ((DateTime[]) buf[15])[0] = rslt.getGXDate(9) ;
                 ((bool[]) buf[16])[0] = rslt.wasNull(9);
                 ((short[]) buf[17])[0] = rslt.getShort(10) ;
                 ((bool[]) buf[18])[0] = rslt.wasNull(10);
@@ -1464,9 +1462,9 @@ namespace GeneXus.Programs {
                 ((bool[]) buf[10])[0] = rslt.wasNull(6);
                 ((String[]) buf[11])[0] = rslt.getVarchar(7) ;
                 ((bool[]) buf[12])[0] = rslt.wasNull(7);
-                ((DateTime[]) buf[13])[0] = rslt.getGXDateTime(8) ;
+                ((DateTime[]) buf[13])[0] = rslt.getGXDate(8) ;
                 ((bool[]) buf[14])[0] = rslt.wasNull(8);
-                ((DateTime[]) buf[15])[0] = rslt.getGXDateTime(9) ;
+                ((DateTime[]) buf[15])[0] = rslt.getGXDate(9) ;
                 ((bool[]) buf[16])[0] = rslt.wasNull(9);
                 ((short[]) buf[17])[0] = rslt.getShort(10) ;
                 ((bool[]) buf[18])[0] = rslt.wasNull(10);
@@ -1488,9 +1486,9 @@ namespace GeneXus.Programs {
                 ((bool[]) buf[10])[0] = rslt.wasNull(6);
                 ((String[]) buf[11])[0] = rslt.getVarchar(7) ;
                 ((bool[]) buf[12])[0] = rslt.wasNull(7);
-                ((DateTime[]) buf[13])[0] = rslt.getGXDateTime(8) ;
+                ((DateTime[]) buf[13])[0] = rslt.getGXDate(8) ;
                 ((bool[]) buf[14])[0] = rslt.wasNull(8);
-                ((DateTime[]) buf[15])[0] = rslt.getGXDateTime(9) ;
+                ((DateTime[]) buf[15])[0] = rslt.getGXDate(9) ;
                 ((bool[]) buf[16])[0] = rslt.wasNull(9);
                 ((short[]) buf[17])[0] = rslt.getShort(10) ;
                 ((bool[]) buf[18])[0] = rslt.wasNull(10);
@@ -1572,7 +1570,7 @@ namespace GeneXus.Programs {
                 }
                 else
                 {
-                   stmt.SetParameterDatetime(8, (DateTime)parms[14]);
+                   stmt.SetParameter(8, (DateTime)parms[14]);
                 }
                 if ( (bool)parms[15] )
                 {
@@ -1580,7 +1578,7 @@ namespace GeneXus.Programs {
                 }
                 else
                 {
-                   stmt.SetParameterDatetime(9, (DateTime)parms[16]);
+                   stmt.SetParameter(9, (DateTime)parms[16]);
                 }
                 if ( (bool)parms[17] )
                 {
@@ -1646,7 +1644,7 @@ namespace GeneXus.Programs {
                 }
                 else
                 {
-                   stmt.SetParameterDatetime(7, (DateTime)parms[13]);
+                   stmt.SetParameter(7, (DateTime)parms[13]);
                 }
                 if ( (bool)parms[14] )
                 {
@@ -1654,7 +1652,7 @@ namespace GeneXus.Programs {
                 }
                 else
                 {
-                   stmt.SetParameterDatetime(8, (DateTime)parms[15]);
+                   stmt.SetParameter(8, (DateTime)parms[15]);
                 }
                 if ( (bool)parms[16] )
                 {
@@ -1664,10 +1662,6 @@ namespace GeneXus.Programs {
                 {
                    stmt.SetParameter(9, (short)parms[17]);
                 }
-                stmt.SetParameter(10, (int)parms[18]);
-                return;
-             case 6 :
-                stmt.SetParameter(1, (int)parms[0]);
                 return;
              case 7 :
                 stmt.SetParameter(1, (int)parms[0]);

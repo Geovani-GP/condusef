@@ -2,7 +2,7 @@
                File: type_Sdtproducto
         Description: producto
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 2/10/2022 19:54:31.13
+       Generated on: 2/15/2022 5:8:52.75
        Program type: Callable routine
           Main DBMS: postgresql
 */
@@ -46,13 +46,13 @@ namespace GeneXus.Programs {
          /* Constructor for serialization */
          gxTv_Sdtproducto_Productodsc = "";
          gxTv_Sdtproducto_Productousuario = "";
-         gxTv_Sdtproducto_Productofecreg = (DateTime)(DateTime.MinValue);
-         gxTv_Sdtproducto_Productofecultact = (DateTime)(DateTime.MinValue);
+         gxTv_Sdtproducto_Productofecreg = DateTime.MinValue;
+         gxTv_Sdtproducto_Productofecultact = DateTime.MinValue;
          gxTv_Sdtproducto_Mode = "";
          gxTv_Sdtproducto_Productodsc_Z = "";
          gxTv_Sdtproducto_Productousuario_Z = "";
-         gxTv_Sdtproducto_Productofecreg_Z = (DateTime)(DateTime.MinValue);
-         gxTv_Sdtproducto_Productofecultact_Z = (DateTime)(DateTime.MinValue);
+         gxTv_Sdtproducto_Productofecreg_Z = DateTime.MinValue;
+         gxTv_Sdtproducto_Productofecultact_Z = DateTime.MinValue;
       }
 
       public Sdtproducto( IGxContext context )
@@ -108,7 +108,7 @@ namespace GeneXus.Programs {
       {
          GXProperties metadata = new GXProperties() ;
          metadata.Set("Name", "producto");
-         metadata.Set("BT", "producto");
+         metadata.Set("BT", "PRODUCTO");
          metadata.Set("PK", "[ \"productoid\" ]");
          metadata.Set("AllowInsert", "True");
          metadata.Set("AllowUpdate", "True");
@@ -290,13 +290,13 @@ namespace GeneXus.Programs {
                }
                if ( StringUtil.StrCmp2( oReader.LocalName, "productofecreg") )
                {
-                  if ( ( StringUtil.StrCmp(oReader.Value, "0000-00-00T00:00:00") == 0 ) || ( oReader.ExistsAttribute("xsi:nil") == 1 ) )
+                  if ( ( StringUtil.StrCmp(oReader.Value, "0000-00-00") == 0 ) || ( oReader.ExistsAttribute("xsi:nil") == 1 ) )
                   {
-                     gxTv_Sdtproducto_Productofecreg = (DateTime)(DateTime.MinValue);
+                     gxTv_Sdtproducto_Productofecreg = DateTime.MinValue;
                   }
                   else
                   {
-                     gxTv_Sdtproducto_Productofecreg = context.localUtil.YMDHMSToT( (short)(NumberUtil.Val( StringUtil.Substring( oReader.Value, 1, 4), ".")), (short)(NumberUtil.Val( StringUtil.Substring( oReader.Value, 6, 2), ".")), (short)(NumberUtil.Val( StringUtil.Substring( oReader.Value, 9, 2), ".")), (short)(NumberUtil.Val( StringUtil.Substring( oReader.Value, 12, 2), ".")), (short)(NumberUtil.Val( StringUtil.Substring( oReader.Value, 15, 2), ".")), (short)(NumberUtil.Val( StringUtil.Substring( oReader.Value, 18, 2), ".")));
+                     gxTv_Sdtproducto_Productofecreg = context.localUtil.YMDToD( (int)(NumberUtil.Val( StringUtil.Substring( oReader.Value, 1, 4), ".")), (int)(NumberUtil.Val( StringUtil.Substring( oReader.Value, 6, 2), ".")), (int)(NumberUtil.Val( StringUtil.Substring( oReader.Value, 9, 2), ".")));
                   }
                   if ( GXSoapError > 0 )
                   {
@@ -306,13 +306,13 @@ namespace GeneXus.Programs {
                }
                if ( StringUtil.StrCmp2( oReader.LocalName, "productofecultact") )
                {
-                  if ( ( StringUtil.StrCmp(oReader.Value, "0000-00-00T00:00:00") == 0 ) || ( oReader.ExistsAttribute("xsi:nil") == 1 ) )
+                  if ( ( StringUtil.StrCmp(oReader.Value, "0000-00-00") == 0 ) || ( oReader.ExistsAttribute("xsi:nil") == 1 ) )
                   {
-                     gxTv_Sdtproducto_Productofecultact = (DateTime)(DateTime.MinValue);
+                     gxTv_Sdtproducto_Productofecultact = DateTime.MinValue;
                   }
                   else
                   {
-                     gxTv_Sdtproducto_Productofecultact = context.localUtil.YMDHMSToT( (short)(NumberUtil.Val( StringUtil.Substring( oReader.Value, 1, 4), ".")), (short)(NumberUtil.Val( StringUtil.Substring( oReader.Value, 6, 2), ".")), (short)(NumberUtil.Val( StringUtil.Substring( oReader.Value, 9, 2), ".")), (short)(NumberUtil.Val( StringUtil.Substring( oReader.Value, 12, 2), ".")), (short)(NumberUtil.Val( StringUtil.Substring( oReader.Value, 15, 2), ".")), (short)(NumberUtil.Val( StringUtil.Substring( oReader.Value, 18, 2), ".")));
+                     gxTv_Sdtproducto_Productofecultact = context.localUtil.YMDToD( (int)(NumberUtil.Val( StringUtil.Substring( oReader.Value, 1, 4), ".")), (int)(NumberUtil.Val( StringUtil.Substring( oReader.Value, 6, 2), ".")), (int)(NumberUtil.Val( StringUtil.Substring( oReader.Value, 9, 2), ".")));
                   }
                   if ( GXSoapError > 0 )
                   {
@@ -412,13 +412,13 @@ namespace GeneXus.Programs {
                }
                if ( StringUtil.StrCmp2( oReader.LocalName, "productofecreg_Z") )
                {
-                  if ( ( StringUtil.StrCmp(oReader.Value, "0000-00-00T00:00:00") == 0 ) || ( oReader.ExistsAttribute("xsi:nil") == 1 ) )
+                  if ( ( StringUtil.StrCmp(oReader.Value, "0000-00-00") == 0 ) || ( oReader.ExistsAttribute("xsi:nil") == 1 ) )
                   {
-                     gxTv_Sdtproducto_Productofecreg_Z = (DateTime)(DateTime.MinValue);
+                     gxTv_Sdtproducto_Productofecreg_Z = DateTime.MinValue;
                   }
                   else
                   {
-                     gxTv_Sdtproducto_Productofecreg_Z = context.localUtil.YMDHMSToT( (short)(NumberUtil.Val( StringUtil.Substring( oReader.Value, 1, 4), ".")), (short)(NumberUtil.Val( StringUtil.Substring( oReader.Value, 6, 2), ".")), (short)(NumberUtil.Val( StringUtil.Substring( oReader.Value, 9, 2), ".")), (short)(NumberUtil.Val( StringUtil.Substring( oReader.Value, 12, 2), ".")), (short)(NumberUtil.Val( StringUtil.Substring( oReader.Value, 15, 2), ".")), (short)(NumberUtil.Val( StringUtil.Substring( oReader.Value, 18, 2), ".")));
+                     gxTv_Sdtproducto_Productofecreg_Z = context.localUtil.YMDToD( (int)(NumberUtil.Val( StringUtil.Substring( oReader.Value, 1, 4), ".")), (int)(NumberUtil.Val( StringUtil.Substring( oReader.Value, 6, 2), ".")), (int)(NumberUtil.Val( StringUtil.Substring( oReader.Value, 9, 2), ".")));
                   }
                   if ( GXSoapError > 0 )
                   {
@@ -428,13 +428,13 @@ namespace GeneXus.Programs {
                }
                if ( StringUtil.StrCmp2( oReader.LocalName, "productofecultact_Z") )
                {
-                  if ( ( StringUtil.StrCmp(oReader.Value, "0000-00-00T00:00:00") == 0 ) || ( oReader.ExistsAttribute("xsi:nil") == 1 ) )
+                  if ( ( StringUtil.StrCmp(oReader.Value, "0000-00-00") == 0 ) || ( oReader.ExistsAttribute("xsi:nil") == 1 ) )
                   {
-                     gxTv_Sdtproducto_Productofecultact_Z = (DateTime)(DateTime.MinValue);
+                     gxTv_Sdtproducto_Productofecultact_Z = DateTime.MinValue;
                   }
                   else
                   {
-                     gxTv_Sdtproducto_Productofecultact_Z = context.localUtil.YMDHMSToT( (short)(NumberUtil.Val( StringUtil.Substring( oReader.Value, 1, 4), ".")), (short)(NumberUtil.Val( StringUtil.Substring( oReader.Value, 6, 2), ".")), (short)(NumberUtil.Val( StringUtil.Substring( oReader.Value, 9, 2), ".")), (short)(NumberUtil.Val( StringUtil.Substring( oReader.Value, 12, 2), ".")), (short)(NumberUtil.Val( StringUtil.Substring( oReader.Value, 15, 2), ".")), (short)(NumberUtil.Val( StringUtil.Substring( oReader.Value, 18, 2), ".")));
+                     gxTv_Sdtproducto_Productofecultact_Z = context.localUtil.YMDToD( (int)(NumberUtil.Val( StringUtil.Substring( oReader.Value, 1, 4), ".")), (int)(NumberUtil.Val( StringUtil.Substring( oReader.Value, 6, 2), ".")), (int)(NumberUtil.Val( StringUtil.Substring( oReader.Value, 9, 2), ".")));
                   }
                   if ( GXSoapError > 0 )
                   {
@@ -627,15 +627,6 @@ namespace GeneXus.Programs {
             sDateCnv = sDateCnv + "-";
             sNumToPad = StringUtil.Trim( StringUtil.Str( (decimal)(DateTimeUtil.Day( gxTv_Sdtproducto_Productofecreg)), 10, 0));
             sDateCnv = sDateCnv + StringUtil.Substring( "00", 1, 2-StringUtil.Len( sNumToPad)) + sNumToPad;
-            sDateCnv = sDateCnv + "T";
-            sNumToPad = StringUtil.Trim( StringUtil.Str( (decimal)(DateTimeUtil.Hour( gxTv_Sdtproducto_Productofecreg)), 10, 0));
-            sDateCnv = sDateCnv + StringUtil.Substring( "00", 1, 2-StringUtil.Len( sNumToPad)) + sNumToPad;
-            sDateCnv = sDateCnv + ":";
-            sNumToPad = StringUtil.Trim( StringUtil.Str( (decimal)(DateTimeUtil.Minute( gxTv_Sdtproducto_Productofecreg)), 10, 0));
-            sDateCnv = sDateCnv + StringUtil.Substring( "00", 1, 2-StringUtil.Len( sNumToPad)) + sNumToPad;
-            sDateCnv = sDateCnv + ":";
-            sNumToPad = StringUtil.Trim( StringUtil.Str( (decimal)(DateTimeUtil.Second( gxTv_Sdtproducto_Productofecreg)), 10, 0));
-            sDateCnv = sDateCnv + StringUtil.Substring( "00", 1, 2-StringUtil.Len( sNumToPad)) + sNumToPad;
             oWriter.WriteElement("productofecreg", sDateCnv);
             if ( StringUtil.StrCmp(sNameSpace, "Condufef_v1") != 0 )
             {
@@ -659,15 +650,6 @@ namespace GeneXus.Programs {
             sDateCnv = sDateCnv + StringUtil.Substring( "00", 1, 2-StringUtil.Len( sNumToPad)) + sNumToPad;
             sDateCnv = sDateCnv + "-";
             sNumToPad = StringUtil.Trim( StringUtil.Str( (decimal)(DateTimeUtil.Day( gxTv_Sdtproducto_Productofecultact)), 10, 0));
-            sDateCnv = sDateCnv + StringUtil.Substring( "00", 1, 2-StringUtil.Len( sNumToPad)) + sNumToPad;
-            sDateCnv = sDateCnv + "T";
-            sNumToPad = StringUtil.Trim( StringUtil.Str( (decimal)(DateTimeUtil.Hour( gxTv_Sdtproducto_Productofecultact)), 10, 0));
-            sDateCnv = sDateCnv + StringUtil.Substring( "00", 1, 2-StringUtil.Len( sNumToPad)) + sNumToPad;
-            sDateCnv = sDateCnv + ":";
-            sNumToPad = StringUtil.Trim( StringUtil.Str( (decimal)(DateTimeUtil.Minute( gxTv_Sdtproducto_Productofecultact)), 10, 0));
-            sDateCnv = sDateCnv + StringUtil.Substring( "00", 1, 2-StringUtil.Len( sNumToPad)) + sNumToPad;
-            sDateCnv = sDateCnv + ":";
-            sNumToPad = StringUtil.Trim( StringUtil.Str( (decimal)(DateTimeUtil.Second( gxTv_Sdtproducto_Productofecultact)), 10, 0));
             sDateCnv = sDateCnv + StringUtil.Substring( "00", 1, 2-StringUtil.Len( sNumToPad)) + sNumToPad;
             oWriter.WriteElement("productofecultact", sDateCnv);
             if ( StringUtil.StrCmp(sNameSpace, "Condufef_v1") != 0 )
@@ -745,15 +727,6 @@ namespace GeneXus.Programs {
                sDateCnv = sDateCnv + "-";
                sNumToPad = StringUtil.Trim( StringUtil.Str( (decimal)(DateTimeUtil.Day( gxTv_Sdtproducto_Productofecreg_Z)), 10, 0));
                sDateCnv = sDateCnv + StringUtil.Substring( "00", 1, 2-StringUtil.Len( sNumToPad)) + sNumToPad;
-               sDateCnv = sDateCnv + "T";
-               sNumToPad = StringUtil.Trim( StringUtil.Str( (decimal)(DateTimeUtil.Hour( gxTv_Sdtproducto_Productofecreg_Z)), 10, 0));
-               sDateCnv = sDateCnv + StringUtil.Substring( "00", 1, 2-StringUtil.Len( sNumToPad)) + sNumToPad;
-               sDateCnv = sDateCnv + ":";
-               sNumToPad = StringUtil.Trim( StringUtil.Str( (decimal)(DateTimeUtil.Minute( gxTv_Sdtproducto_Productofecreg_Z)), 10, 0));
-               sDateCnv = sDateCnv + StringUtil.Substring( "00", 1, 2-StringUtil.Len( sNumToPad)) + sNumToPad;
-               sDateCnv = sDateCnv + ":";
-               sNumToPad = StringUtil.Trim( StringUtil.Str( (decimal)(DateTimeUtil.Second( gxTv_Sdtproducto_Productofecreg_Z)), 10, 0));
-               sDateCnv = sDateCnv + StringUtil.Substring( "00", 1, 2-StringUtil.Len( sNumToPad)) + sNumToPad;
                oWriter.WriteElement("productofecreg_Z", sDateCnv);
                if ( StringUtil.StrCmp(sNameSpace, "Condufef_v1") != 0 )
                {
@@ -777,15 +750,6 @@ namespace GeneXus.Programs {
                sDateCnv = sDateCnv + StringUtil.Substring( "00", 1, 2-StringUtil.Len( sNumToPad)) + sNumToPad;
                sDateCnv = sDateCnv + "-";
                sNumToPad = StringUtil.Trim( StringUtil.Str( (decimal)(DateTimeUtil.Day( gxTv_Sdtproducto_Productofecultact_Z)), 10, 0));
-               sDateCnv = sDateCnv + StringUtil.Substring( "00", 1, 2-StringUtil.Len( sNumToPad)) + sNumToPad;
-               sDateCnv = sDateCnv + "T";
-               sNumToPad = StringUtil.Trim( StringUtil.Str( (decimal)(DateTimeUtil.Hour( gxTv_Sdtproducto_Productofecultact_Z)), 10, 0));
-               sDateCnv = sDateCnv + StringUtil.Substring( "00", 1, 2-StringUtil.Len( sNumToPad)) + sNumToPad;
-               sDateCnv = sDateCnv + ":";
-               sNumToPad = StringUtil.Trim( StringUtil.Str( (decimal)(DateTimeUtil.Minute( gxTv_Sdtproducto_Productofecultact_Z)), 10, 0));
-               sDateCnv = sDateCnv + StringUtil.Substring( "00", 1, 2-StringUtil.Len( sNumToPad)) + sNumToPad;
-               sDateCnv = sDateCnv + ":";
-               sNumToPad = StringUtil.Trim( StringUtil.Str( (decimal)(DateTimeUtil.Second( gxTv_Sdtproducto_Productofecultact_Z)), 10, 0));
                sDateCnv = sDateCnv + StringUtil.Substring( "00", 1, 2-StringUtil.Len( sNumToPad)) + sNumToPad;
                oWriter.WriteElement("productofecultact_Z", sDateCnv);
                if ( StringUtil.StrCmp(sNameSpace, "Condufef_v1") != 0 )
@@ -863,44 +827,24 @@ namespace GeneXus.Programs {
          AddObjectProperty("pmarcaid", gxTv_Sdtproducto_Pmarcaid, false);
          AddObjectProperty("pcategoriaid", gxTv_Sdtproducto_Pcategoriaid, false);
          AddObjectProperty("productousuario", gxTv_Sdtproducto_Productousuario, false);
-         datetime_STZ = gxTv_Sdtproducto_Productofecreg;
          sDateCnv = "";
-         sNumToPad = StringUtil.Trim( StringUtil.Str( (decimal)(DateTimeUtil.Year( datetime_STZ)), 10, 0));
+         sNumToPad = StringUtil.Trim( StringUtil.Str( (decimal)(DateTimeUtil.Year( gxTv_Sdtproducto_Productofecreg)), 10, 0));
          sDateCnv = sDateCnv + StringUtil.Substring( "0000", 1, 4-StringUtil.Len( sNumToPad)) + sNumToPad;
          sDateCnv = sDateCnv + "-";
-         sNumToPad = StringUtil.Trim( StringUtil.Str( (decimal)(DateTimeUtil.Month( datetime_STZ)), 10, 0));
+         sNumToPad = StringUtil.Trim( StringUtil.Str( (decimal)(DateTimeUtil.Month( gxTv_Sdtproducto_Productofecreg)), 10, 0));
          sDateCnv = sDateCnv + StringUtil.Substring( "00", 1, 2-StringUtil.Len( sNumToPad)) + sNumToPad;
          sDateCnv = sDateCnv + "-";
-         sNumToPad = StringUtil.Trim( StringUtil.Str( (decimal)(DateTimeUtil.Day( datetime_STZ)), 10, 0));
-         sDateCnv = sDateCnv + StringUtil.Substring( "00", 1, 2-StringUtil.Len( sNumToPad)) + sNumToPad;
-         sDateCnv = sDateCnv + "T";
-         sNumToPad = StringUtil.Trim( StringUtil.Str( (decimal)(DateTimeUtil.Hour( datetime_STZ)), 10, 0));
-         sDateCnv = sDateCnv + StringUtil.Substring( "00", 1, 2-StringUtil.Len( sNumToPad)) + sNumToPad;
-         sDateCnv = sDateCnv + ":";
-         sNumToPad = StringUtil.Trim( StringUtil.Str( (decimal)(DateTimeUtil.Minute( datetime_STZ)), 10, 0));
-         sDateCnv = sDateCnv + StringUtil.Substring( "00", 1, 2-StringUtil.Len( sNumToPad)) + sNumToPad;
-         sDateCnv = sDateCnv + ":";
-         sNumToPad = StringUtil.Trim( StringUtil.Str( (decimal)(DateTimeUtil.Second( datetime_STZ)), 10, 0));
+         sNumToPad = StringUtil.Trim( StringUtil.Str( (decimal)(DateTimeUtil.Day( gxTv_Sdtproducto_Productofecreg)), 10, 0));
          sDateCnv = sDateCnv + StringUtil.Substring( "00", 1, 2-StringUtil.Len( sNumToPad)) + sNumToPad;
          AddObjectProperty("productofecreg", sDateCnv, false);
-         datetime_STZ = gxTv_Sdtproducto_Productofecultact;
          sDateCnv = "";
-         sNumToPad = StringUtil.Trim( StringUtil.Str( (decimal)(DateTimeUtil.Year( datetime_STZ)), 10, 0));
+         sNumToPad = StringUtil.Trim( StringUtil.Str( (decimal)(DateTimeUtil.Year( gxTv_Sdtproducto_Productofecultact)), 10, 0));
          sDateCnv = sDateCnv + StringUtil.Substring( "0000", 1, 4-StringUtil.Len( sNumToPad)) + sNumToPad;
          sDateCnv = sDateCnv + "-";
-         sNumToPad = StringUtil.Trim( StringUtil.Str( (decimal)(DateTimeUtil.Month( datetime_STZ)), 10, 0));
+         sNumToPad = StringUtil.Trim( StringUtil.Str( (decimal)(DateTimeUtil.Month( gxTv_Sdtproducto_Productofecultact)), 10, 0));
          sDateCnv = sDateCnv + StringUtil.Substring( "00", 1, 2-StringUtil.Len( sNumToPad)) + sNumToPad;
          sDateCnv = sDateCnv + "-";
-         sNumToPad = StringUtil.Trim( StringUtil.Str( (decimal)(DateTimeUtil.Day( datetime_STZ)), 10, 0));
-         sDateCnv = sDateCnv + StringUtil.Substring( "00", 1, 2-StringUtil.Len( sNumToPad)) + sNumToPad;
-         sDateCnv = sDateCnv + "T";
-         sNumToPad = StringUtil.Trim( StringUtil.Str( (decimal)(DateTimeUtil.Hour( datetime_STZ)), 10, 0));
-         sDateCnv = sDateCnv + StringUtil.Substring( "00", 1, 2-StringUtil.Len( sNumToPad)) + sNumToPad;
-         sDateCnv = sDateCnv + ":";
-         sNumToPad = StringUtil.Trim( StringUtil.Str( (decimal)(DateTimeUtil.Minute( datetime_STZ)), 10, 0));
-         sDateCnv = sDateCnv + StringUtil.Substring( "00", 1, 2-StringUtil.Len( sNumToPad)) + sNumToPad;
-         sDateCnv = sDateCnv + ":";
-         sNumToPad = StringUtil.Trim( StringUtil.Str( (decimal)(DateTimeUtil.Second( datetime_STZ)), 10, 0));
+         sNumToPad = StringUtil.Trim( StringUtil.Str( (decimal)(DateTimeUtil.Day( gxTv_Sdtproducto_Productofecultact)), 10, 0));
          sDateCnv = sDateCnv + StringUtil.Substring( "00", 1, 2-StringUtil.Len( sNumToPad)) + sNumToPad;
          AddObjectProperty("productofecultact", sDateCnv, false);
          AddObjectProperty("ptipobienid", gxTv_Sdtproducto_Ptipobienid, false);
@@ -915,44 +859,24 @@ namespace GeneXus.Programs {
             AddObjectProperty("pmarcaid_Z", gxTv_Sdtproducto_Pmarcaid_Z, false);
             AddObjectProperty("pcategoriaid_Z", gxTv_Sdtproducto_Pcategoriaid_Z, false);
             AddObjectProperty("productousuario_Z", gxTv_Sdtproducto_Productousuario_Z, false);
-            datetime_STZ = gxTv_Sdtproducto_Productofecreg_Z;
             sDateCnv = "";
-            sNumToPad = StringUtil.Trim( StringUtil.Str( (decimal)(DateTimeUtil.Year( datetime_STZ)), 10, 0));
+            sNumToPad = StringUtil.Trim( StringUtil.Str( (decimal)(DateTimeUtil.Year( gxTv_Sdtproducto_Productofecreg_Z)), 10, 0));
             sDateCnv = sDateCnv + StringUtil.Substring( "0000", 1, 4-StringUtil.Len( sNumToPad)) + sNumToPad;
             sDateCnv = sDateCnv + "-";
-            sNumToPad = StringUtil.Trim( StringUtil.Str( (decimal)(DateTimeUtil.Month( datetime_STZ)), 10, 0));
+            sNumToPad = StringUtil.Trim( StringUtil.Str( (decimal)(DateTimeUtil.Month( gxTv_Sdtproducto_Productofecreg_Z)), 10, 0));
             sDateCnv = sDateCnv + StringUtil.Substring( "00", 1, 2-StringUtil.Len( sNumToPad)) + sNumToPad;
             sDateCnv = sDateCnv + "-";
-            sNumToPad = StringUtil.Trim( StringUtil.Str( (decimal)(DateTimeUtil.Day( datetime_STZ)), 10, 0));
-            sDateCnv = sDateCnv + StringUtil.Substring( "00", 1, 2-StringUtil.Len( sNumToPad)) + sNumToPad;
-            sDateCnv = sDateCnv + "T";
-            sNumToPad = StringUtil.Trim( StringUtil.Str( (decimal)(DateTimeUtil.Hour( datetime_STZ)), 10, 0));
-            sDateCnv = sDateCnv + StringUtil.Substring( "00", 1, 2-StringUtil.Len( sNumToPad)) + sNumToPad;
-            sDateCnv = sDateCnv + ":";
-            sNumToPad = StringUtil.Trim( StringUtil.Str( (decimal)(DateTimeUtil.Minute( datetime_STZ)), 10, 0));
-            sDateCnv = sDateCnv + StringUtil.Substring( "00", 1, 2-StringUtil.Len( sNumToPad)) + sNumToPad;
-            sDateCnv = sDateCnv + ":";
-            sNumToPad = StringUtil.Trim( StringUtil.Str( (decimal)(DateTimeUtil.Second( datetime_STZ)), 10, 0));
+            sNumToPad = StringUtil.Trim( StringUtil.Str( (decimal)(DateTimeUtil.Day( gxTv_Sdtproducto_Productofecreg_Z)), 10, 0));
             sDateCnv = sDateCnv + StringUtil.Substring( "00", 1, 2-StringUtil.Len( sNumToPad)) + sNumToPad;
             AddObjectProperty("productofecreg_Z", sDateCnv, false);
-            datetime_STZ = gxTv_Sdtproducto_Productofecultact_Z;
             sDateCnv = "";
-            sNumToPad = StringUtil.Trim( StringUtil.Str( (decimal)(DateTimeUtil.Year( datetime_STZ)), 10, 0));
+            sNumToPad = StringUtil.Trim( StringUtil.Str( (decimal)(DateTimeUtil.Year( gxTv_Sdtproducto_Productofecultact_Z)), 10, 0));
             sDateCnv = sDateCnv + StringUtil.Substring( "0000", 1, 4-StringUtil.Len( sNumToPad)) + sNumToPad;
             sDateCnv = sDateCnv + "-";
-            sNumToPad = StringUtil.Trim( StringUtil.Str( (decimal)(DateTimeUtil.Month( datetime_STZ)), 10, 0));
+            sNumToPad = StringUtil.Trim( StringUtil.Str( (decimal)(DateTimeUtil.Month( gxTv_Sdtproducto_Productofecultact_Z)), 10, 0));
             sDateCnv = sDateCnv + StringUtil.Substring( "00", 1, 2-StringUtil.Len( sNumToPad)) + sNumToPad;
             sDateCnv = sDateCnv + "-";
-            sNumToPad = StringUtil.Trim( StringUtil.Str( (decimal)(DateTimeUtil.Day( datetime_STZ)), 10, 0));
-            sDateCnv = sDateCnv + StringUtil.Substring( "00", 1, 2-StringUtil.Len( sNumToPad)) + sNumToPad;
-            sDateCnv = sDateCnv + "T";
-            sNumToPad = StringUtil.Trim( StringUtil.Str( (decimal)(DateTimeUtil.Hour( datetime_STZ)), 10, 0));
-            sDateCnv = sDateCnv + StringUtil.Substring( "00", 1, 2-StringUtil.Len( sNumToPad)) + sNumToPad;
-            sDateCnv = sDateCnv + ":";
-            sNumToPad = StringUtil.Trim( StringUtil.Str( (decimal)(DateTimeUtil.Minute( datetime_STZ)), 10, 0));
-            sDateCnv = sDateCnv + StringUtil.Substring( "00", 1, 2-StringUtil.Len( sNumToPad)) + sNumToPad;
-            sDateCnv = sDateCnv + ":";
-            sNumToPad = StringUtil.Trim( StringUtil.Str( (decimal)(DateTimeUtil.Second( datetime_STZ)), 10, 0));
+            sNumToPad = StringUtil.Trim( StringUtil.Str( (decimal)(DateTimeUtil.Day( gxTv_Sdtproducto_Productofecultact_Z)), 10, 0));
             sDateCnv = sDateCnv + StringUtil.Substring( "00", 1, 2-StringUtil.Len( sNumToPad)) + sNumToPad;
             AddObjectProperty("productofecultact_Z", sDateCnv, false);
             AddObjectProperty("ptipobienid_Z", gxTv_Sdtproducto_Ptipobienid_Z, false);
@@ -1166,12 +1090,12 @@ namespace GeneXus.Programs {
          get {
             if ( gxTv_Sdtproducto_Productofecreg == DateTime.MinValue)
                return null;
-            return new GxDatetimeString(gxTv_Sdtproducto_Productofecreg).value ;
+            return new GxDateString(gxTv_Sdtproducto_Productofecreg).value ;
          }
 
          set {
             gxTv_Sdtproducto_Productofecreg_N = 0;
-            if (value == null || value == GxDatetimeString.NullValue )
+            if (value == null || value == GxDateString.NullValue )
                gxTv_Sdtproducto_Productofecreg = DateTime.MinValue;
             else
                gxTv_Sdtproducto_Productofecreg = DateTime.Parse( value);
@@ -1213,12 +1137,12 @@ namespace GeneXus.Programs {
          get {
             if ( gxTv_Sdtproducto_Productofecultact == DateTime.MinValue)
                return null;
-            return new GxDatetimeString(gxTv_Sdtproducto_Productofecultact).value ;
+            return new GxDateString(gxTv_Sdtproducto_Productofecultact).value ;
          }
 
          set {
             gxTv_Sdtproducto_Productofecultact_N = 0;
-            if (value == null || value == GxDatetimeString.NullValue )
+            if (value == null || value == GxDateString.NullValue )
                gxTv_Sdtproducto_Productofecultact = DateTime.MinValue;
             else
                gxTv_Sdtproducto_Productofecultact = DateTime.Parse( value);
@@ -1512,11 +1436,11 @@ namespace GeneXus.Programs {
          get {
             if ( gxTv_Sdtproducto_Productofecreg_Z == DateTime.MinValue)
                return null;
-            return new GxDatetimeString(gxTv_Sdtproducto_Productofecreg_Z).value ;
+            return new GxDateString(gxTv_Sdtproducto_Productofecreg_Z).value ;
          }
 
          set {
-            if (value == null || value == GxDatetimeString.NullValue )
+            if (value == null || value == GxDateString.NullValue )
                gxTv_Sdtproducto_Productofecreg_Z = DateTime.MinValue;
             else
                gxTv_Sdtproducto_Productofecreg_Z = DateTime.Parse( value);
@@ -1556,11 +1480,11 @@ namespace GeneXus.Programs {
          get {
             if ( gxTv_Sdtproducto_Productofecultact_Z == DateTime.MinValue)
                return null;
-            return new GxDatetimeString(gxTv_Sdtproducto_Productofecultact_Z).value ;
+            return new GxDateString(gxTv_Sdtproducto_Productofecultact_Z).value ;
          }
 
          set {
-            if (value == null || value == GxDatetimeString.NullValue )
+            if (value == null || value == GxDateString.NullValue )
                gxTv_Sdtproducto_Productofecultact_Z = DateTime.MinValue;
             else
                gxTv_Sdtproducto_Productofecultact_Z = DateTime.Parse( value);
@@ -1847,17 +1771,16 @@ namespace GeneXus.Programs {
       {
          gxTv_Sdtproducto_Productodsc = "";
          gxTv_Sdtproducto_Productousuario = "";
-         gxTv_Sdtproducto_Productofecreg = (DateTime)(DateTime.MinValue);
-         gxTv_Sdtproducto_Productofecultact = (DateTime)(DateTime.MinValue);
+         gxTv_Sdtproducto_Productofecreg = DateTime.MinValue;
+         gxTv_Sdtproducto_Productofecultact = DateTime.MinValue;
          gxTv_Sdtproducto_Mode = "";
          gxTv_Sdtproducto_Productodsc_Z = "";
          gxTv_Sdtproducto_Productousuario_Z = "";
-         gxTv_Sdtproducto_Productofecreg_Z = (DateTime)(DateTime.MinValue);
-         gxTv_Sdtproducto_Productofecultact_Z = (DateTime)(DateTime.MinValue);
+         gxTv_Sdtproducto_Productofecreg_Z = DateTime.MinValue;
+         gxTv_Sdtproducto_Productofecultact_Z = DateTime.MinValue;
          sTagName = "";
          sDateCnv = "";
          sNumToPad = "";
-         datetime_STZ = (DateTime)(DateTime.MinValue);
          IGxSilentTrn obj ;
          obj = (IGxSilentTrn)ClassLoader.FindInstance( "producto", "GeneXus.Programs.producto_bc", new Object[] {context}, constructorCallingAssembly);
          obj.initialize();
@@ -1899,7 +1822,6 @@ namespace GeneXus.Programs {
       private DateTime gxTv_Sdtproducto_Productofecultact ;
       private DateTime gxTv_Sdtproducto_Productofecreg_Z ;
       private DateTime gxTv_Sdtproducto_Productofecultact_Z ;
-      private DateTime datetime_STZ ;
       private String gxTv_Sdtproducto_Productodsc ;
       private String gxTv_Sdtproducto_Productousuario ;
       private String gxTv_Sdtproducto_Productodsc_Z ;
@@ -2021,11 +1943,11 @@ namespace GeneXus.Programs {
       public String gxTpr_Productofecreg
       {
          get {
-            return DateTimeUtil.TToC2( sdt.gxTpr_Productofecreg) ;
+            return DateTimeUtil.DToC2( sdt.gxTpr_Productofecreg) ;
          }
 
          set {
-            sdt.gxTpr_Productofecreg = DateTimeUtil.CToT2( (String)(value));
+            sdt.gxTpr_Productofecreg = DateTimeUtil.CToD2( (String)(value));
          }
 
       }
@@ -2035,11 +1957,11 @@ namespace GeneXus.Programs {
       public String gxTpr_Productofecultact
       {
          get {
-            return DateTimeUtil.TToC2( sdt.gxTpr_Productofecultact) ;
+            return DateTimeUtil.DToC2( sdt.gxTpr_Productofecultact) ;
          }
 
          set {
-            sdt.gxTpr_Productofecultact = DateTimeUtil.CToT2( (String)(value));
+            sdt.gxTpr_Productofecultact = DateTimeUtil.CToD2( (String)(value));
          }
 
       }

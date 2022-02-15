@@ -204,6 +204,8 @@ rule_i(0,index(23,'PRODUCTO_PKEY',u,[ 15,16 ])).
 rule_i(0,loc([ 23,'PRODUCTO_PKEY' ],producto_pkey,'','LAN')).
 rule_i(0,index(23,'PRODUCTO_ID',k,[ 15 ])).
 rule_i(0,loc([ 23,'PRODUCTO_ID' ],producto_id,'','LAN')).
+rule_i(0,index(23,'IPRODUCTO',u,[ 175 ])).
+rule_i(0,loc([ 23,'IPRODUCTO' ],'IPRODUCTO','','LAN')).
 rule_i(0,p(0,0,fv,13,[ intname,'PRODUCTO' ])).
 rule_i(0,p(0,0,fv,13,[ table,23 ])).
 rule_i(0,p(0,15,fv,13,[])).
@@ -221,7 +223,14 @@ rule_i(0,p(0,15,fvix,[ 13,13 ],[ 'NAME',producto_id ])).
 rule_i(0,p(0,15,fvix,[ 13,13 ],[ 'LOC','' ])).
 rule_i(0,p(0,15,fvix,[ 13,13 ],[ 'SCHEMA',public ])).
 rule_i(0,p(0,15,fvix,[ 13,13 ],[ 'EXTNAM','YES' ])).
+rule_i(0,p(0,15,fvix,[ 13,24 ],[])).
+rule_i(0,p(0,15,fvix,[ 13,24 ],[ 'NAME','' ])).
+rule_i(0,p(0,15,fvix,[ 13,24 ],[ 'LOC','' ])).
+rule_i(0,p(0,15,fvix,[ 13,24 ],[ 'SCHEMA','' ])).
+rule_i(0,p(0,15,fvix,[ 13,24 ],[ 'EXTNAM','YES' ])).
 rule_i(0,rule([ a(22,[ '''Guardar''','''Guardar''','' ]) ],[],[],[])).
+rule_i(0,rule([ a(22,[ '''Cancelar''','''Cancelar''','' ]) ],[],[],[])).
+rule_i(0,rule([ a(22,[ '''Consultar''','''Consultar''','' ]) ],[],[],[])).
  
 a_i(1,1,f,'Today',[],[ [],[ t('today(',1),t(')',4) ] ]).
 a_i(2,1,f,'Err',[],[ [],[ t('0',3) ] ]).
@@ -297,7 +306,7 @@ index_i(19,[ 'MODELOS_PKEY',u,[ 15 ],'MODELOS_PKEY' ]).
 index_i(5,[ 'CATEGORIAS_PKEY',u,[ 14 ],'CATEGORIAS_PKEY' ]).
 index_i(1,[ 'TIPOBIEN_PKEY',u,[ 23 ],'TIPOBIEN_PKEY' ]).
 index_i(23,[ 'PRODUCTO_PKEY',u,[ 15,16 ],'PRODUCTO_PKEY' ]).
-index_i(23,[ 'IPRODUCTO',u,[ 175 ],'Iproducto' ]).
+index_i(23,[ 'IPRODUCTO',u,[ 175 ],'IPRODUCTO' ]).
  
 lv_i(2,2000,23).
  
@@ -319,6 +328,7 @@ agg_def_i(40000,[ t('0',3) ]).
  
  
  
+map_i(23,i,'IPRODUCTO',[ 'IPRODUCTO' ]).
 map_i(23,a,183,[ ptipobienid ]).
 map_i(23,a,93,[ productofecultact ]).
 map_i(23,a,92,[ productofecreg ]).
@@ -371,7 +381,9 @@ break_i(2,nvg,1,[],[ [],[],[] ]).
  
 b_group_i(2,1,lit,0,1,2).
 b_group_i(2,2,lit,0,3,7).
-b_group_i(2,3,lit,0,8,0).
+b_group_i(2,3,lit,0,8,31).
+b_group_i(2,4,lit,0,32,35).
+b_group_i(2,5,lit,0,36,0).
  
 b_line_i(2,2,1,cmd,2,[ t('',146,2,0),t('Start',3,2,7) ]).
 b_line_i(3,2,2,cmd,2,[ t('',107,2,0),t('Nextvalue',23,2,0),t(=,10,2,0),t(40000,2,2,0),t(+,5,2,0),t('1',3,2,0) ]).
@@ -398,9 +410,15 @@ b_line_i(25,2,3,cmd,2,[ t('',157,2,0) ]).
 b_line_i(26,2,3,cmd,2,[ t('',111,2,0) ]).
 b_line_i(27,2,3,cmd,2,[ t('',111,2,0) ]).
 b_line_i(28,2,3,cmd,2,[ t('',147,2,0) ]).
-b_line_i(1000,2,3,cmd,0,[ t('',146,0,0),t('Load',3,0,0) ]).
-b_line_i(1001,2,3,cmd,0,[ t('',155,0,0) ]).
-b_line_i(1002,2,3,cmd,0,[ t('',147,0,0) ]).
+b_line_i(31,2,3,cmd,2,[ t('',146,2,0),t('''Cancelar''',3,31,7) ]).
+b_line_i(32,2,4,cmd,2,[ t('',104,2,0),t(o(13,'MenuPrincipal'),28,2,2) ]).
+b_line_i(33,2,4,cmd,2,[ t('',147,2,0) ]).
+b_line_i(35,2,4,cmd,2,[ t('',146,2,0),t('''Consultar''',3,35,7) ]).
+b_line_i(36,2,5,cmd,2,[ t('',104,2,0),t(o(13,'DetallesProducto'),28,2,2) ]).
+b_line_i(37,2,5,cmd,2,[ t('',147,2,0) ]).
+b_line_i(1000,2,5,cmd,0,[ t('',146,0,0),t('Load',3,0,0) ]).
+b_line_i(1001,2,5,cmd,0,[ t('',155,0,0) ]).
+b_line_i(1002,2,5,cmd,0,[ t('',147,0,0) ]).
  
  
  
@@ -471,7 +489,7 @@ html_sub_i(46,49,html_i(1,cell(49))).
 html_sub_i(49,50,html_i(0,t('Categoriasid',23))).
 html_sub_i(46,51,html_i(2,cell(51))).
 html_sub_i(46,52,html_i(3,cell(52))).
-html_sub_i(52,53,html_i(0,button('Enter'))).
+html_sub_i(52,53,html_i(0,button('''Consultar'''))).
 html_sub_i(46,54,html_i(4,cell(54))).
 html_sub_i(28,55,html_i(4,row(55))).
 html_sub_i(55,56,html_i(0,cell(56))).
@@ -482,7 +500,7 @@ html_sub_i(55,60,html_i(2,cell(60))).
 html_sub_i(55,61,html_i(3,cell(61))).
 html_sub_i(61,62,html_i(0,button('''Guardar'''))).
 html_sub_i(55,63,html_i(4,cell(63))).
-html_sub_i(63,64,html_i(0,button('Enter'))).
+html_sub_i(63,64,html_i(0,button('''Cancelar'''))).
 html_sub_i(28,0,html_i(5,html('</tbody>'))).
 html_sub_i(4,0,html_i(4,html('</tbody>'))).
  
@@ -804,7 +822,7 @@ html_comp_i(50,'Title','',d,[ str ]).
 html_comp_i(50,'Invitemsg','',d,[ str ]).
 html_comp_i(53,'Controlname','Button1',v,[ str ]).
 html_comp_i(53,'Class','Button',d,[ str ]).
-html_comp_i(53,'Event','Enter',d,[ str ]).
+html_comp_i(53,'Event','''Consultar''',v,[ str ]).
 html_comp_i(53,'Caption','CONSULTAR',d,[ str ]).
 html_comp_i(53,'Title','CONSULTAR',d,[ str ]).
 html_comp_i(53,'Font',font('Microsoft Sans Serif',10,[]),d,[ font ]).
@@ -869,7 +887,7 @@ html_comp_i(62,'Bordercolor',rgb(219,220,222),d,[ color ]).
 html_comp_i(62,'Buttonborderstyle',standard,d,[ str ]).
 html_comp_i(64,'Controlname','Button3',v,[ str ]).
 html_comp_i(64,'Class','Button',d,[ str ]).
-html_comp_i(64,'Event','Enter',d,[ str ]).
+html_comp_i(64,'Event','''Cancelar''',v,[ str ]).
 html_comp_i(64,'Caption','CANCELAR',d,[ str ]).
 html_comp_i(64,'Title','CANCELAR',d,[ str ]).
 html_comp_i(64,'Font',font('Microsoft Sans Serif',10,[]),d,[ font ]).
@@ -900,11 +918,11 @@ lit_i(40,1,t('MODELO:',3),[ ctlname('Textblock5') ]).
 lit_i(42,1,t('Modelosid',23),[ ctlname('&Modelosid'),ctrltype(dyncombo,42),pos(42),ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
 lit_i(48,1,t('CATEGORÍAS:',3),[ ctlname('Textblock6') ]).
 lit_i(50,1,t('Categoriasid',23),[ ctlname('&Categoriasid'),ctrltype(dyncombo,50),pos(50),ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
-lit_i(53,1,button('Enter'),[ ctlname('Button1'),width(0),rect(0,0,10,10),title('Nothing') ]).
+lit_i(53,1,button('''Consultar'''),[ ctlname('Button1'),width(0),rect(0,0,10,10),title('Nothing') ]).
 lit_i(57,1,t('TIPO BIEN:',3),[ ctlname('Textblock7') ]).
 lit_i(59,1,t('Tipobienid',23),[ ctlname('&Tipobienid'),ctrltype(dyncombo,59),pos(59),ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
 lit_i(62,1,button('''Guardar'''),[ ctlname('Guardar'),width(0),rect(0,0,10,10),title('Nothing') ]).
-lit_i(64,1,button('Enter'),[ ctlname('Button3'),width(0),rect(0,0,10,10),title('Nothing') ]).
+lit_i(64,1,button('''Cancelar'''),[ ctlname('Button3'),width(0),rect(0,0,10,10),title('Nothing') ]).
 lit_i(28,1,table(28),[ ctlname('Table3') ]).
 lit_i(4,1,table(4),[ ctlname('Table1') ]).
 lit_i(1,1,window,[ rect(0,0,1000,1000),ctlname('Form') ]).
@@ -923,6 +941,7 @@ att_prop_i(2,175,'EmptyAsNull','Yes',d).
 att_prop_i(2,175,idBasedOn,'',d).
 att_prop_i(2,175,'AUTONUMBER','0',d).
 att_prop_i(2,175,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,175,'AttRegEx','',d).
 att_prop_i(2,175,'AttValidationFailedMsg','',d).
 att_prop_i(2,175,'FullName',productoid,v).
 att_prop_i(2,25,'ExternalName',cambsid,d).
@@ -1021,6 +1040,7 @@ att_prop_i(2,40000,'EmptyAsNull','Yes',d).
 att_prop_i(2,40000,idBasedOn,'',d).
 att_prop_i(2,40000,'AUTONUMBER','0',d).
 att_prop_i(2,40000,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,40000,'AttRegEx','',d).
 att_prop_i(2,40000,'AttValidationFailedMsg','',d).
 att_prop_i(2,40000,'FullName',productoid,v).
  
@@ -1132,18 +1152,18 @@ struct_dt_elem_i([ 0,9,0 ],7,collection,'False').
 struct_dt_elem_i([ 0,9,0 ],7,attributeid,'91').
 struct_dt_elem_i([ 0,9,0 ],8,name,'Productofecreg').
 struct_dt_elem_i([ 0,9,0 ],8,camelname,productofecreg).
-struct_dt_elem_i([ 0,9,0 ],8,length,10).
-struct_dt_elem_i([ 0,9,0 ],8,decimals,8).
-struct_dt_elem_i([ 0,9,0 ],8,type,[ 12,10,8 ]).
-struct_dt_elem_i([ 0,9,0 ],8,pic,'99/99/9999 99:99:99').
+struct_dt_elem_i([ 0,9,0 ],8,length,8).
+struct_dt_elem_i([ 0,9,0 ],8,decimals,0).
+struct_dt_elem_i([ 0,9,0 ],8,type,[ 6,8,0 ]).
+struct_dt_elem_i([ 0,9,0 ],8,pic,'99/99/9999').
 struct_dt_elem_i([ 0,9,0 ],8,collection,'False').
 struct_dt_elem_i([ 0,9,0 ],8,attributeid,'92').
 struct_dt_elem_i([ 0,9,0 ],9,name,'Productofecultact').
 struct_dt_elem_i([ 0,9,0 ],9,camelname,productofecultact).
-struct_dt_elem_i([ 0,9,0 ],9,length,10).
-struct_dt_elem_i([ 0,9,0 ],9,decimals,8).
-struct_dt_elem_i([ 0,9,0 ],9,type,[ 12,10,8 ]).
-struct_dt_elem_i([ 0,9,0 ],9,pic,'99/99/9999 99:99:99').
+struct_dt_elem_i([ 0,9,0 ],9,length,8).
+struct_dt_elem_i([ 0,9,0 ],9,decimals,0).
+struct_dt_elem_i([ 0,9,0 ],9,type,[ 6,8,0 ]).
+struct_dt_elem_i([ 0,9,0 ],9,pic,'99/99/9999').
 struct_dt_elem_i([ 0,9,0 ],9,collection,'False').
 struct_dt_elem_i([ 0,9,0 ],9,attributeid,'93').
 struct_dt_elem_i([ 0,9,0 ],10,name,'Ptipobienid').
@@ -1204,12 +1224,19 @@ struct_dt_elem_i([ 26,1,1 ],2,pic,'ZZZZZZZZ9').
  
 sub_info_i(146,'Start',2,4,[ [],[ 'Nextvalue' ] ]).
 sub_info_i(146,'''Guardar''',7,28,[ [ 'Cambsid','Marcasid','Modelosid','Categoriasid','Tipobienid','Productodsc','Nextvalue','Producto','Websession','Today' ],[ 'Producto' ] ]).
+sub_info_i(146,'''Cancelar''',31,33,[ [],[] ]).
+sub_info_i(146,'''Consultar''',35,37,[ [],[] ]).
  
+pgm_parm_i(web,117,'DETALLESPRODUCTO',[],[]).
+pgm_parm_i(web,29,'MENUPRINCIPAL',[],[]).
 pgm_parm_i(web,96,'CATALOG_DE_PRODUCTOS',[],[]).
  
 pgm_callprotocol_i(web,96,'CATALOG_DE_PRODUCTOS','INTERNAL').
+pgm_callprotocol_i(web,117,'DETALLESPRODUCTO','INTERNAL').
+pgm_callprotocol_i(web,29,'MENUPRINCIPAL','INTERNAL').
 pgm_callprotocol_i(web,96,'CATALOG_DE_PRODUCTOS','INTERNAL').
  
+pgm_main_info_i(web,29,'MENUPRINCIPAL',[ 15,'MENUPRINCIPAL','','','','','INTERNAL' ]).
  
  
  

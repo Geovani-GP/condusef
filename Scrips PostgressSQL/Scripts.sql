@@ -261,10 +261,10 @@ CONSTRAINT pk_etiquetas_etiquetasid PRIMARY KEY (etiquetasid)
 CREATE  TABLE "public".producto ( 
 	productoid           integer  NOT NULL ,
 	pcambsid             integer  NOT NULL ,
+	productodsc          varchar(100)   ,
 	pmodeloid            integer  NOT NULL ,
 	pmarcaid             integer  NOT NULL ,
 	pcategoriaid         integer  NOT NULL ,
-	productodsc          varchar(100)   ,
 	productousuario      varchar(15)   ,
 	productofecreg       date   ,
 	productofecultact    date   ,

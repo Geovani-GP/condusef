@@ -248,6 +248,7 @@ att_prop_i(2,177,'EmptyAsNull','Yes',d).
 att_prop_i(2,177,idBasedOn,'',d).
 att_prop_i(2,177,'AUTONUMBER','0',d).
 att_prop_i(2,177,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,177,'AttRegEx','',d).
 att_prop_i(2,177,'AttValidationFailedMsg','',d).
 att_prop_i(2,177,'FullName',estadoid,v).
 att_prop_i(2,178,'HORIZONTAL_DESCRIPTION',estado,d).

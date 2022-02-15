@@ -2,7 +2,7 @@
                File: gpxMenuDemo
         Description: gpx Menu Demo
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 2/10/2022 20:7:19.33
+       Generated on: 2/15/2022 6:15:41.54
        Program type: Callable routine
           Main DBMS: postgresql
 */
@@ -214,12 +214,12 @@ namespace GeneXus.Programs {
          Gxm3gpxmenuitems_subitems.gxTpr_Url = "apdf_Modelos.aspx";
          Gxm3gpxmenuitems_subitems = new SdtgpxMenuItems_gpxMenuItem(context);
          Gxm1gpxmenuitems.gxTpr_Subitems.Add(Gxm3gpxmenuitems_subitems, 0);
-         Gxm3gpxmenuitems_subitems.gxTpr_Title = "Reporte de Cambs";
-         Gxm3gpxmenuitems_subitems.gxTpr_Url = "apdf_productos.aspx";
+         Gxm3gpxmenuitems_subitems.gxTpr_Title = "Reporte de Productos";
+         Gxm3gpxmenuitems_subitems.gxTpr_Url = "#";
          Gxm3gpxmenuitems_subitems = new SdtgpxMenuItems_gpxMenuItem(context);
          Gxm1gpxmenuitems.gxTpr_Subitems.Add(Gxm3gpxmenuitems_subitems, 0);
-         Gxm3gpxmenuitems_subitems.gxTpr_Title = "Reporte de Cambs";
-         Gxm3gpxmenuitems_subitems.gxTpr_Url = "apdf_proveedores.aspx";
+         Gxm3gpxmenuitems_subitems.gxTpr_Title = "Reporte de Proveedores";
+         Gxm3gpxmenuitems_subitems.gxTpr_Url = "#";
          this.cleanup();
       }
 

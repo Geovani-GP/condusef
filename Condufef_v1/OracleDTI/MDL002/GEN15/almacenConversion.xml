@@ -20,7 +20,7 @@
 <OnPrimaryKey>Yes</OnPrimaryKey>
 <AttriType>
 <DataType>N</DataType>
-<Presicion>18</Presicion>
+<Presicion>9</Presicion>
 <Scale>0</Scale>
 <Properties>
 <Property>
@@ -189,7 +189,7 @@
 <Description>almacentelefono</Description>
 <TakesValueFrom></TakesValueFrom>
 <AttriType>
-<DataType>V</DataType>
+<DataType>N</DataType>
 <Presicion>10</Presicion>
 <Scale>0</Scale>
 <Properties>
@@ -201,10 +201,7 @@
 <Value>No</Value></Property>
 <Property>
 <Name>AllowNulls</Name>
-<Value>Yes</Value></Property>
-<Property>
-<Name>NLS</Name>
-<Value>No</Value></Property></Properties></AttriType></Attribute>
+<Value>Yes</Value></Property></Properties></AttriType></Attribute>
 <Attribute>
 <AttriId>150</AttriId>
 <AttriName>alamcenobservaciones</AttriName>
@@ -255,9 +252,9 @@
 <Description>almacenfecreg</Description>
 <TakesValueFrom></TakesValueFrom>
 <AttriType>
-<DataType>T</DataType>
-<Presicion>10</Presicion>
-<Scale>8</Scale>
+<DataType>D</DataType>
+<Presicion>8</Presicion>
+<Scale>0</Scale>
 <Properties>
 <Property>
 <Name>Autonumber</Name>
@@ -274,9 +271,9 @@
 <Description>almacenfecultact</Description>
 <TakesValueFrom></TakesValueFrom>
 <AttriType>
-<DataType>T</DataType>
-<Presicion>10</Presicion>
-<Scale>8</Scale>
+<DataType>D</DataType>
+<Presicion>8</Presicion>
+<Scale>0</Scale>
 <Properties>
 <Property>
 <Name>Autonumber</Name>

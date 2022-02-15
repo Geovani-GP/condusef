@@ -2,7 +2,7 @@
                File: Alerts
         Description: Alerts
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 2/2/2022 13:42:9.74
+       Generated on: 2/15/2022 5:8:38.94
        Program type: Callable routine
           Main DBMS: postgresql
 */
@@ -253,15 +253,11 @@ namespace GeneXus.Programs {
          context.AddJavascriptSource("jquery.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxtimezone.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxgral.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("gxcfg.js", "?2022221342976");
+         context.AddJavascriptSource("gxcfg.js", "?2022215583895");
          if ( context.isSpaRequest( ) )
          {
             enableOutput();
          }
-         context.AddJavascriptSource("Shared/jquery/jquery-1.9.0.js", "");
-         context.AddJavascriptSource("Alertify/js/alertify.min.js", "");
-         context.AddJavascriptSource("Alertify/GlobalAlerts.js", "");
-         context.AddJavascriptSource("Alertify/AlertifyRender.js", "");
          if ( StringUtil.Len( sPrefix) == 0 )
          {
             context.CloseHtmlHeader();
@@ -320,7 +316,7 @@ namespace GeneXus.Programs {
          SendCloseFormHiddens( ) ;
          if ( ( StringUtil.Len( sPrefix) != 0 ) && context.isAjaxRequest( ) )
          {
-            context.AddJavascriptSource("alerts.js", "?2022221342976");
+            context.AddJavascriptSource("alerts.js", "?2022215583896");
          }
          GxWebStd.gx_hidden_field( context, sPrefix+"GX_FocusControl", GX_FocusControl);
          define_styles( ) ;
@@ -390,10 +386,6 @@ namespace GeneXus.Programs {
             if ( StringUtil.Len( sPrefix) != 0 )
             {
                GxWebStd.gx_hidden_field( context, sPrefix+"_CMPPGM", "alerts.aspx");
-               context.AddJavascriptSource("Shared/jquery/jquery-1.9.0.js", "");
-               context.AddJavascriptSource("Alertify/js/alertify.min.js", "");
-               context.AddJavascriptSource("Alertify/GlobalAlerts.js", "");
-               context.AddJavascriptSource("Alertify/AlertifyRender.js", "");
             }
             GxWebStd.gx_msg_list( context, "", context.GX_msglist.DisplayMode, "", "", sPrefix, "false");
             /* User Defined Control */
@@ -839,13 +831,11 @@ namespace GeneXus.Programs {
 
       protected void define_styles( )
       {
-         AddStyleSheetFile("Alertify/css/alertify.core.css", "?038420");
-         AddStyleSheetFile("Alertify/css/alertify.default.css", "?038420");
-         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?1342847");
+         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?583790");
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?2022221342980");
+            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?202221558390");
             idxLst = (int)(idxLst+1);
          }
          /* End function define_styles */
@@ -855,11 +845,7 @@ namespace GeneXus.Programs {
       {
          if ( nGXWrapped != 1 )
          {
-            context.AddJavascriptSource("alerts.js", "?2022221342980");
-            context.AddJavascriptSource("Shared/jquery/jquery-1.9.0.js", "");
-            context.AddJavascriptSource("Alertify/js/alertify.min.js", "");
-            context.AddJavascriptSource("Alertify/GlobalAlerts.js", "");
-            context.AddJavascriptSource("Alertify/AlertifyRender.js", "");
+            context.AddJavascriptSource("alerts.js", "?202221558390");
          }
          /* End function include_jscripts */
       }

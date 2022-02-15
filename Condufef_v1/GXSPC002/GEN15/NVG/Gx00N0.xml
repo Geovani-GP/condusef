@@ -50,7 +50,7 @@
 <BaseTable>
 <Table>
 <TableId>23</TableId>
-<TableName>producto</TableName>
+<TableName>PRODUCTO</TableName>
 <Description>producto</Description></Table></BaseTable>
 <Order>
 <Attribute>
@@ -209,7 +209,7 @@
 <NavigationTree>
 <Table>
 <TableId>23</TableId>
-<TableName>producto</TableName>
+<TableName>PRODUCTO</TableName>
 <Description>producto</Description>
 <RecordsToRead>many</RecordsToRead>
 <KeyAttributes>

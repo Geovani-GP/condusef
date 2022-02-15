@@ -375,7 +375,7 @@ html_sub_i(73,78,html_i(2,cell(78))).
 html_sub_i(73,79,html_i(3,cell(79))).
 html_sub_i(79,80,html_i(0,button('''Guardar '''))).
 html_sub_i(73,81,html_i(4,cell(81))).
-html_sub_i(81,82,html_i(0,button('Enter'))).
+html_sub_i(81,82,html_i(0,button('''Cancelar'''))).
 html_sub_i(48,0,html_i(5,html('</tbody>'))).
 html_sub_i(4,0,html_i(4,html('</tbody>'))).
  
@@ -874,7 +874,7 @@ html_comp_i(80,'Bordercolor',rgb(219,220,222),d,[ color ]).
 html_comp_i(80,'Buttonborderstyle',standard,d,[ str ]).
 html_comp_i(82,'Controlname','Button3',v,[ str ]).
 html_comp_i(82,'Class','Button',d,[ str ]).
-html_comp_i(82,'Event','Enter',d,[ str ]).
+html_comp_i(82,'Event','''Cancelar''',v,[ str ]).
 html_comp_i(82,'Caption','CANCELAR',d,[ str ]).
 html_comp_i(82,'Title','CANCELAR',d,[ str ]).
 html_comp_i(82,'Font',font('Microsoft Sans Serif',10,[]),d,[ font ]).
@@ -915,7 +915,7 @@ lit_i(72,1,button('''Consultar '''),[ ctlname('Button1'),width(0),rect(0,0,10,10
 lit_i(75,1,t('Teléfono:',3),[ ctlname('Textblock11') ]).
 lit_i(77,1,t('Proveedorestelefono2',23),[ ctlname('&Proveedorestelefono2'),ctrltype(edit,77),pos(77),ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
 lit_i(80,1,button('''Guardar '''),[ ctlname('Button2'),width(0),rect(0,0,10,10),title('Nothing') ]).
-lit_i(82,1,button('Enter'),[ ctlname('Button3'),width(0),rect(0,0,10,10),title('Nothing') ]).
+lit_i(82,1,button('''Cancelar'''),[ ctlname('Button3'),width(0),rect(0,0,10,10),title('Nothing') ]).
 lit_i(48,1,table(48),[ ctlname('Table3') ]).
 lit_i(4,1,table(4),[ ctlname('Table1') ]).
 lit_i(1,1,window,[ rect(0,0,1000,1000),ctlname('Form') ]).
@@ -934,6 +934,7 @@ att_prop_i(2,2,'EmptyAsNull','Yes',d).
 att_prop_i(2,2,idBasedOn,'',d).
 att_prop_i(2,2,'AUTONUMBER','0',d).
 att_prop_i(2,2,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,2,'AttRegEx','',d).
 att_prop_i(2,2,'AttValidationFailedMsg','',d).
 att_prop_i(2,2,'FullName',proveedoresid,v).
 att_prop_i(2,40000,'ExternalName',proveedoresid,d).
@@ -942,6 +943,7 @@ att_prop_i(2,40000,'EmptyAsNull','Yes',d).
 att_prop_i(2,40000,idBasedOn,'',d).
 att_prop_i(2,40000,'AUTONUMBER','0',d).
 att_prop_i(2,40000,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,40000,'AttRegEx','',d).
 att_prop_i(2,40000,'AttValidationFailedMsg','',d).
 att_prop_i(2,40000,'FullName',proveedoresid,v).
  

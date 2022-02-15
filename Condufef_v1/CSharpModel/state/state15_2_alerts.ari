@@ -11,7 +11,6 @@ ij_object_dependency(alerts,[],[],[],110).
  
 obj_parms_i([],[]).
  
-ij_usercontrol_directory_i('Shared').
  
  
  

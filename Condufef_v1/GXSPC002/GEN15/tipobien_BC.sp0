@@ -442,6 +442,8 @@ struct_dt_i([ 26,1,1 ],namespace,'Genexus.Messages').
 struct_dt_i([ 0,1,0 ],fullname,tipobien).
 struct_dt_i([ 26,1,0 ],fullname,'Messages').
 struct_dt_i([ 26,1,1 ],fullname,'Messages.Message').
+struct_dt_i([ 26,1,0 ],modified,yes).
+struct_dt_i([ 26,1,1 ],modified,yes).
  
 struct_dt_elem_i([ 0,1,0 ],1,name,'Tipobienid').
 struct_dt_elem_i([ 0,1,0 ],1,camelname,tipobienid).

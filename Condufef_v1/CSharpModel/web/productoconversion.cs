@@ -2,7 +2,7 @@
                File: productoConversion
         Description: Conversion for table producto
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 1/29/2022 0:44:58.4
+       Generated on: 2/10/2022 23:5:22.77
        Program type: Callable routine
           Main DBMS: postgresql
 */
@@ -92,22 +92,24 @@ namespace GeneXus.Programs {
          pr_default.execute(0);
          while ( (pr_default.getStatus(0) != 101) )
          {
-            A23tipobienid = PRODUCTOCO2_A23tipobienid[0];
+            A183ptipobienid = PRODUCTOCO2_A183ptipobienid[0];
+            n183ptipobienid = PRODUCTOCO2_n183ptipobienid[0];
+            A182pcategoriaid = PRODUCTOCO2_A182pcategoriaid[0];
+            n182pcategoriaid = PRODUCTOCO2_n182pcategoriaid[0];
+            A181pmarcaid = PRODUCTOCO2_A181pmarcaid[0];
+            n181pmarcaid = PRODUCTOCO2_n181pmarcaid[0];
+            A180pmodeloid = PRODUCTOCO2_A180pmodeloid[0];
+            n180pmodeloid = PRODUCTOCO2_n180pmodeloid[0];
+            A179pcambsid = PRODUCTOCO2_A179pcambsid[0];
+            n179pcambsid = PRODUCTOCO2_n179pcambsid[0];
             A93productofecultact = PRODUCTOCO2_A93productofecultact[0];
             n93productofecultact = PRODUCTOCO2_n93productofecultact[0];
             A92productofecreg = PRODUCTOCO2_A92productofecreg[0];
             n92productofecreg = PRODUCTOCO2_n92productofecreg[0];
             A91productousuario = PRODUCTOCO2_A91productousuario[0];
             n91productousuario = PRODUCTOCO2_n91productousuario[0];
-            A90categoriaid = PRODUCTOCO2_A90categoriaid[0];
-            n90categoriaid = PRODUCTOCO2_n90categoriaid[0];
-            A89marcaid = PRODUCTOCO2_A89marcaid[0];
-            n89marcaid = PRODUCTOCO2_n89marcaid[0];
-            A88modeloid = PRODUCTOCO2_A88modeloid[0];
-            n88modeloid = PRODUCTOCO2_n88modeloid[0];
             A87productodsc = PRODUCTOCO2_A87productodsc[0];
             n87productodsc = PRODUCTOCO2_n87productodsc[0];
-            A25cambsid = PRODUCTOCO2_A25cambsid[0];
             A175productoid = PRODUCTOCO2_A175productoid[0];
             modelosid = PRODUCTOCO2_A15modelosid[0];
             productocambsid = PRODUCTOCO2_A16productocambsid[0];
@@ -116,85 +118,110 @@ namespace GeneXus.Programs {
 
             */
             AV2productoid = A175productoid;
-            AV3cambsid = A25cambsid;
             if ( PRODUCTOCO2_n87productodsc[0] )
             {
-               AV4productodsc = "";
-               nV4productodsc = false;
-               nV4productodsc = true;
+               AV3productodsc = "";
+               nV3productodsc = false;
+               nV3productodsc = true;
             }
             else
             {
-               AV4productodsc = A87productodsc;
-               nV4productodsc = false;
-            }
-            if ( PRODUCTOCO2_n88modeloid[0] )
-            {
-               AV5modeloid = 0;
-            }
-            else
-            {
-               AV5modeloid = A88modeloid;
-            }
-            if ( PRODUCTOCO2_n89marcaid[0] )
-            {
-               AV6marcaid = 0;
-               nV6marcaid = false;
-               nV6marcaid = true;
-            }
-            else
-            {
-               AV6marcaid = A89marcaid;
-               nV6marcaid = false;
-            }
-            if ( PRODUCTOCO2_n90categoriaid[0] )
-            {
-               AV7categoriaid = 0;
-               nV7categoriaid = false;
-               nV7categoriaid = true;
-            }
-            else
-            {
-               AV7categoriaid = A90categoriaid;
-               nV7categoriaid = false;
+               AV3productodsc = A87productodsc;
+               nV3productodsc = false;
             }
             if ( PRODUCTOCO2_n91productousuario[0] )
             {
-               AV8productousuario = "";
-               nV8productousuario = false;
-               nV8productousuario = true;
+               AV4productousuario = "";
+               nV4productousuario = false;
+               nV4productousuario = true;
             }
             else
             {
-               AV8productousuario = A91productousuario;
-               nV8productousuario = false;
+               AV4productousuario = A91productousuario;
+               nV4productousuario = false;
             }
             if ( PRODUCTOCO2_n92productofecreg[0] )
             {
-               AV9productofecreg = (DateTime)(DateTime.MinValue);
-               nV9productofecreg = false;
-               nV9productofecreg = true;
+               AV5productofecreg = DateTime.MinValue;
+               nV5productofecreg = false;
+               nV5productofecreg = true;
             }
             else
             {
-               AV9productofecreg = A92productofecreg;
-               nV9productofecreg = false;
+               AV5productofecreg = DateTimeUtil.ResetTime(A92productofecreg);
+               nV5productofecreg = false;
             }
             if ( PRODUCTOCO2_n93productofecultact[0] )
             {
-               AV10productofecultact = (DateTime)(DateTime.MinValue);
-               nV10productofecultact = false;
-               nV10productofecultact = true;
+               AV6productofecultact = DateTime.MinValue;
+               nV6productofecultact = false;
+               nV6productofecultact = true;
             }
             else
             {
-               AV10productofecultact = A93productofecultact;
-               nV10productofecultact = false;
+               AV6productofecultact = DateTimeUtil.ResetTime(A93productofecultact);
+               nV6productofecultact = false;
             }
-            AV11tipobienid = A23tipobienid;
+            if ( PRODUCTOCO2_n179pcambsid[0] )
+            {
+               AV7pcambsid = 0;
+               nV7pcambsid = false;
+               nV7pcambsid = true;
+            }
+            else
+            {
+               AV7pcambsid = A179pcambsid;
+               nV7pcambsid = false;
+            }
+            if ( PRODUCTOCO2_n180pmodeloid[0] )
+            {
+               AV8pmodeloid = 0;
+               nV8pmodeloid = false;
+               nV8pmodeloid = true;
+            }
+            else
+            {
+               AV8pmodeloid = A180pmodeloid;
+               nV8pmodeloid = false;
+            }
+            if ( PRODUCTOCO2_n181pmarcaid[0] )
+            {
+               AV9pmarcaid = 0;
+               nV9pmarcaid = false;
+               nV9pmarcaid = true;
+            }
+            else
+            {
+               AV9pmarcaid = A181pmarcaid;
+               nV9pmarcaid = false;
+            }
+            if ( PRODUCTOCO2_n182pcategoriaid[0] )
+            {
+               AV10pcategoriaid = 0;
+               nV10pcategoriaid = false;
+               nV10pcategoriaid = true;
+            }
+            else
+            {
+               AV10pcategoriaid = A182pcategoriaid;
+               nV10pcategoriaid = false;
+            }
+            if ( PRODUCTOCO2_n183ptipobienid[0] )
+            {
+               AV11ptipobienid = 0;
+               nV11ptipobienid = false;
+               nV11ptipobienid = true;
+            }
+            else
+            {
+               AV11ptipobienid = A183ptipobienid;
+               nV11ptipobienid = false;
+            }
             /* Using cursor PRODUCTOCO3 */
-            pr_default.execute(1, new Object[] {AV2productoid});
-            if ( (pr_default.getStatus(1) != 101) )
+            pr_default.execute(1, new Object[] {AV2productoid, nV3productodsc, AV3productodsc, nV4productousuario, AV4productousuario, nV5productofecreg, AV5productofecreg, nV6productofecultact, AV6productofecultact, nV7pcambsid, AV7pcambsid, nV8pmodeloid, AV8pmodeloid, nV9pmarcaid, AV9pmarcaid, nV10pcategoriaid, AV10pcategoriaid, nV11ptipobienid, AV11ptipobienid});
+            pr_default.close(1);
+            dsDefault.SmartCacheProvider.SetUpdated("GXA0023") ;
+            if ( (pr_default.getStatus(1) == 1) )
             {
                context.Gx_err = 1;
                Gx_emsg = (String)(GXResourceManager.GetMessage("GXM_noupdate"));
@@ -203,13 +230,8 @@ namespace GeneXus.Programs {
             {
                context.Gx_err = 0;
                Gx_emsg = "";
-               /* Using cursor PRODUCTOCO4 */
-               pr_default.execute(2, new Object[] {AV2productoid, AV3cambsid, nV4productodsc, AV4productodsc, AV5modeloid, nV6marcaid, AV6marcaid, nV7categoriaid, AV7categoriaid, nV8productousuario, AV8productousuario, nV9productofecreg, AV9productofecreg, nV10productofecultact, AV10productofecultact, AV11tipobienid});
-               pr_default.close(2);
-               dsDefault.SmartCacheProvider.SetUpdated("GXA0023") ;
             }
             /* End Insert */
-            pr_default.close(1);
             pr_default.readNext(0);
          }
          pr_default.close(0);
@@ -233,23 +255,25 @@ namespace GeneXus.Programs {
       public override void initialize( )
       {
          scmdbuf = "";
-         PRODUCTOCO2_A23tipobienid = new int[1] ;
+         PRODUCTOCO2_A183ptipobienid = new short[1] ;
+         PRODUCTOCO2_n183ptipobienid = new bool[] {false} ;
+         PRODUCTOCO2_A182pcategoriaid = new short[1] ;
+         PRODUCTOCO2_n182pcategoriaid = new bool[] {false} ;
+         PRODUCTOCO2_A181pmarcaid = new short[1] ;
+         PRODUCTOCO2_n181pmarcaid = new bool[] {false} ;
+         PRODUCTOCO2_A180pmodeloid = new short[1] ;
+         PRODUCTOCO2_n180pmodeloid = new bool[] {false} ;
+         PRODUCTOCO2_A179pcambsid = new short[1] ;
+         PRODUCTOCO2_n179pcambsid = new bool[] {false} ;
          PRODUCTOCO2_A93productofecultact = new DateTime[] {DateTime.MinValue} ;
          PRODUCTOCO2_n93productofecultact = new bool[] {false} ;
          PRODUCTOCO2_A92productofecreg = new DateTime[] {DateTime.MinValue} ;
          PRODUCTOCO2_n92productofecreg = new bool[] {false} ;
          PRODUCTOCO2_A91productousuario = new String[] {""} ;
          PRODUCTOCO2_n91productousuario = new bool[] {false} ;
-         PRODUCTOCO2_A90categoriaid = new long[1] ;
-         PRODUCTOCO2_n90categoriaid = new bool[] {false} ;
-         PRODUCTOCO2_A89marcaid = new long[1] ;
-         PRODUCTOCO2_n89marcaid = new bool[] {false} ;
-         PRODUCTOCO2_A88modeloid = new long[1] ;
-         PRODUCTOCO2_n88modeloid = new bool[] {false} ;
          PRODUCTOCO2_A87productodsc = new String[] {""} ;
          PRODUCTOCO2_n87productodsc = new bool[] {false} ;
-         PRODUCTOCO2_A25cambsid = new int[1] ;
-         PRODUCTOCO2_A175productoid = new short[1] ;
+         PRODUCTOCO2_A175productoid = new int[1] ;
          PRODUCTOCO2_A15modelosid = new int[1] ;
          PRODUCTOCO2_A16productocambsid = new String[] {""} ;
          A93productofecultact = (DateTime)(DateTime.MinValue);
@@ -257,20 +281,17 @@ namespace GeneXus.Programs {
          A91productousuario = "";
          A87productodsc = "";
          productocambsid = "";
-         AV4productodsc = "";
-         AV8productousuario = "";
-         AV9productofecreg = (DateTime)(DateTime.MinValue);
-         AV10productofecultact = (DateTime)(DateTime.MinValue);
-         PRODUCTOCO3_AV2productoid = new short[1] ;
+         AV3productodsc = "";
+         AV4productousuario = "";
+         AV5productofecreg = DateTime.MinValue;
+         AV6productofecultact = DateTime.MinValue;
          Gx_emsg = "";
          pr_default = new DataStoreProvider(context, new GeneXus.Programs.productoconversion__default(),
             new Object[][] {
                 new Object[] {
-               PRODUCTOCO2_A23tipobienid, PRODUCTOCO2_A93productofecultact, PRODUCTOCO2_n93productofecultact, PRODUCTOCO2_A92productofecreg, PRODUCTOCO2_n92productofecreg, PRODUCTOCO2_A91productousuario, PRODUCTOCO2_n91productousuario, PRODUCTOCO2_A90categoriaid, PRODUCTOCO2_n90categoriaid, PRODUCTOCO2_A89marcaid,
-               PRODUCTOCO2_n89marcaid, PRODUCTOCO2_A88modeloid, PRODUCTOCO2_n88modeloid, PRODUCTOCO2_A87productodsc, PRODUCTOCO2_n87productodsc, PRODUCTOCO2_A25cambsid, PRODUCTOCO2_A175productoid, PRODUCTOCO2_A15modelosid, PRODUCTOCO2_A16productocambsid
-               }
-               , new Object[] {
-               PRODUCTOCO3_AV2productoid
+               PRODUCTOCO2_A183ptipobienid, PRODUCTOCO2_n183ptipobienid, PRODUCTOCO2_A182pcategoriaid, PRODUCTOCO2_n182pcategoriaid, PRODUCTOCO2_A181pmarcaid, PRODUCTOCO2_n181pmarcaid, PRODUCTOCO2_A180pmodeloid, PRODUCTOCO2_n180pmodeloid, PRODUCTOCO2_A179pcambsid, PRODUCTOCO2_n179pcambsid,
+               PRODUCTOCO2_A93productofecultact, PRODUCTOCO2_n93productofecultact, PRODUCTOCO2_A92productofecreg, PRODUCTOCO2_n92productofecreg, PRODUCTOCO2_A91productousuario, PRODUCTOCO2_n91productousuario, PRODUCTOCO2_A87productodsc, PRODUCTOCO2_n87productodsc, PRODUCTOCO2_A175productoid, PRODUCTOCO2_A15modelosid,
+               PRODUCTOCO2_A16productocambsid
                }
                , new Object[] {
                }
@@ -280,66 +301,72 @@ namespace GeneXus.Programs {
          context.Gx_err = 0;
       }
 
-      private short A175productoid ;
-      private short AV2productoid ;
-      private int A23tipobienid ;
-      private int A25cambsid ;
+      private short A183ptipobienid ;
+      private short A182pcategoriaid ;
+      private short A181pmarcaid ;
+      private short A180pmodeloid ;
+      private short A179pcambsid ;
+      private short AV7pcambsid ;
+      private short AV8pmodeloid ;
+      private short AV9pmarcaid ;
+      private short AV10pcategoriaid ;
+      private short AV11ptipobienid ;
+      private int A175productoid ;
       private int modelosid ;
       private int GIGXA0023 ;
-      private int AV3cambsid ;
-      private int AV11tipobienid ;
-      private long A90categoriaid ;
-      private long A89marcaid ;
-      private long A88modeloid ;
-      private long AV5modeloid ;
-      private long AV6marcaid ;
-      private long AV7categoriaid ;
+      private int AV2productoid ;
       private String scmdbuf ;
       private String Gx_emsg ;
       private DateTime A93productofecultact ;
       private DateTime A92productofecreg ;
-      private DateTime AV9productofecreg ;
-      private DateTime AV10productofecultact ;
+      private DateTime AV5productofecreg ;
+      private DateTime AV6productofecultact ;
+      private bool n183ptipobienid ;
+      private bool n182pcategoriaid ;
+      private bool n181pmarcaid ;
+      private bool n180pmodeloid ;
+      private bool n179pcambsid ;
       private bool n93productofecultact ;
       private bool n92productofecreg ;
       private bool n91productousuario ;
-      private bool n90categoriaid ;
-      private bool n89marcaid ;
-      private bool n88modeloid ;
       private bool n87productodsc ;
-      private bool nV4productodsc ;
-      private bool nV6marcaid ;
-      private bool nV7categoriaid ;
-      private bool nV8productousuario ;
-      private bool nV9productofecreg ;
-      private bool nV10productofecultact ;
+      private bool nV3productodsc ;
+      private bool nV4productousuario ;
+      private bool nV5productofecreg ;
+      private bool nV6productofecultact ;
+      private bool nV7pcambsid ;
+      private bool nV8pmodeloid ;
+      private bool nV9pmarcaid ;
+      private bool nV10pcategoriaid ;
+      private bool nV11ptipobienid ;
       private String A91productousuario ;
       private String A87productodsc ;
       private String productocambsid ;
-      private String AV4productodsc ;
-      private String AV8productousuario ;
+      private String AV3productodsc ;
+      private String AV4productousuario ;
       private IGxDataStore dsDefault ;
       private IDataStoreProvider pr_default ;
-      private int[] PRODUCTOCO2_A23tipobienid ;
+      private short[] PRODUCTOCO2_A183ptipobienid ;
+      private bool[] PRODUCTOCO2_n183ptipobienid ;
+      private short[] PRODUCTOCO2_A182pcategoriaid ;
+      private bool[] PRODUCTOCO2_n182pcategoriaid ;
+      private short[] PRODUCTOCO2_A181pmarcaid ;
+      private bool[] PRODUCTOCO2_n181pmarcaid ;
+      private short[] PRODUCTOCO2_A180pmodeloid ;
+      private bool[] PRODUCTOCO2_n180pmodeloid ;
+      private short[] PRODUCTOCO2_A179pcambsid ;
+      private bool[] PRODUCTOCO2_n179pcambsid ;
       private DateTime[] PRODUCTOCO2_A93productofecultact ;
       private bool[] PRODUCTOCO2_n93productofecultact ;
       private DateTime[] PRODUCTOCO2_A92productofecreg ;
       private bool[] PRODUCTOCO2_n92productofecreg ;
       private String[] PRODUCTOCO2_A91productousuario ;
       private bool[] PRODUCTOCO2_n91productousuario ;
-      private long[] PRODUCTOCO2_A90categoriaid ;
-      private bool[] PRODUCTOCO2_n90categoriaid ;
-      private long[] PRODUCTOCO2_A89marcaid ;
-      private bool[] PRODUCTOCO2_n89marcaid ;
-      private long[] PRODUCTOCO2_A88modeloid ;
-      private bool[] PRODUCTOCO2_n88modeloid ;
       private String[] PRODUCTOCO2_A87productodsc ;
       private bool[] PRODUCTOCO2_n87productodsc ;
-      private int[] PRODUCTOCO2_A25cambsid ;
-      private short[] PRODUCTOCO2_A175productoid ;
+      private int[] PRODUCTOCO2_A175productoid ;
       private int[] PRODUCTOCO2_A15modelosid ;
       private String[] PRODUCTOCO2_A16productocambsid ;
-      private short[] PRODUCTOCO3_AV2productoid ;
    }
 
    public class productoconversion__default : DataStoreHelperBase, IDataStoreHelper
@@ -349,8 +376,7 @@ namespace GeneXus.Programs {
          cursorDefinitions();
          return new Cursor[] {
           new ForEachCursor(def[0])
-         ,new ForEachCursor(def[1])
-         ,new UpdateCursor(def[2])
+         ,new UpdateCursor(def[1])
        };
     }
 
@@ -364,25 +390,20 @@ namespace GeneXus.Programs {
           } ;
           Object[] prmPRODUCTOCO3 ;
           prmPRODUCTOCO3 = new Object[] {
-          new Object[] {"AV2productoid",NpgsqlDbType.Smallint,4,0}
-          } ;
-          Object[] prmPRODUCTOCO4 ;
-          prmPRODUCTOCO4 = new Object[] {
-          new Object[] {"AV2productoid",NpgsqlDbType.Smallint,4,0} ,
-          new Object[] {"AV3cambsid",NpgsqlDbType.Integer,9,0} ,
-          new Object[] {"AV4productodsc",NpgsqlDbType.Varchar,100,0} ,
-          new Object[] {"AV5modeloid",NpgsqlDbType.Real,18,0} ,
-          new Object[] {"AV6marcaid",NpgsqlDbType.Real,18,0} ,
-          new Object[] {"AV7categoriaid",NpgsqlDbType.Real,18,0} ,
-          new Object[] {"AV8productousuario",NpgsqlDbType.Varchar,15,0} ,
-          new Object[] {"AV9productofecreg",NpgsqlDbType.Timestamp,10,8} ,
-          new Object[] {"AV10productofecultact",NpgsqlDbType.Timestamp,10,8} ,
-          new Object[] {"AV11tipobienid",NpgsqlDbType.Integer,9,0}
+          new Object[] {"AV2productoid",NpgsqlDbType.Integer,9,0} ,
+          new Object[] {"AV3productodsc",NpgsqlDbType.Varchar,100,0} ,
+          new Object[] {"AV4productousuario",NpgsqlDbType.Varchar,15,0} ,
+          new Object[] {"AV5productofecreg",NpgsqlDbType.Date,8,0} ,
+          new Object[] {"AV6productofecultact",NpgsqlDbType.Date,8,0} ,
+          new Object[] {"AV7pcambsid",NpgsqlDbType.Smallint,4,0} ,
+          new Object[] {"AV8pmodeloid",NpgsqlDbType.Smallint,4,0} ,
+          new Object[] {"AV9pmarcaid",NpgsqlDbType.Smallint,4,0} ,
+          new Object[] {"AV10pcategoriaid",NpgsqlDbType.Smallint,4,0} ,
+          new Object[] {"AV11ptipobienid",NpgsqlDbType.Smallint,4,0}
           } ;
           def= new CursorDef[] {
-              new CursorDef("PRODUCTOCO2", "SELECT tipobienid, productofecultact, productofecreg, productousuario, categoriaid, marcaid, modeloid, productodsc, cambsid, productoid, modelosid, productocambsid FROM public.producto ORDER BY modelosid, productocambsid ",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmPRODUCTOCO2,100,0,true,false )
-             ,new CursorDef("PRODUCTOCO3", "SELECT productoid FROM GXA0023 WHERE productoid = :AV2productoid ",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmPRODUCTOCO3,1,0,true,false )
-             ,new CursorDef("PRODUCTOCO4", "INSERT INTO GXA0023(productoid, cambsid, productodsc, modeloid, marcaid, categoriaid, productousuario, productofecreg, productofecultact, tipobienid) VALUES(:AV2productoid, :AV3cambsid, :AV4productodsc, :AV5modeloid, :AV6marcaid, :AV7categoriaid, :AV8productousuario, :AV9productofecreg, :AV10productofecultact, :AV11tipobienid)", GxErrorMask.GX_NOMASK,prmPRODUCTOCO4)
+              new CursorDef("PRODUCTOCO2", "SELECT ptipobienid, pcategoriaid, pmarcaid, pmodeloid, pcambsid, productofecultact, productofecreg, productousuario, productodsc, productoid, modelosid, productocambsid FROM public.producto ORDER BY modelosid, productocambsid ",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmPRODUCTOCO2,100,0,true,false )
+             ,new CursorDef("PRODUCTOCO3", "INSERT INTO GXA0023(productoid, productodsc, productousuario, productofecreg, productofecultact, pcambsid, pmodeloid, pmarcaid, pcategoriaid, ptipobienid) VALUES(:AV2productoid, :AV3productodsc, :AV4productousuario, :AV5productofecreg, :AV6productofecultact, :AV7pcambsid, :AV8pmodeloid, :AV9pmarcaid, :AV10pcategoriaid, :AV11ptipobienid)", GxErrorMask.GX_NOMASK,prmPRODUCTOCO3)
           };
        }
     }
@@ -394,28 +415,27 @@ namespace GeneXus.Programs {
        switch ( cursor )
        {
              case 0 :
-                ((int[]) buf[0])[0] = rslt.getInt(1) ;
-                ((DateTime[]) buf[1])[0] = rslt.getGXDateTime(2) ;
-                ((bool[]) buf[2])[0] = rslt.wasNull(2);
-                ((DateTime[]) buf[3])[0] = rslt.getGXDateTime(3) ;
-                ((bool[]) buf[4])[0] = rslt.wasNull(3);
-                ((String[]) buf[5])[0] = rslt.getVarchar(4) ;
-                ((bool[]) buf[6])[0] = rslt.wasNull(4);
-                ((long[]) buf[7])[0] = rslt.getLong(5) ;
-                ((bool[]) buf[8])[0] = rslt.wasNull(5);
-                ((long[]) buf[9])[0] = rslt.getLong(6) ;
-                ((bool[]) buf[10])[0] = rslt.wasNull(6);
-                ((long[]) buf[11])[0] = rslt.getLong(7) ;
-                ((bool[]) buf[12])[0] = rslt.wasNull(7);
-                ((String[]) buf[13])[0] = rslt.getVarchar(8) ;
-                ((bool[]) buf[14])[0] = rslt.wasNull(8);
-                ((int[]) buf[15])[0] = rslt.getInt(9) ;
-                ((short[]) buf[16])[0] = rslt.getShort(10) ;
-                ((int[]) buf[17])[0] = rslt.getInt(11) ;
-                ((String[]) buf[18])[0] = rslt.getVarchar(12) ;
-                return;
-             case 1 :
                 ((short[]) buf[0])[0] = rslt.getShort(1) ;
+                ((bool[]) buf[1])[0] = rslt.wasNull(1);
+                ((short[]) buf[2])[0] = rslt.getShort(2) ;
+                ((bool[]) buf[3])[0] = rslt.wasNull(2);
+                ((short[]) buf[4])[0] = rslt.getShort(3) ;
+                ((bool[]) buf[5])[0] = rslt.wasNull(3);
+                ((short[]) buf[6])[0] = rslt.getShort(4) ;
+                ((bool[]) buf[7])[0] = rslt.wasNull(4);
+                ((short[]) buf[8])[0] = rslt.getShort(5) ;
+                ((bool[]) buf[9])[0] = rslt.wasNull(5);
+                ((DateTime[]) buf[10])[0] = rslt.getGXDateTime(6) ;
+                ((bool[]) buf[11])[0] = rslt.wasNull(6);
+                ((DateTime[]) buf[12])[0] = rslt.getGXDateTime(7) ;
+                ((bool[]) buf[13])[0] = rslt.wasNull(7);
+                ((String[]) buf[14])[0] = rslt.getVarchar(8) ;
+                ((bool[]) buf[15])[0] = rslt.wasNull(8);
+                ((String[]) buf[16])[0] = rslt.getVarchar(9) ;
+                ((bool[]) buf[17])[0] = rslt.wasNull(9);
+                ((int[]) buf[18])[0] = rslt.getInt(10) ;
+                ((int[]) buf[19])[0] = rslt.getInt(11) ;
+                ((String[]) buf[20])[0] = rslt.getVarchar(12) ;
                 return;
        }
     }
@@ -427,61 +447,79 @@ namespace GeneXus.Programs {
        switch ( cursor )
        {
              case 1 :
-                stmt.SetParameter(1, (short)parms[0]);
-                return;
-             case 2 :
-                stmt.SetParameter(1, (short)parms[0]);
-                stmt.SetParameter(2, (int)parms[1]);
-                if ( (bool)parms[2] )
+                stmt.SetParameter(1, (int)parms[0]);
+                if ( (bool)parms[1] )
+                {
+                   stmt.setNull( 2 , SqlDbType.VarChar );
+                }
+                else
+                {
+                   stmt.SetParameter(2, (String)parms[2]);
+                }
+                if ( (bool)parms[3] )
                 {
                    stmt.setNull( 3 , SqlDbType.VarChar );
                 }
                 else
                 {
-                   stmt.SetParameter(3, (String)parms[3]);
+                   stmt.SetParameter(3, (String)parms[4]);
                 }
-                stmt.SetParameter(4, (long)parms[4]);
                 if ( (bool)parms[5] )
                 {
-                   stmt.setNull( 5 , SqlDbType.Decimal );
+                   stmt.setNull( 4 , SqlDbType.DateTime );
                 }
                 else
                 {
-                   stmt.SetParameter(5, (long)parms[6]);
+                   stmt.SetParameter(4, (DateTime)parms[6]);
                 }
                 if ( (bool)parms[7] )
                 {
-                   stmt.setNull( 6 , SqlDbType.Decimal );
+                   stmt.setNull( 5 , SqlDbType.DateTime );
                 }
                 else
                 {
-                   stmt.SetParameter(6, (long)parms[8]);
+                   stmt.SetParameter(5, (DateTime)parms[8]);
                 }
                 if ( (bool)parms[9] )
                 {
-                   stmt.setNull( 7 , SqlDbType.VarChar );
+                   stmt.setNull( 6 , SqlDbType.SmallInt );
                 }
                 else
                 {
-                   stmt.SetParameter(7, (String)parms[10]);
+                   stmt.SetParameter(6, (short)parms[10]);
                 }
                 if ( (bool)parms[11] )
                 {
-                   stmt.setNull( 8 , SqlDbType.DateTime );
+                   stmt.setNull( 7 , SqlDbType.SmallInt );
                 }
                 else
                 {
-                   stmt.SetParameterDatetime(8, (DateTime)parms[12]);
+                   stmt.SetParameter(7, (short)parms[12]);
                 }
                 if ( (bool)parms[13] )
                 {
-                   stmt.setNull( 9 , SqlDbType.DateTime );
+                   stmt.setNull( 8 , SqlDbType.SmallInt );
                 }
                 else
                 {
-                   stmt.SetParameterDatetime(9, (DateTime)parms[14]);
+                   stmt.SetParameter(8, (short)parms[14]);
                 }
-                stmt.SetParameter(10, (int)parms[15]);
+                if ( (bool)parms[15] )
+                {
+                   stmt.setNull( 9 , SqlDbType.SmallInt );
+                }
+                else
+                {
+                   stmt.SetParameter(9, (short)parms[16]);
+                }
+                if ( (bool)parms[17] )
+                {
+                   stmt.setNull( 10 , SqlDbType.SmallInt );
+                }
+                else
+                {
+                   stmt.SetParameter(10, (short)parms[18]);
+                }
                 return;
        }
     }

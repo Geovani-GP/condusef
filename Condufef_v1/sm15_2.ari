@@ -40,21 +40,14 @@ called_program_i(0,6,13,1).
 called_program_i(0,7,13,1).
 called_program_i(0,8,13,1).
 called_program_i(0,9,13,1).
-called_program_i(0,9,13,108).
-called_program_i(1,0,1,10).
-called_program_i(1,0,1,11).
-called_program_i(1,0,1,12).
-called_program_i(1,0,1,13).
-called_program_i(1,0,1,14).
 called_program_i(1,0,1,15).
 called_program_i(1,0,1,16).
 called_program_i(1,0,1,17).
 called_program_i(1,0,1,18).
+called_program_i(1,0,1,19).
 called_program_i(1,0,1,5).
 called_program_i(1,0,1,6).
 called_program_i(1,0,1,7).
-called_program_i(1,0,1,8).
-called_program_i(1,0,1,9).
 called_program_i(13,1,13,85).
 called_program_i(13,100,0,1).
 called_program_i(13,100,13,1).
@@ -82,7 +75,6 @@ called_program_i(13,106,13,37).
 called_program_i(13,107,0,17).
 called_program_i(13,107,13,1).
 called_program_i(13,107,13,38).
-called_program_i(13,108,13,1).
 called_program_i(13,111,13,1).
 called_program_i(13,112,0,10).
 called_program_i(13,112,13,1).
@@ -97,7 +89,14 @@ called_program_i(13,115,0,18).
 called_program_i(13,115,13,1).
 called_program_i(13,115,13,99).
 called_program_i(13,116,13,1).
+called_program_i(13,117,0,9).
+called_program_i(13,117,13,1).
+called_program_i(13,117,13,96).
+called_program_i(13,120,0,15).
+called_program_i(13,120,13,118).
 called_program_i(13,28,13,110).
+called_program_i(13,28,13,118).
+called_program_i(13,28,13,120).
 called_program_i(13,29,13,1).
 called_program_i(13,30,0,14).
 called_program_i(13,30,13,1).
@@ -162,7 +161,6 @@ called_program_i(13,81,13,1).
 called_program_i(13,82,13,1).
 called_program_i(13,85,33,1).
 called_program_i(13,86,0,14).
-called_program_i(13,86,1,16).
 called_program_i(13,86,13,1).
 called_program_i(13,86,13,30).
 called_program_i(13,92,0,8).
@@ -179,6 +177,7 @@ called_program_i(13,95,13,1).
 called_program_i(13,95,13,40).
 called_program_i(13,96,0,9).
 called_program_i(13,96,13,1).
+called_program_i(13,96,13,117).
 called_program_i(13,96,13,96).
 called_program_i(13,98,0,10).
 called_program_i(13,98,13,1).
@@ -227,3 +226,4 @@ sdt_map_i(15,'TabsMenuData.TabsMenuDataItem',[ 26,6,7 ]).
 sdt_map_i(15,'TabsMenuData.TabsMenuDataItem.SectionsItem',[ 26,6,8 ]).
 sdt_map_i(15,tipobien,[ 0,1,0 ]).
 sdt_map_i(15,tipodocumento,[ 0,20,0 ]).
+sdt_map_i(15,usuarios,[ 0,15,0 ]).

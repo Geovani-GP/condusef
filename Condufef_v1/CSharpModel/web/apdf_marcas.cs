@@ -2,7 +2,7 @@
                File: PDF_marcas
         Description: PDF_marcas
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 2/10/2022 20:1:58.86
+       Generated on: 2/15/2022 5:8:39.84
        Program type: Main program
           Main DBMS: postgresql
 */

@@ -103,6 +103,7 @@ rule_i(0,prop('Folder',o(8,'GeneralWeb'))).
 rule_i(0,prop('ObjDesc','Application Master Page ')).
 rule_i(0,prop('ObjName','AppMasterPage')).
 rule_i(0,maingen(15)).
+rule_i(0,rule([ a(22,[ '''logout''','''logout''','' ]) ],[],[],[])).
  
 a_i(1,1,f,'Err',[],[ [],[ t('0',3) ] ]).
 a_i(2,1,f,[ t('&Titulo',23),t('Enabled',3) ],[],[ [],[ t(0,3),t(';',18) ] ]).
@@ -163,7 +164,8 @@ attri_i('Fecha',[ fecha,char,20,0,'',0,fecha,'',10 ]).
 break_i(2,nvg,1,[],[ [],[],[] ]).
  
 b_group_i(2,1,lit,0,1,2).
-b_group_i(2,2,lit,0,3,0).
+b_group_i(2,2,lit,0,3,13).
+b_group_i(2,3,lit,0,14,0).
  
 b_line_i(2,2,1,cmd,2,[ t('',146,2,0),t('Start',3,2,7) ]).
 b_line_i(3,2,2,cmd,2,[ t('',109,2,0),t('null(',1,3,33),t([ t('Websession',23,3,5),t('get(',1,3,17) ],31,2,17),t('''usuario''',3,3,22),t(')',4,2,31),t(')',4,2,42) ]).
@@ -175,9 +177,13 @@ b_line_i(8,2,2,cmd,2,[ t('',107,2,0),t('Titulo',23,2,0),t(=,10,2,0),t('''SISTEMA
 b_line_i(9,2,2,cmd,2,[ t('',107,2,0),t([ t('Webcomp1',3,2,0),t('Object',3,2,0) ],29,2,0),t(=,10,2,0),t('create(',1,2,0),t(o(13,sidebar),28,2,0),t(')',4,2,0) ]).
 b_line_i(10,2,2,cmd,2,[ t('',111,2,0) ]).
 b_line_i(11,2,2,cmd,2,[ t('',147,2,0) ]).
-b_line_i(1000,2,2,cmd,0,[ t('',146,0,0),t('Load',3,0,0) ]).
-b_line_i(1001,2,2,cmd,0,[ t('',155,0,0) ]).
-b_line_i(1002,2,2,cmd,0,[ t('',147,0,0) ]).
+b_line_i(13,2,2,cmd,2,[ t('',146,2,0),t('''logout''',3,13,7) ]).
+b_line_i(14,2,3,cmd,2,[ t('',107,2,0),t([ t('Websession',23,14,2),t('destroy(',1,14,14) ],31,14,14),t(')',4,2,23) ]).
+b_line_i(15,2,3,cmd,2,[ t('',104,2,0),t(o(13,'Login'),28,2,2) ]).
+b_line_i(16,2,3,cmd,2,[ t('',147,2,0) ]).
+b_line_i(1000,2,3,cmd,0,[ t('',146,0,0),t('Load',3,0,0) ]).
+b_line_i(1001,2,3,cmd,0,[ t('',155,0,0) ]).
+b_line_i(1002,2,3,cmd,0,[ t('',147,0,0) ]).
  
  
  
@@ -192,8 +198,8 @@ b_line_i(1002,2,2,cmd,0,[ t('',147,0,0) ]).
  
  
 html_i(2,table(2)).
-html_i(33,usercontrol(33)).
-html_i(34,html('<p></p>')).
+html_i(34,usercontrol(34)).
+html_i(35,html('<p></p>')).
  
 html_sub_i(2,0,html_i(0,html('<tbody>'))).
 html_sub_i(2,3,html_i(1,row(3))).
@@ -221,18 +227,19 @@ html_sub_i(20,21,html_i(0,t('Fecha: ',3))).
 html_sub_i(19,22,html_i(1,cell(22))).
 html_sub_i(22,23,html_i(0,t('Fecha',23))).
 html_sub_i(13,0,html_i(3,html('</tbody>'))).
-html_sub_i(5,24,html_i(2,row(24))).
+html_sub_i(12,24,html_i(1,button('''logout'''))).
+html_sub_i(5,25,html_i(2,row(25))).
 html_sub_i(5,0,html_i(3,html('</tbody>'))).
-html_sub_i(2,25,html_i(2,row(25))).
-html_sub_i(25,26,html_i(0,cell(26))).
-html_sub_i(26,27,html_i(0,table(27))).
-html_sub_i(27,0,html_i(0,html('<tbody>'))).
-html_sub_i(27,28,html_i(1,row(28))).
-html_sub_i(28,29,html_i(0,cell(29))).
-html_sub_i(29,30,html_i(0,comp(webcomp))).
-html_sub_i(28,31,html_i(1,cell(31))).
-html_sub_i(31,32,html_i(0,comp(conthold))).
-html_sub_i(27,0,html_i(2,html('</tbody>'))).
+html_sub_i(2,26,html_i(2,row(26))).
+html_sub_i(26,27,html_i(0,cell(27))).
+html_sub_i(27,28,html_i(0,table(28))).
+html_sub_i(28,0,html_i(0,html('<tbody>'))).
+html_sub_i(28,29,html_i(1,row(29))).
+html_sub_i(29,30,html_i(0,cell(30))).
+html_sub_i(30,31,html_i(0,comp(webcomp))).
+html_sub_i(29,32,html_i(1,cell(32))).
+html_sub_i(32,33,html_i(0,comp(conthold))).
+html_sub_i(28,0,html_i(2,html('</tbody>'))).
 html_sub_i(2,0,html_i(3,html('</tbody>'))).
  
 html_tags_i(1,'Style','WHITE-SPACE: nowrap').
@@ -422,35 +429,46 @@ html_comp_i(23,'Horizontalalignment',left,d,[ str ]).
 html_comp_i(23,'Gxformat',0,d,[ num ]).
 html_comp_i(23,'Title','',d,[ str ]).
 html_comp_i(23,'Invitemsg','',d,[ str ]).
-html_comp_i(26,'Colspan',2,v,[ num ]).
-html_comp_i(27,'Id','Table3',v,[ str ]).
-html_comp_i(27,'Class','Table',v,[ str ]).
-html_comp_i(27,'Title','',d,[ str ]).
-html_comp_i(27,'Align',left,d,[ str ]).
-html_comp_i(27,'Backgroundgx','',d,[ str ]).
-html_comp_i(27,'Bgcolor',rgb(0,0,0),d,[ color ]).
-html_comp_i(27,'Border','0',d,[ str ]).
-html_comp_i(27,'Bordercolor',rgb(0,0,0),d,[ color ]).
-html_comp_i(27,'Cellpadding','1',d,[ str ]).
-html_comp_i(27,'Cellspacing','2',d,[ str ]).
-html_comp_i(27,'Height',measure(80,'%'),v,[ measure ]).
-html_comp_i(27,'Width',measure(100,'%'),v,[ measure ]).
-html_comp_i(27,'Rules',none,d,[ str ]).
-html_comp_i(29,'Width',measure(273,px),v,[ measure ]).
-html_comp_i(30,'Controlname','Webcomp1',v,[ str ]).
-html_comp_i(30,'Object',o(13,sidebar),v,[ object ]).
-html_comp_i(30,'Params',[],d,[ params ]).
-html_comp_i(32,'Controlname','Contholder1',v,[ str ]).
-html_comp_i(33,'Usercontroltype','HugaoMessages',d,[ str ]).
-html_comp_i(33,'Constructorname','HugaoMessages',d,[ str ]).
-html_comp_i(33,'Showmethodname',show,d,[ str ]).
-html_comp_i(33,'Controlname','HugaoMessages1',v,[ str ]).
-html_comp_i(33,'Type',jgrowl,d,[ str ]).
-html_comp_i(33,'Visible',-1,d,[ bool ]).
-html_comp_i(33,'Csssupportfiles',[ [ t('''HugaoMessages\css\jquery.growl.min.css''',3) ] ],d,[ params ]).
-html_comp_i(33,'Jssupportfiles',[ [ t('''HugaoMessages\js\jquery.growl.min.js''',3) ],[ t('''HugaoMessages\HugaoMessagesRender.js''',3) ] ],d,[ params ]).
-html_comp_i(33,'Csssharedsupportfiles',[],d,[ params ]).
-html_comp_i(33,'Jssharedsupportfiles',[],d,[ params ]).
+html_comp_i(24,'Controlname','Button1',v,[ str ]).
+html_comp_i(24,'Class','Button',d,[ str ]).
+html_comp_i(24,'Event','''logout''',v,[ str ]).
+html_comp_i(24,'Caption','Cerrar Sesión',d,[ str ]).
+html_comp_i(24,'Title','Cerrar Sesión',d,[ str ]).
+html_comp_i(24,'Font',font('Microsoft Sans Serif',10,[]),d,[ font ]).
+html_comp_i(24,'Forecolor',rgb(0,4,68),d,[ color ]).
+html_comp_i(24,'Backcolor',rgb(255,215,0),v,[ color ]).
+html_comp_i(24,'Border','2',d,[ str ]).
+html_comp_i(24,'Bordercolor',rgb(219,220,222),d,[ color ]).
+html_comp_i(24,'Buttonborderstyle',standard,d,[ str ]).
+html_comp_i(27,'Colspan',2,v,[ num ]).
+html_comp_i(28,'Id','Table3',v,[ str ]).
+html_comp_i(28,'Class','Table',v,[ str ]).
+html_comp_i(28,'Title','',d,[ str ]).
+html_comp_i(28,'Align',left,d,[ str ]).
+html_comp_i(28,'Backgroundgx','',d,[ str ]).
+html_comp_i(28,'Bgcolor',rgb(0,0,0),d,[ color ]).
+html_comp_i(28,'Border','0',d,[ str ]).
+html_comp_i(28,'Bordercolor',rgb(0,0,0),d,[ color ]).
+html_comp_i(28,'Cellpadding','1',d,[ str ]).
+html_comp_i(28,'Cellspacing','2',d,[ str ]).
+html_comp_i(28,'Height',measure(80,'%'),v,[ measure ]).
+html_comp_i(28,'Width',measure(100,'%'),v,[ measure ]).
+html_comp_i(28,'Rules',none,d,[ str ]).
+html_comp_i(30,'Width',measure(273,px),v,[ measure ]).
+html_comp_i(31,'Controlname','Webcomp1',v,[ str ]).
+html_comp_i(31,'Object',o(13,sidebar),v,[ object ]).
+html_comp_i(31,'Params',[],d,[ params ]).
+html_comp_i(33,'Controlname','Contholder1',v,[ str ]).
+html_comp_i(34,'Usercontroltype','HugaoMessages',d,[ str ]).
+html_comp_i(34,'Constructorname','HugaoMessages',d,[ str ]).
+html_comp_i(34,'Showmethodname',show,d,[ str ]).
+html_comp_i(34,'Controlname','HugaoMessages1',v,[ str ]).
+html_comp_i(34,'Type',jgrowl,d,[ str ]).
+html_comp_i(34,'Visible',-1,d,[ bool ]).
+html_comp_i(34,'Csssupportfiles',[ [ t('''HugaoMessages\css\jquery.growl.min.css''',3) ] ],d,[ params ]).
+html_comp_i(34,'Jssupportfiles',[ [ t('''HugaoMessages\js\jquery.growl.min.js''',3) ],[ t('''HugaoMessages\HugaoMessagesRender.js''',3) ] ],d,[ params ]).
+html_comp_i(34,'Csssharedsupportfiles',[],d,[ params ]).
+html_comp_i(34,'Jssharedsupportfiles',[],d,[ params ]).
  
  
  
@@ -465,12 +483,13 @@ lit_i(18,1,t('Usuario',23),[ ctlname('&Usuario'),ctrltype(edit,18),pos(18),reado
 lit_i(21,1,t('Fecha: ',3),[ ctlname('Textblock1') ]).
 lit_i(23,1,t('Fecha',23),[ ctlname('&Fecha'),ctrltype(edit,23),pos(23),readonly,ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
 lit_i(13,1,table(13),[ ctlname('Table4') ]).
+lit_i(24,1,button('''logout'''),[ ctlname('Button1'),width(0),rect(0,0,10,10),title('Nothing') ]).
 lit_i(5,1,table(5),[ ctlname('Table2') ]).
-lit_i(30,1,comp(webcomp),[ ctlname('Webcomp1'),width(0),rect(0,0,10,10),title('Nothing') ]).
-lit_i(32,1,comp(conthold),[ ctlname('Contholder1'),width(0),rect(0,0,10,10),title('Nothing') ]).
-lit_i(27,1,table(27),[ ctlname('Table3') ]).
+lit_i(31,1,comp(webcomp),[ ctlname('Webcomp1'),width(0),rect(0,0,10,10),title('Nothing') ]).
+lit_i(33,1,comp(conthold),[ ctlname('Contholder1'),width(0),rect(0,0,10,10),title('Nothing') ]).
+lit_i(28,1,table(28),[ ctlname('Table3') ]).
 lit_i(2,1,table(2),[ ctlname('Table1') ]).
-lit_i(33,1,usercontrol(33),[ ctlname('Hugaomessages1'),ctrltype(hugaomessages),el([]),containers([]) ]).
+lit_i(34,1,usercontrol(34),[ ctlname('Hugaomessages1'),ctrltype(hugaomessages),el([]),containers([]) ]).
 lit_i(1,1,window,[ rect(0,0,1000,1000),ctlname('Form') ]).
  
  
@@ -813,6 +832,7 @@ struct_dt_elem_i([ 26,6,8 ],4,pic,'ZZZZZZZZ9').
  
  
 sub_info_i(146,'Start',2,11,[ [ 'Websession' ],[ 'Usuario','Fecha','Titulo',[ t('Webcomp1',3),t('Object',3) ] ] ]).
+sub_info_i(146,'''logout''',13,16,[ [ 'Websession' ],[] ]).
  
 pgm_parm_i(web,28,'LOGIN',[],[]).
 pgm_parm_i(web,85,'SIDEBAR',[],[]).

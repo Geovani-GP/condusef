@@ -20,7 +20,7 @@
 <OnPrimaryKey>Yes</OnPrimaryKey>
 <AttriType>
 <DataType>N</DataType>
-<Presicion>18</Presicion>
+<Presicion>9</Presicion>
 <Scale>0</Scale>
 <Properties>
 <Property>

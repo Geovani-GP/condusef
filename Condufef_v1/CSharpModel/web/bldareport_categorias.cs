@@ -81,6 +81,8 @@ public class bldareport_categorias : GxBaseBuilder
             return true;
          if (checkTime(obj, cs_path + @"\GxModelInfoProvider.cs" ))
             return true;
+         if (checkTime(obj, cs_path + @"\type_Sdtestados.cs" ))
+            return true;
          if (checkTime(obj, cs_path + @"\type_Sdtempleadospiso.cs" ))
             return true;
          if (checkTime(obj, cs_path + @"\type_Sdtstatus.cs" ))
@@ -94,6 +96,8 @@ public class bldareport_categorias : GxBaseBuilder
          if (checkTime(obj, cs_path + @"\type_Sdtarea.cs" ))
             return true;
          if (checkTime(obj, cs_path + @"\type_Sdtorigen.cs" ))
+            return true;
+         if (checkTime(obj, cs_path + @"\type_Sdtusuarios.cs" ))
             return true;
          if (checkTime(obj, cs_path + @"\type_Sdtcambs.cs" ))
             return true;
@@ -128,6 +132,8 @@ public class bldareport_categorias : GxBaseBuilder
          if (checkTime(obj, cs_path + @"\GXDOMAINCallTargetSize.cs" ))
             return true;
          if (checkTime(obj, cs_path + @"\GXDOMAINGoogleTableFormatter.cs" ))
+            return true;
+         if (checkTime(obj, cs_path + @"\GXDOMAINDVelopConfirmPanelType.cs" ))
             return true;
          if (checkTime(obj, cs_path + @"\GXDOMAINEncoding.cs" ))
             return true;

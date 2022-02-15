@@ -24,12 +24,12 @@
 <BaseTable>
 <Table>
 <TableId>23</TableId>
-<TableName>producto</TableName>
+<TableName>PRODUCTO</TableName>
 <Description>producto</Description></Table></BaseTable>
 <NavigationTree>
 <Table>
 <TableId>23</TableId>
-<TableName>producto</TableName>
+<TableName>PRODUCTO</TableName>
 <Description>producto</Description>
 <Updated>Yes</Updated>
 <RecordsToRead>many</RecordsToRead>
@@ -50,7 +50,7 @@
 <TableToUpdate>
 <Table>
 <TableId>23</TableId>
-<TableName>producto</TableName>
+<TableName>PRODUCTO</TableName>
 <Description>producto</Description></Table>
 <TableAction>insert</TableAction>
 <AttrisToUpdate>
@@ -97,7 +97,7 @@
 <TableToUpdate>
 <Table>
 <TableId>23</TableId>
-<TableName>producto</TableName>
+<TableName>PRODUCTO</TableName>
 <Description>producto</Description></Table>
 <TableAction>update</TableAction>
 <AttrisToUpdate>
@@ -140,7 +140,7 @@
 <TableToUpdate>
 <Table>
 <TableId>23</TableId>
-<TableName>producto</TableName>
+<TableName>PRODUCTO</TableName>
 <Description>producto</Description></Table>
 <TableAction>delete</TableAction>
 <AttrisToUpdate></AttrisToUpdate></TableToUpdate></TablesToUpdate>
@@ -151,4 +151,11 @@
 <Levels></Levels>
 <AfterTrnRules></AfterTrnRules>
 <AfterLevelRules></AfterLevelRules></Level></Levels>
-<Suggests></Suggests></ObjectSpec>
+<Suggests></Suggests>
+<AdditionalWarnings>
+<Warning>
+<MsgCode>spc0208</MsgCode>
+<Message>
+<Token>No triggered actions</Token>
+<Token></Token>
+<Token>.</Token></Message></Warning></AdditionalWarnings></ObjectSpec>

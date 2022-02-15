@@ -495,6 +495,7 @@ att_prop_i(2,10,'EmptyAsNull','Yes',d).
 att_prop_i(2,10,idBasedOn,'',d).
 att_prop_i(2,10,'AUTONUMBER','0',d).
 att_prop_i(2,10,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,10,'AttRegEx','',d).
 att_prop_i(2,10,'AttValidationFailedMsg','',d).
 att_prop_i(2,10,'FullName',origenid,v).
 att_prop_i(2,40000,'ExternalName',origenid,d).
@@ -503,6 +504,7 @@ att_prop_i(2,40000,'EmptyAsNull','Yes',d).
 att_prop_i(2,40000,idBasedOn,'',d).
 att_prop_i(2,40000,'AUTONUMBER','0',d).
 att_prop_i(2,40000,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,40000,'AttRegEx','',d).
 att_prop_i(2,40000,'AttValidationFailedMsg','',d).
 att_prop_i(2,40000,'FullName',origenid,v).
  

@@ -2,7 +2,7 @@
                File: reorganization
         Description: No description for object
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 2/10/2022 19:54:11.47
+       Generated on: 2/15/2022 4:12:58.16
        Program type: Callable routine
           Main DBMS: postgresql
 */
@@ -66,6 +66,11 @@ namespace GeneXus.Programs {
       public override void ExecForm( )
       {
          execute();
+      }
+
+      public override bool GetCreateDataBase( )
+      {
+         return true;
       }
 
    }

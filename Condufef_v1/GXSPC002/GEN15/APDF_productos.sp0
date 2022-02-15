@@ -1,0 +1,368 @@
+spec_i([ proc,19,'PDF_productos','PDF_productos',78,spa,'10_3_15-115824' ]).
+ 
+struct_i(2,1,[],[]).
+ 
+level_i(2,[ 23,[ [ 23,many ] ],[],[],[ [ [ 23 ],[ 175,87,183,180,181 ] ] ],[ [ [ 23 ],[] ] ],[ 15,16 ],'PRODUCTO_PKEY',[],[] ]).
+ 
+tw_i(2,[]).
+ 
+lwi_i(2,[ [] ]).
+ 
+ 
+ 
+ 
+ta_i(2,[ [ [ 23,175 ],[ 23,87 ],[ 23,183 ],[ 23,180 ],[ 23,181 ] ] ]).
+ 
+las_i(2,[ [ 175,87,183,180,181 ] ]).
+ 
+lac_i(2,[ [] ]).
+ 
+ 
+ 
+ 
+ 
+ 
+default_i(e('Output',2,2,'''FIL''')).
+ 
+rule_i(0,datastore(1,'DS_LAST_CHANGE','')).
+rule_i(0,datastore(1,'POSTGRESQL_VERSION','8_3')).
+rule_i(0,datastore(1,'COMMENT_ON','No')).
+rule_i(0,datastore(1,'DCL_REF_INT_DB','Yes')).
+rule_i(0,datastore(1,'PRIMARY_KEY_TYPE','PK')).
+rule_i(0,datastore(1,'CS_SCHEMA','')).
+rule_i(0,datastore(1,'RecycleRWMin','30')).
+rule_i(0,datastore(1,'RecycleRWType','1')).
+rule_i(0,datastore(1,'RecycleRW','-1')).
+rule_i(0,datastore(1,'POOL_STARTUP','No')).
+rule_i(0,datastore(1,'POOLSIZE_RW','10')).
+rule_i(0,datastore(1,'UnlimitedRWPool','-1')).
+rule_i(0,datastore(1,'PoolRWEnabled','-1')).
+rule_i(0,datastore(1,'CS_RPCPGML','')).
+rule_i(0,datastore(1,'JDBC_DATASOURCE','')).
+rule_i(0,datastore(1,'USE_JDBC_DATASOURCE','0')).
+rule_i(0,datastore(1,'DS_DBMS_ADDINFO','')).
+rule_i(0,datastore(1,'USER_PASSWORD',asdf)).
+rule_i(0,datastore(1,'USER_ID',postgres)).
+rule_i(0,datastore(1,'CS_CONNECT','First')).
+rule_i(0,datastore(1,'DBMS_PORT','5432')).
+rule_i(0,datastore(1,'CS_SERVER',localhost)).
+rule_i(0,datastore(1,'CS_DBNAME',condusef)).
+rule_i(0,datastore(1,'CS_FLEDSNAME','')).
+rule_i(0,datastore(1,'CS_DRVNAME','')).
+rule_i(0,datastore(1,'CS_DSNAME','')).
+rule_i(0,datastore(1,'DB_URL','')).
+rule_i(0,datastore(1,'JDBC_CUSTOM_URL','0')).
+rule_i(0,datastore(1,'JDBC_CUSTOM_DRIVER','')).
+rule_i(0,datastore(1,'JDBC_DRIVER','org.postgresql.Driver')).
+rule_i(0,datastore(1,'CONNECT_METHOD','OPSYS')).
+rule_i(0,datastore(1,'ACCESS_TECHNO','ADONET')).
+rule_i(0,datastore(1,'MAIN_DS','-1')).
+rule_i(0,datastore(1,'REORG_GEN','8')).
+rule_i(0,datastore(1,'HelpKeyword','20')).
+rule_i(0,datastore(1,'DBMS',15)).
+rule_i(0,datastore(1,'NAME','Default')).
+rule_i(0,prop(idNULLS_BEHAVIOR,idNB_Current)).
+rule_i(0,prop('ObjectVisibility','Public')).
+rule_i(0,prop('FullyQualifiedName','PDF_productos')).
+rule_i(0,prop('PWFCallable','0')).
+rule_i(0,prop('GenerateObject','-1')).
+rule_i(0,prop('CS_ORA_FORUPD','UMPV')).
+rule_i(0,prop('Optimize_copy','UMPV')).
+rule_i(0,prop('JOIN_TYPE','UMPV')).
+rule_i(0,prop('DBMS_JOINS','UMPV')).
+rule_i(0,prop('BEEPONMSG','UMPV')).
+rule_i(0,prop('GENERATE_ILE','UMPV')).
+rule_i(0,prop('PRT_DDS','UMPV')).
+rule_i(0,prop('TRNCMT','YES')).
+rule_i(0,prop('NULLVALUE_AS_NULL','UMPV')).
+rule_i(0,prop('INITIALIZE_NEW','UMPV')).
+rule_i(0,prop('STD_FUNC_OBJECT','Yes')).
+rule_i(0,prop('SPC_WARNINGS_DISABLED','spc0096 spc0107 spc0142')).
+rule_i(0,prop('TRNEND','Yes')).
+rule_i(0,prop(idISBCEJB,'0')).
+rule_i(0,prop(idISPRCWEBSERVICE,'0')).
+rule_i(0,prop('EXECUTE_IN_NEW_UTL','0')).
+rule_i(0,prop('AUTOCENTER','UMPV')).
+rule_i(0,prop('LSTPFOOT','NO')).
+rule_i(0,prop('CANCEL','YES')).
+rule_i(0,prop('CONFIRM','UMPV')).
+rule_i(0,prop('TRNCFM','UMPV')).
+rule_i(0,prop('PRINT_CUST_LAYOUT','UMPV')).
+rule_i(0,prop('OUTPUT','FIL')).
+rule_i(0,prop(idConnectivitySupport,idInherit)).
+rule_i(0,prop('AppGenerator','1')).
+rule_i(0,prop('AppLocation','')).
+rule_i(0,prop('AppIcon','')).
+rule_i(0,prop('AppTitle','')).
+rule_i(0,prop('WEB_SECURITY_LEVEL','High')).
+rule_i(0,prop('HTTP_PROTOCOL','Unsecure')).
+rule_i(0,prop('USE_ENCRYPTION','NO')).
+rule_i(0,prop('COMPRESS_HTML','UMPV')).
+rule_i(0,prop('Theme',o(25,'Flat'))).
+rule_i(0,prop('OBJECT_METADATA','')).
+rule_i(0,prop('CALL_PROTOCOL','HTTP')).
+rule_i(0,prop('IsMain','-1')).
+rule_i(0,prop('Folder',o(8,'WebApi'))).
+rule_i(0,prop('ObjDesc','PDF_productos')).
+rule_i(0,prop('ObjName','PDF_productos')).
+rule_i(0,maingen(15)).
+rule_i(0,prop('PGMTYPE',main)).
+rule_i(0,output_file(t('Reporte_Modelos.pdf',3),t('PDF',3))).
+rule_i(0,output('FIL')).
+rule_i(0,nolastfooter).
+rule_i(0,file(23,'PRODUCTO',[ 175,179,87,180,181,182,91,92,93,183 ])).
+rule_i(0,loc([ 23 ],'PRODUCTO','','LAN')).
+rule_i(0,index(23,'PRODUCTO_PKEY',u,[ 15,16 ])).
+rule_i(0,loc([ 23,'PRODUCTO_PKEY' ],producto_pkey,'','LAN')).
+rule_i(0,index(23,'PRODUCTO_ID',k,[ 15 ])).
+rule_i(0,loc([ 23,'PRODUCTO_ID' ],producto_id,'','LAN')).
+rule_i(0,index(23,'IPRODUCTO',u,[ 175 ])).
+rule_i(0,loc([ 23,'IPRODUCTO' ],'IPRODUCTO','','LAN')).
+rule_i(0,p(0,0,fv,13,[ intname,'PRODUCTO' ])).
+rule_i(0,p(0,0,fv,13,[ table,23 ])).
+rule_i(0,p(0,15,fv,13,[])).
+rule_i(0,p(0,15,fv,13,[ 'NAME',producto ])).
+rule_i(0,p(0,15,fv,13,[ 'LOC','' ])).
+rule_i(0,p(0,15,fv,13,[ 'SCHEMA',public ])).
+rule_i(0,p(0,15,fv,13,[ 'EXTNAM','YES' ])).
+rule_i(0,p(0,15,fvix,[ 13,12 ],[])).
+rule_i(0,p(0,15,fvix,[ 13,12 ],[ 'NAME',producto_pkey ])).
+rule_i(0,p(0,15,fvix,[ 13,12 ],[ 'LOC','' ])).
+rule_i(0,p(0,15,fvix,[ 13,12 ],[ 'SCHEMA',public ])).
+rule_i(0,p(0,15,fvix,[ 13,12 ],[ 'EXTNAM','YES' ])).
+rule_i(0,p(0,15,fvix,[ 13,13 ],[])).
+rule_i(0,p(0,15,fvix,[ 13,13 ],[ 'NAME',producto_id ])).
+rule_i(0,p(0,15,fvix,[ 13,13 ],[ 'LOC','' ])).
+rule_i(0,p(0,15,fvix,[ 13,13 ],[ 'SCHEMA',public ])).
+rule_i(0,p(0,15,fvix,[ 13,13 ],[ 'EXTNAM','YES' ])).
+rule_i(0,p(0,15,fvix,[ 13,24 ],[])).
+rule_i(0,p(0,15,fvix,[ 13,24 ],[ 'NAME','' ])).
+rule_i(0,p(0,15,fvix,[ 13,24 ],[ 'LOC','' ])).
+rule_i(0,p(0,15,fvix,[ 13,24 ],[ 'SCHEMA','' ])).
+rule_i(0,p(0,15,fvix,[ 13,24 ],[ 'EXTNAM','YES' ])).
+ 
+a_i(1,1,f,'Line',[],[ [],[ t(0,3) ] ]).
+a_i(2,1,f,'Err',[],[ [],[ t('0',3) ] ]).
+a_i(3,2,t,23,[],[ [],'PRODUCTO_PKEY',[] ]).
+ 
+v_i(f,i,1,[]).
+v_i(f,o,1,'Line').
+v_i(f,i,2,[]).
+v_i(f,o,2,'Err').
+v_i(t,i,3,[]).
+v_i(t,o,3,175).
+v_i(t,o,3,87).
+v_i(t,o,3,183).
+v_i(t,o,3,180).
+v_i(t,o,3,181).
+ 
+ 
+ 
+ 
+ 
+ 
+attri_i('Output',[ 'Gx_out',char,3,0,'',1,'','',14 ]).
+attri_i('Page',[ 'Gx_page',int,6,0,'ZZZZZ9',0,'Page number','',13 ]).
+attri_i('Line',[ 'Gx_line',int,6,0,'ZZZZZ9',0,'Line number','',12 ]).
+attri_i(175,[ productoid,int,9,0,'ZZZZZZZZ9',0,productoid,'',0 ]).
+attri_i(87,[ productodsc,svchar,100,0,'',0,productodsc,'',0 ]).
+attri_i(183,[ ptipobienid,int,4,0,'ZZZ9',0,ptipobienid,'',0 ]).
+attri_i(180,[ pmodeloid,int,4,0,'ZZZ9',0,pmodeloid,'',0 ]).
+attri_i(181,[ pmarcaid,int,4,0,'ZZZ9',0,pmarcaid,'',0 ]).
+attri_i('Errmsg',[ 'Gx_emsg',char,70,0,'',1,'Error text','',10 ]).
+attri_i('Err',[ 'Gx_err',int,3,0,'ZZ9',1,'Error code','',9 ]).
+attri_i('Fecha',[ 'FECHA',date,8,0,'99/99/99',0,'FECHA','',8 ]).
+ 
+table_i(23,[ 'PRODUCTO',[ 175,87,180,181,183 ],producto,producto ]).
+ 
+index_i(23,[ 'PRODUCTO_PKEY',u,[ 15,16 ],'PRODUCTO_PKEY' ]).
+index_i(23,[ 'IPRODUCTO',u,[ 175 ],'IPRODUCTO' ]).
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+map_i(23,i,'IPRODUCTO',[ 'IPRODUCTO' ]).
+map_i(23,a,183,[ ptipobienid ]).
+map_i(23,a,93,[ productofecultact ]).
+map_i(23,a,92,[ productofecreg ]).
+map_i(23,a,91,[ productousuario ]).
+map_i(23,a,182,[ pcategoriaid ]).
+map_i(23,a,181,[ pmarcaid ]).
+map_i(23,a,180,[ pmodeloid ]).
+map_i(23,a,87,[ productodsc ]).
+map_i(23,a,179,[ pcambsid ]).
+map_i(23,a,175,[ productoid ]).
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+break_i(2,nvg,1,[],[ [ 181,180,183,87,175 ],[],[] ]).
+break_i(1,rpt,0,[],[ [],[],[] ]).
+ 
+b_group_i(1,1,lit,0,1,10).
+b_group_i(1,2,nvg,2,4,4).
+b_group_i(2,1,lit,0,14,26).
+b_group_i(1,3,lit,0,27,0).
+ 
+b_line_i(0,1,1,cmd,0,[]).
+b_line_i(1,1,1,cmd,0,[ t('',107,0,0),t('Fecha',23,0,0),t(=,10,0,0),t('today(',1,0,0),t(')',4,0,0) ]).
+b_line_i(2,1,1,pb,0,[ t('Pb_header',29,0,7) ]).
+b_line_i([ 2,0 ],1,1,line,0,[ t(' ',3,0,0) ]).
+b_line_i([ 2,1 ],1,1,line,1,[ t('COMISION NACIONAL PARA LA PROTECCIÓN Y DEFENSA DE LOS USUARIOS DE SERVICIOS FINANCIEROS',3,1,20) ]).
+b_line_i([ 2,3 ],1,1,line,3,[ t('REPORTE DE PRODUCTOS',3,3,46),t('Fecha',23,3,92) ]).
+b_line_i([ 2,6 ],1,1,line,6,[ t('CLAVE ',3,6,0),t('TIPO BIEN',3,6,13),t('DESCRIPCIÓN',3,6,27),t('MARCA',3,6,46),t('MODELO',3,6,60) ]).
+b_line_i([ 2,9 ],1,1,line,9,[ t(' ',3,9,0) ]).
+b_line_i(3,1,1,cmd,10,[]).
+b_line_i(4,2,1,cmd,14,[ t('',121,4,0),t(table,3,4,10),t(23,3,4,10) ]).
+b_line_i(5,2,1,pb,14,[ t('Pb_body',29,14,8) ]).
+b_line_i([ 5,0 ],2,1,line,14,[ t(175,2,0,0),t(183,2,0,23),t(87,2,0,47),t(181,2,0,72),t(180,2,0,89) ]).
+b_line_i([ 5,11 ],2,1,line,25,[ t(' ',3,11,0) ]).
+b_line_i(6,2,1,cmd,26,[ t('',128,26,0) ]).
+ 
+ 
+ 
+ 
+ 
+page_layout_i([ 66,0,6 ]).
+ 
+ 
+ 
+paper_info_i([ 0,256,'',16330,16834,0,0,0,0,1 ]).
+ 
+ppi_i([ 100,100 ]).
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+lit_i(5,2,bitmap(i(98,'50a9fefa-952a-4474-8e37-0c75e294c1c6')),[ ctlname('Gxreportimage1'),rect(0,0,130,69) ]).
+lit_i(6,2,t('COMISION NACIONAL PARA LA PROTECCIÓN Y DEFENSA DE LOS USUARIOS DE SERVICIOS FINANCIEROS',3),[ font('Microsoft Sans Serif',9,[ bold ]),rect(142,17,1392,37),outstyle(none),align(left),valign(top),fore(rgb(0,0,0)),border(1),ctlname('Gxreportlabel1'),gxcolor([]) ]).
+lit_i(7,2,t('REPORTE DE PRODUCTOS',3),[ font('Microsoft Sans Serif',10,[ bold ]),rect(325,50,525,68),outstyle(none),align(left),valign(top),fore(rgb(0,0,0)),border(1),ctlname('Gxreportlabel2'),gxcolor([]) ]).
+lit_i(8,2,t('CLAVE ',3),[ font('Microsoft Sans Serif',8,[]),rect(0,100,40,119),outstyle(none),align(left),valign(top),fore(rgb(0,0,0)),border(1),ctlname('Gxreportlabel3'),gxcolor([]) ]).
+lit_i(9,2,t('TIPO BIEN',3),[ font('Microsoft Sans Serif',9,[]),rect(92,100,153,116),outstyle(none),align(left),valign(top),noclip,fore(rgb(0,0,0)),border(1),ctlname('Gxreportlabel4'),gxcolor([]) ]).
+lit_i(10,2,t('Fecha',23),[ font('Microsoft Sans Serif',8,[]),rect(650,50,724,72),outstyle(none),align(right),valign(top),fore(rgb(0,0,0)),border(1),format(0),ctlname('&fecha'),ctrltype(edit,10),ispwd(0),gxcolor([]) ]).
+lit_i(11,2,t('DESCRIPCIÓN',3),[ font('Microsoft Sans Serif',8,[]),rect(192,100,269,114),outstyle(none),align(left),valign(top),noclip,fore(rgb(0,0,0)),border(1),ctlname('Gxreportlabel5'),gxcolor([]) ]).
+lit_i(12,2,t('MARCA',3),[ font('Microsoft Sans Serif',8,[]),rect(325,100,366,114),outstyle(none),align(left),valign(top),noclip,fore(rgb(0,0,0)),border(1),ctlname('Gxreportlabel6'),gxcolor([]) ]).
+lit_i(13,2,t('MODELO',3),[ font('Microsoft Sans Serif',8,[]),rect(425,100,474,114),outstyle(none),align(left),valign(top),noclip,fore(rgb(0,0,0)),border(1),ctlname('Gxreportlabel7'),gxcolor([]) ]).
+lit_i(4,2,window,[ title('Text'),rect(0,0,1134,153),outstyle(none),fill,graph,back(rgb(0,0,0)),fore(rgb(0,0,0)),border(0),ctlname('Pb_header'),align(left),valign(top),gxcolor([]),defgxcolor('BLK','WHT') ]).
+lit_i(15,5,t(181,2),[ font('Microsoft Sans Serif',8,[]),rect(508,0,608,15),outstyle(none),align(right),valign(top),fore(rgb(0,0,0)),border(1),format(0),ctlname('181'),ctrltype(edit,15),ispwd(0),gxcolor([]) ]).
+lit_i(16,5,t(180,2),[ font('Microsoft Sans Serif',8,[]),rect(625,0,725,15),outstyle(none),align(right),valign(top),fore(rgb(0,0,0)),border(1),format(0),ctlname('180'),ctrltype(edit,16),ispwd(0),gxcolor([]) ]).
+lit_i(3,5,t(183,2),[ font('Microsoft Sans Serif',9,[]),rect(167,0,317,17),outstyle(none),align(left),valign(top),fore(rgb(0,0,0)),border(1),format(0),ctlname('183'),ctrltype(edit,3),ispwd(0),gxcolor([]) ]).
+lit_i(14,5,t(87,2),[ font('Microsoft Sans Serif',8,[]),rect(333,0,483,15),outstyle(none),align(left),valign(top),fore(rgb(0,0,0)),border(1),format(0),ctlname('87'),ctrltype(edit,14),ispwd(0),gxcolor([]) ]).
+lit_i(2,5,t(175,2),[ font('Microsoft Sans Serif',9,[]),rect(0,0,150,17),outstyle(none),align(center),valign(top),fore(rgb(0,0,0)),border(1),format(0),ctlname('175'),ctrltype(edit,2),ispwd(0),gxcolor([]) ]).
+lit_i(1,5,window,[ title('Text'),rect(0,0,1134,193),outstyle(none),fill,graph,back(rgb(0,0,0)),fore(rgb(0,0,0)),border(0),ctlname('Pb_body'),align(left),valign(top),gxcolor([]),defgxcolor('BLK','WHT') ]).
+ 
+grid_i(7,15).
+ 
+ 
+ 
+form_class_i(1,'Graphic').
+ 
+ 
+ctrl_info_i(2,10,[ [ 0,0,sort,[],[],0,0,5,0,0 ] ]).
+ 
+ 
+ 
+att_prop_i(2,181,'ExternalName',pmarcaid,d).
+att_prop_i(2,181,'ExternalNamespace','Condufef_v1',d).
+att_prop_i(2,181,'EmptyAsNull','Yes',d).
+att_prop_i(2,181,idBasedOn,'',d).
+att_prop_i(2,181,'AUTONUMBER','0',d).
+att_prop_i(2,181,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,181,'AttRegEx','',d).
+att_prop_i(2,181,'AttValidationFailedMsg','',d).
+att_prop_i(2,181,'FullName',pmarcaid,v).
+att_prop_i(2,180,'ExternalName',pmodeloid,d).
+att_prop_i(2,180,'ExternalNamespace','Condufef_v1',d).
+att_prop_i(2,180,'EmptyAsNull','Yes',d).
+att_prop_i(2,180,idBasedOn,'',d).
+att_prop_i(2,180,'AUTONUMBER','0',d).
+att_prop_i(2,180,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,180,'AttRegEx','',d).
+att_prop_i(2,180,'AttValidationFailedMsg','',d).
+att_prop_i(2,180,'FullName',pmodeloid,v).
+att_prop_i(2,183,'ExternalName',ptipobienid,d).
+att_prop_i(2,183,'ExternalNamespace','Condufef_v1',d).
+att_prop_i(2,183,'EmptyAsNull','Yes',d).
+att_prop_i(2,183,idBasedOn,'',d).
+att_prop_i(2,183,'AUTONUMBER','0',d).
+att_prop_i(2,183,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,183,'AttRegEx','',d).
+att_prop_i(2,183,'AttValidationFailedMsg','',d).
+att_prop_i(2,183,'FullName',ptipobienid,v).
+att_prop_i(2,87,'ExternalName',productodsc,d).
+att_prop_i(2,87,'ExternalNamespace','Condufef_v1',d).
+att_prop_i(2,87,'EmptyAsNull','Yes',d).
+att_prop_i(2,87,idBasedOn,'',d).
+att_prop_i(2,87,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,87,'DB_NLS_SUPPORT','No',d).
+att_prop_i(2,87,'AttRegEx','',d).
+att_prop_i(2,87,'AttValidationFailedMsg','',d).
+att_prop_i(2,87,'FullName',productodsc,v).
+att_prop_i(2,175,'ExternalName',productoid,d).
+att_prop_i(2,175,'ExternalNamespace','Condufef_v1',d).
+att_prop_i(2,175,'EmptyAsNull','Yes',d).
+att_prop_i(2,175,idBasedOn,'',d).
+att_prop_i(2,175,'AUTONUMBER','0',d).
+att_prop_i(2,175,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,175,'AttRegEx','',d).
+att_prop_i(2,175,'AttValidationFailedMsg','',d).
+att_prop_i(2,175,'FullName',productoid,v).
+ 
+ 
+tbl_att_prop_i(2,23,175,'AllowNulls',n).
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+pgm_callprotocol_i(proc,19,'PDF_PRODUCTOS','HTTP').
+ 
+pgm_main_info_i(proc,19,'PDF_PRODUCTOS',[ 15,'APDF_PRODUCTOS','PDF_productos','','','','HTTP' ]).
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

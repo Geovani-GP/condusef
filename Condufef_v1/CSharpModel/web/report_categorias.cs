@@ -2,7 +2,7 @@
                File: Report_Categorias
         Description: Stub for Report_Categorias
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 2/2/2022 15:57:58.5
+       Generated on: 2/15/2022 5:8:39.55
        Program type: Callable routine
           Main DBMS: postgresql
 */

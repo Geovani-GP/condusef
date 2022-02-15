@@ -1,6 +1,6 @@
 spec_i([ trn,9,producto,producto,[],spa,'10_3_15-115824' ]).
  
-struct_i(23,0,[],[]).
+struct_i(23,0,[ 'Mode','Productoid' ],[]).
  
 level_i(23,[ 23,[ [ 23,many ] ],[ 175 ],[],[],[],[ 175 ],'IPRODUCTO',[ 23,[] ],[] ]).
  
@@ -13,7 +13,7 @@ lwi_i(23,[ [] ]).
  
 ta_i(23,[ [ [ 23,175 ],[ 23,179 ],[ 23,87 ],[ 23,180 ],[ 23,181 ],[ 23,182 ],[ 23,91 ],[ 23,92 ],[ 23,93 ],[ 23,183 ] ] ]).
  
-las_i(23,[ [ 175,179,87,180,181,182,91,92,93,183 ] ]).
+las_i(23,[ [ 'Mode','Productoid',175,179,87,180,181,182,91,92,93,183 ] ]).
  
 lac_i(23,[ [ 175,179,87,180,181,182,91,92,93,183 ] ]).
  
@@ -163,32 +163,75 @@ rule_i(0,prop(idBC,'-1')).
 rule_i(0,prop('Folder',o(120,'Root Module'))).
 rule_i(0,prop('ObjDesc',producto)).
 rule_i(0,prop('ObjName',producto)).
-rule_i(23,prompt([ 23,[ [ [],175,175 ] ],[],[],[ t(o(13,'Gx00N0'),28),t(175,2) ],[],n,[] ])).
-rule_i(23,rule([ a(23,[ [ 175 ],[ t(o(13,'Gx00N0'),28),t(175,2) ] ]) ],[],[],[ 175 ])).
 rule_i(0,rule([ a(22,[ 'Dlt','"Eliminar"','' ]) ],[],[],[])).
 rule_i(0,maingen(15)).
+rule_i(0,rule([ a(10,[ 'Mode','Productoid' ]) ],[],[ insert,update,delete,display ],[])).
+rule_i(0,parmio([ [ 'Mode',in ],[ 'Productoid',in ] ])).
+rule_i(0,p(0,0,fv,13,[ intname,'PRODUCTO' ])).
+rule_i(0,p(0,0,fv,13,[ table,23 ])).
+rule_i(0,p(0,15,fv,13,[])).
+rule_i(0,p(0,15,fv,13,[ 'NAME',producto ])).
+rule_i(0,p(0,15,fv,13,[ 'LOC','' ])).
+rule_i(0,p(0,15,fv,13,[ 'SCHEMA',public ])).
+rule_i(0,p(0,15,fv,13,[ 'EXTNAM','YES' ])).
+rule_i(0,p(0,15,fvix,[ 13,12 ],[])).
+rule_i(0,p(0,15,fvix,[ 13,12 ],[ 'NAME',producto_pkey ])).
+rule_i(0,p(0,15,fvix,[ 13,12 ],[ 'LOC','' ])).
+rule_i(0,p(0,15,fvix,[ 13,12 ],[ 'SCHEMA',public ])).
+rule_i(0,p(0,15,fvix,[ 13,12 ],[ 'EXTNAM','YES' ])).
+rule_i(0,p(0,15,fvix,[ 13,13 ],[])).
+rule_i(0,p(0,15,fvix,[ 13,13 ],[ 'NAME',producto_id ])).
+rule_i(0,p(0,15,fvix,[ 13,13 ],[ 'LOC','' ])).
+rule_i(0,p(0,15,fvix,[ 13,13 ],[ 'SCHEMA',public ])).
+rule_i(0,p(0,15,fvix,[ 13,13 ],[ 'EXTNAM','YES' ])).
+rule_i(0,p(0,15,fvix,[ 13,24 ],[])).
+rule_i(0,p(0,15,fvix,[ 13,24 ],[ 'NAME','' ])).
+rule_i(0,p(0,15,fvix,[ 13,24 ],[ 'LOC','' ])).
+rule_i(0,p(0,15,fvix,[ 13,24 ],[ 'SCHEMA','' ])).
+rule_i(0,p(0,15,fvix,[ 13,24 ],[ 'EXTNAM','YES' ])).
+rule_i(0,file(23,'PRODUCTO',[ 175,179,87,180,181,182,91,92,93,183 ])).
+rule_i(0,loc([ 23 ],'PRODUCTO','','LAN')).
+rule_i(0,index(23,'PRODUCTO_PKEY',u,[ 15,16 ])).
+rule_i(0,loc([ 23,'PRODUCTO_PKEY' ],producto_pkey,'','LAN')).
+rule_i(0,index(23,'PRODUCTO_ID',k,[ 15 ])).
+rule_i(0,loc([ 23,'PRODUCTO_ID' ],producto_id,'','LAN')).
+rule_i(0,index(23,'IPRODUCTO',u,[ 175 ])).
+rule_i(0,loc([ 23,'IPRODUCTO' ],'IPRODUCTO','','LAN')).
+rule_i(23,rule([ a(3,[ t(175,2) ]) ],[],[ insert,update,delete,display ],[ 175 ])).
+rule_i(23,rule([ a(21,[ [ 175 ] ]) ],[],[ insert,update,delete,display ],[ 175 ])).
  
-a_i(1,23,t,23,[],[ [ [ [],175,175 ] ],'IPRODUCTO',[] ]).
+a_i(1,23,f,175,[],[ [],[ t('Productoid',23),t('IF',17),t('.NOT.',8),t('null(',1),t('Productoid',23),t(')',4),t(';',18) ] ]).
+a_i(2,23,f,[ t(175,2),t('Enabled',3) ],[],[ [],[ t(0,3),t(';',18) ] ]).
+a_i(3,23,t,23,[],[ [ [ [],175,175 ] ],'IPRODUCTO',[] ]).
+a_i(4,23,k,23,[],[ [ [ [],15,15 ] ],'PRODUCTO_ID',[] ]).
  
-v_i(t,i,1,175).
-v_i(t,o,1,179).
-v_i(t,o,1,87).
-v_i(t,o,1,180).
-v_i(t,o,1,181).
-v_i(t,o,1,182).
-v_i(t,o,1,91).
-v_i(t,o,1,92).
-v_i(t,o,1,93).
-v_i(t,o,1,183).
+v_i(f,i,1,'Productoid').
+v_i(f,o,1,175).
+v_i(f,i,2,[]).
+v_i(f,o,2,[ t(175,2),t('Enabled',3) ]).
+v_i(t,i,3,175).
+v_i(t,o,3,179).
+v_i(t,o,3,87).
+v_i(t,o,3,180).
+v_i(t,o,3,181).
+v_i(t,o,3,182).
+v_i(t,o,3,91).
+v_i(t,o,3,92).
+v_i(t,o,3,93).
+v_i(t,o,3,183).
+v_i(k,i,4,15).
+v_i(k,i,4,175).
+v_i(k,o,4,[]).
  
+act_info_i(1,[ [ 175 ] ]).
  
  
  
  
  
 attri_i(183,[ ptipobienid,int,4,0,'ZZZ9',0,ptipobienid,'',0 ]).
-attri_i(93,[ productofecultact,dtime,10,8,'99/99/9999 99:99:99',0,productofecultact,'',0 ]).
-attri_i(92,[ productofecreg,dtime,10,8,'99/99/9999 99:99:99',0,productofecreg,'',0 ]).
+attri_i(93,[ productofecultact,date,8,0,'99/99/9999',0,productofecultact,'',0 ]).
+attri_i(92,[ productofecreg,date,8,0,'99/99/9999',0,productofecreg,'',0 ]).
 attri_i(91,[ productousuario,svchar,15,0,'',0,productousuario,'',0 ]).
 attri_i(182,[ pcategoriaid,int,4,0,'ZZZ9',0,pcategoriaid,'',0 ]).
 attri_i(181,[ pmarcaid,int,4,0,'ZZZ9',0,pmarcaid,'',0 ]).
@@ -197,11 +240,14 @@ attri_i(87,[ productodsc,svchar,100,0,'',0,productodsc,'',0 ]).
 attri_i(179,[ pcambsid,int,4,0,'ZZZ9',0,pcambsid,'',0 ]).
 attri_i(175,[ productoid,int,9,0,'ZZZZZZZZ9',0,productoid,'',0 ]).
 attri_i('Gxremove',[ 'GxRemove',int,1,0,'9',0,'Gx Remove','',5 ]).
+attri_i('Productoid',[ productoid,int,9,0,'ZZZZZZZZ9',0,productoid,'',7 ]).
 attri_i('Mode',[ 'Gx_mode',char,3,0,'@!',1,'','',2 ]).
  
-table_i(23,[ producto,[ 175,87,91,92,93,179,180,181,182,183 ],producto,producto ]).
+table_i(23,[ 'PRODUCTO',[ 175,179,87,180,181,182,91,92,93,183 ],producto,producto ]).
  
-index_i(23,[ 'IPRODUCTO',u,[ 175 ],'Iproducto' ]).
+index_i(23,[ 'PRODUCTO_PKEY',u,[ 15,16 ],'PRODUCTO_PKEY' ]).
+index_i(23,[ 'PRODUCTO_ID',k,[ 15 ],'PRODUCTO_ID' ]).
+index_i(23,[ 'IPRODUCTO',u,[ 175 ],'IPRODUCTO' ]).
  
  
  
@@ -223,6 +269,17 @@ upd_i(23,23,d,[ [],[],'IPRODUCTO',[] ]).
  
  
  
+map_i(23,i,'IPRODUCTO',[ 'IPRODUCTO' ]).
+map_i(23,a,183,[ ptipobienid ]).
+map_i(23,a,93,[ productofecultact ]).
+map_i(23,a,92,[ productofecreg ]).
+map_i(23,a,91,[ productousuario ]).
+map_i(23,a,182,[ pcategoriaid ]).
+map_i(23,a,181,[ pmarcaid ]).
+map_i(23,a,180,[ pmodeloid ]).
+map_i(23,a,87,[ productodsc ]).
+map_i(23,a,179,[ pcambsid ]).
+map_i(23,a,175,[ productoid ]).
  
  
  
@@ -822,7 +879,7 @@ html_comp_i(49,'Width',measure(0,px),d,[ measure ]).
 html_comp_i(49,'Semanticcontent',div,d,[ str ]).
 html_comp_i(49,'Align',left,d,[ str ]).
 html_comp_i(49,'Valign',top,d,[ str ]).
-html_comp_i(50,'Colcount',19,d,[ num ]).
+html_comp_i(50,'Colcount',10,d,[ num ]).
 html_comp_i(50,'Attid',92,v,[ num ]).
 html_comp_i(50,'Class','Attribute',v,[ str ]).
 html_comp_i(50,'Controlname','Productofecreg',d,[ str ]).
@@ -838,7 +895,7 @@ html_comp_i(50,'Readonly',0,v,[ bool ]).
 html_comp_i(50,'Autocomplete',-1,d,[ bool ]).
 html_comp_i(50,'Ispassword',0,d,[ bool ]).
 html_comp_i(50,'Autoresize',-1,d,[ bool ]).
-html_comp_i(50,'Gxwidth',measure(19,chr),d,[ measure ]).
+html_comp_i(50,'Gxwidth',measure(10,chr),d,[ measure ]).
 html_comp_i(50,'Gxheight',measure(1,row),d,[ measure ]).
 html_comp_i(50,'Ismultiline',0,d,[ bool ]).
 html_comp_i(50,'Fill',-1,d,[ bool ]).
@@ -848,7 +905,6 @@ html_comp_i(50,'Font',font('Verdana',12,[]),d,[ font ]).
 html_comp_i(50,'Horizontalalignment',right,d,[ str ]).
 html_comp_i(50,'Gxformat',0,d,[ num ]).
 html_comp_i(50,'Title','',d,[ str ]).
-html_comp_i(50,'Invitemsg','',v,[ str ]).
 html_comp_i(50,'Use_datepicker',-1,d,[ bool ]).
 html_comp_i(50,'Flat_datepicker',0,d,[ bool ]).
 html_comp_i(51,'Class',row,v,[ str ]).
@@ -872,7 +928,7 @@ html_comp_i(53,'Width',measure(0,px),d,[ measure ]).
 html_comp_i(53,'Semanticcontent',div,d,[ str ]).
 html_comp_i(53,'Align',left,d,[ str ]).
 html_comp_i(53,'Valign',top,d,[ str ]).
-html_comp_i(54,'Colcount',19,d,[ num ]).
+html_comp_i(54,'Colcount',10,d,[ num ]).
 html_comp_i(54,'Attid',93,v,[ num ]).
 html_comp_i(54,'Class','Attribute',v,[ str ]).
 html_comp_i(54,'Controlname','Productofecultact',d,[ str ]).
@@ -888,7 +944,7 @@ html_comp_i(54,'Readonly',0,v,[ bool ]).
 html_comp_i(54,'Autocomplete',-1,d,[ bool ]).
 html_comp_i(54,'Ispassword',0,d,[ bool ]).
 html_comp_i(54,'Autoresize',-1,d,[ bool ]).
-html_comp_i(54,'Gxwidth',measure(19,chr),d,[ measure ]).
+html_comp_i(54,'Gxwidth',measure(10,chr),d,[ measure ]).
 html_comp_i(54,'Gxheight',measure(1,row),d,[ measure ]).
 html_comp_i(54,'Ismultiline',0,d,[ bool ]).
 html_comp_i(54,'Fill',-1,d,[ bool ]).
@@ -898,7 +954,6 @@ html_comp_i(54,'Font',font('Verdana',12,[]),d,[ font ]).
 html_comp_i(54,'Horizontalalignment',right,d,[ str ]).
 html_comp_i(54,'Gxformat',0,d,[ num ]).
 html_comp_i(54,'Title','',d,[ str ]).
-html_comp_i(54,'Invitemsg','',v,[ str ]).
 html_comp_i(54,'Use_datepicker',-1,d,[ bool ]).
 html_comp_i(54,'Flat_datepicker',0,d,[ bool ]).
 html_comp_i(55,'Class',row,v,[ str ]).
@@ -1162,7 +1217,6 @@ att_prop_i(2,92,'ATT_INITIAL_VALUE','',d).
 att_prop_i(2,92,'AttRegEx','',d).
 att_prop_i(2,92,'AttValidationFailedMsg','',d).
 att_prop_i(2,92,idDATEFORMAT,idDATEFORMAT_LONG,v).
-att_prop_i(2,92,idHOURFORMAT,idHOURFORMAT_HOURMINSEC,v).
 att_prop_i(2,92,'FullName',productofecreg,v).
 att_prop_i(2,93,'HORIZONTAL_DESCRIPTION',productofecultact,v).
 att_prop_i(2,93,'ExternalName',productofecultact,d).
@@ -1173,7 +1227,6 @@ att_prop_i(2,93,'ATT_INITIAL_VALUE','',d).
 att_prop_i(2,93,'AttRegEx','',d).
 att_prop_i(2,93,'AttValidationFailedMsg','',d).
 att_prop_i(2,93,idDATEFORMAT,idDATEFORMAT_LONG,v).
-att_prop_i(2,93,idHOURFORMAT,idHOURFORMAT_HOURMINSEC,v).
 att_prop_i(2,93,'FullName',productofecultact,v).
 att_prop_i(2,183,'HORIZONTAL_DESCRIPTION',ptipobienid,d).
 att_prop_i(2,183,'ExternalName',ptipobienid,d).
@@ -1189,6 +1242,7 @@ att_prop_i(2,183,'FullName',ptipobienid,v).
  
 tbl_att_prop_i(2,23,175,'AllowNulls',n).
  
+var_prop_i(2,'Productoid',idBasedOn,'',v).
  
  
  
@@ -1202,10 +1256,8 @@ trn_level_i(23,[ [ 175,179,87,180,181,182,91,92,93,183 ],producto,producto,produ
  
  
  
-pgm_parm_i(web,108,'GX00N0',[ [ int,9,0,0 ] ],[ [ pproductoid,out,[] ] ]).
  
 pgm_callprotocol_i(trn,9,'PRODUCTO','INTERNAL').
-pgm_callprotocol_i(web,108,'GX00N0','INTERNAL').
  
  
  

@@ -2,7 +2,7 @@
                File: entidadfederativa
         Description: entidadfederativa
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 2/2/2022 13:42:13.74
+       Generated on: 2/15/2022 5:8:43.29
        Program type: Callable routine
           Main DBMS: postgresql
 */
@@ -1437,7 +1437,7 @@ namespace GeneXus.Programs {
          context.AddJavascriptSource("jquery.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxtimezone.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxgral.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("gxcfg.js", "?20222213421423");
+         context.AddJavascriptSource("gxcfg.js", "?2022215584383");
          if ( context.isSpaRequest( ) )
          {
             enableOutput();
@@ -1604,12 +1604,12 @@ namespace GeneXus.Programs {
 
       protected void define_styles( )
       {
-         AddStyleSheetFile("calendar-system.css", "?13205289");
-         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?1342847");
+         AddStyleSheetFile("calendar-system.css", "?11323129");
+         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?583790");
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?20222213421428");
+            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?2022215584387");
             idxLst = (int)(idxLst+1);
          }
          /* End function define_styles */
@@ -1618,7 +1618,7 @@ namespace GeneXus.Programs {
       protected void include_jscripts( )
       {
          context.AddJavascriptSource("messages.spa.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("entidadfederativa.js", "?20222213421428");
+         context.AddJavascriptSource("entidadfederativa.js", "?2022215584387");
          /* End function include_jscripts */
       }
 

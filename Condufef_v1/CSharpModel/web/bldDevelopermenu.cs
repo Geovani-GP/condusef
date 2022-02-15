@@ -49,6 +49,7 @@ public class bldDevelopermenu : GxBaseBuilder
       sc.Add( @"apdf_cambs", "dll");
       sc.Add( @"apdf_marcas", "dll");
       sc.Add( @"apdf_modelos", "dll");
+      sc.Add( @"apdf_productos", "dll");
       sc.Add( @"appmasterpage", "dll");
       sc.Add( @"login", "dll");
       sc.Add( @"menuprincipal", "dll");
@@ -100,7 +101,6 @@ public class bldDevelopermenu : GxBaseBuilder
       sc.Add( @"detallesestatus", "dll");
       sc.Add( @"detallesentidadfederativa", "dll");
       sc.Add( @"detallesarea", "dll");
-      sc.Add( @"gx00n0", "dll");
       sc.Add( @"alerts", "dll");
       sc.Add( @"gx00o0", "dll");
       sc.Add( @"detallesproveedores", "dll");
@@ -108,6 +108,9 @@ public class bldDevelopermenu : GxBaseBuilder
       sc.Add( @"detallesempleadospiso", "dll");
       sc.Add( @"detallesalmacen", "dll");
       sc.Add( @"gx00p0", "dll");
+      sc.Add( @"detallesproducto", "dll");
+      sc.Add( @"masterlogin", "dll");
+      sc.Add( @"register", "dll");
       sc.Add( @"tipobien", "dll");
       sc.Add( @"parametros", "dll");
       sc.Add( @"meses", "dll");
@@ -173,39 +176,41 @@ public class bldDevelopermenu : GxBaseBuilder
             return true;
          if (checkTime(obj, cs_path + @"\GxModelInfoProvider.cs" ))
             return true;
-         if (checkTime(obj, cs_path + @"\type_Sdtmodelos.cs" ))
-            return true;
-         if (checkTime(obj, cs_path + @"\type_Sdtcambs.cs" ))
-            return true;
-         if (checkTime(obj, cs_path + @"\type_Sdtmarcas.cs" ))
-            return true;
-         if (checkTime(obj, cs_path + @"\type_Sdtproducto.cs" ))
-            return true;
-         if (checkTime(obj, cs_path + @"\type_Sdttipobien.cs" ))
-            return true;
-         if (checkTime(obj, cs_path + @"\type_Sdtarea.cs" ))
-            return true;
-         if (checkTime(obj, cs_path + @"\type_Sdtempleadospiso.cs" ))
-            return true;
-         if (checkTime(obj, cs_path + @"\type_Sdtalmacen.cs" ))
-            return true;
-         if (checkTime(obj, cs_path + @"\type_Sdtempleados.cs" ))
-            return true;
          if (checkTime(obj, cs_path + @"\type_Sdtestados.cs" ))
             return true;
-         if (checkTime(obj, cs_path + @"\type_Sdtproveedores.cs" ))
+         if (checkTime(obj, cs_path + @"\type_Sdtempleadospiso.cs" ))
             return true;
          if (checkTime(obj, cs_path + @"\type_Sdtstatus.cs" ))
             return true;
          if (checkTime(obj, cs_path + @"\type_Sdttipodocumento.cs" ))
             return true;
+         if (checkTime(obj, cs_path + @"\type_Sdtmodelos.cs" ))
+            return true;
+         if (checkTime(obj, cs_path + @"\type_Sdtalmacen.cs" ))
+            return true;
+         if (checkTime(obj, cs_path + @"\type_Sdtarea.cs" ))
+            return true;
          if (checkTime(obj, cs_path + @"\type_Sdtorigen.cs" ))
             return true;
+         if (checkTime(obj, cs_path + @"\type_Sdtusuarios.cs" ))
+            return true;
+         if (checkTime(obj, cs_path + @"\type_Sdtcambs.cs" ))
+            return true;
+         if (checkTime(obj, cs_path + @"\type_Sdtproveedores.cs" ))
+            return true;
+         if (checkTime(obj, cs_path + @"\type_Sdtproducto.cs" ))
+            return true;
+         if (checkTime(obj, cs_path + @"\type_Sdtmarcas.cs" ))
+            return true;
          if (checkTime(obj, cs_path + @"\type_Sdtestatusarticulo.cs" ))
+            return true;
+         if (checkTime(obj, cs_path + @"\type_Sdtempleados.cs" ))
             return true;
          if (checkTime(obj, cs_path + @"\type_Sdtcategorias.cs" ))
             return true;
          if (checkTime(obj, cs_path + @"\type_Sdtentidadfederativa.cs" ))
+            return true;
+         if (checkTime(obj, cs_path + @"\type_Sdttipobien.cs" ))
             return true;
          if (checkTime(obj, cs_path + @"\GXDOMAINCryptoSignAlgorithm.cs" ))
             return true;

@@ -2,7 +2,7 @@
                File: Gx00N0
         Description: Selection List producto
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 2/10/2022 19:54:32.71
+       Generated on: 2/10/2022 22:32:6.62
        Program type: Callable routine
           Main DBMS: postgresql
 */
@@ -265,7 +265,7 @@ namespace GeneXus.Programs {
          context.AddJavascriptSource("jquery.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxtimezone.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxgral.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("gxcfg.js", "?202221019543275");
+         context.AddJavascriptSource("gxcfg.js", "?20222102232667");
          if ( context.isSpaRequest( ) )
          {
             enableOutput();
@@ -1535,11 +1535,11 @@ namespace GeneXus.Programs {
       protected void define_styles( )
       {
          AddStyleSheetFile("calendar-system.css", "?11323129");
-         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?19483837");
+         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?22305230");
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?202221019543358");
+            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?20222102232761");
             idxLst = (int)(idxLst+1);
          }
          /* End function define_styles */
@@ -1548,7 +1548,7 @@ namespace GeneXus.Programs {
       protected void include_jscripts( )
       {
          context.AddJavascriptSource("messages.spa.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("gx00n0.js", "?202221019543358");
+         context.AddJavascriptSource("gx00n0.js", "?20222102232761");
          /* End function include_jscripts */
       }
 
@@ -2157,7 +2157,7 @@ namespace GeneXus.Programs {
          String sFromString ;
          String sOrderString ;
          sSelectString = " pmodeloid, pcambsid, productofecultact, productofecreg, productousuario, productodsc, productoid";
-         sFromString = " FROM producto";
+         sFromString = " FROM public.producto";
          sOrderString = "";
          sWhereString = sWhereString + " WHERE (productoid >= :AV6cproductoid)";
          if ( ! String.IsNullOrEmpty(StringUtil.RTrim( AV8cproductodsc)) )
@@ -2236,7 +2236,7 @@ namespace GeneXus.Programs {
          GXv_int3 = new short [7] ;
          Object[] GXv_Object4 ;
          GXv_Object4 = new Object [2] ;
-         scmdbuf = "SELECT COUNT(*) FROM producto";
+         scmdbuf = "SELECT COUNT(*) FROM public.producto";
          scmdbuf = scmdbuf + " WHERE (productoid >= :AV6cproductoid)";
          if ( ! String.IsNullOrEmpty(StringUtil.RTrim( AV8cproductodsc)) )
          {

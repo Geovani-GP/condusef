@@ -75,18 +75,18 @@ struct_dt_elem_i([ 0,9,0 ],7,collection,'False').
 struct_dt_elem_i([ 0,9,0 ],7,attributeid,'91').
 struct_dt_elem_i([ 0,9,0 ],8,name,'Productofecreg').
 struct_dt_elem_i([ 0,9,0 ],8,camelname,productofecreg).
-struct_dt_elem_i([ 0,9,0 ],8,length,10).
-struct_dt_elem_i([ 0,9,0 ],8,decimals,8).
-struct_dt_elem_i([ 0,9,0 ],8,type,[ 12,10,8 ]).
-struct_dt_elem_i([ 0,9,0 ],8,pic,'99/99/9999 99:99:99').
+struct_dt_elem_i([ 0,9,0 ],8,length,8).
+struct_dt_elem_i([ 0,9,0 ],8,decimals,0).
+struct_dt_elem_i([ 0,9,0 ],8,type,[ 6,8,0 ]).
+struct_dt_elem_i([ 0,9,0 ],8,pic,'99/99/9999').
 struct_dt_elem_i([ 0,9,0 ],8,collection,'False').
 struct_dt_elem_i([ 0,9,0 ],8,attributeid,'92').
 struct_dt_elem_i([ 0,9,0 ],9,name,'Productofecultact').
 struct_dt_elem_i([ 0,9,0 ],9,camelname,productofecultact).
-struct_dt_elem_i([ 0,9,0 ],9,length,10).
-struct_dt_elem_i([ 0,9,0 ],9,decimals,8).
-struct_dt_elem_i([ 0,9,0 ],9,type,[ 12,10,8 ]).
-struct_dt_elem_i([ 0,9,0 ],9,pic,'99/99/9999 99:99:99').
+struct_dt_elem_i([ 0,9,0 ],9,length,8).
+struct_dt_elem_i([ 0,9,0 ],9,decimals,0).
+struct_dt_elem_i([ 0,9,0 ],9,type,[ 6,8,0 ]).
+struct_dt_elem_i([ 0,9,0 ],9,pic,'99/99/9999').
 struct_dt_elem_i([ 0,9,0 ],9,collection,'False').
 struct_dt_elem_i([ 0,9,0 ],9,attributeid,'93').
 struct_dt_elem_i([ 0,9,0 ],10,name,'Ptipobienid').

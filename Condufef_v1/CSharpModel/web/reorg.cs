@@ -2,7 +2,7 @@
                File: reorg
         Description: Table Manager
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 2/10/2022 19:54:11.14
+       Generated on: 2/15/2022 4:12:58.4
        Program type: Callable routine
           Main DBMS: postgresql
 */
@@ -60,9 +60,58 @@ namespace GeneXus.Programs {
 
       void executePrivate( )
       {
+         SetCreateDataBase( ) ;
+         CreateDataBase( ) ;
          if ( PreviousCheck() )
          {
             ExecuteReorganization( ) ;
+         }
+      }
+
+      private void CreateDataBase( )
+      {
+         DS = (GxDataStore)(context.GetDataStore( "Default"));
+         ErrCode = DS.Connection.FullConnect();
+         DataBaseName = DS.Connection.Database;
+         if ( ErrCode != 0 )
+         {
+            DS.Connection.Database = "postgres";
+            ErrCode = DS.Connection.FullConnect();
+            if ( ErrCode == 0 )
+            {
+               try
+               {
+                  GeneXus.Reorg.GXReorganization.AddMsg( GXResourceManager.GetMessage("GXM_dbcrea")+ " " +DataBaseName , null);
+                  cmdBuffer = "CREATE DATABASE " + "\"" + DataBaseName + "\"";
+                  RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
+                  RGZ.ErrorMask = GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK;
+                  RGZ.ExecuteStmt() ;
+                  RGZ.Drop();
+                  Count = 1;
+               }
+               catch ( Exception ex )
+               {
+                  ErrCode = 1;
+                  GeneXus.Reorg.GXReorganization.AddMsg( ex.Message , null);
+                  throw ex ;
+               }
+               ErrCode = DS.Connection.Disconnect();
+               DS.Connection.Database = DataBaseName;
+               ErrCode = DS.Connection.FullConnect();
+               while ( ( ErrCode != 0 ) && ( Count > 0 ) && ( Count < 30 ) )
+               {
+                  Res = GXUtil.Sleep( 1);
+                  ErrCode = DS.Connection.FullConnect();
+                  Count = (short)(Count+1);
+               }
+            }
+            if ( ErrCode != 0 )
+            {
+               ErrMsg = DS.ErrDescription;
+               GeneXus.Reorg.GXReorganization.AddMsg( ErrMsg , null);
+               ErrCode = 1;
+               throw new Exception( ErrMsg) ;
+            }
          }
       }
 
@@ -71,58 +120,68 @@ namespace GeneXus.Programs {
          /* Load data into tables. */
       }
 
-      public void Reorganizeproducto( )
+      public void Createestados( )
       {
          String cmdBuffer = "" ;
-         /* Indices for table producto */
-         cmdBuffer=" ALTER TABLE producto ADD ptipobienid  smallint , ADD pcategoriaid  smallint , ADD pmarcaid  smallint , ADD pmodeloid  smallint , ADD pcambsid  smallint  "
-         ;
-         RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
-         RGZ.ErrorMask = GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK;
-         RGZ.ExecuteStmt() ;
-         RGZ.Drop();
-         cmdBuffer=" DROP INDEX IPRODUCTO1 "
-         ;
-         RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
-         RGZ.ErrorMask = GxErrorMask.GX_MASKNOTFOUND | GxErrorMask.GX_MASKLOOPLOCK;
-         RGZ.ExecuteStmt() ;
-         RGZ.Drop();
-         cmdBuffer=" DROP INDEX IPRODUCTO2 "
-         ;
-         RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
-         RGZ.ErrorMask = GxErrorMask.GX_MASKNOTFOUND | GxErrorMask.GX_MASKLOOPLOCK;
-         RGZ.ExecuteStmt() ;
-         RGZ.Drop();
-         cmdBuffer=" ALTER TABLE producto DROP CONSTRAINT IPRODUCTO1 "
-         ;
-         RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
-         RGZ.ErrorMask = GxErrorMask.GX_MASKNOTFOUND | GxErrorMask.GX_MASKLOOPLOCK;
-         RGZ.ExecuteStmt() ;
-         RGZ.Drop();
-         cmdBuffer=" ALTER TABLE producto DROP CONSTRAINT IPRODUCTO2 "
-         ;
-         RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
-         RGZ.ErrorMask = GxErrorMask.GX_MASKNOTFOUND | GxErrorMask.GX_MASKLOOPLOCK;
-         RGZ.ExecuteStmt() ;
-         RGZ.Drop();
-         cmdBuffer=" ALTER TABLE producto DROP tipobienid, DROP categoriaid, DROP marcaid, DROP modeloid, DROP cambsid "
-         ;
-         RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
-         RGZ.ErrorMask = GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK;
-         RGZ.ExecuteStmt() ;
-         RGZ.Drop();
+         /* Indices for table estados */
+         try
+         {
+            cmdBuffer=" CREATE TABLE estados (estadoid  smallint NOT NULL , estado  VARCHAR(100) NOT NULL , PRIMARY KEY(estadoid))  "
+            ;
+            RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
+            RGZ.ErrorMask = GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK;
+            RGZ.ExecuteStmt() ;
+            RGZ.Drop();
+         }
+         catch ( Exception ex )
+         {
+            cmdBuffer=" DROP TABLE estados CASCADE "
+            ;
+            RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
+            RGZ.ErrorMask = GxErrorMask.GX_MASKNOTFOUND | GxErrorMask.GX_MASKLOOPLOCK;
+            RGZ.ExecuteStmt() ;
+            RGZ.Drop();
+            cmdBuffer=" CREATE TABLE estados (estadoid  smallint NOT NULL , estado  VARCHAR(100) NOT NULL , PRIMARY KEY(estadoid))  "
+            ;
+            RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
+            RGZ.ErrorMask = GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK;
+            RGZ.ExecuteStmt() ;
+            RGZ.Drop();
+         }
+      }
+
+      public void Createempleadospiso( )
+      {
+         String cmdBuffer = "" ;
+         /* Indices for table empleadospiso */
+         try
+         {
+            cmdBuffer=" CREATE TABLE empleadospiso (empleadospisoextid  integer NOT NULL , empleadospisoextpiso  VARCHAR(10) NOT NULL , empleadospisoextext  VARCHAR(10) NOT NULL , empleadospisoextcorreo  VARCHAR(50) NOT NULL , empleadopisoextprofesion  bigint NOT NULL , empleadospisoextusuario  VARCHAR(15) NOT NULL , empleadospisoextfecgre  date NOT NULL , empleadospisoextfeact  date NOT NULL , PRIMARY KEY(empleadospisoextid))  "
+            ;
+            RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
+            RGZ.ErrorMask = GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK;
+            RGZ.ExecuteStmt() ;
+            RGZ.Drop();
+         }
+         catch ( Exception ex )
+         {
+            cmdBuffer=" DROP TABLE empleadospiso CASCADE "
+            ;
+            RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
+            RGZ.ErrorMask = GxErrorMask.GX_MASKNOTFOUND | GxErrorMask.GX_MASKLOOPLOCK;
+            RGZ.ExecuteStmt() ;
+            RGZ.Drop();
+            cmdBuffer=" CREATE TABLE empleadospiso (empleadospisoextid  integer NOT NULL , empleadospisoextpiso  VARCHAR(10) NOT NULL , empleadospisoextext  VARCHAR(10) NOT NULL , empleadospisoextcorreo  VARCHAR(50) NOT NULL , empleadopisoextprofesion  bigint NOT NULL , empleadospisoextusuario  VARCHAR(15) NOT NULL , empleadospisoextfecgre  date NOT NULL , empleadospisoextfeact  date NOT NULL , PRIMARY KEY(empleadospisoextid))  "
+            ;
+            RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
+            RGZ.ErrorMask = GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK;
+            RGZ.ExecuteStmt() ;
+            RGZ.Drop();
+         }
       }
 
       private void TablesCount( )
       {
-         if ( ! IsResumeMode( ) )
-         {
-            /* Using cursor P00012 */
-            pr_default.execute(0);
-            productoCount = P00012_AproductoCount[0];
-            pr_default.close(0);
-            PrintRecordCount ( "producto" ,  productoCount );
-         }
       }
 
       private bool PreviousCheck( )
@@ -132,91 +191,13 @@ namespace GeneXus.Programs {
             return true ;
          }
          sSchemaVar = GXUtil.UserId( "Server", context, "DEFAULT");
-         if ( ColumnExist("producto",sSchemaVar,"ptipobienid") )
-         {
-            SetCheckError ( GXResourceManager.GetMessage("GXM_column_exist", new   object[]  {"ptipobienid", "producto"}) ) ;
-            return false ;
-         }
-         if ( ColumnExist("producto",sSchemaVar,"pcategoriaid") )
-         {
-            SetCheckError ( GXResourceManager.GetMessage("GXM_column_exist", new   object[]  {"pcategoriaid", "producto"}) ) ;
-            return false ;
-         }
-         if ( ColumnExist("producto",sSchemaVar,"pmarcaid") )
-         {
-            SetCheckError ( GXResourceManager.GetMessage("GXM_column_exist", new   object[]  {"pmarcaid", "producto"}) ) ;
-            return false ;
-         }
-         if ( ColumnExist("producto",sSchemaVar,"pmodeloid") )
-         {
-            SetCheckError ( GXResourceManager.GetMessage("GXM_column_exist", new   object[]  {"pmodeloid", "producto"}) ) ;
-            return false ;
-         }
-         if ( ColumnExist("producto",sSchemaVar,"pcambsid") )
-         {
-            SetCheckError ( GXResourceManager.GetMessage("GXM_column_exist", new   object[]  {"pcambsid", "producto"}) ) ;
-            return false ;
-         }
-         if ( ! ColumnExist("producto",sSchemaVar,"tipobienid") )
-         {
-            SetCheckError ( GXResourceManager.GetMessage("GXM_column_not_exist", new   object[]  {"tipobienid", "producto"}) ) ;
-            return false ;
-         }
-         if ( ! ColumnExist("producto",sSchemaVar,"categoriaid") )
-         {
-            SetCheckError ( GXResourceManager.GetMessage("GXM_column_not_exist", new   object[]  {"categoriaid", "producto"}) ) ;
-            return false ;
-         }
-         if ( ! ColumnExist("producto",sSchemaVar,"marcaid") )
-         {
-            SetCheckError ( GXResourceManager.GetMessage("GXM_column_not_exist", new   object[]  {"marcaid", "producto"}) ) ;
-            return false ;
-         }
-         if ( ! ColumnExist("producto",sSchemaVar,"modeloid") )
-         {
-            SetCheckError ( GXResourceManager.GetMessage("GXM_column_not_exist", new   object[]  {"modeloid", "producto"}) ) ;
-            return false ;
-         }
-         if ( ! ColumnExist("producto",sSchemaVar,"cambsid") )
-         {
-            SetCheckError ( GXResourceManager.GetMessage("GXM_column_not_exist", new   object[]  {"cambsid", "producto"}) ) ;
-            return false ;
-         }
          return true ;
-      }
-
-      private bool ColumnExist( String sTableName ,
-                                String sMySchemaName ,
-                                String sMyColumnName )
-      {
-         bool result ;
-         result = false;
-         /* Using cursor P00023 */
-         pr_default.execute(1, new Object[] {sTableName, sMySchemaName, sMyColumnName});
-         while ( (pr_default.getStatus(1) != 101) )
-         {
-            tablename = P00023_Atablename[0];
-            ntablename = P00023_ntablename[0];
-            schemaname = P00023_Aschemaname[0];
-            nschemaname = P00023_nschemaname[0];
-            columnname = P00023_Acolumnname[0];
-            ncolumnname = P00023_ncolumnname[0];
-            attrelid = P00023_Aattrelid[0];
-            nattrelid = P00023_nattrelid[0];
-            oid = P00023_Aoid[0];
-            noid = P00023_noid[0];
-            relname = P00023_Arelname[0];
-            nrelname = P00023_nrelname[0];
-            result = true;
-            pr_default.readNext(1);
-         }
-         pr_default.close(1);
-         return result ;
       }
 
       private void ExecuteOnlyTablesReorganization( )
       {
-         ReorgExecute.RegisterBlockForSubmit( 1 ,  "Reorganizeproducto" , new Object[]{ });
+         ReorgExecute.RegisterBlockForSubmit( 1 ,  "Createestados" , new Object[]{ });
+         ReorgExecute.RegisterBlockForSubmit( 2 ,  "Createempleadospiso" , new Object[]{ });
       }
 
       private void ExecuteOnlyRisReorganization( )
@@ -238,7 +219,8 @@ namespace GeneXus.Programs {
 
       private void SetPrecedencetables( )
       {
-         GXReorganization.SetMsg( 1 ,  GXResourceManager.GetMessage("GXM_fileupdate", new   object[]  {"producto", ""}) );
+         GXReorganization.SetMsg( 1 ,  GXResourceManager.GetMessage("GXM_filecrea", new   object[]  {"estados", ""}) );
+         GXReorganization.SetMsg( 2 ,  GXResourceManager.GetMessage("GXM_filecrea", new   object[]  {"empleadospiso", ""}) );
       }
 
       private void SetPrecedenceris( )
@@ -275,152 +257,23 @@ namespace GeneXus.Programs {
 
       public override void initialize( )
       {
-         scmdbuf = "";
-         P00012_AproductoCount = new int[1] ;
+         DS = new GxDataStore();
+         ErrMsg = "";
+         DataBaseName = "";
          sSchemaVar = "";
-         sTableName = "";
-         sMySchemaName = "";
-         sMyColumnName = "";
-         tablename = "";
-         ntablename = false;
-         schemaname = "";
-         nschemaname = false;
-         columnname = "";
-         ncolumnname = false;
-         attrelid = "";
-         nattrelid = false;
-         oid = "";
-         noid = false;
-         relname = "";
-         nrelname = false;
-         P00023_Atablename = new String[] {""} ;
-         P00023_ntablename = new bool[] {false} ;
-         P00023_Aschemaname = new String[] {""} ;
-         P00023_nschemaname = new bool[] {false} ;
-         P00023_Acolumnname = new String[] {""} ;
-         P00023_ncolumnname = new bool[] {false} ;
-         P00023_Aattrelid = new String[] {""} ;
-         P00023_nattrelid = new bool[] {false} ;
-         P00023_Aoid = new String[] {""} ;
-         P00023_noid = new bool[] {false} ;
-         P00023_Arelname = new String[] {""} ;
-         P00023_nrelname = new bool[] {false} ;
-         pr_default = new DataStoreProvider(context, new GeneXus.Programs.reorg__default(),
-            new Object[][] {
-                new Object[] {
-               P00012_AproductoCount
-               }
-               , new Object[] {
-               P00023_Atablename, P00023_Aschemaname, P00023_Acolumnname, P00023_Aattrelid, P00023_Aoid, P00023_Arelname
-               }
-            }
-         );
          /* GeneXus formulas. */
       }
 
       protected short ErrCode ;
-      protected int productoCount ;
-      protected String scmdbuf ;
+      protected short Count ;
+      protected short Res ;
+      protected String ErrMsg ;
+      protected String DataBaseName ;
+      protected String cmdBuffer ;
       protected String sSchemaVar ;
-      protected String sTableName ;
-      protected String sMySchemaName ;
-      protected String sMyColumnName ;
-      protected bool ntablename ;
-      protected bool nschemaname ;
-      protected bool ncolumnname ;
-      protected bool nattrelid ;
-      protected bool noid ;
-      protected bool nrelname ;
-      protected String tablename ;
-      protected String schemaname ;
-      protected String columnname ;
-      protected String attrelid ;
-      protected String oid ;
-      protected String relname ;
+      protected GxDataStore DS ;
       protected IGxDataStore dsDefault ;
       protected GxCommand RGZ ;
-      protected IDataStoreProvider pr_default ;
-      protected int[] P00012_AproductoCount ;
-      protected String[] P00023_Atablename ;
-      protected bool[] P00023_ntablename ;
-      protected String[] P00023_Aschemaname ;
-      protected bool[] P00023_nschemaname ;
-      protected String[] P00023_Acolumnname ;
-      protected bool[] P00023_ncolumnname ;
-      protected String[] P00023_Aattrelid ;
-      protected bool[] P00023_nattrelid ;
-      protected String[] P00023_Aoid ;
-      protected bool[] P00023_noid ;
-      protected String[] P00023_Arelname ;
-      protected bool[] P00023_nrelname ;
    }
-
-   public class reorg__default : DataStoreHelperBase, IDataStoreHelper
-   {
-      public ICursor[] getCursors( )
-      {
-         cursorDefinitions();
-         return new Cursor[] {
-          new ForEachCursor(def[0])
-         ,new ForEachCursor(def[1])
-       };
-    }
-
-    private static CursorDef[] def;
-    private void cursorDefinitions( )
-    {
-       if ( def == null )
-       {
-          Object[] prmP00012 ;
-          prmP00012 = new Object[] {
-          } ;
-          Object[] prmP00023 ;
-          prmP00023 = new Object[] {
-          new Object[] {"sTableName",NpgsqlDbType.Text,255,0} ,
-          new Object[] {"sMySchemaName",NpgsqlDbType.Text,255,0} ,
-          new Object[] {"sMyColumnName",NpgsqlDbType.Text,255,0}
-          } ;
-          def= new CursorDef[] {
-              new CursorDef("P00012", "SELECT COUNT(*) FROM producto ",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmP00012,100,0,true,false )
-             ,new CursorDef("P00023", "SELECT T.TABLENAME, T.TABLEOWNER, T1.ATTNAME, T1.ATTRELID, T2.OID, T2.RELNAME FROM PG_TABLES T, PG_ATTRIBUTE T1, PG_CLASS T2 WHERE (UPPER(T.TABLENAME) = ( UPPER(:sTableName))) AND (UPPER(T.TABLEOWNER) = ( UPPER(:sMySchemaName))) AND (UPPER(T1.ATTNAME) = ( UPPER(:sMyColumnName))) AND (T2.OID = ( T1.ATTRELID)) AND (T2.RELNAME = ( T.TABLENAME)) ",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmP00023,100,0,true,false )
-          };
-       }
-    }
-
-    public void getResults( int cursor ,
-                            IFieldGetter rslt ,
-                            Object[] buf )
-    {
-       switch ( cursor )
-       {
-             case 0 :
-                ((int[]) buf[0])[0] = rslt.getInt(1) ;
-                return;
-             case 1 :
-                ((String[]) buf[0])[0] = rslt.getVarchar(1) ;
-                ((String[]) buf[1])[0] = rslt.getVarchar(2) ;
-                ((String[]) buf[2])[0] = rslt.getVarchar(3) ;
-                ((String[]) buf[3])[0] = rslt.getVarchar(4) ;
-                ((String[]) buf[4])[0] = rslt.getVarchar(5) ;
-                ((String[]) buf[5])[0] = rslt.getVarchar(6) ;
-                return;
-       }
-    }
-
-    public void setParameters( int cursor ,
-                               IFieldSetter stmt ,
-                               Object[] parms )
-    {
-       switch ( cursor )
-       {
-             case 1 :
-                stmt.SetParameter(1, (String)parms[0]);
-                stmt.SetParameter(2, (String)parms[1]);
-                stmt.SetParameter(3, (String)parms[2]);
-                return;
-       }
-    }
-
- }
 
 }

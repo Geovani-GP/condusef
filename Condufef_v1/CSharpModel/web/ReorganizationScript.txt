@@ -1,7 +1,4 @@
-ALTER TABLE producto ADD ptipobienid  smallint , ADD pcategoriaid  smallint , ADD pmarcaid  smallint , ADD pmodeloid  smallint , ADD pcambsid  smallint
-DROP INDEX IPRODUCTO1
-DROP INDEX IPRODUCTO2
-ALTER TABLE producto DROP CONSTRAINT IPRODUCTO1
-ALTER TABLE producto DROP CONSTRAINT IPRODUCTO2
-ALTER TABLE producto DROP tipobienid, DROP categoriaid, DROP marcaid, DROP modeloid, DROP cambsid
+CREATE TABLE estados (estadoid  smallint NOT NULL , estado  VARCHAR(100) NOT NULL , PRIMARY KEY(estadoid))
+
+CREATE TABLE empleadospiso (empleadospisoextid  integer NOT NULL , empleadospisoextpiso  VARCHAR(10) NOT NULL , empleadospisoextext  VARCHAR(10) NOT NULL , empleadospisoextcorreo  VARCHAR(50) NOT NULL , empleadopisoextprofesion  bigint NOT NULL , empleadospisoextusuario  VARCHAR(15) NOT NULL , empleadospisoextfecgre  date NOT NULL , empleadospisoextfeact  date NOT NULL , PRIMARY KEY(empleadospisoextid))
 

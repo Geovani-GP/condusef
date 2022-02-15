@@ -124,16 +124,4 @@
 <ObjClsName>Web Panel</ObjClsName></Object>
 <Parameters></Parameters>
 <IF></IF></CALL></Event>
-<Event>
-<EventName>'Imprimir'</EventName>
-<CALL>
-<Object>
-<ObjClsGuid>84a12160-f59b-4ad7-a683-ea4481ac23e9</ObjClsGuid>
-<ObjCls>1</ObjCls>
-<ObjId>16</ObjId>
-<ObjName>PDF_cambs</ObjName>
-<ObjPgmName>PDF_cambs</ObjPgmName>
-<ObjClsName>Procedure</ObjClsName></Object>
-<Parameters></Parameters>
-<IF></IF></CALL></Event>
 <Suggests></Suggests></ObjectSpec>

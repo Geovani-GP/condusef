@@ -1,3 +1,37 @@
-/**@preserve  GeneXus C# 10_3_15-115824 on 2/2/2022 13:42:9.81
+/**@preserve  GeneXus C# 10_3_15-115824 on 2/15/2022 5:8:39.1
 */
-gx.evt.autoSkip=!1;gx.define("alerts",!0,function(n){var i,t;this.ServerClass="alerts";this.PackageName="GeneXus.Programs";this.setObjectType("web");this.setCmpContext(n);this.ReadonlyForm=!0;this.hasEnterEvent=!1;this.skipOnEnter=!1;this.autoRefresh=!0;this.fullAjax=!0;this.supportAjaxEvents=!0;this.ajaxSecurityToken=!0;this.SetStandaloneVars=function(){};this.e12322_client=function(){this.executeServerEvent("ENTER",!0,null,!1,!1)};this.e13322_client=function(){this.executeServerEvent("CANCEL",!0,null,!1,!1)};this.GXValidFnc=[];i=this.GXValidFnc;this.GXLastCtrlId=0;this.ALERTIFY1Container=gx.uc.getNew(this,2,0,"Alertify",this.CmpContext+"ALERTIFY1Container","this");t=this.ALERTIFY1Container;t.setC2ShowFunction(function(n){n.show()});this.setUserControl(t);this.Events={e12322_client:["ENTER",!0],e13322_client:["CANCEL",!0]};this.EvtParms.REFRESH=[[],[]];this.InitStandaloneVars()})
+gx.evt.autoSkip = false;
+gx.define('alerts', true, function (CmpContext) {
+   this.ServerClass =  "alerts" ;
+   this.PackageName =  "GeneXus.Programs" ;
+   this.setObjectType("web");
+   this.setCmpContext(CmpContext);
+   this.ReadonlyForm = true;
+   this.hasEnterEvent = false;
+   this.skipOnEnter = false;
+   this.autoRefresh = true;
+   this.fullAjax = true;
+   this.supportAjaxEvents =  true ;
+   this.ajaxSecurityToken =  true ;
+   this.SetStandaloneVars=function()
+   {
+   };
+   this.e12322_client=function()
+   {
+      this.executeServerEvent("ENTER", true, null, false, false);
+   };
+   this.e13322_client=function()
+   {
+      this.executeServerEvent("CANCEL", true, null, false, false);
+   };
+   this.GXValidFnc = [];
+   var GXValidFnc = this.GXValidFnc ;
+   this.GXLastCtrlId =0;
+   this.ALERTIFY1Container = gx.uc.getNew(this, 2, 0, "", this.CmpContext + "ALERTIFY1Container", "this");
+   var ALERTIFY1Container = this.ALERTIFY1Container;
+   ALERTIFY1Container.setC2ShowFunction(function(UC) { UC.(); });
+   this.setUserControl(ALERTIFY1Container);
+   this.Events = {"e12322_client": ["ENTER", true] ,"e13322_client": ["CANCEL", true]};
+   this.EvtParms["REFRESH"] = [[],[]];
+   this.InitStandaloneVars( );
+});

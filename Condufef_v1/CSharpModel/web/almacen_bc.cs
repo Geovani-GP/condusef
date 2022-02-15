@@ -2,7 +2,7 @@
                File: almacen_BC
         Description: almacen
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 2/5/2022 15:59:33.59
+       Generated on: 2/15/2022 5:9:9.95
        Program type: Callable routine
           Main DBMS: postgresql
 */

@@ -9,7 +9,7 @@
 <ObjDesc>Selection List etiquetas</ObjDesc>
 <ObjPgmName>Gx00C0</ObjPgmName>
 <ObjClsName>Web Panel</ObjClsName></Object>
-<Result>nogenreq</Result>
+<Result>genreq</Result>
 <Warnings></Warnings>
 <Errors></Errors>
 <Generator>

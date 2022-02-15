@@ -2,7 +2,7 @@
                File: PDF_modelos
         Description: Stub for PDF_modelos
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 2/10/2022 20:1:58.93
+       Generated on: 2/15/2022 5:8:39.92
        Program type: Callable routine
           Main DBMS: postgresql
 */

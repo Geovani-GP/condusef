@@ -2,7 +2,7 @@
                File: tipobien_BC
         Description: tipobien
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 2/10/2022 19:54:26.95
+       Generated on: 2/15/2022 5:8:40.95
        Program type: Callable routine
           Main DBMS: postgresql
 */

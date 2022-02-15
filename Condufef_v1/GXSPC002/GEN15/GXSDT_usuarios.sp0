@@ -1,0 +1,44 @@
+ 
+spec_i([ sdt,[ 0,15,0 ],usuarios,usuarios,0,spa,'10_3_15-115824' ]).
+ 
+struct_dt_i([ 0,15,0 ],name,usuarios).
+struct_dt_i([ 0,15,0 ],namespace,'Condufef_v1').
+struct_dt_i([ 0,15,0 ],significantName,usuarios).
+struct_dt_i([ 0,15,0 ],'ObjName',usuarios).
+struct_dt_i([ 0,15,0 ],'ObjDesc',usuarios).
+struct_dt_i([ 0,15,0 ],'ExternalName',usuarios).
+struct_dt_i([ 0,15,0 ],'ExternalNamespace','Condufef_v1').
+struct_dt_i([ 0,15,0 ],key,[ 9 ]).
+struct_dt_i([ 0,15,0 ],lvl,15).
+struct_dt_i([ 0,15,0 ],fullname,usuarios).
+ 
+struct_dt_elem_i([ 0,15,0 ],1,name,'Idusuario').
+struct_dt_elem_i([ 0,15,0 ],1,camelname,idusuario).
+struct_dt_elem_i([ 0,15,0 ],1,length,9).
+struct_dt_elem_i([ 0,15,0 ],1,decimals,0).
+struct_dt_elem_i([ 0,15,0 ],1,sign,0).
+struct_dt_elem_i([ 0,15,0 ],1,type,[ 4,9,0 ]).
+struct_dt_elem_i([ 0,15,0 ],1,pic,'ZZZZZZZZ9').
+struct_dt_elem_i([ 0,15,0 ],1,collection,'False').
+struct_dt_elem_i([ 0,15,0 ],1,attributeid,'9').
+struct_dt_elem_i([ 0,15,0 ],2,name,'Usuario').
+struct_dt_elem_i([ 0,15,0 ],2,camelname,usuario).
+struct_dt_elem_i([ 0,15,0 ],2,length,25).
+struct_dt_elem_i([ 0,15,0 ],2,decimals,0).
+struct_dt_elem_i([ 0,15,0 ],2,type,[ 13,25,0 ]).
+struct_dt_elem_i([ 0,15,0 ],2,pic,'').
+struct_dt_elem_i([ 0,15,0 ],2,collection,'False').
+struct_dt_elem_i([ 0,15,0 ],2,attributeid,'173').
+struct_dt_elem_i([ 0,15,0 ],3,name,'Contrasena').
+struct_dt_elem_i([ 0,15,0 ],3,camelname,contrasena).
+struct_dt_elem_i([ 0,15,0 ],3,length,10).
+struct_dt_elem_i([ 0,15,0 ],3,decimals,0).
+struct_dt_elem_i([ 0,15,0 ],3,type,[ 13,10,0 ]).
+struct_dt_elem_i([ 0,15,0 ],3,pic,'').
+struct_dt_elem_i([ 0,15,0 ],3,collection,'False').
+struct_dt_elem_i([ 0,15,0 ],3,attributeid,'174').
+ 
+ 
+ 
+ 
+ 

@@ -123,7 +123,6 @@ rule_i(0,p(0,15,fvix,[ 19,20 ],[ 'NAME',cambs_pkey ])).
 rule_i(0,p(0,15,fvix,[ 19,20 ],[ 'LOC','' ])).
 rule_i(0,p(0,15,fvix,[ 19,20 ],[ 'SCHEMA',public ])).
 rule_i(0,p(0,15,fvix,[ 19,20 ],[ 'EXTNAM','YES' ])).
-rule_i(0,rule([ a(22,[ '''Imprimir''','''Imprimir''','' ]) ],[],[],[])).
  
 a_i(1,1,f,'Err',[],[ [],[ t('0',3) ] ]).
 a_i(2,2,t,14,[],[ [],'CAMBS_PKEY',[] ]).
@@ -193,8 +192,7 @@ b_group_i(2,2,lit,0,2,7).
 b_group_i(2,3,lit,0,8,11).
 b_group_i(2,4,lit,0,12,16).
 b_group_i(2,5,lit,0,17,22).
-b_group_i(2,6,lit,0,23,27).
-b_group_i(2,7,lit,0,28,0).
+b_group_i(2,6,lit,0,23,0).
  
 b_line_i(1,2,1,cmd,1,[ t('',146,1,0),t('Start',3,1,7) ]).
 b_line_i(2,2,2,cmd,1,[ t('',107,1,0),t([ t('Updateimage',23,2,2),t('fromimage(',1,2,15) ],31,2,2),t(i(98,'c7599f2c-228e-49d1-912e-ed139fdd44e8'),69,1,26),t(')',4,1,32) ]).
@@ -214,9 +212,6 @@ b_line_i(18,2,5,cmd,3,[ t('',147,3,0) ]).
 b_line_i(22,2,5,cmd,3,[ t('',146,3,0),t('Enter',3,22,7) ]).
 b_line_i(23,2,6,cmd,3,[ t('',104,3,0),t(o(13,'Catalog_De_Cambs'),28,3,2) ]).
 b_line_i(24,2,6,cmd,3,[ t('',147,3,0) ]).
-b_line_i(27,2,6,cmd,3,[ t('',146,3,0),t('''Imprimir''',3,27,7) ]).
-b_line_i(28,2,7,cmd,3,[ t('',104,3,0),t(o(1,'PDF_cambs'),28,3,2) ]).
-b_line_i(29,2,7,cmd,3,[ t('',147,3,0) ]).
  
 sf_break_i(12,2).
  
@@ -236,7 +231,6 @@ html_i(10,html('<p></p>')).
 html_i(11,html('<p>')).
 html_i(12,s(12)).
 html_i(17,html('</p>')).
-html_i(18,button('''Imprimir''')).
  
 html_sub_i(2,0,html_i(0,html('<tbody>'))).
 html_sub_i(2,3,html_i(1,row(3))).
@@ -453,17 +447,6 @@ html_comp_i(16,'Alt','',d,[ str ]).
 html_comp_i(16,'Title','',d,[ str ]).
 html_comp_i(16,'Hspace',0,d,[ num ]).
 html_comp_i(16,'Vspace',0,d,[ num ]).
-html_comp_i(18,'Controlname','Button1',v,[ str ]).
-html_comp_i(18,'Class','Button',d,[ str ]).
-html_comp_i(18,'Event','''Imprimir''',v,[ str ]).
-html_comp_i(18,'Caption','Imprimir',d,[ str ]).
-html_comp_i(18,'Title','Imprimir',d,[ str ]).
-html_comp_i(18,'Font',font('Microsoft Sans Serif',10,[]),d,[ font ]).
-html_comp_i(18,'Forecolor',rgb(0,4,68),d,[ color ]).
-html_comp_i(18,'Backcolor',rgb(255,255,255),d,[ color ]).
-html_comp_i(18,'Border','2',d,[ str ]).
-html_comp_i(18,'Bordercolor',rgb(219,220,222),d,[ color ]).
-html_comp_i(18,'Buttonborderstyle',standard,d,[ str ]).
  
  
  
@@ -480,7 +463,6 @@ lit_i(14,1,s(t(83,2),12),[ ctlname(83),ctrltype(edit,14),pos(14),readonly,ispwd(
 lit_i(15,1,s(t('Updateimage',23),12),[ ctlname('&Updateimage'),ctrltype(edit,15),pos(15),readonly,ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
 lit_i(16,1,s(t('Deleteimage',23),12),[ ctlname('&Deleteimage'),ctrltype(edit,16),pos(16),readonly,ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
 lit_i(12,1,s(12),[ ctlname('Cambsgrid'),el([ t(25,2),t(83,2),t('Updateimage',23),t('Deleteimage',23) ]),width(0),rect(0,0,10,10),title('Nothing') ]).
-lit_i(18,1,button('''Imprimir'''),[ ctlname('Button1'),width(0),rect(0,0,10,10),title('Nothing') ]).
 lit_i(1,1,window,[ rect(0,0,1000,1000),ctlname('Form') ]).
  
  
@@ -531,18 +513,14 @@ sub_info_i(146,[ t('Updateimage',23,7,7),t('Click',3,7,20) ],7,9,[ [ 25 ],[] ]).
 sub_info_i(146,[ t('Deleteimage',23,11,7),t('Click',3,11,20) ],11,13,[ [ 25 ],[] ]).
 sub_info_i(146,[ t('Cambsgrid',3,16,7),t('Load',3,16,17) ],16,18,[ [],[] ]).
 sub_info_i(146,'Enter',22,24,[ [],[] ]).
-sub_info_i(146,'''Imprimir''',27,29,[ [],[] ]).
  
-pgm_parm_i(proc,16,'PDF_CAMBS',[],[]).
 pgm_parm_i(web,30,'CATALOG_DE_CAMBS',[],[]).
 pgm_parm_i(trn,14,'CAMBS',[ [ char,3,0,0 ],[ int,9,0,0 ] ],[ [ 'Mode',in,[] ],[ cambsid,in,[] ] ]).
  
 pgm_callprotocol_i(web,86,'DETALLESCAMBS','INTERNAL').
-pgm_callprotocol_i(proc,16,'PDF_CAMBS','HTTP').
 pgm_callprotocol_i(web,30,'CATALOG_DE_CAMBS','INTERNAL').
 pgm_callprotocol_i(trn,14,'CAMBS','INTERNAL').
  
-pgm_main_info_i(proc,16,'PDF_CAMBS',[ 15,'APDF_CAMBS','','','','','HTTP' ]).
  
  
  

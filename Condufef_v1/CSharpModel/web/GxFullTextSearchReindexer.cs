@@ -2,7 +2,7 @@
                File: GxFullTextSearchReindexer
         Description: No description for object
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 2/10/2022 20:2:12.72
+       Generated on: 2/15/2022 5:9:59.16
        Program type: Callable routine
           Main DBMS: postgresql
 */
@@ -32,37 +32,10 @@ namespace GeneXus.Programs {
          GxSilentTrnSdt obj ;
          IGxSilentTrn trn ;
          bool result ;
-         obj = new Sdtmodelos(context);
-         trn = obj.getTransaction();
-         result = trn.Reindex();
-         obj = new Sdtcambs(context);
-         trn = obj.getTransaction();
-         result = trn.Reindex();
-         obj = new Sdtmarcas(context);
-         trn = obj.getTransaction();
-         result = trn.Reindex();
-         obj = new Sdtproducto(context);
-         trn = obj.getTransaction();
-         result = trn.Reindex();
-         obj = new Sdttipobien(context);
-         trn = obj.getTransaction();
-         result = trn.Reindex();
-         obj = new Sdtarea(context);
-         trn = obj.getTransaction();
-         result = trn.Reindex();
-         obj = new Sdtempleadospiso(context);
-         trn = obj.getTransaction();
-         result = trn.Reindex();
-         obj = new Sdtalmacen(context);
-         trn = obj.getTransaction();
-         result = trn.Reindex();
-         obj = new Sdtempleados(context);
-         trn = obj.getTransaction();
-         result = trn.Reindex();
          obj = new Sdtestados(context);
          trn = obj.getTransaction();
          result = trn.Reindex();
-         obj = new Sdtproveedores(context);
+         obj = new Sdtempleadospiso(context);
          trn = obj.getTransaction();
          result = trn.Reindex();
          obj = new Sdtstatus(context);
@@ -71,16 +44,46 @@ namespace GeneXus.Programs {
          obj = new Sdttipodocumento(context);
          trn = obj.getTransaction();
          result = trn.Reindex();
+         obj = new Sdtmodelos(context);
+         trn = obj.getTransaction();
+         result = trn.Reindex();
+         obj = new Sdtalmacen(context);
+         trn = obj.getTransaction();
+         result = trn.Reindex();
+         obj = new Sdtarea(context);
+         trn = obj.getTransaction();
+         result = trn.Reindex();
          obj = new Sdtorigen(context);
          trn = obj.getTransaction();
          result = trn.Reindex();
+         obj = new Sdtusuarios(context);
+         trn = obj.getTransaction();
+         result = trn.Reindex();
+         obj = new Sdtcambs(context);
+         trn = obj.getTransaction();
+         result = trn.Reindex();
+         obj = new Sdtproveedores(context);
+         trn = obj.getTransaction();
+         result = trn.Reindex();
+         obj = new Sdtproducto(context);
+         trn = obj.getTransaction();
+         result = trn.Reindex();
+         obj = new Sdtmarcas(context);
+         trn = obj.getTransaction();
+         result = trn.Reindex();
          obj = new Sdtestatusarticulo(context);
+         trn = obj.getTransaction();
+         result = trn.Reindex();
+         obj = new Sdtempleados(context);
          trn = obj.getTransaction();
          result = trn.Reindex();
          obj = new Sdtcategorias(context);
          trn = obj.getTransaction();
          result = trn.Reindex();
          obj = new Sdtentidadfederativa(context);
+         trn = obj.getTransaction();
+         result = trn.Reindex();
+         obj = new Sdttipobien(context);
          trn = obj.getTransaction();
          result = trn.Reindex();
          return 1 ;

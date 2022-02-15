@@ -424,6 +424,7 @@ att_prop_i(2,19,'EmptyAsNull','Yes',d).
 att_prop_i(2,19,idBasedOn,'',d).
 att_prop_i(2,19,'AUTONUMBER','0',d).
 att_prop_i(2,19,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,19,'AttRegEx','',d).
 att_prop_i(2,19,'AttValidationFailedMsg','',d).
 att_prop_i(2,19,'FullName',almacenid,v).
 att_prop_i(2,13,'HORIZONTAL_DESCRIPTION',empleadosid,v).
@@ -433,6 +434,7 @@ att_prop_i(2,13,'EmptyAsNull','Yes',d).
 att_prop_i(2,13,idBasedOn,'',d).
 att_prop_i(2,13,'AUTONUMBER','0',d).
 att_prop_i(2,13,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,13,'AttRegEx','',d).
 att_prop_i(2,13,'AttValidationFailedMsg','',d).
 att_prop_i(2,13,'FullName',empleadosid,v).
 att_prop_i(2,143,'HORIZONTAL_DESCRIPTION',almacendsc,v).
@@ -502,6 +504,7 @@ att_prop_i(2,149,'EmptyAsNull','Yes',d).
 att_prop_i(2,149,idBasedOn,'',d).
 att_prop_i(2,149,'AUTONUMBER','0',d).
 att_prop_i(2,149,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,149,'AttRegEx','',d).
 att_prop_i(2,149,'AttValidationFailedMsg','',d).
 att_prop_i(2,149,'FullName',almacentelefono,v).
 att_prop_i(2,150,'HORIZONTAL_DESCRIPTION',alamcenobservaciones,v).
@@ -530,6 +533,7 @@ att_prop_i(2,152,'ExternalNamespace','Condufef_v1',d).
 att_prop_i(2,152,'EmptyAsNull','Yes',d).
 att_prop_i(2,152,idBasedOn,'',d).
 att_prop_i(2,152,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,152,'AttRegEx','',d).
 att_prop_i(2,152,'AttValidationFailedMsg','',d).
 att_prop_i(2,152,idDATEFORMAT,idDATEFORMAT_LONG,v).
 att_prop_i(2,152,'FullName',almacenfecreg,v).
@@ -539,6 +543,7 @@ att_prop_i(2,153,'ExternalNamespace','Condufef_v1',d).
 att_prop_i(2,153,'EmptyAsNull','Yes',d).
 att_prop_i(2,153,idBasedOn,'',d).
 att_prop_i(2,153,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,153,'AttRegEx','',d).
 att_prop_i(2,153,'AttValidationFailedMsg','',d).
 att_prop_i(2,153,idDATEFORMAT,idDATEFORMAT_LONG,v).
 att_prop_i(2,153,'FullName',almacenfecultact,v).

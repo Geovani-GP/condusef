@@ -2,7 +2,7 @@
                File: marcas
         Description: marcas
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 2/10/2022 20:1:59.2
+       Generated on: 2/15/2022 5:8:50.0
        Program type: Callable routine
           Main DBMS: postgresql
 */
@@ -1415,7 +1415,7 @@ namespace GeneXus.Programs {
          context.AddJavascriptSource("jquery.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxtimezone.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxgral.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("gxcfg.js", "?20222102015954");
+         context.AddJavascriptSource("gxcfg.js", "?2022215585053");
          if ( context.isSpaRequest( ) )
          {
             enableOutput();
@@ -1582,11 +1582,11 @@ namespace GeneXus.Programs {
       protected void define_styles( )
       {
          AddStyleSheetFile("calendar-system.css", "?11323129");
-         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?19483837");
+         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?583790");
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?20222102015958");
+            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?2022215585057");
             idxLst = (int)(idxLst+1);
          }
          /* End function define_styles */
@@ -1596,7 +1596,7 @@ namespace GeneXus.Programs {
       {
          context.AddJavascriptSource("messages.spa.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxdec.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("marcas.js", "?20222102015959");
+         context.AddJavascriptSource("marcas.js", "?2022215585057");
          /* End function include_jscripts */
       }
 

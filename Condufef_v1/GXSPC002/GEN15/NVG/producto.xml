@@ -16,7 +16,17 @@
 <GenId>15</GenId>
 <GenName>Default (C#)</GenName></Generator>
 <FormClass>HTML</FormClass>
-<Parameters></Parameters>
+<Parameters>
+<Parameter>
+<IO>in</IO>
+<Variable>
+<VarId>Mode</VarId>
+<VarName>&amp;Mode</VarName></Variable></Parameter>
+<Parameter>
+<IO>in</IO>
+<Variable>
+<VarId>Productoid</VarId>
+<VarName>&amp;productoid</VarName></Variable></Parameter></Parameters>
 <Levels>
 <Level>
 <LevelType>Trn</LevelType>
@@ -24,12 +34,12 @@
 <BaseTable>
 <Table>
 <TableId>23</TableId>
-<TableName>producto</TableName>
+<TableName>PRODUCTO</TableName>
 <Description>producto</Description></Table></BaseTable>
 <NavigationTree>
 <Table>
 <TableId>23</TableId>
-<TableName>producto</TableName>
+<TableName>PRODUCTO</TableName>
 <Description>producto</Description>
 <Updated>Yes</Updated>
 <RecordsToRead>many</RecordsToRead>
@@ -50,7 +60,7 @@
 <TableToUpdate>
 <Table>
 <TableId>23</TableId>
-<TableName>producto</TableName>
+<TableName>PRODUCTO</TableName>
 <Description>producto</Description></Table>
 <TableAction>insert</TableAction>
 <AttrisToUpdate>
@@ -97,7 +107,7 @@
 <TableToUpdate>
 <Table>
 <TableId>23</TableId>
-<TableName>producto</TableName>
+<TableName>PRODUCTO</TableName>
 <Description>producto</Description></Table>
 <TableAction>update</TableAction>
 <AttrisToUpdate>
@@ -140,7 +150,7 @@
 <TableToUpdate>
 <Table>
 <TableId>23</TableId>
-<TableName>producto</TableName>
+<TableName>PRODUCTO</TableName>
 <Description>producto</Description></Table>
 <TableAction>delete</TableAction>
 <AttrisToUpdate></AttrisToUpdate></TableToUpdate></TablesToUpdate>
@@ -151,24 +161,11 @@
 <Levels></Levels>
 <AfterTrnRules></AfterTrnRules>
 <AfterLevelRules></AfterLevelRules></Level></Levels>
-<Prompts>
-<Prompt>
-<Table>
-<TableId>23</TableId>
-<TableName>producto</TableName>
-<Description>producto</Description></Table>
-<Object>
-<ObjClsGuid>c9584656-94b6-4ccd-890f-332d11fc2c25</ObjClsGuid>
-<ObjCls>13</ObjCls>
-<ObjId>108</ObjId>
-<ObjName>Gx00N0</ObjName>
-<ObjPgmName>Gx00N0</ObjPgmName>
-<ObjClsName>Web Panel</ObjClsName></Object>
-<InputParameters></InputParameters>
-<OutputParameters>
-<Attribute>
-<AttriId>175</AttriId>
-<AttriName>productoid</AttriName>
-<Description>productoid</Description></Attribute></OutputParameters>
-<PromptType>System</PromptType></Prompt></Prompts>
-<Suggests></Suggests></ObjectSpec>
+<Suggests></Suggests>
+<AdditionalWarnings>
+<Warning>
+<MsgCode>spc0208</MsgCode>
+<Message>
+<Token>No triggered actions</Token>
+<Token></Token>
+<Token>.</Token></Message></Warning></AdditionalWarnings></ObjectSpec>

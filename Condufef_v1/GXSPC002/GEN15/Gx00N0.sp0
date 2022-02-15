@@ -131,6 +131,36 @@ rule_i(0,maingen(15)).
 rule_i(0,parm([ 'Pproductoid' ],[])).
 rule_i(0,parmio([ [ 'Pproductoid',out ] ])).
 rule_i(0,order([ 175 ])).
+rule_i(0,file(23,'PRODUCTO',[ 175,179,87,180,181,182,91,92,93,183 ])).
+rule_i(0,loc([ 23 ],'PRODUCTO','','LAN')).
+rule_i(0,index(23,'PRODUCTO_PKEY',u,[ 15,16 ])).
+rule_i(0,loc([ 23,'PRODUCTO_PKEY' ],producto_pkey,'','LAN')).
+rule_i(0,index(23,'PRODUCTO_ID',k,[ 15 ])).
+rule_i(0,loc([ 23,'PRODUCTO_ID' ],producto_id,'','LAN')).
+rule_i(0,index(23,'IPRODUCTO',u,[ 175 ])).
+rule_i(0,loc([ 23,'IPRODUCTO' ],'IPRODUCTO','','LAN')).
+rule_i(0,p(0,0,fv,13,[ intname,'PRODUCTO' ])).
+rule_i(0,p(0,0,fv,13,[ table,23 ])).
+rule_i(0,p(0,15,fv,13,[])).
+rule_i(0,p(0,15,fv,13,[ 'NAME',producto ])).
+rule_i(0,p(0,15,fv,13,[ 'LOC','' ])).
+rule_i(0,p(0,15,fv,13,[ 'SCHEMA',public ])).
+rule_i(0,p(0,15,fv,13,[ 'EXTNAM','YES' ])).
+rule_i(0,p(0,15,fvix,[ 13,12 ],[])).
+rule_i(0,p(0,15,fvix,[ 13,12 ],[ 'NAME',producto_pkey ])).
+rule_i(0,p(0,15,fvix,[ 13,12 ],[ 'LOC','' ])).
+rule_i(0,p(0,15,fvix,[ 13,12 ],[ 'SCHEMA',public ])).
+rule_i(0,p(0,15,fvix,[ 13,12 ],[ 'EXTNAM','YES' ])).
+rule_i(0,p(0,15,fvix,[ 13,13 ],[])).
+rule_i(0,p(0,15,fvix,[ 13,13 ],[ 'NAME',producto_id ])).
+rule_i(0,p(0,15,fvix,[ 13,13 ],[ 'LOC','' ])).
+rule_i(0,p(0,15,fvix,[ 13,13 ],[ 'SCHEMA',public ])).
+rule_i(0,p(0,15,fvix,[ 13,13 ],[ 'EXTNAM','YES' ])).
+rule_i(0,p(0,15,fvix,[ 13,24 ],[])).
+rule_i(0,p(0,15,fvix,[ 13,24 ],[ 'NAME','' ])).
+rule_i(0,p(0,15,fvix,[ 13,24 ],[ 'LOC','' ])).
+rule_i(0,p(0,15,fvix,[ 13,24 ],[ 'SCHEMA','' ])).
+rule_i(0,p(0,15,fvix,[ 13,24 ],[ 'EXTNAM','YES' ])).
 rule_i(0,rule([ a(22,[ '''Toggle''','''Toggle''','' ]) ],[],[],[])).
  
 a_i(1,1,f,'Err',[],[ [],[ t('0',3) ] ]).
@@ -152,10 +182,10 @@ v_i(t,o,2,175).
  
  
  
-attri_i(92,[ productofecreg,dtime,10,8,'99/99/9999 99:99:99',0,productofecreg,'',0 ]).
 attri_i(93,[ productofecultact,dtime,10,8,'99/99/9999 99:99:99',0,productofecultact,'',0 ]).
-attri_i(179,[ pcambsid,int,4,0,'ZZZ9',0,pcambsid,'',0 ]).
+attri_i(92,[ productofecreg,dtime,10,8,'99/99/9999 99:99:99',0,productofecreg,'',0 ]).
 attri_i(180,[ pmodeloid,int,4,0,'ZZZ9',0,pmodeloid,'',0 ]).
+attri_i(179,[ pcambsid,int,4,0,'ZZZ9',0,pcambsid,'',0 ]).
 attri_i(91,[ productousuario,svchar,15,0,'',0,productousuario,'',0 ]).
 attri_i(87,[ productodsc,svchar,100,0,'',0,productodsc,'',0 ]).
 attri_i(175,[ productoid,int,9,0,'ZZZZZZZZ9',0,productoid,'',0 ]).
@@ -173,9 +203,10 @@ attri_i('Cproductodsc',[ cproductodsc,svchar,100,0,'',0,productodsc,'',8 ]).
 attri_i('Cproductoid',[ cproductoid,int,9,0,'ZZZZZZZZ9',0,productoid,'',6 ]).
 attri_i('Linkselection',[ 'LinkSelection',bits,1024,0,'',0,'Link Selection','',5 ]).
  
-table_i(23,[ producto,[ 175,87,91,92,93,179,180 ],producto,producto ]).
+table_i(23,[ 'PRODUCTO',[ 175,179,87,180,91,92,93 ],producto,producto ]).
  
-index_i(23,[ 'IPRODUCTO',u,[ 175 ],'Iproducto' ]).
+index_i(23,[ 'PRODUCTO_PKEY',u,[ 15,16 ],'PRODUCTO_PKEY' ]).
+index_i(23,[ 'IPRODUCTO',u,[ 175 ],'IPRODUCTO' ]).
  
  
  
@@ -196,6 +227,17 @@ start_i(2,0,0,[ [ [ 175,23,'Cproductoid',>= ] ],many ]).
  
  
  
+map_i(23,i,'IPRODUCTO',[ 'IPRODUCTO' ]).
+map_i(23,a,183,[ ptipobienid ]).
+map_i(23,a,93,[ productofecultact ]).
+map_i(23,a,92,[ productofecreg ]).
+map_i(23,a,91,[ productousuario ]).
+map_i(23,a,182,[ pcategoriaid ]).
+map_i(23,a,181,[ pmarcaid ]).
+map_i(23,a,180,[ pmodeloid ]).
+map_i(23,a,87,[ productodsc ]).
+map_i(23,a,179,[ pcambsid ]).
+map_i(23,a,175,[ productoid ]).
  
  
  
@@ -1440,6 +1482,7 @@ att_prop_i(2,175,'EmptyAsNull','Yes',d).
 att_prop_i(2,175,idBasedOn,'',d).
 att_prop_i(2,175,'AUTONUMBER','0',d).
 att_prop_i(2,175,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,175,'AttRegEx','',d).
 att_prop_i(2,175,'AttValidationFailedMsg','',d).
 att_prop_i(2,175,'FullName',productoid,v).
 att_prop_i(2,87,'ExternalName',productodsc,d).
@@ -1460,40 +1503,44 @@ att_prop_i(2,91,'DB_NLS_SUPPORT','No',d).
 att_prop_i(2,91,'AttRegEx','',d).
 att_prop_i(2,91,'AttValidationFailedMsg','',d).
 att_prop_i(2,91,'FullName',productousuario,v).
-att_prop_i(2,180,'ExternalName',pmodeloid,d).
-att_prop_i(2,180,'ExternalNamespace','Condufef_v1',d).
-att_prop_i(2,180,'EmptyAsNull','Yes',d).
-att_prop_i(2,180,idBasedOn,'',d).
-att_prop_i(2,180,'AUTONUMBER','0',d).
-att_prop_i(2,180,'ATT_INITIAL_VALUE','',d).
-att_prop_i(2,180,'AttValidationFailedMsg','',d).
-att_prop_i(2,180,'FullName',pmodeloid,v).
 att_prop_i(2,179,'ExternalName',pcambsid,d).
 att_prop_i(2,179,'ExternalNamespace','Condufef_v1',d).
 att_prop_i(2,179,'EmptyAsNull','Yes',d).
 att_prop_i(2,179,idBasedOn,'',d).
 att_prop_i(2,179,'AUTONUMBER','0',d).
 att_prop_i(2,179,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,179,'AttRegEx','',d).
 att_prop_i(2,179,'AttValidationFailedMsg','',d).
 att_prop_i(2,179,'FullName',pcambsid,v).
-att_prop_i(2,93,'ExternalName',productofecultact,d).
-att_prop_i(2,93,'ExternalNamespace','Condufef_v1',d).
-att_prop_i(2,93,'EmptyAsNull','Yes',d).
-att_prop_i(2,93,idBasedOn,'',d).
-att_prop_i(2,93,'ATT_INITIAL_VALUE','',d).
-att_prop_i(2,93,'AttValidationFailedMsg','',d).
-att_prop_i(2,93,idDATEFORMAT,idDATEFORMAT_LONG,v).
-att_prop_i(2,93,idHOURFORMAT,idHOURFORMAT_HOURMINSEC,v).
-att_prop_i(2,93,'FullName',productofecultact,v).
+att_prop_i(2,180,'ExternalName',pmodeloid,d).
+att_prop_i(2,180,'ExternalNamespace','Condufef_v1',d).
+att_prop_i(2,180,'EmptyAsNull','Yes',d).
+att_prop_i(2,180,idBasedOn,'',d).
+att_prop_i(2,180,'AUTONUMBER','0',d).
+att_prop_i(2,180,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,180,'AttRegEx','',d).
+att_prop_i(2,180,'AttValidationFailedMsg','',d).
+att_prop_i(2,180,'FullName',pmodeloid,v).
 att_prop_i(2,92,'ExternalName',productofecreg,d).
 att_prop_i(2,92,'ExternalNamespace','Condufef_v1',d).
 att_prop_i(2,92,'EmptyAsNull','Yes',d).
 att_prop_i(2,92,idBasedOn,'',d).
 att_prop_i(2,92,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,92,'AttRegEx','',d).
 att_prop_i(2,92,'AttValidationFailedMsg','',d).
 att_prop_i(2,92,idDATEFORMAT,idDATEFORMAT_LONG,v).
 att_prop_i(2,92,idHOURFORMAT,idHOURFORMAT_HOURMINSEC,v).
 att_prop_i(2,92,'FullName',productofecreg,v).
+att_prop_i(2,93,'ExternalName',productofecultact,d).
+att_prop_i(2,93,'ExternalNamespace','Condufef_v1',d).
+att_prop_i(2,93,'EmptyAsNull','Yes',d).
+att_prop_i(2,93,idBasedOn,'',d).
+att_prop_i(2,93,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,93,'AttRegEx','',d).
+att_prop_i(2,93,'AttValidationFailedMsg','',d).
+att_prop_i(2,93,idDATEFORMAT,idDATEFORMAT_LONG,v).
+att_prop_i(2,93,idHOURFORMAT,idHOURFORMAT_HOURMINSEC,v).
+att_prop_i(2,93,'FullName',productofecultact,v).
  
  
 tbl_att_prop_i(2,23,175,'AllowNulls',n).

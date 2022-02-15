@@ -36,8 +36,9 @@ lac_i(4,[ [ 'Usuario','Contrasena' ] ]).
 lac_i(3,[ [ 'Usuario','Contrasena' ] ]).
  
  
+lits_i('Registrate aquí..',5,10).
  
-cls_i([ 0,0 ],[ 0,24 ]).
+cls_i([ 0,0 ],[ 5,26 ]).
  
 pos_i('Usuario',[ 0,0,0 ]).
 pos_i('Contrasena',[ 0,0,0 ]).
@@ -114,6 +115,8 @@ rule_i(0,prop('WEB_AUTO_FOCUS','UMPV')).
 rule_i(0,prop('OnSessionTimeout','Ignore')).
 rule_i(0,prop('OBJECT_METADATA','')).
 rule_i(0,prop('IsMain','-1')).
+rule_i(0,prop('SHOWMASTERPAGE_POPUP','0')).
+rule_i(0,prop('MasterPage',o(13,'MasterLogin'))).
 rule_i(0,prop('WEB_COMP','No')).
 rule_i(0,prop('Theme',o(25,'Flat'))).
 rule_i(0,prop('Folder',o(8,'WebApi'))).
@@ -218,7 +221,8 @@ b_group_i(2,5,lit,0,37,14).
 b_group_i(2,6,nvg,4,37,37).
 b_group_i(4,1,lit,0,38,38).
 b_group_i(2,7,lit,0,51,58).
-b_group_i(2,8,lit,0,59,0).
+b_group_i(2,8,lit,0,59,66).
+b_group_i(2,9,lit,0,67,0).
  
 b_line_i(1,2,1,cmd,1,[ t('',146,1,0),t('''INICIAR SESIÓN ''',3,1,7) ]).
 b_line_i(5,2,2,cmd,1,[ t('',109,1,0),t('null(',1,5,14),t('Usuario',23,1,5),t(')',4,1,23),t('.OR.',9,1,25),t('null(',1,5,42),t('Contrasena',23,1,30),t(')',4,1,51) ]).
@@ -259,9 +263,12 @@ b_line_i(55,2,7,cmd,28,[ t('',147,28,0) ]).
 b_line_i(58,2,7,cmd,28,[ t('',146,28,0),t('Start',3,58,7) ]).
 b_line_i(59,2,8,cmd,28,[ t('',107,28,0),t([ t('Webcomp1',3,28,0),t('Object',3,28,0) ],29,28,0),t(=,10,28,0),t('create(',1,28,0),t(o(13,'Alerts'),28,28,0),t(')',4,28,0) ]).
 b_line_i(62,2,8,cmd,28,[ t('',147,28,0) ]).
-b_line_i(1000,2,8,cmd,0,[ t('',146,0,0),t('Load',3,0,0) ]).
-b_line_i(1001,2,8,cmd,0,[ t('',155,0,0) ]).
-b_line_i(1002,2,8,cmd,0,[ t('',147,0,0) ]).
+b_line_i(66,2,8,cmd,28,[ t('',146,28,0),t([ t('Registrarw',3,66,7),t('Click',3,66,18) ],29,66,18) ]).
+b_line_i(67,2,9,cmd,28,[ t('',104,28,0),t(o(13,'Register'),28,28,2) ]).
+b_line_i(68,2,9,cmd,28,[ t('',147,28,0) ]).
+b_line_i(1000,2,9,cmd,0,[ t('',146,0,0),t('Load',3,0,0) ]).
+b_line_i(1001,2,9,cmd,0,[ t('',155,0,0) ]).
+b_line_i(1002,2,9,cmd,0,[ t('',147,0,0) ]).
  
  
  
@@ -277,7 +284,7 @@ b_line_i(1002,2,8,cmd,0,[ t('',147,0,0) ]).
  
 html_i(2,html('&nbsp;')).
 html_i(3,table(3)).
-html_i(27,comp(webcomp)).
+html_i(34,comp(webcomp)).
  
 html_sub_i(3,0,html_i(0,html('<tbody>'))).
 html_sub_i(3,4,html_i(1,row(4))).
@@ -287,7 +294,7 @@ html_sub_i(6,0,html_i(0,html('<tbody>'))).
 html_sub_i(6,7,html_i(1,row(7))).
 html_sub_i(7,8,html_i(0,cell(8))).
 html_sub_i(7,9,html_i(1,cell(9))).
-html_sub_i(9,10,html_i(0,bitmap('9fb193d9-64a4-4d30-b129-ff7c76830f7e-120'))).
+html_sub_i(9,10,html_i(0,bitmap('9fb193d9-64a4-4d30-b129-ff7c76830f7e-101'))).
 html_sub_i(6,11,html_i(2,row(11))).
 html_sub_i(11,12,html_i(0,cell(12))).
 html_sub_i(12,0,html_i(0,html('Usuario'))).
@@ -306,8 +313,16 @@ html_sub_i(22,23,html_i(0,cell(23))).
 html_sub_i(22,24,html_i(1,cell(24))).
 html_sub_i(24,0,html_i(0,html('&nbsp;'))).
 html_sub_i(24,25,html_i(1,button('''INICIAR SESIÓN '''))).
-html_sub_i(6,0,html_i(6,html('</tbody>'))).
-html_sub_i(5,26,html_i(1,usercontrol(26))).
+html_sub_i(6,26,html_i(6,row(26))).
+html_sub_i(26,27,html_i(0,cell(27))).
+html_sub_i(26,28,html_i(1,cell(28))).
+html_sub_i(28,0,html_i(0,html(ó))).
+html_sub_i(6,29,html_i(7,row(29))).
+html_sub_i(29,30,html_i(0,cell(30))).
+html_sub_i(29,31,html_i(1,cell(31))).
+html_sub_i(31,32,html_i(0,t('Registrate aquí..',3))).
+html_sub_i(6,0,html_i(8,html('</tbody>'))).
+html_sub_i(5,33,html_i(1,usercontrol(33))).
 html_sub_i(3,0,html_i(2,html('</tbody>'))).
  
 html_tags_i(1,'Class','Form').
@@ -345,7 +360,7 @@ html_comp_i(8,'Width',measure(68,px),v,[ measure ]).
 html_comp_i(9,'Align',center,v,[ str ]).
 html_comp_i(10,'Id','Image1',v,[ str ]).
 html_comp_i(10,'Class','Image',v,[ str ]).
-html_comp_i(10,src,i(98,'5d9d0499-e4ca-410a-aefe-c3e59a54b528'),v,[ image ]).
+html_comp_i(10,src,i(98,'5f30ca97-9603-4cf3-8c47-b1a261245deb'),v,[ image ]).
 html_comp_i(10,lowsrc,'',d,[ str ]).
 html_comp_i(10,'Returnonclick',0,d,[ bool ]).
 html_comp_i(10,'Eventgx','',d,[ str ]).
@@ -440,19 +455,32 @@ html_comp_i(25,'Backcolor',rgb(0,128,128),v,[ color ]).
 html_comp_i(25,'Border','2',d,[ str ]).
 html_comp_i(25,'Bordercolor',rgb(219,220,222),d,[ color ]).
 html_comp_i(25,'Buttonborderstyle',standard,d,[ str ]).
-html_comp_i(26,'Usercontroltype','HugaoMessages',d,[ str ]).
-html_comp_i(26,'Constructorname','HugaoMessages',d,[ str ]).
-html_comp_i(26,'Showmethodname',show,d,[ str ]).
-html_comp_i(26,'Controlname','HugaoMessages1',v,[ str ]).
-html_comp_i(26,'Type',jgrowl,d,[ str ]).
-html_comp_i(26,'Visible',-1,d,[ bool ]).
-html_comp_i(26,'Csssupportfiles',[ [ t('''HugaoMessages\css\jquery.growl.min.css''',3) ] ],d,[ params ]).
-html_comp_i(26,'Jssupportfiles',[ [ t('''HugaoMessages\js\jquery.growl.min.js''',3) ],[ t('''HugaoMessages\HugaoMessagesRender.js''',3) ] ],d,[ params ]).
-html_comp_i(26,'Csssharedsupportfiles',[],d,[ params ]).
-html_comp_i(26,'Jssharedsupportfiles',[],d,[ params ]).
-html_comp_i(27,'Controlname','Webcomp1',v,[ str ]).
-html_comp_i(27,'Object',o(13,'Alerts'),v,[ object ]).
-html_comp_i(27,'Params',[],d,[ params ]).
+html_comp_i(28,'Align',center,v,[ str ]).
+html_comp_i(31,'Align',center,v,[ str ]).
+html_comp_i(32,'Caption','Registrate aquí..',d,[ str ]).
+html_comp_i(32,'Id','Registrarw',v,[ str ]).
+html_comp_i(32,'Class','TextBlock',d,[ str ]).
+html_comp_i(32,'Event','''registrar''',v,[ str ]).
+html_comp_i(32,'Returnonclick',0,d,[ bool ]).
+html_comp_i(32,'Gxformat',0,d,[ num ]).
+html_comp_i(32,'Title','',d,[ str ]).
+html_comp_i(32,'Fill',-1,d,[ bool ]).
+html_comp_i(32,'Backcolor',rgb(255,255,255),d,[ color ]).
+html_comp_i(32,'Forecolor',rgb(100,100,100),v,[ color ]).
+html_comp_i(32,'Font',font('Microsoft Sans Serif',13,[ bold ]),v,[ font ]).
+html_comp_i(33,'Usercontroltype','HugaoMessages',d,[ str ]).
+html_comp_i(33,'Constructorname','HugaoMessages',d,[ str ]).
+html_comp_i(33,'Showmethodname',show,d,[ str ]).
+html_comp_i(33,'Controlname','HugaoMessages1',v,[ str ]).
+html_comp_i(33,'Type',jgrowl,d,[ str ]).
+html_comp_i(33,'Visible',-1,d,[ bool ]).
+html_comp_i(33,'Csssupportfiles',[ [ t('''HugaoMessages\css\jquery.growl.min.css''',3) ] ],d,[ params ]).
+html_comp_i(33,'Jssupportfiles',[ [ t('''HugaoMessages\js\jquery.growl.min.js''',3) ],[ t('''HugaoMessages\HugaoMessagesRender.js''',3) ] ],d,[ params ]).
+html_comp_i(33,'Csssharedsupportfiles',[],d,[ params ]).
+html_comp_i(33,'Jssharedsupportfiles',[],d,[ params ]).
+html_comp_i(34,'Controlname','Webcomp1',v,[ str ]).
+html_comp_i(34,'Object',o(13,'Alerts'),v,[ object ]).
+html_comp_i(34,'Params',[],d,[ params ]).
  
  
  
@@ -460,15 +488,17 @@ html_comp_i(27,'Params',[],d,[ params ]).
  
  
 warn_gen_i(msg(layout(16,[]),spc0023,[ 'Parameter ','today()',' ','for method',' ',set,' has wrong type.' ])).
+warn_gen_i(msg([],spc0156,[ 'Event ','''registrar''',' for control ''','Registrarw',''' is not defined.' ])).
  
-lit_i(10,1,bitmap('9fb193d9-64a4-4d30-b129-ff7c76830f7e-120'),[ ctlname('Image1') ]).
+lit_i(10,1,bitmap('9fb193d9-64a4-4d30-b129-ff7c76830f7e-101'),[ ctlname('Image1') ]).
 lit_i(14,1,t('Usuario',23),[ ctlname('&Usuario'),ctrltype(edit,14),pos(14),ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
 lit_i(21,1,t('Contrasena',23),[ ctlname('&Contrasena'),ctrltype(edit,21),pos(21),ispwd(1),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
 lit_i(25,1,button('''INICIAR SESIÓN '''),[ ctlname('Button1'),width(0),rect(0,0,10,10),title('Nothing') ]).
+lit_i(32,1,t('Registrate aquí..',3),[ ctlname('Registrarw') ]).
 lit_i(6,1,table(6),[ ctlname('Table2') ]).
-lit_i(26,1,usercontrol(26),[ ctlname('Hugaomessages1'),ctrltype(hugaomessages),el([]),containers([]) ]).
+lit_i(33,1,usercontrol(33),[ ctlname('Hugaomessages1'),ctrltype(hugaomessages),el([]),containers([]) ]).
 lit_i(3,1,table(3),[ ctlname('Table1') ]).
-lit_i(27,1,comp(webcomp),[ ctlname('Webcomp1'),width(0),rect(0,0,10,10),title('Nothing') ]).
+lit_i(34,1,comp(webcomp),[ ctlname('Webcomp1'),width(0),rect(0,0,10,10),title('Nothing') ]).
 lit_i(1,1,window,[ rect(0,0,1000,1000),ctlname('Form') ]).
  
  
@@ -527,11 +557,14 @@ var_prop_i(2,'Usuario',idBasedOn,'',v).
 sub_info_i(146,'''INICIAR SESIÓN ''',1,30,[ [ 'Usuario','Contrasena',173,174 ],[] ]).
 sub_info_i(146,'Enter',36,55,[ [ 173,'Usuario',174,'Contrasena' ],[] ]).
 sub_info_i(146,'Start',58,62,[ [],[ [ t('Webcomp1',3),t('Object',3) ] ] ]).
+sub_info_i(146,[ t('Registrarw',3,66,7),t('Click',3,66,18) ],66,68,[ [],[] ]).
  
+pgm_parm_i(web,120,'REGISTER',[],[]).
 pgm_parm_i(web,29,'MENUPRINCIPAL',[],[]).
 pgm_parm_i(web,110,'ALERTS',[],[]).
  
 pgm_callprotocol_i(web,28,'LOGIN','INTERNAL').
+pgm_callprotocol_i(web,120,'REGISTER','INTERNAL').
 pgm_callprotocol_i(web,29,'MENUPRINCIPAL','INTERNAL').
 pgm_callprotocol_i(web,110,'ALERTS','INTERNAL').
  

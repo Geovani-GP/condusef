@@ -2,7 +2,7 @@
                File: Catalog_De_Productos
         Description: Catalog_De_Productos
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 2/10/2022 20:2:11.88
+       Generated on: 2/15/2022 5:9:21.83
        Program type: Callable routine
           Main DBMS: postgresql
 */
@@ -275,7 +275,7 @@ namespace GeneXus.Programs {
          context.AddJavascriptSource("jquery.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxtimezone.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxgral.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("gxcfg.js", "?20222102021190");
+         context.AddJavascriptSource("gxcfg.js", "?2022215592186");
          if ( context.isSpaRequest( ) )
          {
             enableOutput();
@@ -499,12 +499,26 @@ namespace GeneXus.Programs {
                               /* Execute user event: E122O2 */
                               E122O2 ();
                            }
-                           else if ( StringUtil.StrCmp(sEvt, "LOAD") == 0 )
+                           else if ( StringUtil.StrCmp(sEvt, "'CANCELAR'") == 0 )
                            {
                               context.wbHandled = 1;
                               dynload_actions( ) ;
                               /* Execute user event: E132O2 */
                               E132O2 ();
+                           }
+                           else if ( StringUtil.StrCmp(sEvt, "'CONSULTAR'") == 0 )
+                           {
+                              context.wbHandled = 1;
+                              dynload_actions( ) ;
+                              /* Execute user event: E142O2 */
+                              E142O2 ();
+                           }
+                           else if ( StringUtil.StrCmp(sEvt, "LOAD") == 0 )
+                           {
+                              context.wbHandled = 1;
+                              dynload_actions( ) ;
+                              /* Execute user event: E152O2 */
+                              E152O2 ();
                            }
                            else if ( StringUtil.StrCmp(sEvt, "ENTER") == 0 )
                            {
@@ -947,8 +961,8 @@ namespace GeneXus.Programs {
          fix_multi_value_controls( ) ;
          if ( String.IsNullOrEmpty(StringUtil.RTrim( context.wjLoc)) && ( context.nUserReturn != 1 ) )
          {
-            /* Execute user event: E132O2 */
-            E132O2 ();
+            /* Execute user event: E152O2 */
+            E152O2 ();
             WB2O0( ) ;
          }
       }
@@ -1096,8 +1110,7 @@ namespace GeneXus.Programs {
             AV7producto.gxTpr_Pcategoriaid = (short)(AV18categoriasid);
             AV7producto.gxTpr_Ptipobienid = (short)(AV17tipobienid);
             AV7producto.gxTpr_Productousuario = AV8WebSession.Get("usuario");
-            GXt_dtime1 = DateTimeUtil.ResetTime( Gx_date ) ;
-            AV7producto.gxTpr_Productofecreg = GXt_dtime1;
+            AV7producto.gxTpr_Productofecreg = Gx_date;
             AV7producto.Save();
             if ( AV7producto.Success() )
             {
@@ -1113,11 +1126,25 @@ namespace GeneXus.Programs {
          context.httpAjaxContext.ajax_rsp_assign_sdt_attri("", false, "AV7producto", AV7producto);
       }
 
+      protected void E132O2( )
+      {
+         /* 'Cancelar' Routine */
+         context.wjLoc = formatLink("menuprincipal.aspx") ;
+         context.wjLocDisableFrm = 1;
+      }
+
+      protected void E142O2( )
+      {
+         /* 'Consultar' Routine */
+         context.wjLoc = formatLink("detallesproducto.aspx") ;
+         context.wjLocDisableFrm = 1;
+      }
+
       protected void nextLoad( )
       {
       }
 
-      protected void E132O2( )
+      protected void E152O2( )
       {
          /* Load Routine */
       }
@@ -1251,7 +1278,7 @@ namespace GeneXus.Programs {
             TempTags = "  onfocus=\"gx.evt.onfocus(this, 53,'',false,'',0)\"";
             ClassString = "Button";
             StyleString = "color:#FFFFFF; background-color:#008000;";
-            GxWebStd.gx_button_ctrl( context, bttButton1_Internalname, "", "CONSULTAR", bttButton1_Jsonclick, 5, "CONSULTAR", "", StyleString, ClassString, 1, 1, "standard", "'"+""+"'"+",false,"+"'"+"EENTER."+"'", TempTags, "", context.GetButtonType( ), "HLP_Catalog_De_Productos.htm");
+            GxWebStd.gx_button_ctrl( context, bttButton1_Internalname, "", "CONSULTAR", bttButton1_Jsonclick, 5, "CONSULTAR", "", StyleString, ClassString, 1, 1, "standard", "'"+""+"'"+",false,"+"'"+"E\\'CONSULTAR\\'."+"'", TempTags, "", context.GetButtonType( ), "HLP_Catalog_De_Productos.htm");
             context.WriteHtmlText( "</td>") ;
             context.WriteHtmlText( "<td>") ;
             context.WriteHtmlText( "</td>") ;
@@ -1280,7 +1307,7 @@ namespace GeneXus.Programs {
             TempTags = "  onfocus=\"gx.evt.onfocus(this, 64,'',false,'',0)\"";
             ClassString = "Button";
             StyleString = "color:#FFFFFF; background-color:#FF0000;";
-            GxWebStd.gx_button_ctrl( context, bttButton3_Internalname, "", "CANCELAR", bttButton3_Jsonclick, 5, "CANCELAR", "", StyleString, ClassString, 1, 1, "standard", "'"+""+"'"+",false,"+"'"+"EENTER."+"'", TempTags, "", context.GetButtonType( ), "HLP_Catalog_De_Productos.htm");
+            GxWebStd.gx_button_ctrl( context, bttButton3_Internalname, "", "CANCELAR", bttButton3_Jsonclick, 5, "CANCELAR", "", StyleString, ClassString, 1, 1, "standard", "'"+""+"'"+",false,"+"'"+"E\\'CANCELAR\\'."+"'", TempTags, "", context.GetButtonType( ), "HLP_Catalog_De_Productos.htm");
             context.WriteHtmlText( "</td>") ;
             context.WriteHtmlText( "</tr>") ;
             context.WriteHtmlText( "</tbody>") ;
@@ -1381,11 +1408,11 @@ namespace GeneXus.Programs {
 
       protected void define_styles( )
       {
-         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?19483837");
+         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?583790");
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?20222102021224");
+            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?2022215592219");
             idxLst = (int)(idxLst+1);
          }
          /* End function define_styles */
@@ -1394,7 +1421,7 @@ namespace GeneXus.Programs {
       protected void include_jscripts( )
       {
          context.AddJavascriptSource("messages.spa.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("catalog_de_productos.js", "?20222102021224");
+         context.AddJavascriptSource("catalog_de_productos.js", "?2022215592219");
          /* End function include_jscripts */
       }
 
@@ -1461,6 +1488,8 @@ namespace GeneXus.Programs {
       {
          setEventMetadata("REFRESH","{handler:'Refresh',iparms:[],oparms:[]}");
          setEventMetadata("'GUARDAR'","{handler:'E122O2',iparms:[{av:'AV14cambsid',fld:'vCAMBSID',pic:'ZZZZZZZZ9',nv:0},{av:'AV15marcasid',fld:'vMARCASID',pic:'ZZZZZZZZ9',nv:0},{av:'AV16modelosid',fld:'vMODELOSID',pic:'ZZZZZZZZ9',nv:0},{av:'AV18categoriasid',fld:'vCATEGORIASID',pic:'ZZZZZZZZ9',nv:0},{av:'AV17tipobienid',fld:'vTIPOBIENID',pic:'ZZZZZZZZ9',nv:0},{av:'AV6productodsc',fld:'vPRODUCTODSC',pic:'',nv:''},{av:'AV20NextValue',fld:'vNEXTVALUE',pic:'ZZZ9',hsh:true,nv:0},{av:'AV7producto',fld:'vPRODUCTO',pic:'',nv:null},{av:'Gx_date',fld:'vTODAY',pic:'',nv:''}],oparms:[{av:'AV7producto',fld:'vPRODUCTO',pic:'',nv:null}]}");
+         setEventMetadata("'CANCELAR'","{handler:'E132O2',iparms:[],oparms:[]}");
+         setEventMetadata("'CONSULTAR'","{handler:'E142O2',iparms:[],oparms:[]}");
          return  ;
       }
 
@@ -1520,7 +1549,6 @@ namespace GeneXus.Programs {
          hsh = "";
          H002O10_A40000GXC1 = new int[1] ;
          AV8WebSession = context.GetSession();
-         GXt_dtime1 = (DateTime)(DateTime.MinValue);
          sStyleString = "";
          lblTextblock_Jsonclick = "";
          lblTextblock4_Jsonclick = "";
@@ -1651,7 +1679,6 @@ namespace GeneXus.Programs {
       private String lblTextblock3_Internalname ;
       private String lblTextblock3_Jsonclick ;
       private String edtavProductodsc_Jsonclick ;
-      private DateTime GXt_dtime1 ;
       private DateTime Gx_date ;
       private bool entryPointCalled ;
       private bool toggleJsOutput ;

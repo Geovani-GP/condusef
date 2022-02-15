@@ -454,6 +454,7 @@ att_prop_i(2,7,'EmptyAsNull','Yes',d).
 att_prop_i(2,7,idBasedOn,'',d).
 att_prop_i(2,7,'AUTONUMBER','0',d).
 att_prop_i(2,7,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,7,'AttRegEx','',d).
 att_prop_i(2,7,'AttValidationFailedMsg','',d).
 att_prop_i(2,7,'FullName',entidafederativaid,v).
 att_prop_i(2,40000,'ExternalName',entidafederativaid,d).
@@ -462,6 +463,7 @@ att_prop_i(2,40000,'EmptyAsNull','Yes',d).
 att_prop_i(2,40000,idBasedOn,'',d).
 att_prop_i(2,40000,'AUTONUMBER','0',d).
 att_prop_i(2,40000,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,40000,'AttRegEx','',d).
 att_prop_i(2,40000,'AttValidationFailedMsg','',d).
 att_prop_i(2,40000,'FullName',entidafederativaid,v).
  

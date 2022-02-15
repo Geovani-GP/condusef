@@ -644,9 +644,10 @@ trn_level_i(25,[ [ 177,178 ],estados,estados,estados,'',178 ]).
  
  
  
-pgm_parm_i(web,0,'GX00P0',[ [ int,4,0,0 ] ],[ [ 'V177',out,[] ] ]).
+pgm_parm_i(web,116,'GX00P0',[ [ int,4,0,0 ] ],[ [ pestadoid,out,[] ] ]).
  
 pgm_callprotocol_i(trn,25,'ESTADOS','INTERNAL').
+pgm_callprotocol_i(web,116,'GX00P0','INTERNAL').
  
  
  
