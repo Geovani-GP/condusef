@@ -107,7 +107,7 @@ rule_i(0,prop('ObjDesc','PDF_productos')).
 rule_i(0,prop('ObjName','PDF_productos')).
 rule_i(0,maingen(15)).
 rule_i(0,prop('PGMTYPE',main)).
-rule_i(0,output_file(t('Reporte_Modelos.pdf',3),t('PDF',3))).
+rule_i(0,output_file(t('Reporte_Productos.pdf',3),t('PDF',3))).
 rule_i(0,output('FIL')).
 rule_i(0,nolastfooter).
 rule_i(0,file(23,'PRODUCTO',[ 175,179,87,180,181,182,91,92,93,183 ])).
@@ -245,7 +245,7 @@ page_layout_i([ 66,0,6 ]).
  
  
  
-paper_info_i([ 0,256,'',16330,16834,0,0,0,0,1 ]).
+paper_info_i([ 0,1,'',12240,15840,0,0,0,0,1 ]).
  
 ppi_i([ 100,100 ]).
  
@@ -271,13 +271,13 @@ lit_i(10,2,t('Fecha',23),[ font('Microsoft Sans Serif',8,[]),rect(650,50,724,72)
 lit_i(11,2,t('DESCRIPCIÓN',3),[ font('Microsoft Sans Serif',8,[]),rect(192,100,269,114),outstyle(none),align(left),valign(top),noclip,fore(rgb(0,0,0)),border(1),ctlname('Gxreportlabel5'),gxcolor([]) ]).
 lit_i(12,2,t('MARCA',3),[ font('Microsoft Sans Serif',8,[]),rect(325,100,366,114),outstyle(none),align(left),valign(top),noclip,fore(rgb(0,0,0)),border(1),ctlname('Gxreportlabel6'),gxcolor([]) ]).
 lit_i(13,2,t('MODELO',3),[ font('Microsoft Sans Serif',8,[]),rect(425,100,474,114),outstyle(none),align(left),valign(top),noclip,fore(rgb(0,0,0)),border(1),ctlname('Gxreportlabel7'),gxcolor([]) ]).
-lit_i(4,2,window,[ title('Text'),rect(0,0,1134,153),outstyle(none),fill,graph,back(rgb(0,0,0)),fore(rgb(0,0,0)),border(0),ctlname('Pb_header'),align(left),valign(top),gxcolor([]),defgxcolor('BLK','WHT') ]).
+lit_i(4,2,window,[ title('Text'),rect(0,0,850,153),outstyle(none),fill,graph,back(rgb(0,0,0)),fore(rgb(0,0,0)),border(0),ctlname('Pb_header'),align(left),valign(top),gxcolor([]),defgxcolor('BLK','WHT') ]).
 lit_i(15,5,t(181,2),[ font('Microsoft Sans Serif',8,[]),rect(508,0,608,15),outstyle(none),align(right),valign(top),fore(rgb(0,0,0)),border(1),format(0),ctlname('181'),ctrltype(edit,15),ispwd(0),gxcolor([]) ]).
 lit_i(16,5,t(180,2),[ font('Microsoft Sans Serif',8,[]),rect(625,0,725,15),outstyle(none),align(right),valign(top),fore(rgb(0,0,0)),border(1),format(0),ctlname('180'),ctrltype(edit,16),ispwd(0),gxcolor([]) ]).
 lit_i(3,5,t(183,2),[ font('Microsoft Sans Serif',9,[]),rect(167,0,317,17),outstyle(none),align(left),valign(top),fore(rgb(0,0,0)),border(1),format(0),ctlname('183'),ctrltype(edit,3),ispwd(0),gxcolor([]) ]).
 lit_i(14,5,t(87,2),[ font('Microsoft Sans Serif',8,[]),rect(333,0,483,15),outstyle(none),align(left),valign(top),fore(rgb(0,0,0)),border(1),format(0),ctlname('87'),ctrltype(edit,14),ispwd(0),gxcolor([]) ]).
 lit_i(2,5,t(175,2),[ font('Microsoft Sans Serif',9,[]),rect(0,0,150,17),outstyle(none),align(center),valign(top),fore(rgb(0,0,0)),border(1),format(0),ctlname('175'),ctrltype(edit,2),ispwd(0),gxcolor([]) ]).
-lit_i(1,5,window,[ title('Text'),rect(0,0,1134,193),outstyle(none),fill,graph,back(rgb(0,0,0)),fore(rgb(0,0,0)),border(0),ctlname('Pb_body'),align(left),valign(top),gxcolor([]),defgxcolor('BLK','WHT') ]).
+lit_i(1,5,window,[ title('Text'),rect(0,0,850,193),outstyle(none),fill,graph,back(rgb(0,0,0)),fore(rgb(0,0,0)),border(0),ctlname('Pb_body'),align(left),valign(top),gxcolor([]),defgxcolor('BLK','WHT') ]).
  
 grid_i(7,15).
  

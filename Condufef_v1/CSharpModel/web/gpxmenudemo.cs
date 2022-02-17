@@ -2,7 +2,7 @@
                File: gpxMenuDemo
         Description: gpx Menu Demo
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 2/15/2022 6:15:41.54
+       Generated on: 2/17/2022 0:13:16.99
        Program type: Callable routine
           Main DBMS: postgresql
 */
@@ -219,7 +219,7 @@ namespace GeneXus.Programs {
          Gxm3gpxmenuitems_subitems = new SdtgpxMenuItems_gpxMenuItem(context);
          Gxm1gpxmenuitems.gxTpr_Subitems.Add(Gxm3gpxmenuitems_subitems, 0);
          Gxm3gpxmenuitems_subitems.gxTpr_Title = "Reporte de Proveedores";
-         Gxm3gpxmenuitems_subitems.gxTpr_Url = "#";
+         Gxm3gpxmenuitems_subitems.gxTpr_Url = "apdf_proveedores.aspx";
          this.cleanup();
       }
 

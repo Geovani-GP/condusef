@@ -2,7 +2,7 @@
                File: PDF_productos
         Description: PDF_productos
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 2/15/2022 5:8:40.5
+       Generated on: 2/17/2022 0:16:44.31
        Program type: Main program
           Main DBMS: postgresql
 */
@@ -124,7 +124,7 @@ namespace GeneXus.Programs {
          try
          {
             Gx_out = "FIL" ;
-            if (!initPrinter (Gx_out, gxXPage, gxYPage, "GXPRN.INI", "", "", 2, 1, 256, 16834, 16330, 0, 1, 1, 0, 1, 1) )
+            if (!initPrinter (Gx_out, gxXPage, gxYPage, "GXPRN.INI", "", "", 2, 1, 1, 15840, 12240, 0, 1, 1, 0, 1, 1) )
             {
                cleanup();
                return;

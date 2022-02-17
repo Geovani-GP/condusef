@@ -50,6 +50,7 @@ public class bldDevelopermenu : GxBaseBuilder
       sc.Add( @"apdf_marcas", "dll");
       sc.Add( @"apdf_modelos", "dll");
       sc.Add( @"apdf_productos", "dll");
+      sc.Add( @"apdf_proveedores", "dll");
       sc.Add( @"appmasterpage", "dll");
       sc.Add( @"login", "dll");
       sc.Add( @"menuprincipal", "dll");

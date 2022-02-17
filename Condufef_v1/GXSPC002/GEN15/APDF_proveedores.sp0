@@ -1,0 +1,383 @@
+spec_i([ proc,20,'PDF_proveedores','PDF_proveedores',78,spa,'10_3_15-115824' ]).
+ 
+struct_i(2,1,[],[]).
+ 
+level_i(2,[ 10,[ [ 10,many ] ],[],[],[ [ [ 10 ],[ 132,131,130,2,135,126,128 ] ] ],[ [ [ 10 ],[] ] ],[ 2 ],'PROVEEDORES_PKEY',[],[] ]).
+ 
+tw_i(2,[]).
+ 
+lwi_i(2,[ [] ]).
+ 
+ 
+ 
+ 
+ta_i(2,[ [ [ 10,132 ],[ 10,131 ],[ 10,130 ],[ 10,2 ],[ 10,135 ],[ 10,126 ],[ 10,128 ] ] ]).
+ 
+las_i(2,[ [ 132,131,130,2,135,126,128 ] ]).
+ 
+lac_i(2,[ [] ]).
+ 
+ 
+ 
+ 
+ 
+ 
+default_i(e('Output',2,2,'''FIL''')).
+ 
+rule_i(0,datastore(1,'DS_LAST_CHANGE','')).
+rule_i(0,datastore(1,'POSTGRESQL_VERSION','8_3')).
+rule_i(0,datastore(1,'COMMENT_ON','No')).
+rule_i(0,datastore(1,'DCL_REF_INT_DB','Yes')).
+rule_i(0,datastore(1,'PRIMARY_KEY_TYPE','PK')).
+rule_i(0,datastore(1,'CS_SCHEMA','')).
+rule_i(0,datastore(1,'RecycleRWMin','30')).
+rule_i(0,datastore(1,'RecycleRWType','1')).
+rule_i(0,datastore(1,'RecycleRW','-1')).
+rule_i(0,datastore(1,'POOL_STARTUP','No')).
+rule_i(0,datastore(1,'POOLSIZE_RW','10')).
+rule_i(0,datastore(1,'UnlimitedRWPool','-1')).
+rule_i(0,datastore(1,'PoolRWEnabled','-1')).
+rule_i(0,datastore(1,'CS_RPCPGML','')).
+rule_i(0,datastore(1,'JDBC_DATASOURCE','')).
+rule_i(0,datastore(1,'USE_JDBC_DATASOURCE','0')).
+rule_i(0,datastore(1,'DS_DBMS_ADDINFO','')).
+rule_i(0,datastore(1,'USER_PASSWORD',asdf)).
+rule_i(0,datastore(1,'USER_ID',postgres)).
+rule_i(0,datastore(1,'CS_CONNECT','First')).
+rule_i(0,datastore(1,'DBMS_PORT','5432')).
+rule_i(0,datastore(1,'CS_SERVER',localhost)).
+rule_i(0,datastore(1,'CS_DBNAME',condusef)).
+rule_i(0,datastore(1,'CS_FLEDSNAME','')).
+rule_i(0,datastore(1,'CS_DRVNAME','')).
+rule_i(0,datastore(1,'CS_DSNAME','')).
+rule_i(0,datastore(1,'DB_URL','')).
+rule_i(0,datastore(1,'JDBC_CUSTOM_URL','0')).
+rule_i(0,datastore(1,'JDBC_CUSTOM_DRIVER','')).
+rule_i(0,datastore(1,'JDBC_DRIVER','org.postgresql.Driver')).
+rule_i(0,datastore(1,'CONNECT_METHOD','OPSYS')).
+rule_i(0,datastore(1,'ACCESS_TECHNO','ADONET')).
+rule_i(0,datastore(1,'MAIN_DS','-1')).
+rule_i(0,datastore(1,'REORG_GEN','8')).
+rule_i(0,datastore(1,'HelpKeyword','20')).
+rule_i(0,datastore(1,'DBMS',15)).
+rule_i(0,datastore(1,'NAME','Default')).
+rule_i(0,prop(idNULLS_BEHAVIOR,idNB_Current)).
+rule_i(0,prop('ObjectVisibility','Public')).
+rule_i(0,prop('FullyQualifiedName','PDF_proveedores')).
+rule_i(0,prop('PWFCallable','0')).
+rule_i(0,prop('GenerateObject','-1')).
+rule_i(0,prop('CS_ORA_FORUPD','UMPV')).
+rule_i(0,prop('Optimize_copy','UMPV')).
+rule_i(0,prop('JOIN_TYPE','UMPV')).
+rule_i(0,prop('DBMS_JOINS','UMPV')).
+rule_i(0,prop('BEEPONMSG','UMPV')).
+rule_i(0,prop('GENERATE_ILE','UMPV')).
+rule_i(0,prop('PRT_DDS','UMPV')).
+rule_i(0,prop('TRNCMT','YES')).
+rule_i(0,prop('NULLVALUE_AS_NULL','UMPV')).
+rule_i(0,prop('INITIALIZE_NEW','UMPV')).
+rule_i(0,prop('STD_FUNC_OBJECT','Yes')).
+rule_i(0,prop('SPC_WARNINGS_DISABLED','spc0096 spc0107 spc0142')).
+rule_i(0,prop('TRNEND','Yes')).
+rule_i(0,prop(idISBCEJB,'0')).
+rule_i(0,prop(idISPRCWEBSERVICE,'0')).
+rule_i(0,prop('EXECUTE_IN_NEW_UTL','0')).
+rule_i(0,prop('AUTOCENTER','UMPV')).
+rule_i(0,prop('LSTPFOOT','NO')).
+rule_i(0,prop('CANCEL','YES')).
+rule_i(0,prop('CONFIRM','UMPV')).
+rule_i(0,prop('TRNCFM','UMPV')).
+rule_i(0,prop('PRINT_CUST_LAYOUT','UMPV')).
+rule_i(0,prop('OUTPUT','FIL')).
+rule_i(0,prop(idConnectivitySupport,idInherit)).
+rule_i(0,prop('AppGenerator','1')).
+rule_i(0,prop('AppLocation','')).
+rule_i(0,prop('AppIcon','')).
+rule_i(0,prop('AppTitle','')).
+rule_i(0,prop('WEB_SECURITY_LEVEL','High')).
+rule_i(0,prop('HTTP_PROTOCOL','Unsecure')).
+rule_i(0,prop('USE_ENCRYPTION','NO')).
+rule_i(0,prop('COMPRESS_HTML','UMPV')).
+rule_i(0,prop('Theme',o(25,'Flat'))).
+rule_i(0,prop('OBJECT_METADATA','')).
+rule_i(0,prop('CALL_PROTOCOL','HTTP')).
+rule_i(0,prop('IsMain','-1')).
+rule_i(0,prop('Folder',o(8,'WebApi'))).
+rule_i(0,prop('ObjDesc','PDF_proveedores')).
+rule_i(0,prop('ObjName','PDF_proveedores')).
+rule_i(0,maingen(15)).
+rule_i(0,prop('PGMTYPE',main)).
+rule_i(0,output_file(t('Reporte_Proveedores.pdf',3),t('PDF',3))).
+rule_i(0,output('FIL')).
+rule_i(0,nolastfooter).
+rule_i(0,file(10,'PROVEEDORES',[ 2,126,127,128,129,130,131,132,133,134,135,136,137,138 ])).
+rule_i(0,loc([ 10 ],'PROVEEDORES','','LAN')).
+rule_i(0,index(10,'PROVEEDORES_PKEY',u,[ 2 ])).
+rule_i(0,loc([ 10,'PROVEEDORES_PKEY' ],proveedores_pkey,'','LAN')).
+rule_i(0,p(0,0,fv,2,[ intname,'PROVEEDORES' ])).
+rule_i(0,p(0,0,fv,2,[ table,10 ])).
+rule_i(0,p(0,15,fv,2,[])).
+rule_i(0,p(0,15,fv,2,[ 'NAME',proveedores ])).
+rule_i(0,p(0,15,fv,2,[ 'LOC','' ])).
+rule_i(0,p(0,15,fv,2,[ 'SCHEMA',public ])).
+rule_i(0,p(0,15,fv,2,[ 'EXTNAM','YES' ])).
+rule_i(0,p(0,15,fvix,[ 2,2 ],[])).
+rule_i(0,p(0,15,fvix,[ 2,2 ],[ 'NAME',proveedores_pkey ])).
+rule_i(0,p(0,15,fvix,[ 2,2 ],[ 'LOC','' ])).
+rule_i(0,p(0,15,fvix,[ 2,2 ],[ 'SCHEMA',public ])).
+rule_i(0,p(0,15,fvix,[ 2,2 ],[ 'EXTNAM','YES' ])).
+ 
+a_i(1,1,f,'Line',[],[ [],[ t(0,3) ] ]).
+a_i(2,1,f,'Err',[],[ [],[ t('0',3) ] ]).
+a_i(3,2,t,10,[],[ [],'PROVEEDORES_PKEY',[] ]).
+ 
+v_i(f,i,1,[]).
+v_i(f,o,1,'Line').
+v_i(f,i,2,[]).
+v_i(f,o,2,'Err').
+v_i(t,i,3,[]).
+v_i(t,o,3,132).
+v_i(t,o,3,131).
+v_i(t,o,3,130).
+v_i(t,o,3,2).
+v_i(t,o,3,135).
+v_i(t,o,3,126).
+v_i(t,o,3,128).
+ 
+ 
+ 
+ 
+ 
+ 
+attri_i('Output',[ 'Gx_out',char,3,0,'',1,'','',14 ]).
+attri_i('Page',[ 'Gx_page',int,6,0,'ZZZZZ9',0,'Page number','',13 ]).
+attri_i('Line',[ 'Gx_line',int,6,0,'ZZZZZ9',0,'Line number','',12 ]).
+attri_i(132,[ proveedorestelefono1,int,10,0,'ZZZZZZZZZ9',0,proveedorestelefono1,'',0 ]).
+attri_i(131,[ proveedorestado,svchar,20,0,'',0,proveedorestado,'',0 ]).
+attri_i(130,[ proveedoresmunicipio,svchar,25,0,'',0,proveedoresmunicipio,'',0 ]).
+attri_i(2,[ proveedoresid,int,9,0,'ZZZZZZZZ9',0,proveedoresid,'',0 ]).
+attri_i(135,[ proveedoresrfc,svchar,13,0,'',0,proveedoresrfc,'',0 ]).
+attri_i(126,[ proveedoresnombre,svchar,80,0,'',0,proveedoresnombre,'',0 ]).
+attri_i(128,[ proveedorescolonia,svchar,25,0,'',0,proveedorescolonia,'',0 ]).
+attri_i('Errmsg',[ 'Gx_emsg',char,70,0,'',1,'Error text','',10 ]).
+attri_i('Err',[ 'Gx_err',int,3,0,'ZZ9',1,'Error code','',9 ]).
+attri_i('Fecha',[ 'FECHA',date,8,0,'99/99/99',0,'FECHA','',8 ]).
+ 
+table_i(10,[ 'PROVEEDORES',[ 2,126,128,130,131,132,135 ],proveedores,proveedores ]).
+ 
+index_i(10,[ 'PROVEEDORES_PKEY',u,[ 2 ],'PROVEEDORES_PKEY' ]).
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+map_i(10,i,'PROVEEDORES_PKEY',[ 'PROVEEDORES_PKEY' ]).
+map_i(10,a,138,[ proveedoresfecultact ]).
+map_i(10,a,137,[ proveedoresfecreg ]).
+map_i(10,a,136,[ proveedoresusuario ]).
+map_i(10,a,135,[ proveedoresrfc ]).
+map_i(10,a,134,[ proveedoresfax ]).
+map_i(10,a,133,[ proveedorestelefono2 ]).
+map_i(10,a,132,[ proveedorestelefono1 ]).
+map_i(10,a,131,[ proveedorestado ]).
+map_i(10,a,130,[ proveedoresmunicipio ]).
+map_i(10,a,129,[ proveedorescodigopostal ]).
+map_i(10,a,128,[ proveedorescolonia ]).
+map_i(10,a,127,[ proveedoresdireccion ]).
+map_i(10,a,126,[ proveedoresnombre ]).
+map_i(10,a,2,[ proveedoresid ]).
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+break_i(2,nvg,1,[],[ [ 128,126,135,2,130,131,132 ],[],[] ]).
+break_i(1,rpt,0,[],[ [],[],[] ]).
+ 
+b_group_i(1,1,lit,0,1,10).
+b_group_i(1,2,nvg,2,4,4).
+b_group_i(2,1,lit,0,14,26).
+b_group_i(1,3,lit,0,27,0).
+ 
+b_line_i(0,1,1,cmd,0,[]).
+b_line_i(1,1,1,cmd,0,[ t('',107,0,0),t('Fecha',23,0,0),t(=,10,0,0),t('today(',1,0,0),t(')',4,0,0) ]).
+b_line_i(2,1,1,pb,0,[ t('Pb_header',29,0,7) ]).
+b_line_i([ 2,0 ],1,1,line,0,[ t(' ',3,0,0) ]).
+b_line_i([ 2,1 ],1,1,line,1,[ t('COMISION NACIONAL PARA LA PROTECCIÓN Y DEFENSA DE LOS USUARIOS DE SERVICIOS FINANCIEROS',3,1,20) ]).
+b_line_i([ 2,3 ],1,1,line,3,[ t('REPORTE DE PRROVEEDORES',3,3,46),t('Fecha',23,3,92) ]).
+b_line_i([ 2,6 ],1,1,line,6,[ t('CLAVE ',3,6,0),t('NOMBRE',3,6,13),t('R.F.C.',3,6,34),t('COLONIA',3,6,56),t('MUNICIPIO',3,6,73),t('ESTADO',3,6,86),t('TELEFONO',3,6,101) ]).
+b_line_i([ 2,9 ],1,1,line,9,[ t(' ',3,9,0) ]).
+b_line_i(3,1,1,cmd,10,[]).
+b_line_i(4,2,1,cmd,14,[ t('',121,4,0),t(table,3,4,10),t(10,3,4,10) ]).
+b_line_i(5,2,1,pb,14,[ t('Pb_body',29,14,8) ]).
+b_line_i([ 5,0 ],2,1,line,14,[ t(2,2,0,0),t(126,2,0,13),t(135,2,0,33),t(128,2,0,53),t(130,2,0,73),t(131,2,0,91),t(132,2,0,106) ]).
+b_line_i([ 5,11 ],2,1,line,25,[ t(' ',3,11,0) ]).
+b_line_i(6,2,1,cmd,26,[ t('',128,26,0) ]).
+ 
+ 
+ 
+ 
+ 
+page_layout_i([ 66,0,6 ]).
+ 
+ 
+ 
+paper_info_i([ 0,1,'',12240,15840,0,0,0,0,1 ]).
+ 
+ppi_i([ 100,100 ]).
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+lit_i(5,2,bitmap(i(98,'50a9fefa-952a-4474-8e37-0c75e294c1c6')),[ ctlname('Gxreportimage1'),rect(0,0,130,69) ]).
+lit_i(6,2,t('COMISION NACIONAL PARA LA PROTECCIÓN Y DEFENSA DE LOS USUARIOS DE SERVICIOS FINANCIEROS',3),[ font('Microsoft Sans Serif',9,[ bold ]),rect(142,17,1392,37),outstyle(none),align(left),valign(top),fore(rgb(0,0,0)),border(1),ctlname('Gxreportlabel1'),gxcolor([]) ]).
+lit_i(7,2,t('REPORTE DE PRROVEEDORES',3),[ font('Microsoft Sans Serif',10,[ bold ]),rect(325,50,525,68),outstyle(none),align(left),valign(top),fore(rgb(0,0,0)),border(1),ctlname('Gxreportlabel2'),gxcolor([]) ]).
+lit_i(8,2,t('CLAVE ',3),[ font('Microsoft Sans Serif',8,[]),rect(0,100,40,119),outstyle(none),align(left),valign(top),fore(rgb(0,0,0)),border(1),ctlname('Gxreportlabel3'),gxcolor([]) ]).
+lit_i(9,2,t('NOMBRE',3),[ font('Microsoft Sans Serif',9,[]),rect(92,100,149,116),outstyle(none),align(left),valign(top),noclip,fore(rgb(0,0,0)),border(1),ctlname('Gxreportlabel4'),gxcolor([]) ]).
+lit_i(10,2,t('Fecha',23),[ font('Microsoft Sans Serif',8,[]),rect(650,50,724,72),outstyle(none),align(right),valign(top),fore(rgb(0,0,0)),border(1),format(0),ctlname('&fecha'),ctrltype(edit,10),ispwd(0),gxcolor([]) ]).
+lit_i(11,2,t('R.F.C.',3),[ font('Microsoft Sans Serif',8,[]),rect(242,100,274,114),outstyle(none),align(left),valign(top),noclip,fore(rgb(0,0,0)),border(1),ctlname('Gxreportlabel5'),gxcolor([]) ]).
+lit_i(13,2,t('COLONIA',3),[ font('Microsoft Sans Serif',8,[]),rect(392,100,442,114),outstyle(none),align(left),valign(top),noclip,fore(rgb(0,0,0)),border(1),ctlname('Gxreportlabel7'),gxcolor([]) ]).
+lit_i(17,2,t('MUNICIPIO',3),[ font('Microsoft Sans Serif',8,[]),rect(517,100,576,114),outstyle(none),align(left),valign(top),noclip,fore(rgb(0,0,0)),border(1),ctlname('Gxreportlabel8'),gxcolor([]) ]).
+lit_i(18,2,t('ESTADO',3),[ font('Microsoft Sans Serif',8,[]),rect(608,100,655,114),outstyle(none),align(left),valign(top),noclip,fore(rgb(0,0,0)),border(1),ctlname('Gxreportlabel9'),gxcolor([]) ]).
+lit_i(19,2,t('TELEFONO',3),[ font('Microsoft Sans Serif',8,[]),rect(708,100,768,114),outstyle(none),align(left),valign(top),noclip,fore(rgb(0,0,0)),border(1),ctlname('Gxreportlabel10'),gxcolor([]) ]).
+lit_i(4,2,window,[ title('Text'),rect(0,0,850,153),outstyle(none),fill,graph,back(rgb(0,0,0)),fore(rgb(0,0,0)),border(0),ctlname('Pb_header'),align(left),valign(top),gxcolor([]),defgxcolor('BLK','WHT') ]).
+lit_i(16,5,t(128,2),[ font('Microsoft Sans Serif',8,[]),rect(375,0,475,15),outstyle(none),align(left),valign(top),fore(rgb(0,0,0)),border(1),format(0),ctlname('128'),ctrltype(edit,16),ispwd(0),gxcolor([]) ]).
+lit_i(3,5,t(126,2),[ font('Microsoft Sans Serif',9,[]),rect(92,0,242,17),outstyle(none),align(left),valign(top),fore(rgb(0,0,0)),border(1),format(0),ctlname('126'),ctrltype(edit,3),ispwd(0),gxcolor([]) ]).
+lit_i(14,5,t(135,2),[ font('Microsoft Sans Serif',8,[]),rect(233,0,383,15),outstyle(none),align(left),valign(top),fore(rgb(0,0,0)),border(1),format(0),ctlname('135'),ctrltype(edit,14),ispwd(0),gxcolor([]) ]).
+lit_i(2,5,t(2,2),[ font('Microsoft Sans Serif',9,[]),rect(0,0,150,17),outstyle(none),align(center),valign(top),fore(rgb(0,0,0)),border(1),format(0),ctlname('2'),ctrltype(edit,2),ispwd(0),gxcolor([]) ]).
+lit_i(20,5,t(130,2),[ font('Microsoft Sans Serif',8,[]),rect(517,0,648,15),outstyle(none),align(left),valign(top),noclip,fore(rgb(0,0,0)),border(1),format(0),ctlname('130'),ctrltype(edit,20),ispwd(0),gxcolor([]) ]).
+lit_i(21,5,t(131,2),[ font('Microsoft Sans Serif',8,[]),rect(642,0,747,15),outstyle(none),align(left),valign(top),noclip,fore(rgb(0,0,0)),border(1),format(0),ctlname('131'),ctrltype(edit,21),ispwd(0),gxcolor([]) ]).
+lit_i(22,5,t(132,2),[ font('Microsoft Sans Serif',8,[]),rect(742,0,806,15),outstyle(none),align(right),valign(top),noclip,fore(rgb(0,0,0)),border(1),format(0),ctlname('132'),ctrltype(edit,22),ispwd(0),gxcolor([]) ]).
+lit_i(1,5,window,[ title('Text'),rect(0,0,850,193),outstyle(none),fill,graph,back(rgb(0,0,0)),fore(rgb(0,0,0)),border(0),ctlname('Pb_body'),align(left),valign(top),gxcolor([]),defgxcolor('BLK','WHT') ]).
+ 
+grid_i(7,15).
+ 
+ 
+ 
+form_class_i(1,'Graphic').
+ 
+ 
+ctrl_info_i(2,10,[ [ 0,0,sort,[],[],0,0,5,0,0 ] ]).
+ 
+ 
+ 
+att_prop_i(2,128,'ExternalName',proveedorescolonia,d).
+att_prop_i(2,128,'ExternalNamespace','Condufef_v1',d).
+att_prop_i(2,128,'EmptyAsNull','Yes',d).
+att_prop_i(2,128,idBasedOn,'',d).
+att_prop_i(2,128,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,128,'DB_NLS_SUPPORT','No',d).
+att_prop_i(2,128,'AttRegEx','',d).
+att_prop_i(2,128,'AttValidationFailedMsg','',d).
+att_prop_i(2,128,'FullName',proveedorescolonia,v).
+att_prop_i(2,126,'ExternalName',proveedoresnombre,d).
+att_prop_i(2,126,'ExternalNamespace','Condufef_v1',d).
+att_prop_i(2,126,'EmptyAsNull','Yes',d).
+att_prop_i(2,126,idBasedOn,'',d).
+att_prop_i(2,126,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,126,'DB_NLS_SUPPORT','No',d).
+att_prop_i(2,126,'AttRegEx','',d).
+att_prop_i(2,126,'AttValidationFailedMsg','',d).
+att_prop_i(2,126,'FullName',proveedoresnombre,v).
+att_prop_i(2,135,'ExternalName',proveedoresrfc,d).
+att_prop_i(2,135,'ExternalNamespace','Condufef_v1',d).
+att_prop_i(2,135,'EmptyAsNull','Yes',d).
+att_prop_i(2,135,idBasedOn,'',d).
+att_prop_i(2,135,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,135,'DB_NLS_SUPPORT','No',d).
+att_prop_i(2,135,'AttRegEx','',d).
+att_prop_i(2,135,'AttValidationFailedMsg','',d).
+att_prop_i(2,135,'FullName',proveedoresrfc,v).
+att_prop_i(2,2,'ExternalName',proveedoresid,d).
+att_prop_i(2,2,'ExternalNamespace','Condufef_v1',d).
+att_prop_i(2,2,'EmptyAsNull','Yes',d).
+att_prop_i(2,2,idBasedOn,'',d).
+att_prop_i(2,2,'AUTONUMBER','0',d).
+att_prop_i(2,2,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,2,'AttRegEx','',d).
+att_prop_i(2,2,'AttValidationFailedMsg','',d).
+att_prop_i(2,2,'FullName',proveedoresid,v).
+att_prop_i(2,130,'ExternalName',proveedoresmunicipio,d).
+att_prop_i(2,130,'ExternalNamespace','Condufef_v1',d).
+att_prop_i(2,130,'EmptyAsNull','Yes',d).
+att_prop_i(2,130,idBasedOn,'',d).
+att_prop_i(2,130,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,130,'DB_NLS_SUPPORT','No',d).
+att_prop_i(2,130,'AttRegEx','',d).
+att_prop_i(2,130,'AttValidationFailedMsg','',d).
+att_prop_i(2,130,'FullName',proveedoresmunicipio,v).
+att_prop_i(2,131,'ExternalName',proveedorestado,d).
+att_prop_i(2,131,'ExternalNamespace','Condufef_v1',d).
+att_prop_i(2,131,'EmptyAsNull','Yes',d).
+att_prop_i(2,131,idBasedOn,'',d).
+att_prop_i(2,131,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,131,'DB_NLS_SUPPORT','No',d).
+att_prop_i(2,131,'AttRegEx','',d).
+att_prop_i(2,131,'AttValidationFailedMsg','',d).
+att_prop_i(2,131,'FullName',proveedorestado,v).
+att_prop_i(2,132,'ExternalName',proveedorestelefono1,d).
+att_prop_i(2,132,'ExternalNamespace','Condufef_v1',d).
+att_prop_i(2,132,'EmptyAsNull','Yes',d).
+att_prop_i(2,132,idBasedOn,'',d).
+att_prop_i(2,132,'AUTONUMBER','0',d).
+att_prop_i(2,132,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,132,'AttRegEx','',d).
+att_prop_i(2,132,'AttValidationFailedMsg','',d).
+att_prop_i(2,132,'FullName',proveedorestelefono1,v).
+ 
+ 
+tbl_att_prop_i(2,10,2,'AllowNulls',n).
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+pgm_callprotocol_i(proc,20,'PDF_PROVEEDORES','HTTP').
+ 
+pgm_main_info_i(proc,20,'PDF_PROVEEDORES',[ 15,'APDF_PROVEEDORES','PDF_proveedores','','','','HTTP' ]).
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

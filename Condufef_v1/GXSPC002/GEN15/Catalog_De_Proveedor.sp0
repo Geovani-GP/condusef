@@ -14,9 +14,9 @@ lwi_i(2,[ [] ]).
 ta_i(2,[ [ [ 2000,se(40000,[ [ 2000,40000 ] ],[ t('coalesce(',1),t(40000,2),t(',',7),t('0',3),t(')',4) ]) ] ] ]).
 ta_i(2,[ [] ]).
  
-las_i(2,[ [ 'Nextvalue','Proveedoresnombre','Proveedoresrfc','Proveedoresdireccion','Proveedorescolonia','Proveedorescodigopostal','Proveedoresmunicipio','Proveedoresfax','Proveedorestelefono1','Proveedorestelefono2' ] ]).
+las_i(2,[ [ 'Nextvalue','Proveedoresnombre','Proveedoresrfc','Proveedoresdireccion','Proveedorescolonia','Proveedorescodigopostal','Proveedoresmunicipio','Estadoid','Proveedoresfax','Proveedorestelefono1','Proveedorestelefono2' ] ]).
  
-lac_i(2,[ [ 'Nextvalue','Proveedoresnombre','Proveedoresrfc','Proveedoresdireccion','Proveedorescolonia','Proveedorescodigopostal','Proveedoresmunicipio','Proveedoresfax','Proveedorestelefono1','Proveedorestelefono2' ] ]).
+lac_i(2,[ [ 'Nextvalue','Proveedoresnombre','Proveedoresrfc','Proveedoresdireccion','Proveedorescolonia','Proveedorescodigopostal','Proveedoresmunicipio','Estadoid','Proveedoresfax','Proveedorestelefono1','Proveedorestelefono2' ] ]).
  
  
 lits_i('CATÁLOGO DE PROVEEDOR',5,10).
@@ -41,6 +41,7 @@ pos_i('Proveedoresdireccion',[ 0,0,0 ]).
 pos_i('Proveedorescolonia',[ 0,0,0 ]).
 pos_i('Proveedorescodigopostal',[ 0,0,0 ]).
 pos_i('Proveedoresmunicipio',[ 0,0,0 ]).
+pos_i('Estadoid',[ 0,0,0 ]).
 pos_i('Proveedoresfax',[ 0,0,0 ]).
 pos_i('Proveedorestelefono1',[ 0,0,0 ]).
 pos_i('Proveedorestelefono2',[ 0,0,0 ]).
@@ -123,6 +124,7 @@ rule_i(0,prop('Theme',o(25,'Flat'))).
 rule_i(0,prop('Folder',o(8,'WebApi'))).
 rule_i(0,prop('ObjDesc','Catalog_De_Proveedor')).
 rule_i(0,prop('ObjName','Catalog_De_Proveedor')).
+rule_i(0,dyncombo(t('Estadoid',23),[ 177,178,sort,25 ])).
 rule_i(0,maingen(15)).
 rule_i(0,file(10,'PROVEEDORES',[ 2,126,127,128,129,130,131,132,133,134,135,136,137,138 ])).
 rule_i(0,loc([ 10 ],'PROVEEDORES','','LAN')).
@@ -143,6 +145,8 @@ rule_i(0,p(0,15,fvix,[ 2,2 ],[ 'EXTNAM','YES' ])).
 rule_i(0,rule([ a(22,[ '''Guardar ''','''Guardar ''','' ]) ],[],[],[])).
 rule_i(0,rule([ a(22,[ '''Cancelar''','''Cancelar''','' ]) ],[],[],[])).
 rule_i(0,rule([ a(22,[ '''Consultar ''','''Consultar ''','' ]) ],[],[],[])).
+rule_i(0,p(0,0,fv,24,[ intname,'ESTADOS' ])).
+rule_i(0,p(0,0,fv,24,[ table,25 ])).
  
 a_i(1,1,f,'Today',[],[ [],[ t('today(',1),t(')',4) ] ]).
 a_i(2,1,f,'Err',[],[ [],[ t('0',3) ] ]).
@@ -163,13 +167,16 @@ v_i(f,o,4,[ t('&Nextvalue',23),t('Enabled',3) ]).
  
  
  
-attri_i('Today',[ 'Gx_date',date,8,0,'99/99/99',1,'','',26 ]).
+attri_i(178,[ estado,svchar,100,0,'',0,estado,'',0 ]).
+attri_i(177,[ estadoid,int,4,0,'ZZZ9',0,estadoid,'',0 ]).
+attri_i('Today',[ 'Gx_date',date,8,0,'99/99/99',1,'','',27 ]).
 attri_i(40000,[ 'GXC1',int,9,0,'',0,'',[],0 ]).
 attri_i(2,[ proveedoresid,int,9,0,'ZZZZZZZZ9',0,proveedoresid,'',0 ]).
-attri_i('Errmsg',[ 'Gx_emsg',char,70,0,'',1,'Error text','',25 ]).
-attri_i('Err',[ 'Gx_err',int,3,0,'ZZ9',1,'Error code','',24 ]).
-attri_i('Proveedoresusuario',[ proveedoresusuario,svchar,15,0,'',0,proveedoresusuario,'',23 ]).
+attri_i('Errmsg',[ 'Gx_emsg',char,70,0,'',1,'Error text','',26 ]).
+attri_i('Err',[ 'Gx_err',int,3,0,'ZZ9',1,'Error code','',25 ]).
+attri_i('Estadoid',[ estadoid,int,4,0,'ZZZ9',0,estadoid,'',24 ]).
 attri_i('Websession',[ 'WebSession',o(websession),4,0,'',0,'Web Session','',8 ]).
+attri_i('Proveedoresusuario',[ proveedoresusuario,svchar,15,0,'',0,proveedoresusuario,'',23 ]).
 attri_i('Proveedorestelefono2',[ proveedorestelefono2,int,10,0,'ZZZZZZZZZ9',0,proveedorestelefono2,'',19 ]).
 attri_i('Proveedorestelefono1',[ proveedorestelefono1,int,10,0,'ZZZZZZZZZ9',0,proveedorestelefono1,'',18 ]).
 attri_i('Proveedoresrfc',[ proveedoresrfc,svchar,13,0,'',0,proveedoresrfc,'',13 ]).
@@ -184,9 +191,11 @@ attri_i('Proveedorescodigopostal',[ proveedorescodigopostal,svchar,5,0,'',0,prov
 attri_i('Proveedores',[ proveedores,o(proveedores),0,0,'',0,proveedores,'',11 ]).
 attri_i('Nextvalue',[ 'NextValue',int,4,0,'ZZZ9',0,'Next Value','',12 ]).
  
+table_i(25,[ estados,[ 177,178 ],estados,estados ]).
 table_i(10,[ 'PROVEEDORES',[ 2 ],proveedores,proveedores ]).
  
 index_i(10,[ 'PROVEEDORES_PKEY',u,[ 2 ],'PROVEEDORES_PKEY' ]).
+index_i(25,[ 'IESTADOS',u,[ 177 ],'Iestados' ]).
  
 lv_i(2,2000,10).
  
@@ -235,15 +244,15 @@ break_i(2,nvg,1,[],[ [],[],[] ]).
  
 b_group_i(2,1,lit,0,1,1).
 b_group_i(2,2,lit,0,2,4).
-b_group_i(2,3,lit,0,5,30).
-b_group_i(2,4,lit,0,31,34).
-b_group_i(2,5,lit,0,35,0).
+b_group_i(2,3,lit,0,5,31).
+b_group_i(2,4,lit,0,32,35).
+b_group_i(2,5,lit,0,36,0).
  
 b_line_i(1,2,1,cmd,1,[ t('',146,1,0),t('Start',3,1,7) ]).
 b_line_i(2,2,2,cmd,1,[ t('',107,1,0),t('Nextvalue',23,1,0),t(=,10,1,0),t(40000,2,1,0),t(+,5,1,0),t('1',3,1,0) ]).
 b_line_i(3,2,2,cmd,1,[ t('',147,1,0) ]).
 b_line_i(4,2,2,cmd,1,[ t('',146,1,0),t('''Guardar ''',3,4,7) ]).
-b_line_i(5,2,3,cmd,1,[ t('',109,1,0),t('null(',1,5,24),t('Proveedoresnombre',23,1,5),t(')',4,1,33),t('.OR.',9,1,35),t('null(',1,5,56),t('Proveedoresrfc',23,1,40),t(')',4,1,65),t('.OR.',9,1,67),t('null(',1,5,94),t('Proveedoresdireccion',23,1,72),t(')',4,1,103),t('.OR.',9,1,104),t('null(',1,5,129),t('Proveedorescolonia',23,1,109),t(')',4,1,138),t('.OR.',9,1,140),t('null(',1,5,170),t('Proveedorescodigopostal',23,1,145),t(')',4,1,179),t('.OR.',9,1,181),t('null(',1,5,208),t('Proveedoresmunicipio',23,1,186),t(')',4,1,217),t('.OR.',9,1,219),t('null(',1,5,240),t('Proveedoresfax',23,1,224),t(')',4,1,249),t('.OR.',9,1,251),t('null(',1,5,278),t('Proveedorestelefono1',23,1,256),t(')',4,1,287),t('.OR.',9,1,289),t('null(',1,5,316),t('Proveedorestelefono2',23,1,294),t(')',4,1,325) ]).
+b_line_i(5,2,3,cmd,1,[ t('',109,1,0),t('null(',1,5,24),t('Proveedoresnombre',23,1,5),t(')',4,1,33),t('.OR.',9,1,35),t('null(',1,5,51),t('Estadoid',23,1,41),t(')',4,1,60),t('.OR.',9,1,62),t('null(',1,5,83),t('Proveedoresrfc',23,1,67),t(')',4,1,92),t('.OR.',9,1,94),t('null(',1,5,121),t('Proveedoresdireccion',23,1,99),t(')',4,1,130),t('.OR.',9,1,131),t('null(',1,5,156),t('Proveedorescolonia',23,1,136),t(')',4,1,165),t('.OR.',9,1,167),t('null(',1,5,197),t('Proveedorescodigopostal',23,1,172),t(')',4,1,206),t('.OR.',9,1,208),t('null(',1,5,235),t('Proveedoresmunicipio',23,1,213),t(')',4,1,244),t('.OR.',9,1,246),t('null(',1,5,267),t('Proveedoresfax',23,1,251),t(')',4,1,276),t('.OR.',9,1,278),t('null(',1,5,305),t('Proveedorestelefono1',23,1,283),t(')',4,1,314),t('.OR.',9,1,316),t('null(',1,5,343),t('Proveedorestelefono2',23,1,321),t(')',4,1,352) ]).
 b_line_i(6,2,3,cmd,1,[ t('',141,1,0),t('''Los campos estan vacios''',3,6,7),t(')',4,1,32) ]).
 b_line_i(7,2,3,cmd,1,[ t('',110,1,0) ]).
 b_line_i(8,2,3,cmd,1,[ t('',107,1,0),t([ t('Proveedores',23,1,0),t('Proveedoresid',3,1,0) ],29,1,0),t(=,10,1,0),t('Nextvalue',23,1,0) ]).
@@ -253,26 +262,27 @@ b_line_i(11,2,3,cmd,1,[ t('',107,1,0),t([ t('Proveedores',23,1,0),t('Proveedores
 b_line_i(12,2,3,cmd,1,[ t('',107,1,0),t([ t('Proveedores',23,1,0),t('Proveedorescolonia',3,1,0) ],29,1,0),t(=,10,1,0),t('Proveedorescolonia',23,1,0) ]).
 b_line_i(13,2,3,cmd,1,[ t('',107,1,0),t([ t('Proveedores',23,1,0),t('Proveedorescodigopostal',3,1,0) ],29,1,0),t(=,10,1,0),t('Proveedorescodigopostal',23,1,0) ]).
 b_line_i(14,2,3,cmd,1,[ t('',107,1,0),t([ t('Proveedores',23,1,0),t('Proveedoresmunicipio',3,1,0) ],29,1,0),t(=,10,1,0),t('Proveedoresmunicipio',23,1,0) ]).
-b_line_i(15,2,3,cmd,1,[ t('',107,1,0),t([ t('Proveedores',23,1,0),t('Proveedoresfax',3,1,0) ],29,1,0),t(=,10,1,0),t('Proveedoresfax',23,1,0) ]).
-b_line_i(16,2,3,cmd,1,[ t('',107,1,0),t([ t('Proveedores',23,1,0),t('Proveedorestelefono1',3,1,0) ],29,1,0),t(=,10,1,0),t('Proveedorestelefono1',23,1,0) ]).
-b_line_i(17,2,3,cmd,1,[ t('',107,1,0),t([ t('Proveedores',23,1,0),t('Proveedorestelefono2',3,1,0) ],29,1,0),t(=,10,1,0),t('Proveedorestelefono2',23,1,0) ]).
-b_line_i(18,2,3,cmd,1,[ t('',107,1,0),t([ t('Proveedores',23,1,0),t('Proveedoresfecreg',3,1,0) ],29,1,0),t(=,10,1,0),t('Today',23,1,0) ]).
-b_line_i(19,2,3,cmd,1,[ t('',107,1,0),t([ t('Proveedores',23,1,0),t('Proveedoresusuario',3,1,0) ],29,1,0),t(=,10,1,0),t([ t('Websession',23,1,0),t('get(',1,1,0) ],31,1,0),t('''usuario''',3,1,0),t(')',4,1,0) ]).
-b_line_i(20,2,3,cmd,1,[ t('',107,1,0),t([ t('Proveedores',23,20,3),t('save(',1,20,16) ],31,20,16),t(')',4,1,22) ]).
-b_line_i(21,2,3,cmd,1,[ t('',109,1,0),t([ t('Proveedores',23,21,6),t('success(',1,21,19) ],31,21,19),t(')',4,1,28) ]).
-b_line_i(22,2,3,cmd,1,[ t('',132,1,0) ]).
-b_line_i(23,2,3,cmd,1,[ t('',104,1,0),t(o(13,'Catalog_De_Proveedor'),28,1,3) ]).
-b_line_i(24,2,3,cmd,1,[ t('',110,1,0) ]).
-b_line_i(25,2,3,cmd,1,[ t('',157,1,0) ]).
-b_line_i(26,2,3,cmd,1,[ t('',111,1,0) ]).
+b_line_i(15,2,3,cmd,1,[ t('',107,1,0),t([ t('Proveedores',23,1,0),t('Proveedorestado',3,1,0) ],29,1,0),t(=,10,1,0),t('str(',1,1,0),t('Proveedoresid',23,1,0),t(',',7,1,0),t(9,3,1,0),t(',',7,1,0),t(0,3,1,0),t(')',4,1,0) ]).
+b_line_i(16,2,3,cmd,1,[ t('',107,1,0),t([ t('Proveedores',23,1,0),t('Proveedoresfax',3,1,0) ],29,1,0),t(=,10,1,0),t('Proveedoresfax',23,1,0) ]).
+b_line_i(17,2,3,cmd,1,[ t('',107,1,0),t([ t('Proveedores',23,1,0),t('Proveedorestelefono1',3,1,0) ],29,1,0),t(=,10,1,0),t('Proveedorestelefono1',23,1,0) ]).
+b_line_i(18,2,3,cmd,1,[ t('',107,1,0),t([ t('Proveedores',23,1,0),t('Proveedorestelefono2',3,1,0) ],29,1,0),t(=,10,1,0),t('Proveedorestelefono2',23,1,0) ]).
+b_line_i(19,2,3,cmd,1,[ t('',107,1,0),t([ t('Proveedores',23,1,0),t('Proveedoresfecreg',3,1,0) ],29,1,0),t(=,10,1,0),t('Today',23,1,0) ]).
+b_line_i(20,2,3,cmd,1,[ t('',107,1,0),t([ t('Proveedores',23,1,0),t('Proveedoresusuario',3,1,0) ],29,1,0),t(=,10,1,0),t([ t('Websession',23,1,0),t('get(',1,1,0) ],31,1,0),t('''usuario''',3,1,0),t(')',4,1,0) ]).
+b_line_i(21,2,3,cmd,1,[ t('',107,1,0),t([ t('Proveedores',23,21,3),t('save(',1,21,16) ],31,21,16),t(')',4,1,22) ]).
+b_line_i(22,2,3,cmd,1,[ t('',109,1,0),t([ t('Proveedores',23,22,6),t('success(',1,22,19) ],31,22,19),t(')',4,1,28) ]).
+b_line_i(23,2,3,cmd,1,[ t('',132,1,0) ]).
+b_line_i(24,2,3,cmd,1,[ t('',104,1,0),t(o(13,'Catalog_De_Proveedor'),28,1,3) ]).
+b_line_i(25,2,3,cmd,1,[ t('',110,1,0) ]).
+b_line_i(26,2,3,cmd,1,[ t('',157,1,0) ]).
 b_line_i(27,2,3,cmd,1,[ t('',111,1,0) ]).
-b_line_i(28,2,3,cmd,1,[ t('',147,1,0) ]).
-b_line_i(30,2,3,cmd,1,[ t('',146,1,0),t('''Cancelar''',3,30,7) ]).
-b_line_i(31,2,4,cmd,1,[ t('',104,1,0),t(o(13,'MenuPrincipal'),28,1,2) ]).
-b_line_i(32,2,4,cmd,1,[ t('',147,1,0) ]).
-b_line_i(34,2,4,cmd,1,[ t('',146,1,0),t('''Consultar ''',3,34,7) ]).
-b_line_i(35,2,5,cmd,1,[ t('',104,1,0),t(o(13,'DetallesProveedores'),28,1,2) ]).
-b_line_i(36,2,5,cmd,1,[ t('',147,1,0) ]).
+b_line_i(28,2,3,cmd,1,[ t('',111,1,0) ]).
+b_line_i(29,2,3,cmd,1,[ t('',147,1,0) ]).
+b_line_i(31,2,3,cmd,1,[ t('',146,1,0),t('''Cancelar''',3,31,7) ]).
+b_line_i(32,2,4,cmd,1,[ t('',104,1,0),t(o(13,'MenuPrincipal'),28,1,2) ]).
+b_line_i(33,2,4,cmd,1,[ t('',147,1,0) ]).
+b_line_i(35,2,4,cmd,1,[ t('',146,1,0),t('''Consultar ''',3,35,7) ]).
+b_line_i(36,2,5,cmd,1,[ t('',104,1,0),t(o(13,'DetallesProveedores'),28,1,2) ]).
+b_line_i(37,2,5,cmd,1,[ t('',147,1,0) ]).
 b_line_i(1000,2,5,cmd,0,[ t('',146,0,0),t('Load',3,0,0) ]).
 b_line_i(1001,2,5,cmd,0,[ t('',155,0,0) ]).
 b_line_i(1002,2,5,cmd,0,[ t('',147,0,0) ]).
@@ -292,7 +302,7 @@ b_line_i(1002,2,5,cmd,0,[ t('',147,0,0) ]).
 html_i(2,html('&nbsp; ')).
 html_i(3,html('<p>')).
 html_i(4,table(4)).
-html_i(83,html('</p>')).
+html_i(84,html('</p>')).
  
 html_sub_i(4,0,html_i(0,html('<tbody>'))).
 html_sub_i(4,5,html_i(1,row(5))).
@@ -346,36 +356,37 @@ html_sub_i(48,49,html_i(1,row(49))).
 html_sub_i(49,50,html_i(0,cell(50))).
 html_sub_i(50,51,html_i(0,t('Estado:',3))).
 html_sub_i(49,52,html_i(1,cell(52))).
-html_sub_i(49,53,html_i(2,cell(53))).
-html_sub_i(49,54,html_i(3,cell(54))).
-html_sub_i(49,55,html_i(4,cell(55))).
-html_sub_i(48,56,html_i(2,row(56))).
-html_sub_i(56,57,html_i(0,cell(57))).
-html_sub_i(57,58,html_i(0,t('Fax:',3))).
-html_sub_i(56,59,html_i(1,cell(59))).
-html_sub_i(59,60,html_i(0,t('Proveedoresfax',23))).
-html_sub_i(56,61,html_i(2,cell(61))).
-html_sub_i(56,62,html_i(3,cell(62))).
-html_sub_i(56,63,html_i(4,cell(63))).
-html_sub_i(48,64,html_i(3,row(64))).
-html_sub_i(64,65,html_i(0,cell(65))).
-html_sub_i(65,66,html_i(0,t('Teléfono1:',3))).
-html_sub_i(64,67,html_i(1,cell(67))).
-html_sub_i(67,68,html_i(0,t('Proveedorestelefono1',23))).
-html_sub_i(64,69,html_i(2,cell(69))).
-html_sub_i(64,70,html_i(3,cell(70))).
-html_sub_i(64,71,html_i(4,cell(71))).
-html_sub_i(71,72,html_i(0,button('''Consultar '''))).
-html_sub_i(48,73,html_i(4,row(73))).
-html_sub_i(73,74,html_i(0,cell(74))).
-html_sub_i(74,75,html_i(0,t('Teléfono:',3))).
-html_sub_i(73,76,html_i(1,cell(76))).
-html_sub_i(76,77,html_i(0,t('Proveedorestelefono2',23))).
-html_sub_i(73,78,html_i(2,cell(78))).
-html_sub_i(73,79,html_i(3,cell(79))).
-html_sub_i(79,80,html_i(0,button('''Guardar '''))).
-html_sub_i(73,81,html_i(4,cell(81))).
-html_sub_i(81,82,html_i(0,button('''Cancelar'''))).
+html_sub_i(52,53,html_i(0,t('Estadoid',23))).
+html_sub_i(49,54,html_i(2,cell(54))).
+html_sub_i(49,55,html_i(3,cell(55))).
+html_sub_i(49,56,html_i(4,cell(56))).
+html_sub_i(48,57,html_i(2,row(57))).
+html_sub_i(57,58,html_i(0,cell(58))).
+html_sub_i(58,59,html_i(0,t('Fax:',3))).
+html_sub_i(57,60,html_i(1,cell(60))).
+html_sub_i(60,61,html_i(0,t('Proveedoresfax',23))).
+html_sub_i(57,62,html_i(2,cell(62))).
+html_sub_i(57,63,html_i(3,cell(63))).
+html_sub_i(57,64,html_i(4,cell(64))).
+html_sub_i(48,65,html_i(3,row(65))).
+html_sub_i(65,66,html_i(0,cell(66))).
+html_sub_i(66,67,html_i(0,t('Teléfono1:',3))).
+html_sub_i(65,68,html_i(1,cell(68))).
+html_sub_i(68,69,html_i(0,t('Proveedorestelefono1',23))).
+html_sub_i(65,70,html_i(2,cell(70))).
+html_sub_i(65,71,html_i(3,cell(71))).
+html_sub_i(65,72,html_i(4,cell(72))).
+html_sub_i(72,73,html_i(0,button('''Consultar '''))).
+html_sub_i(48,74,html_i(4,row(74))).
+html_sub_i(74,75,html_i(0,cell(75))).
+html_sub_i(75,76,html_i(0,t('Teléfono:',3))).
+html_sub_i(74,77,html_i(1,cell(77))).
+html_sub_i(77,78,html_i(0,t('Proveedorestelefono2',23))).
+html_sub_i(74,79,html_i(2,cell(79))).
+html_sub_i(74,80,html_i(3,cell(80))).
+html_sub_i(80,81,html_i(0,button('''Guardar '''))).
+html_sub_i(74,82,html_i(4,cell(82))).
+html_sub_i(82,83,html_i(0,button('''Cancelar'''))).
 html_sub_i(48,0,html_i(5,html('</tbody>'))).
 html_sub_i(4,0,html_i(4,html('</tbody>'))).
  
@@ -730,159 +741,189 @@ html_comp_i(51,'Backcolor',rgb(255,255,255),d,[ color ]).
 html_comp_i(51,'Forecolor',rgb(0,0,0),d,[ color ]).
 html_comp_i(51,'Font','',d,[ str ]).
 html_comp_i(52,'Width',measure(569,px),v,[ measure ]).
-html_comp_i(53,'Width',measure(131,px),v,[ measure ]).
-html_comp_i(58,'Caption','Fax:',d,[ str ]).
-html_comp_i(58,'Id','Textblock9',v,[ str ]).
-html_comp_i(58,'Class','TextBlock',d,[ str ]).
-html_comp_i(58,'Event','',d,[ str ]).
-html_comp_i(58,'Returnonclick',0,d,[ bool ]).
-html_comp_i(58,'Gxformat',0,d,[ num ]).
-html_comp_i(58,'Title','',d,[ str ]).
-html_comp_i(58,'Fill',-1,d,[ bool ]).
-html_comp_i(58,'Backcolor',rgb(255,255,255),d,[ color ]).
-html_comp_i(58,'Forecolor',rgb(0,0,0),d,[ color ]).
-html_comp_i(58,'Font','',d,[ str ]).
-html_comp_i(60,'Colcount',15,d,[ num ]).
-html_comp_i(60,'Attid',-17,v,[ num ]).
-html_comp_i(60,'Class','Attribute',d,[ str ]).
-html_comp_i(60,'Controlname','&Proveedoresfax',d,[ str ]).
-html_comp_i(60,'Returnonclick',0,d,[ bool ]).
-html_comp_i(60,'Captionclass','',d,[ str ]).
-html_comp_i(60,'Captionposition','',d,[ str ]).
-html_comp_i(60,'Captionvalue','',d,[ str ]).
-html_comp_i(60,'Controltype',2,d,[ num ]).
-html_comp_i(60,'Inputtype',0,d,[ num ]).
-html_comp_i(60,'Editautocomplete',0,d,[ num ]).
-html_comp_i(60,'Autocorrection',-1,d,[ bool ]).
-html_comp_i(60,'Autocapitalization','FirstWord',d,[ str ]).
-html_comp_i(60,'Notifycontextchange',0,d,[ bool ]).
-html_comp_i(60,'Emptyasnull','Yes',d,[ str ]).
-html_comp_i(60,'Readonly',0,d,[ bool ]).
-html_comp_i(60,'Autocomplete',-1,d,[ bool ]).
-html_comp_i(60,'Ispassword',0,d,[ bool ]).
-html_comp_i(60,'Autoresize',-1,d,[ bool ]).
-html_comp_i(60,'Gxwidth',measure(15,chr),d,[ measure ]).
-html_comp_i(60,'Gxheight',measure(1,row),d,[ measure ]).
-html_comp_i(60,'Ismultiline',0,d,[ bool ]).
-html_comp_i(60,'Fill',-1,d,[ bool ]).
-html_comp_i(60,'Backcolor',rgb(255,255,255),d,[ color ]).
-html_comp_i(60,'Forecolor',rgb(0,0,0),d,[ color ]).
-html_comp_i(60,'Font',font('Verdana',12,[]),d,[ font ]).
-html_comp_i(60,'Horizontalalignment',left,d,[ str ]).
-html_comp_i(60,'Gxformat',0,d,[ num ]).
-html_comp_i(60,'Title','',d,[ str ]).
-html_comp_i(60,'Invitemsg','',d,[ str ]).
-html_comp_i(65,'Height',measure(24,px),v,[ measure ]).
-html_comp_i(66,'Caption','Teléfono1:',d,[ str ]).
-html_comp_i(66,'Id','Textblock10',v,[ str ]).
-html_comp_i(66,'Class','TextBlock',d,[ str ]).
-html_comp_i(66,'Event','',d,[ str ]).
-html_comp_i(66,'Returnonclick',0,d,[ bool ]).
-html_comp_i(66,'Gxformat',0,d,[ num ]).
-html_comp_i(66,'Title','',d,[ str ]).
-html_comp_i(66,'Fill',-1,d,[ bool ]).
-html_comp_i(66,'Backcolor',rgb(255,255,255),d,[ color ]).
-html_comp_i(66,'Forecolor',rgb(0,0,0),d,[ color ]).
-html_comp_i(66,'Font','',d,[ str ]).
-html_comp_i(68,'Colcount',10,d,[ num ]).
-html_comp_i(68,'Attid',-18,v,[ num ]).
-html_comp_i(68,'Class','Attribute',d,[ str ]).
-html_comp_i(68,'Controlname','&Proveedorestelefono1',d,[ str ]).
-html_comp_i(68,'Returnonclick',0,d,[ bool ]).
-html_comp_i(68,'Captionclass','',d,[ str ]).
-html_comp_i(68,'Captionposition','',d,[ str ]).
-html_comp_i(68,'Captionvalue','',d,[ str ]).
-html_comp_i(68,'Controltype',2,d,[ num ]).
-html_comp_i(68,'Inputtype',0,d,[ num ]).
-html_comp_i(68,'Notifycontextchange',0,d,[ bool ]).
-html_comp_i(68,'Emptyasnull','Yes',d,[ str ]).
-html_comp_i(68,'Readonly',0,d,[ bool ]).
-html_comp_i(68,'Autocomplete',-1,d,[ bool ]).
-html_comp_i(68,'Ispassword',0,d,[ bool ]).
-html_comp_i(68,'Autoresize',-1,d,[ bool ]).
-html_comp_i(68,'Gxwidth',measure(10,chr),d,[ measure ]).
-html_comp_i(68,'Gxheight',measure(1,row),d,[ measure ]).
-html_comp_i(68,'Ismultiline',0,d,[ bool ]).
-html_comp_i(68,'Fill',-1,d,[ bool ]).
-html_comp_i(68,'Backcolor',rgb(255,255,255),d,[ color ]).
-html_comp_i(68,'Forecolor',rgb(0,0,0),d,[ color ]).
-html_comp_i(68,'Font',font('Verdana',12,[]),d,[ font ]).
-html_comp_i(68,'Horizontalalignment',right,d,[ str ]).
-html_comp_i(68,'Gxformat',0,d,[ num ]).
-html_comp_i(68,'Title','',d,[ str ]).
-html_comp_i(68,'Invitemsg','',d,[ str ]).
-html_comp_i(72,'Controlname','Button1',v,[ str ]).
-html_comp_i(72,'Class','Button',d,[ str ]).
-html_comp_i(72,'Event','''Consultar ''',v,[ str ]).
-html_comp_i(72,'Caption','CONSULTAR',d,[ str ]).
-html_comp_i(72,'Title','CONSULTAR',d,[ str ]).
-html_comp_i(72,'Font',font('Microsoft Sans Serif',10,[]),d,[ font ]).
-html_comp_i(72,'Forecolor',rgb(255,255,255),v,[ color ]).
-html_comp_i(72,'Backcolor',rgb(0,128,0),v,[ color ]).
-html_comp_i(72,'Border','2',d,[ str ]).
-html_comp_i(72,'Bordercolor',rgb(219,220,222),d,[ color ]).
-html_comp_i(72,'Buttonborderstyle',standard,d,[ str ]).
-html_comp_i(74,'Height',measure(24,px),v,[ measure ]).
-html_comp_i(75,'Caption','Teléfono:',d,[ str ]).
-html_comp_i(75,'Id','Textblock11',v,[ str ]).
-html_comp_i(75,'Class','TextBlock',d,[ str ]).
-html_comp_i(75,'Event','',d,[ str ]).
-html_comp_i(75,'Returnonclick',0,d,[ bool ]).
-html_comp_i(75,'Gxformat',0,d,[ num ]).
-html_comp_i(75,'Title','',d,[ str ]).
-html_comp_i(75,'Fill',-1,d,[ bool ]).
-html_comp_i(75,'Backcolor',rgb(255,255,255),d,[ color ]).
-html_comp_i(75,'Forecolor',rgb(0,0,0),d,[ color ]).
-html_comp_i(75,'Font','',d,[ str ]).
-html_comp_i(77,'Colcount',10,d,[ num ]).
-html_comp_i(77,'Attid',-19,v,[ num ]).
-html_comp_i(77,'Class','Attribute',d,[ str ]).
-html_comp_i(77,'Controlname','&Proveedorestelefono2',d,[ str ]).
-html_comp_i(77,'Returnonclick',0,d,[ bool ]).
-html_comp_i(77,'Captionclass','',d,[ str ]).
-html_comp_i(77,'Captionposition','',d,[ str ]).
-html_comp_i(77,'Captionvalue','',d,[ str ]).
-html_comp_i(77,'Controltype',2,d,[ num ]).
-html_comp_i(77,'Inputtype',0,d,[ num ]).
-html_comp_i(77,'Notifycontextchange',0,d,[ bool ]).
-html_comp_i(77,'Emptyasnull','Yes',d,[ str ]).
-html_comp_i(77,'Readonly',0,d,[ bool ]).
-html_comp_i(77,'Autocomplete',-1,d,[ bool ]).
-html_comp_i(77,'Ispassword',0,d,[ bool ]).
-html_comp_i(77,'Autoresize',-1,d,[ bool ]).
-html_comp_i(77,'Gxwidth',measure(10,chr),d,[ measure ]).
-html_comp_i(77,'Gxheight',measure(1,row),d,[ measure ]).
-html_comp_i(77,'Ismultiline',0,d,[ bool ]).
-html_comp_i(77,'Fill',-1,d,[ bool ]).
-html_comp_i(77,'Backcolor',rgb(255,255,255),d,[ color ]).
-html_comp_i(77,'Forecolor',rgb(0,0,0),d,[ color ]).
-html_comp_i(77,'Font',font('Verdana',12,[]),d,[ font ]).
-html_comp_i(77,'Horizontalalignment',right,d,[ str ]).
-html_comp_i(77,'Gxformat',0,d,[ num ]).
-html_comp_i(77,'Title','',d,[ str ]).
-html_comp_i(77,'Invitemsg','',d,[ str ]).
-html_comp_i(80,'Controlname','Button2',v,[ str ]).
-html_comp_i(80,'Class','Button',d,[ str ]).
-html_comp_i(80,'Event','''Guardar ''',v,[ str ]).
-html_comp_i(80,'Caption','GUARDAR',d,[ str ]).
-html_comp_i(80,'Title','GUARDAR',d,[ str ]).
-html_comp_i(80,'Font',font('Microsoft Sans Serif',10,[]),d,[ font ]).
-html_comp_i(80,'Forecolor',rgb(255,255,255),v,[ color ]).
-html_comp_i(80,'Backcolor',rgb(0,128,0),v,[ color ]).
-html_comp_i(80,'Border','2',d,[ str ]).
-html_comp_i(80,'Bordercolor',rgb(219,220,222),d,[ color ]).
-html_comp_i(80,'Buttonborderstyle',standard,d,[ str ]).
-html_comp_i(82,'Controlname','Button3',v,[ str ]).
-html_comp_i(82,'Class','Button',d,[ str ]).
-html_comp_i(82,'Event','''Cancelar''',v,[ str ]).
-html_comp_i(82,'Caption','CANCELAR',d,[ str ]).
-html_comp_i(82,'Title','CANCELAR',d,[ str ]).
-html_comp_i(82,'Font',font('Microsoft Sans Serif',10,[]),d,[ font ]).
-html_comp_i(82,'Forecolor',rgb(255,255,255),v,[ color ]).
-html_comp_i(82,'Backcolor',rgb(255,0,0),v,[ color ]).
-html_comp_i(82,'Border','2',d,[ str ]).
-html_comp_i(82,'Bordercolor',rgb(219,220,222),d,[ color ]).
-html_comp_i(82,'Buttonborderstyle',standard,d,[ str ]).
+html_comp_i(53,'Colcount',80,d,[ num ]).
+html_comp_i(53,'Attid',-24,v,[ num ]).
+html_comp_i(53,'Class','Attribute',d,[ str ]).
+html_comp_i(53,'Controlname','&Estadoid',d,[ str ]).
+html_comp_i(53,'Returnonclick',0,d,[ bool ]).
+html_comp_i(53,'Captionclass','',d,[ str ]).
+html_comp_i(53,'Captionposition','',d,[ str ]).
+html_comp_i(53,'Captionvalue','',d,[ str ]).
+html_comp_i(53,'Controltype',4,v,[ num ]).
+html_comp_i(53,'Datasourcefrom','Attributes',d,[ str ]).
+html_comp_i(53,'Controlitemvalues',177,d,[ num ]).
+html_comp_i(53,'Controlitemdescription',178,v,[ num ]).
+html_comp_i(53,'Controlsortdescription',-1,d,[ bool ]).
+html_comp_i(53,'Controlwhere','',d,[ str ]).
+html_comp_i(53,'Controlrestrictedby','',d,[ str ]).
+html_comp_i(53,'Addemptyitem',0,d,[ bool ]).
+html_comp_i(53,'Notifycontextchange',0,d,[ bool ]).
+html_comp_i(53,'Emptyasnull','Yes',d,[ str ]).
+html_comp_i(53,'Readonly',0,d,[ bool ]).
+html_comp_i(53,'Autocomplete',-1,d,[ bool ]).
+html_comp_i(53,'Autoresize',0,v,[ bool ]).
+html_comp_i(53,'Gxwidth',measure(250,px),v,[ measure ]).
+html_comp_i(53,'Ismultiline',0,d,[ bool ]).
+html_comp_i(53,'Fill',-1,d,[ bool ]).
+html_comp_i(53,'Backcolor',rgb(255,255,255),d,[ color ]).
+html_comp_i(53,'Forecolor',rgb(0,0,0),d,[ color ]).
+html_comp_i(53,'Font',font('Verdana',12,[]),d,[ font ]).
+html_comp_i(53,'Horizontalalignment',left,d,[ str ]).
+html_comp_i(53,'Title','',d,[ str ]).
+html_comp_i(53,'Invitemsg','',d,[ str ]).
+html_comp_i(54,'Width',measure(131,px),v,[ measure ]).
+html_comp_i(59,'Caption','Fax:',d,[ str ]).
+html_comp_i(59,'Id','Textblock9',v,[ str ]).
+html_comp_i(59,'Class','TextBlock',d,[ str ]).
+html_comp_i(59,'Event','',d,[ str ]).
+html_comp_i(59,'Returnonclick',0,d,[ bool ]).
+html_comp_i(59,'Gxformat',0,d,[ num ]).
+html_comp_i(59,'Title','',d,[ str ]).
+html_comp_i(59,'Fill',-1,d,[ bool ]).
+html_comp_i(59,'Backcolor',rgb(255,255,255),d,[ color ]).
+html_comp_i(59,'Forecolor',rgb(0,0,0),d,[ color ]).
+html_comp_i(59,'Font','',d,[ str ]).
+html_comp_i(61,'Colcount',15,d,[ num ]).
+html_comp_i(61,'Attid',-17,v,[ num ]).
+html_comp_i(61,'Class','Attribute',d,[ str ]).
+html_comp_i(61,'Controlname','&Proveedoresfax',d,[ str ]).
+html_comp_i(61,'Returnonclick',0,d,[ bool ]).
+html_comp_i(61,'Captionclass','',d,[ str ]).
+html_comp_i(61,'Captionposition','',d,[ str ]).
+html_comp_i(61,'Captionvalue','',d,[ str ]).
+html_comp_i(61,'Controltype',2,d,[ num ]).
+html_comp_i(61,'Inputtype',0,d,[ num ]).
+html_comp_i(61,'Editautocomplete',0,d,[ num ]).
+html_comp_i(61,'Autocorrection',-1,d,[ bool ]).
+html_comp_i(61,'Autocapitalization','FirstWord',d,[ str ]).
+html_comp_i(61,'Notifycontextchange',0,d,[ bool ]).
+html_comp_i(61,'Emptyasnull','Yes',d,[ str ]).
+html_comp_i(61,'Readonly',0,d,[ bool ]).
+html_comp_i(61,'Autocomplete',-1,d,[ bool ]).
+html_comp_i(61,'Ispassword',0,d,[ bool ]).
+html_comp_i(61,'Autoresize',-1,d,[ bool ]).
+html_comp_i(61,'Gxwidth',measure(15,chr),d,[ measure ]).
+html_comp_i(61,'Gxheight',measure(1,row),d,[ measure ]).
+html_comp_i(61,'Ismultiline',0,d,[ bool ]).
+html_comp_i(61,'Fill',-1,d,[ bool ]).
+html_comp_i(61,'Backcolor',rgb(255,255,255),d,[ color ]).
+html_comp_i(61,'Forecolor',rgb(0,0,0),d,[ color ]).
+html_comp_i(61,'Font',font('Verdana',12,[]),d,[ font ]).
+html_comp_i(61,'Horizontalalignment',left,d,[ str ]).
+html_comp_i(61,'Gxformat',0,d,[ num ]).
+html_comp_i(61,'Title','',d,[ str ]).
+html_comp_i(61,'Invitemsg','',d,[ str ]).
+html_comp_i(66,'Height',measure(24,px),v,[ measure ]).
+html_comp_i(67,'Caption','Teléfono1:',d,[ str ]).
+html_comp_i(67,'Id','Textblock10',v,[ str ]).
+html_comp_i(67,'Class','TextBlock',d,[ str ]).
+html_comp_i(67,'Event','',d,[ str ]).
+html_comp_i(67,'Returnonclick',0,d,[ bool ]).
+html_comp_i(67,'Gxformat',0,d,[ num ]).
+html_comp_i(67,'Title','',d,[ str ]).
+html_comp_i(67,'Fill',-1,d,[ bool ]).
+html_comp_i(67,'Backcolor',rgb(255,255,255),d,[ color ]).
+html_comp_i(67,'Forecolor',rgb(0,0,0),d,[ color ]).
+html_comp_i(67,'Font','',d,[ str ]).
+html_comp_i(69,'Colcount',10,d,[ num ]).
+html_comp_i(69,'Attid',-18,v,[ num ]).
+html_comp_i(69,'Class','Attribute',d,[ str ]).
+html_comp_i(69,'Controlname','&Proveedorestelefono1',d,[ str ]).
+html_comp_i(69,'Returnonclick',0,d,[ bool ]).
+html_comp_i(69,'Captionclass','',d,[ str ]).
+html_comp_i(69,'Captionposition','',d,[ str ]).
+html_comp_i(69,'Captionvalue','',d,[ str ]).
+html_comp_i(69,'Controltype',2,d,[ num ]).
+html_comp_i(69,'Inputtype',0,d,[ num ]).
+html_comp_i(69,'Notifycontextchange',0,d,[ bool ]).
+html_comp_i(69,'Emptyasnull','Yes',d,[ str ]).
+html_comp_i(69,'Readonly',0,d,[ bool ]).
+html_comp_i(69,'Autocomplete',-1,d,[ bool ]).
+html_comp_i(69,'Ispassword',0,d,[ bool ]).
+html_comp_i(69,'Autoresize',-1,d,[ bool ]).
+html_comp_i(69,'Gxwidth',measure(10,chr),d,[ measure ]).
+html_comp_i(69,'Gxheight',measure(1,row),d,[ measure ]).
+html_comp_i(69,'Ismultiline',0,d,[ bool ]).
+html_comp_i(69,'Fill',-1,d,[ bool ]).
+html_comp_i(69,'Backcolor',rgb(255,255,255),d,[ color ]).
+html_comp_i(69,'Forecolor',rgb(0,0,0),d,[ color ]).
+html_comp_i(69,'Font',font('Verdana',12,[]),d,[ font ]).
+html_comp_i(69,'Horizontalalignment',right,d,[ str ]).
+html_comp_i(69,'Gxformat',0,d,[ num ]).
+html_comp_i(69,'Title','',d,[ str ]).
+html_comp_i(69,'Invitemsg','',d,[ str ]).
+html_comp_i(73,'Controlname','Button1',v,[ str ]).
+html_comp_i(73,'Class','Button',d,[ str ]).
+html_comp_i(73,'Event','''Consultar ''',v,[ str ]).
+html_comp_i(73,'Caption','CONSULTAR',d,[ str ]).
+html_comp_i(73,'Title','CONSULTAR',d,[ str ]).
+html_comp_i(73,'Font',font('Microsoft Sans Serif',10,[]),d,[ font ]).
+html_comp_i(73,'Forecolor',rgb(255,255,255),v,[ color ]).
+html_comp_i(73,'Backcolor',rgb(0,128,0),v,[ color ]).
+html_comp_i(73,'Border','2',d,[ str ]).
+html_comp_i(73,'Bordercolor',rgb(219,220,222),d,[ color ]).
+html_comp_i(73,'Buttonborderstyle',standard,d,[ str ]).
+html_comp_i(75,'Height',measure(24,px),v,[ measure ]).
+html_comp_i(76,'Caption','Teléfono:',d,[ str ]).
+html_comp_i(76,'Id','Textblock11',v,[ str ]).
+html_comp_i(76,'Class','TextBlock',d,[ str ]).
+html_comp_i(76,'Event','',d,[ str ]).
+html_comp_i(76,'Returnonclick',0,d,[ bool ]).
+html_comp_i(76,'Gxformat',0,d,[ num ]).
+html_comp_i(76,'Title','',d,[ str ]).
+html_comp_i(76,'Fill',-1,d,[ bool ]).
+html_comp_i(76,'Backcolor',rgb(255,255,255),d,[ color ]).
+html_comp_i(76,'Forecolor',rgb(0,0,0),d,[ color ]).
+html_comp_i(76,'Font','',d,[ str ]).
+html_comp_i(78,'Colcount',10,d,[ num ]).
+html_comp_i(78,'Attid',-19,v,[ num ]).
+html_comp_i(78,'Class','Attribute',d,[ str ]).
+html_comp_i(78,'Controlname','&Proveedorestelefono2',d,[ str ]).
+html_comp_i(78,'Returnonclick',0,d,[ bool ]).
+html_comp_i(78,'Captionclass','',d,[ str ]).
+html_comp_i(78,'Captionposition','',d,[ str ]).
+html_comp_i(78,'Captionvalue','',d,[ str ]).
+html_comp_i(78,'Controltype',2,d,[ num ]).
+html_comp_i(78,'Inputtype',0,d,[ num ]).
+html_comp_i(78,'Notifycontextchange',0,d,[ bool ]).
+html_comp_i(78,'Emptyasnull','Yes',d,[ str ]).
+html_comp_i(78,'Readonly',0,d,[ bool ]).
+html_comp_i(78,'Autocomplete',-1,d,[ bool ]).
+html_comp_i(78,'Ispassword',0,d,[ bool ]).
+html_comp_i(78,'Autoresize',-1,d,[ bool ]).
+html_comp_i(78,'Gxwidth',measure(10,chr),d,[ measure ]).
+html_comp_i(78,'Gxheight',measure(1,row),d,[ measure ]).
+html_comp_i(78,'Ismultiline',0,d,[ bool ]).
+html_comp_i(78,'Fill',-1,d,[ bool ]).
+html_comp_i(78,'Backcolor',rgb(255,255,255),d,[ color ]).
+html_comp_i(78,'Forecolor',rgb(0,0,0),d,[ color ]).
+html_comp_i(78,'Font',font('Verdana',12,[]),d,[ font ]).
+html_comp_i(78,'Horizontalalignment',right,d,[ str ]).
+html_comp_i(78,'Gxformat',0,d,[ num ]).
+html_comp_i(78,'Title','',d,[ str ]).
+html_comp_i(78,'Invitemsg','',d,[ str ]).
+html_comp_i(81,'Controlname','Button2',v,[ str ]).
+html_comp_i(81,'Class','Button',d,[ str ]).
+html_comp_i(81,'Event','''Guardar ''',v,[ str ]).
+html_comp_i(81,'Caption','GUARDAR',d,[ str ]).
+html_comp_i(81,'Title','GUARDAR',d,[ str ]).
+html_comp_i(81,'Font',font('Microsoft Sans Serif',10,[]),d,[ font ]).
+html_comp_i(81,'Forecolor',rgb(255,255,255),v,[ color ]).
+html_comp_i(81,'Backcolor',rgb(0,128,0),v,[ color ]).
+html_comp_i(81,'Border','2',d,[ str ]).
+html_comp_i(81,'Bordercolor',rgb(219,220,222),d,[ color ]).
+html_comp_i(81,'Buttonborderstyle',standard,d,[ str ]).
+html_comp_i(83,'Controlname','Button3',v,[ str ]).
+html_comp_i(83,'Class','Button',d,[ str ]).
+html_comp_i(83,'Event','''Cancelar''',v,[ str ]).
+html_comp_i(83,'Caption','CANCELAR',d,[ str ]).
+html_comp_i(83,'Title','CANCELAR',d,[ str ]).
+html_comp_i(83,'Font',font('Microsoft Sans Serif',10,[]),d,[ font ]).
+html_comp_i(83,'Forecolor',rgb(255,255,255),v,[ color ]).
+html_comp_i(83,'Backcolor',rgb(255,0,0),v,[ color ]).
+html_comp_i(83,'Border','2',d,[ str ]).
+html_comp_i(83,'Bordercolor',rgb(219,220,222),d,[ color ]).
+html_comp_i(83,'Buttonborderstyle',standard,d,[ str ]).
  
  
  
@@ -907,15 +948,16 @@ lit_i(43,1,t('Municipio:',3),[ ctlname('Textblock7') ]).
 lit_i(45,1,t('Proveedoresmunicipio',23),[ ctlname('&Proveedoresmunicipio'),ctrltype(edit,45),pos(45),ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
 lit_i(10,1,table(10),[ ctlname('Table2') ]).
 lit_i(51,1,t('Estado:',3),[ ctlname('Textblock8') ]).
-lit_i(58,1,t('Fax:',3),[ ctlname('Textblock9') ]).
-lit_i(60,1,t('Proveedoresfax',23),[ ctlname('&Proveedoresfax'),ctrltype(edit,60),pos(60),ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
-lit_i(66,1,t('Teléfono1:',3),[ ctlname('Textblock10') ]).
-lit_i(68,1,t('Proveedorestelefono1',23),[ ctlname('&Proveedorestelefono1'),ctrltype(edit,68),pos(68),ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
-lit_i(72,1,button('''Consultar '''),[ ctlname('Button1'),width(0),rect(0,0,10,10),title('Nothing') ]).
-lit_i(75,1,t('Teléfono:',3),[ ctlname('Textblock11') ]).
-lit_i(77,1,t('Proveedorestelefono2',23),[ ctlname('&Proveedorestelefono2'),ctrltype(edit,77),pos(77),ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
-lit_i(80,1,button('''Guardar '''),[ ctlname('Button2'),width(0),rect(0,0,10,10),title('Nothing') ]).
-lit_i(82,1,button('''Cancelar'''),[ ctlname('Button3'),width(0),rect(0,0,10,10),title('Nothing') ]).
+lit_i(53,1,t('Estadoid',23),[ ctlname('&Estadoid'),ctrltype(dyncombo,53),pos(53),ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
+lit_i(59,1,t('Fax:',3),[ ctlname('Textblock9') ]).
+lit_i(61,1,t('Proveedoresfax',23),[ ctlname('&Proveedoresfax'),ctrltype(edit,61),pos(61),ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
+lit_i(67,1,t('Teléfono1:',3),[ ctlname('Textblock10') ]).
+lit_i(69,1,t('Proveedorestelefono1',23),[ ctlname('&Proveedorestelefono1'),ctrltype(edit,69),pos(69),ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
+lit_i(73,1,button('''Consultar '''),[ ctlname('Button1'),width(0),rect(0,0,10,10),title('Nothing') ]).
+lit_i(76,1,t('Teléfono:',3),[ ctlname('Textblock11') ]).
+lit_i(78,1,t('Proveedorestelefono2',23),[ ctlname('&Proveedorestelefono2'),ctrltype(edit,78),pos(78),ispwd(0),e2n(1),width(0),rect(0,0,10,10),title('Nothing') ]).
+lit_i(81,1,button('''Guardar '''),[ ctlname('Button2'),width(0),rect(0,0,10,10),title('Nothing') ]).
+lit_i(83,1,button('''Cancelar'''),[ ctlname('Button3'),width(0),rect(0,0,10,10),title('Nothing') ]).
 lit_i(48,1,table(48),[ ctlname('Table3') ]).
 lit_i(4,1,table(4),[ ctlname('Table1') ]).
 lit_i(1,1,window,[ rect(0,0,1000,1000),ctlname('Form') ]).
@@ -925,6 +967,7 @@ lit_i(1,1,window,[ rect(0,0,1000,1000),ctlname('Form') ]).
  
  
  
+ctrl_info_i(1,53,[ [ 177,178,sort,[],[],noempty,'' ] ]).
  
  
  
@@ -934,21 +977,39 @@ att_prop_i(2,2,'EmptyAsNull','Yes',d).
 att_prop_i(2,2,idBasedOn,'',d).
 att_prop_i(2,2,'AUTONUMBER','0',d).
 att_prop_i(2,2,'ATT_INITIAL_VALUE','',d).
-att_prop_i(2,2,'AttRegEx','',d).
 att_prop_i(2,2,'AttValidationFailedMsg','',d).
 att_prop_i(2,2,'FullName',proveedoresid,v).
+att_prop_i(2,177,'ExternalName',estadoid,d).
+att_prop_i(2,177,'ExternalNamespace','Condufef_v1',d).
+att_prop_i(2,177,'EmptyAsNull','Yes',d).
+att_prop_i(2,177,idBasedOn,'',d).
+att_prop_i(2,177,'AUTONUMBER','0',d).
+att_prop_i(2,177,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,177,'AttRegEx','',d).
+att_prop_i(2,177,'AttValidationFailedMsg','',d).
+att_prop_i(2,177,'FullName',estadoid,v).
+att_prop_i(2,178,'ExternalName',estado,d).
+att_prop_i(2,178,'ExternalNamespace','Condufef_v1',d).
+att_prop_i(2,178,'EmptyAsNull','Yes',d).
+att_prop_i(2,178,idBasedOn,'',d).
+att_prop_i(2,178,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,178,'DB_NLS_SUPPORT','No',d).
+att_prop_i(2,178,'AttRegEx','',d).
+att_prop_i(2,178,'AttValidationFailedMsg','',d).
+att_prop_i(2,178,'FullName',estado,v).
 att_prop_i(2,40000,'ExternalName',proveedoresid,d).
 att_prop_i(2,40000,'ExternalNamespace','Condufef_v1',d).
 att_prop_i(2,40000,'EmptyAsNull','Yes',d).
 att_prop_i(2,40000,idBasedOn,'',d).
 att_prop_i(2,40000,'AUTONUMBER','0',d).
 att_prop_i(2,40000,'ATT_INITIAL_VALUE','',d).
-att_prop_i(2,40000,'AttRegEx','',d).
 att_prop_i(2,40000,'AttValidationFailedMsg','',d).
 att_prop_i(2,40000,'FullName',proveedoresid,v).
  
  
 tbl_att_prop_i(2,10,2,'AllowNulls',n).
+tbl_att_prop_i(2,25,177,'AllowNulls',n).
+tbl_att_prop_i(2,25,178,'AllowNulls',n).
  
 var_prop_i(2,'Proveedorescodigopostal',idBasedOn,'',v).
 var_prop_i(2,'Proveedorescolonia',idBasedOn,'',v).
@@ -962,6 +1023,7 @@ var_prop_i(2,'Proveedoresrfc',idBasedOn,'',v).
 var_prop_i(2,'Proveedorestelefono1',idBasedOn,'',v).
 var_prop_i(2,'Proveedorestelefono2',idBasedOn,'',v).
 var_prop_i(2,'Proveedoresusuario',idBasedOn,'',v).
+var_prop_i(2,'Estadoid',idBasedOn,'',v).
  
  
  
@@ -1155,9 +1217,9 @@ struct_dt_elem_i([ 26,1,1 ],2,pic,'ZZZZZZZZ9').
  
  
 sub_info_i(146,'Start',1,3,[ [],[ 'Nextvalue' ] ]).
-sub_info_i(146,'''Guardar ''',4,28,[ [ 'Proveedoresnombre','Proveedoresrfc','Proveedoresdireccion','Proveedorescolonia','Proveedorescodigopostal','Proveedoresmunicipio','Proveedoresfax','Proveedorestelefono1','Proveedorestelefono2','Nextvalue','Proveedores','Today','Websession' ],[ 'Proveedores' ] ]).
-sub_info_i(146,'''Cancelar''',30,32,[ [],[] ]).
-sub_info_i(146,'''Consultar ''',34,36,[ [],[] ]).
+sub_info_i(146,'''Guardar ''',4,29,[ [ 'Proveedoresnombre','Estadoid','Proveedoresrfc','Proveedoresdireccion','Proveedorescolonia','Proveedorescodigopostal','Proveedoresmunicipio','Proveedoresfax','Proveedorestelefono1','Proveedorestelefono2','Nextvalue','Proveedores','Proveedoresid','Today','Websession' ],[ 'Proveedores' ] ]).
+sub_info_i(146,'''Cancelar''',31,33,[ [],[] ]).
+sub_info_i(146,'''Consultar ''',35,37,[ [],[] ]).
  
 pgm_parm_i(web,112,'DETALLESPROVEEDORES',[],[]).
 pgm_parm_i(web,29,'MENUPRINCIPAL',[],[]).

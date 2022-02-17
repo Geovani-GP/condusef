@@ -241,7 +241,7 @@ b_line_i(156,1,1,cmd,63,[ t('',107,63,0),t([ t('Gxm3gpxmenuitems_subitems',23,63
 b_line_i(158,1,1,cmd,63,[ t('',107,63,0),t('Gxm3gpxmenuitems_subitems',23,63,0),t(=,10,63,0),t([ 'gpxMenuItems.gpxMenuItem',[ t('(',0,158,0),t(')',4,158,0) ],n ],46,63,0) ]).
 b_line_i([ 158,1 ],1,1,cmd,63,[ t('',107,63,0),t([ t('Gxm1gpxmenuitems',23,158,0),t('Subitems',3,158,0),t('add(',1,158,0) ],31,158,0),t('Gxm3gpxmenuitems_subitems',23,63,0),t(')',4,63,0) ]).
 b_line_i(160,1,1,cmd,65,[ t('',107,65,0),t([ t('Gxm3gpxmenuitems_subitems',23,65,0),t('Title',3,65,0) ],29,65,0),t(=,10,65,0),t('"Reporte de Proveedores"',3,65,0) ]).
-b_line_i(161,1,1,cmd,65,[ t('',107,65,0),t([ t('Gxm3gpxmenuitems_subitems',23,65,0),t('Url',3,65,0) ],29,65,0),t(=,10,65,0),t('"#"',3,65,0) ]).
+b_line_i(161,1,1,cmd,65,[ t('',107,65,0),t([ t('Gxm3gpxmenuitems_subitems',23,65,0),t('Url',3,65,0) ],29,65,0),t(=,10,65,0),t('"apdf_proveedores.aspx"',3,65,0) ]).
  
  
  
