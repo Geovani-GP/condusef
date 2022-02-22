@@ -20,6 +20,9 @@ pgm_main_i(proc,10,'REPORTECATEGORIAS',[ 15,'AREPORTECATEGORIAS','ReporteCategor
 pgm_main_i(proc,9,'REPORTECATEGORIAS',[ 15,'AREPORTECATEGORIAS','Reporte Categorias','','','','HTTP' ]).
 pgm_main_i(proc,8,'REPORTCATEGORIAS',[ 15,'AREPORTCATEGORIAS','Report Categorias','','','','HTTP' ]).
  
+pgm_prop_i(web,96,'CATALOG_DE_PRODUCTOS','USE_ENCRYPTION','NO').
+pgm_prop_i(web,96,'CATALOG_DE_PRODUCTOS','HTTP_PROTOCOL','Unsecure').
+pgm_prop_i(mnproc,1,'GPXMENUDEMO','OutputSDT',o(26,gpxMenuItems)).
 pgm_prop_i(proc,20,'APDF_PROVEEDORES','USE_ENCRYPTION','NO').
 pgm_prop_i(proc,20,'PDF_PROVEEDORES','USE_ENCRYPTION','NO').
 pgm_prop_i(proc,20,'APDF_PROVEEDORES','HTTP_PROTOCOL','Unsecure').
@@ -30,7 +33,6 @@ pgm_prop_i(proc,19,'APDF_PRODUCTOS','USE_ENCRYPTION','NO').
 pgm_prop_i(proc,19,'PDF_PRODUCTOS','USE_ENCRYPTION','NO').
 pgm_prop_i(proc,19,'APDF_PRODUCTOS','HTTP_PROTOCOL','Unsecure').
 pgm_prop_i(proc,19,'PDF_PRODUCTOS','HTTP_PROTOCOL','Unsecure').
-pgm_prop_i(mnproc,1,'GPXMENUDEMO','OutputSDT',o(26,gpxMenuItems)).
 pgm_prop_i(web,120,'REGISTER','USE_ENCRYPTION','NO').
 pgm_prop_i(web,120,'REGISTER','HTTP_PROTOCOL','Unsecure').
 pgm_prop_i(web,28,'LOGIN','USE_ENCRYPTION','NO').
@@ -110,8 +112,6 @@ pgm_prop_i(web,100,'CATALOG_DE_TIPOBIEN','USE_ENCRYPTION','NO').
 pgm_prop_i(web,100,'CATALOG_DE_TIPOBIEN','HTTP_PROTOCOL','Unsecure').
 pgm_prop_i(web,99,'CATALOG_DE_ALMACEN','USE_ENCRYPTION','NO').
 pgm_prop_i(web,99,'CATALOG_DE_ALMACEN','HTTP_PROTOCOL','Unsecure').
-pgm_prop_i(web,96,'CATALOG_DE_PRODUCTOS','USE_ENCRYPTION','NO').
-pgm_prop_i(web,96,'CATALOG_DE_PRODUCTOS','HTTP_PROTOCOL','Unsecure').
 pgm_prop_i(web,95,'DETALLESORIGEN','USE_ENCRYPTION','NO').
 pgm_prop_i(web,95,'DETALLESORIGEN','HTTP_PROTOCOL','Unsecure').
 pgm_prop_i(web,94,'DETALLECATEGORIAS','USE_ENCRYPTION','NO').

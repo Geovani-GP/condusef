@@ -2,7 +2,7 @@
                File: Catalog_De_Productos
         Description: Catalog_De_Productos
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 2/15/2022 5:9:21.83
+       Generated on: 2/21/2022 20:56:53.3
        Program type: Callable routine
           Main DBMS: postgresql
 */
@@ -275,7 +275,7 @@ namespace GeneXus.Programs {
          context.AddJavascriptSource("jquery.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxtimezone.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxgral.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("gxcfg.js", "?2022215592186");
+         context.AddJavascriptSource("gxcfg.js", "?202222120565312");
          if ( context.isSpaRequest( ) )
          {
             enableOutput();
@@ -1275,10 +1275,6 @@ namespace GeneXus.Programs {
             context.WriteHtmlText( "<td>") ;
             context.WriteHtmlText( "</td>") ;
             context.WriteHtmlText( "<td>") ;
-            TempTags = "  onfocus=\"gx.evt.onfocus(this, 53,'',false,'',0)\"";
-            ClassString = "Button";
-            StyleString = "color:#FFFFFF; background-color:#008000;";
-            GxWebStd.gx_button_ctrl( context, bttButton1_Internalname, "", "CONSULTAR", bttButton1_Jsonclick, 5, "CONSULTAR", "", StyleString, ClassString, 1, 1, "standard", "'"+""+"'"+",false,"+"'"+"E\\'CONSULTAR\\'."+"'", TempTags, "", context.GetButtonType( ), "HLP_Catalog_De_Productos.htm");
             context.WriteHtmlText( "</td>") ;
             context.WriteHtmlText( "<td>") ;
             context.WriteHtmlText( "</td>") ;
@@ -1289,22 +1285,22 @@ namespace GeneXus.Programs {
             GxWebStd.gx_label_ctrl( context, lblTextblock7_Internalname, "TIPO BIEN:", "", "", lblTextblock7_Jsonclick, "'"+""+"'"+",false,"+"'"+""+"'", "", "TextBlock", 0, "", 1, 1, 0, "HLP_Catalog_De_Productos.htm");
             context.WriteHtmlText( "</td>") ;
             context.WriteHtmlText( "<td>") ;
-            TempTags = "  onfocus=\"gx.evt.onfocus(this, 59,'',false,'',0)\"";
+            TempTags = "  onfocus=\"gx.evt.onfocus(this, 58,'',false,'',0)\"";
             /* ComboBox */
-            GxWebStd.gx_combobox_ctrl1( context, dynavTipobienid, dynavTipobienid_Internalname, StringUtil.Trim( StringUtil.Str( (decimal)(AV17tipobienid), 9, 0)), 1, dynavTipobienid_Jsonclick, 0, "'"+""+"'"+",false,"+"'"+""+"'", "int", "", 1, 1, 0, 0, 197, "px", 0, "", "", "Attribute", "", TempTags+" onchange=\"gx.evt.onchange(this)\" "+" onblur=\""+""+";gx.evt.onblur(this,59);\"", "", true, "HLP_Catalog_De_Productos.htm");
+            GxWebStd.gx_combobox_ctrl1( context, dynavTipobienid, dynavTipobienid_Internalname, StringUtil.Trim( StringUtil.Str( (decimal)(AV17tipobienid), 9, 0)), 1, dynavTipobienid_Jsonclick, 0, "'"+""+"'"+",false,"+"'"+""+"'", "int", "", 1, 1, 0, 0, 197, "px", 0, "", "", "Attribute", "", TempTags+" onchange=\"gx.evt.onchange(this)\" "+" onblur=\""+""+";gx.evt.onblur(this,58);\"", "", true, "HLP_Catalog_De_Productos.htm");
             dynavTipobienid.CurrentValue = StringUtil.Trim( StringUtil.Str( (decimal)(AV17tipobienid), 9, 0));
             context.httpAjaxContext.ajax_rsp_assign_prop("", false, dynavTipobienid_Internalname, "Values", (String)(dynavTipobienid.ToJavascriptSource()));
             context.WriteHtmlText( "</td>") ;
             context.WriteHtmlText( "<td>") ;
             context.WriteHtmlText( "</td>") ;
             context.WriteHtmlText( "<td>") ;
-            TempTags = "  onfocus=\"gx.evt.onfocus(this, 62,'',false,'',0)\"";
+            TempTags = "  onfocus=\"gx.evt.onfocus(this, 61,'',false,'',0)\"";
             ClassString = "Button";
             StyleString = "color:#FFFFFF; background-color:#008000;";
             GxWebStd.gx_button_ctrl( context, bttGuardar_Internalname, "", "GUARDAR", bttGuardar_Jsonclick, 5, "GUARDAR", "", StyleString, ClassString, 1, 1, "standard", "'"+""+"'"+",false,"+"'"+"E\\'GUARDAR\\'."+"'", TempTags, "", context.GetButtonType( ), "HLP_Catalog_De_Productos.htm");
             context.WriteHtmlText( "</td>") ;
             context.WriteHtmlText( "<td>") ;
-            TempTags = "  onfocus=\"gx.evt.onfocus(this, 64,'',false,'',0)\"";
+            TempTags = "  onfocus=\"gx.evt.onfocus(this, 63,'',false,'',0)\"";
             ClassString = "Button";
             StyleString = "color:#FFFFFF; background-color:#FF0000;";
             GxWebStd.gx_button_ctrl( context, bttButton3_Internalname, "", "CANCELAR", bttButton3_Jsonclick, 5, "CANCELAR", "", StyleString, ClassString, 1, 1, "standard", "'"+""+"'"+",false,"+"'"+"E\\'CANCELAR\\'."+"'", TempTags, "", context.GetButtonType( ), "HLP_Catalog_De_Productos.htm");
@@ -1412,7 +1408,7 @@ namespace GeneXus.Programs {
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?2022215592219");
+            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?202222120565368");
             idxLst = (int)(idxLst+1);
          }
          /* End function define_styles */
@@ -1421,7 +1417,7 @@ namespace GeneXus.Programs {
       protected void include_jscripts( )
       {
          context.AddJavascriptSource("messages.spa.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("catalog_de_productos.js", "?2022215592219");
+         context.AddJavascriptSource("catalog_de_productos.js", "?202222120565368");
          /* End function include_jscripts */
       }
 
@@ -1442,7 +1438,6 @@ namespace GeneXus.Programs {
          dynavModelosid_Internalname = "vMODELOSID";
          lblTextblock6_Internalname = "TEXTBLOCK6";
          dynavCategoriasid_Internalname = "vCATEGORIASID";
-         bttButton1_Internalname = "BUTTON1";
          lblTextblock7_Internalname = "TEXTBLOCK7";
          dynavTipobienid_Internalname = "vTIPOBIENID";
          bttGuardar_Internalname = "GUARDAR";
@@ -1556,10 +1551,9 @@ namespace GeneXus.Programs {
          lblTextblock8_Jsonclick = "";
          lblTextblock5_Jsonclick = "";
          lblTextblock6_Jsonclick = "";
+         lblTextblock7_Jsonclick = "";
          ClassString = "";
          StyleString = "";
-         bttButton1_Jsonclick = "";
-         lblTextblock7_Jsonclick = "";
          bttGuardar_Jsonclick = "";
          bttButton3_Jsonclick = "";
          lblTextblock1_Jsonclick = "";
@@ -1658,13 +1652,11 @@ namespace GeneXus.Programs {
       private String lblTextblock6_Internalname ;
       private String lblTextblock6_Jsonclick ;
       private String dynavCategoriasid_Jsonclick ;
-      private String ClassString ;
-      private String StyleString ;
-      private String bttButton1_Internalname ;
-      private String bttButton1_Jsonclick ;
       private String lblTextblock7_Internalname ;
       private String lblTextblock7_Jsonclick ;
       private String dynavTipobienid_Jsonclick ;
+      private String ClassString ;
+      private String StyleString ;
       private String bttGuardar_Internalname ;
       private String bttGuardar_Jsonclick ;
       private String bttButton3_Internalname ;

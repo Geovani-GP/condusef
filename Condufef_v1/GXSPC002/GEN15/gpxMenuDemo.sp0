@@ -213,35 +213,27 @@ b_line_i(118,1,1,cmd,49,[ t('',107,49,0),t([ t('Gxm3gpxmenuitems_subitems',23,49
 b_line_i(119,1,1,cmd,49,[ t('',107,49,0),t([ t('Gxm3gpxmenuitems_subitems',23,49,0),t('Url',3,49,0) ],29,49,0),t(=,10,49,0),t('"DetalleModelos.aspx"',3,49,0) ]).
 b_line_i(121,1,1,cmd,49,[ t('',107,49,0),t('Gxm3gpxmenuitems_subitems',23,49,0),t(=,10,49,0),t([ 'gpxMenuItems.gpxMenuItem',[ t('(',0,121,0),t(')',4,121,0) ],n ],46,49,0) ]).
 b_line_i([ 121,1 ],1,1,cmd,49,[ t('',107,49,0),t([ t('Gxm1gpxmenuitems',23,121,0),t('Subitems',3,121,0),t('add(',1,121,0) ],31,121,0),t('Gxm3gpxmenuitems_subitems',23,49,0),t(')',4,49,0) ]).
-b_line_i(123,1,1,cmd,51,[ t('',107,51,0),t([ t('Gxm3gpxmenuitems_subitems',23,51,0),t('Title',3,51,0) ],29,51,0),t(=,10,51,0),t('"Consultar Productos"',3,51,0) ]).
-b_line_i(124,1,1,cmd,51,[ t('',107,51,0),t([ t('Gxm3gpxmenuitems_subitems',23,51,0),t('Url',3,51,0) ],29,51,0),t(=,10,51,0),t('"#"',3,51,0) ]).
-b_line_i(126,1,1,cmd,51,[ t('',107,51,0),t('Gxm3gpxmenuitems_subitems',23,51,0),t(=,10,51,0),t([ 'gpxMenuItems.gpxMenuItem',[ t('(',0,126,0),t(')',4,126,0) ],n ],46,51,0) ]).
-b_line_i([ 126,1 ],1,1,cmd,51,[ t('',107,51,0),t([ t('Gxm1gpxmenuitems',23,126,0),t('Subitems',3,126,0),t('add(',1,126,0) ],31,126,0),t('Gxm3gpxmenuitems_subitems',23,51,0),t(')',4,51,0) ]).
-b_line_i(128,1,1,cmd,53,[ t('',107,53,0),t([ t('Gxm3gpxmenuitems_subitems',23,53,0),t('Title',3,53,0) ],29,53,0),t(=,10,53,0),t('"Consultar Proveedores"',3,53,0) ]).
-b_line_i(129,1,1,cmd,53,[ t('',107,53,0),t([ t('Gxm3gpxmenuitems_subitems',23,53,0),t('Url',3,53,0) ],29,53,0),t(=,10,53,0),t('"DetallesProveedores.aspx"',3,53,0) ]).
-b_line_i(133,1,1,cmd,53,[ t('',107,53,0),t('Gxm1gpxmenuitems',23,53,0),t(=,10,53,0),t([ 'gpxMenuItems.gpxMenuItem',[ t('(',0,133,0),t(')',4,133,0) ],n ],46,53,0) ]).
-b_line_i([ 133,1 ],1,1,cmd,53,[ t('',107,53,0),t([ t('Gxm2rootcol',23,133,0),t('add(',1,133,0) ],31,133,0),t('Gxm1gpxmenuitems',23,53,0),t(')',4,53,0) ]).
-b_line_i(135,1,1,cmd,55,[ t('',107,55,0),t([ t('Gxm1gpxmenuitems',23,55,0),t('Title',3,55,0) ],29,55,0),t(=,10,55,0),t('"Reportes"',3,55,0) ]).
+b_line_i(123,1,1,cmd,51,[ t('',107,51,0),t([ t('Gxm3gpxmenuitems_subitems',23,51,0),t('Title',3,51,0) ],29,51,0),t(=,10,51,0),t('"Consultar Proveedores"',3,51,0) ]).
+b_line_i(124,1,1,cmd,51,[ t('',107,51,0),t([ t('Gxm3gpxmenuitems_subitems',23,51,0),t('Url',3,51,0) ],29,51,0),t(=,10,51,0),t('"DetallesProveedores.aspx"',3,51,0) ]).
+b_line_i(128,1,1,cmd,51,[ t('',107,51,0),t('Gxm1gpxmenuitems',23,51,0),t(=,10,51,0),t([ 'gpxMenuItems.gpxMenuItem',[ t('(',0,128,0),t(')',4,128,0) ],n ],46,51,0) ]).
+b_line_i([ 128,1 ],1,1,cmd,51,[ t('',107,51,0),t([ t('Gxm2rootcol',23,128,0),t('add(',1,128,0) ],31,128,0),t('Gxm1gpxmenuitems',23,51,0),t(')',4,51,0) ]).
+b_line_i(130,1,1,cmd,53,[ t('',107,53,0),t([ t('Gxm1gpxmenuitems',23,53,0),t('Title',3,53,0) ],29,53,0),t(=,10,53,0),t('"Reportes"',3,53,0) ]).
+b_line_i(133,1,1,cmd,53,[ t('',107,53,0),t('Gxm3gpxmenuitems_subitems',23,53,0),t(=,10,53,0),t([ 'gpxMenuItems.gpxMenuItem',[ t('(',0,133,0),t(')',4,133,0) ],n ],46,53,0) ]).
+b_line_i([ 133,1 ],1,1,cmd,53,[ t('',107,53,0),t([ t('Gxm1gpxmenuitems',23,133,0),t('Subitems',3,133,0),t('add(',1,133,0) ],31,133,0),t('Gxm3gpxmenuitems_subitems',23,53,0),t(')',4,53,0) ]).
+b_line_i(135,1,1,cmd,55,[ t('',107,55,0),t([ t('Gxm3gpxmenuitems_subitems',23,55,0),t('Title',3,55,0) ],29,55,0),t(=,10,55,0),t('"Reporte de Cambs"',3,55,0) ]).
+b_line_i(136,1,1,cmd,55,[ t('',107,55,0),t([ t('Gxm3gpxmenuitems_subitems',23,55,0),t('Url',3,55,0) ],29,55,0),t(=,10,55,0),t('"apdf_cambs.aspx"',3,55,0) ]).
 b_line_i(138,1,1,cmd,55,[ t('',107,55,0),t('Gxm3gpxmenuitems_subitems',23,55,0),t(=,10,55,0),t([ 'gpxMenuItems.gpxMenuItem',[ t('(',0,138,0),t(')',4,138,0) ],n ],46,55,0) ]).
 b_line_i([ 138,1 ],1,1,cmd,55,[ t('',107,55,0),t([ t('Gxm1gpxmenuitems',23,138,0),t('Subitems',3,138,0),t('add(',1,138,0) ],31,138,0),t('Gxm3gpxmenuitems_subitems',23,55,0),t(')',4,55,0) ]).
-b_line_i(140,1,1,cmd,57,[ t('',107,57,0),t([ t('Gxm3gpxmenuitems_subitems',23,57,0),t('Title',3,57,0) ],29,57,0),t(=,10,57,0),t('"Reporte de Cambs"',3,57,0) ]).
-b_line_i(141,1,1,cmd,57,[ t('',107,57,0),t([ t('Gxm3gpxmenuitems_subitems',23,57,0),t('Url',3,57,0) ],29,57,0),t(=,10,57,0),t('"apdf_cambs.aspx"',3,57,0) ]).
+b_line_i(140,1,1,cmd,57,[ t('',107,57,0),t([ t('Gxm3gpxmenuitems_subitems',23,57,0),t('Title',3,57,0) ],29,57,0),t(=,10,57,0),t('"Reporte de Marcas"',3,57,0) ]).
+b_line_i(141,1,1,cmd,57,[ t('',107,57,0),t([ t('Gxm3gpxmenuitems_subitems',23,57,0),t('Url',3,57,0) ],29,57,0),t(=,10,57,0),t('"apdf_marcas.aspx"',3,57,0) ]).
 b_line_i(143,1,1,cmd,57,[ t('',107,57,0),t('Gxm3gpxmenuitems_subitems',23,57,0),t(=,10,57,0),t([ 'gpxMenuItems.gpxMenuItem',[ t('(',0,143,0),t(')',4,143,0) ],n ],46,57,0) ]).
 b_line_i([ 143,1 ],1,1,cmd,57,[ t('',107,57,0),t([ t('Gxm1gpxmenuitems',23,143,0),t('Subitems',3,143,0),t('add(',1,143,0) ],31,143,0),t('Gxm3gpxmenuitems_subitems',23,57,0),t(')',4,57,0) ]).
-b_line_i(145,1,1,cmd,59,[ t('',107,59,0),t([ t('Gxm3gpxmenuitems_subitems',23,59,0),t('Title',3,59,0) ],29,59,0),t(=,10,59,0),t('"Reporte de Marcas"',3,59,0) ]).
-b_line_i(146,1,1,cmd,59,[ t('',107,59,0),t([ t('Gxm3gpxmenuitems_subitems',23,59,0),t('Url',3,59,0) ],29,59,0),t(=,10,59,0),t('"apdf_marcas.aspx"',3,59,0) ]).
+b_line_i(145,1,1,cmd,59,[ t('',107,59,0),t([ t('Gxm3gpxmenuitems_subitems',23,59,0),t('Title',3,59,0) ],29,59,0),t(=,10,59,0),t('"Reporte de Modelos"',3,59,0) ]).
+b_line_i(146,1,1,cmd,59,[ t('',107,59,0),t([ t('Gxm3gpxmenuitems_subitems',23,59,0),t('Url',3,59,0) ],29,59,0),t(=,10,59,0),t('"apdf_Modelos.aspx"',3,59,0) ]).
 b_line_i(148,1,1,cmd,59,[ t('',107,59,0),t('Gxm3gpxmenuitems_subitems',23,59,0),t(=,10,59,0),t([ 'gpxMenuItems.gpxMenuItem',[ t('(',0,148,0),t(')',4,148,0) ],n ],46,59,0) ]).
 b_line_i([ 148,1 ],1,1,cmd,59,[ t('',107,59,0),t([ t('Gxm1gpxmenuitems',23,148,0),t('Subitems',3,148,0),t('add(',1,148,0) ],31,148,0),t('Gxm3gpxmenuitems_subitems',23,59,0),t(')',4,59,0) ]).
-b_line_i(150,1,1,cmd,61,[ t('',107,61,0),t([ t('Gxm3gpxmenuitems_subitems',23,61,0),t('Title',3,61,0) ],29,61,0),t(=,10,61,0),t('"Reporte de Modelos"',3,61,0) ]).
-b_line_i(151,1,1,cmd,61,[ t('',107,61,0),t([ t('Gxm3gpxmenuitems_subitems',23,61,0),t('Url',3,61,0) ],29,61,0),t(=,10,61,0),t('"apdf_Modelos.aspx"',3,61,0) ]).
-b_line_i(153,1,1,cmd,61,[ t('',107,61,0),t('Gxm3gpxmenuitems_subitems',23,61,0),t(=,10,61,0),t([ 'gpxMenuItems.gpxMenuItem',[ t('(',0,153,0),t(')',4,153,0) ],n ],46,61,0) ]).
-b_line_i([ 153,1 ],1,1,cmd,61,[ t('',107,61,0),t([ t('Gxm1gpxmenuitems',23,153,0),t('Subitems',3,153,0),t('add(',1,153,0) ],31,153,0),t('Gxm3gpxmenuitems_subitems',23,61,0),t(')',4,61,0) ]).
-b_line_i(155,1,1,cmd,63,[ t('',107,63,0),t([ t('Gxm3gpxmenuitems_subitems',23,63,0),t('Title',3,63,0) ],29,63,0),t(=,10,63,0),t('"Reporte de Productos"',3,63,0) ]).
-b_line_i(156,1,1,cmd,63,[ t('',107,63,0),t([ t('Gxm3gpxmenuitems_subitems',23,63,0),t('Url',3,63,0) ],29,63,0),t(=,10,63,0),t('"#"',3,63,0) ]).
-b_line_i(158,1,1,cmd,63,[ t('',107,63,0),t('Gxm3gpxmenuitems_subitems',23,63,0),t(=,10,63,0),t([ 'gpxMenuItems.gpxMenuItem',[ t('(',0,158,0),t(')',4,158,0) ],n ],46,63,0) ]).
-b_line_i([ 158,1 ],1,1,cmd,63,[ t('',107,63,0),t([ t('Gxm1gpxmenuitems',23,158,0),t('Subitems',3,158,0),t('add(',1,158,0) ],31,158,0),t('Gxm3gpxmenuitems_subitems',23,63,0),t(')',4,63,0) ]).
-b_line_i(160,1,1,cmd,65,[ t('',107,65,0),t([ t('Gxm3gpxmenuitems_subitems',23,65,0),t('Title',3,65,0) ],29,65,0),t(=,10,65,0),t('"Reporte de Proveedores"',3,65,0) ]).
-b_line_i(161,1,1,cmd,65,[ t('',107,65,0),t([ t('Gxm3gpxmenuitems_subitems',23,65,0),t('Url',3,65,0) ],29,65,0),t(=,10,65,0),t('"apdf_proveedores.aspx"',3,65,0) ]).
+b_line_i(150,1,1,cmd,61,[ t('',107,61,0),t([ t('Gxm3gpxmenuitems_subitems',23,61,0),t('Title',3,61,0) ],29,61,0),t(=,10,61,0),t('"Reporte de Proveedores"',3,61,0) ]).
+b_line_i(151,1,1,cmd,61,[ t('',107,61,0),t([ t('Gxm3gpxmenuitems_subitems',23,61,0),t('Url',3,61,0) ],29,61,0),t(=,10,61,0),t('"apdf_proveedores.aspx"',3,61,0) ]).
  
  
  
