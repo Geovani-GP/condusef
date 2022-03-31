@@ -2,7 +2,7 @@
                File: PDF_productos
         Description: PDF_productos
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 2/17/2022 0:16:44.31
+       Generated on: 3/31/2022 0:36:14.19
        Program type: Main program
           Main DBMS: postgresql
 */
@@ -140,13 +140,13 @@ namespace GeneXus.Programs {
             H0J0( false, 153) ;
             getPrinter().GxDrawBitMap(context.GetImagePath( "50a9fefa-952a-4474-8e37-0c75e294c1c6", "", context.GetTheme( )), 0, Gx_line+0, 130, Gx_line+69) ;
             getPrinter().GxAttris("Microsoft Sans Serif", 8, false, false, false, false, 0, 0, 0, 0, 0, 255, 255, 255) ;
-            getPrinter().GxDrawText("CLAVE ", 0, Gx_line+100, 40, Gx_line+119, 0, 0, 0, 0) ;
+            getPrinter().GxDrawText("CLAVE ", 67, Gx_line+100, 107, Gx_line+119, 0, 0, 0, 0) ;
             getPrinter().GxDrawText(context.localUtil.Format( AV8FECHA, "99/99/99"), 650, Gx_line+50, 724, Gx_line+72, 2, 0, 0, 0) ;
-            getPrinter().GxDrawText("DESCRIPCIÓN", 192, Gx_line+100, 269, Gx_line+114, 0+256, 0, 0, 0) ;
-            getPrinter().GxDrawText("MARCA", 325, Gx_line+100, 366, Gx_line+114, 0+256, 0, 0, 0) ;
-            getPrinter().GxDrawText("MODELO", 425, Gx_line+100, 474, Gx_line+114, 0+256, 0, 0, 0) ;
+            getPrinter().GxDrawText("DESCRIPCIÓN", 342, Gx_line+100, 419, Gx_line+114, 0+256, 0, 0, 0) ;
+            getPrinter().GxDrawText("MARCA", 583, Gx_line+100, 624, Gx_line+114, 0+256, 0, 0, 0) ;
+            getPrinter().GxDrawText("MODELO", 692, Gx_line+100, 741, Gx_line+114, 0+256, 0, 0, 0) ;
             getPrinter().GxAttris("Microsoft Sans Serif", 9, false, false, false, false, 0, 0, 0, 0, 0, 255, 255, 255) ;
-            getPrinter().GxDrawText("TIPO BIEN", 92, Gx_line+100, 153, Gx_line+116, 0+256, 0, 0, 0) ;
+            getPrinter().GxDrawText("TIPO BIEN", 150, Gx_line+100, 211, Gx_line+116, 0+256, 0, 0, 0) ;
             getPrinter().GxAttris("Microsoft Sans Serif", 9, true, false, false, false, 0, 0, 0, 0, 0, 255, 255, 255) ;
             getPrinter().GxDrawText("COMISION NACIONAL PARA LA PROTECCIÓN Y DEFENSA DE LOS USUARIOS DE SERVICIOS FINANCIEROS", 142, Gx_line+17, 1392, Gx_line+37, 0, 0, 0, 0) ;
             getPrinter().GxAttris("Microsoft Sans Serif", 10, true, false, false, false, 0, 0, 0, 0, 0, 255, 255, 255) ;
@@ -166,7 +166,7 @@ namespace GeneXus.Programs {
                n180pmodeloid = P000J2_n180pmodeloid[0];
                A181pmarcaid = P000J2_A181pmarcaid[0];
                n181pmarcaid = P000J2_n181pmarcaid[0];
-               H0J0( false, 193) ;
+               H0J0( false, 36) ;
                getPrinter().GxAttris("Microsoft Sans Serif", 8, false, false, false, false, 0, 0, 0, 0, 0, 255, 255, 255) ;
                getPrinter().GxDrawText(StringUtil.LTrim( context.localUtil.Format( (decimal)(A181pmarcaid), "ZZZ9")), 508, Gx_line+0, 608, Gx_line+15, 2, 0, 0, 0) ;
                getPrinter().GxDrawText(StringUtil.LTrim( context.localUtil.Format( (decimal)(A180pmodeloid), "ZZZ9")), 625, Gx_line+0, 725, Gx_line+15, 2, 0, 0, 0) ;
@@ -175,7 +175,7 @@ namespace GeneXus.Programs {
                getPrinter().GxDrawText(StringUtil.LTrim( context.localUtil.Format( (decimal)(A183ptipobienid), "ZZZ9")), 167, Gx_line+0, 317, Gx_line+17, 0, 0, 0, 0) ;
                getPrinter().GxDrawText(StringUtil.LTrim( context.localUtil.Format( (decimal)(A175productoid), "ZZZZZZZZ9")), 0, Gx_line+0, 150, Gx_line+17, 1, 0, 0, 0) ;
                Gx_OldLine = Gx_line;
-               Gx_line = (int)(Gx_line+193);
+               Gx_line = (int)(Gx_line+36);
                pr_default.readNext(0);
             }
             pr_default.close(0);
@@ -361,7 +361,7 @@ namespace GeneXus.Programs {
           prmP000J2 = new Object[] {
           } ;
           def= new CursorDef[] {
-              new CursorDef("P000J2", "SELECT productoid, productodsc, ptipobienid, pmodeloid, pmarcaid FROM public.producto ORDER BY  ",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmP000J2,100,0,false,false )
+              new CursorDef("P000J2", "SELECT productoid, productodsc, ptipobienid, pmodeloid, pmarcaid FROM public.producto ORDER BY productoid ",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmP000J2,100,0,false,false )
           };
        }
     }

@@ -2,7 +2,7 @@
                File: DetallesProducto
         Description: Detalles Producto
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 2/15/2022 5:9:26.69
+       Generated on: 3/31/2022 0:21:43.80
        Program type: Callable routine
           Main DBMS: postgresql
 */
@@ -253,7 +253,7 @@ namespace GeneXus.Programs {
          context.AddJavascriptSource("jquery.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxtimezone.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxgral.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("gxcfg.js", "?2022215592672");
+         context.AddJavascriptSource("gxcfg.js", "?20223310214382");
          if ( context.isSpaRequest( ) )
          {
             enableOutput();
@@ -1028,11 +1028,11 @@ namespace GeneXus.Programs {
 
       protected void define_styles( )
       {
-         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?583790");
+         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?0185564");
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?2022215592686");
+            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?20223310214396");
             idxLst = (int)(idxLst+1);
          }
          /* End function define_styles */
@@ -1041,7 +1041,7 @@ namespace GeneXus.Programs {
       protected void include_jscripts( )
       {
          context.AddJavascriptSource("messages.spa.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("detallesproducto.js", "?2022215592686");
+         context.AddJavascriptSource("detallesproducto.js", "?20223310214396");
          /* End function include_jscripts */
       }
 
@@ -1477,7 +1477,7 @@ namespace GeneXus.Programs {
           new Object[] {"lV5buscar",NpgsqlDbType.Text,20,0}
           } ;
           def= new CursorDef[] {
-              new CursorDef("H00392", "SELECT pmodeloid, pmarcaid, productodsc, ptipobienid, productoid FROM public.producto WHERE productodsc like :lV5buscar ORDER BY  ",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmH00392,11,0,true,false )
+              new CursorDef("H00392", "SELECT pmodeloid, pmarcaid, productodsc, ptipobienid, productoid FROM public.producto WHERE productodsc like :lV5buscar ORDER BY productoid ",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmH00392,11,0,true,false )
           };
        }
     }

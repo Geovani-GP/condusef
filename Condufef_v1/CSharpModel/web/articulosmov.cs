@@ -2,7 +2,7 @@
                File: articulosmov
         Description: articulosmov
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 2/15/2022 5:9:1.89
+       Generated on: 3/31/2022 0:19:15.98
        Program type: Callable routine
           Main DBMS: postgresql
 */
@@ -1800,7 +1800,7 @@ namespace GeneXus.Programs {
          context.AddJavascriptSource("jquery.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxtimezone.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxgral.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("gxcfg.js", "?202221559267");
+         context.AddJavascriptSource("gxcfg.js", "?20223310191672");
          if ( context.isSpaRequest( ) )
          {
             enableOutput();
@@ -1985,11 +1985,11 @@ namespace GeneXus.Programs {
       protected void define_styles( )
       {
          AddStyleSheetFile("calendar-system.css", "?11323129");
-         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?583790");
+         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?0185564");
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?202221559272");
+            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?20223310191676");
             idxLst = (int)(idxLst+1);
          }
          /* End function define_styles */
@@ -1999,7 +1999,7 @@ namespace GeneXus.Programs {
       {
          context.AddJavascriptSource("messages.spa.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxdec.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("articulosmov.js", "?202221559273");
+         context.AddJavascriptSource("articulosmov.js", "?20223310191676");
          /* End function include_jscripts */
       }
 

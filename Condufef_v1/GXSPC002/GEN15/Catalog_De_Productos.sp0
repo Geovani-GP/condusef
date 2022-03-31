@@ -200,12 +200,8 @@ rule_i(0,index(1,'TIPOBIEN_PKEY',u,[ 23 ])).
 rule_i(0,loc([ 1,'TIPOBIEN_PKEY' ],tipobien_pkey,'','LAN')).
 rule_i(0,file(23,'PRODUCTO',[ 175,179,87,180,181,182,91,92,93,183 ])).
 rule_i(0,loc([ 23 ],'PRODUCTO','','LAN')).
-rule_i(0,index(23,'PRODUCTO_PKEY',u,[ 15,16 ])).
-rule_i(0,loc([ 23,'PRODUCTO_PKEY' ],producto_pkey,'','LAN')).
-rule_i(0,index(23,'PRODUCTO_ID',k,[ 15 ])).
-rule_i(0,loc([ 23,'PRODUCTO_ID' ],producto_id,'','LAN')).
-rule_i(0,index(23,'IPRODUCTO',u,[ 175 ])).
-rule_i(0,loc([ 23,'IPRODUCTO' ],'IPRODUCTO','','LAN')).
+rule_i(0,index(23,'PRODUCTOS_PKEY',u,[ 175 ])).
+rule_i(0,loc([ 23,'PRODUCTOS_PKEY' ],'PRODUCTOS_PKEY','','LAN')).
 rule_i(0,p(0,0,fv,13,[ intname,'PRODUCTO' ])).
 rule_i(0,p(0,0,fv,13,[ table,23 ])).
 rule_i(0,p(0,15,fv,13,[])).
@@ -213,21 +209,11 @@ rule_i(0,p(0,15,fv,13,[ 'NAME',producto ])).
 rule_i(0,p(0,15,fv,13,[ 'LOC','' ])).
 rule_i(0,p(0,15,fv,13,[ 'SCHEMA',public ])).
 rule_i(0,p(0,15,fv,13,[ 'EXTNAM','YES' ])).
-rule_i(0,p(0,15,fvix,[ 13,12 ],[])).
-rule_i(0,p(0,15,fvix,[ 13,12 ],[ 'NAME',producto_pkey ])).
-rule_i(0,p(0,15,fvix,[ 13,12 ],[ 'LOC','' ])).
-rule_i(0,p(0,15,fvix,[ 13,12 ],[ 'SCHEMA',public ])).
-rule_i(0,p(0,15,fvix,[ 13,12 ],[ 'EXTNAM','YES' ])).
-rule_i(0,p(0,15,fvix,[ 13,13 ],[])).
-rule_i(0,p(0,15,fvix,[ 13,13 ],[ 'NAME',producto_id ])).
-rule_i(0,p(0,15,fvix,[ 13,13 ],[ 'LOC','' ])).
-rule_i(0,p(0,15,fvix,[ 13,13 ],[ 'SCHEMA',public ])).
-rule_i(0,p(0,15,fvix,[ 13,13 ],[ 'EXTNAM','YES' ])).
-rule_i(0,p(0,15,fvix,[ 13,24 ],[])).
-rule_i(0,p(0,15,fvix,[ 13,24 ],[ 'NAME','' ])).
-rule_i(0,p(0,15,fvix,[ 13,24 ],[ 'LOC','' ])).
-rule_i(0,p(0,15,fvix,[ 13,24 ],[ 'SCHEMA','' ])).
-rule_i(0,p(0,15,fvix,[ 13,24 ],[ 'EXTNAM','YES' ])).
+rule_i(0,p(0,15,fvix,[ 13,25 ],[])).
+rule_i(0,p(0,15,fvix,[ 13,25 ],[ 'NAME','' ])).
+rule_i(0,p(0,15,fvix,[ 13,25 ],[ 'LOC','' ])).
+rule_i(0,p(0,15,fvix,[ 13,25 ],[ 'SCHEMA','' ])).
+rule_i(0,p(0,15,fvix,[ 13,25 ],[ 'EXTNAM','YES' ])).
 rule_i(0,rule([ a(22,[ '''Guardar''','''Guardar''','' ]) ],[],[],[])).
 rule_i(0,rule([ a(22,[ '''Cancelar''','''Cancelar''','' ]) ],[],[],[])).
 rule_i(0,rule([ a(22,[ '''Consultar''','''Consultar''','' ]) ],[],[],[])).
@@ -239,7 +225,7 @@ a_i(4,2,d,t('Marcasid',23),[],[ 24,112,[ [ [ 8,24 ],[ 8,112 ] ],n,[ [ 8,many ] ]
 a_i(5,2,d,t('Modelosid',23),[],[ 15,116,[ [ [ 19,15 ],[ 19,116 ] ],n,[ [ 19,many ] ],[],[],[ 116 ],[],[],[] ],empty,'Selecciona' ]).
 a_i(6,2,d,t('Categoriasid',23),[],[ 14,94,[ [ [ 5,14 ],[ 5,94 ] ],n,[ [ 5,many ] ],[],[],[ 94 ],[],[],[] ],empty,'Selecciona' ]).
 a_i(7,2,d,t('Tipobienid',23),[],[ 23,139,[ [ [ 1,23 ],[ 1,139 ] ],n,[ [ 1,many ] ],[],[],[ 139 ],[],[],[] ],empty,'Selecciona' ]).
-a_i(8,2,ra,2000,[],[ [],'IPRODUCTO',[],2 ]).
+a_i(8,2,ra,2000,[],[ [],'PRODUCTOS_PKEY',[],2 ]).
 a_i(9,1,f,[ t('&Nextvalue',23),t('Enabled',3) ],[],[ [],[ t(0,3),t(';',18) ] ]).
  
 v_i(f,i,1,[]).
@@ -305,8 +291,7 @@ index_i(8,[ 'MARCAS_PKEY',u,[ 24 ],'MARCAS_PKEY' ]).
 index_i(19,[ 'MODELOS_PKEY',u,[ 15 ],'MODELOS_PKEY' ]).
 index_i(5,[ 'CATEGORIAS_PKEY',u,[ 14 ],'CATEGORIAS_PKEY' ]).
 index_i(1,[ 'TIPOBIEN_PKEY',u,[ 23 ],'TIPOBIEN_PKEY' ]).
-index_i(23,[ 'PRODUCTO_PKEY',u,[ 15,16 ],'PRODUCTO_PKEY' ]).
-index_i(23,[ 'IPRODUCTO',u,[ 175 ],'IPRODUCTO' ]).
+index_i(23,[ 'PRODUCTOS_PKEY',u,[ 175 ],'PRODUCTOS_PKEY' ]).
  
 lv_i(2,2000,23).
  
@@ -328,7 +313,7 @@ agg_def_i(40000,[ t('0',3) ]).
  
  
  
-map_i(23,i,'IPRODUCTO',[ 'IPRODUCTO' ]).
+map_i(23,i,'IPRODUCTO',[ 'PRODUCTOS_PKEY' ]).
 map_i(23,a,183,[ ptipobienid ]).
 map_i(23,a,93,[ productofecultact ]).
 map_i(23,a,92,[ productofecreg ]).
@@ -928,6 +913,7 @@ att_prop_i(2,175,'EmptyAsNull','Yes',d).
 att_prop_i(2,175,idBasedOn,'',d).
 att_prop_i(2,175,'AUTONUMBER','0',d).
 att_prop_i(2,175,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,175,'AttRegEx','',d).
 att_prop_i(2,175,'AttValidationFailedMsg','',d).
 att_prop_i(2,175,'FullName',productoid,v).
 att_prop_i(2,25,'ExternalName',cambsid,d).
@@ -1026,6 +1012,7 @@ att_prop_i(2,40000,'EmptyAsNull','Yes',d).
 att_prop_i(2,40000,idBasedOn,'',d).
 att_prop_i(2,40000,'AUTONUMBER','0',d).
 att_prop_i(2,40000,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,40000,'AttRegEx','',d).
 att_prop_i(2,40000,'AttValidationFailedMsg','',d).
 att_prop_i(2,40000,'FullName',productoid,v).
  

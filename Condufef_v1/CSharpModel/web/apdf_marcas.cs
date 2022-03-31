@@ -2,7 +2,7 @@
                File: PDF_marcas
         Description: PDF_marcas
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 2/15/2022 5:8:39.84
+       Generated on: 3/31/2022 0:34:16.26
        Program type: Main program
           Main DBMS: postgresql
 */
@@ -157,12 +157,12 @@ namespace GeneXus.Programs {
                A24marcasid = P000H2_A24marcasid[0];
                A112marcasdsc = P000H2_A112marcasdsc[0];
                n112marcasdsc = P000H2_n112marcasdsc[0];
-               H0H0( false, 120) ;
+               H0H0( false, 36) ;
                getPrinter().GxAttris("Microsoft Sans Serif", 9, false, false, false, false, 0, 0, 0, 0, 0, 255, 255, 255) ;
                getPrinter().GxDrawText(StringUtil.RTrim( context.localUtil.Format( A112marcasdsc, "")), 250, Gx_line+0, 750, Gx_line+17, 0, 0, 0, 0) ;
                getPrinter().GxDrawText(StringUtil.LTrim( context.localUtil.Format( (decimal)(A24marcasid), "ZZZZZZZZ9")), 50, Gx_line+0, 200, Gx_line+17, 1, 0, 0, 0) ;
                Gx_OldLine = Gx_line;
-               Gx_line = (int)(Gx_line+120);
+               Gx_line = (int)(Gx_line+36);
                pr_default.readNext(0);
             }
             pr_default.close(0);

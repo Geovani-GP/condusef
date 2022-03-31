@@ -2,7 +2,7 @@
                File: CallType
         Description: CallType
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 2/15/2022 5:9:57.65
+       Generated on: 3/31/2022 0:20:5.84
        Program type: Callable routine
           Main DBMS: postgresql
 */

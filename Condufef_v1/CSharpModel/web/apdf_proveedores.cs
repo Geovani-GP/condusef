@@ -2,7 +2,7 @@
                File: PDF_proveedores
         Description: PDF_proveedores
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 2/17/2022 0:30:20.33
+       Generated on: 3/31/2022 0:39:27.94
        Program type: Main program
           Main DBMS: postgresql
 */
@@ -143,8 +143,8 @@ namespace GeneXus.Programs {
             getPrinter().GxDrawText("CLAVE ", 0, Gx_line+100, 40, Gx_line+119, 0, 0, 0, 0) ;
             getPrinter().GxDrawText(context.localUtil.Format( AV8FECHA, "99/99/99"), 650, Gx_line+50, 724, Gx_line+72, 2, 0, 0, 0) ;
             getPrinter().GxDrawText("R.F.C.", 242, Gx_line+100, 274, Gx_line+114, 0+256, 0, 0, 0) ;
-            getPrinter().GxDrawText("COLONIA", 392, Gx_line+100, 442, Gx_line+114, 0+256, 0, 0, 0) ;
-            getPrinter().GxDrawText("MUNICIPIO", 517, Gx_line+100, 576, Gx_line+114, 0+256, 0, 0, 0) ;
+            getPrinter().GxDrawText("COLONIA", 367, Gx_line+100, 417, Gx_line+114, 0+256, 0, 0, 0) ;
+            getPrinter().GxDrawText("MUNICIPIO", 500, Gx_line+100, 559, Gx_line+114, 0+256, 0, 0, 0) ;
             getPrinter().GxDrawText("ESTADO", 608, Gx_line+100, 655, Gx_line+114, 0+256, 0, 0, 0) ;
             getPrinter().GxDrawText("TELEFONO", 708, Gx_line+100, 768, Gx_line+114, 0+256, 0, 0, 0) ;
             getPrinter().GxAttris("Microsoft Sans Serif", 9, false, false, false, false, 0, 0, 0, 0, 0, 255, 255, 255) ;
@@ -172,18 +172,18 @@ namespace GeneXus.Programs {
                n126proveedoresnombre = P000K2_n126proveedoresnombre[0];
                A128proveedorescolonia = P000K2_A128proveedorescolonia[0];
                n128proveedorescolonia = P000K2_n128proveedorescolonia[0];
-               H0K0( false, 193) ;
+               H0K0( false, 36) ;
                getPrinter().GxAttris("Microsoft Sans Serif", 8, false, false, false, false, 0, 0, 0, 0, 0, 255, 255, 255) ;
                getPrinter().GxDrawText(StringUtil.RTrim( context.localUtil.Format( A128proveedorescolonia, "")), 375, Gx_line+0, 475, Gx_line+15, 0, 0, 0, 0) ;
                getPrinter().GxDrawText(StringUtil.RTrim( context.localUtil.Format( A135proveedoresrfc, "")), 233, Gx_line+0, 383, Gx_line+15, 0, 0, 0, 0) ;
                getPrinter().GxDrawText(StringUtil.RTrim( context.localUtil.Format( A130proveedoresmunicipio, "")), 517, Gx_line+0, 648, Gx_line+15, 0+256, 0, 0, 0) ;
                getPrinter().GxDrawText(StringUtil.RTrim( context.localUtil.Format( A131proveedorestado, "")), 642, Gx_line+0, 747, Gx_line+15, 0+256, 0, 0, 0) ;
-               getPrinter().GxDrawText(StringUtil.LTrim( context.localUtil.Format( (decimal)(A132proveedorestelefono1), "ZZZZZZZZZ9")), 742, Gx_line+0, 806, Gx_line+15, 2+256, 0, 0, 0) ;
+               getPrinter().GxDrawText(StringUtil.LTrim( context.localUtil.Format( (decimal)(A132proveedorestelefono1), "ZZZZZZZZZ9")), 717, Gx_line+0, 781, Gx_line+15, 2+256, 0, 0, 0) ;
                getPrinter().GxAttris("Microsoft Sans Serif", 9, false, false, false, false, 0, 0, 0, 0, 0, 255, 255, 255) ;
                getPrinter().GxDrawText(StringUtil.RTrim( context.localUtil.Format( A126proveedoresnombre, "")), 92, Gx_line+0, 242, Gx_line+17, 0, 0, 0, 0) ;
-               getPrinter().GxDrawText(StringUtil.LTrim( context.localUtil.Format( (decimal)(A2proveedoresid), "ZZZZZZZZ9")), 0, Gx_line+0, 150, Gx_line+17, 1, 0, 0, 0) ;
+               getPrinter().GxDrawText(StringUtil.LTrim( context.localUtil.Format( (decimal)(A2proveedoresid), "ZZZZZZZZ9")), 0, Gx_line+0, 150, Gx_line+17, 0, 0, 0, 0) ;
                Gx_OldLine = Gx_line;
-               Gx_line = (int)(Gx_line+193);
+               Gx_line = (int)(Gx_line+36);
                pr_default.readNext(0);
             }
             pr_default.close(0);

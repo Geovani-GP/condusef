@@ -2,7 +2,7 @@
                File: tipobien
         Description: tipobien
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 2/15/2022 5:8:40.13
+       Generated on: 3/31/2022 0:18:58.34
        Program type: Callable routine
           Main DBMS: postgresql
 */
@@ -1523,7 +1523,7 @@ namespace GeneXus.Programs {
          context.AddJavascriptSource("jquery.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxtimezone.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxgral.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("gxcfg.js", "?2022215584068");
+         context.AddJavascriptSource("gxcfg.js", "?20223310185878");
          if ( context.isSpaRequest( ) )
          {
             enableOutput();
@@ -1682,11 +1682,11 @@ namespace GeneXus.Programs {
       protected void define_styles( )
       {
          AddStyleSheetFile("calendar-system.css", "?11323129");
-         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?583790");
+         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?0185564");
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?2022215584071");
+            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?20223310185881");
             idxLst = (int)(idxLst+1);
          }
          /* End function define_styles */
@@ -1695,7 +1695,7 @@ namespace GeneXus.Programs {
       protected void include_jscripts( )
       {
          context.AddJavascriptSource("messages.spa.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("tipobien.js", "?2022215584072");
+         context.AddJavascriptSource("tipobien.js", "?20223310185882");
          /* End function include_jscripts */
       }
 

@@ -2,7 +2,7 @@
                File: estatusarticulo
         Description: estatusarticulo
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 2/15/2022 5:8:48.31
+       Generated on: 3/31/2022 0:19:4.53
        Program type: Callable routine
           Main DBMS: postgresql
 */
@@ -1545,7 +1545,7 @@ namespace GeneXus.Programs {
          context.AddJavascriptSource("jquery.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxtimezone.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxgral.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("gxcfg.js", "?2022215584894");
+         context.AddJavascriptSource("gxcfg.js", "?202233101958");
          if ( context.isSpaRequest( ) )
          {
             enableOutput();
@@ -1730,11 +1730,11 @@ namespace GeneXus.Programs {
       protected void define_styles( )
       {
          AddStyleSheetFile("calendar-system.css", "?11323129");
-         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?583790");
+         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?0185564");
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?202221558490");
+            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?2022331019513");
             idxLst = (int)(idxLst+1);
          }
          /* End function define_styles */
@@ -1744,7 +1744,7 @@ namespace GeneXus.Programs {
       {
          context.AddJavascriptSource("messages.spa.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxdec.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("estatusarticulo.js", "?202221558490");
+         context.AddJavascriptSource("estatusarticulo.js", "?2022331019513");
          /* End function include_jscripts */
       }
 

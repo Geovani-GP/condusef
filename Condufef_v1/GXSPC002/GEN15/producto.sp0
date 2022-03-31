@@ -174,36 +174,21 @@ rule_i(0,p(0,15,fv,13,[ 'NAME',producto ])).
 rule_i(0,p(0,15,fv,13,[ 'LOC','' ])).
 rule_i(0,p(0,15,fv,13,[ 'SCHEMA',public ])).
 rule_i(0,p(0,15,fv,13,[ 'EXTNAM','YES' ])).
-rule_i(0,p(0,15,fvix,[ 13,12 ],[])).
-rule_i(0,p(0,15,fvix,[ 13,12 ],[ 'NAME',producto_pkey ])).
-rule_i(0,p(0,15,fvix,[ 13,12 ],[ 'LOC','' ])).
-rule_i(0,p(0,15,fvix,[ 13,12 ],[ 'SCHEMA',public ])).
-rule_i(0,p(0,15,fvix,[ 13,12 ],[ 'EXTNAM','YES' ])).
-rule_i(0,p(0,15,fvix,[ 13,13 ],[])).
-rule_i(0,p(0,15,fvix,[ 13,13 ],[ 'NAME',producto_id ])).
-rule_i(0,p(0,15,fvix,[ 13,13 ],[ 'LOC','' ])).
-rule_i(0,p(0,15,fvix,[ 13,13 ],[ 'SCHEMA',public ])).
-rule_i(0,p(0,15,fvix,[ 13,13 ],[ 'EXTNAM','YES' ])).
-rule_i(0,p(0,15,fvix,[ 13,24 ],[])).
-rule_i(0,p(0,15,fvix,[ 13,24 ],[ 'NAME','' ])).
-rule_i(0,p(0,15,fvix,[ 13,24 ],[ 'LOC','' ])).
-rule_i(0,p(0,15,fvix,[ 13,24 ],[ 'SCHEMA','' ])).
-rule_i(0,p(0,15,fvix,[ 13,24 ],[ 'EXTNAM','YES' ])).
+rule_i(0,p(0,15,fvix,[ 13,25 ],[])).
+rule_i(0,p(0,15,fvix,[ 13,25 ],[ 'NAME','' ])).
+rule_i(0,p(0,15,fvix,[ 13,25 ],[ 'LOC','' ])).
+rule_i(0,p(0,15,fvix,[ 13,25 ],[ 'SCHEMA','' ])).
+rule_i(0,p(0,15,fvix,[ 13,25 ],[ 'EXTNAM','YES' ])).
 rule_i(0,file(23,'PRODUCTO',[ 175,179,87,180,181,182,91,92,93,183 ])).
 rule_i(0,loc([ 23 ],'PRODUCTO','','LAN')).
-rule_i(0,index(23,'PRODUCTO_PKEY',u,[ 15,16 ])).
-rule_i(0,loc([ 23,'PRODUCTO_PKEY' ],producto_pkey,'','LAN')).
-rule_i(0,index(23,'PRODUCTO_ID',k,[ 15 ])).
-rule_i(0,loc([ 23,'PRODUCTO_ID' ],producto_id,'','LAN')).
-rule_i(0,index(23,'IPRODUCTO',u,[ 175 ])).
-rule_i(0,loc([ 23,'IPRODUCTO' ],'IPRODUCTO','','LAN')).
+rule_i(0,index(23,'PRODUCTOS_PKEY',u,[ 175 ])).
+rule_i(0,loc([ 23,'PRODUCTOS_PKEY' ],'PRODUCTOS_PKEY','','LAN')).
 rule_i(23,rule([ a(3,[ t(175,2) ]) ],[],[ insert,update,delete,display ],[ 175 ])).
 rule_i(23,rule([ a(21,[ [ 175 ] ]) ],[],[ insert,update,delete,display ],[ 175 ])).
  
 a_i(1,23,f,175,[],[ [],[ t('Productoid',23),t('IF',17),t('.NOT.',8),t('null(',1),t('Productoid',23),t(')',4),t(';',18) ] ]).
 a_i(2,23,f,[ t(175,2),t('Enabled',3) ],[],[ [],[ t(0,3),t(';',18) ] ]).
 a_i(3,23,t,23,[],[ [ [ [],175,175 ] ],'IPRODUCTO',[] ]).
-a_i(4,23,k,23,[],[ [ [ [],15,15 ] ],'PRODUCTO_ID',[] ]).
  
 v_i(f,i,1,'Productoid').
 v_i(f,o,1,175).
@@ -219,9 +204,6 @@ v_i(t,o,3,91).
 v_i(t,o,3,92).
 v_i(t,o,3,93).
 v_i(t,o,3,183).
-v_i(k,i,4,15).
-v_i(k,i,4,175).
-v_i(k,o,4,[]).
  
 act_info_i(1,[ [ 175 ] ]).
  
@@ -245,9 +227,7 @@ attri_i('Mode',[ 'Gx_mode',char,3,0,'@!',1,'','',2 ]).
  
 table_i(23,[ 'PRODUCTO',[ 175,179,87,180,181,182,91,92,93,183 ],producto,producto ]).
  
-index_i(23,[ 'PRODUCTO_PKEY',u,[ 15,16 ],'PRODUCTO_PKEY' ]).
-index_i(23,[ 'PRODUCTO_ID',k,[ 15 ],'PRODUCTO_ID' ]).
-index_i(23,[ 'IPRODUCTO',u,[ 175 ],'IPRODUCTO' ]).
+index_i(23,[ 'PRODUCTOS_PKEY',u,[ 175 ],'PRODUCTOS_PKEY' ]).
  
  
  
@@ -269,7 +249,7 @@ upd_i(23,23,d,[ [],[],'IPRODUCTO',[] ]).
  
  
  
-map_i(23,i,'IPRODUCTO',[ 'IPRODUCTO' ]).
+map_i(23,i,'IPRODUCTO',[ 'PRODUCTOS_PKEY' ]).
 map_i(23,a,183,[ ptipobienid ]).
 map_i(23,a,93,[ productofecultact ]).
 map_i(23,a,92,[ productofecreg ]).

@@ -2,7 +2,7 @@
                File: AppMasterPage
         Description: Application Master Page
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 2/15/2022 5:9:17.36
+       Generated on: 3/31/2022 0:19:30.45
        Program type: Callable routine
           Main DBMS: postgresql
 */
@@ -149,7 +149,7 @@ namespace GeneXus.Programs {
          }
          context.AddJavascriptSource("HugaoMessages/js/jquery.growl.min.js", "");
          context.AddJavascriptSource("HugaoMessages/HugaoMessagesRender.js", "");
-         context.AddJavascriptSource("appmasterpage.js", "?2022215591738");
+         context.AddJavascriptSource("appmasterpage.js", "?20223310193047");
          context.WriteHtmlTextNl( "</body>") ;
          context.WriteHtmlTextNl( "</html>") ;
          if ( context.isSpaRequest( ) )
@@ -844,7 +844,7 @@ namespace GeneXus.Programs {
       protected void define_styles( )
       {
          AddStyleSheetFile("HugaoMessages/css/jquery.growl.min.css", "?12514575");
-         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?583790");
+         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?0185564");
          if ( StringUtil.StrCmp(WebComp_Webcomp1_Component, "") == 0 )
          {
             WebComp_Webcomp1 = getWebComponent(GetType(), "GeneXus.Programs", "sidebar", new Object[] {context} );
@@ -862,7 +862,7 @@ namespace GeneXus.Programs {
          idxLst = 1;
          while ( idxLst <= (getDataAreaObject() == null ? Form : getDataAreaObject().GetForm()).Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((String)(getDataAreaObject() == null ? Form : getDataAreaObject().GetForm()).Jscriptsrc.Item(idxLst))), "?2022215591750");
+            context.AddJavascriptSource(StringUtil.RTrim( ((String)(getDataAreaObject() == null ? Form : getDataAreaObject().GetForm()).Jscriptsrc.Item(idxLst))), "?20223310193058");
             idxLst = (int)(idxLst+1);
          }
          /* End function define_styles */
@@ -870,7 +870,7 @@ namespace GeneXus.Programs {
 
       protected void include_jscripts( )
       {
-         context.AddJavascriptSource("appmasterpage.js", "?2022215591750");
+         context.AddJavascriptSource("appmasterpage.js", "?20223310193058");
          context.AddJavascriptSource("HugaoMessages/js/jquery.growl.min.js", "");
          context.AddJavascriptSource("HugaoMessages/HugaoMessagesRender.js", "");
          /* End function include_jscripts */

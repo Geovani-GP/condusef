@@ -977,6 +977,7 @@ att_prop_i(2,2,'EmptyAsNull','Yes',d).
 att_prop_i(2,2,idBasedOn,'',d).
 att_prop_i(2,2,'AUTONUMBER','0',d).
 att_prop_i(2,2,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,2,'AttRegEx','',d).
 att_prop_i(2,2,'AttValidationFailedMsg','',d).
 att_prop_i(2,2,'FullName',proveedoresid,v).
 att_prop_i(2,177,'ExternalName',estadoid,d).
@@ -1003,6 +1004,7 @@ att_prop_i(2,40000,'EmptyAsNull','Yes',d).
 att_prop_i(2,40000,idBasedOn,'',d).
 att_prop_i(2,40000,'AUTONUMBER','0',d).
 att_prop_i(2,40000,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,40000,'AttRegEx','',d).
 att_prop_i(2,40000,'AttValidationFailedMsg','',d).
 att_prop_i(2,40000,'FullName',proveedoresid,v).
  

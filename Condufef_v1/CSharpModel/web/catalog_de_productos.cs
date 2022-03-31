@@ -2,7 +2,7 @@
                File: Catalog_De_Productos
         Description: Catalog_De_Productos
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 2/21/2022 20:56:53.3
+       Generated on: 3/31/2022 0:19:34.24
        Program type: Callable routine
           Main DBMS: postgresql
 */
@@ -275,7 +275,7 @@ namespace GeneXus.Programs {
          context.AddJavascriptSource("jquery.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxtimezone.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxgral.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("gxcfg.js", "?202222120565312");
+         context.AddJavascriptSource("gxcfg.js", "?20223310193426");
          if ( context.isSpaRequest( ) )
          {
             enableOutput();
@@ -1404,11 +1404,11 @@ namespace GeneXus.Programs {
 
       protected void define_styles( )
       {
-         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?583790");
+         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?0185564");
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?202222120565368");
+            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?20223310193455");
             idxLst = (int)(idxLst+1);
          }
          /* End function define_styles */
@@ -1417,7 +1417,7 @@ namespace GeneXus.Programs {
       protected void include_jscripts( )
       {
          context.AddJavascriptSource("messages.spa.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("catalog_de_productos.js", "?202222120565368");
+         context.AddJavascriptSource("catalog_de_productos.js", "?20223310193455");
          /* End function include_jscripts */
       }
 

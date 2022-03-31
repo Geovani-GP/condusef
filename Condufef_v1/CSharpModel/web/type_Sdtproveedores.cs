@@ -2,7 +2,7 @@
                File: type_Sdtproveedores
         Description: proveedores
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 2/15/2022 5:8:55.30
+       Generated on: 3/31/2022 0:19:10.32
        Program type: Callable routine
           Main DBMS: postgresql
 */

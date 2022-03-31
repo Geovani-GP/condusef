@@ -2,7 +2,7 @@
                File: producto
         Description: producto
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 2/15/2022 5:8:51.30
+       Generated on: 3/31/2022 0:19:7.2
        Program type: Callable routine
           Main DBMS: postgresql
 */
@@ -1419,7 +1419,7 @@ namespace GeneXus.Programs {
                   if ( AnyError == 0 )
                   {
                      /* Using cursor T00099 */
-                     pr_default.execute(7, new Object[] {n179pcambsid, A179pcambsid, n87productodsc, A87productodsc, n180pmodeloid, A180pmodeloid, n181pmarcaid, A181pmarcaid, n182pcategoriaid, A182pcategoriaid, n91productousuario, A91productousuario, n92productofecreg, A92productofecreg, n93productofecultact, A93productofecultact, n183ptipobienid, A183ptipobienid});
+                     pr_default.execute(7, new Object[] {n179pcambsid, A179pcambsid, n87productodsc, A87productodsc, n180pmodeloid, A180pmodeloid, n181pmarcaid, A181pmarcaid, n182pcategoriaid, A182pcategoriaid, n91productousuario, A91productousuario, n92productofecreg, A92productofecreg, n93productofecultact, A93productofecultact, n183ptipobienid, A183ptipobienid, A175productoid});
                      pr_default.close(7);
                      dsDefault.SmartCacheProvider.SetUpdated("PRODUCTO") ;
                      if ( (pr_default.getStatus(7) == 103) )
@@ -1478,7 +1478,7 @@ namespace GeneXus.Programs {
                {
                   /* No cascading delete specified. */
                   /* Using cursor T000910 */
-                  pr_default.execute(8);
+                  pr_default.execute(8, new Object[] {A175productoid});
                   pr_default.close(8);
                   dsDefault.SmartCacheProvider.SetUpdated("PRODUCTO") ;
                   if ( AnyError == 0 )
@@ -1675,7 +1675,7 @@ namespace GeneXus.Programs {
          context.AddJavascriptSource("jquery.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxtimezone.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxgral.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("gxcfg.js", "?202221558527");
+         context.AddJavascriptSource("gxcfg.js", "?2022331019767");
          if ( context.isSpaRequest( ) )
          {
             enableOutput();
@@ -1872,11 +1872,11 @@ namespace GeneXus.Programs {
       protected void define_styles( )
       {
          AddStyleSheetFile("calendar-system.css", "?11323129");
-         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?583790");
+         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?0185564");
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?2022215585213");
+            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?2022331019773");
             idxLst = (int)(idxLst+1);
          }
          /* End function define_styles */
@@ -1885,7 +1885,7 @@ namespace GeneXus.Programs {
       protected void include_jscripts( )
       {
          context.AddJavascriptSource("messages.spa.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("producto.js", "?2022215585213");
+         context.AddJavascriptSource("producto.js", "?2022331019773");
          /* End function include_jscripts */
       }
 
@@ -2444,10 +2444,12 @@ namespace GeneXus.Programs {
           new Object[] {"productousuario",NpgsqlDbType.Varchar,15,0} ,
           new Object[] {"productofecreg",NpgsqlDbType.Date,8,0} ,
           new Object[] {"productofecultact",NpgsqlDbType.Date,8,0} ,
-          new Object[] {"ptipobienid",NpgsqlDbType.Smallint,4,0}
+          new Object[] {"ptipobienid",NpgsqlDbType.Smallint,4,0} ,
+          new Object[] {"productoid",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT000910 ;
           prmT000910 = new Object[] {
+          new Object[] {"productoid",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmT000911 ;
           prmT000911 = new Object[] {
@@ -2460,8 +2462,8 @@ namespace GeneXus.Programs {
              ,new CursorDef("T00096", "SELECT productoid FROM public.producto WHERE ( productoid > :productoid) ORDER BY productoid ",true, GxErrorMask.GX_NOMASK, false, this,prmT00096,1,0,true,true )
              ,new CursorDef("T00097", "SELECT productoid FROM public.producto WHERE ( productoid < :productoid) ORDER BY productoid DESC ",true, GxErrorMask.GX_NOMASK, false, this,prmT00097,1,0,true,true )
              ,new CursorDef("T00098", "SAVEPOINT gxupdate;INSERT INTO public.producto(productoid, pcambsid, productodsc, pmodeloid, pmarcaid, pcategoriaid, productousuario, productofecreg, productofecultact, ptipobienid) VALUES(:productoid, :pcambsid, :productodsc, :pmodeloid, :pmarcaid, :pcategoriaid, :productousuario, :productofecreg, :productofecultact, :ptipobienid);RELEASE SAVEPOINT gxupdate", GxErrorMask.GX_ROLLBACKSAVEPOINT,prmT00098)
-             ,new CursorDef("T00099", "SAVEPOINT gxupdate;UPDATE public.producto SET pcambsid=:pcambsid, productodsc=:productodsc, pmodeloid=:pmodeloid, pmarcaid=:pmarcaid, pcategoriaid=:pcategoriaid, productousuario=:productousuario, productofecreg=:productofecreg, productofecultact=:productofecultact, ptipobienid=:ptipobienid ;RELEASE SAVEPOINT gxupdate", GxErrorMask.GX_ROLLBACKSAVEPOINT | GxErrorMask.GX_NOMASK,prmT00099)
-             ,new CursorDef("T000910", "SAVEPOINT gxupdate;DELETE FROM public.producto ;RELEASE SAVEPOINT gxupdate", GxErrorMask.GX_ROLLBACKSAVEPOINT | GxErrorMask.GX_NOMASK,prmT000910)
+             ,new CursorDef("T00099", "SAVEPOINT gxupdate;UPDATE public.producto SET pcambsid=:pcambsid, productodsc=:productodsc, pmodeloid=:pmodeloid, pmarcaid=:pmarcaid, pcategoriaid=:pcategoriaid, productousuario=:productousuario, productofecreg=:productofecreg, productofecultact=:productofecultact, ptipobienid=:ptipobienid  WHERE productoid = :productoid;RELEASE SAVEPOINT gxupdate", GxErrorMask.GX_ROLLBACKSAVEPOINT | GxErrorMask.GX_NOMASK,prmT00099)
+             ,new CursorDef("T000910", "SAVEPOINT gxupdate;DELETE FROM public.producto  WHERE productoid = :productoid;RELEASE SAVEPOINT gxupdate", GxErrorMask.GX_ROLLBACKSAVEPOINT | GxErrorMask.GX_NOMASK,prmT000910)
              ,new CursorDef("T000911", "SELECT productoid FROM public.producto ORDER BY productoid ",true, GxErrorMask.GX_NOMASK, false, this,prmT000911,100,0,true,false )
           };
        }
@@ -2723,6 +2725,10 @@ namespace GeneXus.Programs {
                 {
                    stmt.SetParameter(9, (short)parms[17]);
                 }
+                stmt.SetParameter(10, (int)parms[18]);
+                return;
+             case 8 :
+                stmt.SetParameter(1, (int)parms[0]);
                 return;
        }
     }

@@ -2,7 +2,7 @@
                File: Alerts
         Description: Alerts
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 2/15/2022 5:8:38.94
+       Generated on: 3/31/2022 0:18:56.82
        Program type: Callable routine
           Main DBMS: postgresql
 */
@@ -253,7 +253,7 @@ namespace GeneXus.Programs {
          context.AddJavascriptSource("jquery.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxtimezone.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxgral.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("gxcfg.js", "?2022215583895");
+         context.AddJavascriptSource("gxcfg.js", "?20223310185683");
          if ( context.isSpaRequest( ) )
          {
             enableOutput();
@@ -316,7 +316,7 @@ namespace GeneXus.Programs {
          SendCloseFormHiddens( ) ;
          if ( ( StringUtil.Len( sPrefix) != 0 ) && context.isAjaxRequest( ) )
          {
-            context.AddJavascriptSource("alerts.js", "?2022215583896");
+            context.AddJavascriptSource("alerts.js", "?20223310185684");
          }
          GxWebStd.gx_hidden_field( context, sPrefix+"GX_FocusControl", GX_FocusControl);
          define_styles( ) ;
@@ -831,11 +831,11 @@ namespace GeneXus.Programs {
 
       protected void define_styles( )
       {
-         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?583790");
+         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?0185564");
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?202221558390");
+            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?20223310185686");
             idxLst = (int)(idxLst+1);
          }
          /* End function define_styles */
@@ -845,7 +845,7 @@ namespace GeneXus.Programs {
       {
          if ( nGXWrapped != 1 )
          {
-            context.AddJavascriptSource("alerts.js", "?202221558390");
+            context.AddJavascriptSource("alerts.js", "?20223310185686");
          }
          /* End function include_jscripts */
       }

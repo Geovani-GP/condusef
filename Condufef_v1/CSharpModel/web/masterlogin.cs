@@ -2,7 +2,7 @@
                File: MasterLogin
         Description: Master Login
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 2/15/2022 5:9:27.1
+       Generated on: 3/31/2022 0:19:39.12
        Program type: Callable routine
           Main DBMS: postgresql
 */
@@ -134,7 +134,7 @@ namespace GeneXus.Programs {
          {
             disableOutput();
          }
-         context.AddJavascriptSource("masterlogin.js", "?202221559272");
+         context.AddJavascriptSource("masterlogin.js", "?20223310193912");
          context.WriteHtmlTextNl( "</body>") ;
          context.WriteHtmlTextNl( "</html>") ;
          if ( context.isSpaRequest( ) )
@@ -562,11 +562,11 @@ namespace GeneXus.Programs {
 
       protected void define_styles( )
       {
-         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?583790");
+         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?0185564");
          idxLst = 1;
          while ( idxLst <= (getDataAreaObject() == null ? Form : getDataAreaObject().GetForm()).Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((String)(getDataAreaObject() == null ? Form : getDataAreaObject().GetForm()).Jscriptsrc.Item(idxLst))), "?202221559274");
+            context.AddJavascriptSource(StringUtil.RTrim( ((String)(getDataAreaObject() == null ? Form : getDataAreaObject().GetForm()).Jscriptsrc.Item(idxLst))), "?20223310193915");
             idxLst = (int)(idxLst+1);
          }
          /* End function define_styles */
@@ -576,7 +576,7 @@ namespace GeneXus.Programs {
       {
          if ( nGXWrapped != 1 )
          {
-            context.AddJavascriptSource("masterlogin.js", "?202221559274");
+            context.AddJavascriptSource("masterlogin.js", "?20223310193915");
          }
          /* End function include_jscripts */
       }

@@ -151,11 +151,4 @@
 <Levels></Levels>
 <AfterTrnRules></AfterTrnRules>
 <AfterLevelRules></AfterLevelRules></Level></Levels>
-<Suggests></Suggests>
-<AdditionalWarnings>
-<Warning>
-<MsgCode>spc0208</MsgCode>
-<Message>
-<Token>No triggered actions</Token>
-<Token></Token>
-<Token>.</Token></Message></Warning></AdditionalWarnings></ObjectSpec>
+<Suggests></Suggests></ObjectSpec>

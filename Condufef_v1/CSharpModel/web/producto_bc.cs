@@ -2,7 +2,7 @@
                File: producto_BC
         Description: producto
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 2/15/2022 5:8:52.39
+       Generated on: 3/31/2022 0:19:7.95
        Program type: Callable routine
           Main DBMS: postgresql
 */
@@ -401,7 +401,7 @@ namespace GeneXus.Programs {
                   if ( AnyError == 0 )
                   {
                      /* Using cursor BC00097 */
-                     pr_default.execute(5, new Object[] {n179pcambsid, A179pcambsid, n87productodsc, A87productodsc, n180pmodeloid, A180pmodeloid, n181pmarcaid, A181pmarcaid, n182pcategoriaid, A182pcategoriaid, n91productousuario, A91productousuario, n92productofecreg, A92productofecreg, n93productofecultact, A93productofecultact, n183ptipobienid, A183ptipobienid});
+                     pr_default.execute(5, new Object[] {n179pcambsid, A179pcambsid, n87productodsc, A87productodsc, n180pmodeloid, A180pmodeloid, n181pmarcaid, A181pmarcaid, n182pcategoriaid, A182pcategoriaid, n91productousuario, A91productousuario, n92productofecreg, A92productofecreg, n93productofecultact, A93productofecultact, n183ptipobienid, A183ptipobienid, A175productoid});
                      pr_default.close(5);
                      dsDefault.SmartCacheProvider.SetUpdated("PRODUCTO") ;
                      if ( (pr_default.getStatus(5) == 103) )
@@ -456,7 +456,7 @@ namespace GeneXus.Programs {
                {
                   /* No cascading delete specified. */
                   /* Using cursor BC00098 */
-                  pr_default.execute(6);
+                  pr_default.execute(6, new Object[] {A175productoid});
                   pr_default.close(6);
                   dsDefault.SmartCacheProvider.SetUpdated("PRODUCTO") ;
                   if ( AnyError == 0 )
@@ -1378,10 +1378,12 @@ namespace GeneXus.Programs {
           new Object[] {"productousuario",NpgsqlDbType.Varchar,15,0} ,
           new Object[] {"productofecreg",NpgsqlDbType.Date,8,0} ,
           new Object[] {"productofecultact",NpgsqlDbType.Date,8,0} ,
-          new Object[] {"ptipobienid",NpgsqlDbType.Smallint,4,0}
+          new Object[] {"ptipobienid",NpgsqlDbType.Smallint,4,0} ,
+          new Object[] {"productoid",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmBC00098 ;
           prmBC00098 = new Object[] {
+          new Object[] {"productoid",NpgsqlDbType.Integer,9,0}
           } ;
           Object[] prmBC00099 ;
           prmBC00099 = new Object[] {
@@ -1393,8 +1395,8 @@ namespace GeneXus.Programs {
              ,new CursorDef("BC00094", "SELECT TM1.productoid, TM1.pcambsid, TM1.productodsc, TM1.pmodeloid, TM1.pmarcaid, TM1.pcategoriaid, TM1.productousuario, TM1.productofecreg, TM1.productofecultact, TM1.ptipobienid FROM public.producto TM1 WHERE TM1.productoid = :productoid ORDER BY TM1.productoid ",true, GxErrorMask.GX_NOMASK, false, this,prmBC00094,100,0,true,false )
              ,new CursorDef("BC00095", "SELECT productoid FROM public.producto WHERE productoid = :productoid ",true, GxErrorMask.GX_NOMASK, false, this,prmBC00095,1,0,true,false )
              ,new CursorDef("BC00096", "SAVEPOINT gxupdate;INSERT INTO public.producto(productoid, pcambsid, productodsc, pmodeloid, pmarcaid, pcategoriaid, productousuario, productofecreg, productofecultact, ptipobienid) VALUES(:productoid, :pcambsid, :productodsc, :pmodeloid, :pmarcaid, :pcategoriaid, :productousuario, :productofecreg, :productofecultact, :ptipobienid);RELEASE SAVEPOINT gxupdate", GxErrorMask.GX_ROLLBACKSAVEPOINT,prmBC00096)
-             ,new CursorDef("BC00097", "SAVEPOINT gxupdate;UPDATE public.producto SET pcambsid=:pcambsid, productodsc=:productodsc, pmodeloid=:pmodeloid, pmarcaid=:pmarcaid, pcategoriaid=:pcategoriaid, productousuario=:productousuario, productofecreg=:productofecreg, productofecultact=:productofecultact, ptipobienid=:ptipobienid ;RELEASE SAVEPOINT gxupdate", GxErrorMask.GX_ROLLBACKSAVEPOINT | GxErrorMask.GX_NOMASK,prmBC00097)
-             ,new CursorDef("BC00098", "SAVEPOINT gxupdate;DELETE FROM public.producto ;RELEASE SAVEPOINT gxupdate", GxErrorMask.GX_ROLLBACKSAVEPOINT | GxErrorMask.GX_NOMASK,prmBC00098)
+             ,new CursorDef("BC00097", "SAVEPOINT gxupdate;UPDATE public.producto SET pcambsid=:pcambsid, productodsc=:productodsc, pmodeloid=:pmodeloid, pmarcaid=:pmarcaid, pcategoriaid=:pcategoriaid, productousuario=:productousuario, productofecreg=:productofecreg, productofecultact=:productofecultact, ptipobienid=:ptipobienid  WHERE productoid = :productoid;RELEASE SAVEPOINT gxupdate", GxErrorMask.GX_ROLLBACKSAVEPOINT | GxErrorMask.GX_NOMASK,prmBC00097)
+             ,new CursorDef("BC00098", "SAVEPOINT gxupdate;DELETE FROM public.producto  WHERE productoid = :productoid;RELEASE SAVEPOINT gxupdate", GxErrorMask.GX_ROLLBACKSAVEPOINT | GxErrorMask.GX_NOMASK,prmBC00098)
              ,new CursorDef("BC00099", "SELECT TM1.productoid, TM1.pcambsid, TM1.productodsc, TM1.pmodeloid, TM1.pmarcaid, TM1.pcategoriaid, TM1.productousuario, TM1.productofecreg, TM1.productofecultact, TM1.ptipobienid FROM public.producto TM1 WHERE TM1.productoid = :productoid ORDER BY TM1.productoid ",true, GxErrorMask.GX_NOMASK, false, this,prmBC00099,100,0,true,false )
           };
        }
@@ -1662,6 +1664,10 @@ namespace GeneXus.Programs {
                 {
                    stmt.SetParameter(9, (short)parms[17]);
                 }
+                stmt.SetParameter(10, (int)parms[18]);
+                return;
+             case 6 :
+                stmt.SetParameter(1, (int)parms[0]);
                 return;
              case 7 :
                 stmt.SetParameter(1, (int)parms[0]);

@@ -2,7 +2,7 @@
                File: LoadEventsSampleProc
         Description: Load Events Sample Proc
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 2/15/2022 5:8:39.43
+       Generated on: 3/31/2022 0:18:57.32
        Program type: Main program
           Main DBMS: postgresql
 */

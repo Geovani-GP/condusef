@@ -15,7 +15,6 @@ ij_object_dependency(login,[],[],[],28).
  
 obj_parms_i([],[]).
  
-ij_usercontrol_directory_i('HugaoMessages').
  
  
  

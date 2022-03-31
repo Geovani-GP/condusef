@@ -193,8 +193,8 @@ break_i(1,rpt,0,[],[ [],[],[] ]).
  
 b_group_i(1,1,lit,0,1,10).
 b_group_i(1,2,nvg,2,4,4).
-b_group_i(2,1,lit,0,14,22).
-b_group_i(1,3,lit,0,23,0).
+b_group_i(2,1,lit,0,14,16).
+b_group_i(1,3,lit,0,17,0).
  
 b_line_i(0,1,1,cmd,0,[]).
 b_line_i(1,1,1,cmd,0,[ t('',107,0,0),t('Fecha',23,0,0),t(=,10,0,0),t('today(',1,0,0),t(')',4,0,0) ]).
@@ -208,8 +208,8 @@ b_line_i(3,1,1,cmd,10,[]).
 b_line_i(4,2,1,cmd,14,[ t('',121,4,0),t(table,3,4,10),t(8,3,4,10) ]).
 b_line_i(5,2,1,pb,14,[ t('Pb_body',29,14,8) ]).
 b_line_i([ 5,0 ],2,1,line,14,[ t(24,2,0,7),t(112,2,0,35) ]).
-b_line_i([ 5,7 ],2,1,line,21,[ t(' ',3,7,0) ]).
-b_line_i(6,2,1,cmd,22,[ t('',128,22,0) ]).
+b_line_i([ 5,1 ],2,1,line,15,[ t(' ',3,1,0) ]).
+b_line_i(6,2,1,cmd,16,[ t('',128,16,0) ]).
  
  
  
@@ -245,7 +245,7 @@ lit_i(10,2,t('Fecha',23),[ font('Microsoft Sans Serif',8,[]),rect(650,50,724,72)
 lit_i(4,2,window,[ title('Text'),rect(0,0,850,153),outstyle(none),fill,graph,back(rgb(0,0,0)),fore(rgb(0,0,0)),border(0),ctlname('Pb_header'),align(left),valign(top),gxcolor([]),defgxcolor('BLK','WHT') ]).
 lit_i(3,5,t(112,2),[ font('Microsoft Sans Serif',9,[]),rect(250,0,750,17),outstyle(none),align(left),valign(top),fore(rgb(0,0,0)),border(1),format(0),ctlname('112'),ctrltype(edit,3),ispwd(0),gxcolor([]) ]).
 lit_i(2,5,t(24,2),[ font('Microsoft Sans Serif',9,[]),rect(50,0,200,17),outstyle(none),align(center),valign(top),fore(rgb(0,0,0)),border(1),format(0),ctlname('24'),ctrltype(edit,2),ispwd(0),gxcolor([]) ]).
-lit_i(1,5,window,[ title('Text'),rect(0,0,850,120),outstyle(none),fill,graph,back(rgb(0,0,0)),fore(rgb(0,0,0)),border(0),ctlname('Pb_body'),align(left),valign(top),gxcolor([]),defgxcolor('BLK','WHT') ]).
+lit_i(1,5,window,[ title('Text'),rect(0,0,850,36),outstyle(none),fill,graph,back(rgb(0,0,0)),fore(rgb(0,0,0)),border(0),ctlname('Pb_body'),align(left),valign(top),gxcolor([]),defgxcolor('BLK','WHT') ]).
  
 grid_i(7,15).
  

@@ -2,7 +2,7 @@ spec_i([ web,117,'Detalles Producto','DetallesProducto',0,spa,'10_3_15-115824' ]
  
 struct_i(2,1,[ 'Updateimage','Deleteimage' ],[]).
  
-level_i(2,[ 23,[ [ 23,many ] ],[],[],[ [ [ 23 ],[ 180,181,87,183,175 ] ] ],[ [ [ 23 ],[] ] ],[ 15,16 ],'PRODUCTO_PKEY',[],[] ]).
+level_i(2,[ 23,[ [ 23,many ] ],[],[],[ [ [ 23 ],[ 180,181,87,183,175 ] ] ],[ [ [ 23 ],[] ] ],[ 175 ],'PRODUCTOS_PKEY',[],[] ]).
  
 tw_i(2,[]).
  
@@ -112,12 +112,8 @@ rule_i(0,prop('ObjName','DetallesProducto')).
 rule_i(0,maingen(15)).
 rule_i(0,file(23,'PRODUCTO',[ 175,179,87,180,181,182,91,92,93,183 ])).
 rule_i(0,loc([ 23 ],'PRODUCTO','','LAN')).
-rule_i(0,index(23,'PRODUCTO_PKEY',u,[ 15,16 ])).
-rule_i(0,loc([ 23,'PRODUCTO_PKEY' ],producto_pkey,'','LAN')).
-rule_i(0,index(23,'PRODUCTO_ID',k,[ 15 ])).
-rule_i(0,loc([ 23,'PRODUCTO_ID' ],producto_id,'','LAN')).
-rule_i(0,index(23,'IPRODUCTO',u,[ 175 ])).
-rule_i(0,loc([ 23,'IPRODUCTO' ],'IPRODUCTO','','LAN')).
+rule_i(0,index(23,'PRODUCTOS_PKEY',u,[ 175 ])).
+rule_i(0,loc([ 23,'PRODUCTOS_PKEY' ],'PRODUCTOS_PKEY','','LAN')).
 rule_i(0,p(0,0,fv,13,[ intname,'PRODUCTO' ])).
 rule_i(0,p(0,0,fv,13,[ table,23 ])).
 rule_i(0,p(0,15,fv,13,[])).
@@ -125,25 +121,15 @@ rule_i(0,p(0,15,fv,13,[ 'NAME',producto ])).
 rule_i(0,p(0,15,fv,13,[ 'LOC','' ])).
 rule_i(0,p(0,15,fv,13,[ 'SCHEMA',public ])).
 rule_i(0,p(0,15,fv,13,[ 'EXTNAM','YES' ])).
-rule_i(0,p(0,15,fvix,[ 13,12 ],[])).
-rule_i(0,p(0,15,fvix,[ 13,12 ],[ 'NAME',producto_pkey ])).
-rule_i(0,p(0,15,fvix,[ 13,12 ],[ 'LOC','' ])).
-rule_i(0,p(0,15,fvix,[ 13,12 ],[ 'SCHEMA',public ])).
-rule_i(0,p(0,15,fvix,[ 13,12 ],[ 'EXTNAM','YES' ])).
-rule_i(0,p(0,15,fvix,[ 13,13 ],[])).
-rule_i(0,p(0,15,fvix,[ 13,13 ],[ 'NAME',producto_id ])).
-rule_i(0,p(0,15,fvix,[ 13,13 ],[ 'LOC','' ])).
-rule_i(0,p(0,15,fvix,[ 13,13 ],[ 'SCHEMA',public ])).
-rule_i(0,p(0,15,fvix,[ 13,13 ],[ 'EXTNAM','YES' ])).
-rule_i(0,p(0,15,fvix,[ 13,24 ],[])).
-rule_i(0,p(0,15,fvix,[ 13,24 ],[ 'NAME','' ])).
-rule_i(0,p(0,15,fvix,[ 13,24 ],[ 'LOC','' ])).
-rule_i(0,p(0,15,fvix,[ 13,24 ],[ 'SCHEMA','' ])).
-rule_i(0,p(0,15,fvix,[ 13,24 ],[ 'EXTNAM','YES' ])).
+rule_i(0,p(0,15,fvix,[ 13,25 ],[])).
+rule_i(0,p(0,15,fvix,[ 13,25 ],[ 'NAME','' ])).
+rule_i(0,p(0,15,fvix,[ 13,25 ],[ 'LOC','' ])).
+rule_i(0,p(0,15,fvix,[ 13,25 ],[ 'SCHEMA','' ])).
+rule_i(0,p(0,15,fvix,[ 13,25 ],[ 'EXTNAM','YES' ])).
 rule_i(0,rule([ a(22,[ '''Agregar''','''Agregar''','' ]) ],[],[],[])).
  
 a_i(1,1,f,'Err',[],[ [],[ t('0',3) ] ]).
-a_i(2,2,t,23,[],[ [],'PRODUCTO_PKEY',[] ]).
+a_i(2,2,t,23,[],[ [],'PRODUCTOS_PKEY',[] ]).
  
 v_i(f,i,1,[]).
 v_i(f,o,1,'Err').
@@ -174,8 +160,7 @@ attri_i('Buscar',[ buscar,char,20,0,'',0,buscar,'',5 ]).
  
 table_i(23,[ 'PRODUCTO',[ 175,87,180,181,183 ],producto,producto ]).
  
-index_i(23,[ 'PRODUCTO_PKEY',u,[ 15,16 ],'PRODUCTO_PKEY' ]).
-index_i(23,[ 'IPRODUCTO',u,[ 175 ],'IPRODUCTO' ]).
+index_i(23,[ 'PRODUCTOS_PKEY',u,[ 175 ],'PRODUCTOS_PKEY' ]).
  
  
  
@@ -196,7 +181,7 @@ add_att_i(bits,2,'Deleteimage_GXI','Deleteimage','Deleteimage_GXI',[ svchar,2048
  
  
  
-map_i(23,i,'IPRODUCTO',[ 'IPRODUCTO' ]).
+map_i(23,i,'IPRODUCTO',[ 'PRODUCTOS_PKEY' ]).
 map_i(23,a,183,[ ptipobienid ]).
 map_i(23,a,93,[ productofecultact ]).
 map_i(23,a,92,[ productofecreg ]).

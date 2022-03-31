@@ -2,7 +2,7 @@
                File: gpxMenuDemo
         Description: gpx Menu Demo
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 2/21/2022 20:54:44.97
+       Generated on: 3/31/2022 0:18:57.9
        Program type: Callable routine
           Main DBMS: postgresql
 */
@@ -191,6 +191,10 @@ namespace GeneXus.Programs {
          Gxm3gpxmenuitems_subitems.gxTpr_Url = "DetalleModelos.aspx";
          Gxm3gpxmenuitems_subitems = new SdtgpxMenuItems_gpxMenuItem(context);
          Gxm1gpxmenuitems.gxTpr_Subitems.Add(Gxm3gpxmenuitems_subitems, 0);
+         Gxm3gpxmenuitems_subitems.gxTpr_Title = "Consultar Productos";
+         Gxm3gpxmenuitems_subitems.gxTpr_Url = "DetallesProducto.aspx";
+         Gxm3gpxmenuitems_subitems = new SdtgpxMenuItems_gpxMenuItem(context);
+         Gxm1gpxmenuitems.gxTpr_Subitems.Add(Gxm3gpxmenuitems_subitems, 0);
          Gxm3gpxmenuitems_subitems.gxTpr_Title = "Consultar Proveedores";
          Gxm3gpxmenuitems_subitems.gxTpr_Url = "DetallesProveedores.aspx";
          Gxm1gpxmenuitems = new SdtgpxMenuItems_gpxMenuItem(context);
@@ -208,6 +212,10 @@ namespace GeneXus.Programs {
          Gxm1gpxmenuitems.gxTpr_Subitems.Add(Gxm3gpxmenuitems_subitems, 0);
          Gxm3gpxmenuitems_subitems.gxTpr_Title = "Reporte de Modelos";
          Gxm3gpxmenuitems_subitems.gxTpr_Url = "apdf_Modelos.aspx";
+         Gxm3gpxmenuitems_subitems = new SdtgpxMenuItems_gpxMenuItem(context);
+         Gxm1gpxmenuitems.gxTpr_Subitems.Add(Gxm3gpxmenuitems_subitems, 0);
+         Gxm3gpxmenuitems_subitems.gxTpr_Title = "Reporte de Productos";
+         Gxm3gpxmenuitems_subitems.gxTpr_Url = "apdf_productos.aspx";
          Gxm3gpxmenuitems_subitems = new SdtgpxMenuItems_gpxMenuItem(context);
          Gxm1gpxmenuitems.gxTpr_Subitems.Add(Gxm3gpxmenuitems_subitems, 0);
          Gxm3gpxmenuitems_subitems.gxTpr_Title = "Reporte de Proveedores";

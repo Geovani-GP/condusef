@@ -2,7 +2,7 @@
                File: Login
         Description: Login
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 2/15/2022 5:35:30.40
+       Generated on: 3/31/2022 0:19:30.65
        Program type: Main program
           Main DBMS: postgresql
 */
@@ -215,7 +215,7 @@ namespace GeneXus.Programs {
          context.AddJavascriptSource("jquery.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxtimezone.js", "?"+context.GetBuildNumber( 115824));
          context.AddJavascriptSource("gxgral.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("gxcfg.js", "?20222155353042");
+         context.AddJavascriptSource("gxcfg.js", "?20223310193066");
          if ( context.isSpaRequest( ) )
          {
             enableOutput();
@@ -932,7 +932,7 @@ namespace GeneXus.Programs {
       protected void define_styles( )
       {
          AddStyleSheetFile("HugaoMessages/css/jquery.growl.min.css", "?12514575");
-         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?583790");
+         AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?0185564");
          if ( StringUtil.StrCmp(WebComp_Webcomp1_Component, "") == 0 )
          {
             WebComp_Webcomp1 = getWebComponent(GetType(), "GeneXus.Programs", "alerts", new Object[] {context} );
@@ -950,7 +950,7 @@ namespace GeneXus.Programs {
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?20222155353052");
+            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?20223310193077");
             idxLst = (int)(idxLst+1);
          }
          /* End function define_styles */
@@ -959,7 +959,7 @@ namespace GeneXus.Programs {
       protected void include_jscripts( )
       {
          context.AddJavascriptSource("messages.spa.js", "?"+context.GetBuildNumber( 115824));
-         context.AddJavascriptSource("login.js", "?20222155353052");
+         context.AddJavascriptSource("login.js", "?20223310193077");
          context.AddJavascriptSource("HugaoMessages/js/jquery.growl.min.js", "");
          context.AddJavascriptSource("HugaoMessages/HugaoMessagesRender.js", "");
          /* End function include_jscripts */

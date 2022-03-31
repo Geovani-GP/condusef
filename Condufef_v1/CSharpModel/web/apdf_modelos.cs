@@ -2,7 +2,7 @@
                File: PDF_modelos
         Description: PDF_modelos
              Author: GeneXus C# Generator version 10_3_15-115824
-       Generated on: 2/15/2022 5:8:39.94
+       Generated on: 3/31/2022 0:34:16.32
        Program type: Main program
           Main DBMS: postgresql
 */
@@ -157,12 +157,12 @@ namespace GeneXus.Programs {
                A15modelosid = P000I2_A15modelosid[0];
                A116modelosdsc = P000I2_A116modelosdsc[0];
                n116modelosdsc = P000I2_n116modelosdsc[0];
-               H0I0( false, 82) ;
+               H0I0( false, 36) ;
                getPrinter().GxAttris("Microsoft Sans Serif", 9, false, false, false, false, 0, 0, 0, 0, 0, 255, 255, 255) ;
                getPrinter().GxDrawText(StringUtil.RTrim( context.localUtil.Format( A116modelosdsc, "")), 250, Gx_line+0, 750, Gx_line+17, 0, 0, 0, 0) ;
                getPrinter().GxDrawText(StringUtil.LTrim( context.localUtil.Format( (decimal)(A15modelosid), "ZZZZZZZZ9")), 50, Gx_line+0, 200, Gx_line+17, 1, 0, 0, 0) ;
                Gx_OldLine = Gx_line;
-               Gx_line = (int)(Gx_line+82);
+               Gx_line = (int)(Gx_line+36);
                pr_default.readNext(0);
             }
             pr_default.close(0);
